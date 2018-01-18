@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cobol85/Cobol85.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cobol85/Cobol85.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class Cobol85BaseListener: Cobol85Listener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -61,45 +61,6 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitEndProgramStatement(_ ctx: Cobol85Parser.EndProgramStatementContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterCompilerOptions(_ ctx: Cobol85Parser.CompilerOptionsContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitCompilerOptions(_ ctx: Cobol85Parser.CompilerOptionsContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterCompilerOption(_ ctx: Cobol85Parser.CompilerOptionContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitCompilerOption(_ ctx: Cobol85Parser.CompilerOptionContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterCompilerSubOption(_ ctx: Cobol85Parser.CompilerSubOptionContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitCompilerSubOption(_ ctx: Cobol85Parser.CompilerSubOptionContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -1068,13 +1029,13 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterDataDivisionBody(_ ctx: Cobol85Parser.DataDivisionBodyContext) { }
+	open func enterDataDivisionSection(_ ctx: Cobol85Parser.DataDivisionSectionContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitDataDivisionBody(_ ctx: Cobol85Parser.DataDivisionBodyContext) { }
+	open func exitDataDivisionSection(_ ctx: Cobol85Parser.DataDivisionSectionContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -3109,19 +3070,6 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterPictureCharsKeyword(_ ctx: Cobol85Parser.PictureCharsKeywordContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitPictureCharsKeyword(_ ctx: Cobol85Parser.PictureCharsKeywordContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	open func enterPictureCardinality(_ ctx: Cobol85Parser.PictureCardinalityContext) { }
 	/**
 	 * {@inheritDoc}
@@ -3376,6 +3324,71 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitProcedureDivisionGivingClause(_ ctx: Cobol85Parser.ProcedureDivisionGivingClauseContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterProcedureDivisionUsingParameter(_ ctx: Cobol85Parser.ProcedureDivisionUsingParameterContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitProcedureDivisionUsingParameter(_ ctx: Cobol85Parser.ProcedureDivisionUsingParameterContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterProcedureDivisionByReferencePhrase(_ ctx: Cobol85Parser.ProcedureDivisionByReferencePhraseContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitProcedureDivisionByReferencePhrase(_ ctx: Cobol85Parser.ProcedureDivisionByReferencePhraseContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterProcedureDivisionByReference(_ ctx: Cobol85Parser.ProcedureDivisionByReferenceContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitProcedureDivisionByReference(_ ctx: Cobol85Parser.ProcedureDivisionByReferenceContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterProcedureDivisionByValuePhrase(_ ctx: Cobol85Parser.ProcedureDivisionByValuePhraseContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitProcedureDivisionByValuePhrase(_ ctx: Cobol85Parser.ProcedureDivisionByValuePhraseContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterProcedureDivisionByValue(_ ctx: Cobol85Parser.ProcedureDivisionByValueContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitProcedureDivisionByValue(_ ctx: Cobol85Parser.ProcedureDivisionByValueContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -3642,6 +3655,19 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterAddToGiving(_ ctx: Cobol85Parser.AddToGivingContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitAddToGiving(_ ctx: Cobol85Parser.AddToGivingContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterAddGiving(_ ctx: Cobol85Parser.AddGivingContext) { }
 	/**
 	 * {@inheritDoc}
@@ -3707,13 +3733,39 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterCallByReferenceStatement(_ ctx: Cobol85Parser.CallByReferenceStatementContext) { }
+	open func enterCallUsingPhrase(_ ctx: Cobol85Parser.CallUsingPhraseContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitCallByReferenceStatement(_ ctx: Cobol85Parser.CallByReferenceStatementContext) { }
+	open func exitCallUsingPhrase(_ ctx: Cobol85Parser.CallUsingPhraseContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCallUsingParameter(_ ctx: Cobol85Parser.CallUsingParameterContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCallUsingParameter(_ ctx: Cobol85Parser.CallUsingParameterContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCallByReferencePhrase(_ ctx: Cobol85Parser.CallByReferencePhraseContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCallByReferencePhrase(_ ctx: Cobol85Parser.CallByReferencePhraseContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -3733,13 +3785,13 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterCallByValueStatement(_ ctx: Cobol85Parser.CallByValueStatementContext) { }
+	open func enterCallByValuePhrase(_ ctx: Cobol85Parser.CallByValuePhraseContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitCallByValueStatement(_ ctx: Cobol85Parser.CallByValueStatementContext) { }
+	open func exitCallByValuePhrase(_ ctx: Cobol85Parser.CallByValuePhraseContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -3759,13 +3811,13 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterCallByContentStatement(_ ctx: Cobol85Parser.CallByContentStatementContext) { }
+	open func enterCallByContentPhrase(_ ctx: Cobol85Parser.CallByContentPhraseContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitCallByContentStatement(_ ctx: Cobol85Parser.CallByContentStatementContext) { }
+	open func exitCallByContentPhrase(_ ctx: Cobol85Parser.CallByContentPhraseContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -4110,13 +4162,13 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterDivideIntoByGivingStatement(_ ctx: Cobol85Parser.DivideIntoByGivingStatementContext) { }
+	open func enterDivideByGivingStatement(_ ctx: Cobol85Parser.DivideByGivingStatementContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitDivideIntoByGivingStatement(_ ctx: Cobol85Parser.DivideIntoByGivingStatementContext) { }
+	open func exitDivideByGivingStatement(_ ctx: Cobol85Parser.DivideByGivingStatementContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -4130,6 +4182,19 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitDivideGivingPhrase(_ ctx: Cobol85Parser.DivideGivingPhraseContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterDivideInto(_ ctx: Cobol85Parser.DivideIntoContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitDivideInto(_ ctx: Cobol85Parser.DivideIntoContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -4929,6 +4994,19 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterMoveCorrespondingToSendingArea(_ ctx: Cobol85Parser.MoveCorrespondingToSendingAreaContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitMoveCorrespondingToSendingArea(_ ctx: Cobol85Parser.MoveCorrespondingToSendingAreaContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterMultiplyStatement(_ ctx: Cobol85Parser.MultiplyStatementContext) { }
 	/**
 	 * {@inheritDoc}
@@ -5196,6 +5274,58 @@ open class Cobol85BaseListener: Cobol85Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitPerformVaryingClause(_ ctx: Cobol85Parser.PerformVaryingClauseContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterPerformVaryingPhrase(_ ctx: Cobol85Parser.PerformVaryingPhraseContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitPerformVaryingPhrase(_ ctx: Cobol85Parser.PerformVaryingPhraseContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterPerformAfter(_ ctx: Cobol85Parser.PerformAfterContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitPerformAfter(_ ctx: Cobol85Parser.PerformAfterContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterPerformFrom(_ ctx: Cobol85Parser.PerformFromContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitPerformFrom(_ ctx: Cobol85Parser.PerformFromContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterPerformBy(_ ctx: Cobol85Parser.PerformByContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitPerformBy(_ ctx: Cobol85Parser.PerformByContext) { }
 
 	/**
 	 * {@inheritDoc}

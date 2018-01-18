@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/properties/properties.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/properties/properties.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class propertiesVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertiesFile(_ ctx: propertiesParser.PropertiesFileContext) -> T{
+	open func visitPropertiesFile(_ ctx: propertiesParser.PropertiesFileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class propertiesVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRow(_ ctx: propertiesParser.RowContext) -> T{
+	open func visitRow(_ ctx: propertiesParser.RowContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class propertiesVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDecl(_ ctx: propertiesParser.DeclContext) -> T{
+	open func visitDecl(_ ctx: propertiesParser.DeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class propertiesVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKey(_ ctx: propertiesParser.KeyContext) -> T{
+	open func visitKey(_ ctx: propertiesParser.KeyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class propertiesVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: propertiesParser.ValueContext) -> T{
+	open func visitValue(_ ctx: propertiesParser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class propertiesVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: propertiesParser.CommentContext) -> T{
+	open func visitComment(_ ctx: propertiesParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

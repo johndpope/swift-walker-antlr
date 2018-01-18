@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/lambda/lambda.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/lambda/lambda.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class lambdaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: lambdaParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: lambdaParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class lambdaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunction(_ ctx: lambdaParser.FunctionContext) -> T{
+	open func visitFunction(_ ctx: lambdaParser.FunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class lambdaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitApplication(_ ctx: lambdaParser.ApplicationContext) -> T{
+	open func visitApplication(_ ctx: lambdaParser.ApplicationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class lambdaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScope(_ ctx: lambdaParser.ScopeContext) -> T{
+	open func visitScope(_ ctx: lambdaParser.ScopeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cobol85/Cobol85Preprocessor.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cobol85/Cobol85Preprocessor.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -17,6 +17,27 @@ open class Cobol85PreprocessorBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitStartRule(_ ctx: Cobol85PreprocessorParser.StartRuleContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCompilerOptions(_ ctx: Cobol85PreprocessorParser.CompilerOptionsContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCompilerXOpts(_ ctx: Cobol85PreprocessorParser.CompilerXOptsContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCompilerOption(_ ctx: Cobol85PreprocessorParser.CompilerOptionContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -52,6 +73,13 @@ open class Cobol85PreprocessorBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitCopySource(_ ctx: Cobol85PreprocessorParser.CopySourceContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCopyLibrary(_ ctx: Cobol85PreprocessorParser.CopyLibraryContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -121,21 +149,21 @@ open class Cobol85PreprocessorBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitControlSpacingStatement(_ ctx: Cobol85PreprocessorParser.ControlSpacingStatementContext) -> T? { return visitChildren(ctx) }
+	open func visitEjectStatement(_ ctx: Cobol85PreprocessorParser.EjectStatementContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitCobolWord(_ ctx: Cobol85PreprocessorParser.CobolWordContext) -> T? { return visitChildren(ctx) }
+	open func visitSkipStatement(_ ctx: Cobol85PreprocessorParser.SkipStatementContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitLiteral(_ ctx: Cobol85PreprocessorParser.LiteralContext) -> T? { return visitChildren(ctx) }
+	open func visitTitleStatement(_ ctx: Cobol85PreprocessorParser.TitleStatementContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -156,7 +184,35 @@ open class Cobol85PreprocessorBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	open func visitCharDataSql(_ ctx: Cobol85PreprocessorParser.CharDataSqlContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	open func visitCharDataLine(_ ctx: Cobol85PreprocessorParser.CharDataLineContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCobolWord(_ ctx: Cobol85PreprocessorParser.CobolWordContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitLiteral(_ ctx: Cobol85PreprocessorParser.LiteralContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitFilename(_ ctx: Cobol85PreprocessorParser.FilenameContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/fasta/fasta.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/fasta/fasta.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class fastaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSequence(_ ctx: fastaParser.SequenceContext) -> T{
+	open func visitSequence(_ ctx: fastaParser.SequenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class fastaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSection(_ ctx: fastaParser.SectionContext) -> T{
+	open func visitSection(_ ctx: fastaParser.SectionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class fastaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSequencelines(_ ctx: fastaParser.SequencelinesContext) -> T{
+	open func visitSequencelines(_ ctx: fastaParser.SequencelinesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class fastaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDescriptionline(_ ctx: fastaParser.DescriptionlineContext) -> T{
+	open func visitDescriptionline(_ ctx: fastaParser.DescriptionlineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class fastaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommentline(_ ctx: fastaParser.CommentlineContext) -> T{
+	open func visitCommentline(_ ctx: fastaParser.CommentlineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

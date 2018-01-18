@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/swift3/Swift3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/swift3/Swift3.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class Swift3Parser: Parser {
@@ -11,8 +11,11 @@ open class Swift3Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -53,135 +56,128 @@ open class Swift3Parser: Parser {
                  Interpolated_string_literal = 168, WS = 169, Block_comment = 170, 
                  Line_comment = 171
 	}
-	public static let RULE_top_level = 0, RULE_statement = 1, RULE_statements = 2, 
-                   RULE_statements_impl = 3, RULE_loop_statement = 4, RULE_for_statement = 5, 
-                   RULE_for_init = 6, RULE_for_in_statement = 7, RULE_while_statement = 8, 
-                   RULE_condition_list = 9, RULE_condition = 10, RULE_case_condition = 11, 
-                   RULE_optional_binding_condition = 12, RULE_repeat_while_statement = 13, 
-                   RULE_branch_statement = 14, RULE_if_statement = 15, RULE_else_clause = 16, 
-                   RULE_guard_statement = 17, RULE_switch_statement = 18, 
-                   RULE_switch_cases = 19, RULE_switch_case = 20, RULE_case_label = 21, 
-                   RULE_case_item_list = 22, RULE_default_label = 23, RULE_where_clause = 24, 
-                   RULE_where_expression = 25, RULE_labeled_statement = 26, 
-                   RULE_statement_label = 27, RULE_label_name = 28, RULE_control_transfer_statement = 29, 
-                   RULE_break_statement = 30, RULE_continue_statement = 31, 
-                   RULE_fallthrough_statement = 32, RULE_return_statement = 33, 
-                   RULE_throw_statement = 34, RULE_defer_statement = 35, 
-                   RULE_do_statement = 36, RULE_catch_clauses = 37, RULE_catch_clause = 38, 
-                   RULE_compiler_control_statement = 39, RULE_conditional_compilation_block = 40, 
-                   RULE_if_directive_clause = 41, RULE_elseif_directive_clauses = 42, 
-                   RULE_elseif_directive_clause = 43, RULE_else_directive_clause = 44, 
-                   RULE_if_directive = 45, RULE_elseif_directive = 46, RULE_else_directive = 47, 
-                   RULE_endif_directive = 48, RULE_compilation_condition = 49, 
-                   RULE_platform_condition = 50, RULE_swift_version = 51, 
-                   RULE_operating_system = 52, RULE_architecture = 53, RULE_line_control_statement = 54, 
-                   RULE_line_number = 55, RULE_file_name = 56, RULE_availability_condition = 57, 
-                   RULE_availability_arguments = 58, RULE_availability_argument = 59, 
-                   RULE_generic_parameter_clause = 60, RULE_generic_parameter_list = 61, 
-                   RULE_generic_parameter = 62, RULE_generic_where_clause = 63, 
-                   RULE_requirement_list = 64, RULE_requirement = 65, RULE_conformance_requirement = 66, 
-                   RULE_same_type_requirement = 67, RULE_generic_argument_clause = 68, 
-                   RULE_generic_argument_list = 69, RULE_generic_argument = 70, 
-                   RULE_declaration = 71, RULE_declarations = 72, RULE_top_level_declaration = 73, 
-                   RULE_code_block = 74, RULE_import_declaration = 75, RULE_import_kind = 76, 
-                   RULE_import_path = 77, RULE_import_path_identifier = 78, 
-                   RULE_constant_declaration = 79, RULE_pattern_initializer_list = 80, 
-                   RULE_pattern_initializer = 81, RULE_initializer = 82, 
-                   RULE_variable_declaration = 83, RULE_variable_declaration_head = 84, 
-                   RULE_variable_name = 85, RULE_getter_setter_block = 86, 
-                   RULE_getter_clause = 87, RULE_setter_clause = 88, RULE_setter_name = 89, 
-                   RULE_getter_setter_keyword_block = 90, RULE_getter_keyword_clause = 91, 
-                   RULE_setter_keyword_clause = 92, RULE_willSet_didSet_block = 93, 
-                   RULE_willSet_clause = 94, RULE_didSet_clause = 95, RULE_typealias_declaration = 96, 
-                   RULE_typealias_name = 97, RULE_typealias_assignment = 98, 
-                   RULE_function_declaration = 99, RULE_function_head = 100, 
-                   RULE_function_name = 101, RULE_function_signature = 102, 
-                   RULE_function_result = 103, RULE_function_body = 104, 
-                   RULE_parameter_clause = 105, RULE_parameter_list = 106, 
-                   RULE_parameter = 107, RULE_external_parameter_name = 108, 
-                   RULE_local_parameter_name = 109, RULE_default_argument_clause = 110, 
-                   RULE_enum_declaration = 111, RULE_union_style_enum = 112, 
-                   RULE_union_style_enum_members = 113, RULE_union_style_enum_member = 114, 
-                   RULE_union_style_enum_case_clause = 115, RULE_union_style_enum_case_list = 116, 
-                   RULE_union_style_enum_case = 117, RULE_enum_name = 118, 
-                   RULE_enum_case_name = 119, RULE_raw_value_style_enum = 120, 
-                   RULE_raw_value_style_enum_members = 121, RULE_raw_value_style_enum_member = 122, 
-                   RULE_raw_value_style_enum_case_clause = 123, RULE_raw_value_style_enum_case_list = 124, 
-                   RULE_raw_value_style_enum_case = 125, RULE_raw_value_assignment = 126, 
-                   RULE_raw_value_literal = 127, RULE_struct_declaration = 128, 
-                   RULE_struct_name = 129, RULE_struct_body = 130, RULE_struct_member = 131, 
-                   RULE_class_declaration = 132, RULE_class_name = 133, 
-                   RULE_class_body = 134, RULE_class_member = 135, RULE_protocol_declaration = 136, 
-                   RULE_protocol_name = 137, RULE_protocol_body = 138, RULE_protocol_member = 139, 
-                   RULE_protocol_member_declaration = 140, RULE_protocol_property_declaration = 141, 
-                   RULE_protocol_method_declaration = 142, RULE_protocol_initializer_declaration = 143, 
-                   RULE_protocol_subscript_declaration = 144, RULE_protocol_associated_type_declaration = 145, 
-                   RULE_initializer_declaration = 146, RULE_initializer_head = 147, 
-                   RULE_initializer_body = 148, RULE_deinitializer_declaration = 149, 
-                   RULE_extension_declaration = 150, RULE_extension_body = 151, 
-                   RULE_extension_member = 152, RULE_subscript_declaration = 153, 
-                   RULE_subscript_head = 154, RULE_subscript_result = 155, 
-                   RULE_operator_declaration = 156, RULE_prefix_operator_declaration = 157, 
-                   RULE_postfix_operator_declaration = 158, RULE_infix_operator_declaration = 159, 
-                   RULE_infix_operator_group = 160, RULE_precedence_group_declaration = 161, 
-                   RULE_precedence_group_attribute = 162, RULE_precedence_group_relation = 163, 
-                   RULE_precedence_group_assignment = 164, RULE_precedence_group_associativity = 165, 
-                   RULE_associativity = 166, RULE_precedence_group_names = 167, 
-                   RULE_precedence_group_name = 168, RULE_declaration_modifier = 169, 
-                   RULE_declaration_modifiers = 170, RULE_access_level_modifier = 171, 
-                   RULE_mutation_modifier = 172, RULE_pattern = 173, RULE_wildcard_pattern = 174, 
-                   RULE_identifier_pattern = 175, RULE_value_binding_pattern = 176, 
-                   RULE_tuple_pattern = 177, RULE_tuple_pattern_element_list = 178, 
-                   RULE_tuple_pattern_element = 179, RULE_enum_case_pattern = 180, 
-                   RULE_optional_pattern = 181, RULE_expression_pattern = 182, 
-                   RULE_attribute = 183, RULE_attribute_name = 184, RULE_attribute_argument_clause = 185, 
-                   RULE_attributes = 186, RULE_balanced_tokens = 187, RULE_balanced_token = 188, 
-                   RULE_any_punctuation_for_balanced_token = 189, RULE_expression = 190, 
-                   RULE_expression_list = 191, RULE_prefix_expression = 192, 
-                   RULE_in_out_expression = 193, RULE_try_operator = 194, 
-                   RULE_binary_expression = 195, RULE_binary_expressions = 196, 
-                   RULE_conditional_operator = 197, RULE_type_casting_operator = 198, 
-                   RULE_primary_expression = 199, RULE_literal_expression = 200, 
-                   RULE_array_literal = 201, RULE_array_literal_items = 202, 
-                   RULE_array_literal_item = 203, RULE_dictionary_literal = 204, 
-                   RULE_dictionary_literal_items = 205, RULE_dictionary_literal_item = 206, 
-                   RULE_playground_literal = 207, RULE_self_expression = 208, 
-                   RULE_superclass_expression = 209, RULE_superclass_method_expression = 210, 
-                   RULE_superclass_subscript_expression = 211, RULE_superclass_initializer_expression = 212, 
-                   RULE_closure_expression = 213, RULE_closure_signature = 214, 
-                   RULE_closure_parameter_clause = 215, RULE_closure_parameter_clause_identifier_list = 216, 
-                   RULE_closure_parameter_list = 217, RULE_closure_parameter = 218, 
-                   RULE_closure_parameter_name = 219, RULE_capture_list = 220, 
-                   RULE_capture_list_items = 221, RULE_capture_list_item = 222, 
-                   RULE_capture_specifier = 223, RULE_implicit_member_expression = 224, 
-                   RULE_parenthesized_expression = 225, RULE_tuple_expression = 226, 
-                   RULE_tuple_element = 227, RULE_wildcard_expression = 228, 
-                   RULE_selector_expression = 229, RULE_key_path_expression = 230, 
-                   RULE_postfix_expression = 231, RULE_function_call_argument_clause = 232, 
-                   RULE_function_call_argument_list = 233, RULE_function_call_argument = 234, 
-                   RULE_trailing_closure = 235, RULE_argument_names = 236, 
-                   RULE_argument_name = 237, RULE_dynamic_type_expression = 238, 
-                   RULE_type = 239, RULE_type_annotation = 240, RULE_type_identifier = 241, 
-                   RULE_type_name = 242, RULE_tuple_type = 243, RULE_tuple_type_element_list = 244, 
-                   RULE_tuple_type_element = 245, RULE_element_name = 246, 
-                   RULE_function_type = 247, RULE_function_type_argument_clause = 248, 
-                   RULE_function_type_argument_list = 249, RULE_function_type_argument = 250, 
-                   RULE_argument_label = 251, RULE_array_type = 252, RULE_dictionary_type = 253, 
-                   RULE_protocol_composition_type = 254, RULE_protocol_identifier = 255, 
-                   RULE_type_inheritance_clause = 256, RULE_type_inheritance_list = 257, 
-                   RULE_class_requirement = 258, RULE_declaration_identifier = 259, 
-                   RULE_label_identifier = 260, RULE_keyword_as_identifier_in_declarations = 261, 
-                   RULE_keyword_as_identifier_in_labels = 262, RULE_assignment_operator = 263, 
-                   RULE_negate_prefix_operator = 264, RULE_compilation_condition_AND = 265, 
-                   RULE_compilation_condition_OR = 266, RULE_compilation_condition_GE = 267, 
-                   RULE_arrow_operator = 268, RULE_range_operator = 269, 
-                   RULE_same_type_equals = 270, RULE_binary_operator = 271, 
-                   RULE_prefix_operator = 272, RULE_postfix_operator = 273, 
-                   RULE_operator = 274, RULE_operator_character = 275, RULE_operator_head = 276, 
-                   RULE_dot_operator_head = 277, RULE_dot_operator_character = 278, 
-                   RULE_literal = 279, RULE_numeric_literal = 280, RULE_boolean_literal = 281, 
-                   RULE_nil_literal = 282, RULE_integer_literal = 283, RULE_string_literal = 284
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_top_level = 0, RULE_statement = 1, RULE_statements = 2, 
+            RULE_statements_impl = 3, RULE_loop_statement = 4, RULE_for_statement = 5, 
+            RULE_for_init = 6, RULE_for_in_statement = 7, RULE_while_statement = 8, 
+            RULE_condition_list = 9, RULE_condition = 10, RULE_case_condition = 11, 
+            RULE_optional_binding_condition = 12, RULE_repeat_while_statement = 13, 
+            RULE_branch_statement = 14, RULE_if_statement = 15, RULE_else_clause = 16, 
+            RULE_guard_statement = 17, RULE_switch_statement = 18, RULE_switch_cases = 19, 
+            RULE_switch_case = 20, RULE_case_label = 21, RULE_case_item_list = 22, 
+            RULE_default_label = 23, RULE_where_clause = 24, RULE_where_expression = 25, 
+            RULE_labeled_statement = 26, RULE_statement_label = 27, RULE_label_name = 28, 
+            RULE_control_transfer_statement = 29, RULE_break_statement = 30, 
+            RULE_continue_statement = 31, RULE_fallthrough_statement = 32, 
+            RULE_return_statement = 33, RULE_throw_statement = 34, RULE_defer_statement = 35, 
+            RULE_do_statement = 36, RULE_catch_clauses = 37, RULE_catch_clause = 38, 
+            RULE_compiler_control_statement = 39, RULE_conditional_compilation_block = 40, 
+            RULE_if_directive_clause = 41, RULE_elseif_directive_clauses = 42, 
+            RULE_elseif_directive_clause = 43, RULE_else_directive_clause = 44, 
+            RULE_if_directive = 45, RULE_elseif_directive = 46, RULE_else_directive = 47, 
+            RULE_endif_directive = 48, RULE_compilation_condition = 49, 
+            RULE_platform_condition = 50, RULE_swift_version = 51, RULE_operating_system = 52, 
+            RULE_architecture = 53, RULE_line_control_statement = 54, RULE_line_number = 55, 
+            RULE_file_name = 56, RULE_availability_condition = 57, RULE_availability_arguments = 58, 
+            RULE_availability_argument = 59, RULE_generic_parameter_clause = 60, 
+            RULE_generic_parameter_list = 61, RULE_generic_parameter = 62, 
+            RULE_generic_where_clause = 63, RULE_requirement_list = 64, 
+            RULE_requirement = 65, RULE_conformance_requirement = 66, RULE_same_type_requirement = 67, 
+            RULE_generic_argument_clause = 68, RULE_generic_argument_list = 69, 
+            RULE_generic_argument = 70, RULE_declaration = 71, RULE_declarations = 72, 
+            RULE_top_level_declaration = 73, RULE_code_block = 74, RULE_import_declaration = 75, 
+            RULE_import_kind = 76, RULE_import_path = 77, RULE_import_path_identifier = 78, 
+            RULE_constant_declaration = 79, RULE_pattern_initializer_list = 80, 
+            RULE_pattern_initializer = 81, RULE_initializer = 82, RULE_variable_declaration = 83, 
+            RULE_variable_declaration_head = 84, RULE_variable_name = 85, 
+            RULE_getter_setter_block = 86, RULE_getter_clause = 87, RULE_setter_clause = 88, 
+            RULE_setter_name = 89, RULE_getter_setter_keyword_block = 90, 
+            RULE_getter_keyword_clause = 91, RULE_setter_keyword_clause = 92, 
+            RULE_willSet_didSet_block = 93, RULE_willSet_clause = 94, RULE_didSet_clause = 95, 
+            RULE_typealias_declaration = 96, RULE_typealias_name = 97, RULE_typealias_assignment = 98, 
+            RULE_function_declaration = 99, RULE_function_head = 100, RULE_function_name = 101, 
+            RULE_function_signature = 102, RULE_function_result = 103, RULE_function_body = 104, 
+            RULE_parameter_clause = 105, RULE_parameter_list = 106, RULE_parameter = 107, 
+            RULE_external_parameter_name = 108, RULE_local_parameter_name = 109, 
+            RULE_default_argument_clause = 110, RULE_enum_declaration = 111, 
+            RULE_union_style_enum = 112, RULE_union_style_enum_members = 113, 
+            RULE_union_style_enum_member = 114, RULE_union_style_enum_case_clause = 115, 
+            RULE_union_style_enum_case_list = 116, RULE_union_style_enum_case = 117, 
+            RULE_enum_name = 118, RULE_enum_case_name = 119, RULE_raw_value_style_enum = 120, 
+            RULE_raw_value_style_enum_members = 121, RULE_raw_value_style_enum_member = 122, 
+            RULE_raw_value_style_enum_case_clause = 123, RULE_raw_value_style_enum_case_list = 124, 
+            RULE_raw_value_style_enum_case = 125, RULE_raw_value_assignment = 126, 
+            RULE_raw_value_literal = 127, RULE_struct_declaration = 128, 
+            RULE_struct_name = 129, RULE_struct_body = 130, RULE_struct_member = 131, 
+            RULE_class_declaration = 132, RULE_class_name = 133, RULE_class_body = 134, 
+            RULE_class_member = 135, RULE_protocol_declaration = 136, RULE_protocol_name = 137, 
+            RULE_protocol_body = 138, RULE_protocol_member = 139, RULE_protocol_member_declaration = 140, 
+            RULE_protocol_property_declaration = 141, RULE_protocol_method_declaration = 142, 
+            RULE_protocol_initializer_declaration = 143, RULE_protocol_subscript_declaration = 144, 
+            RULE_protocol_associated_type_declaration = 145, RULE_initializer_declaration = 146, 
+            RULE_initializer_head = 147, RULE_initializer_body = 148, RULE_deinitializer_declaration = 149, 
+            RULE_extension_declaration = 150, RULE_extension_body = 151, 
+            RULE_extension_member = 152, RULE_subscript_declaration = 153, 
+            RULE_subscript_head = 154, RULE_subscript_result = 155, RULE_operator_declaration = 156, 
+            RULE_prefix_operator_declaration = 157, RULE_postfix_operator_declaration = 158, 
+            RULE_infix_operator_declaration = 159, RULE_infix_operator_group = 160, 
+            RULE_precedence_group_declaration = 161, RULE_precedence_group_attribute = 162, 
+            RULE_precedence_group_relation = 163, RULE_precedence_group_assignment = 164, 
+            RULE_precedence_group_associativity = 165, RULE_associativity = 166, 
+            RULE_precedence_group_names = 167, RULE_precedence_group_name = 168, 
+            RULE_declaration_modifier = 169, RULE_declaration_modifiers = 170, 
+            RULE_access_level_modifier = 171, RULE_mutation_modifier = 172, 
+            RULE_pattern = 173, RULE_wildcard_pattern = 174, RULE_identifier_pattern = 175, 
+            RULE_value_binding_pattern = 176, RULE_tuple_pattern = 177, 
+            RULE_tuple_pattern_element_list = 178, RULE_tuple_pattern_element = 179, 
+            RULE_enum_case_pattern = 180, RULE_optional_pattern = 181, RULE_expression_pattern = 182, 
+            RULE_attribute = 183, RULE_attribute_name = 184, RULE_attribute_argument_clause = 185, 
+            RULE_attributes = 186, RULE_balanced_tokens = 187, RULE_balanced_token = 188, 
+            RULE_any_punctuation_for_balanced_token = 189, RULE_expression = 190, 
+            RULE_expression_list = 191, RULE_prefix_expression = 192, RULE_in_out_expression = 193, 
+            RULE_try_operator = 194, RULE_binary_expression = 195, RULE_binary_expressions = 196, 
+            RULE_conditional_operator = 197, RULE_type_casting_operator = 198, 
+            RULE_primary_expression = 199, RULE_literal_expression = 200, 
+            RULE_array_literal = 201, RULE_array_literal_items = 202, RULE_array_literal_item = 203, 
+            RULE_dictionary_literal = 204, RULE_dictionary_literal_items = 205, 
+            RULE_dictionary_literal_item = 206, RULE_playground_literal = 207, 
+            RULE_self_expression = 208, RULE_superclass_expression = 209, 
+            RULE_superclass_method_expression = 210, RULE_superclass_subscript_expression = 211, 
+            RULE_superclass_initializer_expression = 212, RULE_closure_expression = 213, 
+            RULE_closure_signature = 214, RULE_closure_parameter_clause = 215, 
+            RULE_closure_parameter_clause_identifier_list = 216, RULE_closure_parameter_list = 217, 
+            RULE_closure_parameter = 218, RULE_closure_parameter_name = 219, 
+            RULE_capture_list = 220, RULE_capture_list_items = 221, RULE_capture_list_item = 222, 
+            RULE_capture_specifier = 223, RULE_implicit_member_expression = 224, 
+            RULE_parenthesized_expression = 225, RULE_tuple_expression = 226, 
+            RULE_tuple_element = 227, RULE_wildcard_expression = 228, RULE_selector_expression = 229, 
+            RULE_key_path_expression = 230, RULE_postfix_expression = 231, 
+            RULE_function_call_argument_clause = 232, RULE_function_call_argument_list = 233, 
+            RULE_function_call_argument = 234, RULE_trailing_closure = 235, 
+            RULE_argument_names = 236, RULE_argument_name = 237, RULE_dynamic_type_expression = 238, 
+            RULE_type = 239, RULE_type_annotation = 240, RULE_type_identifier = 241, 
+            RULE_type_name = 242, RULE_tuple_type = 243, RULE_tuple_type_element_list = 244, 
+            RULE_tuple_type_element = 245, RULE_element_name = 246, RULE_function_type = 247, 
+            RULE_function_type_argument_clause = 248, RULE_function_type_argument_list = 249, 
+            RULE_function_type_argument = 250, RULE_argument_label = 251, 
+            RULE_array_type = 252, RULE_dictionary_type = 253, RULE_protocol_composition_type = 254, 
+            RULE_protocol_identifier = 255, RULE_type_inheritance_clause = 256, 
+            RULE_type_inheritance_list = 257, RULE_class_requirement = 258, 
+            RULE_declaration_identifier = 259, RULE_label_identifier = 260, 
+            RULE_keyword_as_identifier_in_declarations = 261, RULE_keyword_as_identifier_in_labels = 262, 
+            RULE_assignment_operator = 263, RULE_negate_prefix_operator = 264, 
+            RULE_compilation_condition_AND = 265, RULE_compilation_condition_OR = 266, 
+            RULE_compilation_condition_GE = 267, RULE_arrow_operator = 268, 
+            RULE_range_operator = 269, RULE_same_type_equals = 270, RULE_binary_operator = 271, 
+            RULE_prefix_operator = 272, RULE_postfix_operator = 273, RULE_operator = 274, 
+            RULE_operator_character = 275, RULE_operator_head = 276, RULE_dot_operator_head = 277, 
+            RULE_dot_operator_character = 278, RULE_literal = 279, RULE_numeric_literal = 280, 
+            RULE_boolean_literal = 281, RULE_nil_literal = 282, RULE_integer_literal = 283, 
+            RULE_string_literal = 284
+
+	public
+	static let ruleNames: [String] = [
 		"top_level", "statement", "statements", "statements_impl", "loop_statement", 
 		"for_statement", "for_init", "for_in_statement", "while_statement", "condition_list", 
 		"condition", "case_condition", "optional_binding_condition", "repeat_while_statement", 
@@ -307,86 +303,73 @@ open class Swift3Parser: Parser {
 		"Floating_point_literal", "Static_string_literal", "Interpolated_string_literal", 
 		"WS", "Block_comment", "Line_comment"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Swift3.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return Swift3Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Swift3.g4" }
+	override open
+	func getSerializedATN() -> String { return Swift3Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return Swift3Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return Swift3Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return Swift3Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return Swift3Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return Swift3Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,Swift3Parser._ATN,Swift3Parser._decisionToDFA, Swift3Parser._sharedContextCache)
 	}
-	open class Top_levelContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(Swift3Parser.Tokens.EOF.rawValue, 0) }
-		open func statements() -> StatementsContext? {
-			return getRuleContext(StatementsContext.self,0)
+
+	public class Top_levelContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func statements() -> StatementsContext? {
+				return getRuleContext(StatementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_top_level
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_top_level }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTop_level(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTop_level(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTop_level(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTop_level(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTop_level(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTop_level(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTop_level(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTop_level(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func top_level() throws -> Top_levelContext {
+	 open func top_level() throws -> Top_levelContext {
 		var _localctx: Top_levelContext = Top_levelContext(_ctx, getState())
 		try enterRule(_localctx, 0, Swift3Parser.RULE_top_level)
 		defer {
@@ -416,61 +399,75 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func loop_statement() -> Loop_statementContext? {
+				return getRuleContext(Loop_statementContext.self, 0)
+			}
+			open
+			func branch_statement() -> Branch_statementContext? {
+				return getRuleContext(Branch_statementContext.self, 0)
+			}
+			open
+			func labeled_statement() -> Labeled_statementContext? {
+				return getRuleContext(Labeled_statementContext.self, 0)
+			}
+			open
+			func control_transfer_statement() -> Control_transfer_statementContext? {
+				return getRuleContext(Control_transfer_statementContext.self, 0)
+			}
+			open
+			func defer_statement() -> Defer_statementContext? {
+				return getRuleContext(Defer_statementContext.self, 0)
+			}
+			open
+			func do_statement() -> Do_statementContext? {
+				return getRuleContext(Do_statementContext.self, 0)
+			}
+			open
+			func compiler_control_statement() -> Compiler_control_statementContext? {
+				return getRuleContext(Compiler_control_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_statement
 		}
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
-		}
-		open func loop_statement() -> Loop_statementContext? {
-			return getRuleContext(Loop_statementContext.self,0)
-		}
-		open func branch_statement() -> Branch_statementContext? {
-			return getRuleContext(Branch_statementContext.self,0)
-		}
-		open func labeled_statement() -> Labeled_statementContext? {
-			return getRuleContext(Labeled_statementContext.self,0)
-		}
-		open func control_transfer_statement() -> Control_transfer_statementContext? {
-			return getRuleContext(Control_transfer_statementContext.self,0)
-		}
-		open func defer_statement() -> Defer_statementContext? {
-			return getRuleContext(Defer_statementContext.self,0)
-		}
-		open func do_statement() -> Do_statementContext? {
-			return getRuleContext(Do_statementContext.self,0)
-		}
-		open func compiler_control_statement() -> Compiler_control_statementContext? {
-			return getRuleContext(Compiler_control_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitStatement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 2, Swift3Parser.RULE_statement)
 		defer {
@@ -635,37 +632,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class StatementsContext:ParserRuleContext {
-		open func statements_impl() -> Statements_implContext? {
-			return getRuleContext(Statements_implContext.self,0)
+
+	public class StatementsContext: ParserRuleContext {
+			open
+			func statements_impl() -> Statements_implContext? {
+				return getRuleContext(Statements_implContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_statements
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_statements }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterStatements(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterStatements(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitStatements(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitStatements(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitStatements(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitStatements(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitStatements(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitStatements(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statements() throws -> StatementsContext {
+	 open func statements() throws -> StatementsContext {
 		var _localctx: StatementsContext = StatementsContext(_ctx, getState())
 		try enterRule(_localctx, 4, Swift3Parser.RULE_statements)
 		defer {
@@ -685,46 +688,54 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Statements_implContext:ParserRuleContext {
-		public var indexBefore: Int!
-		public var indexAfter: Int = -1
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		open func statements_impl() -> Statements_implContext? {
-			return getRuleContext(Statements_implContext.self,0)
-		}
-		 public convenience init(_ parent: ParserRuleContext?, _ invokingState: Int, _ indexBefore: Int!) {
+
+	public class Statements_implContext: ParserRuleContext {
+		open var indexBefore: Int!
+		open var indexAfter: Int = -1
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func statements_impl() -> Statements_implContext? {
+				return getRuleContext(Statements_implContext.self, 0)
+			}
+		public convenience init(_ parent: ParserRuleContext?, _ invokingState: Int, _ indexBefore: Int!) {
 			self.init(parent, invokingState)
 			self.indexBefore = indexBefore;
-		 }
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_statements_impl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterStatements_impl(self)
+		}
+
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_statements_impl
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterStatements_impl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitStatements_impl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitStatements_impl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitStatements_impl(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitStatements_impl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitStatements_impl(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitStatements_impl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statements_impl(_ indexBefore: Int!) throws -> Statements_implContext {
+	 open func statements_impl(_ indexBefore: Int!) throws -> Statements_implContext {
 		var _localctx: Statements_implContext = Statements_implContext(_ctx, getState(), indexBefore)
 		try enterRule(_localctx, 6, Swift3Parser.RULE_statements_impl)
 		defer {
@@ -734,7 +745,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(615)
 		 	if (!(SwiftSupport.isSeparatedStatement(_input, _localctx.indexBefore))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isSeparatedStatement(_input, $indexBefore)"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isSeparatedStatement(_input, $indexBefore)"))
 		 	}
 		 	setState(616)
 		 	try statement()
@@ -759,46 +770,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Loop_statementContext:ParserRuleContext {
-		open func for_statement() -> For_statementContext? {
-			return getRuleContext(For_statementContext.self,0)
+
+	public class Loop_statementContext: ParserRuleContext {
+			open
+			func for_statement() -> For_statementContext? {
+				return getRuleContext(For_statementContext.self, 0)
+			}
+			open
+			func for_in_statement() -> For_in_statementContext? {
+				return getRuleContext(For_in_statementContext.self, 0)
+			}
+			open
+			func while_statement() -> While_statementContext? {
+				return getRuleContext(While_statementContext.self, 0)
+			}
+			open
+			func repeat_while_statement() -> Repeat_while_statementContext? {
+				return getRuleContext(Repeat_while_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_loop_statement
 		}
-		open func for_in_statement() -> For_in_statementContext? {
-			return getRuleContext(For_in_statementContext.self,0)
-		}
-		open func while_statement() -> While_statementContext? {
-			return getRuleContext(While_statementContext.self,0)
-		}
-		open func repeat_while_statement() -> Repeat_while_statementContext? {
-			return getRuleContext(Repeat_while_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_loop_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterLoop_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterLoop_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitLoop_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitLoop_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitLoop_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitLoop_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitLoop_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitLoop_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func loop_statement() throws -> Loop_statementContext {
+	 open func loop_statement() throws -> Loop_statementContext {
 		var _localctx: Loop_statementContext = Loop_statementContext(_ctx, getState())
 		try enterRule(_localctx, 8, Swift3Parser.RULE_loop_statement)
 		defer {
@@ -843,46 +863,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class For_statementContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class For_statementContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func for_init() -> For_initContext? {
+				return getRuleContext(For_initContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_for_statement
 		}
-		open func for_init() -> For_initContext? {
-			return getRuleContext(For_initContext.self,0)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_for_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFor_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFor_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFor_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFor_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFor_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFor_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFor_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFor_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func for_statement() throws -> For_statementContext {
+	 open func for_statement() throws -> For_statementContext {
 		var _localctx: For_statementContext = For_statementContext(_ctx, getState())
 		try enterRule(_localctx, 10, Swift3Parser.RULE_for_statement)
 		defer {
@@ -991,40 +1020,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class For_initContext:ParserRuleContext {
-		open func variable_declaration() -> Variable_declarationContext? {
-			return getRuleContext(Variable_declarationContext.self,0)
+
+	public class For_initContext: ParserRuleContext {
+			open
+			func variable_declaration() -> Variable_declarationContext? {
+				return getRuleContext(Variable_declarationContext.self, 0)
+			}
+			open
+			func expression_list() -> Expression_listContext? {
+				return getRuleContext(Expression_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_for_init
 		}
-		open func expression_list() -> Expression_listContext? {
-			return getRuleContext(Expression_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_for_init }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFor_init(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFor_init(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFor_init(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFor_init(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFor_init(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFor_init(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFor_init(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFor_init(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func for_init() throws -> For_initContext {
+	 open func for_init() throws -> For_initContext {
 		var _localctx: For_initContext = For_initContext(_ctx, getState())
 		try enterRule(_localctx, 12, Swift3Parser.RULE_for_init)
 		defer {
@@ -1057,46 +1093,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class For_in_statementContext:ParserRuleContext {
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
+
+	public class For_in_statementContext: ParserRuleContext {
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func where_clause() -> Where_clauseContext? {
+				return getRuleContext(Where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_for_in_statement
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
-		}
-		open func where_clause() -> Where_clauseContext? {
-			return getRuleContext(Where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_for_in_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFor_in_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFor_in_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFor_in_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFor_in_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFor_in_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFor_in_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFor_in_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFor_in_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func for_in_statement() throws -> For_in_statementContext {
+	 open func for_in_statement() throws -> For_in_statementContext {
 		var _localctx: For_in_statementContext = For_in_statementContext(_ctx, getState())
 		try enterRule(_localctx, 14, Swift3Parser.RULE_for_in_statement)
 		var _la: Int = 0
@@ -1148,40 +1193,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class While_statementContext:ParserRuleContext {
-		open func condition_list() -> Condition_listContext? {
-			return getRuleContext(Condition_listContext.self,0)
+
+	public class While_statementContext: ParserRuleContext {
+			open
+			func condition_list() -> Condition_listContext? {
+				return getRuleContext(Condition_listContext.self, 0)
+			}
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_while_statement
 		}
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_while_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterWhile_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterWhile_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitWhile_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitWhile_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitWhile_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitWhile_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitWhile_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitWhile_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func while_statement() throws -> While_statementContext {
+	 open func while_statement() throws -> While_statementContext {
 		var _localctx: While_statementContext = While_statementContext(_ctx, getState())
 		try enterRule(_localctx, 16, Swift3Parser.RULE_while_statement)
 		defer {
@@ -1205,40 +1257,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Condition_listContext:ParserRuleContext {
-		open func condition() -> Array<ConditionContext> {
-			return getRuleContexts(ConditionContext.self)
+
+	public class Condition_listContext: ParserRuleContext {
+			open
+			func condition() -> [ConditionContext] {
+				return getRuleContexts(ConditionContext.self)
+			}
+			open
+			func condition(_ i: Int) -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_condition_list
 		}
-		open func condition(_ i: Int) -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_condition_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCondition_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCondition_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCondition_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCondition_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCondition_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCondition_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCondition_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCondition_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func condition_list() throws -> Condition_listContext {
+	 open func condition_list() throws -> Condition_listContext {
 		var _localctx: Condition_listContext = Condition_listContext(_ctx, getState())
 		try enterRule(_localctx, 18, Swift3Parser.RULE_condition_list)
 		var _la: Int = 0
@@ -1277,46 +1336,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class ConditionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ConditionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func availability_condition() -> Availability_conditionContext? {
+				return getRuleContext(Availability_conditionContext.self, 0)
+			}
+			open
+			func case_condition() -> Case_conditionContext? {
+				return getRuleContext(Case_conditionContext.self, 0)
+			}
+			open
+			func optional_binding_condition() -> Optional_binding_conditionContext? {
+				return getRuleContext(Optional_binding_conditionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_condition
 		}
-		open func availability_condition() -> Availability_conditionContext? {
-			return getRuleContext(Availability_conditionContext.self,0)
-		}
-		open func case_condition() -> Case_conditionContext? {
-			return getRuleContext(Case_conditionContext.self,0)
-		}
-		open func optional_binding_condition() -> Optional_binding_conditionContext? {
-			return getRuleContext(Optional_binding_conditionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCondition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCondition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCondition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCondition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCondition(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCondition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCondition(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCondition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func condition() throws -> ConditionContext {
+	 open func condition() throws -> ConditionContext {
 		var _localctx: ConditionContext = ConditionContext(_ctx, getState())
 		try enterRule(_localctx, 20, Swift3Parser.RULE_condition)
 		defer {
@@ -1361,43 +1429,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Case_conditionContext:ParserRuleContext {
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
+
+	public class Case_conditionContext: ParserRuleContext {
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+			open
+			func initializer() -> InitializerContext? {
+				return getRuleContext(InitializerContext.self, 0)
+			}
+			open
+			func where_clause() -> Where_clauseContext? {
+				return getRuleContext(Where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_case_condition
 		}
-		open func initializer() -> InitializerContext? {
-			return getRuleContext(InitializerContext.self,0)
-		}
-		open func where_clause() -> Where_clauseContext? {
-			return getRuleContext(Where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_case_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCase_condition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCase_condition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCase_condition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCase_condition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCase_condition(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCase_condition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCase_condition(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCase_condition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func case_condition() throws -> Case_conditionContext {
+	 open func case_condition() throws -> Case_conditionContext {
 		var _localctx: Case_conditionContext = Case_conditionContext(_ctx, getState())
 		try enterRule(_localctx, 22, Swift3Parser.RULE_case_condition)
 		var _la: Int = 0
@@ -1435,40 +1511,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Optional_binding_conditionContext:ParserRuleContext {
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
+
+	public class Optional_binding_conditionContext: ParserRuleContext {
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+			open
+			func initializer() -> InitializerContext? {
+				return getRuleContext(InitializerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_optional_binding_condition
 		}
-		open func initializer() -> InitializerContext? {
-			return getRuleContext(InitializerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_optional_binding_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterOptional_binding_condition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterOptional_binding_condition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitOptional_binding_condition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitOptional_binding_condition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitOptional_binding_condition(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitOptional_binding_condition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitOptional_binding_condition(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitOptional_binding_condition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optional_binding_condition() throws -> Optional_binding_conditionContext {
+	 open func optional_binding_condition() throws -> Optional_binding_conditionContext {
 		var _localctx: Optional_binding_conditionContext = Optional_binding_conditionContext(_ctx, getState())
 		try enterRule(_localctx, 24, Swift3Parser.RULE_optional_binding_condition)
 		defer {
@@ -1500,7 +1583,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1511,40 +1594,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Repeat_while_statementContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Repeat_while_statementContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_repeat_while_statement
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_repeat_while_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRepeat_while_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRepeat_while_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRepeat_while_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRepeat_while_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRepeat_while_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRepeat_while_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRepeat_while_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRepeat_while_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func repeat_while_statement() throws -> Repeat_while_statementContext {
+	 open func repeat_while_statement() throws -> Repeat_while_statementContext {
 		var _localctx: Repeat_while_statementContext = Repeat_while_statementContext(_ctx, getState())
 		try enterRule(_localctx, 26, Swift3Parser.RULE_repeat_while_statement)
 		defer {
@@ -1570,43 +1660,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Branch_statementContext:ParserRuleContext {
-		open func if_statement() -> If_statementContext? {
-			return getRuleContext(If_statementContext.self,0)
+
+	public class Branch_statementContext: ParserRuleContext {
+			open
+			func if_statement() -> If_statementContext? {
+				return getRuleContext(If_statementContext.self, 0)
+			}
+			open
+			func guard_statement() -> Guard_statementContext? {
+				return getRuleContext(Guard_statementContext.self, 0)
+			}
+			open
+			func switch_statement() -> Switch_statementContext? {
+				return getRuleContext(Switch_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_branch_statement
 		}
-		open func guard_statement() -> Guard_statementContext? {
-			return getRuleContext(Guard_statementContext.self,0)
-		}
-		open func switch_statement() -> Switch_statementContext? {
-			return getRuleContext(Switch_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_branch_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterBranch_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterBranch_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitBranch_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitBranch_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitBranch_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitBranch_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitBranch_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitBranch_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func branch_statement() throws -> Branch_statementContext {
+	 open func branch_statement() throws -> Branch_statementContext {
 		var _localctx: Branch_statementContext = Branch_statementContext(_ctx, getState())
 		try enterRule(_localctx, 28, Swift3Parser.RULE_branch_statement)
 		defer {
@@ -1637,7 +1735,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1648,43 +1746,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class If_statementContext:ParserRuleContext {
-		open func condition_list() -> Condition_listContext? {
-			return getRuleContext(Condition_listContext.self,0)
+
+	public class If_statementContext: ParserRuleContext {
+			open
+			func condition_list() -> Condition_listContext? {
+				return getRuleContext(Condition_listContext.self, 0)
+			}
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func else_clause() -> Else_clauseContext? {
+				return getRuleContext(Else_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_if_statement
 		}
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
-		}
-		open func else_clause() -> Else_clauseContext? {
-			return getRuleContext(Else_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_if_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterIf_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterIf_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitIf_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitIf_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitIf_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitIf_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitIf_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitIf_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func if_statement() throws -> If_statementContext {
+	 open func if_statement() throws -> If_statementContext {
 		var _localctx: If_statementContext = If_statementContext(_ctx, getState())
 		try enterRule(_localctx, 30, Swift3Parser.RULE_if_statement)
 		defer {
@@ -1718,40 +1824,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Else_clauseContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Else_clauseContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func if_statement() -> If_statementContext? {
+				return getRuleContext(If_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_else_clause
 		}
-		open func if_statement() -> If_statementContext? {
-			return getRuleContext(If_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_else_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterElse_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterElse_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitElse_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitElse_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitElse_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitElse_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitElse_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitElse_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func else_clause() throws -> Else_clauseContext {
+	 open func else_clause() throws -> Else_clauseContext {
 		var _localctx: Else_clauseContext = Else_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 32, Swift3Parser.RULE_else_clause)
 		defer {
@@ -1788,40 +1901,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Guard_statementContext:ParserRuleContext {
-		open func condition_list() -> Condition_listContext? {
-			return getRuleContext(Condition_listContext.self,0)
+
+	public class Guard_statementContext: ParserRuleContext {
+			open
+			func condition_list() -> Condition_listContext? {
+				return getRuleContext(Condition_listContext.self, 0)
+			}
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_guard_statement
 		}
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_guard_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGuard_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGuard_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGuard_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGuard_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGuard_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGuard_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGuard_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGuard_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func guard_statement() throws -> Guard_statementContext {
+	 open func guard_statement() throws -> Guard_statementContext {
 		var _localctx: Guard_statementContext = Guard_statementContext(_ctx, getState())
 		try enterRule(_localctx, 34, Swift3Parser.RULE_guard_statement)
 		defer {
@@ -1847,40 +1967,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Switch_statementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Switch_statementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func switch_cases() -> Switch_casesContext? {
+				return getRuleContext(Switch_casesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_switch_statement
 		}
-		open func switch_cases() -> Switch_casesContext? {
-			return getRuleContext(Switch_casesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_switch_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSwitch_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSwitch_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSwitch_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSwitch_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSwitch_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSwitch_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSwitch_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSwitch_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func switch_statement() throws -> Switch_statementContext {
+	 open func switch_statement() throws -> Switch_statementContext {
 		var _localctx: Switch_statementContext = Switch_statementContext(_ctx, getState())
 		try enterRule(_localctx, 36, Swift3Parser.RULE_switch_statement)
 		var _la: Int = 0
@@ -1920,40 +2047,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Switch_casesContext:ParserRuleContext {
-		open func switch_case() -> Switch_caseContext? {
-			return getRuleContext(Switch_caseContext.self,0)
+
+	public class Switch_casesContext: ParserRuleContext {
+			open
+			func switch_case() -> Switch_caseContext? {
+				return getRuleContext(Switch_caseContext.self, 0)
+			}
+			open
+			func switch_cases() -> Switch_casesContext? {
+				return getRuleContext(Switch_casesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_switch_cases
 		}
-		open func switch_cases() -> Switch_casesContext? {
-			return getRuleContext(Switch_casesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_switch_cases }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSwitch_cases(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSwitch_cases(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSwitch_cases(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSwitch_cases(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSwitch_cases(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSwitch_cases(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSwitch_cases(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSwitch_cases(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func switch_cases() throws -> Switch_casesContext {
+	 open func switch_cases() throws -> Switch_casesContext {
 		var _localctx: Switch_casesContext = Switch_casesContext(_ctx, getState())
 		try enterRule(_localctx, 38, Swift3Parser.RULE_switch_cases)
 		var _la: Int = 0
@@ -1987,43 +2121,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Switch_caseContext:ParserRuleContext {
-		open func case_label() -> Case_labelContext? {
-			return getRuleContext(Case_labelContext.self,0)
+
+	public class Switch_caseContext: ParserRuleContext {
+			open
+			func case_label() -> Case_labelContext? {
+				return getRuleContext(Case_labelContext.self, 0)
+			}
+			open
+			func statements() -> StatementsContext? {
+				return getRuleContext(StatementsContext.self, 0)
+			}
+			open
+			func default_label() -> Default_labelContext? {
+				return getRuleContext(Default_labelContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_switch_case
 		}
-		open func statements() -> StatementsContext? {
-			return getRuleContext(StatementsContext.self,0)
-		}
-		open func default_label() -> Default_labelContext? {
-			return getRuleContext(Default_labelContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_switch_case }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSwitch_case(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSwitch_case(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSwitch_case(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSwitch_case(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSwitch_case(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSwitch_case(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSwitch_case(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSwitch_case(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func switch_case() throws -> Switch_caseContext {
+	 open func switch_case() throws -> Switch_caseContext {
 		var _localctx: Switch_caseContext = Switch_caseContext(_ctx, getState())
 		try enterRule(_localctx, 40, Swift3Parser.RULE_switch_case)
 		defer {
@@ -2051,7 +2193,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2062,37 +2204,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Case_labelContext:ParserRuleContext {
-		open func case_item_list() -> Case_item_listContext? {
-			return getRuleContext(Case_item_listContext.self,0)
+
+	public class Case_labelContext: ParserRuleContext {
+			open
+			func case_item_list() -> Case_item_listContext? {
+				return getRuleContext(Case_item_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_case_label
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_case_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCase_label(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCase_label(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCase_label(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCase_label(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCase_label(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCase_label(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCase_label(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCase_label(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func case_label() throws -> Case_labelContext {
+	 open func case_label() throws -> Case_labelContext {
 		var _localctx: Case_labelContext = Case_labelContext(_ctx, getState())
 		try enterRule(_localctx, 42, Swift3Parser.RULE_case_label)
 		defer {
@@ -2116,43 +2264,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Case_item_listContext:ParserRuleContext {
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
+
+	public class Case_item_listContext: ParserRuleContext {
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+			open
+			func where_clause() -> Where_clauseContext? {
+				return getRuleContext(Where_clauseContext.self, 0)
+			}
+			open
+			func case_item_list() -> Case_item_listContext? {
+				return getRuleContext(Case_item_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_case_item_list
 		}
-		open func where_clause() -> Where_clauseContext? {
-			return getRuleContext(Where_clauseContext.self,0)
-		}
-		open func case_item_list() -> Case_item_listContext? {
-			return getRuleContext(Case_item_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_case_item_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCase_item_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCase_item_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCase_item_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCase_item_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCase_item_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCase_item_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCase_item_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCase_item_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func case_item_list() throws -> Case_item_listContext {
+	 open func case_item_list() throws -> Case_item_listContext {
 		var _localctx: Case_item_listContext = Case_item_listContext(_ctx, getState())
 		try enterRule(_localctx, 44, Swift3Parser.RULE_case_item_list)
 		var _la: Int = 0
@@ -2216,34 +2372,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Default_labelContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_default_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDefault_label(self)
+
+	public class Default_labelContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_default_label
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDefault_label(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDefault_label(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDefault_label(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDefault_label(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDefault_label(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDefault_label(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDefault_label(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func default_label() throws -> Default_labelContext {
+	 open func default_label() throws -> Default_labelContext {
 		var _localctx: Default_labelContext = Default_labelContext(_ctx, getState())
 		try enterRule(_localctx, 46, Swift3Parser.RULE_default_label)
 		defer {
@@ -2265,37 +2426,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Where_clauseContext:ParserRuleContext {
-		open func where_expression() -> Where_expressionContext? {
-			return getRuleContext(Where_expressionContext.self,0)
+
+	public class Where_clauseContext: ParserRuleContext {
+			open
+			func where_expression() -> Where_expressionContext? {
+				return getRuleContext(Where_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_where_clause
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_where_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterWhere_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterWhere_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitWhere_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitWhere_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitWhere_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitWhere_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitWhere_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitWhere_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func where_clause() throws -> Where_clauseContext {
+	 open func where_clause() throws -> Where_clauseContext {
 		var _localctx: Where_clauseContext = Where_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 48, Swift3Parser.RULE_where_clause)
 		defer {
@@ -2317,37 +2484,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Where_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Where_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_where_expression
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_where_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterWhere_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterWhere_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitWhere_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitWhere_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitWhere_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitWhere_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitWhere_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitWhere_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func where_expression() throws -> Where_expressionContext {
+	 open func where_expression() throws -> Where_expressionContext {
 		var _localctx: Where_expressionContext = Where_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 50, Swift3Parser.RULE_where_expression)
 		defer {
@@ -2367,49 +2540,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Labeled_statementContext:ParserRuleContext {
-		open func statement_label() -> Statement_labelContext? {
-			return getRuleContext(Statement_labelContext.self,0)
+
+	public class Labeled_statementContext: ParserRuleContext {
+			open
+			func statement_label() -> Statement_labelContext? {
+				return getRuleContext(Statement_labelContext.self, 0)
+			}
+			open
+			func loop_statement() -> Loop_statementContext? {
+				return getRuleContext(Loop_statementContext.self, 0)
+			}
+			open
+			func if_statement() -> If_statementContext? {
+				return getRuleContext(If_statementContext.self, 0)
+			}
+			open
+			func switch_statement() -> Switch_statementContext? {
+				return getRuleContext(Switch_statementContext.self, 0)
+			}
+			open
+			func do_statement() -> Do_statementContext? {
+				return getRuleContext(Do_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_labeled_statement
 		}
-		open func loop_statement() -> Loop_statementContext? {
-			return getRuleContext(Loop_statementContext.self,0)
-		}
-		open func if_statement() -> If_statementContext? {
-			return getRuleContext(If_statementContext.self,0)
-		}
-		open func switch_statement() -> Switch_statementContext? {
-			return getRuleContext(Switch_statementContext.self,0)
-		}
-		open func do_statement() -> Do_statementContext? {
-			return getRuleContext(Do_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_labeled_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterLabeled_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterLabeled_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitLabeled_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitLabeled_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitLabeled_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitLabeled_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitLabeled_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitLabeled_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func labeled_statement() throws -> Labeled_statementContext {
+	 open func labeled_statement() throws -> Labeled_statementContext {
 		var _localctx: Labeled_statementContext = Labeled_statementContext(_ctx, getState())
 		try enterRule(_localctx, 52, Swift3Parser.RULE_labeled_statement)
 		defer {
@@ -2462,37 +2645,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Statement_labelContext:ParserRuleContext {
-		open func label_name() -> Label_nameContext? {
-			return getRuleContext(Label_nameContext.self,0)
+
+	public class Statement_labelContext: ParserRuleContext {
+			open
+			func label_name() -> Label_nameContext? {
+				return getRuleContext(Label_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_statement_label
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_statement_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterStatement_label(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterStatement_label(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitStatement_label(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitStatement_label(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitStatement_label(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitStatement_label(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitStatement_label(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitStatement_label(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement_label() throws -> Statement_labelContext {
+	 open func statement_label() throws -> Statement_labelContext {
 		var _localctx: Statement_labelContext = Statement_labelContext(_ctx, getState())
 		try enterRule(_localctx, 54, Swift3Parser.RULE_statement_label)
 		defer {
@@ -2514,37 +2703,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Label_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Label_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_label_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_label_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterLabel_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterLabel_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitLabel_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitLabel_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitLabel_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitLabel_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitLabel_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitLabel_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label_name() throws -> Label_nameContext {
+	 open func label_name() throws -> Label_nameContext {
 		var _localctx: Label_nameContext = Label_nameContext(_ctx, getState())
 		try enterRule(_localctx, 56, Swift3Parser.RULE_label_name)
 		defer {
@@ -2564,49 +2759,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Control_transfer_statementContext:ParserRuleContext {
-		open func break_statement() -> Break_statementContext? {
-			return getRuleContext(Break_statementContext.self,0)
+
+	public class Control_transfer_statementContext: ParserRuleContext {
+			open
+			func break_statement() -> Break_statementContext? {
+				return getRuleContext(Break_statementContext.self, 0)
+			}
+			open
+			func continue_statement() -> Continue_statementContext? {
+				return getRuleContext(Continue_statementContext.self, 0)
+			}
+			open
+			func fallthrough_statement() -> Fallthrough_statementContext? {
+				return getRuleContext(Fallthrough_statementContext.self, 0)
+			}
+			open
+			func return_statement() -> Return_statementContext? {
+				return getRuleContext(Return_statementContext.self, 0)
+			}
+			open
+			func throw_statement() -> Throw_statementContext? {
+				return getRuleContext(Throw_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_control_transfer_statement
 		}
-		open func continue_statement() -> Continue_statementContext? {
-			return getRuleContext(Continue_statementContext.self,0)
-		}
-		open func fallthrough_statement() -> Fallthrough_statementContext? {
-			return getRuleContext(Fallthrough_statementContext.self,0)
-		}
-		open func return_statement() -> Return_statementContext? {
-			return getRuleContext(Return_statementContext.self,0)
-		}
-		open func throw_statement() -> Throw_statementContext? {
-			return getRuleContext(Throw_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_control_transfer_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterControl_transfer_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterControl_transfer_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitControl_transfer_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitControl_transfer_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitControl_transfer_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitControl_transfer_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitControl_transfer_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitControl_transfer_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func control_transfer_statement() throws -> Control_transfer_statementContext {
+	 open func control_transfer_statement() throws -> Control_transfer_statementContext {
 		var _localctx: Control_transfer_statementContext = Control_transfer_statementContext(_ctx, getState())
 		try enterRule(_localctx, 58, Swift3Parser.RULE_control_transfer_statement)
 		defer {
@@ -2651,7 +2856,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2662,37 +2867,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Break_statementContext:ParserRuleContext {
-		open func label_name() -> Label_nameContext? {
-			return getRuleContext(Label_nameContext.self,0)
+
+	public class Break_statementContext: ParserRuleContext {
+			open
+			func label_name() -> Label_nameContext? {
+				return getRuleContext(Label_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_break_statement
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_break_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterBreak_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterBreak_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitBreak_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitBreak_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitBreak_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitBreak_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitBreak_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitBreak_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func break_statement() throws -> Break_statementContext {
+	 open func break_statement() throws -> Break_statementContext {
 		var _localctx: Break_statementContext = Break_statementContext(_ctx, getState())
 		try enterRule(_localctx, 60, Swift3Parser.RULE_break_statement)
 		defer {
@@ -2722,37 +2933,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Continue_statementContext:ParserRuleContext {
-		open func label_name() -> Label_nameContext? {
-			return getRuleContext(Label_nameContext.self,0)
+
+	public class Continue_statementContext: ParserRuleContext {
+			open
+			func label_name() -> Label_nameContext? {
+				return getRuleContext(Label_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_continue_statement
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_continue_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterContinue_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterContinue_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitContinue_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitContinue_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitContinue_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitContinue_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitContinue_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitContinue_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func continue_statement() throws -> Continue_statementContext {
+	 open func continue_statement() throws -> Continue_statementContext {
 		var _localctx: Continue_statementContext = Continue_statementContext(_ctx, getState())
 		try enterRule(_localctx, 62, Swift3Parser.RULE_continue_statement)
 		defer {
@@ -2782,34 +2999,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Fallthrough_statementContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_fallthrough_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFallthrough_statement(self)
+
+	public class Fallthrough_statementContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_fallthrough_statement
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFallthrough_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFallthrough_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFallthrough_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFallthrough_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFallthrough_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFallthrough_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFallthrough_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fallthrough_statement() throws -> Fallthrough_statementContext {
+	 open func fallthrough_statement() throws -> Fallthrough_statementContext {
 		var _localctx: Fallthrough_statementContext = Fallthrough_statementContext(_ctx, getState())
 		try enterRule(_localctx, 64, Swift3Parser.RULE_fallthrough_statement)
 		defer {
@@ -2829,37 +3051,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Return_statementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Return_statementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_return_statement
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_return_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterReturn_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterReturn_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitReturn_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitReturn_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitReturn_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitReturn_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitReturn_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitReturn_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func return_statement() throws -> Return_statementContext {
+	 open func return_statement() throws -> Return_statementContext {
 		var _localctx: Return_statementContext = Return_statementContext(_ctx, getState())
 		try enterRule(_localctx, 66, Swift3Parser.RULE_return_statement)
 		defer {
@@ -2889,37 +3117,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Throw_statementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Throw_statementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_throw_statement
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_throw_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThrow_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThrow_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThrow_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThrow_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThrow_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThrow_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThrow_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThrow_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func throw_statement() throws -> Throw_statementContext {
+	 open func throw_statement() throws -> Throw_statementContext {
 		var _localctx: Throw_statementContext = Throw_statementContext(_ctx, getState())
 		try enterRule(_localctx, 68, Swift3Parser.RULE_throw_statement)
 		defer {
@@ -2941,37 +3175,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Defer_statementContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Defer_statementContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_defer_statement
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_defer_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDefer_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDefer_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDefer_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDefer_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDefer_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDefer_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDefer_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDefer_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func defer_statement() throws -> Defer_statementContext {
+	 open func defer_statement() throws -> Defer_statementContext {
 		var _localctx: Defer_statementContext = Defer_statementContext(_ctx, getState())
 		try enterRule(_localctx, 70, Swift3Parser.RULE_defer_statement)
 		defer {
@@ -2993,40 +3233,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Do_statementContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Do_statementContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func catch_clauses() -> Catch_clausesContext? {
+				return getRuleContext(Catch_clausesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_do_statement
 		}
-		open func catch_clauses() -> Catch_clausesContext? {
-			return getRuleContext(Catch_clausesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_do_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDo_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDo_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDo_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDo_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDo_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDo_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDo_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDo_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func do_statement() throws -> Do_statementContext {
+	 open func do_statement() throws -> Do_statementContext {
 		var _localctx: Do_statementContext = Do_statementContext(_ctx, getState())
 		try enterRule(_localctx, 72, Swift3Parser.RULE_do_statement)
 		defer {
@@ -3058,40 +3305,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Catch_clausesContext:ParserRuleContext {
-		open func catch_clause() -> Catch_clauseContext? {
-			return getRuleContext(Catch_clauseContext.self,0)
+
+	public class Catch_clausesContext: ParserRuleContext {
+			open
+			func catch_clause() -> Catch_clauseContext? {
+				return getRuleContext(Catch_clauseContext.self, 0)
+			}
+			open
+			func catch_clauses() -> Catch_clausesContext? {
+				return getRuleContext(Catch_clausesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_catch_clauses
 		}
-		open func catch_clauses() -> Catch_clausesContext? {
-			return getRuleContext(Catch_clausesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_catch_clauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCatch_clauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCatch_clauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCatch_clauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCatch_clauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCatch_clauses(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCatch_clauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCatch_clauses(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCatch_clauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func catch_clauses() throws -> Catch_clausesContext {
+	 open func catch_clauses() throws -> Catch_clausesContext {
 		var _localctx: Catch_clausesContext = Catch_clausesContext(_ctx, getState())
 		try enterRule(_localctx, 74, Swift3Parser.RULE_catch_clauses)
 		defer {
@@ -3121,43 +3375,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Catch_clauseContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Catch_clauseContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+			open
+			func where_clause() -> Where_clauseContext? {
+				return getRuleContext(Where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_catch_clause
 		}
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
-		}
-		open func where_clause() -> Where_clauseContext? {
-			return getRuleContext(Where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_catch_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCatch_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCatch_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCatch_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCatch_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCatch_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCatch_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCatch_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCatch_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func catch_clause() throws -> Catch_clauseContext {
+	 open func catch_clause() throws -> Catch_clauseContext {
 		var _localctx: Catch_clauseContext = Catch_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 76, Swift3Parser.RULE_catch_clause)
 		var _la: Int = 0
@@ -3203,40 +3465,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Compiler_control_statementContext:ParserRuleContext {
-		open func conditional_compilation_block() -> Conditional_compilation_blockContext? {
-			return getRuleContext(Conditional_compilation_blockContext.self,0)
+
+	public class Compiler_control_statementContext: ParserRuleContext {
+			open
+			func conditional_compilation_block() -> Conditional_compilation_blockContext? {
+				return getRuleContext(Conditional_compilation_blockContext.self, 0)
+			}
+			open
+			func line_control_statement() -> Line_control_statementContext? {
+				return getRuleContext(Line_control_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_compiler_control_statement
 		}
-		open func line_control_statement() -> Line_control_statementContext? {
-			return getRuleContext(Line_control_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_compiler_control_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCompiler_control_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCompiler_control_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCompiler_control_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCompiler_control_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCompiler_control_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCompiler_control_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCompiler_control_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCompiler_control_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compiler_control_statement() throws -> Compiler_control_statementContext {
+	 open func compiler_control_statement() throws -> Compiler_control_statementContext {
 		var _localctx: Compiler_control_statementContext = Compiler_control_statementContext(_ctx, getState())
 		try enterRule(_localctx, 78, Swift3Parser.RULE_compiler_control_statement)
 		defer {
@@ -3260,7 +3529,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3271,46 +3540,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Conditional_compilation_blockContext:ParserRuleContext {
-		open func if_directive_clause() -> If_directive_clauseContext? {
-			return getRuleContext(If_directive_clauseContext.self,0)
+
+	public class Conditional_compilation_blockContext: ParserRuleContext {
+			open
+			func if_directive_clause() -> If_directive_clauseContext? {
+				return getRuleContext(If_directive_clauseContext.self, 0)
+			}
+			open
+			func endif_directive() -> Endif_directiveContext? {
+				return getRuleContext(Endif_directiveContext.self, 0)
+			}
+			open
+			func elseif_directive_clauses() -> Elseif_directive_clausesContext? {
+				return getRuleContext(Elseif_directive_clausesContext.self, 0)
+			}
+			open
+			func else_directive_clause() -> Else_directive_clauseContext? {
+				return getRuleContext(Else_directive_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_conditional_compilation_block
 		}
-		open func endif_directive() -> Endif_directiveContext? {
-			return getRuleContext(Endif_directiveContext.self,0)
-		}
-		open func elseif_directive_clauses() -> Elseif_directive_clausesContext? {
-			return getRuleContext(Elseif_directive_clausesContext.self,0)
-		}
-		open func else_directive_clause() -> Else_directive_clauseContext? {
-			return getRuleContext(Else_directive_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_conditional_compilation_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterConditional_compilation_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterConditional_compilation_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitConditional_compilation_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitConditional_compilation_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitConditional_compilation_block(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitConditional_compilation_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitConditional_compilation_block(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitConditional_compilation_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditional_compilation_block() throws -> Conditional_compilation_blockContext {
+	 open func conditional_compilation_block() throws -> Conditional_compilation_blockContext {
 		var _localctx: Conditional_compilation_blockContext = Conditional_compilation_blockContext(_ctx, getState())
 		try enterRule(_localctx, 80, Swift3Parser.RULE_conditional_compilation_block)
 		var _la: Int = 0
@@ -3359,43 +3637,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class If_directive_clauseContext:ParserRuleContext {
-		open func if_directive() -> If_directiveContext? {
-			return getRuleContext(If_directiveContext.self,0)
+
+	public class If_directive_clauseContext: ParserRuleContext {
+			open
+			func if_directive() -> If_directiveContext? {
+				return getRuleContext(If_directiveContext.self, 0)
+			}
+			open
+			func compilation_condition() -> Compilation_conditionContext? {
+				return getRuleContext(Compilation_conditionContext.self, 0)
+			}
+			open
+			func statements() -> StatementsContext? {
+				return getRuleContext(StatementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_if_directive_clause
 		}
-		open func compilation_condition() -> Compilation_conditionContext? {
-			return getRuleContext(Compilation_conditionContext.self,0)
-		}
-		open func statements() -> StatementsContext? {
-			return getRuleContext(StatementsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_if_directive_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterIf_directive_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterIf_directive_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitIf_directive_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitIf_directive_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitIf_directive_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitIf_directive_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitIf_directive_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitIf_directive_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func if_directive_clause() throws -> If_directive_clauseContext {
+	 open func if_directive_clause() throws -> If_directive_clauseContext {
 		var _localctx: If_directive_clauseContext = If_directive_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 82, Swift3Parser.RULE_if_directive_clause)
 		defer {
@@ -3427,40 +3713,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Elseif_directive_clausesContext:ParserRuleContext {
-		open func elseif_directive_clause() -> Array<Elseif_directive_clauseContext> {
-			return getRuleContexts(Elseif_directive_clauseContext.self)
+
+	public class Elseif_directive_clausesContext: ParserRuleContext {
+			open
+			func elseif_directive_clause() -> [Elseif_directive_clauseContext] {
+				return getRuleContexts(Elseif_directive_clauseContext.self)
+			}
+			open
+			func elseif_directive_clause(_ i: Int) -> Elseif_directive_clauseContext? {
+				return getRuleContext(Elseif_directive_clauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_elseif_directive_clauses
 		}
-		open func elseif_directive_clause(_ i: Int) -> Elseif_directive_clauseContext? {
-			return getRuleContext(Elseif_directive_clauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_elseif_directive_clauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterElseif_directive_clauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterElseif_directive_clauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitElseif_directive_clauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitElseif_directive_clauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitElseif_directive_clauses(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitElseif_directive_clauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitElseif_directive_clauses(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitElseif_directive_clauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elseif_directive_clauses() throws -> Elseif_directive_clausesContext {
+	 open func elseif_directive_clauses() throws -> Elseif_directive_clausesContext {
 		var _localctx: Elseif_directive_clausesContext = Elseif_directive_clausesContext(_ctx, getState())
 		try enterRule(_localctx, 84, Swift3Parser.RULE_elseif_directive_clauses)
 		var _la: Int = 0
@@ -3495,43 +3788,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Elseif_directive_clauseContext:ParserRuleContext {
-		open func elseif_directive() -> Elseif_directiveContext? {
-			return getRuleContext(Elseif_directiveContext.self,0)
+
+	public class Elseif_directive_clauseContext: ParserRuleContext {
+			open
+			func elseif_directive() -> Elseif_directiveContext? {
+				return getRuleContext(Elseif_directiveContext.self, 0)
+			}
+			open
+			func compilation_condition() -> Compilation_conditionContext? {
+				return getRuleContext(Compilation_conditionContext.self, 0)
+			}
+			open
+			func statements() -> StatementsContext? {
+				return getRuleContext(StatementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_elseif_directive_clause
 		}
-		open func compilation_condition() -> Compilation_conditionContext? {
-			return getRuleContext(Compilation_conditionContext.self,0)
-		}
-		open func statements() -> StatementsContext? {
-			return getRuleContext(StatementsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_elseif_directive_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterElseif_directive_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterElseif_directive_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitElseif_directive_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitElseif_directive_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitElseif_directive_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitElseif_directive_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitElseif_directive_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitElseif_directive_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elseif_directive_clause() throws -> Elseif_directive_clauseContext {
+	 open func elseif_directive_clause() throws -> Elseif_directive_clauseContext {
 		var _localctx: Elseif_directive_clauseContext = Elseif_directive_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 86, Swift3Parser.RULE_elseif_directive_clause)
 		defer {
@@ -3563,40 +3864,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Else_directive_clauseContext:ParserRuleContext {
-		open func else_directive() -> Else_directiveContext? {
-			return getRuleContext(Else_directiveContext.self,0)
+
+	public class Else_directive_clauseContext: ParserRuleContext {
+			open
+			func else_directive() -> Else_directiveContext? {
+				return getRuleContext(Else_directiveContext.self, 0)
+			}
+			open
+			func statements() -> StatementsContext? {
+				return getRuleContext(StatementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_else_directive_clause
 		}
-		open func statements() -> StatementsContext? {
-			return getRuleContext(StatementsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_else_directive_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterElse_directive_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterElse_directive_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitElse_directive_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitElse_directive_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitElse_directive_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitElse_directive_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitElse_directive_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitElse_directive_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func else_directive_clause() throws -> Else_directive_clauseContext {
+	 open func else_directive_clause() throws -> Else_directive_clauseContext {
 		var _localctx: Else_directive_clauseContext = Else_directive_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 88, Swift3Parser.RULE_else_directive_clause)
 		defer {
@@ -3626,34 +3934,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class If_directiveContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_if_directive }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterIf_directive(self)
+
+	public class If_directiveContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_if_directive
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterIf_directive(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitIf_directive(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitIf_directive(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitIf_directive(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitIf_directive(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitIf_directive(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitIf_directive(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func if_directive() throws -> If_directiveContext {
+	 open func if_directive() throws -> If_directiveContext {
 		var _localctx: If_directiveContext = If_directiveContext(_ctx, getState())
 		try enterRule(_localctx, 90, Swift3Parser.RULE_if_directive)
 		defer {
@@ -3673,34 +3986,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Elseif_directiveContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_elseif_directive }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterElseif_directive(self)
+
+	public class Elseif_directiveContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_elseif_directive
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterElseif_directive(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitElseif_directive(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitElseif_directive(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitElseif_directive(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitElseif_directive(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitElseif_directive(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitElseif_directive(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elseif_directive() throws -> Elseif_directiveContext {
+	 open func elseif_directive() throws -> Elseif_directiveContext {
 		var _localctx: Elseif_directiveContext = Elseif_directiveContext(_ctx, getState())
 		try enterRule(_localctx, 92, Swift3Parser.RULE_elseif_directive)
 		defer {
@@ -3720,34 +4038,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Else_directiveContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_else_directive }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterElse_directive(self)
+
+	public class Else_directiveContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_else_directive
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterElse_directive(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitElse_directive(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitElse_directive(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitElse_directive(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitElse_directive(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitElse_directive(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitElse_directive(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func else_directive() throws -> Else_directiveContext {
+	 open func else_directive() throws -> Else_directiveContext {
 		var _localctx: Else_directiveContext = Else_directiveContext(_ctx, getState())
 		try enterRule(_localctx, 94, Swift3Parser.RULE_else_directive)
 		defer {
@@ -3767,34 +4090,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Endif_directiveContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_endif_directive }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterEndif_directive(self)
+
+	public class Endif_directiveContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_endif_directive
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterEndif_directive(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitEndif_directive(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitEndif_directive(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitEndif_directive(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitEndif_directive(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitEndif_directive(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitEndif_directive(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func endif_directive() throws -> Endif_directiveContext {
+	 open func endif_directive() throws -> Endif_directiveContext {
 		var _localctx: Endif_directiveContext = Endif_directiveContext(_ctx, getState())
 		try enterRule(_localctx, 96, Swift3Parser.RULE_endif_directive)
 		defer {
@@ -3815,55 +4143,66 @@ open class Swift3Parser: Parser {
 		return _localctx
 	}
 
-	open class Compilation_conditionContext:ParserRuleContext {
-		open func platform_condition() -> Platform_conditionContext? {
-			return getRuleContext(Platform_conditionContext.self,0)
+	public class Compilation_conditionContext: ParserRuleContext {
+			open
+			func platform_condition() -> Platform_conditionContext? {
+				return getRuleContext(Platform_conditionContext.self, 0)
+			}
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+			open
+			func boolean_literal() -> Boolean_literalContext? {
+				return getRuleContext(Boolean_literalContext.self, 0)
+			}
+			open
+			func compilation_condition() -> [Compilation_conditionContext] {
+				return getRuleContexts(Compilation_conditionContext.self)
+			}
+			open
+			func compilation_condition(_ i: Int) -> Compilation_conditionContext? {
+				return getRuleContext(Compilation_conditionContext.self, i)
+			}
+			open
+			func compilation_condition_AND() -> Compilation_condition_ANDContext? {
+				return getRuleContext(Compilation_condition_ANDContext.self, 0)
+			}
+			open
+			func compilation_condition_OR() -> Compilation_condition_ORContext? {
+				return getRuleContext(Compilation_condition_ORContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_compilation_condition
 		}
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
-		}
-		open func boolean_literal() -> Boolean_literalContext? {
-			return getRuleContext(Boolean_literalContext.self,0)
-		}
-		open func compilation_condition() -> Array<Compilation_conditionContext> {
-			return getRuleContexts(Compilation_conditionContext.self)
-		}
-		open func compilation_condition(_ i: Int) -> Compilation_conditionContext? {
-			return getRuleContext(Compilation_conditionContext.self,i)
-		}
-		open func compilation_condition_AND() -> Compilation_condition_ANDContext? {
-			return getRuleContext(Compilation_condition_ANDContext.self,0)
-		}
-		open func compilation_condition_OR() -> Compilation_condition_ORContext? {
-			return getRuleContext(Compilation_condition_ORContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_compilation_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCompilation_condition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCompilation_condition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCompilation_condition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCompilation_condition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCompilation_condition(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCompilation_condition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCompilation_condition(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCompilation_condition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func compilation_condition( ) throws -> Compilation_conditionContext   {
+	 public final  func compilation_condition( ) throws -> Compilation_conditionContext   {
 		return try compilation_condition(0)
 	}
 	@discardableResult
@@ -3934,7 +4273,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_compilation_condition)
 						setState(895)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(896)
 						try compilation_condition_AND()
@@ -3947,7 +4286,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_compilation_condition)
 						setState(899)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(900)
 						try compilation_condition_OR()
@@ -3973,46 +4312,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx;
 	}
-	open class Platform_conditionContext:ParserRuleContext {
-		open func operating_system() -> Operating_systemContext? {
-			return getRuleContext(Operating_systemContext.self,0)
+
+	public class Platform_conditionContext: ParserRuleContext {
+			open
+			func operating_system() -> Operating_systemContext? {
+				return getRuleContext(Operating_systemContext.self, 0)
+			}
+			open
+			func architecture() -> ArchitectureContext? {
+				return getRuleContext(ArchitectureContext.self, 0)
+			}
+			open
+			func compilation_condition_GE() -> Compilation_condition_GEContext? {
+				return getRuleContext(Compilation_condition_GEContext.self, 0)
+			}
+			open
+			func swift_version() -> Swift_versionContext? {
+				return getRuleContext(Swift_versionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_platform_condition
 		}
-		open func architecture() -> ArchitectureContext? {
-			return getRuleContext(ArchitectureContext.self,0)
-		}
-		open func compilation_condition_GE() -> Compilation_condition_GEContext? {
-			return getRuleContext(Compilation_condition_GEContext.self,0)
-		}
-		open func swift_version() -> Swift_versionContext? {
-			return getRuleContext(Swift_versionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_platform_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPlatform_condition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPlatform_condition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPlatform_condition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPlatform_condition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPlatform_condition(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPlatform_condition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPlatform_condition(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPlatform_condition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func platform_condition() throws -> Platform_conditionContext {
+	 open func platform_condition() throws -> Platform_conditionContext {
 		var _localctx: Platform_conditionContext = Platform_conditionContext(_ctx, getState())
 		try enterRule(_localctx, 100, Swift3Parser.RULE_platform_condition)
 		defer {
@@ -4063,7 +4411,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4074,38 +4422,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Swift_versionContext:ParserRuleContext {
-		open func Pure_decimal_digits() -> Array<TerminalNode> { return getTokens(Swift3Parser.Tokens.Pure_decimal_digits.rawValue) }
-		open func Pure_decimal_digits(_ i:Int) -> TerminalNode?{
-			return getToken(Swift3Parser.Tokens.Pure_decimal_digits.rawValue, i)
+
+	public class Swift_versionContext: ParserRuleContext {
+			open
+			func Pure_decimal_digits() -> [TerminalNode] {
+				return getTokens(Swift3Parser.Tokens.Pure_decimal_digits.rawValue)
+			}
+			open
+			func Pure_decimal_digits(_ i:Int) -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Pure_decimal_digits.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_swift_version
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_swift_version }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSwift_version(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSwift_version(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSwift_version(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSwift_version(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSwift_version(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSwift_version(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSwift_version(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSwift_version(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func swift_version() throws -> Swift_versionContext {
+	 open func swift_version() throws -> Swift_versionContext {
 		var _localctx: Swift_versionContext = Swift_versionContext(_ctx, getState())
 		try enterRule(_localctx, 102, Swift3Parser.RULE_swift_version)
 		defer {
@@ -4129,37 +4486,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Operating_systemContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Operating_systemContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_operating_system
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_operating_system }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterOperating_system(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterOperating_system(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitOperating_system(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitOperating_system(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitOperating_system(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitOperating_system(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitOperating_system(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitOperating_system(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operating_system() throws -> Operating_systemContext {
+	 open func operating_system() throws -> Operating_systemContext {
 		var _localctx: Operating_systemContext = Operating_systemContext(_ctx, getState())
 		try enterRule(_localctx, 104, Swift3Parser.RULE_operating_system)
 		defer {
@@ -4179,37 +4542,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class ArchitectureContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class ArchitectureContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_architecture
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_architecture }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterArchitecture(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterArchitecture(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitArchitecture(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitArchitecture(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitArchitecture(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitArchitecture(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitArchitecture(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitArchitecture(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func architecture() throws -> ArchitectureContext {
+	 open func architecture() throws -> ArchitectureContext {
 		var _localctx: ArchitectureContext = ArchitectureContext(_ctx, getState())
 		try enterRule(_localctx, 106, Swift3Parser.RULE_architecture)
 		defer {
@@ -4229,40 +4598,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Line_control_statementContext:ParserRuleContext {
-		open func file_name() -> File_nameContext? {
-			return getRuleContext(File_nameContext.self,0)
+
+	public class Line_control_statementContext: ParserRuleContext {
+			open
+			func file_name() -> File_nameContext? {
+				return getRuleContext(File_nameContext.self, 0)
+			}
+			open
+			func line_number() -> Line_numberContext? {
+				return getRuleContext(Line_numberContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_line_control_statement
 		}
-		open func line_number() -> Line_numberContext? {
-			return getRuleContext(Line_numberContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_line_control_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterLine_control_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterLine_control_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitLine_control_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitLine_control_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitLine_control_statement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitLine_control_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitLine_control_statement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitLine_control_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line_control_statement() throws -> Line_control_statementContext {
+	 open func line_control_statement() throws -> Line_control_statementContext {
 		var _localctx: Line_control_statementContext = Line_control_statementContext(_ctx, getState())
 		try enterRule(_localctx, 108, Swift3Parser.RULE_line_control_statement)
 		defer {
@@ -4317,37 +4693,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Line_numberContext:ParserRuleContext {
-		open func integer_literal() -> Integer_literalContext? {
-			return getRuleContext(Integer_literalContext.self,0)
+
+	public class Line_numberContext: ParserRuleContext {
+			open
+			func integer_literal() -> Integer_literalContext? {
+				return getRuleContext(Integer_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_line_number
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_line_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterLine_number(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterLine_number(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitLine_number(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitLine_number(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitLine_number(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitLine_number(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitLine_number(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitLine_number(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line_number() throws -> Line_numberContext {
+	 open func line_number() throws -> Line_numberContext {
 		var _localctx: Line_numberContext = Line_numberContext(_ctx, getState())
 		try enterRule(_localctx, 110, Swift3Parser.RULE_line_number)
 		defer {
@@ -4367,35 +4749,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class File_nameContext:ParserRuleContext {
-		open func Static_string_literal() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Static_string_literal.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_file_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFile_name(self)
+
+	public class File_nameContext: ParserRuleContext {
+			open
+			func Static_string_literal() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Static_string_literal.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_file_name
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFile_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFile_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFile_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFile_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFile_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFile_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFile_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func file_name() throws -> File_nameContext {
+	 open func file_name() throws -> File_nameContext {
 		var _localctx: File_nameContext = File_nameContext(_ctx, getState())
 		try enterRule(_localctx, 112, Swift3Parser.RULE_file_name)
 		defer {
@@ -4415,37 +4805,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Availability_conditionContext:ParserRuleContext {
-		open func availability_arguments() -> Availability_argumentsContext? {
-			return getRuleContext(Availability_argumentsContext.self,0)
+
+	public class Availability_conditionContext: ParserRuleContext {
+			open
+			func availability_arguments() -> Availability_argumentsContext? {
+				return getRuleContext(Availability_argumentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_availability_condition
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_availability_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAvailability_condition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAvailability_condition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAvailability_condition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAvailability_condition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAvailability_condition(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAvailability_condition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAvailability_condition(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAvailability_condition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func availability_condition() throws -> Availability_conditionContext {
+	 open func availability_condition() throws -> Availability_conditionContext {
 		var _localctx: Availability_conditionContext = Availability_conditionContext(_ctx, getState())
 		try enterRule(_localctx, 114, Swift3Parser.RULE_availability_condition)
 		defer {
@@ -4471,40 +4867,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Availability_argumentsContext:ParserRuleContext {
-		open func availability_argument() -> Array<Availability_argumentContext> {
-			return getRuleContexts(Availability_argumentContext.self)
+
+	public class Availability_argumentsContext: ParserRuleContext {
+			open
+			func availability_argument() -> [Availability_argumentContext] {
+				return getRuleContexts(Availability_argumentContext.self)
+			}
+			open
+			func availability_argument(_ i: Int) -> Availability_argumentContext? {
+				return getRuleContext(Availability_argumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_availability_arguments
 		}
-		open func availability_argument(_ i: Int) -> Availability_argumentContext? {
-			return getRuleContext(Availability_argumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_availability_arguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAvailability_arguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAvailability_arguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAvailability_arguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAvailability_arguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAvailability_arguments(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAvailability_arguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAvailability_arguments(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAvailability_arguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func availability_arguments() throws -> Availability_argumentsContext {
+	 open func availability_arguments() throws -> Availability_argumentsContext {
 		var _localctx: Availability_argumentsContext = Availability_argumentsContext(_ctx, getState())
 		try enterRule(_localctx, 116, Swift3Parser.RULE_availability_arguments)
 		var _la: Int = 0
@@ -4543,35 +4946,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Availability_argumentContext:ParserRuleContext {
-		open func Platform_name_platform_version() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Platform_name_platform_version.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_availability_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAvailability_argument(self)
+
+	public class Availability_argumentContext: ParserRuleContext {
+			open
+			func Platform_name_platform_version() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Platform_name_platform_version.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_availability_argument
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAvailability_argument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAvailability_argument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAvailability_argument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAvailability_argument(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAvailability_argument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAvailability_argument(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAvailability_argument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func availability_argument() throws -> Availability_argumentContext {
+	 open func availability_argument() throws -> Availability_argumentContext {
 		var _localctx: Availability_argumentContext = Availability_argumentContext(_ctx, getState())
 		try enterRule(_localctx, 118, Swift3Parser.RULE_availability_argument)
 		var _la: Int = 0
@@ -4603,37 +5014,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Generic_parameter_clauseContext:ParserRuleContext {
-		open func generic_parameter_list() -> Generic_parameter_listContext? {
-			return getRuleContext(Generic_parameter_listContext.self,0)
+
+	public class Generic_parameter_clauseContext: ParserRuleContext {
+			open
+			func generic_parameter_list() -> Generic_parameter_listContext? {
+				return getRuleContext(Generic_parameter_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_generic_parameter_clause
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_generic_parameter_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGeneric_parameter_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGeneric_parameter_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGeneric_parameter_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGeneric_parameter_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGeneric_parameter_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGeneric_parameter_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGeneric_parameter_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGeneric_parameter_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generic_parameter_clause() throws -> Generic_parameter_clauseContext {
+	 open func generic_parameter_clause() throws -> Generic_parameter_clauseContext {
 		var _localctx: Generic_parameter_clauseContext = Generic_parameter_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 120, Swift3Parser.RULE_generic_parameter_clause)
 		defer {
@@ -4657,40 +5074,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Generic_parameter_listContext:ParserRuleContext {
-		open func generic_parameter() -> Array<Generic_parameterContext> {
-			return getRuleContexts(Generic_parameterContext.self)
+
+	public class Generic_parameter_listContext: ParserRuleContext {
+			open
+			func generic_parameter() -> [Generic_parameterContext] {
+				return getRuleContexts(Generic_parameterContext.self)
+			}
+			open
+			func generic_parameter(_ i: Int) -> Generic_parameterContext? {
+				return getRuleContext(Generic_parameterContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_generic_parameter_list
 		}
-		open func generic_parameter(_ i: Int) -> Generic_parameterContext? {
-			return getRuleContext(Generic_parameterContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_generic_parameter_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGeneric_parameter_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGeneric_parameter_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGeneric_parameter_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGeneric_parameter_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGeneric_parameter_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGeneric_parameter_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGeneric_parameter_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGeneric_parameter_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generic_parameter_list() throws -> Generic_parameter_listContext {
+	 open func generic_parameter_list() throws -> Generic_parameter_listContext {
 		var _localctx: Generic_parameter_listContext = Generic_parameter_listContext(_ctx, getState())
 		try enterRule(_localctx, 122, Swift3Parser.RULE_generic_parameter_list)
 		var _la: Int = 0
@@ -4729,43 +5153,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Generic_parameterContext:ParserRuleContext {
-		open func type_name() -> Type_nameContext? {
-			return getRuleContext(Type_nameContext.self,0)
+
+	public class Generic_parameterContext: ParserRuleContext {
+			open
+			func type_name() -> Type_nameContext? {
+				return getRuleContext(Type_nameContext.self, 0)
+			}
+			open
+			func type_identifier() -> Type_identifierContext? {
+				return getRuleContext(Type_identifierContext.self, 0)
+			}
+			open
+			func protocol_composition_type() -> Protocol_composition_typeContext? {
+				return getRuleContext(Protocol_composition_typeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_generic_parameter
 		}
-		open func type_identifier() -> Type_identifierContext? {
-			return getRuleContext(Type_identifierContext.self,0)
-		}
-		open func protocol_composition_type() -> Protocol_composition_typeContext? {
-			return getRuleContext(Protocol_composition_typeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_generic_parameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGeneric_parameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGeneric_parameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGeneric_parameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGeneric_parameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGeneric_parameter(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGeneric_parameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGeneric_parameter(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGeneric_parameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generic_parameter() throws -> Generic_parameterContext {
+	 open func generic_parameter() throws -> Generic_parameterContext {
 		var _localctx: Generic_parameterContext = Generic_parameterContext(_ctx, getState())
 		try enterRule(_localctx, 124, Swift3Parser.RULE_generic_parameter)
 		defer {
@@ -4812,37 +5244,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Generic_where_clauseContext:ParserRuleContext {
-		open func requirement_list() -> Requirement_listContext? {
-			return getRuleContext(Requirement_listContext.self,0)
+
+	public class Generic_where_clauseContext: ParserRuleContext {
+			open
+			func requirement_list() -> Requirement_listContext? {
+				return getRuleContext(Requirement_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_generic_where_clause
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_generic_where_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGeneric_where_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGeneric_where_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGeneric_where_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGeneric_where_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGeneric_where_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGeneric_where_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGeneric_where_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGeneric_where_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generic_where_clause() throws -> Generic_where_clauseContext {
+	 open func generic_where_clause() throws -> Generic_where_clauseContext {
 		var _localctx: Generic_where_clauseContext = Generic_where_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 126, Swift3Parser.RULE_generic_where_clause)
 		defer {
@@ -4864,40 +5302,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Requirement_listContext:ParserRuleContext {
-		open func requirement() -> Array<RequirementContext> {
-			return getRuleContexts(RequirementContext.self)
+
+	public class Requirement_listContext: ParserRuleContext {
+			open
+			func requirement() -> [RequirementContext] {
+				return getRuleContexts(RequirementContext.self)
+			}
+			open
+			func requirement(_ i: Int) -> RequirementContext? {
+				return getRuleContext(RequirementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_requirement_list
 		}
-		open func requirement(_ i: Int) -> RequirementContext? {
-			return getRuleContext(RequirementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_requirement_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRequirement_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRequirement_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRequirement_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRequirement_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRequirement_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRequirement_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRequirement_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRequirement_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func requirement_list() throws -> Requirement_listContext {
+	 open func requirement_list() throws -> Requirement_listContext {
 		var _localctx: Requirement_listContext = Requirement_listContext(_ctx, getState())
 		try enterRule(_localctx, 128, Swift3Parser.RULE_requirement_list)
 		defer {
@@ -4934,40 +5379,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class RequirementContext:ParserRuleContext {
-		open func conformance_requirement() -> Conformance_requirementContext? {
-			return getRuleContext(Conformance_requirementContext.self,0)
+
+	public class RequirementContext: ParserRuleContext {
+			open
+			func conformance_requirement() -> Conformance_requirementContext? {
+				return getRuleContext(Conformance_requirementContext.self, 0)
+			}
+			open
+			func same_type_requirement() -> Same_type_requirementContext? {
+				return getRuleContext(Same_type_requirementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_requirement
 		}
-		open func same_type_requirement() -> Same_type_requirementContext? {
-			return getRuleContext(Same_type_requirementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_requirement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRequirement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRequirement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRequirement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRequirement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRequirement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRequirement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRequirement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRequirement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func requirement() throws -> RequirementContext {
+	 open func requirement() throws -> RequirementContext {
 		var _localctx: RequirementContext = RequirementContext(_ctx, getState())
 		try enterRule(_localctx, 130, Swift3Parser.RULE_requirement)
 		defer {
@@ -5000,43 +5452,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Conformance_requirementContext:ParserRuleContext {
-		open func type_identifier() -> Array<Type_identifierContext> {
-			return getRuleContexts(Type_identifierContext.self)
+
+	public class Conformance_requirementContext: ParserRuleContext {
+			open
+			func type_identifier() -> [Type_identifierContext] {
+				return getRuleContexts(Type_identifierContext.self)
+			}
+			open
+			func type_identifier(_ i: Int) -> Type_identifierContext? {
+				return getRuleContext(Type_identifierContext.self, i)
+			}
+			open
+			func protocol_composition_type() -> Protocol_composition_typeContext? {
+				return getRuleContext(Protocol_composition_typeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_conformance_requirement
 		}
-		open func type_identifier(_ i: Int) -> Type_identifierContext? {
-			return getRuleContext(Type_identifierContext.self,i)
-		}
-		open func protocol_composition_type() -> Protocol_composition_typeContext? {
-			return getRuleContext(Protocol_composition_typeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_conformance_requirement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterConformance_requirement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterConformance_requirement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitConformance_requirement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitConformance_requirement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitConformance_requirement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitConformance_requirement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitConformance_requirement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitConformance_requirement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conformance_requirement() throws -> Conformance_requirementContext {
+	 open func conformance_requirement() throws -> Conformance_requirementContext {
 		var _localctx: Conformance_requirementContext = Conformance_requirementContext(_ctx, getState())
 		try enterRule(_localctx, 132, Swift3Parser.RULE_conformance_requirement)
 		defer {
@@ -5077,43 +5537,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Same_type_requirementContext:ParserRuleContext {
-		open func type_identifier() -> Type_identifierContext? {
-			return getRuleContext(Type_identifierContext.self,0)
+
+	public class Same_type_requirementContext: ParserRuleContext {
+			open
+			func type_identifier() -> Type_identifierContext? {
+				return getRuleContext(Type_identifierContext.self, 0)
+			}
+			open
+			func same_type_equals() -> Same_type_equalsContext? {
+				return getRuleContext(Same_type_equalsContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_same_type_requirement
 		}
-		open func same_type_equals() -> Same_type_equalsContext? {
-			return getRuleContext(Same_type_equalsContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_same_type_requirement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSame_type_requirement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSame_type_requirement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSame_type_requirement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSame_type_requirement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSame_type_requirement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSame_type_requirement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSame_type_requirement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSame_type_requirement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func same_type_requirement() throws -> Same_type_requirementContext {
+	 open func same_type_requirement() throws -> Same_type_requirementContext {
 		var _localctx: Same_type_requirementContext = Same_type_requirementContext(_ctx, getState())
 		try enterRule(_localctx, 134, Swift3Parser.RULE_same_type_requirement)
 		defer {
@@ -5137,37 +5605,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Generic_argument_clauseContext:ParserRuleContext {
-		open func generic_argument_list() -> Generic_argument_listContext? {
-			return getRuleContext(Generic_argument_listContext.self,0)
+
+	public class Generic_argument_clauseContext: ParserRuleContext {
+			open
+			func generic_argument_list() -> Generic_argument_listContext? {
+				return getRuleContext(Generic_argument_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_generic_argument_clause
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_generic_argument_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGeneric_argument_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGeneric_argument_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGeneric_argument_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGeneric_argument_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGeneric_argument_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGeneric_argument_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGeneric_argument_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGeneric_argument_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generic_argument_clause() throws -> Generic_argument_clauseContext {
+	 open func generic_argument_clause() throws -> Generic_argument_clauseContext {
 		var _localctx: Generic_argument_clauseContext = Generic_argument_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 136, Swift3Parser.RULE_generic_argument_clause)
 		defer {
@@ -5191,40 +5665,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Generic_argument_listContext:ParserRuleContext {
-		open func generic_argument() -> Array<Generic_argumentContext> {
-			return getRuleContexts(Generic_argumentContext.self)
+
+	public class Generic_argument_listContext: ParserRuleContext {
+			open
+			func generic_argument() -> [Generic_argumentContext] {
+				return getRuleContexts(Generic_argumentContext.self)
+			}
+			open
+			func generic_argument(_ i: Int) -> Generic_argumentContext? {
+				return getRuleContext(Generic_argumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_generic_argument_list
 		}
-		open func generic_argument(_ i: Int) -> Generic_argumentContext? {
-			return getRuleContext(Generic_argumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_generic_argument_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGeneric_argument_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGeneric_argument_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGeneric_argument_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGeneric_argument_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGeneric_argument_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGeneric_argument_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGeneric_argument_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGeneric_argument_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generic_argument_list() throws -> Generic_argument_listContext {
+	 open func generic_argument_list() throws -> Generic_argument_listContext {
 		var _localctx: Generic_argument_listContext = Generic_argument_listContext(_ctx, getState())
 		try enterRule(_localctx, 138, Swift3Parser.RULE_generic_argument_list)
 		var _la: Int = 0
@@ -5263,37 +5744,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Generic_argumentContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class Generic_argumentContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_generic_argument
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_generic_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGeneric_argument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGeneric_argument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGeneric_argument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGeneric_argument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGeneric_argument(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGeneric_argument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGeneric_argument(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGeneric_argument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generic_argument() throws -> Generic_argumentContext {
+	 open func generic_argument() throws -> Generic_argumentContext {
 		var _localctx: Generic_argumentContext = Generic_argumentContext(_ctx, getState())
 		try enterRule(_localctx, 140, Swift3Parser.RULE_generic_argument)
 		defer {
@@ -5313,79 +5800,99 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationContext:ParserRuleContext {
-		open func import_declaration() -> Import_declarationContext? {
-			return getRuleContext(Import_declarationContext.self,0)
+
+	public class DeclarationContext: ParserRuleContext {
+			open
+			func import_declaration() -> Import_declarationContext? {
+				return getRuleContext(Import_declarationContext.self, 0)
+			}
+			open
+			func constant_declaration() -> Constant_declarationContext? {
+				return getRuleContext(Constant_declarationContext.self, 0)
+			}
+			open
+			func variable_declaration() -> Variable_declarationContext? {
+				return getRuleContext(Variable_declarationContext.self, 0)
+			}
+			open
+			func typealias_declaration() -> Typealias_declarationContext? {
+				return getRuleContext(Typealias_declarationContext.self, 0)
+			}
+			open
+			func function_declaration() -> Function_declarationContext? {
+				return getRuleContext(Function_declarationContext.self, 0)
+			}
+			open
+			func enum_declaration() -> Enum_declarationContext? {
+				return getRuleContext(Enum_declarationContext.self, 0)
+			}
+			open
+			func struct_declaration() -> Struct_declarationContext? {
+				return getRuleContext(Struct_declarationContext.self, 0)
+			}
+			open
+			func class_declaration() -> Class_declarationContext? {
+				return getRuleContext(Class_declarationContext.self, 0)
+			}
+			open
+			func protocol_declaration() -> Protocol_declarationContext? {
+				return getRuleContext(Protocol_declarationContext.self, 0)
+			}
+			open
+			func initializer_declaration() -> Initializer_declarationContext? {
+				return getRuleContext(Initializer_declarationContext.self, 0)
+			}
+			open
+			func deinitializer_declaration() -> Deinitializer_declarationContext? {
+				return getRuleContext(Deinitializer_declarationContext.self, 0)
+			}
+			open
+			func extension_declaration() -> Extension_declarationContext? {
+				return getRuleContext(Extension_declarationContext.self, 0)
+			}
+			open
+			func subscript_declaration() -> Subscript_declarationContext? {
+				return getRuleContext(Subscript_declarationContext.self, 0)
+			}
+			open
+			func operator_declaration() -> Operator_declarationContext? {
+				return getRuleContext(Operator_declarationContext.self, 0)
+			}
+			open
+			func precedence_group_declaration() -> Precedence_group_declarationContext? {
+				return getRuleContext(Precedence_group_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_declaration
 		}
-		open func constant_declaration() -> Constant_declarationContext? {
-			return getRuleContext(Constant_declarationContext.self,0)
-		}
-		open func variable_declaration() -> Variable_declarationContext? {
-			return getRuleContext(Variable_declarationContext.self,0)
-		}
-		open func typealias_declaration() -> Typealias_declarationContext? {
-			return getRuleContext(Typealias_declarationContext.self,0)
-		}
-		open func function_declaration() -> Function_declarationContext? {
-			return getRuleContext(Function_declarationContext.self,0)
-		}
-		open func enum_declaration() -> Enum_declarationContext? {
-			return getRuleContext(Enum_declarationContext.self,0)
-		}
-		open func struct_declaration() -> Struct_declarationContext? {
-			return getRuleContext(Struct_declarationContext.self,0)
-		}
-		open func class_declaration() -> Class_declarationContext? {
-			return getRuleContext(Class_declarationContext.self,0)
-		}
-		open func protocol_declaration() -> Protocol_declarationContext? {
-			return getRuleContext(Protocol_declarationContext.self,0)
-		}
-		open func initializer_declaration() -> Initializer_declarationContext? {
-			return getRuleContext(Initializer_declarationContext.self,0)
-		}
-		open func deinitializer_declaration() -> Deinitializer_declarationContext? {
-			return getRuleContext(Deinitializer_declarationContext.self,0)
-		}
-		open func extension_declaration() -> Extension_declarationContext? {
-			return getRuleContext(Extension_declarationContext.self,0)
-		}
-		open func subscript_declaration() -> Subscript_declarationContext? {
-			return getRuleContext(Subscript_declarationContext.self,0)
-		}
-		open func operator_declaration() -> Operator_declarationContext? {
-			return getRuleContext(Operator_declarationContext.self,0)
-		}
-		open func precedence_group_declaration() -> Precedence_group_declarationContext? {
-			return getRuleContext(Precedence_group_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDeclaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDeclaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration() throws -> DeclarationContext {
+	 open func declaration() throws -> DeclarationContext {
 		var _localctx: DeclarationContext = DeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 142, Swift3Parser.RULE_declaration)
 		defer {
@@ -5502,40 +6009,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationsContext:ParserRuleContext {
-		open func declaration() -> Array<DeclarationContext> {
-			return getRuleContexts(DeclarationContext.self)
+
+	public class DeclarationsContext: ParserRuleContext {
+			open
+			func declaration() -> [DeclarationContext] {
+				return getRuleContexts(DeclarationContext.self)
+			}
+			open
+			func declaration(_ i: Int) -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_declarations
 		}
-		open func declaration(_ i: Int) -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_declarations }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDeclarations(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDeclarations(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDeclarations(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDeclarations(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDeclarations(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDeclarations(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDeclarations(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDeclarations(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declarations() throws -> DeclarationsContext {
+	 open func declarations() throws -> DeclarationsContext {
 		var _localctx: DeclarationsContext = DeclarationsContext(_ctx, getState())
 		try enterRule(_localctx, 144, Swift3Parser.RULE_declarations)
 		var _la: Int = 0
@@ -5578,37 +6092,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Top_level_declarationContext:ParserRuleContext {
-		open func statements() -> StatementsContext? {
-			return getRuleContext(StatementsContext.self,0)
+
+	public class Top_level_declarationContext: ParserRuleContext {
+			open
+			func statements() -> StatementsContext? {
+				return getRuleContext(StatementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_top_level_declaration
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_top_level_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTop_level_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTop_level_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTop_level_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTop_level_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTop_level_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTop_level_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTop_level_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTop_level_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func top_level_declaration() throws -> Top_level_declarationContext {
+	 open func top_level_declaration() throws -> Top_level_declarationContext {
 		var _localctx: Top_level_declarationContext = Top_level_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 146, Swift3Parser.RULE_top_level_declaration)
 		defer {
@@ -5636,37 +6156,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Code_blockContext:ParserRuleContext {
-		open func statements() -> StatementsContext? {
-			return getRuleContext(StatementsContext.self,0)
+
+	public class Code_blockContext: ParserRuleContext {
+			open
+			func statements() -> StatementsContext? {
+				return getRuleContext(StatementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_code_block
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_code_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCode_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCode_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCode_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCode_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCode_block(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCode_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCode_block(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCode_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func code_block() throws -> Code_blockContext {
+	 open func code_block() throws -> Code_blockContext {
 		var _localctx: Code_blockContext = Code_blockContext(_ctx, getState())
 		try enterRule(_localctx, 148, Swift3Parser.RULE_code_block)
 		defer {
@@ -5698,43 +6224,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Import_declarationContext:ParserRuleContext {
-		open func import_path() -> Import_pathContext? {
-			return getRuleContext(Import_pathContext.self,0)
+
+	public class Import_declarationContext: ParserRuleContext {
+			open
+			func import_path() -> Import_pathContext? {
+				return getRuleContext(Import_pathContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func import_kind() -> Import_kindContext? {
+				return getRuleContext(Import_kindContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_import_declaration
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func import_kind() -> Import_kindContext? {
-			return getRuleContext(Import_kindContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_import_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterImport_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterImport_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitImport_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitImport_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitImport_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitImport_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitImport_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitImport_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_declaration() throws -> Import_declarationContext {
+	 open func import_declaration() throws -> Import_declarationContext {
 		var _localctx: Import_declarationContext = Import_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 150, Swift3Parser.RULE_import_declaration)
 		var _la: Int = 0
@@ -5786,34 +6320,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Import_kindContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_import_kind }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterImport_kind(self)
+
+	public class Import_kindContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_import_kind
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterImport_kind(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitImport_kind(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitImport_kind(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitImport_kind(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitImport_kind(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitImport_kind(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitImport_kind(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_kind() throws -> Import_kindContext {
+	 open func import_kind() throws -> Import_kindContext {
 		var _localctx: Import_kindContext = Import_kindContext(_ctx, getState())
 		try enterRule(_localctx, 152, Swift3Parser.RULE_import_kind)
 		var _la: Int = 0
@@ -5848,40 +6387,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Import_pathContext:ParserRuleContext {
-		open func import_path_identifier() -> Array<Import_path_identifierContext> {
-			return getRuleContexts(Import_path_identifierContext.self)
+
+	public class Import_pathContext: ParserRuleContext {
+			open
+			func import_path_identifier() -> [Import_path_identifierContext] {
+				return getRuleContexts(Import_path_identifierContext.self)
+			}
+			open
+			func import_path_identifier(_ i: Int) -> Import_path_identifierContext? {
+				return getRuleContext(Import_path_identifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_import_path
 		}
-		open func import_path_identifier(_ i: Int) -> Import_path_identifierContext? {
-			return getRuleContext(Import_path_identifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_import_path }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterImport_path(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterImport_path(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitImport_path(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitImport_path(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitImport_path(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitImport_path(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitImport_path(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitImport_path(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_path() throws -> Import_pathContext {
+	 open func import_path() throws -> Import_pathContext {
 		var _localctx: Import_pathContext = Import_pathContext(_ctx, getState())
 		try enterRule(_localctx, 154, Swift3Parser.RULE_import_path)
 		defer {
@@ -5918,40 +6464,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Import_path_identifierContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Import_path_identifierContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_import_path_identifier
 		}
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_import_path_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterImport_path_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterImport_path_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitImport_path_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitImport_path_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitImport_path_identifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitImport_path_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitImport_path_identifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitImport_path_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_path_identifier() throws -> Import_path_identifierContext {
+	 open func import_path_identifier() throws -> Import_path_identifierContext {
 		var _localctx: Import_path_identifierContext = Import_path_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 156, Swift3Parser.RULE_import_path_identifier)
 		defer {
@@ -6043,7 +6596,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6054,43 +6607,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Constant_declarationContext:ParserRuleContext {
-		open func pattern_initializer_list() -> Pattern_initializer_listContext? {
-			return getRuleContext(Pattern_initializer_listContext.self,0)
+
+	public class Constant_declarationContext: ParserRuleContext {
+			open
+			func pattern_initializer_list() -> Pattern_initializer_listContext? {
+				return getRuleContext(Pattern_initializer_listContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func declaration_modifiers() -> Declaration_modifiersContext? {
+				return getRuleContext(Declaration_modifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_constant_declaration
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func declaration_modifiers() -> Declaration_modifiersContext? {
-			return getRuleContext(Declaration_modifiersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_constant_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterConstant_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterConstant_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitConstant_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitConstant_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitConstant_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitConstant_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitConstant_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitConstant_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant_declaration() throws -> Constant_declarationContext {
+	 open func constant_declaration() throws -> Constant_declarationContext {
 		var _localctx: Constant_declarationContext = Constant_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 158, Swift3Parser.RULE_constant_declaration)
 		var _la: Int = 0
@@ -6142,40 +6703,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Pattern_initializer_listContext:ParserRuleContext {
-		open func pattern_initializer() -> Array<Pattern_initializerContext> {
-			return getRuleContexts(Pattern_initializerContext.self)
+
+	public class Pattern_initializer_listContext: ParserRuleContext {
+			open
+			func pattern_initializer() -> [Pattern_initializerContext] {
+				return getRuleContexts(Pattern_initializerContext.self)
+			}
+			open
+			func pattern_initializer(_ i: Int) -> Pattern_initializerContext? {
+				return getRuleContext(Pattern_initializerContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_pattern_initializer_list
 		}
-		open func pattern_initializer(_ i: Int) -> Pattern_initializerContext? {
-			return getRuleContext(Pattern_initializerContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_pattern_initializer_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPattern_initializer_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPattern_initializer_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPattern_initializer_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPattern_initializer_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPattern_initializer_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPattern_initializer_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPattern_initializer_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPattern_initializer_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pattern_initializer_list() throws -> Pattern_initializer_listContext {
+	 open func pattern_initializer_list() throws -> Pattern_initializer_listContext {
 		var _localctx: Pattern_initializer_listContext = Pattern_initializer_listContext(_ctx, getState())
 		try enterRule(_localctx, 160, Swift3Parser.RULE_pattern_initializer_list)
 		defer {
@@ -6212,40 +6780,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Pattern_initializerContext:ParserRuleContext {
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
+
+	public class Pattern_initializerContext: ParserRuleContext {
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+			open
+			func initializer() -> InitializerContext? {
+				return getRuleContext(InitializerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_pattern_initializer
 		}
-		open func initializer() -> InitializerContext? {
-			return getRuleContext(InitializerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_pattern_initializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPattern_initializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPattern_initializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPattern_initializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPattern_initializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPattern_initializer(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPattern_initializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPattern_initializer(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPattern_initializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pattern_initializer() throws -> Pattern_initializerContext {
+	 open func pattern_initializer() throws -> Pattern_initializerContext {
 		var _localctx: Pattern_initializerContext = Pattern_initializerContext(_ctx, getState())
 		try enterRule(_localctx, 162, Swift3Parser.RULE_pattern_initializer)
 		defer {
@@ -6275,40 +6850,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class InitializerContext:ParserRuleContext {
-		open func assignment_operator() -> Assignment_operatorContext? {
-			return getRuleContext(Assignment_operatorContext.self,0)
+
+	public class InitializerContext: ParserRuleContext {
+			open
+			func assignment_operator() -> Assignment_operatorContext? {
+				return getRuleContext(Assignment_operatorContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_initializer
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_initializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterInitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterInitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitInitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitInitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitInitializer(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitInitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitInitializer(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitInitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initializer() throws -> InitializerContext {
+	 open func initializer() throws -> InitializerContext {
 		var _localctx: InitializerContext = InitializerContext(_ctx, getState())
 		try enterRule(_localctx, 164, Swift3Parser.RULE_initializer)
 		defer {
@@ -6330,64 +6912,79 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Variable_declarationContext:ParserRuleContext {
-		open func variable_declaration_head() -> Variable_declaration_headContext? {
-			return getRuleContext(Variable_declaration_headContext.self,0)
+
+	public class Variable_declarationContext: ParserRuleContext {
+			open
+			func variable_declaration_head() -> Variable_declaration_headContext? {
+				return getRuleContext(Variable_declaration_headContext.self, 0)
+			}
+			open
+			func variable_name() -> Variable_nameContext? {
+				return getRuleContext(Variable_nameContext.self, 0)
+			}
+			open
+			func type_annotation() -> [Type_annotationContext] {
+				return getRuleContexts(Type_annotationContext.self)
+			}
+			open
+			func type_annotation(_ i: Int) -> Type_annotationContext? {
+				return getRuleContext(Type_annotationContext.self, i)
+			}
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func getter_setter_block() -> Getter_setter_blockContext? {
+				return getRuleContext(Getter_setter_blockContext.self, 0)
+			}
+			open
+			func getter_setter_keyword_block() -> Getter_setter_keyword_blockContext? {
+				return getRuleContext(Getter_setter_keyword_blockContext.self, 0)
+			}
+			open
+			func willSet_didSet_block() -> WillSet_didSet_blockContext? {
+				return getRuleContext(WillSet_didSet_blockContext.self, 0)
+			}
+			open
+			func initializer() -> InitializerContext? {
+				return getRuleContext(InitializerContext.self, 0)
+			}
+			open
+			func pattern_initializer_list() -> Pattern_initializer_listContext? {
+				return getRuleContext(Pattern_initializer_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_variable_declaration
 		}
-		open func variable_name() -> Variable_nameContext? {
-			return getRuleContext(Variable_nameContext.self,0)
-		}
-		open func type_annotation() -> Array<Type_annotationContext> {
-			return getRuleContexts(Type_annotationContext.self)
-		}
-		open func type_annotation(_ i: Int) -> Type_annotationContext? {
-			return getRuleContext(Type_annotationContext.self,i)
-		}
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
-		}
-		open func getter_setter_block() -> Getter_setter_blockContext? {
-			return getRuleContext(Getter_setter_blockContext.self,0)
-		}
-		open func getter_setter_keyword_block() -> Getter_setter_keyword_blockContext? {
-			return getRuleContext(Getter_setter_keyword_blockContext.self,0)
-		}
-		open func willSet_didSet_block() -> WillSet_didSet_blockContext? {
-			return getRuleContext(WillSet_didSet_blockContext.self,0)
-		}
-		open func initializer() -> InitializerContext? {
-			return getRuleContext(InitializerContext.self,0)
-		}
-		open func pattern_initializer_list() -> Pattern_initializer_listContext? {
-			return getRuleContext(Pattern_initializer_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_variable_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterVariable_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterVariable_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitVariable_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitVariable_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitVariable_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitVariable_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitVariable_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitVariable_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable_declaration() throws -> Variable_declarationContext {
+	 open func variable_declaration() throws -> Variable_declarationContext {
 		var _localctx: Variable_declarationContext = Variable_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 166, Swift3Parser.RULE_variable_declaration)
 		defer {
@@ -6498,40 +7095,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Variable_declaration_headContext:ParserRuleContext {
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
+
+	public class Variable_declaration_headContext: ParserRuleContext {
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func declaration_modifiers() -> Declaration_modifiersContext? {
+				return getRuleContext(Declaration_modifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_variable_declaration_head
 		}
-		open func declaration_modifiers() -> Declaration_modifiersContext? {
-			return getRuleContext(Declaration_modifiersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_variable_declaration_head }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterVariable_declaration_head(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterVariable_declaration_head(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitVariable_declaration_head(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitVariable_declaration_head(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitVariable_declaration_head(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitVariable_declaration_head(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitVariable_declaration_head(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitVariable_declaration_head(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable_declaration_head() throws -> Variable_declaration_headContext {
+	 open func variable_declaration_head() throws -> Variable_declaration_headContext {
 		var _localctx: Variable_declaration_headContext = Variable_declaration_headContext(_ctx, getState())
 		try enterRule(_localctx, 168, Swift3Parser.RULE_variable_declaration_head)
 		var _la: Int = 0
@@ -6581,37 +7185,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Variable_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Variable_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_variable_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_variable_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterVariable_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterVariable_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitVariable_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitVariable_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitVariable_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitVariable_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitVariable_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitVariable_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable_name() throws -> Variable_nameContext {
+	 open func variable_name() throws -> Variable_nameContext {
 		var _localctx: Variable_nameContext = Variable_nameContext(_ctx, getState())
 		try enterRule(_localctx, 170, Swift3Parser.RULE_variable_name)
 		defer {
@@ -6631,40 +7241,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Getter_setter_blockContext:ParserRuleContext {
-		open func getter_clause() -> Getter_clauseContext? {
-			return getRuleContext(Getter_clauseContext.self,0)
+
+	public class Getter_setter_blockContext: ParserRuleContext {
+			open
+			func getter_clause() -> Getter_clauseContext? {
+				return getRuleContext(Getter_clauseContext.self, 0)
+			}
+			open
+			func setter_clause() -> Setter_clauseContext? {
+				return getRuleContext(Setter_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_getter_setter_block
 		}
-		open func setter_clause() -> Setter_clauseContext? {
-			return getRuleContext(Setter_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_getter_setter_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGetter_setter_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGetter_setter_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGetter_setter_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGetter_setter_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGetter_setter_block(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGetter_setter_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGetter_setter_block(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGetter_setter_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func getter_setter_block() throws -> Getter_setter_blockContext {
+	 open func getter_setter_block() throws -> Getter_setter_blockContext {
 		var _localctx: Getter_setter_blockContext = Getter_setter_blockContext(_ctx, getState())
 		try enterRule(_localctx, 172, Swift3Parser.RULE_getter_setter_block)
 		var _la: Int = 0
@@ -6725,43 +7342,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Getter_clauseContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Getter_clauseContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func mutation_modifier() -> Mutation_modifierContext? {
+				return getRuleContext(Mutation_modifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_getter_clause
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func mutation_modifier() -> Mutation_modifierContext? {
-			return getRuleContext(Mutation_modifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_getter_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGetter_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGetter_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGetter_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGetter_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGetter_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGetter_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGetter_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGetter_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func getter_clause() throws -> Getter_clauseContext {
+	 open func getter_clause() throws -> Getter_clauseContext {
 		var _localctx: Getter_clauseContext = Getter_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 174, Swift3Parser.RULE_getter_clause)
 		var _la: Int = 0
@@ -6810,46 +7435,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Setter_clauseContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Setter_clauseContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func mutation_modifier() -> Mutation_modifierContext? {
+				return getRuleContext(Mutation_modifierContext.self, 0)
+			}
+			open
+			func setter_name() -> Setter_nameContext? {
+				return getRuleContext(Setter_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_setter_clause
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func mutation_modifier() -> Mutation_modifierContext? {
-			return getRuleContext(Mutation_modifierContext.self,0)
-		}
-		open func setter_name() -> Setter_nameContext? {
-			return getRuleContext(Setter_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_setter_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSetter_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSetter_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSetter_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSetter_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSetter_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSetter_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSetter_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSetter_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setter_clause() throws -> Setter_clauseContext {
+	 open func setter_clause() throws -> Setter_clauseContext {
 		var _localctx: Setter_clauseContext = Setter_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 176, Swift3Parser.RULE_setter_clause)
 		var _la: Int = 0
@@ -6911,37 +7545,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Setter_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Setter_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_setter_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_setter_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSetter_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSetter_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSetter_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSetter_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSetter_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSetter_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSetter_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSetter_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setter_name() throws -> Setter_nameContext {
+	 open func setter_name() throws -> Setter_nameContext {
 		var _localctx: Setter_nameContext = Setter_nameContext(_ctx, getState())
 		try enterRule(_localctx, 178, Swift3Parser.RULE_setter_name)
 		defer {
@@ -6965,40 +7605,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Getter_setter_keyword_blockContext:ParserRuleContext {
-		open func getter_keyword_clause() -> Getter_keyword_clauseContext? {
-			return getRuleContext(Getter_keyword_clauseContext.self,0)
+
+	public class Getter_setter_keyword_blockContext: ParserRuleContext {
+			open
+			func getter_keyword_clause() -> Getter_keyword_clauseContext? {
+				return getRuleContext(Getter_keyword_clauseContext.self, 0)
+			}
+			open
+			func setter_keyword_clause() -> Setter_keyword_clauseContext? {
+				return getRuleContext(Setter_keyword_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_getter_setter_keyword_block
 		}
-		open func setter_keyword_clause() -> Setter_keyword_clauseContext? {
-			return getRuleContext(Setter_keyword_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_getter_setter_keyword_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGetter_setter_keyword_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGetter_setter_keyword_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGetter_setter_keyword_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGetter_setter_keyword_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGetter_setter_keyword_block(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGetter_setter_keyword_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGetter_setter_keyword_block(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGetter_setter_keyword_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func getter_setter_keyword_block() throws -> Getter_setter_keyword_blockContext {
+	 open func getter_setter_keyword_block() throws -> Getter_setter_keyword_blockContext {
 		var _localctx: Getter_setter_keyword_blockContext = Getter_setter_keyword_blockContext(_ctx, getState())
 		try enterRule(_localctx, 180, Swift3Parser.RULE_getter_setter_keyword_block)
 		var _la: Int = 0
@@ -7059,40 +7706,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Getter_keyword_clauseContext:ParserRuleContext {
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
+
+	public class Getter_keyword_clauseContext: ParserRuleContext {
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func mutation_modifier() -> Mutation_modifierContext? {
+				return getRuleContext(Mutation_modifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_getter_keyword_clause
 		}
-		open func mutation_modifier() -> Mutation_modifierContext? {
-			return getRuleContext(Mutation_modifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_getter_keyword_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterGetter_keyword_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterGetter_keyword_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitGetter_keyword_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitGetter_keyword_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitGetter_keyword_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitGetter_keyword_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitGetter_keyword_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitGetter_keyword_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func getter_keyword_clause() throws -> Getter_keyword_clauseContext {
+	 open func getter_keyword_clause() throws -> Getter_keyword_clauseContext {
 		var _localctx: Getter_keyword_clauseContext = Getter_keyword_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 182, Swift3Parser.RULE_getter_keyword_clause)
 		var _la: Int = 0
@@ -7139,40 +7793,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Setter_keyword_clauseContext:ParserRuleContext {
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
+
+	public class Setter_keyword_clauseContext: ParserRuleContext {
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func mutation_modifier() -> Mutation_modifierContext? {
+				return getRuleContext(Mutation_modifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_setter_keyword_clause
 		}
-		open func mutation_modifier() -> Mutation_modifierContext? {
-			return getRuleContext(Mutation_modifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_setter_keyword_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSetter_keyword_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSetter_keyword_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSetter_keyword_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSetter_keyword_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSetter_keyword_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSetter_keyword_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSetter_keyword_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSetter_keyword_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setter_keyword_clause() throws -> Setter_keyword_clauseContext {
+	 open func setter_keyword_clause() throws -> Setter_keyword_clauseContext {
 		var _localctx: Setter_keyword_clauseContext = Setter_keyword_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 184, Swift3Parser.RULE_setter_keyword_clause)
 		var _la: Int = 0
@@ -7219,40 +7880,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class WillSet_didSet_blockContext:ParserRuleContext {
-		open func willSet_clause() -> WillSet_clauseContext? {
-			return getRuleContext(WillSet_clauseContext.self,0)
+
+	public class WillSet_didSet_blockContext: ParserRuleContext {
+			open
+			func willSet_clause() -> WillSet_clauseContext? {
+				return getRuleContext(WillSet_clauseContext.self, 0)
+			}
+			open
+			func didSet_clause() -> DidSet_clauseContext? {
+				return getRuleContext(DidSet_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_willSet_didSet_block
 		}
-		open func didSet_clause() -> DidSet_clauseContext? {
-			return getRuleContext(DidSet_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_willSet_didSet_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterWillSet_didSet_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterWillSet_didSet_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitWillSet_didSet_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitWillSet_didSet_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitWillSet_didSet_block(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitWillSet_didSet_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitWillSet_didSet_block(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitWillSet_didSet_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func willSet_didSet_block() throws -> WillSet_didSet_blockContext {
+	 open func willSet_didSet_block() throws -> WillSet_didSet_blockContext {
 		var _localctx: WillSet_didSet_blockContext = WillSet_didSet_blockContext(_ctx, getState())
 		try enterRule(_localctx, 186, Swift3Parser.RULE_willSet_didSet_block)
 		var _la: Int = 0
@@ -7310,43 +7978,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class WillSet_clauseContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class WillSet_clauseContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func setter_name() -> Setter_nameContext? {
+				return getRuleContext(Setter_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_willSet_clause
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func setter_name() -> Setter_nameContext? {
-			return getRuleContext(Setter_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_willSet_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterWillSet_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterWillSet_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitWillSet_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitWillSet_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitWillSet_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitWillSet_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitWillSet_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitWillSet_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func willSet_clause() throws -> WillSet_clauseContext {
+	 open func willSet_clause() throws -> WillSet_clauseContext {
 		var _localctx: WillSet_clauseContext = WillSet_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 188, Swift3Parser.RULE_willSet_clause)
 		var _la: Int = 0
@@ -7395,43 +8071,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class DidSet_clauseContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class DidSet_clauseContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func setter_name() -> Setter_nameContext? {
+				return getRuleContext(Setter_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_didSet_clause
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func setter_name() -> Setter_nameContext? {
-			return getRuleContext(Setter_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_didSet_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDidSet_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDidSet_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDidSet_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDidSet_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDidSet_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDidSet_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDidSet_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDidSet_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func didSet_clause() throws -> DidSet_clauseContext {
+	 open func didSet_clause() throws -> DidSet_clauseContext {
 		var _localctx: DidSet_clauseContext = DidSet_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 190, Swift3Parser.RULE_didSet_clause)
 		var _la: Int = 0
@@ -7480,49 +8164,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Typealias_declarationContext:ParserRuleContext {
-		open func typealias_name() -> Typealias_nameContext? {
-			return getRuleContext(Typealias_nameContext.self,0)
+
+	public class Typealias_declarationContext: ParserRuleContext {
+			open
+			func typealias_name() -> Typealias_nameContext? {
+				return getRuleContext(Typealias_nameContext.self, 0)
+			}
+			open
+			func typealias_assignment() -> Typealias_assignmentContext? {
+				return getRuleContext(Typealias_assignmentContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func access_level_modifier() -> Access_level_modifierContext? {
+				return getRuleContext(Access_level_modifierContext.self, 0)
+			}
+			open
+			func generic_parameter_clause() -> Generic_parameter_clauseContext? {
+				return getRuleContext(Generic_parameter_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_typealias_declaration
 		}
-		open func typealias_assignment() -> Typealias_assignmentContext? {
-			return getRuleContext(Typealias_assignmentContext.self,0)
-		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func access_level_modifier() -> Access_level_modifierContext? {
-			return getRuleContext(Access_level_modifierContext.self,0)
-		}
-		open func generic_parameter_clause() -> Generic_parameter_clauseContext? {
-			return getRuleContext(Generic_parameter_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_typealias_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTypealias_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTypealias_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTypealias_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTypealias_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTypealias_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTypealias_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTypealias_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTypealias_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typealias_declaration() throws -> Typealias_declarationContext {
+	 open func typealias_declaration() throws -> Typealias_declarationContext {
 		var _localctx: Typealias_declarationContext = Typealias_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 192, Swift3Parser.RULE_typealias_declaration)
 		var _la: Int = 0
@@ -7586,37 +8280,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Typealias_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Typealias_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_typealias_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_typealias_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTypealias_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTypealias_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTypealias_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTypealias_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTypealias_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTypealias_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTypealias_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTypealias_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typealias_name() throws -> Typealias_nameContext {
+	 open func typealias_name() throws -> Typealias_nameContext {
 		var _localctx: Typealias_nameContext = Typealias_nameContext(_ctx, getState())
 		try enterRule(_localctx, 194, Swift3Parser.RULE_typealias_name)
 		defer {
@@ -7636,40 +8336,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Typealias_assignmentContext:ParserRuleContext {
-		open func assignment_operator() -> Assignment_operatorContext? {
-			return getRuleContext(Assignment_operatorContext.self,0)
+
+	public class Typealias_assignmentContext: ParserRuleContext {
+			open
+			func assignment_operator() -> Assignment_operatorContext? {
+				return getRuleContext(Assignment_operatorContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_typealias_assignment
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_typealias_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTypealias_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTypealias_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTypealias_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTypealias_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTypealias_assignment(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTypealias_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTypealias_assignment(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTypealias_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typealias_assignment() throws -> Typealias_assignmentContext {
+	 open func typealias_assignment() throws -> Typealias_assignmentContext {
 		var _localctx: Typealias_assignmentContext = Typealias_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 196, Swift3Parser.RULE_typealias_assignment)
 		defer {
@@ -7691,52 +8398,63 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_declarationContext:ParserRuleContext {
-		open func function_head() -> Function_headContext? {
-			return getRuleContext(Function_headContext.self,0)
+
+	public class Function_declarationContext: ParserRuleContext {
+			open
+			func function_head() -> Function_headContext? {
+				return getRuleContext(Function_headContext.self, 0)
+			}
+			open
+			func function_name() -> Function_nameContext? {
+				return getRuleContext(Function_nameContext.self, 0)
+			}
+			open
+			func function_signature() -> Function_signatureContext? {
+				return getRuleContext(Function_signatureContext.self, 0)
+			}
+			open
+			func generic_parameter_clause() -> Generic_parameter_clauseContext? {
+				return getRuleContext(Generic_parameter_clauseContext.self, 0)
+			}
+			open
+			func generic_where_clause() -> Generic_where_clauseContext? {
+				return getRuleContext(Generic_where_clauseContext.self, 0)
+			}
+			open
+			func function_body() -> Function_bodyContext? {
+				return getRuleContext(Function_bodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_declaration
 		}
-		open func function_name() -> Function_nameContext? {
-			return getRuleContext(Function_nameContext.self,0)
-		}
-		open func function_signature() -> Function_signatureContext? {
-			return getRuleContext(Function_signatureContext.self,0)
-		}
-		open func generic_parameter_clause() -> Generic_parameter_clauseContext? {
-			return getRuleContext(Generic_parameter_clauseContext.self,0)
-		}
-		open func generic_where_clause() -> Generic_where_clauseContext? {
-			return getRuleContext(Generic_where_clauseContext.self,0)
-		}
-		open func function_body() -> Function_bodyContext? {
-			return getRuleContext(Function_bodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_declaration() throws -> Function_declarationContext {
+	 open func function_declaration() throws -> Function_declarationContext {
 		var _localctx: Function_declarationContext = Function_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 198, Swift3Parser.RULE_function_declaration)
 		var _la: Int = 0
@@ -7794,40 +8512,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_headContext:ParserRuleContext {
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
+
+	public class Function_headContext: ParserRuleContext {
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func declaration_modifiers() -> Declaration_modifiersContext? {
+				return getRuleContext(Declaration_modifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_head
 		}
-		open func declaration_modifiers() -> Declaration_modifiersContext? {
-			return getRuleContext(Declaration_modifiersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_head }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_head(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_head(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_head(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_head(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_head(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_head(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_head(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_head(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_head() throws -> Function_headContext {
+	 open func function_head() throws -> Function_headContext {
 		var _localctx: Function_headContext = Function_headContext(_ctx, getState())
 		try enterRule(_localctx, 200, Swift3Parser.RULE_function_head)
 		var _la: Int = 0
@@ -7877,40 +8602,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Function_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_name
 		}
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_name() throws -> Function_nameContext {
+	 open func function_name() throws -> Function_nameContext {
 		var _localctx: Function_nameContext = Function_nameContext(_ctx, getState())
 		try enterRule(_localctx, 202, Swift3Parser.RULE_function_name)
 		defer {
@@ -8002,7 +8734,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -8013,40 +8745,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_signatureContext:ParserRuleContext {
-		open func parameter_clause() -> Parameter_clauseContext? {
-			return getRuleContext(Parameter_clauseContext.self,0)
+
+	public class Function_signatureContext: ParserRuleContext {
+			open
+			func parameter_clause() -> Parameter_clauseContext? {
+				return getRuleContext(Parameter_clauseContext.self, 0)
+			}
+			open
+			func function_result() -> Function_resultContext? {
+				return getRuleContext(Function_resultContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_signature
 		}
-		open func function_result() -> Function_resultContext? {
-			return getRuleContext(Function_resultContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_signature }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_signature(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_signature(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_signature(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_signature(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_signature(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_signature(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_signature(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_signature(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_signature() throws -> Function_signatureContext {
+	 open func function_signature() throws -> Function_signatureContext {
 		var _localctx: Function_signatureContext = Function_signatureContext(_ctx, getState())
 		try enterRule(_localctx, 204, Swift3Parser.RULE_function_signature)
 		defer {
@@ -8111,43 +8850,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_resultContext:ParserRuleContext {
-		open func arrow_operator() -> Arrow_operatorContext? {
-			return getRuleContext(Arrow_operatorContext.self,0)
+
+	public class Function_resultContext: ParserRuleContext {
+			open
+			func arrow_operator() -> Arrow_operatorContext? {
+				return getRuleContext(Arrow_operatorContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_result
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_result }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_result(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_result(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_result(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_result(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_result(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_result(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_result(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_result(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_result() throws -> Function_resultContext {
+	 open func function_result() throws -> Function_resultContext {
 		var _localctx: Function_resultContext = Function_resultContext(_ctx, getState())
 		try enterRule(_localctx, 206, Swift3Parser.RULE_function_result)
 		defer {
@@ -8179,37 +8926,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_bodyContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Function_bodyContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_body
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_body }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_body(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_body(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_body(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_body(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_body(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_body(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_body(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_body(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_body() throws -> Function_bodyContext {
+	 open func function_body() throws -> Function_bodyContext {
 		var _localctx: Function_bodyContext = Function_bodyContext(_ctx, getState())
 		try enterRule(_localctx, 208, Swift3Parser.RULE_function_body)
 		defer {
@@ -8229,37 +8982,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Parameter_clauseContext:ParserRuleContext {
-		open func parameter_list() -> Parameter_listContext? {
-			return getRuleContext(Parameter_listContext.self,0)
+
+	public class Parameter_clauseContext: ParserRuleContext {
+			open
+			func parameter_list() -> Parameter_listContext? {
+				return getRuleContext(Parameter_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_parameter_clause
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_parameter_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterParameter_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterParameter_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitParameter_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitParameter_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitParameter_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitParameter_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitParameter_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitParameter_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter_clause() throws -> Parameter_clauseContext {
+	 open func parameter_clause() throws -> Parameter_clauseContext {
 		var _localctx: Parameter_clauseContext = Parameter_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 210, Swift3Parser.RULE_parameter_clause)
 		defer {
@@ -8298,40 +9057,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Parameter_listContext:ParserRuleContext {
-		open func parameter() -> Array<ParameterContext> {
-			return getRuleContexts(ParameterContext.self)
+
+	public class Parameter_listContext: ParserRuleContext {
+			open
+			func parameter() -> [ParameterContext] {
+				return getRuleContexts(ParameterContext.self)
+			}
+			open
+			func parameter(_ i: Int) -> ParameterContext? {
+				return getRuleContext(ParameterContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_parameter_list
 		}
-		open func parameter(_ i: Int) -> ParameterContext? {
-			return getRuleContext(ParameterContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_parameter_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterParameter_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterParameter_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitParameter_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitParameter_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitParameter_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitParameter_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitParameter_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitParameter_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter_list() throws -> Parameter_listContext {
+	 open func parameter_list() throws -> Parameter_listContext {
 		var _localctx: Parameter_listContext = Parameter_listContext(_ctx, getState())
 		try enterRule(_localctx, 212, Swift3Parser.RULE_parameter_list)
 		var _la: Int = 0
@@ -8370,49 +9136,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class ParameterContext:ParserRuleContext {
-		open func local_parameter_name() -> Local_parameter_nameContext? {
-			return getRuleContext(Local_parameter_nameContext.self,0)
+
+	public class ParameterContext: ParserRuleContext {
+			open
+			func local_parameter_name() -> Local_parameter_nameContext? {
+				return getRuleContext(Local_parameter_nameContext.self, 0)
+			}
+			open
+			func type_annotation() -> Type_annotationContext? {
+				return getRuleContext(Type_annotationContext.self, 0)
+			}
+			open
+			func external_parameter_name() -> External_parameter_nameContext? {
+				return getRuleContext(External_parameter_nameContext.self, 0)
+			}
+			open
+			func default_argument_clause() -> Default_argument_clauseContext? {
+				return getRuleContext(Default_argument_clauseContext.self, 0)
+			}
+			open
+			func range_operator() -> Range_operatorContext? {
+				return getRuleContext(Range_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_parameter
 		}
-		open func type_annotation() -> Type_annotationContext? {
-			return getRuleContext(Type_annotationContext.self,0)
-		}
-		open func external_parameter_name() -> External_parameter_nameContext? {
-			return getRuleContext(External_parameter_nameContext.self,0)
-		}
-		open func default_argument_clause() -> Default_argument_clauseContext? {
-			return getRuleContext(Default_argument_clauseContext.self,0)
-		}
-		open func range_operator() -> Range_operatorContext? {
-			return getRuleContext(Range_operatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_parameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterParameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterParameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitParameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitParameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitParameter(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitParameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitParameter(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitParameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter() throws -> ParameterContext {
+	 open func parameter() throws -> ParameterContext {
 		var _localctx: ParameterContext = ParameterContext(_ctx, getState())
 		try enterRule(_localctx, 214, Swift3Parser.RULE_parameter)
 		defer {
@@ -8499,37 +9275,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class External_parameter_nameContext:ParserRuleContext {
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
+
+	public class External_parameter_nameContext: ParserRuleContext {
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_external_parameter_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_external_parameter_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExternal_parameter_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExternal_parameter_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExternal_parameter_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExternal_parameter_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExternal_parameter_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExternal_parameter_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExternal_parameter_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExternal_parameter_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func external_parameter_name() throws -> External_parameter_nameContext {
+	 open func external_parameter_name() throws -> External_parameter_nameContext {
 		var _localctx: External_parameter_nameContext = External_parameter_nameContext(_ctx, getState())
 		try enterRule(_localctx, 216, Swift3Parser.RULE_external_parameter_name)
 		defer {
@@ -8549,37 +9331,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Local_parameter_nameContext:ParserRuleContext {
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
+
+	public class Local_parameter_nameContext: ParserRuleContext {
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_local_parameter_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_local_parameter_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterLocal_parameter_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterLocal_parameter_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitLocal_parameter_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitLocal_parameter_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitLocal_parameter_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitLocal_parameter_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitLocal_parameter_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitLocal_parameter_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func local_parameter_name() throws -> Local_parameter_nameContext {
+	 open func local_parameter_name() throws -> Local_parameter_nameContext {
 		var _localctx: Local_parameter_nameContext = Local_parameter_nameContext(_ctx, getState())
 		try enterRule(_localctx, 218, Swift3Parser.RULE_local_parameter_name)
 		defer {
@@ -8599,40 +9387,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Default_argument_clauseContext:ParserRuleContext {
-		open func assignment_operator() -> Assignment_operatorContext? {
-			return getRuleContext(Assignment_operatorContext.self,0)
+
+	public class Default_argument_clauseContext: ParserRuleContext {
+			open
+			func assignment_operator() -> Assignment_operatorContext? {
+				return getRuleContext(Assignment_operatorContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_default_argument_clause
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_default_argument_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDefault_argument_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDefault_argument_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDefault_argument_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDefault_argument_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDefault_argument_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDefault_argument_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDefault_argument_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDefault_argument_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func default_argument_clause() throws -> Default_argument_clauseContext {
+	 open func default_argument_clause() throws -> Default_argument_clauseContext {
 		var _localctx: Default_argument_clauseContext = Default_argument_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 220, Swift3Parser.RULE_default_argument_clause)
 		defer {
@@ -8654,46 +9449,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Enum_declarationContext:ParserRuleContext {
-		open func union_style_enum() -> Union_style_enumContext? {
-			return getRuleContext(Union_style_enumContext.self,0)
+
+	public class Enum_declarationContext: ParserRuleContext {
+			open
+			func union_style_enum() -> Union_style_enumContext? {
+				return getRuleContext(Union_style_enumContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func access_level_modifier() -> Access_level_modifierContext? {
+				return getRuleContext(Access_level_modifierContext.self, 0)
+			}
+			open
+			func raw_value_style_enum() -> Raw_value_style_enumContext? {
+				return getRuleContext(Raw_value_style_enumContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_enum_declaration
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func access_level_modifier() -> Access_level_modifierContext? {
-			return getRuleContext(Access_level_modifierContext.self,0)
-		}
-		open func raw_value_style_enum() -> Raw_value_style_enumContext? {
-			return getRuleContext(Raw_value_style_enumContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_enum_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterEnum_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterEnum_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitEnum_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitEnum_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitEnum_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitEnum_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitEnum_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitEnum_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enum_declaration() throws -> Enum_declarationContext {
+	 open func enum_declaration() throws -> Enum_declarationContext {
 		var _localctx: Enum_declarationContext = Enum_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 222, Swift3Parser.RULE_enum_declaration)
 		var _la: Int = 0
@@ -8785,49 +9589,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Union_style_enumContext:ParserRuleContext {
-		open func enum_name() -> Enum_nameContext? {
-			return getRuleContext(Enum_nameContext.self,0)
+
+	public class Union_style_enumContext: ParserRuleContext {
+			open
+			func enum_name() -> Enum_nameContext? {
+				return getRuleContext(Enum_nameContext.self, 0)
+			}
+			open
+			func generic_parameter_clause() -> Generic_parameter_clauseContext? {
+				return getRuleContext(Generic_parameter_clauseContext.self, 0)
+			}
+			open
+			func type_inheritance_clause() -> Type_inheritance_clauseContext? {
+				return getRuleContext(Type_inheritance_clauseContext.self, 0)
+			}
+			open
+			func generic_where_clause() -> Generic_where_clauseContext? {
+				return getRuleContext(Generic_where_clauseContext.self, 0)
+			}
+			open
+			func union_style_enum_members() -> Union_style_enum_membersContext? {
+				return getRuleContext(Union_style_enum_membersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_union_style_enum
 		}
-		open func generic_parameter_clause() -> Generic_parameter_clauseContext? {
-			return getRuleContext(Generic_parameter_clauseContext.self,0)
-		}
-		open func type_inheritance_clause() -> Type_inheritance_clauseContext? {
-			return getRuleContext(Type_inheritance_clauseContext.self,0)
-		}
-		open func generic_where_clause() -> Generic_where_clauseContext? {
-			return getRuleContext(Generic_where_clauseContext.self,0)
-		}
-		open func union_style_enum_members() -> Union_style_enum_membersContext? {
-			return getRuleContext(Union_style_enum_membersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_union_style_enum }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterUnion_style_enum(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterUnion_style_enum(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitUnion_style_enum(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitUnion_style_enum(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitUnion_style_enum(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitUnion_style_enum(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitUnion_style_enum(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitUnion_style_enum(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func union_style_enum() throws -> Union_style_enumContext {
+	 open func union_style_enum() throws -> Union_style_enumContext {
 		var _localctx: Union_style_enumContext = Union_style_enumContext(_ctx, getState())
 		try enterRule(_localctx, 224, Swift3Parser.RULE_union_style_enum)
 		var _la: Int = 0
@@ -8927,40 +9741,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Union_style_enum_membersContext:ParserRuleContext {
-		open func union_style_enum_member() -> Union_style_enum_memberContext? {
-			return getRuleContext(Union_style_enum_memberContext.self,0)
+
+	public class Union_style_enum_membersContext: ParserRuleContext {
+			open
+			func union_style_enum_member() -> Union_style_enum_memberContext? {
+				return getRuleContext(Union_style_enum_memberContext.self, 0)
+			}
+			open
+			func union_style_enum_members() -> Union_style_enum_membersContext? {
+				return getRuleContext(Union_style_enum_membersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_union_style_enum_members
 		}
-		open func union_style_enum_members() -> Union_style_enum_membersContext? {
-			return getRuleContext(Union_style_enum_membersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_union_style_enum_members }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterUnion_style_enum_members(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterUnion_style_enum_members(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitUnion_style_enum_members(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitUnion_style_enum_members(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitUnion_style_enum_members(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitUnion_style_enum_members(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitUnion_style_enum_members(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitUnion_style_enum_members(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func union_style_enum_members() throws -> Union_style_enum_membersContext {
+	 open func union_style_enum_members() throws -> Union_style_enum_membersContext {
 		var _localctx: Union_style_enum_membersContext = Union_style_enum_membersContext(_ctx, getState())
 		try enterRule(_localctx, 226, Swift3Parser.RULE_union_style_enum_members)
 		var _la: Int = 0
@@ -9002,43 +9823,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Union_style_enum_memberContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class Union_style_enum_memberContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func union_style_enum_case_clause() -> Union_style_enum_case_clauseContext? {
+				return getRuleContext(Union_style_enum_case_clauseContext.self, 0)
+			}
+			open
+			func compiler_control_statement() -> Compiler_control_statementContext? {
+				return getRuleContext(Compiler_control_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_union_style_enum_member
 		}
-		open func union_style_enum_case_clause() -> Union_style_enum_case_clauseContext? {
-			return getRuleContext(Union_style_enum_case_clauseContext.self,0)
-		}
-		open func compiler_control_statement() -> Compiler_control_statementContext? {
-			return getRuleContext(Compiler_control_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_union_style_enum_member }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterUnion_style_enum_member(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterUnion_style_enum_member(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitUnion_style_enum_member(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitUnion_style_enum_member(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitUnion_style_enum_member(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitUnion_style_enum_member(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitUnion_style_enum_member(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitUnion_style_enum_member(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func union_style_enum_member() throws -> Union_style_enum_memberContext {
+	 open func union_style_enum_member() throws -> Union_style_enum_memberContext {
 		var _localctx: Union_style_enum_memberContext = Union_style_enum_memberContext(_ctx, getState())
 		try enterRule(_localctx, 228, Swift3Parser.RULE_union_style_enum_member)
 		defer {
@@ -9077,40 +9906,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Union_style_enum_case_clauseContext:ParserRuleContext {
-		open func union_style_enum_case_list() -> Union_style_enum_case_listContext? {
-			return getRuleContext(Union_style_enum_case_listContext.self,0)
+
+	public class Union_style_enum_case_clauseContext: ParserRuleContext {
+			open
+			func union_style_enum_case_list() -> Union_style_enum_case_listContext? {
+				return getRuleContext(Union_style_enum_case_listContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_union_style_enum_case_clause
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_union_style_enum_case_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterUnion_style_enum_case_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterUnion_style_enum_case_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitUnion_style_enum_case_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitUnion_style_enum_case_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitUnion_style_enum_case_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitUnion_style_enum_case_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitUnion_style_enum_case_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitUnion_style_enum_case_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func union_style_enum_case_clause() throws -> Union_style_enum_case_clauseContext {
+	 open func union_style_enum_case_clause() throws -> Union_style_enum_case_clauseContext {
 		var _localctx: Union_style_enum_case_clauseContext = Union_style_enum_case_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 230, Swift3Parser.RULE_union_style_enum_case_clause)
 		var _la: Int = 0
@@ -9159,40 +9995,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Union_style_enum_case_listContext:ParserRuleContext {
-		open func union_style_enum_case() -> Union_style_enum_caseContext? {
-			return getRuleContext(Union_style_enum_caseContext.self,0)
+
+	public class Union_style_enum_case_listContext: ParserRuleContext {
+			open
+			func union_style_enum_case() -> Union_style_enum_caseContext? {
+				return getRuleContext(Union_style_enum_caseContext.self, 0)
+			}
+			open
+			func union_style_enum_case_list() -> Union_style_enum_case_listContext? {
+				return getRuleContext(Union_style_enum_case_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_union_style_enum_case_list
 		}
-		open func union_style_enum_case_list() -> Union_style_enum_case_listContext? {
-			return getRuleContext(Union_style_enum_case_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_union_style_enum_case_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterUnion_style_enum_case_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterUnion_style_enum_case_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitUnion_style_enum_case_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitUnion_style_enum_case_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitUnion_style_enum_case_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitUnion_style_enum_case_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitUnion_style_enum_case_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitUnion_style_enum_case_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func union_style_enum_case_list() throws -> Union_style_enum_case_listContext {
+	 open func union_style_enum_case_list() throws -> Union_style_enum_case_listContext {
 		var _localctx: Union_style_enum_case_listContext = Union_style_enum_case_listContext(_ctx, getState())
 		try enterRule(_localctx, 232, Swift3Parser.RULE_union_style_enum_case_list)
 		defer {
@@ -9229,40 +10072,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Union_style_enum_caseContext:ParserRuleContext {
-		open func enum_case_name() -> Enum_case_nameContext? {
-			return getRuleContext(Enum_case_nameContext.self,0)
+
+	public class Union_style_enum_caseContext: ParserRuleContext {
+			open
+			func enum_case_name() -> Enum_case_nameContext? {
+				return getRuleContext(Enum_case_nameContext.self, 0)
+			}
+			open
+			func tuple_type() -> Tuple_typeContext? {
+				return getRuleContext(Tuple_typeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_union_style_enum_case
 		}
-		open func tuple_type() -> Tuple_typeContext? {
-			return getRuleContext(Tuple_typeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_union_style_enum_case }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterUnion_style_enum_case(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterUnion_style_enum_case(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitUnion_style_enum_case(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitUnion_style_enum_case(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitUnion_style_enum_case(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitUnion_style_enum_case(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitUnion_style_enum_case(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitUnion_style_enum_case(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func union_style_enum_case() throws -> Union_style_enum_caseContext {
+	 open func union_style_enum_case() throws -> Union_style_enum_caseContext {
 		var _localctx: Union_style_enum_caseContext = Union_style_enum_caseContext(_ctx, getState())
 		try enterRule(_localctx, 234, Swift3Parser.RULE_union_style_enum_case)
 		var _la: Int = 0
@@ -9296,37 +10146,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Enum_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Enum_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_enum_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_enum_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterEnum_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterEnum_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitEnum_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitEnum_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitEnum_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitEnum_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitEnum_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitEnum_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enum_name() throws -> Enum_nameContext {
+	 open func enum_name() throws -> Enum_nameContext {
 		var _localctx: Enum_nameContext = Enum_nameContext(_ctx, getState())
 		try enterRule(_localctx, 236, Swift3Parser.RULE_enum_name)
 		defer {
@@ -9346,37 +10202,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Enum_case_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Enum_case_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_enum_case_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_enum_case_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterEnum_case_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterEnum_case_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitEnum_case_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitEnum_case_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitEnum_case_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitEnum_case_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitEnum_case_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitEnum_case_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enum_case_name() throws -> Enum_case_nameContext {
+	 open func enum_case_name() throws -> Enum_case_nameContext {
 		var _localctx: Enum_case_nameContext = Enum_case_nameContext(_ctx, getState())
 		try enterRule(_localctx, 238, Swift3Parser.RULE_enum_case_name)
 		defer {
@@ -9396,49 +10258,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Raw_value_style_enumContext:ParserRuleContext {
-		open func enum_name() -> Enum_nameContext? {
-			return getRuleContext(Enum_nameContext.self,0)
+
+	public class Raw_value_style_enumContext: ParserRuleContext {
+			open
+			func enum_name() -> Enum_nameContext? {
+				return getRuleContext(Enum_nameContext.self, 0)
+			}
+			open
+			func type_inheritance_clause() -> Type_inheritance_clauseContext? {
+				return getRuleContext(Type_inheritance_clauseContext.self, 0)
+			}
+			open
+			func raw_value_style_enum_members() -> Raw_value_style_enum_membersContext? {
+				return getRuleContext(Raw_value_style_enum_membersContext.self, 0)
+			}
+			open
+			func generic_parameter_clause() -> Generic_parameter_clauseContext? {
+				return getRuleContext(Generic_parameter_clauseContext.self, 0)
+			}
+			open
+			func generic_where_clause() -> Generic_where_clauseContext? {
+				return getRuleContext(Generic_where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_raw_value_style_enum
 		}
-		open func type_inheritance_clause() -> Type_inheritance_clauseContext? {
-			return getRuleContext(Type_inheritance_clauseContext.self,0)
-		}
-		open func raw_value_style_enum_members() -> Raw_value_style_enum_membersContext? {
-			return getRuleContext(Raw_value_style_enum_membersContext.self,0)
-		}
-		open func generic_parameter_clause() -> Generic_parameter_clauseContext? {
-			return getRuleContext(Generic_parameter_clauseContext.self,0)
-		}
-		open func generic_where_clause() -> Generic_where_clauseContext? {
-			return getRuleContext(Generic_where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_raw_value_style_enum }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRaw_value_style_enum(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRaw_value_style_enum(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRaw_value_style_enum(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRaw_value_style_enum(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRaw_value_style_enum(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRaw_value_style_enum(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRaw_value_style_enum(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRaw_value_style_enum(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raw_value_style_enum() throws -> Raw_value_style_enumContext {
+	 open func raw_value_style_enum() throws -> Raw_value_style_enumContext {
 		var _localctx: Raw_value_style_enumContext = Raw_value_style_enumContext(_ctx, getState())
 		try enterRule(_localctx, 240, Swift3Parser.RULE_raw_value_style_enum)
 		var _la: Int = 0
@@ -9495,40 +10367,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Raw_value_style_enum_membersContext:ParserRuleContext {
-		open func raw_value_style_enum_member() -> Raw_value_style_enum_memberContext? {
-			return getRuleContext(Raw_value_style_enum_memberContext.self,0)
+
+	public class Raw_value_style_enum_membersContext: ParserRuleContext {
+			open
+			func raw_value_style_enum_member() -> Raw_value_style_enum_memberContext? {
+				return getRuleContext(Raw_value_style_enum_memberContext.self, 0)
+			}
+			open
+			func raw_value_style_enum_members() -> Raw_value_style_enum_membersContext? {
+				return getRuleContext(Raw_value_style_enum_membersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_raw_value_style_enum_members
 		}
-		open func raw_value_style_enum_members() -> Raw_value_style_enum_membersContext? {
-			return getRuleContext(Raw_value_style_enum_membersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_raw_value_style_enum_members }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRaw_value_style_enum_members(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRaw_value_style_enum_members(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRaw_value_style_enum_members(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRaw_value_style_enum_members(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRaw_value_style_enum_members(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRaw_value_style_enum_members(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRaw_value_style_enum_members(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRaw_value_style_enum_members(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raw_value_style_enum_members() throws -> Raw_value_style_enum_membersContext {
+	 open func raw_value_style_enum_members() throws -> Raw_value_style_enum_membersContext {
 		var _localctx: Raw_value_style_enum_membersContext = Raw_value_style_enum_membersContext(_ctx, getState())
 		try enterRule(_localctx, 242, Swift3Parser.RULE_raw_value_style_enum_members)
 		var _la: Int = 0
@@ -9570,43 +10449,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Raw_value_style_enum_memberContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class Raw_value_style_enum_memberContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func raw_value_style_enum_case_clause() -> Raw_value_style_enum_case_clauseContext? {
+				return getRuleContext(Raw_value_style_enum_case_clauseContext.self, 0)
+			}
+			open
+			func compiler_control_statement() -> Compiler_control_statementContext? {
+				return getRuleContext(Compiler_control_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_raw_value_style_enum_member
 		}
-		open func raw_value_style_enum_case_clause() -> Raw_value_style_enum_case_clauseContext? {
-			return getRuleContext(Raw_value_style_enum_case_clauseContext.self,0)
-		}
-		open func compiler_control_statement() -> Compiler_control_statementContext? {
-			return getRuleContext(Compiler_control_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_raw_value_style_enum_member }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRaw_value_style_enum_member(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRaw_value_style_enum_member(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRaw_value_style_enum_member(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRaw_value_style_enum_member(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRaw_value_style_enum_member(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRaw_value_style_enum_member(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRaw_value_style_enum_member(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRaw_value_style_enum_member(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raw_value_style_enum_member() throws -> Raw_value_style_enum_memberContext {
+	 open func raw_value_style_enum_member() throws -> Raw_value_style_enum_memberContext {
 		var _localctx: Raw_value_style_enum_memberContext = Raw_value_style_enum_memberContext(_ctx, getState())
 		try enterRule(_localctx, 244, Swift3Parser.RULE_raw_value_style_enum_member)
 		defer {
@@ -9645,40 +10532,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Raw_value_style_enum_case_clauseContext:ParserRuleContext {
-		open func raw_value_style_enum_case_list() -> Raw_value_style_enum_case_listContext? {
-			return getRuleContext(Raw_value_style_enum_case_listContext.self,0)
+
+	public class Raw_value_style_enum_case_clauseContext: ParserRuleContext {
+			open
+			func raw_value_style_enum_case_list() -> Raw_value_style_enum_case_listContext? {
+				return getRuleContext(Raw_value_style_enum_case_listContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_raw_value_style_enum_case_clause
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_raw_value_style_enum_case_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRaw_value_style_enum_case_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRaw_value_style_enum_case_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRaw_value_style_enum_case_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRaw_value_style_enum_case_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRaw_value_style_enum_case_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRaw_value_style_enum_case_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRaw_value_style_enum_case_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRaw_value_style_enum_case_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raw_value_style_enum_case_clause() throws -> Raw_value_style_enum_case_clauseContext {
+	 open func raw_value_style_enum_case_clause() throws -> Raw_value_style_enum_case_clauseContext {
 		var _localctx: Raw_value_style_enum_case_clauseContext = Raw_value_style_enum_case_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 246, Swift3Parser.RULE_raw_value_style_enum_case_clause)
 		var _la: Int = 0
@@ -9714,40 +10608,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Raw_value_style_enum_case_listContext:ParserRuleContext {
-		open func raw_value_style_enum_case() -> Raw_value_style_enum_caseContext? {
-			return getRuleContext(Raw_value_style_enum_caseContext.self,0)
+
+	public class Raw_value_style_enum_case_listContext: ParserRuleContext {
+			open
+			func raw_value_style_enum_case() -> Raw_value_style_enum_caseContext? {
+				return getRuleContext(Raw_value_style_enum_caseContext.self, 0)
+			}
+			open
+			func raw_value_style_enum_case_list() -> Raw_value_style_enum_case_listContext? {
+				return getRuleContext(Raw_value_style_enum_case_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_raw_value_style_enum_case_list
 		}
-		open func raw_value_style_enum_case_list() -> Raw_value_style_enum_case_listContext? {
-			return getRuleContext(Raw_value_style_enum_case_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_raw_value_style_enum_case_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRaw_value_style_enum_case_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRaw_value_style_enum_case_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRaw_value_style_enum_case_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRaw_value_style_enum_case_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRaw_value_style_enum_case_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRaw_value_style_enum_case_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRaw_value_style_enum_case_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRaw_value_style_enum_case_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raw_value_style_enum_case_list() throws -> Raw_value_style_enum_case_listContext {
+	 open func raw_value_style_enum_case_list() throws -> Raw_value_style_enum_case_listContext {
 		var _localctx: Raw_value_style_enum_case_listContext = Raw_value_style_enum_case_listContext(_ctx, getState())
 		try enterRule(_localctx, 248, Swift3Parser.RULE_raw_value_style_enum_case_list)
 		defer {
@@ -9784,40 +10685,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Raw_value_style_enum_caseContext:ParserRuleContext {
-		open func enum_case_name() -> Enum_case_nameContext? {
-			return getRuleContext(Enum_case_nameContext.self,0)
+
+	public class Raw_value_style_enum_caseContext: ParserRuleContext {
+			open
+			func enum_case_name() -> Enum_case_nameContext? {
+				return getRuleContext(Enum_case_nameContext.self, 0)
+			}
+			open
+			func raw_value_assignment() -> Raw_value_assignmentContext? {
+				return getRuleContext(Raw_value_assignmentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_raw_value_style_enum_case
 		}
-		open func raw_value_assignment() -> Raw_value_assignmentContext? {
-			return getRuleContext(Raw_value_assignmentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_raw_value_style_enum_case }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRaw_value_style_enum_case(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRaw_value_style_enum_case(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRaw_value_style_enum_case(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRaw_value_style_enum_case(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRaw_value_style_enum_case(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRaw_value_style_enum_case(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRaw_value_style_enum_case(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRaw_value_style_enum_case(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raw_value_style_enum_case() throws -> Raw_value_style_enum_caseContext {
+	 open func raw_value_style_enum_case() throws -> Raw_value_style_enum_caseContext {
 		var _localctx: Raw_value_style_enum_caseContext = Raw_value_style_enum_caseContext(_ctx, getState())
 		try enterRule(_localctx, 250, Swift3Parser.RULE_raw_value_style_enum_case)
 		defer {
@@ -9847,40 +10755,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Raw_value_assignmentContext:ParserRuleContext {
-		open func assignment_operator() -> Assignment_operatorContext? {
-			return getRuleContext(Assignment_operatorContext.self,0)
+
+	public class Raw_value_assignmentContext: ParserRuleContext {
+			open
+			func assignment_operator() -> Assignment_operatorContext? {
+				return getRuleContext(Assignment_operatorContext.self, 0)
+			}
+			open
+			func raw_value_literal() -> Raw_value_literalContext? {
+				return getRuleContext(Raw_value_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_raw_value_assignment
 		}
-		open func raw_value_literal() -> Raw_value_literalContext? {
-			return getRuleContext(Raw_value_literalContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_raw_value_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRaw_value_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRaw_value_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRaw_value_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRaw_value_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRaw_value_assignment(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRaw_value_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRaw_value_assignment(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRaw_value_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raw_value_assignment() throws -> Raw_value_assignmentContext {
+	 open func raw_value_assignment() throws -> Raw_value_assignmentContext {
 		var _localctx: Raw_value_assignmentContext = Raw_value_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 252, Swift3Parser.RULE_raw_value_assignment)
 		defer {
@@ -9902,41 +10817,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Raw_value_literalContext:ParserRuleContext {
-		open func numeric_literal() -> Numeric_literalContext? {
-			return getRuleContext(Numeric_literalContext.self,0)
+
+	public class Raw_value_literalContext: ParserRuleContext {
+			open
+			func numeric_literal() -> Numeric_literalContext? {
+				return getRuleContext(Numeric_literalContext.self, 0)
+			}
+			open
+			func Static_string_literal() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Static_string_literal.rawValue, 0)
+			}
+			open
+			func boolean_literal() -> Boolean_literalContext? {
+				return getRuleContext(Boolean_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_raw_value_literal
 		}
-		open func Static_string_literal() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Static_string_literal.rawValue, 0) }
-		open func boolean_literal() -> Boolean_literalContext? {
-			return getRuleContext(Boolean_literalContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_raw_value_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRaw_value_literal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRaw_value_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRaw_value_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRaw_value_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRaw_value_literal(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRaw_value_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRaw_value_literal(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRaw_value_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raw_value_literal() throws -> Raw_value_literalContext {
+	 open func raw_value_literal() throws -> Raw_value_literalContext {
 		var _localctx: Raw_value_literalContext = Raw_value_literalContext(_ctx, getState())
 		try enterRule(_localctx, 254, Swift3Parser.RULE_raw_value_literal)
 		defer {
@@ -9975,55 +10900,67 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Struct_declarationContext:ParserRuleContext {
-		open func struct_name() -> Struct_nameContext? {
-			return getRuleContext(Struct_nameContext.self,0)
+
+	public class Struct_declarationContext: ParserRuleContext {
+			open
+			func struct_name() -> Struct_nameContext? {
+				return getRuleContext(Struct_nameContext.self, 0)
+			}
+			open
+			func struct_body() -> Struct_bodyContext? {
+				return getRuleContext(Struct_bodyContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func access_level_modifier() -> Access_level_modifierContext? {
+				return getRuleContext(Access_level_modifierContext.self, 0)
+			}
+			open
+			func generic_parameter_clause() -> Generic_parameter_clauseContext? {
+				return getRuleContext(Generic_parameter_clauseContext.self, 0)
+			}
+			open
+			func type_inheritance_clause() -> Type_inheritance_clauseContext? {
+				return getRuleContext(Type_inheritance_clauseContext.self, 0)
+			}
+			open
+			func generic_where_clause() -> Generic_where_clauseContext? {
+				return getRuleContext(Generic_where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_struct_declaration
 		}
-		open func struct_body() -> Struct_bodyContext? {
-			return getRuleContext(Struct_bodyContext.self,0)
-		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func access_level_modifier() -> Access_level_modifierContext? {
-			return getRuleContext(Access_level_modifierContext.self,0)
-		}
-		open func generic_parameter_clause() -> Generic_parameter_clauseContext? {
-			return getRuleContext(Generic_parameter_clauseContext.self,0)
-		}
-		open func type_inheritance_clause() -> Type_inheritance_clauseContext? {
-			return getRuleContext(Type_inheritance_clauseContext.self,0)
-		}
-		open func generic_where_clause() -> Generic_where_clauseContext? {
-			return getRuleContext(Generic_where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_struct_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterStruct_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterStruct_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitStruct_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitStruct_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitStruct_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitStruct_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitStruct_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitStruct_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func struct_declaration() throws -> Struct_declarationContext {
+	 open func struct_declaration() throws -> Struct_declarationContext {
 		var _localctx: Struct_declarationContext = Struct_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 256, Swift3Parser.RULE_struct_declaration)
 		var _la: Int = 0
@@ -10116,37 +11053,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Struct_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Struct_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_struct_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_struct_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterStruct_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterStruct_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitStruct_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitStruct_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitStruct_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitStruct_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitStruct_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitStruct_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func struct_name() throws -> Struct_nameContext {
+	 open func struct_name() throws -> Struct_nameContext {
 		var _localctx: Struct_nameContext = Struct_nameContext(_ctx, getState())
 		try enterRule(_localctx, 258, Swift3Parser.RULE_struct_name)
 		defer {
@@ -10166,40 +11109,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Struct_bodyContext:ParserRuleContext {
-		open func struct_member() -> Array<Struct_memberContext> {
-			return getRuleContexts(Struct_memberContext.self)
+
+	public class Struct_bodyContext: ParserRuleContext {
+			open
+			func struct_member() -> [Struct_memberContext] {
+				return getRuleContexts(Struct_memberContext.self)
+			}
+			open
+			func struct_member(_ i: Int) -> Struct_memberContext? {
+				return getRuleContext(Struct_memberContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_struct_body
 		}
-		open func struct_member(_ i: Int) -> Struct_memberContext? {
-			return getRuleContext(Struct_memberContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_struct_body }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterStruct_body(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterStruct_body(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitStruct_body(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitStruct_body(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitStruct_body(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitStruct_body(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitStruct_body(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitStruct_body(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func struct_body() throws -> Struct_bodyContext {
+	 open func struct_body() throws -> Struct_bodyContext {
 		var _localctx: Struct_bodyContext = Struct_bodyContext(_ctx, getState())
 		try enterRule(_localctx, 260, Swift3Parser.RULE_struct_body)
 		var _la: Int = 0
@@ -10246,40 +11196,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Struct_memberContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class Struct_memberContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func compiler_control_statement() -> Compiler_control_statementContext? {
+				return getRuleContext(Compiler_control_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_struct_member
 		}
-		open func compiler_control_statement() -> Compiler_control_statementContext? {
-			return getRuleContext(Compiler_control_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_struct_member }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterStruct_member(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterStruct_member(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitStruct_member(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitStruct_member(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitStruct_member(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitStruct_member(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitStruct_member(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitStruct_member(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func struct_member() throws -> Struct_memberContext {
+	 open func struct_member() throws -> Struct_memberContext {
 		var _localctx: Struct_memberContext = Struct_memberContext(_ctx, getState())
 		try enterRule(_localctx, 262, Swift3Parser.RULE_struct_member)
 		defer {
@@ -10338,7 +11295,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10349,58 +11306,71 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Class_declarationContext:ParserRuleContext {
-		open func class_name() -> Class_nameContext? {
-			return getRuleContext(Class_nameContext.self,0)
+
+	public class Class_declarationContext: ParserRuleContext {
+			open
+			func class_name() -> Class_nameContext? {
+				return getRuleContext(Class_nameContext.self, 0)
+			}
+			open
+			func class_body() -> Class_bodyContext? {
+				return getRuleContext(Class_bodyContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func access_level_modifier() -> [Access_level_modifierContext] {
+				return getRuleContexts(Access_level_modifierContext.self)
+			}
+			open
+			func access_level_modifier(_ i: Int) -> Access_level_modifierContext? {
+				return getRuleContext(Access_level_modifierContext.self, i)
+			}
+			open
+			func generic_parameter_clause() -> Generic_parameter_clauseContext? {
+				return getRuleContext(Generic_parameter_clauseContext.self, 0)
+			}
+			open
+			func type_inheritance_clause() -> Type_inheritance_clauseContext? {
+				return getRuleContext(Type_inheritance_clauseContext.self, 0)
+			}
+			open
+			func generic_where_clause() -> Generic_where_clauseContext? {
+				return getRuleContext(Generic_where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_class_declaration
 		}
-		open func class_body() -> Class_bodyContext? {
-			return getRuleContext(Class_bodyContext.self,0)
-		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func access_level_modifier() -> Array<Access_level_modifierContext> {
-			return getRuleContexts(Access_level_modifierContext.self)
-		}
-		open func access_level_modifier(_ i: Int) -> Access_level_modifierContext? {
-			return getRuleContext(Access_level_modifierContext.self,i)
-		}
-		open func generic_parameter_clause() -> Generic_parameter_clauseContext? {
-			return getRuleContext(Generic_parameter_clauseContext.self,0)
-		}
-		open func type_inheritance_clause() -> Type_inheritance_clauseContext? {
-			return getRuleContext(Type_inheritance_clauseContext.self,0)
-		}
-		open func generic_where_clause() -> Generic_where_clauseContext? {
-			return getRuleContext(Generic_where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_class_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClass_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClass_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClass_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClass_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClass_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClass_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClass_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClass_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func class_declaration() throws -> Class_declarationContext {
+	 open func class_declaration() throws -> Class_declarationContext {
 		var _localctx: Class_declarationContext = Class_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 264, Swift3Parser.RULE_class_declaration)
 		var _la: Int = 0
@@ -10609,37 +11579,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Class_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Class_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_class_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_class_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClass_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClass_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClass_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClass_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClass_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClass_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClass_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClass_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func class_name() throws -> Class_nameContext {
+	 open func class_name() throws -> Class_nameContext {
 		var _localctx: Class_nameContext = Class_nameContext(_ctx, getState())
 		try enterRule(_localctx, 266, Swift3Parser.RULE_class_name)
 		defer {
@@ -10659,40 +11635,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Class_bodyContext:ParserRuleContext {
-		open func class_member() -> Array<Class_memberContext> {
-			return getRuleContexts(Class_memberContext.self)
+
+	public class Class_bodyContext: ParserRuleContext {
+			open
+			func class_member() -> [Class_memberContext] {
+				return getRuleContexts(Class_memberContext.self)
+			}
+			open
+			func class_member(_ i: Int) -> Class_memberContext? {
+				return getRuleContext(Class_memberContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_class_body
 		}
-		open func class_member(_ i: Int) -> Class_memberContext? {
-			return getRuleContext(Class_memberContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_class_body }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClass_body(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClass_body(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClass_body(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClass_body(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClass_body(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClass_body(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClass_body(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClass_body(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func class_body() throws -> Class_bodyContext {
+	 open func class_body() throws -> Class_bodyContext {
 		var _localctx: Class_bodyContext = Class_bodyContext(_ctx, getState())
 		try enterRule(_localctx, 268, Swift3Parser.RULE_class_body)
 		var _la: Int = 0
@@ -10739,40 +11722,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Class_memberContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class Class_memberContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func compiler_control_statement() -> Compiler_control_statementContext? {
+				return getRuleContext(Compiler_control_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_class_member
 		}
-		open func compiler_control_statement() -> Compiler_control_statementContext? {
-			return getRuleContext(Compiler_control_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_class_member }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClass_member(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClass_member(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClass_member(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClass_member(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClass_member(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClass_member(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClass_member(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClass_member(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func class_member() throws -> Class_memberContext {
+	 open func class_member() throws -> Class_memberContext {
 		var _localctx: Class_memberContext = Class_memberContext(_ctx, getState())
 		try enterRule(_localctx, 270, Swift3Parser.RULE_class_member)
 		defer {
@@ -10831,7 +11821,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10842,49 +11832,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_declarationContext:ParserRuleContext {
-		open func protocol_name() -> Protocol_nameContext? {
-			return getRuleContext(Protocol_nameContext.self,0)
+
+	public class Protocol_declarationContext: ParserRuleContext {
+			open
+			func protocol_name() -> Protocol_nameContext? {
+				return getRuleContext(Protocol_nameContext.self, 0)
+			}
+			open
+			func protocol_body() -> Protocol_bodyContext? {
+				return getRuleContext(Protocol_bodyContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func access_level_modifier() -> Access_level_modifierContext? {
+				return getRuleContext(Access_level_modifierContext.self, 0)
+			}
+			open
+			func type_inheritance_clause() -> Type_inheritance_clauseContext? {
+				return getRuleContext(Type_inheritance_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_declaration
 		}
-		open func protocol_body() -> Protocol_bodyContext? {
-			return getRuleContext(Protocol_bodyContext.self,0)
-		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func access_level_modifier() -> Access_level_modifierContext? {
-			return getRuleContext(Access_level_modifierContext.self,0)
-		}
-		open func type_inheritance_clause() -> Type_inheritance_clauseContext? {
-			return getRuleContext(Type_inheritance_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_declaration() throws -> Protocol_declarationContext {
+	 open func protocol_declaration() throws -> Protocol_declarationContext {
 		var _localctx: Protocol_declarationContext = Protocol_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 272, Swift3Parser.RULE_protocol_declaration)
 		var _la: Int = 0
@@ -10951,37 +11951,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Protocol_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_name() throws -> Protocol_nameContext {
+	 open func protocol_name() throws -> Protocol_nameContext {
 		var _localctx: Protocol_nameContext = Protocol_nameContext(_ctx, getState())
 		try enterRule(_localctx, 274, Swift3Parser.RULE_protocol_name)
 		defer {
@@ -11001,40 +12007,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_bodyContext:ParserRuleContext {
-		open func protocol_member() -> Array<Protocol_memberContext> {
-			return getRuleContexts(Protocol_memberContext.self)
+
+	public class Protocol_bodyContext: ParserRuleContext {
+			open
+			func protocol_member() -> [Protocol_memberContext] {
+				return getRuleContexts(Protocol_memberContext.self)
+			}
+			open
+			func protocol_member(_ i: Int) -> Protocol_memberContext? {
+				return getRuleContext(Protocol_memberContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_body
 		}
-		open func protocol_member(_ i: Int) -> Protocol_memberContext? {
-			return getRuleContext(Protocol_memberContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_body }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_body(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_body(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_body(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_body(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_body(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_body(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_body(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_body(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_body() throws -> Protocol_bodyContext {
+	 open func protocol_body() throws -> Protocol_bodyContext {
 		var _localctx: Protocol_bodyContext = Protocol_bodyContext(_ctx, getState())
 		try enterRule(_localctx, 276, Swift3Parser.RULE_protocol_body)
 		var _la: Int = 0
@@ -11081,40 +12094,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_memberContext:ParserRuleContext {
-		open func protocol_member_declaration() -> Protocol_member_declarationContext? {
-			return getRuleContext(Protocol_member_declarationContext.self,0)
+
+	public class Protocol_memberContext: ParserRuleContext {
+			open
+			func protocol_member_declaration() -> Protocol_member_declarationContext? {
+				return getRuleContext(Protocol_member_declarationContext.self, 0)
+			}
+			open
+			func compiler_control_statement() -> Compiler_control_statementContext? {
+				return getRuleContext(Compiler_control_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_member
 		}
-		open func compiler_control_statement() -> Compiler_control_statementContext? {
-			return getRuleContext(Compiler_control_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_member }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_member(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_member(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_member(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_member(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_member(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_member(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_member(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_member(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_member() throws -> Protocol_memberContext {
+	 open func protocol_member() throws -> Protocol_memberContext {
 		var _localctx: Protocol_memberContext = Protocol_memberContext(_ctx, getState())
 		try enterRule(_localctx, 278, Swift3Parser.RULE_protocol_member)
 		defer {
@@ -11165,7 +12185,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -11176,52 +12196,63 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_member_declarationContext:ParserRuleContext {
-		open func protocol_property_declaration() -> Protocol_property_declarationContext? {
-			return getRuleContext(Protocol_property_declarationContext.self,0)
+
+	public class Protocol_member_declarationContext: ParserRuleContext {
+			open
+			func protocol_property_declaration() -> Protocol_property_declarationContext? {
+				return getRuleContext(Protocol_property_declarationContext.self, 0)
+			}
+			open
+			func protocol_method_declaration() -> Protocol_method_declarationContext? {
+				return getRuleContext(Protocol_method_declarationContext.self, 0)
+			}
+			open
+			func protocol_initializer_declaration() -> Protocol_initializer_declarationContext? {
+				return getRuleContext(Protocol_initializer_declarationContext.self, 0)
+			}
+			open
+			func protocol_subscript_declaration() -> Protocol_subscript_declarationContext? {
+				return getRuleContext(Protocol_subscript_declarationContext.self, 0)
+			}
+			open
+			func protocol_associated_type_declaration() -> Protocol_associated_type_declarationContext? {
+				return getRuleContext(Protocol_associated_type_declarationContext.self, 0)
+			}
+			open
+			func typealias_declaration() -> Typealias_declarationContext? {
+				return getRuleContext(Typealias_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_member_declaration
 		}
-		open func protocol_method_declaration() -> Protocol_method_declarationContext? {
-			return getRuleContext(Protocol_method_declarationContext.self,0)
-		}
-		open func protocol_initializer_declaration() -> Protocol_initializer_declarationContext? {
-			return getRuleContext(Protocol_initializer_declarationContext.self,0)
-		}
-		open func protocol_subscript_declaration() -> Protocol_subscript_declarationContext? {
-			return getRuleContext(Protocol_subscript_declarationContext.self,0)
-		}
-		open func protocol_associated_type_declaration() -> Protocol_associated_type_declarationContext? {
-			return getRuleContext(Protocol_associated_type_declarationContext.self,0)
-		}
-		open func typealias_declaration() -> Typealias_declarationContext? {
-			return getRuleContext(Typealias_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_member_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_member_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_member_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_member_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_member_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_member_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_member_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_member_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_member_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_member_declaration() throws -> Protocol_member_declarationContext {
+	 open func protocol_member_declaration() throws -> Protocol_member_declarationContext {
 		var _localctx: Protocol_member_declarationContext = Protocol_member_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 280, Swift3Parser.RULE_protocol_member_declaration)
 		defer {
@@ -11278,46 +12309,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_property_declarationContext:ParserRuleContext {
-		open func variable_declaration_head() -> Variable_declaration_headContext? {
-			return getRuleContext(Variable_declaration_headContext.self,0)
+
+	public class Protocol_property_declarationContext: ParserRuleContext {
+			open
+			func variable_declaration_head() -> Variable_declaration_headContext? {
+				return getRuleContext(Variable_declaration_headContext.self, 0)
+			}
+			open
+			func variable_name() -> Variable_nameContext? {
+				return getRuleContext(Variable_nameContext.self, 0)
+			}
+			open
+			func type_annotation() -> Type_annotationContext? {
+				return getRuleContext(Type_annotationContext.self, 0)
+			}
+			open
+			func getter_setter_keyword_block() -> Getter_setter_keyword_blockContext? {
+				return getRuleContext(Getter_setter_keyword_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_property_declaration
 		}
-		open func variable_name() -> Variable_nameContext? {
-			return getRuleContext(Variable_nameContext.self,0)
-		}
-		open func type_annotation() -> Type_annotationContext? {
-			return getRuleContext(Type_annotationContext.self,0)
-		}
-		open func getter_setter_keyword_block() -> Getter_setter_keyword_blockContext? {
-			return getRuleContext(Getter_setter_keyword_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_property_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_property_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_property_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_property_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_property_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_property_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_property_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_property_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_property_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_property_declaration() throws -> Protocol_property_declarationContext {
+	 open func protocol_property_declaration() throws -> Protocol_property_declarationContext {
 		var _localctx: Protocol_property_declarationContext = Protocol_property_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 282, Swift3Parser.RULE_protocol_property_declaration)
 		defer {
@@ -11343,49 +12383,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_method_declarationContext:ParserRuleContext {
-		open func function_head() -> Function_headContext? {
-			return getRuleContext(Function_headContext.self,0)
+
+	public class Protocol_method_declarationContext: ParserRuleContext {
+			open
+			func function_head() -> Function_headContext? {
+				return getRuleContext(Function_headContext.self, 0)
+			}
+			open
+			func function_name() -> Function_nameContext? {
+				return getRuleContext(Function_nameContext.self, 0)
+			}
+			open
+			func function_signature() -> Function_signatureContext? {
+				return getRuleContext(Function_signatureContext.self, 0)
+			}
+			open
+			func generic_parameter_clause() -> Generic_parameter_clauseContext? {
+				return getRuleContext(Generic_parameter_clauseContext.self, 0)
+			}
+			open
+			func generic_where_clause() -> Generic_where_clauseContext? {
+				return getRuleContext(Generic_where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_method_declaration
 		}
-		open func function_name() -> Function_nameContext? {
-			return getRuleContext(Function_nameContext.self,0)
-		}
-		open func function_signature() -> Function_signatureContext? {
-			return getRuleContext(Function_signatureContext.self,0)
-		}
-		open func generic_parameter_clause() -> Generic_parameter_clauseContext? {
-			return getRuleContext(Generic_parameter_clauseContext.self,0)
-		}
-		open func generic_where_clause() -> Generic_where_clauseContext? {
-			return getRuleContext(Generic_where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_method_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_method_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_method_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_method_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_method_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_method_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_method_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_method_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_method_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_method_declaration() throws -> Protocol_method_declarationContext {
+	 open func protocol_method_declaration() throws -> Protocol_method_declarationContext {
 		var _localctx: Protocol_method_declarationContext = Protocol_method_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 284, Swift3Parser.RULE_protocol_method_declaration)
 		var _la: Int = 0
@@ -11436,46 +12486,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_initializer_declarationContext:ParserRuleContext {
-		open func initializer_head() -> Initializer_headContext? {
-			return getRuleContext(Initializer_headContext.self,0)
+
+	public class Protocol_initializer_declarationContext: ParserRuleContext {
+			open
+			func initializer_head() -> Initializer_headContext? {
+				return getRuleContext(Initializer_headContext.self, 0)
+			}
+			open
+			func parameter_clause() -> Parameter_clauseContext? {
+				return getRuleContext(Parameter_clauseContext.self, 0)
+			}
+			open
+			func generic_parameter_clause() -> Generic_parameter_clauseContext? {
+				return getRuleContext(Generic_parameter_clauseContext.self, 0)
+			}
+			open
+			func generic_where_clause() -> Generic_where_clauseContext? {
+				return getRuleContext(Generic_where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_initializer_declaration
 		}
-		open func parameter_clause() -> Parameter_clauseContext? {
-			return getRuleContext(Parameter_clauseContext.self,0)
-		}
-		open func generic_parameter_clause() -> Generic_parameter_clauseContext? {
-			return getRuleContext(Generic_parameter_clauseContext.self,0)
-		}
-		open func generic_where_clause() -> Generic_where_clauseContext? {
-			return getRuleContext(Generic_where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_initializer_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_initializer_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_initializer_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_initializer_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_initializer_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_initializer_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_initializer_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_initializer_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_initializer_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_initializer_declaration() throws -> Protocol_initializer_declarationContext {
+	 open func protocol_initializer_declaration() throws -> Protocol_initializer_declarationContext {
 		var _localctx: Protocol_initializer_declarationContext = Protocol_initializer_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 286, Swift3Parser.RULE_protocol_initializer_declaration)
 		var _la: Int = 0
@@ -11580,43 +12639,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_subscript_declarationContext:ParserRuleContext {
-		open func subscript_head() -> Subscript_headContext? {
-			return getRuleContext(Subscript_headContext.self,0)
+
+	public class Protocol_subscript_declarationContext: ParserRuleContext {
+			open
+			func subscript_head() -> Subscript_headContext? {
+				return getRuleContext(Subscript_headContext.self, 0)
+			}
+			open
+			func subscript_result() -> Subscript_resultContext? {
+				return getRuleContext(Subscript_resultContext.self, 0)
+			}
+			open
+			func getter_setter_keyword_block() -> Getter_setter_keyword_blockContext? {
+				return getRuleContext(Getter_setter_keyword_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_subscript_declaration
 		}
-		open func subscript_result() -> Subscript_resultContext? {
-			return getRuleContext(Subscript_resultContext.self,0)
-		}
-		open func getter_setter_keyword_block() -> Getter_setter_keyword_blockContext? {
-			return getRuleContext(Getter_setter_keyword_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_subscript_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_subscript_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_subscript_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_subscript_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_subscript_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_subscript_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_subscript_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_subscript_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_subscript_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_subscript_declaration() throws -> Protocol_subscript_declarationContext {
+	 open func protocol_subscript_declaration() throws -> Protocol_subscript_declarationContext {
 		var _localctx: Protocol_subscript_declarationContext = Protocol_subscript_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 288, Swift3Parser.RULE_protocol_subscript_declaration)
 		defer {
@@ -11640,49 +12707,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_associated_type_declarationContext:ParserRuleContext {
-		open func typealias_name() -> Typealias_nameContext? {
-			return getRuleContext(Typealias_nameContext.self,0)
+
+	public class Protocol_associated_type_declarationContext: ParserRuleContext {
+			open
+			func typealias_name() -> Typealias_nameContext? {
+				return getRuleContext(Typealias_nameContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func access_level_modifier() -> Access_level_modifierContext? {
+				return getRuleContext(Access_level_modifierContext.self, 0)
+			}
+			open
+			func type_inheritance_clause() -> Type_inheritance_clauseContext? {
+				return getRuleContext(Type_inheritance_clauseContext.self, 0)
+			}
+			open
+			func typealias_assignment() -> Typealias_assignmentContext? {
+				return getRuleContext(Typealias_assignmentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_associated_type_declaration
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func access_level_modifier() -> Access_level_modifierContext? {
-			return getRuleContext(Access_level_modifierContext.self,0)
-		}
-		open func type_inheritance_clause() -> Type_inheritance_clauseContext? {
-			return getRuleContext(Type_inheritance_clauseContext.self,0)
-		}
-		open func typealias_assignment() -> Typealias_assignmentContext? {
-			return getRuleContext(Typealias_assignmentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_associated_type_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_associated_type_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_associated_type_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_associated_type_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_associated_type_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_associated_type_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_associated_type_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_associated_type_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_associated_type_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_associated_type_declaration() throws -> Protocol_associated_type_declarationContext {
+	 open func protocol_associated_type_declaration() throws -> Protocol_associated_type_declarationContext {
 		var _localctx: Protocol_associated_type_declarationContext = Protocol_associated_type_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 290, Swift3Parser.RULE_protocol_associated_type_declaration)
 		var _la: Int = 0
@@ -11754,49 +12831,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Initializer_declarationContext:ParserRuleContext {
-		open func initializer_head() -> Initializer_headContext? {
-			return getRuleContext(Initializer_headContext.self,0)
+
+	public class Initializer_declarationContext: ParserRuleContext {
+			open
+			func initializer_head() -> Initializer_headContext? {
+				return getRuleContext(Initializer_headContext.self, 0)
+			}
+			open
+			func parameter_clause() -> Parameter_clauseContext? {
+				return getRuleContext(Parameter_clauseContext.self, 0)
+			}
+			open
+			func initializer_body() -> Initializer_bodyContext? {
+				return getRuleContext(Initializer_bodyContext.self, 0)
+			}
+			open
+			func generic_parameter_clause() -> Generic_parameter_clauseContext? {
+				return getRuleContext(Generic_parameter_clauseContext.self, 0)
+			}
+			open
+			func generic_where_clause() -> Generic_where_clauseContext? {
+				return getRuleContext(Generic_where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_initializer_declaration
 		}
-		open func parameter_clause() -> Parameter_clauseContext? {
-			return getRuleContext(Parameter_clauseContext.self,0)
-		}
-		open func initializer_body() -> Initializer_bodyContext? {
-			return getRuleContext(Initializer_bodyContext.self,0)
-		}
-		open func generic_parameter_clause() -> Generic_parameter_clauseContext? {
-			return getRuleContext(Generic_parameter_clauseContext.self,0)
-		}
-		open func generic_where_clause() -> Generic_where_clauseContext? {
-			return getRuleContext(Generic_where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_initializer_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterInitializer_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterInitializer_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitInitializer_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitInitializer_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitInitializer_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitInitializer_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitInitializer_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitInitializer_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initializer_declaration() throws -> Initializer_declarationContext {
+	 open func initializer_declaration() throws -> Initializer_declarationContext {
 		var _localctx: Initializer_declarationContext = Initializer_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 292, Swift3Parser.RULE_initializer_declaration)
 		var _la: Int = 0
@@ -11905,40 +12992,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Initializer_headContext:ParserRuleContext {
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
+
+	public class Initializer_headContext: ParserRuleContext {
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func declaration_modifiers() -> Declaration_modifiersContext? {
+				return getRuleContext(Declaration_modifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_initializer_head
 		}
-		open func declaration_modifiers() -> Declaration_modifiersContext? {
-			return getRuleContext(Declaration_modifiersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_initializer_head }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterInitializer_head(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterInitializer_head(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitInitializer_head(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitInitializer_head(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitInitializer_head(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitInitializer_head(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitInitializer_head(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitInitializer_head(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initializer_head() throws -> Initializer_headContext {
+	 open func initializer_head() throws -> Initializer_headContext {
 		var _localctx: Initializer_headContext = Initializer_headContext(_ctx, getState())
 		try enterRule(_localctx, 294, Swift3Parser.RULE_initializer_head)
 		var _la: Int = 0
@@ -12069,37 +13163,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Initializer_bodyContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Initializer_bodyContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_initializer_body
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_initializer_body }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterInitializer_body(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterInitializer_body(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitInitializer_body(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitInitializer_body(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitInitializer_body(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitInitializer_body(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitInitializer_body(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitInitializer_body(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initializer_body() throws -> Initializer_bodyContext {
+	 open func initializer_body() throws -> Initializer_bodyContext {
 		var _localctx: Initializer_bodyContext = Initializer_bodyContext(_ctx, getState())
 		try enterRule(_localctx, 296, Swift3Parser.RULE_initializer_body)
 		defer {
@@ -12119,40 +13219,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Deinitializer_declarationContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class Deinitializer_declarationContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_deinitializer_declaration
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_deinitializer_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDeinitializer_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDeinitializer_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDeinitializer_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDeinitializer_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDeinitializer_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDeinitializer_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDeinitializer_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDeinitializer_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func deinitializer_declaration() throws -> Deinitializer_declarationContext {
+	 open func deinitializer_declaration() throws -> Deinitializer_declarationContext {
 		var _localctx: Deinitializer_declarationContext = Deinitializer_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 298, Swift3Parser.RULE_deinitializer_declaration)
 		var _la: Int = 0
@@ -12188,52 +13295,63 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Extension_declarationContext:ParserRuleContext {
-		open func type_identifier() -> Type_identifierContext? {
-			return getRuleContext(Type_identifierContext.self,0)
+
+	public class Extension_declarationContext: ParserRuleContext {
+			open
+			func type_identifier() -> Type_identifierContext? {
+				return getRuleContext(Type_identifierContext.self, 0)
+			}
+			open
+			func extension_body() -> Extension_bodyContext? {
+				return getRuleContext(Extension_bodyContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func access_level_modifier() -> Access_level_modifierContext? {
+				return getRuleContext(Access_level_modifierContext.self, 0)
+			}
+			open
+			func type_inheritance_clause() -> Type_inheritance_clauseContext? {
+				return getRuleContext(Type_inheritance_clauseContext.self, 0)
+			}
+			open
+			func generic_where_clause() -> Generic_where_clauseContext? {
+				return getRuleContext(Generic_where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_extension_declaration
 		}
-		open func extension_body() -> Extension_bodyContext? {
-			return getRuleContext(Extension_bodyContext.self,0)
-		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func access_level_modifier() -> Access_level_modifierContext? {
-			return getRuleContext(Access_level_modifierContext.self,0)
-		}
-		open func type_inheritance_clause() -> Type_inheritance_clauseContext? {
-			return getRuleContext(Type_inheritance_clauseContext.self,0)
-		}
-		open func generic_where_clause() -> Generic_where_clauseContext? {
-			return getRuleContext(Generic_where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_extension_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExtension_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExtension_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExtension_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExtension_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExtension_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExtension_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExtension_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExtension_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extension_declaration() throws -> Extension_declarationContext {
+	 open func extension_declaration() throws -> Extension_declarationContext {
 		var _localctx: Extension_declarationContext = Extension_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 300, Swift3Parser.RULE_extension_declaration)
 		var _la: Int = 0
@@ -12348,40 +13466,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Extension_bodyContext:ParserRuleContext {
-		open func extension_member() -> Array<Extension_memberContext> {
-			return getRuleContexts(Extension_memberContext.self)
+
+	public class Extension_bodyContext: ParserRuleContext {
+			open
+			func extension_member() -> [Extension_memberContext] {
+				return getRuleContexts(Extension_memberContext.self)
+			}
+			open
+			func extension_member(_ i: Int) -> Extension_memberContext? {
+				return getRuleContext(Extension_memberContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_extension_body
 		}
-		open func extension_member(_ i: Int) -> Extension_memberContext? {
-			return getRuleContext(Extension_memberContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_extension_body }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExtension_body(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExtension_body(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExtension_body(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExtension_body(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExtension_body(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExtension_body(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExtension_body(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExtension_body(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extension_body() throws -> Extension_bodyContext {
+	 open func extension_body() throws -> Extension_bodyContext {
 		var _localctx: Extension_bodyContext = Extension_bodyContext(_ctx, getState())
 		try enterRule(_localctx, 302, Swift3Parser.RULE_extension_body)
 		var _la: Int = 0
@@ -12428,40 +13553,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Extension_memberContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class Extension_memberContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func compiler_control_statement() -> Compiler_control_statementContext? {
+				return getRuleContext(Compiler_control_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_extension_member
 		}
-		open func compiler_control_statement() -> Compiler_control_statementContext? {
-			return getRuleContext(Compiler_control_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_extension_member }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExtension_member(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExtension_member(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExtension_member(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExtension_member(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExtension_member(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExtension_member(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExtension_member(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExtension_member(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extension_member() throws -> Extension_memberContext {
+	 open func extension_member() throws -> Extension_memberContext {
 		var _localctx: Extension_memberContext = Extension_memberContext(_ctx, getState())
 		try enterRule(_localctx, 304, Swift3Parser.RULE_extension_member)
 		defer {
@@ -12520,7 +13652,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12531,49 +13663,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Subscript_declarationContext:ParserRuleContext {
-		open func subscript_head() -> Subscript_headContext? {
-			return getRuleContext(Subscript_headContext.self,0)
+
+	public class Subscript_declarationContext: ParserRuleContext {
+			open
+			func subscript_head() -> Subscript_headContext? {
+				return getRuleContext(Subscript_headContext.self, 0)
+			}
+			open
+			func subscript_result() -> Subscript_resultContext? {
+				return getRuleContext(Subscript_resultContext.self, 0)
+			}
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func getter_setter_block() -> Getter_setter_blockContext? {
+				return getRuleContext(Getter_setter_blockContext.self, 0)
+			}
+			open
+			func getter_setter_keyword_block() -> Getter_setter_keyword_blockContext? {
+				return getRuleContext(Getter_setter_keyword_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_subscript_declaration
 		}
-		open func subscript_result() -> Subscript_resultContext? {
-			return getRuleContext(Subscript_resultContext.self,0)
-		}
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
-		}
-		open func getter_setter_block() -> Getter_setter_blockContext? {
-			return getRuleContext(Getter_setter_blockContext.self,0)
-		}
-		open func getter_setter_keyword_block() -> Getter_setter_keyword_blockContext? {
-			return getRuleContext(Getter_setter_keyword_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_subscript_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSubscript_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSubscript_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSubscript_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSubscript_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSubscript_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSubscript_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSubscript_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSubscript_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subscript_declaration() throws -> Subscript_declarationContext {
+	 open func subscript_declaration() throws -> Subscript_declarationContext {
 		var _localctx: Subscript_declarationContext = Subscript_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 306, Swift3Parser.RULE_subscript_declaration)
 		defer {
@@ -12624,43 +13766,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Subscript_headContext:ParserRuleContext {
-		open func parameter_clause() -> Parameter_clauseContext? {
-			return getRuleContext(Parameter_clauseContext.self,0)
+
+	public class Subscript_headContext: ParserRuleContext {
+			open
+			func parameter_clause() -> Parameter_clauseContext? {
+				return getRuleContext(Parameter_clauseContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func declaration_modifiers() -> Declaration_modifiersContext? {
+				return getRuleContext(Declaration_modifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_subscript_head
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func declaration_modifiers() -> Declaration_modifiersContext? {
-			return getRuleContext(Declaration_modifiersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_subscript_head }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSubscript_head(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSubscript_head(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSubscript_head(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSubscript_head(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSubscript_head(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSubscript_head(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSubscript_head(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSubscript_head(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subscript_head() throws -> Subscript_headContext {
+	 open func subscript_head() throws -> Subscript_headContext {
 		var _localctx: Subscript_headContext = Subscript_headContext(_ctx, getState())
 		try enterRule(_localctx, 308, Swift3Parser.RULE_subscript_head)
 		var _la: Int = 0
@@ -12712,43 +13862,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Subscript_resultContext:ParserRuleContext {
-		open func arrow_operator() -> Arrow_operatorContext? {
-			return getRuleContext(Arrow_operatorContext.self,0)
+
+	public class Subscript_resultContext: ParserRuleContext {
+			open
+			func arrow_operator() -> Arrow_operatorContext? {
+				return getRuleContext(Arrow_operatorContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_subscript_result
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_subscript_result }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSubscript_result(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSubscript_result(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSubscript_result(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSubscript_result(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSubscript_result(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSubscript_result(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSubscript_result(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSubscript_result(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subscript_result() throws -> Subscript_resultContext {
+	 open func subscript_result() throws -> Subscript_resultContext {
 		var _localctx: Subscript_resultContext = Subscript_resultContext(_ctx, getState())
 		try enterRule(_localctx, 310, Swift3Parser.RULE_subscript_result)
 		defer {
@@ -12780,43 +13938,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Operator_declarationContext:ParserRuleContext {
-		open func prefix_operator_declaration() -> Prefix_operator_declarationContext? {
-			return getRuleContext(Prefix_operator_declarationContext.self,0)
+
+	public class Operator_declarationContext: ParserRuleContext {
+			open
+			func prefix_operator_declaration() -> Prefix_operator_declarationContext? {
+				return getRuleContext(Prefix_operator_declarationContext.self, 0)
+			}
+			open
+			func postfix_operator_declaration() -> Postfix_operator_declarationContext? {
+				return getRuleContext(Postfix_operator_declarationContext.self, 0)
+			}
+			open
+			func infix_operator_declaration() -> Infix_operator_declarationContext? {
+				return getRuleContext(Infix_operator_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_operator_declaration
 		}
-		open func postfix_operator_declaration() -> Postfix_operator_declarationContext? {
-			return getRuleContext(Postfix_operator_declarationContext.self,0)
-		}
-		open func infix_operator_declaration() -> Infix_operator_declarationContext? {
-			return getRuleContext(Infix_operator_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_operator_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterOperator_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterOperator_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitOperator_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitOperator_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitOperator_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitOperator_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitOperator_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitOperator_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operator_declaration() throws -> Operator_declarationContext {
+	 open func operator_declaration() throws -> Operator_declarationContext {
 		var _localctx: Operator_declarationContext = Operator_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 312, Swift3Parser.RULE_operator_declaration)
 		defer {
@@ -12847,7 +14013,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12858,37 +14024,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Prefix_operator_declarationContext:ParserRuleContext {
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
+
+	public class Prefix_operator_declarationContext: ParserRuleContext {
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_prefix_operator_declaration
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_prefix_operator_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrefix_operator_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrefix_operator_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrefix_operator_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrefix_operator_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrefix_operator_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrefix_operator_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrefix_operator_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrefix_operator_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefix_operator_declaration() throws -> Prefix_operator_declarationContext {
+	 open func prefix_operator_declaration() throws -> Prefix_operator_declarationContext {
 		var _localctx: Prefix_operator_declarationContext = Prefix_operator_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 314, Swift3Parser.RULE_prefix_operator_declaration)
 		defer {
@@ -12912,37 +14084,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Postfix_operator_declarationContext:ParserRuleContext {
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
+
+	public class Postfix_operator_declarationContext: ParserRuleContext {
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_postfix_operator_declaration
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_postfix_operator_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPostfix_operator_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPostfix_operator_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPostfix_operator_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPostfix_operator_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPostfix_operator_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPostfix_operator_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPostfix_operator_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPostfix_operator_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func postfix_operator_declaration() throws -> Postfix_operator_declarationContext {
+	 open func postfix_operator_declaration() throws -> Postfix_operator_declarationContext {
 		var _localctx: Postfix_operator_declarationContext = Postfix_operator_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 316, Swift3Parser.RULE_postfix_operator_declaration)
 		defer {
@@ -12966,40 +14144,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Infix_operator_declarationContext:ParserRuleContext {
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
+
+	public class Infix_operator_declarationContext: ParserRuleContext {
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+			open
+			func infix_operator_group() -> Infix_operator_groupContext? {
+				return getRuleContext(Infix_operator_groupContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_infix_operator_declaration
 		}
-		open func infix_operator_group() -> Infix_operator_groupContext? {
-			return getRuleContext(Infix_operator_groupContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_infix_operator_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterInfix_operator_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterInfix_operator_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitInfix_operator_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitInfix_operator_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitInfix_operator_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitInfix_operator_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitInfix_operator_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitInfix_operator_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func infix_operator_declaration() throws -> Infix_operator_declarationContext {
+	 open func infix_operator_declaration() throws -> Infix_operator_declarationContext {
 		var _localctx: Infix_operator_declarationContext = Infix_operator_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 318, Swift3Parser.RULE_infix_operator_declaration)
 		defer {
@@ -13033,37 +14218,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Infix_operator_groupContext:ParserRuleContext {
-		open func precedence_group_name() -> Precedence_group_nameContext? {
-			return getRuleContext(Precedence_group_nameContext.self,0)
+
+	public class Infix_operator_groupContext: ParserRuleContext {
+			open
+			func precedence_group_name() -> Precedence_group_nameContext? {
+				return getRuleContext(Precedence_group_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_infix_operator_group
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_infix_operator_group }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterInfix_operator_group(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterInfix_operator_group(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitInfix_operator_group(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitInfix_operator_group(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitInfix_operator_group(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitInfix_operator_group(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitInfix_operator_group(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitInfix_operator_group(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func infix_operator_group() throws -> Infix_operator_groupContext {
+	 open func infix_operator_group() throws -> Infix_operator_groupContext {
 		var _localctx: Infix_operator_groupContext = Infix_operator_groupContext(_ctx, getState())
 		try enterRule(_localctx, 320, Swift3Parser.RULE_infix_operator_group)
 		defer {
@@ -13085,43 +14276,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Precedence_group_declarationContext:ParserRuleContext {
-		open func precedence_group_name() -> Precedence_group_nameContext? {
-			return getRuleContext(Precedence_group_nameContext.self,0)
+
+	public class Precedence_group_declarationContext: ParserRuleContext {
+			open
+			func precedence_group_name() -> Precedence_group_nameContext? {
+				return getRuleContext(Precedence_group_nameContext.self, 0)
+			}
+			open
+			func precedence_group_attribute() -> [Precedence_group_attributeContext] {
+				return getRuleContexts(Precedence_group_attributeContext.self)
+			}
+			open
+			func precedence_group_attribute(_ i: Int) -> Precedence_group_attributeContext? {
+				return getRuleContext(Precedence_group_attributeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_precedence_group_declaration
 		}
-		open func precedence_group_attribute() -> Array<Precedence_group_attributeContext> {
-			return getRuleContexts(Precedence_group_attributeContext.self)
-		}
-		open func precedence_group_attribute(_ i: Int) -> Precedence_group_attributeContext? {
-			return getRuleContext(Precedence_group_attributeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_precedence_group_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrecedence_group_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrecedence_group_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrecedence_group_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrecedence_group_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrecedence_group_declaration(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrecedence_group_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrecedence_group_declaration(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrecedence_group_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func precedence_group_declaration() throws -> Precedence_group_declarationContext {
+	 open func precedence_group_declaration() throws -> Precedence_group_declarationContext {
 		var _localctx: Precedence_group_declarationContext = Precedence_group_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 322, Swift3Parser.RULE_precedence_group_declaration)
 		var _la: Int = 0
@@ -13167,43 +14366,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Precedence_group_attributeContext:ParserRuleContext {
-		open func precedence_group_relation() -> Precedence_group_relationContext? {
-			return getRuleContext(Precedence_group_relationContext.self,0)
+
+	public class Precedence_group_attributeContext: ParserRuleContext {
+			open
+			func precedence_group_relation() -> Precedence_group_relationContext? {
+				return getRuleContext(Precedence_group_relationContext.self, 0)
+			}
+			open
+			func precedence_group_assignment() -> Precedence_group_assignmentContext? {
+				return getRuleContext(Precedence_group_assignmentContext.self, 0)
+			}
+			open
+			func precedence_group_associativity() -> Precedence_group_associativityContext? {
+				return getRuleContext(Precedence_group_associativityContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_precedence_group_attribute
 		}
-		open func precedence_group_assignment() -> Precedence_group_assignmentContext? {
-			return getRuleContext(Precedence_group_assignmentContext.self,0)
-		}
-		open func precedence_group_associativity() -> Precedence_group_associativityContext? {
-			return getRuleContext(Precedence_group_associativityContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_precedence_group_attribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrecedence_group_attribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrecedence_group_attribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrecedence_group_attribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrecedence_group_attribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrecedence_group_attribute(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrecedence_group_attribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrecedence_group_attribute(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrecedence_group_attribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func precedence_group_attribute() throws -> Precedence_group_attributeContext {
+	 open func precedence_group_attribute() throws -> Precedence_group_attributeContext {
 		var _localctx: Precedence_group_attributeContext = Precedence_group_attributeContext(_ctx, getState())
 		try enterRule(_localctx, 324, Swift3Parser.RULE_precedence_group_attribute)
 		defer {
@@ -13235,7 +14442,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13246,37 +14453,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Precedence_group_relationContext:ParserRuleContext {
-		open func precedence_group_names() -> Precedence_group_namesContext? {
-			return getRuleContext(Precedence_group_namesContext.self,0)
+
+	public class Precedence_group_relationContext: ParserRuleContext {
+			open
+			func precedence_group_names() -> Precedence_group_namesContext? {
+				return getRuleContext(Precedence_group_namesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_precedence_group_relation
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_precedence_group_relation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrecedence_group_relation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrecedence_group_relation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrecedence_group_relation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrecedence_group_relation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrecedence_group_relation(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrecedence_group_relation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrecedence_group_relation(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrecedence_group_relation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func precedence_group_relation() throws -> Precedence_group_relationContext {
+	 open func precedence_group_relation() throws -> Precedence_group_relationContext {
 		var _localctx: Precedence_group_relationContext = Precedence_group_relationContext(_ctx, getState())
 		try enterRule(_localctx, 326, Swift3Parser.RULE_precedence_group_relation)
 		defer {
@@ -13308,7 +14521,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13319,37 +14532,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Precedence_group_assignmentContext:ParserRuleContext {
-		open func boolean_literal() -> Boolean_literalContext? {
-			return getRuleContext(Boolean_literalContext.self,0)
+
+	public class Precedence_group_assignmentContext: ParserRuleContext {
+			open
+			func boolean_literal() -> Boolean_literalContext? {
+				return getRuleContext(Boolean_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_precedence_group_assignment
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_precedence_group_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrecedence_group_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrecedence_group_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrecedence_group_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrecedence_group_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrecedence_group_assignment(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrecedence_group_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrecedence_group_assignment(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrecedence_group_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func precedence_group_assignment() throws -> Precedence_group_assignmentContext {
+	 open func precedence_group_assignment() throws -> Precedence_group_assignmentContext {
 		var _localctx: Precedence_group_assignmentContext = Precedence_group_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 328, Swift3Parser.RULE_precedence_group_assignment)
 		defer {
@@ -13373,37 +14592,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Precedence_group_associativityContext:ParserRuleContext {
-		open func associativity() -> AssociativityContext? {
-			return getRuleContext(AssociativityContext.self,0)
+
+	public class Precedence_group_associativityContext: ParserRuleContext {
+			open
+			func associativity() -> AssociativityContext? {
+				return getRuleContext(AssociativityContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_precedence_group_associativity
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_precedence_group_associativity }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrecedence_group_associativity(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrecedence_group_associativity(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrecedence_group_associativity(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrecedence_group_associativity(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrecedence_group_associativity(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrecedence_group_associativity(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrecedence_group_associativity(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrecedence_group_associativity(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func precedence_group_associativity() throws -> Precedence_group_associativityContext {
+	 open func precedence_group_associativity() throws -> Precedence_group_associativityContext {
 		var _localctx: Precedence_group_associativityContext = Precedence_group_associativityContext(_ctx, getState())
 		try enterRule(_localctx, 330, Swift3Parser.RULE_precedence_group_associativity)
 		defer {
@@ -13427,34 +14652,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class AssociativityContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_associativity }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAssociativity(self)
+
+	public class AssociativityContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_associativity
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAssociativity(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAssociativity(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAssociativity(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAssociativity(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAssociativity(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAssociativity(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAssociativity(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func associativity() throws -> AssociativityContext {
+	 open func associativity() throws -> AssociativityContext {
 		var _localctx: AssociativityContext = AssociativityContext(_ctx, getState())
 		try enterRule(_localctx, 332, Swift3Parser.RULE_associativity)
 		var _la: Int = 0
@@ -13489,40 +14719,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Precedence_group_namesContext:ParserRuleContext {
-		open func precedence_group_name() -> Array<Precedence_group_nameContext> {
-			return getRuleContexts(Precedence_group_nameContext.self)
+
+	public class Precedence_group_namesContext: ParserRuleContext {
+			open
+			func precedence_group_name() -> [Precedence_group_nameContext] {
+				return getRuleContexts(Precedence_group_nameContext.self)
+			}
+			open
+			func precedence_group_name(_ i: Int) -> Precedence_group_nameContext? {
+				return getRuleContext(Precedence_group_nameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_precedence_group_names
 		}
-		open func precedence_group_name(_ i: Int) -> Precedence_group_nameContext? {
-			return getRuleContext(Precedence_group_nameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_precedence_group_names }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrecedence_group_names(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrecedence_group_names(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrecedence_group_names(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrecedence_group_names(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrecedence_group_names(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrecedence_group_names(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrecedence_group_names(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrecedence_group_names(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func precedence_group_names() throws -> Precedence_group_namesContext {
+	 open func precedence_group_names() throws -> Precedence_group_namesContext {
 		var _localctx: Precedence_group_namesContext = Precedence_group_namesContext(_ctx, getState())
 		try enterRule(_localctx, 334, Swift3Parser.RULE_precedence_group_names)
 		var _la: Int = 0
@@ -13561,37 +14798,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Precedence_group_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Precedence_group_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_precedence_group_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_precedence_group_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrecedence_group_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrecedence_group_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrecedence_group_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrecedence_group_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrecedence_group_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrecedence_group_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrecedence_group_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrecedence_group_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func precedence_group_name() throws -> Precedence_group_nameContext {
+	 open func precedence_group_name() throws -> Precedence_group_nameContext {
 		var _localctx: Precedence_group_nameContext = Precedence_group_nameContext(_ctx, getState())
 		try enterRule(_localctx, 336, Swift3Parser.RULE_precedence_group_name)
 		defer {
@@ -13611,40 +14854,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Declaration_modifierContext:ParserRuleContext {
-		open func access_level_modifier() -> Access_level_modifierContext? {
-			return getRuleContext(Access_level_modifierContext.self,0)
+
+	public class Declaration_modifierContext: ParserRuleContext {
+			open
+			func access_level_modifier() -> Access_level_modifierContext? {
+				return getRuleContext(Access_level_modifierContext.self, 0)
+			}
+			open
+			func mutation_modifier() -> Mutation_modifierContext? {
+				return getRuleContext(Mutation_modifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_declaration_modifier
 		}
-		open func mutation_modifier() -> Mutation_modifierContext? {
-			return getRuleContext(Mutation_modifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_declaration_modifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDeclaration_modifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDeclaration_modifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDeclaration_modifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDeclaration_modifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDeclaration_modifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDeclaration_modifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDeclaration_modifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDeclaration_modifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration_modifier() throws -> Declaration_modifierContext {
+	 open func declaration_modifier() throws -> Declaration_modifierContext {
 		var _localctx: Declaration_modifierContext = Declaration_modifierContext(_ctx, getState())
 		try enterRule(_localctx, 338, Swift3Parser.RULE_declaration_modifier)
 		defer {
@@ -13785,40 +15035,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Declaration_modifiersContext:ParserRuleContext {
-		open func declaration_modifier() -> Array<Declaration_modifierContext> {
-			return getRuleContexts(Declaration_modifierContext.self)
+
+	public class Declaration_modifiersContext: ParserRuleContext {
+			open
+			func declaration_modifier() -> [Declaration_modifierContext] {
+				return getRuleContexts(Declaration_modifierContext.self)
+			}
+			open
+			func declaration_modifier(_ i: Int) -> Declaration_modifierContext? {
+				return getRuleContext(Declaration_modifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_declaration_modifiers
 		}
-		open func declaration_modifier(_ i: Int) -> Declaration_modifierContext? {
-			return getRuleContext(Declaration_modifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_declaration_modifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDeclaration_modifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDeclaration_modifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDeclaration_modifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDeclaration_modifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDeclaration_modifiers(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDeclaration_modifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDeclaration_modifiers(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDeclaration_modifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration_modifiers() throws -> Declaration_modifiersContext {
+	 open func declaration_modifiers() throws -> Declaration_modifiersContext {
 		var _localctx: Declaration_modifiersContext = Declaration_modifiersContext(_ctx, getState())
 		try enterRule(_localctx, 340, Swift3Parser.RULE_declaration_modifiers)
 		var _la: Int = 0
@@ -13856,34 +15113,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Access_level_modifierContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_access_level_modifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAccess_level_modifier(self)
+
+	public class Access_level_modifierContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_access_level_modifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAccess_level_modifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAccess_level_modifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAccess_level_modifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAccess_level_modifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAccess_level_modifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAccess_level_modifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAccess_level_modifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func access_level_modifier() throws -> Access_level_modifierContext {
+	 open func access_level_modifier() throws -> Access_level_modifierContext {
 		var _localctx: Access_level_modifierContext = Access_level_modifierContext(_ctx, getState())
 		try enterRule(_localctx, 342, Swift3Parser.RULE_access_level_modifier)
 		defer {
@@ -13994,34 +15256,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Mutation_modifierContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_mutation_modifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterMutation_modifier(self)
+
+	public class Mutation_modifierContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_mutation_modifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterMutation_modifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitMutation_modifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitMutation_modifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitMutation_modifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitMutation_modifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitMutation_modifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitMutation_modifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mutation_modifier() throws -> Mutation_modifierContext {
+	 open func mutation_modifier() throws -> Mutation_modifierContext {
 		var _localctx: Mutation_modifierContext = Mutation_modifierContext(_ctx, getState())
 		try enterRule(_localctx, 344, Swift3Parser.RULE_mutation_modifier)
 		var _la: Int = 0
@@ -14054,64 +15321,78 @@ open class Swift3Parser: Parser {
 		return _localctx
 	}
 
-	open class PatternContext:ParserRuleContext {
-		open func wildcard_pattern() -> Wildcard_patternContext? {
-			return getRuleContext(Wildcard_patternContext.self,0)
+	public class PatternContext: ParserRuleContext {
+			open
+			func wildcard_pattern() -> Wildcard_patternContext? {
+				return getRuleContext(Wildcard_patternContext.self, 0)
+			}
+			open
+			func type_annotation() -> Type_annotationContext? {
+				return getRuleContext(Type_annotationContext.self, 0)
+			}
+			open
+			func identifier_pattern() -> Identifier_patternContext? {
+				return getRuleContext(Identifier_patternContext.self, 0)
+			}
+			open
+			func value_binding_pattern() -> Value_binding_patternContext? {
+				return getRuleContext(Value_binding_patternContext.self, 0)
+			}
+			open
+			func tuple_pattern() -> Tuple_patternContext? {
+				return getRuleContext(Tuple_patternContext.self, 0)
+			}
+			open
+			func enum_case_pattern() -> Enum_case_patternContext? {
+				return getRuleContext(Enum_case_patternContext.self, 0)
+			}
+			open
+			func optional_pattern() -> Optional_patternContext? {
+				return getRuleContext(Optional_patternContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func expression_pattern() -> Expression_patternContext? {
+				return getRuleContext(Expression_patternContext.self, 0)
+			}
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_pattern
 		}
-		open func type_annotation() -> Type_annotationContext? {
-			return getRuleContext(Type_annotationContext.self,0)
-		}
-		open func identifier_pattern() -> Identifier_patternContext? {
-			return getRuleContext(Identifier_patternContext.self,0)
-		}
-		open func value_binding_pattern() -> Value_binding_patternContext? {
-			return getRuleContext(Value_binding_patternContext.self,0)
-		}
-		open func tuple_pattern() -> Tuple_patternContext? {
-			return getRuleContext(Tuple_patternContext.self,0)
-		}
-		open func enum_case_pattern() -> Enum_case_patternContext? {
-			return getRuleContext(Enum_case_patternContext.self,0)
-		}
-		open func optional_pattern() -> Optional_patternContext? {
-			return getRuleContext(Optional_patternContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func expression_pattern() -> Expression_patternContext? {
-			return getRuleContext(Expression_patternContext.self,0)
-		}
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPattern(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPattern(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func pattern( ) throws -> PatternContext   {
+	 public final  func pattern( ) throws -> PatternContext   {
 		return try pattern(0)
 	}
 	@discardableResult
@@ -14219,7 +15500,7 @@ open class Swift3Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_pattern)
 					setState(1948)
 					if (!(precpred(_ctx, 2))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 					}
 					setState(1949)
 					try match(Swift3Parser.Tokens.T__83.rawValue)
@@ -14242,34 +15523,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx;
 	}
-	open class Wildcard_patternContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_wildcard_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterWildcard_pattern(self)
+
+	public class Wildcard_patternContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_wildcard_pattern
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterWildcard_pattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitWildcard_pattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitWildcard_pattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitWildcard_pattern(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitWildcard_pattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitWildcard_pattern(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitWildcard_pattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func wildcard_pattern() throws -> Wildcard_patternContext {
+	 open func wildcard_pattern() throws -> Wildcard_patternContext {
 		var _localctx: Wildcard_patternContext = Wildcard_patternContext(_ctx, getState())
 		try enterRule(_localctx, 348, Swift3Parser.RULE_wildcard_pattern)
 		defer {
@@ -14289,37 +15575,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Identifier_patternContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Identifier_patternContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_identifier_pattern
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_identifier_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterIdentifier_pattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterIdentifier_pattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitIdentifier_pattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitIdentifier_pattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitIdentifier_pattern(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitIdentifier_pattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitIdentifier_pattern(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitIdentifier_pattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifier_pattern() throws -> Identifier_patternContext {
+	 open func identifier_pattern() throws -> Identifier_patternContext {
 		var _localctx: Identifier_patternContext = Identifier_patternContext(_ctx, getState())
 		try enterRule(_localctx, 350, Swift3Parser.RULE_identifier_pattern)
 		defer {
@@ -14339,37 +15631,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Value_binding_patternContext:ParserRuleContext {
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
+
+	public class Value_binding_patternContext: ParserRuleContext {
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_value_binding_pattern
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_value_binding_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterValue_binding_pattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterValue_binding_pattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitValue_binding_pattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitValue_binding_pattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitValue_binding_pattern(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitValue_binding_pattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitValue_binding_pattern(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitValue_binding_pattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value_binding_pattern() throws -> Value_binding_patternContext {
+	 open func value_binding_pattern() throws -> Value_binding_patternContext {
 		var _localctx: Value_binding_patternContext = Value_binding_patternContext(_ctx, getState())
 		try enterRule(_localctx, 352, Swift3Parser.RULE_value_binding_pattern)
 		defer {
@@ -14397,7 +15695,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -14408,37 +15706,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Tuple_patternContext:ParserRuleContext {
-		open func tuple_pattern_element_list() -> Tuple_pattern_element_listContext? {
-			return getRuleContext(Tuple_pattern_element_listContext.self,0)
+
+	public class Tuple_patternContext: ParserRuleContext {
+			open
+			func tuple_pattern_element_list() -> Tuple_pattern_element_listContext? {
+				return getRuleContext(Tuple_pattern_element_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_tuple_pattern
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_tuple_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTuple_pattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTuple_pattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTuple_pattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTuple_pattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTuple_pattern(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTuple_pattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTuple_pattern(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTuple_pattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuple_pattern() throws -> Tuple_patternContext {
+	 open func tuple_pattern() throws -> Tuple_patternContext {
 		var _localctx: Tuple_patternContext = Tuple_patternContext(_ctx, getState())
 		try enterRule(_localctx, 354, Swift3Parser.RULE_tuple_pattern)
 		defer {
@@ -14470,40 +15774,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Tuple_pattern_element_listContext:ParserRuleContext {
-		open func tuple_pattern_element() -> Array<Tuple_pattern_elementContext> {
-			return getRuleContexts(Tuple_pattern_elementContext.self)
+
+	public class Tuple_pattern_element_listContext: ParserRuleContext {
+			open
+			func tuple_pattern_element() -> [Tuple_pattern_elementContext] {
+				return getRuleContexts(Tuple_pattern_elementContext.self)
+			}
+			open
+			func tuple_pattern_element(_ i: Int) -> Tuple_pattern_elementContext? {
+				return getRuleContext(Tuple_pattern_elementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_tuple_pattern_element_list
 		}
-		open func tuple_pattern_element(_ i: Int) -> Tuple_pattern_elementContext? {
-			return getRuleContext(Tuple_pattern_elementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_tuple_pattern_element_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTuple_pattern_element_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTuple_pattern_element_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTuple_pattern_element_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTuple_pattern_element_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTuple_pattern_element_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTuple_pattern_element_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTuple_pattern_element_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTuple_pattern_element_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuple_pattern_element_list() throws -> Tuple_pattern_element_listContext {
+	 open func tuple_pattern_element_list() throws -> Tuple_pattern_element_listContext {
 		var _localctx: Tuple_pattern_element_listContext = Tuple_pattern_element_listContext(_ctx, getState())
 		try enterRule(_localctx, 356, Swift3Parser.RULE_tuple_pattern_element_list)
 		var _la: Int = 0
@@ -14542,37 +15853,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Tuple_pattern_elementContext:ParserRuleContext {
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
+
+	public class Tuple_pattern_elementContext: ParserRuleContext {
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_tuple_pattern_element
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_tuple_pattern_element }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTuple_pattern_element(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTuple_pattern_element(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTuple_pattern_element(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTuple_pattern_element(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTuple_pattern_element(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTuple_pattern_element(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTuple_pattern_element(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTuple_pattern_element(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuple_pattern_element() throws -> Tuple_pattern_elementContext {
+	 open func tuple_pattern_element() throws -> Tuple_pattern_elementContext {
 		var _localctx: Tuple_pattern_elementContext = Tuple_pattern_elementContext(_ctx, getState())
 		try enterRule(_localctx, 358, Swift3Parser.RULE_tuple_pattern_element)
 		defer {
@@ -14592,43 +15909,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Enum_case_patternContext:ParserRuleContext {
-		open func enum_case_name() -> Enum_case_nameContext? {
-			return getRuleContext(Enum_case_nameContext.self,0)
+
+	public class Enum_case_patternContext: ParserRuleContext {
+			open
+			func enum_case_name() -> Enum_case_nameContext? {
+				return getRuleContext(Enum_case_nameContext.self, 0)
+			}
+			open
+			func type_identifier() -> Type_identifierContext? {
+				return getRuleContext(Type_identifierContext.self, 0)
+			}
+			open
+			func tuple_pattern() -> Tuple_patternContext? {
+				return getRuleContext(Tuple_patternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_enum_case_pattern
 		}
-		open func type_identifier() -> Type_identifierContext? {
-			return getRuleContext(Type_identifierContext.self,0)
-		}
-		open func tuple_pattern() -> Tuple_patternContext? {
-			return getRuleContext(Tuple_patternContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_enum_case_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterEnum_case_pattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterEnum_case_pattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitEnum_case_pattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitEnum_case_pattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitEnum_case_pattern(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitEnum_case_pattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitEnum_case_pattern(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitEnum_case_pattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enum_case_pattern() throws -> Enum_case_patternContext {
+	 open func enum_case_pattern() throws -> Enum_case_patternContext {
 		var _localctx: Enum_case_patternContext = Enum_case_patternContext(_ctx, getState())
 		try enterRule(_localctx, 360, Swift3Parser.RULE_enum_case_pattern)
 		var _la: Int = 0
@@ -14681,37 +16006,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Optional_patternContext:ParserRuleContext {
-		open func identifier_pattern() -> Identifier_patternContext? {
-			return getRuleContext(Identifier_patternContext.self,0)
+
+	public class Optional_patternContext: ParserRuleContext {
+			open
+			func identifier_pattern() -> Identifier_patternContext? {
+				return getRuleContext(Identifier_patternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_optional_pattern
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_optional_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterOptional_pattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterOptional_pattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitOptional_pattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitOptional_pattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitOptional_pattern(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitOptional_pattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitOptional_pattern(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitOptional_pattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optional_pattern() throws -> Optional_patternContext {
+	 open func optional_pattern() throws -> Optional_patternContext {
 		var _localctx: Optional_patternContext = Optional_patternContext(_ctx, getState())
 		try enterRule(_localctx, 362, Swift3Parser.RULE_optional_pattern)
 		defer {
@@ -14733,37 +16064,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Expression_patternContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Expression_patternContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_expression_pattern
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_expression_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExpression_pattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExpression_pattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExpression_pattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExpression_pattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExpression_pattern(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExpression_pattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExpression_pattern(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExpression_pattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression_pattern() throws -> Expression_patternContext {
+	 open func expression_pattern() throws -> Expression_patternContext {
 		var _localctx: Expression_patternContext = Expression_patternContext(_ctx, getState())
 		try enterRule(_localctx, 364, Swift3Parser.RULE_expression_pattern)
 		defer {
@@ -14783,40 +16120,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class AttributeContext:ParserRuleContext {
-		open func attribute_name() -> Attribute_nameContext? {
-			return getRuleContext(Attribute_nameContext.self,0)
+
+	public class AttributeContext: ParserRuleContext {
+			open
+			func attribute_name() -> Attribute_nameContext? {
+				return getRuleContext(Attribute_nameContext.self, 0)
+			}
+			open
+			func attribute_argument_clause() -> Attribute_argument_clauseContext? {
+				return getRuleContext(Attribute_argument_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_attribute
 		}
-		open func attribute_argument_clause() -> Attribute_argument_clauseContext? {
-			return getRuleContext(Attribute_argument_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_attribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAttribute(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAttribute(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attribute() throws -> AttributeContext {
+	 open func attribute() throws -> AttributeContext {
 		var _localctx: AttributeContext = AttributeContext(_ctx, getState())
 		try enterRule(_localctx, 366, Swift3Parser.RULE_attribute)
 		defer {
@@ -14848,37 +16192,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Attribute_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Attribute_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_attribute_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_attribute_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAttribute_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAttribute_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAttribute_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAttribute_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAttribute_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAttribute_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAttribute_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAttribute_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attribute_name() throws -> Attribute_nameContext {
+	 open func attribute_name() throws -> Attribute_nameContext {
 		var _localctx: Attribute_nameContext = Attribute_nameContext(_ctx, getState())
 		try enterRule(_localctx, 368, Swift3Parser.RULE_attribute_name)
 		defer {
@@ -14898,37 +16248,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Attribute_argument_clauseContext:ParserRuleContext {
-		open func balanced_tokens() -> Balanced_tokensContext? {
-			return getRuleContext(Balanced_tokensContext.self,0)
+
+	public class Attribute_argument_clauseContext: ParserRuleContext {
+			open
+			func balanced_tokens() -> Balanced_tokensContext? {
+				return getRuleContext(Balanced_tokensContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_attribute_argument_clause
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_attribute_argument_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAttribute_argument_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAttribute_argument_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAttribute_argument_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAttribute_argument_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAttribute_argument_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAttribute_argument_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAttribute_argument_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAttribute_argument_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attribute_argument_clause() throws -> Attribute_argument_clauseContext {
+	 open func attribute_argument_clause() throws -> Attribute_argument_clauseContext {
 		var _localctx: Attribute_argument_clauseContext = Attribute_argument_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 370, Swift3Parser.RULE_attribute_argument_clause)
 		defer {
@@ -14952,40 +16308,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class AttributesContext:ParserRuleContext {
-		open func attribute() -> Array<AttributeContext> {
-			return getRuleContexts(AttributeContext.self)
+
+	public class AttributesContext: ParserRuleContext {
+			open
+			func attribute() -> [AttributeContext] {
+				return getRuleContexts(AttributeContext.self)
+			}
+			open
+			func attribute(_ i: Int) -> AttributeContext? {
+				return getRuleContext(AttributeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_attributes
 		}
-		open func attribute(_ i: Int) -> AttributeContext? {
-			return getRuleContext(AttributeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_attributes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAttributes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAttributes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAttributes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAttributes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAttributes(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAttributes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAttributes(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAttributes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributes() throws -> AttributesContext {
+	 open func attributes() throws -> AttributesContext {
 		var _localctx: AttributesContext = AttributesContext(_ctx, getState())
 		try enterRule(_localctx, 372, Swift3Parser.RULE_attributes)
 		defer {
@@ -15006,7 +16369,7 @@ open class Swift3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2009); 
 		 		try _errHandler.sync(self)
@@ -15022,40 +16385,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Balanced_tokensContext:ParserRuleContext {
-		open func balanced_token() -> Array<Balanced_tokenContext> {
-			return getRuleContexts(Balanced_tokenContext.self)
+
+	public class Balanced_tokensContext: ParserRuleContext {
+			open
+			func balanced_token() -> [Balanced_tokenContext] {
+				return getRuleContexts(Balanced_tokenContext.self)
+			}
+			open
+			func balanced_token(_ i: Int) -> Balanced_tokenContext? {
+				return getRuleContext(Balanced_tokenContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_balanced_tokens
 		}
-		open func balanced_token(_ i: Int) -> Balanced_tokenContext? {
-			return getRuleContext(Balanced_tokenContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_balanced_tokens }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterBalanced_tokens(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterBalanced_tokens(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitBalanced_tokens(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitBalanced_tokens(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitBalanced_tokens(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitBalanced_tokens(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitBalanced_tokens(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitBalanced_tokens(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func balanced_tokens() throws -> Balanced_tokensContext {
+	 open func balanced_tokens() throws -> Balanced_tokensContext {
 		var _localctx: Balanced_tokensContext = Balanced_tokensContext(_ctx, getState())
 		try enterRule(_localctx, 374, Swift3Parser.RULE_balanced_tokens)
 		defer {
@@ -15088,50 +16458,63 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Balanced_tokenContext:ParserRuleContext {
-		open func balanced_tokens() -> Balanced_tokensContext? {
-			return getRuleContext(Balanced_tokensContext.self,0)
+
+	public class Balanced_tokenContext: ParserRuleContext {
+			open
+			func balanced_tokens() -> Balanced_tokensContext? {
+				return getRuleContext(Balanced_tokensContext.self, 0)
+			}
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+			open
+			func Platform_name_platform_version() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Platform_name_platform_version.rawValue, 0)
+			}
+			open
+			func any_punctuation_for_balanced_token() -> Any_punctuation_for_balanced_tokenContext? {
+				return getRuleContext(Any_punctuation_for_balanced_tokenContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_balanced_token
 		}
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
-		}
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
-		}
-		open func Platform_name_platform_version() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Platform_name_platform_version.rawValue, 0) }
-		open func any_punctuation_for_balanced_token() -> Any_punctuation_for_balanced_tokenContext? {
-			return getRuleContext(Any_punctuation_for_balanced_tokenContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_balanced_token }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterBalanced_token(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterBalanced_token(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitBalanced_token(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitBalanced_token(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitBalanced_token(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitBalanced_token(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitBalanced_token(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitBalanced_token(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func balanced_token() throws -> Balanced_tokenContext {
+	 open func balanced_token() throws -> Balanced_tokenContext {
 		var _localctx: Balanced_tokenContext = Balanced_tokenContext(_ctx, getState())
 		try enterRule(_localctx, 376, Swift3Parser.RULE_balanced_token)
 		defer {
@@ -15212,37 +16595,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Any_punctuation_for_balanced_tokenContext:ParserRuleContext {
-		open func arrow_operator() -> Arrow_operatorContext? {
-			return getRuleContext(Arrow_operatorContext.self,0)
+
+	public class Any_punctuation_for_balanced_tokenContext: ParserRuleContext {
+			open
+			func arrow_operator() -> Arrow_operatorContext? {
+				return getRuleContext(Arrow_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_any_punctuation_for_balanced_token
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_any_punctuation_for_balanced_token }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAny_punctuation_for_balanced_token(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAny_punctuation_for_balanced_token(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAny_punctuation_for_balanced_token(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAny_punctuation_for_balanced_token(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAny_punctuation_for_balanced_token(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAny_punctuation_for_balanced_token(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAny_punctuation_for_balanced_token(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAny_punctuation_for_balanced_token(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func any_punctuation_for_balanced_token() throws -> Any_punctuation_for_balanced_tokenContext {
+	 open func any_punctuation_for_balanced_token() throws -> Any_punctuation_for_balanced_tokenContext {
 		var _localctx: Any_punctuation_for_balanced_tokenContext = Any_punctuation_for_balanced_tokenContext(_ctx, getState())
 		try enterRule(_localctx, 378, Swift3Parser.RULE_any_punctuation_for_balanced_token)
 		var _la: Int = 0
@@ -15284,7 +16673,7 @@ open class Swift3Parser: Parser {
 		 		try enterOuterAlt(_localctx, 3)
 		 		setState(2038)
 		 		if (!(SwiftSupport.isPrefixOp(_input))) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPrefixOp(_input)"))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPrefixOp(_input)"))
 		 		}
 		 		setState(2039)
 		 		try match(Swift3Parser.Tokens.AND.rawValue)
@@ -15294,7 +16683,7 @@ open class Swift3Parser: Parser {
 		 		try enterOuterAlt(_localctx, 4)
 		 		setState(2040)
 		 		if (!(SwiftSupport.isPostfixOp(_input))) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPostfixOp(_input)"))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPostfixOp(_input)"))
 		 		}
 		 		setState(2041)
 		 		try match(Swift3Parser.Tokens.BANG.rawValue)
@@ -15311,43 +16700,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func prefix_expression() -> Prefix_expressionContext? {
-			return getRuleContext(Prefix_expressionContext.self,0)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func prefix_expression() -> Prefix_expressionContext? {
+				return getRuleContext(Prefix_expressionContext.self, 0)
+			}
+			open
+			func try_operator() -> Try_operatorContext? {
+				return getRuleContext(Try_operatorContext.self, 0)
+			}
+			open
+			func binary_expressions() -> Binary_expressionsContext? {
+				return getRuleContext(Binary_expressionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_expression
 		}
-		open func try_operator() -> Try_operatorContext? {
-			return getRuleContext(Try_operatorContext.self,0)
-		}
-		open func binary_expressions() -> Binary_expressionsContext? {
-			return getRuleContext(Binary_expressionsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExpression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 380, Swift3Parser.RULE_expression)
 		defer {
@@ -15387,40 +16784,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Expression_listContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Expression_listContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_expression_list
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_expression_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExpression_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExpression_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExpression_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExpression_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExpression_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExpression_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExpression_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExpression_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression_list() throws -> Expression_listContext {
+	 open func expression_list() throws -> Expression_listContext {
 		var _localctx: Expression_listContext = Expression_listContext(_ctx, getState())
 		try enterRule(_localctx, 382, Swift3Parser.RULE_expression_list)
 		var _la: Int = 0
@@ -15459,43 +16863,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Prefix_expressionContext:ParserRuleContext {
-		open func prefix_operator() -> Prefix_operatorContext? {
-			return getRuleContext(Prefix_operatorContext.self,0)
+
+	public class Prefix_expressionContext: ParserRuleContext {
+			open
+			func prefix_operator() -> Prefix_operatorContext? {
+				return getRuleContext(Prefix_operatorContext.self, 0)
+			}
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func in_out_expression() -> In_out_expressionContext? {
+				return getRuleContext(In_out_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_prefix_expression
 		}
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func in_out_expression() -> In_out_expressionContext? {
-			return getRuleContext(In_out_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_prefix_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrefix_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrefix_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrefix_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrefix_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrefix_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrefix_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrefix_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrefix_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefix_expression() throws -> Prefix_expressionContext {
+	 open func prefix_expression() throws -> Prefix_expressionContext {
 		var _localctx: Prefix_expressionContext = Prefix_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 384, Swift3Parser.RULE_prefix_expression)
 		defer {
@@ -15536,37 +16948,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class In_out_expressionContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class In_out_expressionContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_in_out_expression
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_in_out_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterIn_out_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterIn_out_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitIn_out_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitIn_out_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitIn_out_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitIn_out_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitIn_out_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitIn_out_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func in_out_expression() throws -> In_out_expressionContext {
+	 open func in_out_expression() throws -> In_out_expressionContext {
 		var _localctx: In_out_expressionContext = In_out_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 386, Swift3Parser.RULE_in_out_expression)
 		defer {
@@ -15588,34 +17006,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Try_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_try_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTry_operator(self)
+
+	public class Try_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_try_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTry_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTry_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTry_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTry_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTry_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTry_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTry_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func try_operator() throws -> Try_operatorContext {
+	 open func try_operator() throws -> Try_operatorContext {
 		var _localctx: Try_operatorContext = Try_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 388, Swift3Parser.RULE_try_operator)
 		defer {
@@ -15658,52 +17081,63 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Binary_expressionContext:ParserRuleContext {
-		open func binary_operator() -> Binary_operatorContext? {
-			return getRuleContext(Binary_operatorContext.self,0)
+
+	public class Binary_expressionContext: ParserRuleContext {
+			open
+			func binary_operator() -> Binary_operatorContext? {
+				return getRuleContext(Binary_operatorContext.self, 0)
+			}
+			open
+			func prefix_expression() -> Prefix_expressionContext? {
+				return getRuleContext(Prefix_expressionContext.self, 0)
+			}
+			open
+			func assignment_operator() -> Assignment_operatorContext? {
+				return getRuleContext(Assignment_operatorContext.self, 0)
+			}
+			open
+			func try_operator() -> Try_operatorContext? {
+				return getRuleContext(Try_operatorContext.self, 0)
+			}
+			open
+			func conditional_operator() -> Conditional_operatorContext? {
+				return getRuleContext(Conditional_operatorContext.self, 0)
+			}
+			open
+			func type_casting_operator() -> Type_casting_operatorContext? {
+				return getRuleContext(Type_casting_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_binary_expression
 		}
-		open func prefix_expression() -> Prefix_expressionContext? {
-			return getRuleContext(Prefix_expressionContext.self,0)
-		}
-		open func assignment_operator() -> Assignment_operatorContext? {
-			return getRuleContext(Assignment_operatorContext.self,0)
-		}
-		open func try_operator() -> Try_operatorContext? {
-			return getRuleContext(Try_operatorContext.self,0)
-		}
-		open func conditional_operator() -> Conditional_operatorContext? {
-			return getRuleContext(Conditional_operatorContext.self,0)
-		}
-		open func type_casting_operator() -> Type_casting_operatorContext? {
-			return getRuleContext(Type_casting_operatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_binary_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterBinary_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterBinary_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitBinary_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitBinary_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitBinary_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitBinary_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitBinary_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitBinary_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_expression() throws -> Binary_expressionContext {
+	 open func binary_expression() throws -> Binary_expressionContext {
 		var _localctx: Binary_expressionContext = Binary_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 390, Swift3Parser.RULE_binary_expression)
 		defer {
@@ -15774,40 +17208,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Binary_expressionsContext:ParserRuleContext {
-		open func binary_expression() -> Array<Binary_expressionContext> {
-			return getRuleContexts(Binary_expressionContext.self)
+
+	public class Binary_expressionsContext: ParserRuleContext {
+			open
+			func binary_expression() -> [Binary_expressionContext] {
+				return getRuleContexts(Binary_expressionContext.self)
+			}
+			open
+			func binary_expression(_ i: Int) -> Binary_expressionContext? {
+				return getRuleContext(Binary_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_binary_expressions
 		}
-		open func binary_expression(_ i: Int) -> Binary_expressionContext? {
-			return getRuleContext(Binary_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_binary_expressions }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterBinary_expressions(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterBinary_expressions(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitBinary_expressions(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitBinary_expressions(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitBinary_expressions(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitBinary_expressions(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitBinary_expressions(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitBinary_expressions(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_expressions() throws -> Binary_expressionsContext {
+	 open func binary_expressions() throws -> Binary_expressionsContext {
 		var _localctx: Binary_expressionsContext = Binary_expressionsContext(_ctx, getState())
 		try enterRule(_localctx, 392, Swift3Parser.RULE_binary_expressions)
 		defer {
@@ -15828,7 +17269,7 @@ open class Swift3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2097); 
 		 		try _errHandler.sync(self)
@@ -15844,40 +17285,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Conditional_operatorContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Conditional_operatorContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func try_operator() -> Try_operatorContext? {
+				return getRuleContext(Try_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_conditional_operator
 		}
-		open func try_operator() -> Try_operatorContext? {
-			return getRuleContext(Try_operatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_conditional_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterConditional_operator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterConditional_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitConditional_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitConditional_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitConditional_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitConditional_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitConditional_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitConditional_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditional_operator() throws -> Conditional_operatorContext {
+	 open func conditional_operator() throws -> Conditional_operatorContext {
 		var _localctx: Conditional_operatorContext = Conditional_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 394, Swift3Parser.RULE_conditional_operator)
 		defer {
@@ -15911,37 +17359,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Type_casting_operatorContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class Type_casting_operatorContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_type_casting_operator
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_type_casting_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterType_casting_operator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterType_casting_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitType_casting_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitType_casting_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitType_casting_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitType_casting_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitType_casting_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitType_casting_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type_casting_operator() throws -> Type_casting_operatorContext {
+	 open func type_casting_operator() throws -> Type_casting_operatorContext {
 		var _localctx: Type_casting_operatorContext = Type_casting_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 396, Swift3Parser.RULE_type_casting_operator)
 		defer {
@@ -15998,70 +17452,87 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Primary_expressionContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Primary_expressionContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+			open
+			func generic_argument_clause() -> Generic_argument_clauseContext? {
+				return getRuleContext(Generic_argument_clauseContext.self, 0)
+			}
+			open
+			func literal_expression() -> Literal_expressionContext? {
+				return getRuleContext(Literal_expressionContext.self, 0)
+			}
+			open
+			func self_expression() -> Self_expressionContext? {
+				return getRuleContext(Self_expressionContext.self, 0)
+			}
+			open
+			func superclass_expression() -> Superclass_expressionContext? {
+				return getRuleContext(Superclass_expressionContext.self, 0)
+			}
+			open
+			func closure_expression() -> Closure_expressionContext? {
+				return getRuleContext(Closure_expressionContext.self, 0)
+			}
+			open
+			func parenthesized_expression() -> Parenthesized_expressionContext? {
+				return getRuleContext(Parenthesized_expressionContext.self, 0)
+			}
+			open
+			func tuple_expression() -> Tuple_expressionContext? {
+				return getRuleContext(Tuple_expressionContext.self, 0)
+			}
+			open
+			func implicit_member_expression() -> Implicit_member_expressionContext? {
+				return getRuleContext(Implicit_member_expressionContext.self, 0)
+			}
+			open
+			func wildcard_expression() -> Wildcard_expressionContext? {
+				return getRuleContext(Wildcard_expressionContext.self, 0)
+			}
+			open
+			func selector_expression() -> Selector_expressionContext? {
+				return getRuleContext(Selector_expressionContext.self, 0)
+			}
+			open
+			func key_path_expression() -> Key_path_expressionContext? {
+				return getRuleContext(Key_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_primary_expression
 		}
-		open func generic_argument_clause() -> Generic_argument_clauseContext? {
-			return getRuleContext(Generic_argument_clauseContext.self,0)
-		}
-		open func literal_expression() -> Literal_expressionContext? {
-			return getRuleContext(Literal_expressionContext.self,0)
-		}
-		open func self_expression() -> Self_expressionContext? {
-			return getRuleContext(Self_expressionContext.self,0)
-		}
-		open func superclass_expression() -> Superclass_expressionContext? {
-			return getRuleContext(Superclass_expressionContext.self,0)
-		}
-		open func closure_expression() -> Closure_expressionContext? {
-			return getRuleContext(Closure_expressionContext.self,0)
-		}
-		open func parenthesized_expression() -> Parenthesized_expressionContext? {
-			return getRuleContext(Parenthesized_expressionContext.self,0)
-		}
-		open func tuple_expression() -> Tuple_expressionContext? {
-			return getRuleContext(Tuple_expressionContext.self,0)
-		}
-		open func implicit_member_expression() -> Implicit_member_expressionContext? {
-			return getRuleContext(Implicit_member_expressionContext.self,0)
-		}
-		open func wildcard_expression() -> Wildcard_expressionContext? {
-			return getRuleContext(Wildcard_expressionContext.self,0)
-		}
-		open func selector_expression() -> Selector_expressionContext? {
-			return getRuleContext(Selector_expressionContext.self,0)
-		}
-		open func key_path_expression() -> Key_path_expressionContext? {
-			return getRuleContext(Key_path_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_primary_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrimary_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrimary_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrimary_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrimary_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrimary_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrimary_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrimary_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrimary_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primary_expression() throws -> Primary_expressionContext {
+	 open func primary_expression() throws -> Primary_expressionContext {
 		var _localctx: Primary_expressionContext = Primary_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 398, Swift3Parser.RULE_primary_expression)
 		defer {
@@ -16158,43 +17629,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Literal_expressionContext:ParserRuleContext {
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
+
+	public class Literal_expressionContext: ParserRuleContext {
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func array_literal() -> Array_literalContext? {
+				return getRuleContext(Array_literalContext.self, 0)
+			}
+			open
+			func dictionary_literal() -> Dictionary_literalContext? {
+				return getRuleContext(Dictionary_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_literal_expression
 		}
-		open func array_literal() -> Array_literalContext? {
-			return getRuleContext(Array_literalContext.self,0)
-		}
-		open func dictionary_literal() -> Dictionary_literalContext? {
-			return getRuleContext(Dictionary_literalContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_literal_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterLiteral_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterLiteral_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitLiteral_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitLiteral_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitLiteral_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitLiteral_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitLiteral_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitLiteral_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal_expression() throws -> Literal_expressionContext {
+	 open func literal_expression() throws -> Literal_expressionContext {
 		var _localctx: Literal_expressionContext = Literal_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 400, Swift3Parser.RULE_literal_expression)
 		defer {
@@ -16263,37 +17742,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Array_literalContext:ParserRuleContext {
-		open func array_literal_items() -> Array_literal_itemsContext? {
-			return getRuleContext(Array_literal_itemsContext.self,0)
+
+	public class Array_literalContext: ParserRuleContext {
+			open
+			func array_literal_items() -> Array_literal_itemsContext? {
+				return getRuleContext(Array_literal_itemsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_array_literal
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_array_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterArray_literal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterArray_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitArray_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitArray_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitArray_literal(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitArray_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitArray_literal(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitArray_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func array_literal() throws -> Array_literalContext {
+	 open func array_literal() throws -> Array_literalContext {
 		var _localctx: Array_literalContext = Array_literalContext(_ctx, getState())
 		try enterRule(_localctx, 402, Swift3Parser.RULE_array_literal)
 		defer {
@@ -16325,40 +17810,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Array_literal_itemsContext:ParserRuleContext {
-		open func array_literal_item() -> Array_literal_itemContext? {
-			return getRuleContext(Array_literal_itemContext.self,0)
+
+	public class Array_literal_itemsContext: ParserRuleContext {
+			open
+			func array_literal_item() -> Array_literal_itemContext? {
+				return getRuleContext(Array_literal_itemContext.self, 0)
+			}
+			open
+			func array_literal_items() -> Array_literal_itemsContext? {
+				return getRuleContext(Array_literal_itemsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_array_literal_items
 		}
-		open func array_literal_items() -> Array_literal_itemsContext? {
-			return getRuleContext(Array_literal_itemsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_array_literal_items }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterArray_literal_items(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterArray_literal_items(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitArray_literal_items(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitArray_literal_items(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitArray_literal_items(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitArray_literal_items(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitArray_literal_items(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitArray_literal_items(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func array_literal_items() throws -> Array_literal_itemsContext {
+	 open func array_literal_items() throws -> Array_literal_itemsContext {
 		var _localctx: Array_literal_itemsContext = Array_literal_itemsContext(_ctx, getState())
 		try enterRule(_localctx, 404, Swift3Parser.RULE_array_literal_items)
 		var _la: Int = 0
@@ -16409,37 +17901,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Array_literal_itemContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Array_literal_itemContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_array_literal_item
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_array_literal_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterArray_literal_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterArray_literal_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitArray_literal_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitArray_literal_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitArray_literal_item(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitArray_literal_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitArray_literal_item(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitArray_literal_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func array_literal_item() throws -> Array_literal_itemContext {
+	 open func array_literal_item() throws -> Array_literal_itemContext {
 		var _localctx: Array_literal_itemContext = Array_literal_itemContext(_ctx, getState())
 		try enterRule(_localctx, 406, Swift3Parser.RULE_array_literal_item)
 		defer {
@@ -16459,37 +17957,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dictionary_literalContext:ParserRuleContext {
-		open func dictionary_literal_items() -> Dictionary_literal_itemsContext? {
-			return getRuleContext(Dictionary_literal_itemsContext.self,0)
+
+	public class Dictionary_literalContext: ParserRuleContext {
+			open
+			func dictionary_literal_items() -> Dictionary_literal_itemsContext? {
+				return getRuleContext(Dictionary_literal_itemsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_dictionary_literal
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_dictionary_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDictionary_literal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDictionary_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDictionary_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDictionary_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDictionary_literal(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDictionary_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDictionary_literal(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDictionary_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dictionary_literal() throws -> Dictionary_literalContext {
+	 open func dictionary_literal() throws -> Dictionary_literalContext {
 		var _localctx: Dictionary_literalContext = Dictionary_literalContext(_ctx, getState())
 		try enterRule(_localctx, 408, Swift3Parser.RULE_dictionary_literal)
 		defer {
@@ -16530,40 +18034,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dictionary_literal_itemsContext:ParserRuleContext {
-		open func dictionary_literal_item() -> Dictionary_literal_itemContext? {
-			return getRuleContext(Dictionary_literal_itemContext.self,0)
+
+	public class Dictionary_literal_itemsContext: ParserRuleContext {
+			open
+			func dictionary_literal_item() -> Dictionary_literal_itemContext? {
+				return getRuleContext(Dictionary_literal_itemContext.self, 0)
+			}
+			open
+			func dictionary_literal_items() -> Dictionary_literal_itemsContext? {
+				return getRuleContext(Dictionary_literal_itemsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_dictionary_literal_items
 		}
-		open func dictionary_literal_items() -> Dictionary_literal_itemsContext? {
-			return getRuleContext(Dictionary_literal_itemsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_dictionary_literal_items }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDictionary_literal_items(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDictionary_literal_items(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDictionary_literal_items(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDictionary_literal_items(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDictionary_literal_items(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDictionary_literal_items(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDictionary_literal_items(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDictionary_literal_items(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dictionary_literal_items() throws -> Dictionary_literal_itemsContext {
+	 open func dictionary_literal_items() throws -> Dictionary_literal_itemsContext {
 		var _localctx: Dictionary_literal_itemsContext = Dictionary_literal_itemsContext(_ctx, getState())
 		try enterRule(_localctx, 410, Swift3Parser.RULE_dictionary_literal_items)
 		var _la: Int = 0
@@ -16614,40 +18125,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dictionary_literal_itemContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Dictionary_literal_itemContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_dictionary_literal_item
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_dictionary_literal_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDictionary_literal_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDictionary_literal_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDictionary_literal_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDictionary_literal_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDictionary_literal_item(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDictionary_literal_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDictionary_literal_item(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDictionary_literal_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dictionary_literal_item() throws -> Dictionary_literal_itemContext {
+	 open func dictionary_literal_item() throws -> Dictionary_literal_itemContext {
 		var _localctx: Dictionary_literal_itemContext = Dictionary_literal_itemContext(_ctx, getState())
 		try enterRule(_localctx, 412, Swift3Parser.RULE_dictionary_literal_item)
 		defer {
@@ -16671,40 +18189,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Playground_literalContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Playground_literalContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_playground_literal
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_playground_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPlayground_literal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPlayground_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPlayground_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPlayground_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPlayground_literal(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPlayground_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPlayground_literal(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPlayground_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func playground_literal() throws -> Playground_literalContext {
+	 open func playground_literal() throws -> Playground_literalContext {
 		var _localctx: Playground_literalContext = Playground_literalContext(_ctx, getState())
 		try enterRule(_localctx, 414, Swift3Parser.RULE_playground_literal)
 		defer {
@@ -16789,7 +18314,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16800,40 +18325,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Self_expressionContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Self_expressionContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+			open
+			func expression_list() -> Expression_listContext? {
+				return getRuleContext(Expression_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_self_expression
 		}
-		open func expression_list() -> Expression_listContext? {
-			return getRuleContext(Expression_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_self_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSelf_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSelf_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSelf_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSelf_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSelf_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSelf_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSelf_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSelf_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func self_expression() throws -> Self_expressionContext {
+	 open func self_expression() throws -> Self_expressionContext {
 		var _localctx: Self_expressionContext = Self_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 416, Swift3Parser.RULE_self_expression)
 		defer {
@@ -16918,43 +18450,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Superclass_expressionContext:ParserRuleContext {
-		open func superclass_method_expression() -> Superclass_method_expressionContext? {
-			return getRuleContext(Superclass_method_expressionContext.self,0)
+
+	public class Superclass_expressionContext: ParserRuleContext {
+			open
+			func superclass_method_expression() -> Superclass_method_expressionContext? {
+				return getRuleContext(Superclass_method_expressionContext.self, 0)
+			}
+			open
+			func superclass_subscript_expression() -> Superclass_subscript_expressionContext? {
+				return getRuleContext(Superclass_subscript_expressionContext.self, 0)
+			}
+			open
+			func superclass_initializer_expression() -> Superclass_initializer_expressionContext? {
+				return getRuleContext(Superclass_initializer_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_superclass_expression
 		}
-		open func superclass_subscript_expression() -> Superclass_subscript_expressionContext? {
-			return getRuleContext(Superclass_subscript_expressionContext.self,0)
-		}
-		open func superclass_initializer_expression() -> Superclass_initializer_expressionContext? {
-			return getRuleContext(Superclass_initializer_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_superclass_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSuperclass_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSuperclass_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSuperclass_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSuperclass_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSuperclass_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSuperclass_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSuperclass_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSuperclass_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func superclass_expression() throws -> Superclass_expressionContext {
+	 open func superclass_expression() throws -> Superclass_expressionContext {
 		var _localctx: Superclass_expressionContext = Superclass_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 418, Swift3Parser.RULE_superclass_expression)
 		defer {
@@ -16993,37 +18533,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Superclass_method_expressionContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Superclass_method_expressionContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_superclass_method_expression
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_superclass_method_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSuperclass_method_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSuperclass_method_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSuperclass_method_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSuperclass_method_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSuperclass_method_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSuperclass_method_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSuperclass_method_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSuperclass_method_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func superclass_method_expression() throws -> Superclass_method_expressionContext {
+	 open func superclass_method_expression() throws -> Superclass_method_expressionContext {
 		var _localctx: Superclass_method_expressionContext = Superclass_method_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 420, Swift3Parser.RULE_superclass_method_expression)
 		defer {
@@ -17047,37 +18593,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Superclass_subscript_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Superclass_subscript_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_superclass_subscript_expression
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_superclass_subscript_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSuperclass_subscript_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSuperclass_subscript_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSuperclass_subscript_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSuperclass_subscript_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSuperclass_subscript_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSuperclass_subscript_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSuperclass_subscript_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSuperclass_subscript_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func superclass_subscript_expression() throws -> Superclass_subscript_expressionContext {
+	 open func superclass_subscript_expression() throws -> Superclass_subscript_expressionContext {
 		var _localctx: Superclass_subscript_expressionContext = Superclass_subscript_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 422, Swift3Parser.RULE_superclass_subscript_expression)
 		defer {
@@ -17103,34 +18655,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Superclass_initializer_expressionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_superclass_initializer_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSuperclass_initializer_expression(self)
+
+	public class Superclass_initializer_expressionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_superclass_initializer_expression
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSuperclass_initializer_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSuperclass_initializer_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSuperclass_initializer_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSuperclass_initializer_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSuperclass_initializer_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSuperclass_initializer_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSuperclass_initializer_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func superclass_initializer_expression() throws -> Superclass_initializer_expressionContext {
+	 open func superclass_initializer_expression() throws -> Superclass_initializer_expressionContext {
 		var _localctx: Superclass_initializer_expressionContext = Superclass_initializer_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 424, Swift3Parser.RULE_superclass_initializer_expression)
 		defer {
@@ -17154,40 +18711,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Closure_expressionContext:ParserRuleContext {
-		open func closure_signature() -> Closure_signatureContext? {
-			return getRuleContext(Closure_signatureContext.self,0)
+
+	public class Closure_expressionContext: ParserRuleContext {
+			open
+			func closure_signature() -> Closure_signatureContext? {
+				return getRuleContext(Closure_signatureContext.self, 0)
+			}
+			open
+			func statements() -> StatementsContext? {
+				return getRuleContext(StatementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_closure_expression
 		}
-		open func statements() -> StatementsContext? {
-			return getRuleContext(StatementsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_closure_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClosure_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClosure_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClosure_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClosure_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClosure_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClosure_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClosure_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClosure_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func closure_expression() throws -> Closure_expressionContext {
+	 open func closure_expression() throws -> Closure_expressionContext {
 		var _localctx: Closure_expressionContext = Closure_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 426, Swift3Parser.RULE_closure_expression)
 		defer {
@@ -17229,43 +18793,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Closure_signatureContext:ParserRuleContext {
-		open func closure_parameter_clause() -> Closure_parameter_clauseContext? {
-			return getRuleContext(Closure_parameter_clauseContext.self,0)
+
+	public class Closure_signatureContext: ParserRuleContext {
+			open
+			func closure_parameter_clause() -> Closure_parameter_clauseContext? {
+				return getRuleContext(Closure_parameter_clauseContext.self, 0)
+			}
+			open
+			func capture_list() -> Capture_listContext? {
+				return getRuleContext(Capture_listContext.self, 0)
+			}
+			open
+			func function_result() -> Function_resultContext? {
+				return getRuleContext(Function_resultContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_closure_signature
 		}
-		open func capture_list() -> Capture_listContext? {
-			return getRuleContext(Capture_listContext.self,0)
-		}
-		open func function_result() -> Function_resultContext? {
-			return getRuleContext(Function_resultContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_closure_signature }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClosure_signature(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClosure_signature(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClosure_signature(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClosure_signature(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClosure_signature(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClosure_signature(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClosure_signature(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClosure_signature(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func closure_signature() throws -> Closure_signatureContext {
+	 open func closure_signature() throws -> Closure_signatureContext {
 		var _localctx: Closure_signatureContext = Closure_signatureContext(_ctx, getState())
 		try enterRule(_localctx, 428, Swift3Parser.RULE_closure_signature)
 		var _la: Int = 0
@@ -17336,40 +18908,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Closure_parameter_clauseContext:ParserRuleContext {
-		open func closure_parameter_list() -> Closure_parameter_listContext? {
-			return getRuleContext(Closure_parameter_listContext.self,0)
+
+	public class Closure_parameter_clauseContext: ParserRuleContext {
+			open
+			func closure_parameter_list() -> Closure_parameter_listContext? {
+				return getRuleContext(Closure_parameter_listContext.self, 0)
+			}
+			open
+			func closure_parameter_clause_identifier_list() -> Closure_parameter_clause_identifier_listContext? {
+				return getRuleContext(Closure_parameter_clause_identifier_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_closure_parameter_clause
 		}
-		open func closure_parameter_clause_identifier_list() -> Closure_parameter_clause_identifier_listContext? {
-			return getRuleContext(Closure_parameter_clause_identifier_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_closure_parameter_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClosure_parameter_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClosure_parameter_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClosure_parameter_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClosure_parameter_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClosure_parameter_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClosure_parameter_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClosure_parameter_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClosure_parameter_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func closure_parameter_clause() throws -> Closure_parameter_clauseContext {
+	 open func closure_parameter_clause() throws -> Closure_parameter_clauseContext {
 		var _localctx: Closure_parameter_clauseContext = Closure_parameter_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 430, Swift3Parser.RULE_closure_parameter_clause)
 		defer {
@@ -17414,40 +18993,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Closure_parameter_clause_identifier_listContext:ParserRuleContext {
-		open func declaration_identifier() -> Array<Declaration_identifierContext> {
-			return getRuleContexts(Declaration_identifierContext.self)
+
+	public class Closure_parameter_clause_identifier_listContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> [Declaration_identifierContext] {
+				return getRuleContexts(Declaration_identifierContext.self)
+			}
+			open
+			func declaration_identifier(_ i: Int) -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_closure_parameter_clause_identifier_list
 		}
-		open func declaration_identifier(_ i: Int) -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_closure_parameter_clause_identifier_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClosure_parameter_clause_identifier_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClosure_parameter_clause_identifier_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClosure_parameter_clause_identifier_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClosure_parameter_clause_identifier_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClosure_parameter_clause_identifier_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClosure_parameter_clause_identifier_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClosure_parameter_clause_identifier_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClosure_parameter_clause_identifier_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func closure_parameter_clause_identifier_list() throws -> Closure_parameter_clause_identifier_listContext {
+	 open func closure_parameter_clause_identifier_list() throws -> Closure_parameter_clause_identifier_listContext {
 		var _localctx: Closure_parameter_clause_identifier_listContext = Closure_parameter_clause_identifier_listContext(_ctx, getState())
 		try enterRule(_localctx, 432, Swift3Parser.RULE_closure_parameter_clause_identifier_list)
 		defer {
@@ -17484,40 +19070,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Closure_parameter_listContext:ParserRuleContext {
-		open func closure_parameter() -> Array<Closure_parameterContext> {
-			return getRuleContexts(Closure_parameterContext.self)
+
+	public class Closure_parameter_listContext: ParserRuleContext {
+			open
+			func closure_parameter() -> [Closure_parameterContext] {
+				return getRuleContexts(Closure_parameterContext.self)
+			}
+			open
+			func closure_parameter(_ i: Int) -> Closure_parameterContext? {
+				return getRuleContext(Closure_parameterContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_closure_parameter_list
 		}
-		open func closure_parameter(_ i: Int) -> Closure_parameterContext? {
-			return getRuleContext(Closure_parameterContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_closure_parameter_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClosure_parameter_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClosure_parameter_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClosure_parameter_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClosure_parameter_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClosure_parameter_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClosure_parameter_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClosure_parameter_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClosure_parameter_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func closure_parameter_list() throws -> Closure_parameter_listContext {
+	 open func closure_parameter_list() throws -> Closure_parameter_listContext {
 		var _localctx: Closure_parameter_listContext = Closure_parameter_listContext(_ctx, getState())
 		try enterRule(_localctx, 434, Swift3Parser.RULE_closure_parameter_list)
 		var _la: Int = 0
@@ -17556,43 +19149,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Closure_parameterContext:ParserRuleContext {
-		open func closure_parameter_name() -> Closure_parameter_nameContext? {
-			return getRuleContext(Closure_parameter_nameContext.self,0)
+
+	public class Closure_parameterContext: ParserRuleContext {
+			open
+			func closure_parameter_name() -> Closure_parameter_nameContext? {
+				return getRuleContext(Closure_parameter_nameContext.self, 0)
+			}
+			open
+			func type_annotation() -> Type_annotationContext? {
+				return getRuleContext(Type_annotationContext.self, 0)
+			}
+			open
+			func range_operator() -> Range_operatorContext? {
+				return getRuleContext(Range_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_closure_parameter
 		}
-		open func type_annotation() -> Type_annotationContext? {
-			return getRuleContext(Type_annotationContext.self,0)
-		}
-		open func range_operator() -> Range_operatorContext? {
-			return getRuleContext(Range_operatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_closure_parameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClosure_parameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClosure_parameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClosure_parameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClosure_parameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClosure_parameter(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClosure_parameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClosure_parameter(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClosure_parameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func closure_parameter() throws -> Closure_parameterContext {
+	 open func closure_parameter() throws -> Closure_parameterContext {
 		var _localctx: Closure_parameterContext = Closure_parameterContext(_ctx, getState())
 		try enterRule(_localctx, 436, Swift3Parser.RULE_closure_parameter)
 		var _la: Int = 0
@@ -17643,37 +19244,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Closure_parameter_nameContext:ParserRuleContext {
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
+
+	public class Closure_parameter_nameContext: ParserRuleContext {
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_closure_parameter_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_closure_parameter_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClosure_parameter_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClosure_parameter_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClosure_parameter_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClosure_parameter_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClosure_parameter_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClosure_parameter_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClosure_parameter_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClosure_parameter_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func closure_parameter_name() throws -> Closure_parameter_nameContext {
+	 open func closure_parameter_name() throws -> Closure_parameter_nameContext {
 		var _localctx: Closure_parameter_nameContext = Closure_parameter_nameContext(_ctx, getState())
 		try enterRule(_localctx, 438, Swift3Parser.RULE_closure_parameter_name)
 		defer {
@@ -17693,37 +19300,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Capture_listContext:ParserRuleContext {
-		open func capture_list_items() -> Capture_list_itemsContext? {
-			return getRuleContext(Capture_list_itemsContext.self,0)
+
+	public class Capture_listContext: ParserRuleContext {
+			open
+			func capture_list_items() -> Capture_list_itemsContext? {
+				return getRuleContext(Capture_list_itemsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_capture_list
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_capture_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCapture_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCapture_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCapture_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCapture_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCapture_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCapture_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCapture_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCapture_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func capture_list() throws -> Capture_listContext {
+	 open func capture_list() throws -> Capture_listContext {
 		var _localctx: Capture_listContext = Capture_listContext(_ctx, getState())
 		try enterRule(_localctx, 440, Swift3Parser.RULE_capture_list)
 		defer {
@@ -17747,40 +19360,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Capture_list_itemsContext:ParserRuleContext {
-		open func capture_list_item() -> Array<Capture_list_itemContext> {
-			return getRuleContexts(Capture_list_itemContext.self)
+
+	public class Capture_list_itemsContext: ParserRuleContext {
+			open
+			func capture_list_item() -> [Capture_list_itemContext] {
+				return getRuleContexts(Capture_list_itemContext.self)
+			}
+			open
+			func capture_list_item(_ i: Int) -> Capture_list_itemContext? {
+				return getRuleContext(Capture_list_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_capture_list_items
 		}
-		open func capture_list_item(_ i: Int) -> Capture_list_itemContext? {
-			return getRuleContext(Capture_list_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_capture_list_items }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCapture_list_items(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCapture_list_items(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCapture_list_items(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCapture_list_items(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCapture_list_items(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCapture_list_items(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCapture_list_items(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCapture_list_items(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func capture_list_items() throws -> Capture_list_itemsContext {
+	 open func capture_list_items() throws -> Capture_list_itemsContext {
 		var _localctx: Capture_list_itemsContext = Capture_list_itemsContext(_ctx, getState())
 		try enterRule(_localctx, 442, Swift3Parser.RULE_capture_list_items)
 		var _la: Int = 0
@@ -17819,40 +19439,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Capture_list_itemContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Capture_list_itemContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func capture_specifier() -> Capture_specifierContext? {
+				return getRuleContext(Capture_specifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_capture_list_item
 		}
-		open func capture_specifier() -> Capture_specifierContext? {
-			return getRuleContext(Capture_specifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_capture_list_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCapture_list_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCapture_list_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCapture_list_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCapture_list_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCapture_list_item(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCapture_list_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCapture_list_item(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCapture_list_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func capture_list_item() throws -> Capture_list_itemContext {
+	 open func capture_list_item() throws -> Capture_list_itemContext {
 		var _localctx: Capture_list_itemContext = Capture_list_itemContext(_ctx, getState())
 		try enterRule(_localctx, 444, Swift3Parser.RULE_capture_list_item)
 		defer {
@@ -17882,34 +19509,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Capture_specifierContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_capture_specifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCapture_specifier(self)
+
+	public class Capture_specifierContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_capture_specifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCapture_specifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCapture_specifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCapture_specifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCapture_specifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCapture_specifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCapture_specifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCapture_specifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func capture_specifier() throws -> Capture_specifierContext {
+	 open func capture_specifier() throws -> Capture_specifierContext {
 		var _localctx: Capture_specifierContext = Capture_specifierContext(_ctx, getState())
 		try enterRule(_localctx, 446, Swift3Parser.RULE_capture_specifier)
 		var _la: Int = 0
@@ -17944,37 +19576,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Implicit_member_expressionContext:ParserRuleContext {
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
+
+	public class Implicit_member_expressionContext: ParserRuleContext {
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_implicit_member_expression
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_implicit_member_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterImplicit_member_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterImplicit_member_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitImplicit_member_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitImplicit_member_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitImplicit_member_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitImplicit_member_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitImplicit_member_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitImplicit_member_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func implicit_member_expression() throws -> Implicit_member_expressionContext {
+	 open func implicit_member_expression() throws -> Implicit_member_expressionContext {
 		var _localctx: Implicit_member_expressionContext = Implicit_member_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 448, Swift3Parser.RULE_implicit_member_expression)
 		defer {
@@ -17996,37 +19634,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Parenthesized_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Parenthesized_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_parenthesized_expression
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_parenthesized_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterParenthesized_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterParenthesized_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitParenthesized_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitParenthesized_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitParenthesized_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitParenthesized_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitParenthesized_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitParenthesized_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parenthesized_expression() throws -> Parenthesized_expressionContext {
+	 open func parenthesized_expression() throws -> Parenthesized_expressionContext {
 		var _localctx: Parenthesized_expressionContext = Parenthesized_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 450, Swift3Parser.RULE_parenthesized_expression)
 		defer {
@@ -18050,40 +19694,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Tuple_expressionContext:ParserRuleContext {
-		open func tuple_element() -> Array<Tuple_elementContext> {
-			return getRuleContexts(Tuple_elementContext.self)
+
+	public class Tuple_expressionContext: ParserRuleContext {
+			open
+			func tuple_element() -> [Tuple_elementContext] {
+				return getRuleContexts(Tuple_elementContext.self)
+			}
+			open
+			func tuple_element(_ i: Int) -> Tuple_elementContext? {
+				return getRuleContext(Tuple_elementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_tuple_expression
 		}
-		open func tuple_element(_ i: Int) -> Tuple_elementContext? {
-			return getRuleContext(Tuple_elementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_tuple_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTuple_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTuple_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTuple_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTuple_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTuple_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTuple_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTuple_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTuple_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuple_expression() throws -> Tuple_expressionContext {
+	 open func tuple_expression() throws -> Tuple_expressionContext {
 		var _localctx: Tuple_expressionContext = Tuple_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 452, Swift3Parser.RULE_tuple_expression)
 		var _la: Int = 0
@@ -18141,40 +19792,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Tuple_elementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Tuple_elementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_tuple_element
 		}
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_tuple_element }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTuple_element(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTuple_element(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTuple_element(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTuple_element(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTuple_element(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTuple_element(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTuple_element(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTuple_element(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuple_element() throws -> Tuple_elementContext {
+	 open func tuple_element() throws -> Tuple_elementContext {
 		var _localctx: Tuple_elementContext = Tuple_elementContext(_ctx, getState())
 		try enterRule(_localctx, 454, Swift3Parser.RULE_tuple_element)
 		defer {
@@ -18211,34 +19869,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Wildcard_expressionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_wildcard_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterWildcard_expression(self)
+
+	public class Wildcard_expressionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_wildcard_expression
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterWildcard_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitWildcard_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitWildcard_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitWildcard_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitWildcard_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitWildcard_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitWildcard_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func wildcard_expression() throws -> Wildcard_expressionContext {
+	 open func wildcard_expression() throws -> Wildcard_expressionContext {
 		var _localctx: Wildcard_expressionContext = Wildcard_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 456, Swift3Parser.RULE_wildcard_expression)
 		defer {
@@ -18258,37 +19921,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Selector_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Selector_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_selector_expression
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_selector_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSelector_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSelector_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSelector_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSelector_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSelector_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSelector_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSelector_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSelector_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selector_expression() throws -> Selector_expressionContext {
+	 open func selector_expression() throws -> Selector_expressionContext {
 		var _localctx: Selector_expressionContext = Selector_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 458, Swift3Parser.RULE_selector_expression)
 		defer {
@@ -18349,37 +20018,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Key_path_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Key_path_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_key_path_expression
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_key_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterKey_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterKey_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitKey_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitKey_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitKey_path_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitKey_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitKey_path_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitKey_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func key_path_expression() throws -> Key_path_expressionContext {
+	 open func key_path_expression() throws -> Key_path_expressionContext {
 		var _localctx: Key_path_expressionContext = Key_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 460, Swift3Parser.RULE_key_path_expression)
 		defer {
@@ -18406,465 +20081,535 @@ open class Swift3Parser: Parser {
 		return _localctx
 	}
 
-	open class Postfix_expressionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_postfix_expression }
+	public class Postfix_expressionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_postfix_expression
+		}
 	 
-		public  func copyFrom(_ ctx: Postfix_expressionContext) {
+		open
+		func copyFrom(_ ctx: Postfix_expressionContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class Function_call_expression_with_closureContext: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func trailing_closure() -> Trailing_closureContext? {
-			return getRuleContext(Trailing_closureContext.self,0)
-		}
-		open func function_call_argument_clause() -> Function_call_argument_clauseContext? {
-			return getRuleContext(Function_call_argument_clauseContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Function_call_expression_with_closureContext: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func trailing_closure() -> Trailing_closureContext? {
+				return getRuleContext(Trailing_closureContext.self, 0)
+			}
+			open
+			func function_call_argument_clause() -> Function_call_argument_clauseContext? {
+				return getRuleContext(Function_call_argument_clauseContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_call_expression_with_closure(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_call_expression_with_closure(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_call_expression_with_closure(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_call_expression_with_closure(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_call_expression_with_closure(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_call_expression_with_closure(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_call_expression_with_closure(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_call_expression_with_closure(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Function_call_expressionContext: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func function_call_argument_clause() -> Function_call_argument_clauseContext? {
-			return getRuleContext(Function_call_argument_clauseContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Function_call_expressionContext: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func function_call_argument_clause() -> Function_call_argument_clauseContext? {
+				return getRuleContext(Function_call_argument_clauseContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_call_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_call_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_call_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_call_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_call_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_call_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_call_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_call_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Explicit_member_expression1Context: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func Pure_decimal_digits() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Pure_decimal_digits.rawValue, 0) }
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Explicit_member_expression1Context: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func Pure_decimal_digits() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Pure_decimal_digits.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExplicit_member_expression1(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExplicit_member_expression1(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExplicit_member_expression1(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExplicit_member_expression1(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExplicit_member_expression1(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExplicit_member_expression1(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExplicit_member_expression1(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExplicit_member_expression1(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Initializer_expressionContext: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Initializer_expressionContext: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterInitializer_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterInitializer_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitInitializer_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitInitializer_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitInitializer_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitInitializer_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitInitializer_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitInitializer_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Postfix_self_expressionContext: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Postfix_self_expressionContext: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPostfix_self_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPostfix_self_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPostfix_self_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPostfix_self_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPostfix_self_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPostfix_self_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPostfix_self_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPostfix_self_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Initializer_expression_with_argsContext: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func argument_names() -> Argument_namesContext? {
-			return getRuleContext(Argument_namesContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Initializer_expression_with_argsContext: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func argument_names() -> Argument_namesContext? {
+				return getRuleContext(Argument_namesContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterInitializer_expression_with_args(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterInitializer_expression_with_args(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitInitializer_expression_with_args(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitInitializer_expression_with_args(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitInitializer_expression_with_args(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitInitializer_expression_with_args(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitInitializer_expression_with_args(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitInitializer_expression_with_args(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Dynamic_typeContext: Postfix_expressionContext {
-		open func dynamic_type_expression() -> Dynamic_type_expressionContext? {
-			return getRuleContext(Dynamic_type_expressionContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Dynamic_typeContext: Postfix_expressionContext {
+			open
+			func dynamic_type_expression() -> Dynamic_type_expressionContext? {
+				return getRuleContext(Dynamic_type_expressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDynamic_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDynamic_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDynamic_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDynamic_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDynamic_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDynamic_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDynamic_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDynamic_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Subscript_expressionContext: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func expression_list() -> Expression_listContext? {
-			return getRuleContext(Expression_listContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Subscript_expressionContext: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func expression_list() -> Expression_listContext? {
+				return getRuleContext(Expression_listContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSubscript_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSubscript_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSubscript_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSubscript_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSubscript_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSubscript_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSubscript_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSubscript_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Explicit_member_expression2Context: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
-		}
-		open func generic_argument_clause() -> Generic_argument_clauseContext? {
-			return getRuleContext(Generic_argument_clauseContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Explicit_member_expression2Context: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+			open
+			func generic_argument_clause() -> Generic_argument_clauseContext? {
+				return getRuleContext(Generic_argument_clauseContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExplicit_member_expression2(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExplicit_member_expression2(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExplicit_member_expression2(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExplicit_member_expression2(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExplicit_member_expression2(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExplicit_member_expression2(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExplicit_member_expression2(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExplicit_member_expression2(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Explicit_member_expression3Context: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
-		}
-		open func argument_names() -> Argument_namesContext? {
-			return getRuleContext(Argument_namesContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Explicit_member_expression3Context: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+			open
+			func argument_names() -> Argument_namesContext? {
+				return getRuleContext(Argument_namesContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExplicit_member_expression3(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExplicit_member_expression3(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExplicit_member_expression3(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExplicit_member_expression3(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExplicit_member_expression3(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExplicit_member_expression3(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExplicit_member_expression3(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExplicit_member_expression3(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Explicit_member_expression4Context: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func argument_names() -> Argument_namesContext? {
-			return getRuleContext(Argument_namesContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Explicit_member_expression4Context: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func argument_names() -> Argument_namesContext? {
+				return getRuleContext(Argument_namesContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterExplicit_member_expression4(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterExplicit_member_expression4(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitExplicit_member_expression4(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitExplicit_member_expression4(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitExplicit_member_expression4(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitExplicit_member_expression4(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitExplicit_member_expression4(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitExplicit_member_expression4(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class Postfix_operationContext: Postfix_expressionContext {
-		open func postfix_expression() -> Postfix_expressionContext? {
-			return getRuleContext(Postfix_expressionContext.self,0)
-		}
-		open func postfix_operator() -> Postfix_operatorContext? {
-			return getRuleContext(Postfix_operatorContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class Postfix_operationContext: Postfix_expressionContext {
+			open
+			func postfix_expression() -> Postfix_expressionContext? {
+				return getRuleContext(Postfix_expressionContext.self, 0)
+			}
+			open
+			func postfix_operator() -> Postfix_operatorContext? {
+				return getRuleContext(Postfix_operatorContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPostfix_operation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPostfix_operation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPostfix_operation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPostfix_operation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPostfix_operation(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPostfix_operation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPostfix_operation(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPostfix_operation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class PrimaryContext: Postfix_expressionContext {
-		open func primary_expression() -> Primary_expressionContext? {
-			return getRuleContext(Primary_expressionContext.self,0)
-		}
-		public init(_ ctx: Postfix_expressionContext) {
+	public class PrimaryContext: Postfix_expressionContext {
+			open
+			func primary_expression() -> Primary_expressionContext? {
+				return getRuleContext(Primary_expressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: Postfix_expressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrimary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrimary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrimary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrimary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrimary(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrimary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrimary(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrimary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func postfix_expression( ) throws -> Postfix_expressionContext   {
+	 public final  func postfix_expression( ) throws -> Postfix_expressionContext   {
 		return try postfix_expression(0)
 	}
 	@discardableResult
@@ -18922,7 +20667,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2400)
 						if (!(precpred(_ctx, 12))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
 						}
 						setState(2401)
 						try postfix_operator()
@@ -18933,7 +20678,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2402)
 						if (!(precpred(_ctx, 11))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
 						}
 						setState(2403)
 						try function_call_argument_clause()
@@ -18944,7 +20689,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2404)
 						if (!(precpred(_ctx, 10))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
 						}
 						setState(2406)
 						try _errHandler.sync(self)
@@ -18968,7 +20713,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2409)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(2410)
 						try match(Swift3Parser.Tokens.DOT.rawValue)
@@ -18981,7 +20726,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2412)
 						if (!(precpred(_ctx, 8))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
 						}
 						setState(2413)
 						try match(Swift3Parser.Tokens.DOT.rawValue)
@@ -19000,7 +20745,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2419)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(2420)
 						try match(Swift3Parser.Tokens.DOT.rawValue)
@@ -19013,7 +20758,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2422)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(2423)
 						try match(Swift3Parser.Tokens.DOT.rawValue)
@@ -19036,7 +20781,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2428)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(2429)
 						try match(Swift3Parser.Tokens.DOT.rawValue)
@@ -19055,7 +20800,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2435)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(2436)
 						try match(Swift3Parser.Tokens.LPAREN.rawValue)
@@ -19070,7 +20815,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2440)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(2441)
 						try match(Swift3Parser.Tokens.DOT.rawValue)
@@ -19083,7 +20828,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_postfix_expression)
 						setState(2443)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(2444)
 						try match(Swift3Parser.Tokens.LBRACK.rawValue)
@@ -19111,37 +20856,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx;
 	}
-	open class Function_call_argument_clauseContext:ParserRuleContext {
-		open func function_call_argument_list() -> Function_call_argument_listContext? {
-			return getRuleContext(Function_call_argument_listContext.self,0)
+
+	public class Function_call_argument_clauseContext: ParserRuleContext {
+			open
+			func function_call_argument_list() -> Function_call_argument_listContext? {
+				return getRuleContext(Function_call_argument_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_call_argument_clause
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_call_argument_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_call_argument_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_call_argument_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_call_argument_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_call_argument_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_call_argument_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_call_argument_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_call_argument_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_call_argument_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_call_argument_clause() throws -> Function_call_argument_clauseContext {
+	 open func function_call_argument_clause() throws -> Function_call_argument_clauseContext {
 		var _localctx: Function_call_argument_clauseContext = Function_call_argument_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 464, Swift3Parser.RULE_function_call_argument_clause)
 		defer {
@@ -19180,40 +20931,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_call_argument_listContext:ParserRuleContext {
-		open func function_call_argument() -> Array<Function_call_argumentContext> {
-			return getRuleContexts(Function_call_argumentContext.self)
+
+	public class Function_call_argument_listContext: ParserRuleContext {
+			open
+			func function_call_argument() -> [Function_call_argumentContext] {
+				return getRuleContexts(Function_call_argumentContext.self)
+			}
+			open
+			func function_call_argument(_ i: Int) -> Function_call_argumentContext? {
+				return getRuleContext(Function_call_argumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_call_argument_list
 		}
-		open func function_call_argument(_ i: Int) -> Function_call_argumentContext? {
-			return getRuleContext(Function_call_argumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_call_argument_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_call_argument_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_call_argument_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_call_argument_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_call_argument_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_call_argument_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_call_argument_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_call_argument_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_call_argument_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_call_argument_list() throws -> Function_call_argument_listContext {
+	 open func function_call_argument_list() throws -> Function_call_argument_listContext {
 		var _localctx: Function_call_argument_listContext = Function_call_argument_listContext(_ctx, getState())
 		try enterRule(_localctx, 466, Swift3Parser.RULE_function_call_argument_list)
 		var _la: Int = 0
@@ -19252,43 +21010,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_call_argumentContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Function_call_argumentContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_call_argument
 		}
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
-		}
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_call_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_call_argument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_call_argument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_call_argument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_call_argument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_call_argument(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_call_argument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_call_argument(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_call_argument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_call_argument() throws -> Function_call_argumentContext {
+	 open func function_call_argument() throws -> Function_call_argumentContext {
 		var _localctx: Function_call_argumentContext = Function_call_argumentContext(_ctx, getState())
 		try enterRule(_localctx, 468, Swift3Parser.RULE_function_call_argument)
 		defer {
@@ -19341,37 +21107,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Trailing_closureContext:ParserRuleContext {
-		open func closure_expression() -> Closure_expressionContext? {
-			return getRuleContext(Closure_expressionContext.self,0)
+
+	public class Trailing_closureContext: ParserRuleContext {
+			open
+			func closure_expression() -> Closure_expressionContext? {
+				return getRuleContext(Closure_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_trailing_closure
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_trailing_closure }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTrailing_closure(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTrailing_closure(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTrailing_closure(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTrailing_closure(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTrailing_closure(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTrailing_closure(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTrailing_closure(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTrailing_closure(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func trailing_closure() throws -> Trailing_closureContext {
+	 open func trailing_closure() throws -> Trailing_closureContext {
 		var _localctx: Trailing_closureContext = Trailing_closureContext(_ctx, getState())
 		try enterRule(_localctx, 470, Swift3Parser.RULE_trailing_closure)
 		defer {
@@ -19391,40 +21163,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Argument_namesContext:ParserRuleContext {
-		open func argument_name() -> Array<Argument_nameContext> {
-			return getRuleContexts(Argument_nameContext.self)
+
+	public class Argument_namesContext: ParserRuleContext {
+			open
+			func argument_name() -> [Argument_nameContext] {
+				return getRuleContexts(Argument_nameContext.self)
+			}
+			open
+			func argument_name(_ i: Int) -> Argument_nameContext? {
+				return getRuleContext(Argument_nameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_argument_names
 		}
-		open func argument_name(_ i: Int) -> Argument_nameContext? {
-			return getRuleContext(Argument_nameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_argument_names }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterArgument_names(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterArgument_names(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitArgument_names(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitArgument_names(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitArgument_names(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitArgument_names(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitArgument_names(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitArgument_names(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument_names() throws -> Argument_namesContext {
+	 open func argument_names() throws -> Argument_namesContext {
 		var _localctx: Argument_namesContext = Argument_namesContext(_ctx, getState())
 		try enterRule(_localctx, 472, Swift3Parser.RULE_argument_names)
 		var _la: Int = 0
@@ -19472,37 +21251,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Argument_nameContext:ParserRuleContext {
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
+
+	public class Argument_nameContext: ParserRuleContext {
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_argument_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_argument_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterArgument_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterArgument_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitArgument_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitArgument_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitArgument_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitArgument_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitArgument_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitArgument_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument_name() throws -> Argument_nameContext {
+	 open func argument_name() throws -> Argument_nameContext {
 		var _localctx: Argument_nameContext = Argument_nameContext(_ctx, getState())
 		try enterRule(_localctx, 474, Swift3Parser.RULE_argument_name)
 		defer {
@@ -19524,37 +21309,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dynamic_type_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Dynamic_type_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_dynamic_type_expression
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_dynamic_type_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDynamic_type_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDynamic_type_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDynamic_type_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDynamic_type_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDynamic_type_expression(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDynamic_type_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDynamic_type_expression(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDynamic_type_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dynamic_type_expression() throws -> Dynamic_type_expressionContext {
+	 open func dynamic_type_expression() throws -> Dynamic_type_expressionContext {
 		var _localctx: Dynamic_type_expressionContext = Dynamic_type_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 476, Swift3Parser.RULE_dynamic_type_expression)
 		defer {
@@ -19585,393 +21376,443 @@ open class Swift3Parser: Parser {
 		return _localctx
 	}
 
-	open class TypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_type }
+	public class TypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_type
+		}
 	 
-		public  func copyFrom(_ ctx: TypeContext) {
+		open
+		func copyFrom(_ ctx: TypeContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class The_metatype_protocol_typeContext: TypeContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_metatype_protocol_typeContext: TypeContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_metatype_protocol_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_metatype_protocol_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_metatype_protocol_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_metatype_protocol_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_metatype_protocol_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_metatype_protocol_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_metatype_protocol_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_metatype_protocol_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_function_typeContext: TypeContext {
-		open func function_type() -> Function_typeContext? {
-			return getRuleContext(Function_typeContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_function_typeContext: TypeContext {
+			open
+			func function_type() -> Function_typeContext? {
+				return getRuleContext(Function_typeContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_function_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_function_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_function_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_function_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_function_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_function_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_function_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_function_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_implicitly_unwrapped_optional_typeContext: TypeContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_implicitly_unwrapped_optional_typeContext: TypeContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_implicitly_unwrapped_optional_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_implicitly_unwrapped_optional_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_implicitly_unwrapped_optional_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_implicitly_unwrapped_optional_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_implicitly_unwrapped_optional_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_implicitly_unwrapped_optional_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_implicitly_unwrapped_optional_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_implicitly_unwrapped_optional_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_dictionary_typeContext: TypeContext {
-		open func dictionary_type() -> Dictionary_typeContext? {
-			return getRuleContext(Dictionary_typeContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_dictionary_typeContext: TypeContext {
+			open
+			func dictionary_type() -> Dictionary_typeContext? {
+				return getRuleContext(Dictionary_typeContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_dictionary_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_dictionary_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_dictionary_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_dictionary_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_dictionary_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_dictionary_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_dictionary_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_dictionary_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_optional_typeContext: TypeContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_optional_typeContext: TypeContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_optional_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_optional_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_optional_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_optional_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_optional_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_optional_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_optional_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_optional_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_tuple_typeContext: TypeContext {
-		open func tuple_type() -> Tuple_typeContext? {
-			return getRuleContext(Tuple_typeContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_tuple_typeContext: TypeContext {
+			open
+			func tuple_type() -> Tuple_typeContext? {
+				return getRuleContext(Tuple_typeContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_tuple_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_tuple_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_tuple_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_tuple_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_tuple_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_tuple_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_tuple_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_tuple_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_self_typeContext: TypeContext {
-		public init(_ ctx: TypeContext) {
+	public class The_self_typeContext: TypeContext {
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_self_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_self_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_self_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_self_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_self_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_self_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_self_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_self_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_array_typeContext: TypeContext {
-		open func array_type() -> Array_typeContext? {
-			return getRuleContext(Array_typeContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_array_typeContext: TypeContext {
+			open
+			func array_type() -> Array_typeContext? {
+				return getRuleContext(Array_typeContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_array_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_array_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_array_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_array_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_array_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_array_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_array_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_array_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_metatype_type_typeContext: TypeContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_metatype_type_typeContext: TypeContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_metatype_type_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_metatype_type_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_metatype_type_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_metatype_type_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_metatype_type_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_metatype_type_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_metatype_type_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_metatype_type_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_protocol_composition_typeContext: TypeContext {
-		open func protocol_composition_type() -> Protocol_composition_typeContext? {
-			return getRuleContext(Protocol_composition_typeContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_protocol_composition_typeContext: TypeContext {
+			open
+			func protocol_composition_type() -> Protocol_composition_typeContext? {
+				return getRuleContext(Protocol_composition_typeContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_protocol_composition_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_protocol_composition_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_protocol_composition_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_protocol_composition_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_protocol_composition_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_protocol_composition_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_protocol_composition_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_protocol_composition_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_any_typeContext: TypeContext {
-		public init(_ ctx: TypeContext) {
+	public class The_any_typeContext: TypeContext {
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_any_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_any_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_any_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_any_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_any_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_any_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_any_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_any_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class The_type_identifierContext: TypeContext {
-		open func type_identifier() -> Type_identifierContext? {
-			return getRuleContext(Type_identifierContext.self,0)
-		}
-		public init(_ ctx: TypeContext) {
+	public class The_type_identifierContext: TypeContext {
+			open
+			func type_identifier() -> Type_identifierContext? {
+				return getRuleContext(Type_identifierContext.self, 0)
+			}
+
+		public
+		init(_ ctx: TypeContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterThe_type_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterThe_type_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitThe_type_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitThe_type_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitThe_type_identifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitThe_type_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitThe_type_identifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitThe_type_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func type( ) throws -> TypeContext   {
+	 public final  func type( ) throws -> TypeContext   {
 		return try type(0)
 	}
 	@discardableResult
@@ -20076,7 +21917,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_type)
 						setState(2511)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(2512)
 						try match(Swift3Parser.Tokens.QUESTION.rawValue)
@@ -20087,7 +21928,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_type)
 						setState(2513)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(2514)
 						try match(Swift3Parser.Tokens.BANG.rawValue)
@@ -20098,7 +21939,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_type)
 						setState(2515)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(2516)
 						try match(Swift3Parser.Tokens.DOT.rawValue)
@@ -20111,7 +21952,7 @@ open class Swift3Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, Swift3Parser.RULE_type)
 						setState(2518)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(2519)
 						try match(Swift3Parser.Tokens.DOT.rawValue)
@@ -20137,40 +21978,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx;
 	}
-	open class Type_annotationContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class Type_annotationContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_type_annotation
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_type_annotation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterType_annotation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterType_annotation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitType_annotation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitType_annotation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitType_annotation(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitType_annotation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitType_annotation(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitType_annotation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type_annotation() throws -> Type_annotationContext {
+	 open func type_annotation() throws -> Type_annotationContext {
 		var _localctx: Type_annotationContext = Type_annotationContext(_ctx, getState())
 		try enterRule(_localctx, 480, Swift3Parser.RULE_type_annotation)
 		var _la: Int = 0
@@ -20216,43 +22064,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Type_identifierContext:ParserRuleContext {
-		open func type_name() -> Type_nameContext? {
-			return getRuleContext(Type_nameContext.self,0)
+
+	public class Type_identifierContext: ParserRuleContext {
+			open
+			func type_name() -> Type_nameContext? {
+				return getRuleContext(Type_nameContext.self, 0)
+			}
+			open
+			func generic_argument_clause() -> Generic_argument_clauseContext? {
+				return getRuleContext(Generic_argument_clauseContext.self, 0)
+			}
+			open
+			func type_identifier() -> Type_identifierContext? {
+				return getRuleContext(Type_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_type_identifier
 		}
-		open func generic_argument_clause() -> Generic_argument_clauseContext? {
-			return getRuleContext(Generic_argument_clauseContext.self,0)
-		}
-		open func type_identifier() -> Type_identifierContext? {
-			return getRuleContext(Type_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_type_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterType_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterType_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitType_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitType_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitType_identifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitType_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitType_identifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitType_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type_identifier() throws -> Type_identifierContext {
+	 open func type_identifier() throws -> Type_identifierContext {
 		var _localctx: Type_identifierContext = Type_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 482, Swift3Parser.RULE_type_identifier)
 		defer {
@@ -20294,37 +22150,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Type_nameContext:ParserRuleContext {
-		open func declaration_identifier() -> Declaration_identifierContext? {
-			return getRuleContext(Declaration_identifierContext.self,0)
+
+	public class Type_nameContext: ParserRuleContext {
+			open
+			func declaration_identifier() -> Declaration_identifierContext? {
+				return getRuleContext(Declaration_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_type_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_type_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterType_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterType_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitType_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitType_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitType_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitType_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitType_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitType_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type_name() throws -> Type_nameContext {
+	 open func type_name() throws -> Type_nameContext {
 		var _localctx: Type_nameContext = Type_nameContext(_ctx, getState())
 		try enterRule(_localctx, 484, Swift3Parser.RULE_type_name)
 		defer {
@@ -20344,37 +22206,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Tuple_typeContext:ParserRuleContext {
-		open func tuple_type_element_list() -> Tuple_type_element_listContext? {
-			return getRuleContext(Tuple_type_element_listContext.self,0)
+
+	public class Tuple_typeContext: ParserRuleContext {
+			open
+			func tuple_type_element_list() -> Tuple_type_element_listContext? {
+				return getRuleContext(Tuple_type_element_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_tuple_type
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_tuple_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTuple_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTuple_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTuple_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTuple_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTuple_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTuple_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTuple_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTuple_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuple_type() throws -> Tuple_typeContext {
+	 open func tuple_type() throws -> Tuple_typeContext {
 		var _localctx: Tuple_typeContext = Tuple_typeContext(_ctx, getState())
 		try enterRule(_localctx, 486, Swift3Parser.RULE_tuple_type)
 		var _la: Int = 0
@@ -20421,40 +22289,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Tuple_type_element_listContext:ParserRuleContext {
-		open func tuple_type_element() -> Tuple_type_elementContext? {
-			return getRuleContext(Tuple_type_elementContext.self,0)
+
+	public class Tuple_type_element_listContext: ParserRuleContext {
+			open
+			func tuple_type_element() -> Tuple_type_elementContext? {
+				return getRuleContext(Tuple_type_elementContext.self, 0)
+			}
+			open
+			func tuple_type_element_list() -> Tuple_type_element_listContext? {
+				return getRuleContext(Tuple_type_element_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_tuple_type_element_list
 		}
-		open func tuple_type_element_list() -> Tuple_type_element_listContext? {
-			return getRuleContext(Tuple_type_element_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_tuple_type_element_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTuple_type_element_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTuple_type_element_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTuple_type_element_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTuple_type_element_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTuple_type_element_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTuple_type_element_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTuple_type_element_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTuple_type_element_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuple_type_element_list() throws -> Tuple_type_element_listContext {
+	 open func tuple_type_element_list() throws -> Tuple_type_element_listContext {
 		var _localctx: Tuple_type_element_listContext = Tuple_type_element_listContext(_ctx, getState())
 		try enterRule(_localctx, 488, Swift3Parser.RULE_tuple_type_element_list)
 		defer {
@@ -20491,43 +22366,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Tuple_type_elementContext:ParserRuleContext {
-		open func element_name() -> Element_nameContext? {
-			return getRuleContext(Element_nameContext.self,0)
+
+	public class Tuple_type_elementContext: ParserRuleContext {
+			open
+			func element_name() -> Element_nameContext? {
+				return getRuleContext(Element_nameContext.self, 0)
+			}
+			open
+			func type_annotation() -> Type_annotationContext? {
+				return getRuleContext(Type_annotationContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_tuple_type_element
 		}
-		open func type_annotation() -> Type_annotationContext? {
-			return getRuleContext(Type_annotationContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_tuple_type_element }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterTuple_type_element(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterTuple_type_element(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitTuple_type_element(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitTuple_type_element(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitTuple_type_element(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitTuple_type_element(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitTuple_type_element(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitTuple_type_element(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuple_type_element() throws -> Tuple_type_elementContext {
+	 open func tuple_type_element() throws -> Tuple_type_elementContext {
 		var _localctx: Tuple_type_elementContext = Tuple_type_elementContext(_ctx, getState())
 		try enterRule(_localctx, 490, Swift3Parser.RULE_tuple_type_element)
 		defer {
@@ -20562,37 +22445,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Element_nameContext:ParserRuleContext {
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
+
+	public class Element_nameContext: ParserRuleContext {
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_element_name
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_element_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterElement_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterElement_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitElement_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitElement_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitElement_name(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitElement_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitElement_name(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitElement_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func element_name() throws -> Element_nameContext {
+	 open func element_name() throws -> Element_nameContext {
 		var _localctx: Element_nameContext = Element_nameContext(_ctx, getState())
 		try enterRule(_localctx, 492, Swift3Parser.RULE_element_name)
 		defer {
@@ -20612,46 +22501,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_typeContext:ParserRuleContext {
-		open func function_type_argument_clause() -> Function_type_argument_clauseContext? {
-			return getRuleContext(Function_type_argument_clauseContext.self,0)
+
+	public class Function_typeContext: ParserRuleContext {
+			open
+			func function_type_argument_clause() -> Function_type_argument_clauseContext? {
+				return getRuleContext(Function_type_argument_clauseContext.self, 0)
+			}
+			open
+			func arrow_operator() -> Arrow_operatorContext? {
+				return getRuleContext(Arrow_operatorContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_type
 		}
-		open func arrow_operator() -> Arrow_operatorContext? {
-			return getRuleContext(Arrow_operatorContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_type() throws -> Function_typeContext {
+	 open func function_type() throws -> Function_typeContext {
 		var _localctx: Function_typeContext = Function_typeContext(_ctx, getState())
 		try enterRule(_localctx, 494, Swift3Parser.RULE_function_type)
 		var _la: Int = 0
@@ -20731,40 +22629,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_type_argument_clauseContext:ParserRuleContext {
-		open func function_type_argument_list() -> Function_type_argument_listContext? {
-			return getRuleContext(Function_type_argument_listContext.self,0)
+
+	public class Function_type_argument_clauseContext: ParserRuleContext {
+			open
+			func function_type_argument_list() -> Function_type_argument_listContext? {
+				return getRuleContext(Function_type_argument_listContext.self, 0)
+			}
+			open
+			func range_operator() -> Range_operatorContext? {
+				return getRuleContext(Range_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_type_argument_clause
 		}
-		open func range_operator() -> Range_operatorContext? {
-			return getRuleContext(Range_operatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_type_argument_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_type_argument_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_type_argument_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_type_argument_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_type_argument_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_type_argument_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_type_argument_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_type_argument_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_type_argument_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_type_argument_clause() throws -> Function_type_argument_clauseContext {
+	 open func function_type_argument_clause() throws -> Function_type_argument_clauseContext {
 		var _localctx: Function_type_argument_clauseContext = Function_type_argument_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 496, Swift3Parser.RULE_function_type_argument_clause)
 		defer {
@@ -20813,40 +22718,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_type_argument_listContext:ParserRuleContext {
-		open func function_type_argument() -> Function_type_argumentContext? {
-			return getRuleContext(Function_type_argumentContext.self,0)
+
+	public class Function_type_argument_listContext: ParserRuleContext {
+			open
+			func function_type_argument() -> Function_type_argumentContext? {
+				return getRuleContext(Function_type_argumentContext.self, 0)
+			}
+			open
+			func function_type_argument_list() -> Function_type_argument_listContext? {
+				return getRuleContext(Function_type_argument_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_type_argument_list
 		}
-		open func function_type_argument_list() -> Function_type_argument_listContext? {
-			return getRuleContext(Function_type_argument_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_type_argument_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_type_argument_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_type_argument_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_type_argument_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_type_argument_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_type_argument_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_type_argument_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_type_argument_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_type_argument_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_type_argument_list() throws -> Function_type_argument_listContext {
+	 open func function_type_argument_list() throws -> Function_type_argument_listContext {
 		var _localctx: Function_type_argument_listContext = Function_type_argument_listContext(_ctx, getState())
 		try enterRule(_localctx, 498, Swift3Parser.RULE_function_type_argument_list)
 		defer {
@@ -20883,46 +22795,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_type_argumentContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class Function_type_argumentContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+			open
+			func argument_label() -> Argument_labelContext? {
+				return getRuleContext(Argument_labelContext.self, 0)
+			}
+			open
+			func type_annotation() -> Type_annotationContext? {
+				return getRuleContext(Type_annotationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_function_type_argument
 		}
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open func argument_label() -> Argument_labelContext? {
-			return getRuleContext(Argument_labelContext.self,0)
-		}
-		open func type_annotation() -> Type_annotationContext? {
-			return getRuleContext(Type_annotationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_function_type_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterFunction_type_argument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterFunction_type_argument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitFunction_type_argument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitFunction_type_argument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitFunction_type_argument(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitFunction_type_argument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitFunction_type_argument(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitFunction_type_argument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_type_argument() throws -> Function_type_argumentContext {
+	 open func function_type_argument() throws -> Function_type_argumentContext {
 		var _localctx: Function_type_argumentContext = Function_type_argumentContext(_ctx, getState())
 		try enterRule(_localctx, 500, Swift3Parser.RULE_function_type_argument)
 		var _la: Int = 0
@@ -20981,37 +22902,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Argument_labelContext:ParserRuleContext {
-		open func label_identifier() -> Label_identifierContext? {
-			return getRuleContext(Label_identifierContext.self,0)
+
+	public class Argument_labelContext: ParserRuleContext {
+			open
+			func label_identifier() -> Label_identifierContext? {
+				return getRuleContext(Label_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_argument_label
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_argument_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterArgument_label(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterArgument_label(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitArgument_label(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitArgument_label(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitArgument_label(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitArgument_label(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitArgument_label(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitArgument_label(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument_label() throws -> Argument_labelContext {
+	 open func argument_label() throws -> Argument_labelContext {
 		var _localctx: Argument_labelContext = Argument_labelContext(_ctx, getState())
 		try enterRule(_localctx, 502, Swift3Parser.RULE_argument_label)
 		defer {
@@ -21031,37 +22958,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Array_typeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class Array_typeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_array_type
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_array_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterArray_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterArray_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitArray_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitArray_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitArray_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitArray_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitArray_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitArray_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func array_type() throws -> Array_typeContext {
+	 open func array_type() throws -> Array_typeContext {
 		var _localctx: Array_typeContext = Array_typeContext(_ctx, getState())
 		try enterRule(_localctx, 504, Swift3Parser.RULE_array_type)
 		defer {
@@ -21085,40 +23018,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dictionary_typeContext:ParserRuleContext {
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
+
+	public class Dictionary_typeContext: ParserRuleContext {
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_dictionary_type
 		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_dictionary_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDictionary_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDictionary_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDictionary_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDictionary_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDictionary_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDictionary_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDictionary_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDictionary_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dictionary_type() throws -> Dictionary_typeContext {
+	 open func dictionary_type() throws -> Dictionary_typeContext {
 		var _localctx: Dictionary_typeContext = Dictionary_typeContext(_ctx, getState())
 		try enterRule(_localctx, 506, Swift3Parser.RULE_dictionary_type)
 		defer {
@@ -21146,40 +23086,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_composition_typeContext:ParserRuleContext {
-		open func protocol_identifier() -> Array<Protocol_identifierContext> {
-			return getRuleContexts(Protocol_identifierContext.self)
+
+	public class Protocol_composition_typeContext: ParserRuleContext {
+			open
+			func protocol_identifier() -> [Protocol_identifierContext] {
+				return getRuleContexts(Protocol_identifierContext.self)
+			}
+			open
+			func protocol_identifier(_ i: Int) -> Protocol_identifierContext? {
+				return getRuleContext(Protocol_identifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_composition_type
 		}
-		open func protocol_identifier(_ i: Int) -> Protocol_identifierContext? {
-			return getRuleContext(Protocol_identifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_composition_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_composition_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_composition_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_composition_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_composition_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_composition_type(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_composition_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_composition_type(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_composition_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_composition_type() throws -> Protocol_composition_typeContext {
+	 open func protocol_composition_type() throws -> Protocol_composition_typeContext {
 		var _localctx: Protocol_composition_typeContext = Protocol_composition_typeContext(_ctx, getState())
 		try enterRule(_localctx, 508, Swift3Parser.RULE_protocol_composition_type)
 		defer {
@@ -21204,7 +23151,7 @@ open class Swift3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2633); 
 		 		try _errHandler.sync(self)
@@ -21220,37 +23167,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Protocol_identifierContext:ParserRuleContext {
-		open func type_identifier() -> Type_identifierContext? {
-			return getRuleContext(Type_identifierContext.self,0)
+
+	public class Protocol_identifierContext: ParserRuleContext {
+			open
+			func type_identifier() -> Type_identifierContext? {
+				return getRuleContext(Type_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_protocol_identifier
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_protocol_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterProtocol_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterProtocol_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitProtocol_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitProtocol_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitProtocol_identifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitProtocol_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitProtocol_identifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitProtocol_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func protocol_identifier() throws -> Protocol_identifierContext {
+	 open func protocol_identifier() throws -> Protocol_identifierContext {
 		var _localctx: Protocol_identifierContext = Protocol_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 510, Swift3Parser.RULE_protocol_identifier)
 		defer {
@@ -21270,40 +23223,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Type_inheritance_clauseContext:ParserRuleContext {
-		open func class_requirement() -> Class_requirementContext? {
-			return getRuleContext(Class_requirementContext.self,0)
+
+	public class Type_inheritance_clauseContext: ParserRuleContext {
+			open
+			func class_requirement() -> Class_requirementContext? {
+				return getRuleContext(Class_requirementContext.self, 0)
+			}
+			open
+			func type_inheritance_list() -> Type_inheritance_listContext? {
+				return getRuleContext(Type_inheritance_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_type_inheritance_clause
 		}
-		open func type_inheritance_list() -> Type_inheritance_listContext? {
-			return getRuleContext(Type_inheritance_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_type_inheritance_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterType_inheritance_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterType_inheritance_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitType_inheritance_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitType_inheritance_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitType_inheritance_clause(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitType_inheritance_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitType_inheritance_clause(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitType_inheritance_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type_inheritance_clause() throws -> Type_inheritance_clauseContext {
+	 open func type_inheritance_clause() throws -> Type_inheritance_clauseContext {
 		var _localctx: Type_inheritance_clauseContext = Type_inheritance_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 512, Swift3Parser.RULE_type_inheritance_clause)
 		defer {
@@ -21352,40 +23312,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Type_inheritance_listContext:ParserRuleContext {
-		open func type_identifier() -> Type_identifierContext? {
-			return getRuleContext(Type_identifierContext.self,0)
+
+	public class Type_inheritance_listContext: ParserRuleContext {
+			open
+			func type_identifier() -> Type_identifierContext? {
+				return getRuleContext(Type_identifierContext.self, 0)
+			}
+			open
+			func type_inheritance_list() -> Type_inheritance_listContext? {
+				return getRuleContext(Type_inheritance_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_type_inheritance_list
 		}
-		open func type_inheritance_list() -> Type_inheritance_listContext? {
-			return getRuleContext(Type_inheritance_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_type_inheritance_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterType_inheritance_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterType_inheritance_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitType_inheritance_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitType_inheritance_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitType_inheritance_list(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitType_inheritance_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitType_inheritance_list(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitType_inheritance_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type_inheritance_list() throws -> Type_inheritance_listContext {
+	 open func type_inheritance_list() throws -> Type_inheritance_listContext {
 		var _localctx: Type_inheritance_listContext = Type_inheritance_listContext(_ctx, getState())
 		try enterRule(_localctx, 514, Swift3Parser.RULE_type_inheritance_list)
 		defer {
@@ -21422,34 +23389,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Class_requirementContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_class_requirement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterClass_requirement(self)
+
+	public class Class_requirementContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_class_requirement
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterClass_requirement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitClass_requirement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitClass_requirement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitClass_requirement(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitClass_requirement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitClass_requirement(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitClass_requirement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func class_requirement() throws -> Class_requirementContext {
+	 open func class_requirement() throws -> Class_requirementContext {
 		var _localctx: Class_requirementContext = Class_requirementContext(_ctx, getState())
 		try enterRule(_localctx, 516, Swift3Parser.RULE_class_requirement)
 		defer {
@@ -21469,38 +23441,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Declaration_identifierContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Identifier.rawValue, 0) }
-		open func keyword_as_identifier_in_declarations() -> Keyword_as_identifier_in_declarationsContext? {
-			return getRuleContext(Keyword_as_identifier_in_declarationsContext.self,0)
+
+	public class Declaration_identifierContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func keyword_as_identifier_in_declarations() -> Keyword_as_identifier_in_declarationsContext? {
+				return getRuleContext(Keyword_as_identifier_in_declarationsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_declaration_identifier
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_declaration_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDeclaration_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDeclaration_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDeclaration_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDeclaration_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDeclaration_identifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDeclaration_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDeclaration_identifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDeclaration_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration_identifier() throws -> Declaration_identifierContext {
+	 open func declaration_identifier() throws -> Declaration_identifierContext {
 		var _localctx: Declaration_identifierContext = Declaration_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 518, Swift3Parser.RULE_declaration_identifier)
 		defer {
@@ -21576,7 +23557,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -21587,38 +23568,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Label_identifierContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Identifier.rawValue, 0) }
-		open func keyword_as_identifier_in_labels() -> Keyword_as_identifier_in_labelsContext? {
-			return getRuleContext(Keyword_as_identifier_in_labelsContext.self,0)
+
+	public class Label_identifierContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func keyword_as_identifier_in_labels() -> Keyword_as_identifier_in_labelsContext? {
+				return getRuleContext(Keyword_as_identifier_in_labelsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_label_identifier
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_label_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterLabel_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterLabel_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitLabel_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitLabel_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitLabel_identifier(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitLabel_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitLabel_identifier(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitLabel_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label_identifier() throws -> Label_identifierContext {
+	 open func label_identifier() throws -> Label_identifierContext {
 		var _localctx: Label_identifierContext = Label_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 520, Swift3Parser.RULE_label_identifier)
 		defer {
@@ -21744,7 +23734,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -21755,34 +23745,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Keyword_as_identifier_in_declarationsContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_keyword_as_identifier_in_declarations }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterKeyword_as_identifier_in_declarations(self)
+
+	public class Keyword_as_identifier_in_declarationsContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_keyword_as_identifier_in_declarations
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterKeyword_as_identifier_in_declarations(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitKeyword_as_identifier_in_declarations(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitKeyword_as_identifier_in_declarations(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitKeyword_as_identifier_in_declarations(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitKeyword_as_identifier_in_declarations(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitKeyword_as_identifier_in_declarations(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitKeyword_as_identifier_in_declarations(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keyword_as_identifier_in_declarations() throws -> Keyword_as_identifier_in_declarationsContext {
+	 open func keyword_as_identifier_in_declarations() throws -> Keyword_as_identifier_in_declarationsContext {
 		var _localctx: Keyword_as_identifier_in_declarationsContext = Keyword_as_identifier_in_declarationsContext(_ctx, getState())
 		try enterRule(_localctx, 522, Swift3Parser.RULE_keyword_as_identifier_in_declarations)
 		var _la: Int = 0
@@ -21821,34 +23816,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Keyword_as_identifier_in_labelsContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_keyword_as_identifier_in_labels }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterKeyword_as_identifier_in_labels(self)
+
+	public class Keyword_as_identifier_in_labelsContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_keyword_as_identifier_in_labels
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterKeyword_as_identifier_in_labels(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitKeyword_as_identifier_in_labels(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitKeyword_as_identifier_in_labels(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitKeyword_as_identifier_in_labels(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitKeyword_as_identifier_in_labels(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitKeyword_as_identifier_in_labels(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitKeyword_as_identifier_in_labels(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keyword_as_identifier_in_labels() throws -> Keyword_as_identifier_in_labelsContext {
+	 open func keyword_as_identifier_in_labels() throws -> Keyword_as_identifier_in_labelsContext {
 		var _localctx: Keyword_as_identifier_in_labelsContext = Keyword_as_identifier_in_labelsContext(_ctx, getState())
 		try enterRule(_localctx, 524, Swift3Parser.RULE_keyword_as_identifier_in_labels)
 		var _la: Int = 0
@@ -21888,34 +23888,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Assignment_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_assignment_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterAssignment_operator(self)
+
+	public class Assignment_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_assignment_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterAssignment_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitAssignment_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitAssignment_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitAssignment_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitAssignment_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitAssignment_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitAssignment_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignment_operator() throws -> Assignment_operatorContext {
+	 open func assignment_operator() throws -> Assignment_operatorContext {
 		var _localctx: Assignment_operatorContext = Assignment_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 526, Swift3Parser.RULE_assignment_operator)
 		defer {
@@ -21925,7 +23930,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2669)
 		 	if (!(SwiftSupport.isBinaryOp(_input))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isBinaryOp(_input)"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isBinaryOp(_input)"))
 		 	}
 		 	setState(2670)
 		 	try match(Swift3Parser.Tokens.EQUAL.rawValue)
@@ -21939,34 +23944,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Negate_prefix_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_negate_prefix_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterNegate_prefix_operator(self)
+
+	public class Negate_prefix_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_negate_prefix_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterNegate_prefix_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitNegate_prefix_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitNegate_prefix_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitNegate_prefix_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitNegate_prefix_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitNegate_prefix_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitNegate_prefix_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func negate_prefix_operator() throws -> Negate_prefix_operatorContext {
+	 open func negate_prefix_operator() throws -> Negate_prefix_operatorContext {
 		var _localctx: Negate_prefix_operatorContext = Negate_prefix_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 528, Swift3Parser.RULE_negate_prefix_operator)
 		defer {
@@ -21976,7 +23986,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2672)
 		 	if (!(SwiftSupport.isPrefixOp(_input))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPrefixOp(_input)"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPrefixOp(_input)"))
 		 	}
 		 	setState(2673)
 		 	try match(Swift3Parser.Tokens.SUB.rawValue)
@@ -21990,34 +24000,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Compilation_condition_ANDContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_compilation_condition_AND }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCompilation_condition_AND(self)
+
+	public class Compilation_condition_ANDContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_compilation_condition_AND
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCompilation_condition_AND(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCompilation_condition_AND(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCompilation_condition_AND(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCompilation_condition_AND(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCompilation_condition_AND(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCompilation_condition_AND(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCompilation_condition_AND(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compilation_condition_AND() throws -> Compilation_condition_ANDContext {
+	 open func compilation_condition_AND() throws -> Compilation_condition_ANDContext {
 		var _localctx: Compilation_condition_ANDContext = Compilation_condition_ANDContext(_ctx, getState())
 		try enterRule(_localctx, 530, Swift3Parser.RULE_compilation_condition_AND)
 		defer {
@@ -22027,7 +24042,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2675)
 		 	if (!(SwiftSupport.isOperator(_input,"&&"))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"&&\")"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"&&\")"))
 		 	}
 		 	setState(2676)
 		 	try match(Swift3Parser.Tokens.AND.rawValue)
@@ -22043,34 +24058,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Compilation_condition_ORContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_compilation_condition_OR }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCompilation_condition_OR(self)
+
+	public class Compilation_condition_ORContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_compilation_condition_OR
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCompilation_condition_OR(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCompilation_condition_OR(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCompilation_condition_OR(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCompilation_condition_OR(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCompilation_condition_OR(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCompilation_condition_OR(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCompilation_condition_OR(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compilation_condition_OR() throws -> Compilation_condition_ORContext {
+	 open func compilation_condition_OR() throws -> Compilation_condition_ORContext {
 		var _localctx: Compilation_condition_ORContext = Compilation_condition_ORContext(_ctx, getState())
 		try enterRule(_localctx, 532, Swift3Parser.RULE_compilation_condition_OR)
 		defer {
@@ -22080,7 +24100,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2679)
 		 	if (!(SwiftSupport.isOperator(_input,"||"))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"||\")"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"||\")"))
 		 	}
 		 	setState(2680)
 		 	try match(Swift3Parser.Tokens.OR.rawValue)
@@ -22096,34 +24116,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Compilation_condition_GEContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_compilation_condition_GE }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterCompilation_condition_GE(self)
+
+	public class Compilation_condition_GEContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_compilation_condition_GE
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterCompilation_condition_GE(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitCompilation_condition_GE(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitCompilation_condition_GE(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitCompilation_condition_GE(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitCompilation_condition_GE(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitCompilation_condition_GE(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitCompilation_condition_GE(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compilation_condition_GE() throws -> Compilation_condition_GEContext {
+	 open func compilation_condition_GE() throws -> Compilation_condition_GEContext {
 		var _localctx: Compilation_condition_GEContext = Compilation_condition_GEContext(_ctx, getState())
 		try enterRule(_localctx, 534, Swift3Parser.RULE_compilation_condition_GE)
 		defer {
@@ -22133,7 +24158,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2683)
 		 	if (!(SwiftSupport.isOperator(_input,">="))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\">=\")"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\">=\")"))
 		 	}
 		 	setState(2684)
 		 	try match(Swift3Parser.Tokens.GT.rawValue)
@@ -22149,34 +24174,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Arrow_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_arrow_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterArrow_operator(self)
+
+	public class Arrow_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_arrow_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterArrow_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitArrow_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitArrow_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitArrow_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitArrow_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitArrow_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitArrow_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrow_operator() throws -> Arrow_operatorContext {
+	 open func arrow_operator() throws -> Arrow_operatorContext {
 		var _localctx: Arrow_operatorContext = Arrow_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 536, Swift3Parser.RULE_arrow_operator)
 		defer {
@@ -22186,7 +24216,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2687)
 		 	if (!(SwiftSupport.isOperator(_input,"->"))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"->\")"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"->\")"))
 		 	}
 		 	setState(2688)
 		 	try match(Swift3Parser.Tokens.SUB.rawValue)
@@ -22202,34 +24232,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Range_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_range_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterRange_operator(self)
+
+	public class Range_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_range_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterRange_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitRange_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitRange_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitRange_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitRange_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitRange_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitRange_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func range_operator() throws -> Range_operatorContext {
+	 open func range_operator() throws -> Range_operatorContext {
 		var _localctx: Range_operatorContext = Range_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 538, Swift3Parser.RULE_range_operator)
 		defer {
@@ -22239,7 +24274,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2691)
 		 	if (!(SwiftSupport.isOperator(_input,"..."))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"...\")"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"...\")"))
 		 	}
 		 	setState(2692)
 		 	try match(Swift3Parser.Tokens.DOT.rawValue)
@@ -22257,34 +24292,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Same_type_equalsContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_same_type_equals }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterSame_type_equals(self)
+
+	public class Same_type_equalsContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_same_type_equals
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterSame_type_equals(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitSame_type_equals(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitSame_type_equals(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitSame_type_equals(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitSame_type_equals(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitSame_type_equals(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitSame_type_equals(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func same_type_equals() throws -> Same_type_equalsContext {
+	 open func same_type_equals() throws -> Same_type_equalsContext {
 		var _localctx: Same_type_equalsContext = Same_type_equalsContext(_ctx, getState())
 		try enterRule(_localctx, 540, Swift3Parser.RULE_same_type_equals)
 		defer {
@@ -22294,7 +24334,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2696)
 		 	if (!(SwiftSupport.isOperator(_input,"=="))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"==\")"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isOperator(_input,\"==\")"))
 		 	}
 		 	setState(2697)
 		 	try match(Swift3Parser.Tokens.EQUAL.rawValue)
@@ -22310,37 +24350,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Binary_operatorContext:ParserRuleContext {
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
+
+	public class Binary_operatorContext: ParserRuleContext {
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_binary_operator
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_binary_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterBinary_operator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterBinary_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitBinary_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitBinary_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitBinary_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitBinary_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitBinary_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitBinary_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_operator() throws -> Binary_operatorContext {
+	 open func binary_operator() throws -> Binary_operatorContext {
 		var _localctx: Binary_operatorContext = Binary_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 542, Swift3Parser.RULE_binary_operator)
 		defer {
@@ -22350,7 +24396,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2700)
 		 	if (!(SwiftSupport.isBinaryOp(_input))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isBinaryOp(_input)"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isBinaryOp(_input)"))
 		 	}
 		 	setState(2701)
 		 	try operator()
@@ -22364,37 +24410,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Prefix_operatorContext:ParserRuleContext {
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
+
+	public class Prefix_operatorContext: ParserRuleContext {
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_prefix_operator
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_prefix_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPrefix_operator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPrefix_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPrefix_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPrefix_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPrefix_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPrefix_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPrefix_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPrefix_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefix_operator() throws -> Prefix_operatorContext {
+	 open func prefix_operator() throws -> Prefix_operatorContext {
 		var _localctx: Prefix_operatorContext = Prefix_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 544, Swift3Parser.RULE_prefix_operator)
 		defer {
@@ -22404,7 +24456,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2703)
 		 	if (!(SwiftSupport.isPrefixOp(_input))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPrefixOp(_input)"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPrefixOp(_input)"))
 		 	}
 		 	setState(2704)
 		 	try operator()
@@ -22418,37 +24470,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Postfix_operatorContext:ParserRuleContext {
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
+
+	public class Postfix_operatorContext: ParserRuleContext {
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_postfix_operator
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_postfix_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterPostfix_operator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterPostfix_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitPostfix_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitPostfix_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitPostfix_operator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitPostfix_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitPostfix_operator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitPostfix_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func postfix_operator() throws -> Postfix_operatorContext {
+	 open func postfix_operator() throws -> Postfix_operatorContext {
 		var _localctx: Postfix_operatorContext = Postfix_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 546, Swift3Parser.RULE_postfix_operator)
 		defer {
@@ -22458,7 +24516,7 @@ open class Swift3Parser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(2706)
 		 	if (!(SwiftSupport.isPostfixOp(_input))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPostfixOp(_input)"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "SwiftSupport.isPostfixOp(_input)"))
 		 	}
 		 	setState(2707)
 		 	try operator()
@@ -22472,52 +24530,63 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class OperatorContext:ParserRuleContext {
-		open func operator_head() -> Operator_headContext? {
-			return getRuleContext(Operator_headContext.self,0)
+
+	public class OperatorContext: ParserRuleContext {
+			open
+			func operator_head() -> Operator_headContext? {
+				return getRuleContext(Operator_headContext.self, 0)
+			}
+			open
+			func operator_character() -> [Operator_characterContext] {
+				return getRuleContexts(Operator_characterContext.self)
+			}
+			open
+			func operator_character(_ i: Int) -> Operator_characterContext? {
+				return getRuleContext(Operator_characterContext.self, i)
+			}
+			open
+			func dot_operator_head() -> Dot_operator_headContext? {
+				return getRuleContext(Dot_operator_headContext.self, 0)
+			}
+			open
+			func dot_operator_character() -> [Dot_operator_characterContext] {
+				return getRuleContexts(Dot_operator_characterContext.self)
+			}
+			open
+			func dot_operator_character(_ i: Int) -> Dot_operator_characterContext? {
+				return getRuleContext(Dot_operator_characterContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_operator
 		}
-		open func operator_character() -> Array<Operator_characterContext> {
-			return getRuleContexts(Operator_characterContext.self)
-		}
-		open func operator_character(_ i: Int) -> Operator_characterContext? {
-			return getRuleContext(Operator_characterContext.self,i)
-		}
-		open func dot_operator_head() -> Dot_operator_headContext? {
-			return getRuleContext(Dot_operator_headContext.self,0)
-		}
-		open func dot_operator_character() -> Array<Dot_operator_characterContext> {
-			return getRuleContexts(Dot_operator_characterContext.self)
-		}
-		open func dot_operator_character(_ i: Int) -> Dot_operator_characterContext? {
-			return getRuleContext(Dot_operator_characterContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterOperator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitOperator(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitOperator(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operator() throws -> OperatorContext {
+	 open func operator() throws -> OperatorContext {
 		var _localctx: OperatorContext = OperatorContext(_ctx, getState())
 		try enterRule(_localctx, 548, Swift3Parser.RULE_operator)
 		defer {
@@ -22553,7 +24622,7 @@ open class Swift3Parser: Parser {
 		 			if ( _alt==1 ) {
 		 				setState(2710)
 		 				if (!(_input.get(_input.index()-1).getType()!=WS)) {
-		 				    throw try ANTLRException.recognition(e:FailedPredicateException(self, "_input.get(_input.index()-1).getType()!=WS"))
+		 				    throw ANTLRException.recognition(e:FailedPredicateException(self, "_input.get(_input.index()-1).getType()!=WS"))
 		 				}
 		 				setState(2711)
 		 				try operator_character()
@@ -22578,7 +24647,7 @@ open class Swift3Parser: Parser {
 		 			if ( _alt==1 ) {
 		 				setState(2718)
 		 				if (!(_input.get(_input.index()-1).getType()!=WS)) {
-		 				    throw try ANTLRException.recognition(e:FailedPredicateException(self, "_input.get(_input.index()-1).getType()!=WS"))
+		 				    throw ANTLRException.recognition(e:FailedPredicateException(self, "_input.get(_input.index()-1).getType()!=WS"))
 		 				}
 		 				setState(2719)
 		 				try dot_operator_character()
@@ -22592,7 +24661,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -22603,38 +24672,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Operator_characterContext:ParserRuleContext {
-		open func operator_head() -> Operator_headContext? {
-			return getRuleContext(Operator_headContext.self,0)
+
+	public class Operator_characterContext: ParserRuleContext {
+			open
+			func operator_head() -> Operator_headContext? {
+				return getRuleContext(Operator_headContext.self, 0)
+			}
+			open
+			func Operator_following_character() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Operator_following_character.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_operator_character
 		}
-		open func Operator_following_character() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Operator_following_character.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_operator_character }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterOperator_character(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterOperator_character(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitOperator_character(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitOperator_character(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitOperator_character(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitOperator_character(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitOperator_character(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitOperator_character(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operator_character() throws -> Operator_characterContext {
+	 open func operator_character() throws -> Operator_characterContext {
 		var _localctx: Operator_characterContext = Operator_characterContext(_ctx, getState())
 		try enterRule(_localctx, 550, Swift3Parser.RULE_operator_character)
 		defer {
@@ -22672,7 +24750,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -22683,35 +24761,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Operator_headContext:ParserRuleContext {
-		open func Operator_head_other() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Operator_head_other.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_operator_head }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterOperator_head(self)
+
+	public class Operator_headContext: ParserRuleContext {
+			open
+			func Operator_head_other() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Operator_head_other.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_operator_head
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterOperator_head(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitOperator_head(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitOperator_head(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitOperator_head(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitOperator_head(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitOperator_head(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitOperator_head(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operator_head() throws -> Operator_headContext {
+	 open func operator_head() throws -> Operator_headContext {
 		var _localctx: Operator_headContext = Operator_headContext(_ctx, getState())
 		try enterRule(_localctx, 552, Swift3Parser.RULE_operator_head)
 		var _la: Int = 0
@@ -22763,7 +24849,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -22774,34 +24860,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dot_operator_headContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_dot_operator_head }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDot_operator_head(self)
+
+	public class Dot_operator_headContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_dot_operator_head
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDot_operator_head(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDot_operator_head(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDot_operator_head(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDot_operator_head(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDot_operator_head(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDot_operator_head(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDot_operator_head(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dot_operator_head() throws -> Dot_operator_headContext {
+	 open func dot_operator_head() throws -> Dot_operator_headContext {
 		var _localctx: Dot_operator_headContext = Dot_operator_headContext(_ctx, getState())
 		try enterRule(_localctx, 554, Swift3Parser.RULE_dot_operator_head)
 		defer {
@@ -22821,37 +24912,43 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dot_operator_characterContext:ParserRuleContext {
-		open func operator_character() -> Operator_characterContext? {
-			return getRuleContext(Operator_characterContext.self,0)
+
+	public class Dot_operator_characterContext: ParserRuleContext {
+			open
+			func operator_character() -> Operator_characterContext? {
+				return getRuleContext(Operator_characterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_dot_operator_character
 		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_dot_operator_character }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterDot_operator_character(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterDot_operator_character(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitDot_operator_character(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitDot_operator_character(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitDot_operator_character(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitDot_operator_character(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitDot_operator_character(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitDot_operator_character(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dot_operator_character() throws -> Dot_operator_characterContext {
+	 open func dot_operator_character() throws -> Dot_operator_characterContext {
 		var _localctx: Dot_operator_characterContext = Dot_operator_characterContext(_ctx, getState())
 		try enterRule(_localctx, 556, Swift3Parser.RULE_dot_operator_character)
 		defer {
@@ -22889,7 +24986,7 @@ open class Swift3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -22900,46 +24997,55 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func numeric_literal() -> Numeric_literalContext? {
-			return getRuleContext(Numeric_literalContext.self,0)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func numeric_literal() -> Numeric_literalContext? {
+				return getRuleContext(Numeric_literalContext.self, 0)
+			}
+			open
+			func string_literal() -> String_literalContext? {
+				return getRuleContext(String_literalContext.self, 0)
+			}
+			open
+			func boolean_literal() -> Boolean_literalContext? {
+				return getRuleContext(Boolean_literalContext.self, 0)
+			}
+			open
+			func nil_literal() -> Nil_literalContext? {
+				return getRuleContext(Nil_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_literal
 		}
-		open func string_literal() -> String_literalContext? {
-			return getRuleContext(String_literalContext.self,0)
-		}
-		open func boolean_literal() -> Boolean_literalContext? {
-			return getRuleContext(Boolean_literalContext.self,0)
-		}
-		open func nil_literal() -> Nil_literalContext? {
-			return getRuleContext(Nil_literalContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitLiteral(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 558, Swift3Parser.RULE_literal)
 		defer {
@@ -22984,41 +25090,51 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Numeric_literalContext:ParserRuleContext {
-		open func integer_literal() -> Integer_literalContext? {
-			return getRuleContext(Integer_literalContext.self,0)
+
+	public class Numeric_literalContext: ParserRuleContext {
+			open
+			func integer_literal() -> Integer_literalContext? {
+				return getRuleContext(Integer_literalContext.self, 0)
+			}
+			open
+			func negate_prefix_operator() -> Negate_prefix_operatorContext? {
+				return getRuleContext(Negate_prefix_operatorContext.self, 0)
+			}
+			open
+			func Floating_point_literal() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Floating_point_literal.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_numeric_literal
 		}
-		open func negate_prefix_operator() -> Negate_prefix_operatorContext? {
-			return getRuleContext(Negate_prefix_operatorContext.self,0)
-		}
-		open func Floating_point_literal() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Floating_point_literal.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_numeric_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterNumeric_literal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterNumeric_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitNumeric_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitNumeric_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitNumeric_literal(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitNumeric_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitNumeric_literal(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitNumeric_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numeric_literal() throws -> Numeric_literalContext {
+	 open func numeric_literal() throws -> Numeric_literalContext {
 		var _localctx: Numeric_literalContext = Numeric_literalContext(_ctx, getState())
 		try enterRule(_localctx, 560, Swift3Parser.RULE_numeric_literal)
 		defer {
@@ -23071,34 +25187,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Boolean_literalContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_boolean_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterBoolean_literal(self)
+
+	public class Boolean_literalContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_boolean_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterBoolean_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitBoolean_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitBoolean_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitBoolean_literal(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitBoolean_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitBoolean_literal(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitBoolean_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func boolean_literal() throws -> Boolean_literalContext {
+	 open func boolean_literal() throws -> Boolean_literalContext {
 		var _localctx: Boolean_literalContext = Boolean_literalContext(_ctx, getState())
 		try enterRule(_localctx, 562, Swift3Parser.RULE_boolean_literal)
 		var _la: Int = 0
@@ -23130,34 +25251,39 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Nil_literalContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_nil_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterNil_literal(self)
+
+	public class Nil_literalContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_nil_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterNil_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitNil_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitNil_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitNil_literal(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitNil_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitNil_literal(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitNil_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nil_literal() throws -> Nil_literalContext {
+	 open func nil_literal() throws -> Nil_literalContext {
 		var _localctx: Nil_literalContext = Nil_literalContext(_ctx, getState())
 		try enterRule(_localctx, 564, Swift3Parser.RULE_nil_literal)
 		defer {
@@ -23177,39 +25303,59 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class Integer_literalContext:ParserRuleContext {
-		open func Binary_literal() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Binary_literal.rawValue, 0) }
-		open func Octal_literal() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Octal_literal.rawValue, 0) }
-		open func Decimal_literal() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Decimal_literal.rawValue, 0) }
-		open func Pure_decimal_digits() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Pure_decimal_digits.rawValue, 0) }
-		open func Hexadecimal_literal() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Hexadecimal_literal.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_integer_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterInteger_literal(self)
+
+	public class Integer_literalContext: ParserRuleContext {
+			open
+			func Binary_literal() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Binary_literal.rawValue, 0)
+			}
+			open
+			func Octal_literal() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Octal_literal.rawValue, 0)
+			}
+			open
+			func Decimal_literal() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Decimal_literal.rawValue, 0)
+			}
+			open
+			func Pure_decimal_digits() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Pure_decimal_digits.rawValue, 0)
+			}
+			open
+			func Hexadecimal_literal() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Hexadecimal_literal.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_integer_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterInteger_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitInteger_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitInteger_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitInteger_literal(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitInteger_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitInteger_literal(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitInteger_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integer_literal() throws -> Integer_literalContext {
+	 open func integer_literal() throws -> Integer_literalContext {
 		var _localctx: Integer_literalContext = Integer_literalContext(_ctx, getState())
 		try enterRule(_localctx, 566, Swift3Parser.RULE_integer_literal)
 		var _la: Int = 0
@@ -23244,36 +25390,47 @@ open class Swift3Parser: Parser {
 
 		return _localctx
 	}
-	open class String_literalContext:ParserRuleContext {
-		open func Static_string_literal() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Static_string_literal.rawValue, 0) }
-		open func Interpolated_string_literal() -> TerminalNode? { return getToken(Swift3Parser.Tokens.Interpolated_string_literal.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Swift3Parser.RULE_string_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).enterString_literal(self)
+
+	public class String_literalContext: ParserRuleContext {
+			open
+			func Static_string_literal() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Static_string_literal.rawValue, 0)
+			}
+			open
+			func Interpolated_string_literal() -> TerminalNode? {
+				return getToken(Swift3Parser.Tokens.Interpolated_string_literal.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Swift3Parser.RULE_string_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.enterString_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Swift3Listener {
-			 	(listener as! Swift3Listener).exitString_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Swift3Listener {
+				listener.exitString_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Swift3Visitor {
-			     return (visitor as! Swift3Visitor<T>).visitString_literal(self)
-			}else if visitor is Swift3BaseVisitor {
-		    	 return (visitor as! Swift3BaseVisitor<T>).visitString_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Swift3Visitor {
+			    return visitor.visitString_literal(self)
+			}
+			else if let visitor = visitor as? Swift3BaseVisitor {
+			    return visitor.visitString_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string_literal() throws -> String_literalContext {
+	 open func string_literal() throws -> String_literalContext {
 		var _localctx: String_literalContext = String_literalContext(_ctx, getState())
 		try enterRule(_localctx, 568, Swift3Parser.RULE_string_literal)
 		var _la: Int = 0
@@ -23306,8 +25463,8 @@ open class Swift3Parser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  3:
 			return try statements_impl_sempred(_localctx?.castdown(Statements_implContext.self), predIndex)
@@ -23473,6 +25630,10 @@ open class Swift3Parser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = Swift3ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = Swift3ParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

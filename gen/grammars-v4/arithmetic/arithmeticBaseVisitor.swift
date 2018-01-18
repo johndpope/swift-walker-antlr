@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/arithmetic/arithmetic.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/arithmetic/arithmetic.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -44,6 +44,13 @@ open class arithmeticBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	open func visitSignedAtom(_ ctx: arithmeticParser.SignedAtomContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	open func visitAtom(_ ctx: arithmeticParser.AtomContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
@@ -58,19 +65,12 @@ open class arithmeticBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitRelop(_ ctx: arithmeticParser.RelopContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitNumber(_ ctx: arithmeticParser.NumberContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
 	open func visitVariable(_ ctx: arithmeticParser.VariableContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitRelop(_ ctx: arithmeticParser.RelopContext) -> T? { return visitChildren(ctx) }
 }

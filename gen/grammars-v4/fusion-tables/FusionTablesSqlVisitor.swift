@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/fusion-tables/FusionTablesSql.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/fusion-tables/FusionTablesSql.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFusionTablesSql(_ ctx: FusionTablesSqlParser.FusionTablesSqlContext) -> T{
+	open func visitFusionTablesSql(_ ctx: FusionTablesSqlParser.FusionTablesSqlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSql_stmt(_ ctx: FusionTablesSqlParser.Sql_stmtContext) -> T{
+	open func visitSql_stmt(_ ctx: FusionTablesSqlParser.Sql_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTable_name_in_ddl(_ ctx: FusionTablesSqlParser.Table_name_in_ddlContext) -> T{
+	open func visitTable_name_in_ddl(_ ctx: FusionTablesSqlParser.Table_name_in_ddlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTable_name_in_dml(_ ctx: FusionTablesSqlParser.Table_name_in_dmlContext) -> T{
+	open func visitTable_name_in_dml(_ ctx: FusionTablesSqlParser.Table_name_in_dmlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCreate_table_as_select_stmt(_ ctx: FusionTablesSqlParser.Create_table_as_select_stmtContext) -> T{
+	open func visitCreate_table_as_select_stmt(_ ctx: FusionTablesSqlParser.Create_table_as_select_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDescribe_stmt(_ ctx: FusionTablesSqlParser.Describe_stmtContext) -> T{
+	open func visitDescribe_stmt(_ ctx: FusionTablesSqlParser.Describe_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitShow_tables_stmt(_ ctx: FusionTablesSqlParser.Show_tables_stmtContext) -> T{
+	open func visitShow_tables_stmt(_ ctx: FusionTablesSqlParser.Show_tables_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlter_table_stmt(_ ctx: FusionTablesSqlParser.Alter_table_stmtContext) -> T{
+	open func visitAlter_table_stmt(_ ctx: FusionTablesSqlParser.Alter_table_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCreate_view_stmt(_ ctx: FusionTablesSqlParser.Create_view_stmtContext) -> T{
+	open func visitCreate_view_stmt(_ ctx: FusionTablesSqlParser.Create_view_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDrop_table_stmt(_ ctx: FusionTablesSqlParser.Drop_table_stmtContext) -> T{
+	open func visitDrop_table_stmt(_ ctx: FusionTablesSqlParser.Drop_table_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInsert_stmt(_ ctx: FusionTablesSqlParser.Insert_stmtContext) -> T{
+	open func visitInsert_stmt(_ ctx: FusionTablesSqlParser.Insert_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUpdate_stmt(_ ctx: FusionTablesSqlParser.Update_stmtContext) -> T{
+	open func visitUpdate_stmt(_ ctx: FusionTablesSqlParser.Update_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumn_assignment(_ ctx: FusionTablesSqlParser.Column_assignmentContext) -> T{
+	open func visitColumn_assignment(_ ctx: FusionTablesSqlParser.Column_assignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelete_stmt(_ ctx: FusionTablesSqlParser.Delete_stmtContext) -> T{
+	open func visitDelete_stmt(_ ctx: FusionTablesSqlParser.Delete_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEq_comparison(_ ctx: FusionTablesSqlParser.Eq_comparisonContext) -> T{
+	open func visitEq_comparison(_ ctx: FusionTablesSqlParser.Eq_comparisonContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTable_name_with_alias(_ ctx: FusionTablesSqlParser.Table_name_with_aliasContext) -> T{
+	open func visitTable_name_with_alias(_ ctx: FusionTablesSqlParser.Table_name_with_aliasContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelect_stmt(_ ctx: FusionTablesSqlParser.Select_stmtContext) -> T{
+	open func visitSelect_stmt(_ ctx: FusionTablesSqlParser.Select_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrdering_term(_ ctx: FusionTablesSqlParser.Ordering_termContext) -> T{
+	open func visitOrdering_term(_ ctx: FusionTablesSqlParser.Ordering_termContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJoin_clause(_ ctx: FusionTablesSqlParser.Join_clauseContext) -> T{
+	open func visitJoin_clause(_ ctx: FusionTablesSqlParser.Join_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResult_column(_ ctx: FusionTablesSqlParser.Result_columnContext) -> T{
+	open func visitResult_column(_ ctx: FusionTablesSqlParser.Result_columnContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualified_column_name(_ ctx: FusionTablesSqlParser.Qualified_column_nameContext) -> T{
+	open func visitQualified_column_name(_ ctx: FusionTablesSqlParser.Qualified_column_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAggregate_exp(_ ctx: FusionTablesSqlParser.Aggregate_expContext) -> T{
+	open func visitAggregate_exp(_ ctx: FusionTablesSqlParser.Aggregate_expContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr(_ ctx: FusionTablesSqlParser.ExprContext) -> T{
+	open func visitExpr(_ ctx: FusionTablesSqlParser.ExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumn_name_beginning_expr(_ ctx: FusionTablesSqlParser.Column_name_beginning_exprContext) -> T{
+	open func visitColumn_name_beginning_expr(_ ctx: FusionTablesSqlParser.Column_name_beginning_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumn_name_in_dml(_ ctx: FusionTablesSqlParser.Column_name_in_dmlContext) -> T{
+	open func visitColumn_name_in_dml(_ ctx: FusionTablesSqlParser.Column_name_in_dmlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnd_or_or(_ ctx: FusionTablesSqlParser.And_or_orContext) -> T{
+	open func visitAnd_or_or(_ ctx: FusionTablesSqlParser.And_or_orContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGeometry(_ ctx: FusionTablesSqlParser.GeometryContext) -> T{
+	open func visitGeometry(_ ctx: FusionTablesSqlParser.GeometryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCircle(_ ctx: FusionTablesSqlParser.CircleContext) -> T{
+	open func visitCircle(_ ctx: FusionTablesSqlParser.CircleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRectangle(_ ctx: FusionTablesSqlParser.RectangleContext) -> T{
+	open func visitRectangle(_ ctx: FusionTablesSqlParser.RectangleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCoordinate(_ ctx: FusionTablesSqlParser.CoordinateContext) -> T{
+	open func visitCoordinate(_ ctx: FusionTablesSqlParser.CoordinateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeyword(_ ctx: FusionTablesSqlParser.KeywordContext) -> T{
+	open func visitKeyword(_ ctx: FusionTablesSqlParser.KeywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperator(_ ctx: FusionTablesSqlParser.OperatorContext) -> T{
+	open func visitOperator(_ ctx: FusionTablesSqlParser.OperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: FusionTablesSqlParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: FusionTablesSqlParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitError_message(_ ctx: FusionTablesSqlParser.Error_messageContext) -> T{
+	open func visitError_message(_ ctx: FusionTablesSqlParser.Error_messageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifier(_ ctx: FusionTablesSqlParser.IdentifierContext) -> T{
+	open func visitIdentifier(_ ctx: FusionTablesSqlParser.IdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumn_alias(_ ctx: FusionTablesSqlParser.Column_aliasContext) -> T{
+	open func visitColumn_alias(_ ctx: FusionTablesSqlParser.Column_aliasContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTable_name(_ ctx: FusionTablesSqlParser.Table_nameContext) -> T{
+	open func visitTable_name(_ ctx: FusionTablesSqlParser.Table_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumn_name(_ ctx: FusionTablesSqlParser.Column_nameContext) -> T{
+	open func visitColumn_name(_ ctx: FusionTablesSqlParser.Column_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNew_table_name(_ ctx: FusionTablesSqlParser.New_table_nameContext) -> T{
+	open func visitNew_table_name(_ ctx: FusionTablesSqlParser.New_table_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitView_name(_ ctx: FusionTablesSqlParser.View_nameContext) -> T{
+	open func visitView_name(_ ctx: FusionTablesSqlParser.View_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTable_alias(_ ctx: FusionTablesSqlParser.Table_aliasContext) -> T{
+	open func visitTable_alias(_ ctx: FusionTablesSqlParser.Table_aliasContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumeric_literal(_ ctx: FusionTablesSqlParser.Numeric_literalContext) -> T{
+	open func visitNumeric_literal(_ ctx: FusionTablesSqlParser.Numeric_literalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class FusionTablesSqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString_literal(_ ctx: FusionTablesSqlParser.String_literalContext) -> T{
+	open func visitString_literal(_ ctx: FusionTablesSqlParser.String_literalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -19,19 +19,19 @@ public protocol COOLListener: ParseTreeListener {
 	 */
 	func exitProgram(_ ctx: COOLParser.ProgramContext)
 	/**
-	 * Enter a parse tree produced by the {@code class}
+	 * Enter a parse tree produced by the {@code classes}
 	 * labeled alternative in {@link COOLParser#programBlocks}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterClass(_ ctx: COOLParser.ClassContext)
+	func enterClasses(_ ctx: COOLParser.ClassesContext)
 	/**
-	 * Exit a parse tree produced by the {@code class}
+	 * Exit a parse tree produced by the {@code classes}
 	 * labeled alternative in {@link COOLParser#programBlocks}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitClass(_ ctx: COOLParser.ClassContext)
+	func exitClasses(_ ctx: COOLParser.ClassesContext)
 	/**
 	 * Enter a parse tree produced by the {@code eof}
 	 * labeled alternative in {@link COOLParser#programBlocks}.
@@ -73,19 +73,19 @@ public protocol COOLListener: ParseTreeListener {
 	 */
 	func exitMethod(_ ctx: COOLParser.MethodContext)
 	/**
-	 * Enter a parse tree produced by the {@code classProperty}
+	 * Enter a parse tree produced by the {@code property}
 	 * labeled alternative in {@link COOLParser#feature}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterClassProperty(_ ctx: COOLParser.ClassPropertyContext)
+	func enterProperty(_ ctx: COOLParser.PropertyContext)
 	/**
-	 * Exit a parse tree produced by the {@code classProperty}
+	 * Exit a parse tree produced by the {@code property}
 	 * labeled alternative in {@link COOLParser#feature}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitClassProperty(_ ctx: COOLParser.ClassPropertyContext)
+	func exitProperty(_ ctx: COOLParser.PropertyContext)
 	/**
 	 * Enter a parse tree produced by {@link COOLParser#formal}.
 	 - Parameters:
@@ -112,20 +112,6 @@ public protocol COOLListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitLetIn(_ ctx: COOLParser.LetInContext)
-	/**
-	 * Enter a parse tree produced by the {@code newType}
-	 * labeled alternative in {@link COOLParser#expression}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterNewType(_ ctx: COOLParser.NewTypeContext)
-	/**
-	 * Exit a parse tree produced by the {@code newType}
-	 * labeled alternative in {@link COOLParser#expression}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitNewType(_ ctx: COOLParser.NewTypeContext)
 	/**
 	 * Enter a parse tree produced by the {@code minus}
 	 * labeled alternative in {@link COOLParser#expression}.
@@ -169,19 +155,19 @@ public protocol COOLListener: ParseTreeListener {
 	 */
 	func exitIsvoid(_ ctx: COOLParser.IsvoidContext)
 	/**
-	 * Enter a parse tree produced by the {@code whild}
+	 * Enter a parse tree produced by the {@code while}
 	 * labeled alternative in {@link COOLParser#expression}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterWhild(_ ctx: COOLParser.WhildContext)
+	func enterWhile(_ ctx: COOLParser.WhileContext)
 	/**
-	 * Exit a parse tree produced by the {@code whild}
+	 * Exit a parse tree produced by the {@code while}
 	 * labeled alternative in {@link COOLParser#expression}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitWhild(_ ctx: COOLParser.WhildContext)
+	func exitWhile(_ ctx: COOLParser.WhileContext)
 	/**
 	 * Enter a parse tree produced by the {@code division}
 	 * labeled alternative in {@link COOLParser#expression}.
@@ -196,6 +182,20 @@ public protocol COOLListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitDivision(_ ctx: COOLParser.DivisionContext)
+	/**
+	 * Enter a parse tree produced by the {@code negative}
+	 * labeled alternative in {@link COOLParser#expression}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterNegative(_ ctx: COOLParser.NegativeContext)
+	/**
+	 * Exit a parse tree produced by the {@code negative}
+	 * labeled alternative in {@link COOLParser#expression}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitNegative(_ ctx: COOLParser.NegativeContext)
 	/**
 	 * Enter a parse tree produced by the {@code boolNot}
 	 * labeled alternative in {@link COOLParser#expression}.
@@ -225,19 +225,19 @@ public protocol COOLListener: ParseTreeListener {
 	 */
 	func exitLessThan(_ ctx: COOLParser.LessThanContext)
 	/**
-	 * Enter a parse tree produced by the {@code superClassMethod}
+	 * Enter a parse tree produced by the {@code block}
 	 * labeled alternative in {@link COOLParser#expression}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterSuperClassMethod(_ ctx: COOLParser.SuperClassMethodContext)
+	func enterBlock(_ ctx: COOLParser.BlockContext)
 	/**
-	 * Exit a parse tree produced by the {@code superClassMethod}
+	 * Exit a parse tree produced by the {@code block}
 	 * labeled alternative in {@link COOLParser#expression}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitSuperClassMethod(_ ctx: COOLParser.SuperClassMethodContext)
+	func exitBlock(_ ctx: COOLParser.BlockContext)
 	/**
 	 * Enter a parse tree produced by the {@code id}
 	 * labeled alternative in {@link COOLParser#expression}.
@@ -295,6 +295,20 @@ public protocol COOLListener: ParseTreeListener {
 	 */
 	func exitCase(_ ctx: COOLParser.CaseContext)
 	/**
+	 * Enter a parse tree produced by the {@code ownMethodCall}
+	 * labeled alternative in {@link COOLParser#expression}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterOwnMethodCall(_ ctx: COOLParser.OwnMethodCallContext)
+	/**
+	 * Exit a parse tree produced by the {@code ownMethodCall}
+	 * labeled alternative in {@link COOLParser#expression}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitOwnMethodCall(_ ctx: COOLParser.OwnMethodCallContext)
+	/**
 	 * Enter a parse tree produced by the {@code add}
 	 * labeled alternative in {@link COOLParser#expression}.
 	 - Parameters:
@@ -308,6 +322,20 @@ public protocol COOLListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitAdd(_ ctx: COOLParser.AddContext)
+	/**
+	 * Enter a parse tree produced by the {@code new}
+	 * labeled alternative in {@link COOLParser#expression}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterNew(_ ctx: COOLParser.NewContext)
+	/**
+	 * Exit a parse tree produced by the {@code new}
+	 * labeled alternative in {@link COOLParser#expression}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitNew(_ ctx: COOLParser.NewContext)
 	/**
 	 * Enter a parse tree produced by the {@code parentheses}
 	 * labeled alternative in {@link COOLParser#expression}.
@@ -379,34 +407,6 @@ public protocol COOLListener: ParseTreeListener {
 	 */
 	func exitEqual(_ ctx: COOLParser.EqualContext)
 	/**
-	 * Enter a parse tree produced by the {@code multipleExpression}
-	 * labeled alternative in {@link COOLParser#expression}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterMultipleExpression(_ ctx: COOLParser.MultipleExpressionContext)
-	/**
-	 * Exit a parse tree produced by the {@code multipleExpression}
-	 * labeled alternative in {@link COOLParser#expression}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitMultipleExpression(_ ctx: COOLParser.MultipleExpressionContext)
-	/**
-	 * Enter a parse tree produced by the {@code functionCall}
-	 * labeled alternative in {@link COOLParser#expression}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterFunctionCall(_ ctx: COOLParser.FunctionCallContext)
-	/**
-	 * Exit a parse tree produced by the {@code functionCall}
-	 * labeled alternative in {@link COOLParser#expression}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitFunctionCall(_ ctx: COOLParser.FunctionCallContext)
-	/**
 	 * Enter a parse tree produced by the {@code true}
 	 * labeled alternative in {@link COOLParser#expression}.
 	 - Parameters:
@@ -435,17 +435,17 @@ public protocol COOLListener: ParseTreeListener {
 	 */
 	func exitLessEqual(_ ctx: COOLParser.LessEqualContext)
 	/**
-	 * Enter a parse tree produced by the {@code integerComplement}
+	 * Enter a parse tree produced by the {@code methodCall}
 	 * labeled alternative in {@link COOLParser#expression}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterIntegerComplement(_ ctx: COOLParser.IntegerComplementContext)
+	func enterMethodCall(_ ctx: COOLParser.MethodCallContext)
 	/**
-	 * Exit a parse tree produced by the {@code integerComplement}
+	 * Exit a parse tree produced by the {@code methodCall}
 	 * labeled alternative in {@link COOLParser#expression}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitIntegerComplement(_ ctx: COOLParser.IntegerComplementContext)
+	func exitMethodCall(_ ctx: COOLParser.MethodCallContext)
 }

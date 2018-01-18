@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/emailaddress/emailaddress.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/emailaddress/emailaddress.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmailaddress(_ ctx: emailaddressParser.EmailaddressContext) -> T{
+	open func visitEmailaddress(_ ctx: emailaddressParser.EmailaddressContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGroup(_ ctx: emailaddressParser.GroupContext) -> T{
+	open func visitGroup(_ ctx: emailaddressParser.GroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMailbox(_ ctx: emailaddressParser.MailboxContext) -> T{
+	open func visitMailbox(_ ctx: emailaddressParser.MailboxContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRouteaddr(_ ctx: emailaddressParser.RouteaddrContext) -> T{
+	open func visitRouteaddr(_ ctx: emailaddressParser.RouteaddrContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRoute(_ ctx: emailaddressParser.RouteContext) -> T{
+	open func visitRoute(_ ctx: emailaddressParser.RouteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAddrspec(_ ctx: emailaddressParser.AddrspecContext) -> T{
+	open func visitAddrspec(_ ctx: emailaddressParser.AddrspecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocalpart(_ ctx: emailaddressParser.LocalpartContext) -> T{
+	open func visitLocalpart(_ ctx: emailaddressParser.LocalpartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDomain(_ ctx: emailaddressParser.DomainContext) -> T{
+	open func visitDomain(_ ctx: emailaddressParser.DomainContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubdomain(_ ctx: emailaddressParser.SubdomainContext) -> T{
+	open func visitSubdomain(_ ctx: emailaddressParser.SubdomainContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDomainref(_ ctx: emailaddressParser.DomainrefContext) -> T{
+	open func visitDomainref(_ ctx: emailaddressParser.DomainrefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPhrase(_ ctx: emailaddressParser.PhraseContext) -> T{
+	open func visitPhrase(_ ctx: emailaddressParser.PhraseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWord(_ ctx: emailaddressParser.WordContext) -> T{
+	open func visitWord(_ ctx: emailaddressParser.WordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLwspchar(_ ctx: emailaddressParser.LwspcharContext) -> T{
+	open func visitLwspchar(_ ctx: emailaddressParser.LwspcharContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLwsp(_ ctx: emailaddressParser.LwspContext) -> T{
+	open func visitLwsp(_ ctx: emailaddressParser.LwspContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelimeters(_ ctx: emailaddressParser.DelimetersContext) -> T{
+	open func visitDelimeters(_ ctx: emailaddressParser.DelimetersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: emailaddressParser.AtomContext) -> T{
+	open func visitAtom(_ ctx: emailaddressParser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuotedpair(_ ctx: emailaddressParser.QuotedpairContext) -> T{
+	open func visitQuotedpair(_ ctx: emailaddressParser.QuotedpairContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDomainliteral(_ ctx: emailaddressParser.DomainliteralContext) -> T{
+	open func visitDomainliteral(_ ctx: emailaddressParser.DomainliteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuotedstring(_ ctx: emailaddressParser.QuotedstringContext) -> T{
+	open func visitQuotedstring(_ ctx: emailaddressParser.QuotedstringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class emailaddressVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: emailaddressParser.CommentContext) -> T{
+	open func visitComment(_ ctx: emailaddressParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

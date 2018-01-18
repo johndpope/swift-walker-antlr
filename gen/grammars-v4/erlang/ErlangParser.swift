@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/erlang/Erlang.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/erlang/Erlang.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class ErlangParser: Parser {
@@ -11,8 +11,11 @@ open class ErlangParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -29,40 +32,41 @@ open class ErlangParser: Parser {
                  TokChar = 68, TokString = 69, AttrName = 70, Comment = 71, 
                  WS = 72
 	}
-	public static let RULE_forms = 0, RULE_form = 1, RULE_tokAtom = 2, RULE_tokVar = 3, 
-                   RULE_tokFloat = 4, RULE_tokInteger = 5, RULE_tokChar = 6, 
-                   RULE_tokString = 7, RULE_attribute = 8, RULE_typeSpec = 9, 
-                   RULE_specFun = 10, RULE_typedAttrVal = 11, RULE_typedRecordFields = 12, 
-                   RULE_typedExprs = 13, RULE_typedExpr = 14, RULE_typeSigs = 15, 
-                   RULE_typeSig = 16, RULE_typeGuards = 17, RULE_typeGuard = 18, 
-                   RULE_topTypes = 19, RULE_topType = 20, RULE_topType100 = 21, 
-                   RULE_type200 = 22, RULE_type300 = 23, RULE_type400 = 24, 
-                   RULE_type500 = 25, RULE_type = 26, RULE_funType100 = 27, 
-                   RULE_funType = 28, RULE_fieldTypes = 29, RULE_fieldType = 30, 
-                   RULE_binaryType = 31, RULE_binBaseType = 32, RULE_binUnitType = 33, 
-                   RULE_attrVal = 34, RULE_function = 35, RULE_functionClause = 36, 
-                   RULE_clauseArgs = 37, RULE_clauseGuard = 38, RULE_clauseBody = 39, 
-                   RULE_expr = 40, RULE_expr100 = 41, RULE_expr150 = 42, 
-                   RULE_expr160 = 43, RULE_expr200 = 44, RULE_expr300 = 45, 
-                   RULE_expr400 = 46, RULE_expr500 = 47, RULE_expr600 = 48, 
-                   RULE_expr700 = 49, RULE_expr800 = 50, RULE_exprMax = 51, 
-                   RULE_list = 52, RULE_tail = 53, RULE_binary = 54, RULE_binElements = 55, 
-                   RULE_binElement = 56, RULE_bitExpr = 57, RULE_optBitSizeExpr = 58, 
-                   RULE_optBitTypeList = 59, RULE_bitTypeList = 60, RULE_bitType = 61, 
-                   RULE_bitSizeExpr = 62, RULE_listComprehension = 63, RULE_binaryComprehension = 64, 
-                   RULE_lcExprs = 65, RULE_lcExpr = 66, RULE_tuple = 67, 
-                   RULE_recordExpr = 68, RULE_recordTuple = 69, RULE_recordFields = 70, 
-                   RULE_recordField = 71, RULE_functionCall = 72, RULE_ifExpr = 73, 
-                   RULE_ifClauses = 74, RULE_ifClause = 75, RULE_caseExpr = 76, 
-                   RULE_crClauses = 77, RULE_crClause = 78, RULE_receiveExpr = 79, 
-                   RULE_funExpr = 80, RULE_atomOrVar = 81, RULE_integerOrVar = 82, 
-                   RULE_funClauses = 83, RULE_funClause = 84, RULE_tryExpr = 85, 
-                   RULE_tryCatch = 86, RULE_tryClauses = 87, RULE_tryClause = 88, 
-                   RULE_argumentList = 89, RULE_exprs = 90, RULE_guard = 91, 
-                   RULE_atomic = 92, RULE_prefixOp = 93, RULE_multOp = 94, 
-                   RULE_addOp = 95, RULE_listOp = 96, RULE_compOp = 97, 
-                   RULE_ruleClauses = 98, RULE_ruleClause = 99, RULE_ruleBody = 100
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_forms = 0, RULE_form = 1, RULE_tokAtom = 2, RULE_tokVar = 3, 
+            RULE_tokFloat = 4, RULE_tokInteger = 5, RULE_tokChar = 6, RULE_tokString = 7, 
+            RULE_attribute = 8, RULE_typeSpec = 9, RULE_specFun = 10, RULE_typedAttrVal = 11, 
+            RULE_typedRecordFields = 12, RULE_typedExprs = 13, RULE_typedExpr = 14, 
+            RULE_typeSigs = 15, RULE_typeSig = 16, RULE_typeGuards = 17, 
+            RULE_typeGuard = 18, RULE_topTypes = 19, RULE_topType = 20, 
+            RULE_topType100 = 21, RULE_type200 = 22, RULE_type300 = 23, 
+            RULE_type400 = 24, RULE_type500 = 25, RULE_type = 26, RULE_funType100 = 27, 
+            RULE_funType = 28, RULE_fieldTypes = 29, RULE_fieldType = 30, 
+            RULE_binaryType = 31, RULE_binBaseType = 32, RULE_binUnitType = 33, 
+            RULE_attrVal = 34, RULE_function = 35, RULE_functionClause = 36, 
+            RULE_clauseArgs = 37, RULE_clauseGuard = 38, RULE_clauseBody = 39, 
+            RULE_expr = 40, RULE_expr100 = 41, RULE_expr150 = 42, RULE_expr160 = 43, 
+            RULE_expr200 = 44, RULE_expr300 = 45, RULE_expr400 = 46, RULE_expr500 = 47, 
+            RULE_expr600 = 48, RULE_expr700 = 49, RULE_expr800 = 50, RULE_exprMax = 51, 
+            RULE_list = 52, RULE_tail = 53, RULE_binary = 54, RULE_binElements = 55, 
+            RULE_binElement = 56, RULE_bitExpr = 57, RULE_optBitSizeExpr = 58, 
+            RULE_optBitTypeList = 59, RULE_bitTypeList = 60, RULE_bitType = 61, 
+            RULE_bitSizeExpr = 62, RULE_listComprehension = 63, RULE_binaryComprehension = 64, 
+            RULE_lcExprs = 65, RULE_lcExpr = 66, RULE_tuple = 67, RULE_recordExpr = 68, 
+            RULE_recordTuple = 69, RULE_recordFields = 70, RULE_recordField = 71, 
+            RULE_functionCall = 72, RULE_ifExpr = 73, RULE_ifClauses = 74, 
+            RULE_ifClause = 75, RULE_caseExpr = 76, RULE_crClauses = 77, 
+            RULE_crClause = 78, RULE_receiveExpr = 79, RULE_funExpr = 80, 
+            RULE_atomOrVar = 81, RULE_integerOrVar = 82, RULE_funClauses = 83, 
+            RULE_funClause = 84, RULE_tryExpr = 85, RULE_tryCatch = 86, 
+            RULE_tryClauses = 87, RULE_tryClause = 88, RULE_argumentList = 89, 
+            RULE_exprs = 90, RULE_guard = 91, RULE_atomic = 92, RULE_prefixOp = 93, 
+            RULE_multOp = 94, RULE_addOp = 95, RULE_listOp = 96, RULE_compOp = 97, 
+            RULE_ruleClauses = 98, RULE_ruleClause = 99, RULE_ruleBody = 100
+
+	public
+	static let ruleNames: [String] = [
 		"forms", "form", "tokAtom", "tokVar", "tokFloat", "tokInteger", "tokChar", 
 		"tokString", "attribute", "typeSpec", "specFun", "typedAttrVal", "typedRecordFields", 
 		"typedExprs", "typedExpr", "typeSigs", "typeSig", "typeGuards", "typeGuard", 
@@ -100,89 +104,77 @@ open class ErlangParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, "TokAtom", "TokVar", "TokFloat", 
 		"TokInteger", "TokChar", "TokString", "AttrName", "Comment", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Erlang.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return ErlangParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Erlang.g4" }
+	override open
+	func getSerializedATN() -> String { return ErlangParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return ErlangParser.ruleNames }
+	override open
+	func getATN() -> ATN { return ErlangParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return ErlangParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return ErlangParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return ErlangParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,ErlangParser._ATN,ErlangParser._decisionToDFA, ErlangParser._sharedContextCache)
 	}
-	open class FormsContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(ErlangParser.Tokens.EOF.rawValue, 0) }
-		open func form() -> Array<FormContext> {
-			return getRuleContexts(FormContext.self)
+
+	public class FormsContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(ErlangParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func form() -> [FormContext] {
+				return getRuleContexts(FormContext.self)
+			}
+			open
+			func form(_ i: Int) -> FormContext? {
+				return getRuleContext(FormContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_forms
 		}
-		open func form(_ i: Int) -> FormContext? {
-			return getRuleContext(FormContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_forms }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterForms(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterForms(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitForms(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitForms(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitForms(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitForms(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitForms(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitForms(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forms() throws -> FormsContext {
+	 open func forms() throws -> FormsContext {
 		var _localctx: FormsContext = FormsContext(_ctx, getState())
 		try enterRule(_localctx, 0, ErlangParser.RULE_forms)
 		var _la: Int = 0
@@ -220,43 +212,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FormContext:ParserRuleContext {
-		open func attribute() -> AttributeContext? {
-			return getRuleContext(AttributeContext.self,0)
+
+	public class FormContext: ParserRuleContext {
+			open
+			func attribute() -> AttributeContext? {
+				return getRuleContext(AttributeContext.self, 0)
+			}
+			open
+			func function() -> FunctionContext? {
+				return getRuleContext(FunctionContext.self, 0)
+			}
+			open
+			func ruleClauses() -> RuleClausesContext? {
+				return getRuleContext(RuleClausesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_form
 		}
-		open func function() -> FunctionContext? {
-			return getRuleContext(FunctionContext.self,0)
-		}
-		open func ruleClauses() -> RuleClausesContext? {
-			return getRuleContext(RuleClausesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_form }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterForm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterForm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitForm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitForm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitForm(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitForm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitForm(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitForm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func form() throws -> FormContext {
+	 open func form() throws -> FormContext {
 		var _localctx: FormContext = FormContext(_ctx, getState())
 		try enterRule(_localctx, 2, ErlangParser.RULE_form)
 		defer {
@@ -296,35 +296,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TokAtomContext:ParserRuleContext {
-		open func TokAtom() -> TerminalNode? { return getToken(ErlangParser.Tokens.TokAtom.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tokAtom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTokAtom(self)
+
+	public class TokAtomContext: ParserRuleContext {
+			open
+			func TokAtom() -> TerminalNode? {
+				return getToken(ErlangParser.Tokens.TokAtom.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tokAtom
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTokAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTokAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTokAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTokAtom(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTokAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTokAtom(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTokAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tokAtom() throws -> TokAtomContext {
+	 open func tokAtom() throws -> TokAtomContext {
 		var _localctx: TokAtomContext = TokAtomContext(_ctx, getState())
 		try enterRule(_localctx, 4, ErlangParser.RULE_tokAtom)
 		defer {
@@ -344,35 +352,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TokVarContext:ParserRuleContext {
-		open func TokVar() -> TerminalNode? { return getToken(ErlangParser.Tokens.TokVar.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tokVar }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTokVar(self)
+
+	public class TokVarContext: ParserRuleContext {
+			open
+			func TokVar() -> TerminalNode? {
+				return getToken(ErlangParser.Tokens.TokVar.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tokVar
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTokVar(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTokVar(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTokVar(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTokVar(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTokVar(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTokVar(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTokVar(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tokVar() throws -> TokVarContext {
+	 open func tokVar() throws -> TokVarContext {
 		var _localctx: TokVarContext = TokVarContext(_ctx, getState())
 		try enterRule(_localctx, 6, ErlangParser.RULE_tokVar)
 		defer {
@@ -392,35 +408,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TokFloatContext:ParserRuleContext {
-		open func TokFloat() -> TerminalNode? { return getToken(ErlangParser.Tokens.TokFloat.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tokFloat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTokFloat(self)
+
+	public class TokFloatContext: ParserRuleContext {
+			open
+			func TokFloat() -> TerminalNode? {
+				return getToken(ErlangParser.Tokens.TokFloat.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tokFloat
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTokFloat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTokFloat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTokFloat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTokFloat(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTokFloat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTokFloat(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTokFloat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tokFloat() throws -> TokFloatContext {
+	 open func tokFloat() throws -> TokFloatContext {
 		var _localctx: TokFloatContext = TokFloatContext(_ctx, getState())
 		try enterRule(_localctx, 8, ErlangParser.RULE_tokFloat)
 		defer {
@@ -440,35 +464,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TokIntegerContext:ParserRuleContext {
-		open func TokInteger() -> TerminalNode? { return getToken(ErlangParser.Tokens.TokInteger.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tokInteger }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTokInteger(self)
+
+	public class TokIntegerContext: ParserRuleContext {
+			open
+			func TokInteger() -> TerminalNode? {
+				return getToken(ErlangParser.Tokens.TokInteger.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tokInteger
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTokInteger(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTokInteger(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTokInteger(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTokInteger(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTokInteger(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTokInteger(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTokInteger(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tokInteger() throws -> TokIntegerContext {
+	 open func tokInteger() throws -> TokIntegerContext {
 		var _localctx: TokIntegerContext = TokIntegerContext(_ctx, getState())
 		try enterRule(_localctx, 10, ErlangParser.RULE_tokInteger)
 		defer {
@@ -488,35 +520,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TokCharContext:ParserRuleContext {
-		open func TokChar() -> TerminalNode? { return getToken(ErlangParser.Tokens.TokChar.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tokChar }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTokChar(self)
+
+	public class TokCharContext: ParserRuleContext {
+			open
+			func TokChar() -> TerminalNode? {
+				return getToken(ErlangParser.Tokens.TokChar.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tokChar
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTokChar(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTokChar(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTokChar(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTokChar(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTokChar(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTokChar(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTokChar(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tokChar() throws -> TokCharContext {
+	 open func tokChar() throws -> TokCharContext {
 		var _localctx: TokCharContext = TokCharContext(_ctx, getState())
 		try enterRule(_localctx, 12, ErlangParser.RULE_tokChar)
 		defer {
@@ -536,35 +576,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TokStringContext:ParserRuleContext {
-		open func TokString() -> TerminalNode? { return getToken(ErlangParser.Tokens.TokString.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tokString }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTokString(self)
+
+	public class TokStringContext: ParserRuleContext {
+			open
+			func TokString() -> TerminalNode? {
+				return getToken(ErlangParser.Tokens.TokString.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tokString
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTokString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTokString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTokString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTokString(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTokString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTokString(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTokString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tokString() throws -> TokStringContext {
+	 open func tokString() throws -> TokStringContext {
 		var _localctx: TokStringContext = TokStringContext(_ctx, getState())
 		try enterRule(_localctx, 14, ErlangParser.RULE_tokString)
 		defer {
@@ -584,47 +632,59 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class AttributeContext:ParserRuleContext {
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
+
+	public class AttributeContext: ParserRuleContext {
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+			open
+			func attrVal() -> AttrValContext? {
+				return getRuleContext(AttrValContext.self, 0)
+			}
+			open
+			func typedAttrVal() -> TypedAttrValContext? {
+				return getRuleContext(TypedAttrValContext.self, 0)
+			}
+			open
+			func AttrName() -> TerminalNode? {
+				return getToken(ErlangParser.Tokens.AttrName.rawValue, 0)
+			}
+			open
+			func typeSpec() -> TypeSpecContext? {
+				return getRuleContext(TypeSpecContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_attribute
 		}
-		open func attrVal() -> AttrValContext? {
-			return getRuleContext(AttrValContext.self,0)
-		}
-		open func typedAttrVal() -> TypedAttrValContext? {
-			return getRuleContext(TypedAttrValContext.self,0)
-		}
-		open func AttrName() -> TerminalNode? { return getToken(ErlangParser.Tokens.AttrName.rawValue, 0) }
-		open func typeSpec() -> TypeSpecContext? {
-			return getRuleContext(TypeSpecContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_attribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitAttribute(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitAttribute(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attribute() throws -> AttributeContext {
+	 open func attribute() throws -> AttributeContext {
 		var _localctx: AttributeContext = AttributeContext(_ctx, getState())
 		try enterRule(_localctx, 16, ErlangParser.RULE_attribute)
 		defer {
@@ -687,40 +747,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeSpecContext:ParserRuleContext {
-		open func specFun() -> SpecFunContext? {
-			return getRuleContext(SpecFunContext.self,0)
+
+	public class TypeSpecContext: ParserRuleContext {
+			open
+			func specFun() -> SpecFunContext? {
+				return getRuleContext(SpecFunContext.self, 0)
+			}
+			open
+			func typeSigs() -> TypeSigsContext? {
+				return getRuleContext(TypeSigsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_typeSpec
 		}
-		open func typeSigs() -> TypeSigsContext? {
-			return getRuleContext(TypeSigsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_typeSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTypeSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTypeSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTypeSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTypeSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTypeSpec(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTypeSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTypeSpec(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTypeSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeSpec() throws -> TypeSpecContext {
+	 open func typeSpec() throws -> TypeSpecContext {
 		var _localctx: TypeSpecContext = TypeSpecContext(_ctx, getState())
 		try enterRule(_localctx, 18, ErlangParser.RULE_typeSpec)
 		defer {
@@ -752,7 +819,7 @@ open class ErlangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -763,43 +830,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class SpecFunContext:ParserRuleContext {
-		open func tokAtom() -> Array<TokAtomContext> {
-			return getRuleContexts(TokAtomContext.self)
+
+	public class SpecFunContext: ParserRuleContext {
+			open
+			func tokAtom() -> [TokAtomContext] {
+				return getRuleContexts(TokAtomContext.self)
+			}
+			open
+			func tokAtom(_ i: Int) -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, i)
+			}
+			open
+			func tokInteger() -> TokIntegerContext? {
+				return getRuleContext(TokIntegerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_specFun
 		}
-		open func tokAtom(_ i: Int) -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,i)
-		}
-		open func tokInteger() -> TokIntegerContext? {
-			return getRuleContext(TokIntegerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_specFun }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterSpecFun(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterSpecFun(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitSpecFun(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitSpecFun(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitSpecFun(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitSpecFun(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitSpecFun(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitSpecFun(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specFun() throws -> SpecFunContext {
+	 open func specFun() throws -> SpecFunContext {
 		var _localctx: SpecFunContext = SpecFunContext(_ctx, getState())
 		try enterRule(_localctx, 20, ErlangParser.RULE_specFun)
 		defer {
@@ -864,43 +939,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypedAttrValContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class TypedAttrValContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func typedRecordFields() -> TypedRecordFieldsContext? {
+				return getRuleContext(TypedRecordFieldsContext.self, 0)
+			}
+			open
+			func topType() -> TopTypeContext? {
+				return getRuleContext(TopTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_typedAttrVal
 		}
-		open func typedRecordFields() -> TypedRecordFieldsContext? {
-			return getRuleContext(TypedRecordFieldsContext.self,0)
-		}
-		open func topType() -> TopTypeContext? {
-			return getRuleContext(TopTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_typedAttrVal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTypedAttrVal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTypedAttrVal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTypedAttrVal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTypedAttrVal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTypedAttrVal(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTypedAttrVal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTypedAttrVal(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTypedAttrVal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typedAttrVal() throws -> TypedAttrValContext {
+	 open func typedAttrVal() throws -> TypedAttrValContext {
 		var _localctx: TypedAttrValContext = TypedAttrValContext(_ctx, getState())
 		try enterRule(_localctx, 22, ErlangParser.RULE_typedAttrVal)
 		defer {
@@ -941,37 +1024,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypedRecordFieldsContext:ParserRuleContext {
-		open func typedExprs() -> TypedExprsContext? {
-			return getRuleContext(TypedExprsContext.self,0)
+
+	public class TypedRecordFieldsContext: ParserRuleContext {
+			open
+			func typedExprs() -> TypedExprsContext? {
+				return getRuleContext(TypedExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_typedRecordFields
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_typedRecordFields }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTypedRecordFields(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTypedRecordFields(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTypedRecordFields(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTypedRecordFields(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTypedRecordFields(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTypedRecordFields(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTypedRecordFields(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTypedRecordFields(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typedRecordFields() throws -> TypedRecordFieldsContext {
+	 open func typedRecordFields() throws -> TypedRecordFieldsContext {
 		var _localctx: TypedRecordFieldsContext = TypedRecordFieldsContext(_ctx, getState())
 		try enterRule(_localctx, 24, ErlangParser.RULE_typedRecordFields)
 		defer {
@@ -995,46 +1084,55 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypedExprsContext:ParserRuleContext {
-		open func typedExpr() -> TypedExprContext? {
-			return getRuleContext(TypedExprContext.self,0)
+
+	public class TypedExprsContext: ParserRuleContext {
+			open
+			func typedExpr() -> TypedExprContext? {
+				return getRuleContext(TypedExprContext.self, 0)
+			}
+			open
+			func typedExprs() -> TypedExprsContext? {
+				return getRuleContext(TypedExprsContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_typedExprs
 		}
-		open func typedExprs() -> TypedExprsContext? {
-			return getRuleContext(TypedExprsContext.self,0)
-		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_typedExprs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTypedExprs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTypedExprs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTypedExprs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTypedExprs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTypedExprs(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTypedExprs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTypedExprs(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTypedExprs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typedExprs() throws -> TypedExprsContext {
+	 open func typedExprs() throws -> TypedExprsContext {
 		var _localctx: TypedExprsContext = TypedExprsContext(_ctx, getState())
 		try enterRule(_localctx, 26, ErlangParser.RULE_typedExprs)
 		defer {
@@ -1091,40 +1189,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypedExprContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class TypedExprContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func topType() -> TopTypeContext? {
+				return getRuleContext(TopTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_typedExpr
 		}
-		open func topType() -> TopTypeContext? {
-			return getRuleContext(TopTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_typedExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTypedExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTypedExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTypedExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTypedExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTypedExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTypedExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTypedExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTypedExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typedExpr() throws -> TypedExprContext {
+	 open func typedExpr() throws -> TypedExprContext {
 		var _localctx: TypedExprContext = TypedExprContext(_ctx, getState())
 		try enterRule(_localctx, 28, ErlangParser.RULE_typedExpr)
 		defer {
@@ -1148,40 +1253,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeSigsContext:ParserRuleContext {
-		open func typeSig() -> Array<TypeSigContext> {
-			return getRuleContexts(TypeSigContext.self)
+
+	public class TypeSigsContext: ParserRuleContext {
+			open
+			func typeSig() -> [TypeSigContext] {
+				return getRuleContexts(TypeSigContext.self)
+			}
+			open
+			func typeSig(_ i: Int) -> TypeSigContext? {
+				return getRuleContext(TypeSigContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_typeSigs
 		}
-		open func typeSig(_ i: Int) -> TypeSigContext? {
-			return getRuleContext(TypeSigContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_typeSigs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTypeSigs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTypeSigs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTypeSigs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTypeSigs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTypeSigs(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTypeSigs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTypeSigs(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTypeSigs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeSigs() throws -> TypeSigsContext {
+	 open func typeSigs() throws -> TypeSigsContext {
 		var _localctx: TypeSigsContext = TypeSigsContext(_ctx, getState())
 		try enterRule(_localctx, 30, ErlangParser.RULE_typeSigs)
 		var _la: Int = 0
@@ -1220,40 +1332,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeSigContext:ParserRuleContext {
-		open func funType() -> FunTypeContext? {
-			return getRuleContext(FunTypeContext.self,0)
+
+	public class TypeSigContext: ParserRuleContext {
+			open
+			func funType() -> FunTypeContext? {
+				return getRuleContext(FunTypeContext.self, 0)
+			}
+			open
+			func typeGuards() -> TypeGuardsContext? {
+				return getRuleContext(TypeGuardsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_typeSig
 		}
-		open func typeGuards() -> TypeGuardsContext? {
-			return getRuleContext(TypeGuardsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_typeSig }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTypeSig(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTypeSig(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTypeSig(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTypeSig(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTypeSig(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTypeSig(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTypeSig(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTypeSig(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeSig() throws -> TypeSigContext {
+	 open func typeSig() throws -> TypeSigContext {
 		var _localctx: TypeSigContext = TypeSigContext(_ctx, getState())
 		try enterRule(_localctx, 32, ErlangParser.RULE_typeSig)
 		var _la: Int = 0
@@ -1289,40 +1408,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeGuardsContext:ParserRuleContext {
-		open func typeGuard() -> Array<TypeGuardContext> {
-			return getRuleContexts(TypeGuardContext.self)
+
+	public class TypeGuardsContext: ParserRuleContext {
+			open
+			func typeGuard() -> [TypeGuardContext] {
+				return getRuleContexts(TypeGuardContext.self)
+			}
+			open
+			func typeGuard(_ i: Int) -> TypeGuardContext? {
+				return getRuleContext(TypeGuardContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_typeGuards
 		}
-		open func typeGuard(_ i: Int) -> TypeGuardContext? {
-			return getRuleContext(TypeGuardContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_typeGuards }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTypeGuards(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTypeGuards(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTypeGuards(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTypeGuards(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTypeGuards(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTypeGuards(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTypeGuards(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTypeGuards(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeGuards() throws -> TypeGuardsContext {
+	 open func typeGuards() throws -> TypeGuardsContext {
 		var _localctx: TypeGuardsContext = TypeGuardsContext(_ctx, getState())
 		try enterRule(_localctx, 34, ErlangParser.RULE_typeGuards)
 		var _la: Int = 0
@@ -1361,46 +1487,55 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeGuardContext:ParserRuleContext {
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
+
+	public class TypeGuardContext: ParserRuleContext {
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+			open
+			func topTypes() -> TopTypesContext? {
+				return getRuleContext(TopTypesContext.self, 0)
+			}
+			open
+			func tokVar() -> TokVarContext? {
+				return getRuleContext(TokVarContext.self, 0)
+			}
+			open
+			func topType() -> TopTypeContext? {
+				return getRuleContext(TopTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_typeGuard
 		}
-		open func topTypes() -> TopTypesContext? {
-			return getRuleContext(TopTypesContext.self,0)
-		}
-		open func tokVar() -> TokVarContext? {
-			return getRuleContext(TokVarContext.self,0)
-		}
-		open func topType() -> TopTypeContext? {
-			return getRuleContext(TopTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_typeGuard }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTypeGuard(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTypeGuard(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTypeGuard(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTypeGuard(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTypeGuard(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTypeGuard(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTypeGuard(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTypeGuard(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeGuard() throws -> TypeGuardContext {
+	 open func typeGuard() throws -> TypeGuardContext {
 		var _localctx: TypeGuardContext = TypeGuardContext(_ctx, getState())
 		try enterRule(_localctx, 36, ErlangParser.RULE_typeGuard)
 		defer {
@@ -1434,7 +1569,7 @@ open class ErlangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1445,40 +1580,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TopTypesContext:ParserRuleContext {
-		open func topType() -> Array<TopTypeContext> {
-			return getRuleContexts(TopTypeContext.self)
+
+	public class TopTypesContext: ParserRuleContext {
+			open
+			func topType() -> [TopTypeContext] {
+				return getRuleContexts(TopTypeContext.self)
+			}
+			open
+			func topType(_ i: Int) -> TopTypeContext? {
+				return getRuleContext(TopTypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_topTypes
 		}
-		open func topType(_ i: Int) -> TopTypeContext? {
-			return getRuleContext(TopTypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_topTypes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTopTypes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTopTypes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTopTypes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTopTypes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTopTypes(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTopTypes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTopTypes(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTopTypes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func topTypes() throws -> TopTypesContext {
+	 open func topTypes() throws -> TopTypesContext {
 		var _localctx: TopTypesContext = TopTypesContext(_ctx, getState())
 		try enterRule(_localctx, 38, ErlangParser.RULE_topTypes)
 		var _la: Int = 0
@@ -1517,40 +1659,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TopTypeContext:ParserRuleContext {
-		open func topType100() -> TopType100Context? {
-			return getRuleContext(TopType100Context.self,0)
+
+	public class TopTypeContext: ParserRuleContext {
+			open
+			func topType100() -> TopType100Context? {
+				return getRuleContext(TopType100Context.self, 0)
+			}
+			open
+			func tokVar() -> TokVarContext? {
+				return getRuleContext(TokVarContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_topType
 		}
-		open func tokVar() -> TokVarContext? {
-			return getRuleContext(TokVarContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_topType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTopType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTopType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTopType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTopType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTopType(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTopType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTopType(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTopType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func topType() throws -> TopTypeContext {
+	 open func topType() throws -> TopTypeContext {
 		var _localctx: TopTypeContext = TopTypeContext(_ctx, getState())
 		try enterRule(_localctx, 40, ErlangParser.RULE_topType)
 		defer {
@@ -1582,40 +1731,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TopType100Context:ParserRuleContext {
-		open func type200() -> Type200Context? {
-			return getRuleContext(Type200Context.self,0)
+
+	public class TopType100Context: ParserRuleContext {
+			open
+			func type200() -> Type200Context? {
+				return getRuleContext(Type200Context.self, 0)
+			}
+			open
+			func topType100() -> TopType100Context? {
+				return getRuleContext(TopType100Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_topType100
 		}
-		open func topType100() -> TopType100Context? {
-			return getRuleContext(TopType100Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_topType100 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTopType100(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTopType100(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTopType100(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTopType100(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTopType100(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTopType100(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTopType100(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTopType100(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func topType100() throws -> TopType100Context {
+	 open func topType100() throws -> TopType100Context {
 		var _localctx: TopType100Context = TopType100Context(_ctx, getState())
 		try enterRule(_localctx, 42, ErlangParser.RULE_topType100)
 		var _la: Int = 0
@@ -1651,40 +1807,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Type200Context:ParserRuleContext {
-		open func type300() -> Array<Type300Context> {
-			return getRuleContexts(Type300Context.self)
+
+	public class Type200Context: ParserRuleContext {
+			open
+			func type300() -> [Type300Context] {
+				return getRuleContexts(Type300Context.self)
+			}
+			open
+			func type300(_ i: Int) -> Type300Context? {
+				return getRuleContext(Type300Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_type200
 		}
-		open func type300(_ i: Int) -> Type300Context? {
-			return getRuleContext(Type300Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_type200 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterType200(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterType200(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitType200(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitType200(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitType200(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitType200(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitType200(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitType200(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type200() throws -> Type200Context {
+	 open func type200() throws -> Type200Context {
 		var _localctx: Type200Context = Type200Context(_ctx, getState())
 		try enterRule(_localctx, 44, ErlangParser.RULE_type200)
 		var _la: Int = 0
@@ -1721,43 +1884,50 @@ open class ErlangParser: Parser {
 		return _localctx
 	}
 
-	open class Type300Context:ParserRuleContext {
-		open func type400() -> Type400Context? {
-			return getRuleContext(Type400Context.self,0)
+	public class Type300Context: ParserRuleContext {
+			open
+			func type400() -> Type400Context? {
+				return getRuleContext(Type400Context.self, 0)
+			}
+			open
+			func type300() -> Type300Context? {
+				return getRuleContext(Type300Context.self, 0)
+			}
+			open
+			func addOp() -> AddOpContext? {
+				return getRuleContext(AddOpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_type300
 		}
-		open func type300() -> Type300Context? {
-			return getRuleContext(Type300Context.self,0)
-		}
-		open func addOp() -> AddOpContext? {
-			return getRuleContext(AddOpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_type300 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterType300(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterType300(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitType300(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitType300(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitType300(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitType300(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitType300(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitType300(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func type300( ) throws -> Type300Context   {
+	 public final  func type300( ) throws -> Type300Context   {
 		return try type300(0)
 	}
 	@discardableResult
@@ -1791,7 +1961,7 @@ open class ErlangParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, ErlangParser.RULE_type300)
 					setState(368)
 					if (!(precpred(_ctx, 2))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 					}
 					setState(369)
 					try addOp()
@@ -1815,43 +1985,50 @@ open class ErlangParser: Parser {
 		return _localctx;
 	}
 
-	open class Type400Context:ParserRuleContext {
-		open func type500() -> Type500Context? {
-			return getRuleContext(Type500Context.self,0)
+	public class Type400Context: ParserRuleContext {
+			open
+			func type500() -> Type500Context? {
+				return getRuleContext(Type500Context.self, 0)
+			}
+			open
+			func type400() -> Type400Context? {
+				return getRuleContext(Type400Context.self, 0)
+			}
+			open
+			func multOp() -> MultOpContext? {
+				return getRuleContext(MultOpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_type400
 		}
-		open func type400() -> Type400Context? {
-			return getRuleContext(Type400Context.self,0)
-		}
-		open func multOp() -> MultOpContext? {
-			return getRuleContext(MultOpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_type400 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterType400(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterType400(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitType400(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitType400(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitType400(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitType400(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitType400(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitType400(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func type400( ) throws -> Type400Context   {
+	 public final  func type400( ) throws -> Type400Context   {
 		return try type400(0)
 	}
 	@discardableResult
@@ -1885,7 +2062,7 @@ open class ErlangParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, ErlangParser.RULE_type400)
 					setState(380)
 					if (!(precpred(_ctx, 2))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 					}
 					setState(381)
 					try multOp()
@@ -1908,40 +2085,47 @@ open class ErlangParser: Parser {
 
 		return _localctx;
 	}
-	open class Type500Context:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class Type500Context: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func prefixOp() -> PrefixOpContext? {
+				return getRuleContext(PrefixOpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_type500
 		}
-		open func prefixOp() -> PrefixOpContext? {
-			return getRuleContext(PrefixOpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_type500 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterType500(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterType500(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitType500(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitType500(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitType500(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitType500(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitType500(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitType500(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type500() throws -> Type500Context {
+	 open func type500() throws -> Type500Context {
 		var _localctx: Type500Context = Type500Context(_ctx, getState())
 		try enterRule(_localctx, 50, ErlangParser.RULE_type500)
 		var _la: Int = 0
@@ -1978,61 +2162,75 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func topType() -> TopTypeContext? {
-			return getRuleContext(TopTypeContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func topType() -> TopTypeContext? {
+				return getRuleContext(TopTypeContext.self, 0)
+			}
+			open
+			func tokVar() -> TokVarContext? {
+				return getRuleContext(TokVarContext.self, 0)
+			}
+			open
+			func tokAtom() -> [TokAtomContext] {
+				return getRuleContexts(TokAtomContext.self)
+			}
+			open
+			func tokAtom(_ i: Int) -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, i)
+			}
+			open
+			func topTypes() -> TopTypesContext? {
+				return getRuleContext(TopTypesContext.self, 0)
+			}
+			open
+			func fieldTypes() -> FieldTypesContext? {
+				return getRuleContext(FieldTypesContext.self, 0)
+			}
+			open
+			func binaryType() -> BinaryTypeContext? {
+				return getRuleContext(BinaryTypeContext.self, 0)
+			}
+			open
+			func tokInteger() -> TokIntegerContext? {
+				return getRuleContext(TokIntegerContext.self, 0)
+			}
+			open
+			func funType100() -> FunType100Context? {
+				return getRuleContext(FunType100Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_type
 		}
-		open func tokVar() -> TokVarContext? {
-			return getRuleContext(TokVarContext.self,0)
-		}
-		open func tokAtom() -> Array<TokAtomContext> {
-			return getRuleContexts(TokAtomContext.self)
-		}
-		open func tokAtom(_ i: Int) -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,i)
-		}
-		open func topTypes() -> TopTypesContext? {
-			return getRuleContext(TopTypesContext.self,0)
-		}
-		open func fieldTypes() -> FieldTypesContext? {
-			return getRuleContext(FieldTypesContext.self,0)
-		}
-		open func binaryType() -> BinaryTypeContext? {
-			return getRuleContext(BinaryTypeContext.self,0)
-		}
-		open func tokInteger() -> TokIntegerContext? {
-			return getRuleContext(TokIntegerContext.self,0)
-		}
-		open func funType100() -> FunType100Context? {
-			return getRuleContext(FunType100Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitType(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 52, ErlangParser.RULE_type)
 		defer {
@@ -2237,40 +2435,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FunType100Context:ParserRuleContext {
-		open func topType() -> TopTypeContext? {
-			return getRuleContext(TopTypeContext.self,0)
+
+	public class FunType100Context: ParserRuleContext {
+			open
+			func topType() -> TopTypeContext? {
+				return getRuleContext(TopTypeContext.self, 0)
+			}
+			open
+			func funType() -> FunTypeContext? {
+				return getRuleContext(FunTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_funType100
 		}
-		open func funType() -> FunTypeContext? {
-			return getRuleContext(FunTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_funType100 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFunType100(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFunType100(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFunType100(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFunType100(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFunType100(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFunType100(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFunType100(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFunType100(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funType100() throws -> FunType100Context {
+	 open func funType100() throws -> FunType100Context {
 		var _localctx: FunType100Context = FunType100Context(_ctx, getState())
 		try enterRule(_localctx, 54, ErlangParser.RULE_funType100)
 		defer {
@@ -2311,40 +2516,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FunTypeContext:ParserRuleContext {
-		open func topType() -> TopTypeContext? {
-			return getRuleContext(TopTypeContext.self,0)
+
+	public class FunTypeContext: ParserRuleContext {
+			open
+			func topType() -> TopTypeContext? {
+				return getRuleContext(TopTypeContext.self, 0)
+			}
+			open
+			func topTypes() -> TopTypesContext? {
+				return getRuleContext(TopTypesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_funType
 		}
-		open func topTypes() -> TopTypesContext? {
-			return getRuleContext(TopTypesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_funType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFunType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFunType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFunType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFunType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFunType(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFunType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFunType(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFunType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funType() throws -> FunTypeContext {
+	 open func funType() throws -> FunTypeContext {
 		var _localctx: FunTypeContext = FunTypeContext(_ctx, getState())
 		try enterRule(_localctx, 56, ErlangParser.RULE_funType)
 		var _la: Int = 0
@@ -2391,40 +2603,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FieldTypesContext:ParserRuleContext {
-		open func fieldType() -> Array<FieldTypeContext> {
-			return getRuleContexts(FieldTypeContext.self)
+
+	public class FieldTypesContext: ParserRuleContext {
+			open
+			func fieldType() -> [FieldTypeContext] {
+				return getRuleContexts(FieldTypeContext.self)
+			}
+			open
+			func fieldType(_ i: Int) -> FieldTypeContext? {
+				return getRuleContext(FieldTypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_fieldTypes
 		}
-		open func fieldType(_ i: Int) -> FieldTypeContext? {
-			return getRuleContext(FieldTypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_fieldTypes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFieldTypes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFieldTypes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFieldTypes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFieldTypes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFieldTypes(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFieldTypes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFieldTypes(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFieldTypes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldTypes() throws -> FieldTypesContext {
+	 open func fieldTypes() throws -> FieldTypesContext {
 		var _localctx: FieldTypesContext = FieldTypesContext(_ctx, getState())
 		try enterRule(_localctx, 58, ErlangParser.RULE_fieldTypes)
 		var _la: Int = 0
@@ -2463,40 +2682,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FieldTypeContext:ParserRuleContext {
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
+
+	public class FieldTypeContext: ParserRuleContext {
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+			open
+			func topType() -> TopTypeContext? {
+				return getRuleContext(TopTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_fieldType
 		}
-		open func topType() -> TopTypeContext? {
-			return getRuleContext(TopTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_fieldType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFieldType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFieldType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFieldType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFieldType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFieldType(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFieldType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFieldType(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFieldType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldType() throws -> FieldTypeContext {
+	 open func fieldType() throws -> FieldTypeContext {
 		var _localctx: FieldTypeContext = FieldTypeContext(_ctx, getState())
 		try enterRule(_localctx, 60, ErlangParser.RULE_fieldType)
 		defer {
@@ -2520,40 +2746,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BinaryTypeContext:ParserRuleContext {
-		open func binBaseType() -> BinBaseTypeContext? {
-			return getRuleContext(BinBaseTypeContext.self,0)
+
+	public class BinaryTypeContext: ParserRuleContext {
+			open
+			func binBaseType() -> BinBaseTypeContext? {
+				return getRuleContext(BinBaseTypeContext.self, 0)
+			}
+			open
+			func binUnitType() -> BinUnitTypeContext? {
+				return getRuleContext(BinUnitTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_binaryType
 		}
-		open func binUnitType() -> BinUnitTypeContext? {
-			return getRuleContext(BinUnitTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_binaryType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBinaryType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBinaryType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBinaryType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBinaryType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBinaryType(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBinaryType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBinaryType(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBinaryType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binaryType() throws -> BinaryTypeContext {
+	 open func binaryType() throws -> BinaryTypeContext {
 		var _localctx: BinaryTypeContext = BinaryTypeContext(_ctx, getState())
 		try enterRule(_localctx, 62, ErlangParser.RULE_binaryType)
 		defer {
@@ -2616,40 +2849,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BinBaseTypeContext:ParserRuleContext {
-		open func tokVar() -> TokVarContext? {
-			return getRuleContext(TokVarContext.self,0)
+
+	public class BinBaseTypeContext: ParserRuleContext {
+			open
+			func tokVar() -> TokVarContext? {
+				return getRuleContext(TokVarContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_binBaseType
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_binBaseType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBinBaseType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBinBaseType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBinBaseType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBinBaseType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBinBaseType(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBinBaseType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBinBaseType(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBinBaseType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binBaseType() throws -> BinBaseTypeContext {
+	 open func binBaseType() throws -> BinBaseTypeContext {
 		var _localctx: BinBaseTypeContext = BinBaseTypeContext(_ctx, getState())
 		try enterRule(_localctx, 64, ErlangParser.RULE_binBaseType)
 		defer {
@@ -2673,43 +2913,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BinUnitTypeContext:ParserRuleContext {
-		open func tokVar() -> Array<TokVarContext> {
-			return getRuleContexts(TokVarContext.self)
+
+	public class BinUnitTypeContext: ParserRuleContext {
+			open
+			func tokVar() -> [TokVarContext] {
+				return getRuleContexts(TokVarContext.self)
+			}
+			open
+			func tokVar(_ i: Int) -> TokVarContext? {
+				return getRuleContext(TokVarContext.self, i)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_binUnitType
 		}
-		open func tokVar(_ i: Int) -> TokVarContext? {
-			return getRuleContext(TokVarContext.self,i)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_binUnitType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBinUnitType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBinUnitType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBinUnitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBinUnitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBinUnitType(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBinUnitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBinUnitType(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBinUnitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binUnitType() throws -> BinUnitTypeContext {
+	 open func binUnitType() throws -> BinUnitTypeContext {
 		var _localctx: BinUnitTypeContext = BinUnitTypeContext(_ctx, getState())
 		try enterRule(_localctx, 66, ErlangParser.RULE_binUnitType)
 		defer {
@@ -2737,40 +2985,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class AttrValContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class AttrValContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_attrVal
 		}
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_attrVal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterAttrVal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterAttrVal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitAttrVal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitAttrVal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitAttrVal(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitAttrVal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitAttrVal(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitAttrVal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attrVal() throws -> AttrValContext {
+	 open func attrVal() throws -> AttrValContext {
 		var _localctx: AttrValContext = AttrValContext(_ctx, getState())
 		try enterRule(_localctx, 68, ErlangParser.RULE_attrVal)
 		defer {
@@ -2831,40 +3086,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionContext:ParserRuleContext {
-		open func functionClause() -> Array<FunctionClauseContext> {
-			return getRuleContexts(FunctionClauseContext.self)
+
+	public class FunctionContext: ParserRuleContext {
+			open
+			func functionClause() -> [FunctionClauseContext] {
+				return getRuleContexts(FunctionClauseContext.self)
+			}
+			open
+			func functionClause(_ i: Int) -> FunctionClauseContext? {
+				return getRuleContext(FunctionClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_function
 		}
-		open func functionClause(_ i: Int) -> FunctionClauseContext? {
-			return getRuleContext(FunctionClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_function }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFunction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFunction(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFunction(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function() throws -> FunctionContext {
+	 open func function() throws -> FunctionContext {
 		var _localctx: FunctionContext = FunctionContext(_ctx, getState())
 		try enterRule(_localctx, 70, ErlangParser.RULE_function)
 		var _la: Int = 0
@@ -2903,46 +3165,55 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionClauseContext:ParserRuleContext {
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
+
+	public class FunctionClauseContext: ParserRuleContext {
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+			open
+			func clauseArgs() -> ClauseArgsContext? {
+				return getRuleContext(ClauseArgsContext.self, 0)
+			}
+			open
+			func clauseGuard() -> ClauseGuardContext? {
+				return getRuleContext(ClauseGuardContext.self, 0)
+			}
+			open
+			func clauseBody() -> ClauseBodyContext? {
+				return getRuleContext(ClauseBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_functionClause
 		}
-		open func clauseArgs() -> ClauseArgsContext? {
-			return getRuleContext(ClauseArgsContext.self,0)
-		}
-		open func clauseGuard() -> ClauseGuardContext? {
-			return getRuleContext(ClauseGuardContext.self,0)
-		}
-		open func clauseBody() -> ClauseBodyContext? {
-			return getRuleContext(ClauseBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_functionClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFunctionClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFunctionClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFunctionClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFunctionClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFunctionClause(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFunctionClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFunctionClause(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFunctionClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionClause() throws -> FunctionClauseContext {
+	 open func functionClause() throws -> FunctionClauseContext {
 		var _localctx: FunctionClauseContext = FunctionClauseContext(_ctx, getState())
 		try enterRule(_localctx, 72, ErlangParser.RULE_functionClause)
 		defer {
@@ -2968,37 +3239,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ClauseArgsContext:ParserRuleContext {
-		open func argumentList() -> ArgumentListContext? {
-			return getRuleContext(ArgumentListContext.self,0)
+
+	public class ClauseArgsContext: ParserRuleContext {
+			open
+			func argumentList() -> ArgumentListContext? {
+				return getRuleContext(ArgumentListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_clauseArgs
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_clauseArgs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterClauseArgs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterClauseArgs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitClauseArgs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitClauseArgs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitClauseArgs(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitClauseArgs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitClauseArgs(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitClauseArgs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func clauseArgs() throws -> ClauseArgsContext {
+	 open func clauseArgs() throws -> ClauseArgsContext {
 		var _localctx: ClauseArgsContext = ClauseArgsContext(_ctx, getState())
 		try enterRule(_localctx, 74, ErlangParser.RULE_clauseArgs)
 		defer {
@@ -3018,37 +3295,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ClauseGuardContext:ParserRuleContext {
-		open func guard() -> GuardContext? {
-			return getRuleContext(GuardContext.self,0)
+
+	public class ClauseGuardContext: ParserRuleContext {
+			open
+			func guard() -> GuardContext? {
+				return getRuleContext(GuardContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_clauseGuard
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_clauseGuard }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterClauseGuard(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterClauseGuard(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitClauseGuard(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitClauseGuard(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitClauseGuard(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitClauseGuard(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitClauseGuard(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitClauseGuard(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func clauseGuard() throws -> ClauseGuardContext {
+	 open func clauseGuard() throws -> ClauseGuardContext {
 		var _localctx: ClauseGuardContext = ClauseGuardContext(_ctx, getState())
 		try enterRule(_localctx, 76, ErlangParser.RULE_clauseGuard)
 		var _la: Int = 0
@@ -3082,37 +3365,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ClauseBodyContext:ParserRuleContext {
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
+
+	public class ClauseBodyContext: ParserRuleContext {
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_clauseBody
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_clauseBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterClauseBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterClauseBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitClauseBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitClauseBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitClauseBody(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitClauseBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitClauseBody(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitClauseBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func clauseBody() throws -> ClauseBodyContext {
+	 open func clauseBody() throws -> ClauseBodyContext {
 		var _localctx: ClauseBodyContext = ClauseBodyContext(_ctx, getState())
 		try enterRule(_localctx, 78, ErlangParser.RULE_clauseBody)
 		defer {
@@ -3134,40 +3423,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ExprContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class ExprContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func expr100() -> Expr100Context? {
+				return getRuleContext(Expr100Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr
 		}
-		open func expr100() -> Expr100Context? {
-			return getRuleContext(Expr100Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr() throws -> ExprContext {
+	 open func expr() throws -> ExprContext {
 		var _localctx: ExprContext = ExprContext(_ctx, getState())
 		try enterRule(_localctx, 80, ErlangParser.RULE_expr)
 		defer {
@@ -3212,7 +3508,7 @@ open class ErlangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3223,40 +3519,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr100Context:ParserRuleContext {
-		open func expr150() -> Array<Expr150Context> {
-			return getRuleContexts(Expr150Context.self)
+
+	public class Expr100Context: ParserRuleContext {
+			open
+			func expr150() -> [Expr150Context] {
+				return getRuleContexts(Expr150Context.self)
+			}
+			open
+			func expr150(_ i: Int) -> Expr150Context? {
+				return getRuleContext(Expr150Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr100
 		}
-		open func expr150(_ i: Int) -> Expr150Context? {
-			return getRuleContext(Expr150Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr100 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr100(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr100(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr100(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr100(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr100(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr100(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr100(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr100(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr100() throws -> Expr100Context {
+	 open func expr100() throws -> Expr100Context {
 		var _localctx: Expr100Context = Expr100Context(_ctx, getState())
 		try enterRule(_localctx, 82, ErlangParser.RULE_expr100)
 		var _la: Int = 0
@@ -3306,40 +3609,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr150Context:ParserRuleContext {
-		open func expr160() -> Array<Expr160Context> {
-			return getRuleContexts(Expr160Context.self)
+
+	public class Expr150Context: ParserRuleContext {
+			open
+			func expr160() -> [Expr160Context] {
+				return getRuleContexts(Expr160Context.self)
+			}
+			open
+			func expr160(_ i: Int) -> Expr160Context? {
+				return getRuleContext(Expr160Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr150
 		}
-		open func expr160(_ i: Int) -> Expr160Context? {
-			return getRuleContext(Expr160Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr150 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr150(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr150(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr150(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr150(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr150(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr150(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr150(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr150(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr150() throws -> Expr150Context {
+	 open func expr150() throws -> Expr150Context {
 		var _localctx: Expr150Context = Expr150Context(_ctx, getState())
 		try enterRule(_localctx, 84, ErlangParser.RULE_expr150)
 		var _la: Int = 0
@@ -3378,40 +3688,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr160Context:ParserRuleContext {
-		open func expr200() -> Array<Expr200Context> {
-			return getRuleContexts(Expr200Context.self)
+
+	public class Expr160Context: ParserRuleContext {
+			open
+			func expr200() -> [Expr200Context] {
+				return getRuleContexts(Expr200Context.self)
+			}
+			open
+			func expr200(_ i: Int) -> Expr200Context? {
+				return getRuleContext(Expr200Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr160
 		}
-		open func expr200(_ i: Int) -> Expr200Context? {
-			return getRuleContext(Expr200Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr160 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr160(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr160(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr160(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr160(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr160(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr160(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr160(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr160(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr160() throws -> Expr160Context {
+	 open func expr160() throws -> Expr160Context {
 		var _localctx: Expr160Context = Expr160Context(_ctx, getState())
 		try enterRule(_localctx, 86, ErlangParser.RULE_expr160)
 		var _la: Int = 0
@@ -3450,43 +3767,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr200Context:ParserRuleContext {
-		open func expr300() -> Array<Expr300Context> {
-			return getRuleContexts(Expr300Context.self)
+
+	public class Expr200Context: ParserRuleContext {
+			open
+			func expr300() -> [Expr300Context] {
+				return getRuleContexts(Expr300Context.self)
+			}
+			open
+			func expr300(_ i: Int) -> Expr300Context? {
+				return getRuleContext(Expr300Context.self, i)
+			}
+			open
+			func compOp() -> CompOpContext? {
+				return getRuleContext(CompOpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr200
 		}
-		open func expr300(_ i: Int) -> Expr300Context? {
-			return getRuleContext(Expr300Context.self,i)
-		}
-		open func compOp() -> CompOpContext? {
-			return getRuleContext(CompOpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr200 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr200(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr200(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr200(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr200(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr200(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr200(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr200(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr200(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr200() throws -> Expr200Context {
+	 open func expr200() throws -> Expr200Context {
 		var _localctx: Expr200Context = Expr200Context(_ctx, getState())
 		try enterRule(_localctx, 88, ErlangParser.RULE_expr200)
 		var _la: Int = 0
@@ -3525,46 +3850,55 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr300Context:ParserRuleContext {
-		open func expr400() -> Array<Expr400Context> {
-			return getRuleContexts(Expr400Context.self)
+
+	public class Expr300Context: ParserRuleContext {
+			open
+			func expr400() -> [Expr400Context] {
+				return getRuleContexts(Expr400Context.self)
+			}
+			open
+			func expr400(_ i: Int) -> Expr400Context? {
+				return getRuleContext(Expr400Context.self, i)
+			}
+			open
+			func listOp() -> [ListOpContext] {
+				return getRuleContexts(ListOpContext.self)
+			}
+			open
+			func listOp(_ i: Int) -> ListOpContext? {
+				return getRuleContext(ListOpContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr300
 		}
-		open func expr400(_ i: Int) -> Expr400Context? {
-			return getRuleContext(Expr400Context.self,i)
-		}
-		open func listOp() -> Array<ListOpContext> {
-			return getRuleContexts(ListOpContext.self)
-		}
-		open func listOp(_ i: Int) -> ListOpContext? {
-			return getRuleContext(ListOpContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr300 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr300(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr300(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr300(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr300(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr300(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr300(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr300(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr300(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr300() throws -> Expr300Context {
+	 open func expr300() throws -> Expr300Context {
 		var _localctx: Expr300Context = Expr300Context(_ctx, getState())
 		try enterRule(_localctx, 90, ErlangParser.RULE_expr300)
 		var _la: Int = 0
@@ -3603,46 +3937,55 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr400Context:ParserRuleContext {
-		open func expr500() -> Array<Expr500Context> {
-			return getRuleContexts(Expr500Context.self)
+
+	public class Expr400Context: ParserRuleContext {
+			open
+			func expr500() -> [Expr500Context] {
+				return getRuleContexts(Expr500Context.self)
+			}
+			open
+			func expr500(_ i: Int) -> Expr500Context? {
+				return getRuleContext(Expr500Context.self, i)
+			}
+			open
+			func addOp() -> [AddOpContext] {
+				return getRuleContexts(AddOpContext.self)
+			}
+			open
+			func addOp(_ i: Int) -> AddOpContext? {
+				return getRuleContext(AddOpContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr400
 		}
-		open func expr500(_ i: Int) -> Expr500Context? {
-			return getRuleContext(Expr500Context.self,i)
-		}
-		open func addOp() -> Array<AddOpContext> {
-			return getRuleContexts(AddOpContext.self)
-		}
-		open func addOp(_ i: Int) -> AddOpContext? {
-			return getRuleContext(AddOpContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr400 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr400(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr400(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr400(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr400(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr400(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr400(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr400(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr400(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr400() throws -> Expr400Context {
+	 open func expr400() throws -> Expr400Context {
 		var _localctx: Expr400Context = Expr400Context(_ctx, getState())
 		try enterRule(_localctx, 92, ErlangParser.RULE_expr400)
 		var _la: Int = 0
@@ -3684,46 +4027,55 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr500Context:ParserRuleContext {
-		open func expr600() -> Array<Expr600Context> {
-			return getRuleContexts(Expr600Context.self)
+
+	public class Expr500Context: ParserRuleContext {
+			open
+			func expr600() -> [Expr600Context] {
+				return getRuleContexts(Expr600Context.self)
+			}
+			open
+			func expr600(_ i: Int) -> Expr600Context? {
+				return getRuleContext(Expr600Context.self, i)
+			}
+			open
+			func multOp() -> [MultOpContext] {
+				return getRuleContexts(MultOpContext.self)
+			}
+			open
+			func multOp(_ i: Int) -> MultOpContext? {
+				return getRuleContext(MultOpContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr500
 		}
-		open func expr600(_ i: Int) -> Expr600Context? {
-			return getRuleContext(Expr600Context.self,i)
-		}
-		open func multOp() -> Array<MultOpContext> {
-			return getRuleContexts(MultOpContext.self)
-		}
-		open func multOp(_ i: Int) -> MultOpContext? {
-			return getRuleContext(MultOpContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr500 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr500(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr500(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr500(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr500(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr500(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr500(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr500(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr500(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr500() throws -> Expr500Context {
+	 open func expr500() throws -> Expr500Context {
 		var _localctx: Expr500Context = Expr500Context(_ctx, getState())
 		try enterRule(_localctx, 94, ErlangParser.RULE_expr500)
 		var _la: Int = 0
@@ -3765,40 +4117,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr600Context:ParserRuleContext {
-		open func expr700() -> Expr700Context? {
-			return getRuleContext(Expr700Context.self,0)
+
+	public class Expr600Context: ParserRuleContext {
+			open
+			func expr700() -> Expr700Context? {
+				return getRuleContext(Expr700Context.self, 0)
+			}
+			open
+			func prefixOp() -> PrefixOpContext? {
+				return getRuleContext(PrefixOpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr600
 		}
-		open func prefixOp() -> PrefixOpContext? {
-			return getRuleContext(PrefixOpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr600 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr600(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr600(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr600(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr600(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr600(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr600(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr600(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr600(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr600() throws -> Expr600Context {
+	 open func expr600() throws -> Expr600Context {
 		var _localctx: Expr600Context = Expr600Context(_ctx, getState())
 		try enterRule(_localctx, 96, ErlangParser.RULE_expr600)
 		var _la: Int = 0
@@ -3835,43 +4194,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr700Context:ParserRuleContext {
-		open func functionCall() -> FunctionCallContext? {
-			return getRuleContext(FunctionCallContext.self,0)
+
+	public class Expr700Context: ParserRuleContext {
+			open
+			func functionCall() -> FunctionCallContext? {
+				return getRuleContext(FunctionCallContext.self, 0)
+			}
+			open
+			func recordExpr() -> RecordExprContext? {
+				return getRuleContext(RecordExprContext.self, 0)
+			}
+			open
+			func expr800() -> Expr800Context? {
+				return getRuleContext(Expr800Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr700
 		}
-		open func recordExpr() -> RecordExprContext? {
-			return getRuleContext(RecordExprContext.self,0)
-		}
-		open func expr800() -> Expr800Context? {
-			return getRuleContext(Expr800Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr700 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr700(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr700(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr700(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr700(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr700(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr700(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr700(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr700(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr700() throws -> Expr700Context {
+	 open func expr700() throws -> Expr700Context {
 		var _localctx: Expr700Context = Expr700Context(_ctx, getState())
 		try enterRule(_localctx, 98, ErlangParser.RULE_expr700)
 		defer {
@@ -3910,40 +4277,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class Expr800Context:ParserRuleContext {
-		open func exprMax() -> Array<ExprMaxContext> {
-			return getRuleContexts(ExprMaxContext.self)
+
+	public class Expr800Context: ParserRuleContext {
+			open
+			func exprMax() -> [ExprMaxContext] {
+				return getRuleContexts(ExprMaxContext.self)
+			}
+			open
+			func exprMax(_ i: Int) -> ExprMaxContext? {
+				return getRuleContext(ExprMaxContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_expr800
 		}
-		open func exprMax(_ i: Int) -> ExprMaxContext? {
-			return getRuleContext(ExprMaxContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_expr800 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExpr800(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExpr800(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExpr800(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExpr800(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExpr800(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExpr800(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExpr800(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExpr800(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr800() throws -> Expr800Context {
+	 open func expr800() throws -> Expr800Context {
 		var _localctx: Expr800Context = Expr800Context(_ctx, getState())
 		try enterRule(_localctx, 100, ErlangParser.RULE_expr800)
 		var _la: Int = 0
@@ -3979,76 +4353,95 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ExprMaxContext:ParserRuleContext {
-		open func tokVar() -> TokVarContext? {
-			return getRuleContext(TokVarContext.self,0)
+
+	public class ExprMaxContext: ParserRuleContext {
+			open
+			func tokVar() -> TokVarContext? {
+				return getRuleContext(TokVarContext.self, 0)
+			}
+			open
+			func atomic() -> AtomicContext? {
+				return getRuleContext(AtomicContext.self, 0)
+			}
+			open
+			func list() -> ListContext? {
+				return getRuleContext(ListContext.self, 0)
+			}
+			open
+			func binary() -> BinaryContext? {
+				return getRuleContext(BinaryContext.self, 0)
+			}
+			open
+			func listComprehension() -> ListComprehensionContext? {
+				return getRuleContext(ListComprehensionContext.self, 0)
+			}
+			open
+			func binaryComprehension() -> BinaryComprehensionContext? {
+				return getRuleContext(BinaryComprehensionContext.self, 0)
+			}
+			open
+			func tuple() -> TupleContext? {
+				return getRuleContext(TupleContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+			open
+			func ifExpr() -> IfExprContext? {
+				return getRuleContext(IfExprContext.self, 0)
+			}
+			open
+			func caseExpr() -> CaseExprContext? {
+				return getRuleContext(CaseExprContext.self, 0)
+			}
+			open
+			func receiveExpr() -> ReceiveExprContext? {
+				return getRuleContext(ReceiveExprContext.self, 0)
+			}
+			open
+			func funExpr() -> FunExprContext? {
+				return getRuleContext(FunExprContext.self, 0)
+			}
+			open
+			func tryExpr() -> TryExprContext? {
+				return getRuleContext(TryExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_exprMax
 		}
-		open func atomic() -> AtomicContext? {
-			return getRuleContext(AtomicContext.self,0)
-		}
-		open func list() -> ListContext? {
-			return getRuleContext(ListContext.self,0)
-		}
-		open func binary() -> BinaryContext? {
-			return getRuleContext(BinaryContext.self,0)
-		}
-		open func listComprehension() -> ListComprehensionContext? {
-			return getRuleContext(ListComprehensionContext.self,0)
-		}
-		open func binaryComprehension() -> BinaryComprehensionContext? {
-			return getRuleContext(BinaryComprehensionContext.self,0)
-		}
-		open func tuple() -> TupleContext? {
-			return getRuleContext(TupleContext.self,0)
-		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
-		}
-		open func ifExpr() -> IfExprContext? {
-			return getRuleContext(IfExprContext.self,0)
-		}
-		open func caseExpr() -> CaseExprContext? {
-			return getRuleContext(CaseExprContext.self,0)
-		}
-		open func receiveExpr() -> ReceiveExprContext? {
-			return getRuleContext(ReceiveExprContext.self,0)
-		}
-		open func funExpr() -> FunExprContext? {
-			return getRuleContext(FunExprContext.self,0)
-		}
-		open func tryExpr() -> TryExprContext? {
-			return getRuleContext(TryExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_exprMax }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExprMax(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExprMax(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExprMax(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExprMax(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExprMax(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExprMax(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExprMax(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExprMax(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exprMax() throws -> ExprMaxContext {
+	 open func exprMax() throws -> ExprMaxContext {
 		var _localctx: ExprMaxContext = ExprMaxContext(_ctx, getState())
 		try enterRule(_localctx, 102, ErlangParser.RULE_exprMax)
 		defer {
@@ -4161,40 +4554,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ListContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class ListContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func tail() -> TailContext? {
+				return getRuleContext(TailContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_list
 		}
-		open func tail() -> TailContext? {
-			return getRuleContext(TailContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitList(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitList(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list() throws -> ListContext {
+	 open func list() throws -> ListContext {
 		var _localctx: ListContext = ListContext(_ctx, getState())
 		try enterRule(_localctx, 104, ErlangParser.RULE_list)
 		defer {
@@ -4233,40 +4633,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TailContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class TailContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func tail() -> TailContext? {
+				return getRuleContext(TailContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tail
 		}
-		open func tail() -> TailContext? {
-			return getRuleContext(TailContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tail }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTail(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTail(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTail(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTail(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTail(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTail(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTail(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTail(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tail() throws -> TailContext {
+	 open func tail() throws -> TailContext {
 		var _localctx: TailContext = TailContext(_ctx, getState())
 		try enterRule(_localctx, 106, ErlangParser.RULE_tail)
 		defer {
@@ -4305,7 +4712,7 @@ open class ErlangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4316,37 +4723,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BinaryContext:ParserRuleContext {
-		open func binElements() -> BinElementsContext? {
-			return getRuleContext(BinElementsContext.self,0)
+
+	public class BinaryContext: ParserRuleContext {
+			open
+			func binElements() -> BinElementsContext? {
+				return getRuleContext(BinElementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_binary
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_binary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBinary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBinary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBinary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBinary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBinary(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBinary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBinary(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBinary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary() throws -> BinaryContext {
+	 open func binary() throws -> BinaryContext {
 		var _localctx: BinaryContext = BinaryContext(_ctx, getState())
 		try enterRule(_localctx, 108, ErlangParser.RULE_binary)
 		defer {
@@ -4385,40 +4798,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BinElementsContext:ParserRuleContext {
-		open func binElement() -> Array<BinElementContext> {
-			return getRuleContexts(BinElementContext.self)
+
+	public class BinElementsContext: ParserRuleContext {
+			open
+			func binElement() -> [BinElementContext] {
+				return getRuleContexts(BinElementContext.self)
+			}
+			open
+			func binElement(_ i: Int) -> BinElementContext? {
+				return getRuleContext(BinElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_binElements
 		}
-		open func binElement(_ i: Int) -> BinElementContext? {
-			return getRuleContext(BinElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_binElements }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBinElements(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBinElements(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBinElements(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBinElements(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBinElements(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBinElements(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBinElements(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBinElements(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binElements() throws -> BinElementsContext {
+	 open func binElements() throws -> BinElementsContext {
 		var _localctx: BinElementsContext = BinElementsContext(_ctx, getState())
 		try enterRule(_localctx, 110, ErlangParser.RULE_binElements)
 		var _la: Int = 0
@@ -4457,43 +4877,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BinElementContext:ParserRuleContext {
-		open func bitExpr() -> BitExprContext? {
-			return getRuleContext(BitExprContext.self,0)
+
+	public class BinElementContext: ParserRuleContext {
+			open
+			func bitExpr() -> BitExprContext? {
+				return getRuleContext(BitExprContext.self, 0)
+			}
+			open
+			func optBitSizeExpr() -> OptBitSizeExprContext? {
+				return getRuleContext(OptBitSizeExprContext.self, 0)
+			}
+			open
+			func optBitTypeList() -> OptBitTypeListContext? {
+				return getRuleContext(OptBitTypeListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_binElement
 		}
-		open func optBitSizeExpr() -> OptBitSizeExprContext? {
-			return getRuleContext(OptBitSizeExprContext.self,0)
-		}
-		open func optBitTypeList() -> OptBitTypeListContext? {
-			return getRuleContext(OptBitTypeListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_binElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBinElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBinElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBinElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBinElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBinElement(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBinElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBinElement(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBinElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binElement() throws -> BinElementContext {
+	 open func binElement() throws -> BinElementContext {
 		var _localctx: BinElementContext = BinElementContext(_ctx, getState())
 		try enterRule(_localctx, 112, ErlangParser.RULE_binElement)
 		defer {
@@ -4517,40 +4945,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BitExprContext:ParserRuleContext {
-		open func exprMax() -> ExprMaxContext? {
-			return getRuleContext(ExprMaxContext.self,0)
+
+	public class BitExprContext: ParserRuleContext {
+			open
+			func exprMax() -> ExprMaxContext? {
+				return getRuleContext(ExprMaxContext.self, 0)
+			}
+			open
+			func prefixOp() -> PrefixOpContext? {
+				return getRuleContext(PrefixOpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_bitExpr
 		}
-		open func prefixOp() -> PrefixOpContext? {
-			return getRuleContext(PrefixOpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_bitExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBitExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBitExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBitExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBitExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bitExpr() throws -> BitExprContext {
+	 open func bitExpr() throws -> BitExprContext {
 		var _localctx: BitExprContext = BitExprContext(_ctx, getState())
 		try enterRule(_localctx, 114, ErlangParser.RULE_bitExpr)
 		var _la: Int = 0
@@ -4587,37 +5022,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class OptBitSizeExprContext:ParserRuleContext {
-		open func bitSizeExpr() -> BitSizeExprContext? {
-			return getRuleContext(BitSizeExprContext.self,0)
+
+	public class OptBitSizeExprContext: ParserRuleContext {
+			open
+			func bitSizeExpr() -> BitSizeExprContext? {
+				return getRuleContext(BitSizeExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_optBitSizeExpr
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_optBitSizeExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterOptBitSizeExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterOptBitSizeExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitOptBitSizeExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitOptBitSizeExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitOptBitSizeExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitOptBitSizeExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitOptBitSizeExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitOptBitSizeExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optBitSizeExpr() throws -> OptBitSizeExprContext {
+	 open func optBitSizeExpr() throws -> OptBitSizeExprContext {
 		var _localctx: OptBitSizeExprContext = OptBitSizeExprContext(_ctx, getState())
 		try enterRule(_localctx, 116, ErlangParser.RULE_optBitSizeExpr)
 		var _la: Int = 0
@@ -4651,37 +5092,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class OptBitTypeListContext:ParserRuleContext {
-		open func bitTypeList() -> BitTypeListContext? {
-			return getRuleContext(BitTypeListContext.self,0)
+
+	public class OptBitTypeListContext: ParserRuleContext {
+			open
+			func bitTypeList() -> BitTypeListContext? {
+				return getRuleContext(BitTypeListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_optBitTypeList
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_optBitTypeList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterOptBitTypeList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterOptBitTypeList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitOptBitTypeList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitOptBitTypeList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitOptBitTypeList(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitOptBitTypeList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitOptBitTypeList(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitOptBitTypeList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optBitTypeList() throws -> OptBitTypeListContext {
+	 open func optBitTypeList() throws -> OptBitTypeListContext {
 		var _localctx: OptBitTypeListContext = OptBitTypeListContext(_ctx, getState())
 		try enterRule(_localctx, 118, ErlangParser.RULE_optBitTypeList)
 		var _la: Int = 0
@@ -4715,40 +5162,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BitTypeListContext:ParserRuleContext {
-		open func bitType() -> Array<BitTypeContext> {
-			return getRuleContexts(BitTypeContext.self)
+
+	public class BitTypeListContext: ParserRuleContext {
+			open
+			func bitType() -> [BitTypeContext] {
+				return getRuleContexts(BitTypeContext.self)
+			}
+			open
+			func bitType(_ i: Int) -> BitTypeContext? {
+				return getRuleContext(BitTypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_bitTypeList
 		}
-		open func bitType(_ i: Int) -> BitTypeContext? {
-			return getRuleContext(BitTypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_bitTypeList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBitTypeList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBitTypeList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBitTypeList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBitTypeList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBitTypeList(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBitTypeList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBitTypeList(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBitTypeList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bitTypeList() throws -> BitTypeListContext {
+	 open func bitTypeList() throws -> BitTypeListContext {
 		var _localctx: BitTypeListContext = BitTypeListContext(_ctx, getState())
 		try enterRule(_localctx, 120, ErlangParser.RULE_bitTypeList)
 		var _la: Int = 0
@@ -4787,40 +5241,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BitTypeContext:ParserRuleContext {
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
+
+	public class BitTypeContext: ParserRuleContext {
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+			open
+			func tokInteger() -> TokIntegerContext? {
+				return getRuleContext(TokIntegerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_bitType
 		}
-		open func tokInteger() -> TokIntegerContext? {
-			return getRuleContext(TokIntegerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_bitType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBitType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBitType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBitType(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBitType(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bitType() throws -> BitTypeContext {
+	 open func bitType() throws -> BitTypeContext {
 		var _localctx: BitTypeContext = BitTypeContext(_ctx, getState())
 		try enterRule(_localctx, 122, ErlangParser.RULE_bitType)
 		var _la: Int = 0
@@ -4856,37 +5317,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BitSizeExprContext:ParserRuleContext {
-		open func exprMax() -> ExprMaxContext? {
-			return getRuleContext(ExprMaxContext.self,0)
+
+	public class BitSizeExprContext: ParserRuleContext {
+			open
+			func exprMax() -> ExprMaxContext? {
+				return getRuleContext(ExprMaxContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_bitSizeExpr
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_bitSizeExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBitSizeExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBitSizeExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBitSizeExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBitSizeExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBitSizeExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBitSizeExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBitSizeExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBitSizeExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bitSizeExpr() throws -> BitSizeExprContext {
+	 open func bitSizeExpr() throws -> BitSizeExprContext {
 		var _localctx: BitSizeExprContext = BitSizeExprContext(_ctx, getState())
 		try enterRule(_localctx, 124, ErlangParser.RULE_bitSizeExpr)
 		defer {
@@ -4906,40 +5373,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ListComprehensionContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class ListComprehensionContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func lcExprs() -> LcExprsContext? {
+				return getRuleContext(LcExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_listComprehension
 		}
-		open func lcExprs() -> LcExprsContext? {
-			return getRuleContext(LcExprsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_listComprehension }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterListComprehension(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterListComprehension(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitListComprehension(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitListComprehension(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitListComprehension(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitListComprehension(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitListComprehension(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitListComprehension(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func listComprehension() throws -> ListComprehensionContext {
+	 open func listComprehension() throws -> ListComprehensionContext {
 		var _localctx: ListComprehensionContext = ListComprehensionContext(_ctx, getState())
 		try enterRule(_localctx, 126, ErlangParser.RULE_listComprehension)
 		defer {
@@ -4967,40 +5441,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class BinaryComprehensionContext:ParserRuleContext {
-		open func binary() -> BinaryContext? {
-			return getRuleContext(BinaryContext.self,0)
+
+	public class BinaryComprehensionContext: ParserRuleContext {
+			open
+			func binary() -> BinaryContext? {
+				return getRuleContext(BinaryContext.self, 0)
+			}
+			open
+			func lcExprs() -> LcExprsContext? {
+				return getRuleContext(LcExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_binaryComprehension
 		}
-		open func lcExprs() -> LcExprsContext? {
-			return getRuleContext(LcExprsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_binaryComprehension }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterBinaryComprehension(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterBinaryComprehension(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitBinaryComprehension(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitBinaryComprehension(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitBinaryComprehension(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitBinaryComprehension(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitBinaryComprehension(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitBinaryComprehension(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binaryComprehension() throws -> BinaryComprehensionContext {
+	 open func binaryComprehension() throws -> BinaryComprehensionContext {
 		var _localctx: BinaryComprehensionContext = BinaryComprehensionContext(_ctx, getState())
 		try enterRule(_localctx, 128, ErlangParser.RULE_binaryComprehension)
 		defer {
@@ -5028,40 +5509,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class LcExprsContext:ParserRuleContext {
-		open func lcExpr() -> Array<LcExprContext> {
-			return getRuleContexts(LcExprContext.self)
+
+	public class LcExprsContext: ParserRuleContext {
+			open
+			func lcExpr() -> [LcExprContext] {
+				return getRuleContexts(LcExprContext.self)
+			}
+			open
+			func lcExpr(_ i: Int) -> LcExprContext? {
+				return getRuleContext(LcExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_lcExprs
 		}
-		open func lcExpr(_ i: Int) -> LcExprContext? {
-			return getRuleContext(LcExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_lcExprs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterLcExprs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterLcExprs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitLcExprs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitLcExprs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitLcExprs(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitLcExprs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitLcExprs(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitLcExprs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lcExprs() throws -> LcExprsContext {
+	 open func lcExprs() throws -> LcExprsContext {
 		var _localctx: LcExprsContext = LcExprsContext(_ctx, getState())
 		try enterRule(_localctx, 130, ErlangParser.RULE_lcExprs)
 		var _la: Int = 0
@@ -5100,43 +5588,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class LcExprContext:ParserRuleContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+
+	public class LcExprContext: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func binary() -> BinaryContext? {
+				return getRuleContext(BinaryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_lcExpr
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func binary() -> BinaryContext? {
-			return getRuleContext(BinaryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_lcExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterLcExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterLcExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitLcExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitLcExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitLcExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitLcExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitLcExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitLcExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lcExpr() throws -> LcExprContext {
+	 open func lcExpr() throws -> LcExprContext {
 		var _localctx: LcExprContext = LcExprContext(_ctx, getState())
 		try enterRule(_localctx, 132, ErlangParser.RULE_lcExpr)
 		defer {
@@ -5183,37 +5679,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TupleContext:ParserRuleContext {
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
+
+	public class TupleContext: ParserRuleContext {
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tuple
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tuple }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTuple(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTuple(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTuple(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTuple(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTuple(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTuple(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTuple(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTuple(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuple() throws -> TupleContext {
+	 open func tuple() throws -> TupleContext {
 		var _localctx: TupleContext = TupleContext(_ctx, getState())
 		try enterRule(_localctx, 134, ErlangParser.RULE_tuple)
 		var _la: Int = 0
@@ -5257,49 +5759,58 @@ open class ErlangParser: Parser {
 		return _localctx
 	}
 
-	open class RecordExprContext:ParserRuleContext {
-		open func tokAtom() -> Array<TokAtomContext> {
-			return getRuleContexts(TokAtomContext.self)
+	public class RecordExprContext: ParserRuleContext {
+			open
+			func tokAtom() -> [TokAtomContext] {
+				return getRuleContexts(TokAtomContext.self)
+			}
+			open
+			func tokAtom(_ i: Int) -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, i)
+			}
+			open
+			func recordTuple() -> RecordTupleContext? {
+				return getRuleContext(RecordTupleContext.self, 0)
+			}
+			open
+			func exprMax() -> ExprMaxContext? {
+				return getRuleContext(ExprMaxContext.self, 0)
+			}
+			open
+			func recordExpr() -> RecordExprContext? {
+				return getRuleContext(RecordExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_recordExpr
 		}
-		open func tokAtom(_ i: Int) -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,i)
-		}
-		open func recordTuple() -> RecordTupleContext? {
-			return getRuleContext(RecordTupleContext.self,0)
-		}
-		open func exprMax() -> ExprMaxContext? {
-			return getRuleContext(ExprMaxContext.self,0)
-		}
-		open func recordExpr() -> RecordExprContext? {
-			return getRuleContext(RecordExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_recordExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterRecordExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterRecordExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitRecordExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitRecordExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitRecordExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitRecordExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitRecordExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitRecordExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func recordExpr( ) throws -> RecordExprContext   {
+	 public final  func recordExpr( ) throws -> RecordExprContext   {
 		return try recordExpr(0)
 	}
 	@discardableResult
@@ -5358,7 +5869,7 @@ open class ErlangParser: Parser {
 
 				break
 			default:
-				throw try ANTLRException.recognition(e: NoViableAltException(self))
+				throw ANTLRException.recognition(e: NoViableAltException(self))
 			}
 
 			_ctx!.stop = try _input.LT(-1)
@@ -5375,7 +5886,7 @@ open class ErlangParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, ErlangParser.RULE_recordExpr)
 					setState(772)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(773)
 					try match(ErlangParser.Tokens.T__17.rawValue)
@@ -5398,7 +5909,7 @@ open class ErlangParser: Parser {
 
 						break
 					default:
-						throw try ANTLRException.recognition(e: NoViableAltException(self))
+						throw ANTLRException.recognition(e: NoViableAltException(self))
 					}
 
 			 
@@ -5417,37 +5928,43 @@ open class ErlangParser: Parser {
 
 		return _localctx;
 	}
-	open class RecordTupleContext:ParserRuleContext {
-		open func recordFields() -> RecordFieldsContext? {
-			return getRuleContext(RecordFieldsContext.self,0)
+
+	public class RecordTupleContext: ParserRuleContext {
+			open
+			func recordFields() -> RecordFieldsContext? {
+				return getRuleContext(RecordFieldsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_recordTuple
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_recordTuple }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterRecordTuple(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterRecordTuple(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitRecordTuple(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitRecordTuple(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitRecordTuple(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitRecordTuple(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitRecordTuple(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitRecordTuple(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func recordTuple() throws -> RecordTupleContext {
+	 open func recordTuple() throws -> RecordTupleContext {
 		var _localctx: RecordTupleContext = RecordTupleContext(_ctx, getState())
 		try enterRule(_localctx, 138, ErlangParser.RULE_recordTuple)
 		var _la: Int = 0
@@ -5483,40 +6000,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class RecordFieldsContext:ParserRuleContext {
-		open func recordField() -> Array<RecordFieldContext> {
-			return getRuleContexts(RecordFieldContext.self)
+
+	public class RecordFieldsContext: ParserRuleContext {
+			open
+			func recordField() -> [RecordFieldContext] {
+				return getRuleContexts(RecordFieldContext.self)
+			}
+			open
+			func recordField(_ i: Int) -> RecordFieldContext? {
+				return getRuleContext(RecordFieldContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_recordFields
 		}
-		open func recordField(_ i: Int) -> RecordFieldContext? {
-			return getRuleContext(RecordFieldContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_recordFields }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterRecordFields(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterRecordFields(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitRecordFields(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitRecordFields(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitRecordFields(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitRecordFields(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitRecordFields(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitRecordFields(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func recordFields() throws -> RecordFieldsContext {
+	 open func recordFields() throws -> RecordFieldsContext {
 		var _localctx: RecordFieldsContext = RecordFieldsContext(_ctx, getState())
 		try enterRule(_localctx, 140, ErlangParser.RULE_recordFields)
 		var _la: Int = 0
@@ -5555,43 +6079,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class RecordFieldContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class RecordFieldContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func tokVar() -> TokVarContext? {
+				return getRuleContext(TokVarContext.self, 0)
+			}
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_recordField
 		}
-		open func tokVar() -> TokVarContext? {
-			return getRuleContext(TokVarContext.self,0)
-		}
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_recordField }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterRecordField(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterRecordField(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitRecordField(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitRecordField(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitRecordField(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitRecordField(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitRecordField(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitRecordField(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func recordField() throws -> RecordFieldContext {
+	 open func recordField() throws -> RecordFieldContext {
 		var _localctx: RecordFieldContext = RecordFieldContext(_ctx, getState())
 		try enterRule(_localctx, 142, ErlangParser.RULE_recordField)
 		defer {
@@ -5614,7 +6146,7 @@ open class ErlangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(803)
 		 	try match(ErlangParser.Tokens.T__24.rawValue)
@@ -5630,40 +6162,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionCallContext:ParserRuleContext {
-		open func expr800() -> Expr800Context? {
-			return getRuleContext(Expr800Context.self,0)
+
+	public class FunctionCallContext: ParserRuleContext {
+			open
+			func expr800() -> Expr800Context? {
+				return getRuleContext(Expr800Context.self, 0)
+			}
+			open
+			func argumentList() -> ArgumentListContext? {
+				return getRuleContext(ArgumentListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_functionCall
 		}
-		open func argumentList() -> ArgumentListContext? {
-			return getRuleContext(ArgumentListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_functionCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFunctionCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFunctionCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFunctionCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFunctionCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFunctionCall(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFunctionCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFunctionCall(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFunctionCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionCall() throws -> FunctionCallContext {
+	 open func functionCall() throws -> FunctionCallContext {
 		var _localctx: FunctionCallContext = FunctionCallContext(_ctx, getState())
 		try enterRule(_localctx, 144, ErlangParser.RULE_functionCall)
 		defer {
@@ -5685,37 +6224,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class IfExprContext:ParserRuleContext {
-		open func ifClauses() -> IfClausesContext? {
-			return getRuleContext(IfClausesContext.self,0)
+
+	public class IfExprContext: ParserRuleContext {
+			open
+			func ifClauses() -> IfClausesContext? {
+				return getRuleContext(IfClausesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_ifExpr
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_ifExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterIfExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterIfExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitIfExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitIfExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitIfExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitIfExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitIfExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitIfExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifExpr() throws -> IfExprContext {
+	 open func ifExpr() throws -> IfExprContext {
 		var _localctx: IfExprContext = IfExprContext(_ctx, getState())
 		try enterRule(_localctx, 146, ErlangParser.RULE_ifExpr)
 		defer {
@@ -5739,40 +6284,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class IfClausesContext:ParserRuleContext {
-		open func ifClause() -> Array<IfClauseContext> {
-			return getRuleContexts(IfClauseContext.self)
+
+	public class IfClausesContext: ParserRuleContext {
+			open
+			func ifClause() -> [IfClauseContext] {
+				return getRuleContexts(IfClauseContext.self)
+			}
+			open
+			func ifClause(_ i: Int) -> IfClauseContext? {
+				return getRuleContext(IfClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_ifClauses
 		}
-		open func ifClause(_ i: Int) -> IfClauseContext? {
-			return getRuleContext(IfClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_ifClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterIfClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterIfClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitIfClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitIfClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitIfClauses(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitIfClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitIfClauses(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitIfClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifClauses() throws -> IfClausesContext {
+	 open func ifClauses() throws -> IfClausesContext {
 		var _localctx: IfClausesContext = IfClausesContext(_ctx, getState())
 		try enterRule(_localctx, 148, ErlangParser.RULE_ifClauses)
 		var _la: Int = 0
@@ -5811,40 +6363,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class IfClauseContext:ParserRuleContext {
-		open func guard() -> GuardContext? {
-			return getRuleContext(GuardContext.self,0)
+
+	public class IfClauseContext: ParserRuleContext {
+			open
+			func guard() -> GuardContext? {
+				return getRuleContext(GuardContext.self, 0)
+			}
+			open
+			func clauseBody() -> ClauseBodyContext? {
+				return getRuleContext(ClauseBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_ifClause
 		}
-		open func clauseBody() -> ClauseBodyContext? {
-			return getRuleContext(ClauseBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_ifClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterIfClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterIfClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitIfClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitIfClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitIfClause(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitIfClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitIfClause(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitIfClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifClause() throws -> IfClauseContext {
+	 open func ifClause() throws -> IfClauseContext {
 		var _localctx: IfClauseContext = IfClauseContext(_ctx, getState())
 		try enterRule(_localctx, 150, ErlangParser.RULE_ifClause)
 		defer {
@@ -5866,40 +6425,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class CaseExprContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class CaseExprContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func crClauses() -> CrClausesContext? {
+				return getRuleContext(CrClausesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_caseExpr
 		}
-		open func crClauses() -> CrClausesContext? {
-			return getRuleContext(CrClausesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_caseExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterCaseExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterCaseExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitCaseExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitCaseExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitCaseExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitCaseExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitCaseExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitCaseExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseExpr() throws -> CaseExprContext {
+	 open func caseExpr() throws -> CaseExprContext {
 		var _localctx: CaseExprContext = CaseExprContext(_ctx, getState())
 		try enterRule(_localctx, 152, ErlangParser.RULE_caseExpr)
 		defer {
@@ -5927,40 +6493,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class CrClausesContext:ParserRuleContext {
-		open func crClause() -> Array<CrClauseContext> {
-			return getRuleContexts(CrClauseContext.self)
+
+	public class CrClausesContext: ParserRuleContext {
+			open
+			func crClause() -> [CrClauseContext] {
+				return getRuleContexts(CrClauseContext.self)
+			}
+			open
+			func crClause(_ i: Int) -> CrClauseContext? {
+				return getRuleContext(CrClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_crClauses
 		}
-		open func crClause(_ i: Int) -> CrClauseContext? {
-			return getRuleContext(CrClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_crClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterCrClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterCrClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitCrClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitCrClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitCrClauses(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitCrClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitCrClauses(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitCrClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func crClauses() throws -> CrClausesContext {
+	 open func crClauses() throws -> CrClausesContext {
 		var _localctx: CrClausesContext = CrClausesContext(_ctx, getState())
 		try enterRule(_localctx, 154, ErlangParser.RULE_crClauses)
 		var _la: Int = 0
@@ -5999,43 +6572,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class CrClauseContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class CrClauseContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func clauseGuard() -> ClauseGuardContext? {
+				return getRuleContext(ClauseGuardContext.self, 0)
+			}
+			open
+			func clauseBody() -> ClauseBodyContext? {
+				return getRuleContext(ClauseBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_crClause
 		}
-		open func clauseGuard() -> ClauseGuardContext? {
-			return getRuleContext(ClauseGuardContext.self,0)
-		}
-		open func clauseBody() -> ClauseBodyContext? {
-			return getRuleContext(ClauseBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_crClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterCrClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterCrClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitCrClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitCrClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitCrClause(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitCrClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitCrClause(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitCrClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func crClause() throws -> CrClauseContext {
+	 open func crClause() throws -> CrClauseContext {
 		var _localctx: CrClauseContext = CrClauseContext(_ctx, getState())
 		try enterRule(_localctx, 156, ErlangParser.RULE_crClause)
 		defer {
@@ -6059,43 +6640,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ReceiveExprContext:ParserRuleContext {
-		open func crClauses() -> CrClausesContext? {
-			return getRuleContext(CrClausesContext.self,0)
+
+	public class ReceiveExprContext: ParserRuleContext {
+			open
+			func crClauses() -> CrClausesContext? {
+				return getRuleContext(CrClausesContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func clauseBody() -> ClauseBodyContext? {
+				return getRuleContext(ClauseBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_receiveExpr
 		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func clauseBody() -> ClauseBodyContext? {
-			return getRuleContext(ClauseBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_receiveExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterReceiveExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterReceiveExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitReceiveExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitReceiveExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitReceiveExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitReceiveExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitReceiveExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitReceiveExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func receiveExpr() throws -> ReceiveExprContext {
+	 open func receiveExpr() throws -> ReceiveExprContext {
 		var _localctx: ReceiveExprContext = ReceiveExprContext(_ctx, getState())
 		try enterRule(_localctx, 158, ErlangParser.RULE_receiveExpr)
 		defer {
@@ -6156,52 +6745,63 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FunExprContext:ParserRuleContext {
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
+
+	public class FunExprContext: ParserRuleContext {
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+			open
+			func tokInteger() -> TokIntegerContext? {
+				return getRuleContext(TokIntegerContext.self, 0)
+			}
+			open
+			func atomOrVar() -> [AtomOrVarContext] {
+				return getRuleContexts(AtomOrVarContext.self)
+			}
+			open
+			func atomOrVar(_ i: Int) -> AtomOrVarContext? {
+				return getRuleContext(AtomOrVarContext.self, i)
+			}
+			open
+			func integerOrVar() -> IntegerOrVarContext? {
+				return getRuleContext(IntegerOrVarContext.self, 0)
+			}
+			open
+			func funClauses() -> FunClausesContext? {
+				return getRuleContext(FunClausesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_funExpr
 		}
-		open func tokInteger() -> TokIntegerContext? {
-			return getRuleContext(TokIntegerContext.self,0)
-		}
-		open func atomOrVar() -> Array<AtomOrVarContext> {
-			return getRuleContexts(AtomOrVarContext.self)
-		}
-		open func atomOrVar(_ i: Int) -> AtomOrVarContext? {
-			return getRuleContext(AtomOrVarContext.self,i)
-		}
-		open func integerOrVar() -> IntegerOrVarContext? {
-			return getRuleContext(IntegerOrVarContext.self,0)
-		}
-		open func funClauses() -> FunClausesContext? {
-			return getRuleContext(FunClausesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_funExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFunExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFunExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFunExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFunExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFunExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFunExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFunExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFunExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funExpr() throws -> FunExprContext {
+	 open func funExpr() throws -> FunExprContext {
 		var _localctx: FunExprContext = FunExprContext(_ctx, getState())
 		try enterRule(_localctx, 160, ErlangParser.RULE_funExpr)
 		defer {
@@ -6260,40 +6860,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class AtomOrVarContext:ParserRuleContext {
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
+
+	public class AtomOrVarContext: ParserRuleContext {
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+			open
+			func tokVar() -> TokVarContext? {
+				return getRuleContext(TokVarContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_atomOrVar
 		}
-		open func tokVar() -> TokVarContext? {
-			return getRuleContext(TokVarContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_atomOrVar }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterAtomOrVar(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterAtomOrVar(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitAtomOrVar(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitAtomOrVar(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitAtomOrVar(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitAtomOrVar(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitAtomOrVar(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitAtomOrVar(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atomOrVar() throws -> AtomOrVarContext {
+	 open func atomOrVar() throws -> AtomOrVarContext {
 		var _localctx: AtomOrVarContext = AtomOrVarContext(_ctx, getState())
 		try enterRule(_localctx, 162, ErlangParser.RULE_atomOrVar)
 		defer {
@@ -6317,7 +6924,7 @@ open class ErlangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6328,40 +6935,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class IntegerOrVarContext:ParserRuleContext {
-		open func tokInteger() -> TokIntegerContext? {
-			return getRuleContext(TokIntegerContext.self,0)
+
+	public class IntegerOrVarContext: ParserRuleContext {
+			open
+			func tokInteger() -> TokIntegerContext? {
+				return getRuleContext(TokIntegerContext.self, 0)
+			}
+			open
+			func tokVar() -> TokVarContext? {
+				return getRuleContext(TokVarContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_integerOrVar
 		}
-		open func tokVar() -> TokVarContext? {
-			return getRuleContext(TokVarContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_integerOrVar }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterIntegerOrVar(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterIntegerOrVar(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitIntegerOrVar(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitIntegerOrVar(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitIntegerOrVar(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitIntegerOrVar(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitIntegerOrVar(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitIntegerOrVar(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integerOrVar() throws -> IntegerOrVarContext {
+	 open func integerOrVar() throws -> IntegerOrVarContext {
 		var _localctx: IntegerOrVarContext = IntegerOrVarContext(_ctx, getState())
 		try enterRule(_localctx, 164, ErlangParser.RULE_integerOrVar)
 		defer {
@@ -6385,7 +6999,7 @@ open class ErlangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6396,40 +7010,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FunClausesContext:ParserRuleContext {
-		open func funClause() -> Array<FunClauseContext> {
-			return getRuleContexts(FunClauseContext.self)
+
+	public class FunClausesContext: ParserRuleContext {
+			open
+			func funClause() -> [FunClauseContext] {
+				return getRuleContexts(FunClauseContext.self)
+			}
+			open
+			func funClause(_ i: Int) -> FunClauseContext? {
+				return getRuleContext(FunClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_funClauses
 		}
-		open func funClause(_ i: Int) -> FunClauseContext? {
-			return getRuleContext(FunClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_funClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFunClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFunClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFunClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFunClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFunClauses(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFunClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFunClauses(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFunClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funClauses() throws -> FunClausesContext {
+	 open func funClauses() throws -> FunClausesContext {
 		var _localctx: FunClausesContext = FunClausesContext(_ctx, getState())
 		try enterRule(_localctx, 166, ErlangParser.RULE_funClauses)
 		var _la: Int = 0
@@ -6468,43 +7089,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class FunClauseContext:ParserRuleContext {
-		open func argumentList() -> ArgumentListContext? {
-			return getRuleContext(ArgumentListContext.self,0)
+
+	public class FunClauseContext: ParserRuleContext {
+			open
+			func argumentList() -> ArgumentListContext? {
+				return getRuleContext(ArgumentListContext.self, 0)
+			}
+			open
+			func clauseGuard() -> ClauseGuardContext? {
+				return getRuleContext(ClauseGuardContext.self, 0)
+			}
+			open
+			func clauseBody() -> ClauseBodyContext? {
+				return getRuleContext(ClauseBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_funClause
 		}
-		open func clauseGuard() -> ClauseGuardContext? {
-			return getRuleContext(ClauseGuardContext.self,0)
-		}
-		open func clauseBody() -> ClauseBodyContext? {
-			return getRuleContext(ClauseBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_funClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterFunClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterFunClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitFunClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitFunClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitFunClause(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitFunClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitFunClause(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitFunClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funClause() throws -> FunClauseContext {
+	 open func funClause() throws -> FunClauseContext {
 		var _localctx: FunClauseContext = FunClauseContext(_ctx, getState())
 		try enterRule(_localctx, 168, ErlangParser.RULE_funClause)
 		defer {
@@ -6528,43 +7157,51 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TryExprContext:ParserRuleContext {
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
+
+	public class TryExprContext: ParserRuleContext {
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+			open
+			func tryCatch() -> TryCatchContext? {
+				return getRuleContext(TryCatchContext.self, 0)
+			}
+			open
+			func crClauses() -> CrClausesContext? {
+				return getRuleContext(CrClausesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tryExpr
 		}
-		open func tryCatch() -> TryCatchContext? {
-			return getRuleContext(TryCatchContext.self,0)
-		}
-		open func crClauses() -> CrClausesContext? {
-			return getRuleContext(CrClausesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tryExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTryExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTryExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTryExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTryExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTryExpr(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTryExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTryExpr(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTryExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tryExpr() throws -> TryExprContext {
+	 open func tryExpr() throws -> TryExprContext {
 		var _localctx: TryExprContext = TryExprContext(_ctx, getState())
 		try enterRule(_localctx, 170, ErlangParser.RULE_tryExpr)
 		var _la: Int = 0
@@ -6604,40 +7241,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TryCatchContext:ParserRuleContext {
-		open func tryClauses() -> TryClausesContext? {
-			return getRuleContext(TryClausesContext.self,0)
+
+	public class TryCatchContext: ParserRuleContext {
+			open
+			func tryClauses() -> TryClausesContext? {
+				return getRuleContext(TryClausesContext.self, 0)
+			}
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tryCatch
 		}
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tryCatch }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTryCatch(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTryCatch(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTryCatch(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTryCatch(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTryCatch(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTryCatch(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTryCatch(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTryCatch(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tryCatch() throws -> TryCatchContext {
+	 open func tryCatch() throws -> TryCatchContext {
 		var _localctx: TryCatchContext = TryCatchContext(_ctx, getState())
 		try enterRule(_localctx, 172, ErlangParser.RULE_tryCatch)
 		defer {
@@ -6692,40 +7336,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TryClausesContext:ParserRuleContext {
-		open func tryClause() -> Array<TryClauseContext> {
-			return getRuleContexts(TryClauseContext.self)
+
+	public class TryClausesContext: ParserRuleContext {
+			open
+			func tryClause() -> [TryClauseContext] {
+				return getRuleContexts(TryClauseContext.self)
+			}
+			open
+			func tryClause(_ i: Int) -> TryClauseContext? {
+				return getRuleContext(TryClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tryClauses
 		}
-		open func tryClause(_ i: Int) -> TryClauseContext? {
-			return getRuleContext(TryClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tryClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTryClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTryClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTryClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTryClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTryClauses(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTryClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTryClauses(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTryClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tryClauses() throws -> TryClausesContext {
+	 open func tryClauses() throws -> TryClausesContext {
 		var _localctx: TryClausesContext = TryClausesContext(_ctx, getState())
 		try enterRule(_localctx, 174, ErlangParser.RULE_tryClauses)
 		var _la: Int = 0
@@ -6764,46 +7415,55 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class TryClauseContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class TryClauseContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func clauseGuard() -> ClauseGuardContext? {
+				return getRuleContext(ClauseGuardContext.self, 0)
+			}
+			open
+			func clauseBody() -> ClauseBodyContext? {
+				return getRuleContext(ClauseBodyContext.self, 0)
+			}
+			open
+			func atomOrVar() -> AtomOrVarContext? {
+				return getRuleContext(AtomOrVarContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_tryClause
 		}
-		open func clauseGuard() -> ClauseGuardContext? {
-			return getRuleContext(ClauseGuardContext.self,0)
-		}
-		open func clauseBody() -> ClauseBodyContext? {
-			return getRuleContext(ClauseBodyContext.self,0)
-		}
-		open func atomOrVar() -> AtomOrVarContext? {
-			return getRuleContext(AtomOrVarContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_tryClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterTryClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterTryClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitTryClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitTryClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitTryClause(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitTryClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitTryClause(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitTryClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tryClause() throws -> TryClauseContext {
+	 open func tryClause() throws -> TryClauseContext {
 		var _localctx: TryClauseContext = TryClauseContext(_ctx, getState())
 		try enterRule(_localctx, 176, ErlangParser.RULE_tryClause)
 		defer {
@@ -6839,37 +7499,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentListContext:ParserRuleContext {
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
+
+	public class ArgumentListContext: ParserRuleContext {
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_argumentList
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_argumentList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterArgumentList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterArgumentList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitArgumentList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitArgumentList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitArgumentList(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitArgumentList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitArgumentList(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitArgumentList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argumentList() throws -> ArgumentListContext {
+	 open func argumentList() throws -> ArgumentListContext {
 		var _localctx: ArgumentListContext = ArgumentListContext(_ctx, getState())
 		try enterRule(_localctx, 178, ErlangParser.RULE_argumentList)
 		var _la: Int = 0
@@ -6912,40 +7578,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ExprsContext:ParserRuleContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+
+	public class ExprsContext: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_exprs
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_exprs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterExprs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterExprs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitExprs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitExprs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitExprs(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitExprs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitExprs(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitExprs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exprs() throws -> ExprsContext {
+	 open func exprs() throws -> ExprsContext {
 		var _localctx: ExprsContext = ExprsContext(_ctx, getState())
 		try enterRule(_localctx, 180, ErlangParser.RULE_exprs)
 		var _la: Int = 0
@@ -6984,40 +7657,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class GuardContext:ParserRuleContext {
-		open func exprs() -> Array<ExprsContext> {
-			return getRuleContexts(ExprsContext.self)
+
+	public class GuardContext: ParserRuleContext {
+			open
+			func exprs() -> [ExprsContext] {
+				return getRuleContexts(ExprsContext.self)
+			}
+			open
+			func exprs(_ i: Int) -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_guard
 		}
-		open func exprs(_ i: Int) -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_guard }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterGuard(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterGuard(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitGuard(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitGuard(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitGuard(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitGuard(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitGuard(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitGuard(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func guard() throws -> GuardContext {
+	 open func guard() throws -> GuardContext {
 		var _localctx: GuardContext = GuardContext(_ctx, getState())
 		try enterRule(_localctx, 182, ErlangParser.RULE_guard)
 		var _la: Int = 0
@@ -7056,52 +7736,63 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class AtomicContext:ParserRuleContext {
-		open func tokChar() -> TokCharContext? {
-			return getRuleContext(TokCharContext.self,0)
+
+	public class AtomicContext: ParserRuleContext {
+			open
+			func tokChar() -> TokCharContext? {
+				return getRuleContext(TokCharContext.self, 0)
+			}
+			open
+			func tokInteger() -> TokIntegerContext? {
+				return getRuleContext(TokIntegerContext.self, 0)
+			}
+			open
+			func tokFloat() -> TokFloatContext? {
+				return getRuleContext(TokFloatContext.self, 0)
+			}
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+			open
+			func tokString() -> [TokStringContext] {
+				return getRuleContexts(TokStringContext.self)
+			}
+			open
+			func tokString(_ i: Int) -> TokStringContext? {
+				return getRuleContext(TokStringContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_atomic
 		}
-		open func tokInteger() -> TokIntegerContext? {
-			return getRuleContext(TokIntegerContext.self,0)
-		}
-		open func tokFloat() -> TokFloatContext? {
-			return getRuleContext(TokFloatContext.self,0)
-		}
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
-		}
-		open func tokString() -> Array<TokStringContext> {
-			return getRuleContexts(TokStringContext.self)
-		}
-		open func tokString(_ i: Int) -> TokStringContext? {
-			return getRuleContext(TokStringContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_atomic }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterAtomic(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterAtomic(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitAtomic(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitAtomic(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitAtomic(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitAtomic(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitAtomic(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitAtomic(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atomic() throws -> AtomicContext {
+	 open func atomic() throws -> AtomicContext {
 		var _localctx: AtomicContext = AtomicContext(_ctx, getState())
 		try enterRule(_localctx, 184, ErlangParser.RULE_atomic)
 		var _la: Int = 0
@@ -7161,7 +7852,7 @@ open class ErlangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7172,34 +7863,39 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class PrefixOpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_prefixOp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterPrefixOp(self)
+
+	public class PrefixOpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_prefixOp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterPrefixOp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitPrefixOp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitPrefixOp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitPrefixOp(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitPrefixOp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitPrefixOp(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitPrefixOp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefixOp() throws -> PrefixOpContext {
+	 open func prefixOp() throws -> PrefixOpContext {
 		var _localctx: PrefixOpContext = PrefixOpContext(_ctx, getState())
 		try enterRule(_localctx, 186, ErlangParser.RULE_prefixOp)
 		var _la: Int = 0
@@ -7234,34 +7930,39 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class MultOpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_multOp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterMultOp(self)
+
+	public class MultOpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_multOp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterMultOp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitMultOp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitMultOp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitMultOp(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitMultOp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitMultOp(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitMultOp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multOp() throws -> MultOpContext {
+	 open func multOp() throws -> MultOpContext {
 		var _localctx: MultOpContext = MultOpContext(_ctx, getState())
 		try enterRule(_localctx, 188, ErlangParser.RULE_multOp)
 		var _la: Int = 0
@@ -7296,34 +7997,39 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class AddOpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_addOp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterAddOp(self)
+
+	public class AddOpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_addOp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterAddOp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitAddOp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitAddOp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitAddOp(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitAddOp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitAddOp(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitAddOp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func addOp() throws -> AddOpContext {
+	 open func addOp() throws -> AddOpContext {
 		var _localctx: AddOpContext = AddOpContext(_ctx, getState())
 		try enterRule(_localctx, 190, ErlangParser.RULE_addOp)
 		var _la: Int = 0
@@ -7358,34 +8064,39 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class ListOpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_listOp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterListOp(self)
+
+	public class ListOpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_listOp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterListOp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitListOp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitListOp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitListOp(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitListOp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitListOp(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitListOp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func listOp() throws -> ListOpContext {
+	 open func listOp() throws -> ListOpContext {
 		var _localctx: ListOpContext = ListOpContext(_ctx, getState())
 		try enterRule(_localctx, 192, ErlangParser.RULE_listOp)
 		var _la: Int = 0
@@ -7417,34 +8128,39 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class CompOpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_compOp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterCompOp(self)
+
+	public class CompOpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_compOp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterCompOp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitCompOp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitCompOp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitCompOp(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitCompOp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitCompOp(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitCompOp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compOp() throws -> CompOpContext {
+	 open func compOp() throws -> CompOpContext {
 		var _localctx: CompOpContext = CompOpContext(_ctx, getState())
 		try enterRule(_localctx, 194, ErlangParser.RULE_compOp)
 		var _la: Int = 0
@@ -7479,40 +8195,47 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class RuleClausesContext:ParserRuleContext {
-		open func ruleClause() -> Array<RuleClauseContext> {
-			return getRuleContexts(RuleClauseContext.self)
+
+	public class RuleClausesContext: ParserRuleContext {
+			open
+			func ruleClause() -> [RuleClauseContext] {
+				return getRuleContexts(RuleClauseContext.self)
+			}
+			open
+			func ruleClause(_ i: Int) -> RuleClauseContext? {
+				return getRuleContext(RuleClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_ruleClauses
 		}
-		open func ruleClause(_ i: Int) -> RuleClauseContext? {
-			return getRuleContext(RuleClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_ruleClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterRuleClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterRuleClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitRuleClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitRuleClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitRuleClauses(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitRuleClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitRuleClauses(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitRuleClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ruleClauses() throws -> RuleClausesContext {
+	 open func ruleClauses() throws -> RuleClausesContext {
 		var _localctx: RuleClausesContext = RuleClausesContext(_ctx, getState())
 		try enterRule(_localctx, 196, ErlangParser.RULE_ruleClauses)
 		var _la: Int = 0
@@ -7551,46 +8274,55 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class RuleClauseContext:ParserRuleContext {
-		open func tokAtom() -> TokAtomContext? {
-			return getRuleContext(TokAtomContext.self,0)
+
+	public class RuleClauseContext: ParserRuleContext {
+			open
+			func tokAtom() -> TokAtomContext? {
+				return getRuleContext(TokAtomContext.self, 0)
+			}
+			open
+			func clauseArgs() -> ClauseArgsContext? {
+				return getRuleContext(ClauseArgsContext.self, 0)
+			}
+			open
+			func clauseGuard() -> ClauseGuardContext? {
+				return getRuleContext(ClauseGuardContext.self, 0)
+			}
+			open
+			func ruleBody() -> RuleBodyContext? {
+				return getRuleContext(RuleBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_ruleClause
 		}
-		open func clauseArgs() -> ClauseArgsContext? {
-			return getRuleContext(ClauseArgsContext.self,0)
-		}
-		open func clauseGuard() -> ClauseGuardContext? {
-			return getRuleContext(ClauseGuardContext.self,0)
-		}
-		open func ruleBody() -> RuleBodyContext? {
-			return getRuleContext(RuleBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_ruleClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterRuleClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterRuleClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitRuleClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitRuleClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitRuleClause(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitRuleClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitRuleClause(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitRuleClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ruleClause() throws -> RuleClauseContext {
+	 open func ruleClause() throws -> RuleClauseContext {
 		var _localctx: RuleClauseContext = RuleClauseContext(_ctx, getState())
 		try enterRule(_localctx, 198, ErlangParser.RULE_ruleClause)
 		defer {
@@ -7616,37 +8348,43 @@ open class ErlangParser: Parser {
 
 		return _localctx
 	}
-	open class RuleBodyContext:ParserRuleContext {
-		open func lcExprs() -> LcExprsContext? {
-			return getRuleContext(LcExprsContext.self,0)
+
+	public class RuleBodyContext: ParserRuleContext {
+			open
+			func lcExprs() -> LcExprsContext? {
+				return getRuleContext(LcExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ErlangParser.RULE_ruleBody
 		}
-		open override func getRuleIndex() -> Int { return ErlangParser.RULE_ruleBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).enterRuleBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.enterRuleBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ErlangListener {
-			 	(listener as! ErlangListener).exitRuleBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ErlangListener {
+				listener.exitRuleBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ErlangVisitor {
-			     return (visitor as! ErlangVisitor<T>).visitRuleBody(self)
-			}else if visitor is ErlangBaseVisitor {
-		    	 return (visitor as! ErlangBaseVisitor<T>).visitRuleBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ErlangVisitor {
+			    return visitor.visitRuleBody(self)
+			}
+			else if let visitor = visitor as? ErlangBaseVisitor {
+			    return visitor.visitRuleBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ruleBody() throws -> RuleBodyContext {
+	 open func ruleBody() throws -> RuleBodyContext {
 		var _localctx: RuleBodyContext = RuleBodyContext(_ctx, getState())
 		try enterRule(_localctx, 200, ErlangParser.RULE_ruleBody)
 		defer {
@@ -7669,8 +8407,8 @@ open class ErlangParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  23:
 			return try type300_sempred(_localctx?.castdown(Type300Context.self), predIndex)
@@ -7700,6 +8438,10 @@ open class ErlangParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = ErlangParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = ErlangParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

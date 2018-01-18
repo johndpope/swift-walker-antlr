@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/mumps/mumps.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/mumps/mumps.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: mumpsParser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: mumpsParser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEof(_ ctx: mumpsParser.EofContext) -> T{
+	open func visitEof(_ ctx: mumpsParser.EofContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: mumpsParser.LineContext) -> T{
+	open func visitLine(_ ctx: mumpsParser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCode(_ ctx: mumpsParser.CodeContext) -> T{
+	open func visitCode(_ ctx: mumpsParser.CodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabel(_ ctx: mumpsParser.LabelContext) -> T{
+	open func visitLabel(_ ctx: mumpsParser.LabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRoutinedecl(_ ctx: mumpsParser.RoutinedeclContext) -> T{
+	open func visitRoutinedecl(_ ctx: mumpsParser.RoutinedeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParamlist(_ ctx: mumpsParser.ParamlistContext) -> T{
+	open func visitParamlist(_ ctx: mumpsParser.ParamlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParam(_ ctx: mumpsParser.ParamContext) -> T{
+	open func visitParam(_ ctx: mumpsParser.ParamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubproc(_ ctx: mumpsParser.SubprocContext) -> T{
+	open func visitSubproc(_ ctx: mumpsParser.SubprocContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommand(_ ctx: mumpsParser.CommandContext) -> T{
+	open func visitCommand(_ ctx: mumpsParser.CommandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostcondition(_ ctx: mumpsParser.PostconditionContext) -> T{
+	open func visitPostcondition(_ ctx: mumpsParser.PostconditionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: mumpsParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: mumpsParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: mumpsParser.TermContext) -> T{
+	open func visitTerm(_ ctx: mumpsParser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCondition(_ ctx: mumpsParser.ConditionContext) -> T{
+	open func visitCondition(_ ctx: mumpsParser.ConditionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifier(_ ctx: mumpsParser.IdentifierContext) -> T{
+	open func visitIdentifier(_ ctx: mumpsParser.IdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariable(_ ctx: mumpsParser.VariableContext) -> T{
+	open func visitVariable(_ ctx: mumpsParser.VariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBreak_(_ ctx: mumpsParser.Break_Context) -> T{
+	open func visitBreak_(_ ctx: mumpsParser.Break_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDo_(_ ctx: mumpsParser.Do_Context) -> T{
+	open func visitDo_(_ ctx: mumpsParser.Do_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFor_(_ ctx: mumpsParser.For_Context) -> T{
+	open func visitFor_(_ ctx: mumpsParser.For_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHalt_(_ ctx: mumpsParser.Halt_Context) -> T{
+	open func visitHalt_(_ ctx: mumpsParser.Halt_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHang_(_ ctx: mumpsParser.Hang_Context) -> T{
+	open func visitHang_(_ ctx: mumpsParser.Hang_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIf_(_ ctx: mumpsParser.If_Context) -> T{
+	open func visitIf_(_ ctx: mumpsParser.If_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKill_(_ ctx: mumpsParser.Kill_Context) -> T{
+	open func visitKill_(_ ctx: mumpsParser.Kill_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMerge_(_ ctx: mumpsParser.Merge_Context) -> T{
+	open func visitMerge_(_ ctx: mumpsParser.Merge_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNew_(_ ctx: mumpsParser.New_Context) -> T{
+	open func visitNew_(_ ctx: mumpsParser.New_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuit_(_ ctx: mumpsParser.Quit_Context) -> T{
+	open func visitQuit_(_ ctx: mumpsParser.Quit_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRead_(_ ctx: mumpsParser.Read_Context) -> T{
+	open func visitRead_(_ ctx: mumpsParser.Read_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSet_(_ ctx: mumpsParser.Set_Context) -> T{
+	open func visitSet_(_ ctx: mumpsParser.Set_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitView_(_ ctx: mumpsParser.View_Context) -> T{
+	open func visitView_(_ ctx: mumpsParser.View_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWrite_(_ ctx: mumpsParser.Write_Context) -> T{
+	open func visitWrite_(_ ctx: mumpsParser.Write_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitXecute_(_ ctx: mumpsParser.Xecute_Context) -> T{
+	open func visitXecute_(_ ctx: mumpsParser.Xecute_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssign(_ ctx: mumpsParser.AssignContext) -> T{
+	open func visitAssign(_ ctx: mumpsParser.AssignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArglist(_ ctx: mumpsParser.ArglistContext) -> T{
+	open func visitArglist(_ ctx: mumpsParser.ArglistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class mumpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArg(_ ctx: mumpsParser.ArgContext) -> T{
+	open func visitArg(_ ctx: mumpsParser.ArgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

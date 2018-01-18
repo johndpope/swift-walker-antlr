@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/telephone/telephone.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/telephone/telephone.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class telephoneParser: Parser {
@@ -11,13 +11,20 @@ open class telephoneParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, DIGIT = 5, WS = 6
 	}
-	public static let RULE_number = 0, RULE_variation = 1, RULE_nanp = 2, RULE_areacode = 3, 
-                   RULE_exchange = 4, RULE_subscriber = 5, RULE_japan = 6
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_number = 0, RULE_variation = 1, RULE_nanp = 2, RULE_areacode = 3, 
+            RULE_exchange = 4, RULE_subscriber = 5, RULE_japan = 6
+
+	public
+	static let ruleNames: [String] = [
 		"number", "variation", "nanp", "areacode", "exchange", "subscriber", "japan"
 	]
 
@@ -27,85 +34,69 @@ open class telephoneParser: Parser {
 	private static let _SYMBOLIC_NAMES: [String?] = [
 		nil, nil, nil, nil, nil, "DIGIT", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "telephone.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return telephoneParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "telephone.g4" }
+	override open
+	func getSerializedATN() -> String { return telephoneParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return telephoneParser.ruleNames }
+	override open
+	func getATN() -> ATN { return telephoneParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return telephoneParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return telephoneParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return telephoneParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,telephoneParser._ATN,telephoneParser._decisionToDFA, telephoneParser._sharedContextCache)
 	}
-	open class NumberContext:ParserRuleContext {
-		open func variation() -> VariationContext? {
-			return getRuleContext(VariationContext.self,0)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func variation() -> VariationContext? {
+				return getRuleContext(VariationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return telephoneParser.RULE_number
 		}
-		open override func getRuleIndex() -> Int { return telephoneParser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).enterNumber(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is telephoneVisitor {
-			     return (visitor as! telephoneVisitor<T>).visitNumber(self)
-			}else if visitor is telephoneBaseVisitor {
-		    	 return (visitor as! telephoneBaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? telephoneVisitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? telephoneBaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 0, telephoneParser.RULE_number)
 		var _la: Int = 0
@@ -152,40 +143,47 @@ open class telephoneParser: Parser {
 
 		return _localctx
 	}
-	open class VariationContext:ParserRuleContext {
-		open func nanp() -> NanpContext? {
-			return getRuleContext(NanpContext.self,0)
+
+	public class VariationContext: ParserRuleContext {
+			open
+			func nanp() -> NanpContext? {
+				return getRuleContext(NanpContext.self, 0)
+			}
+			open
+			func japan() -> JapanContext? {
+				return getRuleContext(JapanContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return telephoneParser.RULE_variation
 		}
-		open func japan() -> JapanContext? {
-			return getRuleContext(JapanContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return telephoneParser.RULE_variation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).enterVariation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.enterVariation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).exitVariation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.exitVariation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is telephoneVisitor {
-			     return (visitor as! telephoneVisitor<T>).visitVariation(self)
-			}else if visitor is telephoneBaseVisitor {
-		    	 return (visitor as! telephoneBaseVisitor<T>).visitVariation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? telephoneVisitor {
+			    return visitor.visitVariation(self)
+			}
+			else if let visitor = visitor as? telephoneBaseVisitor {
+			    return visitor.visitVariation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variation() throws -> VariationContext {
+	 open func variation() throws -> VariationContext {
 		var _localctx: VariationContext = VariationContext(_ctx, getState())
 		try enterRule(_localctx, 2, telephoneParser.RULE_variation)
 		defer {
@@ -209,7 +207,7 @@ open class telephoneParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -220,43 +218,51 @@ open class telephoneParser: Parser {
 
 		return _localctx
 	}
-	open class NanpContext:ParserRuleContext {
-		open func areacode() -> AreacodeContext? {
-			return getRuleContext(AreacodeContext.self,0)
+
+	public class NanpContext: ParserRuleContext {
+			open
+			func areacode() -> AreacodeContext? {
+				return getRuleContext(AreacodeContext.self, 0)
+			}
+			open
+			func exchange() -> ExchangeContext? {
+				return getRuleContext(ExchangeContext.self, 0)
+			}
+			open
+			func subscriber() -> SubscriberContext? {
+				return getRuleContext(SubscriberContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return telephoneParser.RULE_nanp
 		}
-		open func exchange() -> ExchangeContext? {
-			return getRuleContext(ExchangeContext.self,0)
-		}
-		open func subscriber() -> SubscriberContext? {
-			return getRuleContext(SubscriberContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return telephoneParser.RULE_nanp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).enterNanp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.enterNanp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).exitNanp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.exitNanp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is telephoneVisitor {
-			     return (visitor as! telephoneVisitor<T>).visitNanp(self)
-			}else if visitor is telephoneBaseVisitor {
-		    	 return (visitor as! telephoneBaseVisitor<T>).visitNanp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? telephoneVisitor {
+			    return visitor.visitNanp(self)
+			}
+			else if let visitor = visitor as? telephoneBaseVisitor {
+			    return visitor.visitNanp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nanp() throws -> NanpContext {
+	 open func nanp() throws -> NanpContext {
 		var _localctx: NanpContext = NanpContext(_ctx, getState())
 		try enterRule(_localctx, 4, telephoneParser.RULE_nanp)
 		defer {
@@ -282,38 +288,47 @@ open class telephoneParser: Parser {
 
 		return _localctx
 	}
-	open class AreacodeContext:ParserRuleContext {
-		open func DIGIT() -> Array<TerminalNode> { return getTokens(telephoneParser.Tokens.DIGIT.rawValue) }
-		open func DIGIT(_ i:Int) -> TerminalNode?{
-			return getToken(telephoneParser.Tokens.DIGIT.rawValue, i)
+
+	public class AreacodeContext: ParserRuleContext {
+			open
+			func DIGIT() -> [TerminalNode] {
+				return getTokens(telephoneParser.Tokens.DIGIT.rawValue)
+			}
+			open
+			func DIGIT(_ i:Int) -> TerminalNode? {
+				return getToken(telephoneParser.Tokens.DIGIT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return telephoneParser.RULE_areacode
 		}
-		open override func getRuleIndex() -> Int { return telephoneParser.RULE_areacode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).enterAreacode(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.enterAreacode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).exitAreacode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.exitAreacode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is telephoneVisitor {
-			     return (visitor as! telephoneVisitor<T>).visitAreacode(self)
-			}else if visitor is telephoneBaseVisitor {
-		    	 return (visitor as! telephoneBaseVisitor<T>).visitAreacode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? telephoneVisitor {
+			    return visitor.visitAreacode(self)
+			}
+			else if let visitor = visitor as? telephoneBaseVisitor {
+			    return visitor.visitAreacode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func areacode() throws -> AreacodeContext {
+	 open func areacode() throws -> AreacodeContext {
 		var _localctx: AreacodeContext = AreacodeContext(_ctx, getState())
 		try enterRule(_localctx, 6, telephoneParser.RULE_areacode)
 		defer {
@@ -337,38 +352,47 @@ open class telephoneParser: Parser {
 
 		return _localctx
 	}
-	open class ExchangeContext:ParserRuleContext {
-		open func DIGIT() -> Array<TerminalNode> { return getTokens(telephoneParser.Tokens.DIGIT.rawValue) }
-		open func DIGIT(_ i:Int) -> TerminalNode?{
-			return getToken(telephoneParser.Tokens.DIGIT.rawValue, i)
+
+	public class ExchangeContext: ParserRuleContext {
+			open
+			func DIGIT() -> [TerminalNode] {
+				return getTokens(telephoneParser.Tokens.DIGIT.rawValue)
+			}
+			open
+			func DIGIT(_ i:Int) -> TerminalNode? {
+				return getToken(telephoneParser.Tokens.DIGIT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return telephoneParser.RULE_exchange
 		}
-		open override func getRuleIndex() -> Int { return telephoneParser.RULE_exchange }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).enterExchange(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.enterExchange(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).exitExchange(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.exitExchange(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is telephoneVisitor {
-			     return (visitor as! telephoneVisitor<T>).visitExchange(self)
-			}else if visitor is telephoneBaseVisitor {
-		    	 return (visitor as! telephoneBaseVisitor<T>).visitExchange(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? telephoneVisitor {
+			    return visitor.visitExchange(self)
+			}
+			else if let visitor = visitor as? telephoneBaseVisitor {
+			    return visitor.visitExchange(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exchange() throws -> ExchangeContext {
+	 open func exchange() throws -> ExchangeContext {
 		var _localctx: ExchangeContext = ExchangeContext(_ctx, getState())
 		try enterRule(_localctx, 8, telephoneParser.RULE_exchange)
 		defer {
@@ -392,38 +416,47 @@ open class telephoneParser: Parser {
 
 		return _localctx
 	}
-	open class SubscriberContext:ParserRuleContext {
-		open func DIGIT() -> Array<TerminalNode> { return getTokens(telephoneParser.Tokens.DIGIT.rawValue) }
-		open func DIGIT(_ i:Int) -> TerminalNode?{
-			return getToken(telephoneParser.Tokens.DIGIT.rawValue, i)
+
+	public class SubscriberContext: ParserRuleContext {
+			open
+			func DIGIT() -> [TerminalNode] {
+				return getTokens(telephoneParser.Tokens.DIGIT.rawValue)
+			}
+			open
+			func DIGIT(_ i:Int) -> TerminalNode? {
+				return getToken(telephoneParser.Tokens.DIGIT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return telephoneParser.RULE_subscriber
 		}
-		open override func getRuleIndex() -> Int { return telephoneParser.RULE_subscriber }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).enterSubscriber(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.enterSubscriber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).exitSubscriber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.exitSubscriber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is telephoneVisitor {
-			     return (visitor as! telephoneVisitor<T>).visitSubscriber(self)
-			}else if visitor is telephoneBaseVisitor {
-		    	 return (visitor as! telephoneBaseVisitor<T>).visitSubscriber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? telephoneVisitor {
+			    return visitor.visitSubscriber(self)
+			}
+			else if let visitor = visitor as? telephoneBaseVisitor {
+			    return visitor.visitSubscriber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subscriber() throws -> SubscriberContext {
+	 open func subscriber() throws -> SubscriberContext {
 		var _localctx: SubscriberContext = SubscriberContext(_ctx, getState())
 		try enterRule(_localctx, 10, telephoneParser.RULE_subscriber)
 		defer {
@@ -449,43 +482,51 @@ open class telephoneParser: Parser {
 
 		return _localctx
 	}
-	open class JapanContext:ParserRuleContext {
-		open func areacode() -> AreacodeContext? {
-			return getRuleContext(AreacodeContext.self,0)
+
+	public class JapanContext: ParserRuleContext {
+			open
+			func areacode() -> AreacodeContext? {
+				return getRuleContext(AreacodeContext.self, 0)
+			}
+			open
+			func exchange() -> ExchangeContext? {
+				return getRuleContext(ExchangeContext.self, 0)
+			}
+			open
+			func subscriber() -> SubscriberContext? {
+				return getRuleContext(SubscriberContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return telephoneParser.RULE_japan
 		}
-		open func exchange() -> ExchangeContext? {
-			return getRuleContext(ExchangeContext.self,0)
-		}
-		open func subscriber() -> SubscriberContext? {
-			return getRuleContext(SubscriberContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return telephoneParser.RULE_japan }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).enterJapan(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.enterJapan(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is telephoneListener {
-			 	(listener as! telephoneListener).exitJapan(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? telephoneListener {
+				listener.exitJapan(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is telephoneVisitor {
-			     return (visitor as! telephoneVisitor<T>).visitJapan(self)
-			}else if visitor is telephoneBaseVisitor {
-		    	 return (visitor as! telephoneBaseVisitor<T>).visitJapan(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? telephoneVisitor {
+			    return visitor.visitJapan(self)
+			}
+			else if let visitor = visitor as? telephoneBaseVisitor {
+			    return visitor.visitJapan(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func japan() throws -> JapanContext {
+	 open func japan() throws -> JapanContext {
 		var _localctx: JapanContext = JapanContext(_ctx, getState())
 		try enterRule(_localctx, 12, telephoneParser.RULE_japan)
 		defer {
@@ -512,6 +553,10 @@ open class telephoneParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = telephoneParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = telephoneParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

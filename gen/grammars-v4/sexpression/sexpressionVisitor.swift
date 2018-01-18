@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/sexpression/sexpression.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/sexpression/sexpression.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class sexpressionVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSexpr(_ ctx: sexpressionParser.SexprContext) -> T{
+	open func visitSexpr(_ ctx: sexpressionParser.SexprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class sexpressionVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitItem(_ ctx: sexpressionParser.ItemContext) -> T{
+	open func visitItem(_ ctx: sexpressionParser.ItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class sexpressionVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitList(_ ctx: sexpressionParser.ListContext) -> T{
+	open func visitList(_ ctx: sexpressionParser.ListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class sexpressionVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: sexpressionParser.AtomContext) -> T{
+	open func visitAtom(_ ctx: sexpressionParser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

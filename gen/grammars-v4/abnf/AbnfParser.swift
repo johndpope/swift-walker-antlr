@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/abnf/Abnf.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/abnf/Abnf.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class AbnfParser: Parser {
@@ -11,16 +11,23 @@ open class AbnfParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, NumberValue = 9, ProseValue = 10, ID = 11, 
                  INT = 12, COMMENT = 13, WS = 14, STRING = 15
 	}
-	public static let RULE_rulelist = 0, RULE_rule_ = 1, RULE_elements = 2, 
-                   RULE_alternation = 3, RULE_concatenation = 4, RULE_repetition = 5, 
-                   RULE_repeat = 6, RULE_element = 7, RULE_group = 8, RULE_option = 9
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_rulelist = 0, RULE_rule_ = 1, RULE_elements = 2, RULE_alternation = 3, 
+            RULE_concatenation = 4, RULE_repetition = 5, RULE_repeat = 6, 
+            RULE_element = 7, RULE_group = 8, RULE_option = 9
+
+	public
+	static let ruleNames: [String] = [
 		"rulelist", "rule_", "elements", "alternation", "concatenation", "repetition", 
 		"repeat", "element", "group", "option"
 	]
@@ -32,89 +39,77 @@ open class AbnfParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, "NumberValue", "ProseValue", 
 		"ID", "INT", "COMMENT", "WS", "STRING"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Abnf.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return AbnfParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Abnf.g4" }
+	override open
+	func getSerializedATN() -> String { return AbnfParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return AbnfParser.ruleNames }
+	override open
+	func getATN() -> ATN { return AbnfParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return AbnfParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return AbnfParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return AbnfParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,AbnfParser._ATN,AbnfParser._decisionToDFA, AbnfParser._sharedContextCache)
 	}
-	open class RulelistContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(AbnfParser.Tokens.EOF.rawValue, 0) }
-		open func rule_() -> Array<Rule_Context> {
-			return getRuleContexts(Rule_Context.self)
+
+	public class RulelistContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(AbnfParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func rule_() -> [Rule_Context] {
+				return getRuleContexts(Rule_Context.self)
+			}
+			open
+			func rule_(_ i: Int) -> Rule_Context? {
+				return getRuleContext(Rule_Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_rulelist
 		}
-		open func rule_(_ i: Int) -> Rule_Context? {
-			return getRuleContext(Rule_Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_rulelist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterRulelist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterRulelist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitRulelist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitRulelist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitRulelist(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitRulelist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitRulelist(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitRulelist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rulelist() throws -> RulelistContext {
+	 open func rulelist() throws -> RulelistContext {
 		var _localctx: RulelistContext = RulelistContext(_ctx, getState())
 		try enterRule(_localctx, 0, AbnfParser.RULE_rulelist)
 		var _la: Int = 0
@@ -151,38 +146,47 @@ open class AbnfParser: Parser {
 
 		return _localctx
 	}
-	open class Rule_Context:ParserRuleContext {
-		open func ID() -> TerminalNode? { return getToken(AbnfParser.Tokens.ID.rawValue, 0) }
-		open func elements() -> ElementsContext? {
-			return getRuleContext(ElementsContext.self,0)
+
+	public class Rule_Context: ParserRuleContext {
+			open
+			func ID() -> TerminalNode? {
+				return getToken(AbnfParser.Tokens.ID.rawValue, 0)
+			}
+			open
+			func elements() -> ElementsContext? {
+				return getRuleContext(ElementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_rule_
 		}
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_rule_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterRule_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterRule_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitRule_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitRule_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitRule_(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitRule_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitRule_(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitRule_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rule_() throws -> Rule_Context {
+	 open func rule_() throws -> Rule_Context {
 		var _localctx: Rule_Context = Rule_Context(_ctx, getState())
 		try enterRule(_localctx, 2, AbnfParser.RULE_rule_)
 		var _la: Int = 0
@@ -218,37 +222,43 @@ open class AbnfParser: Parser {
 
 		return _localctx
 	}
-	open class ElementsContext:ParserRuleContext {
-		open func alternation() -> AlternationContext? {
-			return getRuleContext(AlternationContext.self,0)
+
+	public class ElementsContext: ParserRuleContext {
+			open
+			func alternation() -> AlternationContext? {
+				return getRuleContext(AlternationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_elements
 		}
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_elements }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterElements(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterElements(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitElements(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitElements(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitElements(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitElements(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitElements(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitElements(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elements() throws -> ElementsContext {
+	 open func elements() throws -> ElementsContext {
 		var _localctx: ElementsContext = ElementsContext(_ctx, getState())
 		try enterRule(_localctx, 4, AbnfParser.RULE_elements)
 		defer {
@@ -268,40 +278,47 @@ open class AbnfParser: Parser {
 
 		return _localctx
 	}
-	open class AlternationContext:ParserRuleContext {
-		open func concatenation() -> Array<ConcatenationContext> {
-			return getRuleContexts(ConcatenationContext.self)
+
+	public class AlternationContext: ParserRuleContext {
+			open
+			func concatenation() -> [ConcatenationContext] {
+				return getRuleContexts(ConcatenationContext.self)
+			}
+			open
+			func concatenation(_ i: Int) -> ConcatenationContext? {
+				return getRuleContext(ConcatenationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_alternation
 		}
-		open func concatenation(_ i: Int) -> ConcatenationContext? {
-			return getRuleContext(ConcatenationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_alternation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterAlternation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterAlternation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitAlternation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitAlternation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitAlternation(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitAlternation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitAlternation(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitAlternation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func alternation() throws -> AlternationContext {
+	 open func alternation() throws -> AlternationContext {
 		var _localctx: AlternationContext = AlternationContext(_ctx, getState())
 		try enterRule(_localctx, 6, AbnfParser.RULE_alternation)
 		var _la: Int = 0
@@ -340,40 +357,47 @@ open class AbnfParser: Parser {
 
 		return _localctx
 	}
-	open class ConcatenationContext:ParserRuleContext {
-		open func repetition() -> Array<RepetitionContext> {
-			return getRuleContexts(RepetitionContext.self)
+
+	public class ConcatenationContext: ParserRuleContext {
+			open
+			func repetition() -> [RepetitionContext] {
+				return getRuleContexts(RepetitionContext.self)
+			}
+			open
+			func repetition(_ i: Int) -> RepetitionContext? {
+				return getRuleContext(RepetitionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_concatenation
 		}
-		open func repetition(_ i: Int) -> RepetitionContext? {
-			return getRuleContext(RepetitionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_concatenation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterConcatenation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterConcatenation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitConcatenation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitConcatenation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitConcatenation(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitConcatenation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitConcatenation(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitConcatenation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func concatenation() throws -> ConcatenationContext {
+	 open func concatenation() throws -> ConcatenationContext {
 		var _localctx: ConcatenationContext = ConcatenationContext(_ctx, getState())
 		try enterRule(_localctx, 8, AbnfParser.RULE_concatenation)
 		defer {
@@ -408,40 +432,47 @@ open class AbnfParser: Parser {
 
 		return _localctx
 	}
-	open class RepetitionContext:ParserRuleContext {
-		open func element() -> ElementContext? {
-			return getRuleContext(ElementContext.self,0)
+
+	public class RepetitionContext: ParserRuleContext {
+			open
+			func element() -> ElementContext? {
+				return getRuleContext(ElementContext.self, 0)
+			}
+			open
+			func repeat() -> RepeatContext? {
+				return getRuleContext(RepeatContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_repetition
 		}
-		open func repeat() -> RepeatContext? {
-			return getRuleContext(RepeatContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_repetition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterRepetition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterRepetition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitRepetition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitRepetition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitRepetition(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitRepetition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitRepetition(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitRepetition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func repetition() throws -> RepetitionContext {
+	 open func repetition() throws -> RepetitionContext {
 		var _localctx: RepetitionContext = RepetitionContext(_ctx, getState())
 		try enterRule(_localctx, 10, AbnfParser.RULE_repetition)
 		var _la: Int = 0
@@ -475,38 +506,47 @@ open class AbnfParser: Parser {
 
 		return _localctx
 	}
-	open class RepeatContext:ParserRuleContext {
-		open func INT() -> Array<TerminalNode> { return getTokens(AbnfParser.Tokens.INT.rawValue) }
-		open func INT(_ i:Int) -> TerminalNode?{
-			return getToken(AbnfParser.Tokens.INT.rawValue, i)
+
+	public class RepeatContext: ParserRuleContext {
+			open
+			func INT() -> [TerminalNode] {
+				return getTokens(AbnfParser.Tokens.INT.rawValue)
+			}
+			open
+			func INT(_ i:Int) -> TerminalNode? {
+				return getToken(AbnfParser.Tokens.INT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_repeat
 		}
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_repeat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterRepeat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterRepeat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitRepeat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitRepeat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitRepeat(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitRepeat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitRepeat(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitRepeat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func repeat() throws -> RepeatContext {
+	 open func repeat() throws -> RepeatContext {
 		var _localctx: RepeatContext = RepeatContext(_ctx, getState())
 		try enterRule(_localctx, 12, AbnfParser.RULE_repeat)
 		var _la: Int = 0
@@ -567,44 +607,63 @@ open class AbnfParser: Parser {
 
 		return _localctx
 	}
-	open class ElementContext:ParserRuleContext {
-		open func ID() -> TerminalNode? { return getToken(AbnfParser.Tokens.ID.rawValue, 0) }
-		open func group() -> GroupContext? {
-			return getRuleContext(GroupContext.self,0)
+
+	public class ElementContext: ParserRuleContext {
+			open
+			func ID() -> TerminalNode? {
+				return getToken(AbnfParser.Tokens.ID.rawValue, 0)
+			}
+			open
+			func group() -> GroupContext? {
+				return getRuleContext(GroupContext.self, 0)
+			}
+			open
+			func option() -> OptionContext? {
+				return getRuleContext(OptionContext.self, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(AbnfParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func NumberValue() -> TerminalNode? {
+				return getToken(AbnfParser.Tokens.NumberValue.rawValue, 0)
+			}
+			open
+			func ProseValue() -> TerminalNode? {
+				return getToken(AbnfParser.Tokens.ProseValue.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_element
 		}
-		open func option() -> OptionContext? {
-			return getRuleContext(OptionContext.self,0)
-		}
-		open func STRING() -> TerminalNode? { return getToken(AbnfParser.Tokens.STRING.rawValue, 0) }
-		open func NumberValue() -> TerminalNode? { return getToken(AbnfParser.Tokens.NumberValue.rawValue, 0) }
-		open func ProseValue() -> TerminalNode? { return getToken(AbnfParser.Tokens.ProseValue.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_element }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitElement(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitElement(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func element() throws -> ElementContext {
+	 open func element() throws -> ElementContext {
 		var _localctx: ElementContext = ElementContext(_ctx, getState())
 		try enterRule(_localctx, 14, AbnfParser.RULE_element)
 		defer {
@@ -656,7 +715,7 @@ open class AbnfParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -667,37 +726,43 @@ open class AbnfParser: Parser {
 
 		return _localctx
 	}
-	open class GroupContext:ParserRuleContext {
-		open func alternation() -> AlternationContext? {
-			return getRuleContext(AlternationContext.self,0)
+
+	public class GroupContext: ParserRuleContext {
+			open
+			func alternation() -> AlternationContext? {
+				return getRuleContext(AlternationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_group
 		}
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_group }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterGroup(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterGroup(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitGroup(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitGroup(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitGroup(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitGroup(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitGroup(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitGroup(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func group() throws -> GroupContext {
+	 open func group() throws -> GroupContext {
 		var _localctx: GroupContext = GroupContext(_ctx, getState())
 		try enterRule(_localctx, 16, AbnfParser.RULE_group)
 		defer {
@@ -721,37 +786,43 @@ open class AbnfParser: Parser {
 
 		return _localctx
 	}
-	open class OptionContext:ParserRuleContext {
-		open func alternation() -> AlternationContext? {
-			return getRuleContext(AlternationContext.self,0)
+
+	public class OptionContext: ParserRuleContext {
+			open
+			func alternation() -> AlternationContext? {
+				return getRuleContext(AlternationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return AbnfParser.RULE_option
 		}
-		open override func getRuleIndex() -> Int { return AbnfParser.RULE_option }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).enterOption(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.enterOption(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is AbnfListener {
-			 	(listener as! AbnfListener).exitOption(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? AbnfListener {
+				listener.exitOption(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is AbnfVisitor {
-			     return (visitor as! AbnfVisitor<T>).visitOption(self)
-			}else if visitor is AbnfBaseVisitor {
-		    	 return (visitor as! AbnfBaseVisitor<T>).visitOption(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? AbnfVisitor {
+			    return visitor.visitOption(self)
+			}
+			else if let visitor = visitor as? AbnfBaseVisitor {
+			    return visitor.visitOption(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func option() throws -> OptionContext {
+	 open func option() throws -> OptionContext {
 		var _localctx: OptionContext = OptionContext(_ctx, getState())
 		try enterRule(_localctx, 18, AbnfParser.RULE_option)
 		defer {
@@ -776,6 +847,10 @@ open class AbnfParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = AbnfParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = AbnfParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/mps/mps.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/mps/mps.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModell(_ ctx: mpsParser.ModellContext) -> T{
+	open func visitModell(_ ctx: mpsParser.ModellContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFirstrow(_ ctx: mpsParser.FirstrowContext) -> T{
+	open func visitFirstrow(_ ctx: mpsParser.FirstrowContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRows(_ ctx: mpsParser.RowsContext) -> T{
+	open func visitRows(_ ctx: mpsParser.RowsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumns(_ ctx: mpsParser.ColumnsContext) -> T{
+	open func visitColumns(_ ctx: mpsParser.ColumnsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRhs(_ ctx: mpsParser.RhsContext) -> T{
+	open func visitRhs(_ ctx: mpsParser.RhsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRanges(_ ctx: mpsParser.RangesContext) -> T{
+	open func visitRanges(_ ctx: mpsParser.RangesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBounds(_ ctx: mpsParser.BoundsContext) -> T{
+	open func visitBounds(_ ctx: mpsParser.BoundsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEndata(_ ctx: mpsParser.EndataContext) -> T{
+	open func visitEndata(_ ctx: mpsParser.EndataContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRowdatacard(_ ctx: mpsParser.RowdatacardContext) -> T{
+	open func visitRowdatacard(_ ctx: mpsParser.RowdatacardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumndatacards(_ ctx: mpsParser.ColumndatacardsContext) -> T{
+	open func visitColumndatacards(_ ctx: mpsParser.ColumndatacardsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRhsdatacards(_ ctx: mpsParser.RhsdatacardsContext) -> T{
+	open func visitRhsdatacards(_ ctx: mpsParser.RhsdatacardsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRangesdatacards(_ ctx: mpsParser.RangesdatacardsContext) -> T{
+	open func visitRangesdatacards(_ ctx: mpsParser.RangesdatacardsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoundsdatacards(_ ctx: mpsParser.BoundsdatacardsContext) -> T{
+	open func visitBoundsdatacards(_ ctx: mpsParser.BoundsdatacardsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumndatacard(_ ctx: mpsParser.ColumndatacardContext) -> T{
+	open func visitColumndatacard(_ ctx: mpsParser.ColumndatacardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRhsdatacard(_ ctx: mpsParser.RhsdatacardContext) -> T{
+	open func visitRhsdatacard(_ ctx: mpsParser.RhsdatacardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRangesdatacard(_ ctx: mpsParser.RangesdatacardContext) -> T{
+	open func visitRangesdatacard(_ ctx: mpsParser.RangesdatacardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoundsdatacard(_ ctx: mpsParser.BoundsdatacardContext) -> T{
+	open func visitBoundsdatacard(_ ctx: mpsParser.BoundsdatacardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntblock(_ ctx: mpsParser.IntblockContext) -> T{
+	open func visitIntblock(_ ctx: mpsParser.IntblockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStartmarker(_ ctx: mpsParser.StartmarkerContext) -> T{
+	open func visitStartmarker(_ ctx: mpsParser.StartmarkerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class mpsVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEndmarker(_ ctx: mpsParser.EndmarkerContext) -> T{
+	open func visitEndmarker(_ ctx: mpsParser.EndmarkerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

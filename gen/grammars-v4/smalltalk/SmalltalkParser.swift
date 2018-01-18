@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/smalltalk/Smalltalk.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/smalltalk/Smalltalk.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class SmalltalkParser: Parser {
@@ -11,8 +11,11 @@ open class SmalltalkParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, SEPARATOR = 1, STRING = 2, COMMENT = 3, BLOCK_START = 4, 
                  BLOCK_END = 5, CLOSE_PAREN = 6, OPEN_PAREN = 7, PIPE = 8, 
                  PERIOD = 9, SEMI_COLON = 10, BINARY_SELECTOR = 11, LT = 12, 
@@ -22,23 +25,27 @@ open class SmalltalkParser: Parser {
                  DYNARR_END = 26, DYNARR_START = 27, DIGIT = 28, HEXDIGIT = 29, 
                  KEYWORD = 30, BLOCK_PARAM = 31, CHARACTER_CONSTANT = 32
 	}
-	public static let RULE_script = 0, RULE_sequence = 1, RULE_ws = 2, RULE_temps = 3, 
-                   RULE_statements = 4, RULE_answer = 5, RULE_expression = 6, 
-                   RULE_expressions = 7, RULE_expressionList = 8, RULE_cascade = 9, 
-                   RULE_message = 10, RULE_assignment = 11, RULE_variable = 12, 
-                   RULE_binarySend = 13, RULE_unarySend = 14, RULE_keywordSend = 15, 
-                   RULE_keywordMessage = 16, RULE_keywordPair = 17, RULE_operand = 18, 
-                   RULE_subexpression = 19, RULE_literal = 20, RULE_runtimeLiteral = 21, 
-                   RULE_block = 22, RULE_blockParamList = 23, RULE_dynamicDictionary = 24, 
-                   RULE_dynamicArray = 25, RULE_parsetimeLiteral = 26, RULE_number = 27, 
-                   RULE_numberExp = 28, RULE_charConstant = 29, RULE_hex = 30, 
-                   RULE_stInteger = 31, RULE_stFloat = 32, RULE_pseudoVariable = 33, 
-                   RULE_string = 34, RULE_symbol = 35, RULE_primitive = 36, 
-                   RULE_bareSymbol = 37, RULE_literalArray = 38, RULE_literalArrayRest = 39, 
-                   RULE_bareLiteralArray = 40, RULE_unaryTail = 41, RULE_unaryMessage = 42, 
-                   RULE_unarySelector = 43, RULE_keywords = 44, RULE_reference = 45, 
-                   RULE_binaryTail = 46, RULE_binaryMessage = 47
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_script = 0, RULE_sequence = 1, RULE_ws = 2, RULE_temps = 3, 
+            RULE_statements = 4, RULE_answer = 5, RULE_expression = 6, RULE_expressions = 7, 
+            RULE_expressionList = 8, RULE_cascade = 9, RULE_message = 10, 
+            RULE_assignment = 11, RULE_variable = 12, RULE_binarySend = 13, 
+            RULE_unarySend = 14, RULE_keywordSend = 15, RULE_keywordMessage = 16, 
+            RULE_keywordPair = 17, RULE_operand = 18, RULE_subexpression = 19, 
+            RULE_literal = 20, RULE_runtimeLiteral = 21, RULE_block = 22, 
+            RULE_blockParamList = 23, RULE_dynamicDictionary = 24, RULE_dynamicArray = 25, 
+            RULE_parsetimeLiteral = 26, RULE_number = 27, RULE_numberExp = 28, 
+            RULE_charConstant = 29, RULE_hex = 30, RULE_stInteger = 31, 
+            RULE_stFloat = 32, RULE_pseudoVariable = 33, RULE_string = 34, 
+            RULE_symbol = 35, RULE_primitive = 36, RULE_bareSymbol = 37, 
+            RULE_literalArray = 38, RULE_literalArrayRest = 39, RULE_bareLiteralArray = 40, 
+            RULE_unaryTail = 41, RULE_unaryMessage = 42, RULE_unarySelector = 43, 
+            RULE_keywords = 44, RULE_reference = 45, RULE_binaryTail = 46, 
+            RULE_binaryMessage = 47
+
+	public
+	static let ruleNames: [String] = [
 		"script", "sequence", "ws", "temps", "statements", "answer", "expression", 
 		"expressions", "expressionList", "cascade", "message", "assignment", "variable", 
 		"binarySend", "unarySend", "keywordSend", "keywordMessage", "keywordPair", 
@@ -62,86 +69,73 @@ open class SmalltalkParser: Parser {
 		"HASH", "DOLLAR", "EXP", "HEX", "LITARR_START", "DYNDICT_START", "DYNARR_END", 
 		"DYNARR_START", "DIGIT", "HEXDIGIT", "KEYWORD", "BLOCK_PARAM", "CHARACTER_CONSTANT"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Smalltalk.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return SmalltalkParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Smalltalk.g4" }
+	override open
+	func getSerializedATN() -> String { return SmalltalkParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return SmalltalkParser.ruleNames }
+	override open
+	func getATN() -> ATN { return SmalltalkParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return SmalltalkParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return SmalltalkParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return SmalltalkParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,SmalltalkParser._ATN,SmalltalkParser._decisionToDFA, SmalltalkParser._sharedContextCache)
 	}
-	open class ScriptContext:ParserRuleContext {
-		open func sequence() -> SequenceContext? {
-			return getRuleContext(SequenceContext.self,0)
+
+	public class ScriptContext: ParserRuleContext {
+			open
+			func sequence() -> SequenceContext? {
+				return getRuleContext(SequenceContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.EOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_script
 		}
-		open func EOF() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.EOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_script }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterScript(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterScript(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitScript(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitScript(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitScript(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitScript(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitScript(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitScript(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func script() throws -> ScriptContext {
+	 open func script() throws -> ScriptContext {
 		var _localctx: ScriptContext = ScriptContext(_ctx, getState())
 		try enterRule(_localctx, 0, SmalltalkParser.RULE_script)
 		defer {
@@ -163,43 +157,51 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class SequenceContext:ParserRuleContext {
-		open func temps() -> TempsContext? {
-			return getRuleContext(TempsContext.self,0)
+
+	public class SequenceContext: ParserRuleContext {
+			open
+			func temps() -> TempsContext? {
+				return getRuleContext(TempsContext.self, 0)
+			}
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+			open
+			func statements() -> StatementsContext? {
+				return getRuleContext(StatementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_sequence
 		}
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
-		}
-		open func statements() -> StatementsContext? {
-			return getRuleContext(StatementsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_sequence }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterSequence(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterSequence(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitSequence(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitSequence(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitSequence(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitSequence(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitSequence(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitSequence(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sequence() throws -> SequenceContext {
+	 open func sequence() throws -> SequenceContext {
 		var _localctx: SequenceContext = SequenceContext(_ctx, getState())
 		try enterRule(_localctx, 2, SmalltalkParser.RULE_sequence)
 		var _la: Int = 0
@@ -281,7 +283,7 @@ open class SmalltalkParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -292,42 +294,55 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class WsContext:ParserRuleContext {
-		open func SEPARATOR() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.SEPARATOR.rawValue) }
-		open func SEPARATOR(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.SEPARATOR.rawValue, i)
+
+	public class WsContext: ParserRuleContext {
+			open
+			func SEPARATOR() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.SEPARATOR.rawValue)
+			}
+			open
+			func SEPARATOR(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.SEPARATOR.rawValue, i)
+			}
+			open
+			func COMMENT() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.COMMENT.rawValue)
+			}
+			open
+			func COMMENT(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.COMMENT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_ws
 		}
-		open func COMMENT() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.COMMENT.rawValue) }
-		open func COMMENT(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.COMMENT.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_ws }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterWs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterWs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitWs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitWs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitWs(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitWs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitWs(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitWs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ws() throws -> WsContext {
+	 open func ws() throws -> WsContext {
 		var _localctx: WsContext = WsContext(_ctx, getState())
 		try enterRule(_localctx, 4, SmalltalkParser.RULE_ws)
 		var _la: Int = 0
@@ -360,7 +375,7 @@ open class SmalltalkParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(115); 
 		 		try _errHandler.sync(self)
@@ -376,48 +391,63 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class TempsContext:ParserRuleContext {
-		open func PIPE() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.PIPE.rawValue) }
-		open func PIPE(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.PIPE.rawValue, i)
+
+	public class TempsContext: ParserRuleContext {
+			open
+			func PIPE() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.PIPE.rawValue)
+			}
+			open
+			func PIPE(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.PIPE.rawValue, i)
+			}
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_temps
 		}
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.IDENTIFIER.rawValue, i)
-		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_temps }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterTemps(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterTemps(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitTemps(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitTemps(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitTemps(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitTemps(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitTemps(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitTemps(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func temps() throws -> TempsContext {
+	 open func temps() throws -> TempsContext {
 		var _localctx: TempsContext = TempsContext(_ctx, getState())
 		try enterRule(_localctx, 6, SmalltalkParser.RULE_temps)
 		var _la: Int = 0
@@ -454,7 +484,7 @@ open class SmalltalkParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(124); 
 		 		try _errHandler.sync(self)
@@ -485,128 +515,156 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class StatementsContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_statements }
+
+	public class StatementsContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_statements
+		}
 	 
-		public  func copyFrom(_ ctx: StatementsContext) {
+		open
+		func copyFrom(_ ctx: StatementsContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class StatementAnswerContext: StatementsContext {
-		open func answer() -> AnswerContext? {
-			return getRuleContext(AnswerContext.self,0)
-		}
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
-		}
-		public init(_ ctx: StatementsContext) {
+	public class StatementAnswerContext: StatementsContext {
+			open
+			func answer() -> AnswerContext? {
+				return getRuleContext(AnswerContext.self, 0)
+			}
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StatementsContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterStatementAnswer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterStatementAnswer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitStatementAnswer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitStatementAnswer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitStatementAnswer(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitStatementAnswer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitStatementAnswer(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitStatementAnswer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StatementExpressionsContext: StatementsContext {
-		open func expressions() -> ExpressionsContext? {
-			return getRuleContext(ExpressionsContext.self,0)
-		}
-		open func PERIOD() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0) }
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
-		}
-		public init(_ ctx: StatementsContext) {
+	public class StatementExpressionsContext: StatementsContext {
+			open
+			func expressions() -> ExpressionsContext? {
+				return getRuleContext(ExpressionsContext.self, 0)
+			}
+			open
+			func PERIOD() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0)
+			}
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StatementsContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterStatementExpressions(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterStatementExpressions(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitStatementExpressions(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitStatementExpressions(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitStatementExpressions(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitStatementExpressions(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitStatementExpressions(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitStatementExpressions(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StatementExpressionsAnswerContext: StatementsContext {
-		open func expressions() -> ExpressionsContext? {
-			return getRuleContext(ExpressionsContext.self,0)
-		}
-		open func PERIOD() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0) }
-		open func answer() -> AnswerContext? {
-			return getRuleContext(AnswerContext.self,0)
-		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		public init(_ ctx: StatementsContext) {
+	public class StatementExpressionsAnswerContext: StatementsContext {
+			open
+			func expressions() -> ExpressionsContext? {
+				return getRuleContext(ExpressionsContext.self, 0)
+			}
+			open
+			func PERIOD() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0)
+			}
+			open
+			func answer() -> AnswerContext? {
+				return getRuleContext(AnswerContext.self, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+
+		public
+		init(_ ctx: StatementsContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterStatementExpressionsAnswer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterStatementExpressionsAnswer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitStatementExpressionsAnswer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitStatementExpressionsAnswer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitStatementExpressionsAnswer(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitStatementExpressionsAnswer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitStatementExpressionsAnswer(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitStatementExpressionsAnswer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statements() throws -> StatementsContext {
+	 open func statements() throws -> StatementsContext {
 		var _localctx: StatementsContext = StatementsContext(_ctx, getState())
 		try enterRule(_localctx, 8, SmalltalkParser.RULE_statements)
 		var _la: Int = 0
@@ -718,45 +776,59 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class AnswerContext:ParserRuleContext {
-		open func CARROT() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.CARROT.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class AnswerContext: ParserRuleContext {
+			open
+			func CARROT() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.CARROT.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func PERIOD() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_answer
 		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func PERIOD() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_answer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterAnswer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterAnswer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitAnswer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitAnswer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitAnswer(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitAnswer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitAnswer(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitAnswer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func answer() throws -> AnswerContext {
+	 open func answer() throws -> AnswerContext {
 		var _localctx: AnswerContext = AnswerContext(_ctx, getState())
 		try enterRule(_localctx, 10, SmalltalkParser.RULE_answer)
 		var _la: Int = 0
@@ -815,49 +887,59 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func assignment() -> AssignmentContext? {
-			return getRuleContext(AssignmentContext.self,0)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func assignment() -> AssignmentContext? {
+				return getRuleContext(AssignmentContext.self, 0)
+			}
+			open
+			func cascade() -> CascadeContext? {
+				return getRuleContext(CascadeContext.self, 0)
+			}
+			open
+			func keywordSend() -> KeywordSendContext? {
+				return getRuleContext(KeywordSendContext.self, 0)
+			}
+			open
+			func binarySend() -> BinarySendContext? {
+				return getRuleContext(BinarySendContext.self, 0)
+			}
+			open
+			func primitive() -> PrimitiveContext? {
+				return getRuleContext(PrimitiveContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_expression
 		}
-		open func cascade() -> CascadeContext? {
-			return getRuleContext(CascadeContext.self,0)
-		}
-		open func keywordSend() -> KeywordSendContext? {
-			return getRuleContext(KeywordSendContext.self,0)
-		}
-		open func binarySend() -> BinarySendContext? {
-			return getRuleContext(BinarySendContext.self,0)
-		}
-		open func primitive() -> PrimitiveContext? {
-			return getRuleContext(PrimitiveContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitExpression(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 12, SmalltalkParser.RULE_expression)
 		defer {
@@ -908,43 +990,51 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionsContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ExpressionsContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func expressionList() -> [ExpressionListContext] {
+				return getRuleContexts(ExpressionListContext.self)
+			}
+			open
+			func expressionList(_ i: Int) -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_expressions
 		}
-		open func expressionList() -> Array<ExpressionListContext> {
-			return getRuleContexts(ExpressionListContext.self)
-		}
-		open func expressionList(_ i: Int) -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_expressions }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterExpressions(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterExpressions(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitExpressions(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitExpressions(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitExpressions(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitExpressions(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitExpressions(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitExpressions(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressions() throws -> ExpressionsContext {
+	 open func expressions() throws -> ExpressionsContext {
 		var _localctx: ExpressionsContext = ExpressionsContext(_ctx, getState())
 		try enterRule(_localctx, 14, SmalltalkParser.RULE_expressions)
 		defer {
@@ -979,41 +1069,51 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionListContext:ParserRuleContext {
-		open func PERIOD() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ExpressionListContext: ParserRuleContext {
+			open
+			func PERIOD() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_expressionList
 		}
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_expressionList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterExpressionList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterExpressionList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitExpressionList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitExpressionList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitExpressionList(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitExpressionList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitExpressionList(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitExpressionList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionList() throws -> ExpressionListContext {
+	 open func expressionList() throws -> ExpressionListContext {
 		var _localctx: ExpressionListContext = ExpressionListContext(_ctx, getState())
 		try enterRule(_localctx, 16, SmalltalkParser.RULE_expressionList)
 		var _la: Int = 0
@@ -1049,56 +1149,71 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class CascadeContext:ParserRuleContext {
-		open func keywordSend() -> KeywordSendContext? {
-			return getRuleContext(KeywordSendContext.self,0)
+
+	public class CascadeContext: ParserRuleContext {
+			open
+			func keywordSend() -> KeywordSendContext? {
+				return getRuleContext(KeywordSendContext.self, 0)
+			}
+			open
+			func binarySend() -> BinarySendContext? {
+				return getRuleContext(BinarySendContext.self, 0)
+			}
+			open
+			func SEMI_COLON() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.SEMI_COLON.rawValue)
+			}
+			open
+			func SEMI_COLON(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.SEMI_COLON.rawValue, i)
+			}
+			open
+			func message() -> [MessageContext] {
+				return getRuleContexts(MessageContext.self)
+			}
+			open
+			func message(_ i: Int) -> MessageContext? {
+				return getRuleContext(MessageContext.self, i)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_cascade
 		}
-		open func binarySend() -> BinarySendContext? {
-			return getRuleContext(BinarySendContext.self,0)
-		}
-		open func SEMI_COLON() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.SEMI_COLON.rawValue) }
-		open func SEMI_COLON(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.SEMI_COLON.rawValue, i)
-		}
-		open func message() -> Array<MessageContext> {
-			return getRuleContexts(MessageContext.self)
-		}
-		open func message(_ i: Int) -> MessageContext? {
-			return getRuleContext(MessageContext.self,i)
-		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_cascade }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterCascade(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterCascade(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitCascade(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitCascade(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitCascade(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitCascade(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitCascade(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitCascade(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cascade() throws -> CascadeContext {
+	 open func cascade() throws -> CascadeContext {
 		var _localctx: CascadeContext = CascadeContext(_ctx, getState())
 		try enterRule(_localctx, 18, SmalltalkParser.RULE_cascade)
 		var _la: Int = 0
@@ -1160,7 +1275,7 @@ open class SmalltalkParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(199); 
 		 		try _errHandler.sync(self)
@@ -1176,43 +1291,51 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class MessageContext:ParserRuleContext {
-		open func binaryMessage() -> BinaryMessageContext? {
-			return getRuleContext(BinaryMessageContext.self,0)
+
+	public class MessageContext: ParserRuleContext {
+			open
+			func binaryMessage() -> BinaryMessageContext? {
+				return getRuleContext(BinaryMessageContext.self, 0)
+			}
+			open
+			func unaryMessage() -> UnaryMessageContext? {
+				return getRuleContext(UnaryMessageContext.self, 0)
+			}
+			open
+			func keywordMessage() -> KeywordMessageContext? {
+				return getRuleContext(KeywordMessageContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_message
 		}
-		open func unaryMessage() -> UnaryMessageContext? {
-			return getRuleContext(UnaryMessageContext.self,0)
-		}
-		open func keywordMessage() -> KeywordMessageContext? {
-			return getRuleContext(KeywordMessageContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_message }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterMessage(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterMessage(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitMessage(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitMessage(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitMessage(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitMessage(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitMessage(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitMessage(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func message() throws -> MessageContext {
+	 open func message() throws -> MessageContext {
 		var _localctx: MessageContext = MessageContext(_ctx, getState())
 		try enterRule(_localctx, 20, SmalltalkParser.RULE_message)
 		defer {
@@ -1251,47 +1374,59 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentContext:ParserRuleContext {
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class AssignmentContext: ParserRuleContext {
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func ASSIGNMENT() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.ASSIGNMENT.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_assignment
 		}
-		open func ASSIGNMENT() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.ASSIGNMENT.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterAssignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterAssignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitAssignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitAssignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitAssignment(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitAssignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitAssignment(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitAssignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignment() throws -> AssignmentContext {
+	 open func assignment() throws -> AssignmentContext {
 		var _localctx: AssignmentContext = AssignmentContext(_ctx, getState())
 		try enterRule(_localctx, 22, SmalltalkParser.RULE_assignment)
 		var _la: Int = 0
@@ -1342,35 +1477,43 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class VariableContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_variable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterVariable(self)
+
+	public class VariableContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_variable
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitVariable(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitVariable(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable() throws -> VariableContext {
+	 open func variable() throws -> VariableContext {
 		var _localctx: VariableContext = VariableContext(_ctx, getState())
 		try enterRule(_localctx, 24, SmalltalkParser.RULE_variable)
 		defer {
@@ -1390,40 +1533,47 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class BinarySendContext:ParserRuleContext {
-		open func unarySend() -> UnarySendContext? {
-			return getRuleContext(UnarySendContext.self,0)
+
+	public class BinarySendContext: ParserRuleContext {
+			open
+			func unarySend() -> UnarySendContext? {
+				return getRuleContext(UnarySendContext.self, 0)
+			}
+			open
+			func binaryTail() -> BinaryTailContext? {
+				return getRuleContext(BinaryTailContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_binarySend
 		}
-		open func binaryTail() -> BinaryTailContext? {
-			return getRuleContext(BinaryTailContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_binarySend }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterBinarySend(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterBinarySend(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitBinarySend(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitBinarySend(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitBinarySend(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitBinarySend(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitBinarySend(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitBinarySend(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binarySend() throws -> BinarySendContext {
+	 open func binarySend() throws -> BinarySendContext {
 		var _localctx: BinarySendContext = BinarySendContext(_ctx, getState())
 		try enterRule(_localctx, 26, SmalltalkParser.RULE_binarySend)
 		defer {
@@ -1453,43 +1603,51 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class UnarySendContext:ParserRuleContext {
-		open func operand() -> OperandContext? {
-			return getRuleContext(OperandContext.self,0)
+
+	public class UnarySendContext: ParserRuleContext {
+			open
+			func operand() -> OperandContext? {
+				return getRuleContext(OperandContext.self, 0)
+			}
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+			open
+			func unaryTail() -> UnaryTailContext? {
+				return getRuleContext(UnaryTailContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_unarySend
 		}
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
-		}
-		open func unaryTail() -> UnaryTailContext? {
-			return getRuleContext(UnaryTailContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_unarySend }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterUnarySend(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterUnarySend(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitUnarySend(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitUnarySend(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitUnarySend(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitUnarySend(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitUnarySend(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitUnarySend(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unarySend() throws -> UnarySendContext {
+	 open func unarySend() throws -> UnarySendContext {
 		var _localctx: UnarySendContext = UnarySendContext(_ctx, getState())
 		try enterRule(_localctx, 28, SmalltalkParser.RULE_unarySend)
 		defer {
@@ -1529,40 +1687,47 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class KeywordSendContext:ParserRuleContext {
-		open func binarySend() -> BinarySendContext? {
-			return getRuleContext(BinarySendContext.self,0)
+
+	public class KeywordSendContext: ParserRuleContext {
+			open
+			func binarySend() -> BinarySendContext? {
+				return getRuleContext(BinarySendContext.self, 0)
+			}
+			open
+			func keywordMessage() -> KeywordMessageContext? {
+				return getRuleContext(KeywordMessageContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_keywordSend
 		}
-		open func keywordMessage() -> KeywordMessageContext? {
-			return getRuleContext(KeywordMessageContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_keywordSend }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterKeywordSend(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterKeywordSend(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitKeywordSend(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitKeywordSend(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitKeywordSend(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitKeywordSend(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitKeywordSend(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitKeywordSend(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keywordSend() throws -> KeywordSendContext {
+	 open func keywordSend() throws -> KeywordSendContext {
 		var _localctx: KeywordSendContext = KeywordSendContext(_ctx, getState())
 		try enterRule(_localctx, 30, SmalltalkParser.RULE_keywordSend)
 		defer {
@@ -1584,46 +1749,55 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class KeywordMessageContext:ParserRuleContext {
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
+
+	public class KeywordMessageContext: ParserRuleContext {
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func keywordPair() -> [KeywordPairContext] {
+				return getRuleContexts(KeywordPairContext.self)
+			}
+			open
+			func keywordPair(_ i: Int) -> KeywordPairContext? {
+				return getRuleContext(KeywordPairContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_keywordMessage
 		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func keywordPair() -> Array<KeywordPairContext> {
-			return getRuleContexts(KeywordPairContext.self)
-		}
-		open func keywordPair(_ i: Int) -> KeywordPairContext? {
-			return getRuleContext(KeywordPairContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_keywordMessage }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterKeywordMessage(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterKeywordMessage(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitKeywordMessage(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitKeywordMessage(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitKeywordMessage(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitKeywordMessage(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitKeywordMessage(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitKeywordMessage(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keywordMessage() throws -> KeywordMessageContext {
+	 open func keywordMessage() throws -> KeywordMessageContext {
 		var _localctx: KeywordMessageContext = KeywordMessageContext(_ctx, getState())
 		try enterRule(_localctx, 32, SmalltalkParser.RULE_keywordMessage)
 		var _la: Int = 0
@@ -1681,44 +1855,55 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class KeywordPairContext:ParserRuleContext {
-		open func KEYWORD() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.KEYWORD.rawValue, 0) }
-		open func binarySend() -> BinarySendContext? {
-			return getRuleContext(BinarySendContext.self,0)
+
+	public class KeywordPairContext: ParserRuleContext {
+			open
+			func KEYWORD() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.KEYWORD.rawValue, 0)
+			}
+			open
+			func binarySend() -> BinarySendContext? {
+				return getRuleContext(BinarySendContext.self, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_keywordPair
 		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_keywordPair }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterKeywordPair(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterKeywordPair(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitKeywordPair(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitKeywordPair(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitKeywordPair(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitKeywordPair(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitKeywordPair(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitKeywordPair(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keywordPair() throws -> KeywordPairContext {
+	 open func keywordPair() throws -> KeywordPairContext {
 		var _localctx: KeywordPairContext = KeywordPairContext(_ctx, getState())
 		try enterRule(_localctx, 34, SmalltalkParser.RULE_keywordPair)
 		var _la: Int = 0
@@ -1764,43 +1949,51 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class OperandContext:ParserRuleContext {
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
+
+	public class OperandContext: ParserRuleContext {
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func reference() -> ReferenceContext? {
+				return getRuleContext(ReferenceContext.self, 0)
+			}
+			open
+			func subexpression() -> SubexpressionContext? {
+				return getRuleContext(SubexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_operand
 		}
-		open func reference() -> ReferenceContext? {
-			return getRuleContext(ReferenceContext.self,0)
-		}
-		open func subexpression() -> SubexpressionContext? {
-			return getRuleContext(SubexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_operand }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterOperand(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterOperand(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitOperand(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitOperand(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitOperand(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitOperand(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitOperand(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitOperand(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operand() throws -> OperandContext {
+	 open func operand() throws -> OperandContext {
 		var _localctx: OperandContext = OperandContext(_ctx, getState())
 		try enterRule(_localctx, 36, SmalltalkParser.RULE_operand)
 		defer {
@@ -1841,7 +2034,7 @@ open class SmalltalkParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1852,45 +2045,59 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class SubexpressionContext:ParserRuleContext {
-		open func OPEN_PAREN() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.OPEN_PAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class SubexpressionContext: ParserRuleContext {
+			open
+			func OPEN_PAREN() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.OPEN_PAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func CLOSE_PAREN() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.CLOSE_PAREN.rawValue, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_subexpression
 		}
-		open func CLOSE_PAREN() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.CLOSE_PAREN.rawValue, 0) }
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_subexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterSubexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterSubexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitSubexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitSubexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitSubexpression(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitSubexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitSubexpression(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitSubexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subexpression() throws -> SubexpressionContext {
+	 open func subexpression() throws -> SubexpressionContext {
 		var _localctx: SubexpressionContext = SubexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 38, SmalltalkParser.RULE_subexpression)
 		var _la: Int = 0
@@ -1941,40 +2148,47 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func runtimeLiteral() -> RuntimeLiteralContext? {
-			return getRuleContext(RuntimeLiteralContext.self,0)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func runtimeLiteral() -> RuntimeLiteralContext? {
+				return getRuleContext(RuntimeLiteralContext.self, 0)
+			}
+			open
+			func parsetimeLiteral() -> ParsetimeLiteralContext? {
+				return getRuleContext(ParsetimeLiteralContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_literal
 		}
-		open func parsetimeLiteral() -> ParsetimeLiteralContext? {
-			return getRuleContext(ParsetimeLiteralContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitLiteral(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 40, SmalltalkParser.RULE_literal)
 		defer {
@@ -2006,7 +2220,7 @@ open class SmalltalkParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2017,43 +2231,51 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class RuntimeLiteralContext:ParserRuleContext {
-		open func dynamicDictionary() -> DynamicDictionaryContext? {
-			return getRuleContext(DynamicDictionaryContext.self,0)
+
+	public class RuntimeLiteralContext: ParserRuleContext {
+			open
+			func dynamicDictionary() -> DynamicDictionaryContext? {
+				return getRuleContext(DynamicDictionaryContext.self, 0)
+			}
+			open
+			func dynamicArray() -> DynamicArrayContext? {
+				return getRuleContext(DynamicArrayContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_runtimeLiteral
 		}
-		open func dynamicArray() -> DynamicArrayContext? {
-			return getRuleContext(DynamicArrayContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_runtimeLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterRuntimeLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterRuntimeLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitRuntimeLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitRuntimeLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitRuntimeLiteral(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitRuntimeLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitRuntimeLiteral(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitRuntimeLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func runtimeLiteral() throws -> RuntimeLiteralContext {
+	 open func runtimeLiteral() throws -> RuntimeLiteralContext {
 		var _localctx: RuntimeLiteralContext = RuntimeLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 42, SmalltalkParser.RULE_runtimeLiteral)
 		defer {
@@ -2084,7 +2306,7 @@ open class SmalltalkParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2095,45 +2317,59 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func BLOCK_START() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.BLOCK_START.rawValue, 0) }
-		open func BLOCK_END() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.BLOCK_END.rawValue, 0) }
-		open func blockParamList() -> BlockParamListContext? {
-			return getRuleContext(BlockParamListContext.self,0)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func BLOCK_START() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.BLOCK_START.rawValue, 0)
+			}
+			open
+			func BLOCK_END() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.BLOCK_END.rawValue, 0)
+			}
+			open
+			func blockParamList() -> BlockParamListContext? {
+				return getRuleContext(BlockParamListContext.self, 0)
+			}
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+			open
+			func sequence() -> SequenceContext? {
+				return getRuleContext(SequenceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_block
 		}
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
-		}
-		open func sequence() -> SequenceContext? {
-			return getRuleContext(SequenceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitBlock(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 44, SmalltalkParser.RULE_block)
 		var _la: Int = 0
@@ -2192,44 +2428,55 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class BlockParamListContext:ParserRuleContext {
-		open func BLOCK_PARAM() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.BLOCK_PARAM.rawValue) }
-		open func BLOCK_PARAM(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.BLOCK_PARAM.rawValue, i)
+
+	public class BlockParamListContext: ParserRuleContext {
+			open
+			func BLOCK_PARAM() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.BLOCK_PARAM.rawValue)
+			}
+			open
+			func BLOCK_PARAM(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.BLOCK_PARAM.rawValue, i)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_blockParamList
 		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_blockParamList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterBlockParamList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterBlockParamList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitBlockParamList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitBlockParamList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitBlockParamList(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitBlockParamList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitBlockParamList(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitBlockParamList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blockParamList() throws -> BlockParamListContext {
+	 open func blockParamList() throws -> BlockParamListContext {
 		var _localctx: BlockParamListContext = BlockParamListContext(_ctx, getState())
 		try enterRule(_localctx, 46, SmalltalkParser.RULE_blockParamList)
 		var _la: Int = 0
@@ -2264,7 +2511,7 @@ open class SmalltalkParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(293); 
 		 		try _errHandler.sync(self)
@@ -2280,45 +2527,59 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class DynamicDictionaryContext:ParserRuleContext {
-		open func DYNDICT_START() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.DYNDICT_START.rawValue, 0) }
-		open func DYNARR_END() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.DYNARR_END.rawValue, 0) }
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
+
+	public class DynamicDictionaryContext: ParserRuleContext {
+			open
+			func DYNDICT_START() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.DYNDICT_START.rawValue, 0)
+			}
+			open
+			func DYNARR_END() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.DYNARR_END.rawValue, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func expressions() -> ExpressionsContext? {
+				return getRuleContext(ExpressionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_dynamicDictionary
 		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func expressions() -> ExpressionsContext? {
-			return getRuleContext(ExpressionsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_dynamicDictionary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterDynamicDictionary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterDynamicDictionary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitDynamicDictionary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitDynamicDictionary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitDynamicDictionary(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitDynamicDictionary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitDynamicDictionary(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitDynamicDictionary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dynamicDictionary() throws -> DynamicDictionaryContext {
+	 open func dynamicDictionary() throws -> DynamicDictionaryContext {
 		var _localctx: DynamicDictionaryContext = DynamicDictionaryContext(_ctx, getState())
 		try enterRule(_localctx, 48, SmalltalkParser.RULE_dynamicDictionary)
 		var _la: Int = 0
@@ -2380,45 +2641,59 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class DynamicArrayContext:ParserRuleContext {
-		open func DYNARR_START() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.DYNARR_START.rawValue, 0) }
-		open func DYNARR_END() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.DYNARR_END.rawValue, 0) }
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
+
+	public class DynamicArrayContext: ParserRuleContext {
+			open
+			func DYNARR_START() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.DYNARR_START.rawValue, 0)
+			}
+			open
+			func DYNARR_END() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.DYNARR_END.rawValue, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func expressions() -> ExpressionsContext? {
+				return getRuleContext(ExpressionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_dynamicArray
 		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func expressions() -> ExpressionsContext? {
-			return getRuleContext(ExpressionsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_dynamicArray }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterDynamicArray(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterDynamicArray(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitDynamicArray(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitDynamicArray(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitDynamicArray(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitDynamicArray(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitDynamicArray(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitDynamicArray(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dynamicArray() throws -> DynamicArrayContext {
+	 open func dynamicArray() throws -> DynamicArrayContext {
 		var _localctx: DynamicArrayContext = DynamicArrayContext(_ctx, getState())
 		try enterRule(_localctx, 50, SmalltalkParser.RULE_dynamicArray)
 		var _la: Int = 0
@@ -2480,52 +2755,63 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class ParsetimeLiteralContext:ParserRuleContext {
-		open func pseudoVariable() -> PseudoVariableContext? {
-			return getRuleContext(PseudoVariableContext.self,0)
+
+	public class ParsetimeLiteralContext: ParserRuleContext {
+			open
+			func pseudoVariable() -> PseudoVariableContext? {
+				return getRuleContext(PseudoVariableContext.self, 0)
+			}
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func charConstant() -> CharConstantContext? {
+				return getRuleContext(CharConstantContext.self, 0)
+			}
+			open
+			func literalArray() -> LiteralArrayContext? {
+				return getRuleContext(LiteralArrayContext.self, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func symbol() -> SymbolContext? {
+				return getRuleContext(SymbolContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_parsetimeLiteral
 		}
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
-		}
-		open func charConstant() -> CharConstantContext? {
-			return getRuleContext(CharConstantContext.self,0)
-		}
-		open func literalArray() -> LiteralArrayContext? {
-			return getRuleContext(LiteralArrayContext.self,0)
-		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func symbol() -> SymbolContext? {
-			return getRuleContext(SymbolContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_parsetimeLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterParsetimeLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterParsetimeLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitParsetimeLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitParsetimeLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitParsetimeLiteral(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitParsetimeLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitParsetimeLiteral(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitParsetimeLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parsetimeLiteral() throws -> ParsetimeLiteralContext {
+	 open func parsetimeLiteral() throws -> ParsetimeLiteralContext {
 		var _localctx: ParsetimeLiteralContext = ParsetimeLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 52, SmalltalkParser.RULE_parsetimeLiteral)
 		defer {
@@ -2578,7 +2864,7 @@ open class SmalltalkParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2589,46 +2875,55 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class NumberContext:ParserRuleContext {
-		open func numberExp() -> NumberExpContext? {
-			return getRuleContext(NumberExpContext.self,0)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func numberExp() -> NumberExpContext? {
+				return getRuleContext(NumberExpContext.self, 0)
+			}
+			open
+			func hex() -> HexContext? {
+				return getRuleContext(HexContext.self, 0)
+			}
+			open
+			func stFloat() -> StFloatContext? {
+				return getRuleContext(StFloatContext.self, 0)
+			}
+			open
+			func stInteger() -> StIntegerContext? {
+				return getRuleContext(StIntegerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_number
 		}
-		open func hex() -> HexContext? {
-			return getRuleContext(HexContext.self,0)
-		}
-		open func stFloat() -> StFloatContext? {
-			return getRuleContext(StFloatContext.self,0)
-		}
-		open func stInteger() -> StIntegerContext? {
-			return getRuleContext(StIntegerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterNumber(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitNumber(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 54, SmalltalkParser.RULE_number)
 		defer {
@@ -2673,44 +2968,55 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class NumberExpContext:ParserRuleContext {
-		open func EXP() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.EXP.rawValue, 0) }
-		open func stInteger() -> Array<StIntegerContext> {
-			return getRuleContexts(StIntegerContext.self)
+
+	public class NumberExpContext: ParserRuleContext {
+			open
+			func EXP() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.EXP.rawValue, 0)
+			}
+			open
+			func stInteger() -> [StIntegerContext] {
+				return getRuleContexts(StIntegerContext.self)
+			}
+			open
+			func stInteger(_ i: Int) -> StIntegerContext? {
+				return getRuleContext(StIntegerContext.self, i)
+			}
+			open
+			func stFloat() -> StFloatContext? {
+				return getRuleContext(StFloatContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_numberExp
 		}
-		open func stInteger(_ i: Int) -> StIntegerContext? {
-			return getRuleContext(StIntegerContext.self,i)
-		}
-		open func stFloat() -> StFloatContext? {
-			return getRuleContext(StFloatContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_numberExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterNumberExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterNumberExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitNumberExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitNumberExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitNumberExp(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitNumberExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitNumberExp(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitNumberExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numberExp() throws -> NumberExpContext {
+	 open func numberExp() throws -> NumberExpContext {
 		var _localctx: NumberExpContext = NumberExpContext(_ctx, getState())
 		try enterRule(_localctx, 56, SmalltalkParser.RULE_numberExp)
 		defer {
@@ -2747,35 +3053,43 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class CharConstantContext:ParserRuleContext {
-		open func CHARACTER_CONSTANT() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.CHARACTER_CONSTANT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_charConstant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterCharConstant(self)
+
+	public class CharConstantContext: ParserRuleContext {
+			open
+			func CHARACTER_CONSTANT() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.CHARACTER_CONSTANT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_charConstant
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterCharConstant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitCharConstant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitCharConstant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitCharConstant(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitCharConstant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitCharConstant(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitCharConstant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func charConstant() throws -> CharConstantContext {
+	 open func charConstant() throws -> CharConstantContext {
 		var _localctx: CharConstantContext = CharConstantContext(_ctx, getState())
 		try enterRule(_localctx, 58, SmalltalkParser.RULE_charConstant)
 		defer {
@@ -2795,40 +3109,55 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class HexContext:ParserRuleContext {
-		open func HEX() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.HEX.rawValue, 0) }
-		open func MINUS() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.MINUS.rawValue, 0) }
-		open func HEXDIGIT() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.HEXDIGIT.rawValue) }
-		open func HEXDIGIT(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.HEXDIGIT.rawValue, i)
+
+	public class HexContext: ParserRuleContext {
+			open
+			func HEX() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.HEX.rawValue, 0)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.MINUS.rawValue, 0)
+			}
+			open
+			func HEXDIGIT() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.HEXDIGIT.rawValue)
+			}
+			open
+			func HEXDIGIT(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.HEXDIGIT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_hex
 		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_hex }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterHex(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterHex(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitHex(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitHex(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitHex(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitHex(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitHex(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitHex(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hex() throws -> HexContext {
+	 open func hex() throws -> HexContext {
 		var _localctx: HexContext = HexContext(_ctx, getState())
 		try enterRule(_localctx, 60, SmalltalkParser.RULE_hex)
 		var _la: Int = 0
@@ -2878,39 +3207,51 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class StIntegerContext:ParserRuleContext {
-		open func MINUS() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.MINUS.rawValue, 0) }
-		open func DIGIT() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.DIGIT.rawValue) }
-		open func DIGIT(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.DIGIT.rawValue, i)
+
+	public class StIntegerContext: ParserRuleContext {
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.MINUS.rawValue, 0)
+			}
+			open
+			func DIGIT() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.DIGIT.rawValue)
+			}
+			open
+			func DIGIT(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.DIGIT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_stInteger
 		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_stInteger }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterStInteger(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterStInteger(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitStInteger(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitStInteger(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitStInteger(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitStInteger(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitStInteger(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitStInteger(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stInteger() throws -> StIntegerContext {
+	 open func stInteger() throws -> StIntegerContext {
 		var _localctx: StIntegerContext = StIntegerContext(_ctx, getState())
 		try enterRule(_localctx, 62, SmalltalkParser.RULE_stInteger)
 		var _la: Int = 0
@@ -2945,7 +3286,7 @@ open class SmalltalkParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(357); 
 		 		try _errHandler.sync(self)
@@ -2961,40 +3302,55 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class StFloatContext:ParserRuleContext {
-		open func PERIOD() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0) }
-		open func MINUS() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.MINUS.rawValue, 0) }
-		open func DIGIT() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.DIGIT.rawValue) }
-		open func DIGIT(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.DIGIT.rawValue, i)
+
+	public class StFloatContext: ParserRuleContext {
+			open
+			func PERIOD() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.PERIOD.rawValue, 0)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.MINUS.rawValue, 0)
+			}
+			open
+			func DIGIT() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.DIGIT.rawValue)
+			}
+			open
+			func DIGIT(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.DIGIT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_stFloat
 		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_stFloat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterStFloat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterStFloat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitStFloat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitStFloat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitStFloat(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitStFloat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitStFloat(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitStFloat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stFloat() throws -> StFloatContext {
+	 open func stFloat() throws -> StFloatContext {
 		var _localctx: StFloatContext = StFloatContext(_ctx, getState())
 		try enterRule(_localctx, 64, SmalltalkParser.RULE_stFloat)
 		var _la: Int = 0
@@ -3047,7 +3403,7 @@ open class SmalltalkParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(371); 
 		 		try _errHandler.sync(self)
@@ -3063,35 +3419,43 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class PseudoVariableContext:ParserRuleContext {
-		open func RESERVED_WORD() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.RESERVED_WORD.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_pseudoVariable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterPseudoVariable(self)
+
+	public class PseudoVariableContext: ParserRuleContext {
+			open
+			func RESERVED_WORD() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.RESERVED_WORD.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_pseudoVariable
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterPseudoVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitPseudoVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitPseudoVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitPseudoVariable(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitPseudoVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitPseudoVariable(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitPseudoVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pseudoVariable() throws -> PseudoVariableContext {
+	 open func pseudoVariable() throws -> PseudoVariableContext {
 		var _localctx: PseudoVariableContext = PseudoVariableContext(_ctx, getState())
 		try enterRule(_localctx, 66, SmalltalkParser.RULE_pseudoVariable)
 		defer {
@@ -3111,35 +3475,43 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class StringContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_string }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterString(self)
+
+	public class StringContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_string
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitString(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitString(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string() throws -> StringContext {
+	 open func string() throws -> StringContext {
 		var _localctx: StringContext = StringContext(_ctx, getState())
 		try enterRule(_localctx, 68, SmalltalkParser.RULE_string)
 		defer {
@@ -3159,38 +3531,47 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class SymbolContext:ParserRuleContext {
-		open func HASH() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.HASH.rawValue, 0) }
-		open func bareSymbol() -> BareSymbolContext? {
-			return getRuleContext(BareSymbolContext.self,0)
+
+	public class SymbolContext: ParserRuleContext {
+			open
+			func HASH() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.HASH.rawValue, 0)
+			}
+			open
+			func bareSymbol() -> BareSymbolContext? {
+				return getRuleContext(BareSymbolContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_symbol
 		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_symbol }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterSymbol(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterSymbol(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitSymbol(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitSymbol(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitSymbol(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitSymbol(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitSymbol(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitSymbol(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func symbol() throws -> SymbolContext {
+	 open func symbol() throws -> SymbolContext {
 		var _localctx: SymbolContext = SymbolContext(_ctx, getState())
 		try enterRule(_localctx, 70, SmalltalkParser.RULE_symbol)
 		defer {
@@ -3212,47 +3593,67 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class PrimitiveContext:ParserRuleContext {
-		open func LT() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.LT.rawValue, 0) }
-		open func KEYWORD() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.KEYWORD.rawValue, 0) }
-		open func GT() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.GT.rawValue, 0) }
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
+
+	public class PrimitiveContext: ParserRuleContext {
+			open
+			func LT() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.LT.rawValue, 0)
+			}
+			open
+			func KEYWORD() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.KEYWORD.rawValue, 0)
+			}
+			open
+			func GT() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.GT.rawValue, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func DIGIT() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.DIGIT.rawValue)
+			}
+			open
+			func DIGIT(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.DIGIT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_primitive
 		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func DIGIT() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.DIGIT.rawValue) }
-		open func DIGIT(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.DIGIT.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_primitive }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterPrimitive(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterPrimitive(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitPrimitive(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitPrimitive(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitPrimitive(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitPrimitive(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitPrimitive(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitPrimitive(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primitive() throws -> PrimitiveContext {
+	 open func primitive() throws -> PrimitiveContext {
 		var _localctx: PrimitiveContext = PrimitiveContext(_ctx, getState())
 		try enterRule(_localctx, 72, SmalltalkParser.RULE_primitive)
 		var _la: Int = 0
@@ -3332,43 +3733,59 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class BareSymbolContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func BINARY_SELECTOR() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.BINARY_SELECTOR.rawValue, 0) }
-		open func KEYWORD() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.KEYWORD.rawValue) }
-		open func KEYWORD(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.KEYWORD.rawValue, i)
+
+	public class BareSymbolContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func BINARY_SELECTOR() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.BINARY_SELECTOR.rawValue, 0)
+			}
+			open
+			func KEYWORD() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.KEYWORD.rawValue)
+			}
+			open
+			func KEYWORD(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.KEYWORD.rawValue, i)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_bareSymbol
 		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_bareSymbol }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterBareSymbol(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterBareSymbol(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitBareSymbol(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitBareSymbol(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitBareSymbol(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitBareSymbol(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitBareSymbol(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitBareSymbol(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bareSymbol() throws -> BareSymbolContext {
+	 open func bareSymbol() throws -> BareSymbolContext {
 		var _localctx: BareSymbolContext = BareSymbolContext(_ctx, getState())
 		try enterRule(_localctx, 74, SmalltalkParser.RULE_bareSymbol)
 		var _la: Int = 0
@@ -3413,7 +3830,7 @@ open class SmalltalkParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(402); 
 		 			try _errHandler.sync(self)
@@ -3429,7 +3846,7 @@ open class SmalltalkParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3440,38 +3857,47 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralArrayContext:ParserRuleContext {
-		open func LITARR_START() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.LITARR_START.rawValue, 0) }
-		open func literalArrayRest() -> LiteralArrayRestContext? {
-			return getRuleContext(LiteralArrayRestContext.self,0)
+
+	public class LiteralArrayContext: ParserRuleContext {
+			open
+			func LITARR_START() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.LITARR_START.rawValue, 0)
+			}
+			open
+			func literalArrayRest() -> LiteralArrayRestContext? {
+				return getRuleContext(LiteralArrayRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_literalArray
 		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_literalArray }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterLiteralArray(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterLiteralArray(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitLiteralArray(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitLiteralArray(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitLiteralArray(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitLiteralArray(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitLiteralArray(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitLiteralArray(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literalArray() throws -> LiteralArrayContext {
+	 open func literalArray() throws -> LiteralArrayContext {
 		var _localctx: LiteralArrayContext = LiteralArrayContext(_ctx, getState())
 		try enterRule(_localctx, 76, SmalltalkParser.RULE_literalArray)
 		defer {
@@ -3493,59 +3919,75 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralArrayRestContext:ParserRuleContext {
-		open func CLOSE_PAREN() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.CLOSE_PAREN.rawValue, 0) }
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
+
+	public class LiteralArrayRestContext: ParserRuleContext {
+			open
+			func CLOSE_PAREN() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.CLOSE_PAREN.rawValue, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func parsetimeLiteral() -> [ParsetimeLiteralContext] {
+				return getRuleContexts(ParsetimeLiteralContext.self)
+			}
+			open
+			func parsetimeLiteral(_ i: Int) -> ParsetimeLiteralContext? {
+				return getRuleContext(ParsetimeLiteralContext.self, i)
+			}
+			open
+			func bareLiteralArray() -> [BareLiteralArrayContext] {
+				return getRuleContexts(BareLiteralArrayContext.self)
+			}
+			open
+			func bareLiteralArray(_ i: Int) -> BareLiteralArrayContext? {
+				return getRuleContext(BareLiteralArrayContext.self, i)
+			}
+			open
+			func bareSymbol() -> [BareSymbolContext] {
+				return getRuleContexts(BareSymbolContext.self)
+			}
+			open
+			func bareSymbol(_ i: Int) -> BareSymbolContext? {
+				return getRuleContext(BareSymbolContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_literalArrayRest
 		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func parsetimeLiteral() -> Array<ParsetimeLiteralContext> {
-			return getRuleContexts(ParsetimeLiteralContext.self)
-		}
-		open func parsetimeLiteral(_ i: Int) -> ParsetimeLiteralContext? {
-			return getRuleContext(ParsetimeLiteralContext.self,i)
-		}
-		open func bareLiteralArray() -> Array<BareLiteralArrayContext> {
-			return getRuleContexts(BareLiteralArrayContext.self)
-		}
-		open func bareLiteralArray(_ i: Int) -> BareLiteralArrayContext? {
-			return getRuleContext(BareLiteralArrayContext.self,i)
-		}
-		open func bareSymbol() -> Array<BareSymbolContext> {
-			return getRuleContexts(BareSymbolContext.self)
-		}
-		open func bareSymbol(_ i: Int) -> BareSymbolContext? {
-			return getRuleContext(BareSymbolContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_literalArrayRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterLiteralArrayRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterLiteralArrayRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitLiteralArrayRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitLiteralArrayRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitLiteralArrayRest(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitLiteralArrayRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitLiteralArrayRest(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitLiteralArrayRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literalArrayRest() throws -> LiteralArrayRestContext {
+	 open func literalArrayRest() throws -> LiteralArrayRestContext {
 		var _localctx: LiteralArrayRestContext = LiteralArrayRestContext(_ctx, getState())
 		try enterRule(_localctx, 78, SmalltalkParser.RULE_literalArrayRest)
 		var _la: Int = 0
@@ -3629,38 +4071,47 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class BareLiteralArrayContext:ParserRuleContext {
-		open func OPEN_PAREN() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.OPEN_PAREN.rawValue, 0) }
-		open func literalArrayRest() -> LiteralArrayRestContext? {
-			return getRuleContext(LiteralArrayRestContext.self,0)
+
+	public class BareLiteralArrayContext: ParserRuleContext {
+			open
+			func OPEN_PAREN() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.OPEN_PAREN.rawValue, 0)
+			}
+			open
+			func literalArrayRest() -> LiteralArrayRestContext? {
+				return getRuleContext(LiteralArrayRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_bareLiteralArray
 		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_bareLiteralArray }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterBareLiteralArray(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterBareLiteralArray(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitBareLiteralArray(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitBareLiteralArray(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitBareLiteralArray(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitBareLiteralArray(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitBareLiteralArray(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitBareLiteralArray(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bareLiteralArray() throws -> BareLiteralArrayContext {
+	 open func bareLiteralArray() throws -> BareLiteralArrayContext {
 		var _localctx: BareLiteralArrayContext = BareLiteralArrayContext(_ctx, getState())
 		try enterRule(_localctx, 80, SmalltalkParser.RULE_bareLiteralArray)
 		defer {
@@ -3682,46 +4133,55 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class UnaryTailContext:ParserRuleContext {
-		open func unaryMessage() -> UnaryMessageContext? {
-			return getRuleContext(UnaryMessageContext.self,0)
+
+	public class UnaryTailContext: ParserRuleContext {
+			open
+			func unaryMessage() -> UnaryMessageContext? {
+				return getRuleContext(UnaryMessageContext.self, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func unaryTail() -> UnaryTailContext? {
+				return getRuleContext(UnaryTailContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_unaryTail
 		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func unaryTail() -> UnaryTailContext? {
-			return getRuleContext(UnaryTailContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_unaryTail }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterUnaryTail(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterUnaryTail(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitUnaryTail(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitUnaryTail(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitUnaryTail(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitUnaryTail(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitUnaryTail(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitUnaryTail(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unaryTail() throws -> UnaryTailContext {
+	 open func unaryTail() throws -> UnaryTailContext {
 		var _localctx: UnaryTailContext = UnaryTailContext(_ctx, getState())
 		try enterRule(_localctx, 82, SmalltalkParser.RULE_unaryTail)
 		defer {
@@ -3771,40 +4231,47 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class UnaryMessageContext:ParserRuleContext {
-		open func unarySelector() -> UnarySelectorContext? {
-			return getRuleContext(UnarySelectorContext.self,0)
+
+	public class UnaryMessageContext: ParserRuleContext {
+			open
+			func unarySelector() -> UnarySelectorContext? {
+				return getRuleContext(UnarySelectorContext.self, 0)
+			}
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_unaryMessage
 		}
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_unaryMessage }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterUnaryMessage(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterUnaryMessage(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitUnaryMessage(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitUnaryMessage(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitUnaryMessage(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitUnaryMessage(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitUnaryMessage(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitUnaryMessage(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unaryMessage() throws -> UnaryMessageContext {
+	 open func unaryMessage() throws -> UnaryMessageContext {
 		var _localctx: UnaryMessageContext = UnaryMessageContext(_ctx, getState())
 		try enterRule(_localctx, 84, SmalltalkParser.RULE_unaryMessage)
 		var _la: Int = 0
@@ -3838,35 +4305,43 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class UnarySelectorContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_unarySelector }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterUnarySelector(self)
+
+	public class UnarySelectorContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_unarySelector
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterUnarySelector(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitUnarySelector(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitUnarySelector(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitUnarySelector(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitUnarySelector(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitUnarySelector(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitUnarySelector(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unarySelector() throws -> UnarySelectorContext {
+	 open func unarySelector() throws -> UnarySelectorContext {
 		var _localctx: UnarySelectorContext = UnarySelectorContext(_ctx, getState())
 		try enterRule(_localctx, 86, SmalltalkParser.RULE_unarySelector)
 		defer {
@@ -3886,38 +4361,47 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class KeywordsContext:ParserRuleContext {
-		open func KEYWORD() -> Array<TerminalNode> { return getTokens(SmalltalkParser.Tokens.KEYWORD.rawValue) }
-		open func KEYWORD(_ i:Int) -> TerminalNode?{
-			return getToken(SmalltalkParser.Tokens.KEYWORD.rawValue, i)
+
+	public class KeywordsContext: ParserRuleContext {
+			open
+			func KEYWORD() -> [TerminalNode] {
+				return getTokens(SmalltalkParser.Tokens.KEYWORD.rawValue)
+			}
+			open
+			func KEYWORD(_ i:Int) -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.KEYWORD.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_keywords
 		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_keywords }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterKeywords(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterKeywords(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitKeywords(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitKeywords(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitKeywords(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitKeywords(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitKeywords(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitKeywords(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keywords() throws -> KeywordsContext {
+	 open func keywords() throws -> KeywordsContext {
 		var _localctx: KeywordsContext = KeywordsContext(_ctx, getState())
 		try enterRule(_localctx, 88, SmalltalkParser.RULE_keywords)
 		var _la: Int = 0
@@ -3952,37 +4436,43 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class ReferenceContext:ParserRuleContext {
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class ReferenceContext: ParserRuleContext {
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_reference
 		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_reference }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterReference(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterReference(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitReference(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitReference(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitReference(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitReference(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitReference(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitReference(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reference() throws -> ReferenceContext {
+	 open func reference() throws -> ReferenceContext {
 		var _localctx: ReferenceContext = ReferenceContext(_ctx, getState())
 		try enterRule(_localctx, 90, SmalltalkParser.RULE_reference)
 		defer {
@@ -4002,40 +4492,47 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class BinaryTailContext:ParserRuleContext {
-		open func binaryMessage() -> BinaryMessageContext? {
-			return getRuleContext(BinaryMessageContext.self,0)
+
+	public class BinaryTailContext: ParserRuleContext {
+			open
+			func binaryMessage() -> BinaryMessageContext? {
+				return getRuleContext(BinaryMessageContext.self, 0)
+			}
+			open
+			func binaryTail() -> BinaryTailContext? {
+				return getRuleContext(BinaryTailContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_binaryTail
 		}
-		open func binaryTail() -> BinaryTailContext? {
-			return getRuleContext(BinaryTailContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_binaryTail }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterBinaryTail(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterBinaryTail(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitBinaryTail(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitBinaryTail(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitBinaryTail(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitBinaryTail(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitBinaryTail(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitBinaryTail(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binaryTail() throws -> BinaryTailContext {
+	 open func binaryTail() throws -> BinaryTailContext {
 		var _localctx: BinaryTailContext = BinaryTailContext(_ctx, getState())
 		try enterRule(_localctx, 92, SmalltalkParser.RULE_binaryTail)
 		defer {
@@ -4065,47 +4562,59 @@ open class SmalltalkParser: Parser {
 
 		return _localctx
 	}
-	open class BinaryMessageContext:ParserRuleContext {
-		open func BINARY_SELECTOR() -> TerminalNode? { return getToken(SmalltalkParser.Tokens.BINARY_SELECTOR.rawValue, 0) }
-		open func unarySend() -> UnarySendContext? {
-			return getRuleContext(UnarySendContext.self,0)
+
+	public class BinaryMessageContext: ParserRuleContext {
+			open
+			func BINARY_SELECTOR() -> TerminalNode? {
+				return getToken(SmalltalkParser.Tokens.BINARY_SELECTOR.rawValue, 0)
+			}
+			open
+			func unarySend() -> UnarySendContext? {
+				return getRuleContext(UnarySendContext.self, 0)
+			}
+			open
+			func operand() -> OperandContext? {
+				return getRuleContext(OperandContext.self, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SmalltalkParser.RULE_binaryMessage
 		}
-		open func operand() -> OperandContext? {
-			return getRuleContext(OperandContext.self,0)
-		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SmalltalkParser.RULE_binaryMessage }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).enterBinaryMessage(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.enterBinaryMessage(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SmalltalkListener {
-			 	(listener as! SmalltalkListener).exitBinaryMessage(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SmalltalkListener {
+				listener.exitBinaryMessage(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SmalltalkVisitor {
-			     return (visitor as! SmalltalkVisitor<T>).visitBinaryMessage(self)
-			}else if visitor is SmalltalkBaseVisitor {
-		    	 return (visitor as! SmalltalkBaseVisitor<T>).visitBinaryMessage(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SmalltalkVisitor {
+			    return visitor.visitBinaryMessage(self)
+			}
+			else if let visitor = visitor as? SmalltalkBaseVisitor {
+			    return visitor.visitBinaryMessage(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binaryMessage() throws -> BinaryMessageContext {
+	 open func binaryMessage() throws -> BinaryMessageContext {
 		var _localctx: BinaryMessageContext = BinaryMessageContext(_ctx, getState())
 		try enterRule(_localctx, 94, SmalltalkParser.RULE_binaryMessage)
 		var _la: Int = 0
@@ -4168,6 +4677,10 @@ open class SmalltalkParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = SmalltalkParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = SmalltalkParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

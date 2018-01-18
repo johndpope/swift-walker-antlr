@@ -1,96 +1,101 @@
-// Generated from ./grammars-v4/php/PHPLexer.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/php/PhpLexer.g4 by ANTLR 4.7.1
 import Antlr4
 
-open class PHPLexer: Lexer {
+open class PhpLexer: Lexer {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
-          let length = PHPLexer._ATN.getNumberOfDecisions()
+          let length = PhpLexer._ATN.getNumberOfDecisions()
           for i in 0..<length {
-          	    decisionToDFA.append(DFA(PHPLexer._ATN.getDecisionState(i)!, i))
+          	    decisionToDFA.append(DFA(PhpLexer._ATN.getDecisionState(i)!, i))
           }
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let SeaWhitespace=1, HtmlText=2, PHPStart=3, HtmlScriptOpen=4, 
-                   HtmlStyleOpen=5, HtmlComment=6, HtmlDtd=7, HtmlOpen=8, 
-                   Shebang=9, Error=10, PHPStartInside=11, HtmlClose=12, 
-                   HtmlSlashClose=13, HtmlSlash=14, HtmlEquals=15, HtmlStartQuoteString=16, 
-                   HtmlStartDoubleQuoteString=17, HtmlHex=18, HtmlDecimal=19, 
-                   HtmlSpace=20, HtmlName=21, ErrorInside=22, PHPStartInsideQuoteString=23, 
-                   HtmlEndQuoteString=24, HtmlQuoteString=25, ErrorHtmlQuote=26, 
-                   PHPStartDoubleQuoteString=27, HtmlEndDoubleQuoteString=28, 
-                   HtmlDoubleQuoteString=29, ErrorHtmlDoubleQuote=30, ScriptText=31, 
-                   ScriptClose=32, PHPStartInsideScript=33, StyleBody=34, 
-                   PHPEnd=35, Whitespace=36, MultiLineComment=37, SingleLineComment=38, 
-                   ShellStyleComment=39, Abstract=40, Array=41, As=42, BinaryCast=43, 
-                   BoolType=44, BooleanConstant=45, Break=46, Callable=47, 
-                   Case=48, Catch=49, Class=50, Clone=51, Const=52, Continue=53, 
-                   Declare=54, Default=55, Do=56, DoubleCast=57, DoubleType=58, 
-                   Echo=59, Else=60, ElseIf=61, Empty=62, EndDeclare=63, 
-                   EndFor=64, EndForeach=65, EndIf=66, EndSwitch=67, EndWhile=68, 
-                   Eval=69, Exit=70, Extends=71, Final=72, Finally=73, FloatCast=74, 
-                   For=75, Foreach=76, Function=77, Global=78, Goto=79, 
-                   If=80, Implements=81, Import=82, Include=83, IncludeOnce=84, 
-                   InstanceOf=85, InsteadOf=86, Int8Cast=87, Int16Cast=88, 
-                   Int64Type=89, IntType=90, Interface=91, IsSet=92, List=93, 
-                   LogicalAnd=94, LogicalOr=95, LogicalXor=96, Namespace=97, 
-                   New=98, Null=99, ObjectType=100, Parent_=101, Partial=102, 
-                   Print=103, Private=104, Protected=105, Public=106, Require=107, 
-                   RequireOnce=108, Resource=109, Return=110, Static=111, 
-                   StringType=112, Switch=113, Throw=114, Trait=115, Try=116, 
-                   Typeof=117, UintCast=118, UnicodeCast=119, Unset=120, 
-                   Use=121, Var=122, While=123, Yield=124, Get=125, Set=126, 
-                   Call=127, CallStatic=128, Constructor=129, Destruct=130, 
-                   Wakeup=131, Sleep=132, Autoload=133, IsSet__=134, Unset__=135, 
-                   ToString__=136, Invoke=137, SetState=138, Clone__=139, 
-                   DebugInfo=140, Namespace__=141, Class__=142, Traic__=143, 
-                   Function__=144, Method__=145, Line__=146, File__=147, 
-                   Dir__=148, Lgeneric=149, Rgeneric=150, DoubleArrow=151, 
-                   Inc=152, Dec=153, IsIdentical=154, IsNoidentical=155, 
-                   IsEqual=156, IsNotEq=157, IsSmallerOrEqual=158, IsGreaterOrEqual=159, 
-                   PlusEqual=160, MinusEqual=161, MulEqual=162, Pow=163, 
-                   PowEqual=164, DivEqual=165, Concaequal=166, ModEqual=167, 
-                   ShiftLeftEqual=168, ShiftRightEqual=169, AndEqual=170, 
-                   OrEqual=171, XorEqual=172, BooleanOr=173, BooleanAnd=174, 
-                   ShiftLeft=175, ShiftRight=176, DoubleColon=177, ObjectOperator=178, 
-                   NamespaceSeparator=179, Ellipsis=180, Less=181, Greater=182, 
-                   Ampersand=183, Pipe=184, Bang=185, Caret=186, Plus=187, 
-                   Minus=188, Asterisk=189, Percent=190, Divide=191, Tilde=192, 
-                   SuppressWarnings=193, Dollar=194, Dot=195, QuestionMark=196, 
-                   OpenRoundBracket=197, CloseRoundBracket=198, OpenSquareBracket=199, 
-                   CloseSquareBracket=200, OpenCurlyBracket=201, CloseCurlyBracket=202, 
-                   Comma=203, Colon=204, SemiColon=205, Eq=206, Quote=207, 
-                   BackQuote=208, VarName=209, Label=210, Octal=211, Decimal=212, 
-                   Real=213, Hex=214, Binary=215, BackQuoteString=216, SingleQuoteString=217, 
-                   DoubleQuote=218, StartNowDoc=219, StartHereDoc=220, ErrorPhp=221, 
-                   CurlyDollar=222, StringPart=223, Comment=224, PHPEndSingleLineComment=225, 
-                   CommentEnd=226, HereDocText=227
-	public static let PhpComments=2, ErrorLexem=3
-	public static let INSIDE=1, HtmlQuoteStringMode=2, HtmlDoubleQuoteStringMode=3, 
-                   SCRIPT=4, STYLE=5, PHP=6, InterpolationString=7, SingleLineCommentMode=8, 
-                   HereDoc=9
-	public static let channelNames: [String] = [
-		"DEFAULT_TOKEN_CHANNEL", "HIDDEN", "PhpComments", "ErrorLexem"
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let SeaWhitespace=1, HtmlText=2, XmlStart=3, PHPStart=4, HtmlScriptOpen=5, 
+            HtmlStyleOpen=6, HtmlComment=7, HtmlDtd=8, HtmlOpen=9, Shebang=10, 
+            Error=11, XmlText=12, XmlClose=13, PHPStartInside=14, HtmlClose=15, 
+            HtmlSlashClose=16, HtmlSlash=17, HtmlEquals=18, HtmlStartQuoteString=19, 
+            HtmlStartDoubleQuoteString=20, HtmlHex=21, HtmlDecimal=22, HtmlSpace=23, 
+            HtmlName=24, ErrorInside=25, PHPStartInsideQuoteString=26, HtmlEndQuoteString=27, 
+            HtmlQuoteString=28, ErrorHtmlQuote=29, PHPStartDoubleQuoteString=30, 
+            HtmlEndDoubleQuoteString=31, HtmlDoubleQuoteString=32, ErrorHtmlDoubleQuote=33, 
+            ScriptText=34, ScriptClose=35, PHPStartInsideScript=36, StyleBody=37, 
+            PHPEnd=38, Whitespace=39, MultiLineComment=40, SingleLineComment=41, 
+            ShellStyleComment=42, Abstract=43, Array=44, As=45, BinaryCast=46, 
+            BoolType=47, BooleanConstant=48, Break=49, Callable=50, Case=51, 
+            Catch=52, Class=53, Clone=54, Const=55, Continue=56, Declare=57, 
+            Default=58, Do=59, DoubleCast=60, DoubleType=61, Echo=62, Else=63, 
+            ElseIf=64, Empty=65, EndDeclare=66, EndFor=67, EndForeach=68, 
+            EndIf=69, EndSwitch=70, EndWhile=71, Eval=72, Exit=73, Extends=74, 
+            Final=75, Finally=76, FloatCast=77, For=78, Foreach=79, Function=80, 
+            Global=81, Goto=82, If=83, Implements=84, Import=85, Include=86, 
+            IncludeOnce=87, InstanceOf=88, InsteadOf=89, Int8Cast=90, Int16Cast=91, 
+            Int64Type=92, IntType=93, Interface=94, IsSet=95, List=96, LogicalAnd=97, 
+            LogicalOr=98, LogicalXor=99, Namespace=100, New=101, Null=102, 
+            ObjectType=103, Parent_=104, Partial=105, Print=106, Private=107, 
+            Protected=108, Public=109, Require=110, RequireOnce=111, Resource=112, 
+            Return=113, Static=114, StringType=115, Switch=116, Throw=117, 
+            Trait=118, Try=119, Typeof=120, UintCast=121, UnicodeCast=122, 
+            Unset=123, Use=124, Var=125, While=126, Yield=127, Get=128, 
+            Set=129, Call=130, CallStatic=131, Constructor=132, Destruct=133, 
+            Wakeup=134, Sleep=135, Autoload=136, IsSet__=137, Unset__=138, 
+            ToString__=139, Invoke=140, SetState=141, Clone__=142, DebugInfo=143, 
+            Namespace__=144, Class__=145, Traic__=146, Function__=147, Method__=148, 
+            Line__=149, File__=150, Dir__=151, Lgeneric=152, Rgeneric=153, 
+            DoubleArrow=154, Inc=155, Dec=156, IsIdentical=157, IsNoidentical=158, 
+            IsEqual=159, IsNotEq=160, IsSmallerOrEqual=161, IsGreaterOrEqual=162, 
+            PlusEqual=163, MinusEqual=164, MulEqual=165, Pow=166, PowEqual=167, 
+            DivEqual=168, Concaequal=169, ModEqual=170, ShiftLeftEqual=171, 
+            ShiftRightEqual=172, AndEqual=173, OrEqual=174, XorEqual=175, 
+            BooleanOr=176, BooleanAnd=177, ShiftLeft=178, ShiftRight=179, 
+            DoubleColon=180, ObjectOperator=181, NamespaceSeparator=182, 
+            Ellipsis=183, Less=184, Greater=185, Ampersand=186, Pipe=187, 
+            Bang=188, Caret=189, Plus=190, Minus=191, Asterisk=192, Percent=193, 
+            Divide=194, Tilde=195, SuppressWarnings=196, Dollar=197, Dot=198, 
+            QuestionMark=199, OpenRoundBracket=200, CloseRoundBracket=201, 
+            OpenSquareBracket=202, CloseSquareBracket=203, OpenCurlyBracket=204, 
+            CloseCurlyBracket=205, Comma=206, Colon=207, SemiColon=208, 
+            Eq=209, Quote=210, BackQuote=211, VarName=212, Label=213, Octal=214, 
+            Decimal=215, Real=216, Hex=217, Binary=218, BackQuoteString=219, 
+            SingleQuoteString=220, DoubleQuote=221, StartNowDoc=222, StartHereDoc=223, 
+            ErrorPhp=224, CurlyDollar=225, StringPart=226, Comment=227, 
+            PHPEndSingleLineComment=228, CommentEnd=229, HereDocText=230, 
+            XmlText2=231
+
+	public
+	static let PhpComments=2, ErrorLexem=3, SkipChannel=4
+	public
+	static let XML=1, INSIDE=2, HtmlQuoteStringMode=3, HtmlDoubleQuoteStringMode=4, 
+            SCRIPT=5, STYLE=6, PHP=7, InterpolationString=8, SingleLineCommentMode=9, 
+            HereDoc=10
+	public
+	static let channelNames: [String] = [
+		"DEFAULT_TOKEN_CHANNEL", "HIDDEN", "PhpComments", "ErrorLexem", "SkipChannel"
 	]
 
-	public static let modeNames: [String] = [
-		"DEFAULT_MODE", "INSIDE", "HtmlQuoteStringMode", "HtmlDoubleQuoteStringMode", 
+	public
+	static let modeNames: [String] = [
+		"DEFAULT_MODE", "XML", "INSIDE", "HtmlQuoteStringMode", "HtmlDoubleQuoteStringMode", 
 		"SCRIPT", "STYLE", "PHP", "InterpolationString", "SingleLineCommentMode", 
 		"HereDoc"
 	]
 
-	public static let ruleNames: [String] = [
-		"SeaWhitespace", "HtmlText", "PHPStartEcho", "PHPStart", "HtmlScriptOpen", 
+	public
+	static let ruleNames: [String] = [
+		"SeaWhitespace", "HtmlText", "XmlStart", "PHPStartEcho", "PHPStart", "HtmlScriptOpen", 
 		"HtmlStyleOpen", "HtmlComment", "HtmlDtd", "HtmlOpen", "Shebang", "NumberSign", 
-		"Error", "PHPStartEchoInside", "PHPStartInside", "HtmlClose", "HtmlSlashClose", 
-		"HtmlSlash", "HtmlEquals", "HtmlStartQuoteString", "HtmlStartDoubleQuoteString", 
-		"HtmlHex", "HtmlDecimal", "HtmlSpace", "HtmlName", "ErrorInside", "PHPStartEchoInsideQuoteString", 
-		"PHPStartInsideQuoteString", "HtmlEndQuoteString", "HtmlQuoteString", 
-		"ErrorHtmlQuote", "PHPStartEchoDoubleQuoteString", "PHPStartDoubleQuoteString", 
-		"HtmlEndDoubleQuoteString", "HtmlDoubleQuoteString", "ErrorHtmlDoubleQuote", 
-		"ScriptText", "ScriptClose", "PHPStartInsideScriptEcho", "PHPStartInsideScript", 
-		"ScriptText2", "ScriptText3", "ScriptText4", "StyleBody", "PHPEnd", "Whitespace", 
+		"Error", "XmlText", "XmlClose", "XmlText2", "PHPStartEchoInside", "PHPStartInside", 
+		"HtmlClose", "HtmlSlashClose", "HtmlSlash", "HtmlEquals", "HtmlStartQuoteString", 
+		"HtmlStartDoubleQuoteString", "HtmlHex", "HtmlDecimal", "HtmlSpace", "HtmlName", 
+		"ErrorInside", "PHPStartEchoInsideQuoteString", "PHPStartInsideQuoteString", 
+		"HtmlEndQuoteString", "HtmlQuoteString", "ErrorHtmlQuote", "PHPStartEchoDoubleQuoteString", 
+		"PHPStartDoubleQuoteString", "HtmlEndDoubleQuoteString", "HtmlDoubleQuoteString", 
+		"ErrorHtmlDoubleQuote", "ScriptText", "ScriptClose", "PHPStartInsideScriptEcho", 
+		"PHPStartInsideScript", "ScriptText2", "StyleBody", "PHPEnd", "Whitespace", 
 		"MultiLineComment", "SingleLineComment", "ShellStyleComment", "Abstract", 
 		"Array", "As", "BinaryCast", "BoolType", "BooleanConstant", "Break", "Callable", 
 		"Case", "Catch", "Class", "Clone", "Const", "Continue", "Declare", "Default", 
@@ -127,61 +132,62 @@ open class PHPLexer: Lexer {
 	]
 
 	private static let _LITERAL_NAMES: [String?] = [
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "'/>'", 
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "'//'", "'#'", "'abstract'", 
-		"'array'", "'as'", "'binary'", nil, nil, "'break'", "'callable'", "'case'", 
-		"'catch'", "'class'", "'clone'", "'const'", "'continue'", "'declare'", 
-		"'default'", "'do'", "'real'", "'double'", "'echo'", "'else'", "'elseif'", 
-		"'empty'", "'enddeclare'", "'endfor'", "'endforeach'", "'endif'", "'endswitch'", 
-		"'endwhile'", "'eval'", "'die'", "'extends'", "'final'", "'finally'", 
-		"'float'", "'for'", "'foreach'", "'function'", "'global'", "'goto'", "'if'", 
-		"'implements'", "'import'", "'include'", "'include_once'", "'instanceof'", 
-		"'insteadof'", "'int8'", "'int16'", "'int64'", nil, "'interface'", "'isset'", 
-		"'list'", "'and'", "'or'", "'xor'", "'namespace'", "'new'", "'null'", 
-		"'object'", "'parent'", "'partial'", "'print'", "'private'", "'protected'", 
-		"'public'", "'require'", "'require_once'", "'resource'", "'return'", "'static'", 
-		"'string'", "'switch'", "'throw'", "'trait'", "'try'", "'clrtypeof'", 
-		nil, "'unicode'", "'unset'", "'use'", "'var'", "'while'", "'yield'", "'__get'", 
-		"'__set'", "'__call'", "'__callstatic'", "'__construct'", "'__destruct'", 
-		"'__wakeup'", "'__sleep'", "'__autoload'", "'__isset'", "'__unset'", "'__tostring'", 
-		"'__invoke'", "'__set_state'", "'__clone'", "'__debuginfo'", "'__namespace__'", 
-		"'__class__'", "'__trait__'", "'__function__'", "'__method__'", "'__line__'", 
-		"'__file__'", "'__dir__'", "'<:'", "':>'", "'=>'", "'++'", "'--'", "'==='", 
-		"'!=='", "'=='", nil, "'<='", "'>='", "'+='", "'-='", "'*='", "'**'", 
-		"'**='", "'/='", "'.='", "'%='", "'<<='", "'>>='", "'&='", "'|='", "'^='", 
-		"'||'", "'&&'", "'<<'", "'>>'", "'::'", "'->'", "'\\'", "'...'", nil, 
-		nil, "'&'", "'|'", "'!'", "'^'", "'+'", "'-'", "'*'", "'%'", nil, "'~'", 
-		"'@'", nil, "'.'", "'?'", "'('", "')'", "'['", "']'", nil, "'}'", "','", 
-		"':'", "';'", nil, "'''", "'`'"
+		nil, nil, "'/>'", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
+		nil, "'abstract'", "'array'", "'as'", "'binary'", nil, nil, "'break'", 
+		"'callable'", "'case'", "'catch'", "'class'", "'clone'", "'const'", "'continue'", 
+		"'declare'", "'default'", "'do'", "'real'", "'double'", "'echo'", "'else'", 
+		"'elseif'", "'empty'", "'enddeclare'", "'endfor'", "'endforeach'", "'endif'", 
+		"'endswitch'", "'endwhile'", "'eval'", "'die'", "'extends'", "'final'", 
+		"'finally'", "'float'", "'for'", "'foreach'", "'function'", "'global'", 
+		"'goto'", "'if'", "'implements'", "'import'", "'include'", "'include_once'", 
+		"'instanceof'", "'insteadof'", "'int8'", "'int16'", "'int64'", nil, "'interface'", 
+		"'isset'", "'list'", "'and'", "'or'", "'xor'", "'namespace'", "'new'", 
+		"'null'", "'object'", "'parent'", "'partial'", "'print'", "'private'", 
+		"'protected'", "'public'", "'require'", "'require_once'", "'resource'", 
+		"'return'", "'static'", "'string'", "'switch'", "'throw'", "'trait'", 
+		"'try'", "'clrtypeof'", nil, "'unicode'", "'unset'", "'use'", "'var'", 
+		"'while'", "'yield'", "'__get'", "'__set'", "'__call'", "'__callstatic'", 
+		"'__construct'", "'__destruct'", "'__wakeup'", "'__sleep'", "'__autoload'", 
+		"'__isset'", "'__unset'", "'__tostring'", "'__invoke'", "'__set_state'", 
+		"'__clone'", "'__debuginfo'", "'__namespace__'", "'__class__'", "'__trait__'", 
+		"'__function__'", "'__method__'", "'__line__'", "'__file__'", "'__dir__'", 
+		"'<:'", "':>'", "'=>'", "'++'", "'--'", "'==='", "'!=='", "'=='", nil, 
+		"'<='", "'>='", "'+='", "'-='", "'*='", "'**'", "'**='", "'/='", "'.='", 
+		"'%='", "'<<='", "'>>='", "'&='", "'|='", "'^='", "'||'", "'&&'", "'<<'", 
+		"'>>'", "'::'", "'->'", "'\\'", "'...'", nil, nil, "'&'", "'|'", "'!'", 
+		"'^'", "'+'", "'-'", "'*'", "'%'", nil, "'~'", "'@'", nil, "'.'", nil, 
+		"'('", "')'", "'['", "']'", nil, "'}'", "','", "':'", "';'", nil, "'''", 
+		"'`'"
 	]
 	private static let _SYMBOLIC_NAMES: [String?] = [
-		nil, "SeaWhitespace", "HtmlText", "PHPStart", "HtmlScriptOpen", "HtmlStyleOpen", 
-		"HtmlComment", "HtmlDtd", "HtmlOpen", "Shebang", "Error", "PHPStartInside", 
-		"HtmlClose", "HtmlSlashClose", "HtmlSlash", "HtmlEquals", "HtmlStartQuoteString", 
-		"HtmlStartDoubleQuoteString", "HtmlHex", "HtmlDecimal", "HtmlSpace", "HtmlName", 
-		"ErrorInside", "PHPStartInsideQuoteString", "HtmlEndQuoteString", "HtmlQuoteString", 
-		"ErrorHtmlQuote", "PHPStartDoubleQuoteString", "HtmlEndDoubleQuoteString", 
-		"HtmlDoubleQuoteString", "ErrorHtmlDoubleQuote", "ScriptText", "ScriptClose", 
-		"PHPStartInsideScript", "StyleBody", "PHPEnd", "Whitespace", "MultiLineComment", 
-		"SingleLineComment", "ShellStyleComment", "Abstract", "Array", "As", "BinaryCast", 
-		"BoolType", "BooleanConstant", "Break", "Callable", "Case", "Catch", "Class", 
-		"Clone", "Const", "Continue", "Declare", "Default", "Do", "DoubleCast", 
-		"DoubleType", "Echo", "Else", "ElseIf", "Empty", "EndDeclare", "EndFor", 
-		"EndForeach", "EndIf", "EndSwitch", "EndWhile", "Eval", "Exit", "Extends", 
-		"Final", "Finally", "FloatCast", "For", "Foreach", "Function", "Global", 
-		"Goto", "If", "Implements", "Import", "Include", "IncludeOnce", "InstanceOf", 
-		"InsteadOf", "Int8Cast", "Int16Cast", "Int64Type", "IntType", "Interface", 
-		"IsSet", "List", "LogicalAnd", "LogicalOr", "LogicalXor", "Namespace", 
-		"New", "Null", "ObjectType", "Parent_", "Partial", "Print", "Private", 
-		"Protected", "Public", "Require", "RequireOnce", "Resource", "Return", 
-		"Static", "StringType", "Switch", "Throw", "Trait", "Try", "Typeof", "UintCast", 
-		"UnicodeCast", "Unset", "Use", "Var", "While", "Yield", "Get", "Set", 
-		"Call", "CallStatic", "Constructor", "Destruct", "Wakeup", "Sleep", "Autoload", 
-		"IsSet__", "Unset__", "ToString__", "Invoke", "SetState", "Clone__", "DebugInfo", 
-		"Namespace__", "Class__", "Traic__", "Function__", "Method__", "Line__", 
-		"File__", "Dir__", "Lgeneric", "Rgeneric", "DoubleArrow", "Inc", "Dec", 
-		"IsIdentical", "IsNoidentical", "IsEqual", "IsNotEq", "IsSmallerOrEqual", 
+		nil, "SeaWhitespace", "HtmlText", "XmlStart", "PHPStart", "HtmlScriptOpen", 
+		"HtmlStyleOpen", "HtmlComment", "HtmlDtd", "HtmlOpen", "Shebang", "Error", 
+		"XmlText", "XmlClose", "PHPStartInside", "HtmlClose", "HtmlSlashClose", 
+		"HtmlSlash", "HtmlEquals", "HtmlStartQuoteString", "HtmlStartDoubleQuoteString", 
+		"HtmlHex", "HtmlDecimal", "HtmlSpace", "HtmlName", "ErrorInside", "PHPStartInsideQuoteString", 
+		"HtmlEndQuoteString", "HtmlQuoteString", "ErrorHtmlQuote", "PHPStartDoubleQuoteString", 
+		"HtmlEndDoubleQuoteString", "HtmlDoubleQuoteString", "ErrorHtmlDoubleQuote", 
+		"ScriptText", "ScriptClose", "PHPStartInsideScript", "StyleBody", "PHPEnd", 
+		"Whitespace", "MultiLineComment", "SingleLineComment", "ShellStyleComment", 
+		"Abstract", "Array", "As", "BinaryCast", "BoolType", "BooleanConstant", 
+		"Break", "Callable", "Case", "Catch", "Class", "Clone", "Const", "Continue", 
+		"Declare", "Default", "Do", "DoubleCast", "DoubleType", "Echo", "Else", 
+		"ElseIf", "Empty", "EndDeclare", "EndFor", "EndForeach", "EndIf", "EndSwitch", 
+		"EndWhile", "Eval", "Exit", "Extends", "Final", "Finally", "FloatCast", 
+		"For", "Foreach", "Function", "Global", "Goto", "If", "Implements", "Import", 
+		"Include", "IncludeOnce", "InstanceOf", "InsteadOf", "Int8Cast", "Int16Cast", 
+		"Int64Type", "IntType", "Interface", "IsSet", "List", "LogicalAnd", "LogicalOr", 
+		"LogicalXor", "Namespace", "New", "Null", "ObjectType", "Parent_", "Partial", 
+		"Print", "Private", "Protected", "Public", "Require", "RequireOnce", "Resource", 
+		"Return", "Static", "StringType", "Switch", "Throw", "Trait", "Try", "Typeof", 
+		"UintCast", "UnicodeCast", "Unset", "Use", "Var", "While", "Yield", "Get", 
+		"Set", "Call", "CallStatic", "Constructor", "Destruct", "Wakeup", "Sleep", 
+		"Autoload", "IsSet__", "Unset__", "ToString__", "Invoke", "SetState", 
+		"Clone__", "DebugInfo", "Namespace__", "Class__", "Traic__", "Function__", 
+		"Method__", "Line__", "File__", "Dir__", "Lgeneric", "Rgeneric", "DoubleArrow", 
+		"Inc", "Dec", "IsIdentical", "IsNoidentical", "IsEqual", "IsNotEq", "IsSmallerOrEqual", 
 		"IsGreaterOrEqual", "PlusEqual", "MinusEqual", "MulEqual", "Pow", "PowEqual", 
 		"DivEqual", "Concaequal", "ModEqual", "ShiftLeftEqual", "ShiftRightEqual", 
 		"AndEqual", "OrEqual", "XorEqual", "BooleanOr", "BooleanAnd", "ShiftLeft", 
@@ -193,34 +199,11 @@ open class PHPLexer: Lexer {
 		"Colon", "SemiColon", "Eq", "Quote", "BackQuote", "VarName", "Label", 
 		"Octal", "Decimal", "Real", "Hex", "Binary", "BackQuoteString", "SingleQuoteString", 
 		"DoubleQuote", "StartNowDoc", "StartHereDoc", "ErrorPhp", "CurlyDollar", 
-		"StringPart", "Comment", "PHPEndSingleLineComment", "CommentEnd", "HereDocText"
+		"StringPart", "Comment", "PHPEndSingleLineComment", "CommentEnd", "HereDocText", 
+		"XmlText2"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
-
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
-
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
 	public boolean AspTags = true;
 	boolean _scriptTag;
@@ -258,7 +241,7 @@ open class PHPLexer: Lexer {
 	            if (_prevTokenType == SemiColon || _prevTokenType == Colon
 	                || _prevTokenType == OpenCurlyBracket || _prevTokenType == CloseCurlyBracket)
 	            {
-	                token = (CommonToken)super.nextToken();
+	                token.setChannel(SkipChannel);
 	            }
 	            else
 	            {
@@ -297,7 +280,7 @@ open class PHPLexer: Lexer {
 	                    }
 	                    else
 	                    {
-	                        token = (CommonToken)super.nextToken();
+	                        token.setChannel(SkipChannel);
 	                    }
 	                }
 	                break;
@@ -322,50 +305,53 @@ open class PHPLexer: Lexer {
 	    boolean result = identifier.equals(_heredocIdentifier);
 	    return result;
 	}
-    open override func getVocabulary() -> Vocabulary {
-        return PHPLexer.VOCABULARY
-    }
 
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
-		super.init(input)
-		_interp = LexerATNSimulator(self, PHPLexer._ATN, PHPLexer._decisionToDFA, PHPLexer._sharedContextCache)
+	override open
+	func getVocabulary() -> Vocabulary {
+		return PhpLexer.VOCABULARY
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "PHPLexer.g4" }
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
+		super.init(input)
+		_interp = LexerATNSimulator(self, PhpLexer._ATN, PhpLexer._decisionToDFA, PhpLexer._sharedContextCache)
+	}
 
-    override
-	open func getRuleNames() -> [String] { return PHPLexer.ruleNames }
+	override open
+	func getGrammarFileName() -> String { return "PhpLexer.g4" }
 
-	override
-	open func getSerializedATN() -> String { return PHPLexer._serializedATN }
+	override open
+	func getRuleNames() -> [String] { return PhpLexer.ruleNames }
 
-	override
-	open func getChannelNames() -> [String] { return PHPLexer.channelNames }
+	override open
+	func getSerializedATN() -> String { return PhpLexer._serializedATN }
 
-	override
-	open func getModeNames() -> [String] { return PHPLexer.modeNames }
+	override open
+	func getChannelNames() -> [String] { return PhpLexer.channelNames }
 
-	override
-	open func getATN() -> ATN { return PHPLexer._ATN }
+	override open
+	func getModeNames() -> [String] { return PhpLexer.modeNames }
 
-	override
-	open func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
+	override open
+	func getATN() -> ATN { return PhpLexer._ATN }
+
+	override open
+	func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
 		switch (ruleIndex) {
-		case 4:
+		case 5:
 			HtmlScriptOpen_action((_localctx as RuleContext?), actionIndex)
 
-		case 5:
+		case 6:
 			HtmlStyleOpen_action((_localctx as RuleContext?), actionIndex)
 
-		case 14:
+		case 18:
 			HtmlClose_action((_localctx as RuleContext?), actionIndex)
 
-		case 210:
+		case 212:
 			CloseCurlyBracket_action((_localctx as RuleContext?), actionIndex)
 
-		case 232:
+		case 234:
 			CurlyDollar_action((_localctx as RuleContext?), actionIndex)
 
 		default: break
@@ -421,7 +407,7 @@ open class PHPLexer: Lexer {
 			if (_insideString)
 			{
 			    _insideString = false;
-			    skip();
+			    setChannel(SkipChannel);
 			    popMode();
 			}
 
@@ -437,22 +423,22 @@ open class PHPLexer: Lexer {
 		 default: break
 		}
 	}
-	override
-	open func sempred(_ _localctx: RuleContext?, _  ruleIndex: Int,_   predIndex: Int) throws -> Bool{
+	override open
+	func sempred(_ _localctx: RuleContext?, _  ruleIndex: Int,_   predIndex: Int) throws -> Bool {
 		switch (ruleIndex) {
-		case 9:
+		case 10:
 			return try Shebang_sempred(_localctx?.castdown(RuleContext.self), predIndex)
-		case 43:
+		case 45:
 			return try PHPEnd_sempred(_localctx?.castdown(RuleContext.self), predIndex)
-		case 227:
+		case 229:
 			return try StartNowDoc_sempred(_localctx?.castdown(RuleContext.self), predIndex)
-		case 228:
+		case 230:
 			return try StartHereDoc_sempred(_localctx?.castdown(RuleContext.self), predIndex)
-		case 232:
+		case 234:
 			return try CurlyDollar_sempred(_localctx?.castdown(RuleContext.self), predIndex)
-		case 242:
+		case 244:
 			return try PhpStartEchoFragment_sempred(_localctx?.castdown(RuleContext.self), predIndex)
-		case 243:
+		case 245:
 			return try PhpStartFragment_sempred(_localctx?.castdown(RuleContext.self), predIndex)
 		default: return true
 		}
@@ -467,40 +453,45 @@ open class PHPLexer: Lexer {
 		switch (predIndex) {
 		    case 1:return AspTags
 		    case 2:return _phpScript
+		    case 3:return _phpScript
 		    default: return true
 		}
 	}
 	private func StartNowDoc_sempred(_ _localctx: RuleContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
-		    case 3:return  _input.LA(1) == '\r' || _input.LA(1) == '\n' 
+		    case 4:return  _input.LA(1) == '\r' || _input.LA(1) == '\n' 
 		    default: return true
 		}
 	}
 	private func StartHereDoc_sempred(_ _localctx: RuleContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
-		    case 4:return  _input.LA(1) == '\r' || _input.LA(1) == '\n' 
+		    case 5:return  _input.LA(1) == '\r' || _input.LA(1) == '\n' 
 		    default: return true
 		}
 	}
 	private func CurlyDollar_sempred(_ _localctx: RuleContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
-		    case 5:return _input.LA(1) == '$'
+		    case 6:return _input.LA(1) == '$'
 		    default: return true
 		}
 	}
 	private func PhpStartEchoFragment_sempred(_ _localctx: RuleContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
-		    case 6:return AspTags
+		    case 7:return AspTags
 		    default: return true
 		}
 	}
 	private func PhpStartFragment_sempred(_ _localctx: RuleContext!,  _ predIndex: Int) throws -> Bool {
 		switch (predIndex) {
-		    case 7:return AspTags
+		    case 8:return AspTags
 		    default: return true
 		}
 	}
 
-    public static let _serializedATN: String = PHPLexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = PhpLexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

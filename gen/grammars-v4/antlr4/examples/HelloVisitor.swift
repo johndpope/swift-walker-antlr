@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/antlr4/examples/Hello.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/antlr4/examples/Hello.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class HelloVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitR(_ ctx: HelloParser.RContext) -> T{
+	open func visitR(_ ctx: HelloParser.RContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

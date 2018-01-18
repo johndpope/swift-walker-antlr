@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/golang/Golang.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/golang/Golang.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class GolangParser: Parser {
@@ -11,8 +11,11 @@ open class GolangParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -30,41 +33,44 @@ open class GolangParser: Parser {
                  BIG_U_VALUE = 70, STRING_LIT = 71, WS = 72, COMMENT = 73, 
                  TERMINATOR = 74, LINE_COMMENT = 75
 	}
-	public static let RULE_sourceFile = 0, RULE_packageClause = 1, RULE_importDecl = 2, 
-                   RULE_importSpec = 3, RULE_importPath = 4, RULE_topLevelDecl = 5, 
-                   RULE_declaration = 6, RULE_constDecl = 7, RULE_constSpec = 8, 
-                   RULE_identifierList = 9, RULE_expressionList = 10, RULE_typeDecl = 11, 
-                   RULE_typeSpec = 12, RULE_functionDecl = 13, RULE_function = 14, 
-                   RULE_methodDecl = 15, RULE_receiver = 16, RULE_varDecl = 17, 
-                   RULE_varSpec = 18, RULE_block = 19, RULE_statementList = 20, 
-                   RULE_statement = 21, RULE_simpleStmt = 22, RULE_expressionStmt = 23, 
-                   RULE_sendStmt = 24, RULE_incDecStmt = 25, RULE_assignment = 26, 
-                   RULE_assign_op = 27, RULE_shortVarDecl = 28, RULE_emptyStmt = 29, 
-                   RULE_labeledStmt = 30, RULE_returnStmt = 31, RULE_breakStmt = 32, 
-                   RULE_continueStmt = 33, RULE_gotoStmt = 34, RULE_fallthroughStmt = 35, 
-                   RULE_deferStmt = 36, RULE_ifStmt = 37, RULE_switchStmt = 38, 
-                   RULE_exprSwitchStmt = 39, RULE_exprCaseClause = 40, RULE_exprSwitchCase = 41, 
-                   RULE_typeSwitchStmt = 42, RULE_typeSwitchGuard = 43, 
-                   RULE_typeCaseClause = 44, RULE_typeSwitchCase = 45, RULE_typeList = 46, 
-                   RULE_selectStmt = 47, RULE_commClause = 48, RULE_commCase = 49, 
-                   RULE_recvStmt = 50, RULE_forStmt = 51, RULE_forClause = 52, 
-                   RULE_rangeClause = 53, RULE_goStmt = 54, RULE_type = 55, 
-                   RULE_typeName = 56, RULE_typeLit = 57, RULE_arrayType = 58, 
-                   RULE_arrayLength = 59, RULE_elementType = 60, RULE_pointerType = 61, 
-                   RULE_interfaceType = 62, RULE_sliceType = 63, RULE_mapType = 64, 
-                   RULE_channelType = 65, RULE_methodSpec = 66, RULE_functionType = 67, 
-                   RULE_signature = 68, RULE_result = 69, RULE_parameters = 70, 
-                   RULE_parameterList = 71, RULE_parameterDecl = 72, RULE_operand = 73, 
-                   RULE_literal = 74, RULE_basicLit = 75, RULE_operandName = 76, 
-                   RULE_qualifiedIdent = 77, RULE_compositeLit = 78, RULE_literalType = 79, 
-                   RULE_literalValue = 80, RULE_elementList = 81, RULE_keyedElement = 82, 
-                   RULE_key = 83, RULE_element = 84, RULE_structType = 85, 
-                   RULE_fieldDecl = 86, RULE_anonymousField = 87, RULE_functionLit = 88, 
-                   RULE_primaryExpr = 89, RULE_selector = 90, RULE_index = 91, 
-                   RULE_slice = 92, RULE_typeAssertion = 93, RULE_arguments = 94, 
-                   RULE_methodExpr = 95, RULE_receiverType = 96, RULE_expression = 97, 
-                   RULE_unaryExpr = 98, RULE_conversion = 99, RULE_eos = 100
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_sourceFile = 0, RULE_packageClause = 1, RULE_importDecl = 2, 
+            RULE_importSpec = 3, RULE_importPath = 4, RULE_topLevelDecl = 5, 
+            RULE_declaration = 6, RULE_constDecl = 7, RULE_constSpec = 8, 
+            RULE_identifierList = 9, RULE_expressionList = 10, RULE_typeDecl = 11, 
+            RULE_typeSpec = 12, RULE_functionDecl = 13, RULE_function = 14, 
+            RULE_methodDecl = 15, RULE_receiver = 16, RULE_varDecl = 17, 
+            RULE_varSpec = 18, RULE_block = 19, RULE_statementList = 20, 
+            RULE_statement = 21, RULE_simpleStmt = 22, RULE_expressionStmt = 23, 
+            RULE_sendStmt = 24, RULE_incDecStmt = 25, RULE_assignment = 26, 
+            RULE_assign_op = 27, RULE_shortVarDecl = 28, RULE_emptyStmt = 29, 
+            RULE_labeledStmt = 30, RULE_returnStmt = 31, RULE_breakStmt = 32, 
+            RULE_continueStmt = 33, RULE_gotoStmt = 34, RULE_fallthroughStmt = 35, 
+            RULE_deferStmt = 36, RULE_ifStmt = 37, RULE_switchStmt = 38, 
+            RULE_exprSwitchStmt = 39, RULE_exprCaseClause = 40, RULE_exprSwitchCase = 41, 
+            RULE_typeSwitchStmt = 42, RULE_typeSwitchGuard = 43, RULE_typeCaseClause = 44, 
+            RULE_typeSwitchCase = 45, RULE_typeList = 46, RULE_selectStmt = 47, 
+            RULE_commClause = 48, RULE_commCase = 49, RULE_recvStmt = 50, 
+            RULE_forStmt = 51, RULE_forClause = 52, RULE_rangeClause = 53, 
+            RULE_goStmt = 54, RULE_type = 55, RULE_typeName = 56, RULE_typeLit = 57, 
+            RULE_arrayType = 58, RULE_arrayLength = 59, RULE_elementType = 60, 
+            RULE_pointerType = 61, RULE_interfaceType = 62, RULE_sliceType = 63, 
+            RULE_mapType = 64, RULE_channelType = 65, RULE_methodSpec = 66, 
+            RULE_functionType = 67, RULE_signature = 68, RULE_result = 69, 
+            RULE_parameters = 70, RULE_parameterList = 71, RULE_parameterDecl = 72, 
+            RULE_operand = 73, RULE_literal = 74, RULE_basicLit = 75, RULE_operandName = 76, 
+            RULE_qualifiedIdent = 77, RULE_compositeLit = 78, RULE_literalType = 79, 
+            RULE_literalValue = 80, RULE_elementList = 81, RULE_keyedElement = 82, 
+            RULE_key = 83, RULE_element = 84, RULE_structType = 85, RULE_fieldDecl = 86, 
+            RULE_anonymousField = 87, RULE_functionLit = 88, RULE_primaryExpr = 89, 
+            RULE_selector = 90, RULE_index = 91, RULE_slice = 92, RULE_typeAssertion = 93, 
+            RULE_arguments = 94, RULE_methodExpr = 95, RULE_receiverType = 96, 
+            RULE_expression = 97, RULE_unaryExpr = 98, RULE_conversion = 99, 
+            RULE_eos = 100
+
+	public
+	static let ruleNames: [String] = [
 		"sourceFile", "packageClause", "importDecl", "importSpec", "importPath", 
 		"topLevelDecl", "declaration", "constDecl", "constSpec", "identifierList", 
 		"expressionList", "typeDecl", "typeSpec", "functionDecl", "function", 
@@ -105,44 +111,20 @@ open class GolangParser: Parser {
 		"FLOAT_LIT", "IMAGINARY_LIT", "RUNE_LIT", "LITTLE_U_VALUE", "BIG_U_VALUE", 
 		"STRING_LIT", "WS", "COMMENT", "TERMINATOR", "LINE_COMMENT"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Golang.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return GolangParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Golang.g4" }
+	override open
+	func getSerializedATN() -> String { return GolangParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return GolangParser.ruleNames }
-
-	override
-	open func getSerializedATN() -> String { return GolangParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return GolangParser._ATN }
+	override open
+	func getATN() -> ATN { return GolangParser._ATN }
 
 
 
@@ -186,64 +168,78 @@ open class GolangParser: Parser {
 	                (type == TERMINATOR);
 	    }
 
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return GolangParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,GolangParser._ATN,GolangParser._decisionToDFA, GolangParser._sharedContextCache)
 	}
-	open class SourceFileContext:ParserRuleContext {
-		open func packageClause() -> PackageClauseContext? {
-			return getRuleContext(PackageClauseContext.self,0)
+
+	public class SourceFileContext: ParserRuleContext {
+			open
+			func packageClause() -> PackageClauseContext? {
+				return getRuleContext(PackageClauseContext.self, 0)
+			}
+			open
+			func eos() -> [EosContext] {
+				return getRuleContexts(EosContext.self)
+			}
+			open
+			func eos(_ i: Int) -> EosContext? {
+				return getRuleContext(EosContext.self, i)
+			}
+			open
+			func importDecl() -> [ImportDeclContext] {
+				return getRuleContexts(ImportDeclContext.self)
+			}
+			open
+			func importDecl(_ i: Int) -> ImportDeclContext? {
+				return getRuleContext(ImportDeclContext.self, i)
+			}
+			open
+			func topLevelDecl() -> [TopLevelDeclContext] {
+				return getRuleContexts(TopLevelDeclContext.self)
+			}
+			open
+			func topLevelDecl(_ i: Int) -> TopLevelDeclContext? {
+				return getRuleContext(TopLevelDeclContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_sourceFile
 		}
-		open func eos() -> Array<EosContext> {
-			return getRuleContexts(EosContext.self)
-		}
-		open func eos(_ i: Int) -> EosContext? {
-			return getRuleContext(EosContext.self,i)
-		}
-		open func importDecl() -> Array<ImportDeclContext> {
-			return getRuleContexts(ImportDeclContext.self)
-		}
-		open func importDecl(_ i: Int) -> ImportDeclContext? {
-			return getRuleContext(ImportDeclContext.self,i)
-		}
-		open func topLevelDecl() -> Array<TopLevelDeclContext> {
-			return getRuleContexts(TopLevelDeclContext.self)
-		}
-		open func topLevelDecl(_ i: Int) -> TopLevelDeclContext? {
-			return getRuleContext(TopLevelDeclContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_sourceFile }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterSourceFile(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterSourceFile(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitSourceFile(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitSourceFile(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitSourceFile(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitSourceFile(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitSourceFile(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitSourceFile(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sourceFile() throws -> SourceFileContext {
+	 open func sourceFile() throws -> SourceFileContext {
 		var _localctx: SourceFileContext = SourceFileContext(_ctx, getState())
 		try enterRule(_localctx, 0, GolangParser.RULE_sourceFile)
 		var _la: Int = 0
@@ -305,35 +301,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class PackageClauseContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_packageClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterPackageClause(self)
+
+	public class PackageClauseContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_packageClause
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterPackageClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitPackageClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitPackageClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitPackageClause(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitPackageClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitPackageClause(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitPackageClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func packageClause() throws -> PackageClauseContext {
+	 open func packageClause() throws -> PackageClauseContext {
 		var _localctx: PackageClauseContext = PackageClauseContext(_ctx, getState())
 		try enterRule(_localctx, 2, GolangParser.RULE_packageClause)
 		defer {
@@ -355,46 +359,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ImportDeclContext:ParserRuleContext {
-		open func importSpec() -> Array<ImportSpecContext> {
-			return getRuleContexts(ImportSpecContext.self)
+
+	public class ImportDeclContext: ParserRuleContext {
+			open
+			func importSpec() -> [ImportSpecContext] {
+				return getRuleContexts(ImportSpecContext.self)
+			}
+			open
+			func importSpec(_ i: Int) -> ImportSpecContext? {
+				return getRuleContext(ImportSpecContext.self, i)
+			}
+			open
+			func eos() -> [EosContext] {
+				return getRuleContexts(EosContext.self)
+			}
+			open
+			func eos(_ i: Int) -> EosContext? {
+				return getRuleContext(EosContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_importDecl
 		}
-		open func importSpec(_ i: Int) -> ImportSpecContext? {
-			return getRuleContext(ImportSpecContext.self,i)
-		}
-		open func eos() -> Array<EosContext> {
-			return getRuleContexts(EosContext.self)
-		}
-		open func eos(_ i: Int) -> EosContext? {
-			return getRuleContext(EosContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_importDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterImportDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterImportDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitImportDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitImportDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitImportDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitImportDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitImportDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitImportDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importDecl() throws -> ImportDeclContext {
+	 open func importDecl() throws -> ImportDeclContext {
 		var _localctx: ImportDeclContext = ImportDeclContext(_ctx, getState())
 		try enterRule(_localctx, 4, GolangParser.RULE_importDecl)
 		var _la: Int = 0
@@ -443,7 +456,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -455,38 +468,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ImportSpecContext:ParserRuleContext {
-		open func importPath() -> ImportPathContext? {
-			return getRuleContext(ImportPathContext.self,0)
+
+	public class ImportSpecContext: ParserRuleContext {
+			open
+			func importPath() -> ImportPathContext? {
+				return getRuleContext(ImportPathContext.self, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_importSpec
 		}
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_importSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterImportSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterImportSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitImportSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitImportSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitImportSpec(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitImportSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitImportSpec(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitImportSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importSpec() throws -> ImportSpecContext {
+	 open func importSpec() throws -> ImportSpecContext {
 		var _localctx: ImportSpecContext = ImportSpecContext(_ctx, getState())
 		try enterRule(_localctx, 6, GolangParser.RULE_importSpec)
 		var _la: Int = 0
@@ -531,35 +553,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ImportPathContext:ParserRuleContext {
-		open func STRING_LIT() -> TerminalNode? { return getToken(GolangParser.Tokens.STRING_LIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_importPath }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterImportPath(self)
+
+	public class ImportPathContext: ParserRuleContext {
+			open
+			func STRING_LIT() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.STRING_LIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_importPath
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterImportPath(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitImportPath(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitImportPath(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitImportPath(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitImportPath(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitImportPath(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitImportPath(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importPath() throws -> ImportPathContext {
+	 open func importPath() throws -> ImportPathContext {
 		var _localctx: ImportPathContext = ImportPathContext(_ctx, getState())
 		try enterRule(_localctx, 8, GolangParser.RULE_importPath)
 		defer {
@@ -579,43 +609,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TopLevelDeclContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class TopLevelDeclContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func functionDecl() -> FunctionDeclContext? {
+				return getRuleContext(FunctionDeclContext.self, 0)
+			}
+			open
+			func methodDecl() -> MethodDeclContext? {
+				return getRuleContext(MethodDeclContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_topLevelDecl
 		}
-		open func functionDecl() -> FunctionDeclContext? {
-			return getRuleContext(FunctionDeclContext.self,0)
-		}
-		open func methodDecl() -> MethodDeclContext? {
-			return getRuleContext(MethodDeclContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_topLevelDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTopLevelDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTopLevelDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTopLevelDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTopLevelDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTopLevelDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTopLevelDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTopLevelDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTopLevelDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func topLevelDecl() throws -> TopLevelDeclContext {
+	 open func topLevelDecl() throws -> TopLevelDeclContext {
 		var _localctx: TopLevelDeclContext = TopLevelDeclContext(_ctx, getState())
 		try enterRule(_localctx, 10, GolangParser.RULE_topLevelDecl)
 		defer {
@@ -654,43 +692,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationContext:ParserRuleContext {
-		open func constDecl() -> ConstDeclContext? {
-			return getRuleContext(ConstDeclContext.self,0)
+
+	public class DeclarationContext: ParserRuleContext {
+			open
+			func constDecl() -> ConstDeclContext? {
+				return getRuleContext(ConstDeclContext.self, 0)
+			}
+			open
+			func typeDecl() -> TypeDeclContext? {
+				return getRuleContext(TypeDeclContext.self, 0)
+			}
+			open
+			func varDecl() -> VarDeclContext? {
+				return getRuleContext(VarDeclContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_declaration
 		}
-		open func typeDecl() -> TypeDeclContext? {
-			return getRuleContext(TypeDeclContext.self,0)
-		}
-		open func varDecl() -> VarDeclContext? {
-			return getRuleContext(VarDeclContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitDeclaration(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitDeclaration(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration() throws -> DeclarationContext {
+	 open func declaration() throws -> DeclarationContext {
 		var _localctx: DeclarationContext = DeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 12, GolangParser.RULE_declaration)
 		defer {
@@ -721,7 +767,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -732,46 +778,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ConstDeclContext:ParserRuleContext {
-		open func constSpec() -> Array<ConstSpecContext> {
-			return getRuleContexts(ConstSpecContext.self)
+
+	public class ConstDeclContext: ParserRuleContext {
+			open
+			func constSpec() -> [ConstSpecContext] {
+				return getRuleContexts(ConstSpecContext.self)
+			}
+			open
+			func constSpec(_ i: Int) -> ConstSpecContext? {
+				return getRuleContext(ConstSpecContext.self, i)
+			}
+			open
+			func eos() -> [EosContext] {
+				return getRuleContexts(EosContext.self)
+			}
+			open
+			func eos(_ i: Int) -> EosContext? {
+				return getRuleContext(EosContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_constDecl
 		}
-		open func constSpec(_ i: Int) -> ConstSpecContext? {
-			return getRuleContext(ConstSpecContext.self,i)
-		}
-		open func eos() -> Array<EosContext> {
-			return getRuleContexts(EosContext.self)
-		}
-		open func eos(_ i: Int) -> EosContext? {
-			return getRuleContext(EosContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_constDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterConstDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterConstDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitConstDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitConstDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitConstDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitConstDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitConstDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitConstDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constDecl() throws -> ConstDeclContext {
+	 open func constDecl() throws -> ConstDeclContext {
 		var _localctx: ConstDeclContext = ConstDeclContext(_ctx, getState())
 		try enterRule(_localctx, 14, GolangParser.RULE_constDecl)
 		var _la: Int = 0
@@ -817,7 +872,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -829,43 +884,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ConstSpecContext:ParserRuleContext {
-		open func identifierList() -> IdentifierListContext? {
-			return getRuleContext(IdentifierListContext.self,0)
+
+	public class ConstSpecContext: ParserRuleContext {
+			open
+			func identifierList() -> IdentifierListContext? {
+				return getRuleContext(IdentifierListContext.self, 0)
+			}
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_constSpec
 		}
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_constSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterConstSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterConstSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitConstSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitConstSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitConstSpec(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitConstSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitConstSpec(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitConstSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constSpec() throws -> ConstSpecContext {
+	 open func constSpec() throws -> ConstSpecContext {
 		var _localctx: ConstSpecContext = ConstSpecContext(_ctx, getState())
 		try enterRule(_localctx, 16, GolangParser.RULE_constSpec)
 		var _la: Int = 0
@@ -914,38 +977,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class IdentifierListContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(GolangParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class IdentifierListContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(GolangParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_identifierList
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_identifierList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterIdentifierList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterIdentifierList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitIdentifierList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitIdentifierList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitIdentifierList(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitIdentifierList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitIdentifierList(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitIdentifierList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifierList() throws -> IdentifierListContext {
+	 open func identifierList() throws -> IdentifierListContext {
 		var _localctx: IdentifierListContext = IdentifierListContext(_ctx, getState())
 		try enterRule(_localctx, 18, GolangParser.RULE_identifierList)
 		defer {
@@ -982,40 +1054,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionListContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ExpressionListContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_expressionList
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_expressionList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterExpressionList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterExpressionList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitExpressionList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitExpressionList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitExpressionList(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitExpressionList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitExpressionList(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitExpressionList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionList() throws -> ExpressionListContext {
+	 open func expressionList() throws -> ExpressionListContext {
 		var _localctx: ExpressionListContext = ExpressionListContext(_ctx, getState())
 		try enterRule(_localctx, 20, GolangParser.RULE_expressionList)
 		defer {
@@ -1052,40 +1131,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeDeclContext:ParserRuleContext {
-		open func typeSpec() -> Array<TypeSpecContext> {
-			return getRuleContexts(TypeSpecContext.self)
+
+	public class TypeDeclContext: ParserRuleContext {
+			open
+			func typeSpec() -> [TypeSpecContext] {
+				return getRuleContexts(TypeSpecContext.self)
+			}
+			open
+			func typeSpec(_ i: Int) -> TypeSpecContext? {
+				return getRuleContext(TypeSpecContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeDecl
 		}
-		open func typeSpec(_ i: Int) -> TypeSpecContext? {
-			return getRuleContext(TypeSpecContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeDecl() throws -> TypeDeclContext {
+	 open func typeDecl() throws -> TypeDeclContext {
 		var _localctx: TypeDeclContext = TypeDeclContext(_ctx, getState())
 		try enterRule(_localctx, 22, GolangParser.RULE_typeDecl)
 		var _la: Int = 0
@@ -1131,7 +1217,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1143,38 +1229,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeSpecContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class TypeSpecContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeSpec
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeSpec(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeSpec(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeSpec() throws -> TypeSpecContext {
+	 open func typeSpec() throws -> TypeSpecContext {
 		var _localctx: TypeSpecContext = TypeSpecContext(_ctx, getState())
 		try enterRule(_localctx, 24, GolangParser.RULE_typeSpec)
 		defer {
@@ -1196,41 +1291,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionDeclContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func function() -> FunctionContext? {
-			return getRuleContext(FunctionContext.self,0)
+
+	public class FunctionDeclContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func function() -> FunctionContext? {
+				return getRuleContext(FunctionContext.self, 0)
+			}
+			open
+			func signature() -> SignatureContext? {
+				return getRuleContext(SignatureContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_functionDecl
 		}
-		open func signature() -> SignatureContext? {
-			return getRuleContext(SignatureContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_functionDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterFunctionDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterFunctionDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitFunctionDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitFunctionDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitFunctionDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitFunctionDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitFunctionDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitFunctionDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionDecl() throws -> FunctionDeclContext {
+	 open func functionDecl() throws -> FunctionDeclContext {
 		var _localctx: FunctionDeclContext = FunctionDeclContext(_ctx, getState())
 		try enterRule(_localctx, 26, GolangParser.RULE_functionDecl)
 		defer {
@@ -1267,40 +1372,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionContext:ParserRuleContext {
-		open func signature() -> SignatureContext? {
-			return getRuleContext(SignatureContext.self,0)
+
+	public class FunctionContext: ParserRuleContext {
+			open
+			func signature() -> SignatureContext? {
+				return getRuleContext(SignatureContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_function
 		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_function }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterFunction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitFunction(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitFunction(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function() throws -> FunctionContext {
+	 open func function() throws -> FunctionContext {
 		var _localctx: FunctionContext = FunctionContext(_ctx, getState())
 		try enterRule(_localctx, 28, GolangParser.RULE_function)
 		defer {
@@ -1322,44 +1434,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class MethodDeclContext:ParserRuleContext {
-		open func receiver() -> ReceiverContext? {
-			return getRuleContext(ReceiverContext.self,0)
+
+	public class MethodDeclContext: ParserRuleContext {
+			open
+			func receiver() -> ReceiverContext? {
+				return getRuleContext(ReceiverContext.self, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func function() -> FunctionContext? {
+				return getRuleContext(FunctionContext.self, 0)
+			}
+			open
+			func signature() -> SignatureContext? {
+				return getRuleContext(SignatureContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_methodDecl
 		}
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func function() -> FunctionContext? {
-			return getRuleContext(FunctionContext.self,0)
-		}
-		open func signature() -> SignatureContext? {
-			return getRuleContext(SignatureContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_methodDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterMethodDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterMethodDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitMethodDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitMethodDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitMethodDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitMethodDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitMethodDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitMethodDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func methodDecl() throws -> MethodDeclContext {
+	 open func methodDecl() throws -> MethodDeclContext {
 		var _localctx: MethodDeclContext = MethodDeclContext(_ctx, getState())
 		try enterRule(_localctx, 30, GolangParser.RULE_methodDecl)
 		defer {
@@ -1398,37 +1521,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ReceiverContext:ParserRuleContext {
-		open func parameters() -> ParametersContext? {
-			return getRuleContext(ParametersContext.self,0)
+
+	public class ReceiverContext: ParserRuleContext {
+			open
+			func parameters() -> ParametersContext? {
+				return getRuleContext(ParametersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_receiver
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_receiver }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterReceiver(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterReceiver(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitReceiver(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitReceiver(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitReceiver(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitReceiver(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitReceiver(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitReceiver(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func receiver() throws -> ReceiverContext {
+	 open func receiver() throws -> ReceiverContext {
 		var _localctx: ReceiverContext = ReceiverContext(_ctx, getState())
 		try enterRule(_localctx, 32, GolangParser.RULE_receiver)
 		defer {
@@ -1448,46 +1577,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class VarDeclContext:ParserRuleContext {
-		open func varSpec() -> Array<VarSpecContext> {
-			return getRuleContexts(VarSpecContext.self)
+
+	public class VarDeclContext: ParserRuleContext {
+			open
+			func varSpec() -> [VarSpecContext] {
+				return getRuleContexts(VarSpecContext.self)
+			}
+			open
+			func varSpec(_ i: Int) -> VarSpecContext? {
+				return getRuleContext(VarSpecContext.self, i)
+			}
+			open
+			func eos() -> [EosContext] {
+				return getRuleContexts(EosContext.self)
+			}
+			open
+			func eos(_ i: Int) -> EosContext? {
+				return getRuleContext(EosContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_varDecl
 		}
-		open func varSpec(_ i: Int) -> VarSpecContext? {
-			return getRuleContext(VarSpecContext.self,i)
-		}
-		open func eos() -> Array<EosContext> {
-			return getRuleContexts(EosContext.self)
-		}
-		open func eos(_ i: Int) -> EosContext? {
-			return getRuleContext(EosContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_varDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterVarDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterVarDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitVarDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitVarDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitVarDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitVarDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitVarDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitVarDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varDecl() throws -> VarDeclContext {
+	 open func varDecl() throws -> VarDeclContext {
 		var _localctx: VarDeclContext = VarDeclContext(_ctx, getState())
 		try enterRule(_localctx, 34, GolangParser.RULE_varDecl)
 		var _la: Int = 0
@@ -1533,7 +1671,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1545,43 +1683,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class VarSpecContext:ParserRuleContext {
-		open func identifierList() -> IdentifierListContext? {
-			return getRuleContext(IdentifierListContext.self,0)
+
+	public class VarSpecContext: ParserRuleContext {
+			open
+			func identifierList() -> IdentifierListContext? {
+				return getRuleContext(IdentifierListContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_varSpec
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_varSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterVarSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterVarSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitVarSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitVarSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitVarSpec(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitVarSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitVarSpec(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitVarSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varSpec() throws -> VarSpecContext {
+	 open func varSpec() throws -> VarSpecContext {
 		var _localctx: VarSpecContext = VarSpecContext(_ctx, getState())
 		try enterRule(_localctx, 36, GolangParser.RULE_varSpec)
 		defer {
@@ -1629,7 +1775,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1641,37 +1787,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func statementList() -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,0)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func statementList() -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_block
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitBlock(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 38, GolangParser.RULE_block)
 		defer {
@@ -1695,46 +1847,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class StatementListContext:ParserRuleContext {
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
+
+	public class StatementListContext: ParserRuleContext {
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+			open
+			func eos() -> [EosContext] {
+				return getRuleContexts(EosContext.self)
+			}
+			open
+			func eos(_ i: Int) -> EosContext? {
+				return getRuleContext(EosContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_statementList
 		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open func eos() -> Array<EosContext> {
-			return getRuleContexts(EosContext.self)
-		}
-		open func eos(_ i: Int) -> EosContext? {
-			return getRuleContext(EosContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_statementList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterStatementList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterStatementList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitStatementList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitStatementList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitStatementList(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitStatementList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitStatementList(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitStatementList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statementList() throws -> StatementListContext {
+	 open func statementList() throws -> StatementListContext {
 		var _localctx: StatementListContext = StatementListContext(_ctx, getState())
 		try enterRule(_localctx, 40, GolangParser.RULE_statementList)
 		var _la: Int = 0
@@ -1778,79 +1939,99 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func labeledStmt() -> LabeledStmtContext? {
+				return getRuleContext(LabeledStmtContext.self, 0)
+			}
+			open
+			func simpleStmt() -> SimpleStmtContext? {
+				return getRuleContext(SimpleStmtContext.self, 0)
+			}
+			open
+			func goStmt() -> GoStmtContext? {
+				return getRuleContext(GoStmtContext.self, 0)
+			}
+			open
+			func returnStmt() -> ReturnStmtContext? {
+				return getRuleContext(ReturnStmtContext.self, 0)
+			}
+			open
+			func breakStmt() -> BreakStmtContext? {
+				return getRuleContext(BreakStmtContext.self, 0)
+			}
+			open
+			func continueStmt() -> ContinueStmtContext? {
+				return getRuleContext(ContinueStmtContext.self, 0)
+			}
+			open
+			func gotoStmt() -> GotoStmtContext? {
+				return getRuleContext(GotoStmtContext.self, 0)
+			}
+			open
+			func fallthroughStmt() -> FallthroughStmtContext? {
+				return getRuleContext(FallthroughStmtContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func ifStmt() -> IfStmtContext? {
+				return getRuleContext(IfStmtContext.self, 0)
+			}
+			open
+			func switchStmt() -> SwitchStmtContext? {
+				return getRuleContext(SwitchStmtContext.self, 0)
+			}
+			open
+			func selectStmt() -> SelectStmtContext? {
+				return getRuleContext(SelectStmtContext.self, 0)
+			}
+			open
+			func forStmt() -> ForStmtContext? {
+				return getRuleContext(ForStmtContext.self, 0)
+			}
+			open
+			func deferStmt() -> DeferStmtContext? {
+				return getRuleContext(DeferStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_statement
 		}
-		open func labeledStmt() -> LabeledStmtContext? {
-			return getRuleContext(LabeledStmtContext.self,0)
-		}
-		open func simpleStmt() -> SimpleStmtContext? {
-			return getRuleContext(SimpleStmtContext.self,0)
-		}
-		open func goStmt() -> GoStmtContext? {
-			return getRuleContext(GoStmtContext.self,0)
-		}
-		open func returnStmt() -> ReturnStmtContext? {
-			return getRuleContext(ReturnStmtContext.self,0)
-		}
-		open func breakStmt() -> BreakStmtContext? {
-			return getRuleContext(BreakStmtContext.self,0)
-		}
-		open func continueStmt() -> ContinueStmtContext? {
-			return getRuleContext(ContinueStmtContext.self,0)
-		}
-		open func gotoStmt() -> GotoStmtContext? {
-			return getRuleContext(GotoStmtContext.self,0)
-		}
-		open func fallthroughStmt() -> FallthroughStmtContext? {
-			return getRuleContext(FallthroughStmtContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func ifStmt() -> IfStmtContext? {
-			return getRuleContext(IfStmtContext.self,0)
-		}
-		open func switchStmt() -> SwitchStmtContext? {
-			return getRuleContext(SwitchStmtContext.self,0)
-		}
-		open func selectStmt() -> SelectStmtContext? {
-			return getRuleContext(SelectStmtContext.self,0)
-		}
-		open func forStmt() -> ForStmtContext? {
-			return getRuleContext(ForStmtContext.self,0)
-		}
-		open func deferStmt() -> DeferStmtContext? {
-			return getRuleContext(DeferStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitStatement(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 42, GolangParser.RULE_statement)
 		defer {
@@ -1961,52 +2142,63 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class SimpleStmtContext:ParserRuleContext {
-		open func sendStmt() -> SendStmtContext? {
-			return getRuleContext(SendStmtContext.self,0)
+
+	public class SimpleStmtContext: ParserRuleContext {
+			open
+			func sendStmt() -> SendStmtContext? {
+				return getRuleContext(SendStmtContext.self, 0)
+			}
+			open
+			func expressionStmt() -> ExpressionStmtContext? {
+				return getRuleContext(ExpressionStmtContext.self, 0)
+			}
+			open
+			func incDecStmt() -> IncDecStmtContext? {
+				return getRuleContext(IncDecStmtContext.self, 0)
+			}
+			open
+			func assignment() -> AssignmentContext? {
+				return getRuleContext(AssignmentContext.self, 0)
+			}
+			open
+			func shortVarDecl() -> ShortVarDeclContext? {
+				return getRuleContext(ShortVarDeclContext.self, 0)
+			}
+			open
+			func emptyStmt() -> EmptyStmtContext? {
+				return getRuleContext(EmptyStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_simpleStmt
 		}
-		open func expressionStmt() -> ExpressionStmtContext? {
-			return getRuleContext(ExpressionStmtContext.self,0)
-		}
-		open func incDecStmt() -> IncDecStmtContext? {
-			return getRuleContext(IncDecStmtContext.self,0)
-		}
-		open func assignment() -> AssignmentContext? {
-			return getRuleContext(AssignmentContext.self,0)
-		}
-		open func shortVarDecl() -> ShortVarDeclContext? {
-			return getRuleContext(ShortVarDeclContext.self,0)
-		}
-		open func emptyStmt() -> EmptyStmtContext? {
-			return getRuleContext(EmptyStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_simpleStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterSimpleStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterSimpleStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitSimpleStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitSimpleStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitSimpleStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitSimpleStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitSimpleStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitSimpleStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleStmt() throws -> SimpleStmtContext {
+	 open func simpleStmt() throws -> SimpleStmtContext {
 		var _localctx: SimpleStmtContext = SimpleStmtContext(_ctx, getState())
 		try enterRule(_localctx, 44, GolangParser.RULE_simpleStmt)
 		defer {
@@ -2063,37 +2255,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionStmtContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ExpressionStmtContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_expressionStmt
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_expressionStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterExpressionStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterExpressionStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitExpressionStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitExpressionStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitExpressionStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitExpressionStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitExpressionStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitExpressionStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionStmt() throws -> ExpressionStmtContext {
+	 open func expressionStmt() throws -> ExpressionStmtContext {
 		var _localctx: ExpressionStmtContext = ExpressionStmtContext(_ctx, getState())
 		try enterRule(_localctx, 46, GolangParser.RULE_expressionStmt)
 		defer {
@@ -2113,40 +2311,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class SendStmtContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class SendStmtContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_sendStmt
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_sendStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterSendStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterSendStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitSendStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitSendStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitSendStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitSendStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitSendStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitSendStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sendStmt() throws -> SendStmtContext {
+	 open func sendStmt() throws -> SendStmtContext {
 		var _localctx: SendStmtContext = SendStmtContext(_ctx, getState())
 		try enterRule(_localctx, 48, GolangParser.RULE_sendStmt)
 		defer {
@@ -2170,37 +2375,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class IncDecStmtContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class IncDecStmtContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_incDecStmt
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_incDecStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterIncDecStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterIncDecStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitIncDecStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitIncDecStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitIncDecStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitIncDecStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitIncDecStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitIncDecStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func incDecStmt() throws -> IncDecStmtContext {
+	 open func incDecStmt() throws -> IncDecStmtContext {
 		var _localctx: IncDecStmtContext = IncDecStmtContext(_ctx, getState())
 		try enterRule(_localctx, 50, GolangParser.RULE_incDecStmt)
 		var _la: Int = 0
@@ -2234,43 +2445,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentContext:ParserRuleContext {
-		open func expressionList() -> Array<ExpressionListContext> {
-			return getRuleContexts(ExpressionListContext.self)
+
+	public class AssignmentContext: ParserRuleContext {
+			open
+			func expressionList() -> [ExpressionListContext] {
+				return getRuleContexts(ExpressionListContext.self)
+			}
+			open
+			func expressionList(_ i: Int) -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, i)
+			}
+			open
+			func assign_op() -> Assign_opContext? {
+				return getRuleContext(Assign_opContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_assignment
 		}
-		open func expressionList(_ i: Int) -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,i)
-		}
-		open func assign_op() -> Assign_opContext? {
-			return getRuleContext(Assign_opContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterAssignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterAssignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitAssignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitAssignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitAssignment(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitAssignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitAssignment(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitAssignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignment() throws -> AssignmentContext {
+	 open func assignment() throws -> AssignmentContext {
 		var _localctx: AssignmentContext = AssignmentContext(_ctx, getState())
 		try enterRule(_localctx, 52, GolangParser.RULE_assignment)
 		defer {
@@ -2294,34 +2513,39 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class Assign_opContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_assign_op }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterAssign_op(self)
+
+	public class Assign_opContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_assign_op
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterAssign_op(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitAssign_op(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitAssign_op(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitAssign_op(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitAssign_op(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitAssign_op(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitAssign_op(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assign_op() throws -> Assign_opContext {
+	 open func assign_op() throws -> Assign_opContext {
 		var _localctx: Assign_opContext = Assign_opContext(_ctx, getState())
 		try enterRule(_localctx, 54, GolangParser.RULE_assign_op)
 		var _la: Int = 0
@@ -2372,40 +2596,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ShortVarDeclContext:ParserRuleContext {
-		open func identifierList() -> IdentifierListContext? {
-			return getRuleContext(IdentifierListContext.self,0)
+
+	public class ShortVarDeclContext: ParserRuleContext {
+			open
+			func identifierList() -> IdentifierListContext? {
+				return getRuleContext(IdentifierListContext.self, 0)
+			}
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_shortVarDecl
 		}
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_shortVarDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterShortVarDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterShortVarDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitShortVarDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitShortVarDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitShortVarDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitShortVarDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitShortVarDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitShortVarDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func shortVarDecl() throws -> ShortVarDeclContext {
+	 open func shortVarDecl() throws -> ShortVarDeclContext {
 		var _localctx: ShortVarDeclContext = ShortVarDeclContext(_ctx, getState())
 		try enterRule(_localctx, 56, GolangParser.RULE_shortVarDecl)
 		defer {
@@ -2429,34 +2660,39 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class EmptyStmtContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_emptyStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterEmptyStmt(self)
+
+	public class EmptyStmtContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_emptyStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterEmptyStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitEmptyStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitEmptyStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitEmptyStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitEmptyStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitEmptyStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitEmptyStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func emptyStmt() throws -> EmptyStmtContext {
+	 open func emptyStmt() throws -> EmptyStmtContext {
 		var _localctx: EmptyStmtContext = EmptyStmtContext(_ctx, getState())
 		try enterRule(_localctx, 58, GolangParser.RULE_emptyStmt)
 		defer {
@@ -2476,38 +2712,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class LabeledStmtContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
+
+	public class LabeledStmtContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_labeledStmt
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_labeledStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterLabeledStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterLabeledStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitLabeledStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitLabeledStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitLabeledStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitLabeledStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitLabeledStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitLabeledStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func labeledStmt() throws -> LabeledStmtContext {
+	 open func labeledStmt() throws -> LabeledStmtContext {
 		var _localctx: LabeledStmtContext = LabeledStmtContext(_ctx, getState())
 		try enterRule(_localctx, 60, GolangParser.RULE_labeledStmt)
 		defer {
@@ -2531,37 +2776,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ReturnStmtContext:ParserRuleContext {
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
+
+	public class ReturnStmtContext: ParserRuleContext {
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_returnStmt
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_returnStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterReturnStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterReturnStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitReturnStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitReturnStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitReturnStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitReturnStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitReturnStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitReturnStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func returnStmt() throws -> ReturnStmtContext {
+	 open func returnStmt() throws -> ReturnStmtContext {
 		var _localctx: ReturnStmtContext = ReturnStmtContext(_ctx, getState())
 		try enterRule(_localctx, 62, GolangParser.RULE_returnStmt)
 		defer {
@@ -2591,35 +2842,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class BreakStmtContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_breakStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterBreakStmt(self)
+
+	public class BreakStmtContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_breakStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterBreakStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitBreakStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitBreakStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitBreakStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitBreakStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitBreakStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitBreakStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func breakStmt() throws -> BreakStmtContext {
+	 open func breakStmt() throws -> BreakStmtContext {
 		var _localctx: BreakStmtContext = BreakStmtContext(_ctx, getState())
 		try enterRule(_localctx, 64, GolangParser.RULE_breakStmt)
 		defer {
@@ -2649,35 +2908,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ContinueStmtContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_continueStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterContinueStmt(self)
+
+	public class ContinueStmtContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_continueStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterContinueStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitContinueStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitContinueStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitContinueStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitContinueStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitContinueStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitContinueStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func continueStmt() throws -> ContinueStmtContext {
+	 open func continueStmt() throws -> ContinueStmtContext {
 		var _localctx: ContinueStmtContext = ContinueStmtContext(_ctx, getState())
 		try enterRule(_localctx, 66, GolangParser.RULE_continueStmt)
 		defer {
@@ -2707,35 +2974,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class GotoStmtContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_gotoStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterGotoStmt(self)
+
+	public class GotoStmtContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_gotoStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterGotoStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitGotoStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitGotoStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitGotoStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitGotoStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitGotoStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitGotoStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func gotoStmt() throws -> GotoStmtContext {
+	 open func gotoStmt() throws -> GotoStmtContext {
 		var _localctx: GotoStmtContext = GotoStmtContext(_ctx, getState())
 		try enterRule(_localctx, 68, GolangParser.RULE_gotoStmt)
 		defer {
@@ -2757,34 +3032,39 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class FallthroughStmtContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_fallthroughStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterFallthroughStmt(self)
+
+	public class FallthroughStmtContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_fallthroughStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterFallthroughStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitFallthroughStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitFallthroughStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitFallthroughStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitFallthroughStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitFallthroughStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitFallthroughStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fallthroughStmt() throws -> FallthroughStmtContext {
+	 open func fallthroughStmt() throws -> FallthroughStmtContext {
 		var _localctx: FallthroughStmtContext = FallthroughStmtContext(_ctx, getState())
 		try enterRule(_localctx, 70, GolangParser.RULE_fallthroughStmt)
 		defer {
@@ -2804,37 +3084,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class DeferStmtContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class DeferStmtContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_deferStmt
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_deferStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterDeferStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterDeferStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitDeferStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitDeferStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitDeferStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitDeferStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitDeferStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitDeferStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func deferStmt() throws -> DeferStmtContext {
+	 open func deferStmt() throws -> DeferStmtContext {
 		var _localctx: DeferStmtContext = DeferStmtContext(_ctx, getState())
 		try enterRule(_localctx, 72, GolangParser.RULE_deferStmt)
 		defer {
@@ -2856,49 +3142,59 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class IfStmtContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class IfStmtContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func block() -> [BlockContext] {
+				return getRuleContexts(BlockContext.self)
+			}
+			open
+			func block(_ i: Int) -> BlockContext? {
+				return getRuleContext(BlockContext.self, i)
+			}
+			open
+			func simpleStmt() -> SimpleStmtContext? {
+				return getRuleContext(SimpleStmtContext.self, 0)
+			}
+			open
+			func ifStmt() -> IfStmtContext? {
+				return getRuleContext(IfStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_ifStmt
 		}
-		open func block() -> Array<BlockContext> {
-			return getRuleContexts(BlockContext.self)
-		}
-		open func block(_ i: Int) -> BlockContext? {
-			return getRuleContext(BlockContext.self,i)
-		}
-		open func simpleStmt() -> SimpleStmtContext? {
-			return getRuleContext(SimpleStmtContext.self,0)
-		}
-		open func ifStmt() -> IfStmtContext? {
-			return getRuleContext(IfStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_ifStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterIfStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterIfStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitIfStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitIfStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitIfStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitIfStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitIfStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitIfStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifStmt() throws -> IfStmtContext {
+	 open func ifStmt() throws -> IfStmtContext {
 		var _localctx: IfStmtContext = IfStmtContext(_ctx, getState())
 		try enterRule(_localctx, 74, GolangParser.RULE_ifStmt)
 		defer {
@@ -2945,7 +3241,7 @@ open class GolangParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -2961,40 +3257,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class SwitchStmtContext:ParserRuleContext {
-		open func exprSwitchStmt() -> ExprSwitchStmtContext? {
-			return getRuleContext(ExprSwitchStmtContext.self,0)
+
+	public class SwitchStmtContext: ParserRuleContext {
+			open
+			func exprSwitchStmt() -> ExprSwitchStmtContext? {
+				return getRuleContext(ExprSwitchStmtContext.self, 0)
+			}
+			open
+			func typeSwitchStmt() -> TypeSwitchStmtContext? {
+				return getRuleContext(TypeSwitchStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_switchStmt
 		}
-		open func typeSwitchStmt() -> TypeSwitchStmtContext? {
-			return getRuleContext(TypeSwitchStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_switchStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterSwitchStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterSwitchStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitSwitchStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitSwitchStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitSwitchStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitSwitchStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitSwitchStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitSwitchStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func switchStmt() throws -> SwitchStmtContext {
+	 open func switchStmt() throws -> SwitchStmtContext {
 		var _localctx: SwitchStmtContext = SwitchStmtContext(_ctx, getState())
 		try enterRule(_localctx, 76, GolangParser.RULE_switchStmt)
 		defer {
@@ -3027,46 +3330,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ExprSwitchStmtContext:ParserRuleContext {
-		open func simpleStmt() -> SimpleStmtContext? {
-			return getRuleContext(SimpleStmtContext.self,0)
+
+	public class ExprSwitchStmtContext: ParserRuleContext {
+			open
+			func simpleStmt() -> SimpleStmtContext? {
+				return getRuleContext(SimpleStmtContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func exprCaseClause() -> [ExprCaseClauseContext] {
+				return getRuleContexts(ExprCaseClauseContext.self)
+			}
+			open
+			func exprCaseClause(_ i: Int) -> ExprCaseClauseContext? {
+				return getRuleContext(ExprCaseClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_exprSwitchStmt
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func exprCaseClause() -> Array<ExprCaseClauseContext> {
-			return getRuleContexts(ExprCaseClauseContext.self)
-		}
-		open func exprCaseClause(_ i: Int) -> ExprCaseClauseContext? {
-			return getRuleContext(ExprCaseClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_exprSwitchStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterExprSwitchStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterExprSwitchStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitExprSwitchStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitExprSwitchStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitExprSwitchStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitExprSwitchStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitExprSwitchStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitExprSwitchStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exprSwitchStmt() throws -> ExprSwitchStmtContext {
+	 open func exprSwitchStmt() throws -> ExprSwitchStmtContext {
 		var _localctx: ExprSwitchStmtContext = ExprSwitchStmtContext(_ctx, getState())
 		try enterRule(_localctx, 78, GolangParser.RULE_exprSwitchStmt)
 		var _la: Int = 0
@@ -3139,40 +3451,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ExprCaseClauseContext:ParserRuleContext {
-		open func exprSwitchCase() -> ExprSwitchCaseContext? {
-			return getRuleContext(ExprSwitchCaseContext.self,0)
+
+	public class ExprCaseClauseContext: ParserRuleContext {
+			open
+			func exprSwitchCase() -> ExprSwitchCaseContext? {
+				return getRuleContext(ExprSwitchCaseContext.self, 0)
+			}
+			open
+			func statementList() -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_exprCaseClause
 		}
-		open func statementList() -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_exprCaseClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterExprCaseClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterExprCaseClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitExprCaseClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitExprCaseClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitExprCaseClause(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitExprCaseClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitExprCaseClause(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitExprCaseClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exprCaseClause() throws -> ExprCaseClauseContext {
+	 open func exprCaseClause() throws -> ExprCaseClauseContext {
 		var _localctx: ExprCaseClauseContext = ExprCaseClauseContext(_ctx, getState())
 		try enterRule(_localctx, 80, GolangParser.RULE_exprCaseClause)
 		defer {
@@ -3196,37 +3515,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ExprSwitchCaseContext:ParserRuleContext {
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
+
+	public class ExprSwitchCaseContext: ParserRuleContext {
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_exprSwitchCase
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_exprSwitchCase }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterExprSwitchCase(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterExprSwitchCase(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitExprSwitchCase(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitExprSwitchCase(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitExprSwitchCase(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitExprSwitchCase(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitExprSwitchCase(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitExprSwitchCase(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exprSwitchCase() throws -> ExprSwitchCaseContext {
+	 open func exprSwitchCase() throws -> ExprSwitchCaseContext {
 		var _localctx: ExprSwitchCaseContext = ExprSwitchCaseContext(_ctx, getState())
 		try enterRule(_localctx, 82, GolangParser.RULE_exprSwitchCase)
 		defer {
@@ -3252,7 +3577,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3263,46 +3588,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeSwitchStmtContext:ParserRuleContext {
-		open func typeSwitchGuard() -> TypeSwitchGuardContext? {
-			return getRuleContext(TypeSwitchGuardContext.self,0)
+
+	public class TypeSwitchStmtContext: ParserRuleContext {
+			open
+			func typeSwitchGuard() -> TypeSwitchGuardContext? {
+				return getRuleContext(TypeSwitchGuardContext.self, 0)
+			}
+			open
+			func simpleStmt() -> SimpleStmtContext? {
+				return getRuleContext(SimpleStmtContext.self, 0)
+			}
+			open
+			func typeCaseClause() -> [TypeCaseClauseContext] {
+				return getRuleContexts(TypeCaseClauseContext.self)
+			}
+			open
+			func typeCaseClause(_ i: Int) -> TypeCaseClauseContext? {
+				return getRuleContext(TypeCaseClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeSwitchStmt
 		}
-		open func simpleStmt() -> SimpleStmtContext? {
-			return getRuleContext(SimpleStmtContext.self,0)
-		}
-		open func typeCaseClause() -> Array<TypeCaseClauseContext> {
-			return getRuleContexts(TypeCaseClauseContext.self)
-		}
-		open func typeCaseClause(_ i: Int) -> TypeCaseClauseContext? {
-			return getRuleContext(TypeCaseClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeSwitchStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeSwitchStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeSwitchStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeSwitchStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeSwitchStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeSwitchStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeSwitchStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeSwitchStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeSwitchStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeSwitchStmt() throws -> TypeSwitchStmtContext {
+	 open func typeSwitchStmt() throws -> TypeSwitchStmtContext {
 		var _localctx: TypeSwitchStmtContext = TypeSwitchStmtContext(_ctx, getState())
 		try enterRule(_localctx, 84, GolangParser.RULE_typeSwitchStmt)
 		var _la: Int = 0
@@ -3357,38 +3691,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeSwitchGuardContext:ParserRuleContext {
-		open func primaryExpr() -> PrimaryExprContext? {
-			return getRuleContext(PrimaryExprContext.self,0)
+
+	public class TypeSwitchGuardContext: ParserRuleContext {
+			open
+			func primaryExpr() -> PrimaryExprContext? {
+				return getRuleContext(PrimaryExprContext.self, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeSwitchGuard
 		}
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeSwitchGuard }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeSwitchGuard(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeSwitchGuard(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeSwitchGuard(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeSwitchGuard(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeSwitchGuard(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeSwitchGuard(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeSwitchGuard(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeSwitchGuard(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeSwitchGuard() throws -> TypeSwitchGuardContext {
+	 open func typeSwitchGuard() throws -> TypeSwitchGuardContext {
 		var _localctx: TypeSwitchGuardContext = TypeSwitchGuardContext(_ctx, getState())
 		try enterRule(_localctx, 86, GolangParser.RULE_typeSwitchGuard)
 		defer {
@@ -3428,40 +3771,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeCaseClauseContext:ParserRuleContext {
-		open func typeSwitchCase() -> TypeSwitchCaseContext? {
-			return getRuleContext(TypeSwitchCaseContext.self,0)
+
+	public class TypeCaseClauseContext: ParserRuleContext {
+			open
+			func typeSwitchCase() -> TypeSwitchCaseContext? {
+				return getRuleContext(TypeSwitchCaseContext.self, 0)
+			}
+			open
+			func statementList() -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeCaseClause
 		}
-		open func statementList() -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeCaseClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeCaseClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeCaseClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeCaseClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeCaseClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeCaseClause(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeCaseClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeCaseClause(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeCaseClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeCaseClause() throws -> TypeCaseClauseContext {
+	 open func typeCaseClause() throws -> TypeCaseClauseContext {
 		var _localctx: TypeCaseClauseContext = TypeCaseClauseContext(_ctx, getState())
 		try enterRule(_localctx, 88, GolangParser.RULE_typeCaseClause)
 		defer {
@@ -3485,37 +3835,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeSwitchCaseContext:ParserRuleContext {
-		open func typeList() -> TypeListContext? {
-			return getRuleContext(TypeListContext.self,0)
+
+	public class TypeSwitchCaseContext: ParserRuleContext {
+			open
+			func typeList() -> TypeListContext? {
+				return getRuleContext(TypeListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeSwitchCase
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeSwitchCase }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeSwitchCase(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeSwitchCase(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeSwitchCase(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeSwitchCase(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeSwitchCase(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeSwitchCase(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeSwitchCase(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeSwitchCase(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeSwitchCase() throws -> TypeSwitchCaseContext {
+	 open func typeSwitchCase() throws -> TypeSwitchCaseContext {
 		var _localctx: TypeSwitchCaseContext = TypeSwitchCaseContext(_ctx, getState())
 		try enterRule(_localctx, 90, GolangParser.RULE_typeSwitchCase)
 		defer {
@@ -3541,7 +3897,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3552,40 +3908,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeListContext:ParserRuleContext {
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
+
+	public class TypeListContext: ParserRuleContext {
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeList
 		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeList(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeList(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeList() throws -> TypeListContext {
+	 open func typeList() throws -> TypeListContext {
 		var _localctx: TypeListContext = TypeListContext(_ctx, getState())
 		try enterRule(_localctx, 92, GolangParser.RULE_typeList)
 		var _la: Int = 0
@@ -3624,40 +3987,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class SelectStmtContext:ParserRuleContext {
-		open func commClause() -> Array<CommClauseContext> {
-			return getRuleContexts(CommClauseContext.self)
+
+	public class SelectStmtContext: ParserRuleContext {
+			open
+			func commClause() -> [CommClauseContext] {
+				return getRuleContexts(CommClauseContext.self)
+			}
+			open
+			func commClause(_ i: Int) -> CommClauseContext? {
+				return getRuleContext(CommClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_selectStmt
 		}
-		open func commClause(_ i: Int) -> CommClauseContext? {
-			return getRuleContext(CommClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_selectStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterSelectStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterSelectStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitSelectStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitSelectStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitSelectStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitSelectStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitSelectStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitSelectStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selectStmt() throws -> SelectStmtContext {
+	 open func selectStmt() throws -> SelectStmtContext {
 		var _localctx: SelectStmtContext = SelectStmtContext(_ctx, getState())
 		try enterRule(_localctx, 94, GolangParser.RULE_selectStmt)
 		var _la: Int = 0
@@ -3698,40 +4068,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class CommClauseContext:ParserRuleContext {
-		open func commCase() -> CommCaseContext? {
-			return getRuleContext(CommCaseContext.self,0)
+
+	public class CommClauseContext: ParserRuleContext {
+			open
+			func commCase() -> CommCaseContext? {
+				return getRuleContext(CommCaseContext.self, 0)
+			}
+			open
+			func statementList() -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_commClause
 		}
-		open func statementList() -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_commClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterCommClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterCommClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitCommClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitCommClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitCommClause(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitCommClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitCommClause(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitCommClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func commClause() throws -> CommClauseContext {
+	 open func commClause() throws -> CommClauseContext {
 		var _localctx: CommClauseContext = CommClauseContext(_ctx, getState())
 		try enterRule(_localctx, 96, GolangParser.RULE_commClause)
 		defer {
@@ -3755,40 +4132,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class CommCaseContext:ParserRuleContext {
-		open func sendStmt() -> SendStmtContext? {
-			return getRuleContext(SendStmtContext.self,0)
+
+	public class CommCaseContext: ParserRuleContext {
+			open
+			func sendStmt() -> SendStmtContext? {
+				return getRuleContext(SendStmtContext.self, 0)
+			}
+			open
+			func recvStmt() -> RecvStmtContext? {
+				return getRuleContext(RecvStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_commCase
 		}
-		open func recvStmt() -> RecvStmtContext? {
-			return getRuleContext(RecvStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_commCase }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterCommCase(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterCommCase(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitCommCase(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitCommCase(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitCommCase(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitCommCase(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitCommCase(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitCommCase(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func commCase() throws -> CommCaseContext {
+	 open func commCase() throws -> CommCaseContext {
 		var _localctx: CommCaseContext = CommCaseContext(_ctx, getState())
 		try enterRule(_localctx, 98, GolangParser.RULE_commCase)
 		defer {
@@ -3827,7 +4211,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3838,43 +4222,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class RecvStmtContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class RecvStmtContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+			open
+			func identifierList() -> IdentifierListContext? {
+				return getRuleContext(IdentifierListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_recvStmt
 		}
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
-		}
-		open func identifierList() -> IdentifierListContext? {
-			return getRuleContext(IdentifierListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_recvStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterRecvStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterRecvStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitRecvStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitRecvStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitRecvStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitRecvStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitRecvStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitRecvStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func recvStmt() throws -> RecvStmtContext {
+	 open func recvStmt() throws -> RecvStmtContext {
 		var _localctx: RecvStmtContext = RecvStmtContext(_ctx, getState())
 		try enterRule(_localctx, 100, GolangParser.RULE_recvStmt)
 		defer {
@@ -3913,46 +4305,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ForStmtContext:ParserRuleContext {
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class ForStmtContext: ParserRuleContext {
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func forClause() -> ForClauseContext? {
+				return getRuleContext(ForClauseContext.self, 0)
+			}
+			open
+			func rangeClause() -> RangeClauseContext? {
+				return getRuleContext(RangeClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_forStmt
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func forClause() -> ForClauseContext? {
-			return getRuleContext(ForClauseContext.self,0)
-		}
-		open func rangeClause() -> RangeClauseContext? {
-			return getRuleContext(RangeClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_forStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterForStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterForStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitForStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitForStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitForStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitForStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitForStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitForStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forStmt() throws -> ForStmtContext {
+	 open func forStmt() throws -> ForStmtContext {
 		var _localctx: ForStmtContext = ForStmtContext(_ctx, getState())
 		try enterRule(_localctx, 102, GolangParser.RULE_forStmt)
 		defer {
@@ -3994,43 +4395,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ForClauseContext:ParserRuleContext {
-		open func simpleStmt() -> Array<SimpleStmtContext> {
-			return getRuleContexts(SimpleStmtContext.self)
+
+	public class ForClauseContext: ParserRuleContext {
+			open
+			func simpleStmt() -> [SimpleStmtContext] {
+				return getRuleContexts(SimpleStmtContext.self)
+			}
+			open
+			func simpleStmt(_ i: Int) -> SimpleStmtContext? {
+				return getRuleContext(SimpleStmtContext.self, i)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_forClause
 		}
-		open func simpleStmt(_ i: Int) -> SimpleStmtContext? {
-			return getRuleContext(SimpleStmtContext.self,i)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_forClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterForClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterForClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitForClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitForClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitForClause(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitForClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitForClause(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitForClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forClause() throws -> ForClauseContext {
+	 open func forClause() throws -> ForClauseContext {
 		var _localctx: ForClauseContext = ForClauseContext(_ctx, getState())
 		try enterRule(_localctx, 104, GolangParser.RULE_forClause)
 		var _la: Int = 0
@@ -4103,43 +4512,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class RangeClauseContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class RangeClauseContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+			open
+			func identifierList() -> IdentifierListContext? {
+				return getRuleContext(IdentifierListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_rangeClause
 		}
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
-		}
-		open func identifierList() -> IdentifierListContext? {
-			return getRuleContext(IdentifierListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_rangeClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterRangeClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterRangeClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitRangeClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitRangeClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitRangeClause(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitRangeClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitRangeClause(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitRangeClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rangeClause() throws -> RangeClauseContext {
+	 open func rangeClause() throws -> RangeClauseContext {
 		var _localctx: RangeClauseContext = RangeClauseContext(_ctx, getState())
 		try enterRule(_localctx, 106, GolangParser.RULE_rangeClause)
 		defer {
@@ -4180,37 +4597,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class GoStmtContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class GoStmtContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_goStmt
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_goStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterGoStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterGoStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitGoStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitGoStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitGoStmt(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitGoStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitGoStmt(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitGoStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func goStmt() throws -> GoStmtContext {
+	 open func goStmt() throws -> GoStmtContext {
 		var _localctx: GoStmtContext = GoStmtContext(_ctx, getState())
 		try enterRule(_localctx, 108, GolangParser.RULE_goStmt)
 		defer {
@@ -4232,43 +4655,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+			open
+			func typeLit() -> TypeLitContext? {
+				return getRuleContext(TypeLitContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_type
 		}
-		open func typeLit() -> TypeLitContext? {
-			return getRuleContext(TypeLitContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 110, GolangParser.RULE_type)
 		defer {
@@ -4309,7 +4740,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4320,38 +4751,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeNameContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func qualifiedIdent() -> QualifiedIdentContext? {
-			return getRuleContext(QualifiedIdentContext.self,0)
+
+	public class TypeNameContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func qualifiedIdent() -> QualifiedIdentContext? {
+				return getRuleContext(QualifiedIdentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeName
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeName(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeName(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeName() throws -> TypeNameContext {
+	 open func typeName() throws -> TypeNameContext {
 		var _localctx: TypeNameContext = TypeNameContext(_ctx, getState())
 		try enterRule(_localctx, 112, GolangParser.RULE_typeName)
 		defer {
@@ -4384,58 +4824,71 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeLitContext:ParserRuleContext {
-		open func arrayType() -> ArrayTypeContext? {
-			return getRuleContext(ArrayTypeContext.self,0)
+
+	public class TypeLitContext: ParserRuleContext {
+			open
+			func arrayType() -> ArrayTypeContext? {
+				return getRuleContext(ArrayTypeContext.self, 0)
+			}
+			open
+			func structType() -> StructTypeContext? {
+				return getRuleContext(StructTypeContext.self, 0)
+			}
+			open
+			func pointerType() -> PointerTypeContext? {
+				return getRuleContext(PointerTypeContext.self, 0)
+			}
+			open
+			func functionType() -> FunctionTypeContext? {
+				return getRuleContext(FunctionTypeContext.self, 0)
+			}
+			open
+			func interfaceType() -> InterfaceTypeContext? {
+				return getRuleContext(InterfaceTypeContext.self, 0)
+			}
+			open
+			func sliceType() -> SliceTypeContext? {
+				return getRuleContext(SliceTypeContext.self, 0)
+			}
+			open
+			func mapType() -> MapTypeContext? {
+				return getRuleContext(MapTypeContext.self, 0)
+			}
+			open
+			func channelType() -> ChannelTypeContext? {
+				return getRuleContext(ChannelTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeLit
 		}
-		open func structType() -> StructTypeContext? {
-			return getRuleContext(StructTypeContext.self,0)
-		}
-		open func pointerType() -> PointerTypeContext? {
-			return getRuleContext(PointerTypeContext.self,0)
-		}
-		open func functionType() -> FunctionTypeContext? {
-			return getRuleContext(FunctionTypeContext.self,0)
-		}
-		open func interfaceType() -> InterfaceTypeContext? {
-			return getRuleContext(InterfaceTypeContext.self,0)
-		}
-		open func sliceType() -> SliceTypeContext? {
-			return getRuleContext(SliceTypeContext.self,0)
-		}
-		open func mapType() -> MapTypeContext? {
-			return getRuleContext(MapTypeContext.self,0)
-		}
-		open func channelType() -> ChannelTypeContext? {
-			return getRuleContext(ChannelTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeLit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeLit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeLit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeLit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeLit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeLit(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeLit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeLit(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeLit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeLit() throws -> TypeLitContext {
+	 open func typeLit() throws -> TypeLitContext {
 		var _localctx: TypeLitContext = TypeLitContext(_ctx, getState())
 		try enterRule(_localctx, 114, GolangParser.RULE_typeLit)
 		defer {
@@ -4504,40 +4957,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayTypeContext:ParserRuleContext {
-		open func arrayLength() -> ArrayLengthContext? {
-			return getRuleContext(ArrayLengthContext.self,0)
+
+	public class ArrayTypeContext: ParserRuleContext {
+			open
+			func arrayLength() -> ArrayLengthContext? {
+				return getRuleContext(ArrayLengthContext.self, 0)
+			}
+			open
+			func elementType() -> ElementTypeContext? {
+				return getRuleContext(ElementTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_arrayType
 		}
-		open func elementType() -> ElementTypeContext? {
-			return getRuleContext(ElementTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_arrayType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterArrayType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterArrayType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitArrayType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitArrayType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitArrayType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitArrayType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitArrayType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitArrayType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayType() throws -> ArrayTypeContext {
+	 open func arrayType() throws -> ArrayTypeContext {
 		var _localctx: ArrayTypeContext = ArrayTypeContext(_ctx, getState())
 		try enterRule(_localctx, 116, GolangParser.RULE_arrayType)
 		defer {
@@ -4563,37 +5023,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayLengthContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ArrayLengthContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_arrayLength
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_arrayLength }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterArrayLength(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterArrayLength(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitArrayLength(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitArrayLength(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitArrayLength(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitArrayLength(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitArrayLength(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitArrayLength(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayLength() throws -> ArrayLengthContext {
+	 open func arrayLength() throws -> ArrayLengthContext {
 		var _localctx: ArrayLengthContext = ArrayLengthContext(_ctx, getState())
 		try enterRule(_localctx, 118, GolangParser.RULE_arrayLength)
 		defer {
@@ -4613,37 +5079,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ElementTypeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class ElementTypeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_elementType
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_elementType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterElementType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterElementType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitElementType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitElementType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitElementType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitElementType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitElementType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitElementType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elementType() throws -> ElementTypeContext {
+	 open func elementType() throws -> ElementTypeContext {
 		var _localctx: ElementTypeContext = ElementTypeContext(_ctx, getState())
 		try enterRule(_localctx, 120, GolangParser.RULE_elementType)
 		defer {
@@ -4663,37 +5135,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class PointerTypeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class PointerTypeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_pointerType
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_pointerType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterPointerType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterPointerType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitPointerType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitPointerType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitPointerType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitPointerType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitPointerType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitPointerType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pointerType() throws -> PointerTypeContext {
+	 open func pointerType() throws -> PointerTypeContext {
 		var _localctx: PointerTypeContext = PointerTypeContext(_ctx, getState())
 		try enterRule(_localctx, 122, GolangParser.RULE_pointerType)
 		defer {
@@ -4715,46 +5193,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class InterfaceTypeContext:ParserRuleContext {
-		open func methodSpec() -> Array<MethodSpecContext> {
-			return getRuleContexts(MethodSpecContext.self)
+
+	public class InterfaceTypeContext: ParserRuleContext {
+			open
+			func methodSpec() -> [MethodSpecContext] {
+				return getRuleContexts(MethodSpecContext.self)
+			}
+			open
+			func methodSpec(_ i: Int) -> MethodSpecContext? {
+				return getRuleContext(MethodSpecContext.self, i)
+			}
+			open
+			func eos() -> [EosContext] {
+				return getRuleContexts(EosContext.self)
+			}
+			open
+			func eos(_ i: Int) -> EosContext? {
+				return getRuleContext(EosContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_interfaceType
 		}
-		open func methodSpec(_ i: Int) -> MethodSpecContext? {
-			return getRuleContext(MethodSpecContext.self,i)
-		}
-		open func eos() -> Array<EosContext> {
-			return getRuleContexts(EosContext.self)
-		}
-		open func eos(_ i: Int) -> EosContext? {
-			return getRuleContext(EosContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_interfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterInterfaceType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterInterfaceType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitInterfaceType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitInterfaceType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitInterfaceType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitInterfaceType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitInterfaceType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitInterfaceType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interfaceType() throws -> InterfaceTypeContext {
+	 open func interfaceType() throws -> InterfaceTypeContext {
 		var _localctx: InterfaceTypeContext = InterfaceTypeContext(_ctx, getState())
 		try enterRule(_localctx, 124, GolangParser.RULE_interfaceType)
 		var _la: Int = 0
@@ -4797,37 +5284,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class SliceTypeContext:ParserRuleContext {
-		open func elementType() -> ElementTypeContext? {
-			return getRuleContext(ElementTypeContext.self,0)
+
+	public class SliceTypeContext: ParserRuleContext {
+			open
+			func elementType() -> ElementTypeContext? {
+				return getRuleContext(ElementTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_sliceType
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_sliceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterSliceType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterSliceType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitSliceType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitSliceType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitSliceType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitSliceType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitSliceType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitSliceType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sliceType() throws -> SliceTypeContext {
+	 open func sliceType() throws -> SliceTypeContext {
 		var _localctx: SliceTypeContext = SliceTypeContext(_ctx, getState())
 		try enterRule(_localctx, 126, GolangParser.RULE_sliceType)
 		defer {
@@ -4851,40 +5344,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class MapTypeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class MapTypeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func elementType() -> ElementTypeContext? {
+				return getRuleContext(ElementTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_mapType
 		}
-		open func elementType() -> ElementTypeContext? {
-			return getRuleContext(ElementTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_mapType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterMapType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterMapType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitMapType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitMapType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitMapType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitMapType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitMapType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitMapType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mapType() throws -> MapTypeContext {
+	 open func mapType() throws -> MapTypeContext {
 		var _localctx: MapTypeContext = MapTypeContext(_ctx, getState())
 		try enterRule(_localctx, 128, GolangParser.RULE_mapType)
 		defer {
@@ -4912,37 +5412,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ChannelTypeContext:ParserRuleContext {
-		open func elementType() -> ElementTypeContext? {
-			return getRuleContext(ElementTypeContext.self,0)
+
+	public class ChannelTypeContext: ParserRuleContext {
+			open
+			func elementType() -> ElementTypeContext? {
+				return getRuleContext(ElementTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_channelType
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_channelType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterChannelType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterChannelType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitChannelType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitChannelType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitChannelType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitChannelType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitChannelType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitChannelType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func channelType() throws -> ChannelTypeContext {
+	 open func channelType() throws -> ChannelTypeContext {
 		var _localctx: ChannelTypeContext = ChannelTypeContext(_ctx, getState())
 		try enterRule(_localctx, 130, GolangParser.RULE_channelType)
 		defer {
@@ -4986,41 +5492,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class MethodSpecContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func signature() -> SignatureContext? {
-			return getRuleContext(SignatureContext.self,0)
+
+	public class MethodSpecContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func signature() -> SignatureContext? {
+				return getRuleContext(SignatureContext.self, 0)
+			}
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_methodSpec
 		}
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_methodSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterMethodSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterMethodSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitMethodSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitMethodSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitMethodSpec(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitMethodSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitMethodSpec(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitMethodSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func methodSpec() throws -> MethodSpecContext {
+	 open func methodSpec() throws -> MethodSpecContext {
 		var _localctx: MethodSpecContext = MethodSpecContext(_ctx, getState())
 		try enterRule(_localctx, 132, GolangParser.RULE_methodSpec)
 		defer {
@@ -5055,37 +5571,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionTypeContext:ParserRuleContext {
-		open func signature() -> SignatureContext? {
-			return getRuleContext(SignatureContext.self,0)
+
+	public class FunctionTypeContext: ParserRuleContext {
+			open
+			func signature() -> SignatureContext? {
+				return getRuleContext(SignatureContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_functionType
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_functionType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterFunctionType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterFunctionType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitFunctionType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitFunctionType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitFunctionType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitFunctionType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitFunctionType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitFunctionType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionType() throws -> FunctionTypeContext {
+	 open func functionType() throws -> FunctionTypeContext {
 		var _localctx: FunctionTypeContext = FunctionTypeContext(_ctx, getState())
 		try enterRule(_localctx, 134, GolangParser.RULE_functionType)
 		defer {
@@ -5107,40 +5629,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class SignatureContext:ParserRuleContext {
-		open func parameters() -> ParametersContext? {
-			return getRuleContext(ParametersContext.self,0)
+
+	public class SignatureContext: ParserRuleContext {
+			open
+			func parameters() -> ParametersContext? {
+				return getRuleContext(ParametersContext.self, 0)
+			}
+			open
+			func result() -> ResultContext? {
+				return getRuleContext(ResultContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_signature
 		}
-		open func result() -> ResultContext? {
-			return getRuleContext(ResultContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_signature }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterSignature(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterSignature(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitSignature(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitSignature(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitSignature(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitSignature(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitSignature(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitSignature(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func signature() throws -> SignatureContext {
+	 open func signature() throws -> SignatureContext {
 		var _localctx: SignatureContext = SignatureContext(_ctx, getState())
 		try enterRule(_localctx, 136, GolangParser.RULE_signature)
 		defer {
@@ -5170,40 +5699,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ResultContext:ParserRuleContext {
-		open func parameters() -> ParametersContext? {
-			return getRuleContext(ParametersContext.self,0)
+
+	public class ResultContext: ParserRuleContext {
+			open
+			func parameters() -> ParametersContext? {
+				return getRuleContext(ParametersContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_result
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_result }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterResult(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterResult(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitResult(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitResult(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitResult(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitResult(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitResult(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitResult(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func result() throws -> ResultContext {
+	 open func result() throws -> ResultContext {
 		var _localctx: ResultContext = ResultContext(_ctx, getState())
 		try enterRule(_localctx, 138, GolangParser.RULE_result)
 		defer {
@@ -5236,37 +5772,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ParametersContext:ParserRuleContext {
-		open func parameterList() -> ParameterListContext? {
-			return getRuleContext(ParameterListContext.self,0)
+
+	public class ParametersContext: ParserRuleContext {
+			open
+			func parameterList() -> ParameterListContext? {
+				return getRuleContext(ParameterListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_parameters
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_parameters }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterParameters(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterParameters(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitParameters(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitParameters(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitParameters(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitParameters(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitParameters(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitParameters(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameters() throws -> ParametersContext {
+	 open func parameters() throws -> ParametersContext {
 		var _localctx: ParametersContext = ParametersContext(_ctx, getState())
 		try enterRule(_localctx, 140, GolangParser.RULE_parameters)
 		var _la: Int = 0
@@ -5318,40 +5860,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ParameterListContext:ParserRuleContext {
-		open func parameterDecl() -> Array<ParameterDeclContext> {
-			return getRuleContexts(ParameterDeclContext.self)
+
+	public class ParameterListContext: ParserRuleContext {
+			open
+			func parameterDecl() -> [ParameterDeclContext] {
+				return getRuleContexts(ParameterDeclContext.self)
+			}
+			open
+			func parameterDecl(_ i: Int) -> ParameterDeclContext? {
+				return getRuleContext(ParameterDeclContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_parameterList
 		}
-		open func parameterDecl(_ i: Int) -> ParameterDeclContext? {
-			return getRuleContext(ParameterDeclContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_parameterList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterParameterList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterParameterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitParameterList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitParameterList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitParameterList(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitParameterList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitParameterList(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitParameterList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameterList() throws -> ParameterListContext {
+	 open func parameterList() throws -> ParameterListContext {
 		var _localctx: ParameterListContext = ParameterListContext(_ctx, getState())
 		try enterRule(_localctx, 142, GolangParser.RULE_parameterList)
 		defer {
@@ -5388,40 +5937,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ParameterDeclContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class ParameterDeclContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func identifierList() -> IdentifierListContext? {
+				return getRuleContext(IdentifierListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_parameterDecl
 		}
-		open func identifierList() -> IdentifierListContext? {
-			return getRuleContext(IdentifierListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_parameterDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterParameterDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterParameterDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitParameterDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitParameterDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitParameterDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitParameterDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitParameterDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitParameterDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameterDecl() throws -> ParameterDeclContext {
+	 open func parameterDecl() throws -> ParameterDeclContext {
 		var _localctx: ParameterDeclContext = ParameterDeclContext(_ctx, getState())
 		try enterRule(_localctx, 144, GolangParser.RULE_parameterDecl)
 		var _la: Int = 0
@@ -5465,46 +6021,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class OperandContext:ParserRuleContext {
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
+
+	public class OperandContext: ParserRuleContext {
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func operandName() -> OperandNameContext? {
+				return getRuleContext(OperandNameContext.self, 0)
+			}
+			open
+			func methodExpr() -> MethodExprContext? {
+				return getRuleContext(MethodExprContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_operand
 		}
-		open func operandName() -> OperandNameContext? {
-			return getRuleContext(OperandNameContext.self,0)
-		}
-		open func methodExpr() -> MethodExprContext? {
-			return getRuleContext(MethodExprContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_operand }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterOperand(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterOperand(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitOperand(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitOperand(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitOperand(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitOperand(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitOperand(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitOperand(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operand() throws -> OperandContext {
+	 open func operand() throws -> OperandContext {
 		var _localctx: OperandContext = OperandContext(_ctx, getState())
 		try enterRule(_localctx, 146, GolangParser.RULE_operand)
 		defer {
@@ -5553,43 +6118,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func basicLit() -> BasicLitContext? {
-			return getRuleContext(BasicLitContext.self,0)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func basicLit() -> BasicLitContext? {
+				return getRuleContext(BasicLitContext.self, 0)
+			}
+			open
+			func compositeLit() -> CompositeLitContext? {
+				return getRuleContext(CompositeLitContext.self, 0)
+			}
+			open
+			func functionLit() -> FunctionLitContext? {
+				return getRuleContext(FunctionLitContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_literal
 		}
-		open func compositeLit() -> CompositeLitContext? {
-			return getRuleContext(CompositeLitContext.self,0)
-		}
-		open func functionLit() -> FunctionLitContext? {
-			return getRuleContext(FunctionLitContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitLiteral(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 148, GolangParser.RULE_literal)
 		defer {
@@ -5626,7 +6199,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5637,39 +6210,59 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class BasicLitContext:ParserRuleContext {
-		open func INT_LIT() -> TerminalNode? { return getToken(GolangParser.Tokens.INT_LIT.rawValue, 0) }
-		open func FLOAT_LIT() -> TerminalNode? { return getToken(GolangParser.Tokens.FLOAT_LIT.rawValue, 0) }
-		open func IMAGINARY_LIT() -> TerminalNode? { return getToken(GolangParser.Tokens.IMAGINARY_LIT.rawValue, 0) }
-		open func RUNE_LIT() -> TerminalNode? { return getToken(GolangParser.Tokens.RUNE_LIT.rawValue, 0) }
-		open func STRING_LIT() -> TerminalNode? { return getToken(GolangParser.Tokens.STRING_LIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_basicLit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterBasicLit(self)
+
+	public class BasicLitContext: ParserRuleContext {
+			open
+			func INT_LIT() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.INT_LIT.rawValue, 0)
+			}
+			open
+			func FLOAT_LIT() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.FLOAT_LIT.rawValue, 0)
+			}
+			open
+			func IMAGINARY_LIT() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IMAGINARY_LIT.rawValue, 0)
+			}
+			open
+			func RUNE_LIT() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.RUNE_LIT.rawValue, 0)
+			}
+			open
+			func STRING_LIT() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.STRING_LIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_basicLit
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterBasicLit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitBasicLit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitBasicLit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitBasicLit(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitBasicLit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitBasicLit(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitBasicLit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func basicLit() throws -> BasicLitContext {
+	 open func basicLit() throws -> BasicLitContext {
 		var _localctx: BasicLitContext = BasicLitContext(_ctx, getState())
 		try enterRule(_localctx, 150, GolangParser.RULE_basicLit)
 		var _la: Int = 0
@@ -5704,38 +6297,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class OperandNameContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func qualifiedIdent() -> QualifiedIdentContext? {
-			return getRuleContext(QualifiedIdentContext.self,0)
+
+	public class OperandNameContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func qualifiedIdent() -> QualifiedIdentContext? {
+				return getRuleContext(QualifiedIdentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_operandName
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_operandName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterOperandName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterOperandName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitOperandName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitOperandName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitOperandName(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitOperandName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitOperandName(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitOperandName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operandName() throws -> OperandNameContext {
+	 open func operandName() throws -> OperandNameContext {
 		var _localctx: OperandNameContext = OperandNameContext(_ctx, getState())
 		try enterRule(_localctx, 152, GolangParser.RULE_operandName)
 		defer {
@@ -5768,38 +6370,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class QualifiedIdentContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(GolangParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class QualifiedIdentContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(GolangParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_qualifiedIdent
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_qualifiedIdent }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterQualifiedIdent(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterQualifiedIdent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitQualifiedIdent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitQualifiedIdent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitQualifiedIdent(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitQualifiedIdent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitQualifiedIdent(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitQualifiedIdent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qualifiedIdent() throws -> QualifiedIdentContext {
+	 open func qualifiedIdent() throws -> QualifiedIdentContext {
 		var _localctx: QualifiedIdentContext = QualifiedIdentContext(_ctx, getState())
 		try enterRule(_localctx, 154, GolangParser.RULE_qualifiedIdent)
 		defer {
@@ -5823,40 +6434,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class CompositeLitContext:ParserRuleContext {
-		open func literalType() -> LiteralTypeContext? {
-			return getRuleContext(LiteralTypeContext.self,0)
+
+	public class CompositeLitContext: ParserRuleContext {
+			open
+			func literalType() -> LiteralTypeContext? {
+				return getRuleContext(LiteralTypeContext.self, 0)
+			}
+			open
+			func literalValue() -> LiteralValueContext? {
+				return getRuleContext(LiteralValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_compositeLit
 		}
-		open func literalValue() -> LiteralValueContext? {
-			return getRuleContext(LiteralValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_compositeLit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterCompositeLit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterCompositeLit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitCompositeLit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitCompositeLit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitCompositeLit(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitCompositeLit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitCompositeLit(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitCompositeLit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compositeLit() throws -> CompositeLitContext {
+	 open func compositeLit() throws -> CompositeLitContext {
 		var _localctx: CompositeLitContext = CompositeLitContext(_ctx, getState())
 		try enterRule(_localctx, 156, GolangParser.RULE_compositeLit)
 		defer {
@@ -5878,52 +6496,63 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralTypeContext:ParserRuleContext {
-		open func structType() -> StructTypeContext? {
-			return getRuleContext(StructTypeContext.self,0)
+
+	public class LiteralTypeContext: ParserRuleContext {
+			open
+			func structType() -> StructTypeContext? {
+				return getRuleContext(StructTypeContext.self, 0)
+			}
+			open
+			func arrayType() -> ArrayTypeContext? {
+				return getRuleContext(ArrayTypeContext.self, 0)
+			}
+			open
+			func elementType() -> ElementTypeContext? {
+				return getRuleContext(ElementTypeContext.self, 0)
+			}
+			open
+			func sliceType() -> SliceTypeContext? {
+				return getRuleContext(SliceTypeContext.self, 0)
+			}
+			open
+			func mapType() -> MapTypeContext? {
+				return getRuleContext(MapTypeContext.self, 0)
+			}
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_literalType
 		}
-		open func arrayType() -> ArrayTypeContext? {
-			return getRuleContext(ArrayTypeContext.self,0)
-		}
-		open func elementType() -> ElementTypeContext? {
-			return getRuleContext(ElementTypeContext.self,0)
-		}
-		open func sliceType() -> SliceTypeContext? {
-			return getRuleContext(SliceTypeContext.self,0)
-		}
-		open func mapType() -> MapTypeContext? {
-			return getRuleContext(MapTypeContext.self,0)
-		}
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_literalType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterLiteralType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterLiteralType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitLiteralType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitLiteralType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitLiteralType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitLiteralType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitLiteralType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitLiteralType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literalType() throws -> LiteralTypeContext {
+	 open func literalType() throws -> LiteralTypeContext {
 		var _localctx: LiteralTypeContext = LiteralTypeContext(_ctx, getState())
 		try enterRule(_localctx, 158, GolangParser.RULE_literalType)
 		defer {
@@ -5986,37 +6615,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralValueContext:ParserRuleContext {
-		open func elementList() -> ElementListContext? {
-			return getRuleContext(ElementListContext.self,0)
+
+	public class LiteralValueContext: ParserRuleContext {
+			open
+			func elementList() -> ElementListContext? {
+				return getRuleContext(ElementListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_literalValue
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_literalValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterLiteralValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterLiteralValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitLiteralValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitLiteralValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitLiteralValue(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitLiteralValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitLiteralValue(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitLiteralValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literalValue() throws -> LiteralValueContext {
+	 open func literalValue() throws -> LiteralValueContext {
 		var _localctx: LiteralValueContext = LiteralValueContext(_ctx, getState())
 		try enterRule(_localctx, 160, GolangParser.RULE_literalValue)
 		var _la: Int = 0
@@ -6072,40 +6707,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ElementListContext:ParserRuleContext {
-		open func keyedElement() -> Array<KeyedElementContext> {
-			return getRuleContexts(KeyedElementContext.self)
+
+	public class ElementListContext: ParserRuleContext {
+			open
+			func keyedElement() -> [KeyedElementContext] {
+				return getRuleContexts(KeyedElementContext.self)
+			}
+			open
+			func keyedElement(_ i: Int) -> KeyedElementContext? {
+				return getRuleContext(KeyedElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_elementList
 		}
-		open func keyedElement(_ i: Int) -> KeyedElementContext? {
-			return getRuleContext(KeyedElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_elementList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterElementList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterElementList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitElementList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitElementList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitElementList(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitElementList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitElementList(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitElementList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elementList() throws -> ElementListContext {
+	 open func elementList() throws -> ElementListContext {
 		var _localctx: ElementListContext = ElementListContext(_ctx, getState())
 		try enterRule(_localctx, 162, GolangParser.RULE_elementList)
 		defer {
@@ -6142,40 +6784,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class KeyedElementContext:ParserRuleContext {
-		open func element() -> ElementContext? {
-			return getRuleContext(ElementContext.self,0)
+
+	public class KeyedElementContext: ParserRuleContext {
+			open
+			func element() -> ElementContext? {
+				return getRuleContext(ElementContext.self, 0)
+			}
+			open
+			func key() -> KeyContext? {
+				return getRuleContext(KeyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_keyedElement
 		}
-		open func key() -> KeyContext? {
-			return getRuleContext(KeyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_keyedElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterKeyedElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterKeyedElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitKeyedElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitKeyedElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitKeyedElement(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitKeyedElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitKeyedElement(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitKeyedElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keyedElement() throws -> KeyedElementContext {
+	 open func keyedElement() throws -> KeyedElementContext {
 		var _localctx: KeyedElementContext = KeyedElementContext(_ctx, getState())
 		try enterRule(_localctx, 164, GolangParser.RULE_keyedElement)
 		defer {
@@ -6207,41 +6856,51 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class KeyContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class KeyContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func literalValue() -> LiteralValueContext? {
+				return getRuleContext(LiteralValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_key
 		}
-		open func literalValue() -> LiteralValueContext? {
-			return getRuleContext(LiteralValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_key }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterKey(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterKey(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitKey(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitKey(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitKey(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitKey(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitKey(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitKey(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func key() throws -> KeyContext {
+	 open func key() throws -> KeyContext {
 		var _localctx: KeyContext = KeyContext(_ctx, getState())
 		try enterRule(_localctx, 166, GolangParser.RULE_key)
 		defer {
@@ -6280,40 +6939,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ElementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ElementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func literalValue() -> LiteralValueContext? {
+				return getRuleContext(LiteralValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_element
 		}
-		open func literalValue() -> LiteralValueContext? {
-			return getRuleContext(LiteralValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_element }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitElement(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitElement(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func element() throws -> ElementContext {
+	 open func element() throws -> ElementContext {
 		var _localctx: ElementContext = ElementContext(_ctx, getState())
 		try enterRule(_localctx, 168, GolangParser.RULE_element)
 		defer {
@@ -6356,7 +7022,7 @@ open class GolangParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6367,46 +7033,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class StructTypeContext:ParserRuleContext {
-		open func fieldDecl() -> Array<FieldDeclContext> {
-			return getRuleContexts(FieldDeclContext.self)
+
+	public class StructTypeContext: ParserRuleContext {
+			open
+			func fieldDecl() -> [FieldDeclContext] {
+				return getRuleContexts(FieldDeclContext.self)
+			}
+			open
+			func fieldDecl(_ i: Int) -> FieldDeclContext? {
+				return getRuleContext(FieldDeclContext.self, i)
+			}
+			open
+			func eos() -> [EosContext] {
+				return getRuleContexts(EosContext.self)
+			}
+			open
+			func eos(_ i: Int) -> EosContext? {
+				return getRuleContext(EosContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_structType
 		}
-		open func fieldDecl(_ i: Int) -> FieldDeclContext? {
-			return getRuleContext(FieldDeclContext.self,i)
-		}
-		open func eos() -> Array<EosContext> {
-			return getRuleContexts(EosContext.self)
-		}
-		open func eos(_ i: Int) -> EosContext? {
-			return getRuleContext(EosContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_structType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterStructType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterStructType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitStructType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitStructType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitStructType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitStructType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitStructType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitStructType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func structType() throws -> StructTypeContext {
+	 open func structType() throws -> StructTypeContext {
 		var _localctx: StructTypeContext = StructTypeContext(_ctx, getState())
 		try enterRule(_localctx, 170, GolangParser.RULE_structType)
 		var _la: Int = 0
@@ -6449,44 +7124,55 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class FieldDeclContext:ParserRuleContext {
-		open func identifierList() -> IdentifierListContext? {
-			return getRuleContext(IdentifierListContext.self,0)
+
+	public class FieldDeclContext: ParserRuleContext {
+			open
+			func identifierList() -> IdentifierListContext? {
+				return getRuleContext(IdentifierListContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func anonymousField() -> AnonymousFieldContext? {
+				return getRuleContext(AnonymousFieldContext.self, 0)
+			}
+			open
+			func STRING_LIT() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.STRING_LIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_fieldDecl
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func anonymousField() -> AnonymousFieldContext? {
-			return getRuleContext(AnonymousFieldContext.self,0)
-		}
-		open func STRING_LIT() -> TerminalNode? { return getToken(GolangParser.Tokens.STRING_LIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_fieldDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterFieldDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterFieldDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitFieldDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitFieldDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitFieldDecl(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitFieldDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitFieldDecl(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitFieldDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldDecl() throws -> FieldDeclContext {
+	 open func fieldDecl() throws -> FieldDeclContext {
 		var _localctx: FieldDeclContext = FieldDeclContext(_ctx, getState())
 		try enterRule(_localctx, 172, GolangParser.RULE_fieldDecl)
 		defer {
@@ -6531,37 +7217,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class AnonymousFieldContext:ParserRuleContext {
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
+
+	public class AnonymousFieldContext: ParserRuleContext {
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_anonymousField
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_anonymousField }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterAnonymousField(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterAnonymousField(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitAnonymousField(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitAnonymousField(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitAnonymousField(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitAnonymousField(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitAnonymousField(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitAnonymousField(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func anonymousField() throws -> AnonymousFieldContext {
+	 open func anonymousField() throws -> AnonymousFieldContext {
 		var _localctx: AnonymousFieldContext = AnonymousFieldContext(_ctx, getState())
 		try enterRule(_localctx, 174, GolangParser.RULE_anonymousField)
 		var _la: Int = 0
@@ -6595,37 +7287,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionLitContext:ParserRuleContext {
-		open func function() -> FunctionContext? {
-			return getRuleContext(FunctionContext.self,0)
+
+	public class FunctionLitContext: ParserRuleContext {
+			open
+			func function() -> FunctionContext? {
+				return getRuleContext(FunctionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_functionLit
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_functionLit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterFunctionLit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterFunctionLit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitFunctionLit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitFunctionLit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitFunctionLit(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitFunctionLit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitFunctionLit(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitFunctionLit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionLit() throws -> FunctionLitContext {
+	 open func functionLit() throws -> FunctionLitContext {
 		var _localctx: FunctionLitContext = FunctionLitContext(_ctx, getState())
 		try enterRule(_localctx, 176, GolangParser.RULE_functionLit)
 		defer {
@@ -6648,58 +7346,70 @@ open class GolangParser: Parser {
 		return _localctx
 	}
 
-	open class PrimaryExprContext:ParserRuleContext {
-		open func operand() -> OperandContext? {
-			return getRuleContext(OperandContext.self,0)
+	public class PrimaryExprContext: ParserRuleContext {
+			open
+			func operand() -> OperandContext? {
+				return getRuleContext(OperandContext.self, 0)
+			}
+			open
+			func conversion() -> ConversionContext? {
+				return getRuleContext(ConversionContext.self, 0)
+			}
+			open
+			func primaryExpr() -> PrimaryExprContext? {
+				return getRuleContext(PrimaryExprContext.self, 0)
+			}
+			open
+			func selector() -> SelectorContext? {
+				return getRuleContext(SelectorContext.self, 0)
+			}
+			open
+			func index() -> IndexContext? {
+				return getRuleContext(IndexContext.self, 0)
+			}
+			open
+			func slice() -> SliceContext? {
+				return getRuleContext(SliceContext.self, 0)
+			}
+			open
+			func typeAssertion() -> TypeAssertionContext? {
+				return getRuleContext(TypeAssertionContext.self, 0)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_primaryExpr
 		}
-		open func conversion() -> ConversionContext? {
-			return getRuleContext(ConversionContext.self,0)
-		}
-		open func primaryExpr() -> PrimaryExprContext? {
-			return getRuleContext(PrimaryExprContext.self,0)
-		}
-		open func selector() -> SelectorContext? {
-			return getRuleContext(SelectorContext.self,0)
-		}
-		open func index() -> IndexContext? {
-			return getRuleContext(IndexContext.self,0)
-		}
-		open func slice() -> SliceContext? {
-			return getRuleContext(SliceContext.self,0)
-		}
-		open func typeAssertion() -> TypeAssertionContext? {
-			return getRuleContext(TypeAssertionContext.self,0)
-		}
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_primaryExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterPrimaryExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterPrimaryExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitPrimaryExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitPrimaryExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitPrimaryExpr(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitPrimaryExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitPrimaryExpr(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitPrimaryExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func primaryExpr( ) throws -> PrimaryExprContext   {
+	 public final  func primaryExpr( ) throws -> PrimaryExprContext   {
 		return try primaryExpr(0)
 	}
 	@discardableResult
@@ -6749,7 +7459,7 @@ open class GolangParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, GolangParser.RULE_primaryExpr)
 						setState(801)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(802)
 						try selector()
@@ -6760,7 +7470,7 @@ open class GolangParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, GolangParser.RULE_primaryExpr)
 						setState(803)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(804)
 						try index()
@@ -6771,7 +7481,7 @@ open class GolangParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, GolangParser.RULE_primaryExpr)
 						setState(805)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(806)
 						try slice()
@@ -6782,7 +7492,7 @@ open class GolangParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, GolangParser.RULE_primaryExpr)
 						setState(807)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(808)
 						try typeAssertion()
@@ -6793,7 +7503,7 @@ open class GolangParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, GolangParser.RULE_primaryExpr)
 						setState(809)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(810)
 						try arguments()
@@ -6817,35 +7527,43 @@ open class GolangParser: Parser {
 
 		return _localctx;
 	}
-	open class SelectorContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_selector }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterSelector(self)
+
+	public class SelectorContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_selector
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterSelector(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitSelector(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitSelector(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitSelector(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitSelector(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitSelector(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitSelector(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selector() throws -> SelectorContext {
+	 open func selector() throws -> SelectorContext {
 		var _localctx: SelectorContext = SelectorContext(_ctx, getState())
 		try enterRule(_localctx, 180, GolangParser.RULE_selector)
 		defer {
@@ -6867,37 +7585,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class IndexContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class IndexContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_index
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_index }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterIndex(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterIndex(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitIndex(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitIndex(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitIndex(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitIndex(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitIndex(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitIndex(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func index() throws -> IndexContext {
+	 open func index() throws -> IndexContext {
 		var _localctx: IndexContext = IndexContext(_ctx, getState())
 		try enterRule(_localctx, 182, GolangParser.RULE_index)
 		defer {
@@ -6921,40 +7645,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class SliceContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class SliceContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_slice
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_slice }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterSlice(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterSlice(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitSlice(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitSlice(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitSlice(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitSlice(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitSlice(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitSlice(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func slice() throws -> SliceContext {
+	 open func slice() throws -> SliceContext {
 		var _localctx: SliceContext = SliceContext(_ctx, getState())
 		try enterRule(_localctx, 184, GolangParser.RULE_slice)
 		var _la: Int = 0
@@ -7060,37 +7791,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class TypeAssertionContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class TypeAssertionContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_typeAssertion
 		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_typeAssertion }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterTypeAssertion(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterTypeAssertion(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitTypeAssertion(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitTypeAssertion(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitTypeAssertion(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitTypeAssertion(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitTypeAssertion(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitTypeAssertion(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeAssertion() throws -> TypeAssertionContext {
+	 open func typeAssertion() throws -> TypeAssertionContext {
 		var _localctx: TypeAssertionContext = TypeAssertionContext(_ctx, getState())
 		try enterRule(_localctx, 186, GolangParser.RULE_typeAssertion)
 		defer {
@@ -7116,40 +7853,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentsContext:ParserRuleContext {
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
+
+	public class ArgumentsContext: ParserRuleContext {
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_arguments
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_arguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterArguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterArguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitArguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitArguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitArguments(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitArguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitArguments(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitArguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arguments() throws -> ArgumentsContext {
+	 open func arguments() throws -> ArgumentsContext {
 		var _localctx: ArgumentsContext = ArgumentsContext(_ctx, getState())
 		try enterRule(_localctx, 188, GolangParser.RULE_arguments)
 		var _la: Int = 0
@@ -7243,38 +7987,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class MethodExprContext:ParserRuleContext {
-		open func receiverType() -> ReceiverTypeContext? {
-			return getRuleContext(ReceiverTypeContext.self,0)
+
+	public class MethodExprContext: ParserRuleContext {
+			open
+			func receiverType() -> ReceiverTypeContext? {
+				return getRuleContext(ReceiverTypeContext.self, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_methodExpr
 		}
-		open func IDENTIFIER() -> TerminalNode? { return getToken(GolangParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_methodExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterMethodExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterMethodExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitMethodExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitMethodExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitMethodExpr(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitMethodExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitMethodExpr(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitMethodExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func methodExpr() throws -> MethodExprContext {
+	 open func methodExpr() throws -> MethodExprContext {
 		var _localctx: MethodExprContext = MethodExprContext(_ctx, getState())
 		try enterRule(_localctx, 190, GolangParser.RULE_methodExpr)
 		defer {
@@ -7298,40 +8051,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ReceiverTypeContext:ParserRuleContext {
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
+
+	public class ReceiverTypeContext: ParserRuleContext {
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+			open
+			func receiverType() -> ReceiverTypeContext? {
+				return getRuleContext(ReceiverTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_receiverType
 		}
-		open func receiverType() -> ReceiverTypeContext? {
-			return getRuleContext(ReceiverTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_receiverType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterReceiverType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterReceiverType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitReceiverType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitReceiverType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitReceiverType(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitReceiverType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitReceiverType(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitReceiverType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func receiverType() throws -> ReceiverTypeContext {
+	 open func receiverType() throws -> ReceiverTypeContext {
 		var _localctx: ReceiverTypeContext = ReceiverTypeContext(_ctx, getState())
 		try enterRule(_localctx, 192, GolangParser.RULE_receiverType)
 		defer {
@@ -7381,43 +8141,50 @@ open class GolangParser: Parser {
 		return _localctx
 	}
 
-	open class ExpressionContext:ParserRuleContext {
-		open func unaryExpr() -> UnaryExprContext? {
-			return getRuleContext(UnaryExprContext.self,0)
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func unaryExpr() -> UnaryExprContext? {
+				return getRuleContext(UnaryExprContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_expression
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitExpression(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expression( ) throws -> ExpressionContext   {
+	 public final  func expression( ) throws -> ExpressionContext   {
 		return try expression(0)
 	}
 	@discardableResult
@@ -7452,7 +8219,7 @@ open class GolangParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, GolangParser.RULE_expression)
 					setState(886)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(887)
 					_la = try _input.LA(1)
@@ -7489,40 +8256,47 @@ open class GolangParser: Parser {
 
 		return _localctx;
 	}
-	open class UnaryExprContext:ParserRuleContext {
-		open func primaryExpr() -> PrimaryExprContext? {
-			return getRuleContext(PrimaryExprContext.self,0)
+
+	public class UnaryExprContext: ParserRuleContext {
+			open
+			func primaryExpr() -> PrimaryExprContext? {
+				return getRuleContext(PrimaryExprContext.self, 0)
+			}
+			open
+			func unaryExpr() -> UnaryExprContext? {
+				return getRuleContext(UnaryExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_unaryExpr
 		}
-		open func unaryExpr() -> UnaryExprContext? {
-			return getRuleContext(UnaryExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_unaryExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterUnaryExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterUnaryExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitUnaryExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitUnaryExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitUnaryExpr(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitUnaryExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitUnaryExpr(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitUnaryExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unaryExpr() throws -> UnaryExprContext {
+	 open func unaryExpr() throws -> UnaryExprContext {
 		var _localctx: UnaryExprContext = UnaryExprContext(_ctx, getState())
 		try enterRule(_localctx, 196, GolangParser.RULE_unaryExpr)
 		var _la: Int = 0
@@ -7572,40 +8346,47 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class ConversionContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class ConversionContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_conversion
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_conversion }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterConversion(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterConversion(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitConversion(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitConversion(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitConversion(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitConversion(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitConversion(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitConversion(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conversion() throws -> ConversionContext {
+	 open func conversion() throws -> ConversionContext {
 		var _localctx: ConversionContext = ConversionContext(_ctx, getState())
 		try enterRule(_localctx, 198, GolangParser.RULE_conversion)
 		var _la: Int = 0
@@ -7645,35 +8426,43 @@ open class GolangParser: Parser {
 
 		return _localctx
 	}
-	open class EosContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(GolangParser.Tokens.EOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GolangParser.RULE_eos }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).enterEos(self)
+
+	public class EosContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(GolangParser.Tokens.EOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GolangParser.RULE_eos
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.enterEos(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GolangListener {
-			 	(listener as! GolangListener).exitEos(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GolangListener {
+				listener.exitEos(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GolangVisitor {
-			     return (visitor as! GolangVisitor<T>).visitEos(self)
-			}else if visitor is GolangBaseVisitor {
-		    	 return (visitor as! GolangBaseVisitor<T>).visitEos(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GolangVisitor {
+			    return visitor.visitEos(self)
+			}
+			else if let visitor = visitor as? GolangBaseVisitor {
+			    return visitor.visitEos(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eos() throws -> EosContext {
+	 open func eos() throws -> EosContext {
 		var _localctx: EosContext = EosContext(_ctx, getState())
 		try enterRule(_localctx, 200, GolangParser.RULE_eos)
 		defer {
@@ -7699,7 +8488,7 @@ open class GolangParser: Parser {
 		 		try enterOuterAlt(_localctx, 3)
 		 		setState(909)
 		 		if (!(lineTerminatorAhead())) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "lineTerminatorAhead()"))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "lineTerminatorAhead()"))
 		 		}
 
 		 		break
@@ -7707,7 +8496,7 @@ open class GolangParser: Parser {
 		 		try enterOuterAlt(_localctx, 4)
 		 		setState(910)
 		 		if (!(_input.LT(1).getText().equals("}") )) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "_input.LT(1).getText().equals(\"}\") "))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "_input.LT(1).getText().equals(\"}\") "))
 		 		}
 
 		 		break
@@ -7723,8 +8512,8 @@ open class GolangParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  89:
 			return try primaryExpr_sempred(_localctx?.castdown(PrimaryExprContext.self), predIndex)
@@ -7759,6 +8548,10 @@ open class GolangParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = GolangParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = GolangParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

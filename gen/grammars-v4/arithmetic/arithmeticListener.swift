@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/arithmetic/arithmetic.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/arithmetic/arithmetic.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -55,6 +55,18 @@ public protocol arithmeticListener: ParseTreeListener {
 	 */
 	func exitFactor(_ ctx: arithmeticParser.FactorContext)
 	/**
+	 * Enter a parse tree produced by {@link arithmeticParser#signedAtom}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterSignedAtom(_ ctx: arithmeticParser.SignedAtomContext)
+	/**
+	 * Exit a parse tree produced by {@link arithmeticParser#signedAtom}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitSignedAtom(_ ctx: arithmeticParser.SignedAtomContext)
+	/**
 	 * Enter a parse tree produced by {@link arithmeticParser#atom}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -79,30 +91,6 @@ public protocol arithmeticListener: ParseTreeListener {
 	 */
 	func exitScientific(_ ctx: arithmeticParser.ScientificContext)
 	/**
-	 * Enter a parse tree produced by {@link arithmeticParser#relop}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterRelop(_ ctx: arithmeticParser.RelopContext)
-	/**
-	 * Exit a parse tree produced by {@link arithmeticParser#relop}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitRelop(_ ctx: arithmeticParser.RelopContext)
-	/**
-	 * Enter a parse tree produced by {@link arithmeticParser#number}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterNumber(_ ctx: arithmeticParser.NumberContext)
-	/**
-	 * Exit a parse tree produced by {@link arithmeticParser#number}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitNumber(_ ctx: arithmeticParser.NumberContext)
-	/**
 	 * Enter a parse tree produced by {@link arithmeticParser#variable}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -114,4 +102,16 @@ public protocol arithmeticListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitVariable(_ ctx: arithmeticParser.VariableContext)
+	/**
+	 * Enter a parse tree produced by {@link arithmeticParser#relop}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterRelop(_ ctx: arithmeticParser.RelopContext)
+	/**
+	 * Exit a parse tree produced by {@link arithmeticParser#relop}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitRelop(_ ctx: arithmeticParser.RelopContext)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/useragent/useragent.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/useragent/useragent.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class useragentVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProg(_ ctx: useragentParser.ProgContext) -> T{
+	open func visitProg(_ ctx: useragentParser.ProgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class useragentVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProduct(_ ctx: useragentParser.ProductContext) -> T{
+	open func visitProduct(_ ctx: useragentParser.ProductContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class useragentVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitName(_ ctx: useragentParser.NameContext) -> T{
+	open func visitName(_ ctx: useragentParser.NameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class useragentVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVersion(_ ctx: useragentParser.VersionContext) -> T{
+	open func visitVersion(_ ctx: useragentParser.VersionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class useragentVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: useragentParser.CommentContext) -> T{
+	open func visitComment(_ ctx: useragentParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

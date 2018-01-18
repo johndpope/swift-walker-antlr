@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/vb6/VisualBasic6.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/vb6/VisualBasic6.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStartRule(_ ctx: VisualBasic6Parser.StartRuleContext) -> T{
+	open func visitStartRule(_ ctx: VisualBasic6Parser.StartRuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,47 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModule(_ ctx: VisualBasic6Parser.ModuleContext) -> T{
+	open func visitModule(_ ctx: VisualBasic6Parser.ModuleContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#moduleReferences}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitModuleReferences(_ ctx: VisualBasic6Parser.ModuleReferencesContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#moduleReference}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitModuleReference(_ ctx: VisualBasic6Parser.ModuleReferenceContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#moduleReferenceGUID}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitModuleReferenceGUID(_ ctx: VisualBasic6Parser.ModuleReferenceGUIDContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#moduleReferenceComponent}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitModuleReferenceComponent(_ ctx: VisualBasic6Parser.ModuleReferenceComponentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +75,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleHeader(_ ctx: VisualBasic6Parser.ModuleHeaderContext) -> T{
+	open func visitModuleHeader(_ ctx: VisualBasic6Parser.ModuleHeaderContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +85,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleConfig(_ ctx: VisualBasic6Parser.ModuleConfigContext) -> T{
+	open func visitModuleConfig(_ ctx: VisualBasic6Parser.ModuleConfigContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +95,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleConfigElement(_ ctx: VisualBasic6Parser.ModuleConfigElementContext) -> T{
+	open func visitModuleConfigElement(_ ctx: VisualBasic6Parser.ModuleConfigElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +105,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleAttributes(_ ctx: VisualBasic6Parser.ModuleAttributesContext) -> T{
+	open func visitModuleAttributes(_ ctx: VisualBasic6Parser.ModuleAttributesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +115,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleOptions(_ ctx: VisualBasic6Parser.ModuleOptionsContext) -> T{
+	open func visitModuleOptions(_ ctx: VisualBasic6Parser.ModuleOptionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -86,7 +126,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionBaseStmt(_ ctx: VisualBasic6Parser.OptionBaseStmtContext) -> T{
+	open func visitOptionBaseStmt(_ ctx: VisualBasic6Parser.OptionBaseStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -97,7 +137,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionCompareStmt(_ ctx: VisualBasic6Parser.OptionCompareStmtContext) -> T{
+	open func visitOptionCompareStmt(_ ctx: VisualBasic6Parser.OptionCompareStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -108,7 +148,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionExplicitStmt(_ ctx: VisualBasic6Parser.OptionExplicitStmtContext) -> T{
+	open func visitOptionExplicitStmt(_ ctx: VisualBasic6Parser.OptionExplicitStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -119,7 +159,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionPrivateModuleStmt(_ ctx: VisualBasic6Parser.OptionPrivateModuleStmtContext) -> T{
+	open func visitOptionPrivateModuleStmt(_ ctx: VisualBasic6Parser.OptionPrivateModuleStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -129,7 +169,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleBody(_ ctx: VisualBasic6Parser.ModuleBodyContext) -> T{
+	open func visitModuleBody(_ ctx: VisualBasic6Parser.ModuleBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -139,7 +179,77 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleBodyElement(_ ctx: VisualBasic6Parser.ModuleBodyElementContext) -> T{
+	open func visitModuleBodyElement(_ ctx: VisualBasic6Parser.ModuleBodyElementContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#controlProperties}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitControlProperties(_ ctx: VisualBasic6Parser.ControlPropertiesContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#cp_Properties}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCp_Properties(_ ctx: VisualBasic6Parser.Cp_PropertiesContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#cp_SingleProperty}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCp_SingleProperty(_ ctx: VisualBasic6Parser.Cp_SinglePropertyContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#cp_PropertyName}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCp_PropertyName(_ ctx: VisualBasic6Parser.Cp_PropertyNameContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#cp_NestedProperty}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCp_NestedProperty(_ ctx: VisualBasic6Parser.Cp_NestedPropertyContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#cp_ControlType}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCp_ControlType(_ ctx: VisualBasic6Parser.Cp_ControlTypeContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#cp_ControlIdentifier}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCp_ControlIdentifier(_ ctx: VisualBasic6Parser.Cp_ControlIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -149,7 +259,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleBlock(_ ctx: VisualBasic6Parser.ModuleBlockContext) -> T{
+	open func visitModuleBlock(_ ctx: VisualBasic6Parser.ModuleBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -159,7 +269,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributeStmt(_ ctx: VisualBasic6Parser.AttributeStmtContext) -> T{
+	open func visitAttributeStmt(_ ctx: VisualBasic6Parser.AttributeStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -169,7 +279,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: VisualBasic6Parser.BlockContext) -> T{
+	open func visitBlock(_ ctx: VisualBasic6Parser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -179,17 +289,17 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockStmt(_ ctx: VisualBasic6Parser.BlockStmtContext) -> T{
+	open func visitBlockStmt(_ ctx: VisualBasic6Parser.BlockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link VisualBasic6Parser#appactivateStmt}.
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#appActivateStmt}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAppactivateStmt(_ ctx: VisualBasic6Parser.AppactivateStmtContext) -> T{
+	open func visitAppActivateStmt(_ ctx: VisualBasic6Parser.AppActivateStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -199,27 +309,27 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBeepStmt(_ ctx: VisualBasic6Parser.BeepStmtContext) -> T{
+	open func visitBeepStmt(_ ctx: VisualBasic6Parser.BeepStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link VisualBasic6Parser#chdirStmt}.
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#chDirStmt}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitChdirStmt(_ ctx: VisualBasic6Parser.ChdirStmtContext) -> T{
+	open func visitChDirStmt(_ ctx: VisualBasic6Parser.ChDirStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link VisualBasic6Parser#chdriveStmt}.
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#chDriveStmt}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitChdriveStmt(_ ctx: VisualBasic6Parser.ChdriveStmtContext) -> T{
+	open func visitChDriveStmt(_ ctx: VisualBasic6Parser.ChDriveStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -229,7 +339,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCloseStmt(_ ctx: VisualBasic6Parser.CloseStmtContext) -> T{
+	open func visitCloseStmt(_ ctx: VisualBasic6Parser.CloseStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -239,7 +349,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstStmt(_ ctx: VisualBasic6Parser.ConstStmtContext) -> T{
+	open func visitConstStmt(_ ctx: VisualBasic6Parser.ConstStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -249,7 +359,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstSubStmt(_ ctx: VisualBasic6Parser.ConstSubStmtContext) -> T{
+	open func visitConstSubStmt(_ ctx: VisualBasic6Parser.ConstSubStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -259,7 +369,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDateStmt(_ ctx: VisualBasic6Parser.DateStmtContext) -> T{
+	open func visitDateStmt(_ ctx: VisualBasic6Parser.DateStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -269,7 +379,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclareStmt(_ ctx: VisualBasic6Parser.DeclareStmtContext) -> T{
+	open func visitDeclareStmt(_ ctx: VisualBasic6Parser.DeclareStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -279,7 +389,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeftypeStmt(_ ctx: VisualBasic6Parser.DeftypeStmtContext) -> T{
+	open func visitDeftypeStmt(_ ctx: VisualBasic6Parser.DeftypeStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -289,7 +399,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeleteSettingStmt(_ ctx: VisualBasic6Parser.DeleteSettingStmtContext) -> T{
+	open func visitDeleteSettingStmt(_ ctx: VisualBasic6Parser.DeleteSettingStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -299,7 +409,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDoLoopStmt(_ ctx: VisualBasic6Parser.DoLoopStmtContext) -> T{
+	open func visitDoLoopStmt(_ ctx: VisualBasic6Parser.DoLoopStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -309,7 +419,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEndStmt(_ ctx: VisualBasic6Parser.EndStmtContext) -> T{
+	open func visitEndStmt(_ ctx: VisualBasic6Parser.EndStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -319,7 +429,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumerationStmt(_ ctx: VisualBasic6Parser.EnumerationStmtContext) -> T{
+	open func visitEnumerationStmt(_ ctx: VisualBasic6Parser.EnumerationStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -329,7 +439,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumerationStmt_Constant(_ ctx: VisualBasic6Parser.EnumerationStmt_ConstantContext) -> T{
+	open func visitEnumerationStmt_Constant(_ ctx: VisualBasic6Parser.EnumerationStmt_ConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -339,7 +449,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEraseStmt(_ ctx: VisualBasic6Parser.EraseStmtContext) -> T{
+	open func visitEraseStmt(_ ctx: VisualBasic6Parser.EraseStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -349,7 +459,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitErrorStmt(_ ctx: VisualBasic6Parser.ErrorStmtContext) -> T{
+	open func visitErrorStmt(_ ctx: VisualBasic6Parser.ErrorStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -359,7 +469,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEventStmt(_ ctx: VisualBasic6Parser.EventStmtContext) -> T{
+	open func visitEventStmt(_ ctx: VisualBasic6Parser.EventStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -369,7 +479,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExitStmt(_ ctx: VisualBasic6Parser.ExitStmtContext) -> T{
+	open func visitExitStmt(_ ctx: VisualBasic6Parser.ExitStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -379,7 +489,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFilecopyStmt(_ ctx: VisualBasic6Parser.FilecopyStmtContext) -> T{
+	open func visitFilecopyStmt(_ ctx: VisualBasic6Parser.FilecopyStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -389,7 +499,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForEachStmt(_ ctx: VisualBasic6Parser.ForEachStmtContext) -> T{
+	open func visitForEachStmt(_ ctx: VisualBasic6Parser.ForEachStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -399,7 +509,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForNextStmt(_ ctx: VisualBasic6Parser.ForNextStmtContext) -> T{
+	open func visitForNextStmt(_ ctx: VisualBasic6Parser.ForNextStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -409,7 +519,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionStmt(_ ctx: VisualBasic6Parser.FunctionStmtContext) -> T{
+	open func visitFunctionStmt(_ ctx: VisualBasic6Parser.FunctionStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -419,7 +529,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGetStmt(_ ctx: VisualBasic6Parser.GetStmtContext) -> T{
+	open func visitGetStmt(_ ctx: VisualBasic6Parser.GetStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -429,7 +539,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGoSubStmt(_ ctx: VisualBasic6Parser.GoSubStmtContext) -> T{
+	open func visitGoSubStmt(_ ctx: VisualBasic6Parser.GoSubStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -439,7 +549,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGoToStmt(_ ctx: VisualBasic6Parser.GoToStmtContext) -> T{
+	open func visitGoToStmt(_ ctx: VisualBasic6Parser.GoToStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -450,7 +560,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInlineIfThenElse(_ ctx: VisualBasic6Parser.InlineIfThenElseContext) -> T{
+	open func visitInlineIfThenElse(_ ctx: VisualBasic6Parser.InlineIfThenElseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -461,7 +571,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockIfThenElse(_ ctx: VisualBasic6Parser.BlockIfThenElseContext) -> T{
+	open func visitBlockIfThenElse(_ ctx: VisualBasic6Parser.BlockIfThenElseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -471,7 +581,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfBlockStmt(_ ctx: VisualBasic6Parser.IfBlockStmtContext) -> T{
+	open func visitIfBlockStmt(_ ctx: VisualBasic6Parser.IfBlockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -481,7 +591,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfConditionStmt(_ ctx: VisualBasic6Parser.IfConditionStmtContext) -> T{
+	open func visitIfConditionStmt(_ ctx: VisualBasic6Parser.IfConditionStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -491,7 +601,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfElseIfBlockStmt(_ ctx: VisualBasic6Parser.IfElseIfBlockStmtContext) -> T{
+	open func visitIfElseIfBlockStmt(_ ctx: VisualBasic6Parser.IfElseIfBlockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -501,7 +611,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfElseBlockStmt(_ ctx: VisualBasic6Parser.IfElseBlockStmtContext) -> T{
+	open func visitIfElseBlockStmt(_ ctx: VisualBasic6Parser.IfElseBlockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -511,7 +621,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplementsStmt(_ ctx: VisualBasic6Parser.ImplementsStmtContext) -> T{
+	open func visitImplementsStmt(_ ctx: VisualBasic6Parser.ImplementsStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -521,7 +631,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInputStmt(_ ctx: VisualBasic6Parser.InputStmtContext) -> T{
+	open func visitInputStmt(_ ctx: VisualBasic6Parser.InputStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -531,7 +641,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKillStmt(_ ctx: VisualBasic6Parser.KillStmtContext) -> T{
+	open func visitKillStmt(_ ctx: VisualBasic6Parser.KillStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -541,7 +651,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLetStmt(_ ctx: VisualBasic6Parser.LetStmtContext) -> T{
+	open func visitLetStmt(_ ctx: VisualBasic6Parser.LetStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -551,7 +661,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLineInputStmt(_ ctx: VisualBasic6Parser.LineInputStmtContext) -> T{
+	open func visitLineInputStmt(_ ctx: VisualBasic6Parser.LineInputStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -561,7 +671,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLoadStmt(_ ctx: VisualBasic6Parser.LoadStmtContext) -> T{
+	open func visitLoadStmt(_ ctx: VisualBasic6Parser.LoadStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -571,7 +681,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLockStmt(_ ctx: VisualBasic6Parser.LockStmtContext) -> T{
+	open func visitLockStmt(_ ctx: VisualBasic6Parser.LockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -581,7 +691,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLsetStmt(_ ctx: VisualBasic6Parser.LsetStmtContext) -> T{
+	open func visitLsetStmt(_ ctx: VisualBasic6Parser.LsetStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -591,7 +701,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMacroIfThenElseStmt(_ ctx: VisualBasic6Parser.MacroIfThenElseStmtContext) -> T{
+	open func visitMacroIfThenElseStmt(_ ctx: VisualBasic6Parser.MacroIfThenElseStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -601,7 +711,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMacroIfBlockStmt(_ ctx: VisualBasic6Parser.MacroIfBlockStmtContext) -> T{
+	open func visitMacroIfBlockStmt(_ ctx: VisualBasic6Parser.MacroIfBlockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -611,7 +721,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMacroElseIfBlockStmt(_ ctx: VisualBasic6Parser.MacroElseIfBlockStmtContext) -> T{
+	open func visitMacroElseIfBlockStmt(_ ctx: VisualBasic6Parser.MacroElseIfBlockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -621,7 +731,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMacroElseBlockStmt(_ ctx: VisualBasic6Parser.MacroElseBlockStmtContext) -> T{
+	open func visitMacroElseBlockStmt(_ ctx: VisualBasic6Parser.MacroElseBlockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -631,7 +741,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMidStmt(_ ctx: VisualBasic6Parser.MidStmtContext) -> T{
+	open func visitMidStmt(_ ctx: VisualBasic6Parser.MidStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -641,7 +751,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMkdirStmt(_ ctx: VisualBasic6Parser.MkdirStmtContext) -> T{
+	open func visitMkdirStmt(_ ctx: VisualBasic6Parser.MkdirStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -651,7 +761,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNameStmt(_ ctx: VisualBasic6Parser.NameStmtContext) -> T{
+	open func visitNameStmt(_ ctx: VisualBasic6Parser.NameStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -661,7 +771,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOnErrorStmt(_ ctx: VisualBasic6Parser.OnErrorStmtContext) -> T{
+	open func visitOnErrorStmt(_ ctx: VisualBasic6Parser.OnErrorStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -671,7 +781,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOnGoToStmt(_ ctx: VisualBasic6Parser.OnGoToStmtContext) -> T{
+	open func visitOnGoToStmt(_ ctx: VisualBasic6Parser.OnGoToStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -681,7 +791,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOnGoSubStmt(_ ctx: VisualBasic6Parser.OnGoSubStmtContext) -> T{
+	open func visitOnGoSubStmt(_ ctx: VisualBasic6Parser.OnGoSubStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -691,7 +801,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpenStmt(_ ctx: VisualBasic6Parser.OpenStmtContext) -> T{
+	open func visitOpenStmt(_ ctx: VisualBasic6Parser.OpenStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -701,7 +811,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOutputList(_ ctx: VisualBasic6Parser.OutputListContext) -> T{
+	open func visitOutputList(_ ctx: VisualBasic6Parser.OutputListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -711,7 +821,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOutputList_Expression(_ ctx: VisualBasic6Parser.OutputList_ExpressionContext) -> T{
+	open func visitOutputList_Expression(_ ctx: VisualBasic6Parser.OutputList_ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -721,7 +831,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrintStmt(_ ctx: VisualBasic6Parser.PrintStmtContext) -> T{
+	open func visitPrintStmt(_ ctx: VisualBasic6Parser.PrintStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -731,7 +841,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyGetStmt(_ ctx: VisualBasic6Parser.PropertyGetStmtContext) -> T{
+	open func visitPropertyGetStmt(_ ctx: VisualBasic6Parser.PropertyGetStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -741,7 +851,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertySetStmt(_ ctx: VisualBasic6Parser.PropertySetStmtContext) -> T{
+	open func visitPropertySetStmt(_ ctx: VisualBasic6Parser.PropertySetStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -751,7 +861,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyLetStmt(_ ctx: VisualBasic6Parser.PropertyLetStmtContext) -> T{
+	open func visitPropertyLetStmt(_ ctx: VisualBasic6Parser.PropertyLetStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -761,7 +871,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPutStmt(_ ctx: VisualBasic6Parser.PutStmtContext) -> T{
+	open func visitPutStmt(_ ctx: VisualBasic6Parser.PutStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -771,7 +881,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRaiseEventStmt(_ ctx: VisualBasic6Parser.RaiseEventStmtContext) -> T{
+	open func visitRaiseEventStmt(_ ctx: VisualBasic6Parser.RaiseEventStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -781,7 +891,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRandomizeStmt(_ ctx: VisualBasic6Parser.RandomizeStmtContext) -> T{
+	open func visitRandomizeStmt(_ ctx: VisualBasic6Parser.RandomizeStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -791,7 +901,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRedimStmt(_ ctx: VisualBasic6Parser.RedimStmtContext) -> T{
+	open func visitRedimStmt(_ ctx: VisualBasic6Parser.RedimStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -801,7 +911,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRedimSubStmt(_ ctx: VisualBasic6Parser.RedimSubStmtContext) -> T{
+	open func visitRedimSubStmt(_ ctx: VisualBasic6Parser.RedimSubStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -811,7 +921,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResetStmt(_ ctx: VisualBasic6Parser.ResetStmtContext) -> T{
+	open func visitResetStmt(_ ctx: VisualBasic6Parser.ResetStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -821,7 +931,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResumeStmt(_ ctx: VisualBasic6Parser.ResumeStmtContext) -> T{
+	open func visitResumeStmt(_ ctx: VisualBasic6Parser.ResumeStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -831,7 +941,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturnStmt(_ ctx: VisualBasic6Parser.ReturnStmtContext) -> T{
+	open func visitReturnStmt(_ ctx: VisualBasic6Parser.ReturnStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -841,7 +951,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRmdirStmt(_ ctx: VisualBasic6Parser.RmdirStmtContext) -> T{
+	open func visitRmdirStmt(_ ctx: VisualBasic6Parser.RmdirStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -851,7 +961,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRsetStmt(_ ctx: VisualBasic6Parser.RsetStmtContext) -> T{
+	open func visitRsetStmt(_ ctx: VisualBasic6Parser.RsetStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -861,7 +971,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSavepictureStmt(_ ctx: VisualBasic6Parser.SavepictureStmtContext) -> T{
+	open func visitSavepictureStmt(_ ctx: VisualBasic6Parser.SavepictureStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -871,7 +981,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSaveSettingStmt(_ ctx: VisualBasic6Parser.SaveSettingStmtContext) -> T{
+	open func visitSaveSettingStmt(_ ctx: VisualBasic6Parser.SaveSettingStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -881,7 +991,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSeekStmt(_ ctx: VisualBasic6Parser.SeekStmtContext) -> T{
+	open func visitSeekStmt(_ ctx: VisualBasic6Parser.SeekStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -891,7 +1001,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelectCaseStmt(_ ctx: VisualBasic6Parser.SelectCaseStmtContext) -> T{
+	open func visitSelectCaseStmt(_ ctx: VisualBasic6Parser.SelectCaseStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -901,7 +1011,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSC_Case(_ ctx: VisualBasic6Parser.SC_CaseContext) -> T{
+	open func visitSC_Case(_ ctx: VisualBasic6Parser.SC_CaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -912,7 +1022,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseCondElse(_ ctx: VisualBasic6Parser.CaseCondElseContext) -> T{
+	open func visitCaseCondElse(_ ctx: VisualBasic6Parser.CaseCondElseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -923,7 +1033,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseCondExpr(_ ctx: VisualBasic6Parser.CaseCondExprContext) -> T{
+	open func visitCaseCondExpr(_ ctx: VisualBasic6Parser.CaseCondExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -934,7 +1044,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseCondExprIs(_ ctx: VisualBasic6Parser.CaseCondExprIsContext) -> T{
+	open func visitCaseCondExprIs(_ ctx: VisualBasic6Parser.CaseCondExprIsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +1055,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseCondExprValue(_ ctx: VisualBasic6Parser.CaseCondExprValueContext) -> T{
+	open func visitCaseCondExprValue(_ ctx: VisualBasic6Parser.CaseCondExprValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -956,7 +1066,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseCondExprTo(_ ctx: VisualBasic6Parser.CaseCondExprToContext) -> T{
+	open func visitCaseCondExprTo(_ ctx: VisualBasic6Parser.CaseCondExprToContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -966,7 +1076,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSendkeysStmt(_ ctx: VisualBasic6Parser.SendkeysStmtContext) -> T{
+	open func visitSendkeysStmt(_ ctx: VisualBasic6Parser.SendkeysStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -976,7 +1086,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetattrStmt(_ ctx: VisualBasic6Parser.SetattrStmtContext) -> T{
+	open func visitSetattrStmt(_ ctx: VisualBasic6Parser.SetattrStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -986,7 +1096,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetStmt(_ ctx: VisualBasic6Parser.SetStmtContext) -> T{
+	open func visitSetStmt(_ ctx: VisualBasic6Parser.SetStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -996,7 +1106,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStopStmt(_ ctx: VisualBasic6Parser.StopStmtContext) -> T{
+	open func visitStopStmt(_ ctx: VisualBasic6Parser.StopStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1006,7 +1116,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubStmt(_ ctx: VisualBasic6Parser.SubStmtContext) -> T{
+	open func visitSubStmt(_ ctx: VisualBasic6Parser.SubStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1016,7 +1126,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTimeStmt(_ ctx: VisualBasic6Parser.TimeStmtContext) -> T{
+	open func visitTimeStmt(_ ctx: VisualBasic6Parser.TimeStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1026,7 +1136,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeStmt(_ ctx: VisualBasic6Parser.TypeStmtContext) -> T{
+	open func visitTypeStmt(_ ctx: VisualBasic6Parser.TypeStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1036,7 +1146,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeStmt_Element(_ ctx: VisualBasic6Parser.TypeStmt_ElementContext) -> T{
+	open func visitTypeStmt_Element(_ ctx: VisualBasic6Parser.TypeStmt_ElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1046,7 +1156,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeOfStmt(_ ctx: VisualBasic6Parser.TypeOfStmtContext) -> T{
+	open func visitTypeOfStmt(_ ctx: VisualBasic6Parser.TypeOfStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1056,7 +1166,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnloadStmt(_ ctx: VisualBasic6Parser.UnloadStmtContext) -> T{
+	open func visitUnloadStmt(_ ctx: VisualBasic6Parser.UnloadStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1066,7 +1176,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnlockStmt(_ ctx: VisualBasic6Parser.UnlockStmtContext) -> T{
+	open func visitUnlockStmt(_ ctx: VisualBasic6Parser.UnlockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1077,7 +1187,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsStruct(_ ctx: VisualBasic6Parser.VsStructContext) -> T{
+	open func visitVsStruct(_ ctx: VisualBasic6Parser.VsStructContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1088,7 +1198,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsAdd(_ ctx: VisualBasic6Parser.VsAddContext) -> T{
+	open func visitVsAdd(_ ctx: VisualBasic6Parser.VsAddContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1099,7 +1209,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsLt(_ ctx: VisualBasic6Parser.VsLtContext) -> T{
+	open func visitVsLt(_ ctx: VisualBasic6Parser.VsLtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1110,7 +1220,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsAddressOf(_ ctx: VisualBasic6Parser.VsAddressOfContext) -> T{
+	open func visitVsAddressOf(_ ctx: VisualBasic6Parser.VsAddressOfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1121,7 +1231,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsNew(_ ctx: VisualBasic6Parser.VsNewContext) -> T{
+	open func visitVsNew(_ ctx: VisualBasic6Parser.VsNewContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1132,7 +1242,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsMult(_ ctx: VisualBasic6Parser.VsMultContext) -> T{
+	open func visitVsMult(_ ctx: VisualBasic6Parser.VsMultContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1143,7 +1253,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsNegation(_ ctx: VisualBasic6Parser.VsNegationContext) -> T{
+	open func visitVsNegation(_ ctx: VisualBasic6Parser.VsNegationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1154,18 +1264,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsAssign(_ ctx: VisualBasic6Parser.VsAssignContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by the {@code vsLike}
-	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitVsLike(_ ctx: VisualBasic6Parser.VsLikeContext) -> T{
+	open func visitVsAssign(_ ctx: VisualBasic6Parser.VsAssignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1176,7 +1275,18 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsDiv(_ ctx: VisualBasic6Parser.VsDivContext) -> T{
+	open func visitVsDiv(_ ctx: VisualBasic6Parser.VsDivContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by the {@code vsLike}
+	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitVsLike(_ ctx: VisualBasic6Parser.VsLikeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1187,7 +1297,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsPlus(_ ctx: VisualBasic6Parser.VsPlusContext) -> T{
+	open func visitVsPlus(_ ctx: VisualBasic6Parser.VsPlusContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1198,7 +1308,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsNot(_ ctx: VisualBasic6Parser.VsNotContext) -> T{
+	open func visitVsNot(_ ctx: VisualBasic6Parser.VsNotContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1209,7 +1319,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsGeq(_ ctx: VisualBasic6Parser.VsGeqContext) -> T{
+	open func visitVsGeq(_ ctx: VisualBasic6Parser.VsGeqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1220,7 +1330,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsTypeOf(_ ctx: VisualBasic6Parser.VsTypeOfContext) -> T{
+	open func visitVsTypeOf(_ ctx: VisualBasic6Parser.VsTypeOfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1231,7 +1341,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsICS(_ ctx: VisualBasic6Parser.VsICSContext) -> T{
+	open func visitVsICS(_ ctx: VisualBasic6Parser.VsICSContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1242,7 +1352,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsNeq(_ ctx: VisualBasic6Parser.VsNeqContext) -> T{
+	open func visitVsNeq(_ ctx: VisualBasic6Parser.VsNeqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1253,7 +1363,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsXor(_ ctx: VisualBasic6Parser.VsXorContext) -> T{
+	open func visitVsXor(_ ctx: VisualBasic6Parser.VsXorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1264,18 +1374,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsAnd(_ ctx: VisualBasic6Parser.VsAndContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by the {@code vsLeq}
-	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext) -> T{
+	open func visitVsAnd(_ ctx: VisualBasic6Parser.VsAndContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1286,7 +1385,18 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsPow(_ ctx: VisualBasic6Parser.VsPowContext) -> T{
+	open func visitVsPow(_ ctx: VisualBasic6Parser.VsPowContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by the {@code vsLeq}
+	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1297,7 +1407,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsIs(_ ctx: VisualBasic6Parser.VsIsContext) -> T{
+	open func visitVsIs(_ ctx: VisualBasic6Parser.VsIsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1308,7 +1418,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsMod(_ ctx: VisualBasic6Parser.VsModContext) -> T{
+	open func visitVsMod(_ ctx: VisualBasic6Parser.VsModContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1319,7 +1429,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsAmp(_ ctx: VisualBasic6Parser.VsAmpContext) -> T{
+	open func visitVsAmp(_ ctx: VisualBasic6Parser.VsAmpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1330,7 +1440,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsOr(_ ctx: VisualBasic6Parser.VsOrContext) -> T{
+	open func visitVsOr(_ ctx: VisualBasic6Parser.VsOrContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1341,7 +1451,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsMinus(_ ctx: VisualBasic6Parser.VsMinusContext) -> T{
+	open func visitVsMinus(_ ctx: VisualBasic6Parser.VsMinusContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1352,7 +1462,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsLiteral(_ ctx: VisualBasic6Parser.VsLiteralContext) -> T{
+	open func visitVsLiteral(_ ctx: VisualBasic6Parser.VsLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1363,7 +1473,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsEqv(_ ctx: VisualBasic6Parser.VsEqvContext) -> T{
+	open func visitVsEqv(_ ctx: VisualBasic6Parser.VsEqvContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1374,7 +1484,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsImp(_ ctx: VisualBasic6Parser.VsImpContext) -> T{
+	open func visitVsImp(_ ctx: VisualBasic6Parser.VsImpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1385,7 +1495,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsGt(_ ctx: VisualBasic6Parser.VsGtContext) -> T{
+	open func visitVsGt(_ ctx: VisualBasic6Parser.VsGtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1396,7 +1506,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsEq(_ ctx: VisualBasic6Parser.VsEqContext) -> T{
+	open func visitVsEq(_ ctx: VisualBasic6Parser.VsEqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1407,7 +1517,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVsMid(_ ctx: VisualBasic6Parser.VsMidContext) -> T{
+	open func visitVsMid(_ ctx: VisualBasic6Parser.VsMidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1417,7 +1527,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableStmt(_ ctx: VisualBasic6Parser.VariableStmtContext) -> T{
+	open func visitVariableStmt(_ ctx: VisualBasic6Parser.VariableStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1427,7 +1537,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableListStmt(_ ctx: VisualBasic6Parser.VariableListStmtContext) -> T{
+	open func visitVariableListStmt(_ ctx: VisualBasic6Parser.VariableListStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1437,7 +1547,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableSubStmt(_ ctx: VisualBasic6Parser.VariableSubStmtContext) -> T{
+	open func visitVariableSubStmt(_ ctx: VisualBasic6Parser.VariableSubStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1447,7 +1557,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhileWendStmt(_ ctx: VisualBasic6Parser.WhileWendStmtContext) -> T{
+	open func visitWhileWendStmt(_ ctx: VisualBasic6Parser.WhileWendStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1457,7 +1567,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWidthStmt(_ ctx: VisualBasic6Parser.WidthStmtContext) -> T{
+	open func visitWidthStmt(_ ctx: VisualBasic6Parser.WidthStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1467,7 +1577,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWithStmt(_ ctx: VisualBasic6Parser.WithStmtContext) -> T{
+	open func visitWithStmt(_ ctx: VisualBasic6Parser.WithStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1477,7 +1587,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWriteStmt(_ ctx: VisualBasic6Parser.WriteStmtContext) -> T{
+	open func visitWriteStmt(_ ctx: VisualBasic6Parser.WriteStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1487,7 +1597,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExplicitCallStmt(_ ctx: VisualBasic6Parser.ExplicitCallStmtContext) -> T{
+	open func visitExplicitCallStmt(_ ctx: VisualBasic6Parser.ExplicitCallStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1497,7 +1607,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitECS_ProcedureCall(_ ctx: VisualBasic6Parser.ECS_ProcedureCallContext) -> T{
+	open func visitECS_ProcedureCall(_ ctx: VisualBasic6Parser.ECS_ProcedureCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1507,7 +1617,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitECS_MemberProcedureCall(_ ctx: VisualBasic6Parser.ECS_MemberProcedureCallContext) -> T{
+	open func visitECS_MemberProcedureCall(_ ctx: VisualBasic6Parser.ECS_MemberProcedureCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1517,7 +1627,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplicitCallStmt_InBlock(_ ctx: VisualBasic6Parser.ImplicitCallStmt_InBlockContext) -> T{
+	open func visitImplicitCallStmt_InBlock(_ ctx: VisualBasic6Parser.ImplicitCallStmt_InBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1527,7 +1637,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitICS_B_ProcedureCall(_ ctx: VisualBasic6Parser.ICS_B_ProcedureCallContext) -> T{
+	open func visitICS_B_ProcedureCall(_ ctx: VisualBasic6Parser.ICS_B_ProcedureCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1537,7 +1647,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitICS_B_MemberProcedureCall(_ ctx: VisualBasic6Parser.ICS_B_MemberProcedureCallContext) -> T{
+	open func visitICS_B_MemberProcedureCall(_ ctx: VisualBasic6Parser.ICS_B_MemberProcedureCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1547,7 +1657,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplicitCallStmt_InStmt(_ ctx: VisualBasic6Parser.ImplicitCallStmt_InStmtContext) -> T{
+	open func visitImplicitCallStmt_InStmt(_ ctx: VisualBasic6Parser.ImplicitCallStmt_InStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1557,7 +1667,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitICS_S_VariableOrProcedureCall(_ ctx: VisualBasic6Parser.ICS_S_VariableOrProcedureCallContext) -> T{
+	open func visitICS_S_VariableOrProcedureCall(_ ctx: VisualBasic6Parser.ICS_S_VariableOrProcedureCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1567,7 +1677,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitICS_S_ProcedureOrArrayCall(_ ctx: VisualBasic6Parser.ICS_S_ProcedureOrArrayCallContext) -> T{
+	open func visitICS_S_ProcedureOrArrayCall(_ ctx: VisualBasic6Parser.ICS_S_ProcedureOrArrayCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1577,7 +1687,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitICS_S_MembersCall(_ ctx: VisualBasic6Parser.ICS_S_MembersCallContext) -> T{
+	open func visitICS_S_MembersCall(_ ctx: VisualBasic6Parser.ICS_S_MembersCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1587,7 +1697,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitICS_S_MemberCall(_ ctx: VisualBasic6Parser.ICS_S_MemberCallContext) -> T{
+	open func visitICS_S_MemberCall(_ ctx: VisualBasic6Parser.ICS_S_MemberCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1597,7 +1707,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitICS_S_DictionaryCall(_ ctx: VisualBasic6Parser.ICS_S_DictionaryCallContext) -> T{
+	open func visitICS_S_DictionaryCall(_ ctx: VisualBasic6Parser.ICS_S_DictionaryCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1607,7 +1717,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgsCall(_ ctx: VisualBasic6Parser.ArgsCallContext) -> T{
+	open func visitArgsCall(_ ctx: VisualBasic6Parser.ArgsCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1617,7 +1727,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgCall(_ ctx: VisualBasic6Parser.ArgCallContext) -> T{
+	open func visitArgCall(_ ctx: VisualBasic6Parser.ArgCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1627,7 +1737,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDictionaryCallStmt(_ ctx: VisualBasic6Parser.DictionaryCallStmtContext) -> T{
+	open func visitDictionaryCallStmt(_ ctx: VisualBasic6Parser.DictionaryCallStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1637,7 +1747,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgList(_ ctx: VisualBasic6Parser.ArgListContext) -> T{
+	open func visitArgList(_ ctx: VisualBasic6Parser.ArgListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1647,7 +1757,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArg(_ ctx: VisualBasic6Parser.ArgContext) -> T{
+	open func visitArg(_ ctx: VisualBasic6Parser.ArgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1657,7 +1767,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgDefaultValue(_ ctx: VisualBasic6Parser.ArgDefaultValueContext) -> T{
+	open func visitArgDefaultValue(_ ctx: VisualBasic6Parser.ArgDefaultValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1667,7 +1777,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubscripts(_ ctx: VisualBasic6Parser.SubscriptsContext) -> T{
+	open func visitSubscripts(_ ctx: VisualBasic6Parser.SubscriptsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1677,7 +1787,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubscript(_ ctx: VisualBasic6Parser.SubscriptContext) -> T{
+	open func visitSubscript(_ ctx: VisualBasic6Parser.SubscriptContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1687,7 +1797,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAmbiguousIdentifier(_ ctx: VisualBasic6Parser.AmbiguousIdentifierContext) -> T{
+	open func visitAmbiguousIdentifier(_ ctx: VisualBasic6Parser.AmbiguousIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1697,7 +1807,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAsTypeClause(_ ctx: VisualBasic6Parser.AsTypeClauseContext) -> T{
+	open func visitAsTypeClause(_ ctx: VisualBasic6Parser.AsTypeClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1707,7 +1817,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBaseType(_ ctx: VisualBasic6Parser.BaseTypeContext) -> T{
+	open func visitBaseType(_ ctx: VisualBasic6Parser.BaseTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1717,7 +1827,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCertainIdentifier(_ ctx: VisualBasic6Parser.CertainIdentifierContext) -> T{
+	open func visitCertainIdentifier(_ ctx: VisualBasic6Parser.CertainIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1727,7 +1837,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComparisonOperator(_ ctx: VisualBasic6Parser.ComparisonOperatorContext) -> T{
+	open func visitComparisonOperator(_ ctx: VisualBasic6Parser.ComparisonOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1737,7 +1847,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComplexType(_ ctx: VisualBasic6Parser.ComplexTypeContext) -> T{
+	open func visitComplexType(_ ctx: VisualBasic6Parser.ComplexTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1747,7 +1857,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldLength(_ ctx: VisualBasic6Parser.FieldLengthContext) -> T{
+	open func visitFieldLength(_ ctx: VisualBasic6Parser.FieldLengthContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1757,7 +1867,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLetterrange(_ ctx: VisualBasic6Parser.LetterrangeContext) -> T{
+	open func visitLetterrange(_ ctx: VisualBasic6Parser.LetterrangeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1767,7 +1877,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLineLabel(_ ctx: VisualBasic6Parser.LineLabelContext) -> T{
+	open func visitLineLabel(_ ctx: VisualBasic6Parser.LineLabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1777,7 +1887,27 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: VisualBasic6Parser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: VisualBasic6Parser.LiteralContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#publicPrivateVisibility}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitPublicPrivateVisibility(_ ctx: VisualBasic6Parser.PublicPrivateVisibilityContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link VisualBasic6Parser#publicPrivateGlobalVisibility}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitPublicPrivateGlobalVisibility(_ ctx: VisualBasic6Parser.PublicPrivateGlobalVisibilityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1787,7 +1917,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: VisualBasic6Parser.TypeContext) -> T{
+	open func visitType(_ ctx: VisualBasic6Parser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1797,7 +1927,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeHint(_ ctx: VisualBasic6Parser.TypeHintContext) -> T{
+	open func visitTypeHint(_ ctx: VisualBasic6Parser.TypeHintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1807,7 +1937,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVisibility(_ ctx: VisualBasic6Parser.VisibilityContext) -> T{
+	open func visitVisibility(_ ctx: VisualBasic6Parser.VisibilityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1817,7 +1947,7 @@ open class VisualBasic6Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAmbiguousKeyword(_ ctx: VisualBasic6Parser.AmbiguousKeywordContext) -> T{
+	open func visitAmbiguousKeyword(_ ctx: VisualBasic6Parser.AmbiguousKeywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

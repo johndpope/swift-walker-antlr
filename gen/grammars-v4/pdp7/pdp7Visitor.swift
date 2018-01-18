@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/pdp7/pdp7.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/pdp7/pdp7.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProg(_ ctx: pdp7Parser.ProgContext) -> T{
+	open func visitProg(_ ctx: pdp7Parser.ProgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: pdp7Parser.LineContext) -> T{
+	open func visitLine(_ ctx: pdp7Parser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarations(_ ctx: pdp7Parser.DeclarationsContext) -> T{
+	open func visitDeclarations(_ ctx: pdp7Parser.DeclarationsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclaration(_ ctx: pdp7Parser.DeclarationContext) -> T{
+	open func visitDeclaration(_ ctx: pdp7Parser.DeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarationRight(_ ctx: pdp7Parser.DeclarationRightContext) -> T{
+	open func visitDeclarationRight(_ ctx: pdp7Parser.DeclarationRightContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInstruction(_ ctx: pdp7Parser.InstructionContext) -> T{
+	open func visitInstruction(_ ctx: pdp7Parser.InstructionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgument(_ ctx: pdp7Parser.ArgumentContext) -> T{
+	open func visitArgument(_ ctx: pdp7Parser.ArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignment(_ ctx: pdp7Parser.AssignmentContext) -> T{
+	open func visitAssignment(_ ctx: pdp7Parser.AssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbol(_ ctx: pdp7Parser.SymbolContext) -> T{
+	open func visitSymbol(_ ctx: pdp7Parser.SymbolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: pdp7Parser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: pdp7Parser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplyingExpression(_ ctx: pdp7Parser.MultiplyingExpressionContext) -> T{
+	open func visitMultiplyingExpression(_ ctx: pdp7Parser.MultiplyingExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: pdp7Parser.AtomContext) -> T{
+	open func visitAtom(_ ctx: pdp7Parser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: pdp7Parser.StringContext) -> T{
+	open func visitString(_ ctx: pdp7Parser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEol(_ ctx: pdp7Parser.EolContext) -> T{
+	open func visitEol(_ ctx: pdp7Parser.EolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: pdp7Parser.CommentContext) -> T{
+	open func visitComment(_ ctx: pdp7Parser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabel(_ ctx: pdp7Parser.LabelContext) -> T{
+	open func visitLabel(_ ctx: pdp7Parser.LabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariable(_ ctx: pdp7Parser.VariableContext) -> T{
+	open func visitVariable(_ ctx: pdp7Parser.VariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class pdp7Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpcode(_ ctx: pdp7Parser.OpcodeContext) -> T{
+	open func visitOpcode(_ ctx: pdp7Parser.OpcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

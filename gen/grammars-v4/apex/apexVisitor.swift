@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/apex/apex.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/apex/apex.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompilationUnit(_ ctx: apexParser.CompilationUnitContext) -> T{
+	open func visitCompilationUnit(_ ctx: apexParser.CompilationUnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackageDeclaration(_ ctx: apexParser.PackageDeclarationContext) -> T{
+	open func visitPackageDeclaration(_ ctx: apexParser.PackageDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportDeclaration(_ ctx: apexParser.ImportDeclarationContext) -> T{
+	open func visitImportDeclaration(_ ctx: apexParser.ImportDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDeclaration(_ ctx: apexParser.TypeDeclarationContext) -> T{
+	open func visitTypeDeclaration(_ ctx: apexParser.TypeDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModifier(_ ctx: apexParser.ModifierContext) -> T{
+	open func visitModifier(_ ctx: apexParser.ModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassOrInterfaceModifier(_ ctx: apexParser.ClassOrInterfaceModifierContext) -> T{
+	open func visitClassOrInterfaceModifier(_ ctx: apexParser.ClassOrInterfaceModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableModifier(_ ctx: apexParser.VariableModifierContext) -> T{
+	open func visitVariableModifier(_ ctx: apexParser.VariableModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassDeclaration(_ ctx: apexParser.ClassDeclarationContext) -> T{
+	open func visitClassDeclaration(_ ctx: apexParser.ClassDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeParameters(_ ctx: apexParser.TypeParametersContext) -> T{
+	open func visitTypeParameters(_ ctx: apexParser.TypeParametersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeParameter(_ ctx: apexParser.TypeParameterContext) -> T{
+	open func visitTypeParameter(_ ctx: apexParser.TypeParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeBound(_ ctx: apexParser.TypeBoundContext) -> T{
+	open func visitTypeBound(_ ctx: apexParser.TypeBoundContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumDeclaration(_ ctx: apexParser.EnumDeclarationContext) -> T{
+	open func visitEnumDeclaration(_ ctx: apexParser.EnumDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumConstants(_ ctx: apexParser.EnumConstantsContext) -> T{
+	open func visitEnumConstants(_ ctx: apexParser.EnumConstantsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumConstant(_ ctx: apexParser.EnumConstantContext) -> T{
+	open func visitEnumConstant(_ ctx: apexParser.EnumConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumBodyDeclarations(_ ctx: apexParser.EnumBodyDeclarationsContext) -> T{
+	open func visitEnumBodyDeclarations(_ ctx: apexParser.EnumBodyDeclarationsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceDeclaration(_ ctx: apexParser.InterfaceDeclarationContext) -> T{
+	open func visitInterfaceDeclaration(_ ctx: apexParser.InterfaceDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeList(_ ctx: apexParser.TypeListContext) -> T{
+	open func visitTypeList(_ ctx: apexParser.TypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassBody(_ ctx: apexParser.ClassBodyContext) -> T{
+	open func visitClassBody(_ ctx: apexParser.ClassBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceBody(_ ctx: apexParser.InterfaceBodyContext) -> T{
+	open func visitInterfaceBody(_ ctx: apexParser.InterfaceBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassBodyDeclaration(_ ctx: apexParser.ClassBodyDeclarationContext) -> T{
+	open func visitClassBodyDeclaration(_ ctx: apexParser.ClassBodyDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMemberDeclaration(_ ctx: apexParser.MemberDeclarationContext) -> T{
+	open func visitMemberDeclaration(_ ctx: apexParser.MemberDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodDeclaration(_ ctx: apexParser.MethodDeclarationContext) -> T{
+	open func visitMethodDeclaration(_ ctx: apexParser.MethodDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGenericMethodDeclaration(_ ctx: apexParser.GenericMethodDeclarationContext) -> T{
+	open func visitGenericMethodDeclaration(_ ctx: apexParser.GenericMethodDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructorDeclaration(_ ctx: apexParser.ConstructorDeclarationContext) -> T{
+	open func visitConstructorDeclaration(_ ctx: apexParser.ConstructorDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGenericConstructorDeclaration(_ ctx: apexParser.GenericConstructorDeclarationContext) -> T{
+	open func visitGenericConstructorDeclaration(_ ctx: apexParser.GenericConstructorDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldDeclaration(_ ctx: apexParser.FieldDeclarationContext) -> T{
+	open func visitFieldDeclaration(_ ctx: apexParser.FieldDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyDeclaration(_ ctx: apexParser.PropertyDeclarationContext) -> T{
+	open func visitPropertyDeclaration(_ ctx: apexParser.PropertyDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyBodyDeclaration(_ ctx: apexParser.PropertyBodyDeclarationContext) -> T{
+	open func visitPropertyBodyDeclaration(_ ctx: apexParser.PropertyBodyDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceBodyDeclaration(_ ctx: apexParser.InterfaceBodyDeclarationContext) -> T{
+	open func visitInterfaceBodyDeclaration(_ ctx: apexParser.InterfaceBodyDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceMemberDeclaration(_ ctx: apexParser.InterfaceMemberDeclarationContext) -> T{
+	open func visitInterfaceMemberDeclaration(_ ctx: apexParser.InterfaceMemberDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstDeclaration(_ ctx: apexParser.ConstDeclarationContext) -> T{
+	open func visitConstDeclaration(_ ctx: apexParser.ConstDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantDeclarator(_ ctx: apexParser.ConstantDeclaratorContext) -> T{
+	open func visitConstantDeclarator(_ ctx: apexParser.ConstantDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceMethodDeclaration(_ ctx: apexParser.InterfaceMethodDeclarationContext) -> T{
+	open func visitInterfaceMethodDeclaration(_ ctx: apexParser.InterfaceMethodDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGenericInterfaceMethodDeclaration(_ ctx: apexParser.GenericInterfaceMethodDeclarationContext) -> T{
+	open func visitGenericInterfaceMethodDeclaration(_ ctx: apexParser.GenericInterfaceMethodDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclarators(_ ctx: apexParser.VariableDeclaratorsContext) -> T{
+	open func visitVariableDeclarators(_ ctx: apexParser.VariableDeclaratorsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclarator(_ ctx: apexParser.VariableDeclaratorContext) -> T{
+	open func visitVariableDeclarator(_ ctx: apexParser.VariableDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclaratorId(_ ctx: apexParser.VariableDeclaratorIdContext) -> T{
+	open func visitVariableDeclaratorId(_ ctx: apexParser.VariableDeclaratorIdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableInitializer(_ ctx: apexParser.VariableInitializerContext) -> T{
+	open func visitVariableInitializer(_ ctx: apexParser.VariableInitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayInitializer(_ ctx: apexParser.ArrayInitializerContext) -> T{
+	open func visitArrayInitializer(_ ctx: apexParser.ArrayInitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumConstantName(_ ctx: apexParser.EnumConstantNameContext) -> T{
+	open func visitEnumConstantName(_ ctx: apexParser.EnumConstantNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: apexParser.TypeContext) -> T{
+	open func visitType(_ ctx: apexParser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassOrInterfaceType(_ ctx: apexParser.ClassOrInterfaceTypeContext) -> T{
+	open func visitClassOrInterfaceType(_ ctx: apexParser.ClassOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimitiveType(_ ctx: apexParser.PrimitiveTypeContext) -> T{
+	open func visitPrimitiveType(_ ctx: apexParser.PrimitiveTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeArguments(_ ctx: apexParser.TypeArgumentsContext) -> T{
+	open func visitTypeArguments(_ ctx: apexParser.TypeArgumentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeArgument(_ ctx: apexParser.TypeArgumentContext) -> T{
+	open func visitTypeArgument(_ ctx: apexParser.TypeArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualifiedNameList(_ ctx: apexParser.QualifiedNameListContext) -> T{
+	open func visitQualifiedNameList(_ ctx: apexParser.QualifiedNameListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameters(_ ctx: apexParser.FormalParametersContext) -> T{
+	open func visitFormalParameters(_ ctx: apexParser.FormalParametersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameterList(_ ctx: apexParser.FormalParameterListContext) -> T{
+	open func visitFormalParameterList(_ ctx: apexParser.FormalParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameter(_ ctx: apexParser.FormalParameterContext) -> T{
+	open func visitFormalParameter(_ ctx: apexParser.FormalParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLastFormalParameter(_ ctx: apexParser.LastFormalParameterContext) -> T{
+	open func visitLastFormalParameter(_ ctx: apexParser.LastFormalParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodBody(_ ctx: apexParser.MethodBodyContext) -> T{
+	open func visitMethodBody(_ ctx: apexParser.MethodBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructorBody(_ ctx: apexParser.ConstructorBodyContext) -> T{
+	open func visitConstructorBody(_ ctx: apexParser.ConstructorBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualifiedName(_ ctx: apexParser.QualifiedNameContext) -> T{
+	open func visitQualifiedName(_ ctx: apexParser.QualifiedNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: apexParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: apexParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotation(_ ctx: apexParser.AnnotationContext) -> T{
+	open func visitAnnotation(_ ctx: apexParser.AnnotationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationName(_ ctx: apexParser.AnnotationNameContext) -> T{
+	open func visitAnnotationName(_ ctx: apexParser.AnnotationNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementValuePairs(_ ctx: apexParser.ElementValuePairsContext) -> T{
+	open func visitElementValuePairs(_ ctx: apexParser.ElementValuePairsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementValuePair(_ ctx: apexParser.ElementValuePairContext) -> T{
+	open func visitElementValuePair(_ ctx: apexParser.ElementValuePairContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementValue(_ ctx: apexParser.ElementValueContext) -> T{
+	open func visitElementValue(_ ctx: apexParser.ElementValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementValueArrayInitializer(_ ctx: apexParser.ElementValueArrayInitializerContext) -> T{
+	open func visitElementValueArrayInitializer(_ ctx: apexParser.ElementValueArrayInitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationTypeDeclaration(_ ctx: apexParser.AnnotationTypeDeclarationContext) -> T{
+	open func visitAnnotationTypeDeclaration(_ ctx: apexParser.AnnotationTypeDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationTypeBody(_ ctx: apexParser.AnnotationTypeBodyContext) -> T{
+	open func visitAnnotationTypeBody(_ ctx: apexParser.AnnotationTypeBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationTypeElementDeclaration(_ ctx: apexParser.AnnotationTypeElementDeclarationContext) -> T{
+	open func visitAnnotationTypeElementDeclaration(_ ctx: apexParser.AnnotationTypeElementDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationTypeElementRest(_ ctx: apexParser.AnnotationTypeElementRestContext) -> T{
+	open func visitAnnotationTypeElementRest(_ ctx: apexParser.AnnotationTypeElementRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationMethodOrConstantRest(_ ctx: apexParser.AnnotationMethodOrConstantRestContext) -> T{
+	open func visitAnnotationMethodOrConstantRest(_ ctx: apexParser.AnnotationMethodOrConstantRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationMethodRest(_ ctx: apexParser.AnnotationMethodRestContext) -> T{
+	open func visitAnnotationMethodRest(_ ctx: apexParser.AnnotationMethodRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationConstantRest(_ ctx: apexParser.AnnotationConstantRestContext) -> T{
+	open func visitAnnotationConstantRest(_ ctx: apexParser.AnnotationConstantRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefaultValue(_ ctx: apexParser.DefaultValueContext) -> T{
+	open func visitDefaultValue(_ ctx: apexParser.DefaultValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: apexParser.BlockContext) -> T{
+	open func visitBlock(_ ctx: apexParser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockStatement(_ ctx: apexParser.BlockStatementContext) -> T{
+	open func visitBlockStatement(_ ctx: apexParser.BlockStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocalVariableDeclarationStatement(_ ctx: apexParser.LocalVariableDeclarationStatementContext) -> T{
+	open func visitLocalVariableDeclarationStatement(_ ctx: apexParser.LocalVariableDeclarationStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocalVariableDeclaration(_ ctx: apexParser.LocalVariableDeclarationContext) -> T{
+	open func visitLocalVariableDeclaration(_ ctx: apexParser.LocalVariableDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: apexParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: apexParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyBlock(_ ctx: apexParser.PropertyBlockContext) -> T{
+	open func visitPropertyBlock(_ ctx: apexParser.PropertyBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGetter(_ ctx: apexParser.GetterContext) -> T{
+	open func visitGetter(_ ctx: apexParser.GetterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetter(_ ctx: apexParser.SetterContext) -> T{
+	open func visitSetter(_ ctx: apexParser.SetterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCatchClause(_ ctx: apexParser.CatchClauseContext) -> T{
+	open func visitCatchClause(_ ctx: apexParser.CatchClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCatchType(_ ctx: apexParser.CatchTypeContext) -> T{
+	open func visitCatchType(_ ctx: apexParser.CatchTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFinallyBlock(_ ctx: apexParser.FinallyBlockContext) -> T{
+	open func visitFinallyBlock(_ ctx: apexParser.FinallyBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResourceSpecification(_ ctx: apexParser.ResourceSpecificationContext) -> T{
+	open func visitResourceSpecification(_ ctx: apexParser.ResourceSpecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResources(_ ctx: apexParser.ResourcesContext) -> T{
+	open func visitResources(_ ctx: apexParser.ResourcesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResource(_ ctx: apexParser.ResourceContext) -> T{
+	open func visitResource(_ ctx: apexParser.ResourceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForControl(_ ctx: apexParser.ForControlContext) -> T{
+	open func visitForControl(_ ctx: apexParser.ForControlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForInit(_ ctx: apexParser.ForInitContext) -> T{
+	open func visitForInit(_ ctx: apexParser.ForInitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnhancedForControl(_ ctx: apexParser.EnhancedForControlContext) -> T{
+	open func visitEnhancedForControl(_ ctx: apexParser.EnhancedForControlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForUpdate(_ ctx: apexParser.ForUpdateContext) -> T{
+	open func visitForUpdate(_ ctx: apexParser.ForUpdateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParExpression(_ ctx: apexParser.ParExpressionContext) -> T{
+	open func visitParExpression(_ ctx: apexParser.ParExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionList(_ ctx: apexParser.ExpressionListContext) -> T{
+	open func visitExpressionList(_ ctx: apexParser.ExpressionListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementExpression(_ ctx: apexParser.StatementExpressionContext) -> T{
+	open func visitStatementExpression(_ ctx: apexParser.StatementExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantExpression(_ ctx: apexParser.ConstantExpressionContext) -> T{
+	open func visitConstantExpression(_ ctx: apexParser.ConstantExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitApexDbExpressionLong(_ ctx: apexParser.ApexDbExpressionLongContext) -> T{
+	open func visitApexDbExpressionLong(_ ctx: apexParser.ApexDbExpressionLongContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitApexDbExpressionShort(_ ctx: apexParser.ApexDbExpressionShortContext) -> T{
+	open func visitApexDbExpressionShort(_ ctx: apexParser.ApexDbExpressionShortContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitApexDbExpression(_ ctx: apexParser.ApexDbExpressionContext) -> T{
+	open func visitApexDbExpression(_ ctx: apexParser.ApexDbExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: apexParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: apexParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimary(_ ctx: apexParser.PrimaryContext) -> T{
+	open func visitPrimary(_ ctx: apexParser.PrimaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCreator(_ ctx: apexParser.CreatorContext) -> T{
+	open func visitCreator(_ ctx: apexParser.CreatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCreatedName(_ ctx: apexParser.CreatedNameContext) -> T{
+	open func visitCreatedName(_ ctx: apexParser.CreatedNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInnerCreator(_ ctx: apexParser.InnerCreatorContext) -> T{
+	open func visitInnerCreator(_ ctx: apexParser.InnerCreatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayCreatorRest(_ ctx: apexParser.ArrayCreatorRestContext) -> T{
+	open func visitArrayCreatorRest(_ ctx: apexParser.ArrayCreatorRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMapCreatorRest(_ ctx: apexParser.MapCreatorRestContext) -> T{
+	open func visitMapCreatorRest(_ ctx: apexParser.MapCreatorRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetCreatorRest(_ ctx: apexParser.SetCreatorRestContext) -> T{
+	open func visitSetCreatorRest(_ ctx: apexParser.SetCreatorRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1025,7 +1025,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassCreatorRest(_ ctx: apexParser.ClassCreatorRestContext) -> T{
+	open func visitClassCreatorRest(_ ctx: apexParser.ClassCreatorRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1035,7 +1035,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExplicitGenericInvocation(_ ctx: apexParser.ExplicitGenericInvocationContext) -> T{
+	open func visitExplicitGenericInvocation(_ ctx: apexParser.ExplicitGenericInvocationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1045,7 +1045,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNonWildcardTypeArguments(_ ctx: apexParser.NonWildcardTypeArgumentsContext) -> T{
+	open func visitNonWildcardTypeArguments(_ ctx: apexParser.NonWildcardTypeArgumentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1055,7 +1055,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeArgumentsOrDiamond(_ ctx: apexParser.TypeArgumentsOrDiamondContext) -> T{
+	open func visitTypeArgumentsOrDiamond(_ ctx: apexParser.TypeArgumentsOrDiamondContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1065,7 +1065,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNonWildcardTypeArgumentsOrDiamond(_ ctx: apexParser.NonWildcardTypeArgumentsOrDiamondContext) -> T{
+	open func visitNonWildcardTypeArgumentsOrDiamond(_ ctx: apexParser.NonWildcardTypeArgumentsOrDiamondContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1075,7 +1075,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSuperSuffix(_ ctx: apexParser.SuperSuffixContext) -> T{
+	open func visitSuperSuffix(_ ctx: apexParser.SuperSuffixContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1085,7 +1085,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExplicitGenericInvocationSuffix(_ ctx: apexParser.ExplicitGenericInvocationSuffixContext) -> T{
+	open func visitExplicitGenericInvocationSuffix(_ ctx: apexParser.ExplicitGenericInvocationSuffixContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1095,7 +1095,7 @@ open class apexVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArguments(_ ctx: apexParser.ArgumentsContext) -> T{
+	open func visitArguments(_ ctx: apexParser.ArgumentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

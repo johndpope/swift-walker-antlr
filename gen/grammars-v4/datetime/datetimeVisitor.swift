@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/datetime/datetime.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/datetime/datetime.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDate_time(_ ctx: datetimeParser.Date_timeContext) -> T{
+	open func visitDate_time(_ ctx: datetimeParser.Date_timeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDay(_ ctx: datetimeParser.DayContext) -> T{
+	open func visitDay(_ ctx: datetimeParser.DayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDate(_ ctx: datetimeParser.DateContext) -> T{
+	open func visitDate(_ ctx: datetimeParser.DateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMonth(_ ctx: datetimeParser.MonthContext) -> T{
+	open func visitMonth(_ ctx: datetimeParser.MonthContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTime(_ ctx: datetimeParser.TimeContext) -> T{
+	open func visitTime(_ ctx: datetimeParser.TimeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHour(_ ctx: datetimeParser.HourContext) -> T{
+	open func visitHour(_ ctx: datetimeParser.HourContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitZone(_ ctx: datetimeParser.ZoneContext) -> T{
+	open func visitZone(_ ctx: datetimeParser.ZoneContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTwo_digit(_ ctx: datetimeParser.Two_digitContext) -> T{
+	open func visitTwo_digit(_ ctx: datetimeParser.Two_digitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFour_digit(_ ctx: datetimeParser.Four_digitContext) -> T{
+	open func visitFour_digit(_ ctx: datetimeParser.Four_digitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class datetimeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlphanumeric(_ ctx: datetimeParser.AlphanumericContext) -> T{
+	open func visitAlphanumeric(_ ctx: datetimeParser.AlphanumericContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

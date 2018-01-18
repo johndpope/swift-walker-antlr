@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/dot/DOT.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/dot/DOT.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGraph(_ ctx: DOTParser.GraphContext) -> T{
+	open func visitGraph(_ ctx: DOTParser.GraphContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmt_list(_ ctx: DOTParser.Stmt_listContext) -> T{
+	open func visitStmt_list(_ ctx: DOTParser.Stmt_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmt(_ ctx: DOTParser.StmtContext) -> T{
+	open func visitStmt(_ ctx: DOTParser.StmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttr_stmt(_ ctx: DOTParser.Attr_stmtContext) -> T{
+	open func visitAttr_stmt(_ ctx: DOTParser.Attr_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttr_list(_ ctx: DOTParser.Attr_listContext) -> T{
+	open func visitAttr_list(_ ctx: DOTParser.Attr_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitA_list(_ ctx: DOTParser.A_listContext) -> T{
+	open func visitA_list(_ ctx: DOTParser.A_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEdge_stmt(_ ctx: DOTParser.Edge_stmtContext) -> T{
+	open func visitEdge_stmt(_ ctx: DOTParser.Edge_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEdgeRHS(_ ctx: DOTParser.EdgeRHSContext) -> T{
+	open func visitEdgeRHS(_ ctx: DOTParser.EdgeRHSContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEdgeop(_ ctx: DOTParser.EdgeopContext) -> T{
+	open func visitEdgeop(_ ctx: DOTParser.EdgeopContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNode_stmt(_ ctx: DOTParser.Node_stmtContext) -> T{
+	open func visitNode_stmt(_ ctx: DOTParser.Node_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNode_id(_ ctx: DOTParser.Node_idContext) -> T{
+	open func visitNode_id(_ ctx: DOTParser.Node_idContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPort(_ ctx: DOTParser.PortContext) -> T{
+	open func visitPort(_ ctx: DOTParser.PortContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubgraph(_ ctx: DOTParser.SubgraphContext) -> T{
+	open func visitSubgraph(_ ctx: DOTParser.SubgraphContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class DOTVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitId(_ ctx: DOTParser.IdContext) -> T{
+	open func visitId(_ ctx: DOTParser.IdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

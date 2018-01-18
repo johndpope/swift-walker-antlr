@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/creole/creole.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/creole/creole.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class creoleParser: Parser {
@@ -11,18 +11,25 @@ open class creoleParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, HASH = 8, LBRACKET = 9, RBRACKET = 10, LBRACE = 11, 
                  RBRACE = 12, TEXT = 13, WS = 14, CR = 15, NOWIKI = 16, 
                  RSLASH = 17
 	}
-	public static let RULE_document = 0, RULE_line = 1, RULE_markup = 2, RULE_text = 3, 
-                   RULE_bold = 4, RULE_italics = 5, RULE_href = 6, RULE_image = 7, 
-                   RULE_hline = 8, RULE_listitem = 9, RULE_tableheader = 10, 
-                   RULE_tablerow = 11, RULE_title = 12, RULE_nowiki = 13
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_document = 0, RULE_line = 1, RULE_markup = 2, RULE_text = 3, 
+            RULE_bold = 4, RULE_italics = 5, RULE_href = 6, RULE_image = 7, 
+            RULE_hline = 8, RULE_listitem = 9, RULE_tableheader = 10, RULE_tablerow = 11, 
+            RULE_title = 12, RULE_nowiki = 13
+
+	public
+	static let ruleNames: [String] = [
 		"document", "line", "markup", "text", "bold", "italics", "href", "image", 
 		"hline", "listitem", "tableheader", "tablerow", "title", "nowiki"
 	]
@@ -35,92 +42,81 @@ open class creoleParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, "HASH", "LBRACKET", "RBRACKET", 
 		"LBRACE", "RBRACE", "TEXT", "WS", "CR", "NOWIKI", "RSLASH"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "creole.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return creoleParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "creole.g4" }
+	override open
+	func getSerializedATN() -> String { return creoleParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return creoleParser.ruleNames }
+	override open
+	func getATN() -> ATN { return creoleParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return creoleParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return creoleParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return creoleParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,creoleParser._ATN,creoleParser._decisionToDFA, creoleParser._sharedContextCache)
 	}
-	open class DocumentContext:ParserRuleContext {
-		open func CR() -> Array<TerminalNode> { return getTokens(creoleParser.Tokens.CR.rawValue) }
-		open func CR(_ i:Int) -> TerminalNode?{
-			return getToken(creoleParser.Tokens.CR.rawValue, i)
+
+	public class DocumentContext: ParserRuleContext {
+			open
+			func CR() -> [TerminalNode] {
+				return getTokens(creoleParser.Tokens.CR.rawValue)
+			}
+			open
+			func CR(_ i:Int) -> TerminalNode? {
+				return getToken(creoleParser.Tokens.CR.rawValue, i)
+			}
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_document
 		}
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
-		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_document }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterDocument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterDocument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitDocument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitDocument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitDocument(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitDocument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitDocument(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitDocument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func document() throws -> DocumentContext {
+	 open func document() throws -> DocumentContext {
 		var _localctx: DocumentContext = DocumentContext(_ctx, getState())
 		try enterRule(_localctx, 0, creoleParser.RULE_document)
 		var _la: Int = 0
@@ -174,40 +170,47 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func markup() -> Array<MarkupContext> {
-			return getRuleContexts(MarkupContext.self)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func markup() -> [MarkupContext] {
+				return getRuleContexts(MarkupContext.self)
+			}
+			open
+			func markup(_ i: Int) -> MarkupContext? {
+				return getRuleContext(MarkupContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_line
 		}
-		open func markup(_ i: Int) -> MarkupContext? {
-			return getRuleContext(MarkupContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitLine(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 2, creoleParser.RULE_line)
 		var _la: Int = 0
@@ -245,67 +248,83 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class MarkupContext:ParserRuleContext {
-		open func bold() -> BoldContext? {
-			return getRuleContext(BoldContext.self,0)
+
+	public class MarkupContext: ParserRuleContext {
+			open
+			func bold() -> BoldContext? {
+				return getRuleContext(BoldContext.self, 0)
+			}
+			open
+			func italics() -> ItalicsContext? {
+				return getRuleContext(ItalicsContext.self, 0)
+			}
+			open
+			func href() -> HrefContext? {
+				return getRuleContext(HrefContext.self, 0)
+			}
+			open
+			func title() -> TitleContext? {
+				return getRuleContext(TitleContext.self, 0)
+			}
+			open
+			func hline() -> HlineContext? {
+				return getRuleContext(HlineContext.self, 0)
+			}
+			open
+			func text() -> TextContext? {
+				return getRuleContext(TextContext.self, 0)
+			}
+			open
+			func listitem() -> ListitemContext? {
+				return getRuleContext(ListitemContext.self, 0)
+			}
+			open
+			func image() -> ImageContext? {
+				return getRuleContext(ImageContext.self, 0)
+			}
+			open
+			func tablerow() -> TablerowContext? {
+				return getRuleContext(TablerowContext.self, 0)
+			}
+			open
+			func tableheader() -> TableheaderContext? {
+				return getRuleContext(TableheaderContext.self, 0)
+			}
+			open
+			func nowiki() -> NowikiContext? {
+				return getRuleContext(NowikiContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_markup
 		}
-		open func italics() -> ItalicsContext? {
-			return getRuleContext(ItalicsContext.self,0)
-		}
-		open func href() -> HrefContext? {
-			return getRuleContext(HrefContext.self,0)
-		}
-		open func title() -> TitleContext? {
-			return getRuleContext(TitleContext.self,0)
-		}
-		open func hline() -> HlineContext? {
-			return getRuleContext(HlineContext.self,0)
-		}
-		open func text() -> TextContext? {
-			return getRuleContext(TextContext.self,0)
-		}
-		open func listitem() -> ListitemContext? {
-			return getRuleContext(ListitemContext.self,0)
-		}
-		open func image() -> ImageContext? {
-			return getRuleContext(ImageContext.self,0)
-		}
-		open func tablerow() -> TablerowContext? {
-			return getRuleContext(TablerowContext.self,0)
-		}
-		open func tableheader() -> TableheaderContext? {
-			return getRuleContext(TableheaderContext.self,0)
-		}
-		open func nowiki() -> NowikiContext? {
-			return getRuleContext(NowikiContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_markup }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterMarkup(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterMarkup(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitMarkup(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitMarkup(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitMarkup(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitMarkup(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitMarkup(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitMarkup(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func markup() throws -> MarkupContext {
+	 open func markup() throws -> MarkupContext {
 		var _localctx: MarkupContext = MarkupContext(_ctx, getState())
 		try enterRule(_localctx, 4, creoleParser.RULE_markup)
 		defer {
@@ -392,48 +411,63 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class TextContext:ParserRuleContext {
-		open func text() -> Array<TextContext> {
-			return getRuleContexts(TextContext.self)
+
+	public class TextContext: ParserRuleContext {
+			open
+			func text() -> [TextContext] {
+				return getRuleContexts(TextContext.self)
+			}
+			open
+			func text(_ i: Int) -> TextContext? {
+				return getRuleContext(TextContext.self, i)
+			}
+			open
+			func TEXT() -> [TerminalNode] {
+				return getTokens(creoleParser.Tokens.TEXT.rawValue)
+			}
+			open
+			func TEXT(_ i:Int) -> TerminalNode? {
+				return getToken(creoleParser.Tokens.TEXT.rawValue, i)
+			}
+			open
+			func RSLASH() -> [TerminalNode] {
+				return getTokens(creoleParser.Tokens.RSLASH.rawValue)
+			}
+			open
+			func RSLASH(_ i:Int) -> TerminalNode? {
+				return getToken(creoleParser.Tokens.RSLASH.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_text
 		}
-		open func text(_ i: Int) -> TextContext? {
-			return getRuleContext(TextContext.self,i)
-		}
-		open func TEXT() -> Array<TerminalNode> { return getTokens(creoleParser.Tokens.TEXT.rawValue) }
-		open func TEXT(_ i:Int) -> TerminalNode?{
-			return getToken(creoleParser.Tokens.TEXT.rawValue, i)
-		}
-		open func RSLASH() -> Array<TerminalNode> { return getTokens(creoleParser.Tokens.RSLASH.rawValue) }
-		open func RSLASH(_ i:Int) -> TerminalNode?{
-			return getToken(creoleParser.Tokens.RSLASH.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_text }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterText(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterText(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitText(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitText(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitText(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitText(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitText(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitText(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func text() throws -> TextContext {
+	 open func text() throws -> TextContext {
 		var _localctx: TextContext = TextContext(_ctx, getState())
 		try enterRule(_localctx, 6, creoleParser.RULE_text)
 		var _la: Int = 0
@@ -466,7 +500,7 @@ open class creoleParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(58); 
 		 		try _errHandler.sync(self)
@@ -498,40 +532,47 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class BoldContext:ParserRuleContext {
-		open func markup() -> Array<MarkupContext> {
-			return getRuleContexts(MarkupContext.self)
+
+	public class BoldContext: ParserRuleContext {
+			open
+			func markup() -> [MarkupContext] {
+				return getRuleContexts(MarkupContext.self)
+			}
+			open
+			func markup(_ i: Int) -> MarkupContext? {
+				return getRuleContext(MarkupContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_bold
 		}
-		open func markup(_ i: Int) -> MarkupContext? {
-			return getRuleContext(MarkupContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_bold }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterBold(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterBold(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitBold(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitBold(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitBold(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitBold(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitBold(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitBold(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bold() throws -> BoldContext {
+	 open func bold() throws -> BoldContext {
 		var _localctx: BoldContext = BoldContext(_ctx, getState())
 		try enterRule(_localctx, 8, creoleParser.RULE_bold)
 		defer {
@@ -554,7 +595,7 @@ open class creoleParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(71); 
 		 		try _errHandler.sync(self)
@@ -580,44 +621,55 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class ItalicsContext:ParserRuleContext {
-		open func RSLASH() -> Array<TerminalNode> { return getTokens(creoleParser.Tokens.RSLASH.rawValue) }
-		open func RSLASH(_ i:Int) -> TerminalNode?{
-			return getToken(creoleParser.Tokens.RSLASH.rawValue, i)
+
+	public class ItalicsContext: ParserRuleContext {
+			open
+			func RSLASH() -> [TerminalNode] {
+				return getTokens(creoleParser.Tokens.RSLASH.rawValue)
+			}
+			open
+			func RSLASH(_ i:Int) -> TerminalNode? {
+				return getToken(creoleParser.Tokens.RSLASH.rawValue, i)
+			}
+			open
+			func markup() -> [MarkupContext] {
+				return getRuleContexts(MarkupContext.self)
+			}
+			open
+			func markup(_ i: Int) -> MarkupContext? {
+				return getRuleContext(MarkupContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_italics
 		}
-		open func markup() -> Array<MarkupContext> {
-			return getRuleContexts(MarkupContext.self)
-		}
-		open func markup(_ i: Int) -> MarkupContext? {
-			return getRuleContext(MarkupContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_italics }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterItalics(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterItalics(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitItalics(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitItalics(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitItalics(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitItalics(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitItalics(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitItalics(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func italics() throws -> ItalicsContext {
+	 open func italics() throws -> ItalicsContext {
 		var _localctx: ItalicsContext = ItalicsContext(_ctx, getState())
 		try enterRule(_localctx, 10, creoleParser.RULE_italics)
 		defer {
@@ -642,7 +694,7 @@ open class creoleParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(81); 
 		 		try _errHandler.sync(self)
@@ -662,47 +714,67 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class HrefContext:ParserRuleContext {
-		open func LBRACKET() -> TerminalNode? { return getToken(creoleParser.Tokens.LBRACKET.rawValue, 0) }
-		open func text() -> TextContext? {
-			return getRuleContext(TextContext.self,0)
+
+	public class HrefContext: ParserRuleContext {
+			open
+			func LBRACKET() -> TerminalNode? {
+				return getToken(creoleParser.Tokens.LBRACKET.rawValue, 0)
+			}
+			open
+			func text() -> TextContext? {
+				return getRuleContext(TextContext.self, 0)
+			}
+			open
+			func RBRACKET() -> TerminalNode? {
+				return getToken(creoleParser.Tokens.RBRACKET.rawValue, 0)
+			}
+			open
+			func markup() -> [MarkupContext] {
+				return getRuleContexts(MarkupContext.self)
+			}
+			open
+			func markup(_ i: Int) -> MarkupContext? {
+				return getRuleContext(MarkupContext.self, i)
+			}
+			open
+			func LBRACE() -> TerminalNode? {
+				return getToken(creoleParser.Tokens.LBRACE.rawValue, 0)
+			}
+			open
+			func RBRACE() -> TerminalNode? {
+				return getToken(creoleParser.Tokens.RBRACE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_href
 		}
-		open func RBRACKET() -> TerminalNode? { return getToken(creoleParser.Tokens.RBRACKET.rawValue, 0) }
-		open func markup() -> Array<MarkupContext> {
-			return getRuleContexts(MarkupContext.self)
-		}
-		open func markup(_ i: Int) -> MarkupContext? {
-			return getRuleContext(MarkupContext.self,i)
-		}
-		open func LBRACE() -> TerminalNode? { return getToken(creoleParser.Tokens.LBRACE.rawValue, 0) }
-		open func RBRACE() -> TerminalNode? { return getToken(creoleParser.Tokens.RBRACE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_href }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterHref(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterHref(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitHref(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitHref(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitHref(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitHref(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitHref(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitHref(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func href() throws -> HrefContext {
+	 open func href() throws -> HrefContext {
 		var _localctx: HrefContext = HrefContext(_ctx, getState())
 		try enterRule(_localctx, 12, creoleParser.RULE_href)
 		var _la: Int = 0
@@ -788,7 +860,7 @@ open class creoleParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -799,39 +871,51 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class ImageContext:ParserRuleContext {
-		open func LBRACE() -> TerminalNode? { return getToken(creoleParser.Tokens.LBRACE.rawValue, 0) }
-		open func text() -> TextContext? {
-			return getRuleContext(TextContext.self,0)
+
+	public class ImageContext: ParserRuleContext {
+			open
+			func LBRACE() -> TerminalNode? {
+				return getToken(creoleParser.Tokens.LBRACE.rawValue, 0)
+			}
+			open
+			func text() -> TextContext? {
+				return getRuleContext(TextContext.self, 0)
+			}
+			open
+			func RBRACE() -> TerminalNode? {
+				return getToken(creoleParser.Tokens.RBRACE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_image
 		}
-		open func RBRACE() -> TerminalNode? { return getToken(creoleParser.Tokens.RBRACE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_image }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterImage(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterImage(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitImage(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitImage(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitImage(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitImage(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitImage(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitImage(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func image() throws -> ImageContext {
+	 open func image() throws -> ImageContext {
 		var _localctx: ImageContext = ImageContext(_ctx, getState())
 		try enterRule(_localctx, 14, creoleParser.RULE_image)
 		defer {
@@ -855,34 +939,39 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class HlineContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_hline }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterHline(self)
+
+	public class HlineContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_hline
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterHline(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitHline(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitHline(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitHline(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitHline(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitHline(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitHline(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hline() throws -> HlineContext {
+	 open func hline() throws -> HlineContext {
 		var _localctx: HlineContext = HlineContext(_ctx, getState())
 		try enterRule(_localctx, 16, creoleParser.RULE_hline)
 		defer {
@@ -902,37 +991,43 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class ListitemContext:ParserRuleContext {
-		open func markup() -> MarkupContext? {
-			return getRuleContext(MarkupContext.self,0)
+
+	public class ListitemContext: ParserRuleContext {
+			open
+			func markup() -> MarkupContext? {
+				return getRuleContext(MarkupContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_listitem
 		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_listitem }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterListitem(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterListitem(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitListitem(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitListitem(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitListitem(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitListitem(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitListitem(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitListitem(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func listitem() throws -> ListitemContext {
+	 open func listitem() throws -> ListitemContext {
 		var _localctx: ListitemContext = ListitemContext(_ctx, getState())
 		try enterRule(_localctx, 18, creoleParser.RULE_listitem)
 		defer {
@@ -957,7 +1052,7 @@ open class creoleParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(119); 
 		 			try _errHandler.sync(self)
@@ -983,7 +1078,7 @@ open class creoleParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(125); 
 		 			try _errHandler.sync(self)
@@ -995,7 +1090,7 @@ open class creoleParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1006,44 +1101,55 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class TableheaderContext:ParserRuleContext {
-		open func WS() -> Array<TerminalNode> { return getTokens(creoleParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(creoleParser.Tokens.WS.rawValue, i)
+
+	public class TableheaderContext: ParserRuleContext {
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(creoleParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(creoleParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func markup() -> [MarkupContext] {
+				return getRuleContexts(MarkupContext.self)
+			}
+			open
+			func markup(_ i: Int) -> MarkupContext? {
+				return getRuleContext(MarkupContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_tableheader
 		}
-		open func markup() -> Array<MarkupContext> {
-			return getRuleContexts(MarkupContext.self)
-		}
-		open func markup(_ i: Int) -> MarkupContext? {
-			return getRuleContext(MarkupContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_tableheader }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterTableheader(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterTableheader(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitTableheader(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitTableheader(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitTableheader(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitTableheader(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitTableheader(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitTableheader(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tableheader() throws -> TableheaderContext {
+	 open func tableheader() throws -> TableheaderContext {
 		var _localctx: TableheaderContext = TableheaderContext(_ctx, getState())
 		try enterRule(_localctx, 20, creoleParser.RULE_tableheader)
 		var _la: Int = 0
@@ -1071,7 +1177,7 @@ open class creoleParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(134); 
 		 			try _errHandler.sync(self)
@@ -1115,44 +1221,55 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class TablerowContext:ParserRuleContext {
-		open func WS() -> Array<TerminalNode> { return getTokens(creoleParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(creoleParser.Tokens.WS.rawValue, i)
+
+	public class TablerowContext: ParserRuleContext {
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(creoleParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(creoleParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func markup() -> [MarkupContext] {
+				return getRuleContexts(MarkupContext.self)
+			}
+			open
+			func markup(_ i: Int) -> MarkupContext? {
+				return getRuleContext(MarkupContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_tablerow
 		}
-		open func markup() -> Array<MarkupContext> {
-			return getRuleContexts(MarkupContext.self)
-		}
-		open func markup(_ i: Int) -> MarkupContext? {
-			return getRuleContext(MarkupContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_tablerow }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterTablerow(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterTablerow(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitTablerow(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitTablerow(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitTablerow(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitTablerow(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitTablerow(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitTablerow(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tablerow() throws -> TablerowContext {
+	 open func tablerow() throws -> TablerowContext {
 		var _localctx: TablerowContext = TablerowContext(_ctx, getState())
 		try enterRule(_localctx, 22, creoleParser.RULE_tablerow)
 		var _la: Int = 0
@@ -1182,7 +1299,7 @@ open class creoleParser: Parser {
 
 		 					break
 		 				default:
-		 					throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 					throw ANTLRException.recognition(e: NoViableAltException(self))
 		 				}
 		 				setState(151); 
 		 				try _errHandler.sync(self)
@@ -1192,7 +1309,7 @@ open class creoleParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(155); 
 		 		try _errHandler.sync(self)
@@ -1226,37 +1343,43 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class TitleContext:ParserRuleContext {
-		open func markup() -> MarkupContext? {
-			return getRuleContext(MarkupContext.self,0)
+
+	public class TitleContext: ParserRuleContext {
+			open
+			func markup() -> MarkupContext? {
+				return getRuleContext(MarkupContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_title
 		}
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_title }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterTitle(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterTitle(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitTitle(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitTitle(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitTitle(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitTitle(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitTitle(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitTitle(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func title() throws -> TitleContext {
+	 open func title() throws -> TitleContext {
 		var _localctx: TitleContext = TitleContext(_ctx, getState())
 		try enterRule(_localctx, 24, creoleParser.RULE_title)
 		defer {
@@ -1277,7 +1400,7 @@ open class creoleParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(167); 
 		 		try _errHandler.sync(self)
@@ -1309,35 +1432,43 @@ open class creoleParser: Parser {
 
 		return _localctx
 	}
-	open class NowikiContext:ParserRuleContext {
-		open func NOWIKI() -> TerminalNode? { return getToken(creoleParser.Tokens.NOWIKI.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return creoleParser.RULE_nowiki }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).enterNowiki(self)
+
+	public class NowikiContext: ParserRuleContext {
+			open
+			func NOWIKI() -> TerminalNode? {
+				return getToken(creoleParser.Tokens.NOWIKI.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return creoleParser.RULE_nowiki
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.enterNowiki(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is creoleListener {
-			 	(listener as! creoleListener).exitNowiki(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? creoleListener {
+				listener.exitNowiki(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is creoleVisitor {
-			     return (visitor as! creoleVisitor<T>).visitNowiki(self)
-			}else if visitor is creoleBaseVisitor {
-		    	 return (visitor as! creoleBaseVisitor<T>).visitNowiki(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? creoleVisitor {
+			    return visitor.visitNowiki(self)
+			}
+			else if let visitor = visitor as? creoleBaseVisitor {
+			    return visitor.visitNowiki(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nowiki() throws -> NowikiContext {
+	 open func nowiki() throws -> NowikiContext {
 		var _localctx: NowikiContext = NowikiContext(_ctx, getState())
 		try enterRule(_localctx, 26, creoleParser.RULE_nowiki)
 		defer {
@@ -1358,6 +1489,10 @@ open class creoleParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = creoleParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = creoleParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/muparser/MuParser.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/muparser/MuParser.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class MuParserParser: Parser {
@@ -11,8 +11,11 @@ open class MuParserParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, FUNCTION = 3, FUNCTIONMULTI = 4, ASSIGN = 5, 
                  ASSIGNADD = 6, ASSIGNSUB = 7, ASSIGNMUL = 8, ASSIGNDIV = 9, 
                  AND = 10, OR = 11, LTEQ = 12, GTEQ = 13, NEQ = 14, EQ = 15, 
@@ -21,8 +24,12 @@ open class MuParserParser: Parser {
                  CPAR = 27, INT = 28, FLOAT = 29, TRUE = 30, FALSE = 31, 
                  E = 32, PI = 33, ID = 34, SPACE = 35
 	}
-	public static let RULE_prog = 0, RULE_expr = 1, RULE_atom = 2
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_prog = 0, RULE_expr = 1, RULE_atom = 2
+
+	public
+	static let ruleNames: [String] = [
 		"prog", "expr", "atom"
 	]
 
@@ -38,98 +45,86 @@ open class MuParserParser: Parser {
 		"GT", "ADD", "SUB", "MUL", "DIV", "POW", "NOT", "QUESTION", "COLON", "OPAR", 
 		"CPAR", "INT", "FLOAT", "TRUE", "FALSE", "E", "PI", "ID", "SPACE"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "MuParser.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return MuParserParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "MuParser.g4" }
+	override open
+	func getSerializedATN() -> String { return MuParserParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return MuParserParser.ruleNames }
+	override open
+	func getATN() -> ATN { return MuParserParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return MuParserParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return MuParserParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return MuParserParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,MuParserParser._ATN,MuParserParser._decisionToDFA, MuParserParser._sharedContextCache)
 	}
-	open class ProgContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return MuParserParser.RULE_prog }
+
+	public class ProgContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return MuParserParser.RULE_prog
+		}
 	 
-		public  func copyFrom(_ ctx: ProgContext) {
+		open
+		func copyFrom(_ ctx: ProgContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class ProgExprContext: ProgContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		public init(_ ctx: ProgContext) {
+	public class ProgExprContext: ProgContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+
+		public
+		init(_ ctx: ProgContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterProgExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterProgExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitProgExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitProgExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitProgExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitProgExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitProgExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitProgExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prog() throws -> ProgContext {
+	 open func prog() throws -> ProgContext {
 		var _localctx: ProgContext = ProgContext(_ctx, getState())
 		try enterRule(_localctx, 0, MuParserParser.RULE_prog)
 		var _la: Int = 0
@@ -170,493 +165,642 @@ open class MuParserParser: Parser {
 		return _localctx
 	}
 
-	open class ExprContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return MuParserParser.RULE_expr }
+	public class ExprContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return MuParserParser.RULE_expr
+		}
 	 
-		public  func copyFrom(_ ctx: ExprContext) {
+		open
+		func copyFrom(_ ctx: ExprContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class FunctionMultiExprContext: ExprContext {
+	public class FunctionMultiExprContext: ExprContext {
 		public var op: Token!
-		open func OPAR() -> TerminalNode? { return getToken(MuParserParser.Tokens.OPAR.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func CPAR() -> TerminalNode? { return getToken(MuParserParser.Tokens.CPAR.rawValue, 0) }
-		open func FUNCTIONMULTI() -> TerminalNode? { return getToken(MuParserParser.Tokens.FUNCTIONMULTI.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+			open
+			func OPAR() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.OPAR.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func CPAR() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.CPAR.rawValue, 0)
+			}
+			open
+			func FUNCTIONMULTI() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.FUNCTIONMULTI.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterFunctionMultiExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterFunctionMultiExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitFunctionMultiExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitFunctionMultiExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitFunctionMultiExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitFunctionMultiExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitFunctionMultiExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitFunctionMultiExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AddSubExprContext: ExprContext {
+	public class AddSubExprContext: ExprContext {
 		public var op: Token!
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func ADD() -> TerminalNode? { return getToken(MuParserParser.Tokens.ADD.rawValue, 0) }
-		open func SUB() -> TerminalNode? { return getToken(MuParserParser.Tokens.SUB.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func ADD() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.ADD.rawValue, 0)
+			}
+			open
+			func SUB() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.SUB.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterAddSubExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterAddSubExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitAddSubExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitAddSubExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitAddSubExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitAddSubExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitAddSubExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitAddSubExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AtomExprContext: ExprContext {
-		open func atom() -> AtomContext? {
-			return getRuleContext(AtomContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class AtomExprContext: ExprContext {
+			open
+			func atom() -> AtomContext? {
+				return getRuleContext(AtomContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterAtomExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterAtomExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitAtomExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitAtomExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitAtomExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitAtomExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitAtomExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitAtomExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class OrExprContext: ExprContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func OR() -> TerminalNode? { return getToken(MuParserParser.Tokens.OR.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+	public class OrExprContext: ExprContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func OR() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.OR.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterOrExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterOrExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitOrExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitOrExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitOrExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitOrExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitOrExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitOrExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class RelationalExprContext: ExprContext {
+	public class RelationalExprContext: ExprContext {
 		public var op: Token!
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func LTEQ() -> TerminalNode? { return getToken(MuParserParser.Tokens.LTEQ.rawValue, 0) }
-		open func GTEQ() -> TerminalNode? { return getToken(MuParserParser.Tokens.GTEQ.rawValue, 0) }
-		open func LT() -> TerminalNode? { return getToken(MuParserParser.Tokens.LT.rawValue, 0) }
-		open func GT() -> TerminalNode? { return getToken(MuParserParser.Tokens.GT.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func LTEQ() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.LTEQ.rawValue, 0)
+			}
+			open
+			func GTEQ() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.GTEQ.rawValue, 0)
+			}
+			open
+			func LT() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.LT.rawValue, 0)
+			}
+			open
+			func GT() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.GT.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterRelationalExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterRelationalExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitRelationalExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitRelationalExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitRelationalExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitRelationalExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitRelationalExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitRelationalExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class FunctionExprContext: ExprContext {
+	public class FunctionExprContext: ExprContext {
 		public var op: Token!
-		open func OPAR() -> TerminalNode? { return getToken(MuParserParser.Tokens.OPAR.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func CPAR() -> TerminalNode? { return getToken(MuParserParser.Tokens.CPAR.rawValue, 0) }
-		open func FUNCTION() -> TerminalNode? { return getToken(MuParserParser.Tokens.FUNCTION.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+			open
+			func OPAR() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.OPAR.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func CPAR() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.CPAR.rawValue, 0)
+			}
+			open
+			func FUNCTION() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.FUNCTION.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterFunctionExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterFunctionExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitFunctionExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitFunctionExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitFunctionExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitFunctionExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitFunctionExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitFunctionExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class UnaryMinusExprContext: ExprContext {
-		open func SUB() -> TerminalNode? { return getToken(MuParserParser.Tokens.SUB.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class UnaryMinusExprContext: ExprContext {
+			open
+			func SUB() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.SUB.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterUnaryMinusExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterUnaryMinusExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitUnaryMinusExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitUnaryMinusExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitUnaryMinusExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitUnaryMinusExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitUnaryMinusExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitUnaryMinusExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class PowExprContext: ExprContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func POW() -> TerminalNode? { return getToken(MuParserParser.Tokens.POW.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+	public class PowExprContext: ExprContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func POW() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.POW.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterPowExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterPowExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitPowExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitPowExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitPowExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitPowExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitPowExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitPowExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AssignExprContext: ExprContext {
+	public class AssignExprContext: ExprContext {
 		public var op: Token!
-		open func ID() -> TerminalNode? { return getToken(MuParserParser.Tokens.ID.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func ASSIGN() -> TerminalNode? { return getToken(MuParserParser.Tokens.ASSIGN.rawValue, 0) }
-		open func ASSIGNADD() -> TerminalNode? { return getToken(MuParserParser.Tokens.ASSIGNADD.rawValue, 0) }
-		open func ASSIGNSUB() -> TerminalNode? { return getToken(MuParserParser.Tokens.ASSIGNSUB.rawValue, 0) }
-		open func ASSIGNMUL() -> TerminalNode? { return getToken(MuParserParser.Tokens.ASSIGNMUL.rawValue, 0) }
-		open func ASSIGNDIV() -> TerminalNode? { return getToken(MuParserParser.Tokens.ASSIGNDIV.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+			open
+			func ID() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.ID.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func ASSIGN() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.ASSIGN.rawValue, 0)
+			}
+			open
+			func ASSIGNADD() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.ASSIGNADD.rawValue, 0)
+			}
+			open
+			func ASSIGNSUB() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.ASSIGNSUB.rawValue, 0)
+			}
+			open
+			func ASSIGNMUL() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.ASSIGNMUL.rawValue, 0)
+			}
+			open
+			func ASSIGNDIV() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.ASSIGNDIV.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterAssignExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterAssignExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitAssignExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitAssignExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitAssignExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitAssignExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitAssignExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitAssignExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class MulDivExprContext: ExprContext {
+	public class MulDivExprContext: ExprContext {
 		public var op: Token!
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func MUL() -> TerminalNode? { return getToken(MuParserParser.Tokens.MUL.rawValue, 0) }
-		open func DIV() -> TerminalNode? { return getToken(MuParserParser.Tokens.DIV.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func MUL() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.MUL.rawValue, 0)
+			}
+			open
+			func DIV() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.DIV.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterMulDivExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterMulDivExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitMulDivExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitMulDivExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitMulDivExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitMulDivExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitMulDivExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitMulDivExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class EqualityExprContext: ExprContext {
+	public class EqualityExprContext: ExprContext {
 		public var op: Token!
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func EQ() -> TerminalNode? { return getToken(MuParserParser.Tokens.EQ.rawValue, 0) }
-		open func NEQ() -> TerminalNode? { return getToken(MuParserParser.Tokens.NEQ.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func NEQ() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.NEQ.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterEqualityExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterEqualityExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitEqualityExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitEqualityExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitEqualityExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitEqualityExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitEqualityExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitEqualityExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AndExprContext: ExprContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func AND() -> TerminalNode? { return getToken(MuParserParser.Tokens.AND.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+	public class AndExprContext: ExprContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func AND() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.AND.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterAndExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterAndExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitAndExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitAndExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitAndExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitAndExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitAndExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitAndExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class IteExprContext: ExprContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func QUESTION() -> TerminalNode? { return getToken(MuParserParser.Tokens.QUESTION.rawValue, 0) }
-		open func COLON() -> TerminalNode? { return getToken(MuParserParser.Tokens.COLON.rawValue, 0) }
-		public init(_ ctx: ExprContext) {
+	public class IteExprContext: ExprContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func QUESTION() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.QUESTION.rawValue, 0)
+			}
+			open
+			func COLON() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.COLON.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterIteExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterIteExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitIteExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitIteExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitIteExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitIteExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitIteExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitIteExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expr( ) throws -> ExprContext   {
+	 public final  func expr( ) throws -> ExprContext   {
 		return try expr(0)
 	}
 	@discardableResult
@@ -797,7 +941,7 @@ open class MuParserParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, MuParserParser.RULE_expr)
 						setState(40)
 						if (!(precpred(_ctx, 13))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
 						}
 						setState(41)
 						try match(MuParserParser.Tokens.POW.rawValue)
@@ -810,7 +954,7 @@ open class MuParserParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, MuParserParser.RULE_expr)
 						setState(43)
 						if (!(precpred(_ctx, 11))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
 						}
 						setState(44)
 						_localctx.castdown(MulDivExprContext.self).op = try _input.LT(1)
@@ -835,7 +979,7 @@ open class MuParserParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, MuParserParser.RULE_expr)
 						setState(46)
 						if (!(precpred(_ctx, 10))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
 						}
 						setState(47)
 						_localctx.castdown(AddSubExprContext.self).op = try _input.LT(1)
@@ -860,7 +1004,7 @@ open class MuParserParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, MuParserParser.RULE_expr)
 						setState(49)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(50)
 						_localctx.castdown(RelationalExprContext.self).op = try _input.LT(1)
@@ -888,7 +1032,7 @@ open class MuParserParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, MuParserParser.RULE_expr)
 						setState(52)
 						if (!(precpred(_ctx, 8))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
 						}
 						setState(53)
 						_localctx.castdown(EqualityExprContext.self).op = try _input.LT(1)
@@ -913,7 +1057,7 @@ open class MuParserParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, MuParserParser.RULE_expr)
 						setState(55)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(56)
 						try match(MuParserParser.Tokens.AND.rawValue)
@@ -926,7 +1070,7 @@ open class MuParserParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, MuParserParser.RULE_expr)
 						setState(58)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(59)
 						try match(MuParserParser.Tokens.OR.rawValue)
@@ -939,7 +1083,7 @@ open class MuParserParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, MuParserParser.RULE_expr)
 						setState(61)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(62)
 						try match(MuParserParser.Tokens.QUESTION.rawValue)
@@ -969,172 +1113,220 @@ open class MuParserParser: Parser {
 
 		return _localctx;
 	}
-	open class AtomContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return MuParserParser.RULE_atom }
+
+	public class AtomContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return MuParserParser.RULE_atom
+		}
 	 
-		public  func copyFrom(_ ctx: AtomContext) {
+		open
+		func copyFrom(_ ctx: AtomContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class ParExprContext: AtomContext {
-		open func OPAR() -> TerminalNode? { return getToken(MuParserParser.Tokens.OPAR.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func CPAR() -> TerminalNode? { return getToken(MuParserParser.Tokens.CPAR.rawValue, 0) }
-		public init(_ ctx: AtomContext) {
+	public class ParExprContext: AtomContext {
+			open
+			func OPAR() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.OPAR.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func CPAR() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.CPAR.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: AtomContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterParExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterParExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitParExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitParExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitParExpr(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitParExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitParExpr(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitParExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class BooleanAtomContext: AtomContext {
-		open func TRUE() -> TerminalNode? { return getToken(MuParserParser.Tokens.TRUE.rawValue, 0) }
-		open func FALSE() -> TerminalNode? { return getToken(MuParserParser.Tokens.FALSE.rawValue, 0) }
-		public init(_ ctx: AtomContext) {
+	public class BooleanAtomContext: AtomContext {
+			open
+			func TRUE() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.TRUE.rawValue, 0)
+			}
+			open
+			func FALSE() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.FALSE.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: AtomContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterBooleanAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterBooleanAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitBooleanAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitBooleanAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitBooleanAtom(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitBooleanAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitBooleanAtom(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitBooleanAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class IdAtomContext: AtomContext {
-		open func ID() -> TerminalNode? { return getToken(MuParserParser.Tokens.ID.rawValue, 0) }
-		public init(_ ctx: AtomContext) {
+	public class IdAtomContext: AtomContext {
+			open
+			func ID() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.ID.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: AtomContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterIdAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterIdAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitIdAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitIdAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitIdAtom(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitIdAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitIdAtom(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitIdAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class PredefinedConstantAtomContext: AtomContext {
-		open func E() -> TerminalNode? { return getToken(MuParserParser.Tokens.E.rawValue, 0) }
-		open func PI() -> TerminalNode? { return getToken(MuParserParser.Tokens.PI.rawValue, 0) }
-		public init(_ ctx: AtomContext) {
+	public class PredefinedConstantAtomContext: AtomContext {
+			open
+			func E() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.E.rawValue, 0)
+			}
+			open
+			func PI() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.PI.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: AtomContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterPredefinedConstantAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterPredefinedConstantAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitPredefinedConstantAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitPredefinedConstantAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitPredefinedConstantAtom(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitPredefinedConstantAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitPredefinedConstantAtom(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitPredefinedConstantAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class NumberAtomContext: AtomContext {
-		open func INT() -> TerminalNode? { return getToken(MuParserParser.Tokens.INT.rawValue, 0) }
-		open func FLOAT() -> TerminalNode? { return getToken(MuParserParser.Tokens.FLOAT.rawValue, 0) }
-		public init(_ ctx: AtomContext) {
+	public class NumberAtomContext: AtomContext {
+			open
+			func INT() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.INT.rawValue, 0)
+			}
+			open
+			func FLOAT() -> TerminalNode? {
+				return getToken(MuParserParser.Tokens.FLOAT.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: AtomContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).enterNumberAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.enterNumberAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MuParserListener {
-			 	(listener as! MuParserListener).exitNumberAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MuParserListener {
+				listener.exitNumberAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MuParserVisitor {
-			     return (visitor as! MuParserVisitor<T>).visitNumberAtom(self)
-			}else if visitor is MuParserBaseVisitor {
-		    	 return (visitor as! MuParserBaseVisitor<T>).visitNumberAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MuParserVisitor {
+			    return visitor.visitNumberAtom(self)
+			}
+			else if let visitor = visitor as? MuParserBaseVisitor {
+			    return visitor.visitNumberAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atom() throws -> AtomContext {
+	 open func atom() throws -> AtomContext {
 		var _localctx: AtomContext = AtomContext(_ctx, getState())
 		try enterRule(_localctx, 4, MuParserParser.RULE_atom)
 		var _la: Int = 0
@@ -1222,7 +1414,7 @@ open class MuParserParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1234,8 +1426,8 @@ open class MuParserParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  1:
 			return try expr_sempred(_localctx?.castdown(ExprContext.self), predIndex)
@@ -1256,6 +1448,10 @@ open class MuParserParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = MuParserParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = MuParserParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

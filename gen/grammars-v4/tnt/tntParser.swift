@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/tnt/tnt.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/tnt/tnt.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class tntParser: Parser {
@@ -11,16 +11,23 @@ open class tntParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, ZERO = 8, SUCCESSOR = 9, A = 10, B = 11, C = 12, 
                  D = 13, E = 14, PRIME = 15, FOREVERY = 16, EXISTS = 17, 
                  WS = 18
 	}
-	public static let RULE_equation = 0, RULE_atom = 1, RULE_number = 2, RULE_variable = 3, 
-                   RULE_expression = 4, RULE_forevery = 5, RULE_exists = 6
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_equation = 0, RULE_atom = 1, RULE_number = 2, RULE_variable = 3, 
+            RULE_expression = 4, RULE_forevery = 5, RULE_exists = 6
+
+	public
+	static let ruleNames: [String] = [
 		"equation", "atom", "number", "variable", "expression", "forevery", "exists"
 	]
 
@@ -32,88 +39,73 @@ open class tntParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, "ZERO", "SUCCESSOR", "A", "B", 
 		"C", "D", "E", "PRIME", "FOREVERY", "EXISTS", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "tnt.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return tntParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "tnt.g4" }
+	override open
+	func getSerializedATN() -> String { return tntParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return tntParser.ruleNames }
+	override open
+	func getATN() -> ATN { return tntParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return tntParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return tntParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return tntParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,tntParser._ATN,tntParser._decisionToDFA, tntParser._sharedContextCache)
 	}
-	open class EquationContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class EquationContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tntParser.RULE_equation
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return tntParser.RULE_equation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).enterEquation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.enterEquation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).exitEquation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.exitEquation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tntVisitor {
-			     return (visitor as! tntVisitor<T>).visitEquation(self)
-			}else if visitor is tntBaseVisitor {
-		    	 return (visitor as! tntBaseVisitor<T>).visitEquation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tntVisitor {
+			    return visitor.visitEquation(self)
+			}
+			else if let visitor = visitor as? tntBaseVisitor {
+			    return visitor.visitEquation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func equation() throws -> EquationContext {
+	 open func equation() throws -> EquationContext {
 		var _localctx: EquationContext = EquationContext(_ctx, getState())
 		try enterRule(_localctx, 0, tntParser.RULE_equation)
 		defer {
@@ -137,40 +129,47 @@ open class tntParser: Parser {
 
 		return _localctx
 	}
-	open class AtomContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class AtomContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tntParser.RULE_atom
 		}
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tntParser.RULE_atom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).enterAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.enterAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).exitAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.exitAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tntVisitor {
-			     return (visitor as! tntVisitor<T>).visitAtom(self)
-			}else if visitor is tntBaseVisitor {
-		    	 return (visitor as! tntBaseVisitor<T>).visitAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tntVisitor {
+			    return visitor.visitAtom(self)
+			}
+			else if let visitor = visitor as? tntBaseVisitor {
+			    return visitor.visitAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atom() throws -> AtomContext {
+	 open func atom() throws -> AtomContext {
 		var _localctx: AtomContext = AtomContext(_ctx, getState())
 		try enterRule(_localctx, 2, tntParser.RULE_atom)
 		defer {
@@ -203,39 +202,51 @@ open class tntParser: Parser {
 
 		return _localctx
 	}
-	open class NumberContext:ParserRuleContext {
-		open func ZERO() -> TerminalNode? { return getToken(tntParser.Tokens.ZERO.rawValue, 0) }
-		open func SUCCESSOR() -> Array<TerminalNode> { return getTokens(tntParser.Tokens.SUCCESSOR.rawValue) }
-		open func SUCCESSOR(_ i:Int) -> TerminalNode?{
-			return getToken(tntParser.Tokens.SUCCESSOR.rawValue, i)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func ZERO() -> TerminalNode? {
+				return getToken(tntParser.Tokens.ZERO.rawValue, 0)
+			}
+			open
+			func SUCCESSOR() -> [TerminalNode] {
+				return getTokens(tntParser.Tokens.SUCCESSOR.rawValue)
+			}
+			open
+			func SUCCESSOR(_ i:Int) -> TerminalNode? {
+				return getToken(tntParser.Tokens.SUCCESSOR.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tntParser.RULE_number
 		}
-		open override func getRuleIndex() -> Int { return tntParser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).enterNumber(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tntVisitor {
-			     return (visitor as! tntVisitor<T>).visitNumber(self)
-			}else if visitor is tntBaseVisitor {
-		    	 return (visitor as! tntBaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tntVisitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? tntBaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 4, tntParser.RULE_number)
 		var _la: Int = 0
@@ -272,47 +283,75 @@ open class tntParser: Parser {
 
 		return _localctx
 	}
-	open class VariableContext:ParserRuleContext {
-		open func A() -> TerminalNode? { return getToken(tntParser.Tokens.A.rawValue, 0) }
-		open func B() -> TerminalNode? { return getToken(tntParser.Tokens.B.rawValue, 0) }
-		open func C() -> TerminalNode? { return getToken(tntParser.Tokens.C.rawValue, 0) }
-		open func D() -> TerminalNode? { return getToken(tntParser.Tokens.D.rawValue, 0) }
-		open func E() -> TerminalNode? { return getToken(tntParser.Tokens.E.rawValue, 0) }
-		open func SUCCESSOR() -> Array<TerminalNode> { return getTokens(tntParser.Tokens.SUCCESSOR.rawValue) }
-		open func SUCCESSOR(_ i:Int) -> TerminalNode?{
-			return getToken(tntParser.Tokens.SUCCESSOR.rawValue, i)
+
+	public class VariableContext: ParserRuleContext {
+			open
+			func A() -> TerminalNode? {
+				return getToken(tntParser.Tokens.A.rawValue, 0)
+			}
+			open
+			func B() -> TerminalNode? {
+				return getToken(tntParser.Tokens.B.rawValue, 0)
+			}
+			open
+			func C() -> TerminalNode? {
+				return getToken(tntParser.Tokens.C.rawValue, 0)
+			}
+			open
+			func D() -> TerminalNode? {
+				return getToken(tntParser.Tokens.D.rawValue, 0)
+			}
+			open
+			func E() -> TerminalNode? {
+				return getToken(tntParser.Tokens.E.rawValue, 0)
+			}
+			open
+			func SUCCESSOR() -> [TerminalNode] {
+				return getTokens(tntParser.Tokens.SUCCESSOR.rawValue)
+			}
+			open
+			func SUCCESSOR(_ i:Int) -> TerminalNode? {
+				return getToken(tntParser.Tokens.SUCCESSOR.rawValue, i)
+			}
+			open
+			func PRIME() -> [TerminalNode] {
+				return getTokens(tntParser.Tokens.PRIME.rawValue)
+			}
+			open
+			func PRIME(_ i:Int) -> TerminalNode? {
+				return getToken(tntParser.Tokens.PRIME.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tntParser.RULE_variable
 		}
-		open func PRIME() -> Array<TerminalNode> { return getTokens(tntParser.Tokens.PRIME.rawValue) }
-		open func PRIME(_ i:Int) -> TerminalNode?{
-			return getToken(tntParser.Tokens.PRIME.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return tntParser.RULE_variable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).enterVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.enterVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).exitVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.exitVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tntVisitor {
-			     return (visitor as! tntVisitor<T>).visitVariable(self)
-			}else if visitor is tntBaseVisitor {
-		    	 return (visitor as! tntBaseVisitor<T>).visitVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tntVisitor {
+			    return visitor.visitVariable(self)
+			}
+			else if let visitor = visitor as? tntBaseVisitor {
+			    return visitor.visitVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable() throws -> VariableContext {
+	 open func variable() throws -> VariableContext {
 		var _localctx: VariableContext = VariableContext(_ctx, getState())
 		try enterRule(_localctx, 6, tntParser.RULE_variable)
 		var _la: Int = 0
@@ -379,49 +418,58 @@ open class tntParser: Parser {
 		return _localctx
 	}
 
-	open class ExpressionContext:ParserRuleContext {
-		open func atom() -> AtomContext? {
-			return getRuleContext(AtomContext.self,0)
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func atom() -> AtomContext? {
+				return getRuleContext(AtomContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func forevery() -> ForeveryContext? {
+				return getRuleContext(ForeveryContext.self, 0)
+			}
+			open
+			func exists() -> ExistsContext? {
+				return getRuleContext(ExistsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tntParser.RULE_expression
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func forevery() -> ForeveryContext? {
-			return getRuleContext(ForeveryContext.self,0)
-		}
-		open func exists() -> ExistsContext? {
-			return getRuleContext(ExistsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tntParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tntVisitor {
-			     return (visitor as! tntVisitor<T>).visitExpression(self)
-			}else if visitor is tntBaseVisitor {
-		    	 return (visitor as! tntBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tntVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? tntBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expression( ) throws -> ExpressionContext   {
+	 public final  func expression( ) throws -> ExpressionContext   {
 		return try expression(0)
 	}
 	@discardableResult
@@ -487,7 +535,7 @@ open class tntParser: Parser {
 
 				break
 			default:
-				throw try ANTLRException.recognition(e: NoViableAltException(self))
+				throw ANTLRException.recognition(e: NoViableAltException(self))
 			}
 			_ctx!.stop = try _input.LT(-1)
 			setState(67)
@@ -507,7 +555,7 @@ open class tntParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, tntParser.RULE_expression)
 						setState(59)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(60)
 						try match(tntParser.Tokens.T__1.rawValue)
@@ -520,7 +568,7 @@ open class tntParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, tntParser.RULE_expression)
 						setState(62)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(63)
 						try match(tntParser.Tokens.T__2.rawValue)
@@ -546,38 +594,47 @@ open class tntParser: Parser {
 
 		return _localctx;
 	}
-	open class ForeveryContext:ParserRuleContext {
-		open func FOREVERY() -> TerminalNode? { return getToken(tntParser.Tokens.FOREVERY.rawValue, 0) }
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class ForeveryContext: ParserRuleContext {
+			open
+			func FOREVERY() -> TerminalNode? {
+				return getToken(tntParser.Tokens.FOREVERY.rawValue, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tntParser.RULE_forevery
 		}
-		open override func getRuleIndex() -> Int { return tntParser.RULE_forevery }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).enterForevery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.enterForevery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).exitForevery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.exitForevery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tntVisitor {
-			     return (visitor as! tntVisitor<T>).visitForevery(self)
-			}else if visitor is tntBaseVisitor {
-		    	 return (visitor as! tntBaseVisitor<T>).visitForevery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tntVisitor {
+			    return visitor.visitForevery(self)
+			}
+			else if let visitor = visitor as? tntBaseVisitor {
+			    return visitor.visitForevery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forevery() throws -> ForeveryContext {
+	 open func forevery() throws -> ForeveryContext {
 		var _localctx: ForeveryContext = ForeveryContext(_ctx, getState())
 		try enterRule(_localctx, 10, tntParser.RULE_forevery)
 		defer {
@@ -601,38 +658,47 @@ open class tntParser: Parser {
 
 		return _localctx
 	}
-	open class ExistsContext:ParserRuleContext {
-		open func EXISTS() -> TerminalNode? { return getToken(tntParser.Tokens.EXISTS.rawValue, 0) }
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class ExistsContext: ParserRuleContext {
+			open
+			func EXISTS() -> TerminalNode? {
+				return getToken(tntParser.Tokens.EXISTS.rawValue, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tntParser.RULE_exists
 		}
-		open override func getRuleIndex() -> Int { return tntParser.RULE_exists }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).enterExists(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.enterExists(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tntListener {
-			 	(listener as! tntListener).exitExists(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tntListener {
+				listener.exitExists(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tntVisitor {
-			     return (visitor as! tntVisitor<T>).visitExists(self)
-			}else if visitor is tntBaseVisitor {
-		    	 return (visitor as! tntBaseVisitor<T>).visitExists(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tntVisitor {
+			    return visitor.visitExists(self)
+			}
+			else if let visitor = visitor as? tntBaseVisitor {
+			    return visitor.visitExists(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exists() throws -> ExistsContext {
+	 open func exists() throws -> ExistsContext {
 		var _localctx: ExistsContext = ExistsContext(_ctx, getState())
 		try enterRule(_localctx, 12, tntParser.RULE_exists)
 		defer {
@@ -657,8 +723,8 @@ open class tntParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  4:
 			return try expression_sempred(_localctx?.castdown(ExpressionContext.self), predIndex)
@@ -673,6 +739,10 @@ open class tntParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = tntParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = tntParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

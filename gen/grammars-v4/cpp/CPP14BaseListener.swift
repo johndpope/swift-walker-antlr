@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cpp/CPP14.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cpp/CPP14.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class CPP14BaseListener: CPP14Listener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1003,13 +1003,13 @@ open class CPP14BaseListener: CPP14Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterTypename(_ ctx: CPP14Parser.TypenameContext) { }
+	open func enterThetypename(_ ctx: CPP14Parser.ThetypenameContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitTypename(_ ctx: CPP14Parser.TypenameContext) { }
+	open func exitThetypename(_ ctx: CPP14Parser.ThetypenameContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -1653,13 +1653,13 @@ open class CPP14BaseListener: CPP14Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterTypeid(_ ctx: CPP14Parser.TypeidContext) { }
+	open func enterThetypeid(_ ctx: CPP14Parser.ThetypeidContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitTypeid(_ ctx: CPP14Parser.TypeidContext) { }
+	open func exitThetypeid(_ ctx: CPP14Parser.ThetypeidContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -2537,13 +2537,13 @@ open class CPP14BaseListener: CPP14Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterOperator(_ ctx: CPP14Parser.OperatorContext) { }
+	open func enterTheoperator(_ ctx: CPP14Parser.TheoperatorContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitOperator(_ ctx: CPP14Parser.OperatorContext) { }
+	open func exitTheoperator(_ ctx: CPP14Parser.TheoperatorContext) { }
 
 	/**
 	 * {@inheritDoc}

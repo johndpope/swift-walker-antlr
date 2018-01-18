@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/c/C.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/c/C.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class CBaseListener: CListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1023,6 +1023,45 @@ open class CBaseListener: CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitIterationStatement(_ ctx: CParser.IterationStatementContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterForCondition(_ ctx: CParser.ForConditionContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitForCondition(_ ctx: CParser.ForConditionContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterForDeclaration(_ ctx: CParser.ForDeclarationContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitForDeclaration(_ ctx: CParser.ForDeclarationContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterForExpression(_ ctx: CParser.ForExpressionContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitForExpression(_ ctx: CParser.ForExpressionContext) { }
 
 	/**
 	 * {@inheritDoc}

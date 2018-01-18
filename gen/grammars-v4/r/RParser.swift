@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/r/R.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/r/R.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class RParser: Parser {
@@ -11,8 +11,11 @@ open class RParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -27,9 +30,13 @@ open class RParser: Parser {
                  COMPLEX = 58, STRING = 59, ID = 60, USER_OP = 61, NL = 62, 
                  WS = 63
 	}
-	public static let RULE_prog = 0, RULE_expr = 1, RULE_exprlist = 2, RULE_formlist = 3, 
-                   RULE_form = 4, RULE_sublist = 5, RULE_sub = 6
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_prog = 0, RULE_expr = 1, RULE_exprlist = 2, RULE_formlist = 3, 
+            RULE_form = 4, RULE_sublist = 5, RULE_sub = 6
+
+	public
+	static let ruleNames: [String] = [
 		"prog", "expr", "exprlist", "formlist", "form", "sublist", "sub"
 	]
 
@@ -48,93 +55,85 @@ open class RParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "HEX", 
 		"INT", "FLOAT", "COMPLEX", "STRING", "ID", "USER_OP", "NL", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "R.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return RParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "R.g4" }
+	override open
+	func getSerializedATN() -> String { return RParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return RParser.ruleNames }
+	override open
+	func getATN() -> ATN { return RParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return RParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return RParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return RParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,RParser._ATN,RParser._decisionToDFA, RParser._sharedContextCache)
 	}
-	open class ProgContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(RParser.Tokens.EOF.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+
+	public class ProgContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(RParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func NL() -> [TerminalNode] {
+				return getTokens(RParser.Tokens.NL.rawValue)
+			}
+			open
+			func NL(_ i:Int) -> TerminalNode? {
+				return getToken(RParser.Tokens.NL.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return RParser.RULE_prog
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func NL() -> Array<TerminalNode> { return getTokens(RParser.Tokens.NL.rawValue) }
-		open func NL(_ i:Int) -> TerminalNode?{
-			return getToken(RParser.Tokens.NL.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return RParser.RULE_prog }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).enterProg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.enterProg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).exitProg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.exitProg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is RVisitor {
-			     return (visitor as! RVisitor<T>).visitProg(self)
-			}else if visitor is RBaseVisitor {
-		    	 return (visitor as! RBaseVisitor<T>).visitProg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? RVisitor {
+			    return visitor.visitProg(self)
+			}
+			else if let visitor = visitor as? RBaseVisitor {
+			    return visitor.visitProg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prog() throws -> ProgContext {
+	 open func prog() throws -> ProgContext {
 		var _localctx: ProgContext = ProgContext(_ctx, getState())
 		try enterRule(_localctx, 0, RParser.RULE_prog)
 		var _la: Int = 0
@@ -207,7 +206,7 @@ open class RParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(22)
@@ -227,56 +226,86 @@ open class RParser: Parser {
 		return _localctx
 	}
 
-	open class ExprContext:ParserRuleContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+	public class ExprContext: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func formlist() -> FormlistContext? {
+				return getRuleContext(FormlistContext.self, 0)
+			}
+			open
+			func exprlist() -> ExprlistContext? {
+				return getRuleContext(ExprlistContext.self, 0)
+			}
+			open
+			func ID() -> TerminalNode? {
+				return getToken(RParser.Tokens.ID.rawValue, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(RParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func HEX() -> TerminalNode? {
+				return getToken(RParser.Tokens.HEX.rawValue, 0)
+			}
+			open
+			func INT() -> TerminalNode? {
+				return getToken(RParser.Tokens.INT.rawValue, 0)
+			}
+			open
+			func FLOAT() -> TerminalNode? {
+				return getToken(RParser.Tokens.FLOAT.rawValue, 0)
+			}
+			open
+			func COMPLEX() -> TerminalNode? {
+				return getToken(RParser.Tokens.COMPLEX.rawValue, 0)
+			}
+			open
+			func USER_OP() -> TerminalNode? {
+				return getToken(RParser.Tokens.USER_OP.rawValue, 0)
+			}
+			open
+			func sublist() -> SublistContext? {
+				return getRuleContext(SublistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return RParser.RULE_expr
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func formlist() -> FormlistContext? {
-			return getRuleContext(FormlistContext.self,0)
-		}
-		open func exprlist() -> ExprlistContext? {
-			return getRuleContext(ExprlistContext.self,0)
-		}
-		open func ID() -> TerminalNode? { return getToken(RParser.Tokens.ID.rawValue, 0) }
-		open func STRING() -> TerminalNode? { return getToken(RParser.Tokens.STRING.rawValue, 0) }
-		open func HEX() -> TerminalNode? { return getToken(RParser.Tokens.HEX.rawValue, 0) }
-		open func INT() -> TerminalNode? { return getToken(RParser.Tokens.INT.rawValue, 0) }
-		open func FLOAT() -> TerminalNode? { return getToken(RParser.Tokens.FLOAT.rawValue, 0) }
-		open func COMPLEX() -> TerminalNode? { return getToken(RParser.Tokens.COMPLEX.rawValue, 0) }
-		open func USER_OP() -> TerminalNode? { return getToken(RParser.Tokens.USER_OP.rawValue, 0) }
-		open func sublist() -> SublistContext? {
-			return getRuleContext(SublistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return RParser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).enterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).exitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is RVisitor {
-			     return (visitor as! RVisitor<T>).visitExpr(self)
-			}else if visitor is RBaseVisitor {
-		    	 return (visitor as! RBaseVisitor<T>).visitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? RVisitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? RBaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expr( ) throws -> ExprContext   {
+	 public final  func expr( ) throws -> ExprContext   {
 		return try expr(0)
 	}
 	@discardableResult
@@ -535,7 +564,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(95)
 						if (!(precpred(_ctx, 39))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 39)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 39)"))
 						}
 						setState(96)
 						_la = try _input.LA(1)
@@ -559,7 +588,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(98)
 						if (!(precpred(_ctx, 38))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 38)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 38)"))
 						}
 						setState(99)
 						_la = try _input.LA(1)
@@ -583,7 +612,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(101)
 						if (!(precpred(_ctx, 37))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 37)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 37)"))
 						}
 						setState(102)
 						try match(RParser.Tokens.T__8.rawValue)
@@ -596,7 +625,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(104)
 						if (!(precpred(_ctx, 35))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 35)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 35)"))
 						}
 						setState(105)
 						try match(RParser.Tokens.T__11.rawValue)
@@ -609,7 +638,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(107)
 						if (!(precpred(_ctx, 34))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 34)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 34)"))
 						}
 						setState(108)
 						try match(RParser.Tokens.USER_OP.rawValue)
@@ -622,7 +651,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(110)
 						if (!(precpred(_ctx, 33))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 33)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 33)"))
 						}
 						setState(111)
 						_la = try _input.LA(1)
@@ -646,7 +675,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(113)
 						if (!(precpred(_ctx, 32))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 32)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 32)"))
 						}
 						setState(114)
 						_la = try _input.LA(1)
@@ -670,7 +699,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(116)
 						if (!(precpred(_ctx, 31))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 31)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 31)"))
 						}
 						setState(117)
 						_la = try _input.LA(1)
@@ -697,7 +726,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(119)
 						if (!(precpred(_ctx, 29))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 29)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 29)"))
 						}
 						setState(120)
 						_la = try _input.LA(1)
@@ -721,7 +750,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(122)
 						if (!(precpred(_ctx, 28))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 28)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 28)"))
 						}
 						setState(123)
 						_la = try _input.LA(1)
@@ -745,7 +774,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(125)
 						if (!(precpred(_ctx, 26))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 26)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 26)"))
 						}
 						setState(126)
 						try match(RParser.Tokens.T__25.rawValue)
@@ -758,7 +787,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(128)
 						if (!(precpred(_ctx, 25))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 25)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 25)"))
 						}
 						setState(129)
 						_la = try _input.LA(1)
@@ -785,7 +814,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(131)
 						if (!(precpred(_ctx, 41))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 41)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 41)"))
 						}
 						setState(132)
 						try match(RParser.Tokens.T__1.rawValue)
@@ -802,7 +831,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(137)
 						if (!(precpred(_ctx, 40))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 40)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 40)"))
 						}
 						setState(138)
 						try match(RParser.Tokens.T__3.rawValue)
@@ -817,7 +846,7 @@ open class RParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, RParser.RULE_expr)
 						setState(142)
 						if (!(precpred(_ctx, 23))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 23)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 23)"))
 						}
 						setState(143)
 						try match(RParser.Tokens.T__33.rawValue)
@@ -845,44 +874,55 @@ open class RParser: Parser {
 
 		return _localctx;
 	}
-	open class ExprlistContext:ParserRuleContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+
+	public class ExprlistContext: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func NL() -> [TerminalNode] {
+				return getTokens(RParser.Tokens.NL.rawValue)
+			}
+			open
+			func NL(_ i:Int) -> TerminalNode? {
+				return getToken(RParser.Tokens.NL.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return RParser.RULE_exprlist
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func NL() -> Array<TerminalNode> { return getTokens(RParser.Tokens.NL.rawValue) }
-		open func NL(_ i:Int) -> TerminalNode?{
-			return getToken(RParser.Tokens.NL.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return RParser.RULE_exprlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).enterExprlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.enterExprlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).exitExprlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.exitExprlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is RVisitor {
-			     return (visitor as! RVisitor<T>).visitExprlist(self)
-			}else if visitor is RBaseVisitor {
-		    	 return (visitor as! RBaseVisitor<T>).visitExprlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? RVisitor {
+			    return visitor.visitExprlist(self)
+			}
+			else if let visitor = visitor as? RBaseVisitor {
+			    return visitor.visitExprlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exprlist() throws -> ExprlistContext {
+	 open func exprlist() throws -> ExprlistContext {
 		var _localctx: ExprlistContext = ExprlistContext(_ctx, getState())
 		try enterRule(_localctx, 4, RParser.RULE_exprlist)
 		var _la: Int = 0
@@ -973,7 +1013,7 @@ open class RParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -984,40 +1024,47 @@ open class RParser: Parser {
 
 		return _localctx
 	}
-	open class FormlistContext:ParserRuleContext {
-		open func form() -> Array<FormContext> {
-			return getRuleContexts(FormContext.self)
+
+	public class FormlistContext: ParserRuleContext {
+			open
+			func form() -> [FormContext] {
+				return getRuleContexts(FormContext.self)
+			}
+			open
+			func form(_ i: Int) -> FormContext? {
+				return getRuleContext(FormContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return RParser.RULE_formlist
 		}
-		open func form(_ i: Int) -> FormContext? {
-			return getRuleContext(FormContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return RParser.RULE_formlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).enterFormlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.enterFormlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).exitFormlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.exitFormlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is RVisitor {
-			     return (visitor as! RVisitor<T>).visitFormlist(self)
-			}else if visitor is RBaseVisitor {
-		    	 return (visitor as! RBaseVisitor<T>).visitFormlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? RVisitor {
+			    return visitor.visitFormlist(self)
+			}
+			else if let visitor = visitor as? RBaseVisitor {
+			    return visitor.visitFormlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formlist() throws -> FormlistContext {
+	 open func formlist() throws -> FormlistContext {
 		var _localctx: FormlistContext = FormlistContext(_ctx, getState())
 		try enterRule(_localctx, 6, RParser.RULE_formlist)
 		var _la: Int = 0
@@ -1056,38 +1103,47 @@ open class RParser: Parser {
 
 		return _localctx
 	}
-	open class FormContext:ParserRuleContext {
-		open func ID() -> TerminalNode? { return getToken(RParser.Tokens.ID.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class FormContext: ParserRuleContext {
+			open
+			func ID() -> TerminalNode? {
+				return getToken(RParser.Tokens.ID.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return RParser.RULE_form
 		}
-		open override func getRuleIndex() -> Int { return RParser.RULE_form }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).enterForm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.enterForm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).exitForm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.exitForm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is RVisitor {
-			     return (visitor as! RVisitor<T>).visitForm(self)
-			}else if visitor is RBaseVisitor {
-		    	 return (visitor as! RBaseVisitor<T>).visitForm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? RVisitor {
+			    return visitor.visitForm(self)
+			}
+			else if let visitor = visitor as? RBaseVisitor {
+			    return visitor.visitForm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func form() throws -> FormContext {
+	 open func form() throws -> FormContext {
 		var _localctx: FormContext = FormContext(_ctx, getState())
 		try enterRule(_localctx, 8, RParser.RULE_form)
 		defer {
@@ -1130,40 +1186,47 @@ open class RParser: Parser {
 
 		return _localctx
 	}
-	open class SublistContext:ParserRuleContext {
-		open func sub() -> Array<SubContext> {
-			return getRuleContexts(SubContext.self)
+
+	public class SublistContext: ParserRuleContext {
+			open
+			func sub() -> [SubContext] {
+				return getRuleContexts(SubContext.self)
+			}
+			open
+			func sub(_ i: Int) -> SubContext? {
+				return getRuleContext(SubContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return RParser.RULE_sublist
 		}
-		open func sub(_ i: Int) -> SubContext? {
-			return getRuleContext(SubContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return RParser.RULE_sublist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).enterSublist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.enterSublist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).exitSublist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.exitSublist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is RVisitor {
-			     return (visitor as! RVisitor<T>).visitSublist(self)
-			}else if visitor is RBaseVisitor {
-		    	 return (visitor as! RBaseVisitor<T>).visitSublist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? RVisitor {
+			    return visitor.visitSublist(self)
+			}
+			else if let visitor = visitor as? RBaseVisitor {
+			    return visitor.visitSublist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sublist() throws -> SublistContext {
+	 open func sublist() throws -> SublistContext {
 		var _localctx: SublistContext = SublistContext(_ctx, getState())
 		try enterRule(_localctx, 10, RParser.RULE_sublist)
 		var _la: Int = 0
@@ -1202,39 +1265,51 @@ open class RParser: Parser {
 
 		return _localctx
 	}
-	open class SubContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class SubContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func ID() -> TerminalNode? {
+				return getToken(RParser.Tokens.ID.rawValue, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(RParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return RParser.RULE_sub
 		}
-		open func ID() -> TerminalNode? { return getToken(RParser.Tokens.ID.rawValue, 0) }
-		open func STRING() -> TerminalNode? { return getToken(RParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return RParser.RULE_sub }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).enterSub(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.enterSub(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is RListener {
-			 	(listener as! RListener).exitSub(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? RListener {
+				listener.exitSub(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is RVisitor {
-			     return (visitor as! RVisitor<T>).visitSub(self)
-			}else if visitor is RBaseVisitor {
-		    	 return (visitor as! RBaseVisitor<T>).visitSub(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? RVisitor {
+			    return visitor.visitSub(self)
+			}
+			else if let visitor = visitor as? RBaseVisitor {
+			    return visitor.visitSub(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sub() throws -> SubContext {
+	 open func sub() throws -> SubContext {
 		var _localctx: SubContext = SubContext(_ctx, getState())
 		try enterRule(_localctx, 12, RParser.RULE_sub)
 		defer {
@@ -1326,8 +1401,8 @@ open class RParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  1:
 			return try expr_sempred(_localctx?.castdown(ExprContext.self), predIndex)
@@ -1355,6 +1430,10 @@ open class RParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = RParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = RParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

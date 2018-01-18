@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/sqlite/SQLite.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/sqlite/SQLite.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class SQLiteParser: Parser {
@@ -11,8 +11,11 @@ open class SQLiteParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, SCOL = 1, DOT = 2, OPEN_PAR = 3, CLOSE_PAR = 4, COMMA = 5, 
                  ASSIGN = 6, STAR = 7, PLUS = 8, MINUS = 9, TILDE = 10, 
                  PIPE2 = 11, DIV = 12, MOD = 13, LT2 = 14, GT2 = 15, AMP = 16, 
@@ -52,38 +55,39 @@ open class SQLiteParser: Parser {
                  SINGLE_LINE_COMMENT = 154, MULTILINE_COMMENT = 155, SPACES = 156, 
                  UNEXPECTED_CHAR = 157
 	}
-	public static let RULE_parse = 0, RULE_error = 1, RULE_sql_stmt_list = 2, 
-                   RULE_sql_stmt = 3, RULE_alter_table_stmt = 4, RULE_analyze_stmt = 5, 
-                   RULE_attach_stmt = 6, RULE_begin_stmt = 7, RULE_commit_stmt = 8, 
-                   RULE_compound_select_stmt = 9, RULE_create_index_stmt = 10, 
-                   RULE_create_table_stmt = 11, RULE_create_trigger_stmt = 12, 
-                   RULE_create_view_stmt = 13, RULE_create_virtual_table_stmt = 14, 
-                   RULE_delete_stmt = 15, RULE_delete_stmt_limited = 16, 
-                   RULE_detach_stmt = 17, RULE_drop_index_stmt = 18, RULE_drop_table_stmt = 19, 
-                   RULE_drop_trigger_stmt = 20, RULE_drop_view_stmt = 21, 
-                   RULE_factored_select_stmt = 22, RULE_insert_stmt = 23, 
-                   RULE_pragma_stmt = 24, RULE_reindex_stmt = 25, RULE_release_stmt = 26, 
-                   RULE_rollback_stmt = 27, RULE_savepoint_stmt = 28, RULE_simple_select_stmt = 29, 
-                   RULE_select_stmt = 30, RULE_select_or_values = 31, RULE_update_stmt = 32, 
-                   RULE_update_stmt_limited = 33, RULE_vacuum_stmt = 34, 
-                   RULE_column_def = 35, RULE_type_name = 36, RULE_column_constraint = 37, 
-                   RULE_conflict_clause = 38, RULE_expr = 39, RULE_foreign_key_clause = 40, 
-                   RULE_raise_function = 41, RULE_indexed_column = 42, RULE_table_constraint = 43, 
-                   RULE_with_clause = 44, RULE_qualified_table_name = 45, 
-                   RULE_ordering_term = 46, RULE_pragma_value = 47, RULE_common_table_expression = 48, 
-                   RULE_result_column = 49, RULE_table_or_subquery = 50, 
-                   RULE_join_clause = 51, RULE_join_operator = 52, RULE_join_constraint = 53, 
-                   RULE_select_core = 54, RULE_compound_operator = 55, RULE_cte_table_name = 56, 
-                   RULE_signed_number = 57, RULE_literal_value = 58, RULE_unary_operator = 59, 
-                   RULE_error_message = 60, RULE_module_argument = 61, RULE_column_alias = 62, 
-                   RULE_keyword = 63, RULE_name = 64, RULE_function_name = 65, 
-                   RULE_database_name = 66, RULE_table_name = 67, RULE_table_or_index_name = 68, 
-                   RULE_new_table_name = 69, RULE_column_name = 70, RULE_collation_name = 71, 
-                   RULE_foreign_table = 72, RULE_index_name = 73, RULE_trigger_name = 74, 
-                   RULE_view_name = 75, RULE_module_name = 76, RULE_pragma_name = 77, 
-                   RULE_savepoint_name = 78, RULE_table_alias = 79, RULE_transaction_name = 80, 
-                   RULE_any_name = 81
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_parse = 0, RULE_error = 1, RULE_sql_stmt_list = 2, RULE_sql_stmt = 3, 
+            RULE_alter_table_stmt = 4, RULE_analyze_stmt = 5, RULE_attach_stmt = 6, 
+            RULE_begin_stmt = 7, RULE_commit_stmt = 8, RULE_compound_select_stmt = 9, 
+            RULE_create_index_stmt = 10, RULE_create_table_stmt = 11, RULE_create_trigger_stmt = 12, 
+            RULE_create_view_stmt = 13, RULE_create_virtual_table_stmt = 14, 
+            RULE_delete_stmt = 15, RULE_delete_stmt_limited = 16, RULE_detach_stmt = 17, 
+            RULE_drop_index_stmt = 18, RULE_drop_table_stmt = 19, RULE_drop_trigger_stmt = 20, 
+            RULE_drop_view_stmt = 21, RULE_factored_select_stmt = 22, RULE_insert_stmt = 23, 
+            RULE_pragma_stmt = 24, RULE_reindex_stmt = 25, RULE_release_stmt = 26, 
+            RULE_rollback_stmt = 27, RULE_savepoint_stmt = 28, RULE_simple_select_stmt = 29, 
+            RULE_select_stmt = 30, RULE_select_or_values = 31, RULE_update_stmt = 32, 
+            RULE_update_stmt_limited = 33, RULE_vacuum_stmt = 34, RULE_column_def = 35, 
+            RULE_type_name = 36, RULE_column_constraint = 37, RULE_conflict_clause = 38, 
+            RULE_expr = 39, RULE_foreign_key_clause = 40, RULE_raise_function = 41, 
+            RULE_indexed_column = 42, RULE_table_constraint = 43, RULE_with_clause = 44, 
+            RULE_qualified_table_name = 45, RULE_ordering_term = 46, RULE_pragma_value = 47, 
+            RULE_common_table_expression = 48, RULE_result_column = 49, 
+            RULE_table_or_subquery = 50, RULE_join_clause = 51, RULE_join_operator = 52, 
+            RULE_join_constraint = 53, RULE_select_core = 54, RULE_compound_operator = 55, 
+            RULE_cte_table_name = 56, RULE_signed_number = 57, RULE_literal_value = 58, 
+            RULE_unary_operator = 59, RULE_error_message = 60, RULE_module_argument = 61, 
+            RULE_column_alias = 62, RULE_keyword = 63, RULE_name = 64, RULE_function_name = 65, 
+            RULE_database_name = 66, RULE_table_name = 67, RULE_table_or_index_name = 68, 
+            RULE_new_table_name = 69, RULE_column_name = 70, RULE_collation_name = 71, 
+            RULE_foreign_table = 72, RULE_index_name = 73, RULE_trigger_name = 74, 
+            RULE_view_name = 75, RULE_module_name = 76, RULE_pragma_name = 77, 
+            RULE_savepoint_name = 78, RULE_table_alias = 79, RULE_transaction_name = 80, 
+            RULE_any_name = 81
+
+	public
+	static let ruleNames: [String] = [
 		"parse", "error", "sql_stmt_list", "sql_stmt", "alter_table_stmt", "analyze_stmt", 
 		"attach_stmt", "begin_stmt", "commit_stmt", "compound_select_stmt", "create_index_stmt", 
 		"create_table_stmt", "create_trigger_stmt", "create_view_stmt", "create_virtual_table_stmt", 
@@ -136,95 +140,85 @@ open class SQLiteParser: Parser {
 		"BLOB_LITERAL", "SINGLE_LINE_COMMENT", "MULTILINE_COMMENT", "SPACES", 
 		"UNEXPECTED_CHAR"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "SQLite.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return SQLiteParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "SQLite.g4" }
+	override open
+	func getSerializedATN() -> String { return SQLiteParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return SQLiteParser.ruleNames }
+	override open
+	func getATN() -> ATN { return SQLiteParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return SQLiteParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return SQLiteParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return SQLiteParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,SQLiteParser._ATN,SQLiteParser._decisionToDFA, SQLiteParser._sharedContextCache)
 	}
-	open class ParseContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.EOF.rawValue, 0) }
-		open func sql_stmt_list() -> Array<Sql_stmt_listContext> {
-			return getRuleContexts(Sql_stmt_listContext.self)
+
+	public class ParseContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func sql_stmt_list() -> [Sql_stmt_listContext] {
+				return getRuleContexts(Sql_stmt_listContext.self)
+			}
+			open
+			func sql_stmt_list(_ i: Int) -> Sql_stmt_listContext? {
+				return getRuleContext(Sql_stmt_listContext.self, i)
+			}
+			open
+			func error() -> [ErrorContext] {
+				return getRuleContexts(ErrorContext.self)
+			}
+			open
+			func error(_ i: Int) -> ErrorContext? {
+				return getRuleContext(ErrorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_parse
 		}
-		open func sql_stmt_list(_ i: Int) -> Sql_stmt_listContext? {
-			return getRuleContext(Sql_stmt_listContext.self,i)
-		}
-		open func error() -> Array<ErrorContext> {
-			return getRuleContexts(ErrorContext.self)
-		}
-		open func error(_ i: Int) -> ErrorContext? {
-			return getRuleContext(ErrorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_parse }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterParse(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterParse(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitParse(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitParse(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitParse(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitParse(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitParse(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitParse(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parse() throws -> ParseContext {
+	 open func parse() throws -> ParseContext {
 		var _localctx: ParseContext = ParseContext(_ctx, getState())
 		try enterRule(_localctx, 0, SQLiteParser.RULE_parse)
 		var _la: Int = 0
@@ -290,7 +284,7 @@ open class SQLiteParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(170)
@@ -309,36 +303,44 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class ErrorContext:ParserRuleContext {
-		public var _UNEXPECTED_CHAR: Token!
-		open func UNEXPECTED_CHAR() -> TerminalNode? { return getToken(SQLiteParser.Tokens.UNEXPECTED_CHAR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_error }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterError(self)
+
+	public class ErrorContext: ParserRuleContext {
+		open var _UNEXPECTED_CHAR: Token!
+			open
+			func UNEXPECTED_CHAR() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.UNEXPECTED_CHAR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_error
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterError(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitError(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitError(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitError(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitError(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitError(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitError(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func error() throws -> ErrorContext {
+	 open func error() throws -> ErrorContext {
 		var _localctx: ErrorContext = ErrorContext(_ctx, getState())
 		try enterRule(_localctx, 2, SQLiteParser.RULE_error)
 		defer {
@@ -365,40 +367,47 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Sql_stmt_listContext:ParserRuleContext {
-		open func sql_stmt() -> Array<Sql_stmtContext> {
-			return getRuleContexts(Sql_stmtContext.self)
+
+	public class Sql_stmt_listContext: ParserRuleContext {
+			open
+			func sql_stmt() -> [Sql_stmtContext] {
+				return getRuleContexts(Sql_stmtContext.self)
+			}
+			open
+			func sql_stmt(_ i: Int) -> Sql_stmtContext? {
+				return getRuleContext(Sql_stmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_sql_stmt_list
 		}
-		open func sql_stmt(_ i: Int) -> Sql_stmtContext? {
-			return getRuleContext(Sql_stmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_sql_stmt_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterSql_stmt_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterSql_stmt_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitSql_stmt_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitSql_stmt_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitSql_stmt_list(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitSql_stmt_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitSql_stmt_list(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitSql_stmt_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sql_stmt_list() throws -> Sql_stmt_listContext {
+	 open func sql_stmt_list() throws -> Sql_stmt_listContext {
 		var _localctx: Sql_stmt_listContext = Sql_stmt_listContext(_ctx, getState())
 		try enterRule(_localctx, 4, SQLiteParser.RULE_sql_stmt_list)
 		var _la: Int = 0
@@ -480,127 +489,171 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Sql_stmtContext:ParserRuleContext {
-		open func alter_table_stmt() -> Alter_table_stmtContext? {
-			return getRuleContext(Alter_table_stmtContext.self,0)
+
+	public class Sql_stmtContext: ParserRuleContext {
+			open
+			func alter_table_stmt() -> Alter_table_stmtContext? {
+				return getRuleContext(Alter_table_stmtContext.self, 0)
+			}
+			open
+			func analyze_stmt() -> Analyze_stmtContext? {
+				return getRuleContext(Analyze_stmtContext.self, 0)
+			}
+			open
+			func attach_stmt() -> Attach_stmtContext? {
+				return getRuleContext(Attach_stmtContext.self, 0)
+			}
+			open
+			func begin_stmt() -> Begin_stmtContext? {
+				return getRuleContext(Begin_stmtContext.self, 0)
+			}
+			open
+			func commit_stmt() -> Commit_stmtContext? {
+				return getRuleContext(Commit_stmtContext.self, 0)
+			}
+			open
+			func compound_select_stmt() -> Compound_select_stmtContext? {
+				return getRuleContext(Compound_select_stmtContext.self, 0)
+			}
+			open
+			func create_index_stmt() -> Create_index_stmtContext? {
+				return getRuleContext(Create_index_stmtContext.self, 0)
+			}
+			open
+			func create_table_stmt() -> Create_table_stmtContext? {
+				return getRuleContext(Create_table_stmtContext.self, 0)
+			}
+			open
+			func create_trigger_stmt() -> Create_trigger_stmtContext? {
+				return getRuleContext(Create_trigger_stmtContext.self, 0)
+			}
+			open
+			func create_view_stmt() -> Create_view_stmtContext? {
+				return getRuleContext(Create_view_stmtContext.self, 0)
+			}
+			open
+			func create_virtual_table_stmt() -> Create_virtual_table_stmtContext? {
+				return getRuleContext(Create_virtual_table_stmtContext.self, 0)
+			}
+			open
+			func delete_stmt() -> Delete_stmtContext? {
+				return getRuleContext(Delete_stmtContext.self, 0)
+			}
+			open
+			func delete_stmt_limited() -> Delete_stmt_limitedContext? {
+				return getRuleContext(Delete_stmt_limitedContext.self, 0)
+			}
+			open
+			func detach_stmt() -> Detach_stmtContext? {
+				return getRuleContext(Detach_stmtContext.self, 0)
+			}
+			open
+			func drop_index_stmt() -> Drop_index_stmtContext? {
+				return getRuleContext(Drop_index_stmtContext.self, 0)
+			}
+			open
+			func drop_table_stmt() -> Drop_table_stmtContext? {
+				return getRuleContext(Drop_table_stmtContext.self, 0)
+			}
+			open
+			func drop_trigger_stmt() -> Drop_trigger_stmtContext? {
+				return getRuleContext(Drop_trigger_stmtContext.self, 0)
+			}
+			open
+			func drop_view_stmt() -> Drop_view_stmtContext? {
+				return getRuleContext(Drop_view_stmtContext.self, 0)
+			}
+			open
+			func factored_select_stmt() -> Factored_select_stmtContext? {
+				return getRuleContext(Factored_select_stmtContext.self, 0)
+			}
+			open
+			func insert_stmt() -> Insert_stmtContext? {
+				return getRuleContext(Insert_stmtContext.self, 0)
+			}
+			open
+			func pragma_stmt() -> Pragma_stmtContext? {
+				return getRuleContext(Pragma_stmtContext.self, 0)
+			}
+			open
+			func reindex_stmt() -> Reindex_stmtContext? {
+				return getRuleContext(Reindex_stmtContext.self, 0)
+			}
+			open
+			func release_stmt() -> Release_stmtContext? {
+				return getRuleContext(Release_stmtContext.self, 0)
+			}
+			open
+			func rollback_stmt() -> Rollback_stmtContext? {
+				return getRuleContext(Rollback_stmtContext.self, 0)
+			}
+			open
+			func savepoint_stmt() -> Savepoint_stmtContext? {
+				return getRuleContext(Savepoint_stmtContext.self, 0)
+			}
+			open
+			func simple_select_stmt() -> Simple_select_stmtContext? {
+				return getRuleContext(Simple_select_stmtContext.self, 0)
+			}
+			open
+			func select_stmt() -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, 0)
+			}
+			open
+			func update_stmt() -> Update_stmtContext? {
+				return getRuleContext(Update_stmtContext.self, 0)
+			}
+			open
+			func update_stmt_limited() -> Update_stmt_limitedContext? {
+				return getRuleContext(Update_stmt_limitedContext.self, 0)
+			}
+			open
+			func vacuum_stmt() -> Vacuum_stmtContext? {
+				return getRuleContext(Vacuum_stmtContext.self, 0)
+			}
+			open
+			func K_EXPLAIN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXPLAIN.rawValue, 0)
+			}
+			open
+			func K_QUERY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_QUERY.rawValue, 0)
+			}
+			open
+			func K_PLAN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_PLAN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_sql_stmt
 		}
-		open func analyze_stmt() -> Analyze_stmtContext? {
-			return getRuleContext(Analyze_stmtContext.self,0)
-		}
-		open func attach_stmt() -> Attach_stmtContext? {
-			return getRuleContext(Attach_stmtContext.self,0)
-		}
-		open func begin_stmt() -> Begin_stmtContext? {
-			return getRuleContext(Begin_stmtContext.self,0)
-		}
-		open func commit_stmt() -> Commit_stmtContext? {
-			return getRuleContext(Commit_stmtContext.self,0)
-		}
-		open func compound_select_stmt() -> Compound_select_stmtContext? {
-			return getRuleContext(Compound_select_stmtContext.self,0)
-		}
-		open func create_index_stmt() -> Create_index_stmtContext? {
-			return getRuleContext(Create_index_stmtContext.self,0)
-		}
-		open func create_table_stmt() -> Create_table_stmtContext? {
-			return getRuleContext(Create_table_stmtContext.self,0)
-		}
-		open func create_trigger_stmt() -> Create_trigger_stmtContext? {
-			return getRuleContext(Create_trigger_stmtContext.self,0)
-		}
-		open func create_view_stmt() -> Create_view_stmtContext? {
-			return getRuleContext(Create_view_stmtContext.self,0)
-		}
-		open func create_virtual_table_stmt() -> Create_virtual_table_stmtContext? {
-			return getRuleContext(Create_virtual_table_stmtContext.self,0)
-		}
-		open func delete_stmt() -> Delete_stmtContext? {
-			return getRuleContext(Delete_stmtContext.self,0)
-		}
-		open func delete_stmt_limited() -> Delete_stmt_limitedContext? {
-			return getRuleContext(Delete_stmt_limitedContext.self,0)
-		}
-		open func detach_stmt() -> Detach_stmtContext? {
-			return getRuleContext(Detach_stmtContext.self,0)
-		}
-		open func drop_index_stmt() -> Drop_index_stmtContext? {
-			return getRuleContext(Drop_index_stmtContext.self,0)
-		}
-		open func drop_table_stmt() -> Drop_table_stmtContext? {
-			return getRuleContext(Drop_table_stmtContext.self,0)
-		}
-		open func drop_trigger_stmt() -> Drop_trigger_stmtContext? {
-			return getRuleContext(Drop_trigger_stmtContext.self,0)
-		}
-		open func drop_view_stmt() -> Drop_view_stmtContext? {
-			return getRuleContext(Drop_view_stmtContext.self,0)
-		}
-		open func factored_select_stmt() -> Factored_select_stmtContext? {
-			return getRuleContext(Factored_select_stmtContext.self,0)
-		}
-		open func insert_stmt() -> Insert_stmtContext? {
-			return getRuleContext(Insert_stmtContext.self,0)
-		}
-		open func pragma_stmt() -> Pragma_stmtContext? {
-			return getRuleContext(Pragma_stmtContext.self,0)
-		}
-		open func reindex_stmt() -> Reindex_stmtContext? {
-			return getRuleContext(Reindex_stmtContext.self,0)
-		}
-		open func release_stmt() -> Release_stmtContext? {
-			return getRuleContext(Release_stmtContext.self,0)
-		}
-		open func rollback_stmt() -> Rollback_stmtContext? {
-			return getRuleContext(Rollback_stmtContext.self,0)
-		}
-		open func savepoint_stmt() -> Savepoint_stmtContext? {
-			return getRuleContext(Savepoint_stmtContext.self,0)
-		}
-		open func simple_select_stmt() -> Simple_select_stmtContext? {
-			return getRuleContext(Simple_select_stmtContext.self,0)
-		}
-		open func select_stmt() -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,0)
-		}
-		open func update_stmt() -> Update_stmtContext? {
-			return getRuleContext(Update_stmtContext.self,0)
-		}
-		open func update_stmt_limited() -> Update_stmt_limitedContext? {
-			return getRuleContext(Update_stmt_limitedContext.self,0)
-		}
-		open func vacuum_stmt() -> Vacuum_stmtContext? {
-			return getRuleContext(Vacuum_stmtContext.self,0)
-		}
-		open func K_EXPLAIN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXPLAIN.rawValue, 0) }
-		open func K_QUERY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_QUERY.rawValue, 0) }
-		open func K_PLAN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_PLAN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_sql_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterSql_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterSql_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitSql_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitSql_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitSql_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitSql_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitSql_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitSql_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sql_stmt() throws -> Sql_stmtContext {
+	 open func sql_stmt() throws -> Sql_stmtContext {
 		var _localctx: Sql_stmtContext = Sql_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 6, SQLiteParser.RULE_sql_stmt)
 		var _la: Int = 0
@@ -802,52 +855,79 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Alter_table_stmtContext:ParserRuleContext {
-		open func K_ALTER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ALTER.rawValue, 0) }
-		open func K_TABLE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0) }
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Alter_table_stmtContext: ParserRuleContext {
+			open
+			func K_ALTER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ALTER.rawValue, 0)
+			}
+			open
+			func K_TABLE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func K_RENAME() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RENAME.rawValue, 0)
+			}
+			open
+			func K_TO() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TO.rawValue, 0)
+			}
+			open
+			func new_table_name() -> New_table_nameContext? {
+				return getRuleContext(New_table_nameContext.self, 0)
+			}
+			open
+			func K_ADD() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ADD.rawValue, 0)
+			}
+			open
+			func column_def() -> Column_defContext? {
+				return getRuleContext(Column_defContext.self, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func K_COLUMN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_COLUMN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_alter_table_stmt
 		}
-		open func K_RENAME() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RENAME.rawValue, 0) }
-		open func K_TO() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TO.rawValue, 0) }
-		open func new_table_name() -> New_table_nameContext? {
-			return getRuleContext(New_table_nameContext.self,0)
-		}
-		open func K_ADD() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ADD.rawValue, 0) }
-		open func column_def() -> Column_defContext? {
-			return getRuleContext(Column_defContext.self,0)
-		}
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func K_COLUMN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_COLUMN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_alter_table_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterAlter_table_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterAlter_table_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitAlter_table_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitAlter_table_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitAlter_table_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitAlter_table_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitAlter_table_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitAlter_table_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func alter_table_stmt() throws -> Alter_table_stmtContext {
+	 open func alter_table_stmt() throws -> Alter_table_stmtContext {
 		var _localctx: Alter_table_stmtContext = Alter_table_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 8, SQLiteParser.RULE_alter_table_stmt)
 		defer {
@@ -904,7 +984,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -916,41 +996,51 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Analyze_stmtContext:ParserRuleContext {
-		open func K_ANALYZE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ANALYZE.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
+
+	public class Analyze_stmtContext: ParserRuleContext {
+			open
+			func K_ANALYZE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ANALYZE.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func table_or_index_name() -> Table_or_index_nameContext? {
+				return getRuleContext(Table_or_index_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_analyze_stmt
 		}
-		open func table_or_index_name() -> Table_or_index_nameContext? {
-			return getRuleContext(Table_or_index_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_analyze_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterAnalyze_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterAnalyze_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitAnalyze_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitAnalyze_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitAnalyze_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitAnalyze_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitAnalyze_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitAnalyze_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func analyze_stmt() throws -> Analyze_stmtContext {
+	 open func analyze_stmt() throws -> Analyze_stmtContext {
 		var _localctx: Analyze_stmtContext = Analyze_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 10, SQLiteParser.RULE_analyze_stmt)
 		defer {
@@ -994,43 +1084,59 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Attach_stmtContext:ParserRuleContext {
-		open func K_ATTACH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ATTACH.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class Attach_stmtContext: ParserRuleContext {
+			open
+			func K_ATTACH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ATTACH.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func K_DATABASE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DATABASE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_attach_stmt
 		}
-		open func K_AS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func K_DATABASE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DATABASE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_attach_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterAttach_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterAttach_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitAttach_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitAttach_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitAttach_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitAttach_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitAttach_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitAttach_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attach_stmt() throws -> Attach_stmtContext {
+	 open func attach_stmt() throws -> Attach_stmtContext {
 		var _localctx: Attach_stmtContext = Attach_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 12, SQLiteParser.RULE_attach_stmt)
 		defer {
@@ -1066,42 +1172,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Begin_stmtContext:ParserRuleContext {
-		open func K_BEGIN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BEGIN.rawValue, 0) }
-		open func K_TRANSACTION() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TRANSACTION.rawValue, 0) }
-		open func K_DEFERRED() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DEFERRED.rawValue, 0) }
-		open func K_IMMEDIATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IMMEDIATE.rawValue, 0) }
-		open func K_EXCLUSIVE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXCLUSIVE.rawValue, 0) }
-		open func transaction_name() -> Transaction_nameContext? {
-			return getRuleContext(Transaction_nameContext.self,0)
+
+	public class Begin_stmtContext: ParserRuleContext {
+			open
+			func K_BEGIN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BEGIN.rawValue, 0)
+			}
+			open
+			func K_TRANSACTION() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TRANSACTION.rawValue, 0)
+			}
+			open
+			func K_DEFERRED() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DEFERRED.rawValue, 0)
+			}
+			open
+			func K_IMMEDIATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IMMEDIATE.rawValue, 0)
+			}
+			open
+			func K_EXCLUSIVE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXCLUSIVE.rawValue, 0)
+			}
+			open
+			func transaction_name() -> Transaction_nameContext? {
+				return getRuleContext(Transaction_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_begin_stmt
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_begin_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterBegin_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterBegin_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitBegin_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitBegin_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitBegin_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitBegin_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitBegin_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitBegin_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func begin_stmt() throws -> Begin_stmtContext {
+	 open func begin_stmt() throws -> Begin_stmtContext {
 		var _localctx: Begin_stmtContext = Begin_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 14, SQLiteParser.RULE_begin_stmt)
 		var _la: Int = 0
@@ -1175,40 +1302,55 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Commit_stmtContext:ParserRuleContext {
-		open func K_COMMIT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_COMMIT.rawValue, 0) }
-		open func K_END() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_END.rawValue, 0) }
-		open func K_TRANSACTION() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TRANSACTION.rawValue, 0) }
-		open func transaction_name() -> Transaction_nameContext? {
-			return getRuleContext(Transaction_nameContext.self,0)
+
+	public class Commit_stmtContext: ParserRuleContext {
+			open
+			func K_COMMIT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_COMMIT.rawValue, 0)
+			}
+			open
+			func K_END() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_END.rawValue, 0)
+			}
+			open
+			func K_TRANSACTION() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TRANSACTION.rawValue, 0)
+			}
+			open
+			func transaction_name() -> Transaction_nameContext? {
+				return getRuleContext(Transaction_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_commit_stmt
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_commit_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCommit_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCommit_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCommit_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCommit_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCommit_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCommit_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCommit_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCommit_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func commit_stmt() throws -> Commit_stmtContext {
+	 open func commit_stmt() throws -> Commit_stmtContext {
 		var _localctx: Commit_stmtContext = Commit_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 16, SQLiteParser.RULE_commit_stmt)
 		var _la: Int = 0
@@ -1263,80 +1405,127 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Compound_select_stmtContext:ParserRuleContext {
-		open func select_core() -> Array<Select_coreContext> {
-			return getRuleContexts(Select_coreContext.self)
+
+	public class Compound_select_stmtContext: ParserRuleContext {
+			open
+			func select_core() -> [Select_coreContext] {
+				return getRuleContexts(Select_coreContext.self)
+			}
+			open
+			func select_core(_ i: Int) -> Select_coreContext? {
+				return getRuleContext(Select_coreContext.self, i)
+			}
+			open
+			func K_WITH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0)
+			}
+			open
+			func common_table_expression() -> [Common_table_expressionContext] {
+				return getRuleContexts(Common_table_expressionContext.self)
+			}
+			open
+			func common_table_expression(_ i: Int) -> Common_table_expressionContext? {
+				return getRuleContext(Common_table_expressionContext.self, i)
+			}
+			open
+			func K_ORDER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func ordering_term() -> [Ordering_termContext] {
+				return getRuleContexts(Ordering_termContext.self)
+			}
+			open
+			func ordering_term(_ i: Int) -> Ordering_termContext? {
+				return getRuleContext(Ordering_termContext.self, i)
+			}
+			open
+			func K_LIMIT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func K_UNION() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_UNION.rawValue)
+			}
+			open
+			func K_UNION(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UNION.rawValue, i)
+			}
+			open
+			func K_INTERSECT() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_INTERSECT.rawValue)
+			}
+			open
+			func K_INTERSECT(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INTERSECT.rawValue, i)
+			}
+			open
+			func K_EXCEPT() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_EXCEPT.rawValue)
+			}
+			open
+			func K_EXCEPT(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXCEPT.rawValue, i)
+			}
+			open
+			func K_RECURSIVE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0)
+			}
+			open
+			func K_OFFSET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0)
+			}
+			open
+			func K_ALL() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_ALL.rawValue)
+			}
+			open
+			func K_ALL(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ALL.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_compound_select_stmt
 		}
-		open func select_core(_ i: Int) -> Select_coreContext? {
-			return getRuleContext(Select_coreContext.self,i)
-		}
-		open func K_WITH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0) }
-		open func common_table_expression() -> Array<Common_table_expressionContext> {
-			return getRuleContexts(Common_table_expressionContext.self)
-		}
-		open func common_table_expression(_ i: Int) -> Common_table_expressionContext? {
-			return getRuleContext(Common_table_expressionContext.self,i)
-		}
-		open func K_ORDER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func ordering_term() -> Array<Ordering_termContext> {
-			return getRuleContexts(Ordering_termContext.self)
-		}
-		open func ordering_term(_ i: Int) -> Ordering_termContext? {
-			return getRuleContext(Ordering_termContext.self,i)
-		}
-		open func K_LIMIT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func K_UNION() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_UNION.rawValue) }
-		open func K_UNION(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_UNION.rawValue, i)
-		}
-		open func K_INTERSECT() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_INTERSECT.rawValue) }
-		open func K_INTERSECT(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_INTERSECT.rawValue, i)
-		}
-		open func K_EXCEPT() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_EXCEPT.rawValue) }
-		open func K_EXCEPT(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_EXCEPT.rawValue, i)
-		}
-		open func K_RECURSIVE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0) }
-		open func K_OFFSET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0) }
-		open func K_ALL() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_ALL.rawValue) }
-		open func K_ALL(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_ALL.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_compound_select_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCompound_select_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCompound_select_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCompound_select_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCompound_select_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCompound_select_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCompound_select_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCompound_select_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCompound_select_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compound_select_stmt() throws -> Compound_select_stmtContext {
+	 open func compound_select_stmt() throws -> Compound_select_stmtContext {
 		var _localctx: Compound_select_stmtContext = Compound_select_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 18, SQLiteParser.RULE_compound_select_stmt)
 		var _la: Int = 0
@@ -1428,7 +1617,7 @@ open class SQLiteParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(314)
 		 		try select_core()
@@ -1531,60 +1720,95 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Create_index_stmtContext:ParserRuleContext {
-		open func K_CREATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0) }
-		open func K_INDEX() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INDEX.rawValue, 0) }
-		open func index_name() -> Index_nameContext? {
-			return getRuleContext(Index_nameContext.self,0)
+
+	public class Create_index_stmtContext: ParserRuleContext {
+			open
+			func K_CREATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0)
+			}
+			open
+			func K_INDEX() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INDEX.rawValue, 0)
+			}
+			open
+			func index_name() -> Index_nameContext? {
+				return getRuleContext(Index_nameContext.self, 0)
+			}
+			open
+			func K_ON() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func indexed_column() -> [Indexed_columnContext] {
+				return getRuleContexts(Indexed_columnContext.self)
+			}
+			open
+			func indexed_column(_ i: Int) -> Indexed_columnContext? {
+				return getRuleContext(Indexed_columnContext.self, i)
+			}
+			open
+			func K_UNIQUE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UNIQUE.rawValue, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_create_index_stmt
 		}
-		open func K_ON() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0) }
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
-		}
-		open func indexed_column() -> Array<Indexed_columnContext> {
-			return getRuleContexts(Indexed_columnContext.self)
-		}
-		open func indexed_column(_ i: Int) -> Indexed_columnContext? {
-			return getRuleContext(Indexed_columnContext.self,i)
-		}
-		open func K_UNIQUE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UNIQUE.rawValue, 0) }
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func K_WHERE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_create_index_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCreate_index_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCreate_index_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCreate_index_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCreate_index_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCreate_index_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCreate_index_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCreate_index_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCreate_index_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func create_index_stmt() throws -> Create_index_stmtContext {
+	 open func create_index_stmt() throws -> Create_index_stmtContext {
 		var _localctx: Create_index_stmtContext = Create_index_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 20, SQLiteParser.RULE_create_index_stmt)
 		var _la: Int = 0
@@ -1691,65 +1915,107 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Create_table_stmtContext:ParserRuleContext {
-		open func K_CREATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0) }
-		open func K_TABLE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0) }
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Create_table_stmtContext: ParserRuleContext {
+			open
+			func K_CREATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0)
+			}
+			open
+			func K_TABLE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func column_def() -> [Column_defContext] {
+				return getRuleContexts(Column_defContext.self)
+			}
+			open
+			func column_def(_ i: Int) -> Column_defContext? {
+				return getRuleContext(Column_defContext.self, i)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func select_stmt() -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func K_TEMP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TEMP.rawValue, 0)
+			}
+			open
+			func K_TEMPORARY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TEMPORARY.rawValue, 0)
+			}
+			open
+			func table_constraint() -> [Table_constraintContext] {
+				return getRuleContexts(Table_constraintContext.self)
+			}
+			open
+			func table_constraint(_ i: Int) -> Table_constraintContext? {
+				return getRuleContext(Table_constraintContext.self, i)
+			}
+			open
+			func K_WITHOUT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WITHOUT.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_create_table_stmt
 		}
-		open func column_def() -> Array<Column_defContext> {
-			return getRuleContexts(Column_defContext.self)
-		}
-		open func column_def(_ i: Int) -> Column_defContext? {
-			return getRuleContext(Column_defContext.self,i)
-		}
-		open func K_AS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0) }
-		open func select_stmt() -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,0)
-		}
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func K_TEMP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TEMP.rawValue, 0) }
-		open func K_TEMPORARY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TEMPORARY.rawValue, 0) }
-		open func table_constraint() -> Array<Table_constraintContext> {
-			return getRuleContexts(Table_constraintContext.self)
-		}
-		open func table_constraint(_ i: Int) -> Table_constraintContext? {
-			return getRuleContext(Table_constraintContext.self,i)
-		}
-		open func K_WITHOUT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WITHOUT.rawValue, 0) }
-		open func IDENTIFIER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_create_table_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCreate_table_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCreate_table_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCreate_table_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCreate_table_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCreate_table_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCreate_table_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCreate_table_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCreate_table_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func create_table_stmt() throws -> Create_table_stmtContext {
+	 open func create_table_stmt() throws -> Create_table_stmtContext {
 		var _localctx: Create_table_stmtContext = Create_table_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 22, SQLiteParser.RULE_create_table_stmt)
 		var _la: Int = 0
@@ -1885,7 +2151,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1897,103 +2163,187 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Create_trigger_stmtContext:ParserRuleContext {
-		open func K_CREATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0) }
-		open func K_TRIGGER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TRIGGER.rawValue, 0) }
-		open func trigger_name() -> Trigger_nameContext? {
-			return getRuleContext(Trigger_nameContext.self,0)
+
+	public class Create_trigger_stmtContext: ParserRuleContext {
+			open
+			func K_CREATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0)
+			}
+			open
+			func K_TRIGGER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TRIGGER.rawValue, 0)
+			}
+			open
+			func trigger_name() -> Trigger_nameContext? {
+				return getRuleContext(Trigger_nameContext.self, 0)
+			}
+			open
+			func K_ON() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func K_BEGIN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BEGIN.rawValue, 0)
+			}
+			open
+			func K_END() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_END.rawValue, 0)
+			}
+			open
+			func K_DELETE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, 0)
+			}
+			open
+			func K_INSERT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INSERT.rawValue, 0)
+			}
+			open
+			func K_UPDATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func database_name() -> [Database_nameContext] {
+				return getRuleContexts(Database_nameContext.self)
+			}
+			open
+			func database_name(_ i: Int) -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, i)
+			}
+			open
+			func K_BEFORE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BEFORE.rawValue, 0)
+			}
+			open
+			func K_AFTER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AFTER.rawValue, 0)
+			}
+			open
+			func K_INSTEAD() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INSTEAD.rawValue, 0)
+			}
+			open
+			func K_OF() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_OF.rawValue)
+			}
+			open
+			func K_OF(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OF.rawValue, i)
+			}
+			open
+			func K_FOR() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FOR.rawValue, 0)
+			}
+			open
+			func K_EACH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EACH.rawValue, 0)
+			}
+			open
+			func K_ROW() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ROW.rawValue, 0)
+			}
+			open
+			func K_WHEN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHEN.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func K_TEMP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TEMP.rawValue, 0)
+			}
+			open
+			func K_TEMPORARY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TEMPORARY.rawValue, 0)
+			}
+			open
+			func column_name() -> [Column_nameContext] {
+				return getRuleContexts(Column_nameContext.self)
+			}
+			open
+			func column_name(_ i: Int) -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, i)
+			}
+			open
+			func update_stmt() -> [Update_stmtContext] {
+				return getRuleContexts(Update_stmtContext.self)
+			}
+			open
+			func update_stmt(_ i: Int) -> Update_stmtContext? {
+				return getRuleContext(Update_stmtContext.self, i)
+			}
+			open
+			func insert_stmt() -> [Insert_stmtContext] {
+				return getRuleContexts(Insert_stmtContext.self)
+			}
+			open
+			func insert_stmt(_ i: Int) -> Insert_stmtContext? {
+				return getRuleContext(Insert_stmtContext.self, i)
+			}
+			open
+			func delete_stmt() -> [Delete_stmtContext] {
+				return getRuleContexts(Delete_stmtContext.self)
+			}
+			open
+			func delete_stmt(_ i: Int) -> Delete_stmtContext? {
+				return getRuleContext(Delete_stmtContext.self, i)
+			}
+			open
+			func select_stmt() -> [Select_stmtContext] {
+				return getRuleContexts(Select_stmtContext.self)
+			}
+			open
+			func select_stmt(_ i: Int) -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_create_trigger_stmt
 		}
-		open func K_ON() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0) }
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
-		}
-		open func K_BEGIN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BEGIN.rawValue, 0) }
-		open func K_END() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_END.rawValue, 0) }
-		open func K_DELETE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, 0) }
-		open func K_INSERT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INSERT.rawValue, 0) }
-		open func K_UPDATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, 0) }
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func database_name() -> Array<Database_nameContext> {
-			return getRuleContexts(Database_nameContext.self)
-		}
-		open func database_name(_ i: Int) -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,i)
-		}
-		open func K_BEFORE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BEFORE.rawValue, 0) }
-		open func K_AFTER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AFTER.rawValue, 0) }
-		open func K_INSTEAD() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INSTEAD.rawValue, 0) }
-		open func K_OF() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_OF.rawValue) }
-		open func K_OF(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_OF.rawValue, i)
-		}
-		open func K_FOR() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FOR.rawValue, 0) }
-		open func K_EACH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EACH.rawValue, 0) }
-		open func K_ROW() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ROW.rawValue, 0) }
-		open func K_WHEN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHEN.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func K_TEMP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TEMP.rawValue, 0) }
-		open func K_TEMPORARY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TEMPORARY.rawValue, 0) }
-		open func column_name() -> Array<Column_nameContext> {
-			return getRuleContexts(Column_nameContext.self)
-		}
-		open func column_name(_ i: Int) -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,i)
-		}
-		open func update_stmt() -> Array<Update_stmtContext> {
-			return getRuleContexts(Update_stmtContext.self)
-		}
-		open func update_stmt(_ i: Int) -> Update_stmtContext? {
-			return getRuleContext(Update_stmtContext.self,i)
-		}
-		open func insert_stmt() -> Array<Insert_stmtContext> {
-			return getRuleContexts(Insert_stmtContext.self)
-		}
-		open func insert_stmt(_ i: Int) -> Insert_stmtContext? {
-			return getRuleContext(Insert_stmtContext.self,i)
-		}
-		open func delete_stmt() -> Array<Delete_stmtContext> {
-			return getRuleContexts(Delete_stmtContext.self)
-		}
-		open func delete_stmt(_ i: Int) -> Delete_stmtContext? {
-			return getRuleContext(Delete_stmtContext.self,i)
-		}
-		open func select_stmt() -> Array<Select_stmtContext> {
-			return getRuleContexts(Select_stmtContext.self)
-		}
-		open func select_stmt(_ i: Int) -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_create_trigger_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCreate_trigger_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCreate_trigger_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCreate_trigger_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCreate_trigger_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCreate_trigger_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCreate_trigger_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCreate_trigger_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCreate_trigger_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func create_trigger_stmt() throws -> Create_trigger_stmtContext {
+	 open func create_trigger_stmt() throws -> Create_trigger_stmtContext {
 		var _localctx: Create_trigger_stmtContext = Create_trigger_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 24, SQLiteParser.RULE_create_trigger_stmt)
 		var _la: Int = 0
@@ -2141,7 +2491,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(450)
 		 	try match(SQLiteParser.Tokens.K_ON.rawValue)
@@ -2250,51 +2600,83 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Create_view_stmtContext:ParserRuleContext {
-		open func K_CREATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0) }
-		open func K_VIEW() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VIEW.rawValue, 0) }
-		open func view_name() -> View_nameContext? {
-			return getRuleContext(View_nameContext.self,0)
+
+	public class Create_view_stmtContext: ParserRuleContext {
+			open
+			func K_CREATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0)
+			}
+			open
+			func K_VIEW() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VIEW.rawValue, 0)
+			}
+			open
+			func view_name() -> View_nameContext? {
+				return getRuleContext(View_nameContext.self, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func select_stmt() -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func K_TEMP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TEMP.rawValue, 0)
+			}
+			open
+			func K_TEMPORARY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TEMPORARY.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_create_view_stmt
 		}
-		open func K_AS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0) }
-		open func select_stmt() -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,0)
-		}
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func K_TEMP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TEMP.rawValue, 0) }
-		open func K_TEMPORARY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TEMPORARY.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_create_view_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCreate_view_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCreate_view_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCreate_view_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCreate_view_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCreate_view_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCreate_view_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCreate_view_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCreate_view_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func create_view_stmt() throws -> Create_view_stmtContext {
+	 open func create_view_stmt() throws -> Create_view_stmtContext {
 		var _localctx: Create_view_stmtContext = Create_view_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 26, SQLiteParser.RULE_create_view_stmt)
 		var _la: Int = 0
@@ -2373,56 +2755,87 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Create_virtual_table_stmtContext:ParserRuleContext {
-		open func K_CREATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0) }
-		open func K_VIRTUAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VIRTUAL.rawValue, 0) }
-		open func K_TABLE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0) }
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Create_virtual_table_stmtContext: ParserRuleContext {
+			open
+			func K_CREATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0)
+			}
+			open
+			func K_VIRTUAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VIRTUAL.rawValue, 0)
+			}
+			open
+			func K_TABLE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func K_USING() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_USING.rawValue, 0)
+			}
+			open
+			func module_name() -> Module_nameContext? {
+				return getRuleContext(Module_nameContext.self, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func module_argument() -> [Module_argumentContext] {
+				return getRuleContexts(Module_argumentContext.self)
+			}
+			open
+			func module_argument(_ i: Int) -> Module_argumentContext? {
+				return getRuleContext(Module_argumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_create_virtual_table_stmt
 		}
-		open func K_USING() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_USING.rawValue, 0) }
-		open func module_name() -> Module_nameContext? {
-			return getRuleContext(Module_nameContext.self,0)
-		}
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func module_argument() -> Array<Module_argumentContext> {
-			return getRuleContexts(Module_argumentContext.self)
-		}
-		open func module_argument(_ i: Int) -> Module_argumentContext? {
-			return getRuleContext(Module_argumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_create_virtual_table_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCreate_virtual_table_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCreate_virtual_table_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCreate_virtual_table_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCreate_virtual_table_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCreate_virtual_table_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCreate_virtual_table_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCreate_virtual_table_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCreate_virtual_table_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func create_virtual_table_stmt() throws -> Create_virtual_table_stmtContext {
+	 open func create_virtual_table_stmt() throws -> Create_virtual_table_stmtContext {
 		var _localctx: Create_virtual_table_stmtContext = Create_virtual_table_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 28, SQLiteParser.RULE_create_virtual_table_stmt)
 		var _la: Int = 0
@@ -2514,46 +2927,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Delete_stmtContext:ParserRuleContext {
-		open func K_DELETE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, 0) }
-		open func K_FROM() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0) }
-		open func qualified_table_name() -> Qualified_table_nameContext? {
-			return getRuleContext(Qualified_table_nameContext.self,0)
+
+	public class Delete_stmtContext: ParserRuleContext {
+			open
+			func K_DELETE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, 0)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func qualified_table_name() -> Qualified_table_nameContext? {
+				return getRuleContext(Qualified_table_nameContext.self, 0)
+			}
+			open
+			func with_clause() -> With_clauseContext? {
+				return getRuleContext(With_clauseContext.self, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_delete_stmt
 		}
-		open func with_clause() -> With_clauseContext? {
-			return getRuleContext(With_clauseContext.self,0)
-		}
-		open func K_WHERE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_delete_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterDelete_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterDelete_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitDelete_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitDelete_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitDelete_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitDelete_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitDelete_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitDelete_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delete_stmt() throws -> Delete_stmtContext {
+	 open func delete_stmt() throws -> Delete_stmtContext {
 		var _localctx: Delete_stmtContext = Delete_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 30, SQLiteParser.RULE_delete_stmt)
 		var _la: Int = 0
@@ -2606,59 +3036,91 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Delete_stmt_limitedContext:ParserRuleContext {
-		open func K_DELETE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, 0) }
-		open func K_FROM() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0) }
-		open func qualified_table_name() -> Qualified_table_nameContext? {
-			return getRuleContext(Qualified_table_nameContext.self,0)
+
+	public class Delete_stmt_limitedContext: ParserRuleContext {
+			open
+			func K_DELETE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, 0)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func qualified_table_name() -> Qualified_table_nameContext? {
+				return getRuleContext(Qualified_table_nameContext.self, 0)
+			}
+			open
+			func with_clause() -> With_clauseContext? {
+				return getRuleContext(With_clauseContext.self, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func K_LIMIT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0)
+			}
+			open
+			func K_ORDER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func ordering_term() -> [Ordering_termContext] {
+				return getRuleContexts(Ordering_termContext.self)
+			}
+			open
+			func ordering_term(_ i: Int) -> Ordering_termContext? {
+				return getRuleContext(Ordering_termContext.self, i)
+			}
+			open
+			func K_OFFSET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_delete_stmt_limited
 		}
-		open func with_clause() -> With_clauseContext? {
-			return getRuleContext(With_clauseContext.self,0)
-		}
-		open func K_WHERE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func K_LIMIT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0) }
-		open func K_ORDER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func ordering_term() -> Array<Ordering_termContext> {
-			return getRuleContexts(Ordering_termContext.self)
-		}
-		open func ordering_term(_ i: Int) -> Ordering_termContext? {
-			return getRuleContext(Ordering_termContext.self,i)
-		}
-		open func K_OFFSET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_delete_stmt_limited }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterDelete_stmt_limited(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterDelete_stmt_limited(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitDelete_stmt_limited(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitDelete_stmt_limited(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitDelete_stmt_limited(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitDelete_stmt_limited(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitDelete_stmt_limited(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitDelete_stmt_limited(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delete_stmt_limited() throws -> Delete_stmt_limitedContext {
+	 open func delete_stmt_limited() throws -> Delete_stmt_limitedContext {
 		var _localctx: Delete_stmt_limitedContext = Delete_stmt_limitedContext(_ctx, getState())
 		try enterRule(_localctx, 32, SQLiteParser.RULE_delete_stmt_limited)
 		var _la: Int = 0
@@ -2789,39 +3251,51 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Detach_stmtContext:ParserRuleContext {
-		open func K_DETACH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DETACH.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
+
+	public class Detach_stmtContext: ParserRuleContext {
+			open
+			func K_DETACH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DETACH.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func K_DATABASE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DATABASE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_detach_stmt
 		}
-		open func K_DATABASE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DATABASE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_detach_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterDetach_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterDetach_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitDetach_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitDetach_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitDetach_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitDetach_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitDetach_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitDetach_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func detach_stmt() throws -> Detach_stmtContext {
+	 open func detach_stmt() throws -> Detach_stmtContext {
 		var _localctx: Detach_stmtContext = Detach_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 34, SQLiteParser.RULE_detach_stmt)
 		defer {
@@ -2853,44 +3327,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Drop_index_stmtContext:ParserRuleContext {
-		open func K_DROP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0) }
-		open func K_INDEX() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INDEX.rawValue, 0) }
-		open func index_name() -> Index_nameContext? {
-			return getRuleContext(Index_nameContext.self,0)
+
+	public class Drop_index_stmtContext: ParserRuleContext {
+			open
+			func K_DROP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0)
+			}
+			open
+			func K_INDEX() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INDEX.rawValue, 0)
+			}
+			open
+			func index_name() -> Index_nameContext? {
+				return getRuleContext(Index_nameContext.self, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_drop_index_stmt
 		}
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_drop_index_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterDrop_index_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterDrop_index_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitDrop_index_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitDrop_index_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitDrop_index_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitDrop_index_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitDrop_index_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitDrop_index_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func drop_index_stmt() throws -> Drop_index_stmtContext {
+	 open func drop_index_stmt() throws -> Drop_index_stmtContext {
 		var _localctx: Drop_index_stmtContext = Drop_index_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 36, SQLiteParser.RULE_drop_index_stmt)
 		defer {
@@ -2938,44 +3431,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Drop_table_stmtContext:ParserRuleContext {
-		open func K_DROP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0) }
-		open func K_TABLE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0) }
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Drop_table_stmtContext: ParserRuleContext {
+			open
+			func K_DROP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0)
+			}
+			open
+			func K_TABLE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_drop_table_stmt
 		}
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_drop_table_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterDrop_table_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterDrop_table_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitDrop_table_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitDrop_table_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitDrop_table_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitDrop_table_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitDrop_table_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitDrop_table_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func drop_table_stmt() throws -> Drop_table_stmtContext {
+	 open func drop_table_stmt() throws -> Drop_table_stmtContext {
 		var _localctx: Drop_table_stmtContext = Drop_table_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 38, SQLiteParser.RULE_drop_table_stmt)
 		defer {
@@ -3023,44 +3535,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Drop_trigger_stmtContext:ParserRuleContext {
-		open func K_DROP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0) }
-		open func K_TRIGGER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TRIGGER.rawValue, 0) }
-		open func trigger_name() -> Trigger_nameContext? {
-			return getRuleContext(Trigger_nameContext.self,0)
+
+	public class Drop_trigger_stmtContext: ParserRuleContext {
+			open
+			func K_DROP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0)
+			}
+			open
+			func K_TRIGGER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TRIGGER.rawValue, 0)
+			}
+			open
+			func trigger_name() -> Trigger_nameContext? {
+				return getRuleContext(Trigger_nameContext.self, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_drop_trigger_stmt
 		}
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_drop_trigger_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterDrop_trigger_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterDrop_trigger_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitDrop_trigger_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitDrop_trigger_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitDrop_trigger_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitDrop_trigger_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitDrop_trigger_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitDrop_trigger_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func drop_trigger_stmt() throws -> Drop_trigger_stmtContext {
+	 open func drop_trigger_stmt() throws -> Drop_trigger_stmtContext {
 		var _localctx: Drop_trigger_stmtContext = Drop_trigger_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 40, SQLiteParser.RULE_drop_trigger_stmt)
 		defer {
@@ -3108,44 +3639,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Drop_view_stmtContext:ParserRuleContext {
-		open func K_DROP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0) }
-		open func K_VIEW() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VIEW.rawValue, 0) }
-		open func view_name() -> View_nameContext? {
-			return getRuleContext(View_nameContext.self,0)
+
+	public class Drop_view_stmtContext: ParserRuleContext {
+			open
+			func K_DROP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0)
+			}
+			open
+			func K_VIEW() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VIEW.rawValue, 0)
+			}
+			open
+			func view_name() -> View_nameContext? {
+				return getRuleContext(View_nameContext.self, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_drop_view_stmt
 		}
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_drop_view_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterDrop_view_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterDrop_view_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitDrop_view_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitDrop_view_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitDrop_view_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitDrop_view_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitDrop_view_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitDrop_view_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func drop_view_stmt() throws -> Drop_view_stmtContext {
+	 open func drop_view_stmt() throws -> Drop_view_stmtContext {
 		var _localctx: Drop_view_stmtContext = Drop_view_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 42, SQLiteParser.RULE_drop_view_stmt)
 		defer {
@@ -3193,70 +3743,103 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Factored_select_stmtContext:ParserRuleContext {
-		open func select_core() -> Array<Select_coreContext> {
-			return getRuleContexts(Select_coreContext.self)
+
+	public class Factored_select_stmtContext: ParserRuleContext {
+			open
+			func select_core() -> [Select_coreContext] {
+				return getRuleContexts(Select_coreContext.self)
+			}
+			open
+			func select_core(_ i: Int) -> Select_coreContext? {
+				return getRuleContext(Select_coreContext.self, i)
+			}
+			open
+			func K_WITH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0)
+			}
+			open
+			func common_table_expression() -> [Common_table_expressionContext] {
+				return getRuleContexts(Common_table_expressionContext.self)
+			}
+			open
+			func common_table_expression(_ i: Int) -> Common_table_expressionContext? {
+				return getRuleContext(Common_table_expressionContext.self, i)
+			}
+			open
+			func compound_operator() -> [Compound_operatorContext] {
+				return getRuleContexts(Compound_operatorContext.self)
+			}
+			open
+			func compound_operator(_ i: Int) -> Compound_operatorContext? {
+				return getRuleContext(Compound_operatorContext.self, i)
+			}
+			open
+			func K_ORDER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func ordering_term() -> [Ordering_termContext] {
+				return getRuleContexts(Ordering_termContext.self)
+			}
+			open
+			func ordering_term(_ i: Int) -> Ordering_termContext? {
+				return getRuleContext(Ordering_termContext.self, i)
+			}
+			open
+			func K_LIMIT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func K_RECURSIVE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0)
+			}
+			open
+			func K_OFFSET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_factored_select_stmt
 		}
-		open func select_core(_ i: Int) -> Select_coreContext? {
-			return getRuleContext(Select_coreContext.self,i)
-		}
-		open func K_WITH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0) }
-		open func common_table_expression() -> Array<Common_table_expressionContext> {
-			return getRuleContexts(Common_table_expressionContext.self)
-		}
-		open func common_table_expression(_ i: Int) -> Common_table_expressionContext? {
-			return getRuleContext(Common_table_expressionContext.self,i)
-		}
-		open func compound_operator() -> Array<Compound_operatorContext> {
-			return getRuleContexts(Compound_operatorContext.self)
-		}
-		open func compound_operator(_ i: Int) -> Compound_operatorContext? {
-			return getRuleContext(Compound_operatorContext.self,i)
-		}
-		open func K_ORDER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func ordering_term() -> Array<Ordering_termContext> {
-			return getRuleContexts(Ordering_termContext.self)
-		}
-		open func ordering_term(_ i: Int) -> Ordering_termContext? {
-			return getRuleContext(Ordering_termContext.self,i)
-		}
-		open func K_LIMIT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func K_RECURSIVE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0) }
-		open func K_OFFSET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_factored_select_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterFactored_select_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterFactored_select_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitFactored_select_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitFactored_select_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitFactored_select_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitFactored_select_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitFactored_select_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitFactored_select_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func factored_select_stmt() throws -> Factored_select_stmtContext {
+	 open func factored_select_stmt() throws -> Factored_select_stmtContext {
 		var _localctx: Factored_select_stmtContext = Factored_select_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 44, SQLiteParser.RULE_factored_select_stmt)
 		var _la: Int = 0
@@ -3417,68 +4000,111 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Insert_stmtContext:ParserRuleContext {
-		open func K_INTO() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INTO.rawValue, 0) }
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Insert_stmtContext: ParserRuleContext {
+			open
+			func K_INTO() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INTO.rawValue, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func K_INSERT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INSERT.rawValue, 0)
+			}
+			open
+			func K_REPLACE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0)
+			}
+			open
+			func K_OR() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0)
+			}
+			open
+			func K_ROLLBACK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0)
+			}
+			open
+			func K_ABORT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0)
+			}
+			open
+			func K_FAIL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0)
+			}
+			open
+			func K_IGNORE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0)
+			}
+			open
+			func K_VALUES() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VALUES.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func select_stmt() -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, 0)
+			}
+			open
+			func K_DEFAULT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DEFAULT.rawValue, 0)
+			}
+			open
+			func with_clause() -> With_clauseContext? {
+				return getRuleContext(With_clauseContext.self, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func column_name() -> [Column_nameContext] {
+				return getRuleContexts(Column_nameContext.self)
+			}
+			open
+			func column_name(_ i: Int) -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_insert_stmt
 		}
-		open func K_INSERT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INSERT.rawValue, 0) }
-		open func K_REPLACE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0) }
-		open func K_OR() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0) }
-		open func K_ROLLBACK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0) }
-		open func K_ABORT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0) }
-		open func K_FAIL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0) }
-		open func K_IGNORE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0) }
-		open func K_VALUES() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VALUES.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func select_stmt() -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,0)
-		}
-		open func K_DEFAULT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DEFAULT.rawValue, 0) }
-		open func with_clause() -> With_clauseContext? {
-			return getRuleContext(With_clauseContext.self,0)
-		}
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func column_name() -> Array<Column_nameContext> {
-			return getRuleContexts(Column_nameContext.self)
-		}
-		open func column_name(_ i: Int) -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_insert_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterInsert_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterInsert_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitInsert_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitInsert_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitInsert_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitInsert_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitInsert_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitInsert_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func insert_stmt() throws -> Insert_stmtContext {
+	 open func insert_stmt() throws -> Insert_stmtContext {
 		var _localctx: Insert_stmtContext = Insert_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 46, SQLiteParser.RULE_insert_stmt)
 		var _la: Int = 0
@@ -3707,44 +4333,55 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Pragma_stmtContext:ParserRuleContext {
-		open func K_PRAGMA() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_PRAGMA.rawValue, 0) }
-		open func pragma_name() -> Pragma_nameContext? {
-			return getRuleContext(Pragma_nameContext.self,0)
+
+	public class Pragma_stmtContext: ParserRuleContext {
+			open
+			func K_PRAGMA() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_PRAGMA.rawValue, 0)
+			}
+			open
+			func pragma_name() -> Pragma_nameContext? {
+				return getRuleContext(Pragma_nameContext.self, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func pragma_value() -> Pragma_valueContext? {
+				return getRuleContext(Pragma_valueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_pragma_stmt
 		}
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func pragma_value() -> Pragma_valueContext? {
-			return getRuleContext(Pragma_valueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_pragma_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterPragma_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterPragma_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitPragma_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitPragma_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitPragma_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitPragma_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitPragma_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitPragma_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pragma_stmt() throws -> Pragma_stmtContext {
+	 open func pragma_stmt() throws -> Pragma_stmtContext {
 		var _localctx: Pragma_stmtContext = Pragma_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 48, SQLiteParser.RULE_pragma_stmt)
 		defer {
@@ -3828,47 +4465,59 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Reindex_stmtContext:ParserRuleContext {
-		open func K_REINDEX() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REINDEX.rawValue, 0) }
-		open func collation_name() -> Collation_nameContext? {
-			return getRuleContext(Collation_nameContext.self,0)
+
+	public class Reindex_stmtContext: ParserRuleContext {
+			open
+			func K_REINDEX() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REINDEX.rawValue, 0)
+			}
+			open
+			func collation_name() -> Collation_nameContext? {
+				return getRuleContext(Collation_nameContext.self, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func index_name() -> Index_nameContext? {
+				return getRuleContext(Index_nameContext.self, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_reindex_stmt
 		}
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
-		}
-		open func index_name() -> Index_nameContext? {
-			return getRuleContext(Index_nameContext.self,0)
-		}
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_reindex_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterReindex_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterReindex_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitReindex_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitReindex_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitReindex_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitReindex_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitReindex_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitReindex_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reindex_stmt() throws -> Reindex_stmtContext {
+	 open func reindex_stmt() throws -> Reindex_stmtContext {
 		var _localctx: Reindex_stmtContext = Reindex_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 50, SQLiteParser.RULE_reindex_stmt)
 		defer {
@@ -3928,39 +4577,51 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Release_stmtContext:ParserRuleContext {
-		open func K_RELEASE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RELEASE.rawValue, 0) }
-		open func savepoint_name() -> Savepoint_nameContext? {
-			return getRuleContext(Savepoint_nameContext.self,0)
+
+	public class Release_stmtContext: ParserRuleContext {
+			open
+			func K_RELEASE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RELEASE.rawValue, 0)
+			}
+			open
+			func savepoint_name() -> Savepoint_nameContext? {
+				return getRuleContext(Savepoint_nameContext.self, 0)
+			}
+			open
+			func K_SAVEPOINT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SAVEPOINT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_release_stmt
 		}
-		open func K_SAVEPOINT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SAVEPOINT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_release_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterRelease_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterRelease_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitRelease_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitRelease_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitRelease_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitRelease_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitRelease_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitRelease_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func release_stmt() throws -> Release_stmtContext {
+	 open func release_stmt() throws -> Release_stmtContext {
 		var _localctx: Release_stmtContext = Release_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 52, SQLiteParser.RULE_release_stmt)
 		defer {
@@ -3992,44 +4653,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Rollback_stmtContext:ParserRuleContext {
-		open func K_ROLLBACK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0) }
-		open func K_TRANSACTION() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TRANSACTION.rawValue, 0) }
-		open func K_TO() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TO.rawValue, 0) }
-		open func savepoint_name() -> Savepoint_nameContext? {
-			return getRuleContext(Savepoint_nameContext.self,0)
+
+	public class Rollback_stmtContext: ParserRuleContext {
+			open
+			func K_ROLLBACK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0)
+			}
+			open
+			func K_TRANSACTION() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TRANSACTION.rawValue, 0)
+			}
+			open
+			func K_TO() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TO.rawValue, 0)
+			}
+			open
+			func savepoint_name() -> Savepoint_nameContext? {
+				return getRuleContext(Savepoint_nameContext.self, 0)
+			}
+			open
+			func transaction_name() -> Transaction_nameContext? {
+				return getRuleContext(Transaction_nameContext.self, 0)
+			}
+			open
+			func K_SAVEPOINT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SAVEPOINT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_rollback_stmt
 		}
-		open func transaction_name() -> Transaction_nameContext? {
-			return getRuleContext(Transaction_nameContext.self,0)
-		}
-		open func K_SAVEPOINT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SAVEPOINT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_rollback_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterRollback_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterRollback_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitRollback_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitRollback_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitRollback_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitRollback_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitRollback_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitRollback_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rollback_stmt() throws -> Rollback_stmtContext {
+	 open func rollback_stmt() throws -> Rollback_stmtContext {
 		var _localctx: Rollback_stmtContext = Rollback_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 54, SQLiteParser.RULE_rollback_stmt)
 		var _la: Int = 0
@@ -4098,38 +4778,47 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Savepoint_stmtContext:ParserRuleContext {
-		open func K_SAVEPOINT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SAVEPOINT.rawValue, 0) }
-		open func savepoint_name() -> Savepoint_nameContext? {
-			return getRuleContext(Savepoint_nameContext.self,0)
+
+	public class Savepoint_stmtContext: ParserRuleContext {
+			open
+			func K_SAVEPOINT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SAVEPOINT.rawValue, 0)
+			}
+			open
+			func savepoint_name() -> Savepoint_nameContext? {
+				return getRuleContext(Savepoint_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_savepoint_stmt
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_savepoint_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterSavepoint_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterSavepoint_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitSavepoint_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitSavepoint_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitSavepoint_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitSavepoint_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitSavepoint_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitSavepoint_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func savepoint_stmt() throws -> Savepoint_stmtContext {
+	 open func savepoint_stmt() throws -> Savepoint_stmtContext {
 		var _localctx: Savepoint_stmtContext = Savepoint_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 56, SQLiteParser.RULE_savepoint_stmt)
 		defer {
@@ -4151,61 +4840,91 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Simple_select_stmtContext:ParserRuleContext {
-		open func select_core() -> Select_coreContext? {
-			return getRuleContext(Select_coreContext.self,0)
+
+	public class Simple_select_stmtContext: ParserRuleContext {
+			open
+			func select_core() -> Select_coreContext? {
+				return getRuleContext(Select_coreContext.self, 0)
+			}
+			open
+			func K_WITH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0)
+			}
+			open
+			func common_table_expression() -> [Common_table_expressionContext] {
+				return getRuleContexts(Common_table_expressionContext.self)
+			}
+			open
+			func common_table_expression(_ i: Int) -> Common_table_expressionContext? {
+				return getRuleContext(Common_table_expressionContext.self, i)
+			}
+			open
+			func K_ORDER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func ordering_term() -> [Ordering_termContext] {
+				return getRuleContexts(Ordering_termContext.self)
+			}
+			open
+			func ordering_term(_ i: Int) -> Ordering_termContext? {
+				return getRuleContext(Ordering_termContext.self, i)
+			}
+			open
+			func K_LIMIT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func K_RECURSIVE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0)
+			}
+			open
+			func K_OFFSET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_simple_select_stmt
 		}
-		open func K_WITH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0) }
-		open func common_table_expression() -> Array<Common_table_expressionContext> {
-			return getRuleContexts(Common_table_expressionContext.self)
-		}
-		open func common_table_expression(_ i: Int) -> Common_table_expressionContext? {
-			return getRuleContext(Common_table_expressionContext.self,i)
-		}
-		open func K_ORDER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func ordering_term() -> Array<Ordering_termContext> {
-			return getRuleContexts(Ordering_termContext.self)
-		}
-		open func ordering_term(_ i: Int) -> Ordering_termContext? {
-			return getRuleContext(Ordering_termContext.self,i)
-		}
-		open func K_LIMIT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func K_RECURSIVE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0) }
-		open func K_OFFSET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_simple_select_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterSimple_select_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterSimple_select_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitSimple_select_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitSimple_select_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitSimple_select_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitSimple_select_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitSimple_select_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitSimple_select_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_select_stmt() throws -> Simple_select_stmtContext {
+	 open func simple_select_stmt() throws -> Simple_select_stmtContext {
 		var _localctx: Simple_select_stmtContext = Simple_select_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 58, SQLiteParser.RULE_simple_select_stmt)
 		var _la: Int = 0
@@ -4347,70 +5066,103 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Select_stmtContext:ParserRuleContext {
-		open func select_or_values() -> Array<Select_or_valuesContext> {
-			return getRuleContexts(Select_or_valuesContext.self)
+
+	public class Select_stmtContext: ParserRuleContext {
+			open
+			func select_or_values() -> [Select_or_valuesContext] {
+				return getRuleContexts(Select_or_valuesContext.self)
+			}
+			open
+			func select_or_values(_ i: Int) -> Select_or_valuesContext? {
+				return getRuleContext(Select_or_valuesContext.self, i)
+			}
+			open
+			func K_WITH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0)
+			}
+			open
+			func common_table_expression() -> [Common_table_expressionContext] {
+				return getRuleContexts(Common_table_expressionContext.self)
+			}
+			open
+			func common_table_expression(_ i: Int) -> Common_table_expressionContext? {
+				return getRuleContext(Common_table_expressionContext.self, i)
+			}
+			open
+			func compound_operator() -> [Compound_operatorContext] {
+				return getRuleContexts(Compound_operatorContext.self)
+			}
+			open
+			func compound_operator(_ i: Int) -> Compound_operatorContext? {
+				return getRuleContext(Compound_operatorContext.self, i)
+			}
+			open
+			func K_ORDER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func ordering_term() -> [Ordering_termContext] {
+				return getRuleContexts(Ordering_termContext.self)
+			}
+			open
+			func ordering_term(_ i: Int) -> Ordering_termContext? {
+				return getRuleContext(Ordering_termContext.self, i)
+			}
+			open
+			func K_LIMIT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func K_RECURSIVE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0)
+			}
+			open
+			func K_OFFSET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_select_stmt
 		}
-		open func select_or_values(_ i: Int) -> Select_or_valuesContext? {
-			return getRuleContext(Select_or_valuesContext.self,i)
-		}
-		open func K_WITH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0) }
-		open func common_table_expression() -> Array<Common_table_expressionContext> {
-			return getRuleContexts(Common_table_expressionContext.self)
-		}
-		open func common_table_expression(_ i: Int) -> Common_table_expressionContext? {
-			return getRuleContext(Common_table_expressionContext.self,i)
-		}
-		open func compound_operator() -> Array<Compound_operatorContext> {
-			return getRuleContexts(Compound_operatorContext.self)
-		}
-		open func compound_operator(_ i: Int) -> Compound_operatorContext? {
-			return getRuleContext(Compound_operatorContext.self,i)
-		}
-		open func K_ORDER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func ordering_term() -> Array<Ordering_termContext> {
-			return getRuleContexts(Ordering_termContext.self)
-		}
-		open func ordering_term(_ i: Int) -> Ordering_termContext? {
-			return getRuleContext(Ordering_termContext.self,i)
-		}
-		open func K_LIMIT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func K_RECURSIVE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0) }
-		open func K_OFFSET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_select_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterSelect_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterSelect_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitSelect_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitSelect_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitSelect_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitSelect_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitSelect_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitSelect_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func select_stmt() throws -> Select_stmtContext {
+	 open func select_stmt() throws -> Select_stmtContext {
 		var _localctx: Select_stmtContext = Select_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 60, SQLiteParser.RULE_select_stmt)
 		var _la: Int = 0
@@ -4571,64 +5323,103 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Select_or_valuesContext:ParserRuleContext {
-		open func K_SELECT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SELECT.rawValue, 0) }
-		open func result_column() -> Array<Result_columnContext> {
-			return getRuleContexts(Result_columnContext.self)
+
+	public class Select_or_valuesContext: ParserRuleContext {
+			open
+			func K_SELECT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SELECT.rawValue, 0)
+			}
+			open
+			func result_column() -> [Result_columnContext] {
+				return getRuleContexts(Result_columnContext.self)
+			}
+			open
+			func result_column(_ i: Int) -> Result_columnContext? {
+				return getRuleContext(Result_columnContext.self, i)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func K_GROUP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_GROUP.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func K_DISTINCT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DISTINCT.rawValue, 0)
+			}
+			open
+			func K_ALL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ALL.rawValue, 0)
+			}
+			open
+			func table_or_subquery() -> [Table_or_subqueryContext] {
+				return getRuleContexts(Table_or_subqueryContext.self)
+			}
+			open
+			func table_or_subquery(_ i: Int) -> Table_or_subqueryContext? {
+				return getRuleContext(Table_or_subqueryContext.self, i)
+			}
+			open
+			func join_clause() -> Join_clauseContext? {
+				return getRuleContext(Join_clauseContext.self, 0)
+			}
+			open
+			func K_HAVING() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_HAVING.rawValue, 0)
+			}
+			open
+			func K_VALUES() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VALUES.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_select_or_values
 		}
-		open func result_column(_ i: Int) -> Result_columnContext? {
-			return getRuleContext(Result_columnContext.self,i)
-		}
-		open func K_FROM() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0) }
-		open func K_WHERE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func K_GROUP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_GROUP.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func K_DISTINCT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DISTINCT.rawValue, 0) }
-		open func K_ALL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ALL.rawValue, 0) }
-		open func table_or_subquery() -> Array<Table_or_subqueryContext> {
-			return getRuleContexts(Table_or_subqueryContext.self)
-		}
-		open func table_or_subquery(_ i: Int) -> Table_or_subqueryContext? {
-			return getRuleContext(Table_or_subqueryContext.self,i)
-		}
-		open func join_clause() -> Join_clauseContext? {
-			return getRuleContext(Join_clauseContext.self,0)
-		}
-		open func K_HAVING() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_HAVING.rawValue, 0) }
-		open func K_VALUES() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VALUES.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_select_or_values }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterSelect_or_values(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterSelect_or_values(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitSelect_or_values(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitSelect_or_values(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitSelect_or_values(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitSelect_or_values(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitSelect_or_values(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitSelect_or_values(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func select_or_values() throws -> Select_or_valuesContext {
+	 open func select_or_values() throws -> Select_or_valuesContext {
 		var _localctx: Select_or_valuesContext = Select_or_valuesContext(_ctx, getState())
 		try enterRule(_localctx, 62, SQLiteParser.RULE_select_or_values)
 		var _la: Int = 0
@@ -4869,7 +5660,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4880,61 +5671,99 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Update_stmtContext:ParserRuleContext {
-		open func K_UPDATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, 0) }
-		open func qualified_table_name() -> Qualified_table_nameContext? {
-			return getRuleContext(Qualified_table_nameContext.self,0)
+
+	public class Update_stmtContext: ParserRuleContext {
+			open
+			func K_UPDATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, 0)
+			}
+			open
+			func qualified_table_name() -> Qualified_table_nameContext? {
+				return getRuleContext(Qualified_table_nameContext.self, 0)
+			}
+			open
+			func K_SET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SET.rawValue, 0)
+			}
+			open
+			func column_name() -> [Column_nameContext] {
+				return getRuleContexts(Column_nameContext.self)
+			}
+			open
+			func column_name(_ i: Int) -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, i)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func with_clause() -> With_clauseContext? {
+				return getRuleContext(With_clauseContext.self, 0)
+			}
+			open
+			func K_OR() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0)
+			}
+			open
+			func K_ROLLBACK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0)
+			}
+			open
+			func K_ABORT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0)
+			}
+			open
+			func K_REPLACE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0)
+			}
+			open
+			func K_FAIL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0)
+			}
+			open
+			func K_IGNORE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_update_stmt
 		}
-		open func K_SET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SET.rawValue, 0) }
-		open func column_name() -> Array<Column_nameContext> {
-			return getRuleContexts(Column_nameContext.self)
-		}
-		open func column_name(_ i: Int) -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,i)
-		}
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func with_clause() -> With_clauseContext? {
-			return getRuleContext(With_clauseContext.self,0)
-		}
-		open func K_OR() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0) }
-		open func K_ROLLBACK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0) }
-		open func K_ABORT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0) }
-		open func K_REPLACE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0) }
-		open func K_FAIL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0) }
-		open func K_IGNORE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0) }
-		open func K_WHERE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_update_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterUpdate_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterUpdate_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitUpdate_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitUpdate_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitUpdate_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitUpdate_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitUpdate_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitUpdate_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func update_stmt() throws -> Update_stmtContext {
+	 open func update_stmt() throws -> Update_stmtContext {
 		var _localctx: Update_stmtContext = Update_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 64, SQLiteParser.RULE_update_stmt)
 		var _la: Int = 0
@@ -5055,71 +5884,123 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Update_stmt_limitedContext:ParserRuleContext {
-		open func K_UPDATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, 0) }
-		open func qualified_table_name() -> Qualified_table_nameContext? {
-			return getRuleContext(Qualified_table_nameContext.self,0)
+
+	public class Update_stmt_limitedContext: ParserRuleContext {
+			open
+			func K_UPDATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, 0)
+			}
+			open
+			func qualified_table_name() -> Qualified_table_nameContext? {
+				return getRuleContext(Qualified_table_nameContext.self, 0)
+			}
+			open
+			func K_SET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SET.rawValue, 0)
+			}
+			open
+			func column_name() -> [Column_nameContext] {
+				return getRuleContexts(Column_nameContext.self)
+			}
+			open
+			func column_name(_ i: Int) -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, i)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func with_clause() -> With_clauseContext? {
+				return getRuleContext(With_clauseContext.self, 0)
+			}
+			open
+			func K_OR() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0)
+			}
+			open
+			func K_ROLLBACK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0)
+			}
+			open
+			func K_ABORT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0)
+			}
+			open
+			func K_REPLACE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0)
+			}
+			open
+			func K_FAIL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0)
+			}
+			open
+			func K_IGNORE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func K_LIMIT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0)
+			}
+			open
+			func K_ORDER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func ordering_term() -> [Ordering_termContext] {
+				return getRuleContexts(Ordering_termContext.self)
+			}
+			open
+			func ordering_term(_ i: Int) -> Ordering_termContext? {
+				return getRuleContext(Ordering_termContext.self, i)
+			}
+			open
+			func K_OFFSET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_update_stmt_limited
 		}
-		open func K_SET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SET.rawValue, 0) }
-		open func column_name() -> Array<Column_nameContext> {
-			return getRuleContexts(Column_nameContext.self)
-		}
-		open func column_name(_ i: Int) -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,i)
-		}
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func with_clause() -> With_clauseContext? {
-			return getRuleContext(With_clauseContext.self,0)
-		}
-		open func K_OR() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0) }
-		open func K_ROLLBACK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0) }
-		open func K_ABORT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0) }
-		open func K_REPLACE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0) }
-		open func K_FAIL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0) }
-		open func K_IGNORE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0) }
-		open func K_WHERE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0) }
-		open func K_LIMIT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0) }
-		open func K_ORDER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func ordering_term() -> Array<Ordering_termContext> {
-			return getRuleContexts(Ordering_termContext.self)
-		}
-		open func ordering_term(_ i: Int) -> Ordering_termContext? {
-			return getRuleContext(Ordering_termContext.self,i)
-		}
-		open func K_OFFSET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_update_stmt_limited }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterUpdate_stmt_limited(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterUpdate_stmt_limited(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitUpdate_stmt_limited(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitUpdate_stmt_limited(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitUpdate_stmt_limited(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitUpdate_stmt_limited(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitUpdate_stmt_limited(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitUpdate_stmt_limited(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func update_stmt_limited() throws -> Update_stmt_limitedContext {
+	 open func update_stmt_limited() throws -> Update_stmt_limitedContext {
 		var _localctx: Update_stmt_limitedContext = Update_stmt_limitedContext(_ctx, getState())
 		try enterRule(_localctx, 66, SQLiteParser.RULE_update_stmt_limited)
 		var _la: Int = 0
@@ -5318,35 +6199,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Vacuum_stmtContext:ParserRuleContext {
-		open func K_VACUUM() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VACUUM.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_vacuum_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterVacuum_stmt(self)
+
+	public class Vacuum_stmtContext: ParserRuleContext {
+			open
+			func K_VACUUM() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VACUUM.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_vacuum_stmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterVacuum_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitVacuum_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitVacuum_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitVacuum_stmt(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitVacuum_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitVacuum_stmt(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitVacuum_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func vacuum_stmt() throws -> Vacuum_stmtContext {
+	 open func vacuum_stmt() throws -> Vacuum_stmtContext {
 		var _localctx: Vacuum_stmtContext = Vacuum_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 68, SQLiteParser.RULE_vacuum_stmt)
 		defer {
@@ -5366,46 +6255,55 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Column_defContext:ParserRuleContext {
-		open func column_name() -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,0)
+
+	public class Column_defContext: ParserRuleContext {
+			open
+			func column_name() -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, 0)
+			}
+			open
+			func type_name() -> Type_nameContext? {
+				return getRuleContext(Type_nameContext.self, 0)
+			}
+			open
+			func column_constraint() -> [Column_constraintContext] {
+				return getRuleContexts(Column_constraintContext.self)
+			}
+			open
+			func column_constraint(_ i: Int) -> Column_constraintContext? {
+				return getRuleContext(Column_constraintContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_column_def
 		}
-		open func type_name() -> Type_nameContext? {
-			return getRuleContext(Type_nameContext.self,0)
-		}
-		open func column_constraint() -> Array<Column_constraintContext> {
-			return getRuleContexts(Column_constraintContext.self)
-		}
-		open func column_constraint(_ i: Int) -> Column_constraintContext? {
-			return getRuleContext(Column_constraintContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_column_def }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterColumn_def(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterColumn_def(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitColumn_def(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitColumn_def(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitColumn_def(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitColumn_def(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitColumn_def(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitColumn_def(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func column_def() throws -> Column_defContext {
+	 open func column_def() throws -> Column_defContext {
 		var _localctx: Column_defContext = Column_defContext(_ctx, getState())
 		try enterRule(_localctx, 70, SQLiteParser.RULE_column_def)
 		var _la: Int = 0
@@ -5459,46 +6357,55 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Type_nameContext:ParserRuleContext {
-		open func name() -> Array<NameContext> {
-			return getRuleContexts(NameContext.self)
+
+	public class Type_nameContext: ParserRuleContext {
+			open
+			func name() -> [NameContext] {
+				return getRuleContexts(NameContext.self)
+			}
+			open
+			func name(_ i: Int) -> NameContext? {
+				return getRuleContext(NameContext.self, i)
+			}
+			open
+			func signed_number() -> [Signed_numberContext] {
+				return getRuleContexts(Signed_numberContext.self)
+			}
+			open
+			func signed_number(_ i: Int) -> Signed_numberContext? {
+				return getRuleContext(Signed_numberContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_type_name
 		}
-		open func name(_ i: Int) -> NameContext? {
-			return getRuleContext(NameContext.self,i)
-		}
-		open func signed_number() -> Array<Signed_numberContext> {
-			return getRuleContexts(Signed_numberContext.self)
-		}
-		open func signed_number(_ i: Int) -> Signed_numberContext? {
-			return getRuleContext(Signed_numberContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_type_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterType_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterType_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitType_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitType_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitType_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitType_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitType_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitType_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type_name() throws -> Type_nameContext {
+	 open func type_name() throws -> Type_nameContext {
 		var _localctx: Type_nameContext = Type_nameContext(_ctx, getState())
 		try enterRule(_localctx, 72, SQLiteParser.RULE_type_name)
 		defer {
@@ -5519,7 +6426,7 @@ open class SQLiteParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(1055); 
 		 		try _errHandler.sync(self)
@@ -5562,67 +6469,115 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Column_constraintContext:ParserRuleContext {
-		open func K_PRIMARY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_PRIMARY.rawValue, 0) }
-		open func K_KEY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_KEY.rawValue, 0) }
-		open func conflict_clause() -> Conflict_clauseContext? {
-			return getRuleContext(Conflict_clauseContext.self,0)
+
+	public class Column_constraintContext: ParserRuleContext {
+			open
+			func K_PRIMARY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_PRIMARY.rawValue, 0)
+			}
+			open
+			func K_KEY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_KEY.rawValue, 0)
+			}
+			open
+			func conflict_clause() -> Conflict_clauseContext? {
+				return getRuleContext(Conflict_clauseContext.self, 0)
+			}
+			open
+			func K_NULL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NULL.rawValue, 0)
+			}
+			open
+			func K_UNIQUE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UNIQUE.rawValue, 0)
+			}
+			open
+			func K_CHECK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CHECK.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func K_DEFAULT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DEFAULT.rawValue, 0)
+			}
+			open
+			func K_COLLATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0)
+			}
+			open
+			func collation_name() -> Collation_nameContext? {
+				return getRuleContext(Collation_nameContext.self, 0)
+			}
+			open
+			func foreign_key_clause() -> Foreign_key_clauseContext? {
+				return getRuleContext(Foreign_key_clauseContext.self, 0)
+			}
+			open
+			func K_CONSTRAINT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CONSTRAINT.rawValue, 0)
+			}
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func signed_number() -> Signed_numberContext? {
+				return getRuleContext(Signed_numberContext.self, 0)
+			}
+			open
+			func literal_value() -> Literal_valueContext? {
+				return getRuleContext(Literal_valueContext.self, 0)
+			}
+			open
+			func K_AUTOINCREMENT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AUTOINCREMENT.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_ASC() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ASC.rawValue, 0)
+			}
+			open
+			func K_DESC() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DESC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_column_constraint
 		}
-		open func K_NULL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NULL.rawValue, 0) }
-		open func K_UNIQUE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UNIQUE.rawValue, 0) }
-		open func K_CHECK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CHECK.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func K_DEFAULT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DEFAULT.rawValue, 0) }
-		open func K_COLLATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0) }
-		open func collation_name() -> Collation_nameContext? {
-			return getRuleContext(Collation_nameContext.self,0)
-		}
-		open func foreign_key_clause() -> Foreign_key_clauseContext? {
-			return getRuleContext(Foreign_key_clauseContext.self,0)
-		}
-		open func K_CONSTRAINT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CONSTRAINT.rawValue, 0) }
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
-		}
-		open func signed_number() -> Signed_numberContext? {
-			return getRuleContext(Signed_numberContext.self,0)
-		}
-		open func literal_value() -> Literal_valueContext? {
-			return getRuleContext(Literal_valueContext.self,0)
-		}
-		open func K_AUTOINCREMENT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AUTOINCREMENT.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_ASC() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ASC.rawValue, 0) }
-		open func K_DESC() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DESC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_column_constraint }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterColumn_constraint(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterColumn_constraint(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitColumn_constraint(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitColumn_constraint(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitColumn_constraint(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitColumn_constraint(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitColumn_constraint(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitColumn_constraint(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func column_constraint() throws -> Column_constraintContext {
+	 open func column_constraint() throws -> Column_constraintContext {
 		var _localctx: Column_constraintContext = Column_constraintContext(_ctx, getState())
 		try enterRule(_localctx, 74, SQLiteParser.RULE_column_constraint)
 		var _la: Int = 0
@@ -5781,7 +6736,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -5793,41 +6748,67 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Conflict_clauseContext:ParserRuleContext {
-		open func K_ON() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0) }
-		open func K_CONFLICT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CONFLICT.rawValue, 0) }
-		open func K_ROLLBACK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0) }
-		open func K_ABORT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0) }
-		open func K_FAIL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0) }
-		open func K_IGNORE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0) }
-		open func K_REPLACE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_conflict_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterConflict_clause(self)
+
+	public class Conflict_clauseContext: ParserRuleContext {
+			open
+			func K_ON() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0)
+			}
+			open
+			func K_CONFLICT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CONFLICT.rawValue, 0)
+			}
+			open
+			func K_ROLLBACK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0)
+			}
+			open
+			func K_ABORT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0)
+			}
+			open
+			func K_FAIL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0)
+			}
+			open
+			func K_IGNORE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0)
+			}
+			open
+			func K_REPLACE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_conflict_clause
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterConflict_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitConflict_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitConflict_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitConflict_clause(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitConflict_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitConflict_clause(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitConflict_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conflict_clause() throws -> Conflict_clauseContext {
+	 open func conflict_clause() throws -> Conflict_clauseContext {
 		var _localctx: Conflict_clauseContext = Conflict_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 76, SQLiteParser.RULE_conflict_clause)
 		var _la: Int = 0
@@ -5879,101 +6860,194 @@ open class SQLiteParser: Parser {
 		return _localctx
 	}
 
-	open class ExprContext:ParserRuleContext {
-		open func literal_value() -> Literal_valueContext? {
-			return getRuleContext(Literal_valueContext.self,0)
+	public class ExprContext: ParserRuleContext {
+			open
+			func literal_value() -> Literal_valueContext? {
+				return getRuleContext(Literal_valueContext.self, 0)
+			}
+			open
+			func BIND_PARAMETER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.BIND_PARAMETER.rawValue, 0)
+			}
+			open
+			func column_name() -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func unary_operator() -> Unary_operatorContext? {
+				return getRuleContext(Unary_operatorContext.self, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func function_name() -> Function_nameContext? {
+				return getRuleContext(Function_nameContext.self, 0)
+			}
+			open
+			func K_DISTINCT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DISTINCT.rawValue, 0)
+			}
+			open
+			func K_CAST() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CAST.rawValue, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func type_name() -> Type_nameContext? {
+				return getRuleContext(Type_nameContext.self, 0)
+			}
+			open
+			func select_stmt() -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_CASE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CASE.rawValue, 0)
+			}
+			open
+			func K_END() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_END.rawValue, 0)
+			}
+			open
+			func K_WHEN() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_WHEN.rawValue)
+			}
+			open
+			func K_WHEN(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHEN.rawValue, i)
+			}
+			open
+			func K_THEN() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_THEN.rawValue)
+			}
+			open
+			func K_THEN(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_THEN.rawValue, i)
+			}
+			open
+			func K_ELSE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ELSE.rawValue, 0)
+			}
+			open
+			func raise_function() -> Raise_functionContext? {
+				return getRuleContext(Raise_functionContext.self, 0)
+			}
+			open
+			func K_IS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IS.rawValue, 0)
+			}
+			open
+			func K_IN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IN.rawValue, 0)
+			}
+			open
+			func K_LIKE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LIKE.rawValue, 0)
+			}
+			open
+			func K_GLOB() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_GLOB.rawValue, 0)
+			}
+			open
+			func K_MATCH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_MATCH.rawValue, 0)
+			}
+			open
+			func K_REGEXP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REGEXP.rawValue, 0)
+			}
+			open
+			func K_AND() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AND.rawValue, 0)
+			}
+			open
+			func K_OR() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0)
+			}
+			open
+			func K_BETWEEN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BETWEEN.rawValue, 0)
+			}
+			open
+			func K_COLLATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0)
+			}
+			open
+			func collation_name() -> Collation_nameContext? {
+				return getRuleContext(Collation_nameContext.self, 0)
+			}
+			open
+			func K_ESCAPE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ESCAPE.rawValue, 0)
+			}
+			open
+			func K_ISNULL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ISNULL.rawValue, 0)
+			}
+			open
+			func K_NOTNULL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOTNULL.rawValue, 0)
+			}
+			open
+			func K_NULL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NULL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_expr
 		}
-		open func BIND_PARAMETER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.BIND_PARAMETER.rawValue, 0) }
-		open func column_name() -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,0)
-		}
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
-		}
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func unary_operator() -> Unary_operatorContext? {
-			return getRuleContext(Unary_operatorContext.self,0)
-		}
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func function_name() -> Function_nameContext? {
-			return getRuleContext(Function_nameContext.self,0)
-		}
-		open func K_DISTINCT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DISTINCT.rawValue, 0) }
-		open func K_CAST() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CAST.rawValue, 0) }
-		open func K_AS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0) }
-		open func type_name() -> Type_nameContext? {
-			return getRuleContext(Type_nameContext.self,0)
-		}
-		open func select_stmt() -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,0)
-		}
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_CASE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CASE.rawValue, 0) }
-		open func K_END() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_END.rawValue, 0) }
-		open func K_WHEN() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_WHEN.rawValue) }
-		open func K_WHEN(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_WHEN.rawValue, i)
-		}
-		open func K_THEN() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_THEN.rawValue) }
-		open func K_THEN(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_THEN.rawValue, i)
-		}
-		open func K_ELSE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ELSE.rawValue, 0) }
-		open func raise_function() -> Raise_functionContext? {
-			return getRuleContext(Raise_functionContext.self,0)
-		}
-		open func K_IS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IS.rawValue, 0) }
-		open func K_IN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IN.rawValue, 0) }
-		open func K_LIKE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LIKE.rawValue, 0) }
-		open func K_GLOB() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_GLOB.rawValue, 0) }
-		open func K_MATCH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_MATCH.rawValue, 0) }
-		open func K_REGEXP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REGEXP.rawValue, 0) }
-		open func K_AND() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AND.rawValue, 0) }
-		open func K_OR() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0) }
-		open func K_BETWEEN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BETWEEN.rawValue, 0) }
-		open func K_COLLATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0) }
-		open func collation_name() -> Collation_nameContext? {
-			return getRuleContext(Collation_nameContext.self,0)
-		}
-		open func K_ESCAPE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ESCAPE.rawValue, 0) }
-		open func K_ISNULL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ISNULL.rawValue, 0) }
-		open func K_NOTNULL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOTNULL.rawValue, 0) }
-		open func K_NULL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NULL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitExpr(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expr( ) throws -> ExprContext   {
+	 public final  func expr( ) throws -> ExprContext   {
 		return try expr(0)
 	}
 	@discardableResult
@@ -6367,7 +7441,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1191)
 						if (!(precpred(_ctx, 20))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 20)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 20)"))
 						}
 						setState(1192)
 						try match(SQLiteParser.Tokens.PIPE2.rawValue)
@@ -6380,7 +7454,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1194)
 						if (!(precpred(_ctx, 19))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
 						}
 						setState(1195)
 						_la = try _input.LA(1)
@@ -6407,7 +7481,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1197)
 						if (!(precpred(_ctx, 18))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 18)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 18)"))
 						}
 						setState(1198)
 						_la = try _input.LA(1)
@@ -6431,7 +7505,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1200)
 						if (!(precpred(_ctx, 17))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 17)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 17)"))
 						}
 						setState(1201)
 						_la = try _input.LA(1)
@@ -6458,7 +7532,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1203)
 						if (!(precpred(_ctx, 16))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 16)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 16)"))
 						}
 						setState(1204)
 						_la = try _input.LA(1)
@@ -6485,7 +7559,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1206)
 						if (!(precpred(_ctx, 15))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 15)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 15)"))
 						}
 						setState(1219)
 						try _errHandler.sync(self)
@@ -6558,7 +7632,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1222)
 						if (!(precpred(_ctx, 14))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 14)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 14)"))
 						}
 						setState(1223)
 						try match(SQLiteParser.Tokens.K_AND.rawValue)
@@ -6571,7 +7645,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1225)
 						if (!(precpred(_ctx, 13))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
 						}
 						setState(1226)
 						try match(SQLiteParser.Tokens.K_OR.rawValue)
@@ -6584,7 +7658,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1228)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(1229)
 						try match(SQLiteParser.Tokens.K_IS.rawValue)
@@ -6607,7 +7681,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1234)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(1236)
 						try _errHandler.sync(self)
@@ -6637,7 +7711,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1243)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(1244)
 						try match(SQLiteParser.Tokens.K_COLLATE.rawValue)
@@ -6650,7 +7724,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1246)
 						if (!(precpred(_ctx, 8))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
 						}
 						setState(1248)
 						try _errHandler.sync(self)
@@ -6702,7 +7776,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1256)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(1261)
 						try _errHandler.sync(self)
@@ -6727,7 +7801,7 @@ open class SQLiteParser: Parser {
 
 							break
 						default:
-							throw try ANTLRException.recognition(e: NoViableAltException(self))
+							throw ANTLRException.recognition(e: NoViableAltException(self))
 						}
 
 						break
@@ -6736,7 +7810,7 @@ open class SQLiteParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, SQLiteParser.RULE_expr)
 						setState(1263)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(1265)
 						try _errHandler.sync(self)
@@ -6835,99 +7909,171 @@ open class SQLiteParser: Parser {
 
 		return _localctx;
 	}
-	open class Foreign_key_clauseContext:ParserRuleContext {
-		open func K_REFERENCES() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REFERENCES.rawValue, 0) }
-		open func foreign_table() -> Foreign_tableContext? {
-			return getRuleContext(Foreign_tableContext.self,0)
+
+	public class Foreign_key_clauseContext: ParserRuleContext {
+			open
+			func K_REFERENCES() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REFERENCES.rawValue, 0)
+			}
+			open
+			func foreign_table() -> Foreign_tableContext? {
+				return getRuleContext(Foreign_tableContext.self, 0)
+			}
+			open
+			func column_name() -> [Column_nameContext] {
+				return getRuleContexts(Column_nameContext.self)
+			}
+			open
+			func column_name(_ i: Int) -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, i)
+			}
+			open
+			func K_DEFERRABLE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DEFERRABLE.rawValue, 0)
+			}
+			open
+			func K_ON() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_ON.rawValue)
+			}
+			open
+			func K_ON(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ON.rawValue, i)
+			}
+			open
+			func K_MATCH() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_MATCH.rawValue)
+			}
+			open
+			func K_MATCH(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_MATCH.rawValue, i)
+			}
+			open
+			func name() -> [NameContext] {
+				return getRuleContexts(NameContext.self)
+			}
+			open
+			func name(_ i: Int) -> NameContext? {
+				return getRuleContext(NameContext.self, i)
+			}
+			open
+			func K_DELETE() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_DELETE.rawValue)
+			}
+			open
+			func K_DELETE(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, i)
+			}
+			open
+			func K_UPDATE() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_UPDATE.rawValue)
+			}
+			open
+			func K_UPDATE(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, i)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_INITIALLY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INITIALLY.rawValue, 0)
+			}
+			open
+			func K_DEFERRED() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DEFERRED.rawValue, 0)
+			}
+			open
+			func K_IMMEDIATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IMMEDIATE.rawValue, 0)
+			}
+			open
+			func K_SET() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_SET.rawValue)
+			}
+			open
+			func K_SET(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SET.rawValue, i)
+			}
+			open
+			func K_NULL() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_NULL.rawValue)
+			}
+			open
+			func K_NULL(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NULL.rawValue, i)
+			}
+			open
+			func K_DEFAULT() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_DEFAULT.rawValue)
+			}
+			open
+			func K_DEFAULT(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DEFAULT.rawValue, i)
+			}
+			open
+			func K_CASCADE() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_CASCADE.rawValue)
+			}
+			open
+			func K_CASCADE(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CASCADE.rawValue, i)
+			}
+			open
+			func K_RESTRICT() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_RESTRICT.rawValue)
+			}
+			open
+			func K_RESTRICT(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RESTRICT.rawValue, i)
+			}
+			open
+			func K_NO() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_NO.rawValue)
+			}
+			open
+			func K_NO(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NO.rawValue, i)
+			}
+			open
+			func K_ACTION() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_ACTION.rawValue)
+			}
+			open
+			func K_ACTION(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ACTION.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_foreign_key_clause
 		}
-		open func column_name() -> Array<Column_nameContext> {
-			return getRuleContexts(Column_nameContext.self)
-		}
-		open func column_name(_ i: Int) -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,i)
-		}
-		open func K_DEFERRABLE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DEFERRABLE.rawValue, 0) }
-		open func K_ON() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_ON.rawValue) }
-		open func K_ON(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_ON.rawValue, i)
-		}
-		open func K_MATCH() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_MATCH.rawValue) }
-		open func K_MATCH(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_MATCH.rawValue, i)
-		}
-		open func name() -> Array<NameContext> {
-			return getRuleContexts(NameContext.self)
-		}
-		open func name(_ i: Int) -> NameContext? {
-			return getRuleContext(NameContext.self,i)
-		}
-		open func K_DELETE() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_DELETE.rawValue) }
-		open func K_DELETE(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, i)
-		}
-		open func K_UPDATE() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_UPDATE.rawValue) }
-		open func K_UPDATE(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, i)
-		}
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_INITIALLY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INITIALLY.rawValue, 0) }
-		open func K_DEFERRED() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DEFERRED.rawValue, 0) }
-		open func K_IMMEDIATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IMMEDIATE.rawValue, 0) }
-		open func K_SET() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_SET.rawValue) }
-		open func K_SET(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_SET.rawValue, i)
-		}
-		open func K_NULL() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_NULL.rawValue) }
-		open func K_NULL(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_NULL.rawValue, i)
-		}
-		open func K_DEFAULT() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_DEFAULT.rawValue) }
-		open func K_DEFAULT(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_DEFAULT.rawValue, i)
-		}
-		open func K_CASCADE() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_CASCADE.rawValue) }
-		open func K_CASCADE(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_CASCADE.rawValue, i)
-		}
-		open func K_RESTRICT() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_RESTRICT.rawValue) }
-		open func K_RESTRICT(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_RESTRICT.rawValue, i)
-		}
-		open func K_NO() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_NO.rawValue) }
-		open func K_NO(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_NO.rawValue, i)
-		}
-		open func K_ACTION() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_ACTION.rawValue) }
-		open func K_ACTION(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_ACTION.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_foreign_key_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterForeign_key_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterForeign_key_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitForeign_key_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitForeign_key_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitForeign_key_clause(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitForeign_key_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitForeign_key_clause(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitForeign_key_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func foreign_key_clause() throws -> Foreign_key_clauseContext {
+	 open func foreign_key_clause() throws -> Foreign_key_clauseContext {
 		var _localctx: Foreign_key_clauseContext = Foreign_key_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 80, SQLiteParser.RULE_foreign_key_clause)
 		var _la: Int = 0
@@ -7050,7 +8196,7 @@ open class SQLiteParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 
@@ -7110,42 +8256,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Raise_functionContext:ParserRuleContext {
-		open func K_RAISE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RAISE.rawValue, 0) }
-		open func K_IGNORE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0) }
-		open func error_message() -> Error_messageContext? {
-			return getRuleContext(Error_messageContext.self,0)
+
+	public class Raise_functionContext: ParserRuleContext {
+			open
+			func K_RAISE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RAISE.rawValue, 0)
+			}
+			open
+			func K_IGNORE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0)
+			}
+			open
+			func error_message() -> Error_messageContext? {
+				return getRuleContext(Error_messageContext.self, 0)
+			}
+			open
+			func K_ROLLBACK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0)
+			}
+			open
+			func K_ABORT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0)
+			}
+			open
+			func K_FAIL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_raise_function
 		}
-		open func K_ROLLBACK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0) }
-		open func K_ABORT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0) }
-		open func K_FAIL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_raise_function }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterRaise_function(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterRaise_function(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitRaise_function(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitRaise_function(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitRaise_function(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitRaise_function(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitRaise_function(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitRaise_function(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raise_function() throws -> Raise_functionContext {
+	 open func raise_function() throws -> Raise_functionContext {
 		var _localctx: Raise_functionContext = Raise_functionContext(_ctx, getState())
 		try enterRule(_localctx, 82, SQLiteParser.RULE_raise_function)
 		var _la: Int = 0
@@ -7190,7 +8357,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(1350)
 		 	try match(SQLiteParser.Tokens.CLOSE_PAR.rawValue)
@@ -7204,43 +8371,59 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Indexed_columnContext:ParserRuleContext {
-		open func column_name() -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,0)
+
+	public class Indexed_columnContext: ParserRuleContext {
+			open
+			func column_name() -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, 0)
+			}
+			open
+			func K_COLLATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0)
+			}
+			open
+			func collation_name() -> Collation_nameContext? {
+				return getRuleContext(Collation_nameContext.self, 0)
+			}
+			open
+			func K_ASC() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ASC.rawValue, 0)
+			}
+			open
+			func K_DESC() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DESC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_indexed_column
 		}
-		open func K_COLLATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0) }
-		open func collation_name() -> Collation_nameContext? {
-			return getRuleContext(Collation_nameContext.self,0)
-		}
-		open func K_ASC() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ASC.rawValue, 0) }
-		open func K_DESC() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DESC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_indexed_column }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterIndexed_column(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterIndexed_column(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitIndexed_column(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitIndexed_column(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitIndexed_column(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitIndexed_column(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitIndexed_column(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitIndexed_column(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func indexed_column() throws -> Indexed_columnContext {
+	 open func indexed_column() throws -> Indexed_columnContext {
 		var _localctx: Indexed_columnContext = Indexed_columnContext(_ctx, getState())
 		try enterRule(_localctx, 84, SQLiteParser.RULE_indexed_column)
 		var _la: Int = 0
@@ -7300,64 +8483,95 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Table_constraintContext:ParserRuleContext {
-		open func indexed_column() -> Array<Indexed_columnContext> {
-			return getRuleContexts(Indexed_columnContext.self)
+
+	public class Table_constraintContext: ParserRuleContext {
+			open
+			func indexed_column() -> [Indexed_columnContext] {
+				return getRuleContexts(Indexed_columnContext.self)
+			}
+			open
+			func indexed_column(_ i: Int) -> Indexed_columnContext? {
+				return getRuleContext(Indexed_columnContext.self, i)
+			}
+			open
+			func conflict_clause() -> Conflict_clauseContext? {
+				return getRuleContext(Conflict_clauseContext.self, 0)
+			}
+			open
+			func K_CHECK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CHECK.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func K_FOREIGN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FOREIGN.rawValue, 0)
+			}
+			open
+			func K_KEY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_KEY.rawValue, 0)
+			}
+			open
+			func column_name() -> [Column_nameContext] {
+				return getRuleContexts(Column_nameContext.self)
+			}
+			open
+			func column_name(_ i: Int) -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, i)
+			}
+			open
+			func foreign_key_clause() -> Foreign_key_clauseContext? {
+				return getRuleContext(Foreign_key_clauseContext.self, 0)
+			}
+			open
+			func K_CONSTRAINT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CONSTRAINT.rawValue, 0)
+			}
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func K_PRIMARY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_PRIMARY.rawValue, 0)
+			}
+			open
+			func K_UNIQUE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UNIQUE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_table_constraint
 		}
-		open func indexed_column(_ i: Int) -> Indexed_columnContext? {
-			return getRuleContext(Indexed_columnContext.self,i)
-		}
-		open func conflict_clause() -> Conflict_clauseContext? {
-			return getRuleContext(Conflict_clauseContext.self,0)
-		}
-		open func K_CHECK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CHECK.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func K_FOREIGN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FOREIGN.rawValue, 0) }
-		open func K_KEY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_KEY.rawValue, 0) }
-		open func column_name() -> Array<Column_nameContext> {
-			return getRuleContexts(Column_nameContext.self)
-		}
-		open func column_name(_ i: Int) -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,i)
-		}
-		open func foreign_key_clause() -> Foreign_key_clauseContext? {
-			return getRuleContext(Foreign_key_clauseContext.self,0)
-		}
-		open func K_CONSTRAINT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CONSTRAINT.rawValue, 0) }
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
-		}
-		open func K_PRIMARY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_PRIMARY.rawValue, 0) }
-		open func K_UNIQUE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UNIQUE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_table_constraint }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterTable_constraint(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterTable_constraint(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitTable_constraint(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitTable_constraint(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitTable_constraint(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitTable_constraint(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitTable_constraint(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitTable_constraint(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_constraint() throws -> Table_constraintContext {
+	 open func table_constraint() throws -> Table_constraintContext {
 		var _localctx: Table_constraintContext = Table_constraintContext(_ctx, getState())
 		try enterRule(_localctx, 86, SQLiteParser.RULE_table_constraint)
 		var _la: Int = 0
@@ -7403,7 +8617,7 @@ open class SQLiteParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(1369)
 		 		try match(SQLiteParser.Tokens.OPEN_PAR.rawValue)
@@ -7480,7 +8694,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -7492,52 +8706,71 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class With_clauseContext:ParserRuleContext {
-		open func K_WITH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0) }
-		open func cte_table_name() -> Array<Cte_table_nameContext> {
-			return getRuleContexts(Cte_table_nameContext.self)
+
+	public class With_clauseContext: ParserRuleContext {
+			open
+			func K_WITH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0)
+			}
+			open
+			func cte_table_name() -> [Cte_table_nameContext] {
+				return getRuleContexts(Cte_table_nameContext.self)
+			}
+			open
+			func cte_table_name(_ i: Int) -> Cte_table_nameContext? {
+				return getRuleContext(Cte_table_nameContext.self, i)
+			}
+			open
+			func K_AS() -> [TerminalNode] {
+				return getTokens(SQLiteParser.Tokens.K_AS.rawValue)
+			}
+			open
+			func K_AS(_ i:Int) -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AS.rawValue, i)
+			}
+			open
+			func select_stmt() -> [Select_stmtContext] {
+				return getRuleContexts(Select_stmtContext.self)
+			}
+			open
+			func select_stmt(_ i: Int) -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, i)
+			}
+			open
+			func K_RECURSIVE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_with_clause
 		}
-		open func cte_table_name(_ i: Int) -> Cte_table_nameContext? {
-			return getRuleContext(Cte_table_nameContext.self,i)
-		}
-		open func K_AS() -> Array<TerminalNode> { return getTokens(SQLiteParser.Tokens.K_AS.rawValue) }
-		open func K_AS(_ i:Int) -> TerminalNode?{
-			return getToken(SQLiteParser.Tokens.K_AS.rawValue, i)
-		}
-		open func select_stmt() -> Array<Select_stmtContext> {
-			return getRuleContexts(Select_stmtContext.self)
-		}
-		open func select_stmt(_ i: Int) -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,i)
-		}
-		open func K_RECURSIVE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_with_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterWith_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterWith_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitWith_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitWith_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitWith_clause(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitWith_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitWith_clause(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitWith_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func with_clause() throws -> With_clauseContext {
+	 open func with_clause() throws -> With_clauseContext {
 		var _localctx: With_clauseContext = With_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 88, SQLiteParser.RULE_with_clause)
 		var _la: Int = 0
@@ -7604,46 +8837,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Qualified_table_nameContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Qualified_table_nameContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func K_INDEXED() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INDEXED.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func index_name() -> Index_nameContext? {
+				return getRuleContext(Index_nameContext.self, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_qualified_table_name
 		}
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func K_INDEXED() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INDEXED.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func index_name() -> Index_nameContext? {
-			return getRuleContext(Index_nameContext.self,0)
-		}
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_qualified_table_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterQualified_table_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterQualified_table_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitQualified_table_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitQualified_table_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitQualified_table_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitQualified_table_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitQualified_table_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitQualified_table_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qualified_table_name() throws -> Qualified_table_nameContext {
+	 open func qualified_table_name() throws -> Qualified_table_nameContext {
 		var _localctx: Qualified_table_nameContext = Qualified_table_nameContext(_ctx, getState())
 		try enterRule(_localctx, 90, SQLiteParser.RULE_qualified_table_name)
 		defer {
@@ -7729,43 +8979,59 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Ordering_termContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class Ordering_termContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func K_COLLATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0)
+			}
+			open
+			func collation_name() -> Collation_nameContext? {
+				return getRuleContext(Collation_nameContext.self, 0)
+			}
+			open
+			func K_ASC() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ASC.rawValue, 0)
+			}
+			open
+			func K_DESC() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DESC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_ordering_term
 		}
-		open func K_COLLATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0) }
-		open func collation_name() -> Collation_nameContext? {
-			return getRuleContext(Collation_nameContext.self,0)
-		}
-		open func K_ASC() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ASC.rawValue, 0) }
-		open func K_DESC() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DESC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_ordering_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterOrdering_term(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterOrdering_term(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitOrdering_term(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitOrdering_term(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitOrdering_term(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitOrdering_term(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitOrdering_term(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitOrdering_term(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ordering_term() throws -> Ordering_termContext {
+	 open func ordering_term() throws -> Ordering_termContext {
 		var _localctx: Ordering_termContext = Ordering_termContext(_ctx, getState())
 		try enterRule(_localctx, 92, SQLiteParser.RULE_ordering_term)
 		var _la: Int = 0
@@ -7825,41 +9091,51 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Pragma_valueContext:ParserRuleContext {
-		open func signed_number() -> Signed_numberContext? {
-			return getRuleContext(Signed_numberContext.self,0)
+
+	public class Pragma_valueContext: ParserRuleContext {
+			open
+			func signed_number() -> Signed_numberContext? {
+				return getRuleContext(Signed_numberContext.self, 0)
+			}
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func STRING_LITERAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_pragma_value
 		}
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
-		}
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_pragma_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterPragma_value(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterPragma_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitPragma_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitPragma_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitPragma_value(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitPragma_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitPragma_value(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitPragma_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pragma_value() throws -> Pragma_valueContext {
+	 open func pragma_value() throws -> Pragma_valueContext {
 		var _localctx: Pragma_valueContext = Pragma_valueContext(_ctx, getState())
 		try enterRule(_localctx, 94, SQLiteParser.RULE_pragma_value)
 		defer {
@@ -7898,47 +9174,59 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Common_table_expressionContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Common_table_expressionContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func select_stmt() -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, 0)
+			}
+			open
+			func column_name() -> [Column_nameContext] {
+				return getRuleContexts(Column_nameContext.self)
+			}
+			open
+			func column_name(_ i: Int) -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_common_table_expression
 		}
-		open func K_AS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0) }
-		open func select_stmt() -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,0)
-		}
-		open func column_name() -> Array<Column_nameContext> {
-			return getRuleContexts(Column_nameContext.self)
-		}
-		open func column_name(_ i: Int) -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_common_table_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCommon_table_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCommon_table_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCommon_table_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCommon_table_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCommon_table_expression(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCommon_table_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCommon_table_expression(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCommon_table_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func common_table_expression() throws -> Common_table_expressionContext {
+	 open func common_table_expression() throws -> Common_table_expressionContext {
 		var _localctx: Common_table_expressionContext = Common_table_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 96, SQLiteParser.RULE_common_table_expression)
 		var _la: Int = 0
@@ -8002,44 +9290,55 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Result_columnContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Result_columnContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func column_alias() -> Column_aliasContext? {
+				return getRuleContext(Column_aliasContext.self, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_result_column
 		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func column_alias() -> Column_aliasContext? {
-			return getRuleContext(Column_aliasContext.self,0)
-		}
-		open func K_AS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_result_column }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterResult_column(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterResult_column(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitResult_column(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitResult_column(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitResult_column(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitResult_column(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitResult_column(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitResult_column(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func result_column() throws -> Result_columnContext {
+	 open func result_column() throws -> Result_columnContext {
 		var _localctx: Result_columnContext = Result_columnContext(_ctx, getState())
 		try enterRule(_localctx, 98, SQLiteParser.RULE_result_column)
 		var _la: Int = 0
@@ -8110,62 +9409,87 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Table_or_subqueryContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Table_or_subqueryContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func database_name() -> Database_nameContext? {
+				return getRuleContext(Database_nameContext.self, 0)
+			}
+			open
+			func table_alias() -> Table_aliasContext? {
+				return getRuleContext(Table_aliasContext.self, 0)
+			}
+			open
+			func K_INDEXED() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INDEXED.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func index_name() -> Index_nameContext? {
+				return getRuleContext(Index_nameContext.self, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func table_or_subquery() -> [Table_or_subqueryContext] {
+				return getRuleContexts(Table_or_subqueryContext.self)
+			}
+			open
+			func table_or_subquery(_ i: Int) -> Table_or_subqueryContext? {
+				return getRuleContext(Table_or_subqueryContext.self, i)
+			}
+			open
+			func join_clause() -> Join_clauseContext? {
+				return getRuleContext(Join_clauseContext.self, 0)
+			}
+			open
+			func select_stmt() -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_table_or_subquery
 		}
-		open func database_name() -> Database_nameContext? {
-			return getRuleContext(Database_nameContext.self,0)
-		}
-		open func table_alias() -> Table_aliasContext? {
-			return getRuleContext(Table_aliasContext.self,0)
-		}
-		open func K_INDEXED() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INDEXED.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func index_name() -> Index_nameContext? {
-			return getRuleContext(Index_nameContext.self,0)
-		}
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_AS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0) }
-		open func table_or_subquery() -> Array<Table_or_subqueryContext> {
-			return getRuleContexts(Table_or_subqueryContext.self)
-		}
-		open func table_or_subquery(_ i: Int) -> Table_or_subqueryContext? {
-			return getRuleContext(Table_or_subqueryContext.self,i)
-		}
-		open func join_clause() -> Join_clauseContext? {
-			return getRuleContext(Join_clauseContext.self,0)
-		}
-		open func select_stmt() -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_table_or_subquery }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterTable_or_subquery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterTable_or_subquery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitTable_or_subquery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitTable_or_subquery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitTable_or_subquery(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitTable_or_subquery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitTable_or_subquery(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitTable_or_subquery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_or_subquery() throws -> Table_or_subqueryContext {
+	 open func table_or_subquery() throws -> Table_or_subqueryContext {
 		var _localctx: Table_or_subqueryContext = Table_or_subqueryContext(_ctx, getState())
 		try enterRule(_localctx, 100, SQLiteParser.RULE_table_or_subquery)
 		var _la: Int = 0
@@ -8382,52 +9706,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Join_clauseContext:ParserRuleContext {
-		open func table_or_subquery() -> Array<Table_or_subqueryContext> {
-			return getRuleContexts(Table_or_subqueryContext.self)
+
+	public class Join_clauseContext: ParserRuleContext {
+			open
+			func table_or_subquery() -> [Table_or_subqueryContext] {
+				return getRuleContexts(Table_or_subqueryContext.self)
+			}
+			open
+			func table_or_subquery(_ i: Int) -> Table_or_subqueryContext? {
+				return getRuleContext(Table_or_subqueryContext.self, i)
+			}
+			open
+			func join_operator() -> [Join_operatorContext] {
+				return getRuleContexts(Join_operatorContext.self)
+			}
+			open
+			func join_operator(_ i: Int) -> Join_operatorContext? {
+				return getRuleContext(Join_operatorContext.self, i)
+			}
+			open
+			func join_constraint() -> [Join_constraintContext] {
+				return getRuleContexts(Join_constraintContext.self)
+			}
+			open
+			func join_constraint(_ i: Int) -> Join_constraintContext? {
+				return getRuleContext(Join_constraintContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_join_clause
 		}
-		open func table_or_subquery(_ i: Int) -> Table_or_subqueryContext? {
-			return getRuleContext(Table_or_subqueryContext.self,i)
-		}
-		open func join_operator() -> Array<Join_operatorContext> {
-			return getRuleContexts(Join_operatorContext.self)
-		}
-		open func join_operator(_ i: Int) -> Join_operatorContext? {
-			return getRuleContext(Join_operatorContext.self,i)
-		}
-		open func join_constraint() -> Array<Join_constraintContext> {
-			return getRuleContexts(Join_constraintContext.self)
-		}
-		open func join_constraint(_ i: Int) -> Join_constraintContext? {
-			return getRuleContext(Join_constraintContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_join_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterJoin_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterJoin_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitJoin_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitJoin_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitJoin_clause(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitJoin_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitJoin_clause(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitJoin_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func join_clause() throws -> Join_clauseContext {
+	 open func join_clause() throws -> Join_clauseContext {
 		var _localctx: Join_clauseContext = Join_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 102, SQLiteParser.RULE_join_clause)
 		var _la: Int = 0
@@ -8472,40 +9807,63 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Join_operatorContext:ParserRuleContext {
-		open func K_JOIN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_JOIN.rawValue, 0) }
-		open func K_NATURAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NATURAL.rawValue, 0) }
-		open func K_LEFT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LEFT.rawValue, 0) }
-		open func K_INNER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INNER.rawValue, 0) }
-		open func K_CROSS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CROSS.rawValue, 0) }
-		open func K_OUTER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OUTER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_join_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterJoin_operator(self)
+
+	public class Join_operatorContext: ParserRuleContext {
+			open
+			func K_JOIN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_JOIN.rawValue, 0)
+			}
+			open
+			func K_NATURAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NATURAL.rawValue, 0)
+			}
+			open
+			func K_LEFT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LEFT.rawValue, 0)
+			}
+			open
+			func K_INNER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INNER.rawValue, 0)
+			}
+			open
+			func K_CROSS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CROSS.rawValue, 0)
+			}
+			open
+			func K_OUTER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OUTER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_join_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterJoin_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitJoin_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitJoin_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitJoin_operator(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitJoin_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitJoin_operator(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitJoin_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func join_operator() throws -> Join_operatorContext {
+	 open func join_operator() throws -> Join_operatorContext {
 		var _localctx: Join_operatorContext = Join_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 104, SQLiteParser.RULE_join_operator)
 		var _la: Int = 0
@@ -8585,7 +9943,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -8596,45 +9954,59 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Join_constraintContext:ParserRuleContext {
-		open func K_ON() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class Join_constraintContext: ParserRuleContext {
+			open
+			func K_ON() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func K_USING() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_USING.rawValue, 0)
+			}
+			open
+			func column_name() -> [Column_nameContext] {
+				return getRuleContexts(Column_nameContext.self)
+			}
+			open
+			func column_name(_ i: Int) -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_join_constraint
 		}
-		open func K_USING() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_USING.rawValue, 0) }
-		open func column_name() -> Array<Column_nameContext> {
-			return getRuleContexts(Column_nameContext.self)
-		}
-		open func column_name(_ i: Int) -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_join_constraint }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterJoin_constraint(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterJoin_constraint(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitJoin_constraint(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitJoin_constraint(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitJoin_constraint(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitJoin_constraint(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitJoin_constraint(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitJoin_constraint(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func join_constraint() throws -> Join_constraintContext {
+	 open func join_constraint() throws -> Join_constraintContext {
 		var _localctx: Join_constraintContext = Join_constraintContext(_ctx, getState())
 		try enterRule(_localctx, 106, SQLiteParser.RULE_join_constraint)
 		var _la: Int = 0
@@ -8737,64 +10109,103 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Select_coreContext:ParserRuleContext {
-		open func K_SELECT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SELECT.rawValue, 0) }
-		open func result_column() -> Array<Result_columnContext> {
-			return getRuleContexts(Result_columnContext.self)
+
+	public class Select_coreContext: ParserRuleContext {
+			open
+			func K_SELECT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SELECT.rawValue, 0)
+			}
+			open
+			func result_column() -> [Result_columnContext] {
+				return getRuleContexts(Result_columnContext.self)
+			}
+			open
+			func result_column(_ i: Int) -> Result_columnContext? {
+				return getRuleContext(Result_columnContext.self, i)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func K_GROUP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_GROUP.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func K_DISTINCT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DISTINCT.rawValue, 0)
+			}
+			open
+			func K_ALL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ALL.rawValue, 0)
+			}
+			open
+			func table_or_subquery() -> [Table_or_subqueryContext] {
+				return getRuleContexts(Table_or_subqueryContext.self)
+			}
+			open
+			func table_or_subquery(_ i: Int) -> Table_or_subqueryContext? {
+				return getRuleContext(Table_or_subqueryContext.self, i)
+			}
+			open
+			func join_clause() -> Join_clauseContext? {
+				return getRuleContext(Join_clauseContext.self, 0)
+			}
+			open
+			func K_HAVING() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_HAVING.rawValue, 0)
+			}
+			open
+			func K_VALUES() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VALUES.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_select_core
 		}
-		open func result_column(_ i: Int) -> Result_columnContext? {
-			return getRuleContext(Result_columnContext.self,i)
-		}
-		open func K_FROM() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0) }
-		open func K_WHERE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func K_GROUP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_GROUP.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func K_DISTINCT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DISTINCT.rawValue, 0) }
-		open func K_ALL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ALL.rawValue, 0) }
-		open func table_or_subquery() -> Array<Table_or_subqueryContext> {
-			return getRuleContexts(Table_or_subqueryContext.self)
-		}
-		open func table_or_subquery(_ i: Int) -> Table_or_subqueryContext? {
-			return getRuleContext(Table_or_subqueryContext.self,i)
-		}
-		open func join_clause() -> Join_clauseContext? {
-			return getRuleContext(Join_clauseContext.self,0)
-		}
-		open func K_HAVING() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_HAVING.rawValue, 0) }
-		open func K_VALUES() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VALUES.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_select_core }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterSelect_core(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterSelect_core(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitSelect_core(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitSelect_core(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitSelect_core(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitSelect_core(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitSelect_core(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitSelect_core(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func select_core() throws -> Select_coreContext {
+	 open func select_core() throws -> Select_coreContext {
 		var _localctx: Select_coreContext = Select_coreContext(_ctx, getState())
 		try enterRule(_localctx, 108, SQLiteParser.RULE_select_core)
 		var _la: Int = 0
@@ -9035,7 +10446,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9046,38 +10457,55 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Compound_operatorContext:ParserRuleContext {
-		open func K_UNION() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UNION.rawValue, 0) }
-		open func K_ALL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ALL.rawValue, 0) }
-		open func K_INTERSECT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INTERSECT.rawValue, 0) }
-		open func K_EXCEPT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXCEPT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_compound_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCompound_operator(self)
+
+	public class Compound_operatorContext: ParserRuleContext {
+			open
+			func K_UNION() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UNION.rawValue, 0)
+			}
+			open
+			func K_ALL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ALL.rawValue, 0)
+			}
+			open
+			func K_INTERSECT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INTERSECT.rawValue, 0)
+			}
+			open
+			func K_EXCEPT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXCEPT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_compound_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCompound_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCompound_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCompound_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCompound_operator(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCompound_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCompound_operator(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCompound_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compound_operator() throws -> Compound_operatorContext {
+	 open func compound_operator() throws -> Compound_operatorContext {
 		var _localctx: Compound_operatorContext = Compound_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 110, SQLiteParser.RULE_compound_operator)
 		defer {
@@ -9124,43 +10552,51 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Cte_table_nameContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Cte_table_nameContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func column_name() -> [Column_nameContext] {
+				return getRuleContexts(Column_nameContext.self)
+			}
+			open
+			func column_name(_ i: Int) -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_cte_table_name
 		}
-		open func column_name() -> Array<Column_nameContext> {
-			return getRuleContexts(Column_nameContext.self)
-		}
-		open func column_name(_ i: Int) -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_cte_table_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCte_table_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCte_table_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCte_table_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCte_table_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCte_table_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCte_table_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCte_table_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCte_table_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cte_table_name() throws -> Cte_table_nameContext {
+	 open func cte_table_name() throws -> Cte_table_nameContext {
 		var _localctx: Cte_table_nameContext = Cte_table_nameContext(_ctx, getState())
 		try enterRule(_localctx, 112, SQLiteParser.RULE_cte_table_name)
 		var _la: Int = 0
@@ -9216,35 +10652,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Signed_numberContext:ParserRuleContext {
-		open func NUMERIC_LITERAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.NUMERIC_LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_signed_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterSigned_number(self)
+
+	public class Signed_numberContext: ParserRuleContext {
+			open
+			func NUMERIC_LITERAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.NUMERIC_LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_signed_number
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterSigned_number(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitSigned_number(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitSigned_number(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitSigned_number(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitSigned_number(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitSigned_number(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitSigned_number(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func signed_number() throws -> Signed_numberContext {
+	 open func signed_number() throws -> Signed_numberContext {
 		var _localctx: Signed_numberContext = Signed_numberContext(_ctx, getState())
 		try enterRule(_localctx, 114, SQLiteParser.RULE_signed_number)
 		var _la: Int = 0
@@ -9289,41 +10733,67 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Literal_valueContext:ParserRuleContext {
-		open func NUMERIC_LITERAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.NUMERIC_LITERAL.rawValue, 0) }
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open func BLOB_LITERAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.BLOB_LITERAL.rawValue, 0) }
-		open func K_NULL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NULL.rawValue, 0) }
-		open func K_CURRENT_TIME() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CURRENT_TIME.rawValue, 0) }
-		open func K_CURRENT_DATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CURRENT_DATE.rawValue, 0) }
-		open func K_CURRENT_TIMESTAMP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CURRENT_TIMESTAMP.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_literal_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterLiteral_value(self)
+
+	public class Literal_valueContext: ParserRuleContext {
+			open
+			func NUMERIC_LITERAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.NUMERIC_LITERAL.rawValue, 0)
+			}
+			open
+			func STRING_LITERAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0)
+			}
+			open
+			func BLOB_LITERAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.BLOB_LITERAL.rawValue, 0)
+			}
+			open
+			func K_NULL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NULL.rawValue, 0)
+			}
+			open
+			func K_CURRENT_TIME() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CURRENT_TIME.rawValue, 0)
+			}
+			open
+			func K_CURRENT_DATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CURRENT_DATE.rawValue, 0)
+			}
+			open
+			func K_CURRENT_TIMESTAMP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CURRENT_TIMESTAMP.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_literal_value
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterLiteral_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitLiteral_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitLiteral_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitLiteral_value(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitLiteral_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitLiteral_value(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitLiteral_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal_value() throws -> Literal_valueContext {
+	 open func literal_value() throws -> Literal_valueContext {
 		var _localctx: Literal_valueContext = Literal_valueContext(_ctx, getState())
 		try enterRule(_localctx, 116, SQLiteParser.RULE_literal_value)
 		var _la: Int = 0
@@ -9362,35 +10832,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Unary_operatorContext:ParserRuleContext {
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_unary_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterUnary_operator(self)
+
+	public class Unary_operatorContext: ParserRuleContext {
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_unary_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterUnary_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitUnary_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitUnary_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitUnary_operator(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitUnary_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitUnary_operator(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitUnary_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unary_operator() throws -> Unary_operatorContext {
+	 open func unary_operator() throws -> Unary_operatorContext {
 		var _localctx: Unary_operatorContext = Unary_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 118, SQLiteParser.RULE_unary_operator)
 		var _la: Int = 0
@@ -9426,35 +10904,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Error_messageContext:ParserRuleContext {
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_error_message }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterError_message(self)
+
+	public class Error_messageContext: ParserRuleContext {
+			open
+			func STRING_LITERAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_error_message
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterError_message(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitError_message(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitError_message(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitError_message(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitError_message(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitError_message(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitError_message(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func error_message() throws -> Error_messageContext {
+	 open func error_message() throws -> Error_messageContext {
 		var _localctx: Error_messageContext = Error_messageContext(_ctx, getState())
 		try enterRule(_localctx, 120, SQLiteParser.RULE_error_message)
 		defer {
@@ -9474,40 +10960,47 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Module_argumentContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class Module_argumentContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func column_def() -> Column_defContext? {
+				return getRuleContext(Column_defContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_module_argument
 		}
-		open func column_def() -> Column_defContext? {
-			return getRuleContext(Column_defContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_module_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterModule_argument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterModule_argument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitModule_argument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitModule_argument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitModule_argument(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitModule_argument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitModule_argument(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitModule_argument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_argument() throws -> Module_argumentContext {
+	 open func module_argument() throws -> Module_argumentContext {
 		var _localctx: Module_argumentContext = Module_argumentContext(_ctx, getState())
 		try enterRule(_localctx, 122, SQLiteParser.RULE_module_argument)
 		defer {
@@ -9540,36 +11033,47 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Column_aliasContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_column_alias }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterColumn_alias(self)
+
+	public class Column_aliasContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func STRING_LITERAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_column_alias
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterColumn_alias(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitColumn_alias(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitColumn_alias(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitColumn_alias(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitColumn_alias(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitColumn_alias(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitColumn_alias(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func column_alias() throws -> Column_aliasContext {
+	 open func column_alias() throws -> Column_aliasContext {
 		var _localctx: Column_aliasContext = Column_aliasContext(_ctx, getState())
 		try enterRule(_localctx, 124, SQLiteParser.RULE_column_alias)
 		var _la: Int = 0
@@ -9601,158 +11105,535 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class KeywordContext:ParserRuleContext {
-		open func K_ABORT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0) }
-		open func K_ACTION() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ACTION.rawValue, 0) }
-		open func K_ADD() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ADD.rawValue, 0) }
-		open func K_AFTER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AFTER.rawValue, 0) }
-		open func K_ALL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ALL.rawValue, 0) }
-		open func K_ALTER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ALTER.rawValue, 0) }
-		open func K_ANALYZE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ANALYZE.rawValue, 0) }
-		open func K_AND() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AND.rawValue, 0) }
-		open func K_AS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0) }
-		open func K_ASC() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ASC.rawValue, 0) }
-		open func K_ATTACH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ATTACH.rawValue, 0) }
-		open func K_AUTOINCREMENT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_AUTOINCREMENT.rawValue, 0) }
-		open func K_BEFORE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BEFORE.rawValue, 0) }
-		open func K_BEGIN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BEGIN.rawValue, 0) }
-		open func K_BETWEEN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BETWEEN.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0) }
-		open func K_CASCADE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CASCADE.rawValue, 0) }
-		open func K_CASE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CASE.rawValue, 0) }
-		open func K_CAST() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CAST.rawValue, 0) }
-		open func K_CHECK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CHECK.rawValue, 0) }
-		open func K_COLLATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0) }
-		open func K_COLUMN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_COLUMN.rawValue, 0) }
-		open func K_COMMIT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_COMMIT.rawValue, 0) }
-		open func K_CONFLICT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CONFLICT.rawValue, 0) }
-		open func K_CONSTRAINT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CONSTRAINT.rawValue, 0) }
-		open func K_CREATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0) }
-		open func K_CROSS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CROSS.rawValue, 0) }
-		open func K_CURRENT_DATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CURRENT_DATE.rawValue, 0) }
-		open func K_CURRENT_TIME() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CURRENT_TIME.rawValue, 0) }
-		open func K_CURRENT_TIMESTAMP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_CURRENT_TIMESTAMP.rawValue, 0) }
-		open func K_DATABASE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DATABASE.rawValue, 0) }
-		open func K_DEFAULT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DEFAULT.rawValue, 0) }
-		open func K_DEFERRABLE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DEFERRABLE.rawValue, 0) }
-		open func K_DEFERRED() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DEFERRED.rawValue, 0) }
-		open func K_DELETE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, 0) }
-		open func K_DESC() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DESC.rawValue, 0) }
-		open func K_DETACH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DETACH.rawValue, 0) }
-		open func K_DISTINCT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DISTINCT.rawValue, 0) }
-		open func K_DROP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0) }
-		open func K_EACH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EACH.rawValue, 0) }
-		open func K_ELSE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ELSE.rawValue, 0) }
-		open func K_END() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_END.rawValue, 0) }
-		open func K_ESCAPE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ESCAPE.rawValue, 0) }
-		open func K_EXCEPT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXCEPT.rawValue, 0) }
-		open func K_EXCLUSIVE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXCLUSIVE.rawValue, 0) }
-		open func K_EXISTS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0) }
-		open func K_EXPLAIN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_EXPLAIN.rawValue, 0) }
-		open func K_FAIL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0) }
-		open func K_FOR() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FOR.rawValue, 0) }
-		open func K_FOREIGN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FOREIGN.rawValue, 0) }
-		open func K_FROM() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0) }
-		open func K_FULL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_FULL.rawValue, 0) }
-		open func K_GLOB() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_GLOB.rawValue, 0) }
-		open func K_GROUP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_GROUP.rawValue, 0) }
-		open func K_HAVING() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_HAVING.rawValue, 0) }
-		open func K_IF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0) }
-		open func K_IGNORE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0) }
-		open func K_IMMEDIATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IMMEDIATE.rawValue, 0) }
-		open func K_IN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IN.rawValue, 0) }
-		open func K_INDEX() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INDEX.rawValue, 0) }
-		open func K_INDEXED() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INDEXED.rawValue, 0) }
-		open func K_INITIALLY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INITIALLY.rawValue, 0) }
-		open func K_INNER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INNER.rawValue, 0) }
-		open func K_INSERT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INSERT.rawValue, 0) }
-		open func K_INSTEAD() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INSTEAD.rawValue, 0) }
-		open func K_INTERSECT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INTERSECT.rawValue, 0) }
-		open func K_INTO() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_INTO.rawValue, 0) }
-		open func K_IS() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_IS.rawValue, 0) }
-		open func K_ISNULL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ISNULL.rawValue, 0) }
-		open func K_JOIN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_JOIN.rawValue, 0) }
-		open func K_KEY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_KEY.rawValue, 0) }
-		open func K_LEFT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LEFT.rawValue, 0) }
-		open func K_LIKE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LIKE.rawValue, 0) }
-		open func K_LIMIT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0) }
-		open func K_MATCH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_MATCH.rawValue, 0) }
-		open func K_NATURAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NATURAL.rawValue, 0) }
-		open func K_NO() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NO.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_NOTNULL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NOTNULL.rawValue, 0) }
-		open func K_NULL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_NULL.rawValue, 0) }
-		open func K_OF() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OF.rawValue, 0) }
-		open func K_OFFSET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0) }
-		open func K_ON() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0) }
-		open func K_OR() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0) }
-		open func K_ORDER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0) }
-		open func K_OUTER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_OUTER.rawValue, 0) }
-		open func K_PLAN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_PLAN.rawValue, 0) }
-		open func K_PRAGMA() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_PRAGMA.rawValue, 0) }
-		open func K_PRIMARY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_PRIMARY.rawValue, 0) }
-		open func K_QUERY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_QUERY.rawValue, 0) }
-		open func K_RAISE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RAISE.rawValue, 0) }
-		open func K_RECURSIVE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0) }
-		open func K_REFERENCES() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REFERENCES.rawValue, 0) }
-		open func K_REGEXP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REGEXP.rawValue, 0) }
-		open func K_REINDEX() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REINDEX.rawValue, 0) }
-		open func K_RELEASE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RELEASE.rawValue, 0) }
-		open func K_RENAME() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RENAME.rawValue, 0) }
-		open func K_REPLACE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0) }
-		open func K_RESTRICT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RESTRICT.rawValue, 0) }
-		open func K_RIGHT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_RIGHT.rawValue, 0) }
-		open func K_ROLLBACK() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0) }
-		open func K_ROW() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_ROW.rawValue, 0) }
-		open func K_SAVEPOINT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SAVEPOINT.rawValue, 0) }
-		open func K_SELECT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SELECT.rawValue, 0) }
-		open func K_SET() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_SET.rawValue, 0) }
-		open func K_TABLE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0) }
-		open func K_TEMP() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TEMP.rawValue, 0) }
-		open func K_TEMPORARY() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TEMPORARY.rawValue, 0) }
-		open func K_THEN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_THEN.rawValue, 0) }
-		open func K_TO() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TO.rawValue, 0) }
-		open func K_TRANSACTION() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TRANSACTION.rawValue, 0) }
-		open func K_TRIGGER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_TRIGGER.rawValue, 0) }
-		open func K_UNION() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UNION.rawValue, 0) }
-		open func K_UNIQUE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UNIQUE.rawValue, 0) }
-		open func K_UPDATE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, 0) }
-		open func K_USING() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_USING.rawValue, 0) }
-		open func K_VACUUM() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VACUUM.rawValue, 0) }
-		open func K_VALUES() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VALUES.rawValue, 0) }
-		open func K_VIEW() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VIEW.rawValue, 0) }
-		open func K_VIRTUAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_VIRTUAL.rawValue, 0) }
-		open func K_WHEN() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHEN.rawValue, 0) }
-		open func K_WHERE() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0) }
-		open func K_WITH() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0) }
-		open func K_WITHOUT() -> TerminalNode? { return getToken(SQLiteParser.Tokens.K_WITHOUT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_keyword }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterKeyword(self)
+
+	public class KeywordContext: ParserRuleContext {
+			open
+			func K_ABORT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ABORT.rawValue, 0)
+			}
+			open
+			func K_ACTION() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ACTION.rawValue, 0)
+			}
+			open
+			func K_ADD() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ADD.rawValue, 0)
+			}
+			open
+			func K_AFTER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AFTER.rawValue, 0)
+			}
+			open
+			func K_ALL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ALL.rawValue, 0)
+			}
+			open
+			func K_ALTER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ALTER.rawValue, 0)
+			}
+			open
+			func K_ANALYZE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ANALYZE.rawValue, 0)
+			}
+			open
+			func K_AND() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AND.rawValue, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func K_ASC() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ASC.rawValue, 0)
+			}
+			open
+			func K_ATTACH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ATTACH.rawValue, 0)
+			}
+			open
+			func K_AUTOINCREMENT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_AUTOINCREMENT.rawValue, 0)
+			}
+			open
+			func K_BEFORE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BEFORE.rawValue, 0)
+			}
+			open
+			func K_BEGIN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BEGIN.rawValue, 0)
+			}
+			open
+			func K_BETWEEN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BETWEEN.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func K_CASCADE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CASCADE.rawValue, 0)
+			}
+			open
+			func K_CASE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CASE.rawValue, 0)
+			}
+			open
+			func K_CAST() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CAST.rawValue, 0)
+			}
+			open
+			func K_CHECK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CHECK.rawValue, 0)
+			}
+			open
+			func K_COLLATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_COLLATE.rawValue, 0)
+			}
+			open
+			func K_COLUMN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_COLUMN.rawValue, 0)
+			}
+			open
+			func K_COMMIT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_COMMIT.rawValue, 0)
+			}
+			open
+			func K_CONFLICT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CONFLICT.rawValue, 0)
+			}
+			open
+			func K_CONSTRAINT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CONSTRAINT.rawValue, 0)
+			}
+			open
+			func K_CREATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CREATE.rawValue, 0)
+			}
+			open
+			func K_CROSS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CROSS.rawValue, 0)
+			}
+			open
+			func K_CURRENT_DATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CURRENT_DATE.rawValue, 0)
+			}
+			open
+			func K_CURRENT_TIME() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CURRENT_TIME.rawValue, 0)
+			}
+			open
+			func K_CURRENT_TIMESTAMP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_CURRENT_TIMESTAMP.rawValue, 0)
+			}
+			open
+			func K_DATABASE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DATABASE.rawValue, 0)
+			}
+			open
+			func K_DEFAULT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DEFAULT.rawValue, 0)
+			}
+			open
+			func K_DEFERRABLE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DEFERRABLE.rawValue, 0)
+			}
+			open
+			func K_DEFERRED() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DEFERRED.rawValue, 0)
+			}
+			open
+			func K_DELETE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DELETE.rawValue, 0)
+			}
+			open
+			func K_DESC() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DESC.rawValue, 0)
+			}
+			open
+			func K_DETACH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DETACH.rawValue, 0)
+			}
+			open
+			func K_DISTINCT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DISTINCT.rawValue, 0)
+			}
+			open
+			func K_DROP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_DROP.rawValue, 0)
+			}
+			open
+			func K_EACH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EACH.rawValue, 0)
+			}
+			open
+			func K_ELSE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ELSE.rawValue, 0)
+			}
+			open
+			func K_END() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_END.rawValue, 0)
+			}
+			open
+			func K_ESCAPE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ESCAPE.rawValue, 0)
+			}
+			open
+			func K_EXCEPT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXCEPT.rawValue, 0)
+			}
+			open
+			func K_EXCLUSIVE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXCLUSIVE.rawValue, 0)
+			}
+			open
+			func K_EXISTS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXISTS.rawValue, 0)
+			}
+			open
+			func K_EXPLAIN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_EXPLAIN.rawValue, 0)
+			}
+			open
+			func K_FAIL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FAIL.rawValue, 0)
+			}
+			open
+			func K_FOR() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FOR.rawValue, 0)
+			}
+			open
+			func K_FOREIGN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FOREIGN.rawValue, 0)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func K_FULL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_FULL.rawValue, 0)
+			}
+			open
+			func K_GLOB() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_GLOB.rawValue, 0)
+			}
+			open
+			func K_GROUP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_GROUP.rawValue, 0)
+			}
+			open
+			func K_HAVING() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_HAVING.rawValue, 0)
+			}
+			open
+			func K_IF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IF.rawValue, 0)
+			}
+			open
+			func K_IGNORE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IGNORE.rawValue, 0)
+			}
+			open
+			func K_IMMEDIATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IMMEDIATE.rawValue, 0)
+			}
+			open
+			func K_IN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IN.rawValue, 0)
+			}
+			open
+			func K_INDEX() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INDEX.rawValue, 0)
+			}
+			open
+			func K_INDEXED() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INDEXED.rawValue, 0)
+			}
+			open
+			func K_INITIALLY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INITIALLY.rawValue, 0)
+			}
+			open
+			func K_INNER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INNER.rawValue, 0)
+			}
+			open
+			func K_INSERT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INSERT.rawValue, 0)
+			}
+			open
+			func K_INSTEAD() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INSTEAD.rawValue, 0)
+			}
+			open
+			func K_INTERSECT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INTERSECT.rawValue, 0)
+			}
+			open
+			func K_INTO() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_INTO.rawValue, 0)
+			}
+			open
+			func K_IS() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_IS.rawValue, 0)
+			}
+			open
+			func K_ISNULL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ISNULL.rawValue, 0)
+			}
+			open
+			func K_JOIN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_JOIN.rawValue, 0)
+			}
+			open
+			func K_KEY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_KEY.rawValue, 0)
+			}
+			open
+			func K_LEFT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LEFT.rawValue, 0)
+			}
+			open
+			func K_LIKE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LIKE.rawValue, 0)
+			}
+			open
+			func K_LIMIT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_LIMIT.rawValue, 0)
+			}
+			open
+			func K_MATCH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_MATCH.rawValue, 0)
+			}
+			open
+			func K_NATURAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NATURAL.rawValue, 0)
+			}
+			open
+			func K_NO() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NO.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_NOTNULL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NOTNULL.rawValue, 0)
+			}
+			open
+			func K_NULL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_NULL.rawValue, 0)
+			}
+			open
+			func K_OF() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OF.rawValue, 0)
+			}
+			open
+			func K_OFFSET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OFFSET.rawValue, 0)
+			}
+			open
+			func K_ON() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ON.rawValue, 0)
+			}
+			open
+			func K_OR() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OR.rawValue, 0)
+			}
+			open
+			func K_ORDER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ORDER.rawValue, 0)
+			}
+			open
+			func K_OUTER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_OUTER.rawValue, 0)
+			}
+			open
+			func K_PLAN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_PLAN.rawValue, 0)
+			}
+			open
+			func K_PRAGMA() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_PRAGMA.rawValue, 0)
+			}
+			open
+			func K_PRIMARY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_PRIMARY.rawValue, 0)
+			}
+			open
+			func K_QUERY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_QUERY.rawValue, 0)
+			}
+			open
+			func K_RAISE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RAISE.rawValue, 0)
+			}
+			open
+			func K_RECURSIVE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RECURSIVE.rawValue, 0)
+			}
+			open
+			func K_REFERENCES() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REFERENCES.rawValue, 0)
+			}
+			open
+			func K_REGEXP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REGEXP.rawValue, 0)
+			}
+			open
+			func K_REINDEX() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REINDEX.rawValue, 0)
+			}
+			open
+			func K_RELEASE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RELEASE.rawValue, 0)
+			}
+			open
+			func K_RENAME() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RENAME.rawValue, 0)
+			}
+			open
+			func K_REPLACE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_REPLACE.rawValue, 0)
+			}
+			open
+			func K_RESTRICT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RESTRICT.rawValue, 0)
+			}
+			open
+			func K_RIGHT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_RIGHT.rawValue, 0)
+			}
+			open
+			func K_ROLLBACK() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ROLLBACK.rawValue, 0)
+			}
+			open
+			func K_ROW() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_ROW.rawValue, 0)
+			}
+			open
+			func K_SAVEPOINT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SAVEPOINT.rawValue, 0)
+			}
+			open
+			func K_SELECT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SELECT.rawValue, 0)
+			}
+			open
+			func K_SET() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_SET.rawValue, 0)
+			}
+			open
+			func K_TABLE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TABLE.rawValue, 0)
+			}
+			open
+			func K_TEMP() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TEMP.rawValue, 0)
+			}
+			open
+			func K_TEMPORARY() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TEMPORARY.rawValue, 0)
+			}
+			open
+			func K_THEN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_THEN.rawValue, 0)
+			}
+			open
+			func K_TO() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TO.rawValue, 0)
+			}
+			open
+			func K_TRANSACTION() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TRANSACTION.rawValue, 0)
+			}
+			open
+			func K_TRIGGER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_TRIGGER.rawValue, 0)
+			}
+			open
+			func K_UNION() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UNION.rawValue, 0)
+			}
+			open
+			func K_UNIQUE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UNIQUE.rawValue, 0)
+			}
+			open
+			func K_UPDATE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_UPDATE.rawValue, 0)
+			}
+			open
+			func K_USING() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_USING.rawValue, 0)
+			}
+			open
+			func K_VACUUM() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VACUUM.rawValue, 0)
+			}
+			open
+			func K_VALUES() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VALUES.rawValue, 0)
+			}
+			open
+			func K_VIEW() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VIEW.rawValue, 0)
+			}
+			open
+			func K_VIRTUAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_VIRTUAL.rawValue, 0)
+			}
+			open
+			func K_WHEN() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHEN.rawValue, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func K_WITH() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WITH.rawValue, 0)
+			}
+			open
+			func K_WITHOUT() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.K_WITHOUT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_keyword
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterKeyword(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitKeyword(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitKeyword(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitKeyword(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitKeyword(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitKeyword(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitKeyword(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keyword() throws -> KeywordContext {
+	 open func keyword() throws -> KeywordContext {
 		var _localctx: KeywordContext = KeywordContext(_ctx, getState())
 		try enterRule(_localctx, 126, SQLiteParser.RULE_keyword)
 		var _la: Int = 0
@@ -9791,37 +11672,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class NameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class NameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitName(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitName(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func name() throws -> NameContext {
+	 open func name() throws -> NameContext {
 		var _localctx: NameContext = NameContext(_ctx, getState())
 		try enterRule(_localctx, 128, SQLiteParser.RULE_name)
 		defer {
@@ -9841,37 +11728,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Function_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Function_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_function_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_function_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterFunction_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterFunction_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitFunction_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitFunction_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitFunction_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitFunction_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitFunction_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitFunction_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_name() throws -> Function_nameContext {
+	 open func function_name() throws -> Function_nameContext {
 		var _localctx: Function_nameContext = Function_nameContext(_ctx, getState())
 		try enterRule(_localctx, 130, SQLiteParser.RULE_function_name)
 		defer {
@@ -9891,37 +11784,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Database_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Database_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_database_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_database_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterDatabase_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterDatabase_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitDatabase_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitDatabase_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitDatabase_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitDatabase_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitDatabase_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitDatabase_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func database_name() throws -> Database_nameContext {
+	 open func database_name() throws -> Database_nameContext {
 		var _localctx: Database_nameContext = Database_nameContext(_ctx, getState())
 		try enterRule(_localctx, 132, SQLiteParser.RULE_database_name)
 		defer {
@@ -9941,37 +11840,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Table_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Table_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_table_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_table_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterTable_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterTable_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitTable_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitTable_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitTable_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitTable_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitTable_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitTable_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_name() throws -> Table_nameContext {
+	 open func table_name() throws -> Table_nameContext {
 		var _localctx: Table_nameContext = Table_nameContext(_ctx, getState())
 		try enterRule(_localctx, 134, SQLiteParser.RULE_table_name)
 		defer {
@@ -9991,37 +11896,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Table_or_index_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Table_or_index_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_table_or_index_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_table_or_index_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterTable_or_index_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterTable_or_index_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitTable_or_index_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitTable_or_index_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitTable_or_index_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitTable_or_index_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitTable_or_index_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitTable_or_index_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_or_index_name() throws -> Table_or_index_nameContext {
+	 open func table_or_index_name() throws -> Table_or_index_nameContext {
 		var _localctx: Table_or_index_nameContext = Table_or_index_nameContext(_ctx, getState())
 		try enterRule(_localctx, 136, SQLiteParser.RULE_table_or_index_name)
 		defer {
@@ -10041,37 +11952,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class New_table_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class New_table_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_new_table_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_new_table_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterNew_table_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterNew_table_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitNew_table_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitNew_table_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitNew_table_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitNew_table_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitNew_table_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitNew_table_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func new_table_name() throws -> New_table_nameContext {
+	 open func new_table_name() throws -> New_table_nameContext {
 		var _localctx: New_table_nameContext = New_table_nameContext(_ctx, getState())
 		try enterRule(_localctx, 138, SQLiteParser.RULE_new_table_name)
 		defer {
@@ -10091,37 +12008,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Column_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Column_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_column_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_column_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterColumn_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterColumn_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitColumn_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitColumn_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitColumn_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitColumn_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitColumn_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitColumn_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func column_name() throws -> Column_nameContext {
+	 open func column_name() throws -> Column_nameContext {
 		var _localctx: Column_nameContext = Column_nameContext(_ctx, getState())
 		try enterRule(_localctx, 140, SQLiteParser.RULE_column_name)
 		defer {
@@ -10141,37 +12064,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Collation_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Collation_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_collation_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_collation_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterCollation_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterCollation_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitCollation_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitCollation_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitCollation_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitCollation_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitCollation_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitCollation_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collation_name() throws -> Collation_nameContext {
+	 open func collation_name() throws -> Collation_nameContext {
 		var _localctx: Collation_nameContext = Collation_nameContext(_ctx, getState())
 		try enterRule(_localctx, 142, SQLiteParser.RULE_collation_name)
 		defer {
@@ -10191,37 +12120,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Foreign_tableContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Foreign_tableContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_foreign_table
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_foreign_table }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterForeign_table(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterForeign_table(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitForeign_table(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitForeign_table(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitForeign_table(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitForeign_table(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitForeign_table(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitForeign_table(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func foreign_table() throws -> Foreign_tableContext {
+	 open func foreign_table() throws -> Foreign_tableContext {
 		var _localctx: Foreign_tableContext = Foreign_tableContext(_ctx, getState())
 		try enterRule(_localctx, 144, SQLiteParser.RULE_foreign_table)
 		defer {
@@ -10241,37 +12176,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Index_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Index_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_index_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_index_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterIndex_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterIndex_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitIndex_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitIndex_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitIndex_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitIndex_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitIndex_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitIndex_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func index_name() throws -> Index_nameContext {
+	 open func index_name() throws -> Index_nameContext {
 		var _localctx: Index_nameContext = Index_nameContext(_ctx, getState())
 		try enterRule(_localctx, 146, SQLiteParser.RULE_index_name)
 		defer {
@@ -10291,37 +12232,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Trigger_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Trigger_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_trigger_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_trigger_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterTrigger_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterTrigger_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitTrigger_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitTrigger_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitTrigger_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitTrigger_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitTrigger_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitTrigger_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func trigger_name() throws -> Trigger_nameContext {
+	 open func trigger_name() throws -> Trigger_nameContext {
 		var _localctx: Trigger_nameContext = Trigger_nameContext(_ctx, getState())
 		try enterRule(_localctx, 148, SQLiteParser.RULE_trigger_name)
 		defer {
@@ -10341,37 +12288,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class View_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class View_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_view_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_view_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterView_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterView_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitView_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitView_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitView_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitView_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitView_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitView_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func view_name() throws -> View_nameContext {
+	 open func view_name() throws -> View_nameContext {
 		var _localctx: View_nameContext = View_nameContext(_ctx, getState())
 		try enterRule(_localctx, 150, SQLiteParser.RULE_view_name)
 		defer {
@@ -10391,37 +12344,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Module_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Module_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_module_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_module_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterModule_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterModule_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitModule_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitModule_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitModule_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitModule_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitModule_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitModule_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_name() throws -> Module_nameContext {
+	 open func module_name() throws -> Module_nameContext {
 		var _localctx: Module_nameContext = Module_nameContext(_ctx, getState())
 		try enterRule(_localctx, 152, SQLiteParser.RULE_module_name)
 		defer {
@@ -10441,37 +12400,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Pragma_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Pragma_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_pragma_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_pragma_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterPragma_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterPragma_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitPragma_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitPragma_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitPragma_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitPragma_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitPragma_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitPragma_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pragma_name() throws -> Pragma_nameContext {
+	 open func pragma_name() throws -> Pragma_nameContext {
 		var _localctx: Pragma_nameContext = Pragma_nameContext(_ctx, getState())
 		try enterRule(_localctx, 154, SQLiteParser.RULE_pragma_name)
 		defer {
@@ -10491,37 +12456,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Savepoint_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Savepoint_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_savepoint_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_savepoint_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterSavepoint_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterSavepoint_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitSavepoint_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitSavepoint_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitSavepoint_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitSavepoint_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitSavepoint_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitSavepoint_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func savepoint_name() throws -> Savepoint_nameContext {
+	 open func savepoint_name() throws -> Savepoint_nameContext {
 		var _localctx: Savepoint_nameContext = Savepoint_nameContext(_ctx, getState())
 		try enterRule(_localctx, 156, SQLiteParser.RULE_savepoint_name)
 		defer {
@@ -10541,37 +12512,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Table_aliasContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Table_aliasContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_table_alias
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_table_alias }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterTable_alias(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterTable_alias(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitTable_alias(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitTable_alias(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitTable_alias(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitTable_alias(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitTable_alias(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitTable_alias(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_alias() throws -> Table_aliasContext {
+	 open func table_alias() throws -> Table_aliasContext {
 		var _localctx: Table_aliasContext = Table_aliasContext(_ctx, getState())
 		try enterRule(_localctx, 158, SQLiteParser.RULE_table_alias)
 		defer {
@@ -10591,37 +12568,43 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Transaction_nameContext:ParserRuleContext {
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
+
+	public class Transaction_nameContext: ParserRuleContext {
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_transaction_name
 		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_transaction_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterTransaction_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterTransaction_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitTransaction_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitTransaction_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitTransaction_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitTransaction_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitTransaction_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitTransaction_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func transaction_name() throws -> Transaction_nameContext {
+	 open func transaction_name() throws -> Transaction_nameContext {
 		var _localctx: Transaction_nameContext = Transaction_nameContext(_ctx, getState())
 		try enterRule(_localctx, 160, SQLiteParser.RULE_transaction_name)
 		defer {
@@ -10641,42 +12624,55 @@ open class SQLiteParser: Parser {
 
 		return _localctx
 	}
-	open class Any_nameContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(SQLiteParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func keyword() -> KeywordContext? {
-			return getRuleContext(KeywordContext.self,0)
+
+	public class Any_nameContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func keyword() -> KeywordContext? {
+				return getRuleContext(KeywordContext.self, 0)
+			}
+			open
+			func STRING_LITERAL() -> TerminalNode? {
+				return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0)
+			}
+			open
+			func any_name() -> Any_nameContext? {
+				return getRuleContext(Any_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SQLiteParser.RULE_any_name
 		}
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(SQLiteParser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open func any_name() -> Any_nameContext? {
-			return getRuleContext(Any_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SQLiteParser.RULE_any_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).enterAny_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.enterAny_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SQLiteListener {
-			 	(listener as! SQLiteListener).exitAny_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SQLiteListener {
+				listener.exitAny_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SQLiteVisitor {
-			     return (visitor as! SQLiteVisitor<T>).visitAny_name(self)
-			}else if visitor is SQLiteBaseVisitor {
-		    	 return (visitor as! SQLiteBaseVisitor<T>).visitAny_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SQLiteVisitor {
+			    return visitor.visitAny_name(self)
+			}
+			else if let visitor = visitor as? SQLiteBaseVisitor {
+			    return visitor.visitAny_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func any_name() throws -> Any_nameContext {
+	 open func any_name() throws -> Any_nameContext {
 		var _localctx: Any_nameContext = Any_nameContext(_ctx, getState())
 		try enterRule(_localctx, 162, SQLiteParser.RULE_any_name)
 		defer {
@@ -10840,7 +12836,7 @@ open class SQLiteParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10852,8 +12848,8 @@ open class SQLiteParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  39:
 			return try expr_sempred(_localctx?.castdown(ExprContext.self), predIndex)
@@ -10880,6 +12876,10 @@ open class SQLiteParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = SQLiteParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = SQLiteParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

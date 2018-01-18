@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/modula2pim4/m2pim4.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/modula2pim4/m2pim4.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdent(_ ctx: m2pim4Parser.IdentContext) -> T{
+	open func visitIdent(_ ctx: m2pim4Parser.IdentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: m2pim4Parser.NumberContext) -> T{
+	open func visitNumber(_ ctx: m2pim4Parser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInteger(_ ctx: m2pim4Parser.IntegerContext) -> T{
+	open func visitInteger(_ ctx: m2pim4Parser.IntegerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReal(_ ctx: m2pim4Parser.RealContext) -> T{
+	open func visitReal(_ ctx: m2pim4Parser.RealContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScaleFactor(_ ctx: m2pim4Parser.ScaleFactorContext) -> T{
+	open func visitScaleFactor(_ ctx: m2pim4Parser.ScaleFactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHexDigit(_ ctx: m2pim4Parser.HexDigitContext) -> T{
+	open func visitHexDigit(_ ctx: m2pim4Parser.HexDigitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDigit(_ ctx: m2pim4Parser.DigitContext) -> T{
+	open func visitDigit(_ ctx: m2pim4Parser.DigitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOctalDigit(_ ctx: m2pim4Parser.OctalDigitContext) -> T{
+	open func visitOctalDigit(_ ctx: m2pim4Parser.OctalDigitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: m2pim4Parser.StringContext) -> T{
+	open func visitString(_ ctx: m2pim4Parser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualident(_ ctx: m2pim4Parser.QualidentContext) -> T{
+	open func visitQualident(_ ctx: m2pim4Parser.QualidentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantDeclaration(_ ctx: m2pim4Parser.ConstantDeclarationContext) -> T{
+	open func visitConstantDeclaration(_ ctx: m2pim4Parser.ConstantDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstExpression(_ ctx: m2pim4Parser.ConstExpressionContext) -> T{
+	open func visitConstExpression(_ ctx: m2pim4Parser.ConstExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelation(_ ctx: m2pim4Parser.RelationContext) -> T{
+	open func visitRelation(_ ctx: m2pim4Parser.RelationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleConstExpr(_ ctx: m2pim4Parser.SimpleConstExprContext) -> T{
+	open func visitSimpleConstExpr(_ ctx: m2pim4Parser.SimpleConstExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAddOperator(_ ctx: m2pim4Parser.AddOperatorContext) -> T{
+	open func visitAddOperator(_ ctx: m2pim4Parser.AddOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstTerm(_ ctx: m2pim4Parser.ConstTermContext) -> T{
+	open func visitConstTerm(_ ctx: m2pim4Parser.ConstTermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMulOperator(_ ctx: m2pim4Parser.MulOperatorContext) -> T{
+	open func visitMulOperator(_ ctx: m2pim4Parser.MulOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstFactor(_ ctx: m2pim4Parser.ConstFactorContext) -> T{
+	open func visitConstFactor(_ ctx: m2pim4Parser.ConstFactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetOrQualident(_ ctx: m2pim4Parser.SetOrQualidentContext) -> T{
+	open func visitSetOrQualident(_ ctx: m2pim4Parser.SetOrQualidentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSet(_ ctx: m2pim4Parser.SetContext) -> T{
+	open func visitSet(_ ctx: m2pim4Parser.SetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement(_ ctx: m2pim4Parser.ElementContext) -> T{
+	open func visitElement(_ ctx: m2pim4Parser.ElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDeclaration(_ ctx: m2pim4Parser.TypeDeclarationContext) -> T{
+	open func visitTypeDeclaration(_ ctx: m2pim4Parser.TypeDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: m2pim4Parser.TypeContext) -> T{
+	open func visitType(_ ctx: m2pim4Parser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleType(_ ctx: m2pim4Parser.SimpleTypeContext) -> T{
+	open func visitSimpleType(_ ctx: m2pim4Parser.SimpleTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumeration(_ ctx: m2pim4Parser.EnumerationContext) -> T{
+	open func visitEnumeration(_ ctx: m2pim4Parser.EnumerationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentList(_ ctx: m2pim4Parser.IdentListContext) -> T{
+	open func visitIdentList(_ ctx: m2pim4Parser.IdentListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubrangeType(_ ctx: m2pim4Parser.SubrangeTypeContext) -> T{
+	open func visitSubrangeType(_ ctx: m2pim4Parser.SubrangeTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayType(_ ctx: m2pim4Parser.ArrayTypeContext) -> T{
+	open func visitArrayType(_ ctx: m2pim4Parser.ArrayTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordType(_ ctx: m2pim4Parser.RecordTypeContext) -> T{
+	open func visitRecordType(_ ctx: m2pim4Parser.RecordTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldListSequence(_ ctx: m2pim4Parser.FieldListSequenceContext) -> T{
+	open func visitFieldListSequence(_ ctx: m2pim4Parser.FieldListSequenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldList(_ ctx: m2pim4Parser.FieldListContext) -> T{
+	open func visitFieldList(_ ctx: m2pim4Parser.FieldListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariant(_ ctx: m2pim4Parser.VariantContext) -> T{
+	open func visitVariant(_ ctx: m2pim4Parser.VariantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseLabelList(_ ctx: m2pim4Parser.CaseLabelListContext) -> T{
+	open func visitCaseLabelList(_ ctx: m2pim4Parser.CaseLabelListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseLabels(_ ctx: m2pim4Parser.CaseLabelsContext) -> T{
+	open func visitCaseLabels(_ ctx: m2pim4Parser.CaseLabelsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetType(_ ctx: m2pim4Parser.SetTypeContext) -> T{
+	open func visitSetType(_ ctx: m2pim4Parser.SetTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPointerType(_ ctx: m2pim4Parser.PointerTypeContext) -> T{
+	open func visitPointerType(_ ctx: m2pim4Parser.PointerTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureType(_ ctx: m2pim4Parser.ProcedureTypeContext) -> T{
+	open func visitProcedureType(_ ctx: m2pim4Parser.ProcedureTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalTypeList(_ ctx: m2pim4Parser.FormalTypeListContext) -> T{
+	open func visitFormalTypeList(_ ctx: m2pim4Parser.FormalTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclaration(_ ctx: m2pim4Parser.VariableDeclarationContext) -> T{
+	open func visitVariableDeclaration(_ ctx: m2pim4Parser.VariableDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDesignator(_ ctx: m2pim4Parser.DesignatorContext) -> T{
+	open func visitDesignator(_ ctx: m2pim4Parser.DesignatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDesignatorTail(_ ctx: m2pim4Parser.DesignatorTailContext) -> T{
+	open func visitDesignatorTail(_ ctx: m2pim4Parser.DesignatorTailContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpList(_ ctx: m2pim4Parser.ExpListContext) -> T{
+	open func visitExpList(_ ctx: m2pim4Parser.ExpListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: m2pim4Parser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: m2pim4Parser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleExpression(_ ctx: m2pim4Parser.SimpleExpressionContext) -> T{
+	open func visitSimpleExpression(_ ctx: m2pim4Parser.SimpleExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: m2pim4Parser.TermContext) -> T{
+	open func visitTerm(_ ctx: m2pim4Parser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFactor(_ ctx: m2pim4Parser.FactorContext) -> T{
+	open func visitFactor(_ ctx: m2pim4Parser.FactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetOrDesignatorOrProcCall(_ ctx: m2pim4Parser.SetOrDesignatorOrProcCallContext) -> T{
+	open func visitSetOrDesignatorOrProcCall(_ ctx: m2pim4Parser.SetOrDesignatorOrProcCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActualParameters(_ ctx: m2pim4Parser.ActualParametersContext) -> T{
+	open func visitActualParameters(_ ctx: m2pim4Parser.ActualParametersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: m2pim4Parser.StatementContext) -> T{
+	open func visitStatement(_ ctx: m2pim4Parser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentOrProcCall(_ ctx: m2pim4Parser.AssignmentOrProcCallContext) -> T{
+	open func visitAssignmentOrProcCall(_ ctx: m2pim4Parser.AssignmentOrProcCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementSequence(_ ctx: m2pim4Parser.StatementSequenceContext) -> T{
+	open func visitStatementSequence(_ ctx: m2pim4Parser.StatementSequenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfStatement(_ ctx: m2pim4Parser.IfStatementContext) -> T{
+	open func visitIfStatement(_ ctx: m2pim4Parser.IfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseStatement(_ ctx: m2pim4Parser.CaseStatementContext) -> T{
+	open func visitCaseStatement(_ ctx: m2pim4Parser.CaseStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCcase(_ ctx: m2pim4Parser.CcaseContext) -> T{
+	open func visitCcase(_ ctx: m2pim4Parser.CcaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhileStatement(_ ctx: m2pim4Parser.WhileStatementContext) -> T{
+	open func visitWhileStatement(_ ctx: m2pim4Parser.WhileStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRepeatStatement(_ ctx: m2pim4Parser.RepeatStatementContext) -> T{
+	open func visitRepeatStatement(_ ctx: m2pim4Parser.RepeatStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForStatement(_ ctx: m2pim4Parser.ForStatementContext) -> T{
+	open func visitForStatement(_ ctx: m2pim4Parser.ForStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLoopStatement(_ ctx: m2pim4Parser.LoopStatementContext) -> T{
+	open func visitLoopStatement(_ ctx: m2pim4Parser.LoopStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWithStatement(_ ctx: m2pim4Parser.WithStatementContext) -> T{
+	open func visitWithStatement(_ ctx: m2pim4Parser.WithStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureDeclaration(_ ctx: m2pim4Parser.ProcedureDeclarationContext) -> T{
+	open func visitProcedureDeclaration(_ ctx: m2pim4Parser.ProcedureDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureHeading(_ ctx: m2pim4Parser.ProcedureHeadingContext) -> T{
+	open func visitProcedureHeading(_ ctx: m2pim4Parser.ProcedureHeadingContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: m2pim4Parser.BlockContext) -> T{
+	open func visitBlock(_ ctx: m2pim4Parser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclaration(_ ctx: m2pim4Parser.DeclarationContext) -> T{
+	open func visitDeclaration(_ ctx: m2pim4Parser.DeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameters(_ ctx: m2pim4Parser.FormalParametersContext) -> T{
+	open func visitFormalParameters(_ ctx: m2pim4Parser.FormalParametersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFpSection(_ ctx: m2pim4Parser.FpSectionContext) -> T{
+	open func visitFpSection(_ ctx: m2pim4Parser.FpSectionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalType(_ ctx: m2pim4Parser.FormalTypeContext) -> T{
+	open func visitFormalType(_ ctx: m2pim4Parser.FormalTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleDeclaration(_ ctx: m2pim4Parser.ModuleDeclarationContext) -> T{
+	open func visitModuleDeclaration(_ ctx: m2pim4Parser.ModuleDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPriority(_ ctx: m2pim4Parser.PriorityContext) -> T{
+	open func visitPriority(_ ctx: m2pim4Parser.PriorityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExportList(_ ctx: m2pim4Parser.ExportListContext) -> T{
+	open func visitExportList(_ ctx: m2pim4Parser.ExportListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportList(_ ctx: m2pim4Parser.ImportListContext) -> T{
+	open func visitImportList(_ ctx: m2pim4Parser.ImportListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinitionModule(_ ctx: m2pim4Parser.DefinitionModuleContext) -> T{
+	open func visitDefinitionModule(_ ctx: m2pim4Parser.DefinitionModuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinition(_ ctx: m2pim4Parser.DefinitionContext) -> T{
+	open func visitDefinition(_ ctx: m2pim4Parser.DefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgramModule(_ ctx: m2pim4Parser.ProgramModuleContext) -> T{
+	open func visitProgramModule(_ ctx: m2pim4Parser.ProgramModuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class m2pim4Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompilationUnit(_ ctx: m2pim4Parser.CompilationUnitContext) -> T{
+	open func visitCompilationUnit(_ ctx: m2pim4Parser.CompilationUnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

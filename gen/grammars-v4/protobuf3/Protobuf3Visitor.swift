@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/protobuf3/Protobuf3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/protobuf3/Protobuf3.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProto(_ ctx: Protobuf3Parser.ProtoContext) -> T{
+	open func visitProto(_ ctx: Protobuf3Parser.ProtoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSyntax(_ ctx: Protobuf3Parser.SyntaxContext) -> T{
+	open func visitSyntax(_ ctx: Protobuf3Parser.SyntaxContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportStatement(_ ctx: Protobuf3Parser.ImportStatementContext) -> T{
+	open func visitImportStatement(_ ctx: Protobuf3Parser.ImportStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackageStatement(_ ctx: Protobuf3Parser.PackageStatementContext) -> T{
+	open func visitPackageStatement(_ ctx: Protobuf3Parser.PackageStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOption(_ ctx: Protobuf3Parser.OptionContext) -> T{
+	open func visitOption(_ ctx: Protobuf3Parser.OptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionName(_ ctx: Protobuf3Parser.OptionNameContext) -> T{
+	open func visitOptionName(_ ctx: Protobuf3Parser.OptionNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTopLevelDef(_ ctx: Protobuf3Parser.TopLevelDefContext) -> T{
+	open func visitTopLevelDef(_ ctx: Protobuf3Parser.TopLevelDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessage(_ ctx: Protobuf3Parser.MessageContext) -> T{
+	open func visitMessage(_ ctx: Protobuf3Parser.MessageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessageBody(_ ctx: Protobuf3Parser.MessageBodyContext) -> T{
+	open func visitMessageBody(_ ctx: Protobuf3Parser.MessageBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumDefinition(_ ctx: Protobuf3Parser.EnumDefinitionContext) -> T{
+	open func visitEnumDefinition(_ ctx: Protobuf3Parser.EnumDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumBody(_ ctx: Protobuf3Parser.EnumBodyContext) -> T{
+	open func visitEnumBody(_ ctx: Protobuf3Parser.EnumBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumField(_ ctx: Protobuf3Parser.EnumFieldContext) -> T{
+	open func visitEnumField(_ ctx: Protobuf3Parser.EnumFieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumValueOption(_ ctx: Protobuf3Parser.EnumValueOptionContext) -> T{
+	open func visitEnumValueOption(_ ctx: Protobuf3Parser.EnumValueOptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitService(_ ctx: Protobuf3Parser.ServiceContext) -> T{
+	open func visitService(_ ctx: Protobuf3Parser.ServiceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRpc(_ ctx: Protobuf3Parser.RpcContext) -> T{
+	open func visitRpc(_ ctx: Protobuf3Parser.RpcContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReserved(_ ctx: Protobuf3Parser.ReservedContext) -> T{
+	open func visitReserved(_ ctx: Protobuf3Parser.ReservedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRanges(_ ctx: Protobuf3Parser.RangesContext) -> T{
+	open func visitRanges(_ ctx: Protobuf3Parser.RangesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRange(_ ctx: Protobuf3Parser.RangeContext) -> T{
+	open func visitRange(_ ctx: Protobuf3Parser.RangeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldNames(_ ctx: Protobuf3Parser.FieldNamesContext) -> T{
+	open func visitFieldNames(_ ctx: Protobuf3Parser.FieldNamesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: Protobuf3Parser.TypeContext) -> T{
+	open func visitType(_ ctx: Protobuf3Parser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldNumber(_ ctx: Protobuf3Parser.FieldNumberContext) -> T{
+	open func visitFieldNumber(_ ctx: Protobuf3Parser.FieldNumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitField(_ ctx: Protobuf3Parser.FieldContext) -> T{
+	open func visitField(_ ctx: Protobuf3Parser.FieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldOptions(_ ctx: Protobuf3Parser.FieldOptionsContext) -> T{
+	open func visitFieldOptions(_ ctx: Protobuf3Parser.FieldOptionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldOption(_ ctx: Protobuf3Parser.FieldOptionContext) -> T{
+	open func visitFieldOption(_ ctx: Protobuf3Parser.FieldOptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOneof(_ ctx: Protobuf3Parser.OneofContext) -> T{
+	open func visitOneof(_ ctx: Protobuf3Parser.OneofContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOneofField(_ ctx: Protobuf3Parser.OneofFieldContext) -> T{
+	open func visitOneofField(_ ctx: Protobuf3Parser.OneofFieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMapField(_ ctx: Protobuf3Parser.MapFieldContext) -> T{
+	open func visitMapField(_ ctx: Protobuf3Parser.MapFieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeyType(_ ctx: Protobuf3Parser.KeyTypeContext) -> T{
+	open func visitKeyType(_ ctx: Protobuf3Parser.KeyTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFullIdent(_ ctx: Protobuf3Parser.FullIdentContext) -> T{
+	open func visitFullIdent(_ ctx: Protobuf3Parser.FullIdentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessageName(_ ctx: Protobuf3Parser.MessageNameContext) -> T{
+	open func visitMessageName(_ ctx: Protobuf3Parser.MessageNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumName(_ ctx: Protobuf3Parser.EnumNameContext) -> T{
+	open func visitEnumName(_ ctx: Protobuf3Parser.EnumNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessageOrEnumName(_ ctx: Protobuf3Parser.MessageOrEnumNameContext) -> T{
+	open func visitMessageOrEnumName(_ ctx: Protobuf3Parser.MessageOrEnumNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldName(_ ctx: Protobuf3Parser.FieldNameContext) -> T{
+	open func visitFieldName(_ ctx: Protobuf3Parser.FieldNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOneofName(_ ctx: Protobuf3Parser.OneofNameContext) -> T{
+	open func visitOneofName(_ ctx: Protobuf3Parser.OneofNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMapName(_ ctx: Protobuf3Parser.MapNameContext) -> T{
+	open func visitMapName(_ ctx: Protobuf3Parser.MapNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitServiceName(_ ctx: Protobuf3Parser.ServiceNameContext) -> T{
+	open func visitServiceName(_ ctx: Protobuf3Parser.ServiceNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRpcName(_ ctx: Protobuf3Parser.RpcNameContext) -> T{
+	open func visitRpcName(_ ctx: Protobuf3Parser.RpcNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessageType(_ ctx: Protobuf3Parser.MessageTypeContext) -> T{
+	open func visitMessageType(_ ctx: Protobuf3Parser.MessageTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessageOrEnumType(_ ctx: Protobuf3Parser.MessageOrEnumTypeContext) -> T{
+	open func visitMessageOrEnumType(_ ctx: Protobuf3Parser.MessageOrEnumTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmptyStatement(_ ctx: Protobuf3Parser.EmptyStatementContext) -> T{
+	open func visitEmptyStatement(_ ctx: Protobuf3Parser.EmptyStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class Protobuf3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstant(_ ctx: Protobuf3Parser.ConstantContext) -> T{
+	open func visitConstant(_ ctx: Protobuf3Parser.ConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

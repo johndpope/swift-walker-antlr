@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/arithmetic/arithmetic.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/arithmetic/arithmetic.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class arithmeticVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEquation(_ ctx: arithmeticParser.EquationContext) -> T{
+	open func visitEquation(_ ctx: arithmeticParser.EquationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class arithmeticVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: arithmeticParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: arithmeticParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class arithmeticVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: arithmeticParser.TermContext) -> T{
+	open func visitTerm(_ ctx: arithmeticParser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,17 @@ open class arithmeticVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFactor(_ ctx: arithmeticParser.FactorContext) -> T{
+	open func visitFactor(_ ctx: arithmeticParser.FactorContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link arithmeticParser#signedAtom}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitSignedAtom(_ ctx: arithmeticParser.SignedAtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +65,7 @@ open class arithmeticVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: arithmeticParser.AtomContext) -> T{
+	open func visitAtom(_ ctx: arithmeticParser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,27 +75,7 @@ open class arithmeticVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScientific(_ ctx: arithmeticParser.ScientificContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link arithmeticParser#relop}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitRelop(_ ctx: arithmeticParser.RelopContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link arithmeticParser#number}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitNumber(_ ctx: arithmeticParser.NumberContext) -> T{
+	open func visitScientific(_ ctx: arithmeticParser.ScientificContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +85,17 @@ open class arithmeticVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariable(_ ctx: arithmeticParser.VariableContext) -> T{
+	open func visitVariable(_ ctx: arithmeticParser.VariableContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link arithmeticParser#relop}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitRelop(_ ctx: arithmeticParser.RelopContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/asn/ASN.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/asn/ASN.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -1003,17 +1003,17 @@ public protocol ASNListener: ParseTreeListener {
 	 */
 	func exitValueAssignment(_ ctx: ASNParser.ValueAssignmentContext)
 	/**
-	 * Enter a parse tree produced by {@link ASNParser#type}.
+	 * Enter a parse tree produced by {@link ASNParser#asnType}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterType(_ ctx: ASNParser.TypeContext)
+	func enterAsnType(_ ctx: ASNParser.AsnTypeContext)
 	/**
-	 * Exit a parse tree produced by {@link ASNParser#type}.
+	 * Exit a parse tree produced by {@link ASNParser#asnType}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitType(_ ctx: ASNParser.TypeContext)
+	func exitAsnType(_ ctx: ASNParser.AsnTypeContext)
 	/**
 	 * Enter a parse tree produced by {@link ASNParser#builtinType}.
 	 - Parameters:

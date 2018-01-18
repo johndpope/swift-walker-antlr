@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/gml/gml.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/gml/gml.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class gmlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGraph(_ ctx: gmlParser.GraphContext) -> T{
+	open func visitGraph(_ ctx: gmlParser.GraphContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class gmlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitList(_ ctx: gmlParser.ListContext) -> T{
+	open func visitList(_ ctx: gmlParser.ListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class gmlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKv(_ ctx: gmlParser.KvContext) -> T{
+	open func visitKv(_ ctx: gmlParser.KvContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class gmlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: gmlParser.ValueContext) -> T{
+	open func visitValue(_ ctx: gmlParser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class gmlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKey(_ ctx: gmlParser.KeyContext) -> T{
+	open func visitKey(_ ctx: gmlParser.KeyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class gmlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInteger(_ ctx: gmlParser.IntegerContext) -> T{
+	open func visitInteger(_ ctx: gmlParser.IntegerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class gmlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRealnum(_ ctx: gmlParser.RealnumContext) -> T{
+	open func visitRealnum(_ ctx: gmlParser.RealnumContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class gmlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStr(_ ctx: gmlParser.StrContext) -> T{
+	open func visitStr(_ ctx: gmlParser.StrContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class gmlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStringliteral(_ ctx: gmlParser.StringliteralContext) -> T{
+	open func visitStringliteral(_ ctx: gmlParser.StringliteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,7 +1,8 @@
-// Generated from ./grammars-v4/ucb-logo/UCBLogo.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/ucb-logo/UCBLogo.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class UCBLogoLexer: Lexer {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
           let length = UCBLogoLexer._ATN.getNumberOfDecisions()
@@ -11,21 +12,26 @@ open class UCBLogoLexer: Lexer {
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let T__0=1, T__1=2, TO=3, END=4, MACRO=5, WORD=6, SKIP_=7, 
-                   OPEN_ARRAY=8, CLOSE_ARRAY=9, OPEN_LIST=10, CLOSE_LIST=11, 
-                   MINUS=12, PLUS=13, MULT=14, DIV=15, LT=16, GT=17, EQ=18, 
-                   LT_EQ=19, GT_EQ=20, NOT_EQ=21, QUOTED_WORD=22, NUMBER=23, 
-                   VARIABLE=24, NAME=25, ANY=26
-	public static let channelNames: [String] = [
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let T__0=1, T__1=2, TO=3, END=4, MACRO=5, WORD=6, SKIP_=7, OPEN_ARRAY=8, 
+            CLOSE_ARRAY=9, OPEN_LIST=10, CLOSE_LIST=11, MINUS=12, PLUS=13, 
+            MULT=14, DIV=15, LT=16, GT=17, EQ=18, LT_EQ=19, GT_EQ=20, NOT_EQ=21, 
+            QUOTED_WORD=22, NUMBER=23, VARIABLE=24, NAME=25, ANY=26
+
+	public
+	static let channelNames: [String] = [
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	]
 
-	public static let modeNames: [String] = [
+	public
+	static let modeNames: [String] = [
 		"DEFAULT_MODE"
 	]
 
-	public static let ruleNames: [String] = [
+	public
+	static let ruleNames: [String] = [
 		"T__0", "T__1", "TO", "END", "MACRO", "WORD", "SKIP_", "OPEN_ARRAY", "CLOSE_ARRAY", 
 		"OPEN_LIST", "CLOSE_LIST", "MINUS", "PLUS", "MULT", "DIV", "LT", "GT", 
 		"EQ", "LT_EQ", "GT_EQ", "NOT_EQ", "QUOTED_WORD", "NUMBER", "VARIABLE", 
@@ -45,32 +51,8 @@ open class UCBLogoLexer: Lexer {
 		"EQ", "LT_EQ", "GT_EQ", "NOT_EQ", "QUOTED_WORD", "NUMBER", "VARIABLE", 
 		"NAME", "ANY"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
-
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
-
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
 
 
@@ -81,36 +63,39 @@ open class UCBLogoLexer: Lexer {
 	  private int listDepth = 0;
 	  private int arrayDepth = 0;
 
-    open override func getVocabulary() -> Vocabulary {
-        return UCBLogoLexer.VOCABULARY
-    }
 
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override open
+	func getVocabulary() -> Vocabulary {
+		return UCBLogoLexer.VOCABULARY
+	}
+
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, UCBLogoLexer._ATN, UCBLogoLexer._decisionToDFA, UCBLogoLexer._sharedContextCache)
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "UCBLogo.g4" }
+	override open
+	func getGrammarFileName() -> String { return "UCBLogo.g4" }
 
-    override
-	open func getRuleNames() -> [String] { return UCBLogoLexer.ruleNames }
+	override open
+	func getRuleNames() -> [String] { return UCBLogoLexer.ruleNames }
 
-	override
-	open func getSerializedATN() -> String { return UCBLogoLexer._serializedATN }
+	override open
+	func getSerializedATN() -> String { return UCBLogoLexer._serializedATN }
 
-	override
-	open func getChannelNames() -> [String] { return UCBLogoLexer.channelNames }
+	override open
+	func getChannelNames() -> [String] { return UCBLogoLexer.channelNames }
 
-	override
-	open func getModeNames() -> [String] { return UCBLogoLexer.modeNames }
+	override open
+	func getModeNames() -> [String] { return UCBLogoLexer.modeNames }
 
-	override
-	open func getATN() -> ATN { return UCBLogoLexer._ATN }
+	override open
+	func getATN() -> ATN { return UCBLogoLexer._ATN }
 
-	override
-	open func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
+	override open
+	func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
 		switch (ruleIndex) {
 		case 7:
 			OPEN_ARRAY_action((_localctx as RuleContext?), actionIndex)
@@ -170,8 +155,8 @@ open class UCBLogoLexer: Lexer {
 		 default: break
 		}
 	}
-	override
-	open func sempred(_ _localctx: RuleContext?, _  ruleIndex: Int,_   predIndex: Int) throws -> Bool{
+	override open
+	func sempred(_ _localctx: RuleContext?, _  ruleIndex: Int,_   predIndex: Int) throws -> Bool {
 		switch (ruleIndex) {
 		case 5:
 			return try WORD_sempred(_localctx?.castdown(RuleContext.self), predIndex)
@@ -186,6 +171,10 @@ open class UCBLogoLexer: Lexer {
 		}
 	}
 
-    public static let _serializedATN: String = UCBLogoLexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = UCBLogoLexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

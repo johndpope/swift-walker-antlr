@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/stacktrace/StackTrace.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/stacktrace/StackTrace.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStartRule(_ ctx: StackTraceParser.StartRuleContext) -> T{
+	open func visitStartRule(_ ctx: StackTraceParser.StartRuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStackTrace(_ ctx: StackTraceParser.StackTraceContext) -> T{
+	open func visitStackTrace(_ ctx: StackTraceParser.StackTraceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStackTraceLine(_ ctx: StackTraceParser.StackTraceLineContext) -> T{
+	open func visitStackTraceLine(_ ctx: StackTraceParser.StackTraceLineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtLine(_ ctx: StackTraceParser.AtLineContext) -> T{
+	open func visitAtLine(_ ctx: StackTraceParser.AtLineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCausedByLine(_ ctx: StackTraceParser.CausedByLineContext) -> T{
+	open func visitCausedByLine(_ ctx: StackTraceParser.CausedByLineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEllipsisLine(_ ctx: StackTraceParser.EllipsisLineContext) -> T{
+	open func visitEllipsisLine(_ ctx: StackTraceParser.EllipsisLineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessageLine(_ ctx: StackTraceParser.MessageLineContext) -> T{
+	open func visitMessageLine(_ ctx: StackTraceParser.MessageLineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualifiedClass(_ ctx: StackTraceParser.QualifiedClassContext) -> T{
+	open func visitQualifiedClass(_ ctx: StackTraceParser.QualifiedClassContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInnerClassName(_ ctx: StackTraceParser.InnerClassNameContext) -> T{
+	open func visitInnerClassName(_ ctx: StackTraceParser.InnerClassNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassFile(_ ctx: StackTraceParser.ClassFileContext) -> T{
+	open func visitClassFile(_ ctx: StackTraceParser.ClassFileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualifiedMethod(_ ctx: StackTraceParser.QualifiedMethodContext) -> T{
+	open func visitQualifiedMethod(_ ctx: StackTraceParser.QualifiedMethodContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructor(_ ctx: StackTraceParser.ConstructorContext) -> T{
+	open func visitConstructor(_ ctx: StackTraceParser.ConstructorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodName(_ ctx: StackTraceParser.MethodNameContext) -> T{
+	open func visitMethodName(_ ctx: StackTraceParser.MethodNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackagePath(_ ctx: StackTraceParser.PackagePathContext) -> T{
+	open func visitPackagePath(_ ctx: StackTraceParser.PackagePathContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassName(_ ctx: StackTraceParser.ClassNameContext) -> T{
+	open func visitClassName(_ ctx: StackTraceParser.ClassNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifier(_ ctx: StackTraceParser.IdentifierContext) -> T{
+	open func visitIdentifier(_ ctx: StackTraceParser.IdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class StackTraceVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessage(_ ctx: StackTraceParser.MessageContext) -> T{
+	open func visitMessage(_ ctx: StackTraceParser.MessageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/vb6/VisualBasic6.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/vb6/VisualBasic6.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -30,6 +30,54 @@ public protocol VisualBasic6Listener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitModule(_ ctx: VisualBasic6Parser.ModuleContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#moduleReferences}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterModuleReferences(_ ctx: VisualBasic6Parser.ModuleReferencesContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#moduleReferences}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitModuleReferences(_ ctx: VisualBasic6Parser.ModuleReferencesContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#moduleReference}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterModuleReference(_ ctx: VisualBasic6Parser.ModuleReferenceContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#moduleReference}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitModuleReference(_ ctx: VisualBasic6Parser.ModuleReferenceContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#moduleReferenceGUID}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterModuleReferenceGUID(_ ctx: VisualBasic6Parser.ModuleReferenceGUIDContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#moduleReferenceGUID}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitModuleReferenceGUID(_ ctx: VisualBasic6Parser.ModuleReferenceGUIDContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#moduleReferenceComponent}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterModuleReferenceComponent(_ ctx: VisualBasic6Parser.ModuleReferenceComponentContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#moduleReferenceComponent}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitModuleReferenceComponent(_ ctx: VisualBasic6Parser.ModuleReferenceComponentContext)
 	/**
 	 * Enter a parse tree produced by {@link VisualBasic6Parser#moduleHeader}.
 	 - Parameters:
@@ -171,6 +219,90 @@ public protocol VisualBasic6Listener: ParseTreeListener {
 	 */
 	func exitModuleBodyElement(_ ctx: VisualBasic6Parser.ModuleBodyElementContext)
 	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#controlProperties}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterControlProperties(_ ctx: VisualBasic6Parser.ControlPropertiesContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#controlProperties}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitControlProperties(_ ctx: VisualBasic6Parser.ControlPropertiesContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#cp_Properties}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterCp_Properties(_ ctx: VisualBasic6Parser.Cp_PropertiesContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#cp_Properties}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitCp_Properties(_ ctx: VisualBasic6Parser.Cp_PropertiesContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#cp_SingleProperty}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterCp_SingleProperty(_ ctx: VisualBasic6Parser.Cp_SinglePropertyContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#cp_SingleProperty}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitCp_SingleProperty(_ ctx: VisualBasic6Parser.Cp_SinglePropertyContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#cp_PropertyName}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterCp_PropertyName(_ ctx: VisualBasic6Parser.Cp_PropertyNameContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#cp_PropertyName}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitCp_PropertyName(_ ctx: VisualBasic6Parser.Cp_PropertyNameContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#cp_NestedProperty}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterCp_NestedProperty(_ ctx: VisualBasic6Parser.Cp_NestedPropertyContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#cp_NestedProperty}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitCp_NestedProperty(_ ctx: VisualBasic6Parser.Cp_NestedPropertyContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#cp_ControlType}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterCp_ControlType(_ ctx: VisualBasic6Parser.Cp_ControlTypeContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#cp_ControlType}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitCp_ControlType(_ ctx: VisualBasic6Parser.Cp_ControlTypeContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#cp_ControlIdentifier}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterCp_ControlIdentifier(_ ctx: VisualBasic6Parser.Cp_ControlIdentifierContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#cp_ControlIdentifier}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitCp_ControlIdentifier(_ ctx: VisualBasic6Parser.Cp_ControlIdentifierContext)
+	/**
 	 * Enter a parse tree produced by {@link VisualBasic6Parser#moduleBlock}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -219,17 +351,17 @@ public protocol VisualBasic6Listener: ParseTreeListener {
 	 */
 	func exitBlockStmt(_ ctx: VisualBasic6Parser.BlockStmtContext)
 	/**
-	 * Enter a parse tree produced by {@link VisualBasic6Parser#appactivateStmt}.
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#appActivateStmt}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterAppactivateStmt(_ ctx: VisualBasic6Parser.AppactivateStmtContext)
+	func enterAppActivateStmt(_ ctx: VisualBasic6Parser.AppActivateStmtContext)
 	/**
-	 * Exit a parse tree produced by {@link VisualBasic6Parser#appactivateStmt}.
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#appActivateStmt}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitAppactivateStmt(_ ctx: VisualBasic6Parser.AppactivateStmtContext)
+	func exitAppActivateStmt(_ ctx: VisualBasic6Parser.AppActivateStmtContext)
 	/**
 	 * Enter a parse tree produced by {@link VisualBasic6Parser#beepStmt}.
 	 - Parameters:
@@ -243,29 +375,29 @@ public protocol VisualBasic6Listener: ParseTreeListener {
 	 */
 	func exitBeepStmt(_ ctx: VisualBasic6Parser.BeepStmtContext)
 	/**
-	 * Enter a parse tree produced by {@link VisualBasic6Parser#chdirStmt}.
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#chDirStmt}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterChdirStmt(_ ctx: VisualBasic6Parser.ChdirStmtContext)
+	func enterChDirStmt(_ ctx: VisualBasic6Parser.ChDirStmtContext)
 	/**
-	 * Exit a parse tree produced by {@link VisualBasic6Parser#chdirStmt}.
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#chDirStmt}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitChdirStmt(_ ctx: VisualBasic6Parser.ChdirStmtContext)
+	func exitChDirStmt(_ ctx: VisualBasic6Parser.ChDirStmtContext)
 	/**
-	 * Enter a parse tree produced by {@link VisualBasic6Parser#chdriveStmt}.
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#chDriveStmt}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterChdriveStmt(_ ctx: VisualBasic6Parser.ChdriveStmtContext)
+	func enterChDriveStmt(_ ctx: VisualBasic6Parser.ChDriveStmtContext)
 	/**
-	 * Exit a parse tree produced by {@link VisualBasic6Parser#chdriveStmt}.
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#chDriveStmt}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitChdriveStmt(_ ctx: VisualBasic6Parser.ChdriveStmtContext)
+	func exitChDriveStmt(_ ctx: VisualBasic6Parser.ChDriveStmtContext)
 	/**
 	 * Enter a parse tree produced by {@link VisualBasic6Parser#closeStmt}.
 	 - Parameters:
@@ -1401,20 +1533,6 @@ public protocol VisualBasic6Listener: ParseTreeListener {
 	 */
 	func exitVsAssign(_ ctx: VisualBasic6Parser.VsAssignContext)
 	/**
-	 * Enter a parse tree produced by the {@code vsLike}
-	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterVsLike(_ ctx: VisualBasic6Parser.VsLikeContext)
-	/**
-	 * Exit a parse tree produced by the {@code vsLike}
-	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitVsLike(_ ctx: VisualBasic6Parser.VsLikeContext)
-	/**
 	 * Enter a parse tree produced by the {@code vsDiv}
 	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
 	 - Parameters:
@@ -1428,6 +1546,20 @@ public protocol VisualBasic6Listener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitVsDiv(_ ctx: VisualBasic6Parser.VsDivContext)
+	/**
+	 * Enter a parse tree produced by the {@code vsLike}
+	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterVsLike(_ ctx: VisualBasic6Parser.VsLikeContext)
+	/**
+	 * Exit a parse tree produced by the {@code vsLike}
+	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitVsLike(_ ctx: VisualBasic6Parser.VsLikeContext)
 	/**
 	 * Enter a parse tree produced by the {@code vsPlus}
 	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
@@ -1541,20 +1673,6 @@ public protocol VisualBasic6Listener: ParseTreeListener {
 	 */
 	func exitVsAnd(_ ctx: VisualBasic6Parser.VsAndContext)
 	/**
-	 * Enter a parse tree produced by the {@code vsLeq}
-	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext)
-	/**
-	 * Exit a parse tree produced by the {@code vsLeq}
-	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext)
-	/**
 	 * Enter a parse tree produced by the {@code vsPow}
 	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
 	 - Parameters:
@@ -1568,6 +1686,20 @@ public protocol VisualBasic6Listener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitVsPow(_ ctx: VisualBasic6Parser.VsPowContext)
+	/**
+	 * Enter a parse tree produced by the {@code vsLeq}
+	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext)
+	/**
+	 * Exit a parse tree produced by the {@code vsLeq}
+	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext)
 	/**
 	 * Enter a parse tree produced by the {@code vsIs}
 	 * labeled alternative in {@link VisualBasic6Parser#valueStmt}.
@@ -2166,6 +2298,30 @@ public protocol VisualBasic6Listener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitLiteral(_ ctx: VisualBasic6Parser.LiteralContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#publicPrivateVisibility}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterPublicPrivateVisibility(_ ctx: VisualBasic6Parser.PublicPrivateVisibilityContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#publicPrivateVisibility}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitPublicPrivateVisibility(_ ctx: VisualBasic6Parser.PublicPrivateVisibilityContext)
+	/**
+	 * Enter a parse tree produced by {@link VisualBasic6Parser#publicPrivateGlobalVisibility}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterPublicPrivateGlobalVisibility(_ ctx: VisualBasic6Parser.PublicPrivateGlobalVisibilityContext)
+	/**
+	 * Exit a parse tree produced by {@link VisualBasic6Parser#publicPrivateGlobalVisibility}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitPublicPrivateGlobalVisibility(_ ctx: VisualBasic6Parser.PublicPrivateGlobalVisibilityContext)
 	/**
 	 * Enter a parse tree produced by {@link VisualBasic6Parser#type}.
 	 - Parameters:

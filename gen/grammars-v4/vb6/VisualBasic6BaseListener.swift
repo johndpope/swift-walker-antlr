@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/vb6/VisualBasic6.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/vb6/VisualBasic6.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class VisualBasic6BaseListener: VisualBasic6Listener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -35,6 +35,58 @@ open class VisualBasic6BaseListener: VisualBasic6Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitModule(_ ctx: VisualBasic6Parser.ModuleContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterModuleReferences(_ ctx: VisualBasic6Parser.ModuleReferencesContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitModuleReferences(_ ctx: VisualBasic6Parser.ModuleReferencesContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterModuleReference(_ ctx: VisualBasic6Parser.ModuleReferenceContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitModuleReference(_ ctx: VisualBasic6Parser.ModuleReferenceContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterModuleReferenceGUID(_ ctx: VisualBasic6Parser.ModuleReferenceGUIDContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitModuleReferenceGUID(_ ctx: VisualBasic6Parser.ModuleReferenceGUIDContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterModuleReferenceComponent(_ ctx: VisualBasic6Parser.ModuleReferenceComponentContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitModuleReferenceComponent(_ ctx: VisualBasic6Parser.ModuleReferenceComponentContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -184,6 +236,97 @@ open class VisualBasic6BaseListener: VisualBasic6Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterControlProperties(_ ctx: VisualBasic6Parser.ControlPropertiesContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitControlProperties(_ ctx: VisualBasic6Parser.ControlPropertiesContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCp_Properties(_ ctx: VisualBasic6Parser.Cp_PropertiesContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCp_Properties(_ ctx: VisualBasic6Parser.Cp_PropertiesContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCp_SingleProperty(_ ctx: VisualBasic6Parser.Cp_SinglePropertyContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCp_SingleProperty(_ ctx: VisualBasic6Parser.Cp_SinglePropertyContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCp_PropertyName(_ ctx: VisualBasic6Parser.Cp_PropertyNameContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCp_PropertyName(_ ctx: VisualBasic6Parser.Cp_PropertyNameContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCp_NestedProperty(_ ctx: VisualBasic6Parser.Cp_NestedPropertyContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCp_NestedProperty(_ ctx: VisualBasic6Parser.Cp_NestedPropertyContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCp_ControlType(_ ctx: VisualBasic6Parser.Cp_ControlTypeContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCp_ControlType(_ ctx: VisualBasic6Parser.Cp_ControlTypeContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCp_ControlIdentifier(_ ctx: VisualBasic6Parser.Cp_ControlIdentifierContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCp_ControlIdentifier(_ ctx: VisualBasic6Parser.Cp_ControlIdentifierContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterModuleBlock(_ ctx: VisualBasic6Parser.ModuleBlockContext) { }
 	/**
 	 * {@inheritDoc}
@@ -236,13 +379,13 @@ open class VisualBasic6BaseListener: VisualBasic6Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterAppactivateStmt(_ ctx: VisualBasic6Parser.AppactivateStmtContext) { }
+	open func enterAppActivateStmt(_ ctx: VisualBasic6Parser.AppActivateStmtContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitAppactivateStmt(_ ctx: VisualBasic6Parser.AppactivateStmtContext) { }
+	open func exitAppActivateStmt(_ ctx: VisualBasic6Parser.AppActivateStmtContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -262,26 +405,26 @@ open class VisualBasic6BaseListener: VisualBasic6Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterChdirStmt(_ ctx: VisualBasic6Parser.ChdirStmtContext) { }
+	open func enterChDirStmt(_ ctx: VisualBasic6Parser.ChDirStmtContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitChdirStmt(_ ctx: VisualBasic6Parser.ChdirStmtContext) { }
+	open func exitChDirStmt(_ ctx: VisualBasic6Parser.ChDirStmtContext) { }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterChdriveStmt(_ ctx: VisualBasic6Parser.ChdriveStmtContext) { }
+	open func enterChDriveStmt(_ ctx: VisualBasic6Parser.ChDriveStmtContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitChdriveStmt(_ ctx: VisualBasic6Parser.ChdriveStmtContext) { }
+	open func exitChDriveStmt(_ ctx: VisualBasic6Parser.ChDriveStmtContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -1484,19 +1627,6 @@ open class VisualBasic6BaseListener: VisualBasic6Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterVsLike(_ ctx: VisualBasic6Parser.VsLikeContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitVsLike(_ ctx: VisualBasic6Parser.VsLikeContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	open func enterVsDiv(_ ctx: VisualBasic6Parser.VsDivContext) { }
 	/**
 	 * {@inheritDoc}
@@ -1504,6 +1634,19 @@ open class VisualBasic6BaseListener: VisualBasic6Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitVsDiv(_ ctx: VisualBasic6Parser.VsDivContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterVsLike(_ ctx: VisualBasic6Parser.VsLikeContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitVsLike(_ ctx: VisualBasic6Parser.VsLikeContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -1614,19 +1757,6 @@ open class VisualBasic6BaseListener: VisualBasic6Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	open func enterVsPow(_ ctx: VisualBasic6Parser.VsPowContext) { }
 	/**
 	 * {@inheritDoc}
@@ -1634,6 +1764,19 @@ open class VisualBasic6BaseListener: VisualBasic6Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitVsPow(_ ctx: VisualBasic6Parser.VsPowContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -2258,6 +2401,32 @@ open class VisualBasic6BaseListener: VisualBasic6Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitLiteral(_ ctx: VisualBasic6Parser.LiteralContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterPublicPrivateVisibility(_ ctx: VisualBasic6Parser.PublicPrivateVisibilityContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitPublicPrivateVisibility(_ ctx: VisualBasic6Parser.PublicPrivateVisibilityContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterPublicPrivateGlobalVisibility(_ ctx: VisualBasic6Parser.PublicPrivateGlobalVisibilityContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitPublicPrivateGlobalVisibility(_ ctx: VisualBasic6Parser.PublicPrivateGlobalVisibilityContext) { }
 
 	/**
 	 * {@inheritDoc}

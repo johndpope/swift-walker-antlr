@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/oncrpc/xdr.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/oncrpc/xdr.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclaration(_ ctx: xdrParser.DeclarationContext) -> T{
+	open func visitDeclaration(_ ctx: xdrParser.DeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: xdrParser.ValueContext) -> T{
+	open func visitValue(_ ctx: xdrParser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstant(_ ctx: xdrParser.ConstantContext) -> T{
+	open func visitConstant(_ ctx: xdrParser.ConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSpecifier(_ ctx: xdrParser.TypeSpecifierContext) -> T{
+	open func visitTypeSpecifier(_ ctx: xdrParser.TypeSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumTypeSpec(_ ctx: xdrParser.EnumTypeSpecContext) -> T{
+	open func visitEnumTypeSpec(_ ctx: xdrParser.EnumTypeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumBody(_ ctx: xdrParser.EnumBodyContext) -> T{
+	open func visitEnumBody(_ ctx: xdrParser.EnumBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructTypeSpec(_ ctx: xdrParser.StructTypeSpecContext) -> T{
+	open func visitStructTypeSpec(_ ctx: xdrParser.StructTypeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructBody(_ ctx: xdrParser.StructBodyContext) -> T{
+	open func visitStructBody(_ ctx: xdrParser.StructBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionTypeSpec(_ ctx: xdrParser.UnionTypeSpecContext) -> T{
+	open func visitUnionTypeSpec(_ ctx: xdrParser.UnionTypeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionBody(_ ctx: xdrParser.UnionBodyContext) -> T{
+	open func visitUnionBody(_ ctx: xdrParser.UnionBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseSpec(_ ctx: xdrParser.CaseSpecContext) -> T{
+	open func visitCaseSpec(_ ctx: xdrParser.CaseSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantDef(_ ctx: xdrParser.ConstantDefContext) -> T{
+	open func visitConstantDef(_ ctx: xdrParser.ConstantDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDef(_ ctx: xdrParser.TypeDefContext) -> T{
+	open func visitTypeDef(_ ctx: xdrParser.TypeDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinition(_ ctx: xdrParser.DefinitionContext) -> T{
+	open func visitDefinition(_ ctx: xdrParser.DefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class xdrVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitXdrSpecification(_ ctx: xdrParser.XdrSpecificationContext) -> T{
+	open func visitXdrSpecification(_ ctx: xdrParser.XdrSpecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

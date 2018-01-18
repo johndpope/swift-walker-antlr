@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cobol85/Cobol85Preprocessor.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cobol85/Cobol85Preprocessor.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class Cobol85PreprocessorBaseListener: Cobol85PreprocessorListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -22,6 +22,45 @@ open class Cobol85PreprocessorBaseListener: Cobol85PreprocessorListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitStartRule(_ ctx: Cobol85PreprocessorParser.StartRuleContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCompilerOptions(_ ctx: Cobol85PreprocessorParser.CompilerOptionsContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCompilerOptions(_ ctx: Cobol85PreprocessorParser.CompilerOptionsContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCompilerXOpts(_ ctx: Cobol85PreprocessorParser.CompilerXOptsContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCompilerXOpts(_ ctx: Cobol85PreprocessorParser.CompilerXOptsContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCompilerOption(_ ctx: Cobol85PreprocessorParser.CompilerOptionContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCompilerOption(_ ctx: Cobol85PreprocessorParser.CompilerOptionContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -87,6 +126,19 @@ open class Cobol85PreprocessorBaseListener: Cobol85PreprocessorListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitCopySource(_ ctx: Cobol85PreprocessorParser.CopySourceContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCopyLibrary(_ ctx: Cobol85PreprocessorParser.CopyLibraryContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCopyLibrary(_ ctx: Cobol85PreprocessorParser.CopyLibraryContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -210,39 +262,39 @@ open class Cobol85PreprocessorBaseListener: Cobol85PreprocessorListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterControlSpacingStatement(_ ctx: Cobol85PreprocessorParser.ControlSpacingStatementContext) { }
+	open func enterEjectStatement(_ ctx: Cobol85PreprocessorParser.EjectStatementContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitControlSpacingStatement(_ ctx: Cobol85PreprocessorParser.ControlSpacingStatementContext) { }
+	open func exitEjectStatement(_ ctx: Cobol85PreprocessorParser.EjectStatementContext) { }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterCobolWord(_ ctx: Cobol85PreprocessorParser.CobolWordContext) { }
+	open func enterSkipStatement(_ ctx: Cobol85PreprocessorParser.SkipStatementContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitCobolWord(_ ctx: Cobol85PreprocessorParser.CobolWordContext) { }
+	open func exitSkipStatement(_ ctx: Cobol85PreprocessorParser.SkipStatementContext) { }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterLiteral(_ ctx: Cobol85PreprocessorParser.LiteralContext) { }
+	open func enterTitleStatement(_ ctx: Cobol85PreprocessorParser.TitleStatementContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitLiteral(_ ctx: Cobol85PreprocessorParser.LiteralContext) { }
+	open func exitTitleStatement(_ ctx: Cobol85PreprocessorParser.TitleStatementContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -275,6 +327,19 @@ open class Cobol85PreprocessorBaseListener: Cobol85PreprocessorListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterCharDataSql(_ ctx: Cobol85PreprocessorParser.CharDataSqlContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCharDataSql(_ ctx: Cobol85PreprocessorParser.CharDataSqlContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterCharDataLine(_ ctx: Cobol85PreprocessorParser.CharDataLineContext) { }
 	/**
 	 * {@inheritDoc}
@@ -282,6 +347,45 @@ open class Cobol85PreprocessorBaseListener: Cobol85PreprocessorListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitCharDataLine(_ ctx: Cobol85PreprocessorParser.CharDataLineContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterCobolWord(_ ctx: Cobol85PreprocessorParser.CobolWordContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitCobolWord(_ ctx: Cobol85PreprocessorParser.CobolWordContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterLiteral(_ ctx: Cobol85PreprocessorParser.LiteralContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitLiteral(_ ctx: Cobol85PreprocessorParser.LiteralContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterFilename(_ ctx: Cobol85PreprocessorParser.FilenameContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitFilename(_ ctx: Cobol85PreprocessorParser.FilenameContext) { }
 
 	/**
 	 * {@inheritDoc}

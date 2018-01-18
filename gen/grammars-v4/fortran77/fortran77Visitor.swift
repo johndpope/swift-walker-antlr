@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/fortran77/fortran77.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/fortran77/fortran77.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: fortran77Parser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: fortran77Parser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExecutableUnit(_ ctx: fortran77Parser.ExecutableUnitContext) -> T{
+	open func visitExecutableUnit(_ ctx: fortran77Parser.ExecutableUnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMainProgram(_ ctx: fortran77Parser.MainProgramContext) -> T{
+	open func visitMainProgram(_ ctx: fortran77Parser.MainProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionSubprogram(_ ctx: fortran77Parser.FunctionSubprogramContext) -> T{
+	open func visitFunctionSubprogram(_ ctx: fortran77Parser.FunctionSubprogramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubroutineSubprogram(_ ctx: fortran77Parser.SubroutineSubprogramContext) -> T{
+	open func visitSubroutineSubprogram(_ ctx: fortran77Parser.SubroutineSubprogramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockdataSubprogram(_ ctx: fortran77Parser.BlockdataSubprogramContext) -> T{
+	open func visitBlockdataSubprogram(_ ctx: fortran77Parser.BlockdataSubprogramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOtherSpecificationStatement(_ ctx: fortran77Parser.OtherSpecificationStatementContext) -> T{
+	open func visitOtherSpecificationStatement(_ ctx: fortran77Parser.OtherSpecificationStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExecutableStatement(_ ctx: fortran77Parser.ExecutableStatementContext) -> T{
+	open func visitExecutableStatement(_ ctx: fortran77Parser.ExecutableStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgramStatement(_ ctx: fortran77Parser.ProgramStatementContext) -> T{
+	open func visitProgramStatement(_ ctx: fortran77Parser.ProgramStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSeos(_ ctx: fortran77Parser.SeosContext) -> T{
+	open func visitSeos(_ ctx: fortran77Parser.SeosContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEntryStatement(_ ctx: fortran77Parser.EntryStatementContext) -> T{
+	open func visitEntryStatement(_ ctx: fortran77Parser.EntryStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionStatement(_ ctx: fortran77Parser.FunctionStatementContext) -> T{
+	open func visitFunctionStatement(_ ctx: fortran77Parser.FunctionStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockdataStatement(_ ctx: fortran77Parser.BlockdataStatementContext) -> T{
+	open func visitBlockdataStatement(_ ctx: fortran77Parser.BlockdataStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubroutineStatement(_ ctx: fortran77Parser.SubroutineStatementContext) -> T{
+	open func visitSubroutineStatement(_ ctx: fortran77Parser.SubroutineStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamelist(_ ctx: fortran77Parser.NamelistContext) -> T{
+	open func visitNamelist(_ ctx: fortran77Parser.NamelistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: fortran77Parser.StatementContext) -> T{
+	open func visitStatement(_ ctx: fortran77Parser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubprogramBody(_ ctx: fortran77Parser.SubprogramBodyContext) -> T{
+	open func visitSubprogramBody(_ ctx: fortran77Parser.SubprogramBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWholeStatement(_ ctx: fortran77Parser.WholeStatementContext) -> T{
+	open func visitWholeStatement(_ ctx: fortran77Parser.WholeStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEndStatement(_ ctx: fortran77Parser.EndStatementContext) -> T{
+	open func visitEndStatement(_ ctx: fortran77Parser.EndStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDimensionStatement(_ ctx: fortran77Parser.DimensionStatementContext) -> T{
+	open func visitDimensionStatement(_ ctx: fortran77Parser.DimensionStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayDeclarator(_ ctx: fortran77Parser.ArrayDeclaratorContext) -> T{
+	open func visitArrayDeclarator(_ ctx: fortran77Parser.ArrayDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayDeclarators(_ ctx: fortran77Parser.ArrayDeclaratorsContext) -> T{
+	open func visitArrayDeclarators(_ ctx: fortran77Parser.ArrayDeclaratorsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayDeclaratorExtents(_ ctx: fortran77Parser.ArrayDeclaratorExtentsContext) -> T{
+	open func visitArrayDeclaratorExtents(_ ctx: fortran77Parser.ArrayDeclaratorExtentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayDeclaratorExtent(_ ctx: fortran77Parser.ArrayDeclaratorExtentContext) -> T{
+	open func visitArrayDeclaratorExtent(_ ctx: fortran77Parser.ArrayDeclaratorExtentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEquivalenceStatement(_ ctx: fortran77Parser.EquivalenceStatementContext) -> T{
+	open func visitEquivalenceStatement(_ ctx: fortran77Parser.EquivalenceStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEquivEntityGroup(_ ctx: fortran77Parser.EquivEntityGroupContext) -> T{
+	open func visitEquivEntityGroup(_ ctx: fortran77Parser.EquivEntityGroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEquivEntity(_ ctx: fortran77Parser.EquivEntityContext) -> T{
+	open func visitEquivEntity(_ ctx: fortran77Parser.EquivEntityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommonStatement(_ ctx: fortran77Parser.CommonStatementContext) -> T{
+	open func visitCommonStatement(_ ctx: fortran77Parser.CommonStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommonName(_ ctx: fortran77Parser.CommonNameContext) -> T{
+	open func visitCommonName(_ ctx: fortran77Parser.CommonNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommonItem(_ ctx: fortran77Parser.CommonItemContext) -> T{
+	open func visitCommonItem(_ ctx: fortran77Parser.CommonItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommonItems(_ ctx: fortran77Parser.CommonItemsContext) -> T{
+	open func visitCommonItems(_ ctx: fortran77Parser.CommonItemsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommonBlock(_ ctx: fortran77Parser.CommonBlockContext) -> T{
+	open func visitCommonBlock(_ ctx: fortran77Parser.CommonBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeStatement(_ ctx: fortran77Parser.TypeStatementContext) -> T{
+	open func visitTypeStatement(_ ctx: fortran77Parser.TypeStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeStatementNameList(_ ctx: fortran77Parser.TypeStatementNameListContext) -> T{
+	open func visitTypeStatementNameList(_ ctx: fortran77Parser.TypeStatementNameListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeStatementName(_ ctx: fortran77Parser.TypeStatementNameContext) -> T{
+	open func visitTypeStatementName(_ ctx: fortran77Parser.TypeStatementNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeStatementNameCharList(_ ctx: fortran77Parser.TypeStatementNameCharListContext) -> T{
+	open func visitTypeStatementNameCharList(_ ctx: fortran77Parser.TypeStatementNameCharListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeStatementNameChar(_ ctx: fortran77Parser.TypeStatementNameCharContext) -> T{
+	open func visitTypeStatementNameChar(_ ctx: fortran77Parser.TypeStatementNameCharContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeStatementLenSpec(_ ctx: fortran77Parser.TypeStatementLenSpecContext) -> T{
+	open func visitTypeStatementLenSpec(_ ctx: fortran77Parser.TypeStatementLenSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypename(_ ctx: fortran77Parser.TypenameContext) -> T{
+	open func visitTypename(_ ctx: fortran77Parser.TypenameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: fortran77Parser.TypeContext) -> T{
+	open func visitType(_ ctx: fortran77Parser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypenameLen(_ ctx: fortran77Parser.TypenameLenContext) -> T{
+	open func visitTypenameLen(_ ctx: fortran77Parser.TypenameLenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPointerStatement(_ ctx: fortran77Parser.PointerStatementContext) -> T{
+	open func visitPointerStatement(_ ctx: fortran77Parser.PointerStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPointerDecl(_ ctx: fortran77Parser.PointerDeclContext) -> T{
+	open func visitPointerDecl(_ ctx: fortran77Parser.PointerDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplicitStatement(_ ctx: fortran77Parser.ImplicitStatementContext) -> T{
+	open func visitImplicitStatement(_ ctx: fortran77Parser.ImplicitStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplicitSpec(_ ctx: fortran77Parser.ImplicitSpecContext) -> T{
+	open func visitImplicitSpec(_ ctx: fortran77Parser.ImplicitSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplicitSpecs(_ ctx: fortran77Parser.ImplicitSpecsContext) -> T{
+	open func visitImplicitSpecs(_ ctx: fortran77Parser.ImplicitSpecsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplicitNone(_ ctx: fortran77Parser.ImplicitNoneContext) -> T{
+	open func visitImplicitNone(_ ctx: fortran77Parser.ImplicitNoneContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplicitLetter(_ ctx: fortran77Parser.ImplicitLetterContext) -> T{
+	open func visitImplicitLetter(_ ctx: fortran77Parser.ImplicitLetterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplicitRange(_ ctx: fortran77Parser.ImplicitRangeContext) -> T{
+	open func visitImplicitRange(_ ctx: fortran77Parser.ImplicitRangeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplicitLetters(_ ctx: fortran77Parser.ImplicitLettersContext) -> T{
+	open func visitImplicitLetters(_ ctx: fortran77Parser.ImplicitLettersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLenSpecification(_ ctx: fortran77Parser.LenSpecificationContext) -> T{
+	open func visitLenSpecification(_ ctx: fortran77Parser.LenSpecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharacterWithLen(_ ctx: fortran77Parser.CharacterWithLenContext) -> T{
+	open func visitCharacterWithLen(_ ctx: fortran77Parser.CharacterWithLenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCwlLen(_ ctx: fortran77Parser.CwlLenContext) -> T{
+	open func visitCwlLen(_ ctx: fortran77Parser.CwlLenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterStatement(_ ctx: fortran77Parser.ParameterStatementContext) -> T{
+	open func visitParameterStatement(_ ctx: fortran77Parser.ParameterStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParamlist(_ ctx: fortran77Parser.ParamlistContext) -> T{
+	open func visitParamlist(_ ctx: fortran77Parser.ParamlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParamassign(_ ctx: fortran77Parser.ParamassignContext) -> T{
+	open func visitParamassign(_ ctx: fortran77Parser.ParamassignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExternalStatement(_ ctx: fortran77Parser.ExternalStatementContext) -> T{
+	open func visitExternalStatement(_ ctx: fortran77Parser.ExternalStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntrinsicStatement(_ ctx: fortran77Parser.IntrinsicStatementContext) -> T{
+	open func visitIntrinsicStatement(_ ctx: fortran77Parser.IntrinsicStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSaveStatement(_ ctx: fortran77Parser.SaveStatementContext) -> T{
+	open func visitSaveStatement(_ ctx: fortran77Parser.SaveStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSaveEntity(_ ctx: fortran77Parser.SaveEntityContext) -> T{
+	open func visitSaveEntity(_ ctx: fortran77Parser.SaveEntityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataStatement(_ ctx: fortran77Parser.DataStatementContext) -> T{
+	open func visitDataStatement(_ ctx: fortran77Parser.DataStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataStatementItem(_ ctx: fortran77Parser.DataStatementItemContext) -> T{
+	open func visitDataStatementItem(_ ctx: fortran77Parser.DataStatementItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataStatementMultiple(_ ctx: fortran77Parser.DataStatementMultipleContext) -> T{
+	open func visitDataStatementMultiple(_ ctx: fortran77Parser.DataStatementMultipleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataStatementEntity(_ ctx: fortran77Parser.DataStatementEntityContext) -> T{
+	open func visitDataStatementEntity(_ ctx: fortran77Parser.DataStatementEntityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDse1(_ ctx: fortran77Parser.Dse1Context) -> T{
+	open func visitDse1(_ ctx: fortran77Parser.Dse1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDse2(_ ctx: fortran77Parser.Dse2Context) -> T{
+	open func visitDse2(_ ctx: fortran77Parser.Dse2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataImpliedDo(_ ctx: fortran77Parser.DataImpliedDoContext) -> T{
+	open func visitDataImpliedDo(_ ctx: fortran77Parser.DataImpliedDoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataImpliedDoRange(_ ctx: fortran77Parser.DataImpliedDoRangeContext) -> T{
+	open func visitDataImpliedDoRange(_ ctx: fortran77Parser.DataImpliedDoRangeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataImpliedDoList(_ ctx: fortran77Parser.DataImpliedDoListContext) -> T{
+	open func visitDataImpliedDoList(_ ctx: fortran77Parser.DataImpliedDoListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataImpliedDoListWhat(_ ctx: fortran77Parser.DataImpliedDoListWhatContext) -> T{
+	open func visitDataImpliedDoListWhat(_ ctx: fortran77Parser.DataImpliedDoListWhatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentStatement(_ ctx: fortran77Parser.AssignmentStatementContext) -> T{
+	open func visitAssignmentStatement(_ ctx: fortran77Parser.AssignmentStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGotoStatement(_ ctx: fortran77Parser.GotoStatementContext) -> T{
+	open func visitGotoStatement(_ ctx: fortran77Parser.GotoStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnconditionalGoto(_ ctx: fortran77Parser.UnconditionalGotoContext) -> T{
+	open func visitUnconditionalGoto(_ ctx: fortran77Parser.UnconditionalGotoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComputedGoto(_ ctx: fortran77Parser.ComputedGotoContext) -> T{
+	open func visitComputedGoto(_ ctx: fortran77Parser.ComputedGotoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLblRef(_ ctx: fortran77Parser.LblRefContext) -> T{
+	open func visitLblRef(_ ctx: fortran77Parser.LblRefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabelList(_ ctx: fortran77Parser.LabelListContext) -> T{
+	open func visitLabelList(_ ctx: fortran77Parser.LabelListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignedGoto(_ ctx: fortran77Parser.AssignedGotoContext) -> T{
+	open func visitAssignedGoto(_ ctx: fortran77Parser.AssignedGotoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfStatement(_ ctx: fortran77Parser.IfStatementContext) -> T{
+	open func visitIfStatement(_ ctx: fortran77Parser.IfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArithmeticIfStatement(_ ctx: fortran77Parser.ArithmeticIfStatementContext) -> T{
+	open func visitArithmeticIfStatement(_ ctx: fortran77Parser.ArithmeticIfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalIfStatement(_ ctx: fortran77Parser.LogicalIfStatementContext) -> T{
+	open func visitLogicalIfStatement(_ ctx: fortran77Parser.LogicalIfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockIfStatement(_ ctx: fortran77Parser.BlockIfStatementContext) -> T{
+	open func visitBlockIfStatement(_ ctx: fortran77Parser.BlockIfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFirstIfBlock(_ ctx: fortran77Parser.FirstIfBlockContext) -> T{
+	open func visitFirstIfBlock(_ ctx: fortran77Parser.FirstIfBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElseIfStatement(_ ctx: fortran77Parser.ElseIfStatementContext) -> T{
+	open func visitElseIfStatement(_ ctx: fortran77Parser.ElseIfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElseStatement(_ ctx: fortran77Parser.ElseStatementContext) -> T{
+	open func visitElseStatement(_ ctx: fortran77Parser.ElseStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEndIfStatement(_ ctx: fortran77Parser.EndIfStatementContext) -> T{
+	open func visitEndIfStatement(_ ctx: fortran77Parser.EndIfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDoStatement(_ ctx: fortran77Parser.DoStatementContext) -> T{
+	open func visitDoStatement(_ ctx: fortran77Parser.DoStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDoVarArgs(_ ctx: fortran77Parser.DoVarArgsContext) -> T{
+	open func visitDoVarArgs(_ ctx: fortran77Parser.DoVarArgsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDoWithLabel(_ ctx: fortran77Parser.DoWithLabelContext) -> T{
+	open func visitDoWithLabel(_ ctx: fortran77Parser.DoWithLabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDoBody(_ ctx: fortran77Parser.DoBodyContext) -> T{
+	open func visitDoBody(_ ctx: fortran77Parser.DoBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDoWithEndDo(_ ctx: fortran77Parser.DoWithEndDoContext) -> T{
+	open func visitDoWithEndDo(_ ctx: fortran77Parser.DoWithEndDoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnddoStatement(_ ctx: fortran77Parser.EnddoStatementContext) -> T{
+	open func visitEnddoStatement(_ ctx: fortran77Parser.EnddoStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContinueStatement(_ ctx: fortran77Parser.ContinueStatementContext) -> T{
+	open func visitContinueStatement(_ ctx: fortran77Parser.ContinueStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStopStatement(_ ctx: fortran77Parser.StopStatementContext) -> T{
+	open func visitStopStatement(_ ctx: fortran77Parser.StopStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPauseStatement(_ ctx: fortran77Parser.PauseStatementContext) -> T{
+	open func visitPauseStatement(_ ctx: fortran77Parser.PauseStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWriteStatement(_ ctx: fortran77Parser.WriteStatementContext) -> T{
+	open func visitWriteStatement(_ ctx: fortran77Parser.WriteStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadStatement(_ ctx: fortran77Parser.ReadStatementContext) -> T{
+	open func visitReadStatement(_ ctx: fortran77Parser.ReadStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrintStatement(_ ctx: fortran77Parser.PrintStatementContext) -> T{
+	open func visitPrintStatement(_ ctx: fortran77Parser.PrintStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlInfoList(_ ctx: fortran77Parser.ControlInfoListContext) -> T{
+	open func visitControlInfoList(_ ctx: fortran77Parser.ControlInfoListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlErrSpec(_ ctx: fortran77Parser.ControlErrSpecContext) -> T{
+	open func visitControlErrSpec(_ ctx: fortran77Parser.ControlErrSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlInfoListItem(_ ctx: fortran77Parser.ControlInfoListItemContext) -> T{
+	open func visitControlInfoListItem(_ ctx: fortran77Parser.ControlInfoListItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIoList(_ ctx: fortran77Parser.IoListContext) -> T{
+	open func visitIoList(_ ctx: fortran77Parser.IoListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1025,7 +1025,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIoListItem(_ ctx: fortran77Parser.IoListItemContext) -> T{
+	open func visitIoListItem(_ ctx: fortran77Parser.IoListItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1035,7 +1035,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIoImpliedDoList(_ ctx: fortran77Parser.IoImpliedDoListContext) -> T{
+	open func visitIoImpliedDoList(_ ctx: fortran77Parser.IoImpliedDoListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1045,7 +1045,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpenStatement(_ ctx: fortran77Parser.OpenStatementContext) -> T{
+	open func visitOpenStatement(_ ctx: fortran77Parser.OpenStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1055,7 +1055,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpenControl(_ ctx: fortran77Parser.OpenControlContext) -> T{
+	open func visitOpenControl(_ ctx: fortran77Parser.OpenControlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1065,7 +1065,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlFmt(_ ctx: fortran77Parser.ControlFmtContext) -> T{
+	open func visitControlFmt(_ ctx: fortran77Parser.ControlFmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1075,7 +1075,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlUnit(_ ctx: fortran77Parser.ControlUnitContext) -> T{
+	open func visitControlUnit(_ ctx: fortran77Parser.ControlUnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1085,7 +1085,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlRec(_ ctx: fortran77Parser.ControlRecContext) -> T{
+	open func visitControlRec(_ ctx: fortran77Parser.ControlRecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1095,7 +1095,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlEnd(_ ctx: fortran77Parser.ControlEndContext) -> T{
+	open func visitControlEnd(_ ctx: fortran77Parser.ControlEndContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1105,7 +1105,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlErr(_ ctx: fortran77Parser.ControlErrContext) -> T{
+	open func visitControlErr(_ ctx: fortran77Parser.ControlErrContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1115,7 +1115,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlIostat(_ ctx: fortran77Parser.ControlIostatContext) -> T{
+	open func visitControlIostat(_ ctx: fortran77Parser.ControlIostatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1125,7 +1125,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlFile(_ ctx: fortran77Parser.ControlFileContext) -> T{
+	open func visitControlFile(_ ctx: fortran77Parser.ControlFileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1135,7 +1135,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlStatus(_ ctx: fortran77Parser.ControlStatusContext) -> T{
+	open func visitControlStatus(_ ctx: fortran77Parser.ControlStatusContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1145,7 +1145,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlAccess(_ ctx: fortran77Parser.ControlAccessContext) -> T{
+	open func visitControlAccess(_ ctx: fortran77Parser.ControlAccessContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1155,7 +1155,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlPosition(_ ctx: fortran77Parser.ControlPositionContext) -> T{
+	open func visitControlPosition(_ ctx: fortran77Parser.ControlPositionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1165,7 +1165,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlForm(_ ctx: fortran77Parser.ControlFormContext) -> T{
+	open func visitControlForm(_ ctx: fortran77Parser.ControlFormContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1175,7 +1175,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlRecl(_ ctx: fortran77Parser.ControlReclContext) -> T{
+	open func visitControlRecl(_ ctx: fortran77Parser.ControlReclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1185,7 +1185,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlBlank(_ ctx: fortran77Parser.ControlBlankContext) -> T{
+	open func visitControlBlank(_ ctx: fortran77Parser.ControlBlankContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1195,7 +1195,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlExist(_ ctx: fortran77Parser.ControlExistContext) -> T{
+	open func visitControlExist(_ ctx: fortran77Parser.ControlExistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1205,7 +1205,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlOpened(_ ctx: fortran77Parser.ControlOpenedContext) -> T{
+	open func visitControlOpened(_ ctx: fortran77Parser.ControlOpenedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1215,7 +1215,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlNumber(_ ctx: fortran77Parser.ControlNumberContext) -> T{
+	open func visitControlNumber(_ ctx: fortran77Parser.ControlNumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1225,7 +1225,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlNamed(_ ctx: fortran77Parser.ControlNamedContext) -> T{
+	open func visitControlNamed(_ ctx: fortran77Parser.ControlNamedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1235,7 +1235,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlName(_ ctx: fortran77Parser.ControlNameContext) -> T{
+	open func visitControlName(_ ctx: fortran77Parser.ControlNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1245,7 +1245,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlSequential(_ ctx: fortran77Parser.ControlSequentialContext) -> T{
+	open func visitControlSequential(_ ctx: fortran77Parser.ControlSequentialContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1255,7 +1255,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlDirect(_ ctx: fortran77Parser.ControlDirectContext) -> T{
+	open func visitControlDirect(_ ctx: fortran77Parser.ControlDirectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1265,7 +1265,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlFormatted(_ ctx: fortran77Parser.ControlFormattedContext) -> T{
+	open func visitControlFormatted(_ ctx: fortran77Parser.ControlFormattedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1275,7 +1275,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlUnformatted(_ ctx: fortran77Parser.ControlUnformattedContext) -> T{
+	open func visitControlUnformatted(_ ctx: fortran77Parser.ControlUnformattedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1285,7 +1285,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlNextrec(_ ctx: fortran77Parser.ControlNextrecContext) -> T{
+	open func visitControlNextrec(_ ctx: fortran77Parser.ControlNextrecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1295,7 +1295,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCloseStatement(_ ctx: fortran77Parser.CloseStatementContext) -> T{
+	open func visitCloseStatement(_ ctx: fortran77Parser.CloseStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1305,7 +1305,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCloseControl(_ ctx: fortran77Parser.CloseControlContext) -> T{
+	open func visitCloseControl(_ ctx: fortran77Parser.CloseControlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1315,7 +1315,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInquireStatement(_ ctx: fortran77Parser.InquireStatementContext) -> T{
+	open func visitInquireStatement(_ ctx: fortran77Parser.InquireStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1325,7 +1325,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInquireControl(_ ctx: fortran77Parser.InquireControlContext) -> T{
+	open func visitInquireControl(_ ctx: fortran77Parser.InquireControlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1335,7 +1335,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBackspaceStatement(_ ctx: fortran77Parser.BackspaceStatementContext) -> T{
+	open func visitBackspaceStatement(_ ctx: fortran77Parser.BackspaceStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1345,7 +1345,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEndfileStatement(_ ctx: fortran77Parser.EndfileStatementContext) -> T{
+	open func visitEndfileStatement(_ ctx: fortran77Parser.EndfileStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1355,7 +1355,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewindStatement(_ ctx: fortran77Parser.RewindStatementContext) -> T{
+	open func visitRewindStatement(_ ctx: fortran77Parser.RewindStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1365,7 +1365,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBerFinish(_ ctx: fortran77Parser.BerFinishContext) -> T{
+	open func visitBerFinish(_ ctx: fortran77Parser.BerFinishContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1375,7 +1375,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBerFinishItem(_ ctx: fortran77Parser.BerFinishItemContext) -> T{
+	open func visitBerFinishItem(_ ctx: fortran77Parser.BerFinishItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1385,7 +1385,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnitIdentifier(_ ctx: fortran77Parser.UnitIdentifierContext) -> T{
+	open func visitUnitIdentifier(_ ctx: fortran77Parser.UnitIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1395,7 +1395,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormatIdentifier(_ ctx: fortran77Parser.FormatIdentifierContext) -> T{
+	open func visitFormatIdentifier(_ ctx: fortran77Parser.FormatIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1405,7 +1405,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormatStatement(_ ctx: fortran77Parser.FormatStatementContext) -> T{
+	open func visitFormatStatement(_ ctx: fortran77Parser.FormatStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1415,7 +1415,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFmtSpec(_ ctx: fortran77Parser.FmtSpecContext) -> T{
+	open func visitFmtSpec(_ ctx: fortran77Parser.FmtSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1425,7 +1425,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormatsep(_ ctx: fortran77Parser.FormatsepContext) -> T{
+	open func visitFormatsep(_ ctx: fortran77Parser.FormatsepContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1435,7 +1435,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormatedit(_ ctx: fortran77Parser.FormateditContext) -> T{
+	open func visitFormatedit(_ ctx: fortran77Parser.FormateditContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1445,7 +1445,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEditElement(_ ctx: fortran77Parser.EditElementContext) -> T{
+	open func visitEditElement(_ ctx: fortran77Parser.EditElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1455,7 +1455,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementFunctionStatement(_ ctx: fortran77Parser.StatementFunctionStatementContext) -> T{
+	open func visitStatementFunctionStatement(_ ctx: fortran77Parser.StatementFunctionStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1465,7 +1465,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSfArgs(_ ctx: fortran77Parser.SfArgsContext) -> T{
+	open func visitSfArgs(_ ctx: fortran77Parser.SfArgsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1475,7 +1475,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCallStatement(_ ctx: fortran77Parser.CallStatementContext) -> T{
+	open func visitCallStatement(_ ctx: fortran77Parser.CallStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1485,7 +1485,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubroutineCall(_ ctx: fortran77Parser.SubroutineCallContext) -> T{
+	open func visitSubroutineCall(_ ctx: fortran77Parser.SubroutineCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1495,7 +1495,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCallArgumentList(_ ctx: fortran77Parser.CallArgumentListContext) -> T{
+	open func visitCallArgumentList(_ ctx: fortran77Parser.CallArgumentListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1505,7 +1505,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCallArgument(_ ctx: fortran77Parser.CallArgumentContext) -> T{
+	open func visitCallArgument(_ ctx: fortran77Parser.CallArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1515,7 +1515,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturnStatement(_ ctx: fortran77Parser.ReturnStatementContext) -> T{
+	open func visitReturnStatement(_ ctx: fortran77Parser.ReturnStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1525,7 +1525,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: fortran77Parser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: fortran77Parser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1535,7 +1535,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNcExpr(_ ctx: fortran77Parser.NcExprContext) -> T{
+	open func visitNcExpr(_ ctx: fortran77Parser.NcExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1545,7 +1545,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLexpr0(_ ctx: fortran77Parser.Lexpr0Context) -> T{
+	open func visitLexpr0(_ ctx: fortran77Parser.Lexpr0Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1555,7 +1555,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLexpr1(_ ctx: fortran77Parser.Lexpr1Context) -> T{
+	open func visitLexpr1(_ ctx: fortran77Parser.Lexpr1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1565,7 +1565,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLexpr2(_ ctx: fortran77Parser.Lexpr2Context) -> T{
+	open func visitLexpr2(_ ctx: fortran77Parser.Lexpr2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1575,7 +1575,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLexpr3(_ ctx: fortran77Parser.Lexpr3Context) -> T{
+	open func visitLexpr3(_ ctx: fortran77Parser.Lexpr3Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1585,7 +1585,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLexpr4(_ ctx: fortran77Parser.Lexpr4Context) -> T{
+	open func visitLexpr4(_ ctx: fortran77Parser.Lexpr4Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1595,7 +1595,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAexpr0(_ ctx: fortran77Parser.Aexpr0Context) -> T{
+	open func visitAexpr0(_ ctx: fortran77Parser.Aexpr0Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1605,7 +1605,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAexpr1(_ ctx: fortran77Parser.Aexpr1Context) -> T{
+	open func visitAexpr1(_ ctx: fortran77Parser.Aexpr1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1615,7 +1615,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAexpr2(_ ctx: fortran77Parser.Aexpr2Context) -> T{
+	open func visitAexpr2(_ ctx: fortran77Parser.Aexpr2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1625,7 +1625,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAexpr3(_ ctx: fortran77Parser.Aexpr3Context) -> T{
+	open func visitAexpr3(_ ctx: fortran77Parser.Aexpr3Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1635,7 +1635,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAexpr4(_ ctx: fortran77Parser.Aexpr4Context) -> T{
+	open func visitAexpr4(_ ctx: fortran77Parser.Aexpr4Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1645,7 +1645,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIexpr(_ ctx: fortran77Parser.IexprContext) -> T{
+	open func visitIexpr(_ ctx: fortran77Parser.IexprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1655,7 +1655,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIexprCode(_ ctx: fortran77Parser.IexprCodeContext) -> T{
+	open func visitIexprCode(_ ctx: fortran77Parser.IexprCodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1665,7 +1665,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIexpr1(_ ctx: fortran77Parser.Iexpr1Context) -> T{
+	open func visitIexpr1(_ ctx: fortran77Parser.Iexpr1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1675,7 +1675,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIexpr2(_ ctx: fortran77Parser.Iexpr2Context) -> T{
+	open func visitIexpr2(_ ctx: fortran77Parser.Iexpr2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1685,7 +1685,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIexpr3(_ ctx: fortran77Parser.Iexpr3Context) -> T{
+	open func visitIexpr3(_ ctx: fortran77Parser.Iexpr3Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1695,7 +1695,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIexpr4(_ ctx: fortran77Parser.Iexpr4Context) -> T{
+	open func visitIexpr4(_ ctx: fortran77Parser.Iexpr4Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1705,7 +1705,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantExpr(_ ctx: fortran77Parser.ConstantExprContext) -> T{
+	open func visitConstantExpr(_ ctx: fortran77Parser.ConstantExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1715,7 +1715,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArithmeticExpression(_ ctx: fortran77Parser.ArithmeticExpressionContext) -> T{
+	open func visitArithmeticExpression(_ ctx: fortran77Parser.ArithmeticExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1725,7 +1725,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntegerExpr(_ ctx: fortran77Parser.IntegerExprContext) -> T{
+	open func visitIntegerExpr(_ ctx: fortran77Parser.IntegerExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1735,7 +1735,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntRealDpExpr(_ ctx: fortran77Parser.IntRealDpExprContext) -> T{
+	open func visitIntRealDpExpr(_ ctx: fortran77Parser.IntRealDpExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1745,7 +1745,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArithmeticConstExpr(_ ctx: fortran77Parser.ArithmeticConstExprContext) -> T{
+	open func visitArithmeticConstExpr(_ ctx: fortran77Parser.ArithmeticConstExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1755,7 +1755,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntConstantExpr(_ ctx: fortran77Parser.IntConstantExprContext) -> T{
+	open func visitIntConstantExpr(_ ctx: fortran77Parser.IntConstantExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1765,7 +1765,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharacterExpression(_ ctx: fortran77Parser.CharacterExpressionContext) -> T{
+	open func visitCharacterExpression(_ ctx: fortran77Parser.CharacterExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1775,7 +1775,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConcatOp(_ ctx: fortran77Parser.ConcatOpContext) -> T{
+	open func visitConcatOp(_ ctx: fortran77Parser.ConcatOpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1785,7 +1785,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalExpression(_ ctx: fortran77Parser.LogicalExpressionContext) -> T{
+	open func visitLogicalExpression(_ ctx: fortran77Parser.LogicalExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1795,7 +1795,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalConstExpr(_ ctx: fortran77Parser.LogicalConstExprContext) -> T{
+	open func visitLogicalConstExpr(_ ctx: fortran77Parser.LogicalConstExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1805,7 +1805,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayElementName(_ ctx: fortran77Parser.ArrayElementNameContext) -> T{
+	open func visitArrayElementName(_ ctx: fortran77Parser.ArrayElementNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1815,7 +1815,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubscripts(_ ctx: fortran77Parser.SubscriptsContext) -> T{
+	open func visitSubscripts(_ ctx: fortran77Parser.SubscriptsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1825,7 +1825,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarRef(_ ctx: fortran77Parser.VarRefContext) -> T{
+	open func visitVarRef(_ ctx: fortran77Parser.VarRefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1835,7 +1835,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarRefCode(_ ctx: fortran77Parser.VarRefCodeContext) -> T{
+	open func visitVarRefCode(_ ctx: fortran77Parser.VarRefCodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1845,7 +1845,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubstringApp(_ ctx: fortran77Parser.SubstringAppContext) -> T{
+	open func visitSubstringApp(_ ctx: fortran77Parser.SubstringAppContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1855,7 +1855,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableName(_ ctx: fortran77Parser.VariableNameContext) -> T{
+	open func visitVariableName(_ ctx: fortran77Parser.VariableNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1865,7 +1865,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayName(_ ctx: fortran77Parser.ArrayNameContext) -> T{
+	open func visitArrayName(_ ctx: fortran77Parser.ArrayNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1875,7 +1875,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubroutineName(_ ctx: fortran77Parser.SubroutineNameContext) -> T{
+	open func visitSubroutineName(_ ctx: fortran77Parser.SubroutineNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1885,7 +1885,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionName(_ ctx: fortran77Parser.FunctionNameContext) -> T{
+	open func visitFunctionName(_ ctx: fortran77Parser.FunctionNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1895,7 +1895,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstant(_ ctx: fortran77Parser.ConstantContext) -> T{
+	open func visitConstant(_ ctx: fortran77Parser.ConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1905,7 +1905,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedArithmeticConstant(_ ctx: fortran77Parser.UnsignedArithmeticConstantContext) -> T{
+	open func visitUnsignedArithmeticConstant(_ ctx: fortran77Parser.UnsignedArithmeticConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1915,7 +1915,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComplexConstant(_ ctx: fortran77Parser.ComplexConstantContext) -> T{
+	open func visitComplexConstant(_ ctx: fortran77Parser.ComplexConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1925,7 +1925,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalConstant(_ ctx: fortran77Parser.LogicalConstantContext) -> T{
+	open func visitLogicalConstant(_ ctx: fortran77Parser.LogicalConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1935,7 +1935,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifier(_ ctx: fortran77Parser.IdentifierContext) -> T{
+	open func visitIdentifier(_ ctx: fortran77Parser.IdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1945,7 +1945,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTo(_ ctx: fortran77Parser.ToContext) -> T{
+	open func visitTo(_ ctx: fortran77Parser.ToContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1955,7 +1955,7 @@ open class fortran77Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeyword(_ ctx: fortran77Parser.KeywordContext) -> T{
+	open func visitKeyword(_ ctx: fortran77Parser.KeywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

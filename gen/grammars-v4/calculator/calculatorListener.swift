@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/calculator/calculator.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/calculator/calculator.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -55,6 +55,18 @@ public protocol calculatorListener: ParseTreeListener {
 	 */
 	func exitPowExpression(_ ctx: calculatorParser.PowExpressionContext)
 	/**
+	 * Enter a parse tree produced by {@link calculatorParser#signedAtom}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterSignedAtom(_ ctx: calculatorParser.SignedAtomContext)
+	/**
+	 * Exit a parse tree produced by {@link calculatorParser#signedAtom}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitSignedAtom(_ ctx: calculatorParser.SignedAtomContext)
+	/**
 	 * Enter a parse tree produced by {@link calculatorParser#atom}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -78,6 +90,30 @@ public protocol calculatorListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitScientific(_ ctx: calculatorParser.ScientificContext)
+	/**
+	 * Enter a parse tree produced by {@link calculatorParser#constant}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterConstant(_ ctx: calculatorParser.ConstantContext)
+	/**
+	 * Exit a parse tree produced by {@link calculatorParser#constant}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitConstant(_ ctx: calculatorParser.ConstantContext)
+	/**
+	 * Enter a parse tree produced by {@link calculatorParser#variable}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterVariable(_ ctx: calculatorParser.VariableContext)
+	/**
+	 * Exit a parse tree produced by {@link calculatorParser#variable}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitVariable(_ ctx: calculatorParser.VariableContext)
 	/**
 	 * Enter a parse tree produced by {@link calculatorParser#func}.
 	 - Parameters:
@@ -114,28 +150,4 @@ public protocol calculatorListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitRelop(_ ctx: calculatorParser.RelopContext)
-	/**
-	 * Enter a parse tree produced by {@link calculatorParser#number}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterNumber(_ ctx: calculatorParser.NumberContext)
-	/**
-	 * Exit a parse tree produced by {@link calculatorParser#number}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitNumber(_ ctx: calculatorParser.NumberContext)
-	/**
-	 * Enter a parse tree produced by {@link calculatorParser#variable}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterVariable(_ ctx: calculatorParser.VariableContext)
-	/**
-	 * Exit a parse tree produced by {@link calculatorParser#variable}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitVariable(_ ctx: calculatorParser.VariableContext)
 }

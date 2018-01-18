@@ -24,7 +24,6 @@ QUOTE=23
 QTEXT=24
 DTEXT=25
 CTEXT=26
-TAB=27
 ':'=1
 ';'=2
 '<'=3

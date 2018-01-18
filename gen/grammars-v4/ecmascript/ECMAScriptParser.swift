@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/ecmascript/ECMAScript.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/ecmascript/ECMAScript.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class ECMAScriptParser: Parser {
@@ -11,8 +11,11 @@ open class ECMAScriptParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, RegularExpressionLiteral = 1, LineTerminator = 2, OpenBracket = 3, 
                  CloseBracket = 4, OpenParen = 5, CloseParen = 6, OpenBrace = 7, 
                  CloseBrace = 8, SemiColon = 9, Comma = 10, Assign = 11, 
@@ -40,29 +43,30 @@ open class ECMAScriptParser: Parser {
                  Yield = 97, Identifier = 98, StringLiteral = 99, WhiteSpaces = 100, 
                  MultiLineComment = 101, SingleLineComment = 102, UnexpectedCharacter = 103
 	}
-	public static let RULE_program = 0, RULE_sourceElements = 1, RULE_sourceElement = 2, 
-                   RULE_statement = 3, RULE_block = 4, RULE_statementList = 5, 
-                   RULE_variableStatement = 6, RULE_variableDeclarationList = 7, 
-                   RULE_variableDeclaration = 8, RULE_initialiser = 9, RULE_emptyStatement = 10, 
-                   RULE_expressionStatement = 11, RULE_ifStatement = 12, 
-                   RULE_iterationStatement = 13, RULE_continueStatement = 14, 
-                   RULE_breakStatement = 15, RULE_returnStatement = 16, 
-                   RULE_withStatement = 17, RULE_switchStatement = 18, RULE_caseBlock = 19, 
-                   RULE_caseClauses = 20, RULE_caseClause = 21, RULE_defaultClause = 22, 
-                   RULE_labelledStatement = 23, RULE_throwStatement = 24, 
-                   RULE_tryStatement = 25, RULE_catchProduction = 26, RULE_finallyProduction = 27, 
-                   RULE_debuggerStatement = 28, RULE_functionDeclaration = 29, 
-                   RULE_formalParameterList = 30, RULE_functionBody = 31, 
-                   RULE_arrayLiteral = 32, RULE_elementList = 33, RULE_elision = 34, 
-                   RULE_objectLiteral = 35, RULE_propertyNameAndValueList = 36, 
-                   RULE_propertyAssignment = 37, RULE_propertyName = 38, 
-                   RULE_propertySetParameterList = 39, RULE_arguments = 40, 
-                   RULE_argumentList = 41, RULE_expressionSequence = 42, 
-                   RULE_singleExpression = 43, RULE_assignmentOperator = 44, 
-                   RULE_literal = 45, RULE_numericLiteral = 46, RULE_identifierName = 47, 
-                   RULE_reservedWord = 48, RULE_keyword = 49, RULE_futureReservedWord = 50, 
-                   RULE_getter = 51, RULE_setter = 52, RULE_eos = 53, RULE_eof = 54
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_program = 0, RULE_sourceElements = 1, RULE_sourceElement = 2, 
+            RULE_statement = 3, RULE_block = 4, RULE_statementList = 5, 
+            RULE_variableStatement = 6, RULE_variableDeclarationList = 7, 
+            RULE_variableDeclaration = 8, RULE_initialiser = 9, RULE_emptyStatement = 10, 
+            RULE_expressionStatement = 11, RULE_ifStatement = 12, RULE_iterationStatement = 13, 
+            RULE_continueStatement = 14, RULE_breakStatement = 15, RULE_returnStatement = 16, 
+            RULE_withStatement = 17, RULE_switchStatement = 18, RULE_caseBlock = 19, 
+            RULE_caseClauses = 20, RULE_caseClause = 21, RULE_defaultClause = 22, 
+            RULE_labelledStatement = 23, RULE_throwStatement = 24, RULE_tryStatement = 25, 
+            RULE_catchProduction = 26, RULE_finallyProduction = 27, RULE_debuggerStatement = 28, 
+            RULE_functionDeclaration = 29, RULE_formalParameterList = 30, 
+            RULE_functionBody = 31, RULE_arrayLiteral = 32, RULE_elementList = 33, 
+            RULE_elision = 34, RULE_objectLiteral = 35, RULE_propertyNameAndValueList = 36, 
+            RULE_propertyAssignment = 37, RULE_propertyName = 38, RULE_propertySetParameterList = 39, 
+            RULE_arguments = 40, RULE_argumentList = 41, RULE_expressionSequence = 42, 
+            RULE_singleExpression = 43, RULE_assignmentOperator = 44, RULE_literal = 45, 
+            RULE_numericLiteral = 46, RULE_identifierName = 47, RULE_reservedWord = 48, 
+            RULE_keyword = 49, RULE_futureReservedWord = 50, RULE_getter = 51, 
+            RULE_setter = 52, RULE_eos = 53, RULE_eof = 54
+
+	public
+	static let ruleNames: [String] = [
 		"program", "sourceElements", "sourceElement", "statement", "block", "statementList", 
 		"variableStatement", "variableDeclarationList", "variableDeclaration", 
 		"initialiser", "emptyStatement", "expressionStatement", "ifStatement", 
@@ -111,44 +115,20 @@ open class ECMAScriptParser: Parser {
 		"Yield", "Identifier", "StringLiteral", "WhiteSpaces", "MultiLineComment", 
 		"SingleLineComment", "UnexpectedCharacter"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "ECMAScript.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return ECMAScriptParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "ECMAScript.g4" }
+	override open
+	func getSerializedATN() -> String { return ECMAScriptParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return ECMAScriptParser.ruleNames }
-
-	override
-	open func getSerializedATN() -> String { return ECMAScriptParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return ECMAScriptParser._ATN }
+	override open
+	func getATN() -> ATN { return ECMAScriptParser._ATN }
 
 
 	  
@@ -218,47 +198,58 @@ open class ECMAScriptParser: Parser {
 	                (type == LineTerminator);
 	    }                                
 
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return ECMAScriptParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,ECMAScriptParser._ATN,ECMAScriptParser._decisionToDFA, ECMAScriptParser._sharedContextCache)
 	}
-	open class ProgramContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.EOF.rawValue, 0) }
-		open func sourceElements() -> SourceElementsContext? {
-			return getRuleContext(SourceElementsContext.self,0)
+
+	public class ProgramContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func sourceElements() -> SourceElementsContext? {
+				return getRuleContext(SourceElementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_program
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_program }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterProgram(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterProgram(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitProgram(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitProgram(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitProgram(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitProgram(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitProgram(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitProgram(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func program() throws -> ProgramContext {
+	 open func program() throws -> ProgramContext {
 		var _localctx: ProgramContext = ProgramContext(_ctx, getState())
 		try enterRule(_localctx, 0, ECMAScriptParser.RULE_program)
 		defer {
@@ -288,40 +279,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class SourceElementsContext:ParserRuleContext {
-		open func sourceElement() -> Array<SourceElementContext> {
-			return getRuleContexts(SourceElementContext.self)
+
+	public class SourceElementsContext: ParserRuleContext {
+			open
+			func sourceElement() -> [SourceElementContext] {
+				return getRuleContexts(SourceElementContext.self)
+			}
+			open
+			func sourceElement(_ i: Int) -> SourceElementContext? {
+				return getRuleContext(SourceElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_sourceElements
 		}
-		open func sourceElement(_ i: Int) -> SourceElementContext? {
-			return getRuleContext(SourceElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_sourceElements }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterSourceElements(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterSourceElements(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitSourceElements(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitSourceElements(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitSourceElements(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitSourceElements(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitSourceElements(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitSourceElements(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sourceElements() throws -> SourceElementsContext {
+	 open func sourceElements() throws -> SourceElementsContext {
 		var _localctx: SourceElementsContext = SourceElementsContext(_ctx, getState())
 		try enterRule(_localctx, 2, ECMAScriptParser.RULE_sourceElements)
 		defer {
@@ -342,7 +340,7 @@ open class ECMAScriptParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(118); 
 		 		try _errHandler.sync(self)
@@ -358,40 +356,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class SourceElementContext:ParserRuleContext {
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
+
+	public class SourceElementContext: ParserRuleContext {
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func functionDeclaration() -> FunctionDeclarationContext? {
+				return getRuleContext(FunctionDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_sourceElement
 		}
-		open func functionDeclaration() -> FunctionDeclarationContext? {
-			return getRuleContext(FunctionDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_sourceElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterSourceElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterSourceElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitSourceElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitSourceElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitSourceElement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitSourceElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitSourceElement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitSourceElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sourceElement() throws -> SourceElementContext {
+	 open func sourceElement() throws -> SourceElementContext {
 		var _localctx: SourceElementContext = SourceElementContext(_ctx, getState())
 		try enterRule(_localctx, 4, ECMAScriptParser.RULE_sourceElement)
 		defer {
@@ -424,79 +429,99 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func variableStatement() -> VariableStatementContext? {
+				return getRuleContext(VariableStatementContext.self, 0)
+			}
+			open
+			func emptyStatement() -> EmptyStatementContext? {
+				return getRuleContext(EmptyStatementContext.self, 0)
+			}
+			open
+			func expressionStatement() -> ExpressionStatementContext? {
+				return getRuleContext(ExpressionStatementContext.self, 0)
+			}
+			open
+			func ifStatement() -> IfStatementContext? {
+				return getRuleContext(IfStatementContext.self, 0)
+			}
+			open
+			func iterationStatement() -> IterationStatementContext? {
+				return getRuleContext(IterationStatementContext.self, 0)
+			}
+			open
+			func continueStatement() -> ContinueStatementContext? {
+				return getRuleContext(ContinueStatementContext.self, 0)
+			}
+			open
+			func breakStatement() -> BreakStatementContext? {
+				return getRuleContext(BreakStatementContext.self, 0)
+			}
+			open
+			func returnStatement() -> ReturnStatementContext? {
+				return getRuleContext(ReturnStatementContext.self, 0)
+			}
+			open
+			func withStatement() -> WithStatementContext? {
+				return getRuleContext(WithStatementContext.self, 0)
+			}
+			open
+			func labelledStatement() -> LabelledStatementContext? {
+				return getRuleContext(LabelledStatementContext.self, 0)
+			}
+			open
+			func switchStatement() -> SwitchStatementContext? {
+				return getRuleContext(SwitchStatementContext.self, 0)
+			}
+			open
+			func throwStatement() -> ThrowStatementContext? {
+				return getRuleContext(ThrowStatementContext.self, 0)
+			}
+			open
+			func tryStatement() -> TryStatementContext? {
+				return getRuleContext(TryStatementContext.self, 0)
+			}
+			open
+			func debuggerStatement() -> DebuggerStatementContext? {
+				return getRuleContext(DebuggerStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_statement
 		}
-		open func variableStatement() -> VariableStatementContext? {
-			return getRuleContext(VariableStatementContext.self,0)
-		}
-		open func emptyStatement() -> EmptyStatementContext? {
-			return getRuleContext(EmptyStatementContext.self,0)
-		}
-		open func expressionStatement() -> ExpressionStatementContext? {
-			return getRuleContext(ExpressionStatementContext.self,0)
-		}
-		open func ifStatement() -> IfStatementContext? {
-			return getRuleContext(IfStatementContext.self,0)
-		}
-		open func iterationStatement() -> IterationStatementContext? {
-			return getRuleContext(IterationStatementContext.self,0)
-		}
-		open func continueStatement() -> ContinueStatementContext? {
-			return getRuleContext(ContinueStatementContext.self,0)
-		}
-		open func breakStatement() -> BreakStatementContext? {
-			return getRuleContext(BreakStatementContext.self,0)
-		}
-		open func returnStatement() -> ReturnStatementContext? {
-			return getRuleContext(ReturnStatementContext.self,0)
-		}
-		open func withStatement() -> WithStatementContext? {
-			return getRuleContext(WithStatementContext.self,0)
-		}
-		open func labelledStatement() -> LabelledStatementContext? {
-			return getRuleContext(LabelledStatementContext.self,0)
-		}
-		open func switchStatement() -> SwitchStatementContext? {
-			return getRuleContext(SwitchStatementContext.self,0)
-		}
-		open func throwStatement() -> ThrowStatementContext? {
-			return getRuleContext(ThrowStatementContext.self,0)
-		}
-		open func tryStatement() -> TryStatementContext? {
-			return getRuleContext(TryStatementContext.self,0)
-		}
-		open func debuggerStatement() -> DebuggerStatementContext? {
-			return getRuleContext(DebuggerStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 6, ECMAScriptParser.RULE_statement)
 		defer {
@@ -607,37 +632,43 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func statementList() -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,0)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func statementList() -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_block
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitBlock(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 8, ECMAScriptParser.RULE_block)
 		defer {
@@ -669,40 +700,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class StatementListContext:ParserRuleContext {
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
+
+	public class StatementListContext: ParserRuleContext {
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_statementList
 		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_statementList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterStatementList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterStatementList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitStatementList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitStatementList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitStatementList(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitStatementList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitStatementList(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitStatementList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statementList() throws -> StatementListContext {
+	 open func statementList() throws -> StatementListContext {
 		var _localctx: StatementListContext = StatementListContext(_ctx, getState())
 		try enterRule(_localctx, 10, ECMAScriptParser.RULE_statementList)
 		defer {
@@ -723,7 +761,7 @@ open class ECMAScriptParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(150); 
 		 		try _errHandler.sync(self)
@@ -739,41 +777,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class VariableStatementContext:ParserRuleContext {
-		open func Var() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Var.rawValue, 0) }
-		open func variableDeclarationList() -> VariableDeclarationListContext? {
-			return getRuleContext(VariableDeclarationListContext.self,0)
+
+	public class VariableStatementContext: ParserRuleContext {
+			open
+			func Var() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Var.rawValue, 0)
+			}
+			open
+			func variableDeclarationList() -> VariableDeclarationListContext? {
+				return getRuleContext(VariableDeclarationListContext.self, 0)
+			}
+			open
+			func eos() -> EosContext? {
+				return getRuleContext(EosContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_variableStatement
 		}
-		open func eos() -> EosContext? {
-			return getRuleContext(EosContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_variableStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterVariableStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterVariableStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitVariableStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitVariableStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitVariableStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitVariableStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitVariableStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitVariableStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableStatement() throws -> VariableStatementContext {
+	 open func variableStatement() throws -> VariableStatementContext {
 		var _localctx: VariableStatementContext = VariableStatementContext(_ctx, getState())
 		try enterRule(_localctx, 12, ECMAScriptParser.RULE_variableStatement)
 		defer {
@@ -797,40 +845,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclarationListContext:ParserRuleContext {
-		open func variableDeclaration() -> Array<VariableDeclarationContext> {
-			return getRuleContexts(VariableDeclarationContext.self)
+
+	public class VariableDeclarationListContext: ParserRuleContext {
+			open
+			func variableDeclaration() -> [VariableDeclarationContext] {
+				return getRuleContexts(VariableDeclarationContext.self)
+			}
+			open
+			func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
+				return getRuleContext(VariableDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_variableDeclarationList
 		}
-		open func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
-			return getRuleContext(VariableDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_variableDeclarationList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterVariableDeclarationList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterVariableDeclarationList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitVariableDeclarationList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitVariableDeclarationList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitVariableDeclarationList(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitVariableDeclarationList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitVariableDeclarationList(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitVariableDeclarationList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclarationList() throws -> VariableDeclarationListContext {
+	 open func variableDeclarationList() throws -> VariableDeclarationListContext {
 		var _localctx: VariableDeclarationListContext = VariableDeclarationListContext(_ctx, getState())
 		try enterRule(_localctx, 14, ECMAScriptParser.RULE_variableDeclarationList)
 		defer {
@@ -867,38 +922,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclarationContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open func initialiser() -> InitialiserContext? {
-			return getRuleContext(InitialiserContext.self,0)
+
+	public class VariableDeclarationContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func initialiser() -> InitialiserContext? {
+				return getRuleContext(InitialiserContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_variableDeclaration
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_variableDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterVariableDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterVariableDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitVariableDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitVariableDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitVariableDeclaration(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitVariableDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclaration() throws -> VariableDeclarationContext {
+	 open func variableDeclaration() throws -> VariableDeclarationContext {
 		var _localctx: VariableDeclarationContext = VariableDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 16, ECMAScriptParser.RULE_variableDeclaration)
 		defer {
@@ -928,37 +992,43 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class InitialiserContext:ParserRuleContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
+
+	public class InitialiserContext: ParserRuleContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_initialiser
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_initialiser }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterInitialiser(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterInitialiser(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitInitialiser(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitInitialiser(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitInitialiser(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitInitialiser(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitInitialiser(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitInitialiser(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initialiser() throws -> InitialiserContext {
+	 open func initialiser() throws -> InitialiserContext {
 		var _localctx: InitialiserContext = InitialiserContext(_ctx, getState())
 		try enterRule(_localctx, 18, ECMAScriptParser.RULE_initialiser)
 		defer {
@@ -980,35 +1050,43 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class EmptyStatementContext:ParserRuleContext {
-		open func SemiColon() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.SemiColon.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_emptyStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterEmptyStatement(self)
+
+	public class EmptyStatementContext: ParserRuleContext {
+			open
+			func SemiColon() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.SemiColon.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_emptyStatement
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterEmptyStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitEmptyStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitEmptyStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitEmptyStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitEmptyStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitEmptyStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitEmptyStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func emptyStatement() throws -> EmptyStatementContext {
+	 open func emptyStatement() throws -> EmptyStatementContext {
 		var _localctx: EmptyStatementContext = EmptyStatementContext(_ctx, getState())
 		try enterRule(_localctx, 20, ECMAScriptParser.RULE_emptyStatement)
 		defer {
@@ -1028,40 +1106,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionStatementContext:ParserRuleContext {
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
+
+	public class ExpressionStatementContext: ParserRuleContext {
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func eos() -> EosContext? {
+				return getRuleContext(EosContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_expressionStatement
 		}
-		open func eos() -> EosContext? {
-			return getRuleContext(EosContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_expressionStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterExpressionStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterExpressionStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitExpressionStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitExpressionStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitExpressionStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitExpressionStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitExpressionStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitExpressionStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionStatement() throws -> ExpressionStatementContext {
+	 open func expressionStatement() throws -> ExpressionStatementContext {
 		var _localctx: ExpressionStatementContext = ExpressionStatementContext(_ctx, getState())
 		try enterRule(_localctx, 22, ECMAScriptParser.RULE_expressionStatement)
 		defer {
@@ -1071,7 +1156,7 @@ open class ECMAScriptParser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(173)
 		 	if (!((_input.LA(1) != OpenBrace) && (_input.LA(1) != Function))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "(_input.LA(1) != OpenBrace) && (_input.LA(1) != Function)"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "(_input.LA(1) != OpenBrace) && (_input.LA(1) != Function)"))
 		 	}
 		 	setState(174)
 		 	try expressionSequence()
@@ -1087,45 +1172,59 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class IfStatementContext:ParserRuleContext {
-		open func If() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.If.rawValue, 0) }
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
+
+	public class IfStatementContext: ParserRuleContext {
+			open
+			func If() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.If.rawValue, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+			open
+			func Else() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Else.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_ifStatement
 		}
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
-		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open func Else() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Else.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_ifStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterIfStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterIfStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitIfStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitIfStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitIfStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitIfStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitIfStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitIfStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifStatement() throws -> IfStatementContext {
+	 open func ifStatement() throws -> IfStatementContext {
 		var _localctx: IfStatementContext = IfStatementContext(_ctx, getState())
 		try enterRule(_localctx, 24, ECMAScriptParser.RULE_ifStatement)
 		defer {
@@ -1165,254 +1264,328 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class IterationStatementContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_iterationStatement }
+
+	public class IterationStatementContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_iterationStatement
+		}
 	 
-		public  func copyFrom(_ ctx: IterationStatementContext) {
+		open
+		func copyFrom(_ ctx: IterationStatementContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class DoStatementContext: IterationStatementContext {
-		open func Do() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Do.rawValue, 0) }
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		open func While() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.While.rawValue, 0) }
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
-		}
-		open func eos() -> EosContext? {
-			return getRuleContext(EosContext.self,0)
-		}
-		public init(_ ctx: IterationStatementContext) {
+	public class DoStatementContext: IterationStatementContext {
+			open
+			func Do() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Do.rawValue, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func While() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.While.rawValue, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func eos() -> EosContext? {
+				return getRuleContext(EosContext.self, 0)
+			}
+
+		public
+		init(_ ctx: IterationStatementContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterDoStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterDoStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitDoStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitDoStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitDoStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitDoStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitDoStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitDoStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ForVarStatementContext: IterationStatementContext {
-		open func For() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.For.rawValue, 0) }
-		open func Var() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Var.rawValue, 0) }
-		open func variableDeclarationList() -> VariableDeclarationListContext? {
-			return getRuleContext(VariableDeclarationListContext.self,0)
-		}
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		open func expressionSequence() -> Array<ExpressionSequenceContext> {
-			return getRuleContexts(ExpressionSequenceContext.self)
-		}
-		open func expressionSequence(_ i: Int) -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,i)
-		}
-		public init(_ ctx: IterationStatementContext) {
+	public class ForVarStatementContext: IterationStatementContext {
+			open
+			func For() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.For.rawValue, 0)
+			}
+			open
+			func Var() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Var.rawValue, 0)
+			}
+			open
+			func variableDeclarationList() -> VariableDeclarationListContext? {
+				return getRuleContext(VariableDeclarationListContext.self, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func expressionSequence() -> [ExpressionSequenceContext] {
+				return getRuleContexts(ExpressionSequenceContext.self)
+			}
+			open
+			func expressionSequence(_ i: Int) -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, i)
+			}
+
+		public
+		init(_ ctx: IterationStatementContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterForVarStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterForVarStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitForVarStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitForVarStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitForVarStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitForVarStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitForVarStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitForVarStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ForVarInStatementContext: IterationStatementContext {
-		open func For() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.For.rawValue, 0) }
-		open func Var() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Var.rawValue, 0) }
-		open func variableDeclaration() -> VariableDeclarationContext? {
-			return getRuleContext(VariableDeclarationContext.self,0)
-		}
-		open func In() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.In.rawValue, 0) }
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
-		}
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		public init(_ ctx: IterationStatementContext) {
+	public class ForVarInStatementContext: IterationStatementContext {
+			open
+			func For() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.For.rawValue, 0)
+			}
+			open
+			func Var() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Var.rawValue, 0)
+			}
+			open
+			func variableDeclaration() -> VariableDeclarationContext? {
+				return getRuleContext(VariableDeclarationContext.self, 0)
+			}
+			open
+			func In() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.In.rawValue, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+
+		public
+		init(_ ctx: IterationStatementContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterForVarInStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterForVarInStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitForVarInStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitForVarInStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitForVarInStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitForVarInStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitForVarInStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitForVarInStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class WhileStatementContext: IterationStatementContext {
-		open func While() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.While.rawValue, 0) }
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
-		}
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		public init(_ ctx: IterationStatementContext) {
+	public class WhileStatementContext: IterationStatementContext {
+			open
+			func While() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.While.rawValue, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+
+		public
+		init(_ ctx: IterationStatementContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterWhileStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterWhileStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitWhileStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitWhileStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitWhileStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitWhileStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitWhileStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitWhileStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ForStatementContext: IterationStatementContext {
-		open func For() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.For.rawValue, 0) }
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		open func expressionSequence() -> Array<ExpressionSequenceContext> {
-			return getRuleContexts(ExpressionSequenceContext.self)
-		}
-		open func expressionSequence(_ i: Int) -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,i)
-		}
-		public init(_ ctx: IterationStatementContext) {
+	public class ForStatementContext: IterationStatementContext {
+			open
+			func For() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.For.rawValue, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func expressionSequence() -> [ExpressionSequenceContext] {
+				return getRuleContexts(ExpressionSequenceContext.self)
+			}
+			open
+			func expressionSequence(_ i: Int) -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, i)
+			}
+
+		public
+		init(_ ctx: IterationStatementContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterForStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterForStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitForStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitForStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitForStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitForStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitForStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitForStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ForInStatementContext: IterationStatementContext {
-		open func For() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.For.rawValue, 0) }
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		open func In() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.In.rawValue, 0) }
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
-		}
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		public init(_ ctx: IterationStatementContext) {
+	public class ForInStatementContext: IterationStatementContext {
+			open
+			func For() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.For.rawValue, 0)
+			}
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+			open
+			func In() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.In.rawValue, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+
+		public
+		init(_ ctx: IterationStatementContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterForInStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterForInStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitForInStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitForInStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitForInStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitForInStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitForInStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitForInStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iterationStatement() throws -> IterationStatementContext {
+	 open func iterationStatement() throws -> IterationStatementContext {
 		var _localctx: IterationStatementContext = IterationStatementContext(_ctx, getState())
 		try enterRule(_localctx, 26, ECMAScriptParser.RULE_iterationStatement)
 		var _la: Int = 0
@@ -1646,39 +1819,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ContinueStatementContext:ParserRuleContext {
-		open func Continue() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Continue.rawValue, 0) }
-		open func eos() -> EosContext? {
-			return getRuleContext(EosContext.self,0)
+
+	public class ContinueStatementContext: ParserRuleContext {
+			open
+			func Continue() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Continue.rawValue, 0)
+			}
+			open
+			func eos() -> EosContext? {
+				return getRuleContext(EosContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_continueStatement
 		}
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_continueStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterContinueStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterContinueStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitContinueStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitContinueStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitContinueStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitContinueStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitContinueStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitContinueStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func continueStatement() throws -> ContinueStatementContext {
+	 open func continueStatement() throws -> ContinueStatementContext {
 		var _localctx: ContinueStatementContext = ContinueStatementContext(_ctx, getState())
 		try enterRule(_localctx, 28, ECMAScriptParser.RULE_continueStatement)
 		defer {
@@ -1694,7 +1879,7 @@ open class ECMAScriptParser: Parser {
 		 	case 1:
 		 		setState(250)
 		 		if (!(!here(LineTerminator))) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
 		 		}
 		 		setState(251)
 		 		try match(ECMAScriptParser.Tokens.Identifier.rawValue)
@@ -1714,39 +1899,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class BreakStatementContext:ParserRuleContext {
-		open func Break() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Break.rawValue, 0) }
-		open func eos() -> EosContext? {
-			return getRuleContext(EosContext.self,0)
+
+	public class BreakStatementContext: ParserRuleContext {
+			open
+			func Break() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Break.rawValue, 0)
+			}
+			open
+			func eos() -> EosContext? {
+				return getRuleContext(EosContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_breakStatement
 		}
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_breakStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterBreakStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterBreakStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitBreakStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitBreakStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitBreakStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitBreakStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitBreakStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitBreakStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func breakStatement() throws -> BreakStatementContext {
+	 open func breakStatement() throws -> BreakStatementContext {
 		var _localctx: BreakStatementContext = BreakStatementContext(_ctx, getState())
 		try enterRule(_localctx, 30, ECMAScriptParser.RULE_breakStatement)
 		defer {
@@ -1762,7 +1959,7 @@ open class ECMAScriptParser: Parser {
 		 	case 1:
 		 		setState(257)
 		 		if (!(!here(LineTerminator))) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
 		 		}
 		 		setState(258)
 		 		try match(ECMAScriptParser.Tokens.Identifier.rawValue)
@@ -1782,41 +1979,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ReturnStatementContext:ParserRuleContext {
-		open func Return() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Return.rawValue, 0) }
-		open func eos() -> EosContext? {
-			return getRuleContext(EosContext.self,0)
+
+	public class ReturnStatementContext: ParserRuleContext {
+			open
+			func Return() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Return.rawValue, 0)
+			}
+			open
+			func eos() -> EosContext? {
+				return getRuleContext(EosContext.self, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_returnStatement
 		}
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_returnStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterReturnStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterReturnStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitReturnStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitReturnStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitReturnStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitReturnStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitReturnStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitReturnStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func returnStatement() throws -> ReturnStatementContext {
+	 open func returnStatement() throws -> ReturnStatementContext {
 		var _localctx: ReturnStatementContext = ReturnStatementContext(_ctx, getState())
 		try enterRule(_localctx, 32, ECMAScriptParser.RULE_returnStatement)
 		defer {
@@ -1832,7 +2039,7 @@ open class ECMAScriptParser: Parser {
 		 	case 1:
 		 		setState(264)
 		 		if (!(!here(LineTerminator))) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
 		 		}
 		 		setState(265)
 		 		try expressionSequence()
@@ -1852,41 +2059,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class WithStatementContext:ParserRuleContext {
-		open func With() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.With.rawValue, 0) }
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
+
+	public class WithStatementContext: ParserRuleContext {
+			open
+			func With() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.With.rawValue, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_withStatement
 		}
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_withStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterWithStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterWithStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitWithStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitWithStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitWithStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitWithStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitWithStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitWithStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func withStatement() throws -> WithStatementContext {
+	 open func withStatement() throws -> WithStatementContext {
 		var _localctx: WithStatementContext = WithStatementContext(_ctx, getState())
 		try enterRule(_localctx, 34, ECMAScriptParser.RULE_withStatement)
 		defer {
@@ -1914,41 +2131,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class SwitchStatementContext:ParserRuleContext {
-		open func Switch() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Switch.rawValue, 0) }
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
+
+	public class SwitchStatementContext: ParserRuleContext {
+			open
+			func Switch() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Switch.rawValue, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func caseBlock() -> CaseBlockContext? {
+				return getRuleContext(CaseBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_switchStatement
 		}
-		open func caseBlock() -> CaseBlockContext? {
-			return getRuleContext(CaseBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_switchStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterSwitchStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterSwitchStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitSwitchStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitSwitchStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitSwitchStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitSwitchStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitSwitchStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitSwitchStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func switchStatement() throws -> SwitchStatementContext {
+	 open func switchStatement() throws -> SwitchStatementContext {
 		var _localctx: SwitchStatementContext = SwitchStatementContext(_ctx, getState())
 		try enterRule(_localctx, 36, ECMAScriptParser.RULE_switchStatement)
 		defer {
@@ -1976,43 +2203,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class CaseBlockContext:ParserRuleContext {
-		open func caseClauses() -> Array<CaseClausesContext> {
-			return getRuleContexts(CaseClausesContext.self)
+
+	public class CaseBlockContext: ParserRuleContext {
+			open
+			func caseClauses() -> [CaseClausesContext] {
+				return getRuleContexts(CaseClausesContext.self)
+			}
+			open
+			func caseClauses(_ i: Int) -> CaseClausesContext? {
+				return getRuleContext(CaseClausesContext.self, i)
+			}
+			open
+			func defaultClause() -> DefaultClauseContext? {
+				return getRuleContext(DefaultClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_caseBlock
 		}
-		open func caseClauses(_ i: Int) -> CaseClausesContext? {
-			return getRuleContext(CaseClausesContext.self,i)
-		}
-		open func defaultClause() -> DefaultClauseContext? {
-			return getRuleContext(DefaultClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_caseBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterCaseBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterCaseBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitCaseBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitCaseBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitCaseBlock(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitCaseBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitCaseBlock(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitCaseBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseBlock() throws -> CaseBlockContext {
+	 open func caseBlock() throws -> CaseBlockContext {
 		var _localctx: CaseBlockContext = CaseBlockContext(_ctx, getState())
 		try enterRule(_localctx, 38, ECMAScriptParser.RULE_caseBlock)
 		var _la: Int = 0
@@ -2074,40 +2309,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class CaseClausesContext:ParserRuleContext {
-		open func caseClause() -> Array<CaseClauseContext> {
-			return getRuleContexts(CaseClauseContext.self)
+
+	public class CaseClausesContext: ParserRuleContext {
+			open
+			func caseClause() -> [CaseClauseContext] {
+				return getRuleContexts(CaseClauseContext.self)
+			}
+			open
+			func caseClause(_ i: Int) -> CaseClauseContext? {
+				return getRuleContext(CaseClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_caseClauses
 		}
-		open func caseClause(_ i: Int) -> CaseClauseContext? {
-			return getRuleContext(CaseClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_caseClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterCaseClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterCaseClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitCaseClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitCaseClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitCaseClauses(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitCaseClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitCaseClauses(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitCaseClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseClauses() throws -> CaseClausesContext {
+	 open func caseClauses() throws -> CaseClausesContext {
 		var _localctx: CaseClausesContext = CaseClausesContext(_ctx, getState())
 		try enterRule(_localctx, 40, ECMAScriptParser.RULE_caseClauses)
 		var _la: Int = 0
@@ -2142,41 +2384,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class CaseClauseContext:ParserRuleContext {
-		open func Case() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Case.rawValue, 0) }
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
+
+	public class CaseClauseContext: ParserRuleContext {
+			open
+			func Case() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Case.rawValue, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func statementList() -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_caseClause
 		}
-		open func statementList() -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_caseClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterCaseClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterCaseClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitCaseClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitCaseClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitCaseClause(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitCaseClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitCaseClause(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitCaseClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseClause() throws -> CaseClauseContext {
+	 open func caseClause() throws -> CaseClauseContext {
 		var _localctx: CaseClauseContext = CaseClauseContext(_ctx, getState())
 		try enterRule(_localctx, 42, ECMAScriptParser.RULE_caseClause)
 		defer {
@@ -2210,38 +2462,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class DefaultClauseContext:ParserRuleContext {
-		open func Default() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Default.rawValue, 0) }
-		open func statementList() -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,0)
+
+	public class DefaultClauseContext: ParserRuleContext {
+			open
+			func Default() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Default.rawValue, 0)
+			}
+			open
+			func statementList() -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_defaultClause
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_defaultClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterDefaultClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterDefaultClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitDefaultClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitDefaultClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitDefaultClause(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitDefaultClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitDefaultClause(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitDefaultClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func defaultClause() throws -> DefaultClauseContext {
+	 open func defaultClause() throws -> DefaultClauseContext {
 		var _localctx: DefaultClauseContext = DefaultClauseContext(_ctx, getState())
 		try enterRule(_localctx, 44, ECMAScriptParser.RULE_defaultClause)
 		defer {
@@ -2273,38 +2534,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class LabelledStatementContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
+
+	public class LabelledStatementContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_labelledStatement
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_labelledStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterLabelledStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterLabelledStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitLabelledStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitLabelledStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitLabelledStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitLabelledStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitLabelledStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitLabelledStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func labelledStatement() throws -> LabelledStatementContext {
+	 open func labelledStatement() throws -> LabelledStatementContext {
 		var _localctx: LabelledStatementContext = LabelledStatementContext(_ctx, getState())
 		try enterRule(_localctx, 46, ECMAScriptParser.RULE_labelledStatement)
 		defer {
@@ -2328,41 +2598,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ThrowStatementContext:ParserRuleContext {
-		open func Throw() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Throw.rawValue, 0) }
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
+
+	public class ThrowStatementContext: ParserRuleContext {
+			open
+			func Throw() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Throw.rawValue, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+			open
+			func eos() -> EosContext? {
+				return getRuleContext(EosContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_throwStatement
 		}
-		open func eos() -> EosContext? {
-			return getRuleContext(EosContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_throwStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterThrowStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterThrowStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitThrowStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitThrowStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitThrowStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitThrowStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitThrowStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitThrowStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func throwStatement() throws -> ThrowStatementContext {
+	 open func throwStatement() throws -> ThrowStatementContext {
 		var _localctx: ThrowStatementContext = ThrowStatementContext(_ctx, getState())
 		try enterRule(_localctx, 48, ECMAScriptParser.RULE_throwStatement)
 		defer {
@@ -2374,7 +2654,7 @@ open class ECMAScriptParser: Parser {
 		 	try match(ECMAScriptParser.Tokens.Throw.rawValue)
 		 	setState(315)
 		 	if (!(!here(LineTerminator))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
 		 	}
 		 	setState(316)
 		 	try expressionSequence()
@@ -2390,44 +2670,55 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class TryStatementContext:ParserRuleContext {
-		open func Try() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Try.rawValue, 0) }
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class TryStatementContext: ParserRuleContext {
+			open
+			func Try() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Try.rawValue, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func catchProduction() -> CatchProductionContext? {
+				return getRuleContext(CatchProductionContext.self, 0)
+			}
+			open
+			func finallyProduction() -> FinallyProductionContext? {
+				return getRuleContext(FinallyProductionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_tryStatement
 		}
-		open func catchProduction() -> CatchProductionContext? {
-			return getRuleContext(CatchProductionContext.self,0)
-		}
-		open func finallyProduction() -> FinallyProductionContext? {
-			return getRuleContext(FinallyProductionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_tryStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterTryStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterTryStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitTryStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitTryStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitTryStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitTryStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitTryStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitTryStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tryStatement() throws -> TryStatementContext {
+	 open func tryStatement() throws -> TryStatementContext {
 		var _localctx: TryStatementContext = TryStatementContext(_ctx, getState())
 		try enterRule(_localctx, 50, ECMAScriptParser.RULE_tryStatement)
 		defer {
@@ -2480,39 +2771,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class CatchProductionContext:ParserRuleContext {
-		open func Catch() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Catch.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class CatchProductionContext: ParserRuleContext {
+			open
+			func Catch() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Catch.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_catchProduction
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_catchProduction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterCatchProduction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterCatchProduction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitCatchProduction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitCatchProduction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitCatchProduction(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitCatchProduction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitCatchProduction(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitCatchProduction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func catchProduction() throws -> CatchProductionContext {
+	 open func catchProduction() throws -> CatchProductionContext {
 		var _localctx: CatchProductionContext = CatchProductionContext(_ctx, getState())
 		try enterRule(_localctx, 52, ECMAScriptParser.RULE_catchProduction)
 		defer {
@@ -2540,38 +2843,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class FinallyProductionContext:ParserRuleContext {
-		open func Finally() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Finally.rawValue, 0) }
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class FinallyProductionContext: ParserRuleContext {
+			open
+			func Finally() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Finally.rawValue, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_finallyProduction
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_finallyProduction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterFinallyProduction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterFinallyProduction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitFinallyProduction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitFinallyProduction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitFinallyProduction(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitFinallyProduction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitFinallyProduction(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitFinallyProduction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func finallyProduction() throws -> FinallyProductionContext {
+	 open func finallyProduction() throws -> FinallyProductionContext {
 		var _localctx: FinallyProductionContext = FinallyProductionContext(_ctx, getState())
 		try enterRule(_localctx, 54, ECMAScriptParser.RULE_finallyProduction)
 		defer {
@@ -2593,38 +2905,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class DebuggerStatementContext:ParserRuleContext {
-		open func Debugger() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Debugger.rawValue, 0) }
-		open func eos() -> EosContext? {
-			return getRuleContext(EosContext.self,0)
+
+	public class DebuggerStatementContext: ParserRuleContext {
+			open
+			func Debugger() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Debugger.rawValue, 0)
+			}
+			open
+			func eos() -> EosContext? {
+				return getRuleContext(EosContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_debuggerStatement
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_debuggerStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterDebuggerStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterDebuggerStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitDebuggerStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitDebuggerStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitDebuggerStatement(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitDebuggerStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitDebuggerStatement(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitDebuggerStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func debuggerStatement() throws -> DebuggerStatementContext {
+	 open func debuggerStatement() throws -> DebuggerStatementContext {
 		var _localctx: DebuggerStatementContext = DebuggerStatementContext(_ctx, getState())
 		try enterRule(_localctx, 56, ECMAScriptParser.RULE_debuggerStatement)
 		defer {
@@ -2646,42 +2967,55 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionDeclarationContext:ParserRuleContext {
-		open func Function() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Function.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open func functionBody() -> FunctionBodyContext? {
-			return getRuleContext(FunctionBodyContext.self,0)
+
+	public class FunctionDeclarationContext: ParserRuleContext {
+			open
+			func Function() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Function.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func functionBody() -> FunctionBodyContext? {
+				return getRuleContext(FunctionBodyContext.self, 0)
+			}
+			open
+			func formalParameterList() -> FormalParameterListContext? {
+				return getRuleContext(FormalParameterListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_functionDeclaration
 		}
-		open func formalParameterList() -> FormalParameterListContext? {
-			return getRuleContext(FormalParameterListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_functionDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterFunctionDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterFunctionDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitFunctionDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitFunctionDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitFunctionDeclaration(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitFunctionDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitFunctionDeclaration(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitFunctionDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionDeclaration() throws -> FunctionDeclarationContext {
+	 open func functionDeclaration() throws -> FunctionDeclarationContext {
 		var _localctx: FunctionDeclarationContext = FunctionDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 58, ECMAScriptParser.RULE_functionDeclaration)
 		var _la: Int = 0
@@ -2727,38 +3061,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class FormalParameterListContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(ECMAScriptParser.Tokens.Identifier.rawValue) }
-		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, i)
+
+	public class FormalParameterListContext: ParserRuleContext {
+			open
+			func Identifier() -> [TerminalNode] {
+				return getTokens(ECMAScriptParser.Tokens.Identifier.rawValue)
+			}
+			open
+			func Identifier(_ i:Int) -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_formalParameterList
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_formalParameterList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterFormalParameterList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterFormalParameterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitFormalParameterList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitFormalParameterList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitFormalParameterList(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitFormalParameterList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitFormalParameterList(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitFormalParameterList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalParameterList() throws -> FormalParameterListContext {
+	 open func formalParameterList() throws -> FormalParameterListContext {
 		var _localctx: FormalParameterListContext = FormalParameterListContext(_ctx, getState())
 		try enterRule(_localctx, 60, ECMAScriptParser.RULE_formalParameterList)
 		var _la: Int = 0
@@ -2797,37 +3140,43 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionBodyContext:ParserRuleContext {
-		open func sourceElements() -> SourceElementsContext? {
-			return getRuleContext(SourceElementsContext.self,0)
+
+	public class FunctionBodyContext: ParserRuleContext {
+			open
+			func sourceElements() -> SourceElementsContext? {
+				return getRuleContext(SourceElementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_functionBody
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_functionBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterFunctionBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterFunctionBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitFunctionBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitFunctionBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitFunctionBody(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitFunctionBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitFunctionBody(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitFunctionBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionBody() throws -> FunctionBodyContext {
+	 open func functionBody() throws -> FunctionBodyContext {
 		var _localctx: FunctionBodyContext = FunctionBodyContext(_ctx, getState())
 		try enterRule(_localctx, 62, ECMAScriptParser.RULE_functionBody)
 		defer {
@@ -2855,40 +3204,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayLiteralContext:ParserRuleContext {
-		open func elementList() -> ElementListContext? {
-			return getRuleContext(ElementListContext.self,0)
+
+	public class ArrayLiteralContext: ParserRuleContext {
+			open
+			func elementList() -> ElementListContext? {
+				return getRuleContext(ElementListContext.self, 0)
+			}
+			open
+			func elision() -> ElisionContext? {
+				return getRuleContext(ElisionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_arrayLiteral
 		}
-		open func elision() -> ElisionContext? {
-			return getRuleContext(ElisionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_arrayLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterArrayLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterArrayLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitArrayLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitArrayLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitArrayLiteral(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitArrayLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitArrayLiteral(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitArrayLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayLiteral() throws -> ArrayLiteralContext {
+	 open func arrayLiteral() throws -> ArrayLiteralContext {
 		var _localctx: ArrayLiteralContext = ArrayLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 64, ECMAScriptParser.RULE_arrayLiteral)
 		var _la: Int = 0
@@ -2944,46 +3300,55 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ElementListContext:ParserRuleContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
+
+	public class ElementListContext: ParserRuleContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+			open
+			func elision() -> [ElisionContext] {
+				return getRuleContexts(ElisionContext.self)
+			}
+			open
+			func elision(_ i: Int) -> ElisionContext? {
+				return getRuleContext(ElisionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_elementList
 		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		open func elision() -> Array<ElisionContext> {
-			return getRuleContexts(ElisionContext.self)
-		}
-		open func elision(_ i: Int) -> ElisionContext? {
-			return getRuleContext(ElisionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_elementList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterElementList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterElementList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitElementList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitElementList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitElementList(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitElementList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitElementList(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitElementList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elementList() throws -> ElementListContext {
+	 open func elementList() throws -> ElementListContext {
 		var _localctx: ElementListContext = ElementListContext(_ctx, getState())
 		try enterRule(_localctx, 66, ECMAScriptParser.RULE_elementList)
 		var _la: Int = 0
@@ -3047,34 +3412,39 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ElisionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_elision }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterElision(self)
+
+	public class ElisionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_elision
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterElision(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitElision(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitElision(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitElision(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitElision(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitElision(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitElision(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elision() throws -> ElisionContext {
+	 open func elision() throws -> ElisionContext {
 		var _localctx: ElisionContext = ElisionContext(_ctx, getState())
 		try enterRule(_localctx, 68, ECMAScriptParser.RULE_elision)
 		var _la: Int = 0
@@ -3109,37 +3479,43 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ObjectLiteralContext:ParserRuleContext {
-		open func propertyNameAndValueList() -> PropertyNameAndValueListContext? {
-			return getRuleContext(PropertyNameAndValueListContext.self,0)
+
+	public class ObjectLiteralContext: ParserRuleContext {
+			open
+			func propertyNameAndValueList() -> PropertyNameAndValueListContext? {
+				return getRuleContext(PropertyNameAndValueListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_objectLiteral
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_objectLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterObjectLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterObjectLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitObjectLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitObjectLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitObjectLiteral(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitObjectLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitObjectLiteral(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitObjectLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func objectLiteral() throws -> ObjectLiteralContext {
+	 open func objectLiteral() throws -> ObjectLiteralContext {
 		var _localctx: ObjectLiteralContext = ObjectLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 70, ECMAScriptParser.RULE_objectLiteral)
 		var _la: Int = 0
@@ -3192,40 +3568,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyNameAndValueListContext:ParserRuleContext {
-		open func propertyAssignment() -> Array<PropertyAssignmentContext> {
-			return getRuleContexts(PropertyAssignmentContext.self)
+
+	public class PropertyNameAndValueListContext: ParserRuleContext {
+			open
+			func propertyAssignment() -> [PropertyAssignmentContext] {
+				return getRuleContexts(PropertyAssignmentContext.self)
+			}
+			open
+			func propertyAssignment(_ i: Int) -> PropertyAssignmentContext? {
+				return getRuleContext(PropertyAssignmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_propertyNameAndValueList
 		}
-		open func propertyAssignment(_ i: Int) -> PropertyAssignmentContext? {
-			return getRuleContext(PropertyAssignmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_propertyNameAndValueList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPropertyNameAndValueList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPropertyNameAndValueList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPropertyNameAndValueList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPropertyNameAndValueList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPropertyNameAndValueList(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPropertyNameAndValueList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPropertyNameAndValueList(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPropertyNameAndValueList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyNameAndValueList() throws -> PropertyNameAndValueListContext {
+	 open func propertyNameAndValueList() throws -> PropertyNameAndValueListContext {
 		var _localctx: PropertyNameAndValueListContext = PropertyNameAndValueListContext(_ctx, getState())
 		try enterRule(_localctx, 72, ECMAScriptParser.RULE_propertyNameAndValueList)
 		defer {
@@ -3262,123 +3645,144 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyAssignmentContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_propertyAssignment }
+
+	public class PropertyAssignmentContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_propertyAssignment
+		}
 	 
-		public  func copyFrom(_ ctx: PropertyAssignmentContext) {
+		open
+		func copyFrom(_ ctx: PropertyAssignmentContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class PropertyExpressionAssignmentContext: PropertyAssignmentContext {
-		open func propertyName() -> PropertyNameContext? {
-			return getRuleContext(PropertyNameContext.self,0)
-		}
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: PropertyAssignmentContext) {
+	public class PropertyExpressionAssignmentContext: PropertyAssignmentContext {
+			open
+			func propertyName() -> PropertyNameContext? {
+				return getRuleContext(PropertyNameContext.self, 0)
+			}
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: PropertyAssignmentContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPropertyExpressionAssignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPropertyExpressionAssignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPropertyExpressionAssignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPropertyExpressionAssignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPropertyExpressionAssignment(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPropertyExpressionAssignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPropertyExpressionAssignment(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPropertyExpressionAssignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class PropertySetterContext: PropertyAssignmentContext {
-		open func setter() -> SetterContext? {
-			return getRuleContext(SetterContext.self,0)
-		}
-		open func propertySetParameterList() -> PropertySetParameterListContext? {
-			return getRuleContext(PropertySetParameterListContext.self,0)
-		}
-		open func functionBody() -> FunctionBodyContext? {
-			return getRuleContext(FunctionBodyContext.self,0)
-		}
-		public init(_ ctx: PropertyAssignmentContext) {
+	public class PropertySetterContext: PropertyAssignmentContext {
+			open
+			func setter() -> SetterContext? {
+				return getRuleContext(SetterContext.self, 0)
+			}
+			open
+			func propertySetParameterList() -> PropertySetParameterListContext? {
+				return getRuleContext(PropertySetParameterListContext.self, 0)
+			}
+			open
+			func functionBody() -> FunctionBodyContext? {
+				return getRuleContext(FunctionBodyContext.self, 0)
+			}
+
+		public
+		init(_ ctx: PropertyAssignmentContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPropertySetter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPropertySetter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPropertySetter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPropertySetter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPropertySetter(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPropertySetter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPropertySetter(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPropertySetter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class PropertyGetterContext: PropertyAssignmentContext {
-		open func getter() -> GetterContext? {
-			return getRuleContext(GetterContext.self,0)
-		}
-		open func functionBody() -> FunctionBodyContext? {
-			return getRuleContext(FunctionBodyContext.self,0)
-		}
-		public init(_ ctx: PropertyAssignmentContext) {
+	public class PropertyGetterContext: PropertyAssignmentContext {
+			open
+			func getter() -> GetterContext? {
+				return getRuleContext(GetterContext.self, 0)
+			}
+			open
+			func functionBody() -> FunctionBodyContext? {
+				return getRuleContext(FunctionBodyContext.self, 0)
+			}
+
+		public
+		init(_ ctx: PropertyAssignmentContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPropertyGetter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPropertyGetter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPropertyGetter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPropertyGetter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPropertyGetter(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPropertyGetter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPropertyGetter(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPropertyGetter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyAssignment() throws -> PropertyAssignmentContext {
+	 open func propertyAssignment() throws -> PropertyAssignmentContext {
 		var _localctx: PropertyAssignmentContext = PropertyAssignmentContext(_ctx, getState())
 		try enterRule(_localctx, 74, ECMAScriptParser.RULE_propertyAssignment)
 		defer {
@@ -3446,41 +3850,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyNameContext:ParserRuleContext {
-		open func identifierName() -> IdentifierNameContext? {
-			return getRuleContext(IdentifierNameContext.self,0)
+
+	public class PropertyNameContext: ParserRuleContext {
+			open
+			func identifierName() -> IdentifierNameContext? {
+				return getRuleContext(IdentifierNameContext.self, 0)
+			}
+			open
+			func StringLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.StringLiteral.rawValue, 0)
+			}
+			open
+			func numericLiteral() -> NumericLiteralContext? {
+				return getRuleContext(NumericLiteralContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_propertyName
 		}
-		open func StringLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.StringLiteral.rawValue, 0) }
-		open func numericLiteral() -> NumericLiteralContext? {
-			return getRuleContext(NumericLiteralContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_propertyName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPropertyName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPropertyName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPropertyName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPropertyName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPropertyName(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPropertyName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPropertyName(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPropertyName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyName() throws -> PropertyNameContext {
+	 open func propertyName() throws -> PropertyNameContext {
 		var _localctx: PropertyNameContext = PropertyNameContext(_ctx, getState())
 		try enterRule(_localctx, 76, ECMAScriptParser.RULE_propertyName)
 		defer {
@@ -3556,7 +3970,7 @@ open class ECMAScriptParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3567,35 +3981,43 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class PropertySetParameterListContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_propertySetParameterList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPropertySetParameterList(self)
+
+	public class PropertySetParameterListContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_propertySetParameterList
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPropertySetParameterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPropertySetParameterList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPropertySetParameterList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPropertySetParameterList(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPropertySetParameterList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPropertySetParameterList(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPropertySetParameterList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertySetParameterList() throws -> PropertySetParameterListContext {
+	 open func propertySetParameterList() throws -> PropertySetParameterListContext {
 		var _localctx: PropertySetParameterListContext = PropertySetParameterListContext(_ctx, getState())
 		try enterRule(_localctx, 78, ECMAScriptParser.RULE_propertySetParameterList)
 		defer {
@@ -3615,37 +4037,43 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentsContext:ParserRuleContext {
-		open func argumentList() -> ArgumentListContext? {
-			return getRuleContext(ArgumentListContext.self,0)
+
+	public class ArgumentsContext: ParserRuleContext {
+			open
+			func argumentList() -> ArgumentListContext? {
+				return getRuleContext(ArgumentListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_arguments
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_arguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterArguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterArguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitArguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitArguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitArguments(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitArguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitArguments(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitArguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arguments() throws -> ArgumentsContext {
+	 open func arguments() throws -> ArgumentsContext {
 		var _localctx: ArgumentsContext = ArgumentsContext(_ctx, getState())
 		try enterRule(_localctx, 80, ECMAScriptParser.RULE_arguments)
 		var _la: Int = 0
@@ -3688,40 +4116,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentListContext:ParserRuleContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
+
+	public class ArgumentListContext: ParserRuleContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_argumentList
 		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_argumentList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterArgumentList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterArgumentList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitArgumentList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitArgumentList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitArgumentList(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitArgumentList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitArgumentList(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitArgumentList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argumentList() throws -> ArgumentListContext {
+	 open func argumentList() throws -> ArgumentListContext {
 		var _localctx: ArgumentListContext = ArgumentListContext(_ctx, getState())
 		try enterRule(_localctx, 82, ECMAScriptParser.RULE_argumentList)
 		var _la: Int = 0
@@ -3760,40 +4195,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionSequenceContext:ParserRuleContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
+
+	public class ExpressionSequenceContext: ParserRuleContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_expressionSequence
 		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_expressionSequence }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterExpressionSequence(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterExpressionSequence(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitExpressionSequence(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitExpressionSequence(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitExpressionSequence(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitExpressionSequence(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitExpressionSequence(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitExpressionSequence(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionSequence() throws -> ExpressionSequenceContext {
+	 open func expressionSequence() throws -> ExpressionSequenceContext {
 		var _localctx: ExpressionSequenceContext = ExpressionSequenceContext(_ctx, getState())
 		try enterRule(_localctx, 84, ECMAScriptParser.RULE_expressionSequence)
 		defer {
@@ -3831,1266 +4273,1467 @@ open class ECMAScriptParser: Parser {
 		return _localctx
 	}
 
-	open class SingleExpressionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_singleExpression }
+	public class SingleExpressionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_singleExpression
+		}
 	 
-		public  func copyFrom(_ ctx: SingleExpressionContext) {
+		open
+		func copyFrom(_ ctx: SingleExpressionContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class TernaryExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class TernaryExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterTernaryExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterTernaryExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitTernaryExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitTernaryExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitTernaryExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitTernaryExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitTernaryExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitTernaryExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class LogicalAndExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class LogicalAndExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterLogicalAndExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterLogicalAndExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitLogicalAndExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitLogicalAndExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitLogicalAndExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitLogicalAndExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitLogicalAndExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitLogicalAndExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class PreIncrementExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class PreIncrementExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPreIncrementExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPreIncrementExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPreIncrementExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPreIncrementExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPreIncrementExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPreIncrementExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPreIncrementExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPreIncrementExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ObjectLiteralExpressionContext: SingleExpressionContext {
-		open func objectLiteral() -> ObjectLiteralContext? {
-			return getRuleContext(ObjectLiteralContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class ObjectLiteralExpressionContext: SingleExpressionContext {
+			open
+			func objectLiteral() -> ObjectLiteralContext? {
+				return getRuleContext(ObjectLiteralContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterObjectLiteralExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterObjectLiteralExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitObjectLiteralExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitObjectLiteralExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitObjectLiteralExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitObjectLiteralExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitObjectLiteralExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitObjectLiteralExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class InExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		open func In() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.In.rawValue, 0) }
-		public init(_ ctx: SingleExpressionContext) {
+	public class InExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+			open
+			func In() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.In.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterInExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterInExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitInExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitInExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitInExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitInExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitInExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitInExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class LogicalOrExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class LogicalOrExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterLogicalOrExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterLogicalOrExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitLogicalOrExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitLogicalOrExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitLogicalOrExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitLogicalOrExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitLogicalOrExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitLogicalOrExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class NotExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class NotExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterNotExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterNotExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitNotExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitNotExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitNotExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitNotExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitNotExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitNotExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class PreDecreaseExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class PreDecreaseExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPreDecreaseExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPreDecreaseExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPreDecreaseExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPreDecreaseExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPreDecreaseExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPreDecreaseExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPreDecreaseExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPreDecreaseExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ArgumentsExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class ArgumentsExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterArgumentsExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterArgumentsExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitArgumentsExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitArgumentsExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitArgumentsExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitArgumentsExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitArgumentsExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitArgumentsExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ThisExpressionContext: SingleExpressionContext {
-		open func This() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.This.rawValue, 0) }
-		public init(_ ctx: SingleExpressionContext) {
+	public class ThisExpressionContext: SingleExpressionContext {
+			open
+			func This() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.This.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterThisExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterThisExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitThisExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitThisExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitThisExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitThisExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitThisExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitThisExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class FunctionExpressionContext: SingleExpressionContext {
-		open func Function() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Function.rawValue, 0) }
-		open func functionBody() -> FunctionBodyContext? {
-			return getRuleContext(FunctionBodyContext.self,0)
-		}
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open func formalParameterList() -> FormalParameterListContext? {
-			return getRuleContext(FormalParameterListContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class FunctionExpressionContext: SingleExpressionContext {
+			open
+			func Function() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Function.rawValue, 0)
+			}
+			open
+			func functionBody() -> FunctionBodyContext? {
+				return getRuleContext(FunctionBodyContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func formalParameterList() -> FormalParameterListContext? {
+				return getRuleContext(FormalParameterListContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterFunctionExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterFunctionExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitFunctionExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitFunctionExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitFunctionExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitFunctionExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitFunctionExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitFunctionExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class UnaryMinusExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class UnaryMinusExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterUnaryMinusExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterUnaryMinusExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitUnaryMinusExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitUnaryMinusExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitUnaryMinusExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitUnaryMinusExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitUnaryMinusExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitUnaryMinusExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AssignmentExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class AssignmentExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterAssignmentExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterAssignmentExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitAssignmentExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitAssignmentExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitAssignmentExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitAssignmentExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitAssignmentExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitAssignmentExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class PostDecreaseExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class PostDecreaseExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPostDecreaseExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPostDecreaseExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPostDecreaseExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPostDecreaseExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPostDecreaseExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPostDecreaseExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPostDecreaseExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPostDecreaseExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class TypeofExpressionContext: SingleExpressionContext {
-		open func Typeof() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Typeof.rawValue, 0) }
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class TypeofExpressionContext: SingleExpressionContext {
+			open
+			func Typeof() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Typeof.rawValue, 0)
+			}
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterTypeofExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterTypeofExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitTypeofExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitTypeofExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitTypeofExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitTypeofExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitTypeofExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitTypeofExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class InstanceofExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		open func Instanceof() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Instanceof.rawValue, 0) }
-		public init(_ ctx: SingleExpressionContext) {
+	public class InstanceofExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+			open
+			func Instanceof() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Instanceof.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterInstanceofExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterInstanceofExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitInstanceofExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitInstanceofExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitInstanceofExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitInstanceofExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitInstanceofExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitInstanceofExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class UnaryPlusExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class UnaryPlusExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterUnaryPlusExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterUnaryPlusExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitUnaryPlusExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitUnaryPlusExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitUnaryPlusExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitUnaryPlusExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitUnaryPlusExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitUnaryPlusExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class DeleteExpressionContext: SingleExpressionContext {
-		open func Delete() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Delete.rawValue, 0) }
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class DeleteExpressionContext: SingleExpressionContext {
+			open
+			func Delete() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Delete.rawValue, 0)
+			}
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterDeleteExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterDeleteExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitDeleteExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitDeleteExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitDeleteExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitDeleteExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitDeleteExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitDeleteExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class EqualityExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class EqualityExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterEqualityExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterEqualityExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitEqualityExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitEqualityExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitEqualityExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitEqualityExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitEqualityExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitEqualityExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class BitXOrExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class BitXOrExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterBitXOrExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterBitXOrExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitBitXOrExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitBitXOrExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitBitXOrExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitBitXOrExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitBitXOrExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitBitXOrExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class MultiplicativeExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class MultiplicativeExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterMultiplicativeExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterMultiplicativeExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitMultiplicativeExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitMultiplicativeExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitMultiplicativeExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitMultiplicativeExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitMultiplicativeExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitMultiplicativeExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class BitShiftExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class BitShiftExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterBitShiftExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterBitShiftExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitBitShiftExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitBitShiftExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitBitShiftExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitBitShiftExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitBitShiftExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitBitShiftExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ParenthesizedExpressionContext: SingleExpressionContext {
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class ParenthesizedExpressionContext: SingleExpressionContext {
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterParenthesizedExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterParenthesizedExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitParenthesizedExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitParenthesizedExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitParenthesizedExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitParenthesizedExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitParenthesizedExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitParenthesizedExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AdditiveExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class AdditiveExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterAdditiveExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterAdditiveExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitAdditiveExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitAdditiveExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitAdditiveExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitAdditiveExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitAdditiveExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitAdditiveExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class RelationalExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class RelationalExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterRelationalExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterRelationalExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitRelationalExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitRelationalExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitRelationalExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitRelationalExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitRelationalExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitRelationalExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class PostIncrementExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class PostIncrementExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterPostIncrementExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterPostIncrementExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitPostIncrementExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitPostIncrementExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitPostIncrementExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitPostIncrementExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitPostIncrementExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitPostIncrementExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class BitNotExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class BitNotExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterBitNotExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterBitNotExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitBitNotExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitBitNotExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitBitNotExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitBitNotExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitBitNotExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitBitNotExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class NewExpressionContext: SingleExpressionContext {
-		open func New() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.New.rawValue, 0) }
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class NewExpressionContext: SingleExpressionContext {
+			open
+			func New() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.New.rawValue, 0)
+			}
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterNewExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterNewExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitNewExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitNewExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitNewExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitNewExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitNewExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitNewExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class LiteralExpressionContext: SingleExpressionContext {
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class LiteralExpressionContext: SingleExpressionContext {
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterLiteralExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterLiteralExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitLiteralExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitLiteralExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitLiteralExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitLiteralExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitLiteralExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitLiteralExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ArrayLiteralExpressionContext: SingleExpressionContext {
-		open func arrayLiteral() -> ArrayLiteralContext? {
-			return getRuleContext(ArrayLiteralContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class ArrayLiteralExpressionContext: SingleExpressionContext {
+			open
+			func arrayLiteral() -> ArrayLiteralContext? {
+				return getRuleContext(ArrayLiteralContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterArrayLiteralExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterArrayLiteralExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitArrayLiteralExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitArrayLiteralExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitArrayLiteralExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitArrayLiteralExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitArrayLiteralExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitArrayLiteralExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class MemberDotExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		open func identifierName() -> IdentifierNameContext? {
-			return getRuleContext(IdentifierNameContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class MemberDotExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+			open
+			func identifierName() -> IdentifierNameContext? {
+				return getRuleContext(IdentifierNameContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterMemberDotExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterMemberDotExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitMemberDotExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitMemberDotExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitMemberDotExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitMemberDotExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitMemberDotExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitMemberDotExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class MemberIndexExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		open func expressionSequence() -> ExpressionSequenceContext? {
-			return getRuleContext(ExpressionSequenceContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class MemberIndexExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+			open
+			func expressionSequence() -> ExpressionSequenceContext? {
+				return getRuleContext(ExpressionSequenceContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterMemberIndexExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterMemberIndexExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitMemberIndexExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitMemberIndexExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitMemberIndexExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitMemberIndexExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitMemberIndexExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitMemberIndexExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class IdentifierExpressionContext: SingleExpressionContext {
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		public init(_ ctx: SingleExpressionContext) {
+	public class IdentifierExpressionContext: SingleExpressionContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterIdentifierExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterIdentifierExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitIdentifierExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitIdentifierExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitIdentifierExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitIdentifierExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitIdentifierExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitIdentifierExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class BitAndExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class BitAndExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterBitAndExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterBitAndExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitBitAndExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitBitAndExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitBitAndExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitBitAndExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitBitAndExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitBitAndExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class BitOrExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class BitOrExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterBitOrExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterBitOrExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitBitOrExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitBitOrExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitBitOrExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitBitOrExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitBitOrExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitBitOrExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AssignmentOperatorExpressionContext: SingleExpressionContext {
-		open func singleExpression() -> Array<SingleExpressionContext> {
-			return getRuleContexts(SingleExpressionContext.self)
-		}
-		open func singleExpression(_ i: Int) -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,i)
-		}
-		open func assignmentOperator() -> AssignmentOperatorContext? {
-			return getRuleContext(AssignmentOperatorContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class AssignmentOperatorExpressionContext: SingleExpressionContext {
+			open
+			func singleExpression() -> [SingleExpressionContext] {
+				return getRuleContexts(SingleExpressionContext.self)
+			}
+			open
+			func singleExpression(_ i: Int) -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, i)
+			}
+			open
+			func assignmentOperator() -> AssignmentOperatorContext? {
+				return getRuleContext(AssignmentOperatorContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterAssignmentOperatorExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterAssignmentOperatorExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitAssignmentOperatorExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitAssignmentOperatorExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitAssignmentOperatorExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitAssignmentOperatorExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitAssignmentOperatorExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitAssignmentOperatorExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VoidExpressionContext: SingleExpressionContext {
-		open func Void() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Void.rawValue, 0) }
-		open func singleExpression() -> SingleExpressionContext? {
-			return getRuleContext(SingleExpressionContext.self,0)
-		}
-		public init(_ ctx: SingleExpressionContext) {
+	public class VoidExpressionContext: SingleExpressionContext {
+			open
+			func Void() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Void.rawValue, 0)
+			}
+			open
+			func singleExpression() -> SingleExpressionContext? {
+				return getRuleContext(SingleExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SingleExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterVoidExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterVoidExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitVoidExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitVoidExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitVoidExpression(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitVoidExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitVoidExpression(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitVoidExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func singleExpression( ) throws -> SingleExpressionContext   {
+	 public final  func singleExpression( ) throws -> SingleExpressionContext   {
 		return try singleExpression(0)
 	}
 	@discardableResult
@@ -5340,7 +5983,7 @@ open class ECMAScriptParser: Parser {
 
 				break
 			default:
-				throw try ANTLRException.recognition(e: NoViableAltException(self))
+				throw ANTLRException.recognition(e: NoViableAltException(self))
 			}
 			_ctx!.stop = try _input.LT(-1)
 			setState(583)
@@ -5360,7 +6003,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(516)
 						if (!(precpred(_ctx, 21))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 21)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 21)"))
 						}
 						setState(517)
 						_la = try _input.LA(1)
@@ -5387,7 +6030,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(519)
 						if (!(precpred(_ctx, 20))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 20)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 20)"))
 						}
 						setState(520)
 						_la = try _input.LA(1)
@@ -5411,7 +6054,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(522)
 						if (!(precpred(_ctx, 19))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
 						}
 						setState(523)
 						_la = try _input.LA(1)
@@ -5438,7 +6081,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(525)
 						if (!(precpred(_ctx, 18))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 18)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 18)"))
 						}
 						setState(526)
 						_la = try _input.LA(1)
@@ -5465,7 +6108,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(528)
 						if (!(precpred(_ctx, 17))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 17)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 17)"))
 						}
 						setState(529)
 						try match(ECMAScriptParser.Tokens.Instanceof.rawValue)
@@ -5478,7 +6121,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(531)
 						if (!(precpred(_ctx, 16))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 16)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 16)"))
 						}
 						setState(532)
 						try match(ECMAScriptParser.Tokens.In.rawValue)
@@ -5491,7 +6134,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(534)
 						if (!(precpred(_ctx, 15))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 15)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 15)"))
 						}
 						setState(535)
 						_la = try _input.LA(1)
@@ -5518,7 +6161,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(537)
 						if (!(precpred(_ctx, 14))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 14)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 14)"))
 						}
 						setState(538)
 						try match(ECMAScriptParser.Tokens.BitAnd.rawValue)
@@ -5531,7 +6174,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(540)
 						if (!(precpred(_ctx, 13))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
 						}
 						setState(541)
 						try match(ECMAScriptParser.Tokens.BitXOr.rawValue)
@@ -5544,7 +6187,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(543)
 						if (!(precpred(_ctx, 12))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
 						}
 						setState(544)
 						try match(ECMAScriptParser.Tokens.BitOr.rawValue)
@@ -5557,7 +6200,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(546)
 						if (!(precpred(_ctx, 11))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
 						}
 						setState(547)
 						try match(ECMAScriptParser.Tokens.And.rawValue)
@@ -5570,7 +6213,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(549)
 						if (!(precpred(_ctx, 10))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
 						}
 						setState(550)
 						try match(ECMAScriptParser.Tokens.Or.rawValue)
@@ -5583,7 +6226,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(552)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(553)
 						try match(ECMAScriptParser.Tokens.QuestionMark.rawValue)
@@ -5600,7 +6243,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(558)
 						if (!(precpred(_ctx, 8))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
 						}
 						setState(559)
 						try match(ECMAScriptParser.Tokens.Assign.rawValue)
@@ -5613,7 +6256,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(561)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(562)
 						try assignmentOperator()
@@ -5626,7 +6269,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(565)
 						if (!(precpred(_ctx, 36))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 36)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 36)"))
 						}
 						setState(566)
 						try match(ECMAScriptParser.Tokens.OpenBracket.rawValue)
@@ -5641,7 +6284,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(570)
 						if (!(precpred(_ctx, 35))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 35)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 35)"))
 						}
 						setState(571)
 						try match(ECMAScriptParser.Tokens.Dot.rawValue)
@@ -5654,7 +6297,7 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(573)
 						if (!(precpred(_ctx, 34))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 34)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 34)"))
 						}
 						setState(574)
 						try arguments()
@@ -5665,11 +6308,11 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(575)
 						if (!(precpred(_ctx, 32))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 32)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 32)"))
 						}
 						setState(576)
 						if (!(!here(LineTerminator))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
 						}
 						setState(577)
 						try match(ECMAScriptParser.Tokens.PlusPlus.rawValue)
@@ -5680,11 +6323,11 @@ open class ECMAScriptParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ECMAScriptParser.RULE_singleExpression)
 						setState(578)
 						if (!(precpred(_ctx, 31))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 31)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 31)"))
 						}
 						setState(579)
 						if (!(!here(LineTerminator))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "!here(LineTerminator)"))
 						}
 						setState(580)
 						try match(ECMAScriptParser.Tokens.MinusMinus.rawValue)
@@ -5708,34 +6351,39 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx;
 	}
-	open class AssignmentOperatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_assignmentOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterAssignmentOperator(self)
+
+	public class AssignmentOperatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_assignmentOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterAssignmentOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitAssignmentOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitAssignmentOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitAssignmentOperator(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitAssignmentOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitAssignmentOperator(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitAssignmentOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignmentOperator() throws -> AssignmentOperatorContext {
+	 open func assignmentOperator() throws -> AssignmentOperatorContext {
 		var _localctx: AssignmentOperatorContext = AssignmentOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 88, ECMAScriptParser.RULE_assignmentOperator)
 		var _la: Int = 0
@@ -5770,41 +6418,59 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func NullLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.NullLiteral.rawValue, 0) }
-		open func BooleanLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.BooleanLiteral.rawValue, 0) }
-		open func StringLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.StringLiteral.rawValue, 0) }
-		open func RegularExpressionLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.RegularExpressionLiteral.rawValue, 0) }
-		open func numericLiteral() -> NumericLiteralContext? {
-			return getRuleContext(NumericLiteralContext.self,0)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func NullLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.NullLiteral.rawValue, 0)
+			}
+			open
+			func BooleanLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.BooleanLiteral.rawValue, 0)
+			}
+			open
+			func StringLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.StringLiteral.rawValue, 0)
+			}
+			open
+			func RegularExpressionLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.RegularExpressionLiteral.rawValue, 0)
+			}
+			open
+			func numericLiteral() -> NumericLiteralContext? {
+				return getRuleContext(NumericLiteralContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_literal
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitLiteral(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 90, ECMAScriptParser.RULE_literal)
 		var _la: Int = 0
@@ -5848,7 +6514,7 @@ open class ECMAScriptParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5859,37 +6525,51 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class NumericLiteralContext:ParserRuleContext {
-		open func DecimalLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.DecimalLiteral.rawValue, 0) }
-		open func HexIntegerLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.HexIntegerLiteral.rawValue, 0) }
-		open func OctalIntegerLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.OctalIntegerLiteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_numericLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterNumericLiteral(self)
+
+	public class NumericLiteralContext: ParserRuleContext {
+			open
+			func DecimalLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.DecimalLiteral.rawValue, 0)
+			}
+			open
+			func HexIntegerLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.HexIntegerLiteral.rawValue, 0)
+			}
+			open
+			func OctalIntegerLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.OctalIntegerLiteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_numericLiteral
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterNumericLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitNumericLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitNumericLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitNumericLiteral(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitNumericLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitNumericLiteral(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitNumericLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numericLiteral() throws -> NumericLiteralContext {
+	 open func numericLiteral() throws -> NumericLiteralContext {
 		var _localctx: NumericLiteralContext = NumericLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 92, ECMAScriptParser.RULE_numericLiteral)
 		var _la: Int = 0
@@ -5924,38 +6604,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class IdentifierNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open func reservedWord() -> ReservedWordContext? {
-			return getRuleContext(ReservedWordContext.self,0)
+
+	public class IdentifierNameContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func reservedWord() -> ReservedWordContext? {
+				return getRuleContext(ReservedWordContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_identifierName
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_identifierName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterIdentifierName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterIdentifierName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitIdentifierName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitIdentifierName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitIdentifierName(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitIdentifierName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitIdentifierName(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitIdentifierName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifierName() throws -> IdentifierNameContext {
+	 open func identifierName() throws -> IdentifierNameContext {
 		var _localctx: IdentifierNameContext = IdentifierNameContext(_ctx, getState())
 		try enterRule(_localctx, 94, ECMAScriptParser.RULE_identifierName)
 		defer {
@@ -6021,7 +6710,7 @@ open class ECMAScriptParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6032,42 +6721,55 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class ReservedWordContext:ParserRuleContext {
-		open func keyword() -> KeywordContext? {
-			return getRuleContext(KeywordContext.self,0)
+
+	public class ReservedWordContext: ParserRuleContext {
+			open
+			func keyword() -> KeywordContext? {
+				return getRuleContext(KeywordContext.self, 0)
+			}
+			open
+			func futureReservedWord() -> FutureReservedWordContext? {
+				return getRuleContext(FutureReservedWordContext.self, 0)
+			}
+			open
+			func NullLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.NullLiteral.rawValue, 0)
+			}
+			open
+			func BooleanLiteral() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.BooleanLiteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_reservedWord
 		}
-		open func futureReservedWord() -> FutureReservedWordContext? {
-			return getRuleContext(FutureReservedWordContext.self,0)
-		}
-		open func NullLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.NullLiteral.rawValue, 0) }
-		open func BooleanLiteral() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.BooleanLiteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_reservedWord }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterReservedWord(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterReservedWord(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitReservedWord(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitReservedWord(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitReservedWord(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitReservedWord(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitReservedWord(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitReservedWord(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reservedWord() throws -> ReservedWordContext {
+	 open func reservedWord() throws -> ReservedWordContext {
 		var _localctx: ReservedWordContext = ReservedWordContext(_ctx, getState())
 		try enterRule(_localctx, 96, ECMAScriptParser.RULE_reservedWord)
 		var _la: Int = 0
@@ -6149,7 +6851,7 @@ open class ECMAScriptParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6160,60 +6862,143 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class KeywordContext:ParserRuleContext {
-		open func Break() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Break.rawValue, 0) }
-		open func Do() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Do.rawValue, 0) }
-		open func Instanceof() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Instanceof.rawValue, 0) }
-		open func Typeof() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Typeof.rawValue, 0) }
-		open func Case() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Case.rawValue, 0) }
-		open func Else() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Else.rawValue, 0) }
-		open func New() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.New.rawValue, 0) }
-		open func Var() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Var.rawValue, 0) }
-		open func Catch() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Catch.rawValue, 0) }
-		open func Finally() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Finally.rawValue, 0) }
-		open func Return() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Return.rawValue, 0) }
-		open func Void() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Void.rawValue, 0) }
-		open func Continue() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Continue.rawValue, 0) }
-		open func For() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.For.rawValue, 0) }
-		open func Switch() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Switch.rawValue, 0) }
-		open func While() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.While.rawValue, 0) }
-		open func Debugger() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Debugger.rawValue, 0) }
-		open func Function() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Function.rawValue, 0) }
-		open func This() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.This.rawValue, 0) }
-		open func With() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.With.rawValue, 0) }
-		open func Default() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Default.rawValue, 0) }
-		open func If() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.If.rawValue, 0) }
-		open func Throw() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Throw.rawValue, 0) }
-		open func Delete() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Delete.rawValue, 0) }
-		open func In() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.In.rawValue, 0) }
-		open func Try() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Try.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_keyword }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterKeyword(self)
+
+	public class KeywordContext: ParserRuleContext {
+			open
+			func Break() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Break.rawValue, 0)
+			}
+			open
+			func Do() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Do.rawValue, 0)
+			}
+			open
+			func Instanceof() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Instanceof.rawValue, 0)
+			}
+			open
+			func Typeof() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Typeof.rawValue, 0)
+			}
+			open
+			func Case() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Case.rawValue, 0)
+			}
+			open
+			func Else() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Else.rawValue, 0)
+			}
+			open
+			func New() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.New.rawValue, 0)
+			}
+			open
+			func Var() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Var.rawValue, 0)
+			}
+			open
+			func Catch() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Catch.rawValue, 0)
+			}
+			open
+			func Finally() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Finally.rawValue, 0)
+			}
+			open
+			func Return() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Return.rawValue, 0)
+			}
+			open
+			func Void() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Void.rawValue, 0)
+			}
+			open
+			func Continue() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Continue.rawValue, 0)
+			}
+			open
+			func For() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.For.rawValue, 0)
+			}
+			open
+			func Switch() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Switch.rawValue, 0)
+			}
+			open
+			func While() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.While.rawValue, 0)
+			}
+			open
+			func Debugger() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Debugger.rawValue, 0)
+			}
+			open
+			func Function() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Function.rawValue, 0)
+			}
+			open
+			func This() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.This.rawValue, 0)
+			}
+			open
+			func With() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.With.rawValue, 0)
+			}
+			open
+			func Default() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Default.rawValue, 0)
+			}
+			open
+			func If() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.If.rawValue, 0)
+			}
+			open
+			func Throw() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Throw.rawValue, 0)
+			}
+			open
+			func Delete() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Delete.rawValue, 0)
+			}
+			open
+			func In() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.In.rawValue, 0)
+			}
+			open
+			func Try() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Try.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_keyword
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterKeyword(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitKeyword(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitKeyword(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitKeyword(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitKeyword(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitKeyword(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitKeyword(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keyword() throws -> KeywordContext {
+	 open func keyword() throws -> KeywordContext {
 		var _localctx: KeywordContext = KeywordContext(_ctx, getState())
 		try enterRule(_localctx, 98, ECMAScriptParser.RULE_keyword)
 		var _la: Int = 0
@@ -6248,50 +7033,103 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class FutureReservedWordContext:ParserRuleContext {
-		open func Class() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Class.rawValue, 0) }
-		open func Enum() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Enum.rawValue, 0) }
-		open func Extends() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Extends.rawValue, 0) }
-		open func Super() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Super.rawValue, 0) }
-		open func Const() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Const.rawValue, 0) }
-		open func Export() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Export.rawValue, 0) }
-		open func Import() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Import.rawValue, 0) }
-		open func Implements() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Implements.rawValue, 0) }
-		open func Let() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Let.rawValue, 0) }
-		open func Private() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Private.rawValue, 0) }
-		open func Public() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Public.rawValue, 0) }
-		open func Interface() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Interface.rawValue, 0) }
-		open func Package() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Package.rawValue, 0) }
-		open func Protected() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Protected.rawValue, 0) }
-		open func Static() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Static.rawValue, 0) }
-		open func Yield() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Yield.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_futureReservedWord }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterFutureReservedWord(self)
+
+	public class FutureReservedWordContext: ParserRuleContext {
+			open
+			func Class() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Class.rawValue, 0)
+			}
+			open
+			func Enum() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Enum.rawValue, 0)
+			}
+			open
+			func Extends() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Extends.rawValue, 0)
+			}
+			open
+			func Super() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Super.rawValue, 0)
+			}
+			open
+			func Const() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Const.rawValue, 0)
+			}
+			open
+			func Export() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Export.rawValue, 0)
+			}
+			open
+			func Import() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Import.rawValue, 0)
+			}
+			open
+			func Implements() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Implements.rawValue, 0)
+			}
+			open
+			func Let() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Let.rawValue, 0)
+			}
+			open
+			func Private() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Private.rawValue, 0)
+			}
+			open
+			func Public() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Public.rawValue, 0)
+			}
+			open
+			func Interface() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Interface.rawValue, 0)
+			}
+			open
+			func Package() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Package.rawValue, 0)
+			}
+			open
+			func Protected() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Protected.rawValue, 0)
+			}
+			open
+			func Static() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Static.rawValue, 0)
+			}
+			open
+			func Yield() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Yield.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_futureReservedWord
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterFutureReservedWord(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitFutureReservedWord(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitFutureReservedWord(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitFutureReservedWord(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitFutureReservedWord(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitFutureReservedWord(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitFutureReservedWord(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func futureReservedWord() throws -> FutureReservedWordContext {
+	 open func futureReservedWord() throws -> FutureReservedWordContext {
 		var _localctx: FutureReservedWordContext = FutureReservedWordContext(_ctx, getState())
 		try enterRule(_localctx, 100, ECMAScriptParser.RULE_futureReservedWord)
 		var _la: Int = 0
@@ -6326,38 +7164,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class GetterContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open func propertyName() -> PropertyNameContext? {
-			return getRuleContext(PropertyNameContext.self,0)
+
+	public class GetterContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func propertyName() -> PropertyNameContext? {
+				return getRuleContext(PropertyNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_getter
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_getter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterGetter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterGetter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitGetter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitGetter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitGetter(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitGetter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitGetter(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitGetter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func getter() throws -> GetterContext {
+	 open func getter() throws -> GetterContext {
 		var _localctx: GetterContext = GetterContext(_ctx, getState())
 		try enterRule(_localctx, 102, ECMAScriptParser.RULE_getter)
 		defer {
@@ -6367,7 +7214,7 @@ open class ECMAScriptParser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(607)
 		 	if (!(_input.LT(1).getText().equals("get"))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "_input.LT(1).getText().equals(\"get\")"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "_input.LT(1).getText().equals(\"get\")"))
 		 	}
 		 	setState(608)
 		 	try match(ECMAScriptParser.Tokens.Identifier.rawValue)
@@ -6383,38 +7230,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class SetterContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0) }
-		open func propertyName() -> PropertyNameContext? {
-			return getRuleContext(PropertyNameContext.self,0)
+
+	public class SetterContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func propertyName() -> PropertyNameContext? {
+				return getRuleContext(PropertyNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_setter
 		}
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_setter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterSetter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterSetter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitSetter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitSetter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitSetter(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitSetter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitSetter(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitSetter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setter() throws -> SetterContext {
+	 open func setter() throws -> SetterContext {
 		var _localctx: SetterContext = SetterContext(_ctx, getState())
 		try enterRule(_localctx, 104, ECMAScriptParser.RULE_setter)
 		defer {
@@ -6424,7 +7280,7 @@ open class ECMAScriptParser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(611)
 		 	if (!(_input.LT(1).getText().equals("set"))) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "_input.LT(1).getText().equals(\"set\")"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "_input.LT(1).getText().equals(\"set\")"))
 		 	}
 		 	setState(612)
 		 	try match(ECMAScriptParser.Tokens.Identifier.rawValue)
@@ -6440,36 +7296,47 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class EosContext:ParserRuleContext {
-		open func SemiColon() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.SemiColon.rawValue, 0) }
-		open func EOF() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.EOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_eos }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterEos(self)
+
+	public class EosContext: ParserRuleContext {
+			open
+			func SemiColon() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.SemiColon.rawValue, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.EOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_eos
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterEos(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitEos(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitEos(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitEos(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitEos(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitEos(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitEos(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eos() throws -> EosContext {
+	 open func eos() throws -> EosContext {
 		var _localctx: EosContext = EosContext(_ctx, getState())
 		try enterRule(_localctx, 106, ECMAScriptParser.RULE_eos)
 		defer {
@@ -6495,7 +7362,7 @@ open class ECMAScriptParser: Parser {
 		 		try enterOuterAlt(_localctx, 3)
 		 		setState(617)
 		 		if (!(lineTerminatorAhead())) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "lineTerminatorAhead()"))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "lineTerminatorAhead()"))
 		 		}
 
 		 		break
@@ -6503,7 +7370,7 @@ open class ECMAScriptParser: Parser {
 		 		try enterOuterAlt(_localctx, 4)
 		 		setState(618)
 		 		if (!(_input.LT(1).getType() == CloseBrace)) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "_input.LT(1).getType() == CloseBrace"))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "_input.LT(1).getType() == CloseBrace"))
 		 		}
 
 		 		break
@@ -6518,35 +7385,43 @@ open class ECMAScriptParser: Parser {
 
 		return _localctx
 	}
-	open class EofContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(ECMAScriptParser.Tokens.EOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ECMAScriptParser.RULE_eof }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).enterEof(self)
+
+	public class EofContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(ECMAScriptParser.Tokens.EOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ECMAScriptParser.RULE_eof
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.enterEof(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ECMAScriptListener {
-			 	(listener as! ECMAScriptListener).exitEof(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ECMAScriptListener {
+				listener.exitEof(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ECMAScriptVisitor {
-			     return (visitor as! ECMAScriptVisitor<T>).visitEof(self)
-			}else if visitor is ECMAScriptBaseVisitor {
-		    	 return (visitor as! ECMAScriptBaseVisitor<T>).visitEof(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ECMAScriptVisitor {
+			    return visitor.visitEof(self)
+			}
+			else if let visitor = visitor as? ECMAScriptBaseVisitor {
+			    return visitor.visitEof(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eof() throws -> EofContext {
+	 open func eof() throws -> EofContext {
 		var _localctx: EofContext = EofContext(_ctx, getState())
 		try enterRule(_localctx, 108, ECMAScriptParser.RULE_eof)
 		defer {
@@ -6567,8 +7442,8 @@ open class ECMAScriptParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  11:
 			return try expressionStatement_sempred(_localctx?.castdown(ExpressionStatementContext.self), predIndex)
@@ -6668,6 +7543,10 @@ open class ECMAScriptParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = ECMAScriptParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = ECMAScriptParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/calculator/calculator.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/calculator/calculator.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class calculatorBaseListener: calculatorListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -67,6 +67,19 @@ open class calculatorBaseListener: calculatorListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterSignedAtom(_ ctx: calculatorParser.SignedAtomContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitSignedAtom(_ ctx: calculatorParser.SignedAtomContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterAtom(_ ctx: calculatorParser.AtomContext) { }
 	/**
 	 * {@inheritDoc}
@@ -87,6 +100,32 @@ open class calculatorBaseListener: calculatorListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitScientific(_ ctx: calculatorParser.ScientificContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterConstant(_ ctx: calculatorParser.ConstantContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitConstant(_ ctx: calculatorParser.ConstantContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterVariable(_ ctx: calculatorParser.VariableContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitVariable(_ ctx: calculatorParser.VariableContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -126,32 +165,6 @@ open class calculatorBaseListener: calculatorListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitRelop(_ ctx: calculatorParser.RelopContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterNumber(_ ctx: calculatorParser.NumberContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitNumber(_ ctx: calculatorParser.NumberContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterVariable(_ ctx: calculatorParser.VariableContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitVariable(_ ctx: calculatorParser.VariableContext) { }
 
 	/**
 	 * {@inheritDoc}

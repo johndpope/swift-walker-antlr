@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/pddl/Pddl.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/pddl/Pddl.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPddlDoc(_ ctx: PddlParser.PddlDocContext) -> T{
+	open func visitPddlDoc(_ ctx: PddlParser.PddlDocContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDomain(_ ctx: PddlParser.DomainContext) -> T{
+	open func visitDomain(_ ctx: PddlParser.DomainContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDomainName(_ ctx: PddlParser.DomainNameContext) -> T{
+	open func visitDomainName(_ ctx: PddlParser.DomainNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRequireDef(_ ctx: PddlParser.RequireDefContext) -> T{
+	open func visitRequireDef(_ ctx: PddlParser.RequireDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypesDef(_ ctx: PddlParser.TypesDefContext) -> T{
+	open func visitTypesDef(_ ctx: PddlParser.TypesDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedNameList(_ ctx: PddlParser.TypedNameListContext) -> T{
+	open func visitTypedNameList(_ ctx: PddlParser.TypedNameListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingleTypeNameList(_ ctx: PddlParser.SingleTypeNameListContext) -> T{
+	open func visitSingleTypeNameList(_ ctx: PddlParser.SingleTypeNameListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: PddlParser.TypeContext) -> T{
+	open func visitType(_ ctx: PddlParser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimType(_ ctx: PddlParser.PrimTypeContext) -> T{
+	open func visitPrimType(_ ctx: PddlParser.PrimTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionsDef(_ ctx: PddlParser.FunctionsDefContext) -> T{
+	open func visitFunctionsDef(_ ctx: PddlParser.FunctionsDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionList(_ ctx: PddlParser.FunctionListContext) -> T{
+	open func visitFunctionList(_ ctx: PddlParser.FunctionListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtomicFunctionSkeleton(_ ctx: PddlParser.AtomicFunctionSkeletonContext) -> T{
+	open func visitAtomicFunctionSkeleton(_ ctx: PddlParser.AtomicFunctionSkeletonContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionSymbol(_ ctx: PddlParser.FunctionSymbolContext) -> T{
+	open func visitFunctionSymbol(_ ctx: PddlParser.FunctionSymbolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionType(_ ctx: PddlParser.FunctionTypeContext) -> T{
+	open func visitFunctionType(_ ctx: PddlParser.FunctionTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantsDef(_ ctx: PddlParser.ConstantsDefContext) -> T{
+	open func visitConstantsDef(_ ctx: PddlParser.ConstantsDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPredicatesDef(_ ctx: PddlParser.PredicatesDefContext) -> T{
+	open func visitPredicatesDef(_ ctx: PddlParser.PredicatesDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtomicFormulaSkeleton(_ ctx: PddlParser.AtomicFormulaSkeletonContext) -> T{
+	open func visitAtomicFormulaSkeleton(_ ctx: PddlParser.AtomicFormulaSkeletonContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPredicate(_ ctx: PddlParser.PredicateContext) -> T{
+	open func visitPredicate(_ ctx: PddlParser.PredicateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedVariableList(_ ctx: PddlParser.TypedVariableListContext) -> T{
+	open func visitTypedVariableList(_ ctx: PddlParser.TypedVariableListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingleTypeVarList(_ ctx: PddlParser.SingleTypeVarListContext) -> T{
+	open func visitSingleTypeVarList(_ ctx: PddlParser.SingleTypeVarListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstraints(_ ctx: PddlParser.ConstraintsContext) -> T{
+	open func visitConstraints(_ ctx: PddlParser.ConstraintsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructureDef(_ ctx: PddlParser.StructureDefContext) -> T{
+	open func visitStructureDef(_ ctx: PddlParser.StructureDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActionDef(_ ctx: PddlParser.ActionDefContext) -> T{
+	open func visitActionDef(_ ctx: PddlParser.ActionDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActionSymbol(_ ctx: PddlParser.ActionSymbolContext) -> T{
+	open func visitActionSymbol(_ ctx: PddlParser.ActionSymbolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActionDefBody(_ ctx: PddlParser.ActionDefBodyContext) -> T{
+	open func visitActionDefBody(_ ctx: PddlParser.ActionDefBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGoalDesc(_ ctx: PddlParser.GoalDescContext) -> T{
+	open func visitGoalDesc(_ ctx: PddlParser.GoalDescContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFComp(_ ctx: PddlParser.FCompContext) -> T{
+	open func visitFComp(_ ctx: PddlParser.FCompContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtomicTermFormula(_ ctx: PddlParser.AtomicTermFormulaContext) -> T{
+	open func visitAtomicTermFormula(_ ctx: PddlParser.AtomicTermFormulaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: PddlParser.TermContext) -> T{
+	open func visitTerm(_ ctx: PddlParser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDurativeActionDef(_ ctx: PddlParser.DurativeActionDefContext) -> T{
+	open func visitDurativeActionDef(_ ctx: PddlParser.DurativeActionDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDaDefBody(_ ctx: PddlParser.DaDefBodyContext) -> T{
+	open func visitDaDefBody(_ ctx: PddlParser.DaDefBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDaGD(_ ctx: PddlParser.DaGDContext) -> T{
+	open func visitDaGD(_ ctx: PddlParser.DaGDContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrefTimedGD(_ ctx: PddlParser.PrefTimedGDContext) -> T{
+	open func visitPrefTimedGD(_ ctx: PddlParser.PrefTimedGDContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTimedGD(_ ctx: PddlParser.TimedGDContext) -> T{
+	open func visitTimedGD(_ ctx: PddlParser.TimedGDContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTimeSpecifier(_ ctx: PddlParser.TimeSpecifierContext) -> T{
+	open func visitTimeSpecifier(_ ctx: PddlParser.TimeSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterval(_ ctx: PddlParser.IntervalContext) -> T{
+	open func visitInterval(_ ctx: PddlParser.IntervalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDerivedDef(_ ctx: PddlParser.DerivedDefContext) -> T{
+	open func visitDerivedDef(_ ctx: PddlParser.DerivedDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFExp(_ ctx: PddlParser.FExpContext) -> T{
+	open func visitFExp(_ ctx: PddlParser.FExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFExp2(_ ctx: PddlParser.FExp2Context) -> T{
+	open func visitFExp2(_ ctx: PddlParser.FExp2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFHead(_ ctx: PddlParser.FHeadContext) -> T{
+	open func visitFHead(_ ctx: PddlParser.FHeadContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEffect(_ ctx: PddlParser.EffectContext) -> T{
+	open func visitEffect(_ ctx: PddlParser.EffectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCEffect(_ ctx: PddlParser.CEffectContext) -> T{
+	open func visitCEffect(_ ctx: PddlParser.CEffectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPEffect(_ ctx: PddlParser.PEffectContext) -> T{
+	open func visitPEffect(_ ctx: PddlParser.PEffectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCondEffect(_ ctx: PddlParser.CondEffectContext) -> T{
+	open func visitCondEffect(_ ctx: PddlParser.CondEffectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinaryOp(_ ctx: PddlParser.BinaryOpContext) -> T{
+	open func visitBinaryOp(_ ctx: PddlParser.BinaryOpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinaryComp(_ ctx: PddlParser.BinaryCompContext) -> T{
+	open func visitBinaryComp(_ ctx: PddlParser.BinaryCompContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignOp(_ ctx: PddlParser.AssignOpContext) -> T{
+	open func visitAssignOp(_ ctx: PddlParser.AssignOpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDurationConstraint(_ ctx: PddlParser.DurationConstraintContext) -> T{
+	open func visitDurationConstraint(_ ctx: PddlParser.DurationConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleDurationConstraint(_ ctx: PddlParser.SimpleDurationConstraintContext) -> T{
+	open func visitSimpleDurationConstraint(_ ctx: PddlParser.SimpleDurationConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDurOp(_ ctx: PddlParser.DurOpContext) -> T{
+	open func visitDurOp(_ ctx: PddlParser.DurOpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDurValue(_ ctx: PddlParser.DurValueContext) -> T{
+	open func visitDurValue(_ ctx: PddlParser.DurValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDaEffect(_ ctx: PddlParser.DaEffectContext) -> T{
+	open func visitDaEffect(_ ctx: PddlParser.DaEffectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTimedEffect(_ ctx: PddlParser.TimedEffectContext) -> T{
+	open func visitTimedEffect(_ ctx: PddlParser.TimedEffectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFAssignDA(_ ctx: PddlParser.FAssignDAContext) -> T{
+	open func visitFAssignDA(_ ctx: PddlParser.FAssignDAContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFExpDA(_ ctx: PddlParser.FExpDAContext) -> T{
+	open func visitFExpDA(_ ctx: PddlParser.FExpDAContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProblem(_ ctx: PddlParser.ProblemContext) -> T{
+	open func visitProblem(_ ctx: PddlParser.ProblemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProblemDecl(_ ctx: PddlParser.ProblemDeclContext) -> T{
+	open func visitProblemDecl(_ ctx: PddlParser.ProblemDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProblemDomain(_ ctx: PddlParser.ProblemDomainContext) -> T{
+	open func visitProblemDomain(_ ctx: PddlParser.ProblemDomainContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectDecl(_ ctx: PddlParser.ObjectDeclContext) -> T{
+	open func visitObjectDecl(_ ctx: PddlParser.ObjectDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInit(_ ctx: PddlParser.InitContext) -> T{
+	open func visitInit(_ ctx: PddlParser.InitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitEl(_ ctx: PddlParser.InitElContext) -> T{
+	open func visitInitEl(_ ctx: PddlParser.InitElContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNameLiteral(_ ctx: PddlParser.NameLiteralContext) -> T{
+	open func visitNameLiteral(_ ctx: PddlParser.NameLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtomicNameFormula(_ ctx: PddlParser.AtomicNameFormulaContext) -> T{
+	open func visitAtomicNameFormula(_ ctx: PddlParser.AtomicNameFormulaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGoal(_ ctx: PddlParser.GoalContext) -> T{
+	open func visitGoal(_ ctx: PddlParser.GoalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProbConstraints(_ ctx: PddlParser.ProbConstraintsContext) -> T{
+	open func visitProbConstraints(_ ctx: PddlParser.ProbConstraintsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrefConGD(_ ctx: PddlParser.PrefConGDContext) -> T{
+	open func visitPrefConGD(_ ctx: PddlParser.PrefConGDContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMetricSpec(_ ctx: PddlParser.MetricSpecContext) -> T{
+	open func visitMetricSpec(_ ctx: PddlParser.MetricSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptimization(_ ctx: PddlParser.OptimizationContext) -> T{
+	open func visitOptimization(_ ctx: PddlParser.OptimizationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMetricFExp(_ ctx: PddlParser.MetricFExpContext) -> T{
+	open func visitMetricFExp(_ ctx: PddlParser.MetricFExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class PddlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConGD(_ ctx: PddlParser.ConGDContext) -> T{
+	open func visitConGD(_ ctx: PddlParser.ConGDContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

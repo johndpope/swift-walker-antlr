@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/muparser/MuParser.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/muparser/MuParser.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -16,7 +16,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgExpr(_ ctx: MuParserParser.ProgExprContext) -> T{
+	open func visitProgExpr(_ ctx: MuParserParser.ProgExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -27,7 +27,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionMultiExpr(_ ctx: MuParserParser.FunctionMultiExprContext) -> T{
+	open func visitFunctionMultiExpr(_ ctx: MuParserParser.FunctionMultiExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -38,7 +38,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAddSubExpr(_ ctx: MuParserParser.AddSubExprContext) -> T{
+	open func visitAddSubExpr(_ ctx: MuParserParser.AddSubExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -49,7 +49,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtomExpr(_ ctx: MuParserParser.AtomExprContext) -> T{
+	open func visitAtomExpr(_ ctx: MuParserParser.AtomExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -60,7 +60,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrExpr(_ ctx: MuParserParser.OrExprContext) -> T{
+	open func visitOrExpr(_ ctx: MuParserParser.OrExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -71,7 +71,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelationalExpr(_ ctx: MuParserParser.RelationalExprContext) -> T{
+	open func visitRelationalExpr(_ ctx: MuParserParser.RelationalExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -82,7 +82,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionExpr(_ ctx: MuParserParser.FunctionExprContext) -> T{
+	open func visitFunctionExpr(_ ctx: MuParserParser.FunctionExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -93,7 +93,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryMinusExpr(_ ctx: MuParserParser.UnaryMinusExprContext) -> T{
+	open func visitUnaryMinusExpr(_ ctx: MuParserParser.UnaryMinusExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -104,7 +104,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPowExpr(_ ctx: MuParserParser.PowExprContext) -> T{
+	open func visitPowExpr(_ ctx: MuParserParser.PowExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignExpr(_ ctx: MuParserParser.AssignExprContext) -> T{
+	open func visitAssignExpr(_ ctx: MuParserParser.AssignExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -126,7 +126,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMulDivExpr(_ ctx: MuParserParser.MulDivExprContext) -> T{
+	open func visitMulDivExpr(_ ctx: MuParserParser.MulDivExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -137,7 +137,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEqualityExpr(_ ctx: MuParserParser.EqualityExprContext) -> T{
+	open func visitEqualityExpr(_ ctx: MuParserParser.EqualityExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -148,7 +148,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAndExpr(_ ctx: MuParserParser.AndExprContext) -> T{
+	open func visitAndExpr(_ ctx: MuParserParser.AndExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -159,7 +159,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIteExpr(_ ctx: MuParserParser.IteExprContext) -> T{
+	open func visitIteExpr(_ ctx: MuParserParser.IteExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -170,7 +170,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParExpr(_ ctx: MuParserParser.ParExprContext) -> T{
+	open func visitParExpr(_ ctx: MuParserParser.ParExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -181,7 +181,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumberAtom(_ ctx: MuParserParser.NumberAtomContext) -> T{
+	open func visitNumberAtom(_ ctx: MuParserParser.NumberAtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -192,7 +192,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBooleanAtom(_ ctx: MuParserParser.BooleanAtomContext) -> T{
+	open func visitBooleanAtom(_ ctx: MuParserParser.BooleanAtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -203,7 +203,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPredefinedConstantAtom(_ ctx: MuParserParser.PredefinedConstantAtomContext) -> T{
+	open func visitPredefinedConstantAtom(_ ctx: MuParserParser.PredefinedConstantAtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -214,7 +214,7 @@ open class MuParserVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdAtom(_ ctx: MuParserParser.IdAtomContext) -> T{
+	open func visitIdAtom(_ ctx: MuParserParser.IdAtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

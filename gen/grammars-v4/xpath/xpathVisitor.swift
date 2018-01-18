@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/xpath/xpath.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/xpath/xpath.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMain(_ ctx: xpathParser.MainContext) -> T{
+	open func visitMain(_ ctx: xpathParser.MainContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocationPath(_ ctx: xpathParser.LocationPathContext) -> T{
+	open func visitLocationPath(_ ctx: xpathParser.LocationPathContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAbsoluteLocationPathNoroot(_ ctx: xpathParser.AbsoluteLocationPathNorootContext) -> T{
+	open func visitAbsoluteLocationPathNoroot(_ ctx: xpathParser.AbsoluteLocationPathNorootContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelativeLocationPath(_ ctx: xpathParser.RelativeLocationPathContext) -> T{
+	open func visitRelativeLocationPath(_ ctx: xpathParser.RelativeLocationPathContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStep(_ ctx: xpathParser.StepContext) -> T{
+	open func visitStep(_ ctx: xpathParser.StepContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAxisSpecifier(_ ctx: xpathParser.AxisSpecifierContext) -> T{
+	open func visitAxisSpecifier(_ ctx: xpathParser.AxisSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNodeTest(_ ctx: xpathParser.NodeTestContext) -> T{
+	open func visitNodeTest(_ ctx: xpathParser.NodeTestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPredicate(_ ctx: xpathParser.PredicateContext) -> T{
+	open func visitPredicate(_ ctx: xpathParser.PredicateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAbbreviatedStep(_ ctx: xpathParser.AbbreviatedStepContext) -> T{
+	open func visitAbbreviatedStep(_ ctx: xpathParser.AbbreviatedStepContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr(_ ctx: xpathParser.ExprContext) -> T{
+	open func visitExpr(_ ctx: xpathParser.ExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryExpr(_ ctx: xpathParser.PrimaryExprContext) -> T{
+	open func visitPrimaryExpr(_ ctx: xpathParser.PrimaryExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionCall(_ ctx: xpathParser.FunctionCallContext) -> T{
+	open func visitFunctionCall(_ ctx: xpathParser.FunctionCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionExprNoRoot(_ ctx: xpathParser.UnionExprNoRootContext) -> T{
+	open func visitUnionExprNoRoot(_ ctx: xpathParser.UnionExprNoRootContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPathExprNoRoot(_ ctx: xpathParser.PathExprNoRootContext) -> T{
+	open func visitPathExprNoRoot(_ ctx: xpathParser.PathExprNoRootContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFilterExpr(_ ctx: xpathParser.FilterExprContext) -> T{
+	open func visitFilterExpr(_ ctx: xpathParser.FilterExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrExpr(_ ctx: xpathParser.OrExprContext) -> T{
+	open func visitOrExpr(_ ctx: xpathParser.OrExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAndExpr(_ ctx: xpathParser.AndExprContext) -> T{
+	open func visitAndExpr(_ ctx: xpathParser.AndExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEqualityExpr(_ ctx: xpathParser.EqualityExprContext) -> T{
+	open func visitEqualityExpr(_ ctx: xpathParser.EqualityExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelationalExpr(_ ctx: xpathParser.RelationalExprContext) -> T{
+	open func visitRelationalExpr(_ ctx: xpathParser.RelationalExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditiveExpr(_ ctx: xpathParser.AdditiveExprContext) -> T{
+	open func visitAdditiveExpr(_ ctx: xpathParser.AdditiveExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplicativeExpr(_ ctx: xpathParser.MultiplicativeExprContext) -> T{
+	open func visitMultiplicativeExpr(_ ctx: xpathParser.MultiplicativeExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryExprNoRoot(_ ctx: xpathParser.UnaryExprNoRootContext) -> T{
+	open func visitUnaryExprNoRoot(_ ctx: xpathParser.UnaryExprNoRootContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQName(_ ctx: xpathParser.QNameContext) -> T{
+	open func visitQName(_ ctx: xpathParser.QNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionName(_ ctx: xpathParser.FunctionNameContext) -> T{
+	open func visitFunctionName(_ ctx: xpathParser.FunctionNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableReference(_ ctx: xpathParser.VariableReferenceContext) -> T{
+	open func visitVariableReference(_ ctx: xpathParser.VariableReferenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNameTest(_ ctx: xpathParser.NameTestContext) -> T{
+	open func visitNameTest(_ ctx: xpathParser.NameTestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class xpathVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNCName(_ ctx: xpathParser.NCNameContext) -> T{
+	open func visitNCName(_ ctx: xpathParser.NCNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

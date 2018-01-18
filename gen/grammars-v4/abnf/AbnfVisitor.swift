@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/abnf/Abnf.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/abnf/Abnf.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRulelist(_ ctx: AbnfParser.RulelistContext) -> T{
+	open func visitRulelist(_ ctx: AbnfParser.RulelistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRule_(_ ctx: AbnfParser.Rule_Context) -> T{
+	open func visitRule_(_ ctx: AbnfParser.Rule_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElements(_ ctx: AbnfParser.ElementsContext) -> T{
+	open func visitElements(_ ctx: AbnfParser.ElementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlternation(_ ctx: AbnfParser.AlternationContext) -> T{
+	open func visitAlternation(_ ctx: AbnfParser.AlternationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConcatenation(_ ctx: AbnfParser.ConcatenationContext) -> T{
+	open func visitConcatenation(_ ctx: AbnfParser.ConcatenationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRepetition(_ ctx: AbnfParser.RepetitionContext) -> T{
+	open func visitRepetition(_ ctx: AbnfParser.RepetitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRepeat(_ ctx: AbnfParser.RepeatContext) -> T{
+	open func visitRepeat(_ ctx: AbnfParser.RepeatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement(_ ctx: AbnfParser.ElementContext) -> T{
+	open func visitElement(_ ctx: AbnfParser.ElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGroup(_ ctx: AbnfParser.GroupContext) -> T{
+	open func visitGroup(_ ctx: AbnfParser.GroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class AbnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOption(_ ctx: AbnfParser.OptionContext) -> T{
+	open func visitOption(_ ctx: AbnfParser.OptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

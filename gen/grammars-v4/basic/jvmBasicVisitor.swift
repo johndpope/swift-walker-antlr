@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/basic/jvmBasic.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/basic/jvmBasic.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProg(_ ctx: jvmBasicParser.ProgContext) -> T{
+	open func visitProg(_ ctx: jvmBasicParser.ProgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: jvmBasicParser.LineContext) -> T{
+	open func visitLine(_ ctx: jvmBasicParser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAmperoper(_ ctx: jvmBasicParser.AmperoperContext) -> T{
+	open func visitAmperoper(_ ctx: jvmBasicParser.AmperoperContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLinenumber(_ ctx: jvmBasicParser.LinenumberContext) -> T{
+	open func visitLinenumber(_ ctx: jvmBasicParser.LinenumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAmprstmt(_ ctx: jvmBasicParser.AmprstmtContext) -> T{
+	open func visitAmprstmt(_ ctx: jvmBasicParser.AmprstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: jvmBasicParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: jvmBasicParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVardecl(_ ctx: jvmBasicParser.VardeclContext) -> T{
+	open func visitVardecl(_ ctx: jvmBasicParser.VardeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrintstmt1(_ ctx: jvmBasicParser.Printstmt1Context) -> T{
+	open func visitPrintstmt1(_ ctx: jvmBasicParser.Printstmt1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrintlist(_ ctx: jvmBasicParser.PrintlistContext) -> T{
+	open func visitPrintlist(_ ctx: jvmBasicParser.PrintlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGetstmt(_ ctx: jvmBasicParser.GetstmtContext) -> T{
+	open func visitGetstmt(_ ctx: jvmBasicParser.GetstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLetstmt(_ ctx: jvmBasicParser.LetstmtContext) -> T{
+	open func visitLetstmt(_ ctx: jvmBasicParser.LetstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableassignment(_ ctx: jvmBasicParser.VariableassignmentContext) -> T{
+	open func visitVariableassignment(_ ctx: jvmBasicParser.VariableassignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelop(_ ctx: jvmBasicParser.RelopContext) -> T{
+	open func visitRelop(_ ctx: jvmBasicParser.RelopContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNeq(_ ctx: jvmBasicParser.NeqContext) -> T{
+	open func visitNeq(_ ctx: jvmBasicParser.NeqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfstmt(_ ctx: jvmBasicParser.IfstmtContext) -> T{
+	open func visitIfstmt(_ ctx: jvmBasicParser.IfstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForstmt1(_ ctx: jvmBasicParser.Forstmt1Context) -> T{
+	open func visitForstmt1(_ ctx: jvmBasicParser.Forstmt1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForstmt2(_ ctx: jvmBasicParser.Forstmt2Context) -> T{
+	open func visitForstmt2(_ ctx: jvmBasicParser.Forstmt2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNextstmt(_ ctx: jvmBasicParser.NextstmtContext) -> T{
+	open func visitNextstmt(_ ctx: jvmBasicParser.NextstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInputstmt(_ ctx: jvmBasicParser.InputstmtContext) -> T{
+	open func visitInputstmt(_ ctx: jvmBasicParser.InputstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadstmt(_ ctx: jvmBasicParser.ReadstmtContext) -> T{
+	open func visitReadstmt(_ ctx: jvmBasicParser.ReadstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDimstmt(_ ctx: jvmBasicParser.DimstmtContext) -> T{
+	open func visitDimstmt(_ ctx: jvmBasicParser.DimstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGotostmt(_ ctx: jvmBasicParser.GotostmtContext) -> T{
+	open func visitGotostmt(_ ctx: jvmBasicParser.GotostmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGosubstmt(_ ctx: jvmBasicParser.GosubstmtContext) -> T{
+	open func visitGosubstmt(_ ctx: jvmBasicParser.GosubstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPokestmt(_ ctx: jvmBasicParser.PokestmtContext) -> T{
+	open func visitPokestmt(_ ctx: jvmBasicParser.PokestmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCallstmt(_ ctx: jvmBasicParser.CallstmtContext) -> T{
+	open func visitCallstmt(_ ctx: jvmBasicParser.CallstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHplotstmt(_ ctx: jvmBasicParser.HplotstmtContext) -> T{
+	open func visitHplotstmt(_ ctx: jvmBasicParser.HplotstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVplotstmt(_ ctx: jvmBasicParser.VplotstmtContext) -> T{
+	open func visitVplotstmt(_ ctx: jvmBasicParser.VplotstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPlotstmt(_ ctx: jvmBasicParser.PlotstmtContext) -> T{
+	open func visitPlotstmt(_ ctx: jvmBasicParser.PlotstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOngotostmt(_ ctx: jvmBasicParser.OngotostmtContext) -> T{
+	open func visitOngotostmt(_ ctx: jvmBasicParser.OngotostmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOngosubstmt(_ ctx: jvmBasicParser.OngosubstmtContext) -> T{
+	open func visitOngosubstmt(_ ctx: jvmBasicParser.OngosubstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVtabstmnt(_ ctx: jvmBasicParser.VtabstmntContext) -> T{
+	open func visitVtabstmnt(_ ctx: jvmBasicParser.VtabstmntContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHtabstmnt(_ ctx: jvmBasicParser.HtabstmntContext) -> T{
+	open func visitHtabstmnt(_ ctx: jvmBasicParser.HtabstmntContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHimemstmt(_ ctx: jvmBasicParser.HimemstmtContext) -> T{
+	open func visitHimemstmt(_ ctx: jvmBasicParser.HimemstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLomemstmt(_ ctx: jvmBasicParser.LomemstmtContext) -> T{
+	open func visitLomemstmt(_ ctx: jvmBasicParser.LomemstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDatastmt(_ ctx: jvmBasicParser.DatastmtContext) -> T{
+	open func visitDatastmt(_ ctx: jvmBasicParser.DatastmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDatum(_ ctx: jvmBasicParser.DatumContext) -> T{
+	open func visitDatum(_ ctx: jvmBasicParser.DatumContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWaitstmt(_ ctx: jvmBasicParser.WaitstmtContext) -> T{
+	open func visitWaitstmt(_ ctx: jvmBasicParser.WaitstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitXdrawstmt(_ ctx: jvmBasicParser.XdrawstmtContext) -> T{
+	open func visitXdrawstmt(_ ctx: jvmBasicParser.XdrawstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDrawstmt(_ ctx: jvmBasicParser.DrawstmtContext) -> T{
+	open func visitDrawstmt(_ ctx: jvmBasicParser.DrawstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefstmt(_ ctx: jvmBasicParser.DefstmtContext) -> T{
+	open func visitDefstmt(_ ctx: jvmBasicParser.DefstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTabstmt(_ ctx: jvmBasicParser.TabstmtContext) -> T{
+	open func visitTabstmt(_ ctx: jvmBasicParser.TabstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpeedstmt(_ ctx: jvmBasicParser.SpeedstmtContext) -> T{
+	open func visitSpeedstmt(_ ctx: jvmBasicParser.SpeedstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRotstmt(_ ctx: jvmBasicParser.RotstmtContext) -> T{
+	open func visitRotstmt(_ ctx: jvmBasicParser.RotstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScalestmt(_ ctx: jvmBasicParser.ScalestmtContext) -> T{
+	open func visitScalestmt(_ ctx: jvmBasicParser.ScalestmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColorstmt(_ ctx: jvmBasicParser.ColorstmtContext) -> T{
+	open func visitColorstmt(_ ctx: jvmBasicParser.ColorstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHcolorstmt(_ ctx: jvmBasicParser.HcolorstmtContext) -> T{
+	open func visitHcolorstmt(_ ctx: jvmBasicParser.HcolorstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHlinstmt(_ ctx: jvmBasicParser.HlinstmtContext) -> T{
+	open func visitHlinstmt(_ ctx: jvmBasicParser.HlinstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVlinstmt(_ ctx: jvmBasicParser.VlinstmtContext) -> T{
+	open func visitVlinstmt(_ ctx: jvmBasicParser.VlinstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOnerrstmt(_ ctx: jvmBasicParser.OnerrstmtContext) -> T{
+	open func visitOnerrstmt(_ ctx: jvmBasicParser.OnerrstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrstmt(_ ctx: jvmBasicParser.PrstmtContext) -> T{
+	open func visitPrstmt(_ ctx: jvmBasicParser.PrstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInstmt(_ ctx: jvmBasicParser.InstmtContext) -> T{
+	open func visitInstmt(_ ctx: jvmBasicParser.InstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStorestmt(_ ctx: jvmBasicParser.StorestmtContext) -> T{
+	open func visitStorestmt(_ ctx: jvmBasicParser.StorestmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecallstmt(_ ctx: jvmBasicParser.RecallstmtContext) -> T{
+	open func visitRecallstmt(_ ctx: jvmBasicParser.RecallstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitListstmt(_ ctx: jvmBasicParser.ListstmtContext) -> T{
+	open func visitListstmt(_ ctx: jvmBasicParser.ListstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPopstmt(_ ctx: jvmBasicParser.PopstmtContext) -> T{
+	open func visitPopstmt(_ ctx: jvmBasicParser.PopstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAmptstmt(_ ctx: jvmBasicParser.AmptstmtContext) -> T{
+	open func visitAmptstmt(_ ctx: jvmBasicParser.AmptstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIncludestmt(_ ctx: jvmBasicParser.IncludestmtContext) -> T{
+	open func visitIncludestmt(_ ctx: jvmBasicParser.IncludestmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEndstmt(_ ctx: jvmBasicParser.EndstmtContext) -> T{
+	open func visitEndstmt(_ ctx: jvmBasicParser.EndstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturnstmt(_ ctx: jvmBasicParser.ReturnstmtContext) -> T{
+	open func visitReturnstmt(_ ctx: jvmBasicParser.ReturnstmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRestorestmt(_ ctx: jvmBasicParser.RestorestmtContext) -> T{
+	open func visitRestorestmt(_ ctx: jvmBasicParser.RestorestmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: jvmBasicParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: jvmBasicParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunc(_ ctx: jvmBasicParser.FuncContext) -> T{
+	open func visitFunc(_ ctx: jvmBasicParser.FuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSignExpression(_ ctx: jvmBasicParser.SignExpressionContext) -> T{
+	open func visitSignExpression(_ ctx: jvmBasicParser.SignExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExponentExpression(_ ctx: jvmBasicParser.ExponentExpressionContext) -> T{
+	open func visitExponentExpression(_ ctx: jvmBasicParser.ExponentExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplyingExpression(_ ctx: jvmBasicParser.MultiplyingExpressionContext) -> T{
+	open func visitMultiplyingExpression(_ ctx: jvmBasicParser.MultiplyingExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAddingExpression(_ ctx: jvmBasicParser.AddingExpressionContext) -> T{
+	open func visitAddingExpression(_ ctx: jvmBasicParser.AddingExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelationalExpression(_ ctx: jvmBasicParser.RelationalExpressionContext) -> T{
+	open func visitRelationalExpression(_ ctx: jvmBasicParser.RelationalExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: jvmBasicParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: jvmBasicParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVar(_ ctx: jvmBasicParser.VarContext) -> T{
+	open func visitVar(_ ctx: jvmBasicParser.VarContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarname(_ ctx: jvmBasicParser.VarnameContext) -> T{
+	open func visitVarname(_ ctx: jvmBasicParser.VarnameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarsuffix(_ ctx: jvmBasicParser.VarsuffixContext) -> T{
+	open func visitVarsuffix(_ ctx: jvmBasicParser.VarsuffixContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarlist(_ ctx: jvmBasicParser.VarlistContext) -> T{
+	open func visitVarlist(_ ctx: jvmBasicParser.VarlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprlist(_ ctx: jvmBasicParser.ExprlistContext) -> T{
+	open func visitExprlist(_ ctx: jvmBasicParser.ExprlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqrfunc(_ ctx: jvmBasicParser.SqrfuncContext) -> T{
+	open func visitSqrfunc(_ ctx: jvmBasicParser.SqrfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitChrfunc(_ ctx: jvmBasicParser.ChrfuncContext) -> T{
+	open func visitChrfunc(_ ctx: jvmBasicParser.ChrfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLenfunc(_ ctx: jvmBasicParser.LenfuncContext) -> T{
+	open func visitLenfunc(_ ctx: jvmBasicParser.LenfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAscfunc(_ ctx: jvmBasicParser.AscfuncContext) -> T{
+	open func visitAscfunc(_ ctx: jvmBasicParser.AscfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMidfunc(_ ctx: jvmBasicParser.MidfuncContext) -> T{
+	open func visitMidfunc(_ ctx: jvmBasicParser.MidfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPdlfunc(_ ctx: jvmBasicParser.PdlfuncContext) -> T{
+	open func visitPdlfunc(_ ctx: jvmBasicParser.PdlfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPeekfunc(_ ctx: jvmBasicParser.PeekfuncContext) -> T{
+	open func visitPeekfunc(_ ctx: jvmBasicParser.PeekfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntfunc(_ ctx: jvmBasicParser.IntfuncContext) -> T{
+	open func visitIntfunc(_ ctx: jvmBasicParser.IntfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpcfunc(_ ctx: jvmBasicParser.SpcfuncContext) -> T{
+	open func visitSpcfunc(_ ctx: jvmBasicParser.SpcfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFrefunc(_ ctx: jvmBasicParser.FrefuncContext) -> T{
+	open func visitFrefunc(_ ctx: jvmBasicParser.FrefuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPosfunc(_ ctx: jvmBasicParser.PosfuncContext) -> T{
+	open func visitPosfunc(_ ctx: jvmBasicParser.PosfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUsrfunc(_ ctx: jvmBasicParser.UsrfuncContext) -> T{
+	open func visitUsrfunc(_ ctx: jvmBasicParser.UsrfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLeftfunc(_ ctx: jvmBasicParser.LeftfuncContext) -> T{
+	open func visitLeftfunc(_ ctx: jvmBasicParser.LeftfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRightfunc(_ ctx: jvmBasicParser.RightfuncContext) -> T{
+	open func visitRightfunc(_ ctx: jvmBasicParser.RightfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStrfunc(_ ctx: jvmBasicParser.StrfuncContext) -> T{
+	open func visitStrfunc(_ ctx: jvmBasicParser.StrfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFnfunc(_ ctx: jvmBasicParser.FnfuncContext) -> T{
+	open func visitFnfunc(_ ctx: jvmBasicParser.FnfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValfunc(_ ctx: jvmBasicParser.ValfuncContext) -> T{
+	open func visitValfunc(_ ctx: jvmBasicParser.ValfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScrnfunc(_ ctx: jvmBasicParser.ScrnfuncContext) -> T{
+	open func visitScrnfunc(_ ctx: jvmBasicParser.ScrnfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSinfunc(_ ctx: jvmBasicParser.SinfuncContext) -> T{
+	open func visitSinfunc(_ ctx: jvmBasicParser.SinfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCosfunc(_ ctx: jvmBasicParser.CosfuncContext) -> T{
+	open func visitCosfunc(_ ctx: jvmBasicParser.CosfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTanfunc(_ ctx: jvmBasicParser.TanfuncContext) -> T{
+	open func visitTanfunc(_ ctx: jvmBasicParser.TanfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtnfunc(_ ctx: jvmBasicParser.AtnfuncContext) -> T{
+	open func visitAtnfunc(_ ctx: jvmBasicParser.AtnfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRndfunc(_ ctx: jvmBasicParser.RndfuncContext) -> T{
+	open func visitRndfunc(_ ctx: jvmBasicParser.RndfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSgnfunc(_ ctx: jvmBasicParser.SgnfuncContext) -> T{
+	open func visitSgnfunc(_ ctx: jvmBasicParser.SgnfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpfunc(_ ctx: jvmBasicParser.ExpfuncContext) -> T{
+	open func visitExpfunc(_ ctx: jvmBasicParser.ExpfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogfunc(_ ctx: jvmBasicParser.LogfuncContext) -> T{
+	open func visitLogfunc(_ ctx: jvmBasicParser.LogfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAbsfunc(_ ctx: jvmBasicParser.AbsfuncContext) -> T{
+	open func visitAbsfunc(_ ctx: jvmBasicParser.AbsfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class jvmBasicVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTabfunc(_ ctx: jvmBasicParser.TabfuncContext) -> T{
+	open func visitTabfunc(_ ctx: jvmBasicParser.TabfuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/informix/informix.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/informix/informix.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class informixParser: Parser {
@@ -11,8 +11,11 @@ open class informixParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, ABSOLUTE = 1, AFTER = 2, ACCEPT = 3, AGGREGATE = 4, ALLOCATE = 5, 
                  ALL = 6, ALL_ROWS = 7, AND = 8, ANY = 9, AS = 10, ASC = 11, 
                  ASCII = 12, AT = 13, ATTRIBUTE = 14, ATTRIBUTES = 15, AVERAGE = 16, 
@@ -90,88 +93,84 @@ open class informixParser: Parser {
                  ESC = 342, QUOTED_STRING = 343, DIV = 344, STEP = 345, 
                  MEMORY = 346, SAME = 347, WRAP = 348, PRIOR = 349, SECONDS = 350
 	}
-	public static let RULE_compilation_unit = 0, RULE_identifier = 1, RULE_mainBlock = 2, 
-                   RULE_mainStatements = 3, RULE_deferStatement = 4, RULE_functionOrReportDefinitions = 5, 
-                   RULE_returnStatement = 6, RULE_functionDefinition = 7, 
-                   RULE_parameterList = 8, RULE_parameterGroup = 9, RULE_globalDeclaration = 10, 
-                   RULE_typeDeclarations = 11, RULE_typeDeclaration = 12, 
-                   RULE_variableDeclaration = 13, RULE_type = 14, RULE_indirectType = 15, 
-                   RULE_typeIdentifier = 16, RULE_largeType = 17, RULE_numberType = 18, 
-                   RULE_charType = 19, RULE_timeType = 20, RULE_datetimeQualifier = 21, 
-                   RULE_intervalQualifier = 22, RULE_unitType = 23, RULE_yearQualifier = 24, 
-                   RULE_monthQualifier = 25, RULE_dayQualifier = 26, RULE_hourQualifier = 27, 
-                   RULE_minuteQualifier = 28, RULE_secondQualifier = 29, 
-                   RULE_fractionQualifier = 30, RULE_structuredType = 31, 
-                   RULE_recordType = 32, RULE_arrayIndexer = 33, RULE_arrayType = 34, 
-                   RULE_dynArrayType = 35, RULE_string = 36, RULE_statement = 37, 
-                   RULE_codeBlock = 38, RULE_label = 39, RULE_unlabelledStatement = 40, 
-                   RULE_simpleStatement = 41, RULE_runStatement = 42, RULE_assignmentStatement = 43, 
-                   RULE_procedureStatement = 44, RULE_procedureIdentifier = 45, 
-                   RULE_actualParameter = 46, RULE_gotoStatement = 47, RULE_condition = 48, 
-                   RULE_logicalTerm = 49, RULE_logicalFactor = 50, RULE_quantifiedFactor = 51, 
-                   RULE_expressionSet = 52, RULE_subquery = 53, RULE_sqlExpression = 54, 
-                   RULE_sqlAlias = 55, RULE_sqlTerm = 56, RULE_sqlMultiply = 57, 
-                   RULE_sqlFactor = 58, RULE_sqlFactor2 = 59, RULE_sqlExpressionList = 60, 
-                   RULE_sqlLiteral = 61, RULE_sqlVariable = 62, RULE_sqlFunction = 63, 
-                   RULE_dateFunction = 64, RULE_numberFunction = 65, RULE_charFunction = 66, 
-                   RULE_groupFunction = 67, RULE_otherFunction = 68, RULE_sqlPseudoColumn = 69, 
-                   RULE_relationalOperator = 70, RULE_ifCondition = 71, 
-                   RULE_ifCondition2 = 72, RULE_ifLogicalTerm = 73, RULE_expression = 74, 
-                   RULE_ifLogicalFactor = 75, RULE_simpleExpression = 76, 
-                   RULE_addingOperator = 77, RULE_term = 78, RULE_multiplyingOperator = 79, 
-                   RULE_factor = 80, RULE_functionDesignator = 81, RULE_functionIdentifier = 82, 
-                   RULE_unsignedConstant = 83, RULE_constant = 84, RULE_numericConstant = 85, 
-                   RULE_variable = 86, RULE_entireVariable = 87, RULE_variableIdentifier = 88, 
-                   RULE_indexingVariable = 89, RULE_componentVariable = 90, 
-                   RULE_recordVariable = 91, RULE_fieldIdentifier = 92, 
-                   RULE_structuredStatement = 93, RULE_conditionalStatement = 94, 
-                   RULE_ifStatement = 95, RULE_repetetiveStatement = 96, 
-                   RULE_whileStatement = 97, RULE_forStatement = 98, RULE_forList = 99, 
-                   RULE_controlVariable = 100, RULE_initialValue = 101, 
-                   RULE_finalValue = 102, RULE_forEachStatement = 103, RULE_variableList = 104, 
-                   RULE_variableOrConstantList = 105, RULE_caseStatement = 106, 
-                   RULE_otherFGLStatement = 107, RULE_otherProgramFlowStatement = 108, 
-                   RULE_exitTypes = 109, RULE_exitStatements = 110, RULE_continueStatements = 111, 
-                   RULE_otherStorageStatement = 112, RULE_printExpressionItem = 113, 
-                   RULE_printExpressionList = 114, RULE_reportStatement = 115, 
-                   RULE_fieldName = 116, RULE_thruNotation = 117, RULE_fieldList = 118, 
-                   RULE_keyList = 119, RULE_constructEvents = 120, RULE_constructInsideStatement = 121, 
-                   RULE_specialAttribute = 122, RULE_attribute = 123, RULE_attributeList = 124, 
-                   RULE_constructGroupStatement = 125, RULE_constructStatement = 126, 
-                   RULE_displayArrayStatement = 127, RULE_displayInsideStatement = 128, 
-                   RULE_displayEvents = 129, RULE_displayStatement = 130, 
-                   RULE_errorStatement = 131, RULE_messageStatement = 132, 
-                   RULE_promptStatement = 133, RULE_inputEvents = 134, RULE_inputInsideStatement = 135, 
-                   RULE_inputGroupStatement = 136, RULE_inputStatement = 137, 
-                   RULE_inputArrayStatement = 138, RULE_menuEvents = 139, 
-                   RULE_menuInsideStatement = 140, RULE_menuGroupStatement = 141, 
-                   RULE_menuStatement = 142, RULE_reservedLinePosition = 143, 
-                   RULE_specialWindowAttribute = 144, RULE_windowAttribute = 145, 
-                   RULE_windowAttributeList = 146, RULE_optionStatement = 147, 
-                   RULE_optionsStatement = 148, RULE_screenStatement = 149, 
-                   RULE_sqlStatements = 150, RULE_cursorManipulationStatement = 151, 
-                   RULE_columnsList = 152, RULE_statementId = 153, RULE_cursorName = 154, 
-                   RULE_dataType = 155, RULE_columnItem = 156, RULE_dataDefinitionStatement = 157, 
-                   RULE_dataManipulationStatement = 158, RULE_sqlSelectStatement = 159, 
-                   RULE_columnsTableId = 160, RULE_selectList = 161, RULE_headSelectStatement = 162, 
-                   RULE_tableQualifier = 163, RULE_tableIdentifier = 164, 
-                   RULE_fromTable = 165, RULE_tableExpression = 166, RULE_fromSelectStatement = 167, 
-                   RULE_aliasName = 168, RULE_mainSelectStatement = 169, 
-                   RULE_unionSelectStatement = 170, RULE_simpleSelectStatement = 171, 
-                   RULE_whereStatement = 172, RULE_groupByStatement = 173, 
-                   RULE_havingStatement = 174, RULE_orderbyColumn = 175, 
-                   RULE_orderbyStatement = 176, RULE_sqlLoadStatement = 177, 
-                   RULE_sqlUnLoadStatement = 178, RULE_sqlInsertStatement = 179, 
-                   RULE_sqlUpdateStatement = 180, RULE_sqlDeleteStatement = 181, 
-                   RULE_actualParameterList = 182, RULE_dynamicManagementStatement = 183, 
-                   RULE_queryOptimizationStatement = 184, RULE_databaseDeclaration = 185, 
-                   RULE_clientServerStatement = 186, RULE_dataIntegrityStatement = 187, 
-                   RULE_wheneverStatement = 188, RULE_wheneverType = 189, 
-                   RULE_wheneverFlow = 190, RULE_reportDefinition = 191, 
-                   RULE_outputReport = 192, RULE_formatReport = 193, RULE_eol = 194, 
-                   RULE_unsignedNumber = 195, RULE_unsignedInteger = 196, 
-                   RULE_unsignedReal = 197, RULE_sign = 198, RULE_constantIdentifier = 199
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_compilation_unit = 0, RULE_identifier = 1, RULE_mainBlock = 2, 
+            RULE_mainStatements = 3, RULE_deferStatement = 4, RULE_functionOrReportDefinitions = 5, 
+            RULE_returnStatement = 6, RULE_functionDefinition = 7, RULE_parameterList = 8, 
+            RULE_parameterGroup = 9, RULE_globalDeclaration = 10, RULE_typeDeclarations = 11, 
+            RULE_typeDeclaration = 12, RULE_variableDeclaration = 13, RULE_type = 14, 
+            RULE_indirectType = 15, RULE_typeIdentifier = 16, RULE_largeType = 17, 
+            RULE_numberType = 18, RULE_charType = 19, RULE_timeType = 20, 
+            RULE_datetimeQualifier = 21, RULE_intervalQualifier = 22, RULE_unitType = 23, 
+            RULE_yearQualifier = 24, RULE_monthQualifier = 25, RULE_dayQualifier = 26, 
+            RULE_hourQualifier = 27, RULE_minuteQualifier = 28, RULE_secondQualifier = 29, 
+            RULE_fractionQualifier = 30, RULE_structuredType = 31, RULE_recordType = 32, 
+            RULE_arrayIndexer = 33, RULE_arrayType = 34, RULE_dynArrayType = 35, 
+            RULE_string = 36, RULE_statement = 37, RULE_codeBlock = 38, 
+            RULE_label = 39, RULE_unlabelledStatement = 40, RULE_simpleStatement = 41, 
+            RULE_runStatement = 42, RULE_assignmentStatement = 43, RULE_procedureStatement = 44, 
+            RULE_procedureIdentifier = 45, RULE_actualParameter = 46, RULE_gotoStatement = 47, 
+            RULE_condition = 48, RULE_logicalTerm = 49, RULE_logicalFactor = 50, 
+            RULE_quantifiedFactor = 51, RULE_expressionSet = 52, RULE_subquery = 53, 
+            RULE_sqlExpression = 54, RULE_sqlAlias = 55, RULE_sqlTerm = 56, 
+            RULE_sqlMultiply = 57, RULE_sqlFactor = 58, RULE_sqlFactor2 = 59, 
+            RULE_sqlExpressionList = 60, RULE_sqlLiteral = 61, RULE_sqlVariable = 62, 
+            RULE_sqlFunction = 63, RULE_dateFunction = 64, RULE_numberFunction = 65, 
+            RULE_charFunction = 66, RULE_groupFunction = 67, RULE_otherFunction = 68, 
+            RULE_sqlPseudoColumn = 69, RULE_relationalOperator = 70, RULE_ifCondition = 71, 
+            RULE_ifCondition2 = 72, RULE_ifLogicalTerm = 73, RULE_expression = 74, 
+            RULE_ifLogicalFactor = 75, RULE_simpleExpression = 76, RULE_addingOperator = 77, 
+            RULE_term = 78, RULE_multiplyingOperator = 79, RULE_factor = 80, 
+            RULE_functionDesignator = 81, RULE_functionIdentifier = 82, 
+            RULE_unsignedConstant = 83, RULE_constant = 84, RULE_numericConstant = 85, 
+            RULE_variable = 86, RULE_entireVariable = 87, RULE_variableIdentifier = 88, 
+            RULE_indexingVariable = 89, RULE_componentVariable = 90, RULE_recordVariable = 91, 
+            RULE_fieldIdentifier = 92, RULE_structuredStatement = 93, RULE_conditionalStatement = 94, 
+            RULE_ifStatement = 95, RULE_repetetiveStatement = 96, RULE_whileStatement = 97, 
+            RULE_forStatement = 98, RULE_forList = 99, RULE_controlVariable = 100, 
+            RULE_initialValue = 101, RULE_finalValue = 102, RULE_forEachStatement = 103, 
+            RULE_variableList = 104, RULE_variableOrConstantList = 105, 
+            RULE_caseStatement = 106, RULE_otherFGLStatement = 107, RULE_otherProgramFlowStatement = 108, 
+            RULE_exitTypes = 109, RULE_exitStatements = 110, RULE_continueStatements = 111, 
+            RULE_otherStorageStatement = 112, RULE_printExpressionItem = 113, 
+            RULE_printExpressionList = 114, RULE_reportStatement = 115, 
+            RULE_fieldName = 116, RULE_thruNotation = 117, RULE_fieldList = 118, 
+            RULE_keyList = 119, RULE_constructEvents = 120, RULE_constructInsideStatement = 121, 
+            RULE_specialAttribute = 122, RULE_attribute = 123, RULE_attributeList = 124, 
+            RULE_constructGroupStatement = 125, RULE_constructStatement = 126, 
+            RULE_displayArrayStatement = 127, RULE_displayInsideStatement = 128, 
+            RULE_displayEvents = 129, RULE_displayStatement = 130, RULE_errorStatement = 131, 
+            RULE_messageStatement = 132, RULE_promptStatement = 133, RULE_inputEvents = 134, 
+            RULE_inputInsideStatement = 135, RULE_inputGroupStatement = 136, 
+            RULE_inputStatement = 137, RULE_inputArrayStatement = 138, RULE_menuEvents = 139, 
+            RULE_menuInsideStatement = 140, RULE_menuGroupStatement = 141, 
+            RULE_menuStatement = 142, RULE_reservedLinePosition = 143, RULE_specialWindowAttribute = 144, 
+            RULE_windowAttribute = 145, RULE_windowAttributeList = 146, 
+            RULE_optionStatement = 147, RULE_optionsStatement = 148, RULE_screenStatement = 149, 
+            RULE_sqlStatements = 150, RULE_cursorManipulationStatement = 151, 
+            RULE_columnsList = 152, RULE_statementId = 153, RULE_cursorName = 154, 
+            RULE_dataType = 155, RULE_columnItem = 156, RULE_dataDefinitionStatement = 157, 
+            RULE_dataManipulationStatement = 158, RULE_sqlSelectStatement = 159, 
+            RULE_columnsTableId = 160, RULE_selectList = 161, RULE_headSelectStatement = 162, 
+            RULE_tableQualifier = 163, RULE_tableIdentifier = 164, RULE_fromTable = 165, 
+            RULE_tableExpression = 166, RULE_fromSelectStatement = 167, 
+            RULE_aliasName = 168, RULE_mainSelectStatement = 169, RULE_unionSelectStatement = 170, 
+            RULE_simpleSelectStatement = 171, RULE_whereStatement = 172, 
+            RULE_groupByStatement = 173, RULE_havingStatement = 174, RULE_orderbyColumn = 175, 
+            RULE_orderbyStatement = 176, RULE_sqlLoadStatement = 177, RULE_sqlUnLoadStatement = 178, 
+            RULE_sqlInsertStatement = 179, RULE_sqlUpdateStatement = 180, 
+            RULE_sqlDeleteStatement = 181, RULE_actualParameterList = 182, 
+            RULE_dynamicManagementStatement = 183, RULE_queryOptimizationStatement = 184, 
+            RULE_databaseDeclaration = 185, RULE_clientServerStatement = 186, 
+            RULE_dataIntegrityStatement = 187, RULE_wheneverStatement = 188, 
+            RULE_wheneverType = 189, RULE_wheneverFlow = 190, RULE_reportDefinition = 191, 
+            RULE_outputReport = 192, RULE_formatReport = 193, RULE_eol = 194, 
+            RULE_unsignedNumber = 195, RULE_unsignedInteger = 196, RULE_unsignedReal = 197, 
+            RULE_sign = 198, RULE_constantIdentifier = 199
+
+	public
+	static let ruleNames: [String] = [
 		"compilation_unit", "identifier", "mainBlock", "mainStatements", "deferStatement", 
 		"functionOrReportDefinitions", "returnStatement", "functionDefinition", 
 		"parameterList", "parameterGroup", "globalDeclaration", "typeDeclarations", 
@@ -296,98 +295,89 @@ open class informixParser: Parser {
 		"WS", "CHARACTER", "ESC", "QUOTED_STRING", "DIV", "STEP", "MEMORY", "SAME", 
 		"WRAP", "PRIOR", "SECONDS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "informix.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return informixParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "informix.g4" }
+	override open
+	func getSerializedATN() -> String { return informixParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return informixParser.ruleNames }
+	override open
+	func getATN() -> ATN { return informixParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return informixParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return informixParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return informixParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,informixParser._ATN,informixParser._decisionToDFA, informixParser._sharedContextCache)
 	}
-	open class Compilation_unitContext:ParserRuleContext {
-		open func mainBlock() -> MainBlockContext? {
-			return getRuleContext(MainBlockContext.self,0)
+
+	public class Compilation_unitContext: ParserRuleContext {
+			open
+			func mainBlock() -> MainBlockContext? {
+				return getRuleContext(MainBlockContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func databaseDeclaration() -> DatabaseDeclarationContext? {
+				return getRuleContext(DatabaseDeclarationContext.self, 0)
+			}
+			open
+			func globalDeclaration() -> GlobalDeclarationContext? {
+				return getRuleContext(GlobalDeclarationContext.self, 0)
+			}
+			open
+			func typeDeclarations() -> TypeDeclarationsContext? {
+				return getRuleContext(TypeDeclarationsContext.self, 0)
+			}
+			open
+			func functionOrReportDefinitions() -> FunctionOrReportDefinitionsContext? {
+				return getRuleContext(FunctionOrReportDefinitionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_compilation_unit
 		}
-		open func EOF() -> TerminalNode? { return getToken(informixParser.Tokens.EOF.rawValue, 0) }
-		open func databaseDeclaration() -> DatabaseDeclarationContext? {
-			return getRuleContext(DatabaseDeclarationContext.self,0)
-		}
-		open func globalDeclaration() -> GlobalDeclarationContext? {
-			return getRuleContext(GlobalDeclarationContext.self,0)
-		}
-		open func typeDeclarations() -> TypeDeclarationsContext? {
-			return getRuleContext(TypeDeclarationsContext.self,0)
-		}
-		open func functionOrReportDefinitions() -> FunctionOrReportDefinitionsContext? {
-			return getRuleContext(FunctionOrReportDefinitionsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_compilation_unit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterCompilation_unit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterCompilation_unit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitCompilation_unit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitCompilation_unit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitCompilation_unit(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitCompilation_unit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitCompilation_unit(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitCompilation_unit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compilation_unit() throws -> Compilation_unitContext {
+	 open func compilation_unit() throws -> Compilation_unitContext {
 		var _localctx: Compilation_unitContext = Compilation_unitContext(_ctx, getState())
 		try enterRule(_localctx, 0, informixParser.RULE_compilation_unit)
 		var _la: Int = 0
@@ -463,35 +453,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class IdentifierContext:ParserRuleContext {
-		open func IDENT() -> TerminalNode? { return getToken(informixParser.Tokens.IDENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterIdentifier(self)
+
+	public class IdentifierContext: ParserRuleContext {
+			open
+			func IDENT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.IDENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_identifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitIdentifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitIdentifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifier() throws -> IdentifierContext {
+	 open func identifier() throws -> IdentifierContext {
 		var _localctx: IdentifierContext = IdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 2, informixParser.RULE_identifier)
 		defer {
@@ -511,51 +509,67 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MainBlockContext:ParserRuleContext {
-		open func MAIN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.MAIN.rawValue) }
-		open func MAIN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.MAIN.rawValue, i)
+
+	public class MainBlockContext: ParserRuleContext {
+			open
+			func MAIN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.MAIN.rawValue)
+			}
+			open
+			func MAIN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.MAIN.rawValue, i)
+			}
+			open
+			func eol() -> [EolContext] {
+				return getRuleContexts(EolContext.self)
+			}
+			open
+			func eol(_ i: Int) -> EolContext? {
+				return getRuleContext(EolContext.self, i)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func typeDeclarations() -> TypeDeclarationsContext? {
+				return getRuleContext(TypeDeclarationsContext.self, 0)
+			}
+			open
+			func mainStatements() -> MainStatementsContext? {
+				return getRuleContext(MainStatementsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_mainBlock
 		}
-		open func eol() -> Array<EolContext> {
-			return getRuleContexts(EolContext.self)
-		}
-		open func eol(_ i: Int) -> EolContext? {
-			return getRuleContext(EolContext.self,i)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func typeDeclarations() -> TypeDeclarationsContext? {
-			return getRuleContext(TypeDeclarationsContext.self,0)
-		}
-		open func mainStatements() -> MainStatementsContext? {
-			return getRuleContext(MainStatementsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_mainBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMainBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMainBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMainBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMainBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMainBlock(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMainBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMainBlock(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMainBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mainBlock() throws -> MainBlockContext {
+	 open func mainBlock() throws -> MainBlockContext {
 		var _localctx: MainBlockContext = MainBlockContext(_ctx, getState())
 		try enterRule(_localctx, 4, informixParser.RULE_mainBlock)
 		var _la: Int = 0
@@ -643,52 +657,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MainStatementsContext:ParserRuleContext {
-		open func deferStatement() -> Array<DeferStatementContext> {
-			return getRuleContexts(DeferStatementContext.self)
+
+	public class MainStatementsContext: ParserRuleContext {
+			open
+			func deferStatement() -> [DeferStatementContext] {
+				return getRuleContexts(DeferStatementContext.self)
+			}
+			open
+			func deferStatement(_ i: Int) -> DeferStatementContext? {
+				return getRuleContext(DeferStatementContext.self, i)
+			}
+			open
+			func codeBlock() -> [CodeBlockContext] {
+				return getRuleContexts(CodeBlockContext.self)
+			}
+			open
+			func codeBlock(_ i: Int) -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, i)
+			}
+			open
+			func eol() -> [EolContext] {
+				return getRuleContexts(EolContext.self)
+			}
+			open
+			func eol(_ i: Int) -> EolContext? {
+				return getRuleContext(EolContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_mainStatements
 		}
-		open func deferStatement(_ i: Int) -> DeferStatementContext? {
-			return getRuleContext(DeferStatementContext.self,i)
-		}
-		open func codeBlock() -> Array<CodeBlockContext> {
-			return getRuleContexts(CodeBlockContext.self)
-		}
-		open func codeBlock(_ i: Int) -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,i)
-		}
-		open func eol() -> Array<EolContext> {
-			return getRuleContexts(EolContext.self)
-		}
-		open func eol(_ i: Int) -> EolContext? {
-			return getRuleContext(EolContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_mainStatements }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMainStatements(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMainStatements(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMainStatements(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMainStatements(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMainStatements(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMainStatements(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMainStatements(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMainStatements(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mainStatements() throws -> MainStatementsContext {
+	 open func mainStatements() throws -> MainStatementsContext {
 		var _localctx: MainStatementsContext = MainStatementsContext(_ctx, getState())
 		try enterRule(_localctx, 6, informixParser.RULE_mainStatements)
 		var _la: Int = 0
@@ -786,7 +811,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(437); 
@@ -827,40 +852,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DeferStatementContext:ParserRuleContext {
-		open func DEFER() -> TerminalNode? { return getToken(informixParser.Tokens.DEFER.rawValue, 0) }
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
+
+	public class DeferStatementContext: ParserRuleContext {
+			open
+			func DEFER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DEFER.rawValue, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func INTERRUPT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTERRUPT.rawValue, 0)
+			}
+			open
+			func QUIT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.QUIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_deferStatement
 		}
-		open func INTERRUPT() -> TerminalNode? { return getToken(informixParser.Tokens.INTERRUPT.rawValue, 0) }
-		open func QUIT() -> TerminalNode? { return getToken(informixParser.Tokens.QUIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_deferStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDeferStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDeferStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDeferStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDeferStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDeferStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDeferStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDeferStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDeferStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func deferStatement() throws -> DeferStatementContext {
+	 open func deferStatement() throws -> DeferStatementContext {
 		var _localctx: DeferStatementContext = DeferStatementContext(_ctx, getState())
 		try enterRule(_localctx, 8, informixParser.RULE_deferStatement)
 		var _la: Int = 0
@@ -897,46 +937,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionOrReportDefinitionsContext:ParserRuleContext {
-		open func reportDefinition() -> Array<ReportDefinitionContext> {
-			return getRuleContexts(ReportDefinitionContext.self)
+
+	public class FunctionOrReportDefinitionsContext: ParserRuleContext {
+			open
+			func reportDefinition() -> [ReportDefinitionContext] {
+				return getRuleContexts(ReportDefinitionContext.self)
+			}
+			open
+			func reportDefinition(_ i: Int) -> ReportDefinitionContext? {
+				return getRuleContext(ReportDefinitionContext.self, i)
+			}
+			open
+			func functionDefinition() -> [FunctionDefinitionContext] {
+				return getRuleContexts(FunctionDefinitionContext.self)
+			}
+			open
+			func functionDefinition(_ i: Int) -> FunctionDefinitionContext? {
+				return getRuleContext(FunctionDefinitionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_functionOrReportDefinitions
 		}
-		open func reportDefinition(_ i: Int) -> ReportDefinitionContext? {
-			return getRuleContext(ReportDefinitionContext.self,i)
-		}
-		open func functionDefinition() -> Array<FunctionDefinitionContext> {
-			return getRuleContexts(FunctionDefinitionContext.self)
-		}
-		open func functionDefinition(_ i: Int) -> FunctionDefinitionContext? {
-			return getRuleContext(FunctionDefinitionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_functionOrReportDefinitions }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFunctionOrReportDefinitions(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFunctionOrReportDefinitions(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFunctionOrReportDefinitions(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFunctionOrReportDefinitions(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFunctionOrReportDefinitions(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFunctionOrReportDefinitions(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFunctionOrReportDefinitions(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFunctionOrReportDefinitions(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionOrReportDefinitions() throws -> FunctionOrReportDefinitionsContext {
+	 open func functionOrReportDefinitions() throws -> FunctionOrReportDefinitionsContext {
 		var _localctx: FunctionOrReportDefinitionsContext = FunctionOrReportDefinitionsContext(_ctx, getState())
 		try enterRule(_localctx, 10, informixParser.RULE_functionOrReportDefinitions)
 		var _la: Int = 0
@@ -964,7 +1013,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(447); 
@@ -986,38 +1035,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ReturnStatementContext:ParserRuleContext {
-		open func RETURN() -> TerminalNode? { return getToken(informixParser.Tokens.RETURN.rawValue, 0) }
-		open func variableOrConstantList() -> VariableOrConstantListContext? {
-			return getRuleContext(VariableOrConstantListContext.self,0)
+
+	public class ReturnStatementContext: ParserRuleContext {
+			open
+			func RETURN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RETURN.rawValue, 0)
+			}
+			open
+			func variableOrConstantList() -> VariableOrConstantListContext? {
+				return getRuleContext(VariableOrConstantListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_returnStatement
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_returnStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterReturnStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterReturnStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitReturnStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitReturnStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitReturnStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitReturnStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitReturnStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitReturnStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func returnStatement() throws -> ReturnStatementContext {
+	 open func returnStatement() throws -> ReturnStatementContext {
 		var _localctx: ReturnStatementContext = ReturnStatementContext(_ctx, getState())
 		try enterRule(_localctx, 12, informixParser.RULE_returnStatement)
 		defer {
@@ -1047,57 +1105,75 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionDefinitionContext:ParserRuleContext {
-		open func FUNCTION() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.FUNCTION.rawValue) }
-		open func FUNCTION(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.FUNCTION.rawValue, i)
+
+	public class FunctionDefinitionContext: ParserRuleContext {
+			open
+			func FUNCTION() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.FUNCTION.rawValue)
+			}
+			open
+			func FUNCTION(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.FUNCTION.rawValue, i)
+			}
+			open
+			func functionIdentifier() -> FunctionIdentifierContext? {
+				return getRuleContext(FunctionIdentifierContext.self, 0)
+			}
+			open
+			func eol() -> [EolContext] {
+				return getRuleContexts(EolContext.self)
+			}
+			open
+			func eol(_ i: Int) -> EolContext? {
+				return getRuleContext(EolContext.self, i)
+			}
+			open
+			func typeDeclarations() -> TypeDeclarationsContext? {
+				return getRuleContext(TypeDeclarationsContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func parameterList() -> ParameterListContext? {
+				return getRuleContext(ParameterListContext.self, 0)
+			}
+			open
+			func codeBlock() -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_functionDefinition
 		}
-		open func functionIdentifier() -> FunctionIdentifierContext? {
-			return getRuleContext(FunctionIdentifierContext.self,0)
-		}
-		open func eol() -> Array<EolContext> {
-			return getRuleContexts(EolContext.self)
-		}
-		open func eol(_ i: Int) -> EolContext? {
-			return getRuleContext(EolContext.self,i)
-		}
-		open func typeDeclarations() -> TypeDeclarationsContext? {
-			return getRuleContext(TypeDeclarationsContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func parameterList() -> ParameterListContext? {
-			return getRuleContext(ParameterListContext.self,0)
-		}
-		open func codeBlock() -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_functionDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFunctionDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFunctionDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFunctionDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFunctionDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFunctionDefinition(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFunctionDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFunctionDefinition(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFunctionDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionDefinition() throws -> FunctionDefinitionContext {
+	 open func functionDefinition() throws -> FunctionDefinitionContext {
 		var _localctx: FunctionDefinitionContext = FunctionDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 14, informixParser.RULE_functionDefinition)
 		var _la: Int = 0
@@ -1175,42 +1251,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ParameterListContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func parameterGroup() -> Array<ParameterGroupContext> {
-			return getRuleContexts(ParameterGroupContext.self)
+
+	public class ParameterListContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func parameterGroup() -> [ParameterGroupContext] {
+				return getRuleContexts(ParameterGroupContext.self)
+			}
+			open
+			func parameterGroup(_ i: Int) -> ParameterGroupContext? {
+				return getRuleContext(ParameterGroupContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_parameterList
 		}
-		open func parameterGroup(_ i: Int) -> ParameterGroupContext? {
-			return getRuleContext(ParameterGroupContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_parameterList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterParameterList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterParameterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitParameterList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitParameterList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitParameterList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitParameterList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitParameterList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitParameterList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameterList() throws -> ParameterListContext {
+	 open func parameterList() throws -> ParameterListContext {
 		var _localctx: ParameterListContext = ParameterListContext(_ctx, getState())
 		try enterRule(_localctx, 16, informixParser.RULE_parameterList)
 		var _la: Int = 0
@@ -1249,44 +1338,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ParameterGroupContext:ParserRuleContext {
-		open func identifier() -> Array<IdentifierContext> {
-			return getRuleContexts(IdentifierContext.self)
+
+	public class ParameterGroupContext: ParserRuleContext {
+			open
+			func identifier() -> [IdentifierContext] {
+				return getRuleContexts(IdentifierContext.self)
+			}
+			open
+			func identifier(_ i: Int) -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_parameterGroup
 		}
-		open func identifier(_ i: Int) -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_parameterGroup }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterParameterGroup(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterParameterGroup(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitParameterGroup(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitParameterGroup(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitParameterGroup(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitParameterGroup(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitParameterGroup(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitParameterGroup(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameterGroup() throws -> ParameterGroupContext {
+	 open func parameterGroup() throws -> ParameterGroupContext {
 		var _localctx: ParameterGroupContext = ParameterGroupContext(_ctx, getState())
 		try enterRule(_localctx, 18, informixParser.RULE_parameterGroup)
 		var _la: Int = 0
@@ -1325,51 +1425,67 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class GlobalDeclarationContext:ParserRuleContext {
-		open func GLOBALS() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.GLOBALS.rawValue) }
-		open func GLOBALS(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.GLOBALS.rawValue, i)
+
+	public class GlobalDeclarationContext: ParserRuleContext {
+			open
+			func GLOBALS() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.GLOBALS.rawValue)
+			}
+			open
+			func GLOBALS(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.GLOBALS.rawValue, i)
+			}
+			open
+			func eol() -> [EolContext] {
+				return getRuleContexts(EolContext.self)
+			}
+			open
+			func eol(_ i: Int) -> EolContext? {
+				return getRuleContext(EolContext.self, i)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func typeDeclarations() -> TypeDeclarationsContext? {
+				return getRuleContext(TypeDeclarationsContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_globalDeclaration
 		}
-		open func eol() -> Array<EolContext> {
-			return getRuleContexts(EolContext.self)
-		}
-		open func eol(_ i: Int) -> EolContext? {
-			return getRuleContext(EolContext.self,i)
-		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func typeDeclarations() -> TypeDeclarationsContext? {
-			return getRuleContext(TypeDeclarationsContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_globalDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterGlobalDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterGlobalDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitGlobalDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitGlobalDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitGlobalDeclaration(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitGlobalDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitGlobalDeclaration(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitGlobalDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func globalDeclaration() throws -> GlobalDeclarationContext {
+	 open func globalDeclaration() throws -> GlobalDeclarationContext {
 		var _localctx: GlobalDeclarationContext = GlobalDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 20, informixParser.RULE_globalDeclaration)
 		defer {
@@ -1400,7 +1516,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(493)
 		 	try eol()
@@ -1414,40 +1530,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class TypeDeclarationsContext:ParserRuleContext {
-		open func typeDeclaration() -> Array<TypeDeclarationContext> {
-			return getRuleContexts(TypeDeclarationContext.self)
+
+	public class TypeDeclarationsContext: ParserRuleContext {
+			open
+			func typeDeclaration() -> [TypeDeclarationContext] {
+				return getRuleContexts(TypeDeclarationContext.self)
+			}
+			open
+			func typeDeclaration(_ i: Int) -> TypeDeclarationContext? {
+				return getRuleContext(TypeDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_typeDeclarations
 		}
-		open func typeDeclaration(_ i: Int) -> TypeDeclarationContext? {
-			return getRuleContext(TypeDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_typeDeclarations }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterTypeDeclarations(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterTypeDeclarations(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitTypeDeclarations(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitTypeDeclarations(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitTypeDeclarations(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitTypeDeclarations(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitTypeDeclarations(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitTypeDeclarations(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeDeclarations() throws -> TypeDeclarationsContext {
+	 open func typeDeclarations() throws -> TypeDeclarationsContext {
 		var _localctx: TypeDeclarationsContext = TypeDeclarationsContext(_ctx, getState())
 		try enterRule(_localctx, 22, informixParser.RULE_typeDeclarations)
 		var _la: Int = 0
@@ -1482,45 +1605,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class TypeDeclarationContext:ParserRuleContext {
-		open func DEFINE() -> TerminalNode? { return getToken(informixParser.Tokens.DEFINE.rawValue, 0) }
-		open func variableDeclaration() -> Array<VariableDeclarationContext> {
-			return getRuleContexts(VariableDeclarationContext.self)
+
+	public class TypeDeclarationContext: ParserRuleContext {
+			open
+			func DEFINE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DEFINE.rawValue, 0)
+			}
+			open
+			func variableDeclaration() -> [VariableDeclarationContext] {
+				return getRuleContexts(VariableDeclarationContext.self)
+			}
+			open
+			func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
+				return getRuleContext(VariableDeclarationContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_typeDeclaration
 		}
-		open func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
-			return getRuleContext(VariableDeclarationContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_typeDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterTypeDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterTypeDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitTypeDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitTypeDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitTypeDeclaration(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitTypeDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitTypeDeclaration(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitTypeDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeDeclaration() throws -> TypeDeclarationContext {
+	 open func typeDeclaration() throws -> TypeDeclarationContext {
 		var _localctx: TypeDeclarationContext = TypeDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 24, informixParser.RULE_typeDeclaration)
 		var _la: Int = 0
@@ -1561,50 +1698,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclarationContext:ParserRuleContext {
-		open func constantIdentifier() -> Array<ConstantIdentifierContext> {
-			return getRuleContexts(ConstantIdentifierContext.self)
+
+	public class VariableDeclarationContext: ParserRuleContext {
+			open
+			func constantIdentifier() -> [ConstantIdentifierContext] {
+				return getRuleContexts(ConstantIdentifierContext.self)
+			}
+			open
+			func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, i)
+			}
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_variableDeclaration
 		}
-		open func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,i)
-		}
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
-		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_variableDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterVariableDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterVariableDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitVariableDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitVariableDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitVariableDeclaration(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitVariableDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclaration() throws -> VariableDeclarationContext {
+	 open func variableDeclaration() throws -> VariableDeclarationContext {
 		var _localctx: VariableDeclarationContext = VariableDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 26, informixParser.RULE_variableDeclaration)
 		var _la: Int = 0
@@ -1679,46 +1829,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func typeIdentifier() -> TypeIdentifierContext? {
-			return getRuleContext(TypeIdentifierContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func typeIdentifier() -> TypeIdentifierContext? {
+				return getRuleContext(TypeIdentifierContext.self, 0)
+			}
+			open
+			func indirectType() -> IndirectTypeContext? {
+				return getRuleContext(IndirectTypeContext.self, 0)
+			}
+			open
+			func largeType() -> LargeTypeContext? {
+				return getRuleContext(LargeTypeContext.self, 0)
+			}
+			open
+			func structuredType() -> StructuredTypeContext? {
+				return getRuleContext(StructuredTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_type
 		}
-		open func indirectType() -> IndirectTypeContext? {
-			return getRuleContext(IndirectTypeContext.self,0)
-		}
-		open func largeType() -> LargeTypeContext? {
-			return getRuleContext(LargeTypeContext.self,0)
-		}
-		open func structuredType() -> StructuredTypeContext? {
-			return getRuleContext(StructuredTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 28, informixParser.RULE_type)
 		defer {
@@ -1776,7 +1935,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1787,42 +1946,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class IndirectTypeContext:ParserRuleContext {
-		open func LIKE() -> TerminalNode? { return getToken(informixParser.Tokens.LIKE.rawValue, 0) }
-		open func tableIdentifier() -> TableIdentifierContext? {
-			return getRuleContext(TableIdentifierContext.self,0)
+
+	public class IndirectTypeContext: ParserRuleContext {
+			open
+			func LIKE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LIKE.rawValue, 0)
+			}
+			open
+			func tableIdentifier() -> TableIdentifierContext? {
+				return getRuleContext(TableIdentifierContext.self, 0)
+			}
+			open
+			func DOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOT.rawValue, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_indirectType
 		}
-		open func DOT() -> TerminalNode? { return getToken(informixParser.Tokens.DOT.rawValue, 0) }
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_indirectType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterIndirectType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterIndirectType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitIndirectType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitIndirectType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitIndirectType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitIndirectType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitIndirectType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitIndirectType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func indirectType() throws -> IndirectTypeContext {
+	 open func indirectType() throws -> IndirectTypeContext {
 		var _localctx: IndirectTypeContext = IndirectTypeContext(_ctx, getState())
 		try enterRule(_localctx, 30, informixParser.RULE_indirectType)
 		defer {
@@ -1848,43 +2020,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class TypeIdentifierContext:ParserRuleContext {
-		open func charType() -> CharTypeContext? {
-			return getRuleContext(CharTypeContext.self,0)
+
+	public class TypeIdentifierContext: ParserRuleContext {
+			open
+			func charType() -> CharTypeContext? {
+				return getRuleContext(CharTypeContext.self, 0)
+			}
+			open
+			func numberType() -> NumberTypeContext? {
+				return getRuleContext(NumberTypeContext.self, 0)
+			}
+			open
+			func timeType() -> TimeTypeContext? {
+				return getRuleContext(TimeTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_typeIdentifier
 		}
-		open func numberType() -> NumberTypeContext? {
-			return getRuleContext(NumberTypeContext.self,0)
-		}
-		open func timeType() -> TimeTypeContext? {
-			return getRuleContext(TimeTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_typeIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterTypeIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterTypeIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitTypeIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitTypeIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitTypeIdentifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitTypeIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitTypeIdentifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitTypeIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeIdentifier() throws -> TypeIdentifierContext {
+	 open func typeIdentifier() throws -> TypeIdentifierContext {
 		var _localctx: TypeIdentifierContext = TypeIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 32, informixParser.RULE_typeIdentifier)
 		defer {
@@ -1930,7 +2110,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1941,36 +2121,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class LargeTypeContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(informixParser.Tokens.TEXT.rawValue, 0) }
-		open func BYTE() -> TerminalNode? { return getToken(informixParser.Tokens.BYTE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_largeType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterLargeType(self)
+
+	public class LargeTypeContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TEXT.rawValue, 0)
+			}
+			open
+			func BYTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BYTE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_largeType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterLargeType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitLargeType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitLargeType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitLargeType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitLargeType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitLargeType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitLargeType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func largeType() throws -> LargeTypeContext {
+	 open func largeType() throws -> LargeTypeContext {
 		var _localctx: LargeTypeContext = LargeTypeContext(_ctx, getState())
 		try enterRule(_localctx, 34, informixParser.RULE_largeType)
 		var _la: Int = 0
@@ -2003,55 +2194,107 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class NumberTypeContext:ParserRuleContext {
-		open func BIGINT() -> TerminalNode? { return getToken(informixParser.Tokens.BIGINT.rawValue, 0) }
-		open func INTEGER() -> TerminalNode? { return getToken(informixParser.Tokens.INTEGER.rawValue, 0) }
-		open func INT() -> TerminalNode? { return getToken(informixParser.Tokens.INT.rawValue, 0) }
-		open func SMALLINT() -> TerminalNode? { return getToken(informixParser.Tokens.SMALLINT.rawValue, 0) }
-		open func REAL() -> TerminalNode? { return getToken(informixParser.Tokens.REAL.rawValue, 0) }
-		open func SMALLFLOAT() -> TerminalNode? { return getToken(informixParser.Tokens.SMALLFLOAT.rawValue, 0) }
-		open func DECIMAL() -> TerminalNode? { return getToken(informixParser.Tokens.DECIMAL.rawValue, 0) }
-		open func DEC() -> TerminalNode? { return getToken(informixParser.Tokens.DEC.rawValue, 0) }
-		open func NUMERIC() -> TerminalNode? { return getToken(informixParser.Tokens.NUMERIC.rawValue, 0) }
-		open func MONEY() -> TerminalNode? { return getToken(informixParser.Tokens.MONEY.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func numericConstant() -> Array<NumericConstantContext> {
-			return getRuleContexts(NumericConstantContext.self)
+
+	public class NumberTypeContext: ParserRuleContext {
+			open
+			func BIGINT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BIGINT.rawValue, 0)
+			}
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTEGER.rawValue, 0)
+			}
+			open
+			func INT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INT.rawValue, 0)
+			}
+			open
+			func SMALLINT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SMALLINT.rawValue, 0)
+			}
+			open
+			func REAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.REAL.rawValue, 0)
+			}
+			open
+			func SMALLFLOAT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SMALLFLOAT.rawValue, 0)
+			}
+			open
+			func DECIMAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DECIMAL.rawValue, 0)
+			}
+			open
+			func DEC() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DEC.rawValue, 0)
+			}
+			open
+			func NUMERIC() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NUMERIC.rawValue, 0)
+			}
+			open
+			func MONEY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MONEY.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func numericConstant() -> [NumericConstantContext] {
+				return getRuleContexts(NumericConstantContext.self)
+			}
+			open
+			func numericConstant(_ i: Int) -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, i)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func COMMA() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, 0)
+			}
+			open
+			func FLOAT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FLOAT.rawValue, 0)
+			}
+			open
+			func DOUBLE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOUBLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_numberType
 		}
-		open func numericConstant(_ i: Int) -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,i)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func COMMA() -> TerminalNode? { return getToken(informixParser.Tokens.COMMA.rawValue, 0) }
-		open func FLOAT() -> TerminalNode? { return getToken(informixParser.Tokens.FLOAT.rawValue, 0) }
-		open func DOUBLE() -> TerminalNode? { return getToken(informixParser.Tokens.DOUBLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_numberType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterNumberType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterNumberType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitNumberType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitNumberType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitNumberType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitNumberType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitNumberType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitNumberType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numberType() throws -> NumberTypeContext {
+	 open func numberType() throws -> NumberTypeContext {
 		var _localctx: NumberTypeContext = NumberTypeContext(_ctx, getState())
 		try enterRule(_localctx, 36, informixParser.RULE_numberType)
 		var _la: Int = 0
@@ -2178,7 +2421,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2189,48 +2432,79 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class CharTypeContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func numericConstant() -> Array<NumericConstantContext> {
-			return getRuleContexts(NumericConstantContext.self)
+
+	public class CharTypeContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func numericConstant() -> [NumericConstantContext] {
+				return getRuleContexts(NumericConstantContext.self)
+			}
+			open
+			func numericConstant(_ i: Int) -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, i)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func VARCHAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.VARCHAR.rawValue, 0)
+			}
+			open
+			func NVARCHAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NVARCHAR.rawValue, 0)
+			}
+			open
+			func COMMA() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, 0)
+			}
+			open
+			func CHAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CHAR.rawValue, 0)
+			}
+			open
+			func NCHAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NCHAR.rawValue, 0)
+			}
+			open
+			func CHARACTER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CHARACTER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_charType
 		}
-		open func numericConstant(_ i: Int) -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,i)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func VARCHAR() -> TerminalNode? { return getToken(informixParser.Tokens.VARCHAR.rawValue, 0) }
-		open func NVARCHAR() -> TerminalNode? { return getToken(informixParser.Tokens.NVARCHAR.rawValue, 0) }
-		open func COMMA() -> TerminalNode? { return getToken(informixParser.Tokens.COMMA.rawValue, 0) }
-		open func CHAR() -> TerminalNode? { return getToken(informixParser.Tokens.CHAR.rawValue, 0) }
-		open func NCHAR() -> TerminalNode? { return getToken(informixParser.Tokens.NCHAR.rawValue, 0) }
-		open func CHARACTER() -> TerminalNode? { return getToken(informixParser.Tokens.CHARACTER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_charType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterCharType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterCharType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitCharType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitCharType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitCharType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitCharType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitCharType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitCharType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func charType() throws -> CharTypeContext {
+	 open func charType() throws -> CharTypeContext {
 		var _localctx: CharTypeContext = CharTypeContext(_ctx, getState())
 		try enterRule(_localctx, 38, informixParser.RULE_charType)
 		var _la: Int = 0
@@ -2320,7 +2594,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2331,43 +2605,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class TimeTypeContext:ParserRuleContext {
-		open func DATE() -> TerminalNode? { return getToken(informixParser.Tokens.DATE.rawValue, 0) }
-		open func DATETIME() -> TerminalNode? { return getToken(informixParser.Tokens.DATETIME.rawValue, 0) }
-		open func datetimeQualifier() -> DatetimeQualifierContext? {
-			return getRuleContext(DatetimeQualifierContext.self,0)
+
+	public class TimeTypeContext: ParserRuleContext {
+			open
+			func DATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DATE.rawValue, 0)
+			}
+			open
+			func DATETIME() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DATETIME.rawValue, 0)
+			}
+			open
+			func datetimeQualifier() -> DatetimeQualifierContext? {
+				return getRuleContext(DatetimeQualifierContext.self, 0)
+			}
+			open
+			func INTERVAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTERVAL.rawValue, 0)
+			}
+			open
+			func intervalQualifier() -> IntervalQualifierContext? {
+				return getRuleContext(IntervalQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_timeType
 		}
-		open func INTERVAL() -> TerminalNode? { return getToken(informixParser.Tokens.INTERVAL.rawValue, 0) }
-		open func intervalQualifier() -> IntervalQualifierContext? {
-			return getRuleContext(IntervalQualifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_timeType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterTimeType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterTimeType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitTimeType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitTimeType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitTimeType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitTimeType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitTimeType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitTimeType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func timeType() throws -> TimeTypeContext {
+	 open func timeType() throws -> TimeTypeContext {
 		var _localctx: TimeTypeContext = TimeTypeContext(_ctx, getState())
 		try enterRule(_localctx, 40, informixParser.RULE_timeType)
 		defer {
@@ -2402,7 +2692,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2413,63 +2703,99 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DatetimeQualifierContext:ParserRuleContext {
-		open func YEAR() -> TerminalNode? { return getToken(informixParser.Tokens.YEAR.rawValue, 0) }
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func yearQualifier() -> YearQualifierContext? {
-			return getRuleContext(YearQualifierContext.self,0)
+
+	public class DatetimeQualifierContext: ParserRuleContext {
+			open
+			func YEAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.YEAR.rawValue, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func yearQualifier() -> YearQualifierContext? {
+				return getRuleContext(YearQualifierContext.self, 0)
+			}
+			open
+			func MONTH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MONTH.rawValue, 0)
+			}
+			open
+			func monthQualifier() -> MonthQualifierContext? {
+				return getRuleContext(MonthQualifierContext.self, 0)
+			}
+			open
+			func DAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DAY.rawValue, 0)
+			}
+			open
+			func dayQualifier() -> DayQualifierContext? {
+				return getRuleContext(DayQualifierContext.self, 0)
+			}
+			open
+			func HOUR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HOUR.rawValue, 0)
+			}
+			open
+			func hourQualifier() -> HourQualifierContext? {
+				return getRuleContext(HourQualifierContext.self, 0)
+			}
+			open
+			func MINUTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MINUTE.rawValue, 0)
+			}
+			open
+			func minuteQualifier() -> MinuteQualifierContext? {
+				return getRuleContext(MinuteQualifierContext.self, 0)
+			}
+			open
+			func SECOND() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SECOND.rawValue, 0)
+			}
+			open
+			func secondQualifier() -> SecondQualifierContext? {
+				return getRuleContext(SecondQualifierContext.self, 0)
+			}
+			open
+			func FRACTION() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FRACTION.rawValue, 0)
+			}
+			open
+			func fractionQualifier() -> FractionQualifierContext? {
+				return getRuleContext(FractionQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_datetimeQualifier
 		}
-		open func MONTH() -> TerminalNode? { return getToken(informixParser.Tokens.MONTH.rawValue, 0) }
-		open func monthQualifier() -> MonthQualifierContext? {
-			return getRuleContext(MonthQualifierContext.self,0)
-		}
-		open func DAY() -> TerminalNode? { return getToken(informixParser.Tokens.DAY.rawValue, 0) }
-		open func dayQualifier() -> DayQualifierContext? {
-			return getRuleContext(DayQualifierContext.self,0)
-		}
-		open func HOUR() -> TerminalNode? { return getToken(informixParser.Tokens.HOUR.rawValue, 0) }
-		open func hourQualifier() -> HourQualifierContext? {
-			return getRuleContext(HourQualifierContext.self,0)
-		}
-		open func MINUTE() -> TerminalNode? { return getToken(informixParser.Tokens.MINUTE.rawValue, 0) }
-		open func minuteQualifier() -> MinuteQualifierContext? {
-			return getRuleContext(MinuteQualifierContext.self,0)
-		}
-		open func SECOND() -> TerminalNode? { return getToken(informixParser.Tokens.SECOND.rawValue, 0) }
-		open func secondQualifier() -> SecondQualifierContext? {
-			return getRuleContext(SecondQualifierContext.self,0)
-		}
-		open func FRACTION() -> TerminalNode? { return getToken(informixParser.Tokens.FRACTION.rawValue, 0) }
-		open func fractionQualifier() -> FractionQualifierContext? {
-			return getRuleContext(FractionQualifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_datetimeQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDatetimeQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDatetimeQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDatetimeQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDatetimeQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDatetimeQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDatetimeQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDatetimeQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDatetimeQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func datetimeQualifier() throws -> DatetimeQualifierContext {
+	 open func datetimeQualifier() throws -> DatetimeQualifierContext {
 		var _localctx: DatetimeQualifierContext = DatetimeQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 42, informixParser.RULE_datetimeQualifier)
 		defer {
@@ -2556,7 +2882,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2567,68 +2893,111 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class IntervalQualifierContext:ParserRuleContext {
-		open func YEAR() -> TerminalNode? { return getToken(informixParser.Tokens.YEAR.rawValue, 0) }
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func yearQualifier() -> YearQualifierContext? {
-			return getRuleContext(YearQualifierContext.self,0)
+
+	public class IntervalQualifierContext: ParserRuleContext {
+			open
+			func YEAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.YEAR.rawValue, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func yearQualifier() -> YearQualifierContext? {
+				return getRuleContext(YearQualifierContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func MONTH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MONTH.rawValue, 0)
+			}
+			open
+			func monthQualifier() -> MonthQualifierContext? {
+				return getRuleContext(MonthQualifierContext.self, 0)
+			}
+			open
+			func DAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DAY.rawValue, 0)
+			}
+			open
+			func dayQualifier() -> DayQualifierContext? {
+				return getRuleContext(DayQualifierContext.self, 0)
+			}
+			open
+			func HOUR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HOUR.rawValue, 0)
+			}
+			open
+			func hourQualifier() -> HourQualifierContext? {
+				return getRuleContext(HourQualifierContext.self, 0)
+			}
+			open
+			func MINUTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MINUTE.rawValue, 0)
+			}
+			open
+			func minuteQualifier() -> MinuteQualifierContext? {
+				return getRuleContext(MinuteQualifierContext.self, 0)
+			}
+			open
+			func SECOND() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SECOND.rawValue, 0)
+			}
+			open
+			func secondQualifier() -> SecondQualifierContext? {
+				return getRuleContext(SecondQualifierContext.self, 0)
+			}
+			open
+			func FRACTION() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FRACTION.rawValue, 0)
+			}
+			open
+			func fractionQualifier() -> FractionQualifierContext? {
+				return getRuleContext(FractionQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_intervalQualifier
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func MONTH() -> TerminalNode? { return getToken(informixParser.Tokens.MONTH.rawValue, 0) }
-		open func monthQualifier() -> MonthQualifierContext? {
-			return getRuleContext(MonthQualifierContext.self,0)
-		}
-		open func DAY() -> TerminalNode? { return getToken(informixParser.Tokens.DAY.rawValue, 0) }
-		open func dayQualifier() -> DayQualifierContext? {
-			return getRuleContext(DayQualifierContext.self,0)
-		}
-		open func HOUR() -> TerminalNode? { return getToken(informixParser.Tokens.HOUR.rawValue, 0) }
-		open func hourQualifier() -> HourQualifierContext? {
-			return getRuleContext(HourQualifierContext.self,0)
-		}
-		open func MINUTE() -> TerminalNode? { return getToken(informixParser.Tokens.MINUTE.rawValue, 0) }
-		open func minuteQualifier() -> MinuteQualifierContext? {
-			return getRuleContext(MinuteQualifierContext.self,0)
-		}
-		open func SECOND() -> TerminalNode? { return getToken(informixParser.Tokens.SECOND.rawValue, 0) }
-		open func secondQualifier() -> SecondQualifierContext? {
-			return getRuleContext(SecondQualifierContext.self,0)
-		}
-		open func FRACTION() -> TerminalNode? { return getToken(informixParser.Tokens.FRACTION.rawValue, 0) }
-		open func fractionQualifier() -> FractionQualifierContext? {
-			return getRuleContext(FractionQualifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_intervalQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterIntervalQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterIntervalQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitIntervalQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitIntervalQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitIntervalQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitIntervalQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitIntervalQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitIntervalQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func intervalQualifier() throws -> IntervalQualifierContext {
+	 open func intervalQualifier() throws -> IntervalQualifierContext {
 		var _localctx: IntervalQualifierContext = IntervalQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 44, informixParser.RULE_intervalQualifier)
 		var _la: Int = 0
@@ -2818,7 +3187,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2829,37 +3198,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class UnitTypeContext:ParserRuleContext {
-		open func yearQualifier() -> YearQualifierContext? {
-			return getRuleContext(YearQualifierContext.self,0)
+
+	public class UnitTypeContext: ParserRuleContext {
+			open
+			func yearQualifier() -> YearQualifierContext? {
+				return getRuleContext(YearQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_unitType
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_unitType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterUnitType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterUnitType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitUnitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitUnitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitUnitType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitUnitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitUnitType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitUnitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unitType() throws -> UnitTypeContext {
+	 open func unitType() throws -> UnitTypeContext {
 		var _localctx: UnitTypeContext = UnitTypeContext(_ctx, getState())
 		try enterRule(_localctx, 46, informixParser.RULE_unitType)
 		defer {
@@ -2879,38 +3254,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class YearQualifierContext:ParserRuleContext {
-		open func YEAR() -> TerminalNode? { return getToken(informixParser.Tokens.YEAR.rawValue, 0) }
-		open func monthQualifier() -> MonthQualifierContext? {
-			return getRuleContext(MonthQualifierContext.self,0)
+
+	public class YearQualifierContext: ParserRuleContext {
+			open
+			func YEAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.YEAR.rawValue, 0)
+			}
+			open
+			func monthQualifier() -> MonthQualifierContext? {
+				return getRuleContext(MonthQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_yearQualifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_yearQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterYearQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterYearQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitYearQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitYearQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitYearQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitYearQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitYearQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitYearQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func yearQualifier() throws -> YearQualifierContext {
+	 open func yearQualifier() throws -> YearQualifierContext {
 		var _localctx: YearQualifierContext = YearQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 48, informixParser.RULE_yearQualifier)
 		defer {
@@ -2938,7 +3322,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2949,38 +3333,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MonthQualifierContext:ParserRuleContext {
-		open func MONTH() -> TerminalNode? { return getToken(informixParser.Tokens.MONTH.rawValue, 0) }
-		open func dayQualifier() -> DayQualifierContext? {
-			return getRuleContext(DayQualifierContext.self,0)
+
+	public class MonthQualifierContext: ParserRuleContext {
+			open
+			func MONTH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MONTH.rawValue, 0)
+			}
+			open
+			func dayQualifier() -> DayQualifierContext? {
+				return getRuleContext(DayQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_monthQualifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_monthQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMonthQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMonthQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMonthQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMonthQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMonthQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMonthQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMonthQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMonthQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func monthQualifier() throws -> MonthQualifierContext {
+	 open func monthQualifier() throws -> MonthQualifierContext {
 		var _localctx: MonthQualifierContext = MonthQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 50, informixParser.RULE_monthQualifier)
 		defer {
@@ -3007,7 +3400,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3018,38 +3411,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DayQualifierContext:ParserRuleContext {
-		open func DAY() -> TerminalNode? { return getToken(informixParser.Tokens.DAY.rawValue, 0) }
-		open func hourQualifier() -> HourQualifierContext? {
-			return getRuleContext(HourQualifierContext.self,0)
+
+	public class DayQualifierContext: ParserRuleContext {
+			open
+			func DAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DAY.rawValue, 0)
+			}
+			open
+			func hourQualifier() -> HourQualifierContext? {
+				return getRuleContext(HourQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_dayQualifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_dayQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDayQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDayQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDayQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDayQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDayQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDayQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDayQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDayQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dayQualifier() throws -> DayQualifierContext {
+	 open func dayQualifier() throws -> DayQualifierContext {
 		var _localctx: DayQualifierContext = DayQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 52, informixParser.RULE_dayQualifier)
 		defer {
@@ -3075,7 +3477,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3086,38 +3488,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class HourQualifierContext:ParserRuleContext {
-		open func HOUR() -> TerminalNode? { return getToken(informixParser.Tokens.HOUR.rawValue, 0) }
-		open func minuteQualifier() -> MinuteQualifierContext? {
-			return getRuleContext(MinuteQualifierContext.self,0)
+
+	public class HourQualifierContext: ParserRuleContext {
+			open
+			func HOUR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HOUR.rawValue, 0)
+			}
+			open
+			func minuteQualifier() -> MinuteQualifierContext? {
+				return getRuleContext(MinuteQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_hourQualifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_hourQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterHourQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterHourQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitHourQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitHourQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitHourQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitHourQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitHourQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitHourQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hourQualifier() throws -> HourQualifierContext {
+	 open func hourQualifier() throws -> HourQualifierContext {
 		var _localctx: HourQualifierContext = HourQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 54, informixParser.RULE_hourQualifier)
 		defer {
@@ -3142,7 +3553,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3153,38 +3564,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MinuteQualifierContext:ParserRuleContext {
-		open func MINUTE() -> TerminalNode? { return getToken(informixParser.Tokens.MINUTE.rawValue, 0) }
-		open func secondQualifier() -> SecondQualifierContext? {
-			return getRuleContext(SecondQualifierContext.self,0)
+
+	public class MinuteQualifierContext: ParserRuleContext {
+			open
+			func MINUTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MINUTE.rawValue, 0)
+			}
+			open
+			func secondQualifier() -> SecondQualifierContext? {
+				return getRuleContext(SecondQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_minuteQualifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_minuteQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMinuteQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMinuteQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMinuteQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMinuteQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMinuteQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMinuteQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMinuteQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMinuteQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func minuteQualifier() throws -> MinuteQualifierContext {
+	 open func minuteQualifier() throws -> MinuteQualifierContext {
 		var _localctx: MinuteQualifierContext = MinuteQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 56, informixParser.RULE_minuteQualifier)
 		defer {
@@ -3208,7 +3628,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3219,38 +3639,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SecondQualifierContext:ParserRuleContext {
-		open func SECOND() -> TerminalNode? { return getToken(informixParser.Tokens.SECOND.rawValue, 0) }
-		open func fractionQualifier() -> FractionQualifierContext? {
-			return getRuleContext(FractionQualifierContext.self,0)
+
+	public class SecondQualifierContext: ParserRuleContext {
+			open
+			func SECOND() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SECOND.rawValue, 0)
+			}
+			open
+			func fractionQualifier() -> FractionQualifierContext? {
+				return getRuleContext(FractionQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_secondQualifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_secondQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSecondQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSecondQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSecondQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSecondQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSecondQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSecondQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSecondQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSecondQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func secondQualifier() throws -> SecondQualifierContext {
+	 open func secondQualifier() throws -> SecondQualifierContext {
 		var _localctx: SecondQualifierContext = SecondQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 58, informixParser.RULE_secondQualifier)
 		defer {
@@ -3274,7 +3703,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3285,40 +3714,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FractionQualifierContext:ParserRuleContext {
-		open func FRACTION() -> TerminalNode? { return getToken(informixParser.Tokens.FRACTION.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
+
+	public class FractionQualifierContext: ParserRuleContext {
+			open
+			func FRACTION() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FRACTION.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_fractionQualifier
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_fractionQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFractionQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFractionQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFractionQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFractionQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFractionQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFractionQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFractionQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFractionQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fractionQualifier() throws -> FractionQualifierContext {
+	 open func fractionQualifier() throws -> FractionQualifierContext {
 		var _localctx: FractionQualifierContext = FractionQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 60, informixParser.RULE_fractionQualifier)
 		defer {
@@ -3352,43 +3796,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class StructuredTypeContext:ParserRuleContext {
-		open func recordType() -> RecordTypeContext? {
-			return getRuleContext(RecordTypeContext.self,0)
+
+	public class StructuredTypeContext: ParserRuleContext {
+			open
+			func recordType() -> RecordTypeContext? {
+				return getRuleContext(RecordTypeContext.self, 0)
+			}
+			open
+			func arrayType() -> ArrayTypeContext? {
+				return getRuleContext(ArrayTypeContext.self, 0)
+			}
+			open
+			func dynArrayType() -> DynArrayTypeContext? {
+				return getRuleContext(DynArrayTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_structuredType
 		}
-		open func arrayType() -> ArrayTypeContext? {
-			return getRuleContext(ArrayTypeContext.self,0)
-		}
-		open func dynArrayType() -> DynArrayTypeContext? {
-			return getRuleContext(DynArrayTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_structuredType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterStructuredType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterStructuredType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitStructuredType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitStructuredType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitStructuredType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitStructuredType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitStructuredType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitStructuredType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func structuredType() throws -> StructuredTypeContext {
+	 open func structuredType() throws -> StructuredTypeContext {
 		var _localctx: StructuredTypeContext = StructuredTypeContext(_ctx, getState())
 		try enterRule(_localctx, 62, informixParser.RULE_structuredType)
 		defer {
@@ -3419,7 +3871,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3430,58 +3882,87 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class RecordTypeContext:ParserRuleContext {
-		open func RECORD() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.RECORD.rawValue) }
-		open func RECORD(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.RECORD.rawValue, i)
+
+	public class RecordTypeContext: ParserRuleContext {
+			open
+			func RECORD() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.RECORD.rawValue)
+			}
+			open
+			func RECORD(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.RECORD.rawValue, i)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func variableDeclaration() -> [VariableDeclarationContext] {
+				return getRuleContexts(VariableDeclarationContext.self)
+			}
+			open
+			func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
+				return getRuleContext(VariableDeclarationContext.self, i)
+			}
+			open
+			func LIKE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LIKE.rawValue, 0)
+			}
+			open
+			func tableIdentifier() -> TableIdentifierContext? {
+				return getRuleContext(TableIdentifierContext.self, 0)
+			}
+			open
+			func DOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOT.rawValue, 0)
+			}
+			open
+			func STAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STAR.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_recordType
 		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func variableDeclaration() -> Array<VariableDeclarationContext> {
-			return getRuleContexts(VariableDeclarationContext.self)
-		}
-		open func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
-			return getRuleContext(VariableDeclarationContext.self,i)
-		}
-		open func LIKE() -> TerminalNode? { return getToken(informixParser.Tokens.LIKE.rawValue, 0) }
-		open func tableIdentifier() -> TableIdentifierContext? {
-			return getRuleContext(TableIdentifierContext.self,0)
-		}
-		open func DOT() -> TerminalNode? { return getToken(informixParser.Tokens.DOT.rawValue, 0) }
-		open func STAR() -> TerminalNode? { return getToken(informixParser.Tokens.STAR.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_recordType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterRecordType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterRecordType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitRecordType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitRecordType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitRecordType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitRecordType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitRecordType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitRecordType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func recordType() throws -> RecordTypeContext {
+	 open func recordType() throws -> RecordTypeContext {
 		var _localctx: RecordTypeContext = RecordTypeContext(_ctx, getState())
 		try enterRule(_localctx, 64, informixParser.RULE_recordType)
 		var _la: Int = 0
@@ -3540,7 +4021,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -3552,46 +4033,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayIndexerContext:ParserRuleContext {
-		open func LBRACK() -> TerminalNode? { return getToken(informixParser.Tokens.LBRACK.rawValue, 0) }
-		open func numericConstant() -> Array<NumericConstantContext> {
-			return getRuleContexts(NumericConstantContext.self)
+
+	public class ArrayIndexerContext: ParserRuleContext {
+			open
+			func LBRACK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LBRACK.rawValue, 0)
+			}
+			open
+			func numericConstant() -> [NumericConstantContext] {
+				return getRuleContexts(NumericConstantContext.self)
+			}
+			open
+			func numericConstant(_ i: Int) -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, i)
+			}
+			open
+			func RBRACK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RBRACK.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_arrayIndexer
 		}
-		open func numericConstant(_ i: Int) -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,i)
-		}
-		open func RBRACK() -> TerminalNode? { return getToken(informixParser.Tokens.RBRACK.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_arrayIndexer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterArrayIndexer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterArrayIndexer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitArrayIndexer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitArrayIndexer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitArrayIndexer(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitArrayIndexer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitArrayIndexer(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitArrayIndexer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayIndexer() throws -> ArrayIndexerContext {
+	 open func arrayIndexer() throws -> ArrayIndexerContext {
 		var _localctx: ArrayIndexerContext = ArrayIndexerContext(_ctx, getState())
 		try enterRule(_localctx, 66, informixParser.RULE_arrayIndexer)
 		defer {
@@ -3638,48 +4136,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayTypeContext:ParserRuleContext {
-		open func ARRAY() -> TerminalNode? { return getToken(informixParser.Tokens.ARRAY.rawValue, 0) }
-		open func arrayIndexer() -> ArrayIndexerContext? {
-			return getRuleContext(ArrayIndexerContext.self,0)
+
+	public class ArrayTypeContext: ParserRuleContext {
+			open
+			func ARRAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ARRAY.rawValue, 0)
+			}
+			open
+			func arrayIndexer() -> ArrayIndexerContext? {
+				return getRuleContext(ArrayIndexerContext.self, 0)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func recordType() -> RecordTypeContext? {
+				return getRuleContext(RecordTypeContext.self, 0)
+			}
+			open
+			func typeIdentifier() -> TypeIdentifierContext? {
+				return getRuleContext(TypeIdentifierContext.self, 0)
+			}
+			open
+			func largeType() -> LargeTypeContext? {
+				return getRuleContext(LargeTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_arrayType
 		}
-		open func OF() -> TerminalNode? { return getToken(informixParser.Tokens.OF.rawValue, 0) }
-		open func recordType() -> RecordTypeContext? {
-			return getRuleContext(RecordTypeContext.self,0)
-		}
-		open func typeIdentifier() -> TypeIdentifierContext? {
-			return getRuleContext(TypeIdentifierContext.self,0)
-		}
-		open func largeType() -> LargeTypeContext? {
-			return getRuleContext(LargeTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_arrayType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterArrayType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterArrayType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitArrayType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitArrayType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitArrayType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitArrayType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitArrayType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitArrayType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayType() throws -> ArrayTypeContext {
+	 open func arrayType() throws -> ArrayTypeContext {
 		var _localctx: ArrayTypeContext = ArrayTypeContext(_ctx, getState())
 		try enterRule(_localctx, 68, informixParser.RULE_arrayType)
 		defer {
@@ -3732,7 +4245,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -3744,48 +4257,71 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DynArrayTypeContext:ParserRuleContext {
-		open func DYNAMIC() -> TerminalNode? { return getToken(informixParser.Tokens.DYNAMIC.rawValue, 0) }
-		open func ARRAY() -> TerminalNode? { return getToken(informixParser.Tokens.ARRAY.rawValue, 0) }
-		open func WITH() -> TerminalNode? { return getToken(informixParser.Tokens.WITH.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
+
+	public class DynArrayTypeContext: ParserRuleContext {
+			open
+			func DYNAMIC() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DYNAMIC.rawValue, 0)
+			}
+			open
+			func ARRAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ARRAY.rawValue, 0)
+			}
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func DIMENSIONS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DIMENSIONS.rawValue, 0)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func recordType() -> RecordTypeContext? {
+				return getRuleContext(RecordTypeContext.self, 0)
+			}
+			open
+			func typeIdentifier() -> TypeIdentifierContext? {
+				return getRuleContext(TypeIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_dynArrayType
 		}
-		open func DIMENSIONS() -> TerminalNode? { return getToken(informixParser.Tokens.DIMENSIONS.rawValue, 0) }
-		open func OF() -> TerminalNode? { return getToken(informixParser.Tokens.OF.rawValue, 0) }
-		open func recordType() -> RecordTypeContext? {
-			return getRuleContext(RecordTypeContext.self,0)
-		}
-		open func typeIdentifier() -> TypeIdentifierContext? {
-			return getRuleContext(TypeIdentifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_dynArrayType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDynArrayType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDynArrayType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDynArrayType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDynArrayType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDynArrayType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDynArrayType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDynArrayType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDynArrayType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dynArrayType() throws -> DynArrayTypeContext {
+	 open func dynArrayType() throws -> DynArrayTypeContext {
 		var _localctx: DynArrayTypeContext = DynArrayTypeContext(_ctx, getState())
 		try enterRule(_localctx, 70, informixParser.RULE_dynArrayType)
 		defer {
@@ -3838,7 +4374,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -3850,35 +4386,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class StringContext:ParserRuleContext {
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(informixParser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_string }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterString(self)
+
+	public class StringContext: ParserRuleContext {
+			open
+			func STRING_LITERAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STRING_LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_string
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitString(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitString(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string() throws -> StringContext {
+	 open func string() throws -> StringContext {
 		var _localctx: StringContext = StringContext(_ctx, getState())
 		try enterRule(_localctx, 72, informixParser.RULE_string)
 		defer {
@@ -3898,41 +4442,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func unlabelledStatement() -> UnlabelledStatementContext? {
-			return getRuleContext(UnlabelledStatementContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func unlabelledStatement() -> UnlabelledStatementContext? {
+				return getRuleContext(UnlabelledStatementContext.self, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func COLON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COLON.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_statement
 		}
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
-		}
-		open func COLON() -> TerminalNode? { return getToken(informixParser.Tokens.COLON.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 74, informixParser.RULE_statement)
 		var _la: Int = 0
@@ -3968,46 +4522,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class CodeBlockContext:ParserRuleContext {
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
+
+	public class CodeBlockContext: ParserRuleContext {
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+			open
+			func databaseDeclaration() -> [DatabaseDeclarationContext] {
+				return getRuleContexts(DatabaseDeclarationContext.self)
+			}
+			open
+			func databaseDeclaration(_ i: Int) -> DatabaseDeclarationContext? {
+				return getRuleContext(DatabaseDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_codeBlock
 		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open func databaseDeclaration() -> Array<DatabaseDeclarationContext> {
-			return getRuleContexts(DatabaseDeclarationContext.self)
-		}
-		open func databaseDeclaration(_ i: Int) -> DatabaseDeclarationContext? {
-			return getRuleContext(DatabaseDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_codeBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterCodeBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterCodeBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitCodeBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitCodeBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitCodeBlock(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitCodeBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitCodeBlock(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitCodeBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func codeBlock() throws -> CodeBlockContext {
+	 open func codeBlock() throws -> CodeBlockContext {
 		var _localctx: CodeBlockContext = CodeBlockContext(_ctx, getState())
 		try enterRule(_localctx, 76, informixParser.RULE_codeBlock)
 		defer {
@@ -4101,12 +4664,12 @@ open class informixParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(780); 
 		 		try _errHandler.sync(self)
@@ -4122,37 +4685,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class LabelContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class LabelContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_label
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterLabel(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitLabel(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitLabel(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label() throws -> LabelContext {
+	 open func label() throws -> LabelContext {
 		var _localctx: LabelContext = LabelContext(_ctx, getState())
 		try enterRule(_localctx, 78, informixParser.RULE_label)
 		defer {
@@ -4172,40 +4741,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class UnlabelledStatementContext:ParserRuleContext {
-		open func simpleStatement() -> SimpleStatementContext? {
-			return getRuleContext(SimpleStatementContext.self,0)
+
+	public class UnlabelledStatementContext: ParserRuleContext {
+			open
+			func simpleStatement() -> SimpleStatementContext? {
+				return getRuleContext(SimpleStatementContext.self, 0)
+			}
+			open
+			func structuredStatement() -> StructuredStatementContext? {
+				return getRuleContext(StructuredStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_unlabelledStatement
 		}
-		open func structuredStatement() -> StructuredStatementContext? {
-			return getRuleContext(StructuredStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_unlabelledStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterUnlabelledStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterUnlabelledStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitUnlabelledStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitUnlabelledStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitUnlabelledStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitUnlabelledStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitUnlabelledStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitUnlabelledStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unlabelledStatement() throws -> UnlabelledStatementContext {
+	 open func unlabelledStatement() throws -> UnlabelledStatementContext {
 		var _localctx: UnlabelledStatementContext = UnlabelledStatementContext(_ctx, getState())
 		try enterRule(_localctx, 80, informixParser.RULE_unlabelledStatement)
 		defer {
@@ -4290,7 +4866,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4301,59 +4877,75 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SimpleStatementContext:ParserRuleContext {
-		open func assignmentStatement() -> AssignmentStatementContext? {
-			return getRuleContext(AssignmentStatementContext.self,0)
+
+	public class SimpleStatementContext: ParserRuleContext {
+			open
+			func assignmentStatement() -> AssignmentStatementContext? {
+				return getRuleContext(AssignmentStatementContext.self, 0)
+			}
+			open
+			func procedureStatement() -> ProcedureStatementContext? {
+				return getRuleContext(ProcedureStatementContext.self, 0)
+			}
+			open
+			func sqlStatements() -> SqlStatementsContext? {
+				return getRuleContext(SqlStatementsContext.self, 0)
+			}
+			open
+			func SEMI() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SEMI.rawValue, 0)
+			}
+			open
+			func otherFGLStatement() -> OtherFGLStatementContext? {
+				return getRuleContext(OtherFGLStatementContext.self, 0)
+			}
+			open
+			func menuInsideStatement() -> MenuInsideStatementContext? {
+				return getRuleContext(MenuInsideStatementContext.self, 0)
+			}
+			open
+			func constructInsideStatement() -> ConstructInsideStatementContext? {
+				return getRuleContext(ConstructInsideStatementContext.self, 0)
+			}
+			open
+			func displayInsideStatement() -> DisplayInsideStatementContext? {
+				return getRuleContext(DisplayInsideStatementContext.self, 0)
+			}
+			open
+			func inputInsideStatement() -> InputInsideStatementContext? {
+				return getRuleContext(InputInsideStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_simpleStatement
 		}
-		open func procedureStatement() -> ProcedureStatementContext? {
-			return getRuleContext(ProcedureStatementContext.self,0)
-		}
-		open func sqlStatements() -> SqlStatementsContext? {
-			return getRuleContext(SqlStatementsContext.self,0)
-		}
-		open func SEMI() -> TerminalNode? { return getToken(informixParser.Tokens.SEMI.rawValue, 0) }
-		open func otherFGLStatement() -> OtherFGLStatementContext? {
-			return getRuleContext(OtherFGLStatementContext.self,0)
-		}
-		open func menuInsideStatement() -> MenuInsideStatementContext? {
-			return getRuleContext(MenuInsideStatementContext.self,0)
-		}
-		open func constructInsideStatement() -> ConstructInsideStatementContext? {
-			return getRuleContext(ConstructInsideStatementContext.self,0)
-		}
-		open func displayInsideStatement() -> DisplayInsideStatementContext? {
-			return getRuleContext(DisplayInsideStatementContext.self,0)
-		}
-		open func inputInsideStatement() -> InputInsideStatementContext? {
-			return getRuleContext(InputInsideStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_simpleStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSimpleStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSimpleStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSimpleStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSimpleStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSimpleStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSimpleStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSimpleStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSimpleStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleStatement() throws -> SimpleStatementContext {
+	 open func simpleStatement() throws -> SimpleStatementContext {
 		var _localctx: SimpleStatementContext = SimpleStatementContext(_ctx, getState())
 		try enterRule(_localctx, 82, informixParser.RULE_simpleStatement)
 		var _la: Int = 0
@@ -4436,51 +5028,83 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class RunStatementContext:ParserRuleContext {
-		open func RUN() -> TerminalNode? { return getToken(informixParser.Tokens.RUN.rawValue, 0) }
-		open func variable() -> Array<VariableContext> {
-			return getRuleContexts(VariableContext.self)
+
+	public class RunStatementContext: ParserRuleContext {
+			open
+			func RUN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RUN.rawValue, 0)
+			}
+			open
+			func variable() -> [VariableContext] {
+				return getRuleContexts(VariableContext.self)
+			}
+			open
+			func variable(_ i: Int) -> VariableContext? {
+				return getRuleContext(VariableContext.self, i)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func IN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.IN.rawValue, 0)
+			}
+			open
+			func FORM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FORM.rawValue, 0)
+			}
+			open
+			func MODE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MODE.rawValue, 0)
+			}
+			open
+			func LINE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LINE.rawValue, 0)
+			}
+			open
+			func WITHOUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITHOUT.rawValue, 0)
+			}
+			open
+			func WAITING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WAITING.rawValue, 0)
+			}
+			open
+			func RETURNING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RETURNING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_runStatement
 		}
-		open func variable(_ i: Int) -> VariableContext? {
-			return getRuleContext(VariableContext.self,i)
-		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func IN() -> TerminalNode? { return getToken(informixParser.Tokens.IN.rawValue, 0) }
-		open func FORM() -> TerminalNode? { return getToken(informixParser.Tokens.FORM.rawValue, 0) }
-		open func MODE() -> TerminalNode? { return getToken(informixParser.Tokens.MODE.rawValue, 0) }
-		open func LINE() -> TerminalNode? { return getToken(informixParser.Tokens.LINE.rawValue, 0) }
-		open func WITHOUT() -> TerminalNode? { return getToken(informixParser.Tokens.WITHOUT.rawValue, 0) }
-		open func WAITING() -> TerminalNode? { return getToken(informixParser.Tokens.WAITING.rawValue, 0) }
-		open func RETURNING() -> TerminalNode? { return getToken(informixParser.Tokens.RETURNING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_runStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterRunStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterRunStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitRunStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitRunStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitRunStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitRunStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitRunStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitRunStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func runStatement() throws -> RunStatementContext {
+	 open func runStatement() throws -> RunStatementContext {
 		var _localctx: RunStatementContext = RunStatementContext(_ctx, getState())
 		try enterRule(_localctx, 84, informixParser.RULE_runStatement)
 		defer {
@@ -4538,7 +5162,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(812)
 		 	try _errHandler.sync(self)
@@ -4673,49 +5297,67 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentStatementContext:ParserRuleContext {
-		open func LET() -> TerminalNode? { return getToken(informixParser.Tokens.LET.rawValue, 0) }
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class AssignmentStatementContext: ParserRuleContext {
+			open
+			func LET() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LET.rawValue, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func EQUAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EQUAL.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_assignmentStatement
 		}
-		open func EQUAL() -> TerminalNode? { return getToken(informixParser.Tokens.EQUAL.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_assignmentStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterAssignmentStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterAssignmentStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitAssignmentStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitAssignmentStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitAssignmentStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitAssignmentStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitAssignmentStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitAssignmentStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignmentStatement() throws -> AssignmentStatementContext {
+	 open func assignmentStatement() throws -> AssignmentStatementContext {
 		var _localctx: AssignmentStatementContext = AssignmentStatementContext(_ctx, getState())
 		try enterRule(_localctx, 86, informixParser.RULE_assignmentStatement)
 		var _la: Int = 0
@@ -4760,57 +5402,83 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureStatementContext:ParserRuleContext {
-		open func CALL() -> TerminalNode? { return getToken(informixParser.Tokens.CALL.rawValue, 0) }
-		open func procedureIdentifier() -> ProcedureIdentifierContext? {
-			return getRuleContext(ProcedureIdentifierContext.self,0)
+
+	public class ProcedureStatementContext: ParserRuleContext {
+			open
+			func CALL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CALL.rawValue, 0)
+			}
+			open
+			func procedureIdentifier() -> ProcedureIdentifierContext? {
+				return getRuleContext(ProcedureIdentifierContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func RETURNING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RETURNING.rawValue, 0)
+			}
+			open
+			func variable() -> [VariableContext] {
+				return getRuleContexts(VariableContext.self)
+			}
+			open
+			func variable(_ i: Int) -> VariableContext? {
+				return getRuleContext(VariableContext.self, i)
+			}
+			open
+			func actualParameter() -> [ActualParameterContext] {
+				return getRuleContexts(ActualParameterContext.self)
+			}
+			open
+			func actualParameter(_ i: Int) -> ActualParameterContext? {
+				return getRuleContext(ActualParameterContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_procedureStatement
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func RETURNING() -> TerminalNode? { return getToken(informixParser.Tokens.RETURNING.rawValue, 0) }
-		open func variable() -> Array<VariableContext> {
-			return getRuleContexts(VariableContext.self)
-		}
-		open func variable(_ i: Int) -> VariableContext? {
-			return getRuleContext(VariableContext.self,i)
-		}
-		open func actualParameter() -> Array<ActualParameterContext> {
-			return getRuleContexts(ActualParameterContext.self)
-		}
-		open func actualParameter(_ i: Int) -> ActualParameterContext? {
-			return getRuleContext(ActualParameterContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_procedureStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterProcedureStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterProcedureStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitProcedureStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitProcedureStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitProcedureStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitProcedureStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitProcedureStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitProcedureStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureStatement() throws -> ProcedureStatementContext {
+	 open func procedureStatement() throws -> ProcedureStatementContext {
 		var _localctx: ProcedureStatementContext = ProcedureStatementContext(_ctx, getState())
 		try enterRule(_localctx, 88, informixParser.RULE_procedureStatement)
 		var _la: Int = 0
@@ -4931,37 +5599,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureIdentifierContext:ParserRuleContext {
-		open func functionIdentifier() -> FunctionIdentifierContext? {
-			return getRuleContext(FunctionIdentifierContext.self,0)
+
+	public class ProcedureIdentifierContext: ParserRuleContext {
+			open
+			func functionIdentifier() -> FunctionIdentifierContext? {
+				return getRuleContext(FunctionIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_procedureIdentifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_procedureIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterProcedureIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterProcedureIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitProcedureIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitProcedureIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitProcedureIdentifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitProcedureIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitProcedureIdentifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitProcedureIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureIdentifier() throws -> ProcedureIdentifierContext {
+	 open func procedureIdentifier() throws -> ProcedureIdentifierContext {
 		var _localctx: ProcedureIdentifierContext = ProcedureIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 90, informixParser.RULE_procedureIdentifier)
 		defer {
@@ -4981,38 +5655,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ActualParameterContext:ParserRuleContext {
-		open func STAR() -> TerminalNode? { return getToken(informixParser.Tokens.STAR.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ActualParameterContext: ParserRuleContext {
+			open
+			func STAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STAR.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_actualParameter
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_actualParameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterActualParameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterActualParameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitActualParameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitActualParameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitActualParameter(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitActualParameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitActualParameter(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitActualParameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func actualParameter() throws -> ActualParameterContext {
+	 open func actualParameter() throws -> ActualParameterContext {
 		var _localctx: ActualParameterContext = ActualParameterContext(_ctx, getState())
 		try enterRule(_localctx, 92, informixParser.RULE_actualParameter)
 		defer {
@@ -5086,7 +5769,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5097,42 +5780,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class GotoStatementContext:ParserRuleContext {
-		open func GOTO() -> TerminalNode? { return getToken(informixParser.Tokens.GOTO.rawValue, 0) }
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
+
+	public class GotoStatementContext: ParserRuleContext {
+			open
+			func GOTO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GOTO.rawValue, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func COLON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COLON.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_gotoStatement
 		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func COLON() -> TerminalNode? { return getToken(informixParser.Tokens.COLON.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_gotoStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterGotoStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterGotoStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitGotoStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitGotoStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitGotoStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitGotoStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitGotoStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitGotoStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func gotoStatement() throws -> GotoStatementContext {
+	 open func gotoStatement() throws -> GotoStatementContext {
 		var _localctx: GotoStatementContext = GotoStatementContext(_ctx, getState())
 		try enterRule(_localctx, 94, informixParser.RULE_gotoStatement)
 		var _la: Int = 0
@@ -5170,46 +5866,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ConditionContext:ParserRuleContext {
-		open func TRUE() -> TerminalNode? { return getToken(informixParser.Tokens.TRUE.rawValue, 0) }
-		open func FALSE() -> TerminalNode? { return getToken(informixParser.Tokens.FALSE.rawValue, 0) }
-		open func logicalTerm() -> Array<LogicalTermContext> {
-			return getRuleContexts(LogicalTermContext.self)
+
+	public class ConditionContext: ParserRuleContext {
+			open
+			func TRUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TRUE.rawValue, 0)
+			}
+			open
+			func FALSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FALSE.rawValue, 0)
+			}
+			open
+			func logicalTerm() -> [LogicalTermContext] {
+				return getRuleContexts(LogicalTermContext.self)
+			}
+			open
+			func logicalTerm(_ i: Int) -> LogicalTermContext? {
+				return getRuleContext(LogicalTermContext.self, i)
+			}
+			open
+			func OR() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.OR.rawValue)
+			}
+			open
+			func OR(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.OR.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_condition
 		}
-		open func logicalTerm(_ i: Int) -> LogicalTermContext? {
-			return getRuleContext(LogicalTermContext.self,i)
-		}
-		open func OR() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.OR.rawValue) }
-		open func OR(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.OR.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterCondition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterCondition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitCondition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitCondition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitCondition(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitCondition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitCondition(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitCondition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func condition() throws -> ConditionContext {
+	 open func condition() throws -> ConditionContext {
 		var _localctx: ConditionContext = ConditionContext(_ctx, getState())
 		try enterRule(_localctx, 96, informixParser.RULE_condition)
 		var _la: Int = 0
@@ -5272,44 +5985,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class LogicalTermContext:ParserRuleContext {
-		open func logicalFactor() -> Array<LogicalFactorContext> {
-			return getRuleContexts(LogicalFactorContext.self)
+
+	public class LogicalTermContext: ParserRuleContext {
+			open
+			func logicalFactor() -> [LogicalFactorContext] {
+				return getRuleContexts(LogicalFactorContext.self)
+			}
+			open
+			func logicalFactor(_ i: Int) -> LogicalFactorContext? {
+				return getRuleContext(LogicalFactorContext.self, i)
+			}
+			open
+			func AND() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.AND.rawValue)
+			}
+			open
+			func AND(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.AND.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_logicalTerm
 		}
-		open func logicalFactor(_ i: Int) -> LogicalFactorContext? {
-			return getRuleContext(LogicalFactorContext.self,i)
-		}
-		open func AND() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.AND.rawValue) }
-		open func AND(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.AND.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_logicalTerm }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterLogicalTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterLogicalTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitLogicalTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitLogicalTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitLogicalTerm(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitLogicalTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitLogicalTerm(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitLogicalTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func logicalTerm() throws -> LogicalTermContext {
+	 open func logicalTerm() throws -> LogicalTermContext {
 		var _localctx: LogicalTermContext = LogicalTermContext(_ctx, getState())
 		try enterRule(_localctx, 98, informixParser.RULE_logicalTerm)
 		defer {
@@ -5346,80 +6070,127 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class LogicalFactorContext:ParserRuleContext {
-		open func sqlExpression() -> Array<SqlExpressionContext> {
-			return getRuleContexts(SqlExpressionContext.self)
+
+	public class LogicalFactorContext: ParserRuleContext {
+			open
+			func sqlExpression() -> [SqlExpressionContext] {
+				return getRuleContexts(SqlExpressionContext.self)
+			}
+			open
+			func sqlExpression(_ i: Int) -> SqlExpressionContext? {
+				return getRuleContext(SqlExpressionContext.self, i)
+			}
+			open
+			func LIKE() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LIKE.rawValue)
+			}
+			open
+			func LIKE(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LIKE.rawValue, i)
+			}
+			open
+			func NOT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.NOT.rawValue)
+			}
+			open
+			func NOT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT.rawValue, i)
+			}
+			open
+			func ESC() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ESC.rawValue, 0)
+			}
+			open
+			func QUOTED_STRING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.QUOTED_STRING.rawValue, 0)
+			}
+			open
+			func BETWEEN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.BETWEEN.rawValue)
+			}
+			open
+			func BETWEEN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.BETWEEN.rawValue, i)
+			}
+			open
+			func AND() -> TerminalNode? {
+				return getToken(informixParser.Tokens.AND.rawValue, 0)
+			}
+			open
+			func IS() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.IS.rawValue)
+			}
+			open
+			func IS(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.IS.rawValue, i)
+			}
+			open
+			func NULL() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.NULL.rawValue)
+			}
+			open
+			func NULL(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.NULL.rawValue, i)
+			}
+			open
+			func quantifiedFactor() -> [QuantifiedFactorContext] {
+				return getRuleContexts(QuantifiedFactorContext.self)
+			}
+			open
+			func quantifiedFactor(_ i: Int) -> QuantifiedFactorContext? {
+				return getRuleContext(QuantifiedFactorContext.self, i)
+			}
+			open
+			func condition() -> [ConditionContext] {
+				return getRuleContexts(ConditionContext.self)
+			}
+			open
+			func condition(_ i: Int) -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, i)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func relationalOperator() -> RelationalOperatorContext? {
+				return getRuleContext(RelationalOperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_logicalFactor
 		}
-		open func sqlExpression(_ i: Int) -> SqlExpressionContext? {
-			return getRuleContext(SqlExpressionContext.self,i)
-		}
-		open func LIKE() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LIKE.rawValue) }
-		open func LIKE(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LIKE.rawValue, i)
-		}
-		open func NOT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.NOT.rawValue) }
-		open func NOT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.NOT.rawValue, i)
-		}
-		open func ESC() -> TerminalNode? { return getToken(informixParser.Tokens.ESC.rawValue, 0) }
-		open func QUOTED_STRING() -> TerminalNode? { return getToken(informixParser.Tokens.QUOTED_STRING.rawValue, 0) }
-		open func BETWEEN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.BETWEEN.rawValue) }
-		open func BETWEEN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.BETWEEN.rawValue, i)
-		}
-		open func AND() -> TerminalNode? { return getToken(informixParser.Tokens.AND.rawValue, 0) }
-		open func IS() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.IS.rawValue) }
-		open func IS(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.IS.rawValue, i)
-		}
-		open func NULL() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.NULL.rawValue) }
-		open func NULL(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.NULL.rawValue, i)
-		}
-		open func quantifiedFactor() -> Array<QuantifiedFactorContext> {
-			return getRuleContexts(QuantifiedFactorContext.self)
-		}
-		open func quantifiedFactor(_ i: Int) -> QuantifiedFactorContext? {
-			return getRuleContext(QuantifiedFactorContext.self,i)
-		}
-		open func condition() -> Array<ConditionContext> {
-			return getRuleContexts(ConditionContext.self)
-		}
-		open func condition(_ i: Int) -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,i)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func relationalOperator() -> RelationalOperatorContext? {
-			return getRuleContext(RelationalOperatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_logicalFactor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterLogicalFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterLogicalFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitLogicalFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitLogicalFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitLogicalFactor(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitLogicalFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitLogicalFactor(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitLogicalFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func logicalFactor() throws -> LogicalFactorContext {
+	 open func logicalFactor() throws -> LogicalFactorContext {
 		var _localctx: LogicalFactorContext = LogicalFactorContext(_ctx, getState())
 		try enterRule(_localctx, 100, informixParser.RULE_logicalFactor)
 		var _la: Int = 0
@@ -5630,68 +6401,95 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class QuantifiedFactorContext:ParserRuleContext {
-		open func sqlExpression() -> Array<SqlExpressionContext> {
-			return getRuleContexts(SqlExpressionContext.self)
+
+	public class QuantifiedFactorContext: ParserRuleContext {
+			open
+			func sqlExpression() -> [SqlExpressionContext] {
+				return getRuleContexts(SqlExpressionContext.self)
+			}
+			open
+			func sqlExpression(_ i: Int) -> SqlExpressionContext? {
+				return getRuleContext(SqlExpressionContext.self, i)
+			}
+			open
+			func relationalOperator() -> [RelationalOperatorContext] {
+				return getRuleContexts(RelationalOperatorContext.self)
+			}
+			open
+			func relationalOperator(_ i: Int) -> RelationalOperatorContext? {
+				return getRuleContext(RelationalOperatorContext.self, i)
+			}
+			open
+			func subquery() -> [SubqueryContext] {
+				return getRuleContexts(SubqueryContext.self)
+			}
+			open
+			func subquery(_ i: Int) -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, i)
+			}
+			open
+			func ALL() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.ALL.rawValue)
+			}
+			open
+			func ALL(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.ALL.rawValue, i)
+			}
+			open
+			func ANY() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.ANY.rawValue)
+			}
+			open
+			func ANY(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.ANY.rawValue, i)
+			}
+			open
+			func EXISTS() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.EXISTS.rawValue)
+			}
+			open
+			func EXISTS(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXISTS.rawValue, i)
+			}
+			open
+			func NOT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.NOT.rawValue)
+			}
+			open
+			func NOT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_quantifiedFactor
 		}
-		open func sqlExpression(_ i: Int) -> SqlExpressionContext? {
-			return getRuleContext(SqlExpressionContext.self,i)
-		}
-		open func relationalOperator() -> Array<RelationalOperatorContext> {
-			return getRuleContexts(RelationalOperatorContext.self)
-		}
-		open func relationalOperator(_ i: Int) -> RelationalOperatorContext? {
-			return getRuleContext(RelationalOperatorContext.self,i)
-		}
-		open func subquery() -> Array<SubqueryContext> {
-			return getRuleContexts(SubqueryContext.self)
-		}
-		open func subquery(_ i: Int) -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,i)
-		}
-		open func ALL() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.ALL.rawValue) }
-		open func ALL(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.ALL.rawValue, i)
-		}
-		open func ANY() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.ANY.rawValue) }
-		open func ANY(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.ANY.rawValue, i)
-		}
-		open func EXISTS() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.EXISTS.rawValue) }
-		open func EXISTS(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.EXISTS.rawValue, i)
-		}
-		open func NOT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.NOT.rawValue) }
-		open func NOT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.NOT.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_quantifiedFactor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterQuantifiedFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterQuantifiedFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitQuantifiedFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitQuantifiedFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitQuantifiedFactor(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitQuantifiedFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitQuantifiedFactor(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitQuantifiedFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func quantifiedFactor() throws -> QuantifiedFactorContext {
+	 open func quantifiedFactor() throws -> QuantifiedFactorContext {
 		var _localctx: QuantifiedFactorContext = QuantifiedFactorContext(_ctx, getState())
 		try enterRule(_localctx, 102, informixParser.RULE_quantifiedFactor)
 		var _la: Int = 0
@@ -5823,43 +6621,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionSetContext:ParserRuleContext {
-		open func sqlExpression() -> Array<SqlExpressionContext> {
-			return getRuleContexts(SqlExpressionContext.self)
+
+	public class ExpressionSetContext: ParserRuleContext {
+			open
+			func sqlExpression() -> [SqlExpressionContext] {
+				return getRuleContexts(SqlExpressionContext.self)
+			}
+			open
+			func sqlExpression(_ i: Int) -> SqlExpressionContext? {
+				return getRuleContext(SqlExpressionContext.self, i)
+			}
+			open
+			func subquery() -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_expressionSet
 		}
-		open func sqlExpression(_ i: Int) -> SqlExpressionContext? {
-			return getRuleContext(SqlExpressionContext.self,i)
-		}
-		open func subquery() -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_expressionSet }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterExpressionSet(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterExpressionSet(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitExpressionSet(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitExpressionSet(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitExpressionSet(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitExpressionSet(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitExpressionSet(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitExpressionSet(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionSet() throws -> ExpressionSetContext {
+	 open func expressionSet() throws -> ExpressionSetContext {
 		var _localctx: ExpressionSetContext = ExpressionSetContext(_ctx, getState())
 		try enterRule(_localctx, 104, informixParser.RULE_expressionSet)
 		defer {
@@ -5894,39 +6700,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SubqueryContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func sqlSelectStatement() -> SqlSelectStatementContext? {
-			return getRuleContext(SqlSelectStatementContext.self,0)
+
+	public class SubqueryContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func sqlSelectStatement() -> SqlSelectStatementContext? {
+				return getRuleContext(SqlSelectStatementContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_subquery
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_subquery }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSubquery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSubquery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSubquery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSubquery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSubquery(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSubquery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSubquery(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSubquery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subquery() throws -> SubqueryContext {
+	 open func subquery() throws -> SubqueryContext {
 		var _localctx: SubqueryContext = SubqueryContext(_ctx, getState())
 		try enterRule(_localctx, 106, informixParser.RULE_subquery)
 		defer {
@@ -5950,48 +6768,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlExpressionContext:ParserRuleContext {
-		open func sqlTerm() -> Array<SqlTermContext> {
-			return getRuleContexts(SqlTermContext.self)
+
+	public class SqlExpressionContext: ParserRuleContext {
+			open
+			func sqlTerm() -> [SqlTermContext] {
+				return getRuleContexts(SqlTermContext.self)
+			}
+			open
+			func sqlTerm(_ i: Int) -> SqlTermContext? {
+				return getRuleContext(SqlTermContext.self, i)
+			}
+			open
+			func PLUS() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.PLUS.rawValue)
+			}
+			open
+			func PLUS(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.PLUS.rawValue, i)
+			}
+			open
+			func MINUS() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.MINUS.rawValue)
+			}
+			open
+			func MINUS(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.MINUS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlExpression
 		}
-		open func sqlTerm(_ i: Int) -> SqlTermContext? {
-			return getRuleContext(SqlTermContext.self,i)
-		}
-		open func PLUS() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.PLUS.rawValue) }
-		open func PLUS(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.PLUS.rawValue, i)
-		}
-		open func MINUS() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.MINUS.rawValue) }
-		open func MINUS(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.MINUS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlExpression(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlExpression(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlExpression() throws -> SqlExpressionContext {
+	 open func sqlExpression() throws -> SqlExpressionContext {
 		var _localctx: SqlExpressionContext = SqlExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 108, informixParser.RULE_sqlExpression)
 		var _la: Int = 0
@@ -6040,38 +6873,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlAliasContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class SqlAliasContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func AS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.AS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlAlias
 		}
-		open func AS() -> TerminalNode? { return getToken(informixParser.Tokens.AS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlAlias }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlAlias(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlAlias(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlAlias(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlAlias(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlAlias(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlAlias(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlAlias(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlAlias(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlAlias() throws -> SqlAliasContext {
+	 open func sqlAlias() throws -> SqlAliasContext {
 		var _localctx: SqlAliasContext = SqlAliasContext(_ctx, getState())
 		try enterRule(_localctx, 110, informixParser.RULE_sqlAlias)
 		var _la: Int = 0
@@ -6105,54 +6947,71 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlTermContext:ParserRuleContext {
-		open func sqlFactor() -> Array<SqlFactorContext> {
-			return getRuleContexts(SqlFactorContext.self)
+
+	public class SqlTermContext: ParserRuleContext {
+			open
+			func sqlFactor() -> [SqlFactorContext] {
+				return getRuleContexts(SqlFactorContext.self)
+			}
+			open
+			func sqlFactor(_ i: Int) -> SqlFactorContext? {
+				return getRuleContext(SqlFactorContext.self, i)
+			}
+			open
+			func sqlMultiply() -> [SqlMultiplyContext] {
+				return getRuleContexts(SqlMultiplyContext.self)
+			}
+			open
+			func sqlMultiply(_ i: Int) -> SqlMultiplyContext? {
+				return getRuleContext(SqlMultiplyContext.self, i)
+			}
+			open
+			func DIV() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.DIV.rawValue)
+			}
+			open
+			func DIV(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.DIV.rawValue, i)
+			}
+			open
+			func SLASH() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.SLASH.rawValue)
+			}
+			open
+			func SLASH(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.SLASH.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlTerm
 		}
-		open func sqlFactor(_ i: Int) -> SqlFactorContext? {
-			return getRuleContext(SqlFactorContext.self,i)
-		}
-		open func sqlMultiply() -> Array<SqlMultiplyContext> {
-			return getRuleContexts(SqlMultiplyContext.self)
-		}
-		open func sqlMultiply(_ i: Int) -> SqlMultiplyContext? {
-			return getRuleContext(SqlMultiplyContext.self,i)
-		}
-		open func DIV() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.DIV.rawValue) }
-		open func DIV(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.DIV.rawValue, i)
-		}
-		open func SLASH() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.SLASH.rawValue) }
-		open func SLASH(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.SLASH.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlTerm }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlTerm(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlTerm(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlTerm() throws -> SqlTermContext {
+	 open func sqlTerm() throws -> SqlTermContext {
 		var _localctx: SqlTermContext = SqlTermContext(_ctx, getState())
 		try enterRule(_localctx, 112, informixParser.RULE_sqlTerm)
 		defer {
@@ -6189,7 +7048,7 @@ open class informixParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(1013)
 		 			try sqlFactor()
@@ -6210,35 +7069,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlMultiplyContext:ParserRuleContext {
-		open func STAR() -> TerminalNode? { return getToken(informixParser.Tokens.STAR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlMultiply }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlMultiply(self)
+
+	public class SqlMultiplyContext: ParserRuleContext {
+			open
+			func STAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STAR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlMultiply
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlMultiply(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlMultiply(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlMultiply(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlMultiply(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlMultiply(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlMultiply(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlMultiply(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlMultiply() throws -> SqlMultiplyContext {
+	 open func sqlMultiply() throws -> SqlMultiplyContext {
 		var _localctx: SqlMultiplyContext = SqlMultiplyContext(_ctx, getState())
 		try enterRule(_localctx, 114, informixParser.RULE_sqlMultiply)
 		defer {
@@ -6258,44 +7125,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlFactorContext:ParserRuleContext {
-		open func sqlFactor2() -> Array<SqlFactor2Context> {
-			return getRuleContexts(SqlFactor2Context.self)
+
+	public class SqlFactorContext: ParserRuleContext {
+			open
+			func sqlFactor2() -> [SqlFactor2Context] {
+				return getRuleContexts(SqlFactor2Context.self)
+			}
+			open
+			func sqlFactor2(_ i: Int) -> SqlFactor2Context? {
+				return getRuleContext(SqlFactor2Context.self, i)
+			}
+			open
+			func DOUBLEVERTBAR() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.DOUBLEVERTBAR.rawValue)
+			}
+			open
+			func DOUBLEVERTBAR(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOUBLEVERTBAR.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlFactor
 		}
-		open func sqlFactor2(_ i: Int) -> SqlFactor2Context? {
-			return getRuleContext(SqlFactor2Context.self,i)
-		}
-		open func DOUBLEVERTBAR() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.DOUBLEVERTBAR.rawValue) }
-		open func DOUBLEVERTBAR(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.DOUBLEVERTBAR.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlFactor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlFactor(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlFactor(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlFactor() throws -> SqlFactorContext {
+	 open func sqlFactor() throws -> SqlFactorContext {
 		var _localctx: SqlFactorContext = SqlFactorContext(_ctx, getState())
 		try enterRule(_localctx, 116, informixParser.RULE_sqlFactor)
 		defer {
@@ -6332,109 +7210,163 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlFactor2Context:ParserRuleContext {
-		open func sqlVariable() -> Array<SqlVariableContext> {
-			return getRuleContexts(SqlVariableContext.self)
+
+	public class SqlFactor2Context: ParserRuleContext {
+			open
+			func sqlVariable() -> [SqlVariableContext] {
+				return getRuleContexts(SqlVariableContext.self)
+			}
+			open
+			func sqlVariable(_ i: Int) -> SqlVariableContext? {
+				return getRuleContext(SqlVariableContext.self, i)
+			}
+			open
+			func UNITS() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.UNITS.rawValue)
+			}
+			open
+			func UNITS(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.UNITS.rawValue, i)
+			}
+			open
+			func unitType() -> [UnitTypeContext] {
+				return getRuleContexts(UnitTypeContext.self)
+			}
+			open
+			func unitType(_ i: Int) -> UnitTypeContext? {
+				return getRuleContext(UnitTypeContext.self, i)
+			}
+			open
+			func sqlLiteral() -> [SqlLiteralContext] {
+				return getRuleContexts(SqlLiteralContext.self)
+			}
+			open
+			func sqlLiteral(_ i: Int) -> SqlLiteralContext? {
+				return getRuleContext(SqlLiteralContext.self, i)
+			}
+			open
+			func groupFunction() -> [GroupFunctionContext] {
+				return getRuleContexts(GroupFunctionContext.self)
+			}
+			open
+			func groupFunction(_ i: Int) -> GroupFunctionContext? {
+				return getRuleContext(GroupFunctionContext.self, i)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func sqlExpression() -> [SqlExpressionContext] {
+				return getRuleContexts(SqlExpressionContext.self)
+			}
+			open
+			func sqlExpression(_ i: Int) -> SqlExpressionContext? {
+				return getRuleContext(SqlExpressionContext.self, i)
+			}
+			open
+			func STAR() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.STAR.rawValue)
+			}
+			open
+			func STAR(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.STAR.rawValue, i)
+			}
+			open
+			func ALL() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.ALL.rawValue)
+			}
+			open
+			func ALL(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.ALL.rawValue, i)
+			}
+			open
+			func DISTINCT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.DISTINCT.rawValue)
+			}
+			open
+			func DISTINCT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.DISTINCT.rawValue, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func sqlFunction() -> [SqlFunctionContext] {
+				return getRuleContexts(SqlFunctionContext.self)
+			}
+			open
+			func sqlFunction(_ i: Int) -> SqlFunctionContext? {
+				return getRuleContext(SqlFunctionContext.self, i)
+			}
+			open
+			func PLUS() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.PLUS.rawValue)
+			}
+			open
+			func PLUS(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.PLUS.rawValue, i)
+			}
+			open
+			func MINUS() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.MINUS.rawValue)
+			}
+			open
+			func MINUS(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.MINUS.rawValue, i)
+			}
+			open
+			func sqlExpressionList() -> SqlExpressionListContext? {
+				return getRuleContext(SqlExpressionListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlFactor2
 		}
-		open func sqlVariable(_ i: Int) -> SqlVariableContext? {
-			return getRuleContext(SqlVariableContext.self,i)
-		}
-		open func UNITS() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.UNITS.rawValue) }
-		open func UNITS(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.UNITS.rawValue, i)
-		}
-		open func unitType() -> Array<UnitTypeContext> {
-			return getRuleContexts(UnitTypeContext.self)
-		}
-		open func unitType(_ i: Int) -> UnitTypeContext? {
-			return getRuleContext(UnitTypeContext.self,i)
-		}
-		open func sqlLiteral() -> Array<SqlLiteralContext> {
-			return getRuleContexts(SqlLiteralContext.self)
-		}
-		open func sqlLiteral(_ i: Int) -> SqlLiteralContext? {
-			return getRuleContext(SqlLiteralContext.self,i)
-		}
-		open func groupFunction() -> Array<GroupFunctionContext> {
-			return getRuleContexts(GroupFunctionContext.self)
-		}
-		open func groupFunction(_ i: Int) -> GroupFunctionContext? {
-			return getRuleContext(GroupFunctionContext.self,i)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func sqlExpression() -> Array<SqlExpressionContext> {
-			return getRuleContexts(SqlExpressionContext.self)
-		}
-		open func sqlExpression(_ i: Int) -> SqlExpressionContext? {
-			return getRuleContext(SqlExpressionContext.self,i)
-		}
-		open func STAR() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.STAR.rawValue) }
-		open func STAR(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.STAR.rawValue, i)
-		}
-		open func ALL() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.ALL.rawValue) }
-		open func ALL(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.ALL.rawValue, i)
-		}
-		open func DISTINCT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.DISTINCT.rawValue) }
-		open func DISTINCT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.DISTINCT.rawValue, i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func sqlFunction() -> Array<SqlFunctionContext> {
-			return getRuleContexts(SqlFunctionContext.self)
-		}
-		open func sqlFunction(_ i: Int) -> SqlFunctionContext? {
-			return getRuleContext(SqlFunctionContext.self,i)
-		}
-		open func PLUS() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.PLUS.rawValue) }
-		open func PLUS(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.PLUS.rawValue, i)
-		}
-		open func MINUS() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.MINUS.rawValue) }
-		open func MINUS(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.MINUS.rawValue, i)
-		}
-		open func sqlExpressionList() -> SqlExpressionListContext? {
-			return getRuleContext(SqlExpressionListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlFactor2 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlFactor2(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlFactor2(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlFactor2(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlFactor2(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlFactor2(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlFactor2(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlFactor2(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlFactor2(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlFactor2() throws -> SqlFactor2Context {
+	 open func sqlFactor2() throws -> SqlFactor2Context {
 		var _localctx: SqlFactor2Context = SqlFactor2Context(_ctx, getState())
 		try enterRule(_localctx, 118, informixParser.RULE_sqlFactor2)
 		var _la: Int = 0
@@ -6816,46 +7748,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlExpressionListContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func sqlExpression() -> Array<SqlExpressionContext> {
-			return getRuleContexts(SqlExpressionContext.self)
+
+	public class SqlExpressionListContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func sqlExpression() -> [SqlExpressionContext] {
+				return getRuleContexts(SqlExpressionContext.self)
+			}
+			open
+			func sqlExpression(_ i: Int) -> SqlExpressionContext? {
+				return getRuleContext(SqlExpressionContext.self, i)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlExpressionList
 		}
-		open func sqlExpression(_ i: Int) -> SqlExpressionContext? {
-			return getRuleContext(SqlExpressionContext.self,i)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlExpressionList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlExpressionList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlExpressionList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlExpressionList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlExpressionList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlExpressionList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlExpressionList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlExpressionList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlExpressionList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlExpressionList() throws -> SqlExpressionListContext {
+	 open func sqlExpressionList() throws -> SqlExpressionListContext {
 		var _localctx: SqlExpressionListContext = SqlExpressionListContext(_ctx, getState())
 		try enterRule(_localctx, 120, informixParser.RULE_sqlExpressionList)
 		var _la: Int = 0
@@ -6898,43 +7847,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlLiteralContext:ParserRuleContext {
-		open func unsignedConstant() -> UnsignedConstantContext? {
-			return getRuleContext(UnsignedConstantContext.self,0)
+
+	public class SqlLiteralContext: ParserRuleContext {
+			open
+			func unsignedConstant() -> UnsignedConstantContext? {
+				return getRuleContext(UnsignedConstantContext.self, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func NULL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NULL.rawValue, 0)
+			}
+			open
+			func FALSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FALSE.rawValue, 0)
+			}
+			open
+			func TRUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TRUE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlLiteral
 		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func NULL() -> TerminalNode? { return getToken(informixParser.Tokens.NULL.rawValue, 0) }
-		open func FALSE() -> TerminalNode? { return getToken(informixParser.Tokens.FALSE.rawValue, 0) }
-		open func TRUE() -> TerminalNode? { return getToken(informixParser.Tokens.TRUE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlLiteral(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlLiteral(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlLiteral() throws -> SqlLiteralContext {
+	 open func sqlLiteral() throws -> SqlLiteralContext {
 		var _localctx: SqlLiteralContext = SqlLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 122, informixParser.RULE_sqlLiteral)
 		defer {
@@ -6985,40 +7950,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlVariableContext:ParserRuleContext {
-		open func columnsTableId() -> Array<ColumnsTableIdContext> {
-			return getRuleContexts(ColumnsTableIdContext.self)
+
+	public class SqlVariableContext: ParserRuleContext {
+			open
+			func columnsTableId() -> [ColumnsTableIdContext] {
+				return getRuleContexts(ColumnsTableIdContext.self)
+			}
+			open
+			func columnsTableId(_ i: Int) -> ColumnsTableIdContext? {
+				return getRuleContext(ColumnsTableIdContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlVariable
 		}
-		open func columnsTableId(_ i: Int) -> ColumnsTableIdContext? {
-			return getRuleContext(ColumnsTableIdContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlVariable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlVariable(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlVariable(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlVariable() throws -> SqlVariableContext {
+	 open func sqlVariable() throws -> SqlVariableContext {
 		var _localctx: SqlVariableContext = SqlVariableContext(_ctx, getState())
 		try enterRule(_localctx, 124, informixParser.RULE_sqlVariable)
 		defer {
@@ -7040,46 +8012,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlFunctionContext:ParserRuleContext {
-		open func numberFunction() -> NumberFunctionContext? {
-			return getRuleContext(NumberFunctionContext.self,0)
+
+	public class SqlFunctionContext: ParserRuleContext {
+			open
+			func numberFunction() -> NumberFunctionContext? {
+				return getRuleContext(NumberFunctionContext.self, 0)
+			}
+			open
+			func charFunction() -> CharFunctionContext? {
+				return getRuleContext(CharFunctionContext.self, 0)
+			}
+			open
+			func dateFunction() -> DateFunctionContext? {
+				return getRuleContext(DateFunctionContext.self, 0)
+			}
+			open
+			func otherFunction() -> OtherFunctionContext? {
+				return getRuleContext(OtherFunctionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlFunction
 		}
-		open func charFunction() -> CharFunctionContext? {
-			return getRuleContext(CharFunctionContext.self,0)
-		}
-		open func dateFunction() -> DateFunctionContext? {
-			return getRuleContext(DateFunctionContext.self,0)
-		}
-		open func otherFunction() -> OtherFunctionContext? {
-			return getRuleContext(OtherFunctionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlFunction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlFunction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlFunction(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlFunction(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlFunction() throws -> SqlFunctionContext {
+	 open func sqlFunction() throws -> SqlFunctionContext {
 		var _localctx: SqlFunctionContext = SqlFunctionContext(_ctx, getState())
 		try enterRule(_localctx, 126, informixParser.RULE_sqlFunction)
 		defer {
@@ -7124,38 +8105,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DateFunctionContext:ParserRuleContext {
-		open func YEAR() -> TerminalNode? { return getToken(informixParser.Tokens.YEAR.rawValue, 0) }
-		open func DATE() -> TerminalNode? { return getToken(informixParser.Tokens.DATE.rawValue, 0) }
-		open func DAY() -> TerminalNode? { return getToken(informixParser.Tokens.DAY.rawValue, 0) }
-		open func MONTH() -> TerminalNode? { return getToken(informixParser.Tokens.MONTH.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_dateFunction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDateFunction(self)
+
+	public class DateFunctionContext: ParserRuleContext {
+			open
+			func YEAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.YEAR.rawValue, 0)
+			}
+			open
+			func DATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DATE.rawValue, 0)
+			}
+			open
+			func DAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DAY.rawValue, 0)
+			}
+			open
+			func MONTH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MONTH.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_dateFunction
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDateFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDateFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDateFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDateFunction(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDateFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDateFunction(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDateFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dateFunction() throws -> DateFunctionContext {
+	 open func dateFunction() throws -> DateFunctionContext {
 		var _localctx: DateFunctionContext = DateFunctionContext(_ctx, getState())
 		try enterRule(_localctx, 128, informixParser.RULE_dateFunction)
 		var _la: Int = 0
@@ -7189,35 +8187,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class NumberFunctionContext:ParserRuleContext {
-		open func MOD() -> TerminalNode? { return getToken(informixParser.Tokens.MOD.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_numberFunction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterNumberFunction(self)
+
+	public class NumberFunctionContext: ParserRuleContext {
+			open
+			func MOD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MOD.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_numberFunction
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterNumberFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitNumberFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitNumberFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitNumberFunction(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitNumberFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitNumberFunction(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitNumberFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numberFunction() throws -> NumberFunctionContext {
+	 open func numberFunction() throws -> NumberFunctionContext {
 		var _localctx: NumberFunctionContext = NumberFunctionContext(_ctx, getState())
 		try enterRule(_localctx, 130, informixParser.RULE_numberFunction)
 		defer {
@@ -7237,35 +8243,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class CharFunctionContext:ParserRuleContext {
-		open func LENGTH() -> TerminalNode? { return getToken(informixParser.Tokens.LENGTH.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_charFunction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterCharFunction(self)
+
+	public class CharFunctionContext: ParserRuleContext {
+			open
+			func LENGTH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LENGTH.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_charFunction
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterCharFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitCharFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitCharFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitCharFunction(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitCharFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitCharFunction(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitCharFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func charFunction() throws -> CharFunctionContext {
+	 open func charFunction() throws -> CharFunctionContext {
 		var _localctx: CharFunctionContext = CharFunctionContext(_ctx, getState())
 		try enterRule(_localctx, 132, informixParser.RULE_charFunction)
 		defer {
@@ -7285,39 +8299,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class GroupFunctionContext:ParserRuleContext {
-		open func AVG() -> TerminalNode? { return getToken(informixParser.Tokens.AVG.rawValue, 0) }
-		open func COUNT() -> TerminalNode? { return getToken(informixParser.Tokens.COUNT.rawValue, 0) }
-		open func MAX() -> TerminalNode? { return getToken(informixParser.Tokens.MAX.rawValue, 0) }
-		open func MIN() -> TerminalNode? { return getToken(informixParser.Tokens.MIN.rawValue, 0) }
-		open func SUM() -> TerminalNode? { return getToken(informixParser.Tokens.SUM.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_groupFunction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterGroupFunction(self)
+
+	public class GroupFunctionContext: ParserRuleContext {
+			open
+			func AVG() -> TerminalNode? {
+				return getToken(informixParser.Tokens.AVG.rawValue, 0)
+			}
+			open
+			func COUNT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COUNT.rawValue, 0)
+			}
+			open
+			func MAX() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MAX.rawValue, 0)
+			}
+			open
+			func MIN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MIN.rawValue, 0)
+			}
+			open
+			func SUM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SUM.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_groupFunction
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterGroupFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitGroupFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitGroupFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitGroupFunction(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitGroupFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitGroupFunction(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitGroupFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func groupFunction() throws -> GroupFunctionContext {
+	 open func groupFunction() throws -> GroupFunctionContext {
 		var _localctx: GroupFunctionContext = GroupFunctionContext(_ctx, getState())
 		try enterRule(_localctx, 134, informixParser.RULE_groupFunction)
 		var _la: Int = 0
@@ -7351,39 +8385,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class OtherFunctionContext:ParserRuleContext {
-		open func DECODE() -> TerminalNode? { return getToken(informixParser.Tokens.DECODE.rawValue, 0) }
-		open func NVL() -> TerminalNode? { return getToken(informixParser.Tokens.NVL.rawValue, 0) }
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
+
+	public class OtherFunctionContext: ParserRuleContext {
+			open
+			func DECODE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DECODE.rawValue, 0)
+			}
+			open
+			func NVL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NVL.rawValue, 0)
+			}
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_otherFunction
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_otherFunction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterOtherFunction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterOtherFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitOtherFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitOtherFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitOtherFunction(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitOtherFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitOtherFunction(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitOtherFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func otherFunction() throws -> OtherFunctionContext {
+	 open func otherFunction() throws -> OtherFunctionContext {
 		var _localctx: OtherFunctionContext = OtherFunctionContext(_ctx, getState())
 		try enterRule(_localctx, 136, informixParser.RULE_otherFunction)
 		var _la: Int = 0
@@ -7453,7 +8499,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7464,35 +8510,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlPseudoColumnContext:ParserRuleContext {
-		open func USER() -> TerminalNode? { return getToken(informixParser.Tokens.USER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlPseudoColumn }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlPseudoColumn(self)
+
+	public class SqlPseudoColumnContext: ParserRuleContext {
+			open
+			func USER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.USER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlPseudoColumn
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlPseudoColumn(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlPseudoColumn(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlPseudoColumn(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlPseudoColumn(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlPseudoColumn(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlPseudoColumn(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlPseudoColumn(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlPseudoColumn() throws -> SqlPseudoColumnContext {
+	 open func sqlPseudoColumn() throws -> SqlPseudoColumnContext {
 		var _localctx: SqlPseudoColumnContext = SqlPseudoColumnContext(_ctx, getState())
 		try enterRule(_localctx, 138, informixParser.RULE_sqlPseudoColumn)
 		defer {
@@ -7512,43 +8566,75 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class RelationalOperatorContext:ParserRuleContext {
-		open func EQUAL() -> TerminalNode? { return getToken(informixParser.Tokens.EQUAL.rawValue, 0) }
-		open func NOT_EQUAL() -> TerminalNode? { return getToken(informixParser.Tokens.NOT_EQUAL.rawValue, 0) }
-		open func LE() -> TerminalNode? { return getToken(informixParser.Tokens.LE.rawValue, 0) }
-		open func LT() -> TerminalNode? { return getToken(informixParser.Tokens.LT.rawValue, 0) }
-		open func GE() -> TerminalNode? { return getToken(informixParser.Tokens.GE.rawValue, 0) }
-		open func GT() -> TerminalNode? { return getToken(informixParser.Tokens.GT.rawValue, 0) }
-		open func LIKE() -> TerminalNode? { return getToken(informixParser.Tokens.LIKE.rawValue, 0) }
-		open func MATCHES() -> TerminalNode? { return getToken(informixParser.Tokens.MATCHES.rawValue, 0) }
-		open func NOT() -> TerminalNode? { return getToken(informixParser.Tokens.NOT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_relationalOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterRelationalOperator(self)
+
+	public class RelationalOperatorContext: ParserRuleContext {
+			open
+			func EQUAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EQUAL.rawValue, 0)
+			}
+			open
+			func NOT_EQUAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT_EQUAL.rawValue, 0)
+			}
+			open
+			func LE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LE.rawValue, 0)
+			}
+			open
+			func LT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LT.rawValue, 0)
+			}
+			open
+			func GE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GE.rawValue, 0)
+			}
+			open
+			func GT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GT.rawValue, 0)
+			}
+			open
+			func LIKE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LIKE.rawValue, 0)
+			}
+			open
+			func MATCHES() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MATCHES.rawValue, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_relationalOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterRelationalOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitRelationalOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitRelationalOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitRelationalOperator(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitRelationalOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitRelationalOperator(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitRelationalOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func relationalOperator() throws -> RelationalOperatorContext {
+	 open func relationalOperator() throws -> RelationalOperatorContext {
 		var _localctx: RelationalOperatorContext = RelationalOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 140, informixParser.RULE_relationalOperator)
 		var _la: Int = 0
@@ -7628,7 +8714,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7639,48 +8725,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class IfConditionContext:ParserRuleContext {
-		open func TRUE() -> TerminalNode? { return getToken(informixParser.Tokens.TRUE.rawValue, 0) }
-		open func FALSE() -> TerminalNode? { return getToken(informixParser.Tokens.FALSE.rawValue, 0) }
-		open func ifCondition2() -> Array<IfCondition2Context> {
-			return getRuleContexts(IfCondition2Context.self)
+
+	public class IfConditionContext: ParserRuleContext {
+			open
+			func TRUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TRUE.rawValue, 0)
+			}
+			open
+			func FALSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FALSE.rawValue, 0)
+			}
+			open
+			func ifCondition2() -> [IfCondition2Context] {
+				return getRuleContexts(IfCondition2Context.self)
+			}
+			open
+			func ifCondition2(_ i: Int) -> IfCondition2Context? {
+				return getRuleContext(IfCondition2Context.self, i)
+			}
+			open
+			func relationalOperator() -> [RelationalOperatorContext] {
+				return getRuleContexts(RelationalOperatorContext.self)
+			}
+			open
+			func relationalOperator(_ i: Int) -> RelationalOperatorContext? {
+				return getRuleContext(RelationalOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_ifCondition
 		}
-		open func ifCondition2(_ i: Int) -> IfCondition2Context? {
-			return getRuleContext(IfCondition2Context.self,i)
-		}
-		open func relationalOperator() -> Array<RelationalOperatorContext> {
-			return getRuleContexts(RelationalOperatorContext.self)
-		}
-		open func relationalOperator(_ i: Int) -> RelationalOperatorContext? {
-			return getRuleContext(RelationalOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_ifCondition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterIfCondition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterIfCondition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitIfCondition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitIfCondition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitIfCondition(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitIfCondition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitIfCondition(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitIfCondition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifCondition() throws -> IfConditionContext {
+	 open func ifCondition() throws -> IfConditionContext {
 		var _localctx: IfConditionContext = IfConditionContext(_ctx, getState())
 		try enterRule(_localctx, 142, informixParser.RULE_ifCondition)
 		defer {
@@ -7736,44 +8837,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class IfCondition2Context:ParserRuleContext {
-		open func ifLogicalTerm() -> Array<IfLogicalTermContext> {
-			return getRuleContexts(IfLogicalTermContext.self)
+
+	public class IfCondition2Context: ParserRuleContext {
+			open
+			func ifLogicalTerm() -> [IfLogicalTermContext] {
+				return getRuleContexts(IfLogicalTermContext.self)
+			}
+			open
+			func ifLogicalTerm(_ i: Int) -> IfLogicalTermContext? {
+				return getRuleContext(IfLogicalTermContext.self, i)
+			}
+			open
+			func OR() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.OR.rawValue)
+			}
+			open
+			func OR(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.OR.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_ifCondition2
 		}
-		open func ifLogicalTerm(_ i: Int) -> IfLogicalTermContext? {
-			return getRuleContext(IfLogicalTermContext.self,i)
-		}
-		open func OR() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.OR.rawValue) }
-		open func OR(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.OR.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_ifCondition2 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterIfCondition2(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterIfCondition2(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitIfCondition2(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitIfCondition2(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitIfCondition2(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitIfCondition2(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitIfCondition2(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitIfCondition2(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifCondition2() throws -> IfCondition2Context {
+	 open func ifCondition2() throws -> IfCondition2Context {
 		var _localctx: IfCondition2Context = IfCondition2Context(_ctx, getState())
 		try enterRule(_localctx, 144, informixParser.RULE_ifCondition2)
 		defer {
@@ -7810,44 +8922,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class IfLogicalTermContext:ParserRuleContext {
-		open func ifLogicalFactor() -> Array<IfLogicalFactorContext> {
-			return getRuleContexts(IfLogicalFactorContext.self)
+
+	public class IfLogicalTermContext: ParserRuleContext {
+			open
+			func ifLogicalFactor() -> [IfLogicalFactorContext] {
+				return getRuleContexts(IfLogicalFactorContext.self)
+			}
+			open
+			func ifLogicalFactor(_ i: Int) -> IfLogicalFactorContext? {
+				return getRuleContext(IfLogicalFactorContext.self, i)
+			}
+			open
+			func AND() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.AND.rawValue)
+			}
+			open
+			func AND(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.AND.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_ifLogicalTerm
 		}
-		open func ifLogicalFactor(_ i: Int) -> IfLogicalFactorContext? {
-			return getRuleContext(IfLogicalFactorContext.self,i)
-		}
-		open func AND() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.AND.rawValue) }
-		open func AND(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.AND.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_ifLogicalTerm }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterIfLogicalTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterIfLogicalTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitIfLogicalTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitIfLogicalTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitIfLogicalTerm(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitIfLogicalTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitIfLogicalTerm(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitIfLogicalTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifLogicalTerm() throws -> IfLogicalTermContext {
+	 open func ifLogicalTerm() throws -> IfLogicalTermContext {
 		var _localctx: IfLogicalTermContext = IfLogicalTermContext(_ctx, getState())
 		try enterRule(_localctx, 146, informixParser.RULE_ifLogicalTerm)
 		defer {
@@ -7884,51 +9007,67 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func simpleExpression() -> SimpleExpressionContext? {
-			return getRuleContext(SimpleExpressionContext.self,0)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func simpleExpression() -> SimpleExpressionContext? {
+				return getRuleContext(SimpleExpressionContext.self, 0)
+			}
+			open
+			func CLIPPED() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.CLIPPED.rawValue)
+			}
+			open
+			func CLIPPED(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.CLIPPED.rawValue, i)
+			}
+			open
+			func USING() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.USING.rawValue)
+			}
+			open
+			func USING(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.USING.rawValue, i)
+			}
+			open
+			func string() -> [StringContext] {
+				return getRuleContexts(StringContext.self)
+			}
+			open
+			func string(_ i: Int) -> StringContext? {
+				return getRuleContext(StringContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_expression
 		}
-		open func CLIPPED() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.CLIPPED.rawValue) }
-		open func CLIPPED(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.CLIPPED.rawValue, i)
-		}
-		open func USING() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.USING.rawValue) }
-		open func USING(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.USING.rawValue, i)
-		}
-		open func string() -> Array<StringContext> {
-			return getRuleContexts(StringContext.self)
-		}
-		open func string(_ i: Int) -> StringContext? {
-			return getRuleContext(StringContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitExpression(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 148, informixParser.RULE_expression)
 		var _la: Int = 0
@@ -7965,7 +9104,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(1214)
@@ -7982,52 +9121,71 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class IfLogicalFactorContext:ParserRuleContext {
-		open func NOT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.NOT.rawValue) }
-		open func NOT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.NOT.rawValue, i)
+
+	public class IfLogicalFactorContext: ParserRuleContext {
+			open
+			func NOT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.NOT.rawValue)
+			}
+			open
+			func NOT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT.rawValue, i)
+			}
+			open
+			func ifCondition() -> [IfConditionContext] {
+				return getRuleContexts(IfConditionContext.self)
+			}
+			open
+			func ifCondition(_ i: Int) -> IfConditionContext? {
+				return getRuleContext(IfConditionContext.self, i)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func simpleExpression() -> [SimpleExpressionContext] {
+				return getRuleContexts(SimpleExpressionContext.self)
+			}
+			open
+			func simpleExpression(_ i: Int) -> SimpleExpressionContext? {
+				return getRuleContext(SimpleExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_ifLogicalFactor
 		}
-		open func ifCondition() -> Array<IfConditionContext> {
-			return getRuleContexts(IfConditionContext.self)
-		}
-		open func ifCondition(_ i: Int) -> IfConditionContext? {
-			return getRuleContext(IfConditionContext.self,i)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func simpleExpression() -> Array<SimpleExpressionContext> {
-			return getRuleContexts(SimpleExpressionContext.self)
-		}
-		open func simpleExpression(_ i: Int) -> SimpleExpressionContext? {
-			return getRuleContext(SimpleExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_ifLogicalFactor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterIfLogicalFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterIfLogicalFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitIfLogicalFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitIfLogicalFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitIfLogicalFactor(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitIfLogicalFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitIfLogicalFactor(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitIfLogicalFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifLogicalFactor() throws -> IfLogicalFactorContext {
+	 open func ifLogicalFactor() throws -> IfLogicalFactorContext {
 		var _localctx: IfLogicalFactorContext = IfLogicalFactorContext(_ctx, getState())
 		try enterRule(_localctx, 150, informixParser.RULE_ifLogicalFactor)
 		defer {
@@ -8083,49 +9241,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SimpleExpressionContext:ParserRuleContext {
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class SimpleExpressionContext: ParserRuleContext {
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+			open
+			func sign() -> SignContext? {
+				return getRuleContext(SignContext.self, 0)
+			}
+			open
+			func addingOperator() -> [AddingOperatorContext] {
+				return getRuleContexts(AddingOperatorContext.self)
+			}
+			open
+			func addingOperator(_ i: Int) -> AddingOperatorContext? {
+				return getRuleContext(AddingOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_simpleExpression
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open func sign() -> SignContext? {
-			return getRuleContext(SignContext.self,0)
-		}
-		open func addingOperator() -> Array<AddingOperatorContext> {
-			return getRuleContexts(AddingOperatorContext.self)
-		}
-		open func addingOperator(_ i: Int) -> AddingOperatorContext? {
-			return getRuleContext(AddingOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_simpleExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSimpleExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSimpleExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSimpleExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSimpleExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSimpleExpression(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSimpleExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSimpleExpression(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSimpleExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleExpression() throws -> SimpleExpressionContext {
+	 open func simpleExpression() throws -> SimpleExpressionContext {
 		var _localctx: SimpleExpressionContext = SimpleExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 152, informixParser.RULE_simpleExpression)
 		defer {
@@ -8172,36 +9340,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class AddingOperatorContext:ParserRuleContext {
-		open func PLUS() -> TerminalNode? { return getToken(informixParser.Tokens.PLUS.rawValue, 0) }
-		open func MINUS() -> TerminalNode? { return getToken(informixParser.Tokens.MINUS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_addingOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterAddingOperator(self)
+
+	public class AddingOperatorContext: ParserRuleContext {
+			open
+			func PLUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PLUS.rawValue, 0)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MINUS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_addingOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterAddingOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitAddingOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitAddingOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitAddingOperator(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitAddingOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitAddingOperator(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitAddingOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func addingOperator() throws -> AddingOperatorContext {
+	 open func addingOperator() throws -> AddingOperatorContext {
 		var _localctx: AddingOperatorContext = AddingOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 154, informixParser.RULE_addingOperator)
 		var _la: Int = 0
@@ -8233,46 +9412,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class TermContext:ParserRuleContext {
-		open func factor() -> Array<FactorContext> {
-			return getRuleContexts(FactorContext.self)
+
+	public class TermContext: ParserRuleContext {
+			open
+			func factor() -> [FactorContext] {
+				return getRuleContexts(FactorContext.self)
+			}
+			open
+			func factor(_ i: Int) -> FactorContext? {
+				return getRuleContext(FactorContext.self, i)
+			}
+			open
+			func multiplyingOperator() -> [MultiplyingOperatorContext] {
+				return getRuleContexts(MultiplyingOperatorContext.self)
+			}
+			open
+			func multiplyingOperator(_ i: Int) -> MultiplyingOperatorContext? {
+				return getRuleContext(MultiplyingOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_term
 		}
-		open func factor(_ i: Int) -> FactorContext? {
-			return getRuleContext(FactorContext.self,i)
-		}
-		open func multiplyingOperator() -> Array<MultiplyingOperatorContext> {
-			return getRuleContexts(MultiplyingOperatorContext.self)
-		}
-		open func multiplyingOperator(_ i: Int) -> MultiplyingOperatorContext? {
-			return getRuleContext(MultiplyingOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitTerm(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitTerm(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term() throws -> TermContext {
+	 open func term() throws -> TermContext {
 		var _localctx: TermContext = TermContext(_ctx, getState())
 		try enterRule(_localctx, 156, informixParser.RULE_term)
 		var _la: Int = 0
@@ -8315,38 +9503,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MultiplyingOperatorContext:ParserRuleContext {
-		open func STAR() -> TerminalNode? { return getToken(informixParser.Tokens.STAR.rawValue, 0) }
-		open func SLASH() -> TerminalNode? { return getToken(informixParser.Tokens.SLASH.rawValue, 0) }
-		open func DIV() -> TerminalNode? { return getToken(informixParser.Tokens.DIV.rawValue, 0) }
-		open func MOD() -> TerminalNode? { return getToken(informixParser.Tokens.MOD.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_multiplyingOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMultiplyingOperator(self)
+
+	public class MultiplyingOperatorContext: ParserRuleContext {
+			open
+			func STAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STAR.rawValue, 0)
+			}
+			open
+			func SLASH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SLASH.rawValue, 0)
+			}
+			open
+			func DIV() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DIV.rawValue, 0)
+			}
+			open
+			func MOD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MOD.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_multiplyingOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMultiplyingOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMultiplyingOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMultiplyingOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMultiplyingOperator(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMultiplyingOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMultiplyingOperator(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMultiplyingOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiplyingOperator() throws -> MultiplyingOperatorContext {
+	 open func multiplyingOperator() throws -> MultiplyingOperatorContext {
 		var _localctx: MultiplyingOperatorContext = MultiplyingOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 158, informixParser.RULE_multiplyingOperator)
 		var _la: Int = 0
@@ -8382,57 +9587,83 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FactorContext:ParserRuleContext {
-		open func functionDesignator() -> FunctionDesignatorContext? {
-			return getRuleContext(FunctionDesignatorContext.self,0)
+
+	public class FactorContext: ParserRuleContext {
+			open
+			func functionDesignator() -> FunctionDesignatorContext? {
+				return getRuleContext(FunctionDesignatorContext.self, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func factor() -> FactorContext? {
+				return getRuleContext(FactorContext.self, 0)
+			}
+			open
+			func UNITS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UNITS.rawValue, 0)
+			}
+			open
+			func unitType() -> UnitTypeContext? {
+				return getRuleContext(UnitTypeContext.self, 0)
+			}
+			open
+			func GROUP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GROUP.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_factor
 		}
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
-		}
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func NOT() -> TerminalNode? { return getToken(informixParser.Tokens.NOT.rawValue, 0) }
-		open func factor() -> FactorContext? {
-			return getRuleContext(FactorContext.self,0)
-		}
-		open func UNITS() -> TerminalNode? { return getToken(informixParser.Tokens.UNITS.rawValue, 0) }
-		open func unitType() -> UnitTypeContext? {
-			return getRuleContext(UnitTypeContext.self,0)
-		}
-		open func GROUP() -> TerminalNode? { return getToken(informixParser.Tokens.GROUP.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_factor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFactor(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFactor(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func factor() throws -> FactorContext {
+	 open func factor() throws -> FactorContext {
 		var _localctx: FactorContext = FactorContext(_ctx, getState())
 		try enterRule(_localctx, 160, informixParser.RULE_factor)
 		defer {
@@ -8508,49 +9739,67 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionDesignatorContext:ParserRuleContext {
-		open func functionIdentifier() -> FunctionIdentifierContext? {
-			return getRuleContext(FunctionIdentifierContext.self,0)
+
+	public class FunctionDesignatorContext: ParserRuleContext {
+			open
+			func functionIdentifier() -> FunctionIdentifierContext? {
+				return getRuleContext(FunctionIdentifierContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func actualParameter() -> [ActualParameterContext] {
+				return getRuleContexts(ActualParameterContext.self)
+			}
+			open
+			func actualParameter(_ i: Int) -> ActualParameterContext? {
+				return getRuleContext(ActualParameterContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_functionDesignator
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func actualParameter() -> Array<ActualParameterContext> {
-			return getRuleContexts(ActualParameterContext.self)
-		}
-		open func actualParameter(_ i: Int) -> ActualParameterContext? {
-			return getRuleContext(ActualParameterContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_functionDesignator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFunctionDesignator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFunctionDesignator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFunctionDesignator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFunctionDesignator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFunctionDesignator(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFunctionDesignator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFunctionDesignator(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFunctionDesignator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionDesignator() throws -> FunctionDesignatorContext {
+	 open func functionDesignator() throws -> FunctionDesignatorContext {
 		var _localctx: FunctionDesignatorContext = FunctionDesignatorContext(_ctx, getState())
 		try enterRule(_localctx, 162, informixParser.RULE_functionDesignator)
 		var _la: Int = 0
@@ -8633,54 +9882,111 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionIdentifierContext:ParserRuleContext {
-		open func DAY() -> TerminalNode? { return getToken(informixParser.Tokens.DAY.rawValue, 0) }
-		open func YEAR() -> TerminalNode? { return getToken(informixParser.Tokens.YEAR.rawValue, 0) }
-		open func MONTH() -> TerminalNode? { return getToken(informixParser.Tokens.MONTH.rawValue, 0) }
-		open func TODAY() -> TerminalNode? { return getToken(informixParser.Tokens.TODAY.rawValue, 0) }
-		open func WEEKDAY() -> TerminalNode? { return getToken(informixParser.Tokens.WEEKDAY.rawValue, 0) }
-		open func MDY() -> TerminalNode? { return getToken(informixParser.Tokens.MDY.rawValue, 0) }
-		open func COLUMN() -> TerminalNode? { return getToken(informixParser.Tokens.COLUMN.rawValue, 0) }
-		open func SUM() -> TerminalNode? { return getToken(informixParser.Tokens.SUM.rawValue, 0) }
-		open func COUNT() -> TerminalNode? { return getToken(informixParser.Tokens.COUNT.rawValue, 0) }
-		open func AVG() -> TerminalNode? { return getToken(informixParser.Tokens.AVG.rawValue, 0) }
-		open func MIN() -> TerminalNode? { return getToken(informixParser.Tokens.MIN.rawValue, 0) }
-		open func MAX() -> TerminalNode? { return getToken(informixParser.Tokens.MAX.rawValue, 0) }
-		open func EXTEND() -> TerminalNode? { return getToken(informixParser.Tokens.EXTEND.rawValue, 0) }
-		open func DATE() -> TerminalNode? { return getToken(informixParser.Tokens.DATE.rawValue, 0) }
-		open func TIME() -> TerminalNode? { return getToken(informixParser.Tokens.TIME.rawValue, 0) }
-		open func INFIELD() -> TerminalNode? { return getToken(informixParser.Tokens.INFIELD.rawValue, 0) }
-		open func PREPARE() -> TerminalNode? { return getToken(informixParser.Tokens.PREPARE.rawValue, 0) }
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
+
+	public class FunctionIdentifierContext: ParserRuleContext {
+			open
+			func DAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DAY.rawValue, 0)
+			}
+			open
+			func YEAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.YEAR.rawValue, 0)
+			}
+			open
+			func MONTH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MONTH.rawValue, 0)
+			}
+			open
+			func TODAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TODAY.rawValue, 0)
+			}
+			open
+			func WEEKDAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WEEKDAY.rawValue, 0)
+			}
+			open
+			func MDY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MDY.rawValue, 0)
+			}
+			open
+			func COLUMN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COLUMN.rawValue, 0)
+			}
+			open
+			func SUM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SUM.rawValue, 0)
+			}
+			open
+			func COUNT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COUNT.rawValue, 0)
+			}
+			open
+			func AVG() -> TerminalNode? {
+				return getToken(informixParser.Tokens.AVG.rawValue, 0)
+			}
+			open
+			func MIN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MIN.rawValue, 0)
+			}
+			open
+			func MAX() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MAX.rawValue, 0)
+			}
+			open
+			func EXTEND() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXTEND.rawValue, 0)
+			}
+			open
+			func DATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DATE.rawValue, 0)
+			}
+			open
+			func TIME() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TIME.rawValue, 0)
+			}
+			open
+			func INFIELD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INFIELD.rawValue, 0)
+			}
+			open
+			func PREPARE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PREPARE.rawValue, 0)
+			}
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_functionIdentifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_functionIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFunctionIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFunctionIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFunctionIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFunctionIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFunctionIdentifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFunctionIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFunctionIdentifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFunctionIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionIdentifier() throws -> FunctionIdentifierContext {
+	 open func functionIdentifier() throws -> FunctionIdentifierContext {
 		var _localctx: FunctionIdentifierContext = FunctionIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 164, informixParser.RULE_functionIdentifier)
 		var _la: Int = 0
@@ -8737,44 +10043,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class UnsignedConstantContext:ParserRuleContext {
-		open func unsignedNumber() -> UnsignedNumberContext? {
-			return getRuleContext(UnsignedNumberContext.self,0)
+
+	public class UnsignedConstantContext: ParserRuleContext {
+			open
+			func unsignedNumber() -> UnsignedNumberContext? {
+				return getRuleContext(UnsignedNumberContext.self, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+			open
+			func NULL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NULL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_unsignedConstant
 		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
-		}
-		open func NULL() -> TerminalNode? { return getToken(informixParser.Tokens.NULL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_unsignedConstant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterUnsignedConstant(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterUnsignedConstant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitUnsignedConstant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitUnsignedConstant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitUnsignedConstant(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitUnsignedConstant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitUnsignedConstant(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitUnsignedConstant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unsignedConstant() throws -> UnsignedConstantContext {
+	 open func unsignedConstant() throws -> UnsignedConstantContext {
 		var _localctx: UnsignedConstantContext = UnsignedConstantContext(_ctx, getState())
 		try enterRule(_localctx, 166, informixParser.RULE_unsignedConstant)
 		defer {
@@ -8819,49 +10136,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ConstantContext:ParserRuleContext {
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
+
+	public class ConstantContext: ParserRuleContext {
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+			open
+			func sign() -> SignContext? {
+				return getRuleContext(SignContext.self, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_constant
 		}
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
-		}
-		open func sign() -> SignContext? {
-			return getRuleContext(SignContext.self,0)
-		}
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
-		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_constant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterConstant(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterConstant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitConstant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitConstant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitConstant(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitConstant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitConstant(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitConstant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant() throws -> ConstantContext {
+	 open func constant() throws -> ConstantContext {
 		var _localctx: ConstantContext = ConstantContext(_ctx, getState())
 		try enterRule(_localctx, 168, informixParser.RULE_constant)
 		defer {
@@ -8908,40 +10235,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class NumericConstantContext:ParserRuleContext {
-		open func unsignedNumber() -> UnsignedNumberContext? {
-			return getRuleContext(UnsignedNumberContext.self,0)
+
+	public class NumericConstantContext: ParserRuleContext {
+			open
+			func unsignedNumber() -> UnsignedNumberContext? {
+				return getRuleContext(UnsignedNumberContext.self, 0)
+			}
+			open
+			func sign() -> SignContext? {
+				return getRuleContext(SignContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_numericConstant
 		}
-		open func sign() -> SignContext? {
-			return getRuleContext(SignContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_numericConstant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterNumericConstant(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterNumericConstant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitNumericConstant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitNumericConstant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitNumericConstant(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitNumericConstant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitNumericConstant(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitNumericConstant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numericConstant() throws -> NumericConstantContext {
+	 open func numericConstant() throws -> NumericConstantContext {
 		var _localctx: NumericConstantContext = NumericConstantContext(_ctx, getState())
 		try enterRule(_localctx, 170, informixParser.RULE_numericConstant)
 		defer {
@@ -8968,7 +10302,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -8979,40 +10313,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class VariableContext:ParserRuleContext {
-		open func entireVariable() -> EntireVariableContext? {
-			return getRuleContext(EntireVariableContext.self,0)
+
+	public class VariableContext: ParserRuleContext {
+			open
+			func entireVariable() -> EntireVariableContext? {
+				return getRuleContext(EntireVariableContext.self, 0)
+			}
+			open
+			func componentVariable() -> ComponentVariableContext? {
+				return getRuleContext(ComponentVariableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_variable
 		}
-		open func componentVariable() -> ComponentVariableContext? {
-			return getRuleContext(ComponentVariableContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_variable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitVariable(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitVariable(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable() throws -> VariableContext {
+	 open func variable() throws -> VariableContext {
 		var _localctx: VariableContext = VariableContext(_ctx, getState())
 		try enterRule(_localctx, 172, informixParser.RULE_variable)
 		defer {
@@ -9045,37 +10386,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class EntireVariableContext:ParserRuleContext {
-		open func variableIdentifier() -> VariableIdentifierContext? {
-			return getRuleContext(VariableIdentifierContext.self,0)
+
+	public class EntireVariableContext: ParserRuleContext {
+			open
+			func variableIdentifier() -> VariableIdentifierContext? {
+				return getRuleContext(VariableIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_entireVariable
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_entireVariable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterEntireVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterEntireVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitEntireVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitEntireVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitEntireVariable(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitEntireVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitEntireVariable(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitEntireVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func entireVariable() throws -> EntireVariableContext {
+	 open func entireVariable() throws -> EntireVariableContext {
 		var _localctx: EntireVariableContext = EntireVariableContext(_ctx, getState())
 		try enterRule(_localctx, 174, informixParser.RULE_entireVariable)
 		defer {
@@ -9095,37 +10442,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class VariableIdentifierContext:ParserRuleContext {
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
+
+	public class VariableIdentifierContext: ParserRuleContext {
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_variableIdentifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_variableIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterVariableIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterVariableIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitVariableIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitVariableIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitVariableIdentifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitVariableIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitVariableIdentifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitVariableIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableIdentifier() throws -> VariableIdentifierContext {
+	 open func variableIdentifier() throws -> VariableIdentifierContext {
 		var _localctx: VariableIdentifierContext = VariableIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 176, informixParser.RULE_variableIdentifier)
 		defer {
@@ -9145,46 +10498,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class IndexingVariableContext:ParserRuleContext {
-		open func LBRACK() -> TerminalNode? { return getToken(informixParser.Tokens.LBRACK.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class IndexingVariableContext: ParserRuleContext {
+			open
+			func LBRACK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LBRACK.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func RBRACK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RBRACK.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_indexingVariable
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func RBRACK() -> TerminalNode? { return getToken(informixParser.Tokens.RBRACK.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_indexingVariable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterIndexingVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterIndexingVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitIndexingVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitIndexingVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitIndexingVariable(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitIndexingVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitIndexingVariable(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitIndexingVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func indexingVariable() throws -> IndexingVariableContext {
+	 open func indexingVariable() throws -> IndexingVariableContext {
 		var _localctx: IndexingVariableContext = IndexingVariableContext(_ctx, getState())
 		try enterRule(_localctx, 178, informixParser.RULE_indexingVariable)
 		var _la: Int = 0
@@ -9227,50 +10597,71 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ComponentVariableContext:ParserRuleContext {
-		open func recordVariable() -> RecordVariableContext? {
-			return getRuleContext(RecordVariableContext.self,0)
+
+	public class ComponentVariableContext: ParserRuleContext {
+			open
+			func recordVariable() -> RecordVariableContext? {
+				return getRuleContext(RecordVariableContext.self, 0)
+			}
+			open
+			func indexingVariable() -> IndexingVariableContext? {
+				return getRuleContext(IndexingVariableContext.self, 0)
+			}
+			open
+			func DOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOT.rawValue, 0)
+			}
+			open
+			func STAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STAR.rawValue, 0)
+			}
+			open
+			func componentVariable() -> [ComponentVariableContext] {
+				return getRuleContexts(ComponentVariableContext.self)
+			}
+			open
+			func componentVariable(_ i: Int) -> ComponentVariableContext? {
+				return getRuleContext(ComponentVariableContext.self, i)
+			}
+			open
+			func THROUGH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.THROUGH.rawValue, 0)
+			}
+			open
+			func THRU() -> TerminalNode? {
+				return getToken(informixParser.Tokens.THRU.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_componentVariable
 		}
-		open func indexingVariable() -> IndexingVariableContext? {
-			return getRuleContext(IndexingVariableContext.self,0)
-		}
-		open func DOT() -> TerminalNode? { return getToken(informixParser.Tokens.DOT.rawValue, 0) }
-		open func STAR() -> TerminalNode? { return getToken(informixParser.Tokens.STAR.rawValue, 0) }
-		open func componentVariable() -> Array<ComponentVariableContext> {
-			return getRuleContexts(ComponentVariableContext.self)
-		}
-		open func componentVariable(_ i: Int) -> ComponentVariableContext? {
-			return getRuleContext(ComponentVariableContext.self,i)
-		}
-		open func THROUGH() -> TerminalNode? { return getToken(informixParser.Tokens.THROUGH.rawValue, 0) }
-		open func THRU() -> TerminalNode? { return getToken(informixParser.Tokens.THRU.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_componentVariable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterComponentVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterComponentVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitComponentVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitComponentVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitComponentVariable(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitComponentVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitComponentVariable(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitComponentVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func componentVariable() throws -> ComponentVariableContext {
+	 open func componentVariable() throws -> ComponentVariableContext {
 		var _localctx: ComponentVariableContext = ComponentVariableContext(_ctx, getState())
 		try enterRule(_localctx, 180, informixParser.RULE_componentVariable)
 		var _la: Int = 0
@@ -9349,37 +10740,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class RecordVariableContext:ParserRuleContext {
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
+
+	public class RecordVariableContext: ParserRuleContext {
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_recordVariable
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_recordVariable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterRecordVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterRecordVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitRecordVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitRecordVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitRecordVariable(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitRecordVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitRecordVariable(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitRecordVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func recordVariable() throws -> RecordVariableContext {
+	 open func recordVariable() throws -> RecordVariableContext {
 		var _localctx: RecordVariableContext = RecordVariableContext(_ctx, getState())
 		try enterRule(_localctx, 182, informixParser.RULE_recordVariable)
 		defer {
@@ -9399,37 +10796,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FieldIdentifierContext:ParserRuleContext {
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
+
+	public class FieldIdentifierContext: ParserRuleContext {
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_fieldIdentifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_fieldIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFieldIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFieldIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFieldIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFieldIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFieldIdentifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFieldIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFieldIdentifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFieldIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldIdentifier() throws -> FieldIdentifierContext {
+	 open func fieldIdentifier() throws -> FieldIdentifierContext {
 		var _localctx: FieldIdentifierContext = FieldIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 184, informixParser.RULE_fieldIdentifier)
 		defer {
@@ -9449,40 +10852,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class StructuredStatementContext:ParserRuleContext {
-		open func conditionalStatement() -> ConditionalStatementContext? {
-			return getRuleContext(ConditionalStatementContext.self,0)
+
+	public class StructuredStatementContext: ParserRuleContext {
+			open
+			func conditionalStatement() -> ConditionalStatementContext? {
+				return getRuleContext(ConditionalStatementContext.self, 0)
+			}
+			open
+			func repetetiveStatement() -> RepetetiveStatementContext? {
+				return getRuleContext(RepetetiveStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_structuredStatement
 		}
-		open func repetetiveStatement() -> RepetetiveStatementContext? {
-			return getRuleContext(RepetetiveStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_structuredStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterStructuredStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterStructuredStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitStructuredStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitStructuredStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitStructuredStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitStructuredStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitStructuredStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitStructuredStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func structuredStatement() throws -> StructuredStatementContext {
+	 open func structuredStatement() throws -> StructuredStatementContext {
 		var _localctx: StructuredStatementContext = StructuredStatementContext(_ctx, getState())
 		try enterRule(_localctx, 186, informixParser.RULE_structuredStatement)
 		defer {
@@ -9508,7 +10918,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9519,40 +10929,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ConditionalStatementContext:ParserRuleContext {
-		open func ifStatement() -> IfStatementContext? {
-			return getRuleContext(IfStatementContext.self,0)
+
+	public class ConditionalStatementContext: ParserRuleContext {
+			open
+			func ifStatement() -> IfStatementContext? {
+				return getRuleContext(IfStatementContext.self, 0)
+			}
+			open
+			func caseStatement() -> CaseStatementContext? {
+				return getRuleContext(CaseStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_conditionalStatement
 		}
-		open func caseStatement() -> CaseStatementContext? {
-			return getRuleContext(CaseStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_conditionalStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterConditionalStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterConditionalStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitConditionalStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitConditionalStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitConditionalStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitConditionalStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitConditionalStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitConditionalStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditionalStatement() throws -> ConditionalStatementContext {
+	 open func conditionalStatement() throws -> ConditionalStatementContext {
 		var _localctx: ConditionalStatementContext = ConditionalStatementContext(_ctx, getState())
 		try enterRule(_localctx, 188, informixParser.RULE_conditionalStatement)
 		defer {
@@ -9576,7 +10993,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9587,50 +11004,71 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class IfStatementContext:ParserRuleContext {
-		open func IF() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.IF.rawValue) }
-		open func IF(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.IF.rawValue, i)
+
+	public class IfStatementContext: ParserRuleContext {
+			open
+			func IF() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.IF.rawValue)
+			}
+			open
+			func IF(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.IF.rawValue, i)
+			}
+			open
+			func ifCondition() -> IfConditionContext? {
+				return getRuleContext(IfConditionContext.self, 0)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.THEN.rawValue, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func codeBlock() -> [CodeBlockContext] {
+				return getRuleContexts(CodeBlockContext.self)
+			}
+			open
+			func codeBlock(_ i: Int) -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, i)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ELSE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_ifStatement
 		}
-		open func ifCondition() -> IfConditionContext? {
-			return getRuleContext(IfConditionContext.self,0)
-		}
-		open func THEN() -> TerminalNode? { return getToken(informixParser.Tokens.THEN.rawValue, 0) }
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func codeBlock() -> Array<CodeBlockContext> {
-			return getRuleContexts(CodeBlockContext.self)
-		}
-		open func codeBlock(_ i: Int) -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,i)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(informixParser.Tokens.ELSE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_ifStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterIfStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterIfStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitIfStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitIfStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitIfStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitIfStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitIfStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitIfStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifStatement() throws -> IfStatementContext {
+	 open func ifStatement() throws -> IfStatementContext {
 		var _localctx: IfStatementContext = IfStatementContext(_ctx, getState())
 		try enterRule(_localctx, 190, informixParser.RULE_ifStatement)
 		var _la: Int = 0
@@ -9736,43 +11174,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class RepetetiveStatementContext:ParserRuleContext {
-		open func whileStatement() -> WhileStatementContext? {
-			return getRuleContext(WhileStatementContext.self,0)
+
+	public class RepetetiveStatementContext: ParserRuleContext {
+			open
+			func whileStatement() -> WhileStatementContext? {
+				return getRuleContext(WhileStatementContext.self, 0)
+			}
+			open
+			func forEachStatement() -> ForEachStatementContext? {
+				return getRuleContext(ForEachStatementContext.self, 0)
+			}
+			open
+			func forStatement() -> ForStatementContext? {
+				return getRuleContext(ForStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_repetetiveStatement
 		}
-		open func forEachStatement() -> ForEachStatementContext? {
-			return getRuleContext(ForEachStatementContext.self,0)
-		}
-		open func forStatement() -> ForStatementContext? {
-			return getRuleContext(ForStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_repetetiveStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterRepetetiveStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterRepetetiveStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitRepetetiveStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitRepetetiveStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitRepetetiveStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitRepetetiveStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitRepetetiveStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitRepetetiveStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func repetetiveStatement() throws -> RepetetiveStatementContext {
+	 open func repetetiveStatement() throws -> RepetetiveStatementContext {
 		var _localctx: RepetetiveStatementContext = RepetetiveStatementContext(_ctx, getState())
 		try enterRule(_localctx, 192, informixParser.RULE_repetetiveStatement)
 		defer {
@@ -9803,7 +11249,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9814,45 +11260,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class WhileStatementContext:ParserRuleContext {
-		open func WHILE() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.WHILE.rawValue) }
-		open func WHILE(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.WHILE.rawValue, i)
+
+	public class WhileStatementContext: ParserRuleContext {
+			open
+			func WHILE() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.WHILE.rawValue)
+			}
+			open
+			func WHILE(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.WHILE.rawValue, i)
+			}
+			open
+			func ifCondition() -> IfConditionContext? {
+				return getRuleContext(IfConditionContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func codeBlock() -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_whileStatement
 		}
-		open func ifCondition() -> IfConditionContext? {
-			return getRuleContext(IfConditionContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func codeBlock() -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_whileStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterWhileStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterWhileStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitWhileStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitWhileStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitWhileStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitWhileStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitWhileStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitWhileStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func whileStatement() throws -> WhileStatementContext {
+	 open func whileStatement() throws -> WhileStatementContext {
 		var _localctx: WhileStatementContext = WhileStatementContext(_ctx, getState())
 		try enterRule(_localctx, 194, informixParser.RULE_whileStatement)
 		var _la: Int = 0
@@ -9911,59 +11371,83 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ForStatementContext:ParserRuleContext {
-		open func FOR() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.FOR.rawValue) }
-		open func FOR(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.FOR.rawValue, i)
+
+	public class ForStatementContext: ParserRuleContext {
+			open
+			func FOR() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.FOR.rawValue)
+			}
+			open
+			func FOR(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.FOR.rawValue, i)
+			}
+			open
+			func controlVariable() -> ControlVariableContext? {
+				return getRuleContext(ControlVariableContext.self, 0)
+			}
+			open
+			func EQUAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EQUAL.rawValue, 0)
+			}
+			open
+			func forList() -> ForListContext? {
+				return getRuleContext(ForListContext.self, 0)
+			}
+			open
+			func eol() -> [EolContext] {
+				return getRuleContexts(EolContext.self)
+			}
+			open
+			func eol(_ i: Int) -> EolContext? {
+				return getRuleContext(EolContext.self, i)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func STEP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STEP.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func codeBlock() -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_forStatement
 		}
-		open func controlVariable() -> ControlVariableContext? {
-			return getRuleContext(ControlVariableContext.self,0)
-		}
-		open func EQUAL() -> TerminalNode? { return getToken(informixParser.Tokens.EQUAL.rawValue, 0) }
-		open func forList() -> ForListContext? {
-			return getRuleContext(ForListContext.self,0)
-		}
-		open func eol() -> Array<EolContext> {
-			return getRuleContexts(EolContext.self)
-		}
-		open func eol(_ i: Int) -> EolContext? {
-			return getRuleContext(EolContext.self,i)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func STEP() -> TerminalNode? { return getToken(informixParser.Tokens.STEP.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open func codeBlock() -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_forStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterForStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterForStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitForStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitForStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitForStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitForStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitForStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitForStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forStatement() throws -> ForStatementContext {
+	 open func forStatement() throws -> ForStatementContext {
 		var _localctx: ForStatementContext = ForStatementContext(_ctx, getState())
 		try enterRule(_localctx, 196, informixParser.RULE_forStatement)
 		var _la: Int = 0
@@ -10045,41 +11529,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ForListContext:ParserRuleContext {
-		open func initialValue() -> InitialValueContext? {
-			return getRuleContext(InitialValueContext.self,0)
+
+	public class ForListContext: ParserRuleContext {
+			open
+			func initialValue() -> InitialValueContext? {
+				return getRuleContext(InitialValueContext.self, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func finalValue() -> FinalValueContext? {
+				return getRuleContext(FinalValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_forList
 		}
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func finalValue() -> FinalValueContext? {
-			return getRuleContext(FinalValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_forList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterForList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterForList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitForList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitForList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitForList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitForList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitForList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitForList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forList() throws -> ForListContext {
+	 open func forList() throws -> ForListContext {
 		var _localctx: ForListContext = ForListContext(_ctx, getState())
 		try enterRule(_localctx, 198, informixParser.RULE_forList)
 		defer {
@@ -10103,37 +11597,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ControlVariableContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class ControlVariableContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_controlVariable
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_controlVariable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterControlVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterControlVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitControlVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitControlVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitControlVariable(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitControlVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitControlVariable(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitControlVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func controlVariable() throws -> ControlVariableContext {
+	 open func controlVariable() throws -> ControlVariableContext {
 		var _localctx: ControlVariableContext = ControlVariableContext(_ctx, getState())
 		try enterRule(_localctx, 200, informixParser.RULE_controlVariable)
 		defer {
@@ -10153,37 +11653,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class InitialValueContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class InitialValueContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_initialValue
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_initialValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterInitialValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterInitialValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitInitialValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitInitialValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitInitialValue(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitInitialValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitInitialValue(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitInitialValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initialValue() throws -> InitialValueContext {
+	 open func initialValue() throws -> InitialValueContext {
 		var _localctx: InitialValueContext = InitialValueContext(_ctx, getState())
 		try enterRule(_localctx, 202, informixParser.RULE_initialValue)
 		defer {
@@ -10203,37 +11709,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FinalValueContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class FinalValueContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_finalValue
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_finalValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFinalValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFinalValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFinalValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFinalValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFinalValue(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFinalValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFinalValue(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFinalValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func finalValue() throws -> FinalValueContext {
+	 open func finalValue() throws -> FinalValueContext {
 		var _localctx: FinalValueContext = FinalValueContext(_ctx, getState())
 		try enterRule(_localctx, 204, informixParser.RULE_finalValue)
 		defer {
@@ -10253,61 +11765,91 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ForEachStatementContext:ParserRuleContext {
-		open func FOREACH() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.FOREACH.rawValue) }
-		open func FOREACH(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.FOREACH.rawValue, i)
+
+	public class ForEachStatementContext: ParserRuleContext {
+			open
+			func FOREACH() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.FOREACH.rawValue)
+			}
+			open
+			func FOREACH(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.FOREACH.rawValue, i)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func eol() -> [EolContext] {
+				return getRuleContexts(EolContext.self)
+			}
+			open
+			func eol(_ i: Int) -> EolContext? {
+				return getRuleContext(EolContext.self, i)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func USING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.USING.rawValue, 0)
+			}
+			open
+			func variableList() -> [VariableListContext] {
+				return getRuleContexts(VariableListContext.self)
+			}
+			open
+			func variableList(_ i: Int) -> VariableListContext? {
+				return getRuleContext(VariableListContext.self, i)
+			}
+			open
+			func INTO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTO.rawValue, 0)
+			}
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func REOPTIMIZATION() -> TerminalNode? {
+				return getToken(informixParser.Tokens.REOPTIMIZATION.rawValue, 0)
+			}
+			open
+			func codeBlock() -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_forEachStatement
 		}
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
-		}
-		open func eol() -> Array<EolContext> {
-			return getRuleContexts(EolContext.self)
-		}
-		open func eol(_ i: Int) -> EolContext? {
-			return getRuleContext(EolContext.self,i)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func USING() -> TerminalNode? { return getToken(informixParser.Tokens.USING.rawValue, 0) }
-		open func variableList() -> Array<VariableListContext> {
-			return getRuleContexts(VariableListContext.self)
-		}
-		open func variableList(_ i: Int) -> VariableListContext? {
-			return getRuleContext(VariableListContext.self,i)
-		}
-		open func INTO() -> TerminalNode? { return getToken(informixParser.Tokens.INTO.rawValue, 0) }
-		open func WITH() -> TerminalNode? { return getToken(informixParser.Tokens.WITH.rawValue, 0) }
-		open func REOPTIMIZATION() -> TerminalNode? { return getToken(informixParser.Tokens.REOPTIMIZATION.rawValue, 0) }
-		open func codeBlock() -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_forEachStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterForEachStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterForEachStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitForEachStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitForEachStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitForEachStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitForEachStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitForEachStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitForEachStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forEachStatement() throws -> ForEachStatementContext {
+	 open func forEachStatement() throws -> ForEachStatementContext {
 		var _localctx: ForEachStatementContext = ForEachStatementContext(_ctx, getState())
 		try enterRule(_localctx, 206, informixParser.RULE_forEachStatement)
 		var _la: Int = 0
@@ -10415,44 +11957,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class VariableListContext:ParserRuleContext {
-		open func variable() -> Array<VariableContext> {
-			return getRuleContexts(VariableContext.self)
+
+	public class VariableListContext: ParserRuleContext {
+			open
+			func variable() -> [VariableContext] {
+				return getRuleContexts(VariableContext.self)
+			}
+			open
+			func variable(_ i: Int) -> VariableContext? {
+				return getRuleContext(VariableContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_variableList
 		}
-		open func variable(_ i: Int) -> VariableContext? {
-			return getRuleContext(VariableContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_variableList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterVariableList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterVariableList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitVariableList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitVariableList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitVariableList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitVariableList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitVariableList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitVariableList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableList() throws -> VariableListContext {
+	 open func variableList() throws -> VariableListContext {
 		var _localctx: VariableListContext = VariableListContext(_ctx, getState())
 		try enterRule(_localctx, 208, informixParser.RULE_variableList)
 		var _la: Int = 0
@@ -10491,44 +12044,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class VariableOrConstantListContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class VariableOrConstantListContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_variableOrConstantList
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_variableOrConstantList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterVariableOrConstantList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterVariableOrConstantList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitVariableOrConstantList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitVariableOrConstantList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitVariableOrConstantList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitVariableOrConstantList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitVariableOrConstantList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitVariableOrConstantList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableOrConstantList() throws -> VariableOrConstantListContext {
+	 open func variableOrConstantList() throws -> VariableOrConstantListContext {
 		var _localctx: VariableOrConstantListContext = VariableOrConstantListContext(_ctx, getState())
 		try enterRule(_localctx, 210, informixParser.RULE_variableOrConstantList)
 		var _la: Int = 0
@@ -10567,62 +12131,87 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class CaseStatementContext:ParserRuleContext {
-		open func CASE() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.CASE.rawValue) }
-		open func CASE(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.CASE.rawValue, i)
+
+	public class CaseStatementContext: ParserRuleContext {
+			open
+			func CASE() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.CASE.rawValue)
+			}
+			open
+			func CASE(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.CASE.rawValue, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func WHEN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.WHEN.rawValue)
+			}
+			open
+			func WHEN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.WHEN.rawValue, i)
+			}
+			open
+			func OTHERWISE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OTHERWISE.rawValue, 0)
+			}
+			open
+			func codeBlock() -> [CodeBlockContext] {
+				return getRuleContexts(CodeBlockContext.self)
+			}
+			open
+			func codeBlock(_ i: Int) -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, i)
+			}
+			open
+			func ifCondition() -> [IfConditionContext] {
+				return getRuleContexts(IfConditionContext.self)
+			}
+			open
+			func ifCondition(_ i: Int) -> IfConditionContext? {
+				return getRuleContext(IfConditionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_caseStatement
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func WHEN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.WHEN.rawValue) }
-		open func WHEN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.WHEN.rawValue, i)
-		}
-		open func OTHERWISE() -> TerminalNode? { return getToken(informixParser.Tokens.OTHERWISE.rawValue, 0) }
-		open func codeBlock() -> Array<CodeBlockContext> {
-			return getRuleContexts(CodeBlockContext.self)
-		}
-		open func codeBlock(_ i: Int) -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,i)
-		}
-		open func ifCondition() -> Array<IfConditionContext> {
-			return getRuleContexts(IfConditionContext.self)
-		}
-		open func ifCondition(_ i: Int) -> IfConditionContext? {
-			return getRuleContext(IfConditionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_caseStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterCaseStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterCaseStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitCaseStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitCaseStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitCaseStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitCaseStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitCaseStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitCaseStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseStatement() throws -> CaseStatementContext {
+	 open func caseStatement() throws -> CaseStatementContext {
 		var _localctx: CaseStatementContext = CaseStatementContext(_ctx, getState())
 		try enterRule(_localctx, 212, informixParser.RULE_caseStatement)
 		var _la: Int = 0
@@ -10796,46 +12385,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class OtherFGLStatementContext:ParserRuleContext {
-		open func otherProgramFlowStatement() -> OtherProgramFlowStatementContext? {
-			return getRuleContext(OtherProgramFlowStatementContext.self,0)
+
+	public class OtherFGLStatementContext: ParserRuleContext {
+			open
+			func otherProgramFlowStatement() -> OtherProgramFlowStatementContext? {
+				return getRuleContext(OtherProgramFlowStatementContext.self, 0)
+			}
+			open
+			func otherStorageStatement() -> OtherStorageStatementContext? {
+				return getRuleContext(OtherStorageStatementContext.self, 0)
+			}
+			open
+			func reportStatement() -> ReportStatementContext? {
+				return getRuleContext(ReportStatementContext.self, 0)
+			}
+			open
+			func screenStatement() -> ScreenStatementContext? {
+				return getRuleContext(ScreenStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_otherFGLStatement
 		}
-		open func otherStorageStatement() -> OtherStorageStatementContext? {
-			return getRuleContext(OtherStorageStatementContext.self,0)
-		}
-		open func reportStatement() -> ReportStatementContext? {
-			return getRuleContext(ReportStatementContext.self,0)
-		}
-		open func screenStatement() -> ScreenStatementContext? {
-			return getRuleContext(ScreenStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_otherFGLStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterOtherFGLStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterOtherFGLStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitOtherFGLStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitOtherFGLStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitOtherFGLStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitOtherFGLStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitOtherFGLStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitOtherFGLStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func otherFGLStatement() throws -> OtherFGLStatementContext {
+	 open func otherFGLStatement() throws -> OtherFGLStatementContext {
 		var _localctx: OtherFGLStatementContext = OtherFGLStatementContext(_ctx, getState())
 		try enterRule(_localctx, 214, informixParser.RULE_otherFGLStatement)
 		defer {
@@ -10900,7 +12498,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10911,53 +12509,67 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class OtherProgramFlowStatementContext:ParserRuleContext {
-		open func runStatement() -> RunStatementContext? {
-			return getRuleContext(RunStatementContext.self,0)
+
+	public class OtherProgramFlowStatementContext: ParserRuleContext {
+			open
+			func runStatement() -> RunStatementContext? {
+				return getRuleContext(RunStatementContext.self, 0)
+			}
+			open
+			func gotoStatement() -> GotoStatementContext? {
+				return getRuleContext(GotoStatementContext.self, 0)
+			}
+			open
+			func SLEEP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SLEEP.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func exitStatements() -> ExitStatementsContext? {
+				return getRuleContext(ExitStatementsContext.self, 0)
+			}
+			open
+			func continueStatements() -> ContinueStatementsContext? {
+				return getRuleContext(ContinueStatementsContext.self, 0)
+			}
+			open
+			func returnStatement() -> ReturnStatementContext? {
+				return getRuleContext(ReturnStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_otherProgramFlowStatement
 		}
-		open func gotoStatement() -> GotoStatementContext? {
-			return getRuleContext(GotoStatementContext.self,0)
-		}
-		open func SLEEP() -> TerminalNode? { return getToken(informixParser.Tokens.SLEEP.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func exitStatements() -> ExitStatementsContext? {
-			return getRuleContext(ExitStatementsContext.self,0)
-		}
-		open func continueStatements() -> ContinueStatementsContext? {
-			return getRuleContext(ContinueStatementsContext.self,0)
-		}
-		open func returnStatement() -> ReturnStatementContext? {
-			return getRuleContext(ReturnStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_otherProgramFlowStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterOtherProgramFlowStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterOtherProgramFlowStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitOtherProgramFlowStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitOtherProgramFlowStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitOtherProgramFlowStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitOtherProgramFlowStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitOtherProgramFlowStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitOtherProgramFlowStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func otherProgramFlowStatement() throws -> OtherProgramFlowStatementContext {
+	 open func otherProgramFlowStatement() throws -> OtherProgramFlowStatementContext {
 		var _localctx: OtherProgramFlowStatementContext = OtherProgramFlowStatementContext(_ctx, getState())
 		try enterRule(_localctx, 216, informixParser.RULE_otherProgramFlowStatement)
 		defer {
@@ -11011,7 +12623,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -11022,43 +12634,75 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ExitTypesContext:ParserRuleContext {
-		open func FOREACH() -> TerminalNode? { return getToken(informixParser.Tokens.FOREACH.rawValue, 0) }
-		open func FOR() -> TerminalNode? { return getToken(informixParser.Tokens.FOR.rawValue, 0) }
-		open func CASE() -> TerminalNode? { return getToken(informixParser.Tokens.CASE.rawValue, 0) }
-		open func CONSTRUCT() -> TerminalNode? { return getToken(informixParser.Tokens.CONSTRUCT.rawValue, 0) }
-		open func DISPLAY() -> TerminalNode? { return getToken(informixParser.Tokens.DISPLAY.rawValue, 0) }
-		open func INPUT() -> TerminalNode? { return getToken(informixParser.Tokens.INPUT.rawValue, 0) }
-		open func MENU() -> TerminalNode? { return getToken(informixParser.Tokens.MENU.rawValue, 0) }
-		open func REPORT() -> TerminalNode? { return getToken(informixParser.Tokens.REPORT.rawValue, 0) }
-		open func WHILE() -> TerminalNode? { return getToken(informixParser.Tokens.WHILE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_exitTypes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterExitTypes(self)
+
+	public class ExitTypesContext: ParserRuleContext {
+			open
+			func FOREACH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FOREACH.rawValue, 0)
+			}
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func CASE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CASE.rawValue, 0)
+			}
+			open
+			func CONSTRUCT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONSTRUCT.rawValue, 0)
+			}
+			open
+			func DISPLAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DISPLAY.rawValue, 0)
+			}
+			open
+			func INPUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INPUT.rawValue, 0)
+			}
+			open
+			func MENU() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MENU.rawValue, 0)
+			}
+			open
+			func REPORT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.REPORT.rawValue, 0)
+			}
+			open
+			func WHILE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WHILE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_exitTypes
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterExitTypes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitExitTypes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitExitTypes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitExitTypes(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitExitTypes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitExitTypes(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitExitTypes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exitTypes() throws -> ExitTypesContext {
+	 open func exitTypes() throws -> ExitTypesContext {
 		var _localctx: ExitTypesContext = ExitTypesContext(_ctx, getState())
 		try enterRule(_localctx, 218, informixParser.RULE_exitTypes)
 		var _la: Int = 0
@@ -11096,44 +12740,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ExitStatementsContext:ParserRuleContext {
-		open func EXIT() -> TerminalNode? { return getToken(informixParser.Tokens.EXIT.rawValue, 0) }
-		open func exitTypes() -> ExitTypesContext? {
-			return getRuleContext(ExitTypesContext.self,0)
+
+	public class ExitStatementsContext: ParserRuleContext {
+			open
+			func EXIT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXIT.rawValue, 0)
+			}
+			open
+			func exitTypes() -> ExitTypesContext? {
+				return getRuleContext(ExitTypesContext.self, 0)
+			}
+			open
+			func PROGRAM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PROGRAM.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_exitStatements
 		}
-		open func PROGRAM() -> TerminalNode? { return getToken(informixParser.Tokens.PROGRAM.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_exitStatements }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterExitStatements(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterExitStatements(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitExitStatements(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitExitStatements(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitExitStatements(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitExitStatements(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitExitStatements(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitExitStatements(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exitStatements() throws -> ExitStatementsContext {
+	 open func exitStatements() throws -> ExitStatementsContext {
 		var _localctx: ExitStatementsContext = ExitStatementsContext(_ctx, getState())
 		try enterRule(_localctx, 220, informixParser.RULE_exitStatements)
 		defer {
@@ -11189,41 +12852,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ContinueStatementsContext:ParserRuleContext {
-		open func CONTINUE() -> TerminalNode? { return getToken(informixParser.Tokens.CONTINUE.rawValue, 0) }
-		open func exitTypes() -> ExitTypesContext? {
-			return getRuleContext(ExitTypesContext.self,0)
+
+	public class ContinueStatementsContext: ParserRuleContext {
+			open
+			func CONTINUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONTINUE.rawValue, 0)
+			}
+			open
+			func exitTypes() -> ExitTypesContext? {
+				return getRuleContext(ExitTypesContext.self, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_continueStatements
 		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_continueStatements }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterContinueStatements(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterContinueStatements(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitContinueStatements(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitContinueStatements(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitContinueStatements(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitContinueStatements(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitContinueStatements(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitContinueStatements(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func continueStatements() throws -> ContinueStatementsContext {
+	 open func continueStatements() throws -> ContinueStatementsContext {
 		var _localctx: ContinueStatementsContext = ContinueStatementsContext(_ctx, getState())
 		try enterRule(_localctx, 222, informixParser.RULE_continueStatements)
 		defer {
@@ -11247,76 +12920,135 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class OtherStorageStatementContext:ParserRuleContext {
-		open func ALLOCATE() -> TerminalNode? { return getToken(informixParser.Tokens.ALLOCATE.rawValue, 0) }
-		open func ARRAY() -> TerminalNode? { return getToken(informixParser.Tokens.ARRAY.rawValue, 0) }
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class OtherStorageStatementContext: ParserRuleContext {
+			open
+			func ALLOCATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ALLOCATE.rawValue, 0)
+			}
+			open
+			func ARRAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ARRAY.rawValue, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func arrayIndexer() -> ArrayIndexerContext? {
+				return getRuleContext(ArrayIndexerContext.self, 0)
+			}
+			open
+			func LOCATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LOCATE.rawValue, 0)
+			}
+			open
+			func variableList() -> VariableListContext? {
+				return getRuleContext(VariableListContext.self, 0)
+			}
+			open
+			func IN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.IN.rawValue, 0)
+			}
+			open
+			func MEMORY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MEMORY.rawValue, 0)
+			}
+			open
+			func FILE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FILE.rawValue, 0)
+			}
+			open
+			func variable() -> [VariableContext] {
+				return getRuleContexts(VariableContext.self)
+			}
+			open
+			func variable(_ i: Int) -> VariableContext? {
+				return getRuleContext(VariableContext.self, i)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func DEALLOCATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DEALLOCATE.rawValue, 0)
+			}
+			open
+			func RESIZE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RESIZE.rawValue, 0)
+			}
+			open
+			func FREE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FREE.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func INITIALIZE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INITIALIZE.rawValue, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func NULL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NULL.rawValue, 0)
+			}
+			open
+			func LIKE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LIKE.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func VALIDATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.VALIDATE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_otherStorageStatement
 		}
-		open func arrayIndexer() -> ArrayIndexerContext? {
-			return getRuleContext(ArrayIndexerContext.self,0)
-		}
-		open func LOCATE() -> TerminalNode? { return getToken(informixParser.Tokens.LOCATE.rawValue, 0) }
-		open func variableList() -> VariableListContext? {
-			return getRuleContext(VariableListContext.self,0)
-		}
-		open func IN() -> TerminalNode? { return getToken(informixParser.Tokens.IN.rawValue, 0) }
-		open func MEMORY() -> TerminalNode? { return getToken(informixParser.Tokens.MEMORY.rawValue, 0) }
-		open func FILE() -> TerminalNode? { return getToken(informixParser.Tokens.FILE.rawValue, 0) }
-		open func variable() -> Array<VariableContext> {
-			return getRuleContexts(VariableContext.self)
-		}
-		open func variable(_ i: Int) -> VariableContext? {
-			return getRuleContext(VariableContext.self,i)
-		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func DEALLOCATE() -> TerminalNode? { return getToken(informixParser.Tokens.DEALLOCATE.rawValue, 0) }
-		open func RESIZE() -> TerminalNode? { return getToken(informixParser.Tokens.RESIZE.rawValue, 0) }
-		open func FREE() -> TerminalNode? { return getToken(informixParser.Tokens.FREE.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func INITIALIZE() -> TerminalNode? { return getToken(informixParser.Tokens.INITIALIZE.rawValue, 0) }
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func NULL() -> TerminalNode? { return getToken(informixParser.Tokens.NULL.rawValue, 0) }
-		open func LIKE() -> TerminalNode? { return getToken(informixParser.Tokens.LIKE.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func VALIDATE() -> TerminalNode? { return getToken(informixParser.Tokens.VALIDATE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_otherStorageStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterOtherStorageStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterOtherStorageStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitOtherStorageStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitOtherStorageStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitOtherStorageStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitOtherStorageStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitOtherStorageStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitOtherStorageStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func otherStorageStatement() throws -> OtherStorageStatementContext {
+	 open func otherStorageStatement() throws -> OtherStorageStatementContext {
 		var _localctx: OtherStorageStatementContext = OtherStorageStatementContext(_ctx, getState())
 		try enterRule(_localctx, 224, informixParser.RULE_otherStorageStatement)
 		var _la: Int = 0
@@ -11378,7 +13110,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -11495,7 +13227,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -11549,7 +13281,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -11560,53 +13292,91 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class PrintExpressionItemContext:ParserRuleContext {
-		open func COLUMN() -> TerminalNode? { return getToken(informixParser.Tokens.COLUMN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class PrintExpressionItemContext: ParserRuleContext {
+			open
+			func COLUMN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COLUMN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func PAGENO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PAGENO.rawValue, 0)
+			}
+			open
+			func LINENO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LINENO.rawValue, 0)
+			}
+			open
+			func BYTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BYTE.rawValue, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TEXT.rawValue, 0)
+			}
+			open
+			func WORDWRAP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WORDWRAP.rawValue, 0)
+			}
+			open
+			func SPACE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SPACE.rawValue, 0)
+			}
+			open
+			func SPACES() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SPACES.rawValue, 0)
+			}
+			open
+			func RIGHT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RIGHT.rawValue, 0)
+			}
+			open
+			func MARGIN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MARGIN.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_printExpressionItem
 		}
-		open func PAGENO() -> TerminalNode? { return getToken(informixParser.Tokens.PAGENO.rawValue, 0) }
-		open func LINENO() -> TerminalNode? { return getToken(informixParser.Tokens.LINENO.rawValue, 0) }
-		open func BYTE() -> TerminalNode? { return getToken(informixParser.Tokens.BYTE.rawValue, 0) }
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
-		}
-		open func TEXT() -> TerminalNode? { return getToken(informixParser.Tokens.TEXT.rawValue, 0) }
-		open func WORDWRAP() -> TerminalNode? { return getToken(informixParser.Tokens.WORDWRAP.rawValue, 0) }
-		open func SPACE() -> TerminalNode? { return getToken(informixParser.Tokens.SPACE.rawValue, 0) }
-		open func SPACES() -> TerminalNode? { return getToken(informixParser.Tokens.SPACES.rawValue, 0) }
-		open func RIGHT() -> TerminalNode? { return getToken(informixParser.Tokens.RIGHT.rawValue, 0) }
-		open func MARGIN() -> TerminalNode? { return getToken(informixParser.Tokens.MARGIN.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_printExpressionItem }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterPrintExpressionItem(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterPrintExpressionItem(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitPrintExpressionItem(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitPrintExpressionItem(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitPrintExpressionItem(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitPrintExpressionItem(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitPrintExpressionItem(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitPrintExpressionItem(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func printExpressionItem() throws -> PrintExpressionItemContext {
+	 open func printExpressionItem() throws -> PrintExpressionItemContext {
 		var _localctx: PrintExpressionItemContext = PrintExpressionItemContext(_ctx, getState())
 		try enterRule(_localctx, 226, informixParser.RULE_printExpressionItem)
 		var _la: Int = 0
@@ -11729,44 +13499,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class PrintExpressionListContext:ParserRuleContext {
-		open func printExpressionItem() -> Array<PrintExpressionItemContext> {
-			return getRuleContexts(PrintExpressionItemContext.self)
+
+	public class PrintExpressionListContext: ParserRuleContext {
+			open
+			func printExpressionItem() -> [PrintExpressionItemContext] {
+				return getRuleContexts(PrintExpressionItemContext.self)
+			}
+			open
+			func printExpressionItem(_ i: Int) -> PrintExpressionItemContext? {
+				return getRuleContext(PrintExpressionItemContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_printExpressionList
 		}
-		open func printExpressionItem(_ i: Int) -> PrintExpressionItemContext? {
-			return getRuleContext(PrintExpressionItemContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_printExpressionList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterPrintExpressionList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterPrintExpressionList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitPrintExpressionList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitPrintExpressionList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitPrintExpressionList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitPrintExpressionList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitPrintExpressionList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitPrintExpressionList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func printExpressionList() throws -> PrintExpressionListContext {
+	 open func printExpressionList() throws -> PrintExpressionListContext {
 		var _localctx: PrintExpressionListContext = PrintExpressionListContext(_ctx, getState())
 		try enterRule(_localctx, 228, informixParser.RULE_printExpressionList)
 		var _la: Int = 0
@@ -11805,113 +13586,219 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ReportStatementContext:ParserRuleContext {
-		open func START() -> TerminalNode? { return getToken(informixParser.Tokens.START.rawValue, 0) }
-		open func REPORT() -> TerminalNode? { return getToken(informixParser.Tokens.REPORT.rawValue, 0) }
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
+
+	public class ReportStatementContext: ParserRuleContext {
+			open
+			func START() -> TerminalNode? {
+				return getToken(informixParser.Tokens.START.rawValue, 0)
+			}
+			open
+			func REPORT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.REPORT.rawValue, 0)
+			}
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func PIPE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PIPE.rawValue, 0)
+			}
+			open
+			func PRINTER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PRINTER.rawValue, 0)
+			}
+			open
+			func LEFT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LEFT.rawValue)
+			}
+			open
+			func LEFT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LEFT.rawValue, i)
+			}
+			open
+			func MARGIN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.MARGIN.rawValue)
+			}
+			open
+			func MARGIN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.MARGIN.rawValue, i)
+			}
+			open
+			func numericConstant() -> [NumericConstantContext] {
+				return getRuleContexts(NumericConstantContext.self)
+			}
+			open
+			func numericConstant(_ i: Int) -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, i)
+			}
+			open
+			func RIGHT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.RIGHT.rawValue)
+			}
+			open
+			func RIGHT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.RIGHT.rawValue, i)
+			}
+			open
+			func TOP() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.TOP.rawValue)
+			}
+			open
+			func TOP(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.TOP.rawValue, i)
+			}
+			open
+			func BOTTOM() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.BOTTOM.rawValue)
+			}
+			open
+			func BOTTOM(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.BOTTOM.rawValue, i)
+			}
+			open
+			func PAGE() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.PAGE.rawValue)
+			}
+			open
+			func PAGE(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.PAGE.rawValue, i)
+			}
+			open
+			func LENGTH() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LENGTH.rawValue)
+			}
+			open
+			func LENGTH(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LENGTH.rawValue, i)
+			}
+			open
+			func OF() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.OF.rawValue)
+			}
+			open
+			func OF(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.OF.rawValue, i)
+			}
+			open
+			func string() -> [StringContext] {
+				return getRuleContexts(StringContext.self)
+			}
+			open
+			func string(_ i: Int) -> StringContext? {
+				return getRuleContext(StringContext.self, i)
+			}
+			open
+			func TERMINATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TERMINATE.rawValue, 0)
+			}
+			open
+			func FINISH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FINISH.rawValue, 0)
+			}
+			open
+			func PAUSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PAUSE.rawValue, 0)
+			}
+			open
+			func NEED() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NEED.rawValue, 0)
+			}
+			open
+			func LINES() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LINES.rawValue, 0)
+			}
+			open
+			func PRINT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PRINT.rawValue, 0)
+			}
+			open
+			func FILE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FILE.rawValue, 0)
+			}
+			open
+			func printExpressionList() -> PrintExpressionListContext? {
+				return getRuleContext(PrintExpressionListContext.self, 0)
+			}
+			open
+			func SEMI() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SEMI.rawValue, 0)
+			}
+			open
+			func SKIP2() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SKIP2.rawValue, 0)
+			}
+			open
+			func LINE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LINE.rawValue, 0)
+			}
+			open
+			func OUTPUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OUTPUT.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_reportStatement
 		}
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func WITH() -> TerminalNode? { return getToken(informixParser.Tokens.WITH.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func PIPE() -> TerminalNode? { return getToken(informixParser.Tokens.PIPE.rawValue, 0) }
-		open func PRINTER() -> TerminalNode? { return getToken(informixParser.Tokens.PRINTER.rawValue, 0) }
-		open func LEFT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LEFT.rawValue) }
-		open func LEFT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LEFT.rawValue, i)
-		}
-		open func MARGIN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.MARGIN.rawValue) }
-		open func MARGIN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.MARGIN.rawValue, i)
-		}
-		open func numericConstant() -> Array<NumericConstantContext> {
-			return getRuleContexts(NumericConstantContext.self)
-		}
-		open func numericConstant(_ i: Int) -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,i)
-		}
-		open func RIGHT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.RIGHT.rawValue) }
-		open func RIGHT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.RIGHT.rawValue, i)
-		}
-		open func TOP() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.TOP.rawValue) }
-		open func TOP(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.TOP.rawValue, i)
-		}
-		open func BOTTOM() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.BOTTOM.rawValue) }
-		open func BOTTOM(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.BOTTOM.rawValue, i)
-		}
-		open func PAGE() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.PAGE.rawValue) }
-		open func PAGE(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.PAGE.rawValue, i)
-		}
-		open func LENGTH() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LENGTH.rawValue) }
-		open func LENGTH(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LENGTH.rawValue, i)
-		}
-		open func OF() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.OF.rawValue) }
-		open func OF(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.OF.rawValue, i)
-		}
-		open func string() -> Array<StringContext> {
-			return getRuleContexts(StringContext.self)
-		}
-		open func string(_ i: Int) -> StringContext? {
-			return getRuleContext(StringContext.self,i)
-		}
-		open func TERMINATE() -> TerminalNode? { return getToken(informixParser.Tokens.TERMINATE.rawValue, 0) }
-		open func FINISH() -> TerminalNode? { return getToken(informixParser.Tokens.FINISH.rawValue, 0) }
-		open func PAUSE() -> TerminalNode? { return getToken(informixParser.Tokens.PAUSE.rawValue, 0) }
-		open func NEED() -> TerminalNode? { return getToken(informixParser.Tokens.NEED.rawValue, 0) }
-		open func LINES() -> TerminalNode? { return getToken(informixParser.Tokens.LINES.rawValue, 0) }
-		open func PRINT() -> TerminalNode? { return getToken(informixParser.Tokens.PRINT.rawValue, 0) }
-		open func FILE() -> TerminalNode? { return getToken(informixParser.Tokens.FILE.rawValue, 0) }
-		open func printExpressionList() -> PrintExpressionListContext? {
-			return getRuleContext(PrintExpressionListContext.self,0)
-		}
-		open func SEMI() -> TerminalNode? { return getToken(informixParser.Tokens.SEMI.rawValue, 0) }
-		open func SKIP2() -> TerminalNode? { return getToken(informixParser.Tokens.SKIP2.rawValue, 0) }
-		open func LINE() -> TerminalNode? { return getToken(informixParser.Tokens.LINE.rawValue, 0) }
-		open func OUTPUT() -> TerminalNode? { return getToken(informixParser.Tokens.OUTPUT.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_reportStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterReportStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterReportStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitReportStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitReportStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitReportStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitReportStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitReportStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitReportStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reportStatement() throws -> ReportStatementContext {
+	 open func reportStatement() throws -> ReportStatementContext {
 		var _localctx: ReportStatementContext = ReportStatementContext(_ctx, getState())
 		try enterRule(_localctx, 230, informixParser.RULE_reportStatement)
 		var _la: Int = 0
@@ -12015,7 +13902,7 @@ open class informixParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 
 		 		}
@@ -12301,7 +14188,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -12373,7 +14260,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12384,50 +14271,71 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FieldNameContext:ParserRuleContext {
-		open func identifier() -> Array<IdentifierContext> {
-			return getRuleContexts(IdentifierContext.self)
+
+	public class FieldNameContext: ParserRuleContext {
+			open
+			func identifier() -> [IdentifierContext] {
+				return getRuleContexts(IdentifierContext.self)
+			}
+			open
+			func identifier(_ i: Int) -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, i)
+			}
+			open
+			func DOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOT.rawValue, 0)
+			}
+			open
+			func LBRACK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LBRACK.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func RBRACK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RBRACK.rawValue, 0)
+			}
+			open
+			func STAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STAR.rawValue, 0)
+			}
+			open
+			func thruNotation() -> ThruNotationContext? {
+				return getRuleContext(ThruNotationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_fieldName
 		}
-		open func identifier(_ i: Int) -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,i)
-		}
-		open func DOT() -> TerminalNode? { return getToken(informixParser.Tokens.DOT.rawValue, 0) }
-		open func LBRACK() -> TerminalNode? { return getToken(informixParser.Tokens.LBRACK.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open func RBRACK() -> TerminalNode? { return getToken(informixParser.Tokens.RBRACK.rawValue, 0) }
-		open func STAR() -> TerminalNode? { return getToken(informixParser.Tokens.STAR.rawValue, 0) }
-		open func thruNotation() -> ThruNotationContext? {
-			return getRuleContext(ThruNotationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_fieldName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFieldName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFieldName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFieldName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFieldName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFieldName(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFieldName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFieldName(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFieldName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldName() throws -> FieldNameContext {
+	 open func fieldName() throws -> FieldNameContext {
 		var _localctx: FieldNameContext = FieldNameContext(_ctx, getState())
 		try enterRule(_localctx, 232, informixParser.RULE_fieldName)
 		var _la: Int = 0
@@ -12526,7 +14434,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -12541,41 +14449,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ThruNotationContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class ThruNotationContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func THROUGH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.THROUGH.rawValue, 0)
+			}
+			open
+			func THRU() -> TerminalNode? {
+				return getToken(informixParser.Tokens.THRU.rawValue, 0)
+			}
+			open
+			func SAME() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SAME.rawValue, 0)
+			}
+			open
+			func DOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_thruNotation
 		}
-		open func THROUGH() -> TerminalNode? { return getToken(informixParser.Tokens.THROUGH.rawValue, 0) }
-		open func THRU() -> TerminalNode? { return getToken(informixParser.Tokens.THRU.rawValue, 0) }
-		open func SAME() -> TerminalNode? { return getToken(informixParser.Tokens.SAME.rawValue, 0) }
-		open func DOT() -> TerminalNode? { return getToken(informixParser.Tokens.DOT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_thruNotation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterThruNotation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterThruNotation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitThruNotation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitThruNotation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitThruNotation(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitThruNotation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitThruNotation(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitThruNotation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func thruNotation() throws -> ThruNotationContext {
+	 open func thruNotation() throws -> ThruNotationContext {
 		var _localctx: ThruNotationContext = ThruNotationContext(_ctx, getState())
 		try enterRule(_localctx, 234, informixParser.RULE_thruNotation)
 		var _la: Int = 0
@@ -12624,44 +14550,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FieldListContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class FieldListContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_fieldList
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_fieldList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFieldList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFieldList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFieldList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFieldList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFieldList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFieldList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFieldList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFieldList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldList() throws -> FieldListContext {
+	 open func fieldList() throws -> FieldListContext {
 		var _localctx: FieldListContext = FieldListContext(_ctx, getState())
 		try enterRule(_localctx, 236, informixParser.RULE_fieldList)
 		defer {
@@ -12698,44 +14635,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class KeyListContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class KeyListContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_keyList
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_keyList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterKeyList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterKeyList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitKeyList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitKeyList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitKeyList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitKeyList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitKeyList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitKeyList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keyList() throws -> KeyListContext {
+	 open func keyList() throws -> KeyListContext {
 		var _localctx: KeyListContext = KeyListContext(_ctx, getState())
 		try enterRule(_localctx, 238, informixParser.RULE_keyList)
 		var _la: Int = 0
@@ -12774,48 +14722,79 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ConstructEventsContext:ParserRuleContext {
-		open func BEFORE() -> TerminalNode? { return getToken(informixParser.Tokens.BEFORE.rawValue, 0) }
-		open func CONSTRUCT() -> TerminalNode? { return getToken(informixParser.Tokens.CONSTRUCT.rawValue, 0) }
-		open func AFTER() -> TerminalNode? { return getToken(informixParser.Tokens.AFTER.rawValue, 0) }
-		open func FIELD() -> TerminalNode? { return getToken(informixParser.Tokens.FIELD.rawValue, 0) }
-		open func fieldList() -> FieldListContext? {
-			return getRuleContext(FieldListContext.self,0)
+
+	public class ConstructEventsContext: ParserRuleContext {
+			open
+			func BEFORE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BEFORE.rawValue, 0)
+			}
+			open
+			func CONSTRUCT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONSTRUCT.rawValue, 0)
+			}
+			open
+			func AFTER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.AFTER.rawValue, 0)
+			}
+			open
+			func FIELD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FIELD.rawValue, 0)
+			}
+			open
+			func fieldList() -> FieldListContext? {
+				return getRuleContext(FieldListContext.self, 0)
+			}
+			open
+			func ON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func KEY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.KEY.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func keyList() -> KeyListContext? {
+				return getRuleContext(KeyListContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_constructEvents
 		}
-		open func ON() -> TerminalNode? { return getToken(informixParser.Tokens.ON.rawValue, 0) }
-		open func KEY() -> TerminalNode? { return getToken(informixParser.Tokens.KEY.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func keyList() -> KeyListContext? {
-			return getRuleContext(KeyListContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_constructEvents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterConstructEvents(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterConstructEvents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitConstructEvents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitConstructEvents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitConstructEvents(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitConstructEvents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitConstructEvents(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitConstructEvents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructEvents() throws -> ConstructEventsContext {
+	 open func constructEvents() throws -> ConstructEventsContext {
 		var _localctx: ConstructEventsContext = ConstructEventsContext(_ctx, getState())
 		try enterRule(_localctx, 240, informixParser.RULE_constructEvents)
 		defer {
@@ -12886,49 +14865,75 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ConstructInsideStatementContext:ParserRuleContext {
-		open func NEXT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.NEXT.rawValue) }
-		open func NEXT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.NEXT.rawValue, i)
+
+	public class ConstructInsideStatementContext: ParserRuleContext {
+			open
+			func NEXT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.NEXT.rawValue)
+			}
+			open
+			func NEXT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.NEXT.rawValue, i)
+			}
+			open
+			func FIELD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FIELD.rawValue, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func fieldName() -> FieldNameContext? {
+				return getRuleContext(FieldNameContext.self, 0)
+			}
+			open
+			func PREVIOUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PREVIOUS.rawValue, 0)
+			}
+			open
+			func CONTINUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONTINUE.rawValue, 0)
+			}
+			open
+			func CONSTRUCT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONSTRUCT.rawValue, 0)
+			}
+			open
+			func EXIT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_constructInsideStatement
 		}
-		open func FIELD() -> TerminalNode? { return getToken(informixParser.Tokens.FIELD.rawValue, 0) }
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func fieldName() -> FieldNameContext? {
-			return getRuleContext(FieldNameContext.self,0)
-		}
-		open func PREVIOUS() -> TerminalNode? { return getToken(informixParser.Tokens.PREVIOUS.rawValue, 0) }
-		open func CONTINUE() -> TerminalNode? { return getToken(informixParser.Tokens.CONTINUE.rawValue, 0) }
-		open func CONSTRUCT() -> TerminalNode? { return getToken(informixParser.Tokens.CONSTRUCT.rawValue, 0) }
-		open func EXIT() -> TerminalNode? { return getToken(informixParser.Tokens.EXIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_constructInsideStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterConstructInsideStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterConstructInsideStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitConstructInsideStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitConstructInsideStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitConstructInsideStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitConstructInsideStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitConstructInsideStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitConstructInsideStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructInsideStatement() throws -> ConstructInsideStatementContext {
+	 open func constructInsideStatement() throws -> ConstructInsideStatementContext {
 		var _localctx: ConstructInsideStatementContext = ConstructInsideStatementContext(_ctx, getState())
 		try enterRule(_localctx, 242, informixParser.RULE_constructInsideStatement)
 		defer {
@@ -12965,7 +14970,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(1797)
 		 		try eol()
@@ -12994,7 +14999,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13005,37 +15010,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SpecialAttributeContext:ParserRuleContext {
-		open func REVERSE() -> TerminalNode? { return getToken(informixParser.Tokens.REVERSE.rawValue, 0) }
-		open func BLINK() -> TerminalNode? { return getToken(informixParser.Tokens.BLINK.rawValue, 0) }
-		open func UNDERLINE() -> TerminalNode? { return getToken(informixParser.Tokens.UNDERLINE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_specialAttribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSpecialAttribute(self)
+
+	public class SpecialAttributeContext: ParserRuleContext {
+			open
+			func REVERSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.REVERSE.rawValue, 0)
+			}
+			open
+			func BLINK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BLINK.rawValue, 0)
+			}
+			open
+			func UNDERLINE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UNDERLINE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_specialAttribute
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSpecialAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSpecialAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSpecialAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSpecialAttribute(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSpecialAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSpecialAttribute(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSpecialAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specialAttribute() throws -> SpecialAttributeContext {
+	 open func specialAttribute() throws -> SpecialAttributeContext {
 		var _localctx: SpecialAttributeContext = SpecialAttributeContext(_ctx, getState())
 		try enterRule(_localctx, 244, informixParser.RULE_specialAttribute)
 		var _la: Int = 0
@@ -13068,56 +15087,103 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class AttributeContext:ParserRuleContext {
-		open func specialAttribute() -> Array<SpecialAttributeContext> {
-			return getRuleContexts(SpecialAttributeContext.self)
+
+	public class AttributeContext: ParserRuleContext {
+			open
+			func specialAttribute() -> [SpecialAttributeContext] {
+				return getRuleContexts(SpecialAttributeContext.self)
+			}
+			open
+			func specialAttribute(_ i: Int) -> SpecialAttributeContext? {
+				return getRuleContext(SpecialAttributeContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func BLACK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BLACK.rawValue, 0)
+			}
+			open
+			func BLUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BLUE.rawValue, 0)
+			}
+			open
+			func CYAN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CYAN.rawValue, 0)
+			}
+			open
+			func GREEN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GREEN.rawValue, 0)
+			}
+			open
+			func MAGENTA() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MAGENTA.rawValue, 0)
+			}
+			open
+			func RED() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RED.rawValue, 0)
+			}
+			open
+			func WHITE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WHITE.rawValue, 0)
+			}
+			open
+			func YELLOW() -> TerminalNode? {
+				return getToken(informixParser.Tokens.YELLOW.rawValue, 0)
+			}
+			open
+			func BOLD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BOLD.rawValue, 0)
+			}
+			open
+			func DIM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DIM.rawValue, 0)
+			}
+			open
+			func NORMAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NORMAL.rawValue, 0)
+			}
+			open
+			func INVISIBLE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INVISIBLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_attribute
 		}
-		open func specialAttribute(_ i: Int) -> SpecialAttributeContext? {
-			return getRuleContext(SpecialAttributeContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func BLACK() -> TerminalNode? { return getToken(informixParser.Tokens.BLACK.rawValue, 0) }
-		open func BLUE() -> TerminalNode? { return getToken(informixParser.Tokens.BLUE.rawValue, 0) }
-		open func CYAN() -> TerminalNode? { return getToken(informixParser.Tokens.CYAN.rawValue, 0) }
-		open func GREEN() -> TerminalNode? { return getToken(informixParser.Tokens.GREEN.rawValue, 0) }
-		open func MAGENTA() -> TerminalNode? { return getToken(informixParser.Tokens.MAGENTA.rawValue, 0) }
-		open func RED() -> TerminalNode? { return getToken(informixParser.Tokens.RED.rawValue, 0) }
-		open func WHITE() -> TerminalNode? { return getToken(informixParser.Tokens.WHITE.rawValue, 0) }
-		open func YELLOW() -> TerminalNode? { return getToken(informixParser.Tokens.YELLOW.rawValue, 0) }
-		open func BOLD() -> TerminalNode? { return getToken(informixParser.Tokens.BOLD.rawValue, 0) }
-		open func DIM() -> TerminalNode? { return getToken(informixParser.Tokens.DIM.rawValue, 0) }
-		open func NORMAL() -> TerminalNode? { return getToken(informixParser.Tokens.NORMAL.rawValue, 0) }
-		open func INVISIBLE() -> TerminalNode? { return getToken(informixParser.Tokens.INVISIBLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_attribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitAttribute(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitAttribute(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attribute() throws -> AttributeContext {
+	 open func attribute() throws -> AttributeContext {
 		var _localctx: AttributeContext = AttributeContext(_ctx, getState())
 		try enterRule(_localctx, 246, informixParser.RULE_attribute)
 		var _la: Int = 0
@@ -13198,41 +15264,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class AttributeListContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func attribute() -> AttributeContext? {
-			return getRuleContext(AttributeContext.self,0)
+
+	public class AttributeListContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func attribute() -> AttributeContext? {
+				return getRuleContext(AttributeContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func ATTRIBUTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ATTRIBUTE.rawValue, 0)
+			}
+			open
+			func ATTRIBUTES() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ATTRIBUTES.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_attributeList
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func ATTRIBUTE() -> TerminalNode? { return getToken(informixParser.Tokens.ATTRIBUTE.rawValue, 0) }
-		open func ATTRIBUTES() -> TerminalNode? { return getToken(informixParser.Tokens.ATTRIBUTES.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_attributeList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterAttributeList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterAttributeList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitAttributeList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitAttributeList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitAttributeList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitAttributeList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitAttributeList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitAttributeList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributeList() throws -> AttributeListContext {
+	 open func attributeList() throws -> AttributeListContext {
 		var _localctx: AttributeListContext = AttributeListContext(_ctx, getState())
 		try enterRule(_localctx, 248, informixParser.RULE_attributeList)
 		var _la: Int = 0
@@ -13270,43 +15354,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ConstructGroupStatementContext:ParserRuleContext {
-		open func constructEvents() -> ConstructEventsContext? {
-			return getRuleContext(ConstructEventsContext.self,0)
+
+	public class ConstructGroupStatementContext: ParserRuleContext {
+			open
+			func constructEvents() -> ConstructEventsContext? {
+				return getRuleContext(ConstructEventsContext.self, 0)
+			}
+			open
+			func codeBlock() -> [CodeBlockContext] {
+				return getRuleContexts(CodeBlockContext.self)
+			}
+			open
+			func codeBlock(_ i: Int) -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_constructGroupStatement
 		}
-		open func codeBlock() -> Array<CodeBlockContext> {
-			return getRuleContexts(CodeBlockContext.self)
-		}
-		open func codeBlock(_ i: Int) -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_constructGroupStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterConstructGroupStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterConstructGroupStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitConstructGroupStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitConstructGroupStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitConstructGroupStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitConstructGroupStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitConstructGroupStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitConstructGroupStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructGroupStatement() throws -> ConstructGroupStatementContext {
+	 open func constructGroupStatement() throws -> ConstructGroupStatementContext {
 		var _localctx: ConstructGroupStatementContext = ConstructGroupStatementContext(_ctx, getState())
 		try enterRule(_localctx, 250, informixParser.RULE_constructGroupStatement)
 		var _la: Int = 0
@@ -13362,65 +15454,99 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ConstructStatementContext:ParserRuleContext {
-		open func CONSTRUCT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.CONSTRUCT.rawValue) }
-		open func CONSTRUCT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.CONSTRUCT.rawValue, i)
+
+	public class ConstructStatementContext: ParserRuleContext {
+			open
+			func CONSTRUCT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.CONSTRUCT.rawValue)
+			}
+			open
+			func CONSTRUCT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONSTRUCT.rawValue, i)
+			}
+			open
+			func BY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BY.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func ON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func columnsList() -> ColumnsListContext? {
+				return getRuleContext(ColumnsListContext.self, 0)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func fieldList() -> FieldListContext? {
+				return getRuleContext(FieldListContext.self, 0)
+			}
+			open
+			func attributeList() -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, 0)
+			}
+			open
+			func HELP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HELP.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func constructGroupStatement() -> [ConstructGroupStatementContext] {
+				return getRuleContexts(ConstructGroupStatementContext.self)
+			}
+			open
+			func constructGroupStatement(_ i: Int) -> ConstructGroupStatementContext? {
+				return getRuleContext(ConstructGroupStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_constructStatement
 		}
-		open func BY() -> TerminalNode? { return getToken(informixParser.Tokens.BY.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(informixParser.Tokens.NAME.rawValue, 0) }
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
-		}
-		open func ON() -> TerminalNode? { return getToken(informixParser.Tokens.ON.rawValue, 0) }
-		open func columnsList() -> ColumnsListContext? {
-			return getRuleContext(ColumnsListContext.self,0)
-		}
-		open func FROM() -> TerminalNode? { return getToken(informixParser.Tokens.FROM.rawValue, 0) }
-		open func fieldList() -> FieldListContext? {
-			return getRuleContext(FieldListContext.self,0)
-		}
-		open func attributeList() -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,0)
-		}
-		open func HELP() -> TerminalNode? { return getToken(informixParser.Tokens.HELP.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func constructGroupStatement() -> Array<ConstructGroupStatementContext> {
-			return getRuleContexts(ConstructGroupStatementContext.self)
-		}
-		open func constructGroupStatement(_ i: Int) -> ConstructGroupStatementContext? {
-			return getRuleContext(ConstructGroupStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_constructStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterConstructStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterConstructStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitConstructStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitConstructStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitConstructStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitConstructStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitConstructStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitConstructStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructStatement() throws -> ConstructStatementContext {
+	 open func constructStatement() throws -> ConstructStatementContext {
 		var _localctx: ConstructStatementContext = ConstructStatementContext(_ctx, getState())
 		try enterRule(_localctx, 252, informixParser.RULE_constructStatement)
 		var _la: Int = 0
@@ -13494,7 +15620,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(1846)
 		 	try _errHandler.sync(self)
@@ -13563,56 +15689,79 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DisplayArrayStatementContext:ParserRuleContext {
-		open func DISPLAY() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.DISPLAY.rawValue) }
-		open func DISPLAY(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.DISPLAY.rawValue, i)
+
+	public class DisplayArrayStatementContext: ParserRuleContext {
+			open
+			func DISPLAY() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.DISPLAY.rawValue)
+			}
+			open
+			func DISPLAY(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.DISPLAY.rawValue, i)
+			}
+			open
+			func ARRAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ARRAY.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func attributeList() -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, 0)
+			}
+			open
+			func displayEvents() -> [DisplayEventsContext] {
+				return getRuleContexts(DisplayEventsContext.self)
+			}
+			open
+			func displayEvents(_ i: Int) -> DisplayEventsContext? {
+				return getRuleContext(DisplayEventsContext.self, i)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_displayArrayStatement
 		}
-		open func ARRAY() -> TerminalNode? { return getToken(informixParser.Tokens.ARRAY.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func attributeList() -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,0)
-		}
-		open func displayEvents() -> Array<DisplayEventsContext> {
-			return getRuleContexts(DisplayEventsContext.self)
-		}
-		open func displayEvents(_ i: Int) -> DisplayEventsContext? {
-			return getRuleContext(DisplayEventsContext.self,i)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_displayArrayStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDisplayArrayStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDisplayArrayStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDisplayArrayStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDisplayArrayStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDisplayArrayStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDisplayArrayStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDisplayArrayStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDisplayArrayStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func displayArrayStatement() throws -> DisplayArrayStatementContext {
+	 open func displayArrayStatement() throws -> DisplayArrayStatementContext {
 		var _localctx: DisplayArrayStatementContext = DisplayArrayStatementContext(_ctx, getState())
 		try enterRule(_localctx, 254, informixParser.RULE_displayArrayStatement)
 		var _la: Int = 0
@@ -13681,37 +15830,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DisplayInsideStatementContext:ParserRuleContext {
-		open func CONTINUE() -> TerminalNode? { return getToken(informixParser.Tokens.CONTINUE.rawValue, 0) }
-		open func DISPLAY() -> TerminalNode? { return getToken(informixParser.Tokens.DISPLAY.rawValue, 0) }
-		open func EXIT() -> TerminalNode? { return getToken(informixParser.Tokens.EXIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_displayInsideStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDisplayInsideStatement(self)
+
+	public class DisplayInsideStatementContext: ParserRuleContext {
+			open
+			func CONTINUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONTINUE.rawValue, 0)
+			}
+			open
+			func DISPLAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DISPLAY.rawValue, 0)
+			}
+			open
+			func EXIT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_displayInsideStatement
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDisplayInsideStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDisplayInsideStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDisplayInsideStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDisplayInsideStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDisplayInsideStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDisplayInsideStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDisplayInsideStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func displayInsideStatement() throws -> DisplayInsideStatementContext {
+	 open func displayInsideStatement() throws -> DisplayInsideStatementContext {
 		var _localctx: DisplayInsideStatementContext = DisplayInsideStatementContext(_ctx, getState())
 		try enterRule(_localctx, 256, informixParser.RULE_displayInsideStatement)
 		defer {
@@ -13739,7 +15902,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13750,47 +15913,67 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DisplayEventsContext:ParserRuleContext {
-		open func ON() -> TerminalNode? { return getToken(informixParser.Tokens.ON.rawValue, 0) }
-		open func KEY() -> TerminalNode? { return getToken(informixParser.Tokens.KEY.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func keyList() -> KeyListContext? {
-			return getRuleContext(KeyListContext.self,0)
+
+	public class DisplayEventsContext: ParserRuleContext {
+			open
+			func ON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func KEY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.KEY.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func keyList() -> KeyListContext? {
+				return getRuleContext(KeyListContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func codeBlock() -> [CodeBlockContext] {
+				return getRuleContexts(CodeBlockContext.self)
+			}
+			open
+			func codeBlock(_ i: Int) -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_displayEvents
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func codeBlock() -> Array<CodeBlockContext> {
-			return getRuleContexts(CodeBlockContext.self)
-		}
-		open func codeBlock(_ i: Int) -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_displayEvents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDisplayEvents(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDisplayEvents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDisplayEvents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDisplayEvents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDisplayEvents(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDisplayEvents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDisplayEvents(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDisplayEvents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func displayEvents() throws -> DisplayEventsContext {
+	 open func displayEvents() throws -> DisplayEventsContext {
 		var _localctx: DisplayEventsContext = DisplayEventsContext(_ctx, getState())
 		try enterRule(_localctx, 258, informixParser.RULE_displayEvents)
 		defer {
@@ -13821,7 +16004,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(1894); 
 		 		try _errHandler.sync(self)
@@ -13837,58 +16020,87 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DisplayStatementContext:ParserRuleContext {
-		open func DISPLAY() -> TerminalNode? { return getToken(informixParser.Tokens.DISPLAY.rawValue, 0) }
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
+
+	public class DisplayStatementContext: ParserRuleContext {
+			open
+			func DISPLAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DISPLAY.rawValue, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func BY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BY.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func attributeList() -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func fieldList() -> FieldListContext? {
+				return getRuleContext(FieldListContext.self, 0)
+			}
+			open
+			func AT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.AT.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_displayStatement
 		}
-		open func BY() -> TerminalNode? { return getToken(informixParser.Tokens.BY.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(informixParser.Tokens.NAME.rawValue, 0) }
-		open func attributeList() -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,0)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func fieldList() -> FieldListContext? {
-			return getRuleContext(FieldListContext.self,0)
-		}
-		open func AT() -> TerminalNode? { return getToken(informixParser.Tokens.AT.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_displayStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDisplayStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDisplayStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDisplayStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDisplayStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDisplayStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDisplayStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDisplayStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDisplayStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func displayStatement() throws -> DisplayStatementContext {
+	 open func displayStatement() throws -> DisplayStatementContext {
 		var _localctx: DisplayStatementContext = DisplayStatementContext(_ctx, getState())
 		try enterRule(_localctx, 260, informixParser.RULE_displayStatement)
 		var _la: Int = 0
@@ -14036,7 +16248,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(1927)
 		 	try _errHandler.sync(self)
@@ -14063,48 +16275,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ErrorStatementContext:ParserRuleContext {
-		open func ERROR() -> TerminalNode? { return getToken(informixParser.Tokens.ERROR.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ErrorStatementContext: ParserRuleContext {
+			open
+			func ERROR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ERROR.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func attributeList() -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_errorStatement
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func attributeList() -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_errorStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterErrorStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterErrorStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitErrorStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitErrorStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitErrorStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitErrorStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitErrorStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitErrorStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func errorStatement() throws -> ErrorStatementContext {
+	 open func errorStatement() throws -> ErrorStatementContext {
 		var _localctx: ErrorStatementContext = ErrorStatementContext(_ctx, getState())
 		try enterRule(_localctx, 262, informixParser.RULE_errorStatement)
 		var _la: Int = 0
@@ -14158,48 +16385,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MessageStatementContext:ParserRuleContext {
-		open func MESSAGE() -> TerminalNode? { return getToken(informixParser.Tokens.MESSAGE.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class MessageStatementContext: ParserRuleContext {
+			open
+			func MESSAGE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MESSAGE.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func attributeList() -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_messageStatement
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func attributeList() -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_messageStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMessageStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMessageStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMessageStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMessageStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMessageStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMessageStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMessageStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMessageStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func messageStatement() throws -> MessageStatementContext {
+	 open func messageStatement() throws -> MessageStatementContext {
 		var _localctx: MessageStatementContext = MessageStatementContext(_ctx, getState())
 		try enterRule(_localctx, 264, informixParser.RULE_messageStatement)
 		var _la: Int = 0
@@ -14253,92 +16495,143 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class PromptStatementContext:ParserRuleContext {
-		open func PROMPT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.PROMPT.rawValue) }
-		open func PROMPT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.PROMPT.rawValue, i)
+
+	public class PromptStatementContext: ParserRuleContext {
+			open
+			func PROMPT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.PROMPT.rawValue)
+			}
+			open
+			func PROMPT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.PROMPT.rawValue, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func attributeList() -> [AttributeListContext] {
+				return getRuleContexts(AttributeListContext.self)
+			}
+			open
+			func attributeList(_ i: Int) -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, i)
+			}
+			open
+			func CHAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CHAR.rawValue, 0)
+			}
+			open
+			func HELP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HELP.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func ON() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.ON.rawValue)
+			}
+			open
+			func ON(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.ON.rawValue, i)
+			}
+			open
+			func KEY() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.KEY.rawValue)
+			}
+			open
+			func KEY(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.KEY.rawValue, i)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func keyList() -> [KeyListContext] {
+				return getRuleContexts(KeyListContext.self)
+			}
+			open
+			func keyList(_ i: Int) -> KeyListContext? {
+				return getRuleContext(KeyListContext.self, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func codeBlock() -> [CodeBlockContext] {
+				return getRuleContexts(CodeBlockContext.self)
+			}
+			open
+			func codeBlock(_ i: Int) -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_promptStatement
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func FOR() -> TerminalNode? { return getToken(informixParser.Tokens.FOR.rawValue, 0) }
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func attributeList() -> Array<AttributeListContext> {
-			return getRuleContexts(AttributeListContext.self)
-		}
-		open func attributeList(_ i: Int) -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,i)
-		}
-		open func CHAR() -> TerminalNode? { return getToken(informixParser.Tokens.CHAR.rawValue, 0) }
-		open func HELP() -> TerminalNode? { return getToken(informixParser.Tokens.HELP.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func ON() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.ON.rawValue) }
-		open func ON(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.ON.rawValue, i)
-		}
-		open func KEY() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.KEY.rawValue) }
-		open func KEY(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.KEY.rawValue, i)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func keyList() -> Array<KeyListContext> {
-			return getRuleContexts(KeyListContext.self)
-		}
-		open func keyList(_ i: Int) -> KeyListContext? {
-			return getRuleContext(KeyListContext.self,i)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func codeBlock() -> Array<CodeBlockContext> {
-			return getRuleContexts(CodeBlockContext.self)
-		}
-		open func codeBlock(_ i: Int) -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_promptStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterPromptStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterPromptStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitPromptStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitPromptStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitPromptStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitPromptStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitPromptStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitPromptStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func promptStatement() throws -> PromptStatementContext {
+	 open func promptStatement() throws -> PromptStatementContext {
 		var _localctx: PromptStatementContext = PromptStatementContext(_ctx, getState())
 		try enterRule(_localctx, 266, informixParser.RULE_promptStatement)
 		var _la: Int = 0
@@ -14505,51 +16798,91 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class InputEventsContext:ParserRuleContext {
-		open func BEFORE() -> TerminalNode? { return getToken(informixParser.Tokens.BEFORE.rawValue, 0) }
-		open func AFTER() -> TerminalNode? { return getToken(informixParser.Tokens.AFTER.rawValue, 0) }
-		open func INPUT() -> TerminalNode? { return getToken(informixParser.Tokens.INPUT.rawValue, 0) }
-		open func ROW() -> TerminalNode? { return getToken(informixParser.Tokens.ROW.rawValue, 0) }
-		open func INSERT() -> TerminalNode? { return getToken(informixParser.Tokens.INSERT.rawValue, 0) }
-		open func DELETE() -> TerminalNode? { return getToken(informixParser.Tokens.DELETE.rawValue, 0) }
-		open func FIELD() -> TerminalNode? { return getToken(informixParser.Tokens.FIELD.rawValue, 0) }
-		open func fieldList() -> FieldListContext? {
-			return getRuleContext(FieldListContext.self,0)
+
+	public class InputEventsContext: ParserRuleContext {
+			open
+			func BEFORE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BEFORE.rawValue, 0)
+			}
+			open
+			func AFTER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.AFTER.rawValue, 0)
+			}
+			open
+			func INPUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INPUT.rawValue, 0)
+			}
+			open
+			func ROW() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ROW.rawValue, 0)
+			}
+			open
+			func INSERT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INSERT.rawValue, 0)
+			}
+			open
+			func DELETE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DELETE.rawValue, 0)
+			}
+			open
+			func FIELD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FIELD.rawValue, 0)
+			}
+			open
+			func fieldList() -> FieldListContext? {
+				return getRuleContext(FieldListContext.self, 0)
+			}
+			open
+			func ON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func KEY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.KEY.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func keyList() -> KeyListContext? {
+				return getRuleContext(KeyListContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_inputEvents
 		}
-		open func ON() -> TerminalNode? { return getToken(informixParser.Tokens.ON.rawValue, 0) }
-		open func KEY() -> TerminalNode? { return getToken(informixParser.Tokens.KEY.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func keyList() -> KeyListContext? {
-			return getRuleContext(KeyListContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_inputEvents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterInputEvents(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterInputEvents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitInputEvents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitInputEvents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitInputEvents(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitInputEvents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitInputEvents(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitInputEvents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inputEvents() throws -> InputEventsContext {
+	 open func inputEvents() throws -> InputEventsContext {
 		var _localctx: InputEventsContext = InputEventsContext(_ctx, getState())
 		try enterRule(_localctx, 268, informixParser.RULE_inputEvents)
 		var _la: Int = 0
@@ -14637,46 +16970,71 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class InputInsideStatementContext:ParserRuleContext {
-		open func NEXT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.NEXT.rawValue) }
-		open func NEXT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.NEXT.rawValue, i)
+
+	public class InputInsideStatementContext: ParserRuleContext {
+			open
+			func NEXT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.NEXT.rawValue)
+			}
+			open
+			func NEXT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.NEXT.rawValue, i)
+			}
+			open
+			func FIELD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FIELD.rawValue, 0)
+			}
+			open
+			func fieldName() -> FieldNameContext? {
+				return getRuleContext(FieldNameContext.self, 0)
+			}
+			open
+			func PREVIOUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PREVIOUS.rawValue, 0)
+			}
+			open
+			func CONTINUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONTINUE.rawValue, 0)
+			}
+			open
+			func INPUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INPUT.rawValue, 0)
+			}
+			open
+			func EXIT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_inputInsideStatement
 		}
-		open func FIELD() -> TerminalNode? { return getToken(informixParser.Tokens.FIELD.rawValue, 0) }
-		open func fieldName() -> FieldNameContext? {
-			return getRuleContext(FieldNameContext.self,0)
-		}
-		open func PREVIOUS() -> TerminalNode? { return getToken(informixParser.Tokens.PREVIOUS.rawValue, 0) }
-		open func CONTINUE() -> TerminalNode? { return getToken(informixParser.Tokens.CONTINUE.rawValue, 0) }
-		open func INPUT() -> TerminalNode? { return getToken(informixParser.Tokens.INPUT.rawValue, 0) }
-		open func EXIT() -> TerminalNode? { return getToken(informixParser.Tokens.EXIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_inputInsideStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterInputInsideStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterInputInsideStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitInputInsideStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitInputInsideStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitInputInsideStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitInputInsideStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitInputInsideStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitInputInsideStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inputInsideStatement() throws -> InputInsideStatementContext {
+	 open func inputInsideStatement() throws -> InputInsideStatementContext {
 		var _localctx: InputInsideStatementContext = InputInsideStatementContext(_ctx, getState())
 		try enterRule(_localctx, 270, informixParser.RULE_inputInsideStatement)
 		var _la: Int = 0
@@ -14719,7 +17077,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -14745,12 +17103,12 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -14761,43 +17119,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class InputGroupStatementContext:ParserRuleContext {
-		open func inputEvents() -> InputEventsContext? {
-			return getRuleContext(InputEventsContext.self,0)
+
+	public class InputGroupStatementContext: ParserRuleContext {
+			open
+			func inputEvents() -> InputEventsContext? {
+				return getRuleContext(InputEventsContext.self, 0)
+			}
+			open
+			func codeBlock() -> [CodeBlockContext] {
+				return getRuleContexts(CodeBlockContext.self)
+			}
+			open
+			func codeBlock(_ i: Int) -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_inputGroupStatement
 		}
-		open func codeBlock() -> Array<CodeBlockContext> {
-			return getRuleContexts(CodeBlockContext.self)
-		}
-		open func codeBlock(_ i: Int) -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_inputGroupStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterInputGroupStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterInputGroupStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitInputGroupStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitInputGroupStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitInputGroupStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitInputGroupStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitInputGroupStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitInputGroupStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inputGroupStatement() throws -> InputGroupStatementContext {
+	 open func inputGroupStatement() throws -> InputGroupStatementContext {
 		var _localctx: InputGroupStatementContext = InputGroupStatementContext(_ctx, getState())
 		try enterRule(_localctx, 272, informixParser.RULE_inputGroupStatement)
 		var _la: Int = 0
@@ -14853,70 +17219,111 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class InputStatementContext:ParserRuleContext {
-		open func INPUT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.INPUT.rawValue) }
-		open func INPUT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.INPUT.rawValue, i)
+
+	public class InputStatementContext: ParserRuleContext {
+			open
+			func INPUT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.INPUT.rawValue)
+			}
+			open
+			func INPUT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.INPUT.rawValue, i)
+			}
+			open
+			func BY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BY.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func fieldList() -> FieldListContext? {
+				return getRuleContext(FieldListContext.self, 0)
+			}
+			open
+			func attributeList() -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, 0)
+			}
+			open
+			func HELP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HELP.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func WITHOUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITHOUT.rawValue, 0)
+			}
+			open
+			func DEFAULTS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DEFAULTS.rawValue, 0)
+			}
+			open
+			func inputGroupStatement() -> [InputGroupStatementContext] {
+				return getRuleContexts(InputGroupStatementContext.self)
+			}
+			open
+			func inputGroupStatement(_ i: Int) -> InputGroupStatementContext? {
+				return getRuleContext(InputGroupStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_inputStatement
 		}
-		open func BY() -> TerminalNode? { return getToken(informixParser.Tokens.BY.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(informixParser.Tokens.NAME.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func FROM() -> TerminalNode? { return getToken(informixParser.Tokens.FROM.rawValue, 0) }
-		open func fieldList() -> FieldListContext? {
-			return getRuleContext(FieldListContext.self,0)
-		}
-		open func attributeList() -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,0)
-		}
-		open func HELP() -> TerminalNode? { return getToken(informixParser.Tokens.HELP.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func WITHOUT() -> TerminalNode? { return getToken(informixParser.Tokens.WITHOUT.rawValue, 0) }
-		open func DEFAULTS() -> TerminalNode? { return getToken(informixParser.Tokens.DEFAULTS.rawValue, 0) }
-		open func inputGroupStatement() -> Array<InputGroupStatementContext> {
-			return getRuleContexts(InputGroupStatementContext.self)
-		}
-		open func inputGroupStatement(_ i: Int) -> InputGroupStatementContext? {
-			return getRuleContext(InputGroupStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_inputStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterInputStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterInputStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitInputStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitInputStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitInputStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitInputStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitInputStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitInputStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inputStatement() throws -> InputStatementContext {
+	 open func inputStatement() throws -> InputStatementContext {
 		var _localctx: InputStatementContext = InputStatementContext(_ctx, getState())
 		try enterRule(_localctx, 274, informixParser.RULE_inputStatement)
 		var _la: Int = 0
@@ -15066,7 +17473,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(2066)
 		 	try _errHandler.sync(self)
@@ -15135,66 +17542,103 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class InputArrayStatementContext:ParserRuleContext {
-		open func INPUT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.INPUT.rawValue) }
-		open func INPUT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.INPUT.rawValue, i)
+
+	public class InputArrayStatementContext: ParserRuleContext {
+			open
+			func INPUT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.INPUT.rawValue)
+			}
+			open
+			func INPUT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.INPUT.rawValue, i)
+			}
+			open
+			func ARRAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ARRAY.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func WITHOUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITHOUT.rawValue, 0)
+			}
+			open
+			func DEFAULTS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DEFAULTS.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func HELP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HELP.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func attributeList() -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func inputGroupStatement() -> [InputGroupStatementContext] {
+				return getRuleContexts(InputGroupStatementContext.self)
+			}
+			open
+			func inputGroupStatement(_ i: Int) -> InputGroupStatementContext? {
+				return getRuleContext(InputGroupStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_inputArrayStatement
 		}
-		open func ARRAY() -> TerminalNode? { return getToken(informixParser.Tokens.ARRAY.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func FROM() -> TerminalNode? { return getToken(informixParser.Tokens.FROM.rawValue, 0) }
-		open func WITHOUT() -> TerminalNode? { return getToken(informixParser.Tokens.WITHOUT.rawValue, 0) }
-		open func DEFAULTS() -> TerminalNode? { return getToken(informixParser.Tokens.DEFAULTS.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func HELP() -> TerminalNode? { return getToken(informixParser.Tokens.HELP.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open func attributeList() -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func inputGroupStatement() -> Array<InputGroupStatementContext> {
-			return getRuleContexts(InputGroupStatementContext.self)
-		}
-		open func inputGroupStatement(_ i: Int) -> InputGroupStatementContext? {
-			return getRuleContext(InputGroupStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_inputArrayStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterInputArrayStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterInputArrayStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitInputArrayStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitInputArrayStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitInputArrayStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitInputArrayStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitInputArrayStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitInputArrayStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inputArrayStatement() throws -> InputArrayStatementContext {
+	 open func inputArrayStatement() throws -> InputArrayStatementContext {
 		var _localctx: InputArrayStatementContext = InputArrayStatementContext(_ctx, getState())
 		try enterRule(_localctx, 276, informixParser.RULE_inputArrayStatement)
 		var _la: Int = 0
@@ -15313,53 +17757,83 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MenuEventsContext:ParserRuleContext {
-		open func BEFORE() -> TerminalNode? { return getToken(informixParser.Tokens.BEFORE.rawValue, 0) }
-		open func MENU() -> TerminalNode? { return getToken(informixParser.Tokens.MENU.rawValue, 0) }
-		open func COMMAND() -> TerminalNode? { return getToken(informixParser.Tokens.COMMAND.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class MenuEventsContext: ParserRuleContext {
+			open
+			func BEFORE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BEFORE.rawValue, 0)
+			}
+			open
+			func MENU() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MENU.rawValue, 0)
+			}
+			open
+			func COMMAND() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMAND.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func KEY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.KEY.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func keyList() -> KeyListContext? {
+				return getRuleContext(KeyListContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func HELP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HELP.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_menuEvents
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func KEY() -> TerminalNode? { return getToken(informixParser.Tokens.KEY.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func keyList() -> KeyListContext? {
-			return getRuleContext(KeyListContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func HELP() -> TerminalNode? { return getToken(informixParser.Tokens.HELP.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_menuEvents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMenuEvents(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMenuEvents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMenuEvents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMenuEvents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMenuEvents(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMenuEvents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMenuEvents(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMenuEvents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func menuEvents() throws -> MenuEventsContext {
+	 open func menuEvents() throws -> MenuEventsContext {
 		var _localctx: MenuEventsContext = MenuEventsContext(_ctx, getState())
 		try enterRule(_localctx, 278, informixParser.RULE_menuEvents)
 		var _la: Int = 0
@@ -15434,7 +17908,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -15445,52 +17919,87 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MenuInsideStatementContext:ParserRuleContext {
-		open func NEXT() -> TerminalNode? { return getToken(informixParser.Tokens.NEXT.rawValue, 0) }
-		open func OPTION() -> TerminalNode? { return getToken(informixParser.Tokens.OPTION.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class MenuInsideStatementContext: ParserRuleContext {
+			open
+			func NEXT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NEXT.rawValue, 0)
+			}
+			open
+			func OPTION() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OPTION.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func ALL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ALL.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func SHOW() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SHOW.rawValue, 0)
+			}
+			open
+			func HIDE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HIDE.rawValue, 0)
+			}
+			open
+			func CONTINUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONTINUE.rawValue, 0)
+			}
+			open
+			func MENU() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MENU.rawValue, 0)
+			}
+			open
+			func EXIT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_menuInsideStatement
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func ALL() -> TerminalNode? { return getToken(informixParser.Tokens.ALL.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func SHOW() -> TerminalNode? { return getToken(informixParser.Tokens.SHOW.rawValue, 0) }
-		open func HIDE() -> TerminalNode? { return getToken(informixParser.Tokens.HIDE.rawValue, 0) }
-		open func CONTINUE() -> TerminalNode? { return getToken(informixParser.Tokens.CONTINUE.rawValue, 0) }
-		open func MENU() -> TerminalNode? { return getToken(informixParser.Tokens.MENU.rawValue, 0) }
-		open func EXIT() -> TerminalNode? { return getToken(informixParser.Tokens.EXIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_menuInsideStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMenuInsideStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMenuInsideStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMenuInsideStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMenuInsideStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMenuInsideStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMenuInsideStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMenuInsideStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMenuInsideStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func menuInsideStatement() throws -> MenuInsideStatementContext {
+	 open func menuInsideStatement() throws -> MenuInsideStatementContext {
 		var _localctx: MenuInsideStatementContext = MenuInsideStatementContext(_ctx, getState())
 		try enterRule(_localctx, 280, informixParser.RULE_menuInsideStatement)
 		var _la: Int = 0
@@ -15573,7 +18082,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2145)
 		 		try _errHandler.sync(self)
@@ -15668,7 +18177,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2158)
 		 		try _errHandler.sync(self)
@@ -15763,7 +18272,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2171)
 		 		try _errHandler.sync(self)
@@ -15804,7 +18313,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -15815,40 +18324,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MenuGroupStatementContext:ParserRuleContext {
-		open func menuEvents() -> MenuEventsContext? {
-			return getRuleContext(MenuEventsContext.self,0)
+
+	public class MenuGroupStatementContext: ParserRuleContext {
+			open
+			func menuEvents() -> MenuEventsContext? {
+				return getRuleContext(MenuEventsContext.self, 0)
+			}
+			open
+			func codeBlock() -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_menuGroupStatement
 		}
-		open func codeBlock() -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_menuGroupStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMenuGroupStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMenuGroupStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMenuGroupStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMenuGroupStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMenuGroupStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMenuGroupStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMenuGroupStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMenuGroupStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func menuGroupStatement() throws -> MenuGroupStatementContext {
+	 open func menuGroupStatement() throws -> MenuGroupStatementContext {
 		var _localctx: MenuGroupStatementContext = MenuGroupStatementContext(_ctx, getState())
 		try enterRule(_localctx, 282, informixParser.RULE_menuGroupStatement)
 		var _la: Int = 0
@@ -15901,48 +18417,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MenuStatementContext:ParserRuleContext {
-		open func MENU() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.MENU.rawValue) }
-		open func MENU(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.MENU.rawValue, i)
+
+	public class MenuStatementContext: ParserRuleContext {
+			open
+			func MENU() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.MENU.rawValue)
+			}
+			open
+			func MENU(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.MENU.rawValue, i)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func menuGroupStatement() -> [MenuGroupStatementContext] {
+				return getRuleContexts(MenuGroupStatementContext.self)
+			}
+			open
+			func menuGroupStatement(_ i: Int) -> MenuGroupStatementContext? {
+				return getRuleContext(MenuGroupStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_menuStatement
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func menuGroupStatement() -> Array<MenuGroupStatementContext> {
-			return getRuleContexts(MenuGroupStatementContext.self)
-		}
-		open func menuGroupStatement(_ i: Int) -> MenuGroupStatementContext? {
-			return getRuleContext(MenuGroupStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_menuStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMenuStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMenuStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMenuStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMenuStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMenuStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMenuStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMenuStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMenuStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func menuStatement() throws -> MenuStatementContext {
+	 open func menuStatement() throws -> MenuStatementContext {
 		var _localctx: MenuStatementContext = MenuStatementContext(_ctx, getState())
 		try enterRule(_localctx, 284, informixParser.RULE_menuStatement)
 		var _la: Int = 0
@@ -15985,41 +18516,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ReservedLinePositionContext:ParserRuleContext {
-		open func FIRST() -> TerminalNode? { return getToken(informixParser.Tokens.FIRST.rawValue, 0) }
-		open func PLUS() -> TerminalNode? { return getToken(informixParser.Tokens.PLUS.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
+
+	public class ReservedLinePositionContext: ParserRuleContext {
+			open
+			func FIRST() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FIRST.rawValue, 0)
+			}
+			open
+			func PLUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PLUS.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+			open
+			func LAST() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LAST.rawValue, 0)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MINUS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_reservedLinePosition
 		}
-		open func LAST() -> TerminalNode? { return getToken(informixParser.Tokens.LAST.rawValue, 0) }
-		open func MINUS() -> TerminalNode? { return getToken(informixParser.Tokens.MINUS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_reservedLinePosition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterReservedLinePosition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterReservedLinePosition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitReservedLinePosition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitReservedLinePosition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitReservedLinePosition(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitReservedLinePosition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitReservedLinePosition(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitReservedLinePosition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reservedLinePosition() throws -> ReservedLinePositionContext {
+	 open func reservedLinePosition() throws -> ReservedLinePositionContext {
 		var _localctx: ReservedLinePositionContext = ReservedLinePositionContext(_ctx, getState())
 		try enterRule(_localctx, 286, informixParser.RULE_reservedLinePosition)
 		var _la: Int = 0
@@ -16083,7 +18632,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16094,58 +18643,127 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SpecialWindowAttributeContext:ParserRuleContext {
-		open func BLACK() -> TerminalNode? { return getToken(informixParser.Tokens.BLACK.rawValue, 0) }
-		open func BLUE() -> TerminalNode? { return getToken(informixParser.Tokens.BLUE.rawValue, 0) }
-		open func CYAN() -> TerminalNode? { return getToken(informixParser.Tokens.CYAN.rawValue, 0) }
-		open func GREEN() -> TerminalNode? { return getToken(informixParser.Tokens.GREEN.rawValue, 0) }
-		open func MAGENTA() -> TerminalNode? { return getToken(informixParser.Tokens.MAGENTA.rawValue, 0) }
-		open func RED() -> TerminalNode? { return getToken(informixParser.Tokens.RED.rawValue, 0) }
-		open func WHITE() -> TerminalNode? { return getToken(informixParser.Tokens.WHITE.rawValue, 0) }
-		open func YELLOW() -> TerminalNode? { return getToken(informixParser.Tokens.YELLOW.rawValue, 0) }
-		open func BOLD() -> TerminalNode? { return getToken(informixParser.Tokens.BOLD.rawValue, 0) }
-		open func DIM() -> TerminalNode? { return getToken(informixParser.Tokens.DIM.rawValue, 0) }
-		open func NORMAL() -> TerminalNode? { return getToken(informixParser.Tokens.NORMAL.rawValue, 0) }
-		open func INVISIBLE() -> TerminalNode? { return getToken(informixParser.Tokens.INVISIBLE.rawValue, 0) }
-		open func REVERSE() -> TerminalNode? { return getToken(informixParser.Tokens.REVERSE.rawValue, 0) }
-		open func BORDER() -> TerminalNode? { return getToken(informixParser.Tokens.BORDER.rawValue, 0) }
-		open func LINE() -> TerminalNode? { return getToken(informixParser.Tokens.LINE.rawValue, 0) }
-		open func reservedLinePosition() -> ReservedLinePositionContext? {
-			return getRuleContext(ReservedLinePositionContext.self,0)
+
+	public class SpecialWindowAttributeContext: ParserRuleContext {
+			open
+			func BLACK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BLACK.rawValue, 0)
+			}
+			open
+			func BLUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BLUE.rawValue, 0)
+			}
+			open
+			func CYAN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CYAN.rawValue, 0)
+			}
+			open
+			func GREEN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GREEN.rawValue, 0)
+			}
+			open
+			func MAGENTA() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MAGENTA.rawValue, 0)
+			}
+			open
+			func RED() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RED.rawValue, 0)
+			}
+			open
+			func WHITE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WHITE.rawValue, 0)
+			}
+			open
+			func YELLOW() -> TerminalNode? {
+				return getToken(informixParser.Tokens.YELLOW.rawValue, 0)
+			}
+			open
+			func BOLD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BOLD.rawValue, 0)
+			}
+			open
+			func DIM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DIM.rawValue, 0)
+			}
+			open
+			func NORMAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NORMAL.rawValue, 0)
+			}
+			open
+			func INVISIBLE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INVISIBLE.rawValue, 0)
+			}
+			open
+			func REVERSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.REVERSE.rawValue, 0)
+			}
+			open
+			func BORDER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BORDER.rawValue, 0)
+			}
+			open
+			func LINE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LINE.rawValue, 0)
+			}
+			open
+			func reservedLinePosition() -> ReservedLinePositionContext? {
+				return getRuleContext(ReservedLinePositionContext.self, 0)
+			}
+			open
+			func PROMPT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PROMPT.rawValue, 0)
+			}
+			open
+			func FORM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FORM.rawValue, 0)
+			}
+			open
+			func MENU() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MENU.rawValue, 0)
+			}
+			open
+			func MESSAGE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MESSAGE.rawValue, 0)
+			}
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMENT.rawValue, 0)
+			}
+			open
+			func OFF() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OFF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_specialWindowAttribute
 		}
-		open func PROMPT() -> TerminalNode? { return getToken(informixParser.Tokens.PROMPT.rawValue, 0) }
-		open func FORM() -> TerminalNode? { return getToken(informixParser.Tokens.FORM.rawValue, 0) }
-		open func MENU() -> TerminalNode? { return getToken(informixParser.Tokens.MENU.rawValue, 0) }
-		open func MESSAGE() -> TerminalNode? { return getToken(informixParser.Tokens.MESSAGE.rawValue, 0) }
-		open func COMMENT() -> TerminalNode? { return getToken(informixParser.Tokens.COMMENT.rawValue, 0) }
-		open func OFF() -> TerminalNode? { return getToken(informixParser.Tokens.OFF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_specialWindowAttribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSpecialWindowAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSpecialWindowAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSpecialWindowAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSpecialWindowAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSpecialWindowAttribute(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSpecialWindowAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSpecialWindowAttribute(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSpecialWindowAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specialWindowAttribute() throws -> SpecialWindowAttributeContext {
+	 open func specialWindowAttribute() throws -> SpecialWindowAttributeContext {
 		var _localctx: SpecialWindowAttributeContext = SpecialWindowAttributeContext(_ctx, getState())
 		try enterRule(_localctx, 288, informixParser.RULE_specialWindowAttribute)
 		var _la: Int = 0
@@ -16262,12 +18880,12 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16278,44 +18896,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class WindowAttributeContext:ParserRuleContext {
-		open func specialWindowAttribute() -> Array<SpecialWindowAttributeContext> {
-			return getRuleContexts(SpecialWindowAttributeContext.self)
+
+	public class WindowAttributeContext: ParserRuleContext {
+			open
+			func specialWindowAttribute() -> [SpecialWindowAttributeContext] {
+				return getRuleContexts(SpecialWindowAttributeContext.self)
+			}
+			open
+			func specialWindowAttribute(_ i: Int) -> SpecialWindowAttributeContext? {
+				return getRuleContext(SpecialWindowAttributeContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_windowAttribute
 		}
-		open func specialWindowAttribute(_ i: Int) -> SpecialWindowAttributeContext? {
-			return getRuleContext(SpecialWindowAttributeContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_windowAttribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterWindowAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterWindowAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitWindowAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitWindowAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitWindowAttribute(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitWindowAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitWindowAttribute(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitWindowAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func windowAttribute() throws -> WindowAttributeContext {
+	 open func windowAttribute() throws -> WindowAttributeContext {
 		var _localctx: WindowAttributeContext = WindowAttributeContext(_ctx, getState())
 		try enterRule(_localctx, 290, informixParser.RULE_windowAttribute)
 		var _la: Int = 0
@@ -16354,41 +18983,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class WindowAttributeListContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func windowAttribute() -> WindowAttributeContext? {
-			return getRuleContext(WindowAttributeContext.self,0)
+
+	public class WindowAttributeListContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func windowAttribute() -> WindowAttributeContext? {
+				return getRuleContext(WindowAttributeContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func ATTRIBUTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ATTRIBUTE.rawValue, 0)
+			}
+			open
+			func ATTRIBUTES() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ATTRIBUTES.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_windowAttributeList
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func ATTRIBUTE() -> TerminalNode? { return getToken(informixParser.Tokens.ATTRIBUTE.rawValue, 0) }
-		open func ATTRIBUTES() -> TerminalNode? { return getToken(informixParser.Tokens.ATTRIBUTES.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_windowAttributeList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterWindowAttributeList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterWindowAttributeList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitWindowAttributeList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitWindowAttributeList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitWindowAttributeList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitWindowAttributeList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitWindowAttributeList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitWindowAttributeList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func windowAttributeList() throws -> WindowAttributeListContext {
+	 open func windowAttributeList() throws -> WindowAttributeListContext {
 		var _localctx: WindowAttributeListContext = WindowAttributeListContext(_ctx, getState())
 		try enterRule(_localctx, 292, informixParser.RULE_windowAttributeList)
 		var _la: Int = 0
@@ -16426,67 +19073,155 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class OptionStatementContext:ParserRuleContext {
-		open func MESSAGE() -> TerminalNode? { return getToken(informixParser.Tokens.MESSAGE.rawValue, 0) }
-		open func LINE() -> TerminalNode? { return getToken(informixParser.Tokens.LINE.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class OptionStatementContext: ParserRuleContext {
+			open
+			func MESSAGE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MESSAGE.rawValue, 0)
+			}
+			open
+			func LINE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LINE.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func PROMPT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PROMPT.rawValue, 0)
+			}
+			open
+			func MENU() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MENU.rawValue, 0)
+			}
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMENT.rawValue, 0)
+			}
+			open
+			func ERROR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ERROR.rawValue, 0)
+			}
+			open
+			func FORM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FORM.rawValue, 0)
+			}
+			open
+			func INPUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INPUT.rawValue, 0)
+			}
+			open
+			func INSERT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INSERT.rawValue, 0)
+			}
+			open
+			func KEY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.KEY.rawValue, 0)
+			}
+			open
+			func DELETE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DELETE.rawValue, 0)
+			}
+			open
+			func NEXT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NEXT.rawValue, 0)
+			}
+			open
+			func PREVIOUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PREVIOUS.rawValue, 0)
+			}
+			open
+			func ACCEPT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ACCEPT.rawValue, 0)
+			}
+			open
+			func HELP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HELP.rawValue, 0)
+			}
+			open
+			func FILE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FILE.rawValue, 0)
+			}
+			open
+			func attributeList() -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, 0)
+			}
+			open
+			func DISPLAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DISPLAY.rawValue, 0)
+			}
+			open
+			func SQL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SQL.rawValue, 0)
+			}
+			open
+			func INTERRUPT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTERRUPT.rawValue, 0)
+			}
+			open
+			func FIELD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FIELD.rawValue, 0)
+			}
+			open
+			func ORDER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ORDER.rawValue, 0)
+			}
+			open
+			func ON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func OFF() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OFF.rawValue, 0)
+			}
+			open
+			func CONSTRAINED() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONSTRAINED.rawValue, 0)
+			}
+			open
+			func UNCONSTRAINED() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UNCONSTRAINED.rawValue, 0)
+			}
+			open
+			func WRAP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WRAP.rawValue, 0)
+			}
+			open
+			func NO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NO.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_optionStatement
 		}
-		open func PROMPT() -> TerminalNode? { return getToken(informixParser.Tokens.PROMPT.rawValue, 0) }
-		open func MENU() -> TerminalNode? { return getToken(informixParser.Tokens.MENU.rawValue, 0) }
-		open func COMMENT() -> TerminalNode? { return getToken(informixParser.Tokens.COMMENT.rawValue, 0) }
-		open func ERROR() -> TerminalNode? { return getToken(informixParser.Tokens.ERROR.rawValue, 0) }
-		open func FORM() -> TerminalNode? { return getToken(informixParser.Tokens.FORM.rawValue, 0) }
-		open func INPUT() -> TerminalNode? { return getToken(informixParser.Tokens.INPUT.rawValue, 0) }
-		open func INSERT() -> TerminalNode? { return getToken(informixParser.Tokens.INSERT.rawValue, 0) }
-		open func KEY() -> TerminalNode? { return getToken(informixParser.Tokens.KEY.rawValue, 0) }
-		open func DELETE() -> TerminalNode? { return getToken(informixParser.Tokens.DELETE.rawValue, 0) }
-		open func NEXT() -> TerminalNode? { return getToken(informixParser.Tokens.NEXT.rawValue, 0) }
-		open func PREVIOUS() -> TerminalNode? { return getToken(informixParser.Tokens.PREVIOUS.rawValue, 0) }
-		open func ACCEPT() -> TerminalNode? { return getToken(informixParser.Tokens.ACCEPT.rawValue, 0) }
-		open func HELP() -> TerminalNode? { return getToken(informixParser.Tokens.HELP.rawValue, 0) }
-		open func FILE() -> TerminalNode? { return getToken(informixParser.Tokens.FILE.rawValue, 0) }
-		open func attributeList() -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,0)
-		}
-		open func DISPLAY() -> TerminalNode? { return getToken(informixParser.Tokens.DISPLAY.rawValue, 0) }
-		open func SQL() -> TerminalNode? { return getToken(informixParser.Tokens.SQL.rawValue, 0) }
-		open func INTERRUPT() -> TerminalNode? { return getToken(informixParser.Tokens.INTERRUPT.rawValue, 0) }
-		open func FIELD() -> TerminalNode? { return getToken(informixParser.Tokens.FIELD.rawValue, 0) }
-		open func ORDER() -> TerminalNode? { return getToken(informixParser.Tokens.ORDER.rawValue, 0) }
-		open func ON() -> TerminalNode? { return getToken(informixParser.Tokens.ON.rawValue, 0) }
-		open func OFF() -> TerminalNode? { return getToken(informixParser.Tokens.OFF.rawValue, 0) }
-		open func CONSTRAINED() -> TerminalNode? { return getToken(informixParser.Tokens.CONSTRAINED.rawValue, 0) }
-		open func UNCONSTRAINED() -> TerminalNode? { return getToken(informixParser.Tokens.UNCONSTRAINED.rawValue, 0) }
-		open func WRAP() -> TerminalNode? { return getToken(informixParser.Tokens.WRAP.rawValue, 0) }
-		open func NO() -> TerminalNode? { return getToken(informixParser.Tokens.NO.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_optionStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterOptionStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterOptionStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitOptionStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitOptionStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitOptionStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitOptionStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitOptionStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitOptionStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optionStatement() throws -> OptionStatementContext {
+	 open func optionStatement() throws -> OptionStatementContext {
 		var _localctx: OptionStatementContext = OptionStatementContext(_ctx, getState())
 		try enterRule(_localctx, 294, informixParser.RULE_optionStatement)
 		var _la: Int = 0
@@ -16572,7 +19307,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -16706,45 +19441,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class OptionsStatementContext:ParserRuleContext {
-		open func OPTIONS() -> TerminalNode? { return getToken(informixParser.Tokens.OPTIONS.rawValue, 0) }
-		open func optionStatement() -> Array<OptionStatementContext> {
-			return getRuleContexts(OptionStatementContext.self)
+
+	public class OptionsStatementContext: ParserRuleContext {
+			open
+			func OPTIONS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OPTIONS.rawValue, 0)
+			}
+			open
+			func optionStatement() -> [OptionStatementContext] {
+				return getRuleContexts(OptionStatementContext.self)
+			}
+			open
+			func optionStatement(_ i: Int) -> OptionStatementContext? {
+				return getRuleContext(OptionStatementContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_optionsStatement
 		}
-		open func optionStatement(_ i: Int) -> OptionStatementContext? {
-			return getRuleContext(OptionStatementContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_optionsStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterOptionsStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterOptionsStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitOptionsStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitOptionsStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitOptionsStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitOptionsStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitOptionsStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitOptionsStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optionsStatement() throws -> OptionsStatementContext {
+	 open func optionsStatement() throws -> OptionsStatementContext {
 		var _localctx: OptionsStatementContext = OptionsStatementContext(_ctx, getState())
 		try enterRule(_localctx, 296, informixParser.RULE_optionsStatement)
 		var _la: Int = 0
@@ -16785,113 +19534,195 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ScreenStatementContext:ParserRuleContext {
-		open func CLEAR() -> TerminalNode? { return getToken(informixParser.Tokens.CLEAR.rawValue, 0) }
-		open func FORM() -> TerminalNode? { return getToken(informixParser.Tokens.FORM.rawValue, 0) }
-		open func WINDOW() -> TerminalNode? { return getToken(informixParser.Tokens.WINDOW.rawValue, 0) }
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class ScreenStatementContext: ParserRuleContext {
+			open
+			func CLEAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CLEAR.rawValue, 0)
+			}
+			open
+			func FORM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FORM.rawValue, 0)
+			}
+			open
+			func WINDOW() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WINDOW.rawValue, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func SCREEN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SCREEN.rawValue, 0)
+			}
+			open
+			func fieldList() -> [FieldListContext] {
+				return getRuleContexts(FieldListContext.self)
+			}
+			open
+			func fieldList(_ i: Int) -> FieldListContext? {
+				return getRuleContext(FieldListContext.self, i)
+			}
+			open
+			func CLOSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CLOSE.rawValue, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func constructStatement() -> ConstructStatementContext? {
+				return getRuleContext(ConstructStatementContext.self, 0)
+			}
+			open
+			func CURRENT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CURRENT.rawValue, 0)
+			}
+			open
+			func IS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.IS.rawValue, 0)
+			}
+			open
+			func displayStatement() -> DisplayStatementContext? {
+				return getRuleContext(DisplayStatementContext.self, 0)
+			}
+			open
+			func displayArrayStatement() -> DisplayArrayStatementContext? {
+				return getRuleContext(DisplayArrayStatementContext.self, 0)
+			}
+			open
+			func DISPLAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DISPLAY.rawValue, 0)
+			}
+			open
+			func attributeList() -> AttributeListContext? {
+				return getRuleContext(AttributeListContext.self, 0)
+			}
+			open
+			func errorStatement() -> ErrorStatementContext? {
+				return getRuleContext(ErrorStatementContext.self, 0)
+			}
+			open
+			func messageStatement() -> MessageStatementContext? {
+				return getRuleContext(MessageStatementContext.self, 0)
+			}
+			open
+			func promptStatement() -> PromptStatementContext? {
+				return getRuleContext(PromptStatementContext.self, 0)
+			}
+			open
+			func inputStatement() -> InputStatementContext? {
+				return getRuleContext(InputStatementContext.self, 0)
+			}
+			open
+			func inputArrayStatement() -> InputArrayStatementContext? {
+				return getRuleContext(InputArrayStatementContext.self, 0)
+			}
+			open
+			func menuStatement() -> MenuStatementContext? {
+				return getRuleContext(MenuStatementContext.self, 0)
+			}
+			open
+			func OPEN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OPEN.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func AT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.AT.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func ROWS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ROWS.rawValue, 0)
+			}
+			open
+			func COLUMNS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COLUMNS.rawValue, 0)
+			}
+			open
+			func windowAttributeList() -> WindowAttributeListContext? {
+				return getRuleContext(WindowAttributeListContext.self, 0)
+			}
+			open
+			func optionsStatement() -> OptionsStatementContext? {
+				return getRuleContext(OptionsStatementContext.self, 0)
+			}
+			open
+			func SCROLL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SCROLL.rawValue, 0)
+			}
+			open
+			func UP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UP.rawValue, 0)
+			}
+			open
+			func DOWN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOWN.rawValue, 0)
+			}
+			open
+			func BY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BY.rawValue, 0)
+			}
+			open
+			func numericConstant() -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_screenStatement
 		}
-		open func SCREEN() -> TerminalNode? { return getToken(informixParser.Tokens.SCREEN.rawValue, 0) }
-		open func fieldList() -> Array<FieldListContext> {
-			return getRuleContexts(FieldListContext.self)
-		}
-		open func fieldList(_ i: Int) -> FieldListContext? {
-			return getRuleContext(FieldListContext.self,i)
-		}
-		open func CLOSE() -> TerminalNode? { return getToken(informixParser.Tokens.CLOSE.rawValue, 0) }
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func constructStatement() -> ConstructStatementContext? {
-			return getRuleContext(ConstructStatementContext.self,0)
-		}
-		open func CURRENT() -> TerminalNode? { return getToken(informixParser.Tokens.CURRENT.rawValue, 0) }
-		open func IS() -> TerminalNode? { return getToken(informixParser.Tokens.IS.rawValue, 0) }
-		open func displayStatement() -> DisplayStatementContext? {
-			return getRuleContext(DisplayStatementContext.self,0)
-		}
-		open func displayArrayStatement() -> DisplayArrayStatementContext? {
-			return getRuleContext(DisplayArrayStatementContext.self,0)
-		}
-		open func DISPLAY() -> TerminalNode? { return getToken(informixParser.Tokens.DISPLAY.rawValue, 0) }
-		open func attributeList() -> AttributeListContext? {
-			return getRuleContext(AttributeListContext.self,0)
-		}
-		open func errorStatement() -> ErrorStatementContext? {
-			return getRuleContext(ErrorStatementContext.self,0)
-		}
-		open func messageStatement() -> MessageStatementContext? {
-			return getRuleContext(MessageStatementContext.self,0)
-		}
-		open func promptStatement() -> PromptStatementContext? {
-			return getRuleContext(PromptStatementContext.self,0)
-		}
-		open func inputStatement() -> InputStatementContext? {
-			return getRuleContext(InputStatementContext.self,0)
-		}
-		open func inputArrayStatement() -> InputArrayStatementContext? {
-			return getRuleContext(InputArrayStatementContext.self,0)
-		}
-		open func menuStatement() -> MenuStatementContext? {
-			return getRuleContext(MenuStatementContext.self,0)
-		}
-		open func OPEN() -> TerminalNode? { return getToken(informixParser.Tokens.OPEN.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func FROM() -> TerminalNode? { return getToken(informixParser.Tokens.FROM.rawValue, 0) }
-		open func AT() -> TerminalNode? { return getToken(informixParser.Tokens.AT.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func WITH() -> TerminalNode? { return getToken(informixParser.Tokens.WITH.rawValue, 0) }
-		open func ROWS() -> TerminalNode? { return getToken(informixParser.Tokens.ROWS.rawValue, 0) }
-		open func COLUMNS() -> TerminalNode? { return getToken(informixParser.Tokens.COLUMNS.rawValue, 0) }
-		open func windowAttributeList() -> WindowAttributeListContext? {
-			return getRuleContext(WindowAttributeListContext.self,0)
-		}
-		open func optionsStatement() -> OptionsStatementContext? {
-			return getRuleContext(OptionsStatementContext.self,0)
-		}
-		open func SCROLL() -> TerminalNode? { return getToken(informixParser.Tokens.SCROLL.rawValue, 0) }
-		open func UP() -> TerminalNode? { return getToken(informixParser.Tokens.UP.rawValue, 0) }
-		open func DOWN() -> TerminalNode? { return getToken(informixParser.Tokens.DOWN.rawValue, 0) }
-		open func BY() -> TerminalNode? { return getToken(informixParser.Tokens.BY.rawValue, 0) }
-		open func numericConstant() -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_screenStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterScreenStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterScreenStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitScreenStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitScreenStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitScreenStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitScreenStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitScreenStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitScreenStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func screenStatement() throws -> ScreenStatementContext {
+	 open func screenStatement() throws -> ScreenStatementContext {
 		var _localctx: ScreenStatementContext = ScreenStatementContext(_ctx, getState())
 		try enterRule(_localctx, 298, informixParser.RULE_screenStatement)
 		var _la: Int = 0
@@ -17001,7 +19832,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2330)
 		 		try eol()
@@ -17226,55 +20057,67 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlStatementsContext:ParserRuleContext {
-		open func cursorManipulationStatement() -> CursorManipulationStatementContext? {
-			return getRuleContext(CursorManipulationStatementContext.self,0)
+
+	public class SqlStatementsContext: ParserRuleContext {
+			open
+			func cursorManipulationStatement() -> CursorManipulationStatementContext? {
+				return getRuleContext(CursorManipulationStatementContext.self, 0)
+			}
+			open
+			func dataDefinitionStatement() -> DataDefinitionStatementContext? {
+				return getRuleContext(DataDefinitionStatementContext.self, 0)
+			}
+			open
+			func dataManipulationStatement() -> DataManipulationStatementContext? {
+				return getRuleContext(DataManipulationStatementContext.self, 0)
+			}
+			open
+			func dynamicManagementStatement() -> DynamicManagementStatementContext? {
+				return getRuleContext(DynamicManagementStatementContext.self, 0)
+			}
+			open
+			func queryOptimizationStatement() -> QueryOptimizationStatementContext? {
+				return getRuleContext(QueryOptimizationStatementContext.self, 0)
+			}
+			open
+			func dataIntegrityStatement() -> DataIntegrityStatementContext? {
+				return getRuleContext(DataIntegrityStatementContext.self, 0)
+			}
+			open
+			func clientServerStatement() -> ClientServerStatementContext? {
+				return getRuleContext(ClientServerStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlStatements
 		}
-		open func dataDefinitionStatement() -> DataDefinitionStatementContext? {
-			return getRuleContext(DataDefinitionStatementContext.self,0)
-		}
-		open func dataManipulationStatement() -> DataManipulationStatementContext? {
-			return getRuleContext(DataManipulationStatementContext.self,0)
-		}
-		open func dynamicManagementStatement() -> DynamicManagementStatementContext? {
-			return getRuleContext(DynamicManagementStatementContext.self,0)
-		}
-		open func queryOptimizationStatement() -> QueryOptimizationStatementContext? {
-			return getRuleContext(QueryOptimizationStatementContext.self,0)
-		}
-		open func dataIntegrityStatement() -> DataIntegrityStatementContext? {
-			return getRuleContext(DataIntegrityStatementContext.self,0)
-		}
-		open func clientServerStatement() -> ClientServerStatementContext? {
-			return getRuleContext(ClientServerStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlStatements }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlStatements(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlStatements(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlStatements(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlStatements(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlStatements(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlStatements(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlStatements(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlStatements(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlStatements() throws -> SqlStatementsContext {
+	 open func sqlStatements() throws -> SqlStatementsContext {
 		var _localctx: SqlStatementsContext = SqlStatementsContext(_ctx, getState())
 		try enterRule(_localctx, 300, informixParser.RULE_sqlStatements)
 		defer {
@@ -17337,88 +20180,175 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class CursorManipulationStatementContext:ParserRuleContext {
-		open func CLOSE() -> TerminalNode? { return getToken(informixParser.Tokens.CLOSE.rawValue, 0) }
-		open func cursorName() -> CursorNameContext? {
-			return getRuleContext(CursorNameContext.self,0)
+
+	public class CursorManipulationStatementContext: ParserRuleContext {
+			open
+			func CLOSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CLOSE.rawValue, 0)
+			}
+			open
+			func cursorName() -> CursorNameContext? {
+				return getRuleContext(CursorNameContext.self, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func DECLARE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DECLARE.rawValue, 0)
+			}
+			open
+			func CURSOR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CURSOR.rawValue, 0)
+			}
+			open
+			func FOR() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.FOR.rawValue)
+			}
+			open
+			func FOR(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.FOR.rawValue, i)
+			}
+			open
+			func SCROLL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SCROLL.rawValue, 0)
+			}
+			open
+			func sqlSelectStatement() -> SqlSelectStatementContext? {
+				return getRuleContext(SqlSelectStatementContext.self, 0)
+			}
+			open
+			func sqlInsertStatement() -> SqlInsertStatementContext? {
+				return getRuleContext(SqlInsertStatementContext.self, 0)
+			}
+			open
+			func statementId() -> StatementIdContext? {
+				return getRuleContext(StatementIdContext.self, 0)
+			}
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func HOLD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HOLD.rawValue, 0)
+			}
+			open
+			func UPDATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UPDATE.rawValue, 0)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func columnsList() -> ColumnsListContext? {
+				return getRuleContext(ColumnsListContext.self, 0)
+			}
+			open
+			func FETCH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FETCH.rawValue, 0)
+			}
+			open
+			func NEXT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NEXT.rawValue, 0)
+			}
+			open
+			func FIRST() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FIRST.rawValue, 0)
+			}
+			open
+			func LAST() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LAST.rawValue, 0)
+			}
+			open
+			func CURRENT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CURRENT.rawValue, 0)
+			}
+			open
+			func RELATIVE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RELATIVE.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func ABSOLUTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ABSOLUTE.rawValue, 0)
+			}
+			open
+			func INTO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTO.rawValue, 0)
+			}
+			open
+			func variableList() -> VariableListContext? {
+				return getRuleContext(VariableListContext.self, 0)
+			}
+			open
+			func PREVIOUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PREVIOUS.rawValue, 0)
+			}
+			open
+			func PRIOR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PRIOR.rawValue, 0)
+			}
+			open
+			func FLUSH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FLUSH.rawValue, 0)
+			}
+			open
+			func OPEN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OPEN.rawValue, 0)
+			}
+			open
+			func USING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.USING.rawValue, 0)
+			}
+			open
+			func PUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PUT.rawValue, 0)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func variableOrConstantList() -> VariableOrConstantListContext? {
+				return getRuleContext(VariableOrConstantListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_cursorManipulationStatement
 		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func DECLARE() -> TerminalNode? { return getToken(informixParser.Tokens.DECLARE.rawValue, 0) }
-		open func CURSOR() -> TerminalNode? { return getToken(informixParser.Tokens.CURSOR.rawValue, 0) }
-		open func FOR() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.FOR.rawValue) }
-		open func FOR(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.FOR.rawValue, i)
-		}
-		open func SCROLL() -> TerminalNode? { return getToken(informixParser.Tokens.SCROLL.rawValue, 0) }
-		open func sqlSelectStatement() -> SqlSelectStatementContext? {
-			return getRuleContext(SqlSelectStatementContext.self,0)
-		}
-		open func sqlInsertStatement() -> SqlInsertStatementContext? {
-			return getRuleContext(SqlInsertStatementContext.self,0)
-		}
-		open func statementId() -> StatementIdContext? {
-			return getRuleContext(StatementIdContext.self,0)
-		}
-		open func WITH() -> TerminalNode? { return getToken(informixParser.Tokens.WITH.rawValue, 0) }
-		open func HOLD() -> TerminalNode? { return getToken(informixParser.Tokens.HOLD.rawValue, 0) }
-		open func UPDATE() -> TerminalNode? { return getToken(informixParser.Tokens.UPDATE.rawValue, 0) }
-		open func OF() -> TerminalNode? { return getToken(informixParser.Tokens.OF.rawValue, 0) }
-		open func columnsList() -> ColumnsListContext? {
-			return getRuleContext(ColumnsListContext.self,0)
-		}
-		open func FETCH() -> TerminalNode? { return getToken(informixParser.Tokens.FETCH.rawValue, 0) }
-		open func NEXT() -> TerminalNode? { return getToken(informixParser.Tokens.NEXT.rawValue, 0) }
-		open func FIRST() -> TerminalNode? { return getToken(informixParser.Tokens.FIRST.rawValue, 0) }
-		open func LAST() -> TerminalNode? { return getToken(informixParser.Tokens.LAST.rawValue, 0) }
-		open func CURRENT() -> TerminalNode? { return getToken(informixParser.Tokens.CURRENT.rawValue, 0) }
-		open func RELATIVE() -> TerminalNode? { return getToken(informixParser.Tokens.RELATIVE.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func ABSOLUTE() -> TerminalNode? { return getToken(informixParser.Tokens.ABSOLUTE.rawValue, 0) }
-		open func INTO() -> TerminalNode? { return getToken(informixParser.Tokens.INTO.rawValue, 0) }
-		open func variableList() -> VariableListContext? {
-			return getRuleContext(VariableListContext.self,0)
-		}
-		open func PREVIOUS() -> TerminalNode? { return getToken(informixParser.Tokens.PREVIOUS.rawValue, 0) }
-		open func PRIOR() -> TerminalNode? { return getToken(informixParser.Tokens.PRIOR.rawValue, 0) }
-		open func FLUSH() -> TerminalNode? { return getToken(informixParser.Tokens.FLUSH.rawValue, 0) }
-		open func OPEN() -> TerminalNode? { return getToken(informixParser.Tokens.OPEN.rawValue, 0) }
-		open func USING() -> TerminalNode? { return getToken(informixParser.Tokens.USING.rawValue, 0) }
-		open func PUT() -> TerminalNode? { return getToken(informixParser.Tokens.PUT.rawValue, 0) }
-		open func FROM() -> TerminalNode? { return getToken(informixParser.Tokens.FROM.rawValue, 0) }
-		open func variableOrConstantList() -> VariableOrConstantListContext? {
-			return getRuleContext(VariableOrConstantListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_cursorManipulationStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterCursorManipulationStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterCursorManipulationStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitCursorManipulationStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitCursorManipulationStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitCursorManipulationStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitCursorManipulationStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitCursorManipulationStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitCursorManipulationStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cursorManipulationStatement() throws -> CursorManipulationStatementContext {
+	 open func cursorManipulationStatement() throws -> CursorManipulationStatementContext {
 		var _localctx: CursorManipulationStatementContext = CursorManipulationStatementContext(_ctx, getState())
 		try enterRule(_localctx, 302, informixParser.RULE_cursorManipulationStatement)
 		var _la: Int = 0
@@ -17549,7 +20479,7 @@ open class informixParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 
 		 			break
@@ -17623,12 +20553,12 @@ open class informixParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -17782,7 +20712,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -17793,44 +20723,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ColumnsListContext:ParserRuleContext {
-		open func columnsTableId() -> Array<ColumnsTableIdContext> {
-			return getRuleContexts(ColumnsTableIdContext.self)
+
+	public class ColumnsListContext: ParserRuleContext {
+			open
+			func columnsTableId() -> [ColumnsTableIdContext] {
+				return getRuleContexts(ColumnsTableIdContext.self)
+			}
+			open
+			func columnsTableId(_ i: Int) -> ColumnsTableIdContext? {
+				return getRuleContext(ColumnsTableIdContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_columnsList
 		}
-		open func columnsTableId(_ i: Int) -> ColumnsTableIdContext? {
-			return getRuleContext(ColumnsTableIdContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_columnsList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterColumnsList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterColumnsList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitColumnsList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitColumnsList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitColumnsList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitColumnsList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitColumnsList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitColumnsList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func columnsList() throws -> ColumnsListContext {
+	 open func columnsList() throws -> ColumnsListContext {
 		var _localctx: ColumnsListContext = ColumnsListContext(_ctx, getState())
 		try enterRule(_localctx, 304, informixParser.RULE_columnsList)
 		var _la: Int = 0
@@ -17869,37 +20810,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class StatementIdContext:ParserRuleContext {
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
+
+	public class StatementIdContext: ParserRuleContext {
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_statementId
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_statementId }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterStatementId(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterStatementId(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitStatementId(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitStatementId(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitStatementId(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitStatementId(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitStatementId(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitStatementId(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statementId() throws -> StatementIdContext {
+	 open func statementId() throws -> StatementIdContext {
 		var _localctx: StatementIdContext = StatementIdContext(_ctx, getState())
 		try enterRule(_localctx, 306, informixParser.RULE_statementId)
 		defer {
@@ -17919,37 +20866,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class CursorNameContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class CursorNameContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_cursorName
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_cursorName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterCursorName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterCursorName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitCursorName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitCursorName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitCursorName(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitCursorName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitCursorName(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitCursorName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cursorName() throws -> CursorNameContext {
+	 open func cursorName() throws -> CursorNameContext {
 		var _localctx: CursorNameContext = CursorNameContext(_ctx, getState())
 		try enterRule(_localctx, 308, informixParser.RULE_cursorName)
 		defer {
@@ -17969,37 +20922,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DataTypeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class DataTypeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_dataType
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_dataType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDataType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDataType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDataType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDataType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDataType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDataType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDataType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDataType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dataType() throws -> DataTypeContext {
+	 open func dataType() throws -> DataTypeContext {
 		var _localctx: DataTypeContext = DataTypeContext(_ctx, getState())
 		try enterRule(_localctx, 310, informixParser.RULE_dataType)
 		defer {
@@ -18019,57 +20978,99 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ColumnItemContext:ParserRuleContext {
-		open func constantIdentifier() -> Array<ConstantIdentifierContext> {
-			return getRuleContexts(ConstantIdentifierContext.self)
+
+	public class ColumnItemContext: ParserRuleContext {
+			open
+			func constantIdentifier() -> [ConstantIdentifierContext] {
+				return getRuleContexts(ConstantIdentifierContext.self)
+			}
+			open
+			func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, i)
+			}
+			open
+			func dataType() -> DataTypeContext? {
+				return getRuleContext(DataTypeContext.self, 0)
+			}
+			open
+			func BYTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BYTE.rawValue, 0)
+			}
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TEXT.rawValue, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func NULL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NULL.rawValue, 0)
+			}
+			open
+			func IN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.IN.rawValue, 0)
+			}
+			open
+			func TABLE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TABLE.rawValue, 0)
+			}
+			open
+			func UNIQUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UNIQUE.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func CONSTRAINT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONSTRAINT.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_columnItem
 		}
-		open func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,i)
-		}
-		open func dataType() -> DataTypeContext? {
-			return getRuleContext(DataTypeContext.self,0)
-		}
-		open func BYTE() -> TerminalNode? { return getToken(informixParser.Tokens.BYTE.rawValue, 0) }
-		open func TEXT() -> TerminalNode? { return getToken(informixParser.Tokens.TEXT.rawValue, 0) }
-		open func NOT() -> TerminalNode? { return getToken(informixParser.Tokens.NOT.rawValue, 0) }
-		open func NULL() -> TerminalNode? { return getToken(informixParser.Tokens.NULL.rawValue, 0) }
-		open func IN() -> TerminalNode? { return getToken(informixParser.Tokens.IN.rawValue, 0) }
-		open func TABLE() -> TerminalNode? { return getToken(informixParser.Tokens.TABLE.rawValue, 0) }
-		open func UNIQUE() -> TerminalNode? { return getToken(informixParser.Tokens.UNIQUE.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open func CONSTRAINT() -> TerminalNode? { return getToken(informixParser.Tokens.CONSTRAINT.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_columnItem }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterColumnItem(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterColumnItem(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitColumnItem(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitColumnItem(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitColumnItem(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitColumnItem(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitColumnItem(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitColumnItem(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func columnItem() throws -> ColumnItemContext {
+	 open func columnItem() throws -> ColumnItemContext {
 		var _localctx: ColumnItemContext = ColumnItemContext(_ctx, getState())
 		try enterRule(_localctx, 312, informixParser.RULE_columnItem)
 		var _la: Int = 0
@@ -18197,7 +21198,7 @@ open class informixParser: Parser {
 
 		 					break
 		 				default:
-		 					throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 					throw ANTLRException.recognition(e: NoViableAltException(self))
 		 				}
 
 		 			}
@@ -18297,7 +21298,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -18308,94 +21309,183 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DataDefinitionStatementContext:ParserRuleContext {
-		open func DROP() -> TerminalNode? { return getToken(informixParser.Tokens.DROP.rawValue, 0) }
-		open func TABLE() -> TerminalNode? { return getToken(informixParser.Tokens.TABLE.rawValue, 0) }
-		open func constantIdentifier() -> Array<ConstantIdentifierContext> {
-			return getRuleContexts(ConstantIdentifierContext.self)
+
+	public class DataDefinitionStatementContext: ParserRuleContext {
+			open
+			func DROP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DROP.rawValue, 0)
+			}
+			open
+			func TABLE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TABLE.rawValue, 0)
+			}
+			open
+			func constantIdentifier() -> [ConstantIdentifierContext] {
+				return getRuleContexts(ConstantIdentifierContext.self)
+			}
+			open
+			func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, i)
+			}
+			open
+			func CREATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CREATE.rawValue, 0)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func columnItem() -> [ColumnItemContext] {
+				return getRuleContexts(ColumnItemContext.self)
+			}
+			open
+			func columnItem(_ i: Int) -> ColumnItemContext? {
+				return getRuleContext(ColumnItemContext.self, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func TEMP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TEMP.rawValue, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func NO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NO.rawValue, 0)
+			}
+			open
+			func LOG() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LOG.rawValue, 0)
+			}
+			open
+			func IN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.IN.rawValue, 0)
+			}
+			open
+			func EXTENT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXTENT.rawValue, 0)
+			}
+			open
+			func SIZE() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.SIZE.rawValue)
+			}
+			open
+			func SIZE(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.SIZE.rawValue, i)
+			}
+			open
+			func numericConstant() -> [NumericConstantContext] {
+				return getRuleContexts(NumericConstantContext.self)
+			}
+			open
+			func numericConstant(_ i: Int) -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, i)
+			}
+			open
+			func NEXT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NEXT.rawValue, 0)
+			}
+			open
+			func LOCK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LOCK.rawValue, 0)
+			}
+			open
+			func MODE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MODE.rawValue, 0)
+			}
+			open
+			func PAGE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PAGE.rawValue, 0)
+			}
+			open
+			func ROW() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ROW.rawValue, 0)
+			}
+			open
+			func INDEX() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INDEX.rawValue, 0)
+			}
+			open
+			func ON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func UNIQUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UNIQUE.rawValue, 0)
+			}
+			open
+			func CLUSTER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CLUSTER.rawValue, 0)
+			}
+			open
+			func ASC() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.ASC.rawValue)
+			}
+			open
+			func ASC(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.ASC.rawValue, i)
+			}
+			open
+			func DESC() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.DESC.rawValue)
+			}
+			open
+			func DESC(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.DESC.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_dataDefinitionStatement
 		}
-		open func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,i)
-		}
-		open func CREATE() -> TerminalNode? { return getToken(informixParser.Tokens.CREATE.rawValue, 0) }
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func columnItem() -> Array<ColumnItemContext> {
-			return getRuleContexts(ColumnItemContext.self)
-		}
-		open func columnItem(_ i: Int) -> ColumnItemContext? {
-			return getRuleContext(ColumnItemContext.self,i)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func TEMP() -> TerminalNode? { return getToken(informixParser.Tokens.TEMP.rawValue, 0) }
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func WITH() -> TerminalNode? { return getToken(informixParser.Tokens.WITH.rawValue, 0) }
-		open func NO() -> TerminalNode? { return getToken(informixParser.Tokens.NO.rawValue, 0) }
-		open func LOG() -> TerminalNode? { return getToken(informixParser.Tokens.LOG.rawValue, 0) }
-		open func IN() -> TerminalNode? { return getToken(informixParser.Tokens.IN.rawValue, 0) }
-		open func EXTENT() -> TerminalNode? { return getToken(informixParser.Tokens.EXTENT.rawValue, 0) }
-		open func SIZE() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.SIZE.rawValue) }
-		open func SIZE(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.SIZE.rawValue, i)
-		}
-		open func numericConstant() -> Array<NumericConstantContext> {
-			return getRuleContexts(NumericConstantContext.self)
-		}
-		open func numericConstant(_ i: Int) -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,i)
-		}
-		open func NEXT() -> TerminalNode? { return getToken(informixParser.Tokens.NEXT.rawValue, 0) }
-		open func LOCK() -> TerminalNode? { return getToken(informixParser.Tokens.LOCK.rawValue, 0) }
-		open func MODE() -> TerminalNode? { return getToken(informixParser.Tokens.MODE.rawValue, 0) }
-		open func PAGE() -> TerminalNode? { return getToken(informixParser.Tokens.PAGE.rawValue, 0) }
-		open func ROW() -> TerminalNode? { return getToken(informixParser.Tokens.ROW.rawValue, 0) }
-		open func INDEX() -> TerminalNode? { return getToken(informixParser.Tokens.INDEX.rawValue, 0) }
-		open func ON() -> TerminalNode? { return getToken(informixParser.Tokens.ON.rawValue, 0) }
-		open func UNIQUE() -> TerminalNode? { return getToken(informixParser.Tokens.UNIQUE.rawValue, 0) }
-		open func CLUSTER() -> TerminalNode? { return getToken(informixParser.Tokens.CLUSTER.rawValue, 0) }
-		open func ASC() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.ASC.rawValue) }
-		open func ASC(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.ASC.rawValue, i)
-		}
-		open func DESC() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.DESC.rawValue) }
-		open func DESC(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.DESC.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_dataDefinitionStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDataDefinitionStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDataDefinitionStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDataDefinitionStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDataDefinitionStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDataDefinitionStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDataDefinitionStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDataDefinitionStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDataDefinitionStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dataDefinitionStatement() throws -> DataDefinitionStatementContext {
+	 open func dataDefinitionStatement() throws -> DataDefinitionStatementContext {
 		var _localctx: DataDefinitionStatementContext = DataDefinitionStatementContext(_ctx, getState())
 		try enterRule(_localctx, 314, informixParser.RULE_dataDefinitionStatement)
 		var _la: Int = 0
@@ -18692,52 +21782,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DataManipulationStatementContext:ParserRuleContext {
-		open func sqlInsertStatement() -> SqlInsertStatementContext? {
-			return getRuleContext(SqlInsertStatementContext.self,0)
+
+	public class DataManipulationStatementContext: ParserRuleContext {
+			open
+			func sqlInsertStatement() -> SqlInsertStatementContext? {
+				return getRuleContext(SqlInsertStatementContext.self, 0)
+			}
+			open
+			func sqlDeleteStatement() -> SqlDeleteStatementContext? {
+				return getRuleContext(SqlDeleteStatementContext.self, 0)
+			}
+			open
+			func sqlSelectStatement() -> SqlSelectStatementContext? {
+				return getRuleContext(SqlSelectStatementContext.self, 0)
+			}
+			open
+			func sqlUpdateStatement() -> SqlUpdateStatementContext? {
+				return getRuleContext(SqlUpdateStatementContext.self, 0)
+			}
+			open
+			func sqlLoadStatement() -> SqlLoadStatementContext? {
+				return getRuleContext(SqlLoadStatementContext.self, 0)
+			}
+			open
+			func sqlUnLoadStatement() -> SqlUnLoadStatementContext? {
+				return getRuleContext(SqlUnLoadStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_dataManipulationStatement
 		}
-		open func sqlDeleteStatement() -> SqlDeleteStatementContext? {
-			return getRuleContext(SqlDeleteStatementContext.self,0)
-		}
-		open func sqlSelectStatement() -> SqlSelectStatementContext? {
-			return getRuleContext(SqlSelectStatementContext.self,0)
-		}
-		open func sqlUpdateStatement() -> SqlUpdateStatementContext? {
-			return getRuleContext(SqlUpdateStatementContext.self,0)
-		}
-		open func sqlLoadStatement() -> SqlLoadStatementContext? {
-			return getRuleContext(SqlLoadStatementContext.self,0)
-		}
-		open func sqlUnLoadStatement() -> SqlUnLoadStatementContext? {
-			return getRuleContext(SqlUnLoadStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_dataManipulationStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDataManipulationStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDataManipulationStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDataManipulationStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDataManipulationStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDataManipulationStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDataManipulationStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDataManipulationStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDataManipulationStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dataManipulationStatement() throws -> DataManipulationStatementContext {
+	 open func dataManipulationStatement() throws -> DataManipulationStatementContext {
 		var _localctx: DataManipulationStatementContext = DataManipulationStatementContext(_ctx, getState())
 		try enterRule(_localctx, 316, informixParser.RULE_dataManipulationStatement)
 		defer {
@@ -18789,7 +21890,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -18800,37 +21901,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlSelectStatementContext:ParserRuleContext {
-		open func mainSelectStatement() -> MainSelectStatementContext? {
-			return getRuleContext(MainSelectStatementContext.self,0)
+
+	public class SqlSelectStatementContext: ParserRuleContext {
+			open
+			func mainSelectStatement() -> MainSelectStatementContext? {
+				return getRuleContext(MainSelectStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlSelectStatement
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlSelectStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlSelectStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlSelectStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlSelectStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlSelectStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlSelectStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlSelectStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlSelectStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlSelectStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlSelectStatement() throws -> SqlSelectStatementContext {
+	 open func sqlSelectStatement() throws -> SqlSelectStatementContext {
 		var _localctx: SqlSelectStatementContext = SqlSelectStatementContext(_ctx, getState())
 		try enterRule(_localctx, 318, informixParser.RULE_sqlSelectStatement)
 		defer {
@@ -18850,45 +21957,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ColumnsTableIdContext:ParserRuleContext {
-		open func STAR() -> TerminalNode? { return getToken(informixParser.Tokens.STAR.rawValue, 0) }
-		open func tableIdentifier() -> TableIdentifierContext? {
-			return getRuleContext(TableIdentifierContext.self,0)
+
+	public class ColumnsTableIdContext: ParserRuleContext {
+			open
+			func STAR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STAR.rawValue, 0)
+			}
+			open
+			func tableIdentifier() -> TableIdentifierContext? {
+				return getRuleContext(TableIdentifierContext.self, 0)
+			}
+			open
+			func DOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOT.rawValue, 0)
+			}
+			open
+			func columnsTableId() -> ColumnsTableIdContext? {
+				return getRuleContext(ColumnsTableIdContext.self, 0)
+			}
+			open
+			func indexingVariable() -> IndexingVariableContext? {
+				return getRuleContext(IndexingVariableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_columnsTableId
 		}
-		open func DOT() -> TerminalNode? { return getToken(informixParser.Tokens.DOT.rawValue, 0) }
-		open func columnsTableId() -> ColumnsTableIdContext? {
-			return getRuleContext(ColumnsTableIdContext.self,0)
-		}
-		open func indexingVariable() -> IndexingVariableContext? {
-			return getRuleContext(IndexingVariableContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_columnsTableId }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterColumnsTableId(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterColumnsTableId(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitColumnsTableId(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitColumnsTableId(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitColumnsTableId(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitColumnsTableId(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitColumnsTableId(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitColumnsTableId(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func columnsTableId() throws -> ColumnsTableIdContext {
+	 open func columnsTableId() throws -> ColumnsTableIdContext {
 		var _localctx: ColumnsTableIdContext = ColumnsTableIdContext(_ctx, getState())
 		try enterRule(_localctx, 320, informixParser.RULE_columnsTableId)
 		var _la: Int = 0
@@ -18979,7 +22100,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -18990,50 +22111,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SelectListContext:ParserRuleContext {
-		open func sqlExpression() -> Array<SqlExpressionContext> {
-			return getRuleContexts(SqlExpressionContext.self)
+
+	public class SelectListContext: ParserRuleContext {
+			open
+			func sqlExpression() -> [SqlExpressionContext] {
+				return getRuleContexts(SqlExpressionContext.self)
+			}
+			open
+			func sqlExpression(_ i: Int) -> SqlExpressionContext? {
+				return getRuleContext(SqlExpressionContext.self, i)
+			}
+			open
+			func sqlAlias() -> [SqlAliasContext] {
+				return getRuleContexts(SqlAliasContext.self)
+			}
+			open
+			func sqlAlias(_ i: Int) -> SqlAliasContext? {
+				return getRuleContext(SqlAliasContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_selectList
 		}
-		open func sqlExpression(_ i: Int) -> SqlExpressionContext? {
-			return getRuleContext(SqlExpressionContext.self,i)
-		}
-		open func sqlAlias() -> Array<SqlAliasContext> {
-			return getRuleContexts(SqlAliasContext.self)
-		}
-		open func sqlAlias(_ i: Int) -> SqlAliasContext? {
-			return getRuleContext(SqlAliasContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_selectList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSelectList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSelectList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSelectList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSelectList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSelectList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSelectList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSelectList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSelectList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selectList() throws -> SelectListContext {
+	 open func selectList() throws -> SelectListContext {
 		var _localctx: SelectListContext = SelectListContext(_ctx, getState())
 		try enterRule(_localctx, 322, informixParser.RULE_selectList)
 		var _la: Int = 0
@@ -19101,41 +22235,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class HeadSelectStatementContext:ParserRuleContext {
-		open func SELECT() -> TerminalNode? { return getToken(informixParser.Tokens.SELECT.rawValue, 0) }
-		open func selectList() -> SelectListContext? {
-			return getRuleContext(SelectListContext.self,0)
+
+	public class HeadSelectStatementContext: ParserRuleContext {
+			open
+			func SELECT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SELECT.rawValue, 0)
+			}
+			open
+			func selectList() -> SelectListContext? {
+				return getRuleContext(SelectListContext.self, 0)
+			}
+			open
+			func ALL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ALL.rawValue, 0)
+			}
+			open
+			func DISTINCT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DISTINCT.rawValue, 0)
+			}
+			open
+			func UNIQUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UNIQUE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_headSelectStatement
 		}
-		open func ALL() -> TerminalNode? { return getToken(informixParser.Tokens.ALL.rawValue, 0) }
-		open func DISTINCT() -> TerminalNode? { return getToken(informixParser.Tokens.DISTINCT.rawValue, 0) }
-		open func UNIQUE() -> TerminalNode? { return getToken(informixParser.Tokens.UNIQUE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_headSelectStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterHeadSelectStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterHeadSelectStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitHeadSelectStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitHeadSelectStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitHeadSelectStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitHeadSelectStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitHeadSelectStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitHeadSelectStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func headSelectStatement() throws -> HeadSelectStatementContext {
+	 open func headSelectStatement() throws -> HeadSelectStatementContext {
 		var _localctx: HeadSelectStatementContext = HeadSelectStatementContext(_ctx, getState())
 		try enterRule(_localctx, 324, informixParser.RULE_headSelectStatement)
 		var _la: Int = 0
@@ -19240,45 +22392,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class TableQualifierContext:ParserRuleContext {
-		open func constantIdentifier() -> Array<ConstantIdentifierContext> {
-			return getRuleContexts(ConstantIdentifierContext.self)
+
+	public class TableQualifierContext: ParserRuleContext {
+			open
+			func constantIdentifier() -> [ConstantIdentifierContext] {
+				return getRuleContexts(ConstantIdentifierContext.self)
+			}
+			open
+			func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, i)
+			}
+			open
+			func COLON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COLON.rawValue, 0)
+			}
+			open
+			func ATSYMBOL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ATSYMBOL.rawValue, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_tableQualifier
 		}
-		open func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,i)
-		}
-		open func COLON() -> TerminalNode? { return getToken(informixParser.Tokens.COLON.rawValue, 0) }
-		open func ATSYMBOL() -> TerminalNode? { return getToken(informixParser.Tokens.ATSYMBOL.rawValue, 0) }
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_tableQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterTableQualifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterTableQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitTableQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitTableQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitTableQualifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitTableQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitTableQualifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitTableQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tableQualifier() throws -> TableQualifierContext {
+	 open func tableQualifier() throws -> TableQualifierContext {
 		var _localctx: TableQualifierContext = TableQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 326, informixParser.RULE_tableQualifier)
 		defer {
@@ -19325,40 +22491,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class TableIdentifierContext:ParserRuleContext {
-		open func constantIdentifier() -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,0)
+
+	public class TableIdentifierContext: ParserRuleContext {
+			open
+			func constantIdentifier() -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, 0)
+			}
+			open
+			func tableQualifier() -> TableQualifierContext? {
+				return getRuleContext(TableQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_tableIdentifier
 		}
-		open func tableQualifier() -> TableQualifierContext? {
-			return getRuleContext(TableQualifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_tableIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterTableIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterTableIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitTableIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitTableIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitTableIdentifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitTableIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitTableIdentifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitTableIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tableIdentifier() throws -> TableIdentifierContext {
+	 open func tableIdentifier() throws -> TableIdentifierContext {
 		var _localctx: TableIdentifierContext = TableIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 328, informixParser.RULE_tableIdentifier)
 		defer {
@@ -19388,41 +22561,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FromTableContext:ParserRuleContext {
-		open func tableIdentifier() -> TableIdentifierContext? {
-			return getRuleContext(TableIdentifierContext.self,0)
+
+	public class FromTableContext: ParserRuleContext {
+			open
+			func tableIdentifier() -> TableIdentifierContext? {
+				return getRuleContext(TableIdentifierContext.self, 0)
+			}
+			open
+			func OUTER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OUTER.rawValue, 0)
+			}
+			open
+			func sqlAlias() -> SqlAliasContext? {
+				return getRuleContext(SqlAliasContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_fromTable
 		}
-		open func OUTER() -> TerminalNode? { return getToken(informixParser.Tokens.OUTER.rawValue, 0) }
-		open func sqlAlias() -> SqlAliasContext? {
-			return getRuleContext(SqlAliasContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_fromTable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFromTable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFromTable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFromTable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFromTable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFromTable(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFromTable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFromTable(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFromTable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fromTable() throws -> FromTableContext {
+	 open func fromTable() throws -> FromTableContext {
 		var _localctx: FromTableContext = FromTableContext(_ctx, getState())
 		try enterRule(_localctx, 330, informixParser.RULE_fromTable)
 		var _la: Int = 0
@@ -19466,37 +22649,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class TableExpressionContext:ParserRuleContext {
-		open func simpleSelectStatement() -> SimpleSelectStatementContext? {
-			return getRuleContext(SimpleSelectStatementContext.self,0)
+
+	public class TableExpressionContext: ParserRuleContext {
+			open
+			func simpleSelectStatement() -> SimpleSelectStatementContext? {
+				return getRuleContext(SimpleSelectStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_tableExpression
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_tableExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterTableExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterTableExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitTableExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitTableExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitTableExpression(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitTableExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitTableExpression(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitTableExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tableExpression() throws -> TableExpressionContext {
+	 open func tableExpression() throws -> TableExpressionContext {
 		var _localctx: TableExpressionContext = TableExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 332, informixParser.RULE_tableExpression)
 		defer {
@@ -19516,65 +22705,91 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FromSelectStatementContext:ParserRuleContext {
-		open func FROM() -> TerminalNode? { return getToken(informixParser.Tokens.FROM.rawValue, 0) }
-		open func fromTable() -> Array<FromTableContext> {
-			return getRuleContexts(FromTableContext.self)
+
+	public class FromSelectStatementContext: ParserRuleContext {
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func fromTable() -> [FromTableContext] {
+				return getRuleContexts(FromTableContext.self)
+			}
+			open
+			func fromTable(_ i: Int) -> FromTableContext? {
+				return getRuleContext(FromTableContext.self, i)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func tableExpression() -> [TableExpressionContext] {
+				return getRuleContexts(TableExpressionContext.self)
+			}
+			open
+			func tableExpression(_ i: Int) -> TableExpressionContext? {
+				return getRuleContext(TableExpressionContext.self, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func sqlAlias() -> [SqlAliasContext] {
+				return getRuleContexts(SqlAliasContext.self)
+			}
+			open
+			func sqlAlias(_ i: Int) -> SqlAliasContext? {
+				return getRuleContext(SqlAliasContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_fromSelectStatement
 		}
-		open func fromTable(_ i: Int) -> FromTableContext? {
-			return getRuleContext(FromTableContext.self,i)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func tableExpression() -> Array<TableExpressionContext> {
-			return getRuleContexts(TableExpressionContext.self)
-		}
-		open func tableExpression(_ i: Int) -> TableExpressionContext? {
-			return getRuleContext(TableExpressionContext.self,i)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func sqlAlias() -> Array<SqlAliasContext> {
-			return getRuleContexts(SqlAliasContext.self)
-		}
-		open func sqlAlias(_ i: Int) -> SqlAliasContext? {
-			return getRuleContext(SqlAliasContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_fromSelectStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFromSelectStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFromSelectStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFromSelectStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFromSelectStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFromSelectStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFromSelectStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFromSelectStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFromSelectStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fromSelectStatement() throws -> FromSelectStatementContext {
+	 open func fromSelectStatement() throws -> FromSelectStatementContext {
 		var _localctx: FromSelectStatementContext = FromSelectStatementContext(_ctx, getState())
 		try enterRule(_localctx, 334, informixParser.RULE_fromSelectStatement)
 		var _la: Int = 0
@@ -19649,7 +22864,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(2692)
 		 	try _errHandler.sync(self)
@@ -19725,7 +22940,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 
@@ -19743,37 +22958,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class AliasNameContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class AliasNameContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_aliasName
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_aliasName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterAliasName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterAliasName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitAliasName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitAliasName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitAliasName(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitAliasName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitAliasName(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitAliasName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func aliasName() throws -> AliasNameContext {
+	 open func aliasName() throws -> AliasNameContext {
 		var _localctx: AliasNameContext = AliasNameContext(_ctx, getState())
 		try enterRule(_localctx, 336, informixParser.RULE_aliasName)
 		defer {
@@ -19793,69 +23014,99 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class MainSelectStatementContext:ParserRuleContext {
-		open func headSelectStatement() -> HeadSelectStatementContext? {
-			return getRuleContext(HeadSelectStatementContext.self,0)
+
+	public class MainSelectStatementContext: ParserRuleContext {
+			open
+			func headSelectStatement() -> HeadSelectStatementContext? {
+				return getRuleContext(HeadSelectStatementContext.self, 0)
+			}
+			open
+			func fromSelectStatement() -> FromSelectStatementContext? {
+				return getRuleContext(FromSelectStatementContext.self, 0)
+			}
+			open
+			func INTO() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.INTO.rawValue)
+			}
+			open
+			func INTO(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTO.rawValue, i)
+			}
+			open
+			func variableList() -> VariableListContext? {
+				return getRuleContext(VariableListContext.self, 0)
+			}
+			open
+			func whereStatement() -> WhereStatementContext? {
+				return getRuleContext(WhereStatementContext.self, 0)
+			}
+			open
+			func groupByStatement() -> GroupByStatementContext? {
+				return getRuleContext(GroupByStatementContext.self, 0)
+			}
+			open
+			func havingStatement() -> HavingStatementContext? {
+				return getRuleContext(HavingStatementContext.self, 0)
+			}
+			open
+			func unionSelectStatement() -> UnionSelectStatementContext? {
+				return getRuleContext(UnionSelectStatementContext.self, 0)
+			}
+			open
+			func orderbyStatement() -> OrderbyStatementContext? {
+				return getRuleContext(OrderbyStatementContext.self, 0)
+			}
+			open
+			func TEMP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TEMP.rawValue, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func NO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NO.rawValue, 0)
+			}
+			open
+			func LOG() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LOG.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_mainSelectStatement
 		}
-		open func fromSelectStatement() -> FromSelectStatementContext? {
-			return getRuleContext(FromSelectStatementContext.self,0)
-		}
-		open func INTO() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.INTO.rawValue) }
-		open func INTO(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.INTO.rawValue, i)
-		}
-		open func variableList() -> VariableListContext? {
-			return getRuleContext(VariableListContext.self,0)
-		}
-		open func whereStatement() -> WhereStatementContext? {
-			return getRuleContext(WhereStatementContext.self,0)
-		}
-		open func groupByStatement() -> GroupByStatementContext? {
-			return getRuleContext(GroupByStatementContext.self,0)
-		}
-		open func havingStatement() -> HavingStatementContext? {
-			return getRuleContext(HavingStatementContext.self,0)
-		}
-		open func unionSelectStatement() -> UnionSelectStatementContext? {
-			return getRuleContext(UnionSelectStatementContext.self,0)
-		}
-		open func orderbyStatement() -> OrderbyStatementContext? {
-			return getRuleContext(OrderbyStatementContext.self,0)
-		}
-		open func TEMP() -> TerminalNode? { return getToken(informixParser.Tokens.TEMP.rawValue, 0) }
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
-		}
-		open func WITH() -> TerminalNode? { return getToken(informixParser.Tokens.WITH.rawValue, 0) }
-		open func NO() -> TerminalNode? { return getToken(informixParser.Tokens.NO.rawValue, 0) }
-		open func LOG() -> TerminalNode? { return getToken(informixParser.Tokens.LOG.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_mainSelectStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterMainSelectStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterMainSelectStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitMainSelectStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitMainSelectStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitMainSelectStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitMainSelectStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitMainSelectStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitMainSelectStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mainSelectStatement() throws -> MainSelectStatementContext {
+	 open func mainSelectStatement() throws -> MainSelectStatementContext {
 		var _localctx: MainSelectStatementContext = MainSelectStatementContext(_ctx, getState())
 		try enterRule(_localctx, 338, informixParser.RULE_mainSelectStatement)
 		var _la: Int = 0
@@ -19992,39 +23243,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class UnionSelectStatementContext:ParserRuleContext {
-		open func UNION() -> TerminalNode? { return getToken(informixParser.Tokens.UNION.rawValue, 0) }
-		open func simpleSelectStatement() -> SimpleSelectStatementContext? {
-			return getRuleContext(SimpleSelectStatementContext.self,0)
+
+	public class UnionSelectStatementContext: ParserRuleContext {
+			open
+			func UNION() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UNION.rawValue, 0)
+			}
+			open
+			func simpleSelectStatement() -> SimpleSelectStatementContext? {
+				return getRuleContext(SimpleSelectStatementContext.self, 0)
+			}
+			open
+			func ALL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ALL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_unionSelectStatement
 		}
-		open func ALL() -> TerminalNode? { return getToken(informixParser.Tokens.ALL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_unionSelectStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterUnionSelectStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterUnionSelectStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitUnionSelectStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitUnionSelectStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitUnionSelectStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitUnionSelectStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitUnionSelectStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitUnionSelectStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unionSelectStatement() throws -> UnionSelectStatementContext {
+	 open func unionSelectStatement() throws -> UnionSelectStatementContext {
 		var _localctx: UnionSelectStatementContext = UnionSelectStatementContext(_ctx, getState())
 		try enterRule(_localctx, 340, informixParser.RULE_unionSelectStatement)
 		var _la: Int = 0
@@ -20061,52 +23324,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SimpleSelectStatementContext:ParserRuleContext {
-		open func headSelectStatement() -> HeadSelectStatementContext? {
-			return getRuleContext(HeadSelectStatementContext.self,0)
+
+	public class SimpleSelectStatementContext: ParserRuleContext {
+			open
+			func headSelectStatement() -> HeadSelectStatementContext? {
+				return getRuleContext(HeadSelectStatementContext.self, 0)
+			}
+			open
+			func fromSelectStatement() -> FromSelectStatementContext? {
+				return getRuleContext(FromSelectStatementContext.self, 0)
+			}
+			open
+			func whereStatement() -> WhereStatementContext? {
+				return getRuleContext(WhereStatementContext.self, 0)
+			}
+			open
+			func groupByStatement() -> GroupByStatementContext? {
+				return getRuleContext(GroupByStatementContext.self, 0)
+			}
+			open
+			func havingStatement() -> HavingStatementContext? {
+				return getRuleContext(HavingStatementContext.self, 0)
+			}
+			open
+			func unionSelectStatement() -> UnionSelectStatementContext? {
+				return getRuleContext(UnionSelectStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_simpleSelectStatement
 		}
-		open func fromSelectStatement() -> FromSelectStatementContext? {
-			return getRuleContext(FromSelectStatementContext.self,0)
-		}
-		open func whereStatement() -> WhereStatementContext? {
-			return getRuleContext(WhereStatementContext.self,0)
-		}
-		open func groupByStatement() -> GroupByStatementContext? {
-			return getRuleContext(GroupByStatementContext.self,0)
-		}
-		open func havingStatement() -> HavingStatementContext? {
-			return getRuleContext(HavingStatementContext.self,0)
-		}
-		open func unionSelectStatement() -> UnionSelectStatementContext? {
-			return getRuleContext(UnionSelectStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_simpleSelectStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSimpleSelectStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSimpleSelectStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSimpleSelectStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSimpleSelectStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSimpleSelectStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSimpleSelectStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSimpleSelectStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSimpleSelectStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleSelectStatement() throws -> SimpleSelectStatementContext {
+	 open func simpleSelectStatement() throws -> SimpleSelectStatementContext {
 		var _localctx: SimpleSelectStatementContext = SimpleSelectStatementContext(_ctx, getState())
 		try enterRule(_localctx, 342, informixParser.RULE_simpleSelectStatement)
 		var _la: Int = 0
@@ -20181,38 +23455,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class WhereStatementContext:ParserRuleContext {
-		open func WHERE() -> TerminalNode? { return getToken(informixParser.Tokens.WHERE.rawValue, 0) }
-		open func condition() -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,0)
+
+	public class WhereStatementContext: ParserRuleContext {
+			open
+			func WHERE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WHERE.rawValue, 0)
+			}
+			open
+			func condition() -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_whereStatement
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_whereStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterWhereStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterWhereStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitWhereStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitWhereStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitWhereStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitWhereStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitWhereStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitWhereStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func whereStatement() throws -> WhereStatementContext {
+	 open func whereStatement() throws -> WhereStatementContext {
 		var _localctx: WhereStatementContext = WhereStatementContext(_ctx, getState())
 		try enterRule(_localctx, 344, informixParser.RULE_whereStatement)
 		defer {
@@ -20234,39 +23517,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class GroupByStatementContext:ParserRuleContext {
-		open func GROUP() -> TerminalNode? { return getToken(informixParser.Tokens.GROUP.rawValue, 0) }
-		open func BY() -> TerminalNode? { return getToken(informixParser.Tokens.BY.rawValue, 0) }
-		open func variableOrConstantList() -> VariableOrConstantListContext? {
-			return getRuleContext(VariableOrConstantListContext.self,0)
+
+	public class GroupByStatementContext: ParserRuleContext {
+			open
+			func GROUP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GROUP.rawValue, 0)
+			}
+			open
+			func BY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BY.rawValue, 0)
+			}
+			open
+			func variableOrConstantList() -> VariableOrConstantListContext? {
+				return getRuleContext(VariableOrConstantListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_groupByStatement
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_groupByStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterGroupByStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterGroupByStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitGroupByStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitGroupByStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitGroupByStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitGroupByStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitGroupByStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitGroupByStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func groupByStatement() throws -> GroupByStatementContext {
+	 open func groupByStatement() throws -> GroupByStatementContext {
 		var _localctx: GroupByStatementContext = GroupByStatementContext(_ctx, getState())
 		try enterRule(_localctx, 346, informixParser.RULE_groupByStatement)
 		defer {
@@ -20290,38 +23585,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class HavingStatementContext:ParserRuleContext {
-		open func HAVING() -> TerminalNode? { return getToken(informixParser.Tokens.HAVING.rawValue, 0) }
-		open func condition() -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,0)
+
+	public class HavingStatementContext: ParserRuleContext {
+			open
+			func HAVING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HAVING.rawValue, 0)
+			}
+			open
+			func condition() -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_havingStatement
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_havingStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterHavingStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterHavingStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitHavingStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitHavingStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitHavingStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitHavingStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitHavingStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitHavingStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func havingStatement() throws -> HavingStatementContext {
+	 open func havingStatement() throws -> HavingStatementContext {
 		var _localctx: HavingStatementContext = HavingStatementContext(_ctx, getState())
 		try enterRule(_localctx, 348, informixParser.RULE_havingStatement)
 		defer {
@@ -20343,39 +23647,51 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class OrderbyColumnContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class OrderbyColumnContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func ASC() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ASC.rawValue, 0)
+			}
+			open
+			func DESC() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DESC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_orderbyColumn
 		}
-		open func ASC() -> TerminalNode? { return getToken(informixParser.Tokens.ASC.rawValue, 0) }
-		open func DESC() -> TerminalNode? { return getToken(informixParser.Tokens.DESC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_orderbyColumn }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterOrderbyColumn(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterOrderbyColumn(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitOrderbyColumn(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitOrderbyColumn(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitOrderbyColumn(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitOrderbyColumn(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitOrderbyColumn(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitOrderbyColumn(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func orderbyColumn() throws -> OrderbyColumnContext {
+	 open func orderbyColumn() throws -> OrderbyColumnContext {
 		var _localctx: OrderbyColumnContext = OrderbyColumnContext(_ctx, getState())
 		try enterRule(_localctx, 350, informixParser.RULE_orderbyColumn)
 		var _la: Int = 0
@@ -20422,46 +23738,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class OrderbyStatementContext:ParserRuleContext {
-		open func ORDER() -> TerminalNode? { return getToken(informixParser.Tokens.ORDER.rawValue, 0) }
-		open func BY() -> TerminalNode? { return getToken(informixParser.Tokens.BY.rawValue, 0) }
-		open func orderbyColumn() -> Array<OrderbyColumnContext> {
-			return getRuleContexts(OrderbyColumnContext.self)
+
+	public class OrderbyStatementContext: ParserRuleContext {
+			open
+			func ORDER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ORDER.rawValue, 0)
+			}
+			open
+			func BY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BY.rawValue, 0)
+			}
+			open
+			func orderbyColumn() -> [OrderbyColumnContext] {
+				return getRuleContexts(OrderbyColumnContext.self)
+			}
+			open
+			func orderbyColumn(_ i: Int) -> OrderbyColumnContext? {
+				return getRuleContext(OrderbyColumnContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_orderbyStatement
 		}
-		open func orderbyColumn(_ i: Int) -> OrderbyColumnContext? {
-			return getRuleContext(OrderbyColumnContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_orderbyStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterOrderbyStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterOrderbyStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitOrderbyStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitOrderbyStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitOrderbyStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitOrderbyStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitOrderbyStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitOrderbyStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func orderbyStatement() throws -> OrderbyStatementContext {
+	 open func orderbyStatement() throws -> OrderbyStatementContext {
 		var _localctx: OrderbyStatementContext = OrderbyStatementContext(_ctx, getState())
 		try enterRule(_localctx, 352, informixParser.RULE_orderbyStatement)
 		var _la: Int = 0
@@ -20504,65 +23837,99 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlLoadStatementContext:ParserRuleContext {
-		open func LOAD() -> TerminalNode? { return getToken(informixParser.Tokens.LOAD.rawValue, 0) }
-		open func FROM() -> TerminalNode? { return getToken(informixParser.Tokens.FROM.rawValue, 0) }
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
+
+	public class SqlLoadStatementContext: ParserRuleContext {
+			open
+			func LOAD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LOAD.rawValue, 0)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func variable() -> [VariableContext] {
+				return getRuleContexts(VariableContext.self)
+			}
+			open
+			func variable(_ i: Int) -> VariableContext? {
+				return getRuleContext(VariableContext.self, i)
+			}
+			open
+			func string() -> [StringContext] {
+				return getRuleContexts(StringContext.self)
+			}
+			open
+			func string(_ i: Int) -> StringContext? {
+				return getRuleContext(StringContext.self, i)
+			}
+			open
+			func INSERT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INSERT.rawValue, 0)
+			}
+			open
+			func INTO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTO.rawValue, 0)
+			}
+			open
+			func tableIdentifier() -> TableIdentifierContext? {
+				return getRuleContext(TableIdentifierContext.self, 0)
+			}
+			open
+			func sqlInsertStatement() -> SqlInsertStatementContext? {
+				return getRuleContext(SqlInsertStatementContext.self, 0)
+			}
+			open
+			func DELIMITER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DELIMITER.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func columnsList() -> ColumnsListContext? {
+				return getRuleContext(ColumnsListContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlLoadStatement
 		}
-		open func variable() -> Array<VariableContext> {
-			return getRuleContexts(VariableContext.self)
-		}
-		open func variable(_ i: Int) -> VariableContext? {
-			return getRuleContext(VariableContext.self,i)
-		}
-		open func string() -> Array<StringContext> {
-			return getRuleContexts(StringContext.self)
-		}
-		open func string(_ i: Int) -> StringContext? {
-			return getRuleContext(StringContext.self,i)
-		}
-		open func INSERT() -> TerminalNode? { return getToken(informixParser.Tokens.INSERT.rawValue, 0) }
-		open func INTO() -> TerminalNode? { return getToken(informixParser.Tokens.INTO.rawValue, 0) }
-		open func tableIdentifier() -> TableIdentifierContext? {
-			return getRuleContext(TableIdentifierContext.self,0)
-		}
-		open func sqlInsertStatement() -> SqlInsertStatementContext? {
-			return getRuleContext(SqlInsertStatementContext.self,0)
-		}
-		open func DELIMITER() -> TerminalNode? { return getToken(informixParser.Tokens.DELIMITER.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.LPAREN.rawValue, 0) }
-		open func columnsList() -> ColumnsListContext? {
-			return getRuleContext(ColumnsListContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(informixParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlLoadStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlLoadStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlLoadStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlLoadStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlLoadStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlLoadStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlLoadStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlLoadStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlLoadStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlLoadStatement() throws -> SqlLoadStatementContext {
+	 open func sqlLoadStatement() throws -> SqlLoadStatementContext {
 		var _localctx: SqlLoadStatementContext = SqlLoadStatementContext(_ctx, getState())
 		try enterRule(_localctx, 354, informixParser.RULE_sqlLoadStatement)
 		var _la: Int = 0
@@ -20623,7 +23990,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(2783)
 		 	try _errHandler.sync(self)
@@ -20683,7 +24050,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 	}
@@ -20736,55 +24103,75 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlUnLoadStatementContext:ParserRuleContext {
-		open func UNLOAD() -> TerminalNode? { return getToken(informixParser.Tokens.UNLOAD.rawValue, 0) }
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func sqlSelectStatement() -> SqlSelectStatementContext? {
-			return getRuleContext(SqlSelectStatementContext.self,0)
+
+	public class SqlUnLoadStatementContext: ParserRuleContext {
+			open
+			func UNLOAD() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UNLOAD.rawValue, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func sqlSelectStatement() -> SqlSelectStatementContext? {
+				return getRuleContext(SqlSelectStatementContext.self, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func variable() -> [VariableContext] {
+				return getRuleContexts(VariableContext.self)
+			}
+			open
+			func variable(_ i: Int) -> VariableContext? {
+				return getRuleContext(VariableContext.self, i)
+			}
+			open
+			func string() -> [StringContext] {
+				return getRuleContexts(StringContext.self)
+			}
+			open
+			func string(_ i: Int) -> StringContext? {
+				return getRuleContext(StringContext.self, i)
+			}
+			open
+			func DELIMITER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DELIMITER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlUnLoadStatement
 		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func variable() -> Array<VariableContext> {
-			return getRuleContexts(VariableContext.self)
-		}
-		open func variable(_ i: Int) -> VariableContext? {
-			return getRuleContext(VariableContext.self,i)
-		}
-		open func string() -> Array<StringContext> {
-			return getRuleContexts(StringContext.self)
-		}
-		open func string(_ i: Int) -> StringContext? {
-			return getRuleContext(StringContext.self,i)
-		}
-		open func DELIMITER() -> TerminalNode? { return getToken(informixParser.Tokens.DELIMITER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlUnLoadStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlUnLoadStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlUnLoadStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlUnLoadStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlUnLoadStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlUnLoadStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlUnLoadStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlUnLoadStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlUnLoadStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlUnLoadStatement() throws -> SqlUnLoadStatementContext {
+	 open func sqlUnLoadStatement() throws -> SqlUnLoadStatementContext {
 		var _localctx: SqlUnLoadStatementContext = SqlUnLoadStatementContext(_ctx, getState())
 		try enterRule(_localctx, 356, informixParser.RULE_sqlUnLoadStatement)
 		var _la: Int = 0
@@ -20845,7 +24232,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(2810)
 		 	try _errHandler.sync(self)
@@ -20905,7 +24292,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 	}
@@ -20924,64 +24311,95 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlInsertStatementContext:ParserRuleContext {
-		open func INSERT() -> TerminalNode? { return getToken(informixParser.Tokens.INSERT.rawValue, 0) }
-		open func INTO() -> TerminalNode? { return getToken(informixParser.Tokens.INTO.rawValue, 0) }
-		open func tableIdentifier() -> TableIdentifierContext? {
-			return getRuleContext(TableIdentifierContext.self,0)
+
+	public class SqlInsertStatementContext: ParserRuleContext {
+			open
+			func INSERT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INSERT.rawValue, 0)
+			}
+			open
+			func INTO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTO.rawValue, 0)
+			}
+			open
+			func tableIdentifier() -> TableIdentifierContext? {
+				return getRuleContext(TableIdentifierContext.self, 0)
+			}
+			open
+			func VALUES() -> TerminalNode? {
+				return getToken(informixParser.Tokens.VALUES.rawValue, 0)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func simpleSelectStatement() -> SimpleSelectStatementContext? {
+				return getRuleContext(SimpleSelectStatementContext.self, 0)
+			}
+			open
+			func columnsList() -> ColumnsListContext? {
+				return getRuleContext(ColumnsListContext.self, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlInsertStatement
 		}
-		open func VALUES() -> TerminalNode? { return getToken(informixParser.Tokens.VALUES.rawValue, 0) }
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func simpleSelectStatement() -> SimpleSelectStatementContext? {
-			return getRuleContext(SimpleSelectStatementContext.self,0)
-		}
-		open func columnsList() -> ColumnsListContext? {
-			return getRuleContext(ColumnsListContext.self,0)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlInsertStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlInsertStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlInsertStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlInsertStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlInsertStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlInsertStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlInsertStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlInsertStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlInsertStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlInsertStatement() throws -> SqlInsertStatementContext {
+	 open func sqlInsertStatement() throws -> SqlInsertStatementContext {
 		var _localctx: SqlInsertStatementContext = SqlInsertStatementContext(_ctx, getState())
 		try enterRule(_localctx, 358, informixParser.RULE_sqlInsertStatement)
 		var _la: Int = 0
@@ -21052,7 +24470,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -21064,93 +24482,147 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlUpdateStatementContext:ParserRuleContext {
-		open func UPDATE() -> TerminalNode? { return getToken(informixParser.Tokens.UPDATE.rawValue, 0) }
-		open func tableIdentifier() -> TableIdentifierContext? {
-			return getRuleContext(TableIdentifierContext.self,0)
+
+	public class SqlUpdateStatementContext: ParserRuleContext {
+			open
+			func UPDATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UPDATE.rawValue, 0)
+			}
+			open
+			func tableIdentifier() -> TableIdentifierContext? {
+				return getRuleContext(TableIdentifierContext.self, 0)
+			}
+			open
+			func SET() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SET.rawValue, 0)
+			}
+			open
+			func WHERE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WHERE.rawValue, 0)
+			}
+			open
+			func columnsTableId() -> [ColumnsTableIdContext] {
+				return getRuleContexts(ColumnsTableIdContext.self)
+			}
+			open
+			func columnsTableId(_ i: Int) -> ColumnsTableIdContext? {
+				return getRuleContext(ColumnsTableIdContext.self, i)
+			}
+			open
+			func EQUAL() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.EQUAL.rawValue)
+			}
+			open
+			func EQUAL(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.EQUAL.rawValue, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func condition() -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, 0)
+			}
+			open
+			func CURRENT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CURRENT.rawValue, 0)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func cursorName() -> CursorNameContext? {
+				return getRuleContext(CursorNameContext.self, 0)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func columnsList() -> ColumnsListContext? {
+				return getRuleContext(ColumnsListContext.self, 0)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func STAR() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.STAR.rawValue)
+			}
+			open
+			func STAR(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.STAR.rawValue, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func aliasName() -> [AliasNameContext] {
+				return getRuleContexts(AliasNameContext.self)
+			}
+			open
+			func aliasName(_ i: Int) -> AliasNameContext? {
+				return getRuleContext(AliasNameContext.self, i)
+			}
+			open
+			func DOT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.DOT.rawValue)
+			}
+			open
+			func DOT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.DOT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlUpdateStatement
 		}
-		open func SET() -> TerminalNode? { return getToken(informixParser.Tokens.SET.rawValue, 0) }
-		open func WHERE() -> TerminalNode? { return getToken(informixParser.Tokens.WHERE.rawValue, 0) }
-		open func columnsTableId() -> Array<ColumnsTableIdContext> {
-			return getRuleContexts(ColumnsTableIdContext.self)
-		}
-		open func columnsTableId(_ i: Int) -> ColumnsTableIdContext? {
-			return getRuleContext(ColumnsTableIdContext.self,i)
-		}
-		open func EQUAL() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.EQUAL.rawValue) }
-		open func EQUAL(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.EQUAL.rawValue, i)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func condition() -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,0)
-		}
-		open func CURRENT() -> TerminalNode? { return getToken(informixParser.Tokens.CURRENT.rawValue, 0) }
-		open func OF() -> TerminalNode? { return getToken(informixParser.Tokens.OF.rawValue, 0) }
-		open func cursorName() -> CursorNameContext? {
-			return getRuleContext(CursorNameContext.self,0)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func columnsList() -> ColumnsListContext? {
-			return getRuleContext(ColumnsListContext.self,0)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func STAR() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.STAR.rawValue) }
-		open func STAR(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.STAR.rawValue, i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open func aliasName() -> Array<AliasNameContext> {
-			return getRuleContexts(AliasNameContext.self)
-		}
-		open func aliasName(_ i: Int) -> AliasNameContext? {
-			return getRuleContext(AliasNameContext.self,i)
-		}
-		open func DOT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.DOT.rawValue) }
-		open func DOT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.DOT.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlUpdateStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlUpdateStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlUpdateStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlUpdateStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlUpdateStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlUpdateStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlUpdateStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlUpdateStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlUpdateStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlUpdateStatement() throws -> SqlUpdateStatementContext {
+	 open func sqlUpdateStatement() throws -> SqlUpdateStatementContext {
 		var _localctx: SqlUpdateStatementContext = SqlUpdateStatementContext(_ctx, getState())
 		try enterRule(_localctx, 360, informixParser.RULE_sqlUpdateStatement)
 		var _la: Int = 0
@@ -21235,7 +24707,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2867)
 		 		try match(informixParser.Tokens.EQUAL.rawValue)
@@ -21291,7 +24763,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 
@@ -21340,51 +24812,75 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SqlDeleteStatementContext:ParserRuleContext {
-		open func DELETE() -> TerminalNode? { return getToken(informixParser.Tokens.DELETE.rawValue, 0) }
-		open func FROM() -> TerminalNode? { return getToken(informixParser.Tokens.FROM.rawValue, 0) }
-		open func tableIdentifier() -> TableIdentifierContext? {
-			return getRuleContext(TableIdentifierContext.self,0)
+
+	public class SqlDeleteStatementContext: ParserRuleContext {
+			open
+			func DELETE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DELETE.rawValue, 0)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func tableIdentifier() -> TableIdentifierContext? {
+				return getRuleContext(TableIdentifierContext.self, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func WHERE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WHERE.rawValue, 0)
+			}
+			open
+			func condition() -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, 0)
+			}
+			open
+			func CURRENT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CURRENT.rawValue, 0)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func cursorName() -> CursorNameContext? {
+				return getRuleContext(CursorNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sqlDeleteStatement
 		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func WHERE() -> TerminalNode? { return getToken(informixParser.Tokens.WHERE.rawValue, 0) }
-		open func condition() -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,0)
-		}
-		open func CURRENT() -> TerminalNode? { return getToken(informixParser.Tokens.CURRENT.rawValue, 0) }
-		open func OF() -> TerminalNode? { return getToken(informixParser.Tokens.OF.rawValue, 0) }
-		open func cursorName() -> CursorNameContext? {
-			return getRuleContext(CursorNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sqlDeleteStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSqlDeleteStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSqlDeleteStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSqlDeleteStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSqlDeleteStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSqlDeleteStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSqlDeleteStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSqlDeleteStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSqlDeleteStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sqlDeleteStatement() throws -> SqlDeleteStatementContext {
+	 open func sqlDeleteStatement() throws -> SqlDeleteStatementContext {
 		var _localctx: SqlDeleteStatementContext = SqlDeleteStatementContext(_ctx, getState())
 		try enterRule(_localctx, 362, informixParser.RULE_sqlDeleteStatement)
 		var _la: Int = 0
@@ -21443,44 +24939,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ActualParameterListContext:ParserRuleContext {
-		open func actualParameter() -> Array<ActualParameterContext> {
-			return getRuleContexts(ActualParameterContext.self)
+
+	public class ActualParameterListContext: ParserRuleContext {
+			open
+			func actualParameter() -> [ActualParameterContext] {
+				return getRuleContexts(ActualParameterContext.self)
+			}
+			open
+			func actualParameter(_ i: Int) -> ActualParameterContext? {
+				return getRuleContext(ActualParameterContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_actualParameterList
 		}
-		open func actualParameter(_ i: Int) -> ActualParameterContext? {
-			return getRuleContext(ActualParameterContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_actualParameterList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterActualParameterList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterActualParameterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitActualParameterList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitActualParameterList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitActualParameterList(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitActualParameterList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitActualParameterList(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitActualParameterList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func actualParameterList() throws -> ActualParameterListContext {
+	 open func actualParameterList() throws -> ActualParameterListContext {
 		var _localctx: ActualParameterListContext = ActualParameterListContext(_ctx, getState())
 		try enterRule(_localctx, 364, informixParser.RULE_actualParameterList)
 		var _la: Int = 0
@@ -21519,57 +25026,99 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DynamicManagementStatementContext:ParserRuleContext {
-		open func PREPARE() -> TerminalNode? { return getToken(informixParser.Tokens.PREPARE.rawValue, 0) }
-		open func cursorName() -> CursorNameContext? {
-			return getRuleContext(CursorNameContext.self,0)
+
+	public class DynamicManagementStatementContext: ParserRuleContext {
+			open
+			func PREPARE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PREPARE.rawValue, 0)
+			}
+			open
+			func cursorName() -> CursorNameContext? {
+				return getRuleContext(CursorNameContext.self, 0)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func EXECUTE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXECUTE.rawValue, 0)
+			}
+			open
+			func USING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.USING.rawValue, 0)
+			}
+			open
+			func variableList() -> VariableListContext? {
+				return getRuleContext(VariableListContext.self, 0)
+			}
+			open
+			func FREE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FREE.rawValue, 0)
+			}
+			open
+			func statementId() -> StatementIdContext? {
+				return getRuleContext(StatementIdContext.self, 0)
+			}
+			open
+			func LOCK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LOCK.rawValue, 0)
+			}
+			open
+			func TABLE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TABLE.rawValue, 0)
+			}
+			open
+			func IN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.IN.rawValue, 0)
+			}
+			open
+			func MODE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MODE.rawValue, 0)
+			}
+			open
+			func SHARE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SHARE.rawValue, 0)
+			}
+			open
+			func EXCLUSIVE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXCLUSIVE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_dynamicManagementStatement
 		}
-		open func FROM() -> TerminalNode? { return getToken(informixParser.Tokens.FROM.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func EXECUTE() -> TerminalNode? { return getToken(informixParser.Tokens.EXECUTE.rawValue, 0) }
-		open func USING() -> TerminalNode? { return getToken(informixParser.Tokens.USING.rawValue, 0) }
-		open func variableList() -> VariableListContext? {
-			return getRuleContext(VariableListContext.self,0)
-		}
-		open func FREE() -> TerminalNode? { return getToken(informixParser.Tokens.FREE.rawValue, 0) }
-		open func statementId() -> StatementIdContext? {
-			return getRuleContext(StatementIdContext.self,0)
-		}
-		open func LOCK() -> TerminalNode? { return getToken(informixParser.Tokens.LOCK.rawValue, 0) }
-		open func TABLE() -> TerminalNode? { return getToken(informixParser.Tokens.TABLE.rawValue, 0) }
-		open func IN() -> TerminalNode? { return getToken(informixParser.Tokens.IN.rawValue, 0) }
-		open func MODE() -> TerminalNode? { return getToken(informixParser.Tokens.MODE.rawValue, 0) }
-		open func SHARE() -> TerminalNode? { return getToken(informixParser.Tokens.SHARE.rawValue, 0) }
-		open func EXCLUSIVE() -> TerminalNode? { return getToken(informixParser.Tokens.EXCLUSIVE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_dynamicManagementStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDynamicManagementStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDynamicManagementStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDynamicManagementStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDynamicManagementStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDynamicManagementStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDynamicManagementStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDynamicManagementStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDynamicManagementStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dynamicManagementStatement() throws -> DynamicManagementStatementContext {
+	 open func dynamicManagementStatement() throws -> DynamicManagementStatementContext {
 		var _localctx: DynamicManagementStatementContext = DynamicManagementStatementContext(_ctx, getState())
 		try enterRule(_localctx, 366, informixParser.RULE_dynamicManagementStatement)
 		var _la: Int = 0
@@ -21668,7 +25217,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -21679,60 +25228,135 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class QueryOptimizationStatementContext:ParserRuleContext {
-		open func UPDATE() -> TerminalNode? { return getToken(informixParser.Tokens.UPDATE.rawValue, 0) }
-		open func STATISTICS() -> TerminalNode? { return getToken(informixParser.Tokens.STATISTICS.rawValue, 0) }
-		open func FOR() -> TerminalNode? { return getToken(informixParser.Tokens.FOR.rawValue, 0) }
-		open func TABLE() -> TerminalNode? { return getToken(informixParser.Tokens.TABLE.rawValue, 0) }
-		open func tableIdentifier() -> TableIdentifierContext? {
-			return getRuleContext(TableIdentifierContext.self,0)
+
+	public class QueryOptimizationStatementContext: ParserRuleContext {
+			open
+			func UPDATE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.UPDATE.rawValue, 0)
+			}
+			open
+			func STATISTICS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STATISTICS.rawValue, 0)
+			}
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func TABLE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TABLE.rawValue, 0)
+			}
+			open
+			func tableIdentifier() -> TableIdentifierContext? {
+				return getRuleContext(TableIdentifierContext.self, 0)
+			}
+			open
+			func SET() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SET.rawValue, 0)
+			}
+			open
+			func LOCK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LOCK.rawValue, 0)
+			}
+			open
+			func MODE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MODE.rawValue, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func WAIT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WAIT.rawValue, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func SECONDS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SECONDS.rawValue, 0)
+			}
+			open
+			func EXPLAIN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXPLAIN.rawValue, 0)
+			}
+			open
+			func ON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func OFF() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OFF.rawValue, 0)
+			}
+			open
+			func ISOLATION() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ISOLATION.rawValue, 0)
+			}
+			open
+			func CURSOR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CURSOR.rawValue, 0)
+			}
+			open
+			func STABILITY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STABILITY.rawValue, 0)
+			}
+			open
+			func READ() -> TerminalNode? {
+				return getToken(informixParser.Tokens.READ.rawValue, 0)
+			}
+			open
+			func DIRTY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DIRTY.rawValue, 0)
+			}
+			open
+			func COMMITTED() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMITTED.rawValue, 0)
+			}
+			open
+			func REPEATABLE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.REPEATABLE.rawValue, 0)
+			}
+			open
+			func LOG() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LOG.rawValue, 0)
+			}
+			open
+			func BUFFERED() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BUFFERED.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_queryOptimizationStatement
 		}
-		open func SET() -> TerminalNode? { return getToken(informixParser.Tokens.SET.rawValue, 0) }
-		open func LOCK() -> TerminalNode? { return getToken(informixParser.Tokens.LOCK.rawValue, 0) }
-		open func MODE() -> TerminalNode? { return getToken(informixParser.Tokens.MODE.rawValue, 0) }
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func WAIT() -> TerminalNode? { return getToken(informixParser.Tokens.WAIT.rawValue, 0) }
-		open func NOT() -> TerminalNode? { return getToken(informixParser.Tokens.NOT.rawValue, 0) }
-		open func SECONDS() -> TerminalNode? { return getToken(informixParser.Tokens.SECONDS.rawValue, 0) }
-		open func EXPLAIN() -> TerminalNode? { return getToken(informixParser.Tokens.EXPLAIN.rawValue, 0) }
-		open func ON() -> TerminalNode? { return getToken(informixParser.Tokens.ON.rawValue, 0) }
-		open func OFF() -> TerminalNode? { return getToken(informixParser.Tokens.OFF.rawValue, 0) }
-		open func ISOLATION() -> TerminalNode? { return getToken(informixParser.Tokens.ISOLATION.rawValue, 0) }
-		open func CURSOR() -> TerminalNode? { return getToken(informixParser.Tokens.CURSOR.rawValue, 0) }
-		open func STABILITY() -> TerminalNode? { return getToken(informixParser.Tokens.STABILITY.rawValue, 0) }
-		open func READ() -> TerminalNode? { return getToken(informixParser.Tokens.READ.rawValue, 0) }
-		open func DIRTY() -> TerminalNode? { return getToken(informixParser.Tokens.DIRTY.rawValue, 0) }
-		open func COMMITTED() -> TerminalNode? { return getToken(informixParser.Tokens.COMMITTED.rawValue, 0) }
-		open func REPEATABLE() -> TerminalNode? { return getToken(informixParser.Tokens.REPEATABLE.rawValue, 0) }
-		open func LOG() -> TerminalNode? { return getToken(informixParser.Tokens.LOG.rawValue, 0) }
-		open func BUFFERED() -> TerminalNode? { return getToken(informixParser.Tokens.BUFFERED.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_queryOptimizationStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterQueryOptimizationStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterQueryOptimizationStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitQueryOptimizationStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitQueryOptimizationStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitQueryOptimizationStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitQueryOptimizationStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitQueryOptimizationStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitQueryOptimizationStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func queryOptimizationStatement() throws -> QueryOptimizationStatementContext {
+	 open func queryOptimizationStatement() throws -> QueryOptimizationStatementContext {
 		var _localctx: QueryOptimizationStatementContext = QueryOptimizationStatementContext(_ctx, getState())
 		try enterRule(_localctx, 368, informixParser.RULE_queryOptimizationStatement)
 		var _la: Int = 0
@@ -21805,7 +25429,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -21870,7 +25494,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -21906,44 +25530,63 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DatabaseDeclarationContext:ParserRuleContext {
-		open func DATABASE() -> TerminalNode? { return getToken(informixParser.Tokens.DATABASE.rawValue, 0) }
-		open func constantIdentifier() -> Array<ConstantIdentifierContext> {
-			return getRuleContexts(ConstantIdentifierContext.self)
+
+	public class DatabaseDeclarationContext: ParserRuleContext {
+			open
+			func DATABASE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DATABASE.rawValue, 0)
+			}
+			open
+			func constantIdentifier() -> [ConstantIdentifierContext] {
+				return getRuleContexts(ConstantIdentifierContext.self)
+			}
+			open
+			func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
+				return getRuleContext(ConstantIdentifierContext.self, i)
+			}
+			open
+			func EXCLUSIVE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXCLUSIVE.rawValue, 0)
+			}
+			open
+			func SEMI() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SEMI.rawValue, 0)
+			}
+			open
+			func ATSYMBOL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ATSYMBOL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_databaseDeclaration
 		}
-		open func constantIdentifier(_ i: Int) -> ConstantIdentifierContext? {
-			return getRuleContext(ConstantIdentifierContext.self,i)
-		}
-		open func EXCLUSIVE() -> TerminalNode? { return getToken(informixParser.Tokens.EXCLUSIVE.rawValue, 0) }
-		open func SEMI() -> TerminalNode? { return getToken(informixParser.Tokens.SEMI.rawValue, 0) }
-		open func ATSYMBOL() -> TerminalNode? { return getToken(informixParser.Tokens.ATSYMBOL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_databaseDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDatabaseDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDatabaseDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDatabaseDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDatabaseDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDatabaseDeclaration(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDatabaseDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDatabaseDeclaration(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDatabaseDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func databaseDeclaration() throws -> DatabaseDeclarationContext {
+	 open func databaseDeclaration() throws -> DatabaseDeclarationContext {
 		var _localctx: DatabaseDeclarationContext = DatabaseDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 370, informixParser.RULE_databaseDeclaration)
 		var _la: Int = 0
@@ -22009,36 +25652,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ClientServerStatementContext:ParserRuleContext {
-		open func CLOSE() -> TerminalNode? { return getToken(informixParser.Tokens.CLOSE.rawValue, 0) }
-		open func DATABASE() -> TerminalNode? { return getToken(informixParser.Tokens.DATABASE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_clientServerStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterClientServerStatement(self)
+
+	public class ClientServerStatementContext: ParserRuleContext {
+			open
+			func CLOSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CLOSE.rawValue, 0)
+			}
+			open
+			func DATABASE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.DATABASE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_clientServerStatement
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterClientServerStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitClientServerStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitClientServerStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitClientServerStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitClientServerStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitClientServerStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitClientServerStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func clientServerStatement() throws -> ClientServerStatementContext {
+	 open func clientServerStatement() throws -> ClientServerStatementContext {
 		var _localctx: ClientServerStatementContext = ClientServerStatementContext(_ctx, getState())
 		try enterRule(_localctx, 372, informixParser.RULE_clientServerStatement)
 		defer {
@@ -22060,41 +25714,59 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class DataIntegrityStatementContext:ParserRuleContext {
-		open func wheneverStatement() -> WheneverStatementContext? {
-			return getRuleContext(WheneverStatementContext.self,0)
+
+	public class DataIntegrityStatementContext: ParserRuleContext {
+			open
+			func wheneverStatement() -> WheneverStatementContext? {
+				return getRuleContext(WheneverStatementContext.self, 0)
+			}
+			open
+			func BEGIN() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BEGIN.rawValue, 0)
+			}
+			open
+			func WORK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WORK.rawValue, 0)
+			}
+			open
+			func COMMIT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COMMIT.rawValue, 0)
+			}
+			open
+			func ROLLBACK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ROLLBACK.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_dataIntegrityStatement
 		}
-		open func BEGIN() -> TerminalNode? { return getToken(informixParser.Tokens.BEGIN.rawValue, 0) }
-		open func WORK() -> TerminalNode? { return getToken(informixParser.Tokens.WORK.rawValue, 0) }
-		open func COMMIT() -> TerminalNode? { return getToken(informixParser.Tokens.COMMIT.rawValue, 0) }
-		open func ROLLBACK() -> TerminalNode? { return getToken(informixParser.Tokens.ROLLBACK.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_dataIntegrityStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterDataIntegrityStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterDataIntegrityStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitDataIntegrityStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitDataIntegrityStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitDataIntegrityStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitDataIntegrityStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitDataIntegrityStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitDataIntegrityStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dataIntegrityStatement() throws -> DataIntegrityStatementContext {
+	 open func dataIntegrityStatement() throws -> DataIntegrityStatementContext {
 		var _localctx: DataIntegrityStatementContext = DataIntegrityStatementContext(_ctx, getState())
 		try enterRule(_localctx, 374, informixParser.RULE_dataIntegrityStatement)
 		defer {
@@ -22138,7 +25810,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -22149,44 +25821,55 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class WheneverStatementContext:ParserRuleContext {
-		open func WHENEVER() -> TerminalNode? { return getToken(informixParser.Tokens.WHENEVER.rawValue, 0) }
-		open func wheneverType() -> WheneverTypeContext? {
-			return getRuleContext(WheneverTypeContext.self,0)
+
+	public class WheneverStatementContext: ParserRuleContext {
+			open
+			func WHENEVER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WHENEVER.rawValue, 0)
+			}
+			open
+			func wheneverType() -> WheneverTypeContext? {
+				return getRuleContext(WheneverTypeContext.self, 0)
+			}
+			open
+			func wheneverFlow() -> WheneverFlowContext? {
+				return getRuleContext(WheneverFlowContext.self, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_wheneverStatement
 		}
-		open func wheneverFlow() -> WheneverFlowContext? {
-			return getRuleContext(WheneverFlowContext.self,0)
-		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_wheneverStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterWheneverStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterWheneverStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitWheneverStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitWheneverStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitWheneverStatement(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitWheneverStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitWheneverStatement(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitWheneverStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func wheneverStatement() throws -> WheneverStatementContext {
+	 open func wheneverStatement() throws -> WheneverStatementContext {
 		var _localctx: WheneverStatementContext = WheneverStatementContext(_ctx, getState())
 		try enterRule(_localctx, 376, informixParser.RULE_wheneverStatement)
 		defer {
@@ -22212,41 +25895,67 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class WheneverTypeContext:ParserRuleContext {
-		open func NOT() -> TerminalNode? { return getToken(informixParser.Tokens.NOT.rawValue, 0) }
-		open func FOUND() -> TerminalNode? { return getToken(informixParser.Tokens.FOUND.rawValue, 0) }
-		open func SQLERROR() -> TerminalNode? { return getToken(informixParser.Tokens.SQLERROR.rawValue, 0) }
-		open func ERROR() -> TerminalNode? { return getToken(informixParser.Tokens.ERROR.rawValue, 0) }
-		open func ANY() -> TerminalNode? { return getToken(informixParser.Tokens.ANY.rawValue, 0) }
-		open func SQLWARNING() -> TerminalNode? { return getToken(informixParser.Tokens.SQLWARNING.rawValue, 0) }
-		open func WARNING() -> TerminalNode? { return getToken(informixParser.Tokens.WARNING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_wheneverType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterWheneverType(self)
+
+	public class WheneverTypeContext: ParserRuleContext {
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func FOUND() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FOUND.rawValue, 0)
+			}
+			open
+			func SQLERROR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SQLERROR.rawValue, 0)
+			}
+			open
+			func ERROR() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ERROR.rawValue, 0)
+			}
+			open
+			func ANY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ANY.rawValue, 0)
+			}
+			open
+			func SQLWARNING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SQLWARNING.rawValue, 0)
+			}
+			open
+			func WARNING() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WARNING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_wheneverType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterWheneverType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitWheneverType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitWheneverType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitWheneverType(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitWheneverType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitWheneverType(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitWheneverType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func wheneverType() throws -> WheneverTypeContext {
+	 open func wheneverType() throws -> WheneverTypeContext {
 		var _localctx: WheneverTypeContext = WheneverTypeContext(_ctx, getState())
 		try enterRule(_localctx, 378, informixParser.RULE_wheneverType)
 		var _la: Int = 0
@@ -22317,7 +26026,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -22328,44 +26037,71 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class WheneverFlowContext:ParserRuleContext {
-		open func CONTINUE() -> TerminalNode? { return getToken(informixParser.Tokens.CONTINUE.rawValue, 0) }
-		open func STOP() -> TerminalNode? { return getToken(informixParser.Tokens.STOP.rawValue, 0) }
-		open func CALL() -> TerminalNode? { return getToken(informixParser.Tokens.CALL.rawValue, 0) }
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class WheneverFlowContext: ParserRuleContext {
+			open
+			func CONTINUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CONTINUE.rawValue, 0)
+			}
+			open
+			func STOP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STOP.rawValue, 0)
+			}
+			open
+			func CALL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CALL.rawValue, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func GO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GO.rawValue, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func GOTO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GOTO.rawValue, 0)
+			}
+			open
+			func COLON() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COLON.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_wheneverFlow
 		}
-		open func GO() -> TerminalNode? { return getToken(informixParser.Tokens.GO.rawValue, 0) }
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func GOTO() -> TerminalNode? { return getToken(informixParser.Tokens.GOTO.rawValue, 0) }
-		open func COLON() -> TerminalNode? { return getToken(informixParser.Tokens.COLON.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_wheneverFlow }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterWheneverFlow(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterWheneverFlow(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitWheneverFlow(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitWheneverFlow(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitWheneverFlow(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitWheneverFlow(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitWheneverFlow(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitWheneverFlow(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func wheneverFlow() throws -> WheneverFlowContext {
+	 open func wheneverFlow() throws -> WheneverFlowContext {
 		var _localctx: WheneverFlowContext = WheneverFlowContext(_ctx, getState())
 		try enterRule(_localctx, 380, informixParser.RULE_wheneverFlow)
 		var _la: Int = 0
@@ -22424,7 +26160,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(3030)
 		 		try _errHandler.sync(self)
@@ -22444,7 +26180,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -22455,60 +26191,87 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ReportDefinitionContext:ParserRuleContext {
-		open func REPORT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.REPORT.rawValue) }
-		open func REPORT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.REPORT.rawValue, i)
+
+	public class ReportDefinitionContext: ParserRuleContext {
+			open
+			func REPORT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.REPORT.rawValue)
+			}
+			open
+			func REPORT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.REPORT.rawValue, i)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(informixParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func parameterList() -> ParameterListContext? {
+				return getRuleContext(ParameterListContext.self, 0)
+			}
+			open
+			func typeDeclarations() -> TypeDeclarationsContext? {
+				return getRuleContext(TypeDeclarationsContext.self, 0)
+			}
+			open
+			func outputReport() -> OutputReportContext? {
+				return getRuleContext(OutputReportContext.self, 0)
+			}
+			open
+			func ORDER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ORDER.rawValue, 0)
+			}
+			open
+			func BY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.BY.rawValue, 0)
+			}
+			open
+			func variableList() -> VariableListContext? {
+				return getRuleContext(VariableListContext.self, 0)
+			}
+			open
+			func formatReport() -> FormatReportContext? {
+				return getRuleContext(FormatReportContext.self, 0)
+			}
+			open
+			func EXTERNAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EXTERNAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_reportDefinition
 		}
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(informixParser.Tokens.END.rawValue, 0) }
-		open func parameterList() -> ParameterListContext? {
-			return getRuleContext(ParameterListContext.self,0)
-		}
-		open func typeDeclarations() -> TypeDeclarationsContext? {
-			return getRuleContext(TypeDeclarationsContext.self,0)
-		}
-		open func outputReport() -> OutputReportContext? {
-			return getRuleContext(OutputReportContext.self,0)
-		}
-		open func ORDER() -> TerminalNode? { return getToken(informixParser.Tokens.ORDER.rawValue, 0) }
-		open func BY() -> TerminalNode? { return getToken(informixParser.Tokens.BY.rawValue, 0) }
-		open func variableList() -> VariableListContext? {
-			return getRuleContext(VariableListContext.self,0)
-		}
-		open func formatReport() -> FormatReportContext? {
-			return getRuleContext(FormatReportContext.self,0)
-		}
-		open func EXTERNAL() -> TerminalNode? { return getToken(informixParser.Tokens.EXTERNAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_reportDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterReportDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterReportDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitReportDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitReportDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitReportDefinition(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitReportDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitReportDefinition(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitReportDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reportDefinition() throws -> ReportDefinitionContext {
+	 open func reportDefinition() throws -> ReportDefinitionContext {
 		var _localctx: ReportDefinitionContext = ReportDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 382, informixParser.RULE_reportDefinition)
 		var _la: Int = 0
@@ -22617,83 +26380,139 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class OutputReportContext:ParserRuleContext {
-		open func OUTPUT() -> TerminalNode? { return getToken(informixParser.Tokens.OUTPUT.rawValue, 0) }
-		open func REPORT() -> TerminalNode? { return getToken(informixParser.Tokens.REPORT.rawValue, 0) }
-		open func TO() -> TerminalNode? { return getToken(informixParser.Tokens.TO.rawValue, 0) }
-		open func string() -> Array<StringContext> {
-			return getRuleContexts(StringContext.self)
+
+	public class OutputReportContext: ParserRuleContext {
+			open
+			func OUTPUT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.OUTPUT.rawValue, 0)
+			}
+			open
+			func REPORT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.REPORT.rawValue, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func string() -> [StringContext] {
+				return getRuleContexts(StringContext.self)
+			}
+			open
+			func string(_ i: Int) -> StringContext? {
+				return getRuleContext(StringContext.self, i)
+			}
+			open
+			func PIPE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PIPE.rawValue, 0)
+			}
+			open
+			func PRINTER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PRINTER.rawValue, 0)
+			}
+			open
+			func LEFT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LEFT.rawValue)
+			}
+			open
+			func LEFT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LEFT.rawValue, i)
+			}
+			open
+			func MARGIN() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.MARGIN.rawValue)
+			}
+			open
+			func MARGIN(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.MARGIN.rawValue, i)
+			}
+			open
+			func numericConstant() -> [NumericConstantContext] {
+				return getRuleContexts(NumericConstantContext.self)
+			}
+			open
+			func numericConstant(_ i: Int) -> NumericConstantContext? {
+				return getRuleContext(NumericConstantContext.self, i)
+			}
+			open
+			func RIGHT() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.RIGHT.rawValue)
+			}
+			open
+			func RIGHT(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.RIGHT.rawValue, i)
+			}
+			open
+			func TOP() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.TOP.rawValue)
+			}
+			open
+			func TOP(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.TOP.rawValue, i)
+			}
+			open
+			func BOTTOM() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.BOTTOM.rawValue)
+			}
+			open
+			func BOTTOM(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.BOTTOM.rawValue, i)
+			}
+			open
+			func PAGE() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.PAGE.rawValue)
+			}
+			open
+			func PAGE(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.PAGE.rawValue, i)
+			}
+			open
+			func LENGTH() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LENGTH.rawValue)
+			}
+			open
+			func LENGTH(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LENGTH.rawValue, i)
+			}
+			open
+			func OF() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.OF.rawValue)
+			}
+			open
+			func OF(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.OF.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_outputReport
 		}
-		open func string(_ i: Int) -> StringContext? {
-			return getRuleContext(StringContext.self,i)
-		}
-		open func PIPE() -> TerminalNode? { return getToken(informixParser.Tokens.PIPE.rawValue, 0) }
-		open func PRINTER() -> TerminalNode? { return getToken(informixParser.Tokens.PRINTER.rawValue, 0) }
-		open func LEFT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LEFT.rawValue) }
-		open func LEFT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LEFT.rawValue, i)
-		}
-		open func MARGIN() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.MARGIN.rawValue) }
-		open func MARGIN(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.MARGIN.rawValue, i)
-		}
-		open func numericConstant() -> Array<NumericConstantContext> {
-			return getRuleContexts(NumericConstantContext.self)
-		}
-		open func numericConstant(_ i: Int) -> NumericConstantContext? {
-			return getRuleContext(NumericConstantContext.self,i)
-		}
-		open func RIGHT() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.RIGHT.rawValue) }
-		open func RIGHT(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.RIGHT.rawValue, i)
-		}
-		open func TOP() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.TOP.rawValue) }
-		open func TOP(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.TOP.rawValue, i)
-		}
-		open func BOTTOM() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.BOTTOM.rawValue) }
-		open func BOTTOM(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.BOTTOM.rawValue, i)
-		}
-		open func PAGE() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.PAGE.rawValue) }
-		open func PAGE(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.PAGE.rawValue, i)
-		}
-		open func LENGTH() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LENGTH.rawValue) }
-		open func LENGTH(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LENGTH.rawValue, i)
-		}
-		open func OF() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.OF.rawValue) }
-		open func OF(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.OF.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_outputReport }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterOutputReport(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterOutputReport(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitOutputReport(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitOutputReport(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitOutputReport(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitOutputReport(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitOutputReport(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitOutputReport(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func outputReport() throws -> OutputReportContext {
+	 open func outputReport() throws -> OutputReportContext {
 		var _localctx: OutputReportContext = OutputReportContext(_ctx, getState())
 		try enterRule(_localctx, 384, informixParser.RULE_outputReport)
 		var _la: Int = 0
@@ -22739,7 +26558,7 @@ open class informixParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 	}
@@ -22836,95 +26655,155 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class FormatReportContext:ParserRuleContext {
-		open func FORMAT() -> TerminalNode? { return getToken(informixParser.Tokens.FORMAT.rawValue, 0) }
-		open func EVERY() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.EVERY.rawValue) }
-		open func EVERY(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.EVERY.rawValue, i)
+
+	public class FormatReportContext: ParserRuleContext {
+			open
+			func FORMAT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FORMAT.rawValue, 0)
+			}
+			open
+			func EVERY() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.EVERY.rawValue)
+			}
+			open
+			func EVERY(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.EVERY.rawValue, i)
+			}
+			open
+			func ROW() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.ROW.rawValue)
+			}
+			open
+			func ROW(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.ROW.rawValue, i)
+			}
+			open
+			func codeBlock() -> [CodeBlockContext] {
+				return getRuleContexts(CodeBlockContext.self)
+			}
+			open
+			func codeBlock(_ i: Int) -> CodeBlockContext? {
+				return getRuleContext(CodeBlockContext.self, i)
+			}
+			open
+			func PAGE() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.PAGE.rawValue)
+			}
+			open
+			func PAGE(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.PAGE.rawValue, i)
+			}
+			open
+			func HEADER() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.HEADER.rawValue)
+			}
+			open
+			func HEADER(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.HEADER.rawValue, i)
+			}
+			open
+			func TRAILER() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.TRAILER.rawValue)
+			}
+			open
+			func TRAILER(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.TRAILER.rawValue, i)
+			}
+			open
+			func ON() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.ON.rawValue)
+			}
+			open
+			func ON(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.ON.rawValue, i)
+			}
+			open
+			func GROUP() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.GROUP.rawValue)
+			}
+			open
+			func GROUP(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.GROUP.rawValue, i)
+			}
+			open
+			func OF() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.OF.rawValue)
+			}
+			open
+			func OF(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.OF.rawValue, i)
+			}
+			open
+			func variable() -> [VariableContext] {
+				return getRuleContexts(VariableContext.self)
+			}
+			open
+			func variable(_ i: Int) -> VariableContext? {
+				return getRuleContext(VariableContext.self, i)
+			}
+			open
+			func BEFORE() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.BEFORE.rawValue)
+			}
+			open
+			func BEFORE(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.BEFORE.rawValue, i)
+			}
+			open
+			func AFTER() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.AFTER.rawValue)
+			}
+			open
+			func AFTER(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.AFTER.rawValue, i)
+			}
+			open
+			func LAST() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.LAST.rawValue)
+			}
+			open
+			func LAST(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.LAST.rawValue, i)
+			}
+			open
+			func FIRST() -> [TerminalNode] {
+				return getTokens(informixParser.Tokens.FIRST.rawValue)
+			}
+			open
+			func FIRST(_ i:Int) -> TerminalNode? {
+				return getToken(informixParser.Tokens.FIRST.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_formatReport
 		}
-		open func ROW() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.ROW.rawValue) }
-		open func ROW(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.ROW.rawValue, i)
-		}
-		open func codeBlock() -> Array<CodeBlockContext> {
-			return getRuleContexts(CodeBlockContext.self)
-		}
-		open func codeBlock(_ i: Int) -> CodeBlockContext? {
-			return getRuleContext(CodeBlockContext.self,i)
-		}
-		open func PAGE() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.PAGE.rawValue) }
-		open func PAGE(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.PAGE.rawValue, i)
-		}
-		open func HEADER() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.HEADER.rawValue) }
-		open func HEADER(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.HEADER.rawValue, i)
-		}
-		open func TRAILER() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.TRAILER.rawValue) }
-		open func TRAILER(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.TRAILER.rawValue, i)
-		}
-		open func ON() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.ON.rawValue) }
-		open func ON(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.ON.rawValue, i)
-		}
-		open func GROUP() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.GROUP.rawValue) }
-		open func GROUP(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.GROUP.rawValue, i)
-		}
-		open func OF() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.OF.rawValue) }
-		open func OF(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.OF.rawValue, i)
-		}
-		open func variable() -> Array<VariableContext> {
-			return getRuleContexts(VariableContext.self)
-		}
-		open func variable(_ i: Int) -> VariableContext? {
-			return getRuleContext(VariableContext.self,i)
-		}
-		open func BEFORE() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.BEFORE.rawValue) }
-		open func BEFORE(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.BEFORE.rawValue, i)
-		}
-		open func AFTER() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.AFTER.rawValue) }
-		open func AFTER(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.AFTER.rawValue, i)
-		}
-		open func LAST() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.LAST.rawValue) }
-		open func LAST(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.LAST.rawValue, i)
-		}
-		open func FIRST() -> Array<TerminalNode> { return getTokens(informixParser.Tokens.FIRST.rawValue) }
-		open func FIRST(_ i:Int) -> TerminalNode?{
-			return getToken(informixParser.Tokens.FIRST.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_formatReport }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterFormatReport(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterFormatReport(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitFormatReport(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitFormatReport(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitFormatReport(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitFormatReport(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitFormatReport(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitFormatReport(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formatReport() throws -> FormatReportContext {
+	 open func formatReport() throws -> FormatReportContext {
 		var _localctx: FormatReportContext = FormatReportContext(_ctx, getState())
 		try enterRule(_localctx, 386, informixParser.RULE_formatReport)
 		var _la: Int = 0
@@ -23006,7 +26885,7 @@ open class informixParser: Parser {
 
 		 					break
 		 				default:
-		 					throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 					throw ANTLRException.recognition(e: NoViableAltException(self))
 		 				}
 
 		 				break
@@ -23051,7 +26930,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -23063,35 +26942,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class EolContext:ParserRuleContext {
-		open func EOL() -> TerminalNode? { return getToken(informixParser.Tokens.EOL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_eol }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterEol(self)
+
+	public class EolContext: ParserRuleContext {
+			open
+			func EOL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.EOL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_eol
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterEol(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitEol(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitEol(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitEol(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitEol(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitEol(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitEol(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eol() throws -> EolContext {
+	 open func eol() throws -> EolContext {
 		var _localctx: EolContext = EolContext(_ctx, getState())
 		try enterRule(_localctx, 388, informixParser.RULE_eol)
 		defer {
@@ -23111,40 +26998,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class UnsignedNumberContext:ParserRuleContext {
-		open func unsignedInteger() -> UnsignedIntegerContext? {
-			return getRuleContext(UnsignedIntegerContext.self,0)
+
+	public class UnsignedNumberContext: ParserRuleContext {
+			open
+			func unsignedInteger() -> UnsignedIntegerContext? {
+				return getRuleContext(UnsignedIntegerContext.self, 0)
+			}
+			open
+			func unsignedReal() -> UnsignedRealContext? {
+				return getRuleContext(UnsignedRealContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_unsignedNumber
 		}
-		open func unsignedReal() -> UnsignedRealContext? {
-			return getRuleContext(UnsignedRealContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_unsignedNumber }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterUnsignedNumber(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterUnsignedNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitUnsignedNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitUnsignedNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitUnsignedNumber(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitUnsignedNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitUnsignedNumber(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitUnsignedNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unsignedNumber() throws -> UnsignedNumberContext {
+	 open func unsignedNumber() throws -> UnsignedNumberContext {
 		var _localctx: UnsignedNumberContext = UnsignedNumberContext(_ctx, getState())
 		try enterRule(_localctx, 390, informixParser.RULE_unsignedNumber)
 		defer {
@@ -23168,7 +27062,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -23179,35 +27073,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class UnsignedIntegerContext:ParserRuleContext {
-		open func NUM_INT() -> TerminalNode? { return getToken(informixParser.Tokens.NUM_INT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_unsignedInteger }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterUnsignedInteger(self)
+
+	public class UnsignedIntegerContext: ParserRuleContext {
+			open
+			func NUM_INT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NUM_INT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_unsignedInteger
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterUnsignedInteger(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitUnsignedInteger(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitUnsignedInteger(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitUnsignedInteger(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitUnsignedInteger(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitUnsignedInteger(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitUnsignedInteger(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unsignedInteger() throws -> UnsignedIntegerContext {
+	 open func unsignedInteger() throws -> UnsignedIntegerContext {
 		var _localctx: UnsignedIntegerContext = UnsignedIntegerContext(_ctx, getState())
 		try enterRule(_localctx, 392, informixParser.RULE_unsignedInteger)
 		defer {
@@ -23227,35 +27129,43 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class UnsignedRealContext:ParserRuleContext {
-		open func NUM_REAL() -> TerminalNode? { return getToken(informixParser.Tokens.NUM_REAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_unsignedReal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterUnsignedReal(self)
+
+	public class UnsignedRealContext: ParserRuleContext {
+			open
+			func NUM_REAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NUM_REAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_unsignedReal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterUnsignedReal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitUnsignedReal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitUnsignedReal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitUnsignedReal(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitUnsignedReal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitUnsignedReal(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitUnsignedReal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unsignedReal() throws -> UnsignedRealContext {
+	 open func unsignedReal() throws -> UnsignedRealContext {
 		var _localctx: UnsignedRealContext = UnsignedRealContext(_ctx, getState())
 		try enterRule(_localctx, 394, informixParser.RULE_unsignedReal)
 		defer {
@@ -23275,36 +27185,47 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class SignContext:ParserRuleContext {
-		open func PLUS() -> TerminalNode? { return getToken(informixParser.Tokens.PLUS.rawValue, 0) }
-		open func MINUS() -> TerminalNode? { return getToken(informixParser.Tokens.MINUS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return informixParser.RULE_sign }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterSign(self)
+
+	public class SignContext: ParserRuleContext {
+			open
+			func PLUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PLUS.rawValue, 0)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MINUS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_sign
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterSign(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitSign(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitSign(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitSign(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitSign(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitSign(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitSign(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sign() throws -> SignContext {
+	 open func sign() throws -> SignContext {
 		var _localctx: SignContext = SignContext(_ctx, getState())
 		try enterRule(_localctx, 396, informixParser.RULE_sign)
 		var _la: Int = 0
@@ -23336,70 +27257,175 @@ open class informixParser: Parser {
 
 		return _localctx
 	}
-	open class ConstantIdentifierContext:ParserRuleContext {
-		open func ACCEPT() -> TerminalNode? { return getToken(informixParser.Tokens.ACCEPT.rawValue, 0) }
-		open func ASCII() -> TerminalNode? { return getToken(informixParser.Tokens.ASCII.rawValue, 0) }
-		open func COUNT() -> TerminalNode? { return getToken(informixParser.Tokens.COUNT.rawValue, 0) }
-		open func CURRENT() -> TerminalNode? { return getToken(informixParser.Tokens.CURRENT.rawValue, 0) }
-		open func FALSE() -> TerminalNode? { return getToken(informixParser.Tokens.FALSE.rawValue, 0) }
-		open func FIRST() -> TerminalNode? { return getToken(informixParser.Tokens.FIRST.rawValue, 0) }
-		open func FOUND() -> TerminalNode? { return getToken(informixParser.Tokens.FOUND.rawValue, 0) }
-		open func GROUP() -> TerminalNode? { return getToken(informixParser.Tokens.GROUP.rawValue, 0) }
-		open func HIDE() -> TerminalNode? { return getToken(informixParser.Tokens.HIDE.rawValue, 0) }
-		open func INDEX() -> TerminalNode? { return getToken(informixParser.Tokens.INDEX.rawValue, 0) }
-		open func INT_FLAG() -> TerminalNode? { return getToken(informixParser.Tokens.INT_FLAG.rawValue, 0) }
-		open func INTERRUPT() -> TerminalNode? { return getToken(informixParser.Tokens.INTERRUPT.rawValue, 0) }
-		open func LAST() -> TerminalNode? { return getToken(informixParser.Tokens.LAST.rawValue, 0) }
-		open func LENGTH() -> TerminalNode? { return getToken(informixParser.Tokens.LENGTH.rawValue, 0) }
-		open func LINENO() -> TerminalNode? { return getToken(informixParser.Tokens.LINENO.rawValue, 0) }
-		open func MDY() -> TerminalNode? { return getToken(informixParser.Tokens.MDY.rawValue, 0) }
-		open func NO() -> TerminalNode? { return getToken(informixParser.Tokens.NO.rawValue, 0) }
-		open func NOT() -> TerminalNode? { return getToken(informixParser.Tokens.NOT.rawValue, 0) }
-		open func NOTFOUND() -> TerminalNode? { return getToken(informixParser.Tokens.NOTFOUND.rawValue, 0) }
-		open func NULL() -> TerminalNode? { return getToken(informixParser.Tokens.NULL.rawValue, 0) }
-		open func PAGENO() -> TerminalNode? { return getToken(informixParser.Tokens.PAGENO.rawValue, 0) }
-		open func REAL() -> TerminalNode? { return getToken(informixParser.Tokens.REAL.rawValue, 0) }
-		open func SIZE() -> TerminalNode? { return getToken(informixParser.Tokens.SIZE.rawValue, 0) }
-		open func SQL() -> TerminalNode? { return getToken(informixParser.Tokens.SQL.rawValue, 0) }
-		open func STATUS() -> TerminalNode? { return getToken(informixParser.Tokens.STATUS.rawValue, 0) }
-		open func TEMP() -> TerminalNode? { return getToken(informixParser.Tokens.TEMP.rawValue, 0) }
-		open func TIME() -> TerminalNode? { return getToken(informixParser.Tokens.TIME.rawValue, 0) }
-		open func TODAY() -> TerminalNode? { return getToken(informixParser.Tokens.TODAY.rawValue, 0) }
-		open func TRUE() -> TerminalNode? { return getToken(informixParser.Tokens.TRUE.rawValue, 0) }
-		open func USER() -> TerminalNode? { return getToken(informixParser.Tokens.USER.rawValue, 0) }
-		open func WAIT() -> TerminalNode? { return getToken(informixParser.Tokens.WAIT.rawValue, 0) }
-		open func WEEKDAY() -> TerminalNode? { return getToken(informixParser.Tokens.WEEKDAY.rawValue, 0) }
-		open func WORK() -> TerminalNode? { return getToken(informixParser.Tokens.WORK.rawValue, 0) }
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class ConstantIdentifierContext: ParserRuleContext {
+			open
+			func ACCEPT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ACCEPT.rawValue, 0)
+			}
+			open
+			func ASCII() -> TerminalNode? {
+				return getToken(informixParser.Tokens.ASCII.rawValue, 0)
+			}
+			open
+			func COUNT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.COUNT.rawValue, 0)
+			}
+			open
+			func CURRENT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.CURRENT.rawValue, 0)
+			}
+			open
+			func FALSE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FALSE.rawValue, 0)
+			}
+			open
+			func FIRST() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FIRST.rawValue, 0)
+			}
+			open
+			func FOUND() -> TerminalNode? {
+				return getToken(informixParser.Tokens.FOUND.rawValue, 0)
+			}
+			open
+			func GROUP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.GROUP.rawValue, 0)
+			}
+			open
+			func HIDE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.HIDE.rawValue, 0)
+			}
+			open
+			func INDEX() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INDEX.rawValue, 0)
+			}
+			open
+			func INT_FLAG() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INT_FLAG.rawValue, 0)
+			}
+			open
+			func INTERRUPT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.INTERRUPT.rawValue, 0)
+			}
+			open
+			func LAST() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LAST.rawValue, 0)
+			}
+			open
+			func LENGTH() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LENGTH.rawValue, 0)
+			}
+			open
+			func LINENO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.LINENO.rawValue, 0)
+			}
+			open
+			func MDY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.MDY.rawValue, 0)
+			}
+			open
+			func NO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NO.rawValue, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func NOTFOUND() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NOTFOUND.rawValue, 0)
+			}
+			open
+			func NULL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.NULL.rawValue, 0)
+			}
+			open
+			func PAGENO() -> TerminalNode? {
+				return getToken(informixParser.Tokens.PAGENO.rawValue, 0)
+			}
+			open
+			func REAL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.REAL.rawValue, 0)
+			}
+			open
+			func SIZE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SIZE.rawValue, 0)
+			}
+			open
+			func SQL() -> TerminalNode? {
+				return getToken(informixParser.Tokens.SQL.rawValue, 0)
+			}
+			open
+			func STATUS() -> TerminalNode? {
+				return getToken(informixParser.Tokens.STATUS.rawValue, 0)
+			}
+			open
+			func TEMP() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TEMP.rawValue, 0)
+			}
+			open
+			func TIME() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TIME.rawValue, 0)
+			}
+			open
+			func TODAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TODAY.rawValue, 0)
+			}
+			open
+			func TRUE() -> TerminalNode? {
+				return getToken(informixParser.Tokens.TRUE.rawValue, 0)
+			}
+			open
+			func USER() -> TerminalNode? {
+				return getToken(informixParser.Tokens.USER.rawValue, 0)
+			}
+			open
+			func WAIT() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WAIT.rawValue, 0)
+			}
+			open
+			func WEEKDAY() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WEEKDAY.rawValue, 0)
+			}
+			open
+			func WORK() -> TerminalNode? {
+				return getToken(informixParser.Tokens.WORK.rawValue, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return informixParser.RULE_constantIdentifier
 		}
-		open override func getRuleIndex() -> Int { return informixParser.RULE_constantIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).enterConstantIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.enterConstantIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is informixListener {
-			 	(listener as! informixListener).exitConstantIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? informixListener {
+				listener.exitConstantIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is informixVisitor {
-			     return (visitor as! informixVisitor<T>).visitConstantIdentifier(self)
-			}else if visitor is informixBaseVisitor {
-		    	 return (visitor as! informixBaseVisitor<T>).visitConstantIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? informixVisitor {
+			    return visitor.visitConstantIdentifier(self)
+			}
+			else if let visitor = visitor as? informixBaseVisitor {
+			    return visitor.visitConstantIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constantIdentifier() throws -> ConstantIdentifierContext {
+	 open func constantIdentifier() throws -> ConstantIdentifierContext {
 		var _localctx: ConstantIdentifierContext = ConstantIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 398, informixParser.RULE_constantIdentifier)
 		var _la: Int = 0
@@ -23482,7 +27508,7 @@ open class informixParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -23494,6 +27520,10 @@ open class informixParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = informixParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = informixParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

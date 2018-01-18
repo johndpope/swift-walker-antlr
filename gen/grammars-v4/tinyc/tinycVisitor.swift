@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/tinyc/tinyc.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/tinyc/tinyc.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class tinycVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: tinycParser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: tinycParser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class tinycVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: tinycParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: tinycParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class tinycVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParen_expr(_ ctx: tinycParser.Paren_exprContext) -> T{
+	open func visitParen_expr(_ ctx: tinycParser.Paren_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class tinycVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr(_ ctx: tinycParser.ExprContext) -> T{
+	open func visitExpr(_ ctx: tinycParser.ExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class tinycVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTest(_ ctx: tinycParser.TestContext) -> T{
+	open func visitTest(_ ctx: tinycParser.TestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class tinycVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSum(_ ctx: tinycParser.SumContext) -> T{
+	open func visitSum(_ ctx: tinycParser.SumContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class tinycVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: tinycParser.TermContext) -> T{
+	open func visitTerm(_ ctx: tinycParser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class tinycVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitId(_ ctx: tinycParser.IdContext) -> T{
+	open func visitId(_ ctx: tinycParser.IdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class tinycVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInteger(_ ctx: tinycParser.IntegerContext) -> T{
+	open func visitInteger(_ ctx: tinycParser.IntegerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

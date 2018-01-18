@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class Python3Parser: Parser {
@@ -11,203 +11,202 @@ open class Python3Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
-		case EOF = -1, DEF = 1, RETURN = 2, RAISE = 3, FROM = 4, IMPORT = 5, AS = 6, 
-                 GLOBAL = 7, NONLOCAL = 8, ASSERT = 9, IF = 10, ELIF = 11, 
-                 ELSE = 12, WHILE = 13, FOR = 14, IN = 15, TRY = 16, FINALLY = 17, 
-                 WITH = 18, EXCEPT = 19, LAMBDA = 20, OR = 21, AND = 22, 
-                 NOT = 23, IS = 24, NONE = 25, TRUE = 26, FALSE = 27, CLASS = 28, 
-                 YIELD = 29, DEL = 30, PASS = 31, CONTINUE = 32, BREAK = 33, 
-                 NEWLINE = 34, NAME = 35, STRING_LITERAL = 36, BYTES_LITERAL = 37, 
-                 DECIMAL_INTEGER = 38, OCT_INTEGER = 39, HEX_INTEGER = 40, 
-                 BIN_INTEGER = 41, FLOAT_NUMBER = 42, IMAG_NUMBER = 43, 
-                 DOT = 44, ELLIPSIS = 45, STAR = 46, OPEN_PAREN = 47, CLOSE_PAREN = 48, 
-                 COMMA = 49, COLON = 50, SEMI_COLON = 51, POWER = 52, ASSIGN = 53, 
-                 OPEN_BRACK = 54, CLOSE_BRACK = 55, OR_OP = 56, XOR = 57, 
-                 AND_OP = 58, LEFT_SHIFT = 59, RIGHT_SHIFT = 60, ADD = 61, 
-                 MINUS = 62, DIV = 63, MOD = 64, IDIV = 65, NOT_OP = 66, 
-                 OPEN_BRACE = 67, CLOSE_BRACE = 68, LESS_THAN = 69, GREATER_THAN = 70, 
-                 EQUALS = 71, GT_EQ = 72, LT_EQ = 73, NOT_EQ_1 = 74, NOT_EQ_2 = 75, 
-                 AT = 76, ARROW = 77, ADD_ASSIGN = 78, SUB_ASSIGN = 79, 
-                 MULT_ASSIGN = 80, AT_ASSIGN = 81, DIV_ASSIGN = 82, MOD_ASSIGN = 83, 
-                 AND_ASSIGN = 84, OR_ASSIGN = 85, XOR_ASSIGN = 86, LEFT_SHIFT_ASSIGN = 87, 
-                 RIGHT_SHIFT_ASSIGN = 88, POWER_ASSIGN = 89, IDIV_ASSIGN = 90, 
-                 SKIP_ = 91, UNKNOWN_CHAR = 92, INDENT = 93, DEDENT = 94
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
+		case EOF = -1, STRING = 1, NUMBER = 2, INTEGER = 3, DEF = 4, RETURN = 5, 
+                 RAISE = 6, FROM = 7, IMPORT = 8, AS = 9, GLOBAL = 10, NONLOCAL = 11, 
+                 ASSERT = 12, IF = 13, ELIF = 14, ELSE = 15, WHILE = 16, 
+                 FOR = 17, IN = 18, TRY = 19, FINALLY = 20, WITH = 21, EXCEPT = 22, 
+                 LAMBDA = 23, OR = 24, AND = 25, NOT = 26, IS = 27, NONE = 28, 
+                 TRUE = 29, FALSE = 30, CLASS = 31, YIELD = 32, DEL = 33, 
+                 PASS = 34, CONTINUE = 35, BREAK = 36, ASYNC = 37, AWAIT = 38, 
+                 NEWLINE = 39, NAME = 40, STRING_LITERAL = 41, BYTES_LITERAL = 42, 
+                 DECIMAL_INTEGER = 43, OCT_INTEGER = 44, HEX_INTEGER = 45, 
+                 BIN_INTEGER = 46, FLOAT_NUMBER = 47, IMAG_NUMBER = 48, 
+                 DOT = 49, ELLIPSIS = 50, STAR = 51, OPEN_PAREN = 52, CLOSE_PAREN = 53, 
+                 COMMA = 54, COLON = 55, SEMI_COLON = 56, POWER = 57, ASSIGN = 58, 
+                 OPEN_BRACK = 59, CLOSE_BRACK = 60, OR_OP = 61, XOR = 62, 
+                 AND_OP = 63, LEFT_SHIFT = 64, RIGHT_SHIFT = 65, ADD = 66, 
+                 MINUS = 67, DIV = 68, MOD = 69, IDIV = 70, NOT_OP = 71, 
+                 OPEN_BRACE = 72, CLOSE_BRACE = 73, LESS_THAN = 74, GREATER_THAN = 75, 
+                 EQUALS = 76, GT_EQ = 77, LT_EQ = 78, NOT_EQ_1 = 79, NOT_EQ_2 = 80, 
+                 AT = 81, ARROW = 82, ADD_ASSIGN = 83, SUB_ASSIGN = 84, 
+                 MULT_ASSIGN = 85, AT_ASSIGN = 86, DIV_ASSIGN = 87, MOD_ASSIGN = 88, 
+                 AND_ASSIGN = 89, OR_ASSIGN = 90, XOR_ASSIGN = 91, LEFT_SHIFT_ASSIGN = 92, 
+                 RIGHT_SHIFT_ASSIGN = 93, POWER_ASSIGN = 94, IDIV_ASSIGN = 95, 
+                 SKIP_ = 96, UNKNOWN_CHAR = 97, INDENT = 98, DEDENT = 99
 	}
-	public static let RULE_single_input = 0, RULE_file_input = 1, RULE_eval_input = 2, 
-                   RULE_decorator = 3, RULE_decorators = 4, RULE_decorated = 5, 
-                   RULE_funcdef = 6, RULE_parameters = 7, RULE_typedargslist = 8, 
-                   RULE_tfpdef = 9, RULE_varargslist = 10, RULE_vfpdef = 11, 
-                   RULE_stmt = 12, RULE_simple_stmt = 13, RULE_small_stmt = 14, 
-                   RULE_expr_stmt = 15, RULE_testlist_star_expr = 16, RULE_augassign = 17, 
-                   RULE_del_stmt = 18, RULE_pass_stmt = 19, RULE_flow_stmt = 20, 
-                   RULE_break_stmt = 21, RULE_continue_stmt = 22, RULE_return_stmt = 23, 
-                   RULE_yield_stmt = 24, RULE_raise_stmt = 25, RULE_import_stmt = 26, 
-                   RULE_import_name = 27, RULE_import_from = 28, RULE_import_as_name = 29, 
-                   RULE_dotted_as_name = 30, RULE_import_as_names = 31, 
-                   RULE_dotted_as_names = 32, RULE_dotted_name = 33, RULE_global_stmt = 34, 
-                   RULE_nonlocal_stmt = 35, RULE_assert_stmt = 36, RULE_compound_stmt = 37, 
-                   RULE_if_stmt = 38, RULE_while_stmt = 39, RULE_for_stmt = 40, 
-                   RULE_try_stmt = 41, RULE_with_stmt = 42, RULE_with_item = 43, 
-                   RULE_except_clause = 44, RULE_suite = 45, RULE_test = 46, 
-                   RULE_test_nocond = 47, RULE_lambdef = 48, RULE_lambdef_nocond = 49, 
-                   RULE_or_test = 50, RULE_and_test = 51, RULE_not_test = 52, 
-                   RULE_comparison = 53, RULE_comp_op = 54, RULE_star_expr = 55, 
-                   RULE_expr = 56, RULE_xor_expr = 57, RULE_and_expr = 58, 
-                   RULE_shift_expr = 59, RULE_arith_expr = 60, RULE_term = 61, 
-                   RULE_factor = 62, RULE_power = 63, RULE_atom = 64, RULE_testlist_comp = 65, 
-                   RULE_trailer = 66, RULE_subscriptlist = 67, RULE_subscript = 68, 
-                   RULE_sliceop = 69, RULE_exprlist = 70, RULE_testlist = 71, 
-                   RULE_dictorsetmaker = 72, RULE_classdef = 73, RULE_arglist = 74, 
-                   RULE_argument = 75, RULE_comp_iter = 76, RULE_comp_for = 77, 
-                   RULE_comp_if = 78, RULE_yield_expr = 79, RULE_yield_arg = 80, 
-                   RULE_str = 81, RULE_number = 82, RULE_integer = 83
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_single_input = 0, RULE_file_input = 1, RULE_eval_input = 2, 
+            RULE_decorator = 3, RULE_decorators = 4, RULE_decorated = 5, 
+            RULE_async_funcdef = 6, RULE_funcdef = 7, RULE_parameters = 8, 
+            RULE_typedargslist = 9, RULE_tfpdef = 10, RULE_varargslist = 11, 
+            RULE_vfpdef = 12, RULE_stmt = 13, RULE_simple_stmt = 14, RULE_small_stmt = 15, 
+            RULE_expr_stmt = 16, RULE_annassign = 17, RULE_testlist_star_expr = 18, 
+            RULE_augassign = 19, RULE_del_stmt = 20, RULE_pass_stmt = 21, 
+            RULE_flow_stmt = 22, RULE_break_stmt = 23, RULE_continue_stmt = 24, 
+            RULE_return_stmt = 25, RULE_yield_stmt = 26, RULE_raise_stmt = 27, 
+            RULE_import_stmt = 28, RULE_import_name = 29, RULE_import_from = 30, 
+            RULE_import_as_name = 31, RULE_dotted_as_name = 32, RULE_import_as_names = 33, 
+            RULE_dotted_as_names = 34, RULE_dotted_name = 35, RULE_global_stmt = 36, 
+            RULE_nonlocal_stmt = 37, RULE_assert_stmt = 38, RULE_compound_stmt = 39, 
+            RULE_async_stmt = 40, RULE_if_stmt = 41, RULE_while_stmt = 42, 
+            RULE_for_stmt = 43, RULE_try_stmt = 44, RULE_with_stmt = 45, 
+            RULE_with_item = 46, RULE_except_clause = 47, RULE_suite = 48, 
+            RULE_test = 49, RULE_test_nocond = 50, RULE_lambdef = 51, RULE_lambdef_nocond = 52, 
+            RULE_or_test = 53, RULE_and_test = 54, RULE_not_test = 55, RULE_comparison = 56, 
+            RULE_comp_op = 57, RULE_star_expr = 58, RULE_expr = 59, RULE_xor_expr = 60, 
+            RULE_and_expr = 61, RULE_shift_expr = 62, RULE_arith_expr = 63, 
+            RULE_term = 64, RULE_factor = 65, RULE_power = 66, RULE_atom_expr = 67, 
+            RULE_atom = 68, RULE_testlist_comp = 69, RULE_trailer = 70, 
+            RULE_subscriptlist = 71, RULE_subscript = 72, RULE_sliceop = 73, 
+            RULE_exprlist = 74, RULE_testlist = 75, RULE_dictorsetmaker = 76, 
+            RULE_classdef = 77, RULE_arglist = 78, RULE_argument = 79, RULE_comp_iter = 80, 
+            RULE_comp_for = 81, RULE_comp_if = 82, RULE_encoding_decl = 83, 
+            RULE_yield_expr = 84, RULE_yield_arg = 85
+
+	public
+	static let ruleNames: [String] = [
 		"single_input", "file_input", "eval_input", "decorator", "decorators", 
-		"decorated", "funcdef", "parameters", "typedargslist", "tfpdef", "varargslist", 
-		"vfpdef", "stmt", "simple_stmt", "small_stmt", "expr_stmt", "testlist_star_expr", 
-		"augassign", "del_stmt", "pass_stmt", "flow_stmt", "break_stmt", "continue_stmt", 
-		"return_stmt", "yield_stmt", "raise_stmt", "import_stmt", "import_name", 
-		"import_from", "import_as_name", "dotted_as_name", "import_as_names", 
-		"dotted_as_names", "dotted_name", "global_stmt", "nonlocal_stmt", "assert_stmt", 
-		"compound_stmt", "if_stmt", "while_stmt", "for_stmt", "try_stmt", "with_stmt", 
+		"decorated", "async_funcdef", "funcdef", "parameters", "typedargslist", 
+		"tfpdef", "varargslist", "vfpdef", "stmt", "simple_stmt", "small_stmt", 
+		"expr_stmt", "annassign", "testlist_star_expr", "augassign", "del_stmt", 
+		"pass_stmt", "flow_stmt", "break_stmt", "continue_stmt", "return_stmt", 
+		"yield_stmt", "raise_stmt", "import_stmt", "import_name", "import_from", 
+		"import_as_name", "dotted_as_name", "import_as_names", "dotted_as_names", 
+		"dotted_name", "global_stmt", "nonlocal_stmt", "assert_stmt", "compound_stmt", 
+		"async_stmt", "if_stmt", "while_stmt", "for_stmt", "try_stmt", "with_stmt", 
 		"with_item", "except_clause", "suite", "test", "test_nocond", "lambdef", 
 		"lambdef_nocond", "or_test", "and_test", "not_test", "comparison", "comp_op", 
 		"star_expr", "expr", "xor_expr", "and_expr", "shift_expr", "arith_expr", 
-		"term", "factor", "power", "atom", "testlist_comp", "trailer", "subscriptlist", 
-		"subscript", "sliceop", "exprlist", "testlist", "dictorsetmaker", "classdef", 
-		"arglist", "argument", "comp_iter", "comp_for", "comp_if", "yield_expr", 
-		"yield_arg", "str", "number", "integer"
+		"term", "factor", "power", "atom_expr", "atom", "testlist_comp", "trailer", 
+		"subscriptlist", "subscript", "sliceop", "exprlist", "testlist", "dictorsetmaker", 
+		"classdef", "arglist", "argument", "comp_iter", "comp_for", "comp_if", 
+		"encoding_decl", "yield_expr", "yield_arg"
 	]
 
 	private static let _LITERAL_NAMES: [String?] = [
-		nil, "'def'", "'return'", "'raise'", "'from'", "'import'", "'as'", "'global'", 
-		"'nonlocal'", "'assert'", "'if'", "'elif'", "'else'", "'while'", "'for'", 
-		"'in'", "'try'", "'finally'", "'with'", "'except'", "'lambda'", "'or'", 
-		"'and'", "'not'", "'is'", "'None'", "'True'", "'False'", "'class'", "'yield'", 
-		"'del'", "'pass'", "'continue'", "'break'", nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, "'.'", "'...'", "'*'", "'('", "')'", "','", "':'", 
-		"';'", "'**'", "'='", "'['", "']'", "'|'", "'^'", "'&'", "'<<'", "'>>'", 
-		"'+'", "'-'", "'/'", "'%'", "'//'", "'~'", "'{'", "'}'", "'<'", "'>'", 
-		"'=='", "'>='", "'<='", "'<>'", "'!='", "'@'", "'->'", "'+='", "'-='", 
-		"'*='", "'@='", "'/='", "'%='", "'&='", "'|='", "'^='", "'<<='", "'>>='", 
-		"'**='", "'//='"
+		nil, nil, nil, nil, "'def'", "'return'", "'raise'", "'from'", "'import'", 
+		"'as'", "'global'", "'nonlocal'", "'assert'", "'if'", "'elif'", "'else'", 
+		"'while'", "'for'", "'in'", "'try'", "'finally'", "'with'", "'except'", 
+		"'lambda'", "'or'", "'and'", "'not'", "'is'", "'None'", "'True'", "'False'", 
+		"'class'", "'yield'", "'del'", "'pass'", "'continue'", "'break'", "'async'", 
+		"'await'", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "'.'", "'...'", 
+		"'*'", "'('", "')'", "','", "':'", "';'", "'**'", "'='", "'['", "']'", 
+		"'|'", "'^'", "'&'", "'<<'", "'>>'", "'+'", "'-'", "'/'", "'%'", "'//'", 
+		"'~'", "'{'", "'}'", "'<'", "'>'", "'=='", "'>='", "'<='", "'<>'", "'!='", 
+		"'@'", "'->'", "'+='", "'-='", "'*='", "'@='", "'/='", "'%='", "'&='", 
+		"'|='", "'^='", "'<<='", "'>>='", "'**='", "'//='"
 	]
 	private static let _SYMBOLIC_NAMES: [String?] = [
-		nil, "DEF", "RETURN", "RAISE", "FROM", "IMPORT", "AS", "GLOBAL", "NONLOCAL", 
-		"ASSERT", "IF", "ELIF", "ELSE", "WHILE", "FOR", "IN", "TRY", "FINALLY", 
-		"WITH", "EXCEPT", "LAMBDA", "OR", "AND", "NOT", "IS", "NONE", "TRUE", 
-		"FALSE", "CLASS", "YIELD", "DEL", "PASS", "CONTINUE", "BREAK", "NEWLINE", 
-		"NAME", "STRING_LITERAL", "BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", 
-		"HEX_INTEGER", "BIN_INTEGER", "FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", 
-		"STAR", "OPEN_PAREN", "CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", 
-		"ASSIGN", "OPEN_BRACK", "CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", 
-		"RIGHT_SHIFT", "ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", 
-		"CLOSE_BRACE", "LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", 
-		"NOT_EQ_1", "NOT_EQ_2", "AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN", 
-		"AT_ASSIGN", "DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN", 
-		"LEFT_SHIFT_ASSIGN", "RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN", 
-		"SKIP_", "UNKNOWN_CHAR", "INDENT", "DEDENT"
+		nil, "STRING", "NUMBER", "INTEGER", "DEF", "RETURN", "RAISE", "FROM", 
+		"IMPORT", "AS", "GLOBAL", "NONLOCAL", "ASSERT", "IF", "ELIF", "ELSE", 
+		"WHILE", "FOR", "IN", "TRY", "FINALLY", "WITH", "EXCEPT", "LAMBDA", "OR", 
+		"AND", "NOT", "IS", "NONE", "TRUE", "FALSE", "CLASS", "YIELD", "DEL", 
+		"PASS", "CONTINUE", "BREAK", "ASYNC", "AWAIT", "NEWLINE", "NAME", "STRING_LITERAL", 
+		"BYTES_LITERAL", "DECIMAL_INTEGER", "OCT_INTEGER", "HEX_INTEGER", "BIN_INTEGER", 
+		"FLOAT_NUMBER", "IMAG_NUMBER", "DOT", "ELLIPSIS", "STAR", "OPEN_PAREN", 
+		"CLOSE_PAREN", "COMMA", "COLON", "SEMI_COLON", "POWER", "ASSIGN", "OPEN_BRACK", 
+		"CLOSE_BRACK", "OR_OP", "XOR", "AND_OP", "LEFT_SHIFT", "RIGHT_SHIFT", 
+		"ADD", "MINUS", "DIV", "MOD", "IDIV", "NOT_OP", "OPEN_BRACE", "CLOSE_BRACE", 
+		"LESS_THAN", "GREATER_THAN", "EQUALS", "GT_EQ", "LT_EQ", "NOT_EQ_1", "NOT_EQ_2", 
+		"AT", "ARROW", "ADD_ASSIGN", "SUB_ASSIGN", "MULT_ASSIGN", "AT_ASSIGN", 
+		"DIV_ASSIGN", "MOD_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN", "LEFT_SHIFT_ASSIGN", 
+		"RIGHT_SHIFT_ASSIGN", "POWER_ASSIGN", "IDIV_ASSIGN", "SKIP_", "UNKNOWN_CHAR", 
+		"INDENT", "DEDENT"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Python3.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return Python3Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Python3.g4" }
+	override open
+	func getSerializedATN() -> String { return Python3Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return Python3Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return Python3Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return Python3Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return Python3Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return Python3Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,Python3Parser._ATN,Python3Parser._decisionToDFA, Python3Parser._sharedContextCache)
 	}
-	open class Single_inputContext:ParserRuleContext {
-		open func NEWLINE() -> TerminalNode? { return getToken(Python3Parser.Tokens.NEWLINE.rawValue, 0) }
-		open func simple_stmt() -> Simple_stmtContext? {
-			return getRuleContext(Simple_stmtContext.self,0)
+
+	public class Single_inputContext: ParserRuleContext {
+			open
+			func NEWLINE() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NEWLINE.rawValue, 0)
+			}
+			open
+			func simple_stmt() -> Simple_stmtContext? {
+				return getRuleContext(Simple_stmtContext.self, 0)
+			}
+			open
+			func compound_stmt() -> Compound_stmtContext? {
+				return getRuleContext(Compound_stmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_single_input
 		}
-		open func compound_stmt() -> Compound_stmtContext? {
-			return getRuleContext(Compound_stmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_single_input }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterSingle_input(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterSingle_input(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitSingle_input(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitSingle_input(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitSingle_input(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitSingle_input(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitSingle_input(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitSingle_input(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func single_input() throws -> Single_inputContext {
+	 open func single_input() throws -> Single_inputContext {
 		var _localctx: Single_inputContext = Single_inputContext(_ctx, getState())
 		try enterRule(_localctx, 0, Python3Parser.RULE_single_input)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(173)
+		 	setState(177)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .NEWLINE:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(168)
+		 		setState(172)
 		 		try match(Python3Parser.Tokens.NEWLINE.rawValue)
 
 		 		break
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
 		 	case .RETURN:fallthrough
 		 	case .RAISE:fallthrough
 		 	case .FROM:fallthrough
@@ -225,15 +224,8 @@ open class Python3Parser: Parser {
 		 	case .PASS:fallthrough
 		 	case .CONTINUE:fallthrough
 		 	case .BREAK:fallthrough
+		 	case .AWAIT:fallthrough
 		 	case .NAME:fallthrough
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:fallthrough
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:fallthrough
 		 	case .ELLIPSIS:fallthrough
 		 	case .STAR:fallthrough
 		 	case .OPEN_PAREN:fallthrough
@@ -243,7 +235,7 @@ open class Python3Parser: Parser {
 		 	case .NOT_OP:fallthrough
 		 	case .OPEN_BRACE:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(169)
+		 		setState(173)
 		 		try simple_stmt()
 
 		 		break
@@ -254,16 +246,17 @@ open class Python3Parser: Parser {
 		 	case .TRY:fallthrough
 		 	case .WITH:fallthrough
 		 	case .CLASS:fallthrough
+		 	case .ASYNC:fallthrough
 		 	case .AT:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(170)
+		 		setState(174)
 		 		try compound_stmt()
-		 		setState(171)
+		 		setState(175)
 		 		try match(Python3Parser.Tokens.NEWLINE.rawValue)
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -274,45 +267,59 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class File_inputContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(Python3Parser.Tokens.EOF.rawValue, 0) }
-		open func NEWLINE() -> Array<TerminalNode> { return getTokens(Python3Parser.Tokens.NEWLINE.rawValue) }
-		open func NEWLINE(_ i:Int) -> TerminalNode?{
-			return getToken(Python3Parser.Tokens.NEWLINE.rawValue, i)
+
+	public class File_inputContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func NEWLINE() -> [TerminalNode] {
+				return getTokens(Python3Parser.Tokens.NEWLINE.rawValue)
+			}
+			open
+			func NEWLINE(_ i:Int) -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NEWLINE.rawValue, i)
+			}
+			open
+			func stmt() -> [StmtContext] {
+				return getRuleContexts(StmtContext.self)
+			}
+			open
+			func stmt(_ i: Int) -> StmtContext? {
+				return getRuleContext(StmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_file_input
 		}
-		open func stmt() -> Array<StmtContext> {
-			return getRuleContexts(StmtContext.self)
-		}
-		open func stmt(_ i: Int) -> StmtContext? {
-			return getRuleContext(StmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_file_input }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterFile_input(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterFile_input(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitFile_input(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitFile_input(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitFile_input(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitFile_input(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitFile_input(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitFile_input(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func file_input() throws -> File_inputContext {
+	 open func file_input() throws -> File_inputContext {
 		var _localctx: File_inputContext = File_inputContext(_ctx, getState())
 		try enterRule(_localctx, 2, Python3Parser.RULE_file_input)
 		var _la: Int = 0
@@ -321,29 +328,31 @@ open class Python3Parser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(179)
+		 	setState(183)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      var testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.DEF.rawValue,Python3Parser.Tokens.RETURN.rawValue,Python3Parser.Tokens.RAISE.rawValue,Python3Parser.Tokens.FROM.rawValue,Python3Parser.Tokens.IMPORT.rawValue,Python3Parser.Tokens.GLOBAL.rawValue,Python3Parser.Tokens.NONLOCAL.rawValue,Python3Parser.Tokens.ASSERT.rawValue,Python3Parser.Tokens.IF.rawValue,Python3Parser.Tokens.WHILE.rawValue,Python3Parser.Tokens.FOR.rawValue,Python3Parser.Tokens.TRY.rawValue,Python3Parser.Tokens.WITH.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.CLASS.rawValue,Python3Parser.Tokens.YIELD.rawValue,Python3Parser.Tokens.DEL.rawValue,Python3Parser.Tokens.PASS.rawValue,Python3Parser.Tokens.CONTINUE.rawValue,Python3Parser.Tokens.BREAK.rawValue,Python3Parser.Tokens.NEWLINE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue]
+		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.DEF.rawValue,Python3Parser.Tokens.RETURN.rawValue,Python3Parser.Tokens.RAISE.rawValue,Python3Parser.Tokens.FROM.rawValue,Python3Parser.Tokens.IMPORT.rawValue,Python3Parser.Tokens.GLOBAL.rawValue,Python3Parser.Tokens.NONLOCAL.rawValue,Python3Parser.Tokens.ASSERT.rawValue,Python3Parser.Tokens.IF.rawValue,Python3Parser.Tokens.WHILE.rawValue,Python3Parser.Tokens.FOR.rawValue,Python3Parser.Tokens.TRY.rawValue,Python3Parser.Tokens.WITH.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.CLASS.rawValue,Python3Parser.Tokens.YIELD.rawValue,Python3Parser.Tokens.DEL.rawValue,Python3Parser.Tokens.PASS.rawValue,Python3Parser.Tokens.CONTINUE.rawValue,Python3Parser.Tokens.BREAK.rawValue,Python3Parser.Tokens.ASYNC.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NEWLINE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	          testSet = testSet || {  () -> Bool in
-		 	             let testArray: [Int] = [_la, Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue,Python3Parser.Tokens.AT.rawValue]
+		 	             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue,Python3Parser.Tokens.AT.rawValue]
 		 	              return  Utils.testBitLeftShiftArray(testArray, 66)
 		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(177)
+		 		setState(181)
 		 		try _errHandler.sync(self)
 		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 		case .NEWLINE:
-		 			setState(175)
+		 			setState(179)
 		 			try match(Python3Parser.Tokens.NEWLINE.rawValue)
 
 		 			break
+		 		case .STRING:fallthrough
+		 		case .NUMBER:fallthrough
 		 		case .DEF:fallthrough
 		 		case .RETURN:fallthrough
 		 		case .RAISE:fallthrough
@@ -368,15 +377,9 @@ open class Python3Parser: Parser {
 		 		case .PASS:fallthrough
 		 		case .CONTINUE:fallthrough
 		 		case .BREAK:fallthrough
+		 		case .ASYNC:fallthrough
+		 		case .AWAIT:fallthrough
 		 		case .NAME:fallthrough
-		 		case .STRING_LITERAL:fallthrough
-		 		case .BYTES_LITERAL:fallthrough
-		 		case .DECIMAL_INTEGER:fallthrough
-		 		case .OCT_INTEGER:fallthrough
-		 		case .HEX_INTEGER:fallthrough
-		 		case .BIN_INTEGER:fallthrough
-		 		case .FLOAT_NUMBER:fallthrough
-		 		case .IMAG_NUMBER:fallthrough
 		 		case .ELLIPSIS:fallthrough
 		 		case .STAR:fallthrough
 		 		case .OPEN_PAREN:fallthrough
@@ -386,19 +389,19 @@ open class Python3Parser: Parser {
 		 		case .NOT_OP:fallthrough
 		 		case .OPEN_BRACE:fallthrough
 		 		case .AT:
-		 			setState(176)
+		 			setState(180)
 		 			try stmt()
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
-		 		setState(181)
+		 		setState(185)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(182)
+		 	setState(186)
 		 	try match(Python3Parser.Tokens.EOF.rawValue)
 
 		}
@@ -410,42 +413,55 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Eval_inputContext:ParserRuleContext {
-		open func testlist() -> TestlistContext? {
-			return getRuleContext(TestlistContext.self,0)
+
+	public class Eval_inputContext: ParserRuleContext {
+			open
+			func testlist() -> TestlistContext? {
+				return getRuleContext(TestlistContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func NEWLINE() -> [TerminalNode] {
+				return getTokens(Python3Parser.Tokens.NEWLINE.rawValue)
+			}
+			open
+			func NEWLINE(_ i:Int) -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NEWLINE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_eval_input
 		}
-		open func EOF() -> TerminalNode? { return getToken(Python3Parser.Tokens.EOF.rawValue, 0) }
-		open func NEWLINE() -> Array<TerminalNode> { return getTokens(Python3Parser.Tokens.NEWLINE.rawValue) }
-		open func NEWLINE(_ i:Int) -> TerminalNode?{
-			return getToken(Python3Parser.Tokens.NEWLINE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_eval_input }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterEval_input(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterEval_input(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitEval_input(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitEval_input(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitEval_input(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitEval_input(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitEval_input(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitEval_input(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eval_input() throws -> Eval_inputContext {
+	 open func eval_input() throws -> Eval_inputContext {
 		var _localctx: Eval_inputContext = Eval_inputContext(_ctx, getState())
 		try enterRule(_localctx, 4, Python3Parser.RULE_eval_input)
 		var _la: Int = 0
@@ -454,9 +470,9 @@ open class Python3Parser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(184)
-		 	try testlist()
 		 	setState(188)
+		 	try testlist()
+		 	setState(192)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -464,15 +480,15 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.NEWLINE.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(185)
+		 		setState(189)
 		 		try match(Python3Parser.Tokens.NEWLINE.rawValue)
 
 
-		 		setState(190)
+		 		setState(194)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(191)
+		 	setState(195)
 		 	try match(Python3Parser.Tokens.EOF.rawValue)
 
 		}
@@ -484,41 +500,51 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class DecoratorContext:ParserRuleContext {
-		open func dotted_name() -> Dotted_nameContext? {
-			return getRuleContext(Dotted_nameContext.self,0)
+
+	public class DecoratorContext: ParserRuleContext {
+			open
+			func dotted_name() -> Dotted_nameContext? {
+				return getRuleContext(Dotted_nameContext.self, 0)
+			}
+			open
+			func NEWLINE() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NEWLINE.rawValue, 0)
+			}
+			open
+			func arglist() -> ArglistContext? {
+				return getRuleContext(ArglistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_decorator
 		}
-		open func NEWLINE() -> TerminalNode? { return getToken(Python3Parser.Tokens.NEWLINE.rawValue, 0) }
-		open func arglist() -> ArglistContext? {
-			return getRuleContext(ArglistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_decorator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterDecorator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterDecorator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitDecorator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitDecorator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitDecorator(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitDecorator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitDecorator(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitDecorator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func decorator() throws -> DecoratorContext {
+	 open func decorator() throws -> DecoratorContext {
 		var _localctx: DecoratorContext = DecoratorContext(_ctx, getState())
 		try enterRule(_localctx, 6, Python3Parser.RULE_decorator)
 		var _la: Int = 0
@@ -527,11 +553,11 @@ open class Python3Parser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(193)
+		 	setState(197)
 		 	try match(Python3Parser.Tokens.AT.rawValue)
-		 	setState(194)
+		 	setState(198)
 		 	try dotted_name()
-		 	setState(200)
+		 	setState(204)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -539,30 +565,34 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.OPEN_PAREN.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(195)
+		 		setState(199)
 		 		try match(Python3Parser.Tokens.OPEN_PAREN.rawValue)
-		 		setState(197)
+		 		setState(201)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.POWER.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 		      var testSet: Bool = {  () -> Bool in
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.POWER.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
+		 		          testSet = testSet || {  () -> Bool in
+		 		             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 		              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(196)
+		 			setState(200)
 		 			try arglist()
 
 		 		}
 
-		 		setState(199)
+		 		setState(203)
 		 		try match(Python3Parser.Tokens.CLOSE_PAREN.rawValue)
 
 		 	}
 
-		 	setState(202)
+		 	setState(206)
 		 	try match(Python3Parser.Tokens.NEWLINE.rawValue)
 
 		}
@@ -574,40 +604,47 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class DecoratorsContext:ParserRuleContext {
-		open func decorator() -> Array<DecoratorContext> {
-			return getRuleContexts(DecoratorContext.self)
+
+	public class DecoratorsContext: ParserRuleContext {
+			open
+			func decorator() -> [DecoratorContext] {
+				return getRuleContexts(DecoratorContext.self)
+			}
+			open
+			func decorator(_ i: Int) -> DecoratorContext? {
+				return getRuleContext(DecoratorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_decorators
 		}
-		open func decorator(_ i: Int) -> DecoratorContext? {
-			return getRuleContext(DecoratorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_decorators }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterDecorators(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterDecorators(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitDecorators(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitDecorators(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitDecorators(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitDecorators(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitDecorators(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitDecorators(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func decorators() throws -> DecoratorsContext {
+	 open func decorators() throws -> DecoratorsContext {
 		var _localctx: DecoratorsContext = DecoratorsContext(_ctx, getState())
 		try enterRule(_localctx, 8, Python3Parser.RULE_decorators)
 		var _la: Int = 0
@@ -616,15 +653,15 @@ open class Python3Parser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(205) 
+		 	setState(209) 
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	repeat {
-		 		setState(204)
+		 		setState(208)
 		 		try decorator()
 
 
-		 		setState(207); 
+		 		setState(211); 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	} while (//closure
@@ -642,43 +679,55 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class DecoratedContext:ParserRuleContext {
-		open func decorators() -> DecoratorsContext? {
-			return getRuleContext(DecoratorsContext.self,0)
+
+	public class DecoratedContext: ParserRuleContext {
+			open
+			func decorators() -> DecoratorsContext? {
+				return getRuleContext(DecoratorsContext.self, 0)
+			}
+			open
+			func classdef() -> ClassdefContext? {
+				return getRuleContext(ClassdefContext.self, 0)
+			}
+			open
+			func funcdef() -> FuncdefContext? {
+				return getRuleContext(FuncdefContext.self, 0)
+			}
+			open
+			func async_funcdef() -> Async_funcdefContext? {
+				return getRuleContext(Async_funcdefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_decorated
 		}
-		open func classdef() -> ClassdefContext? {
-			return getRuleContext(ClassdefContext.self,0)
-		}
-		open func funcdef() -> FuncdefContext? {
-			return getRuleContext(FuncdefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_decorated }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterDecorated(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterDecorated(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitDecorated(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitDecorated(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitDecorated(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitDecorated(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitDecorated(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitDecorated(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func decorated() throws -> DecoratedContext {
+	 open func decorated() throws -> DecoratedContext {
 		var _localctx: DecoratedContext = DecoratedContext(_ctx, getState())
 		try enterRule(_localctx, 10, Python3Parser.RULE_decorated)
 		defer {
@@ -686,24 +735,30 @@ open class Python3Parser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(209)
+		 	setState(213)
 		 	try decorators()
-		 	setState(212)
+		 	setState(217)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .CLASS:
-		 		setState(210)
+		 		setState(214)
 		 		try classdef()
 
 		 		break
 
 		 	case .DEF:
-		 		setState(211)
+		 		setState(215)
 		 		try funcdef()
 
 		 		break
+
+		 	case .ASYNC:
+		 		setState(216)
+		 		try async_funcdef()
+
+		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -715,60 +770,132 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class FuncdefContext:ParserRuleContext {
-		open func DEF() -> TerminalNode? { return getToken(Python3Parser.Tokens.DEF.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(Python3Parser.Tokens.NAME.rawValue, 0) }
-		open func parameters() -> ParametersContext? {
-			return getRuleContext(ParametersContext.self,0)
+
+	public class Async_funcdefContext: ParserRuleContext {
+			open
+			func ASYNC() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.ASYNC.rawValue, 0)
+			}
+			open
+			func funcdef() -> FuncdefContext? {
+				return getRuleContext(FuncdefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_async_funcdef
 		}
-		open func suite() -> SuiteContext? {
-			return getRuleContext(SuiteContext.self,0)
-		}
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_funcdef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterFuncdef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterAsync_funcdef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitFuncdef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitAsync_funcdef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitFuncdef(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitFuncdef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitAsync_funcdef(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitAsync_funcdef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funcdef() throws -> FuncdefContext {
+	 open func async_funcdef() throws -> Async_funcdefContext {
+		var _localctx: Async_funcdefContext = Async_funcdefContext(_ctx, getState())
+		try enterRule(_localctx, 12, Python3Parser.RULE_async_funcdef)
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(219)
+		 	try match(Python3Parser.Tokens.ASYNC.rawValue)
+		 	setState(220)
+		 	try funcdef()
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class FuncdefContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func parameters() -> ParametersContext? {
+				return getRuleContext(ParametersContext.self, 0)
+			}
+			open
+			func suite() -> SuiteContext? {
+				return getRuleContext(SuiteContext.self, 0)
+			}
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_funcdef
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterFuncdef(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitFuncdef(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitFuncdef(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitFuncdef(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func funcdef() throws -> FuncdefContext {
 		var _localctx: FuncdefContext = FuncdefContext(_ctx, getState())
-		try enterRule(_localctx, 12, Python3Parser.RULE_funcdef)
+		try enterRule(_localctx, 14, Python3Parser.RULE_funcdef)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(214)
+		 	setState(222)
 		 	try match(Python3Parser.Tokens.DEF.rawValue)
-		 	setState(215)
+		 	setState(223)
 		 	try match(Python3Parser.Tokens.NAME.rawValue)
-		 	setState(216)
+		 	setState(224)
 		 	try parameters()
-		 	setState(219)
+		 	setState(227)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -776,16 +903,16 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.ARROW.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(217)
+		 		setState(225)
 		 		try match(Python3Parser.Tokens.ARROW.rawValue)
-		 		setState(218)
+		 		setState(226)
 		 		try test()
 
 		 	}
 
-		 	setState(221)
+		 	setState(229)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(222)
+		 	setState(230)
 		 	try suite()
 
 		}
@@ -797,48 +924,54 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class ParametersContext:ParserRuleContext {
-		open func typedargslist() -> TypedargslistContext? {
-			return getRuleContext(TypedargslistContext.self,0)
+
+	public class ParametersContext: ParserRuleContext {
+			open
+			func typedargslist() -> TypedargslistContext? {
+				return getRuleContext(TypedargslistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_parameters
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_parameters }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterParameters(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterParameters(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitParameters(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitParameters(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitParameters(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitParameters(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitParameters(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitParameters(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameters() throws -> ParametersContext {
+	 open func parameters() throws -> ParametersContext {
 		var _localctx: ParametersContext = ParametersContext(_ctx, getState())
-		try enterRule(_localctx, 14, Python3Parser.RULE_parameters)
+		try enterRule(_localctx, 16, Python3Parser.RULE_parameters)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(224)
+		 	setState(232)
 		 	try match(Python3Parser.Tokens.OPEN_PAREN.rawValue)
-		 	setState(226)
+		 	setState(234)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -849,12 +982,12 @@ open class Python3Parser: Parser {
 		 	}()
 		 	      return testSet
 		 	 }()) {
-		 		setState(225)
+		 		setState(233)
 		 		try typedargslist()
 
 		 	}
 
-		 	setState(228)
+		 	setState(236)
 		 	try match(Python3Parser.Tokens.CLOSE_PAREN.rawValue)
 
 		}
@@ -866,62 +999,71 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class TypedargslistContext:ParserRuleContext {
-		open func tfpdef() -> Array<TfpdefContext> {
-			return getRuleContexts(TfpdefContext.self)
+
+	public class TypedargslistContext: ParserRuleContext {
+			open
+			func tfpdef() -> [TfpdefContext] {
+				return getRuleContexts(TfpdefContext.self)
+			}
+			open
+			func tfpdef(_ i: Int) -> TfpdefContext? {
+				return getRuleContext(TfpdefContext.self, i)
+			}
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_typedargslist
 		}
-		open func tfpdef(_ i: Int) -> TfpdefContext? {
-			return getRuleContext(TfpdefContext.self,i)
-		}
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
-		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_typedargslist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTypedargslist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTypedargslist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTypedargslist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTypedargslist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTypedargslist(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTypedargslist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTypedargslist(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTypedargslist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typedargslist() throws -> TypedargslistContext {
+	 open func typedargslist() throws -> TypedargslistContext {
 		var _localctx: TypedargslistContext = TypedargslistContext(_ctx, getState())
-		try enterRule(_localctx, 16, Python3Parser.RULE_typedargslist)
+		try enterRule(_localctx, 18, Python3Parser.RULE_typedargslist)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
-		 	setState(295)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(319)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .NAME:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(230)
+		 		setState(238)
 		 		try tfpdef()
-		 		setState(233)
+		 		setState(241)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -929,23 +1071,23 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(231)
+		 			setState(239)
 		 			try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 			setState(232)
+		 			setState(240)
 		 			try test()
 
 		 		}
 
-		 		setState(243)
+		 		setState(251)
 		 		try _errHandler.sync(self)
 		 		_alt = try getInterpreter().adaptivePredict(_input,12,_ctx)
 		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 			if ( _alt==1 ) {
-		 				setState(235)
+		 				setState(243)
 		 				try match(Python3Parser.Tokens.COMMA.rawValue)
-		 				setState(236)
+		 				setState(244)
 		 				try tfpdef()
-		 				setState(239)
+		 				setState(247)
 		 				try _errHandler.sync(self)
 		 				_la = try _input.LA(1)
 		 				if (//closure
@@ -953,9 +1095,9 @@ open class Python3Parser: Parser {
 		 				      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
 		 				      return testSet
 		 				 }()) {
-		 					setState(237)
+		 					setState(245)
 		 					try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 					setState(238)
+		 					setState(246)
 		 					try test()
 
 		 				}
@@ -963,11 +1105,11 @@ open class Python3Parser: Parser {
 
 		 		 
 		 			}
-		 			setState(245)
+		 			setState(253)
 		 			try _errHandler.sync(self)
 		 			_alt = try getInterpreter().adaptivePredict(_input,12,_ctx)
 		 		}
-		 		setState(271)
+		 		setState(287)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -975,15 +1117,15 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(246)
+		 			setState(254)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(269)
+		 			setState(285)
 		 			try _errHandler.sync(self)
 		 			switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 			case .STAR:
-		 			 	setState(247)
+		 			 	setState(255)
 		 			 	try match(Python3Parser.Tokens.STAR.rawValue)
-		 			 	setState(249)
+		 			 	setState(257)
 		 			 	try _errHandler.sync(self)
 		 			 	_la = try _input.LA(1)
 		 			 	if (//closure
@@ -991,21 +1133,21 @@ open class Python3Parser: Parser {
 		 			 	      let testSet: Bool = _la == Python3Parser.Tokens.NAME.rawValue
 		 			 	      return testSet
 		 			 	 }()) {
-		 			 		setState(248)
+		 			 		setState(256)
 		 			 		try tfpdef()
 
 		 			 	}
 
-		 			 	setState(259)
+		 			 	setState(267)
 		 			 	try _errHandler.sync(self)
 		 			 	_alt = try getInterpreter().adaptivePredict(_input,15,_ctx)
 		 			 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 			 		if ( _alt==1 ) {
-		 			 			setState(251)
+		 			 			setState(259)
 		 			 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			 			setState(252)
+		 			 			setState(260)
 		 			 			try tfpdef()
-		 			 			setState(255)
+		 			 			setState(263)
 		 			 			try _errHandler.sync(self)
 		 			 			_la = try _input.LA(1)
 		 			 			if (//closure
@@ -1013,9 +1155,9 @@ open class Python3Parser: Parser {
 		 			 			      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
 		 			 			      return testSet
 		 			 			 }()) {
-		 			 				setState(253)
+		 			 				setState(261)
 		 			 				try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 			 				setState(254)
+		 			 				setState(262)
 		 			 				try test()
 
 		 			 			}
@@ -1023,11 +1165,11 @@ open class Python3Parser: Parser {
 
 		 			 	 
 		 			 		}
-		 			 		setState(261)
+		 			 		setState(269)
 		 			 		try _errHandler.sync(self)
 		 			 		_alt = try getInterpreter().adaptivePredict(_input,15,_ctx)
 		 			 	}
-		 			 	setState(265)
+		 			 	setState(278)
 		 			 	try _errHandler.sync(self)
 		 			 	_la = try _input.LA(1)
 		 			 	if (//closure
@@ -1035,12 +1177,36 @@ open class Python3Parser: Parser {
 		 			 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 			 	      return testSet
 		 			 	 }()) {
-		 			 		setState(262)
+		 			 		setState(270)
 		 			 		try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			 		setState(263)
-		 			 		try match(Python3Parser.Tokens.POWER.rawValue)
-		 			 		setState(264)
-		 			 		try tfpdef()
+		 			 		setState(276)
+		 			 		try _errHandler.sync(self)
+		 			 		_la = try _input.LA(1)
+		 			 		if (//closure
+		 			 		 { () -> Bool in
+		 			 		      let testSet: Bool = _la == Python3Parser.Tokens.POWER.rawValue
+		 			 		      return testSet
+		 			 		 }()) {
+		 			 			setState(271)
+		 			 			try match(Python3Parser.Tokens.POWER.rawValue)
+		 			 			setState(272)
+		 			 			try tfpdef()
+		 			 			setState(274)
+		 			 			try _errHandler.sync(self)
+		 			 			_la = try _input.LA(1)
+		 			 			if (//closure
+		 			 			 { () -> Bool in
+		 			 			      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
+		 			 			      return testSet
+		 			 			 }()) {
+		 			 				setState(273)
+		 			 				try match(Python3Parser.Tokens.COMMA.rawValue)
+
+		 			 			}
+
+
+		 			 		}
+
 
 		 			 	}
 
@@ -1048,10 +1214,23 @@ open class Python3Parser: Parser {
 		 				break
 
 		 			case .POWER:
-		 			 	setState(267)
+		 			 	setState(280)
 		 			 	try match(Python3Parser.Tokens.POWER.rawValue)
-		 			 	setState(268)
+		 			 	setState(281)
 		 			 	try tfpdef()
+		 			 	setState(283)
+		 			 	try _errHandler.sync(self)
+		 			 	_la = try _input.LA(1)
+		 			 	if (//closure
+		 			 	 { () -> Bool in
+		 			 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
+		 			 	      return testSet
+		 			 	 }()) {
+		 			 		setState(282)
+		 			 		try match(Python3Parser.Tokens.COMMA.rawValue)
+
+		 			 	}
+
 
 		 				break
 
@@ -1067,10 +1246,9 @@ open class Python3Parser: Parser {
 		 		break
 
 		 	case .STAR:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(273)
+		 		setState(289)
 		 		try match(Python3Parser.Tokens.STAR.rawValue)
-		 		setState(275)
+		 		setState(291)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -1078,21 +1256,21 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(274)
+		 			setState(290)
 		 			try tfpdef()
 
 		 		}
 
-		 		setState(285)
+		 		setState(301)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,21,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,24,_ctx)
 		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 			if ( _alt==1 ) {
-		 				setState(277)
+		 				setState(293)
 		 				try match(Python3Parser.Tokens.COMMA.rawValue)
-		 				setState(278)
+		 				setState(294)
 		 				try tfpdef()
-		 				setState(281)
+		 				setState(297)
 		 				try _errHandler.sync(self)
 		 				_la = try _input.LA(1)
 		 				if (//closure
@@ -1100,9 +1278,9 @@ open class Python3Parser: Parser {
 		 				      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
 		 				      return testSet
 		 				 }()) {
-		 					setState(279)
+		 					setState(295)
 		 					try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 					setState(280)
+		 					setState(296)
 		 					try test()
 
 		 				}
@@ -1110,11 +1288,11 @@ open class Python3Parser: Parser {
 
 		 		 
 		 			}
-		 			setState(287)
+		 			setState(303)
 		 			try _errHandler.sync(self)
-		 			_alt = try getInterpreter().adaptivePredict(_input,21,_ctx)
+		 			_alt = try getInterpreter().adaptivePredict(_input,24,_ctx)
 		 		}
-		 		setState(291)
+		 		setState(312)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -1122,12 +1300,36 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(288)
+		 			setState(304)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(289)
-		 			try match(Python3Parser.Tokens.POWER.rawValue)
-		 			setState(290)
-		 			try tfpdef()
+		 			setState(310)
+		 			try _errHandler.sync(self)
+		 			_la = try _input.LA(1)
+		 			if (//closure
+		 			 { () -> Bool in
+		 			      let testSet: Bool = _la == Python3Parser.Tokens.POWER.rawValue
+		 			      return testSet
+		 			 }()) {
+		 				setState(305)
+		 				try match(Python3Parser.Tokens.POWER.rawValue)
+		 				setState(306)
+		 				try tfpdef()
+		 				setState(308)
+		 				try _errHandler.sync(self)
+		 				_la = try _input.LA(1)
+		 				if (//closure
+		 				 { () -> Bool in
+		 				      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
+		 				      return testSet
+		 				 }()) {
+		 					setState(307)
+		 					try match(Python3Parser.Tokens.COMMA.rawValue)
+
+		 				}
+
+
+		 			}
+
 
 		 		}
 
@@ -1135,16 +1337,29 @@ open class Python3Parser: Parser {
 		 		break
 
 		 	case .POWER:
-		 		try enterOuterAlt(_localctx, 3)
-		 		setState(293)
+		 		setState(314)
 		 		try match(Python3Parser.Tokens.POWER.rawValue)
-		 		setState(294)
+		 		setState(315)
 		 		try tfpdef()
+		 		setState(317)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 		if (//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
+		 		      return testSet
+		 		 }()) {
+		 			setState(316)
+		 			try match(Python3Parser.Tokens.COMMA.rawValue)
+
+		 		}
+
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -1154,49 +1369,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class TfpdefContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(Python3Parser.Tokens.NAME.rawValue, 0) }
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
+
+	public class TfpdefContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_tfpdef
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_tfpdef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTfpdef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTfpdef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTfpdef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTfpdef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTfpdef(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTfpdef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTfpdef(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTfpdef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tfpdef() throws -> TfpdefContext {
+	 open func tfpdef() throws -> TfpdefContext {
 		var _localctx: TfpdefContext = TfpdefContext(_ctx, getState())
-		try enterRule(_localctx, 18, Python3Parser.RULE_tfpdef)
+		try enterRule(_localctx, 20, Python3Parser.RULE_tfpdef)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(297)
+		 	setState(321)
 		 	try match(Python3Parser.Tokens.NAME.rawValue)
-		 	setState(300)
+		 	setState(324)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -1204,9 +1428,9 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COLON.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(298)
+		 		setState(322)
 		 		try match(Python3Parser.Tokens.COLON.rawValue)
-		 		setState(299)
+		 		setState(323)
 		 		try test()
 
 		 	}
@@ -1221,62 +1445,71 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class VarargslistContext:ParserRuleContext {
-		open func vfpdef() -> Array<VfpdefContext> {
-			return getRuleContexts(VfpdefContext.self)
+
+	public class VarargslistContext: ParserRuleContext {
+			open
+			func vfpdef() -> [VfpdefContext] {
+				return getRuleContexts(VfpdefContext.self)
+			}
+			open
+			func vfpdef(_ i: Int) -> VfpdefContext? {
+				return getRuleContext(VfpdefContext.self, i)
+			}
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_varargslist
 		}
-		open func vfpdef(_ i: Int) -> VfpdefContext? {
-			return getRuleContext(VfpdefContext.self,i)
-		}
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
-		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_varargslist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterVarargslist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterVarargslist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitVarargslist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitVarargslist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitVarargslist(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitVarargslist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitVarargslist(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitVarargslist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varargslist() throws -> VarargslistContext {
+	 open func varargslist() throws -> VarargslistContext {
 		var _localctx: VarargslistContext = VarargslistContext(_ctx, getState())
-		try enterRule(_localctx, 20, Python3Parser.RULE_varargslist)
+		try enterRule(_localctx, 22, Python3Parser.RULE_varargslist)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
-		 	setState(367)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(407)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .NAME:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(302)
+		 		setState(326)
 		 		try vfpdef()
-		 		setState(305)
+		 		setState(329)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -1284,23 +1517,23 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(303)
+		 			setState(327)
 		 			try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 			setState(304)
+		 			setState(328)
 		 			try test()
 
 		 		}
 
-		 		setState(315)
+		 		setState(339)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,27,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,33,_ctx)
 		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 			if ( _alt==1 ) {
-		 				setState(307)
+		 				setState(331)
 		 				try match(Python3Parser.Tokens.COMMA.rawValue)
-		 				setState(308)
+		 				setState(332)
 		 				try vfpdef()
-		 				setState(311)
+		 				setState(335)
 		 				try _errHandler.sync(self)
 		 				_la = try _input.LA(1)
 		 				if (//closure
@@ -1308,9 +1541,9 @@ open class Python3Parser: Parser {
 		 				      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
 		 				      return testSet
 		 				 }()) {
-		 					setState(309)
+		 					setState(333)
 		 					try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 					setState(310)
+		 					setState(334)
 		 					try test()
 
 		 				}
@@ -1318,11 +1551,11 @@ open class Python3Parser: Parser {
 
 		 		 
 		 			}
-		 			setState(317)
+		 			setState(341)
 		 			try _errHandler.sync(self)
-		 			_alt = try getInterpreter().adaptivePredict(_input,27,_ctx)
+		 			_alt = try getInterpreter().adaptivePredict(_input,33,_ctx)
 		 		}
-		 		setState(343)
+		 		setState(375)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -1330,15 +1563,15 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(318)
+		 			setState(342)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(341)
+		 			setState(373)
 		 			try _errHandler.sync(self)
 		 			switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 			case .STAR:
-		 			 	setState(319)
+		 			 	setState(343)
 		 			 	try match(Python3Parser.Tokens.STAR.rawValue)
-		 			 	setState(321)
+		 			 	setState(345)
 		 			 	try _errHandler.sync(self)
 		 			 	_la = try _input.LA(1)
 		 			 	if (//closure
@@ -1346,21 +1579,21 @@ open class Python3Parser: Parser {
 		 			 	      let testSet: Bool = _la == Python3Parser.Tokens.NAME.rawValue
 		 			 	      return testSet
 		 			 	 }()) {
-		 			 		setState(320)
+		 			 		setState(344)
 		 			 		try vfpdef()
 
 		 			 	}
 
-		 			 	setState(331)
+		 			 	setState(355)
 		 			 	try _errHandler.sync(self)
-		 			 	_alt = try getInterpreter().adaptivePredict(_input,30,_ctx)
+		 			 	_alt = try getInterpreter().adaptivePredict(_input,36,_ctx)
 		 			 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 			 		if ( _alt==1 ) {
-		 			 			setState(323)
+		 			 			setState(347)
 		 			 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			 			setState(324)
+		 			 			setState(348)
 		 			 			try vfpdef()
-		 			 			setState(327)
+		 			 			setState(351)
 		 			 			try _errHandler.sync(self)
 		 			 			_la = try _input.LA(1)
 		 			 			if (//closure
@@ -1368,9 +1601,9 @@ open class Python3Parser: Parser {
 		 			 			      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
 		 			 			      return testSet
 		 			 			 }()) {
-		 			 				setState(325)
+		 			 				setState(349)
 		 			 				try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 			 				setState(326)
+		 			 				setState(350)
 		 			 				try test()
 
 		 			 			}
@@ -1378,11 +1611,11 @@ open class Python3Parser: Parser {
 
 		 			 	 
 		 			 		}
-		 			 		setState(333)
+		 			 		setState(357)
 		 			 		try _errHandler.sync(self)
-		 			 		_alt = try getInterpreter().adaptivePredict(_input,30,_ctx)
+		 			 		_alt = try getInterpreter().adaptivePredict(_input,36,_ctx)
 		 			 	}
-		 			 	setState(337)
+		 			 	setState(366)
 		 			 	try _errHandler.sync(self)
 		 			 	_la = try _input.LA(1)
 		 			 	if (//closure
@@ -1390,12 +1623,36 @@ open class Python3Parser: Parser {
 		 			 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 			 	      return testSet
 		 			 	 }()) {
-		 			 		setState(334)
+		 			 		setState(358)
 		 			 		try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			 		setState(335)
-		 			 		try match(Python3Parser.Tokens.POWER.rawValue)
-		 			 		setState(336)
-		 			 		try vfpdef()
+		 			 		setState(364)
+		 			 		try _errHandler.sync(self)
+		 			 		_la = try _input.LA(1)
+		 			 		if (//closure
+		 			 		 { () -> Bool in
+		 			 		      let testSet: Bool = _la == Python3Parser.Tokens.POWER.rawValue
+		 			 		      return testSet
+		 			 		 }()) {
+		 			 			setState(359)
+		 			 			try match(Python3Parser.Tokens.POWER.rawValue)
+		 			 			setState(360)
+		 			 			try vfpdef()
+		 			 			setState(362)
+		 			 			try _errHandler.sync(self)
+		 			 			_la = try _input.LA(1)
+		 			 			if (//closure
+		 			 			 { () -> Bool in
+		 			 			      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
+		 			 			      return testSet
+		 			 			 }()) {
+		 			 				setState(361)
+		 			 				try match(Python3Parser.Tokens.COMMA.rawValue)
+
+		 			 			}
+
+
+		 			 		}
+
 
 		 			 	}
 
@@ -1403,10 +1660,23 @@ open class Python3Parser: Parser {
 		 				break
 
 		 			case .POWER:
-		 			 	setState(339)
+		 			 	setState(368)
 		 			 	try match(Python3Parser.Tokens.POWER.rawValue)
-		 			 	setState(340)
+		 			 	setState(369)
 		 			 	try vfpdef()
+		 			 	setState(371)
+		 			 	try _errHandler.sync(self)
+		 			 	_la = try _input.LA(1)
+		 			 	if (//closure
+		 			 	 { () -> Bool in
+		 			 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
+		 			 	      return testSet
+		 			 	 }()) {
+		 			 		setState(370)
+		 			 		try match(Python3Parser.Tokens.COMMA.rawValue)
+
+		 			 	}
+
 
 		 				break
 
@@ -1422,10 +1692,9 @@ open class Python3Parser: Parser {
 		 		break
 
 		 	case .STAR:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(345)
+		 		setState(377)
 		 		try match(Python3Parser.Tokens.STAR.rawValue)
-		 		setState(347)
+		 		setState(379)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -1433,21 +1702,21 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.NAME.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(346)
+		 			setState(378)
 		 			try vfpdef()
 
 		 		}
 
-		 		setState(357)
+		 		setState(389)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,36,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,45,_ctx)
 		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 			if ( _alt==1 ) {
-		 				setState(349)
+		 				setState(381)
 		 				try match(Python3Parser.Tokens.COMMA.rawValue)
-		 				setState(350)
+		 				setState(382)
 		 				try vfpdef()
-		 				setState(353)
+		 				setState(385)
 		 				try _errHandler.sync(self)
 		 				_la = try _input.LA(1)
 		 				if (//closure
@@ -1455,9 +1724,9 @@ open class Python3Parser: Parser {
 		 				      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
 		 				      return testSet
 		 				 }()) {
-		 					setState(351)
+		 					setState(383)
 		 					try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 					setState(352)
+		 					setState(384)
 		 					try test()
 
 		 				}
@@ -1465,11 +1734,11 @@ open class Python3Parser: Parser {
 
 		 		 
 		 			}
-		 			setState(359)
+		 			setState(391)
 		 			try _errHandler.sync(self)
-		 			_alt = try getInterpreter().adaptivePredict(_input,36,_ctx)
+		 			_alt = try getInterpreter().adaptivePredict(_input,45,_ctx)
 		 		}
-		 		setState(363)
+		 		setState(400)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -1477,12 +1746,36 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(360)
+		 			setState(392)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(361)
-		 			try match(Python3Parser.Tokens.POWER.rawValue)
-		 			setState(362)
-		 			try vfpdef()
+		 			setState(398)
+		 			try _errHandler.sync(self)
+		 			_la = try _input.LA(1)
+		 			if (//closure
+		 			 { () -> Bool in
+		 			      let testSet: Bool = _la == Python3Parser.Tokens.POWER.rawValue
+		 			      return testSet
+		 			 }()) {
+		 				setState(393)
+		 				try match(Python3Parser.Tokens.POWER.rawValue)
+		 				setState(394)
+		 				try vfpdef()
+		 				setState(396)
+		 				try _errHandler.sync(self)
+		 				_la = try _input.LA(1)
+		 				if (//closure
+		 				 { () -> Bool in
+		 				      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
+		 				      return testSet
+		 				 }()) {
+		 					setState(395)
+		 					try match(Python3Parser.Tokens.COMMA.rawValue)
+
+		 				}
+
+
+		 			}
+
 
 		 		}
 
@@ -1490,16 +1783,29 @@ open class Python3Parser: Parser {
 		 		break
 
 		 	case .POWER:
-		 		try enterOuterAlt(_localctx, 3)
-		 		setState(365)
+		 		setState(402)
 		 		try match(Python3Parser.Tokens.POWER.rawValue)
-		 		setState(366)
+		 		setState(403)
 		 		try vfpdef()
+		 		setState(405)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 		if (//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
+		 		      return testSet
+		 		 }()) {
+		 			setState(404)
+		 			try match(Python3Parser.Tokens.COMMA.rawValue)
+
+		 		}
+
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -1509,43 +1815,51 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class VfpdefContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(Python3Parser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_vfpdef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterVfpdef(self)
+
+	public class VfpdefContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_vfpdef
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterVfpdef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitVfpdef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitVfpdef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitVfpdef(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitVfpdef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitVfpdef(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitVfpdef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func vfpdef() throws -> VfpdefContext {
+	 open func vfpdef() throws -> VfpdefContext {
 		var _localctx: VfpdefContext = VfpdefContext(_ctx, getState())
-		try enterRule(_localctx, 22, Python3Parser.RULE_vfpdef)
+		try enterRule(_localctx, 24, Python3Parser.RULE_vfpdef)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(369)
+		 	setState(409)
 		 	try match(Python3Parser.Tokens.NAME.rawValue)
 
 		}
@@ -1557,49 +1871,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class StmtContext:ParserRuleContext {
-		open func simple_stmt() -> Simple_stmtContext? {
-			return getRuleContext(Simple_stmtContext.self,0)
+
+	public class StmtContext: ParserRuleContext {
+			open
+			func simple_stmt() -> Simple_stmtContext? {
+				return getRuleContext(Simple_stmtContext.self, 0)
+			}
+			open
+			func compound_stmt() -> Compound_stmtContext? {
+				return getRuleContext(Compound_stmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_stmt
 		}
-		open func compound_stmt() -> Compound_stmtContext? {
-			return getRuleContext(Compound_stmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitStmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitStmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stmt() throws -> StmtContext {
+	 open func stmt() throws -> StmtContext {
 		var _localctx: StmtContext = StmtContext(_ctx, getState())
-		try enterRule(_localctx, 24, Python3Parser.RULE_stmt)
+		try enterRule(_localctx, 26, Python3Parser.RULE_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(373)
+		 	setState(413)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
 		 	case .RETURN:fallthrough
 		 	case .RAISE:fallthrough
 		 	case .FROM:fallthrough
@@ -1617,15 +1940,8 @@ open class Python3Parser: Parser {
 		 	case .PASS:fallthrough
 		 	case .CONTINUE:fallthrough
 		 	case .BREAK:fallthrough
+		 	case .AWAIT:fallthrough
 		 	case .NAME:fallthrough
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:fallthrough
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:fallthrough
 		 	case .ELLIPSIS:fallthrough
 		 	case .STAR:fallthrough
 		 	case .OPEN_PAREN:fallthrough
@@ -1635,7 +1951,7 @@ open class Python3Parser: Parser {
 		 	case .NOT_OP:fallthrough
 		 	case .OPEN_BRACE:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(371)
+		 		setState(411)
 		 		try simple_stmt()
 
 		 		break
@@ -1646,14 +1962,15 @@ open class Python3Parser: Parser {
 		 	case .TRY:fallthrough
 		 	case .WITH:fallthrough
 		 	case .CLASS:fallthrough
+		 	case .ASYNC:fallthrough
 		 	case .AT:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(372)
+		 		setState(412)
 		 		try compound_stmt()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1664,43 +1981,53 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Simple_stmtContext:ParserRuleContext {
-		open func small_stmt() -> Array<Small_stmtContext> {
-			return getRuleContexts(Small_stmtContext.self)
+
+	public class Simple_stmtContext: ParserRuleContext {
+			open
+			func small_stmt() -> [Small_stmtContext] {
+				return getRuleContexts(Small_stmtContext.self)
+			}
+			open
+			func small_stmt(_ i: Int) -> Small_stmtContext? {
+				return getRuleContext(Small_stmtContext.self, i)
+			}
+			open
+			func NEWLINE() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NEWLINE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_simple_stmt
 		}
-		open func small_stmt(_ i: Int) -> Small_stmtContext? {
-			return getRuleContext(Small_stmtContext.self,i)
-		}
-		open func NEWLINE() -> TerminalNode? { return getToken(Python3Parser.Tokens.NEWLINE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_simple_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterSimple_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterSimple_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitSimple_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitSimple_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitSimple_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitSimple_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitSimple_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitSimple_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_stmt() throws -> Simple_stmtContext {
+	 open func simple_stmt() throws -> Simple_stmtContext {
 		var _localctx: Simple_stmtContext = Simple_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 26, Python3Parser.RULE_simple_stmt)
+		try enterRule(_localctx, 28, Python3Parser.RULE_simple_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -1708,25 +2035,25 @@ open class Python3Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(375)
+		 	setState(415)
 		 	try small_stmt()
-		 	setState(380)
+		 	setState(420)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,40,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,52,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(376)
+		 			setState(416)
 		 			try match(Python3Parser.Tokens.SEMI_COLON.rawValue)
-		 			setState(377)
+		 			setState(417)
 		 			try small_stmt()
 
 		 	 
 		 		}
-		 		setState(382)
+		 		setState(422)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,40,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,52,_ctx)
 		 	}
-		 	setState(384)
+		 	setState(424)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -1734,12 +2061,12 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.SEMI_COLON.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(383)
+		 		setState(423)
 		 		try match(Python3Parser.Tokens.SEMI_COLON.rawValue)
 
 		 	}
 
-		 	setState(386)
+		 	setState(426)
 		 	try match(Python3Parser.Tokens.NEWLINE.rawValue)
 
 		}
@@ -1751,81 +2078,90 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Small_stmtContext:ParserRuleContext {
-		open func expr_stmt() -> Expr_stmtContext? {
-			return getRuleContext(Expr_stmtContext.self,0)
+
+	public class Small_stmtContext: ParserRuleContext {
+			open
+			func expr_stmt() -> Expr_stmtContext? {
+				return getRuleContext(Expr_stmtContext.self, 0)
+			}
+			open
+			func del_stmt() -> Del_stmtContext? {
+				return getRuleContext(Del_stmtContext.self, 0)
+			}
+			open
+			func pass_stmt() -> Pass_stmtContext? {
+				return getRuleContext(Pass_stmtContext.self, 0)
+			}
+			open
+			func flow_stmt() -> Flow_stmtContext? {
+				return getRuleContext(Flow_stmtContext.self, 0)
+			}
+			open
+			func import_stmt() -> Import_stmtContext? {
+				return getRuleContext(Import_stmtContext.self, 0)
+			}
+			open
+			func global_stmt() -> Global_stmtContext? {
+				return getRuleContext(Global_stmtContext.self, 0)
+			}
+			open
+			func nonlocal_stmt() -> Nonlocal_stmtContext? {
+				return getRuleContext(Nonlocal_stmtContext.self, 0)
+			}
+			open
+			func assert_stmt() -> Assert_stmtContext? {
+				return getRuleContext(Assert_stmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_small_stmt
 		}
-		open func del_stmt() -> Del_stmtContext? {
-			return getRuleContext(Del_stmtContext.self,0)
-		}
-		open func pass_stmt() -> Pass_stmtContext? {
-			return getRuleContext(Pass_stmtContext.self,0)
-		}
-		open func flow_stmt() -> Flow_stmtContext? {
-			return getRuleContext(Flow_stmtContext.self,0)
-		}
-		open func import_stmt() -> Import_stmtContext? {
-			return getRuleContext(Import_stmtContext.self,0)
-		}
-		open func global_stmt() -> Global_stmtContext? {
-			return getRuleContext(Global_stmtContext.self,0)
-		}
-		open func nonlocal_stmt() -> Nonlocal_stmtContext? {
-			return getRuleContext(Nonlocal_stmtContext.self,0)
-		}
-		open func assert_stmt() -> Assert_stmtContext? {
-			return getRuleContext(Assert_stmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_small_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterSmall_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterSmall_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitSmall_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitSmall_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitSmall_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitSmall_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitSmall_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitSmall_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func small_stmt() throws -> Small_stmtContext {
+	 open func small_stmt() throws -> Small_stmtContext {
 		var _localctx: Small_stmtContext = Small_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 28, Python3Parser.RULE_small_stmt)
+		try enterRule(_localctx, 30, Python3Parser.RULE_small_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(396)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(436)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
 		 	case .LAMBDA:fallthrough
 		 	case .NOT:fallthrough
 		 	case .NONE:fallthrough
 		 	case .TRUE:fallthrough
 		 	case .FALSE:fallthrough
+		 	case .AWAIT:fallthrough
 		 	case .NAME:fallthrough
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:fallthrough
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:fallthrough
 		 	case .ELLIPSIS:fallthrough
 		 	case .STAR:fallthrough
 		 	case .OPEN_PAREN:fallthrough
@@ -1834,22 +2170,19 @@ open class Python3Parser: Parser {
 		 	case .MINUS:fallthrough
 		 	case .NOT_OP:fallthrough
 		 	case .OPEN_BRACE:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(388)
+		 		setState(428)
 		 		try expr_stmt()
 
 		 		break
 
 		 	case .DEL:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(389)
+		 		setState(429)
 		 		try del_stmt()
 
 		 		break
 
 		 	case .PASS:
-		 		try enterOuterAlt(_localctx, 3)
-		 		setState(390)
+		 		setState(430)
 		 		try pass_stmt()
 
 		 		break
@@ -1858,42 +2191,38 @@ open class Python3Parser: Parser {
 		 	case .YIELD:fallthrough
 		 	case .CONTINUE:fallthrough
 		 	case .BREAK:
-		 		try enterOuterAlt(_localctx, 4)
-		 		setState(391)
+		 		setState(431)
 		 		try flow_stmt()
 
 		 		break
 		 	case .FROM:fallthrough
 		 	case .IMPORT:
-		 		try enterOuterAlt(_localctx, 5)
-		 		setState(392)
+		 		setState(432)
 		 		try import_stmt()
 
 		 		break
 
 		 	case .GLOBAL:
-		 		try enterOuterAlt(_localctx, 6)
-		 		setState(393)
+		 		setState(433)
 		 		try global_stmt()
 
 		 		break
 
 		 	case .NONLOCAL:
-		 		try enterOuterAlt(_localctx, 7)
-		 		setState(394)
+		 		setState(434)
 		 		try nonlocal_stmt()
 
 		 		break
 
 		 	case .ASSERT:
-		 		try enterOuterAlt(_localctx, 8)
-		 		setState(395)
+		 		setState(435)
 		 		try assert_stmt()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -1903,65 +2232,85 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Expr_stmtContext:ParserRuleContext {
-		open func testlist_star_expr() -> Array<Testlist_star_exprContext> {
-			return getRuleContexts(Testlist_star_exprContext.self)
+
+	public class Expr_stmtContext: ParserRuleContext {
+			open
+			func testlist_star_expr() -> [Testlist_star_exprContext] {
+				return getRuleContexts(Testlist_star_exprContext.self)
+			}
+			open
+			func testlist_star_expr(_ i: Int) -> Testlist_star_exprContext? {
+				return getRuleContext(Testlist_star_exprContext.self, i)
+			}
+			open
+			func annassign() -> AnnassignContext? {
+				return getRuleContext(AnnassignContext.self, 0)
+			}
+			open
+			func augassign() -> AugassignContext? {
+				return getRuleContext(AugassignContext.self, 0)
+			}
+			open
+			func yield_expr() -> [Yield_exprContext] {
+				return getRuleContexts(Yield_exprContext.self)
+			}
+			open
+			func yield_expr(_ i: Int) -> Yield_exprContext? {
+				return getRuleContext(Yield_exprContext.self, i)
+			}
+			open
+			func testlist() -> TestlistContext? {
+				return getRuleContext(TestlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_expr_stmt
 		}
-		open func testlist_star_expr(_ i: Int) -> Testlist_star_exprContext? {
-			return getRuleContext(Testlist_star_exprContext.self,i)
-		}
-		open func augassign() -> AugassignContext? {
-			return getRuleContext(AugassignContext.self,0)
-		}
-		open func yield_expr() -> Array<Yield_exprContext> {
-			return getRuleContexts(Yield_exprContext.self)
-		}
-		open func yield_expr(_ i: Int) -> Yield_exprContext? {
-			return getRuleContext(Yield_exprContext.self,i)
-		}
-		open func testlist() -> TestlistContext? {
-			return getRuleContext(TestlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_expr_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterExpr_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterExpr_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitExpr_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitExpr_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitExpr_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitExpr_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitExpr_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitExpr_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr_stmt() throws -> Expr_stmtContext {
+	 open func expr_stmt() throws -> Expr_stmtContext {
 		var _localctx: Expr_stmtContext = Expr_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 30, Python3Parser.RULE_expr_stmt)
+		try enterRule(_localctx, 32, Python3Parser.RULE_expr_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(398)
+		 	setState(438)
 		 	try testlist_star_expr()
-		 	setState(414)
+		 	setState(455)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .COLON:
+		 		setState(439)
+		 		try annassign()
+
+		 		break
 		 	case .ADD_ASSIGN:fallthrough
 		 	case .SUB_ASSIGN:fallthrough
 		 	case .MULT_ASSIGN:fallthrough
@@ -1975,51 +2324,45 @@ open class Python3Parser: Parser {
 		 	case .RIGHT_SHIFT_ASSIGN:fallthrough
 		 	case .POWER_ASSIGN:fallthrough
 		 	case .IDIV_ASSIGN:
-		 		setState(399)
+		 		setState(440)
 		 		try augassign()
-		 		setState(402)
+		 		setState(443)
 		 		try _errHandler.sync(self)
 		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 		case .YIELD:
-		 			setState(400)
+		 			setState(441)
 		 			try yield_expr()
 
 		 			break
+		 		case .STRING:fallthrough
+		 		case .NUMBER:fallthrough
 		 		case .LAMBDA:fallthrough
 		 		case .NOT:fallthrough
 		 		case .NONE:fallthrough
 		 		case .TRUE:fallthrough
 		 		case .FALSE:fallthrough
+		 		case .AWAIT:fallthrough
 		 		case .NAME:fallthrough
-		 		case .STRING_LITERAL:fallthrough
-		 		case .BYTES_LITERAL:fallthrough
-		 		case .DECIMAL_INTEGER:fallthrough
-		 		case .OCT_INTEGER:fallthrough
-		 		case .HEX_INTEGER:fallthrough
-		 		case .BIN_INTEGER:fallthrough
-		 		case .FLOAT_NUMBER:fallthrough
-		 		case .IMAG_NUMBER:fallthrough
 		 		case .ELLIPSIS:fallthrough
-		 		case .STAR:fallthrough
 		 		case .OPEN_PAREN:fallthrough
 		 		case .OPEN_BRACK:fallthrough
 		 		case .ADD:fallthrough
 		 		case .MINUS:fallthrough
 		 		case .NOT_OP:fallthrough
 		 		case .OPEN_BRACE:
-		 			setState(401)
+		 			setState(442)
 		 			try testlist()
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
 		 	case .NEWLINE:fallthrough
 		 	case .SEMI_COLON:fallthrough
 		 	case .ASSIGN:
-		 		setState(411)
+		 		setState(452)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -2027,30 +2370,25 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(404)
+		 			setState(445)
 		 			try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 			setState(407)
+		 			setState(448)
 		 			try _errHandler.sync(self)
 		 			switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 			case .YIELD:
-		 				setState(405)
+		 				setState(446)
 		 				try yield_expr()
 
 		 				break
+		 			case .STRING:fallthrough
+		 			case .NUMBER:fallthrough
 		 			case .LAMBDA:fallthrough
 		 			case .NOT:fallthrough
 		 			case .NONE:fallthrough
 		 			case .TRUE:fallthrough
 		 			case .FALSE:fallthrough
+		 			case .AWAIT:fallthrough
 		 			case .NAME:fallthrough
-		 			case .STRING_LITERAL:fallthrough
-		 			case .BYTES_LITERAL:fallthrough
-		 			case .DECIMAL_INTEGER:fallthrough
-		 			case .OCT_INTEGER:fallthrough
-		 			case .HEX_INTEGER:fallthrough
-		 			case .BIN_INTEGER:fallthrough
-		 			case .FLOAT_NUMBER:fallthrough
-		 			case .IMAG_NUMBER:fallthrough
 		 			case .ELLIPSIS:fallthrough
 		 			case .STAR:fallthrough
 		 			case .OPEN_PAREN:fallthrough
@@ -2059,23 +2397,23 @@ open class Python3Parser: Parser {
 		 			case .MINUS:fallthrough
 		 			case .NOT_OP:fallthrough
 		 			case .OPEN_BRACE:
-		 				setState(406)
+		 				setState(447)
 		 				try testlist_star_expr()
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 
 
-		 			setState(413)
+		 			setState(454)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -2087,48 +2425,135 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Testlist_star_exprContext:ParserRuleContext {
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
+
+	public class AnnassignContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_annassign
 		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open func star_expr() -> Array<Star_exprContext> {
-			return getRuleContexts(Star_exprContext.self)
-		}
-		open func star_expr(_ i: Int) -> Star_exprContext? {
-			return getRuleContext(Star_exprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_testlist_star_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTestlist_star_expr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterAnnassign(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTestlist_star_expr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitAnnassign(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTestlist_star_expr(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTestlist_star_expr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitAnnassign(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitAnnassign(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func testlist_star_expr() throws -> Testlist_star_exprContext {
+	 open func annassign() throws -> AnnassignContext {
+		var _localctx: AnnassignContext = AnnassignContext(_ctx, getState())
+		try enterRule(_localctx, 34, Python3Parser.RULE_annassign)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(457)
+		 	try match(Python3Parser.Tokens.COLON.rawValue)
+		 	setState(458)
+		 	try test()
+		 	setState(461)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.ASSIGN.rawValue
+		 	      return testSet
+		 	 }()) {
+		 		setState(459)
+		 		try match(Python3Parser.Tokens.ASSIGN.rawValue)
+		 		setState(460)
+		 		try test()
+
+		 	}
+
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class Testlist_star_exprContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+			open
+			func star_expr() -> [Star_exprContext] {
+				return getRuleContexts(Star_exprContext.self)
+			}
+			open
+			func star_expr(_ i: Int) -> Star_exprContext? {
+				return getRuleContext(Star_exprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_testlist_star_expr
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTestlist_star_expr(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTestlist_star_expr(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTestlist_star_expr(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTestlist_star_expr(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func testlist_star_expr() throws -> Testlist_star_exprContext {
 		var _localctx: Testlist_star_exprContext = Testlist_star_exprContext(_ctx, getState())
-		try enterRule(_localctx, 32, Python3Parser.RULE_testlist_star_expr)
+		try enterRule(_localctx, 36, Python3Parser.RULE_testlist_star_expr)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -2136,51 +2561,85 @@ open class Python3Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(418)
+		 	setState(465)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,47, _ctx)) {
-		 	case 1:
-		 		setState(416)
+		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
+		 	case .LAMBDA:fallthrough
+		 	case .NOT:fallthrough
+		 	case .NONE:fallthrough
+		 	case .TRUE:fallthrough
+		 	case .FALSE:fallthrough
+		 	case .AWAIT:fallthrough
+		 	case .NAME:fallthrough
+		 	case .ELLIPSIS:fallthrough
+		 	case .OPEN_PAREN:fallthrough
+		 	case .OPEN_BRACK:fallthrough
+		 	case .ADD:fallthrough
+		 	case .MINUS:fallthrough
+		 	case .NOT_OP:fallthrough
+		 	case .OPEN_BRACE:
+		 		setState(463)
 		 		try test()
 
 		 		break
-		 	case 2:
-		 		setState(417)
+
+		 	case .STAR:
+		 		setState(464)
 		 		try star_expr()
 
 		 		break
-		 	default: break
+		 	default:
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
-		 	setState(427)
+		 	setState(474)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,49,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,62,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(420)
+		 			setState(467)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(423)
+		 			setState(470)
 		 			try _errHandler.sync(self)
-		 			switch(try getInterpreter().adaptivePredict(_input,48, _ctx)) {
-		 			case 1:
-		 				setState(421)
+		 			switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 			case .STRING:fallthrough
+		 			case .NUMBER:fallthrough
+		 			case .LAMBDA:fallthrough
+		 			case .NOT:fallthrough
+		 			case .NONE:fallthrough
+		 			case .TRUE:fallthrough
+		 			case .FALSE:fallthrough
+		 			case .AWAIT:fallthrough
+		 			case .NAME:fallthrough
+		 			case .ELLIPSIS:fallthrough
+		 			case .OPEN_PAREN:fallthrough
+		 			case .OPEN_BRACK:fallthrough
+		 			case .ADD:fallthrough
+		 			case .MINUS:fallthrough
+		 			case .NOT_OP:fallthrough
+		 			case .OPEN_BRACE:
+		 				setState(468)
 		 				try test()
 
 		 				break
-		 			case 2:
-		 				setState(422)
+
+		 			case .STAR:
+		 				setState(469)
 		 				try star_expr()
 
 		 				break
-		 			default: break
+		 			default:
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 
 		 	 
 		 		}
-		 		setState(429)
+		 		setState(476)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,49,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,62,_ctx)
 		 	}
-		 	setState(431)
+		 	setState(478)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -2188,7 +2647,7 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(430)
+		 		setState(477)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
 
 		 	}
@@ -2203,49 +2662,54 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class AugassignContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_augassign }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterAugassign(self)
+
+	public class AugassignContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_augassign
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterAugassign(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitAugassign(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitAugassign(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitAugassign(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitAugassign(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitAugassign(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitAugassign(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func augassign() throws -> AugassignContext {
+	 open func augassign() throws -> AugassignContext {
 		var _localctx: AugassignContext = AugassignContext(_ctx, getState())
-		try enterRule(_localctx, 34, Python3Parser.RULE_augassign)
+		try enterRule(_localctx, 38, Python3Parser.RULE_augassign)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(433)
+		 	setState(480)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
 		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.ADD_ASSIGN.rawValue,Python3Parser.Tokens.SUB_ASSIGN.rawValue,Python3Parser.Tokens.MULT_ASSIGN.rawValue,Python3Parser.Tokens.AT_ASSIGN.rawValue,Python3Parser.Tokens.DIV_ASSIGN.rawValue,Python3Parser.Tokens.MOD_ASSIGN.rawValue,Python3Parser.Tokens.AND_ASSIGN.rawValue,Python3Parser.Tokens.OR_ASSIGN.rawValue,Python3Parser.Tokens.XOR_ASSIGN.rawValue,Python3Parser.Tokens.LEFT_SHIFT_ASSIGN.rawValue,Python3Parser.Tokens.RIGHT_SHIFT_ASSIGN.rawValue,Python3Parser.Tokens.POWER_ASSIGN.rawValue,Python3Parser.Tokens.IDIV_ASSIGN.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 78)
+		 	    return  Utils.testBitLeftShiftArray(testArray, 83)
 		 	}()
 		 	      return testSet
 		 	 }())) {
@@ -2265,48 +2729,53 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Del_stmtContext:ParserRuleContext {
-		open func DEL() -> TerminalNode? { return getToken(Python3Parser.Tokens.DEL.rawValue, 0) }
-		open func exprlist() -> ExprlistContext? {
-			return getRuleContext(ExprlistContext.self,0)
+
+	public class Del_stmtContext: ParserRuleContext {
+			open
+			func exprlist() -> ExprlistContext? {
+				return getRuleContext(ExprlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_del_stmt
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_del_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterDel_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterDel_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitDel_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitDel_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitDel_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitDel_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitDel_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitDel_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func del_stmt() throws -> Del_stmtContext {
+	 open func del_stmt() throws -> Del_stmtContext {
 		var _localctx: Del_stmtContext = Del_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 36, Python3Parser.RULE_del_stmt)
+		try enterRule(_localctx, 40, Python3Parser.RULE_del_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(435)
+		 	setState(482)
 		 	try match(Python3Parser.Tokens.DEL.rawValue)
-		 	setState(436)
+		 	setState(483)
 		 	try exprlist()
 
 		}
@@ -2318,43 +2787,47 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Pass_stmtContext:ParserRuleContext {
-		open func PASS() -> TerminalNode? { return getToken(Python3Parser.Tokens.PASS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_pass_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterPass_stmt(self)
+
+	public class Pass_stmtContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_pass_stmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterPass_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitPass_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitPass_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitPass_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitPass_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitPass_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitPass_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pass_stmt() throws -> Pass_stmtContext {
+	 open func pass_stmt() throws -> Pass_stmtContext {
 		var _localctx: Pass_stmtContext = Pass_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 38, Python3Parser.RULE_pass_stmt)
+		try enterRule(_localctx, 42, Python3Parser.RULE_pass_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(438)
+		 	setState(485)
 		 	try match(Python3Parser.Tokens.PASS.rawValue)
 
 		}
@@ -2366,94 +2839,104 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Flow_stmtContext:ParserRuleContext {
-		open func break_stmt() -> Break_stmtContext? {
-			return getRuleContext(Break_stmtContext.self,0)
+
+	public class Flow_stmtContext: ParserRuleContext {
+			open
+			func break_stmt() -> Break_stmtContext? {
+				return getRuleContext(Break_stmtContext.self, 0)
+			}
+			open
+			func continue_stmt() -> Continue_stmtContext? {
+				return getRuleContext(Continue_stmtContext.self, 0)
+			}
+			open
+			func return_stmt() -> Return_stmtContext? {
+				return getRuleContext(Return_stmtContext.self, 0)
+			}
+			open
+			func raise_stmt() -> Raise_stmtContext? {
+				return getRuleContext(Raise_stmtContext.self, 0)
+			}
+			open
+			func yield_stmt() -> Yield_stmtContext? {
+				return getRuleContext(Yield_stmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_flow_stmt
 		}
-		open func continue_stmt() -> Continue_stmtContext? {
-			return getRuleContext(Continue_stmtContext.self,0)
-		}
-		open func return_stmt() -> Return_stmtContext? {
-			return getRuleContext(Return_stmtContext.self,0)
-		}
-		open func raise_stmt() -> Raise_stmtContext? {
-			return getRuleContext(Raise_stmtContext.self,0)
-		}
-		open func yield_stmt() -> Yield_stmtContext? {
-			return getRuleContext(Yield_stmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_flow_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterFlow_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterFlow_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitFlow_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitFlow_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitFlow_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitFlow_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitFlow_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitFlow_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func flow_stmt() throws -> Flow_stmtContext {
+	 open func flow_stmt() throws -> Flow_stmtContext {
 		var _localctx: Flow_stmtContext = Flow_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 40, Python3Parser.RULE_flow_stmt)
+		try enterRule(_localctx, 44, Python3Parser.RULE_flow_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(445)
+		 	setState(492)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .BREAK:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(440)
+		 		setState(487)
 		 		try break_stmt()
 
 		 		break
 
 		 	case .CONTINUE:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(441)
+		 		setState(488)
 		 		try continue_stmt()
 
 		 		break
 
 		 	case .RETURN:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(442)
+		 		setState(489)
 		 		try return_stmt()
 
 		 		break
 
 		 	case .RAISE:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(443)
+		 		setState(490)
 		 		try raise_stmt()
 
 		 		break
 
 		 	case .YIELD:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(444)
+		 		setState(491)
 		 		try yield_stmt()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2464,43 +2947,47 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Break_stmtContext:ParserRuleContext {
-		open func BREAK() -> TerminalNode? { return getToken(Python3Parser.Tokens.BREAK.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_break_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterBreak_stmt(self)
+
+	public class Break_stmtContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_break_stmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterBreak_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitBreak_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitBreak_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitBreak_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitBreak_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitBreak_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitBreak_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func break_stmt() throws -> Break_stmtContext {
+	 open func break_stmt() throws -> Break_stmtContext {
 		var _localctx: Break_stmtContext = Break_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 42, Python3Parser.RULE_break_stmt)
+		try enterRule(_localctx, 46, Python3Parser.RULE_break_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(447)
+		 	setState(494)
 		 	try match(Python3Parser.Tokens.BREAK.rawValue)
 
 		}
@@ -2512,43 +2999,47 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Continue_stmtContext:ParserRuleContext {
-		open func CONTINUE() -> TerminalNode? { return getToken(Python3Parser.Tokens.CONTINUE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_continue_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterContinue_stmt(self)
+
+	public class Continue_stmtContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_continue_stmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterContinue_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitContinue_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitContinue_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitContinue_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitContinue_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitContinue_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitContinue_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func continue_stmt() throws -> Continue_stmtContext {
+	 open func continue_stmt() throws -> Continue_stmtContext {
 		var _localctx: Continue_stmtContext = Continue_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 44, Python3Parser.RULE_continue_stmt)
+		try enterRule(_localctx, 48, Python3Parser.RULE_continue_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(449)
+		 	setState(496)
 		 	try match(Python3Parser.Tokens.CONTINUE.rawValue)
 
 		}
@@ -2560,60 +3051,69 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Return_stmtContext:ParserRuleContext {
-		open func RETURN() -> TerminalNode? { return getToken(Python3Parser.Tokens.RETURN.rawValue, 0) }
-		open func testlist() -> TestlistContext? {
-			return getRuleContext(TestlistContext.self,0)
+
+	public class Return_stmtContext: ParserRuleContext {
+			open
+			func testlist() -> TestlistContext? {
+				return getRuleContext(TestlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_return_stmt
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_return_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterReturn_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterReturn_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitReturn_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitReturn_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitReturn_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitReturn_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitReturn_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitReturn_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func return_stmt() throws -> Return_stmtContext {
+	 open func return_stmt() throws -> Return_stmtContext {
 		var _localctx: Return_stmtContext = Return_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 46, Python3Parser.RULE_return_stmt)
+		try enterRule(_localctx, 50, Python3Parser.RULE_return_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(451)
+		 	setState(498)
 		 	try match(Python3Parser.Tokens.RETURN.rawValue)
-		 	setState(453)
+		 	setState(500)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 	      var testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
+		 	          testSet = testSet || {  () -> Bool in
+		 	             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 	              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(452)
+		 		setState(499)
 		 		try testlist()
 
 		 	}
@@ -2628,45 +3128,51 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Yield_stmtContext:ParserRuleContext {
-		open func yield_expr() -> Yield_exprContext? {
-			return getRuleContext(Yield_exprContext.self,0)
+
+	public class Yield_stmtContext: ParserRuleContext {
+			open
+			func yield_expr() -> Yield_exprContext? {
+				return getRuleContext(Yield_exprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_yield_stmt
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_yield_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterYield_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterYield_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitYield_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitYield_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitYield_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitYield_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitYield_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitYield_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func yield_stmt() throws -> Yield_stmtContext {
+	 open func yield_stmt() throws -> Yield_stmtContext {
 		var _localctx: Yield_stmtContext = Yield_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 48, Python3Parser.RULE_yield_stmt)
+		try enterRule(_localctx, 52, Python3Parser.RULE_yield_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(455)
+		 	setState(502)
 		 	try yield_expr()
 
 		}
@@ -2678,66 +3184,75 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Raise_stmtContext:ParserRuleContext {
-		open func RAISE() -> TerminalNode? { return getToken(Python3Parser.Tokens.RAISE.rawValue, 0) }
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
+
+	public class Raise_stmtContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_raise_stmt
 		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open func FROM() -> TerminalNode? { return getToken(Python3Parser.Tokens.FROM.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_raise_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterRaise_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterRaise_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitRaise_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitRaise_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitRaise_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitRaise_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitRaise_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitRaise_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raise_stmt() throws -> Raise_stmtContext {
+	 open func raise_stmt() throws -> Raise_stmtContext {
 		var _localctx: Raise_stmtContext = Raise_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 50, Python3Parser.RULE_raise_stmt)
+		try enterRule(_localctx, 54, Python3Parser.RULE_raise_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(457)
+		 	setState(504)
 		 	try match(Python3Parser.Tokens.RAISE.rawValue)
-		 	setState(463)
+		 	setState(510)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 	      var testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
+		 	          testSet = testSet || {  () -> Bool in
+		 	             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 	              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(458)
+		 		setState(505)
 		 		try test()
-		 		setState(461)
+		 		setState(508)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -2745,9 +3260,9 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.FROM.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(459)
+		 			setState(506)
 		 			try match(Python3Parser.Tokens.FROM.rawValue)
-		 			setState(460)
+		 			setState(507)
 		 			try test()
 
 		 		}
@@ -2765,64 +3280,71 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Import_stmtContext:ParserRuleContext {
-		open func import_name() -> Import_nameContext? {
-			return getRuleContext(Import_nameContext.self,0)
+
+	public class Import_stmtContext: ParserRuleContext {
+			open
+			func import_name() -> Import_nameContext? {
+				return getRuleContext(Import_nameContext.self, 0)
+			}
+			open
+			func import_from() -> Import_fromContext? {
+				return getRuleContext(Import_fromContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_import_stmt
 		}
-		open func import_from() -> Import_fromContext? {
-			return getRuleContext(Import_fromContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_import_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterImport_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterImport_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitImport_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitImport_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitImport_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitImport_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitImport_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitImport_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_stmt() throws -> Import_stmtContext {
+	 open func import_stmt() throws -> Import_stmtContext {
 		var _localctx: Import_stmtContext = Import_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 52, Python3Parser.RULE_import_stmt)
+		try enterRule(_localctx, 56, Python3Parser.RULE_import_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(467)
+		 	setState(514)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .IMPORT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(465)
+		 		setState(512)
 		 		try import_name()
 
 		 		break
 
 		 	case .FROM:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(466)
+		 		setState(513)
 		 		try import_from()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2833,48 +3355,53 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Import_nameContext:ParserRuleContext {
-		open func IMPORT() -> TerminalNode? { return getToken(Python3Parser.Tokens.IMPORT.rawValue, 0) }
-		open func dotted_as_names() -> Dotted_as_namesContext? {
-			return getRuleContext(Dotted_as_namesContext.self,0)
+
+	public class Import_nameContext: ParserRuleContext {
+			open
+			func dotted_as_names() -> Dotted_as_namesContext? {
+				return getRuleContext(Dotted_as_namesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_import_name
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_import_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterImport_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterImport_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitImport_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitImport_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitImport_name(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitImport_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitImport_name(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitImport_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_name() throws -> Import_nameContext {
+	 open func import_name() throws -> Import_nameContext {
 		var _localctx: Import_nameContext = Import_nameContext(_ctx, getState())
-		try enterRule(_localctx, 54, Python3Parser.RULE_import_name)
+		try enterRule(_localctx, 58, Python3Parser.RULE_import_name)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(469)
+		 	setState(516)
 		 	try match(Python3Parser.Tokens.IMPORT.rawValue)
-		 	setState(470)
+		 	setState(517)
 		 	try dotted_as_names()
 
 		}
@@ -2886,57 +3413,62 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Import_fromContext:ParserRuleContext {
-		open func FROM() -> TerminalNode? { return getToken(Python3Parser.Tokens.FROM.rawValue, 0) }
-		open func IMPORT() -> TerminalNode? { return getToken(Python3Parser.Tokens.IMPORT.rawValue, 0) }
-		open func dotted_name() -> Dotted_nameContext? {
-			return getRuleContext(Dotted_nameContext.self,0)
+
+	public class Import_fromContext: ParserRuleContext {
+			open
+			func dotted_name() -> Dotted_nameContext? {
+				return getRuleContext(Dotted_nameContext.self, 0)
+			}
+			open
+			func import_as_names() -> Import_as_namesContext? {
+				return getRuleContext(Import_as_namesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_import_from
 		}
-		open func import_as_names() -> Import_as_namesContext? {
-			return getRuleContext(Import_as_namesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_import_from }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterImport_from(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterImport_from(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitImport_from(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitImport_from(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitImport_from(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitImport_from(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitImport_from(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitImport_from(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_from() throws -> Import_fromContext {
+	 open func import_from() throws -> Import_fromContext {
 		var _localctx: Import_fromContext = Import_fromContext(_ctx, getState())
-		try enterRule(_localctx, 56, Python3Parser.RULE_import_from)
+		try enterRule(_localctx, 60, Python3Parser.RULE_import_from)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(472)
+		 	setState(519)
 		 	try match(Python3Parser.Tokens.FROM.rawValue)
-		 	setState(485)
+		 	setState(532)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,58, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,71, _ctx)) {
 		 	case 1:
-		 		setState(476)
+		 		setState(523)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		while (//closure
@@ -2944,7 +3476,7 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.DOT.rawValue || _la == Python3Parser.Tokens.ELLIPSIS.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(473)
+		 			setState(520)
 		 			_la = try _input.LA(1)
 		 			if (!(//closure
 		 			 { () -> Bool in
@@ -2959,20 +3491,20 @@ open class Python3Parser: Parser {
 		 			}
 
 
-		 			setState(478)
+		 			setState(525)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		}
-		 		setState(479)
+		 		setState(526)
 		 		try dotted_name()
 
 		 		break
 		 	case 2:
-		 		setState(481) 
+		 		setState(528) 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		repeat {
-		 			setState(480)
+		 			setState(527)
 		 			_la = try _input.LA(1)
 		 			if (!(//closure
 		 			 { () -> Bool in
@@ -2987,7 +3519,7 @@ open class Python3Parser: Parser {
 		 			}
 
 
-		 			setState(483); 
+		 			setState(530); 
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		} while (//closure
@@ -2999,35 +3531,36 @@ open class Python3Parser: Parser {
 		 		break
 		 	default: break
 		 	}
-		 	setState(487)
+		 	setState(534)
 		 	try match(Python3Parser.Tokens.IMPORT.rawValue)
-		 	setState(494)
+		 	setState(541)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .STAR:
-		 		setState(488)
+		 		setState(535)
 		 		try match(Python3Parser.Tokens.STAR.rawValue)
 
 		 		break
 
 		 	case .OPEN_PAREN:
-		 		setState(489)
+		 		setState(536)
 		 		try match(Python3Parser.Tokens.OPEN_PAREN.rawValue)
-		 		setState(490)
+		 		setState(537)
 		 		try import_as_names()
-		 		setState(491)
+		 		setState(538)
 		 		try match(Python3Parser.Tokens.CLOSE_PAREN.rawValue)
 
 		 		break
 
 		 	case .NAME:
-		 		setState(493)
+		 		setState(540)
 		 		try import_as_names()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
+
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3038,50 +3571,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Import_as_nameContext:ParserRuleContext {
-		open func NAME() -> Array<TerminalNode> { return getTokens(Python3Parser.Tokens.NAME.rawValue) }
-		open func NAME(_ i:Int) -> TerminalNode?{
-			return getToken(Python3Parser.Tokens.NAME.rawValue, i)
+
+	public class Import_as_nameContext: ParserRuleContext {
+			open
+			func NAME() -> [TerminalNode] {
+				return getTokens(Python3Parser.Tokens.NAME.rawValue)
+			}
+			open
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_import_as_name
 		}
-		open func AS() -> TerminalNode? { return getToken(Python3Parser.Tokens.AS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_import_as_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterImport_as_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterImport_as_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitImport_as_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitImport_as_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitImport_as_name(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitImport_as_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitImport_as_name(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitImport_as_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_as_name() throws -> Import_as_nameContext {
+	 open func import_as_name() throws -> Import_as_nameContext {
 		var _localctx: Import_as_nameContext = Import_as_nameContext(_ctx, getState())
-		try enterRule(_localctx, 58, Python3Parser.RULE_import_as_name)
+		try enterRule(_localctx, 62, Python3Parser.RULE_import_as_name)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(496)
+		 	setState(543)
 		 	try match(Python3Parser.Tokens.NAME.rawValue)
-		 	setState(499)
+		 	setState(546)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -3089,9 +3630,9 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.AS.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(497)
+		 		setState(544)
 		 		try match(Python3Parser.Tokens.AS.rawValue)
-		 		setState(498)
+		 		setState(545)
 		 		try match(Python3Parser.Tokens.NAME.rawValue)
 
 		 	}
@@ -3106,50 +3647,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dotted_as_nameContext:ParserRuleContext {
-		open func dotted_name() -> Dotted_nameContext? {
-			return getRuleContext(Dotted_nameContext.self,0)
+
+	public class Dotted_as_nameContext: ParserRuleContext {
+			open
+			func dotted_name() -> Dotted_nameContext? {
+				return getRuleContext(Dotted_nameContext.self, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_dotted_as_name
 		}
-		open func AS() -> TerminalNode? { return getToken(Python3Parser.Tokens.AS.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(Python3Parser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_dotted_as_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterDotted_as_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterDotted_as_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitDotted_as_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitDotted_as_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitDotted_as_name(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitDotted_as_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitDotted_as_name(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitDotted_as_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dotted_as_name() throws -> Dotted_as_nameContext {
+	 open func dotted_as_name() throws -> Dotted_as_nameContext {
 		var _localctx: Dotted_as_nameContext = Dotted_as_nameContext(_ctx, getState())
-		try enterRule(_localctx, 60, Python3Parser.RULE_dotted_as_name)
+		try enterRule(_localctx, 64, Python3Parser.RULE_dotted_as_name)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(501)
+		 	setState(548)
 		 	try dotted_name()
-		 	setState(504)
+		 	setState(551)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -3157,9 +3706,9 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.AS.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(502)
+		 		setState(549)
 		 		try match(Python3Parser.Tokens.AS.rawValue)
-		 		setState(503)
+		 		setState(550)
 		 		try match(Python3Parser.Tokens.NAME.rawValue)
 
 		 	}
@@ -3174,42 +3723,49 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Import_as_namesContext:ParserRuleContext {
-		open func import_as_name() -> Array<Import_as_nameContext> {
-			return getRuleContexts(Import_as_nameContext.self)
+
+	public class Import_as_namesContext: ParserRuleContext {
+			open
+			func import_as_name() -> [Import_as_nameContext] {
+				return getRuleContexts(Import_as_nameContext.self)
+			}
+			open
+			func import_as_name(_ i: Int) -> Import_as_nameContext? {
+				return getRuleContext(Import_as_nameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_import_as_names
 		}
-		open func import_as_name(_ i: Int) -> Import_as_nameContext? {
-			return getRuleContext(Import_as_nameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_import_as_names }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterImport_as_names(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterImport_as_names(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitImport_as_names(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitImport_as_names(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitImport_as_names(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitImport_as_names(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitImport_as_names(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitImport_as_names(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_as_names() throws -> Import_as_namesContext {
+	 open func import_as_names() throws -> Import_as_namesContext {
 		var _localctx: Import_as_namesContext = Import_as_namesContext(_ctx, getState())
-		try enterRule(_localctx, 62, Python3Parser.RULE_import_as_names)
+		try enterRule(_localctx, 66, Python3Parser.RULE_import_as_names)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -3217,25 +3773,25 @@ open class Python3Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(506)
+		 	setState(553)
 		 	try import_as_name()
-		 	setState(511)
+		 	setState(558)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,62,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,75,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(507)
+		 			setState(554)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(508)
+		 			setState(555)
 		 			try import_as_name()
 
 		 	 
 		 		}
-		 		setState(513)
+		 		setState(560)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,62,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,75,_ctx)
 		 	}
-		 	setState(515)
+		 	setState(562)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -3243,7 +3799,7 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(514)
+		 		setState(561)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
 
 		 	}
@@ -3258,51 +3814,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dotted_as_namesContext:ParserRuleContext {
-		open func dotted_as_name() -> Array<Dotted_as_nameContext> {
-			return getRuleContexts(Dotted_as_nameContext.self)
+
+	public class Dotted_as_namesContext: ParserRuleContext {
+			open
+			func dotted_as_name() -> [Dotted_as_nameContext] {
+				return getRuleContexts(Dotted_as_nameContext.self)
+			}
+			open
+			func dotted_as_name(_ i: Int) -> Dotted_as_nameContext? {
+				return getRuleContext(Dotted_as_nameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_dotted_as_names
 		}
-		open func dotted_as_name(_ i: Int) -> Dotted_as_nameContext? {
-			return getRuleContext(Dotted_as_nameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_dotted_as_names }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterDotted_as_names(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterDotted_as_names(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitDotted_as_names(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitDotted_as_names(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitDotted_as_names(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitDotted_as_names(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitDotted_as_names(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitDotted_as_names(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dotted_as_names() throws -> Dotted_as_namesContext {
+	 open func dotted_as_names() throws -> Dotted_as_namesContext {
 		var _localctx: Dotted_as_namesContext = Dotted_as_namesContext(_ctx, getState())
-		try enterRule(_localctx, 64, Python3Parser.RULE_dotted_as_names)
+		try enterRule(_localctx, 68, Python3Parser.RULE_dotted_as_names)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(517)
+		 	setState(564)
 		 	try dotted_as_name()
-		 	setState(522)
+		 	setState(569)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -3310,13 +3873,13 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(518)
+		 		setState(565)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
-		 		setState(519)
+		 		setState(566)
 		 		try dotted_as_name()
 
 
-		 		setState(524)
+		 		setState(571)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -3330,49 +3893,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Dotted_nameContext:ParserRuleContext {
-		open func NAME() -> Array<TerminalNode> { return getTokens(Python3Parser.Tokens.NAME.rawValue) }
-		open func NAME(_ i:Int) -> TerminalNode?{
-			return getToken(Python3Parser.Tokens.NAME.rawValue, i)
+
+	public class Dotted_nameContext: ParserRuleContext {
+			open
+			func NAME() -> [TerminalNode] {
+				return getTokens(Python3Parser.Tokens.NAME.rawValue)
+			}
+			open
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_dotted_name
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_dotted_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterDotted_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterDotted_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitDotted_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitDotted_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitDotted_name(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitDotted_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitDotted_name(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitDotted_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dotted_name() throws -> Dotted_nameContext {
+	 open func dotted_name() throws -> Dotted_nameContext {
 		var _localctx: Dotted_nameContext = Dotted_nameContext(_ctx, getState())
-		try enterRule(_localctx, 66, Python3Parser.RULE_dotted_name)
+		try enterRule(_localctx, 70, Python3Parser.RULE_dotted_name)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(525)
+		 	setState(572)
 		 	try match(Python3Parser.Tokens.NAME.rawValue)
-		 	setState(530)
+		 	setState(577)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -3380,13 +3952,13 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.DOT.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(526)
+		 		setState(573)
 		 		try match(Python3Parser.Tokens.DOT.rawValue)
-		 		setState(527)
+		 		setState(574)
 		 		try match(Python3Parser.Tokens.NAME.rawValue)
 
 
-		 		setState(532)
+		 		setState(579)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -3400,52 +3972,60 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Global_stmtContext:ParserRuleContext {
-		open func GLOBAL() -> TerminalNode? { return getToken(Python3Parser.Tokens.GLOBAL.rawValue, 0) }
-		open func NAME() -> Array<TerminalNode> { return getTokens(Python3Parser.Tokens.NAME.rawValue) }
-		open func NAME(_ i:Int) -> TerminalNode?{
-			return getToken(Python3Parser.Tokens.NAME.rawValue, i)
+
+	public class Global_stmtContext: ParserRuleContext {
+			open
+			func NAME() -> [TerminalNode] {
+				return getTokens(Python3Parser.Tokens.NAME.rawValue)
+			}
+			open
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_global_stmt
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_global_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterGlobal_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterGlobal_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitGlobal_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitGlobal_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitGlobal_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitGlobal_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitGlobal_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitGlobal_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func global_stmt() throws -> Global_stmtContext {
+	 open func global_stmt() throws -> Global_stmtContext {
 		var _localctx: Global_stmtContext = Global_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 68, Python3Parser.RULE_global_stmt)
+		try enterRule(_localctx, 72, Python3Parser.RULE_global_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(533)
+		 	setState(580)
 		 	try match(Python3Parser.Tokens.GLOBAL.rawValue)
-		 	setState(534)
+		 	setState(581)
 		 	try match(Python3Parser.Tokens.NAME.rawValue)
-		 	setState(539)
+		 	setState(586)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -3453,13 +4033,13 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(535)
+		 		setState(582)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
-		 		setState(536)
+		 		setState(583)
 		 		try match(Python3Parser.Tokens.NAME.rawValue)
 
 
-		 		setState(541)
+		 		setState(588)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -3473,52 +4053,60 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Nonlocal_stmtContext:ParserRuleContext {
-		open func NONLOCAL() -> TerminalNode? { return getToken(Python3Parser.Tokens.NONLOCAL.rawValue, 0) }
-		open func NAME() -> Array<TerminalNode> { return getTokens(Python3Parser.Tokens.NAME.rawValue) }
-		open func NAME(_ i:Int) -> TerminalNode?{
-			return getToken(Python3Parser.Tokens.NAME.rawValue, i)
+
+	public class Nonlocal_stmtContext: ParserRuleContext {
+			open
+			func NAME() -> [TerminalNode] {
+				return getTokens(Python3Parser.Tokens.NAME.rawValue)
+			}
+			open
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_nonlocal_stmt
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_nonlocal_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterNonlocal_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterNonlocal_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitNonlocal_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitNonlocal_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitNonlocal_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitNonlocal_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitNonlocal_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitNonlocal_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nonlocal_stmt() throws -> Nonlocal_stmtContext {
+	 open func nonlocal_stmt() throws -> Nonlocal_stmtContext {
 		var _localctx: Nonlocal_stmtContext = Nonlocal_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 70, Python3Parser.RULE_nonlocal_stmt)
+		try enterRule(_localctx, 74, Python3Parser.RULE_nonlocal_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(542)
+		 	setState(589)
 		 	try match(Python3Parser.Tokens.NONLOCAL.rawValue)
-		 	setState(543)
+		 	setState(590)
 		 	try match(Python3Parser.Tokens.NAME.rawValue)
-		 	setState(548)
+		 	setState(595)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -3526,13 +4114,13 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(544)
+		 		setState(591)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
-		 		setState(545)
+		 		setState(592)
 		 		try match(Python3Parser.Tokens.NAME.rawValue)
 
 
-		 		setState(550)
+		 		setState(597)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -3546,54 +4134,60 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Assert_stmtContext:ParserRuleContext {
-		open func ASSERT() -> TerminalNode? { return getToken(Python3Parser.Tokens.ASSERT.rawValue, 0) }
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
+
+	public class Assert_stmtContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_assert_stmt
 		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_assert_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterAssert_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterAssert_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitAssert_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitAssert_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitAssert_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitAssert_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitAssert_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitAssert_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assert_stmt() throws -> Assert_stmtContext {
+	 open func assert_stmt() throws -> Assert_stmtContext {
 		var _localctx: Assert_stmtContext = Assert_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 72, Python3Parser.RULE_assert_stmt)
+		try enterRule(_localctx, 76, Python3Parser.RULE_assert_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(551)
+		 	setState(598)
 		 	try match(Python3Parser.Tokens.ASSERT.rawValue)
-		 	setState(552)
+		 	setState(599)
 		 	try test()
-		 	setState(555)
+		 	setState(602)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -3601,9 +4195,9 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(553)
+		 		setState(600)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
-		 		setState(554)
+		 		setState(601)
 		 		try test()
 
 		 	}
@@ -3618,124 +4212,148 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Compound_stmtContext:ParserRuleContext {
-		open func if_stmt() -> If_stmtContext? {
-			return getRuleContext(If_stmtContext.self,0)
+
+	public class Compound_stmtContext: ParserRuleContext {
+			open
+			func if_stmt() -> If_stmtContext? {
+				return getRuleContext(If_stmtContext.self, 0)
+			}
+			open
+			func while_stmt() -> While_stmtContext? {
+				return getRuleContext(While_stmtContext.self, 0)
+			}
+			open
+			func for_stmt() -> For_stmtContext? {
+				return getRuleContext(For_stmtContext.self, 0)
+			}
+			open
+			func try_stmt() -> Try_stmtContext? {
+				return getRuleContext(Try_stmtContext.self, 0)
+			}
+			open
+			func with_stmt() -> With_stmtContext? {
+				return getRuleContext(With_stmtContext.self, 0)
+			}
+			open
+			func funcdef() -> FuncdefContext? {
+				return getRuleContext(FuncdefContext.self, 0)
+			}
+			open
+			func classdef() -> ClassdefContext? {
+				return getRuleContext(ClassdefContext.self, 0)
+			}
+			open
+			func decorated() -> DecoratedContext? {
+				return getRuleContext(DecoratedContext.self, 0)
+			}
+			open
+			func async_stmt() -> Async_stmtContext? {
+				return getRuleContext(Async_stmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_compound_stmt
 		}
-		open func while_stmt() -> While_stmtContext? {
-			return getRuleContext(While_stmtContext.self,0)
-		}
-		open func for_stmt() -> For_stmtContext? {
-			return getRuleContext(For_stmtContext.self,0)
-		}
-		open func try_stmt() -> Try_stmtContext? {
-			return getRuleContext(Try_stmtContext.self,0)
-		}
-		open func with_stmt() -> With_stmtContext? {
-			return getRuleContext(With_stmtContext.self,0)
-		}
-		open func funcdef() -> FuncdefContext? {
-			return getRuleContext(FuncdefContext.self,0)
-		}
-		open func classdef() -> ClassdefContext? {
-			return getRuleContext(ClassdefContext.self,0)
-		}
-		open func decorated() -> DecoratedContext? {
-			return getRuleContext(DecoratedContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_compound_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterCompound_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterCompound_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitCompound_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitCompound_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitCompound_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitCompound_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitCompound_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitCompound_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compound_stmt() throws -> Compound_stmtContext {
+	 open func compound_stmt() throws -> Compound_stmtContext {
 		var _localctx: Compound_stmtContext = Compound_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 74, Python3Parser.RULE_compound_stmt)
+		try enterRule(_localctx, 78, Python3Parser.RULE_compound_stmt)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(565)
+		 	setState(613)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .IF:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(557)
+		 		setState(604)
 		 		try if_stmt()
 
 		 		break
 
 		 	case .WHILE:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(558)
+		 		setState(605)
 		 		try while_stmt()
 
 		 		break
 
 		 	case .FOR:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(559)
+		 		setState(606)
 		 		try for_stmt()
 
 		 		break
 
 		 	case .TRY:
 		 		try enterOuterAlt(_localctx, 4)
-		 		setState(560)
+		 		setState(607)
 		 		try try_stmt()
 
 		 		break
 
 		 	case .WITH:
 		 		try enterOuterAlt(_localctx, 5)
-		 		setState(561)
+		 		setState(608)
 		 		try with_stmt()
 
 		 		break
 
 		 	case .DEF:
 		 		try enterOuterAlt(_localctx, 6)
-		 		setState(562)
+		 		setState(609)
 		 		try funcdef()
 
 		 		break
 
 		 	case .CLASS:
 		 		try enterOuterAlt(_localctx, 7)
-		 		setState(563)
+		 		setState(610)
 		 		try classdef()
 
 		 		break
 
 		 	case .AT:
 		 		try enterOuterAlt(_localctx, 8)
-		 		setState(564)
+		 		setState(611)
 		 		try decorated()
 
 		 		break
+
+		 	case .ASYNC:
+		 		try enterOuterAlt(_localctx, 9)
+		 		setState(612)
+		 		try async_stmt()
+
+		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3746,69 +4364,163 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class If_stmtContext:ParserRuleContext {
-		open func IF() -> TerminalNode? { return getToken(Python3Parser.Tokens.IF.rawValue, 0) }
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
+
+	public class Async_stmtContext: ParserRuleContext {
+			open
+			func ASYNC() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.ASYNC.rawValue, 0)
+			}
+			open
+			func funcdef() -> FuncdefContext? {
+				return getRuleContext(FuncdefContext.self, 0)
+			}
+			open
+			func with_stmt() -> With_stmtContext? {
+				return getRuleContext(With_stmtContext.self, 0)
+			}
+			open
+			func for_stmt() -> For_stmtContext? {
+				return getRuleContext(For_stmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_async_stmt
 		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open func suite() -> Array<SuiteContext> {
-			return getRuleContexts(SuiteContext.self)
-		}
-		open func suite(_ i: Int) -> SuiteContext? {
-			return getRuleContext(SuiteContext.self,i)
-		}
-		open func ELIF() -> Array<TerminalNode> { return getTokens(Python3Parser.Tokens.ELIF.rawValue) }
-		open func ELIF(_ i:Int) -> TerminalNode?{
-			return getToken(Python3Parser.Tokens.ELIF.rawValue, i)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(Python3Parser.Tokens.ELSE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_if_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterIf_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterAsync_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitIf_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitAsync_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitIf_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitIf_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitAsync_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitAsync_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func if_stmt() throws -> If_stmtContext {
+	 open func async_stmt() throws -> Async_stmtContext {
+		var _localctx: Async_stmtContext = Async_stmtContext(_ctx, getState())
+		try enterRule(_localctx, 80, Python3Parser.RULE_async_stmt)
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(615)
+		 	try match(Python3Parser.Tokens.ASYNC.rawValue)
+		 	setState(619)
+		 	try _errHandler.sync(self)
+		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .DEF:
+		 		setState(616)
+		 		try funcdef()
+
+		 		break
+
+		 	case .WITH:
+		 		setState(617)
+		 		try with_stmt()
+
+		 		break
+
+		 	case .FOR:
+		 		setState(618)
+		 		try for_stmt()
+
+		 		break
+		 	default:
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
+		 	}
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class If_stmtContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+			open
+			func suite() -> [SuiteContext] {
+				return getRuleContexts(SuiteContext.self)
+			}
+			open
+			func suite(_ i: Int) -> SuiteContext? {
+				return getRuleContext(SuiteContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_if_stmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterIf_stmt(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitIf_stmt(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitIf_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitIf_stmt(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func if_stmt() throws -> If_stmtContext {
 		var _localctx: If_stmtContext = If_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 76, Python3Parser.RULE_if_stmt)
+		try enterRule(_localctx, 82, Python3Parser.RULE_if_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(567)
+		 	setState(621)
 		 	try match(Python3Parser.Tokens.IF.rawValue)
-		 	setState(568)
+		 	setState(622)
 		 	try test()
-		 	setState(569)
+		 	setState(623)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(570)
+		 	setState(624)
 		 	try suite()
-		 	setState(578)
+		 	setState(632)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -3816,21 +4528,21 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.ELIF.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(571)
+		 		setState(625)
 		 		try match(Python3Parser.Tokens.ELIF.rawValue)
-		 		setState(572)
+		 		setState(626)
 		 		try test()
-		 		setState(573)
+		 		setState(627)
 		 		try match(Python3Parser.Tokens.COLON.rawValue)
-		 		setState(574)
+		 		setState(628)
 		 		try suite()
 
 
-		 		setState(580)
+		 		setState(634)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(584)
+		 	setState(638)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -3838,11 +4550,11 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.ELSE.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(581)
+		 		setState(635)
 		 		try match(Python3Parser.Tokens.ELSE.rawValue)
-		 		setState(582)
+		 		setState(636)
 		 		try match(Python3Parser.Tokens.COLON.rawValue)
-		 		setState(583)
+		 		setState(637)
 		 		try suite()
 
 		 	}
@@ -3857,62 +4569,68 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class While_stmtContext:ParserRuleContext {
-		open func WHILE() -> TerminalNode? { return getToken(Python3Parser.Tokens.WHILE.rawValue, 0) }
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
+
+	public class While_stmtContext: ParserRuleContext {
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+			open
+			func suite() -> [SuiteContext] {
+				return getRuleContexts(SuiteContext.self)
+			}
+			open
+			func suite(_ i: Int) -> SuiteContext? {
+				return getRuleContext(SuiteContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_while_stmt
 		}
-		open func suite() -> Array<SuiteContext> {
-			return getRuleContexts(SuiteContext.self)
-		}
-		open func suite(_ i: Int) -> SuiteContext? {
-			return getRuleContext(SuiteContext.self,i)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(Python3Parser.Tokens.ELSE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_while_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterWhile_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterWhile_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitWhile_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitWhile_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitWhile_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitWhile_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitWhile_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitWhile_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func while_stmt() throws -> While_stmtContext {
+	 open func while_stmt() throws -> While_stmtContext {
 		var _localctx: While_stmtContext = While_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 78, Python3Parser.RULE_while_stmt)
+		try enterRule(_localctx, 84, Python3Parser.RULE_while_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(586)
+		 	setState(640)
 		 	try match(Python3Parser.Tokens.WHILE.rawValue)
-		 	setState(587)
+		 	setState(641)
 		 	try test()
-		 	setState(588)
+		 	setState(642)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(589)
+		 	setState(643)
 		 	try suite()
-		 	setState(593)
+		 	setState(647)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -3920,11 +4638,11 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.ELSE.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(590)
+		 		setState(644)
 		 		try match(Python3Parser.Tokens.ELSE.rawValue)
-		 		setState(591)
+		 		setState(645)
 		 		try match(Python3Parser.Tokens.COLON.rawValue)
-		 		setState(592)
+		 		setState(646)
 		 		try suite()
 
 		 	}
@@ -3939,70 +4657,76 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class For_stmtContext:ParserRuleContext {
-		open func FOR() -> TerminalNode? { return getToken(Python3Parser.Tokens.FOR.rawValue, 0) }
-		open func exprlist() -> ExprlistContext? {
-			return getRuleContext(ExprlistContext.self,0)
+
+	public class For_stmtContext: ParserRuleContext {
+			open
+			func exprlist() -> ExprlistContext? {
+				return getRuleContext(ExprlistContext.self, 0)
+			}
+			open
+			func testlist() -> TestlistContext? {
+				return getRuleContext(TestlistContext.self, 0)
+			}
+			open
+			func suite() -> [SuiteContext] {
+				return getRuleContexts(SuiteContext.self)
+			}
+			open
+			func suite(_ i: Int) -> SuiteContext? {
+				return getRuleContext(SuiteContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_for_stmt
 		}
-		open func IN() -> TerminalNode? { return getToken(Python3Parser.Tokens.IN.rawValue, 0) }
-		open func testlist() -> TestlistContext? {
-			return getRuleContext(TestlistContext.self,0)
-		}
-		open func suite() -> Array<SuiteContext> {
-			return getRuleContexts(SuiteContext.self)
-		}
-		open func suite(_ i: Int) -> SuiteContext? {
-			return getRuleContext(SuiteContext.self,i)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(Python3Parser.Tokens.ELSE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_for_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterFor_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterFor_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitFor_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitFor_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitFor_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitFor_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitFor_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitFor_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func for_stmt() throws -> For_stmtContext {
+	 open func for_stmt() throws -> For_stmtContext {
 		var _localctx: For_stmtContext = For_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 80, Python3Parser.RULE_for_stmt)
+		try enterRule(_localctx, 86, Python3Parser.RULE_for_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(595)
+		 	setState(649)
 		 	try match(Python3Parser.Tokens.FOR.rawValue)
-		 	setState(596)
+		 	setState(650)
 		 	try exprlist()
-		 	setState(597)
+		 	setState(651)
 		 	try match(Python3Parser.Tokens.IN.rawValue)
-		 	setState(598)
+		 	setState(652)
 		 	try testlist()
-		 	setState(599)
+		 	setState(653)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(600)
+		 	setState(654)
 		 	try suite()
-		 	setState(604)
+		 	setState(658)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -4010,11 +4734,11 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.ELSE.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(601)
+		 		setState(655)
 		 		try match(Python3Parser.Tokens.ELSE.rawValue)
-		 		setState(602)
+		 		setState(656)
 		 		try match(Python3Parser.Tokens.COLON.rawValue)
-		 		setState(603)
+		 		setState(657)
 		 		try suite()
 
 		 	}
@@ -4029,80 +4753,86 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Try_stmtContext:ParserRuleContext {
-		open func TRY() -> TerminalNode? { return getToken(Python3Parser.Tokens.TRY.rawValue, 0) }
-		open func suite() -> Array<SuiteContext> {
-			return getRuleContexts(SuiteContext.self)
+
+	public class Try_stmtContext: ParserRuleContext {
+			open
+			func suite() -> [SuiteContext] {
+				return getRuleContexts(SuiteContext.self)
+			}
+			open
+			func suite(_ i: Int) -> SuiteContext? {
+				return getRuleContext(SuiteContext.self, i)
+			}
+			open
+			func except_clause() -> [Except_clauseContext] {
+				return getRuleContexts(Except_clauseContext.self)
+			}
+			open
+			func except_clause(_ i: Int) -> Except_clauseContext? {
+				return getRuleContext(Except_clauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_try_stmt
 		}
-		open func suite(_ i: Int) -> SuiteContext? {
-			return getRuleContext(SuiteContext.self,i)
-		}
-		open func FINALLY() -> TerminalNode? { return getToken(Python3Parser.Tokens.FINALLY.rawValue, 0) }
-		open func except_clause() -> Array<Except_clauseContext> {
-			return getRuleContexts(Except_clauseContext.self)
-		}
-		open func except_clause(_ i: Int) -> Except_clauseContext? {
-			return getRuleContext(Except_clauseContext.self,i)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(Python3Parser.Tokens.ELSE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_try_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTry_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTry_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTry_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTry_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTry_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTry_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTry_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTry_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func try_stmt() throws -> Try_stmtContext {
+	 open func try_stmt() throws -> Try_stmtContext {
 		var _localctx: Try_stmtContext = Try_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 82, Python3Parser.RULE_try_stmt)
+		try enterRule(_localctx, 88, Python3Parser.RULE_try_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(606)
+		 	setState(660)
 		 	try match(Python3Parser.Tokens.TRY.rawValue)
-		 	setState(607)
+		 	setState(661)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(608)
+		 	setState(662)
 		 	try suite()
-		 	setState(630)
+		 	setState(684)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .EXCEPT:
-		 		setState(613) 
+		 		setState(667) 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		repeat {
-		 			setState(609)
+		 			setState(663)
 		 			try except_clause()
-		 			setState(610)
+		 			setState(664)
 		 			try match(Python3Parser.Tokens.COLON.rawValue)
-		 			setState(611)
+		 			setState(665)
 		 			try suite()
 
 
-		 			setState(615); 
+		 			setState(669); 
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		} while (//closure
@@ -4110,7 +4840,7 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.EXCEPT.rawValue
 		 		      return testSet
 		 		 }())
-		 		setState(620)
+		 		setState(674)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -4118,16 +4848,16 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.ELSE.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(617)
+		 			setState(671)
 		 			try match(Python3Parser.Tokens.ELSE.rawValue)
-		 			setState(618)
+		 			setState(672)
 		 			try match(Python3Parser.Tokens.COLON.rawValue)
-		 			setState(619)
+		 			setState(673)
 		 			try suite()
 
 		 		}
 
-		 		setState(625)
+		 		setState(679)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -4135,11 +4865,11 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.FINALLY.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(622)
+		 			setState(676)
 		 			try match(Python3Parser.Tokens.FINALLY.rawValue)
-		 			setState(623)
+		 			setState(677)
 		 			try match(Python3Parser.Tokens.COLON.rawValue)
-		 			setState(624)
+		 			setState(678)
 		 			try suite()
 
 		 		}
@@ -4148,17 +4878,18 @@ open class Python3Parser: Parser {
 		 		break
 
 		 	case .FINALLY:
-		 		setState(627)
+		 		setState(681)
 		 		try match(Python3Parser.Tokens.FINALLY.rawValue)
-		 		setState(628)
+		 		setState(682)
 		 		try match(Python3Parser.Tokens.COLON.rawValue)
-		 		setState(629)
+		 		setState(683)
 		 		try suite()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
+
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4169,57 +4900,64 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class With_stmtContext:ParserRuleContext {
-		open func WITH() -> TerminalNode? { return getToken(Python3Parser.Tokens.WITH.rawValue, 0) }
-		open func with_item() -> Array<With_itemContext> {
-			return getRuleContexts(With_itemContext.self)
+
+	public class With_stmtContext: ParserRuleContext {
+			open
+			func with_item() -> [With_itemContext] {
+				return getRuleContexts(With_itemContext.self)
+			}
+			open
+			func with_item(_ i: Int) -> With_itemContext? {
+				return getRuleContext(With_itemContext.self, i)
+			}
+			open
+			func suite() -> SuiteContext? {
+				return getRuleContext(SuiteContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_with_stmt
 		}
-		open func with_item(_ i: Int) -> With_itemContext? {
-			return getRuleContext(With_itemContext.self,i)
-		}
-		open func suite() -> SuiteContext? {
-			return getRuleContext(SuiteContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_with_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterWith_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterWith_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitWith_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitWith_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitWith_stmt(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitWith_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitWith_stmt(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitWith_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func with_stmt() throws -> With_stmtContext {
+	 open func with_stmt() throws -> With_stmtContext {
 		var _localctx: With_stmtContext = With_stmtContext(_ctx, getState())
-		try enterRule(_localctx, 84, Python3Parser.RULE_with_stmt)
+		try enterRule(_localctx, 90, Python3Parser.RULE_with_stmt)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(632)
+		 	setState(686)
 		 	try match(Python3Parser.Tokens.WITH.rawValue)
-		 	setState(633)
+		 	setState(687)
 		 	try with_item()
-		 	setState(638)
+		 	setState(692)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -4227,19 +4965,19 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(634)
+		 		setState(688)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
-		 		setState(635)
+		 		setState(689)
 		 		try with_item()
 
 
-		 		setState(640)
+		 		setState(694)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(641)
+		 	setState(695)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(642)
+		 	setState(696)
 		 	try suite()
 
 		}
@@ -4251,52 +4989,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class With_itemContext:ParserRuleContext {
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
+
+	public class With_itemContext: ParserRuleContext {
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_with_item
 		}
-		open func AS() -> TerminalNode? { return getToken(Python3Parser.Tokens.AS.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_with_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterWith_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterWith_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitWith_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitWith_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitWith_item(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitWith_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitWith_item(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitWith_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func with_item() throws -> With_itemContext {
+	 open func with_item() throws -> With_itemContext {
 		var _localctx: With_itemContext = With_itemContext(_ctx, getState())
-		try enterRule(_localctx, 86, Python3Parser.RULE_with_item)
+		try enterRule(_localctx, 92, Python3Parser.RULE_with_item)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(644)
+		 	setState(698)
 		 	try test()
-		 	setState(647)
+		 	setState(701)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -4304,9 +5048,9 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.AS.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(645)
+		 		setState(699)
 		 		try match(Python3Parser.Tokens.AS.rawValue)
-		 		setState(646)
+		 		setState(700)
 		 		try expr()
 
 		 	}
@@ -4321,64 +5065,75 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Except_clauseContext:ParserRuleContext {
-		open func EXCEPT() -> TerminalNode? { return getToken(Python3Parser.Tokens.EXCEPT.rawValue, 0) }
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
+
+	public class Except_clauseContext: ParserRuleContext {
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_except_clause
 		}
-		open func AS() -> TerminalNode? { return getToken(Python3Parser.Tokens.AS.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(Python3Parser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_except_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterExcept_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterExcept_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitExcept_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitExcept_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitExcept_clause(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitExcept_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitExcept_clause(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitExcept_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func except_clause() throws -> Except_clauseContext {
+	 open func except_clause() throws -> Except_clauseContext {
 		var _localctx: Except_clauseContext = Except_clauseContext(_ctx, getState())
-		try enterRule(_localctx, 88, Python3Parser.RULE_except_clause)
+		try enterRule(_localctx, 94, Python3Parser.RULE_except_clause)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(649)
+		 	setState(703)
 		 	try match(Python3Parser.Tokens.EXCEPT.rawValue)
-		 	setState(655)
+		 	setState(709)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 	      var testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
+		 	          testSet = testSet || {  () -> Bool in
+		 	             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 	              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(650)
+		 		setState(704)
 		 		try test()
-		 		setState(653)
+		 		setState(707)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -4386,9 +5141,9 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.AS.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(651)
+		 			setState(705)
 		 			try match(Python3Parser.Tokens.AS.rawValue)
-		 			setState(652)
+		 			setState(706)
 		 			try match(Python3Parser.Tokens.NAME.rawValue)
 
 		 		}
@@ -4406,56 +5161,75 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class SuiteContext:ParserRuleContext {
-		open func simple_stmt() -> Simple_stmtContext? {
-			return getRuleContext(Simple_stmtContext.self,0)
+
+	public class SuiteContext: ParserRuleContext {
+			open
+			func simple_stmt() -> Simple_stmtContext? {
+				return getRuleContext(Simple_stmtContext.self, 0)
+			}
+			open
+			func NEWLINE() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NEWLINE.rawValue, 0)
+			}
+			open
+			func INDENT() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.INDENT.rawValue, 0)
+			}
+			open
+			func DEDENT() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.DEDENT.rawValue, 0)
+			}
+			open
+			func stmt() -> [StmtContext] {
+				return getRuleContexts(StmtContext.self)
+			}
+			open
+			func stmt(_ i: Int) -> StmtContext? {
+				return getRuleContext(StmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_suite
 		}
-		open func NEWLINE() -> TerminalNode? { return getToken(Python3Parser.Tokens.NEWLINE.rawValue, 0) }
-		open func INDENT() -> TerminalNode? { return getToken(Python3Parser.Tokens.INDENT.rawValue, 0) }
-		open func DEDENT() -> TerminalNode? { return getToken(Python3Parser.Tokens.DEDENT.rawValue, 0) }
-		open func stmt() -> Array<StmtContext> {
-			return getRuleContexts(StmtContext.self)
-		}
-		open func stmt(_ i: Int) -> StmtContext? {
-			return getRuleContext(StmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_suite }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterSuite(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterSuite(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitSuite(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitSuite(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitSuite(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitSuite(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitSuite(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitSuite(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func suite() throws -> SuiteContext {
+	 open func suite() throws -> SuiteContext {
 		var _localctx: SuiteContext = SuiteContext(_ctx, getState())
-		try enterRule(_localctx, 90, Python3Parser.RULE_suite)
+		try enterRule(_localctx, 96, Python3Parser.RULE_suite)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(667)
+		 	setState(721)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
 		 	case .RETURN:fallthrough
 		 	case .RAISE:fallthrough
 		 	case .FROM:fallthrough
@@ -4473,15 +5247,8 @@ open class Python3Parser: Parser {
 		 	case .PASS:fallthrough
 		 	case .CONTINUE:fallthrough
 		 	case .BREAK:fallthrough
+		 	case .AWAIT:fallthrough
 		 	case .NAME:fallthrough
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:fallthrough
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:fallthrough
 		 	case .ELLIPSIS:fallthrough
 		 	case .STAR:fallthrough
 		 	case .OPEN_PAREN:fallthrough
@@ -4491,46 +5258,46 @@ open class Python3Parser: Parser {
 		 	case .NOT_OP:fallthrough
 		 	case .OPEN_BRACE:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(657)
+		 		setState(711)
 		 		try simple_stmt()
 
 		 		break
 
 		 	case .NEWLINE:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(658)
+		 		setState(712)
 		 		try match(Python3Parser.Tokens.NEWLINE.rawValue)
-		 		setState(659)
+		 		setState(713)
 		 		try match(Python3Parser.Tokens.INDENT.rawValue)
-		 		setState(661) 
+		 		setState(715) 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		repeat {
-		 			setState(660)
+		 			setState(714)
 		 			try stmt()
 
 
-		 			setState(663); 
+		 			setState(717); 
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		} while (//closure
 		 		 { () -> Bool in
 		 		      var testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.DEF.rawValue,Python3Parser.Tokens.RETURN.rawValue,Python3Parser.Tokens.RAISE.rawValue,Python3Parser.Tokens.FROM.rawValue,Python3Parser.Tokens.IMPORT.rawValue,Python3Parser.Tokens.GLOBAL.rawValue,Python3Parser.Tokens.NONLOCAL.rawValue,Python3Parser.Tokens.ASSERT.rawValue,Python3Parser.Tokens.IF.rawValue,Python3Parser.Tokens.WHILE.rawValue,Python3Parser.Tokens.FOR.rawValue,Python3Parser.Tokens.TRY.rawValue,Python3Parser.Tokens.WITH.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.CLASS.rawValue,Python3Parser.Tokens.YIELD.rawValue,Python3Parser.Tokens.DEL.rawValue,Python3Parser.Tokens.PASS.rawValue,Python3Parser.Tokens.CONTINUE.rawValue,Python3Parser.Tokens.BREAK.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue]
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.DEF.rawValue,Python3Parser.Tokens.RETURN.rawValue,Python3Parser.Tokens.RAISE.rawValue,Python3Parser.Tokens.FROM.rawValue,Python3Parser.Tokens.IMPORT.rawValue,Python3Parser.Tokens.GLOBAL.rawValue,Python3Parser.Tokens.NONLOCAL.rawValue,Python3Parser.Tokens.ASSERT.rawValue,Python3Parser.Tokens.IF.rawValue,Python3Parser.Tokens.WHILE.rawValue,Python3Parser.Tokens.FOR.rawValue,Python3Parser.Tokens.TRY.rawValue,Python3Parser.Tokens.WITH.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.CLASS.rawValue,Python3Parser.Tokens.YIELD.rawValue,Python3Parser.Tokens.DEL.rawValue,Python3Parser.Tokens.PASS.rawValue,Python3Parser.Tokens.CONTINUE.rawValue,Python3Parser.Tokens.BREAK.rawValue,Python3Parser.Tokens.ASYNC.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
 		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
 		 		          testSet = testSet || {  () -> Bool in
-		 		             let testArray: [Int] = [_la, Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue,Python3Parser.Tokens.AT.rawValue]
+		 		             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue,Python3Parser.Tokens.AT.rawValue]
 		 		              return  Utils.testBitLeftShiftArray(testArray, 66)
 		 		          }()
 		 		      return testSet
 		 		 }())
-		 		setState(665)
+		 		setState(719)
 		 		try match(Python3Parser.Tokens.DEDENT.rawValue)
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4541,73 +5308,74 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class TestContext:ParserRuleContext {
-		open func or_test() -> Array<Or_testContext> {
-			return getRuleContexts(Or_testContext.self)
+
+	public class TestContext: ParserRuleContext {
+			open
+			func or_test() -> [Or_testContext] {
+				return getRuleContexts(Or_testContext.self)
+			}
+			open
+			func or_test(_ i: Int) -> Or_testContext? {
+				return getRuleContext(Or_testContext.self, i)
+			}
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+			open
+			func lambdef() -> LambdefContext? {
+				return getRuleContext(LambdefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_test
 		}
-		open func or_test(_ i: Int) -> Or_testContext? {
-			return getRuleContext(Or_testContext.self,i)
-		}
-		open func IF() -> TerminalNode? { return getToken(Python3Parser.Tokens.IF.rawValue, 0) }
-		open func ELSE() -> TerminalNode? { return getToken(Python3Parser.Tokens.ELSE.rawValue, 0) }
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
-		}
-		open func lambdef() -> LambdefContext? {
-			return getRuleContext(LambdefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_test }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTest(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTest(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func test() throws -> TestContext {
+	 open func test() throws -> TestContext {
 		var _localctx: TestContext = TestContext(_ctx, getState())
-		try enterRule(_localctx, 92, Python3Parser.RULE_test)
+		try enterRule(_localctx, 98, Python3Parser.RULE_test)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(678)
+		 	setState(732)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
 		 	case .NOT:fallthrough
 		 	case .NONE:fallthrough
 		 	case .TRUE:fallthrough
 		 	case .FALSE:fallthrough
+		 	case .AWAIT:fallthrough
 		 	case .NAME:fallthrough
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:fallthrough
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:fallthrough
 		 	case .ELLIPSIS:fallthrough
-		 	case .STAR:fallthrough
 		 	case .OPEN_PAREN:fallthrough
 		 	case .OPEN_BRACK:fallthrough
 		 	case .ADD:fallthrough
@@ -4615,9 +5383,9 @@ open class Python3Parser: Parser {
 		 	case .NOT_OP:fallthrough
 		 	case .OPEN_BRACE:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(669)
+		 		setState(723)
 		 		try or_test()
-		 		setState(675)
+		 		setState(729)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -4625,13 +5393,13 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.IF.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(670)
+		 			setState(724)
 		 			try match(Python3Parser.Tokens.IF.rawValue)
-		 			setState(671)
+		 			setState(725)
 		 			try or_test()
-		 			setState(672)
+		 			setState(726)
 		 			try match(Python3Parser.Tokens.ELSE.rawValue)
-		 			setState(673)
+		 			setState(727)
 		 			try test()
 
 		 		}
@@ -4641,12 +5409,12 @@ open class Python3Parser: Parser {
 
 		 	case .LAMBDA:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(677)
+		 		setState(731)
 		 		try lambdef()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4657,64 +5425,65 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Test_nocondContext:ParserRuleContext {
-		open func or_test() -> Or_testContext? {
-			return getRuleContext(Or_testContext.self,0)
+
+	public class Test_nocondContext: ParserRuleContext {
+			open
+			func or_test() -> Or_testContext? {
+				return getRuleContext(Or_testContext.self, 0)
+			}
+			open
+			func lambdef_nocond() -> Lambdef_nocondContext? {
+				return getRuleContext(Lambdef_nocondContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_test_nocond
 		}
-		open func lambdef_nocond() -> Lambdef_nocondContext? {
-			return getRuleContext(Lambdef_nocondContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_test_nocond }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTest_nocond(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTest_nocond(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTest_nocond(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTest_nocond(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTest_nocond(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTest_nocond(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTest_nocond(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTest_nocond(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func test_nocond() throws -> Test_nocondContext {
+	 open func test_nocond() throws -> Test_nocondContext {
 		var _localctx: Test_nocondContext = Test_nocondContext(_ctx, getState())
-		try enterRule(_localctx, 94, Python3Parser.RULE_test_nocond)
+		try enterRule(_localctx, 100, Python3Parser.RULE_test_nocond)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(682)
+		 	setState(736)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
 		 	case .NOT:fallthrough
 		 	case .NONE:fallthrough
 		 	case .TRUE:fallthrough
 		 	case .FALSE:fallthrough
+		 	case .AWAIT:fallthrough
 		 	case .NAME:fallthrough
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:fallthrough
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:fallthrough
 		 	case .ELLIPSIS:fallthrough
-		 	case .STAR:fallthrough
 		 	case .OPEN_PAREN:fallthrough
 		 	case .OPEN_BRACK:fallthrough
 		 	case .ADD:fallthrough
@@ -4722,19 +5491,19 @@ open class Python3Parser: Parser {
 		 	case .NOT_OP:fallthrough
 		 	case .OPEN_BRACE:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(680)
+		 		setState(734)
 		 		try or_test()
 
 		 		break
 
 		 	case .LAMBDA:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(681)
+		 		setState(735)
 		 		try lambdef_nocond()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4745,52 +5514,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class LambdefContext:ParserRuleContext {
-		open func LAMBDA() -> TerminalNode? { return getToken(Python3Parser.Tokens.LAMBDA.rawValue, 0) }
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
+
+	public class LambdefContext: ParserRuleContext {
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+			open
+			func varargslist() -> VarargslistContext? {
+				return getRuleContext(VarargslistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_lambdef
 		}
-		open func varargslist() -> VarargslistContext? {
-			return getRuleContext(VarargslistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_lambdef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterLambdef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterLambdef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitLambdef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitLambdef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitLambdef(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitLambdef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitLambdef(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitLambdef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lambdef() throws -> LambdefContext {
+	 open func lambdef() throws -> LambdefContext {
 		var _localctx: LambdefContext = LambdefContext(_ctx, getState())
-		try enterRule(_localctx, 96, Python3Parser.RULE_lambdef)
+		try enterRule(_localctx, 102, Python3Parser.RULE_lambdef)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(684)
+		 	setState(738)
 		 	try match(Python3Parser.Tokens.LAMBDA.rawValue)
-		 	setState(686)
+		 	setState(740)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -4801,14 +5576,14 @@ open class Python3Parser: Parser {
 		 	}()
 		 	      return testSet
 		 	 }()) {
-		 		setState(685)
+		 		setState(739)
 		 		try varargslist()
 
 		 	}
 
-		 	setState(688)
+		 	setState(742)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(689)
+		 	setState(743)
 		 	try test()
 
 		}
@@ -4820,52 +5595,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Lambdef_nocondContext:ParserRuleContext {
-		open func LAMBDA() -> TerminalNode? { return getToken(Python3Parser.Tokens.LAMBDA.rawValue, 0) }
-		open func test_nocond() -> Test_nocondContext? {
-			return getRuleContext(Test_nocondContext.self,0)
+
+	public class Lambdef_nocondContext: ParserRuleContext {
+			open
+			func test_nocond() -> Test_nocondContext? {
+				return getRuleContext(Test_nocondContext.self, 0)
+			}
+			open
+			func varargslist() -> VarargslistContext? {
+				return getRuleContext(VarargslistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_lambdef_nocond
 		}
-		open func varargslist() -> VarargslistContext? {
-			return getRuleContext(VarargslistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_lambdef_nocond }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterLambdef_nocond(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterLambdef_nocond(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitLambdef_nocond(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitLambdef_nocond(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitLambdef_nocond(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitLambdef_nocond(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitLambdef_nocond(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitLambdef_nocond(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lambdef_nocond() throws -> Lambdef_nocondContext {
+	 open func lambdef_nocond() throws -> Lambdef_nocondContext {
 		var _localctx: Lambdef_nocondContext = Lambdef_nocondContext(_ctx, getState())
-		try enterRule(_localctx, 98, Python3Parser.RULE_lambdef_nocond)
+		try enterRule(_localctx, 104, Python3Parser.RULE_lambdef_nocond)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(691)
+		 	setState(745)
 		 	try match(Python3Parser.Tokens.LAMBDA.rawValue)
-		 	setState(693)
+		 	setState(747)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -4876,14 +5657,14 @@ open class Python3Parser: Parser {
 		 	}()
 		 	      return testSet
 		 	 }()) {
-		 		setState(692)
+		 		setState(746)
 		 		try varargslist()
 
 		 	}
 
-		 	setState(695)
+		 	setState(749)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(696)
+		 	setState(750)
 		 	try test_nocond()
 
 		}
@@ -4895,55 +5676,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Or_testContext:ParserRuleContext {
-		open func and_test() -> Array<And_testContext> {
-			return getRuleContexts(And_testContext.self)
+
+	public class Or_testContext: ParserRuleContext {
+			open
+			func and_test() -> [And_testContext] {
+				return getRuleContexts(And_testContext.self)
+			}
+			open
+			func and_test(_ i: Int) -> And_testContext? {
+				return getRuleContext(And_testContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_or_test
 		}
-		open func and_test(_ i: Int) -> And_testContext? {
-			return getRuleContext(And_testContext.self,i)
-		}
-		open func OR() -> Array<TerminalNode> { return getTokens(Python3Parser.Tokens.OR.rawValue) }
-		open func OR(_ i:Int) -> TerminalNode?{
-			return getToken(Python3Parser.Tokens.OR.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_or_test }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterOr_test(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterOr_test(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitOr_test(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitOr_test(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitOr_test(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitOr_test(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitOr_test(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitOr_test(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func or_test() throws -> Or_testContext {
+	 open func or_test() throws -> Or_testContext {
 		var _localctx: Or_testContext = Or_testContext(_ctx, getState())
-		try enterRule(_localctx, 100, Python3Parser.RULE_or_test)
+		try enterRule(_localctx, 106, Python3Parser.RULE_or_test)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(698)
+		 	setState(752)
 		 	try and_test()
-		 	setState(703)
+		 	setState(757)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -4951,13 +5735,13 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.OR.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(699)
+		 		setState(753)
 		 		try match(Python3Parser.Tokens.OR.rawValue)
-		 		setState(700)
+		 		setState(754)
 		 		try and_test()
 
 
-		 		setState(705)
+		 		setState(759)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -4971,55 +5755,58 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class And_testContext:ParserRuleContext {
-		open func not_test() -> Array<Not_testContext> {
-			return getRuleContexts(Not_testContext.self)
+
+	public class And_testContext: ParserRuleContext {
+			open
+			func not_test() -> [Not_testContext] {
+				return getRuleContexts(Not_testContext.self)
+			}
+			open
+			func not_test(_ i: Int) -> Not_testContext? {
+				return getRuleContext(Not_testContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_and_test
 		}
-		open func not_test(_ i: Int) -> Not_testContext? {
-			return getRuleContext(Not_testContext.self,i)
-		}
-		open func AND() -> Array<TerminalNode> { return getTokens(Python3Parser.Tokens.AND.rawValue) }
-		open func AND(_ i:Int) -> TerminalNode?{
-			return getToken(Python3Parser.Tokens.AND.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_and_test }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterAnd_test(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterAnd_test(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitAnd_test(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitAnd_test(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitAnd_test(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitAnd_test(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitAnd_test(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitAnd_test(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func and_test() throws -> And_testContext {
+	 open func and_test() throws -> And_testContext {
 		var _localctx: And_testContext = And_testContext(_ctx, getState())
-		try enterRule(_localctx, 102, Python3Parser.RULE_and_test)
+		try enterRule(_localctx, 108, Python3Parser.RULE_and_test)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(706)
+		 	setState(760)
 		 	try not_test()
-		 	setState(711)
+		 	setState(765)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -5027,13 +5814,13 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.AND.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(707)
+		 		setState(761)
 		 		try match(Python3Parser.Tokens.AND.rawValue)
-		 		setState(708)
+		 		setState(762)
 		 		try not_test()
 
 
-		 		setState(713)
+		 		setState(767)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
@@ -5047,72 +5834,72 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Not_testContext:ParserRuleContext {
-		open func NOT() -> TerminalNode? { return getToken(Python3Parser.Tokens.NOT.rawValue, 0) }
-		open func not_test() -> Not_testContext? {
-			return getRuleContext(Not_testContext.self,0)
+
+	public class Not_testContext: ParserRuleContext {
+			open
+			func not_test() -> Not_testContext? {
+				return getRuleContext(Not_testContext.self, 0)
+			}
+			open
+			func comparison() -> ComparisonContext? {
+				return getRuleContext(ComparisonContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_not_test
 		}
-		open func comparison() -> ComparisonContext? {
-			return getRuleContext(ComparisonContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_not_test }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterNot_test(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterNot_test(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitNot_test(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitNot_test(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitNot_test(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitNot_test(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitNot_test(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitNot_test(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func not_test() throws -> Not_testContext {
+	 open func not_test() throws -> Not_testContext {
 		var _localctx: Not_testContext = Not_testContext(_ctx, getState())
-		try enterRule(_localctx, 104, Python3Parser.RULE_not_test)
+		try enterRule(_localctx, 110, Python3Parser.RULE_not_test)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(717)
+		 	setState(771)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .NOT:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(714)
+		 		setState(768)
 		 		try match(Python3Parser.Tokens.NOT.rawValue)
-		 		setState(715)
+		 		setState(769)
 		 		try not_test()
 
 		 		break
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
 		 	case .NONE:fallthrough
 		 	case .TRUE:fallthrough
 		 	case .FALSE:fallthrough
+		 	case .AWAIT:fallthrough
 		 	case .NAME:fallthrough
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:fallthrough
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:fallthrough
 		 	case .ELLIPSIS:fallthrough
-		 	case .STAR:fallthrough
 		 	case .OPEN_PAREN:fallthrough
 		 	case .OPEN_BRACK:fallthrough
 		 	case .ADD:fallthrough
@@ -5120,12 +5907,12 @@ open class Python3Parser: Parser {
 		 	case .NOT_OP:fallthrough
 		 	case .OPEN_BRACE:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(716)
+		 		setState(770)
 		 		try comparison()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5136,561 +5923,81 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class ComparisonContext:ParserRuleContext {
-		open func star_expr() -> Array<Star_exprContext> {
-			return getRuleContexts(Star_exprContext.self)
+
+	public class ComparisonContext: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func comp_op() -> [Comp_opContext] {
+				return getRuleContexts(Comp_opContext.self)
+			}
+			open
+			func comp_op(_ i: Int) -> Comp_opContext? {
+				return getRuleContext(Comp_opContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_comparison
 		}
-		open func star_expr(_ i: Int) -> Star_exprContext? {
-			return getRuleContext(Star_exprContext.self,i)
-		}
-		open func comp_op() -> Array<Comp_opContext> {
-			return getRuleContexts(Comp_opContext.self)
-		}
-		open func comp_op(_ i: Int) -> Comp_opContext? {
-			return getRuleContext(Comp_opContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_comparison }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterComparison(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterComparison(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitComparison(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitComparison(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitComparison(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitComparison(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitComparison(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitComparison(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comparison() throws -> ComparisonContext {
+	 open func comparison() throws -> ComparisonContext {
 		var _localctx: ComparisonContext = ComparisonContext(_ctx, getState())
-		try enterRule(_localctx, 106, Python3Parser.RULE_comparison)
+		try enterRule(_localctx, 112, Python3Parser.RULE_comparison)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(719)
-		 	try star_expr()
-		 	setState(725)
+		 	setState(773)
+		 	try expr()
+		 	setState(779)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
 		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.IN.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.IS.rawValue,Python3Parser.Tokens.LESS_THAN.rawValue,Python3Parser.Tokens.GREATER_THAN.rawValue,Python3Parser.Tokens.EQUALS.rawValue,Python3Parser.Tokens.GT_EQ.rawValue,Python3Parser.Tokens.LT_EQ.rawValue,Python3Parser.Tokens.NOT_EQ_1.rawValue,Python3Parser.Tokens.NOT_EQ_2.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 15)
+		 	    return  Utils.testBitLeftShiftArray(testArray, 18)
 		 	}()
 		 	      return testSet
 		 	 }()) {
-		 		setState(720)
+		 		setState(774)
 		 		try comp_op()
-		 		setState(721)
-		 		try star_expr()
+		 		setState(775)
+		 		try expr()
 
-
-		 		setState(727)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 	}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class Comp_opContext:ParserRuleContext {
-		open func IN() -> TerminalNode? { return getToken(Python3Parser.Tokens.IN.rawValue, 0) }
-		open func NOT() -> TerminalNode? { return getToken(Python3Parser.Tokens.NOT.rawValue, 0) }
-		open func IS() -> TerminalNode? { return getToken(Python3Parser.Tokens.IS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_comp_op }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterComp_op(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitComp_op(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitComp_op(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitComp_op(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func comp_op() throws -> Comp_opContext {
-		var _localctx: Comp_opContext = Comp_opContext(_ctx, getState())
-		try enterRule(_localctx, 108, Python3Parser.RULE_comp_op)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	setState(741)
-		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,93, _ctx)) {
-		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(728)
-		 		try match(Python3Parser.Tokens.LESS_THAN.rawValue)
-
-		 		break
-		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(729)
-		 		try match(Python3Parser.Tokens.GREATER_THAN.rawValue)
-
-		 		break
-		 	case 3:
-		 		try enterOuterAlt(_localctx, 3)
-		 		setState(730)
-		 		try match(Python3Parser.Tokens.EQUALS.rawValue)
-
-		 		break
-		 	case 4:
-		 		try enterOuterAlt(_localctx, 4)
-		 		setState(731)
-		 		try match(Python3Parser.Tokens.GT_EQ.rawValue)
-
-		 		break
-		 	case 5:
-		 		try enterOuterAlt(_localctx, 5)
-		 		setState(732)
-		 		try match(Python3Parser.Tokens.LT_EQ.rawValue)
-
-		 		break
-		 	case 6:
-		 		try enterOuterAlt(_localctx, 6)
-		 		setState(733)
-		 		try match(Python3Parser.Tokens.NOT_EQ_1.rawValue)
-
-		 		break
-		 	case 7:
-		 		try enterOuterAlt(_localctx, 7)
-		 		setState(734)
-		 		try match(Python3Parser.Tokens.NOT_EQ_2.rawValue)
-
-		 		break
-		 	case 8:
-		 		try enterOuterAlt(_localctx, 8)
-		 		setState(735)
-		 		try match(Python3Parser.Tokens.IN.rawValue)
-
-		 		break
-		 	case 9:
-		 		try enterOuterAlt(_localctx, 9)
-		 		setState(736)
-		 		try match(Python3Parser.Tokens.NOT.rawValue)
-		 		setState(737)
-		 		try match(Python3Parser.Tokens.IN.rawValue)
-
-		 		break
-		 	case 10:
-		 		try enterOuterAlt(_localctx, 10)
-		 		setState(738)
-		 		try match(Python3Parser.Tokens.IS.rawValue)
-
-		 		break
-		 	case 11:
-		 		try enterOuterAlt(_localctx, 11)
-		 		setState(739)
-		 		try match(Python3Parser.Tokens.IS.rawValue)
-		 		setState(740)
-		 		try match(Python3Parser.Tokens.NOT.rawValue)
-
-		 		break
-		 	default: break
-		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class Star_exprContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_star_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterStar_expr(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitStar_expr(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitStar_expr(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitStar_expr(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func star_expr() throws -> Star_exprContext {
-		var _localctx: Star_exprContext = Star_exprContext(_ctx, getState())
-		try enterRule(_localctx, 110, Python3Parser.RULE_star_expr)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(744)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.STAR.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(743)
-		 		try match(Python3Parser.Tokens.STAR.rawValue)
-
-		 	}
-
-		 	setState(746)
-		 	try expr()
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class ExprContext:ParserRuleContext {
-		open func xor_expr() -> Array<Xor_exprContext> {
-			return getRuleContexts(Xor_exprContext.self)
-		}
-		open func xor_expr(_ i: Int) -> Xor_exprContext? {
-			return getRuleContext(Xor_exprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterExpr(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitExpr(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitExpr(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitExpr(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func expr() throws -> ExprContext {
-		var _localctx: ExprContext = ExprContext(_ctx, getState())
-		try enterRule(_localctx, 112, Python3Parser.RULE_expr)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(748)
-		 	try xor_expr()
-		 	setState(753)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.OR_OP.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(749)
-		 		try match(Python3Parser.Tokens.OR_OP.rawValue)
-		 		setState(750)
-		 		try xor_expr()
-
-
-		 		setState(755)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 	}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class Xor_exprContext:ParserRuleContext {
-		open func and_expr() -> Array<And_exprContext> {
-			return getRuleContexts(And_exprContext.self)
-		}
-		open func and_expr(_ i: Int) -> And_exprContext? {
-			return getRuleContext(And_exprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_xor_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterXor_expr(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitXor_expr(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitXor_expr(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitXor_expr(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func xor_expr() throws -> Xor_exprContext {
-		var _localctx: Xor_exprContext = Xor_exprContext(_ctx, getState())
-		try enterRule(_localctx, 114, Python3Parser.RULE_xor_expr)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(756)
-		 	try and_expr()
-		 	setState(761)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.XOR.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(757)
-		 		try match(Python3Parser.Tokens.XOR.rawValue)
-		 		setState(758)
-		 		try and_expr()
-
-
-		 		setState(763)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 	}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class And_exprContext:ParserRuleContext {
-		open func shift_expr() -> Array<Shift_exprContext> {
-			return getRuleContexts(Shift_exprContext.self)
-		}
-		open func shift_expr(_ i: Int) -> Shift_exprContext? {
-			return getRuleContext(Shift_exprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_and_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterAnd_expr(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitAnd_expr(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitAnd_expr(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitAnd_expr(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func and_expr() throws -> And_exprContext {
-		var _localctx: And_exprContext = And_exprContext(_ctx, getState())
-		try enterRule(_localctx, 116, Python3Parser.RULE_and_expr)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(764)
-		 	try shift_expr()
-		 	setState(769)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.AND_OP.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(765)
-		 		try match(Python3Parser.Tokens.AND_OP.rawValue)
-		 		setState(766)
-		 		try shift_expr()
-
-
-		 		setState(771)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 	}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class Shift_exprContext:ParserRuleContext {
-		open func arith_expr() -> Array<Arith_exprContext> {
-			return getRuleContexts(Arith_exprContext.self)
-		}
-		open func arith_expr(_ i: Int) -> Arith_exprContext? {
-			return getRuleContext(Arith_exprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_shift_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterShift_expr(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitShift_expr(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitShift_expr(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitShift_expr(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func shift_expr() throws -> Shift_exprContext {
-		var _localctx: Shift_exprContext = Shift_exprContext(_ctx, getState())
-		try enterRule(_localctx, 118, Python3Parser.RULE_shift_expr)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(772)
-		 	try arith_expr()
-		 	setState(779)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.LEFT_SHIFT.rawValue || _la == Python3Parser.Tokens.RIGHT_SHIFT.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(777)
-		 		try _errHandler.sync(self)
-		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 		case .LEFT_SHIFT:
-		 			setState(773)
-		 			try match(Python3Parser.Tokens.LEFT_SHIFT.rawValue)
-		 			setState(774)
-		 			try arith_expr()
-
-		 			break
-
-		 		case .RIGHT_SHIFT:
-		 			setState(775)
-		 			try match(Python3Parser.Tokens.RIGHT_SHIFT.rawValue)
-		 			setState(776)
-		 			try arith_expr()
-
-		 			break
-		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
-		 		}
 
 		 		setState(781)
 		 		try _errHandler.sync(self)
@@ -5706,84 +6013,177 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Arith_exprContext:ParserRuleContext {
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class Comp_opContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_comp_op
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_arith_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterArith_expr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterComp_op(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitArith_expr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitComp_op(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitArith_expr(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitArith_expr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitComp_op(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitComp_op(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arith_expr() throws -> Arith_exprContext {
-		var _localctx: Arith_exprContext = Arith_exprContext(_ctx, getState())
-		try enterRule(_localctx, 120, Python3Parser.RULE_arith_expr)
-		var _la: Int = 0
+	 open func comp_op() throws -> Comp_opContext {
+		var _localctx: Comp_opContext = Comp_opContext(_ctx, getState())
+		try enterRule(_localctx, 114, Python3Parser.RULE_comp_op)
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	setState(795)
+		 	try _errHandler.sync(self)
+		 	switch(try getInterpreter().adaptivePredict(_input,107, _ctx)) {
+		 	case 1:
+		 		try enterOuterAlt(_localctx, 1)
+		 		setState(782)
+		 		try match(Python3Parser.Tokens.LESS_THAN.rawValue)
+
+		 		break
+		 	case 2:
+		 		try enterOuterAlt(_localctx, 2)
+		 		setState(783)
+		 		try match(Python3Parser.Tokens.GREATER_THAN.rawValue)
+
+		 		break
+		 	case 3:
+		 		try enterOuterAlt(_localctx, 3)
+		 		setState(784)
+		 		try match(Python3Parser.Tokens.EQUALS.rawValue)
+
+		 		break
+		 	case 4:
+		 		try enterOuterAlt(_localctx, 4)
+		 		setState(785)
+		 		try match(Python3Parser.Tokens.GT_EQ.rawValue)
+
+		 		break
+		 	case 5:
+		 		try enterOuterAlt(_localctx, 5)
+		 		setState(786)
+		 		try match(Python3Parser.Tokens.LT_EQ.rawValue)
+
+		 		break
+		 	case 6:
+		 		try enterOuterAlt(_localctx, 6)
+		 		setState(787)
+		 		try match(Python3Parser.Tokens.NOT_EQ_1.rawValue)
+
+		 		break
+		 	case 7:
+		 		try enterOuterAlt(_localctx, 7)
+		 		setState(788)
+		 		try match(Python3Parser.Tokens.NOT_EQ_2.rawValue)
+
+		 		break
+		 	case 8:
+		 		try enterOuterAlt(_localctx, 8)
+		 		setState(789)
+		 		try match(Python3Parser.Tokens.IN.rawValue)
+
+		 		break
+		 	case 9:
+		 		try enterOuterAlt(_localctx, 9)
+		 		setState(790)
+		 		try match(Python3Parser.Tokens.NOT.rawValue)
+		 		setState(791)
+		 		try match(Python3Parser.Tokens.IN.rawValue)
+
+		 		break
+		 	case 10:
+		 		try enterOuterAlt(_localctx, 10)
+		 		setState(792)
+		 		try match(Python3Parser.Tokens.IS.rawValue)
+
+		 		break
+		 	case 11:
+		 		try enterOuterAlt(_localctx, 11)
+		 		setState(793)
+		 		try match(Python3Parser.Tokens.IS.rawValue)
+		 		setState(794)
+		 		try match(Python3Parser.Tokens.NOT.rawValue)
+
+		 		break
+		 	default: break
+		 	}
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class Star_exprContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_star_expr
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterStar_expr(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitStar_expr(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitStar_expr(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitStar_expr(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func star_expr() throws -> Star_exprContext {
+		var _localctx: Star_exprContext = Star_exprContext(_ctx, getState())
+		try enterRule(_localctx, 116, Python3Parser.RULE_star_expr)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(782)
-		 	try term()
-		 	setState(789)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	while (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.ADD.rawValue || _la == Python3Parser.Tokens.MINUS.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(787)
-		 		try _errHandler.sync(self)
-		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 		case .ADD:
-		 			setState(783)
-		 			try match(Python3Parser.Tokens.ADD.rawValue)
-		 			setState(784)
-		 			try term()
-
-		 			break
-
-		 		case .MINUS:
-		 			setState(785)
-		 			try match(Python3Parser.Tokens.MINUS.rawValue)
-		 			setState(786)
-		 			try term()
-
-		 			break
-		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
-		 		}
-
-		 		setState(791)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 	}
+		 	setState(797)
+		 	try match(Python3Parser.Tokens.STAR.rawValue)
+		 	setState(798)
+		 	try expr()
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5794,106 +6194,70 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class TermContext:ParserRuleContext {
-		open func factor() -> Array<FactorContext> {
-			return getRuleContexts(FactorContext.self)
+
+	public class ExprContext: ParserRuleContext {
+			open
+			func xor_expr() -> [Xor_exprContext] {
+				return getRuleContexts(Xor_exprContext.self)
+			}
+			open
+			func xor_expr(_ i: Int) -> Xor_exprContext? {
+				return getRuleContext(Xor_exprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_expr
 		}
-		open func factor(_ i: Int) -> FactorContext? {
-			return getRuleContext(FactorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTerm(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term() throws -> TermContext {
-		var _localctx: TermContext = TermContext(_ctx, getState())
-		try enterRule(_localctx, 122, Python3Parser.RULE_term)
+	 open func expr() throws -> ExprContext {
+		var _localctx: ExprContext = ExprContext(_ctx, getState())
+		try enterRule(_localctx, 118, Python3Parser.RULE_expr)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(792)
-		 	try factor()
+		 	setState(800)
+		 	try xor_expr()
 		 	setState(805)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.DIV.rawValue,Python3Parser.Tokens.MOD.rawValue,Python3Parser.Tokens.IDIV.rawValue,Python3Parser.Tokens.AT.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 46)
-		 	}()
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.OR_OP.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(803)
-		 		try _errHandler.sync(self)
-		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 		case .STAR:
-		 			setState(793)
-		 			try match(Python3Parser.Tokens.STAR.rawValue)
-		 			setState(794)
-		 			try factor()
+		 		setState(801)
+		 		try match(Python3Parser.Tokens.OR_OP.rawValue)
+		 		setState(802)
+		 		try xor_expr()
 
-		 			break
-
-		 		case .DIV:
-		 			setState(795)
-		 			try match(Python3Parser.Tokens.DIV.rawValue)
-		 			setState(796)
-		 			try factor()
-
-		 			break
-
-		 		case .MOD:
-		 			setState(797)
-		 			try match(Python3Parser.Tokens.MOD.rawValue)
-		 			setState(798)
-		 			try factor()
-
-		 			break
-
-		 		case .IDIV:
-		 			setState(799)
-		 			try match(Python3Parser.Tokens.IDIV.rawValue)
-		 			setState(800)
-		 			try factor()
-
-		 			break
-
-		 		case .AT:
-		 			setState(801)
-		 			try match(Python3Parser.Tokens.AT.rawValue)
-		 			setState(802)
-		 			try factor()
-
-		 			break
-		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
-		 		}
 
 		 		setState(807)
 		 		try _errHandler.sync(self)
@@ -5909,98 +6273,533 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class FactorContext:ParserRuleContext {
-		open func factor() -> FactorContext? {
-			return getRuleContext(FactorContext.self,0)
+
+	public class Xor_exprContext: ParserRuleContext {
+			open
+			func and_expr() -> [And_exprContext] {
+				return getRuleContexts(And_exprContext.self)
+			}
+			open
+			func and_expr(_ i: Int) -> And_exprContext? {
+				return getRuleContext(And_exprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_xor_expr
 		}
-		open func power() -> PowerContext? {
-			return getRuleContext(PowerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_factor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterXor_expr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitXor_expr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitFactor(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitXor_expr(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitXor_expr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func factor() throws -> FactorContext {
-		var _localctx: FactorContext = FactorContext(_ctx, getState())
-		try enterRule(_localctx, 124, Python3Parser.RULE_factor)
+	 open func xor_expr() throws -> Xor_exprContext {
+		var _localctx: Xor_exprContext = Xor_exprContext(_ctx, getState())
+		try enterRule(_localctx, 120, Python3Parser.RULE_xor_expr)
+		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(815)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(808)
+		 	try and_expr()
+		 	setState(813)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.XOR.rawValue
+		 	      return testSet
+		 	 }()) {
+		 		setState(809)
+		 		try match(Python3Parser.Tokens.XOR.rawValue)
+		 		setState(810)
+		 		try and_expr()
+
+
+		 		setState(815)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 	}
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class And_exprContext: ParserRuleContext {
+			open
+			func shift_expr() -> [Shift_exprContext] {
+				return getRuleContexts(Shift_exprContext.self)
+			}
+			open
+			func shift_expr(_ i: Int) -> Shift_exprContext? {
+				return getRuleContext(Shift_exprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_and_expr
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterAnd_expr(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitAnd_expr(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitAnd_expr(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitAnd_expr(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func and_expr() throws -> And_exprContext {
+		var _localctx: And_exprContext = And_exprContext(_ctx, getState())
+		try enterRule(_localctx, 122, Python3Parser.RULE_and_expr)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(816)
+		 	try shift_expr()
+		 	setState(821)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.AND_OP.rawValue
+		 	      return testSet
+		 	 }()) {
+		 		setState(817)
+		 		try match(Python3Parser.Tokens.AND_OP.rawValue)
+		 		setState(818)
+		 		try shift_expr()
+
+
+		 		setState(823)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 	}
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class Shift_exprContext: ParserRuleContext {
+			open
+			func arith_expr() -> [Arith_exprContext] {
+				return getRuleContexts(Arith_exprContext.self)
+			}
+			open
+			func arith_expr(_ i: Int) -> Arith_exprContext? {
+				return getRuleContext(Arith_exprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_shift_expr
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterShift_expr(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitShift_expr(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitShift_expr(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitShift_expr(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func shift_expr() throws -> Shift_exprContext {
+		var _localctx: Shift_exprContext = Shift_exprContext(_ctx, getState())
+		try enterRule(_localctx, 124, Python3Parser.RULE_shift_expr)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(824)
+		 	try arith_expr()
+		 	setState(829)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.LEFT_SHIFT.rawValue || _la == Python3Parser.Tokens.RIGHT_SHIFT.rawValue
+		 	      return testSet
+		 	 }()) {
+		 		setState(825)
+		 		_la = try _input.LA(1)
+		 		if (!(//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = _la == Python3Parser.Tokens.LEFT_SHIFT.rawValue || _la == Python3Parser.Tokens.RIGHT_SHIFT.rawValue
+		 		      return testSet
+		 		 }())) {
+		 		try _errHandler.recoverInline(self)
+		 		}
+		 		else {
+		 			_errHandler.reportMatch(self)
+		 			try consume()
+		 		}
+		 		setState(826)
+		 		try arith_expr()
+
+
+		 		setState(831)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 	}
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class Arith_exprContext: ParserRuleContext {
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_arith_expr
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterArith_expr(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitArith_expr(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitArith_expr(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitArith_expr(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func arith_expr() throws -> Arith_exprContext {
+		var _localctx: Arith_exprContext = Arith_exprContext(_ctx, getState())
+		try enterRule(_localctx, 126, Python3Parser.RULE_arith_expr)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(832)
+		 	try term()
+		 	setState(837)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.ADD.rawValue || _la == Python3Parser.Tokens.MINUS.rawValue
+		 	      return testSet
+		 	 }()) {
+		 		setState(833)
+		 		_la = try _input.LA(1)
+		 		if (!(//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = _la == Python3Parser.Tokens.ADD.rawValue || _la == Python3Parser.Tokens.MINUS.rawValue
+		 		      return testSet
+		 		 }())) {
+		 		try _errHandler.recoverInline(self)
+		 		}
+		 		else {
+		 			_errHandler.reportMatch(self)
+		 			try consume()
+		 		}
+		 		setState(834)
+		 		try term()
+
+
+		 		setState(839)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 	}
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class TermContext: ParserRuleContext {
+			open
+			func factor() -> [FactorContext] {
+				return getRuleContexts(FactorContext.self)
+			}
+			open
+			func factor(_ i: Int) -> FactorContext? {
+				return getRuleContext(FactorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_term
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTerm(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTerm(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTerm(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTerm(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func term() throws -> TermContext {
+		var _localctx: TermContext = TermContext(_ctx, getState())
+		try enterRule(_localctx, 128, Python3Parser.RULE_term)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(840)
+		 	try factor()
+		 	setState(845)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	while (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.DIV.rawValue,Python3Parser.Tokens.MOD.rawValue,Python3Parser.Tokens.IDIV.rawValue,Python3Parser.Tokens.AT.rawValue]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 51)
+		 	}()
+		 	      return testSet
+		 	 }()) {
+		 		setState(841)
+		 		_la = try _input.LA(1)
+		 		if (!(//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = {  () -> Bool in
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.DIV.rawValue,Python3Parser.Tokens.MOD.rawValue,Python3Parser.Tokens.IDIV.rawValue,Python3Parser.Tokens.AT.rawValue]
+		 		    return  Utils.testBitLeftShiftArray(testArray, 51)
+		 		}()
+		 		      return testSet
+		 		 }())) {
+		 		try _errHandler.recoverInline(self)
+		 		}
+		 		else {
+		 			_errHandler.reportMatch(self)
+		 			try consume()
+		 		}
+		 		setState(842)
+		 		try factor()
+
+
+		 		setState(847)
+		 		try _errHandler.sync(self)
+		 		_la = try _input.LA(1)
+		 	}
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class FactorContext: ParserRuleContext {
+			open
+			func factor() -> FactorContext? {
+				return getRuleContext(FactorContext.self, 0)
+			}
+			open
+			func power() -> PowerContext? {
+				return getRuleContext(PowerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_factor
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterFactor(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitFactor(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitFactor(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitFactor(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func factor() throws -> FactorContext {
+		var _localctx: FactorContext = FactorContext(_ctx, getState())
+		try enterRule(_localctx, 130, Python3Parser.RULE_factor)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	setState(851)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .ADD:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(808)
-		 		try match(Python3Parser.Tokens.ADD.rawValue)
-		 		setState(809)
-		 		try factor()
-
-		 		break
-
-		 	case .MINUS:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(810)
-		 		try match(Python3Parser.Tokens.MINUS.rawValue)
-		 		setState(811)
-		 		try factor()
-
-		 		break
-
+		 	case .ADD:fallthrough
+		 	case .MINUS:fallthrough
 		 	case .NOT_OP:
-		 		try enterOuterAlt(_localctx, 3)
-		 		setState(812)
-		 		try match(Python3Parser.Tokens.NOT_OP.rawValue)
-		 		setState(813)
+		 		try enterOuterAlt(_localctx, 1)
+		 		setState(848)
+		 		_la = try _input.LA(1)
+		 		if (!(//closure
+		 		 { () -> Bool in
+		 		      let testSet: Bool = {  () -> Bool in
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue]
+		 		    return  Utils.testBitLeftShiftArray(testArray, 66)
+		 		}()
+		 		      return testSet
+		 		 }())) {
+		 		try _errHandler.recoverInline(self)
+		 		}
+		 		else {
+		 			_errHandler.reportMatch(self)
+		 			try consume()
+		 		}
+		 		setState(849)
 		 		try factor()
 
 		 		break
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
 		 	case .NONE:fallthrough
 		 	case .TRUE:fallthrough
 		 	case .FALSE:fallthrough
+		 	case .AWAIT:fallthrough
 		 	case .NAME:fallthrough
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:fallthrough
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:fallthrough
 		 	case .ELLIPSIS:fallthrough
 		 	case .OPEN_PAREN:fallthrough
 		 	case .OPEN_BRACK:fallthrough
 		 	case .OPEN_BRACE:
-		 		try enterOuterAlt(_localctx, 4)
-		 		setState(814)
+		 		try enterOuterAlt(_localctx, 2)
+		 		setState(850)
 		 		try power()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6011,57 +6810,155 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class PowerContext:ParserRuleContext {
-		open func atom() -> AtomContext? {
-			return getRuleContext(AtomContext.self,0)
+
+	public class PowerContext: ParserRuleContext {
+			open
+			func atom_expr() -> Atom_exprContext? {
+				return getRuleContext(Atom_exprContext.self, 0)
+			}
+			open
+			func factor() -> FactorContext? {
+				return getRuleContext(FactorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_power
 		}
-		open func trailer() -> Array<TrailerContext> {
-			return getRuleContexts(TrailerContext.self)
-		}
-		open func trailer(_ i: Int) -> TrailerContext? {
-			return getRuleContext(TrailerContext.self,i)
-		}
-		open func factor() -> FactorContext? {
-			return getRuleContext(FactorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_power }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterPower(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterPower(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitPower(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitPower(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitPower(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitPower(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitPower(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitPower(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func power() throws -> PowerContext {
+	 open func power() throws -> PowerContext {
 		var _localctx: PowerContext = PowerContext(_ctx, getState())
-		try enterRule(_localctx, 126, Python3Parser.RULE_power)
+		try enterRule(_localctx, 132, Python3Parser.RULE_power)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(817)
+		 	setState(853)
+		 	try atom_expr()
+		 	setState(856)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.POWER.rawValue
+		 	      return testSet
+		 	 }()) {
+		 		setState(854)
+		 		try match(Python3Parser.Tokens.POWER.rawValue)
+		 		setState(855)
+		 		try factor()
+
+		 	}
+
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class Atom_exprContext: ParserRuleContext {
+			open
+			func atom() -> AtomContext? {
+				return getRuleContext(AtomContext.self, 0)
+			}
+			open
+			func AWAIT() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.AWAIT.rawValue, 0)
+			}
+			open
+			func trailer() -> [TrailerContext] {
+				return getRuleContexts(TrailerContext.self)
+			}
+			open
+			func trailer(_ i: Int) -> TrailerContext? {
+				return getRuleContext(TrailerContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_atom_expr
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterAtom_expr(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitAtom_expr(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitAtom_expr(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitAtom_expr(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func atom_expr() throws -> Atom_exprContext {
+		var _localctx: Atom_exprContext = Atom_exprContext(_ctx, getState())
+		try enterRule(_localctx, 134, Python3Parser.RULE_atom_expr)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(859)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.AWAIT.rawValue
+		 	      return testSet
+		 	 }()) {
+		 		setState(858)
+		 		try match(Python3Parser.Tokens.AWAIT.rawValue)
+
+		 	}
+
+		 	setState(861)
 		 	try atom()
-		 	setState(821)
+		 	setState(865)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	while (//closure
@@ -6072,29 +6969,14 @@ open class Python3Parser: Parser {
 		 	}()
 		 	      return testSet
 		 	 }()) {
-		 		setState(818)
+		 		setState(862)
 		 		try trailer()
 
 
-		 		setState(823)
+		 		setState(867)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 	}
-		 	setState(826)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.POWER.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(824)
-		 		try match(Python3Parser.Tokens.POWER.rawValue)
-		 		setState(825)
-		 		try factor()
-
-		 	}
-
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6105,92 +6987,98 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class AtomContext:ParserRuleContext {
-		open func yield_expr() -> Yield_exprContext? {
-			return getRuleContext(Yield_exprContext.self,0)
+
+	public class AtomContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NUMBER.rawValue, 0)
+			}
+			open
+			func yield_expr() -> Yield_exprContext? {
+				return getRuleContext(Yield_exprContext.self, 0)
+			}
+			open
+			func testlist_comp() -> Testlist_compContext? {
+				return getRuleContext(Testlist_compContext.self, 0)
+			}
+			open
+			func dictorsetmaker() -> DictorsetmakerContext? {
+				return getRuleContext(DictorsetmakerContext.self, 0)
+			}
+			open
+			func STRING() -> [TerminalNode] {
+				return getTokens(Python3Parser.Tokens.STRING.rawValue)
+			}
+			open
+			func STRING(_ i:Int) -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.STRING.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_atom
 		}
-		open func testlist_comp() -> Testlist_compContext? {
-			return getRuleContext(Testlist_compContext.self,0)
-		}
-		open func dictorsetmaker() -> DictorsetmakerContext? {
-			return getRuleContext(DictorsetmakerContext.self,0)
-		}
-		open func NAME() -> TerminalNode? { return getToken(Python3Parser.Tokens.NAME.rawValue, 0) }
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
-		}
-		open func str() -> Array<StrContext> {
-			return getRuleContexts(StrContext.self)
-		}
-		open func str(_ i: Int) -> StrContext? {
-			return getRuleContext(StrContext.self,i)
-		}
-		open func NONE() -> TerminalNode? { return getToken(Python3Parser.Tokens.NONE.rawValue, 0) }
-		open func TRUE() -> TerminalNode? { return getToken(Python3Parser.Tokens.TRUE.rawValue, 0) }
-		open func FALSE() -> TerminalNode? { return getToken(Python3Parser.Tokens.FALSE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_atom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitAtom(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitAtom(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atom() throws -> AtomContext {
+	 open func atom() throws -> AtomContext {
 		var _localctx: AtomContext = AtomContext(_ctx, getState())
-		try enterRule(_localctx, 128, Python3Parser.RULE_atom)
+		try enterRule(_localctx, 136, Python3Parser.RULE_atom)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(855)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(895)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .OPEN_PAREN:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(828)
+		 		setState(868)
 		 		try match(Python3Parser.Tokens.OPEN_PAREN.rawValue)
-		 		setState(831)
+		 		setState(871)
 		 		try _errHandler.sync(self)
 		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 		case .YIELD:
-		 		 	setState(829)
+		 		 	setState(869)
 		 		 	try yield_expr()
 
 		 			break
+		 		case .STRING:fallthrough
+		 		case .NUMBER:fallthrough
 		 		case .LAMBDA:fallthrough
 		 		case .NOT:fallthrough
 		 		case .NONE:fallthrough
 		 		case .TRUE:fallthrough
 		 		case .FALSE:fallthrough
+		 		case .AWAIT:fallthrough
 		 		case .NAME:fallthrough
-		 		case .STRING_LITERAL:fallthrough
-		 		case .BYTES_LITERAL:fallthrough
-		 		case .DECIMAL_INTEGER:fallthrough
-		 		case .OCT_INTEGER:fallthrough
-		 		case .HEX_INTEGER:fallthrough
-		 		case .BIN_INTEGER:fallthrough
-		 		case .FLOAT_NUMBER:fallthrough
-		 		case .IMAG_NUMBER:fallthrough
 		 		case .ELLIPSIS:fallthrough
 		 		case .STAR:fallthrough
 		 		case .OPEN_PAREN:fallthrough
@@ -6199,7 +7087,7 @@ open class Python3Parser: Parser {
 		 		case .MINUS:fallthrough
 		 		case .NOT_OP:fallthrough
 		 		case .OPEN_BRACE:
-		 		 	setState(830)
+		 		 	setState(870)
 		 		 	try testlist_comp()
 
 		 			break
@@ -6209,130 +7097,126 @@ open class Python3Parser: Parser {
 		 		default:
 		 			break
 		 		}
-		 		setState(833)
+		 		setState(873)
 		 		try match(Python3Parser.Tokens.CLOSE_PAREN.rawValue)
 
 		 		break
 
 		 	case .OPEN_BRACK:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(834)
+		 		setState(874)
 		 		try match(Python3Parser.Tokens.OPEN_BRACK.rawValue)
-		 		setState(836)
+		 		setState(876)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 		      var testSet: Bool = {  () -> Bool in
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
+		 		          testSet = testSet || {  () -> Bool in
+		 		             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 		              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(835)
+		 			setState(875)
 		 			try testlist_comp()
 
 		 		}
 
-		 		setState(838)
+		 		setState(878)
 		 		try match(Python3Parser.Tokens.CLOSE_BRACK.rawValue)
 
 		 		break
 
 		 	case .OPEN_BRACE:
-		 		try enterOuterAlt(_localctx, 3)
-		 		setState(839)
+		 		setState(879)
 		 		try match(Python3Parser.Tokens.OPEN_BRACE.rawValue)
-		 		setState(841)
+		 		setState(881)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 		      var testSet: Bool = {  () -> Bool in
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.POWER.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
+		 		          testSet = testSet || {  () -> Bool in
+		 		             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 		              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(840)
+		 			setState(880)
 		 			try dictorsetmaker()
 
 		 		}
 
-		 		setState(843)
+		 		setState(883)
 		 		try match(Python3Parser.Tokens.CLOSE_BRACE.rawValue)
 
 		 		break
 
 		 	case .NAME:
-		 		try enterOuterAlt(_localctx, 4)
-		 		setState(844)
+		 		setState(884)
 		 		try match(Python3Parser.Tokens.NAME.rawValue)
 
 		 		break
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:
-		 		try enterOuterAlt(_localctx, 5)
-		 		setState(845)
-		 		try number()
+
+		 	case .NUMBER:
+		 		setState(885)
+		 		try match(Python3Parser.Tokens.NUMBER.rawValue)
 
 		 		break
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:
-		 		try enterOuterAlt(_localctx, 6)
-		 		setState(847) 
+
+		 	case .STRING:
+		 		setState(887) 
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		repeat {
-		 			setState(846)
-		 			try str()
+		 			setState(886)
+		 			try match(Python3Parser.Tokens.STRING.rawValue)
 
 
-		 			setState(849); 
+		 			setState(889); 
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 		} while (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Python3Parser.Tokens.STRING_LITERAL.rawValue || _la == Python3Parser.Tokens.BYTES_LITERAL.rawValue
+		 		      let testSet: Bool = _la == Python3Parser.Tokens.STRING.rawValue
 		 		      return testSet
 		 		 }())
 
 		 		break
 
 		 	case .ELLIPSIS:
-		 		try enterOuterAlt(_localctx, 7)
-		 		setState(851)
+		 		setState(891)
 		 		try match(Python3Parser.Tokens.ELLIPSIS.rawValue)
 
 		 		break
 
 		 	case .NONE:
-		 		try enterOuterAlt(_localctx, 8)
-		 		setState(852)
+		 		setState(892)
 		 		try match(Python3Parser.Tokens.NONE.rawValue)
 
 		 		break
 
 		 	case .TRUE:
-		 		try enterOuterAlt(_localctx, 9)
-		 		setState(853)
+		 		setState(893)
 		 		try match(Python3Parser.Tokens.TRUE.rawValue)
 
 		 		break
 
 		 	case .FALSE:
-		 		try enterOuterAlt(_localctx, 10)
-		 		setState(854)
+		 		setState(894)
 		 		try match(Python3Parser.Tokens.FALSE.rawValue)
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -6342,45 +7226,61 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Testlist_compContext:ParserRuleContext {
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
+
+	public class Testlist_compContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+			open
+			func star_expr() -> [Star_exprContext] {
+				return getRuleContexts(Star_exprContext.self)
+			}
+			open
+			func star_expr(_ i: Int) -> Star_exprContext? {
+				return getRuleContext(Star_exprContext.self, i)
+			}
+			open
+			func comp_for() -> Comp_forContext? {
+				return getRuleContext(Comp_forContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_testlist_comp
 		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open func comp_for() -> Comp_forContext? {
-			return getRuleContext(Comp_forContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_testlist_comp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTestlist_comp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTestlist_comp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTestlist_comp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTestlist_comp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTestlist_comp(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTestlist_comp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTestlist_comp(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTestlist_comp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func testlist_comp() throws -> Testlist_compContext {
+	 open func testlist_comp() throws -> Testlist_compContext {
 		var _localctx: Testlist_compContext = Testlist_compContext(_ctx, getState())
-		try enterRule(_localctx, 130, Python3Parser.RULE_testlist_comp)
+		try enterRule(_localctx, 138, Python3Parser.RULE_testlist_comp)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -6388,36 +7288,97 @@ open class Python3Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(857)
-		 	try test()
-		 	setState(869)
+		 	setState(899)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .FOR:
-		 		setState(858)
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
+		 	case .LAMBDA:fallthrough
+		 	case .NOT:fallthrough
+		 	case .NONE:fallthrough
+		 	case .TRUE:fallthrough
+		 	case .FALSE:fallthrough
+		 	case .AWAIT:fallthrough
+		 	case .NAME:fallthrough
+		 	case .ELLIPSIS:fallthrough
+		 	case .OPEN_PAREN:fallthrough
+		 	case .OPEN_BRACK:fallthrough
+		 	case .ADD:fallthrough
+		 	case .MINUS:fallthrough
+		 	case .NOT_OP:fallthrough
+		 	case .OPEN_BRACE:
+		 		setState(897)
+		 		try test()
+
+		 		break
+
+		 	case .STAR:
+		 		setState(898)
+		 		try star_expr()
+
+		 		break
+		 	default:
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
+		 	}
+		 	setState(915)
+		 	try _errHandler.sync(self)
+		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .FOR:fallthrough
+		 	case .ASYNC:
+		 		setState(901)
 		 		try comp_for()
 
 		 		break
 		 	case .CLOSE_PAREN:fallthrough
 		 	case .COMMA:fallthrough
 		 	case .CLOSE_BRACK:
-		 		setState(863)
+		 		setState(909)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,112,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,125,_ctx)
 		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 			if ( _alt==1 ) {
-		 				setState(859)
+		 				setState(902)
 		 				try match(Python3Parser.Tokens.COMMA.rawValue)
-		 				setState(860)
-		 				try test()
+		 				setState(905)
+		 				try _errHandler.sync(self)
+		 				switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 				case .STRING:fallthrough
+		 				case .NUMBER:fallthrough
+		 				case .LAMBDA:fallthrough
+		 				case .NOT:fallthrough
+		 				case .NONE:fallthrough
+		 				case .TRUE:fallthrough
+		 				case .FALSE:fallthrough
+		 				case .AWAIT:fallthrough
+		 				case .NAME:fallthrough
+		 				case .ELLIPSIS:fallthrough
+		 				case .OPEN_PAREN:fallthrough
+		 				case .OPEN_BRACK:fallthrough
+		 				case .ADD:fallthrough
+		 				case .MINUS:fallthrough
+		 				case .NOT_OP:fallthrough
+		 				case .OPEN_BRACE:
+		 					setState(903)
+		 					try test()
+
+		 					break
+
+		 				case .STAR:
+		 					setState(904)
+		 					try star_expr()
+
+		 					break
+		 				default:
+		 					throw ANTLRException.recognition(e: NoViableAltException(self))
+		 				}
 
 		 		 
 		 			}
-		 			setState(865)
+		 			setState(911)
 		 			try _errHandler.sync(self)
-		 			_alt = try getInterpreter().adaptivePredict(_input,112,_ctx)
+		 			_alt = try getInterpreter().adaptivePredict(_input,125,_ctx)
 		 		}
-		 		setState(867)
+		 		setState(913)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -6425,7 +7386,7 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(866)
+		 			setState(912)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
 
 		 		}
@@ -6433,7 +7394,7 @@ open class Python3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -6445,97 +7406,111 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class TrailerContext:ParserRuleContext {
-		open func arglist() -> ArglistContext? {
-			return getRuleContext(ArglistContext.self,0)
+
+	public class TrailerContext: ParserRuleContext {
+			open
+			func arglist() -> ArglistContext? {
+				return getRuleContext(ArglistContext.self, 0)
+			}
+			open
+			func subscriptlist() -> SubscriptlistContext? {
+				return getRuleContext(SubscriptlistContext.self, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_trailer
 		}
-		open func subscriptlist() -> SubscriptlistContext? {
-			return getRuleContext(SubscriptlistContext.self,0)
-		}
-		open func NAME() -> TerminalNode? { return getToken(Python3Parser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_trailer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTrailer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTrailer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTrailer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTrailer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTrailer(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTrailer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTrailer(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTrailer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func trailer() throws -> TrailerContext {
+	 open func trailer() throws -> TrailerContext {
 		var _localctx: TrailerContext = TrailerContext(_ctx, getState())
-		try enterRule(_localctx, 132, Python3Parser.RULE_trailer)
+		try enterRule(_localctx, 140, Python3Parser.RULE_trailer)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(882)
+		 	setState(928)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .OPEN_PAREN:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(871)
+		 		setState(917)
 		 		try match(Python3Parser.Tokens.OPEN_PAREN.rawValue)
-		 		setState(873)
+		 		setState(919)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.POWER.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 		      var testSet: Bool = {  () -> Bool in
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.POWER.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
+		 		          testSet = testSet || {  () -> Bool in
+		 		             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 		              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(872)
+		 			setState(918)
 		 			try arglist()
 
 		 		}
 
-		 		setState(875)
+		 		setState(921)
 		 		try match(Python3Parser.Tokens.CLOSE_PAREN.rawValue)
 
 		 		break
 
 		 	case .OPEN_BRACK:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(876)
+		 		setState(922)
 		 		try match(Python3Parser.Tokens.OPEN_BRACK.rawValue)
-		 		setState(877)
+		 		setState(923)
 		 		try subscriptlist()
-		 		setState(878)
+		 		setState(924)
 		 		try match(Python3Parser.Tokens.CLOSE_BRACK.rawValue)
 
 		 		break
 
 		 	case .DOT:
 		 		try enterOuterAlt(_localctx, 3)
-		 		setState(880)
+		 		setState(926)
 		 		try match(Python3Parser.Tokens.DOT.rawValue)
-		 		setState(881)
+		 		setState(927)
 		 		try match(Python3Parser.Tokens.NAME.rawValue)
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6546,42 +7521,49 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class SubscriptlistContext:ParserRuleContext {
-		open func subscript() -> Array<SubscriptContext> {
-			return getRuleContexts(SubscriptContext.self)
+
+	public class SubscriptlistContext: ParserRuleContext {
+			open
+			func subscript() -> [SubscriptContext] {
+				return getRuleContexts(SubscriptContext.self)
+			}
+			open
+			func subscript(_ i: Int) -> SubscriptContext? {
+				return getRuleContext(SubscriptContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_subscriptlist
 		}
-		open func subscript(_ i: Int) -> SubscriptContext? {
-			return getRuleContext(SubscriptContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_subscriptlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterSubscriptlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterSubscriptlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitSubscriptlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitSubscriptlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitSubscriptlist(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitSubscriptlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitSubscriptlist(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitSubscriptlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subscriptlist() throws -> SubscriptlistContext {
+	 open func subscriptlist() throws -> SubscriptlistContext {
 		var _localctx: SubscriptlistContext = SubscriptlistContext(_ctx, getState())
-		try enterRule(_localctx, 134, Python3Parser.RULE_subscriptlist)
+		try enterRule(_localctx, 142, Python3Parser.RULE_subscriptlist)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -6589,25 +7571,25 @@ open class Python3Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(884)
+		 	setState(930)
 		 	try subscript()
-		 	setState(889)
+		 	setState(935)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,117,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,130,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(885)
+		 			setState(931)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(886)
+		 			setState(932)
 		 			try subscript()
 
 		 	 
 		 		}
-		 		setState(891)
+		 		setState(937)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,117,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,130,_ctx)
 		 	}
-		 	setState(893)
+		 	setState(939)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -6615,7 +7597,7 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(892)
+		 		setState(938)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
 
 		 	}
@@ -6630,96 +7612,112 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class SubscriptContext:ParserRuleContext {
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
+
+	public class SubscriptContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+			open
+			func sliceop() -> SliceopContext? {
+				return getRuleContext(SliceopContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_subscript
 		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open func sliceop() -> SliceopContext? {
-			return getRuleContext(SliceopContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_subscript }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterSubscript(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterSubscript(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitSubscript(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitSubscript(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitSubscript(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitSubscript(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitSubscript(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitSubscript(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subscript() throws -> SubscriptContext {
+	 open func subscript() throws -> SubscriptContext {
 		var _localctx: SubscriptContext = SubscriptContext(_ctx, getState())
-		try enterRule(_localctx, 136, Python3Parser.RULE_subscript)
+		try enterRule(_localctx, 144, Python3Parser.RULE_subscript)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(906)
+		 	setState(952)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,122, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,135, _ctx)) {
 		 	case 1:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(895)
+		 		setState(941)
 		 		try test()
 
 		 		break
 		 	case 2:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(897)
+		 		setState(943)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 		      var testSet: Bool = {  () -> Bool in
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
+		 		          testSet = testSet || {  () -> Bool in
+		 		             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 		              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(896)
+		 			setState(942)
 		 			try test()
 
 		 		}
 
-		 		setState(899)
+		 		setState(945)
 		 		try match(Python3Parser.Tokens.COLON.rawValue)
-		 		setState(901)
+		 		setState(947)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 		      var testSet: Bool = {  () -> Bool in
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
+		 		          testSet = testSet || {  () -> Bool in
+		 		             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 		              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(900)
+		 			setState(946)
 		 			try test()
 
 		 		}
 
-		 		setState(904)
+		 		setState(950)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
@@ -6727,7 +7725,7 @@ open class Python3Parser: Parser {
 		 		      let testSet: Bool = _la == Python3Parser.Tokens.COLON.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(903)
+		 			setState(949)
 		 			try sliceop()
 
 		 		}
@@ -6745,59 +7743,69 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class SliceopContext:ParserRuleContext {
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
+
+	public class SliceopContext: ParserRuleContext {
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_sliceop
 		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_sliceop }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterSliceop(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterSliceop(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitSliceop(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitSliceop(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitSliceop(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitSliceop(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitSliceop(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitSliceop(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sliceop() throws -> SliceopContext {
+	 open func sliceop() throws -> SliceopContext {
 		var _localctx: SliceopContext = SliceopContext(_ctx, getState())
-		try enterRule(_localctx, 138, Python3Parser.RULE_sliceop)
+		try enterRule(_localctx, 146, Python3Parser.RULE_sliceop)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(908)
+		 	setState(954)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(910)
+		 	setState(956)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 	      var testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
+		 	          testSet = testSet || {  () -> Bool in
+		 	             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 	              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 	          }()
 		 	      return testSet
 		 	 }()) {
-		 		setState(909)
+		 		setState(955)
 		 		try test()
 
 		 	}
@@ -6812,42 +7820,57 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class ExprlistContext:ParserRuleContext {
-		open func star_expr() -> Array<Star_exprContext> {
-			return getRuleContexts(Star_exprContext.self)
+
+	public class ExprlistContext: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func star_expr() -> [Star_exprContext] {
+				return getRuleContexts(Star_exprContext.self)
+			}
+			open
+			func star_expr(_ i: Int) -> Star_exprContext? {
+				return getRuleContext(Star_exprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_exprlist
 		}
-		open func star_expr(_ i: Int) -> Star_exprContext? {
-			return getRuleContext(Star_exprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_exprlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterExprlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterExprlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitExprlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitExprlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitExprlist(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitExprlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitExprlist(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitExprlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exprlist() throws -> ExprlistContext {
+	 open func exprlist() throws -> ExprlistContext {
 		var _localctx: ExprlistContext = ExprlistContext(_ctx, getState())
-		try enterRule(_localctx, 140, Python3Parser.RULE_exprlist)
+		try enterRule(_localctx, 148, Python3Parser.RULE_exprlist)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -6855,25 +7878,81 @@ open class Python3Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(912)
-		 	try star_expr()
-		 	setState(917)
+		 	setState(960)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,124,_ctx)
+		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
+		 	case .NONE:fallthrough
+		 	case .TRUE:fallthrough
+		 	case .FALSE:fallthrough
+		 	case .AWAIT:fallthrough
+		 	case .NAME:fallthrough
+		 	case .ELLIPSIS:fallthrough
+		 	case .OPEN_PAREN:fallthrough
+		 	case .OPEN_BRACK:fallthrough
+		 	case .ADD:fallthrough
+		 	case .MINUS:fallthrough
+		 	case .NOT_OP:fallthrough
+		 	case .OPEN_BRACE:
+		 		setState(958)
+		 		try expr()
+
+		 		break
+
+		 	case .STAR:
+		 		setState(959)
+		 		try star_expr()
+
+		 		break
+		 	default:
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
+		 	}
+		 	setState(969)
+		 	try _errHandler.sync(self)
+		 	_alt = try getInterpreter().adaptivePredict(_input,139,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(913)
+		 			setState(962)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(914)
-		 			try star_expr()
+		 			setState(965)
+		 			try _errHandler.sync(self)
+		 			switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 			case .STRING:fallthrough
+		 			case .NUMBER:fallthrough
+		 			case .NONE:fallthrough
+		 			case .TRUE:fallthrough
+		 			case .FALSE:fallthrough
+		 			case .AWAIT:fallthrough
+		 			case .NAME:fallthrough
+		 			case .ELLIPSIS:fallthrough
+		 			case .OPEN_PAREN:fallthrough
+		 			case .OPEN_BRACK:fallthrough
+		 			case .ADD:fallthrough
+		 			case .MINUS:fallthrough
+		 			case .NOT_OP:fallthrough
+		 			case .OPEN_BRACE:
+		 				setState(963)
+		 				try expr()
+
+		 				break
+
+		 			case .STAR:
+		 				setState(964)
+		 				try star_expr()
+
+		 				break
+		 			default:
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
+		 			}
 
 		 	 
 		 		}
-		 		setState(919)
+		 		setState(971)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,124,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,139,_ctx)
 		 	}
-		 	setState(921)
+		 	setState(973)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -6881,7 +7960,7 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(920)
+		 		setState(972)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
 
 		 	}
@@ -6896,42 +7975,49 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class TestlistContext:ParserRuleContext {
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
+
+	public class TestlistContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_testlist
 		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_testlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterTestlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterTestlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitTestlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitTestlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitTestlist(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitTestlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitTestlist(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitTestlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func testlist() throws -> TestlistContext {
+	 open func testlist() throws -> TestlistContext {
 		var _localctx: TestlistContext = TestlistContext(_ctx, getState())
-		try enterRule(_localctx, 142, Python3Parser.RULE_testlist)
+		try enterRule(_localctx, 150, Python3Parser.RULE_testlist)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -6939,25 +8025,25 @@ open class Python3Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(923)
+		 	setState(975)
 		 	try test()
-		 	setState(928)
+		 	setState(980)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,126,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,141,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(924)
+		 			setState(976)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(925)
+		 			setState(977)
 		 			try test()
 
 		 	 
 		 		}
-		 		setState(930)
+		 		setState(982)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,126,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,141,_ctx)
 		 	}
-		 	setState(932)
+		 	setState(984)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -6965,7 +8051,7 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(931)
+		 		setState(983)
 		 		try match(Python3Parser.Tokens.COMMA.rawValue)
 
 		 	}
@@ -6980,93 +8066,182 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class DictorsetmakerContext:ParserRuleContext {
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
+
+	public class DictorsetmakerContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func comp_for() -> Comp_forContext? {
+				return getRuleContext(Comp_forContext.self, 0)
+			}
+			open
+			func star_expr() -> [Star_exprContext] {
+				return getRuleContexts(Star_exprContext.self)
+			}
+			open
+			func star_expr(_ i: Int) -> Star_exprContext? {
+				return getRuleContext(Star_exprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_dictorsetmaker
 		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open func comp_for() -> Comp_forContext? {
-			return getRuleContext(Comp_forContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_dictorsetmaker }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterDictorsetmaker(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterDictorsetmaker(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitDictorsetmaker(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitDictorsetmaker(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitDictorsetmaker(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitDictorsetmaker(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitDictorsetmaker(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitDictorsetmaker(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dictorsetmaker() throws -> DictorsetmakerContext {
+	 open func dictorsetmaker() throws -> DictorsetmakerContext {
 		var _localctx: DictorsetmakerContext = DictorsetmakerContext(_ctx, getState())
-		try enterRule(_localctx, 144, Python3Parser.RULE_dictorsetmaker)
+		try enterRule(_localctx, 152, Python3Parser.RULE_dictorsetmaker)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 			var _alt:Int
-		 	setState(967)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(1034)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,134, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,153, _ctx)) {
 		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(934)
-		 		try test()
-		 		setState(935)
-		 		try match(Python3Parser.Tokens.COLON.rawValue)
-		 		setState(936)
-		 		try test()
-		 		setState(951)
+		 		setState(992)
 		 		try _errHandler.sync(self)
 		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 		case .FOR:
-		 			setState(937)
+		 		case .STRING:fallthrough
+		 		case .NUMBER:fallthrough
+		 		case .LAMBDA:fallthrough
+		 		case .NOT:fallthrough
+		 		case .NONE:fallthrough
+		 		case .TRUE:fallthrough
+		 		case .FALSE:fallthrough
+		 		case .AWAIT:fallthrough
+		 		case .NAME:fallthrough
+		 		case .ELLIPSIS:fallthrough
+		 		case .OPEN_PAREN:fallthrough
+		 		case .OPEN_BRACK:fallthrough
+		 		case .ADD:fallthrough
+		 		case .MINUS:fallthrough
+		 		case .NOT_OP:fallthrough
+		 		case .OPEN_BRACE:
+		 			setState(986)
+		 			try test()
+		 			setState(987)
+		 			try match(Python3Parser.Tokens.COLON.rawValue)
+		 			setState(988)
+		 			try test()
+
+		 			break
+
+		 		case .POWER:
+		 			setState(990)
+		 			try match(Python3Parser.Tokens.POWER.rawValue)
+		 			setState(991)
+		 			try expr()
+
+		 			break
+		 		default:
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
+		 		}
+		 		setState(1012)
+		 		try _errHandler.sync(self)
+		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 		case .FOR:fallthrough
+		 		case .ASYNC:
+		 			setState(994)
 		 			try comp_for()
 
 		 			break
 		 		case .COMMA:fallthrough
 		 		case .CLOSE_BRACE:
-		 			setState(945)
+		 			setState(1006)
 		 			try _errHandler.sync(self)
-		 			_alt = try getInterpreter().adaptivePredict(_input,128,_ctx)
+		 			_alt = try getInterpreter().adaptivePredict(_input,145,_ctx)
 		 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 				if ( _alt==1 ) {
-		 					setState(938)
+		 					setState(995)
 		 					try match(Python3Parser.Tokens.COMMA.rawValue)
-		 					setState(939)
-		 					try test()
-		 					setState(940)
-		 					try match(Python3Parser.Tokens.COLON.rawValue)
-		 					setState(941)
-		 					try test()
+		 					setState(1002)
+		 					try _errHandler.sync(self)
+		 					switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 					case .STRING:fallthrough
+		 					case .NUMBER:fallthrough
+		 					case .LAMBDA:fallthrough
+		 					case .NOT:fallthrough
+		 					case .NONE:fallthrough
+		 					case .TRUE:fallthrough
+		 					case .FALSE:fallthrough
+		 					case .AWAIT:fallthrough
+		 					case .NAME:fallthrough
+		 					case .ELLIPSIS:fallthrough
+		 					case .OPEN_PAREN:fallthrough
+		 					case .OPEN_BRACK:fallthrough
+		 					case .ADD:fallthrough
+		 					case .MINUS:fallthrough
+		 					case .NOT_OP:fallthrough
+		 					case .OPEN_BRACE:
+		 						setState(996)
+		 						try test()
+		 						setState(997)
+		 						try match(Python3Parser.Tokens.COLON.rawValue)
+		 						setState(998)
+		 						try test()
+
+		 						break
+
+		 					case .POWER:
+		 						setState(1000)
+		 						try match(Python3Parser.Tokens.POWER.rawValue)
+		 						setState(1001)
+		 						try expr()
+
+		 						break
+		 					default:
+		 						throw ANTLRException.recognition(e: NoViableAltException(self))
+		 					}
 
 		 			 
 		 				}
-		 				setState(947)
+		 				setState(1008)
 		 				try _errHandler.sync(self)
-		 				_alt = try getInterpreter().adaptivePredict(_input,128,_ctx)
+		 				_alt = try getInterpreter().adaptivePredict(_input,145,_ctx)
 		 			}
-		 			setState(949)
+		 			setState(1010)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 			if (//closure
@@ -7074,7 +8249,7 @@ open class Python3Parser: Parser {
 		 			      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 			      return testSet
 		 			 }()) {
-		 				setState(948)
+		 				setState(1009)
 		 				try match(Python3Parser.Tokens.COMMA.rawValue)
 
 		 			}
@@ -7082,41 +8257,102 @@ open class Python3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
+
 
 		 		break
 		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(953)
-		 		try test()
-		 		setState(965)
+		 		setState(1016)
 		 		try _errHandler.sync(self)
 		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 		case .FOR:
-		 			setState(954)
+		 		case .STRING:fallthrough
+		 		case .NUMBER:fallthrough
+		 		case .LAMBDA:fallthrough
+		 		case .NOT:fallthrough
+		 		case .NONE:fallthrough
+		 		case .TRUE:fallthrough
+		 		case .FALSE:fallthrough
+		 		case .AWAIT:fallthrough
+		 		case .NAME:fallthrough
+		 		case .ELLIPSIS:fallthrough
+		 		case .OPEN_PAREN:fallthrough
+		 		case .OPEN_BRACK:fallthrough
+		 		case .ADD:fallthrough
+		 		case .MINUS:fallthrough
+		 		case .NOT_OP:fallthrough
+		 		case .OPEN_BRACE:
+		 			setState(1014)
+		 			try test()
+
+		 			break
+
+		 		case .STAR:
+		 			setState(1015)
+		 			try star_expr()
+
+		 			break
+		 		default:
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
+		 		}
+		 		setState(1032)
+		 		try _errHandler.sync(self)
+		 		switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 		case .FOR:fallthrough
+		 		case .ASYNC:
+		 			setState(1018)
 		 			try comp_for()
 
 		 			break
 		 		case .COMMA:fallthrough
 		 		case .CLOSE_BRACE:
-		 			setState(959)
+		 			setState(1026)
 		 			try _errHandler.sync(self)
-		 			_alt = try getInterpreter().adaptivePredict(_input,131,_ctx)
+		 			_alt = try getInterpreter().adaptivePredict(_input,150,_ctx)
 		 			while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 				if ( _alt==1 ) {
-		 					setState(955)
+		 					setState(1019)
 		 					try match(Python3Parser.Tokens.COMMA.rawValue)
-		 					setState(956)
-		 					try test()
+		 					setState(1022)
+		 					try _errHandler.sync(self)
+		 					switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
+		 					case .STRING:fallthrough
+		 					case .NUMBER:fallthrough
+		 					case .LAMBDA:fallthrough
+		 					case .NOT:fallthrough
+		 					case .NONE:fallthrough
+		 					case .TRUE:fallthrough
+		 					case .FALSE:fallthrough
+		 					case .AWAIT:fallthrough
+		 					case .NAME:fallthrough
+		 					case .ELLIPSIS:fallthrough
+		 					case .OPEN_PAREN:fallthrough
+		 					case .OPEN_BRACK:fallthrough
+		 					case .ADD:fallthrough
+		 					case .MINUS:fallthrough
+		 					case .NOT_OP:fallthrough
+		 					case .OPEN_BRACE:
+		 						setState(1020)
+		 						try test()
+
+		 						break
+
+		 					case .STAR:
+		 						setState(1021)
+		 						try star_expr()
+
+		 						break
+		 					default:
+		 						throw ANTLRException.recognition(e: NoViableAltException(self))
+		 					}
 
 		 			 
 		 				}
-		 				setState(961)
+		 				setState(1028)
 		 				try _errHandler.sync(self)
-		 				_alt = try getInterpreter().adaptivePredict(_input,131,_ctx)
+		 				_alt = try getInterpreter().adaptivePredict(_input,150,_ctx)
 		 			}
-		 			setState(963)
+		 			setState(1030)
 		 			try _errHandler.sync(self)
 		 			_la = try _input.LA(1)
 		 			if (//closure
@@ -7124,7 +8360,7 @@ open class Python3Parser: Parser {
 		 			      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
 		 			      return testSet
 		 			 }()) {
-		 				setState(962)
+		 				setState(1029)
 		 				try match(Python3Parser.Tokens.COMMA.rawValue)
 
 		 			}
@@ -7132,12 +8368,14 @@ open class Python3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
+
 
 		 		break
 		 	default: break
 		 	}
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -7147,55 +8385,64 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class ClassdefContext:ParserRuleContext {
-		open func CLASS() -> TerminalNode? { return getToken(Python3Parser.Tokens.CLASS.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(Python3Parser.Tokens.NAME.rawValue, 0) }
-		open func suite() -> SuiteContext? {
-			return getRuleContext(SuiteContext.self,0)
+
+	public class ClassdefContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func suite() -> SuiteContext? {
+				return getRuleContext(SuiteContext.self, 0)
+			}
+			open
+			func arglist() -> ArglistContext? {
+				return getRuleContext(ArglistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_classdef
 		}
-		open func arglist() -> ArglistContext? {
-			return getRuleContext(ArglistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_classdef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterClassdef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterClassdef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitClassdef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitClassdef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitClassdef(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitClassdef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitClassdef(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitClassdef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classdef() throws -> ClassdefContext {
+	 open func classdef() throws -> ClassdefContext {
 		var _localctx: ClassdefContext = ClassdefContext(_ctx, getState())
-		try enterRule(_localctx, 146, Python3Parser.RULE_classdef)
+		try enterRule(_localctx, 154, Python3Parser.RULE_classdef)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(969)
+		 	setState(1036)
 		 	try match(Python3Parser.Tokens.CLASS.rawValue)
-		 	setState(970)
+		 	setState(1037)
 		 	try match(Python3Parser.Tokens.NAME.rawValue)
-		 	setState(976)
+		 	setState(1043)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
@@ -7203,32 +8450,36 @@ open class Python3Parser: Parser {
 		 	      let testSet: Bool = _la == Python3Parser.Tokens.OPEN_PAREN.rawValue
 		 	      return testSet
 		 	 }()) {
-		 		setState(971)
+		 		setState(1038)
 		 		try match(Python3Parser.Tokens.OPEN_PAREN.rawValue)
-		 		setState(973)
+		 		setState(1040)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = {  () -> Bool in
-		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.POWER.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 		    return  Utils.testBitLeftShiftArray(testArray, 20)
+		 		      var testSet: Bool = {  () -> Bool in
+		 		   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.POWER.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 		    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 		}()
+		 		          testSet = testSet || {  () -> Bool in
+		 		             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 		              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 		          }()
 		 		      return testSet
 		 		 }()) {
-		 			setState(972)
+		 			setState(1039)
 		 			try arglist()
 
 		 		}
 
-		 		setState(975)
+		 		setState(1042)
 		 		try match(Python3Parser.Tokens.CLOSE_PAREN.rawValue)
 
 		 	}
 
-		 	setState(978)
+		 	setState(1045)
 		 	try match(Python3Parser.Tokens.COLON.rawValue)
-		 	setState(979)
+		 	setState(1046)
 		 	try suite()
 
 		}
@@ -7240,48 +8491,49 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class ArglistContext:ParserRuleContext {
-		open func argument() -> Array<ArgumentContext> {
-			return getRuleContexts(ArgumentContext.self)
+
+	public class ArglistContext: ParserRuleContext {
+			open
+			func argument() -> [ArgumentContext] {
+				return getRuleContexts(ArgumentContext.self)
+			}
+			open
+			func argument(_ i: Int) -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_arglist
 		}
-		open func argument(_ i: Int) -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,i)
-		}
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
-		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_arglist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterArglist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterArglist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitArglist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitArglist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitArglist(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitArglist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitArglist(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitArglist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arglist() throws -> ArglistContext {
+	 open func arglist() throws -> ArglistContext {
 		var _localctx: ArglistContext = ArglistContext(_ctx, getState())
-		try enterRule(_localctx, 148, Python3Parser.RULE_arglist)
+		try enterRule(_localctx, 156, Python3Parser.RULE_arglist)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
@@ -7289,92 +8541,37 @@ open class Python3Parser: Parser {
 		do {
 			var _alt:Int
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(986)
+		 	setState(1048)
+		 	try argument()
+		 	setState(1053)
 		 	try _errHandler.sync(self)
-		 	_alt = try getInterpreter().adaptivePredict(_input,137,_ctx)
+		 	_alt = try getInterpreter().adaptivePredict(_input,156,_ctx)
 		 	while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
 		 		if ( _alt==1 ) {
-		 			setState(981)
-		 			try argument()
-		 			setState(982)
+		 			setState(1049)
 		 			try match(Python3Parser.Tokens.COMMA.rawValue)
+		 			setState(1050)
+		 			try argument()
 
 		 	 
 		 		}
-		 		setState(988)
+		 		setState(1055)
 		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,137,_ctx)
+		 		_alt = try getInterpreter().adaptivePredict(_input,156,_ctx)
 		 	}
-		 	setState(1009)
+		 	setState(1057)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,141, _ctx)) {
-		 	case 1:
-		 		setState(989)
-		 		try argument()
-		 		setState(991)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 		if (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(990)
-		 			try match(Python3Parser.Tokens.COMMA.rawValue)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
+		 	      return testSet
+		 	 }()) {
+		 		setState(1056)
+		 		try match(Python3Parser.Tokens.COMMA.rawValue)
 
-		 		}
-
-
-		 		break
-		 	case 2:
-		 		setState(993)
-		 		try match(Python3Parser.Tokens.STAR.rawValue)
-		 		setState(994)
-		 		try test()
-		 		setState(999)
-		 		try _errHandler.sync(self)
-		 		_alt = try getInterpreter().adaptivePredict(_input,139,_ctx)
-		 		while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
-		 			if ( _alt==1 ) {
-		 				setState(995)
-		 				try match(Python3Parser.Tokens.COMMA.rawValue)
-		 				setState(996)
-		 				try argument()
-
-		 		 
-		 			}
-		 			setState(1001)
-		 			try _errHandler.sync(self)
-		 			_alt = try getInterpreter().adaptivePredict(_input,139,_ctx)
-		 		}
-		 		setState(1005)
-		 		try _errHandler.sync(self)
-		 		_la = try _input.LA(1)
-		 		if (//closure
-		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Python3Parser.Tokens.COMMA.rawValue
-		 		      return testSet
-		 		 }()) {
-		 			setState(1002)
-		 			try match(Python3Parser.Tokens.COMMA.rawValue)
-		 			setState(1003)
-		 			try match(Python3Parser.Tokens.POWER.rawValue)
-		 			setState(1004)
-		 			try test()
-
-		 		}
-
-
-		 		break
-		 	case 3:
-		 		setState(1007)
-		 		try match(Python3Parser.Tokens.POWER.rawValue)
-		 		setState(1008)
-		 		try test()
-
-		 		break
-		 	default: break
 		 	}
+
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7385,66 +8582,74 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentContext:ParserRuleContext {
-		open func test() -> Array<TestContext> {
-			return getRuleContexts(TestContext.self)
+
+	public class ArgumentContext: ParserRuleContext {
+			open
+			func test() -> [TestContext] {
+				return getRuleContexts(TestContext.self)
+			}
+			open
+			func test(_ i: Int) -> TestContext? {
+				return getRuleContext(TestContext.self, i)
+			}
+			open
+			func comp_for() -> Comp_forContext? {
+				return getRuleContext(Comp_forContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_argument
 		}
-		open func test(_ i: Int) -> TestContext? {
-			return getRuleContext(TestContext.self,i)
-		}
-		open func comp_for() -> Comp_forContext? {
-			return getRuleContext(Comp_forContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterArgument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterArgument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitArgument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitArgument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitArgument(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitArgument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitArgument(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitArgument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument() throws -> ArgumentContext {
+	 open func argument() throws -> ArgumentContext {
 		var _localctx: ArgumentContext = ArgumentContext(_ctx, getState())
-		try enterRule(_localctx, 150, Python3Parser.RULE_argument)
+		try enterRule(_localctx, 158, Python3Parser.RULE_argument)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1019)
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(1071)
 		 	try _errHandler.sync(self)
-		 	switch(try getInterpreter().adaptivePredict(_input,143, _ctx)) {
+		 	switch(try getInterpreter().adaptivePredict(_input,159, _ctx)) {
 		 	case 1:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1011)
+		 		setState(1059)
 		 		try test()
-		 		setState(1013)
+		 		setState(1061)
 		 		try _errHandler.sync(self)
 		 		_la = try _input.LA(1)
 		 		if (//closure
 		 		 { () -> Bool in
-		 		      let testSet: Bool = _la == Python3Parser.Tokens.FOR.rawValue
+		 		      let testSet: Bool = _la == Python3Parser.Tokens.FOR.rawValue || _la == Python3Parser.Tokens.ASYNC.rawValue
 		 		      return testSet
 		 		 }()) {
-		 			setState(1012)
+		 			setState(1060)
 		 			try comp_for()
 
 		 		}
@@ -7452,17 +8657,31 @@ open class Python3Parser: Parser {
 
 		 		break
 		 	case 2:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1015)
+		 		setState(1063)
 		 		try test()
-		 		setState(1016)
+		 		setState(1064)
 		 		try match(Python3Parser.Tokens.ASSIGN.rawValue)
-		 		setState(1017)
+		 		setState(1065)
+		 		try test()
+
+		 		break
+		 	case 3:
+		 		setState(1067)
+		 		try match(Python3Parser.Tokens.POWER.rawValue)
+		 		setState(1068)
+		 		try test()
+
+		 		break
+		 	case 4:
+		 		setState(1069)
+		 		try match(Python3Parser.Tokens.STAR.rawValue)
+		 		setState(1070)
 		 		try test()
 
 		 		break
 		 	default: break
 		 	}
+
 		}
 		catch ANTLRException.recognition(let re) {
 			_localctx.exception = re
@@ -7472,64 +8691,72 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Comp_iterContext:ParserRuleContext {
-		open func comp_for() -> Comp_forContext? {
-			return getRuleContext(Comp_forContext.self,0)
+
+	public class Comp_iterContext: ParserRuleContext {
+			open
+			func comp_for() -> Comp_forContext? {
+				return getRuleContext(Comp_forContext.self, 0)
+			}
+			open
+			func comp_if() -> Comp_ifContext? {
+				return getRuleContext(Comp_ifContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_comp_iter
 		}
-		open func comp_if() -> Comp_ifContext? {
-			return getRuleContext(Comp_ifContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_comp_iter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterComp_iter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterComp_iter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitComp_iter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitComp_iter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitComp_iter(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitComp_iter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitComp_iter(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitComp_iter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comp_iter() throws -> Comp_iterContext {
+	 open func comp_iter() throws -> Comp_iterContext {
 		var _localctx: Comp_iterContext = Comp_iterContext(_ctx, getState())
-		try enterRule(_localctx, 152, Python3Parser.RULE_comp_iter)
+		try enterRule(_localctx, 160, Python3Parser.RULE_comp_iter)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1023)
+		 	setState(1075)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .FOR:
+		 	case .FOR:fallthrough
+		 	case .ASYNC:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1021)
+		 		setState(1073)
 		 		try comp_for()
 
 		 		break
 
 		 	case .IF:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1022)
+		 		setState(1074)
 		 		try comp_if()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7540,208 +8767,308 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Comp_forContext:ParserRuleContext {
-		open func FOR() -> TerminalNode? { return getToken(Python3Parser.Tokens.FOR.rawValue, 0) }
-		open func exprlist() -> ExprlistContext? {
-			return getRuleContext(ExprlistContext.self,0)
+
+	public class Comp_forContext: ParserRuleContext {
+			open
+			func exprlist() -> ExprlistContext? {
+				return getRuleContext(ExprlistContext.self, 0)
+			}
+			open
+			func or_test() -> Or_testContext? {
+				return getRuleContext(Or_testContext.self, 0)
+			}
+			open
+			func ASYNC() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.ASYNC.rawValue, 0)
+			}
+			open
+			func comp_iter() -> Comp_iterContext? {
+				return getRuleContext(Comp_iterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_comp_for
 		}
-		open func IN() -> TerminalNode? { return getToken(Python3Parser.Tokens.IN.rawValue, 0) }
-		open func or_test() -> Or_testContext? {
-			return getRuleContext(Or_testContext.self,0)
-		}
-		open func comp_iter() -> Comp_iterContext? {
-			return getRuleContext(Comp_iterContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_comp_for }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterComp_for(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterComp_for(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitComp_for(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitComp_for(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitComp_for(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitComp_for(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitComp_for(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitComp_for(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comp_for() throws -> Comp_forContext {
+	 open func comp_for() throws -> Comp_forContext {
 		var _localctx: Comp_forContext = Comp_forContext(_ctx, getState())
-		try enterRule(_localctx, 154, Python3Parser.RULE_comp_for)
+		try enterRule(_localctx, 162, Python3Parser.RULE_comp_for)
 		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1025)
+		 	setState(1078)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = _la == Python3Parser.Tokens.ASYNC.rawValue
+		 	      return testSet
+		 	 }()) {
+		 		setState(1077)
+		 		try match(Python3Parser.Tokens.ASYNC.rawValue)
+
+		 	}
+
+		 	setState(1080)
 		 	try match(Python3Parser.Tokens.FOR.rawValue)
-		 	setState(1026)
+		 	setState(1081)
 		 	try exprlist()
-		 	setState(1027)
+		 	setState(1082)
 		 	try match(Python3Parser.Tokens.IN.rawValue)
-		 	setState(1028)
+		 	setState(1083)
 		 	try or_test()
-		 	setState(1030)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.IF.rawValue || _la == Python3Parser.Tokens.FOR.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(1029)
-		 		try comp_iter()
-
-		 	}
-
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class Comp_ifContext:ParserRuleContext {
-		open func IF() -> TerminalNode? { return getToken(Python3Parser.Tokens.IF.rawValue, 0) }
-		open func test_nocond() -> Test_nocondContext? {
-			return getRuleContext(Test_nocondContext.self,0)
-		}
-		open func comp_iter() -> Comp_iterContext? {
-			return getRuleContext(Comp_iterContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_comp_if }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterComp_if(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitComp_if(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitComp_if(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitComp_if(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func comp_if() throws -> Comp_ifContext {
-		var _localctx: Comp_ifContext = Comp_ifContext(_ctx, getState())
-		try enterRule(_localctx, 156, Python3Parser.RULE_comp_if)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1032)
-		 	try match(Python3Parser.Tokens.IF.rawValue)
-		 	setState(1033)
-		 	try test_nocond()
-		 	setState(1035)
-		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.IF.rawValue || _la == Python3Parser.Tokens.FOR.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(1034)
-		 		try comp_iter()
-
-		 	}
-
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class Yield_exprContext:ParserRuleContext {
-		open func YIELD() -> TerminalNode? { return getToken(Python3Parser.Tokens.YIELD.rawValue, 0) }
-		open func yield_arg() -> Yield_argContext? {
-			return getRuleContext(Yield_argContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_yield_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterYield_expr(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitYield_expr(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitYield_expr(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitYield_expr(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func yield_expr() throws -> Yield_exprContext {
-		var _localctx: Yield_exprContext = Yield_exprContext(_ctx, getState())
-		try enterRule(_localctx, 158, Python3Parser.RULE_yield_expr)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1037)
-		 	try match(Python3Parser.Tokens.YIELD.rawValue)
-		 	setState(1039)
+		 	setState(1085)
 		 	try _errHandler.sync(self)
 		 	_la = try _input.LA(1)
 		 	if (//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.FROM.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.STRING_LITERAL.rawValue,Python3Parser.Tokens.BYTES_LITERAL.rawValue,Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue,Python3Parser.Tokens.FLOAT_NUMBER.rawValue,Python3Parser.Tokens.IMAG_NUMBER.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.STAR.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue,Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 4)
+		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.IF.rawValue,Python3Parser.Tokens.FOR.rawValue,Python3Parser.Tokens.ASYNC.rawValue]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	      return testSet
 		 	 }()) {
-		 		setState(1038)
+		 		setState(1084)
+		 		try comp_iter()
+
+		 	}
+
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class Comp_ifContext: ParserRuleContext {
+			open
+			func test_nocond() -> Test_nocondContext? {
+				return getRuleContext(Test_nocondContext.self, 0)
+			}
+			open
+			func comp_iter() -> Comp_iterContext? {
+				return getRuleContext(Comp_iterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_comp_if
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterComp_if(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitComp_if(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitComp_if(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitComp_if(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func comp_if() throws -> Comp_ifContext {
+		var _localctx: Comp_ifContext = Comp_ifContext(_ctx, getState())
+		try enterRule(_localctx, 164, Python3Parser.RULE_comp_if)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(1087)
+		 	try match(Python3Parser.Tokens.IF.rawValue)
+		 	setState(1088)
+		 	try test_nocond()
+		 	setState(1090)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      let testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.IF.rawValue,Python3Parser.Tokens.FOR.rawValue,Python3Parser.Tokens.ASYNC.rawValue]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
+		 	}()
+		 	      return testSet
+		 	 }()) {
+		 		setState(1089)
+		 		try comp_iter()
+
+		 	}
+
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class Encoding_declContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(Python3Parser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_encoding_decl
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterEncoding_decl(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitEncoding_decl(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitEncoding_decl(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitEncoding_decl(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func encoding_decl() throws -> Encoding_declContext {
+		var _localctx: Encoding_declContext = Encoding_declContext(_ctx, getState())
+		try enterRule(_localctx, 166, Python3Parser.RULE_encoding_decl)
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(1092)
+		 	try match(Python3Parser.Tokens.NAME.rawValue)
+
+		}
+		catch ANTLRException.recognition(let re) {
+			_localctx.exception = re
+			_errHandler.reportError(self, re)
+			try _errHandler.recover(self, re)
+		}
+
+		return _localctx
+	}
+
+	public class Yield_exprContext: ParserRuleContext {
+			open
+			func yield_arg() -> Yield_argContext? {
+				return getRuleContext(Yield_argContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_yield_expr
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterYield_expr(self)
+			}
+		}
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitYield_expr(self)
+			}
+		}
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitYield_expr(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitYield_expr(self)
+			}
+			else {
+			     return visitor.visitChildren(self)
+			}
+		}
+	}
+	@discardableResult
+	 open func yield_expr() throws -> Yield_exprContext {
+		var _localctx: Yield_exprContext = Yield_exprContext(_ctx, getState())
+		try enterRule(_localctx, 168, Python3Parser.RULE_yield_expr)
+		var _la: Int = 0
+		defer {
+	    		try! exitRule()
+	    }
+		do {
+		 	try enterOuterAlt(_localctx, 1)
+		 	setState(1094)
+		 	try match(Python3Parser.Tokens.YIELD.rawValue)
+		 	setState(1096)
+		 	try _errHandler.sync(self)
+		 	_la = try _input.LA(1)
+		 	if (//closure
+		 	 { () -> Bool in
+		 	      var testSet: Bool = {  () -> Bool in
+		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.STRING.rawValue,Python3Parser.Tokens.NUMBER.rawValue,Python3Parser.Tokens.FROM.rawValue,Python3Parser.Tokens.LAMBDA.rawValue,Python3Parser.Tokens.NOT.rawValue,Python3Parser.Tokens.NONE.rawValue,Python3Parser.Tokens.TRUE.rawValue,Python3Parser.Tokens.FALSE.rawValue,Python3Parser.Tokens.AWAIT.rawValue,Python3Parser.Tokens.NAME.rawValue,Python3Parser.Tokens.ELLIPSIS.rawValue,Python3Parser.Tokens.OPEN_PAREN.rawValue,Python3Parser.Tokens.OPEN_BRACK.rawValue]
+		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
+		 	}()
+		 	          testSet = testSet || {  () -> Bool in
+		 	             let testArray: [Int] = [_la, Python3Parser.Tokens.ADD.rawValue,Python3Parser.Tokens.MINUS.rawValue,Python3Parser.Tokens.NOT_OP.rawValue,Python3Parser.Tokens.OPEN_BRACE.rawValue]
+		 	              return  Utils.testBitLeftShiftArray(testArray, 66)
+		 	          }()
+		 	      return testSet
+		 	 }()) {
+		 		setState(1095)
 		 		try yield_arg()
 
 		 	}
@@ -7756,74 +9083,74 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class Yield_argContext:ParserRuleContext {
-		open func FROM() -> TerminalNode? { return getToken(Python3Parser.Tokens.FROM.rawValue, 0) }
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
+
+	public class Yield_argContext: ParserRuleContext {
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+			open
+			func testlist() -> TestlistContext? {
+				return getRuleContext(TestlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Python3Parser.RULE_yield_arg
 		}
-		open func testlist() -> TestlistContext? {
-			return getRuleContext(TestlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_yield_arg }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterYield_arg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.enterYield_arg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitYield_arg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Python3Listener {
+				listener.exitYield_arg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitYield_arg(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitYield_arg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Python3Visitor {
+			    return visitor.visitYield_arg(self)
+			}
+			else if let visitor = visitor as? Python3BaseVisitor {
+			    return visitor.visitYield_arg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func yield_arg() throws -> Yield_argContext {
+	 open func yield_arg() throws -> Yield_argContext {
 		var _localctx: Yield_argContext = Yield_argContext(_ctx, getState())
-		try enterRule(_localctx, 160, Python3Parser.RULE_yield_arg)
+		try enterRule(_localctx, 170, Python3Parser.RULE_yield_arg)
 		defer {
 	    		try! exitRule()
 	    }
 		do {
-		 	setState(1044)
+		 	setState(1101)
 		 	try _errHandler.sync(self)
 		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .FROM:
 		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1041)
+		 		setState(1098)
 		 		try match(Python3Parser.Tokens.FROM.rawValue)
-		 		setState(1042)
+		 		setState(1099)
 		 		try test()
 
 		 		break
+		 	case .STRING:fallthrough
+		 	case .NUMBER:fallthrough
 		 	case .LAMBDA:fallthrough
 		 	case .NOT:fallthrough
 		 	case .NONE:fallthrough
 		 	case .TRUE:fallthrough
 		 	case .FALSE:fallthrough
+		 	case .AWAIT:fallthrough
 		 	case .NAME:fallthrough
-		 	case .STRING_LITERAL:fallthrough
-		 	case .BYTES_LITERAL:fallthrough
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:fallthrough
-		 	case .FLOAT_NUMBER:fallthrough
-		 	case .IMAG_NUMBER:fallthrough
 		 	case .ELLIPSIS:fallthrough
-		 	case .STAR:fallthrough
 		 	case .OPEN_PAREN:fallthrough
 		 	case .OPEN_BRACK:fallthrough
 		 	case .ADD:fallthrough
@@ -7831,12 +9158,12 @@ open class Python3Parser: Parser {
 		 	case .NOT_OP:fallthrough
 		 	case .OPEN_BRACE:
 		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1043)
+		 		setState(1100)
 		 		try testlist()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7847,211 +9174,11 @@ open class Python3Parser: Parser {
 
 		return _localctx
 	}
-	open class StrContext:ParserRuleContext {
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(Python3Parser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open func BYTES_LITERAL() -> TerminalNode? { return getToken(Python3Parser.Tokens.BYTES_LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_str }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterStr(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitStr(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitStr(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitStr(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func str() throws -> StrContext {
-		var _localctx: StrContext = StrContext(_ctx, getState())
-		try enterRule(_localctx, 162, Python3Parser.RULE_str)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1046)
-		 	_la = try _input.LA(1)
-		 	if (!(//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == Python3Parser.Tokens.STRING_LITERAL.rawValue || _la == Python3Parser.Tokens.BYTES_LITERAL.rawValue
-		 	      return testSet
-		 	 }())) {
-		 	try _errHandler.recoverInline(self)
-		 	}
-		 	else {
-		 		_errHandler.reportMatch(self)
-		 		try consume()
-		 	}
 
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
 
-		return _localctx
-	}
-	open class NumberContext:ParserRuleContext {
-		open func integer() -> IntegerContext? {
-			return getRuleContext(IntegerContext.self,0)
-		}
-		open func FLOAT_NUMBER() -> TerminalNode? { return getToken(Python3Parser.Tokens.FLOAT_NUMBER.rawValue, 0) }
-		open func IMAG_NUMBER() -> TerminalNode? { return getToken(Python3Parser.Tokens.IMAG_NUMBER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterNumber(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitNumber(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitNumber(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitNumber(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func number() throws -> NumberContext {
-		var _localctx: NumberContext = NumberContext(_ctx, getState())
-		try enterRule(_localctx, 164, Python3Parser.RULE_number)
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	setState(1051)
-		 	try _errHandler.sync(self)
-		 	switch (Python3Parser.Tokens(rawValue: try _input.LA(1))!) {
-		 	case .DECIMAL_INTEGER:fallthrough
-		 	case .OCT_INTEGER:fallthrough
-		 	case .HEX_INTEGER:fallthrough
-		 	case .BIN_INTEGER:
-		 		try enterOuterAlt(_localctx, 1)
-		 		setState(1048)
-		 		try integer()
+	public
+	static let _serializedATN = Python3ParserATN().jsonString
 
-		 		break
-
-		 	case .FLOAT_NUMBER:
-		 		try enterOuterAlt(_localctx, 2)
-		 		setState(1049)
-		 		try match(Python3Parser.Tokens.FLOAT_NUMBER.rawValue)
-
-		 		break
-
-		 	case .IMAG_NUMBER:
-		 		try enterOuterAlt(_localctx, 3)
-		 		setState(1050)
-		 		try match(Python3Parser.Tokens.IMAG_NUMBER.rawValue)
-
-		 		break
-		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
-		 	}
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-	open class IntegerContext:ParserRuleContext {
-		open func DECIMAL_INTEGER() -> TerminalNode? { return getToken(Python3Parser.Tokens.DECIMAL_INTEGER.rawValue, 0) }
-		open func OCT_INTEGER() -> TerminalNode? { return getToken(Python3Parser.Tokens.OCT_INTEGER.rawValue, 0) }
-		open func HEX_INTEGER() -> TerminalNode? { return getToken(Python3Parser.Tokens.HEX_INTEGER.rawValue, 0) }
-		open func BIN_INTEGER() -> TerminalNode? { return getToken(Python3Parser.Tokens.BIN_INTEGER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Python3Parser.RULE_integer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).enterInteger(self)
-			}
-		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Python3Listener {
-			 	(listener as! Python3Listener).exitInteger(self)
-			}
-		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Python3Visitor {
-			     return (visitor as! Python3Visitor<T>).visitInteger(self)
-			}else if visitor is Python3BaseVisitor {
-		    	 return (visitor as! Python3BaseVisitor<T>).visitInteger(self)
-		    }
-			else {
-			     return visitor.visitChildren(self)
-			}
-		}
-	}
-	@discardableResult
-	open func integer() throws -> IntegerContext {
-		var _localctx: IntegerContext = IntegerContext(_ctx, getState())
-		try enterRule(_localctx, 166, Python3Parser.RULE_integer)
-		var _la: Int = 0
-		defer {
-	    		try! exitRule()
-	    }
-		do {
-		 	try enterOuterAlt(_localctx, 1)
-		 	setState(1053)
-		 	_la = try _input.LA(1)
-		 	if (!(//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, Python3Parser.Tokens.DECIMAL_INTEGER.rawValue,Python3Parser.Tokens.OCT_INTEGER.rawValue,Python3Parser.Tokens.HEX_INTEGER.rawValue,Python3Parser.Tokens.BIN_INTEGER.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
-		 	}()
-		 	      return testSet
-		 	 }())) {
-		 	try _errHandler.recoverInline(self)
-		 	}
-		 	else {
-		 		_errHandler.reportMatch(self)
-		 		try consume()
-		 	}
-
-		}
-		catch ANTLRException.recognition(let re) {
-			_localctx.exception = re
-			_errHandler.reportError(self, re)
-			try _errHandler.recover(self, re)
-		}
-
-		return _localctx
-	}
-
-   public static let _serializedATN : String = Python3ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

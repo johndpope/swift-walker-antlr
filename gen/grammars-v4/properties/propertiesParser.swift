@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/properties/properties.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/properties/properties.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class propertiesParser: Parser {
@@ -11,13 +11,20 @@ open class propertiesParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
-		case EOF = -1, T__0 = 1, TEXT = 2, STRING = 3, EOL = 4, COMMENT = 5
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
+		case EOF = -1, T__0 = 1, TEXT = 2, STRING = 3, COMMENT = 4, TERMINATOR = 5
 	}
-	public static let RULE_propertiesFile = 0, RULE_row = 1, RULE_decl = 2, 
-                   RULE_key = 3, RULE_value = 4, RULE_comment = 5
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_propertiesFile = 0, RULE_row = 1, RULE_decl = 2, RULE_key = 3, 
+            RULE_value = 4, RULE_comment = 5
+
+	public
+	static let ruleNames: [String] = [
 		"propertiesFile", "row", "decl", "key", "value", "comment"
 	]
 
@@ -25,90 +32,75 @@ open class propertiesParser: Parser {
 		nil, "'='"
 	]
 	private static let _SYMBOLIC_NAMES: [String?] = [
-		nil, nil, "TEXT", "STRING", "EOL", "COMMENT"
+		nil, nil, "TEXT", "STRING", "COMMENT", "TERMINATOR"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "properties.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return propertiesParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "properties.g4" }
+	override open
+	func getSerializedATN() -> String { return propertiesParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return propertiesParser.ruleNames }
+	override open
+	func getATN() -> ATN { return propertiesParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return propertiesParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return propertiesParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return propertiesParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,propertiesParser._ATN,propertiesParser._decisionToDFA, propertiesParser._sharedContextCache)
 	}
-	open class PropertiesFileContext:ParserRuleContext {
-		open func row() -> Array<RowContext> {
-			return getRuleContexts(RowContext.self)
+
+	public class PropertiesFileContext: ParserRuleContext {
+			open
+			func row() -> [RowContext] {
+				return getRuleContexts(RowContext.self)
+			}
+			open
+			func row(_ i: Int) -> RowContext? {
+				return getRuleContext(RowContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return propertiesParser.RULE_propertiesFile
 		}
-		open func row(_ i: Int) -> RowContext? {
-			return getRuleContext(RowContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return propertiesParser.RULE_propertiesFile }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).enterPropertiesFile(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.enterPropertiesFile(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).exitPropertiesFile(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.exitPropertiesFile(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is propertiesVisitor {
-			     return (visitor as! propertiesVisitor<T>).visitPropertiesFile(self)
-			}else if visitor is propertiesBaseVisitor {
-		    	 return (visitor as! propertiesBaseVisitor<T>).visitPropertiesFile(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? propertiesVisitor {
+			    return visitor.visitPropertiesFile(self)
+			}
+			else if let visitor = visitor as? propertiesBaseVisitor {
+			    return visitor.visitPropertiesFile(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertiesFile() throws -> PropertiesFileContext {
+	 open func propertiesFile() throws -> PropertiesFileContext {
 		var _localctx: PropertiesFileContext = PropertiesFileContext(_ctx, getState())
 		try enterRule(_localctx, 0, propertiesParser.RULE_propertiesFile)
 		var _la: Int = 0
@@ -130,10 +122,7 @@ open class propertiesParser: Parser {
 		 		_la = try _input.LA(1)
 		 	} while (//closure
 		 	 { () -> Bool in
-		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, propertiesParser.Tokens.TEXT.rawValue,propertiesParser.Tokens.EOL.rawValue,propertiesParser.Tokens.COMMENT.rawValue]
-		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
-		 	}()
+		 	      let testSet: Bool = _la == propertiesParser.Tokens.TEXT.rawValue || _la == propertiesParser.Tokens.COMMENT.rawValue
 		 	      return testSet
 		 	 }())
 
@@ -146,41 +135,47 @@ open class propertiesParser: Parser {
 
 		return _localctx
 	}
-	open class RowContext:ParserRuleContext {
-		open func EOL() -> TerminalNode? { return getToken(propertiesParser.Tokens.EOL.rawValue, 0) }
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
+
+	public class RowContext: ParserRuleContext {
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+			open
+			func decl() -> DeclContext? {
+				return getRuleContext(DeclContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return propertiesParser.RULE_row
 		}
-		open func decl() -> DeclContext? {
-			return getRuleContext(DeclContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return propertiesParser.RULE_row }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).enterRow(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.enterRow(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).exitRow(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.exitRow(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is propertiesVisitor {
-			     return (visitor as! propertiesVisitor<T>).visitRow(self)
-			}else if visitor is propertiesBaseVisitor {
-		    	 return (visitor as! propertiesBaseVisitor<T>).visitRow(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? propertiesVisitor {
+			    return visitor.visitRow(self)
+			}
+			else if let visitor = visitor as? propertiesBaseVisitor {
+			    return visitor.visitRow(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func row() throws -> RowContext {
+	 open func row() throws -> RowContext {
 		var _localctx: RowContext = RowContext(_ctx, getState())
 		try enterRule(_localctx, 2, propertiesParser.RULE_row)
 		defer {
@@ -192,24 +187,19 @@ open class propertiesParser: Parser {
 		 	try _errHandler.sync(self)
 		 	switch (propertiesParser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .COMMENT:
-		 	 	setState(17)
-		 	 	try comment()
+		 		setState(17)
+		 		try comment()
 
 		 		break
 
 		 	case .TEXT:
-		 	 	setState(18)
-		 	 	try decl()
+		 		setState(18)
+		 		try decl()
 
-		 		break
-
-		 	case .EOL:
 		 		break
 		 	default:
-		 		break
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
-		 	setState(21)
-		 	try match(propertiesParser.Tokens.EOL.rawValue)
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -220,65 +210,68 @@ open class propertiesParser: Parser {
 
 		return _localctx
 	}
-	open class DeclContext:ParserRuleContext {
-		open func key() -> KeyContext? {
-			return getRuleContext(KeyContext.self,0)
+
+	public class DeclContext: ParserRuleContext {
+			open
+			func key() -> KeyContext? {
+				return getRuleContext(KeyContext.self, 0)
+			}
+			open
+			func value() -> ValueContext? {
+				return getRuleContext(ValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return propertiesParser.RULE_decl
 		}
-		open func value() -> ValueContext? {
-			return getRuleContext(ValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return propertiesParser.RULE_decl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).enterDecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.enterDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).exitDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.exitDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is propertiesVisitor {
-			     return (visitor as! propertiesVisitor<T>).visitDecl(self)
-			}else if visitor is propertiesBaseVisitor {
-		    	 return (visitor as! propertiesBaseVisitor<T>).visitDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? propertiesVisitor {
+			    return visitor.visitDecl(self)
+			}
+			else if let visitor = visitor as? propertiesBaseVisitor {
+			    return visitor.visitDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func decl() throws -> DeclContext {
+	 open func decl() throws -> DeclContext {
 		var _localctx: DeclContext = DeclContext(_ctx, getState())
 		try enterRule(_localctx, 4, propertiesParser.RULE_decl)
-		var _la: Int = 0
 		defer {
 	    		try! exitRule()
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(23)
+		 	setState(21)
 		 	try key()
-		 	setState(24)
+		 	setState(22)
 		 	try match(propertiesParser.Tokens.T__0.rawValue)
-		 	setState(26)
+		 	setState(24)
 		 	try _errHandler.sync(self)
-		 	_la = try _input.LA(1)
-		 	if (//closure
-		 	 { () -> Bool in
-		 	      let testSet: Bool = _la == propertiesParser.Tokens.TEXT.rawValue || _la == propertiesParser.Tokens.STRING.rawValue
-		 	      return testSet
-		 	 }()) {
-		 		setState(25)
+		 	switch (try getInterpreter().adaptivePredict(_input,2,_ctx)) {
+		 	case 1:
+		 		setState(23)
 		 		try value()
 
+		 		break
+		 	default: break
 		 	}
-
 
 		}
 		catch ANTLRException.recognition(let re) {
@@ -289,35 +282,43 @@ open class propertiesParser: Parser {
 
 		return _localctx
 	}
-	open class KeyContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(propertiesParser.Tokens.TEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return propertiesParser.RULE_key }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).enterKey(self)
+
+	public class KeyContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(propertiesParser.Tokens.TEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return propertiesParser.RULE_key
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.enterKey(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).exitKey(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.exitKey(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is propertiesVisitor {
-			     return (visitor as! propertiesVisitor<T>).visitKey(self)
-			}else if visitor is propertiesBaseVisitor {
-		    	 return (visitor as! propertiesBaseVisitor<T>).visitKey(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? propertiesVisitor {
+			    return visitor.visitKey(self)
+			}
+			else if let visitor = visitor as? propertiesBaseVisitor {
+			    return visitor.visitKey(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func key() throws -> KeyContext {
+	 open func key() throws -> KeyContext {
 		var _localctx: KeyContext = KeyContext(_ctx, getState())
 		try enterRule(_localctx, 6, propertiesParser.RULE_key)
 		defer {
@@ -325,7 +326,7 @@ open class propertiesParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(28)
+		 	setState(26)
 		 	try match(propertiesParser.Tokens.TEXT.rawValue)
 
 		}
@@ -337,36 +338,47 @@ open class propertiesParser: Parser {
 
 		return _localctx
 	}
-	open class ValueContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(propertiesParser.Tokens.TEXT.rawValue, 0) }
-		open func STRING() -> TerminalNode? { return getToken(propertiesParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return propertiesParser.RULE_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).enterValue(self)
+
+	public class ValueContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(propertiesParser.Tokens.TEXT.rawValue, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(propertiesParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return propertiesParser.RULE_value
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.enterValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).exitValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.exitValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is propertiesVisitor {
-			     return (visitor as! propertiesVisitor<T>).visitValue(self)
-			}else if visitor is propertiesBaseVisitor {
-		    	 return (visitor as! propertiesBaseVisitor<T>).visitValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? propertiesVisitor {
+			    return visitor.visitValue(self)
+			}
+			else if let visitor = visitor as? propertiesBaseVisitor {
+			    return visitor.visitValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value() throws -> ValueContext {
+	 open func value() throws -> ValueContext {
 		var _localctx: ValueContext = ValueContext(_ctx, getState())
 		try enterRule(_localctx, 8, propertiesParser.RULE_value)
 		var _la: Int = 0
@@ -375,7 +387,7 @@ open class propertiesParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(30)
+		 	setState(28)
 		 	_la = try _input.LA(1)
 		 	if (!(//closure
 		 	 { () -> Bool in
@@ -398,35 +410,43 @@ open class propertiesParser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func COMMENT() -> TerminalNode? { return getToken(propertiesParser.Tokens.COMMENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return propertiesParser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).enterComment(self)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(propertiesParser.Tokens.COMMENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return propertiesParser.RULE_comment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is propertiesListener {
-			 	(listener as! propertiesListener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? propertiesListener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is propertiesVisitor {
-			     return (visitor as! propertiesVisitor<T>).visitComment(self)
-			}else if visitor is propertiesBaseVisitor {
-		    	 return (visitor as! propertiesBaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? propertiesVisitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? propertiesBaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 10, propertiesParser.RULE_comment)
 		defer {
@@ -434,7 +454,7 @@ open class propertiesParser: Parser {
 	    }
 		do {
 		 	try enterOuterAlt(_localctx, 1)
-		 	setState(32)
+		 	setState(30)
 		 	try match(propertiesParser.Tokens.COMMENT.rawValue)
 
 		}
@@ -447,6 +467,10 @@ open class propertiesParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = propertiesParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = propertiesParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

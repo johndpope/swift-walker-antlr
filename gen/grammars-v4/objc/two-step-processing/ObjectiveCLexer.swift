@@ -1,7 +1,8 @@
-// Generated from ./grammars-v4/objc/two-step-processing/ObjectiveCLexer.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/objc/two-step-processing/ObjectiveCLexer.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class ObjectiveCLexer: Lexer {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
           let length = ObjectiveCLexer._ATN.getNumberOfDecisions()
@@ -11,186 +12,195 @@ open class ObjectiveCLexer: Lexer {
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let AUTORELEASEPOOL=1, CATCH=2, CLASS=3, DYNAMIC=4, ENCODE=5, 
-                   END=6, FINALLY=7, IMPLEMENTATION=8, INTERFACE=9, IMPORT=10, 
-                   PACKAGE=11, PROTOCOL=12, OPTIONAL=13, PRIVATE=14, PROPERTY=15, 
-                   PROTECTED=16, PUBLIC=17, REQUIRED=18, SELECTOR=19, SYNCHRONIZED=20, 
-                   SYNTHESIZE=21, THROW=22, TRY=23, ABSTRACT=24, AUTO=25, 
-                   BOOLEAN=26, BREAK=27, BYCOPY=28, BYREF=29, CASE=30, CHAR=31, 
-                   CONST=32, CONTINUE=33, DEFAULT=34, DO=35, DOUBLE=36, 
-                   ELSE=37, ENUM=38, EXTERN=39, FLOAT=40, FOR=41, ID=42, 
-                   IF=43, IN=44, INOUT=45, INSTANCETYPE=46, GOTO=47, INT=48, 
-                   LONG=49, ONEWAY=50, OUT=51, REGISTER=52, RETURN=53, SHORT=54, 
-                   SIGNED=55, SIZEOF=56, STATIC=57, STRUCT=58, SWITCH=59, 
-                   TYPEDEF=60, UNION=61, UNSIGNED=62, VOID=63, VOLATILE=64, 
-                   WHILE=65, NS_OPTIONS=66, NS_ENUM=67, WWEAK=68, WUNSAFE_UNRETAINED=69, 
-                   WUNUSED=70, WDEPRECATED=71, WAUTORELEASING=72, TYPEOF=73, 
-                   TYPEOF__=74, TYPEOF____=75, KINDOF__=76, COVARIANT=77, 
-                   CONTRAVARIANT=78, ATTRIBUTE=79, NULLABLE=80, NONNULL=81, 
-                   NS_ASSUME_NONNULL_BEGIN=82, NS_ASSUME_NONNULL_END=83, 
-                   EXTERN_SUFFIX=84, IOS_SUFFIX=85, MAC_SUFFIX=86, TVOS_PROHIBITED=87, 
-                   LP=88, RP=89, LBRACE=90, RBRACE=91, LBRACK=92, RBRACK=93, 
-                   SEMI=94, COMMA=95, DOT=96, STRUCTACCESS=97, AT=98, ASSIGN=99, 
-                   GT=100, LT=101, BANG=102, TILDE=103, QUESTION=104, COLON=105, 
-                   EQUAL=106, LE=107, GE=108, NOTEQUAL=109, AND=110, OR=111, 
-                   INC=112, DEC=113, ADD=114, SUB=115, MUL=116, DIV=117, 
-                   BITAND=118, BITOR=119, CARET=120, MOD=121, ADD_ASSIGN=122, 
-                   SUB_ASSIGN=123, MUL_ASSIGN=124, DIV_ASSIGN=125, AND_ASSIGN=126, 
-                   OR_ASSIGN=127, XOR_ASSIGN=128, MOD_ASSIGN=129, LSHIFT_ASSIGN=130, 
-                   RSHIFT_ASSIGN=131, ELIPSIS=132, ASSIGNPA=133, GETTER=134, 
-                   NONATOMIC=135, SETTER=136, STRONG=137, RETAIN=138, READONLY=139, 
-                   READWRITE=140, WEAK=141, IB_OUTLET=142, IB_OUTLET_COLLECTION=143, 
-                   IDENTIFIER=144, CHARACTER_LITERAL=145, QUOTE_STRING=146, 
-                   STRING=147, HEX_LITERAL=148, OCTAL_LITERAL=149, BINARY_LITERAL=150, 
-                   DECIMAL_LITERAL=151, FLOATING_POINT_LITERAL=152, WS=153, 
-                   COMMENT=154, LINE_COMMENT=155, BACKSLASH=156
-	public static let COMMENTS_CHANNEL=2, IGNORED_MACROS=3
-	public static let channelNames: [String] = [
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let AUTO=1, BREAK=2, CASE=3, CHAR=4, CONST=5, CONTINUE=6, DEFAULT=7, 
+            DO=8, DOUBLE=9, ELSE=10, ENUM=11, EXTERN=12, FLOAT=13, FOR=14, 
+            GOTO=15, IF=16, INLINE=17, INT=18, LONG=19, REGISTER=20, RESTRICT=21, 
+            RETURN=22, SHORT=23, SIGNED=24, SIZEOF=25, STATIC=26, STRUCT=27, 
+            SWITCH=28, TYPEDEF=29, UNION=30, UNSIGNED=31, VOID=32, VOLATILE=33, 
+            WHILE=34, BOOL_=35, COMPLEX=36, IMAGINERY=37, TRUE=38, FALSE=39, 
+            BOOL=40, Class=41, BYCOPY=42, BYREF=43, ID=44, IMP=45, IN=46, 
+            INOUT=47, NIL=48, NO=49, NULL=50, ONEWAY=51, OUT=52, PROTOCOL_=53, 
+            SEL=54, SELF=55, SUPER=56, YES=57, AUTORELEASEPOOL=58, CATCH=59, 
+            CLASS=60, DYNAMIC=61, ENCODE=62, END=63, FINALLY=64, IMPLEMENTATION=65, 
+            INTERFACE=66, IMPORT=67, PACKAGE=68, PROTOCOL=69, OPTIONAL=70, 
+            PRIVATE=71, PROPERTY=72, PROTECTED=73, PUBLIC=74, REQUIRED=75, 
+            SELECTOR=76, SYNCHRONIZED=77, SYNTHESIZE=78, THROW=79, TRY=80, 
+            ATOMIC=81, NONATOMIC=82, RETAIN=83, ATTRIBUTE=84, AUTORELEASING_QUALIFIER=85, 
+            BLOCK=86, BRIDGE=87, BRIDGE_RETAINED=88, BRIDGE_TRANSFER=89, 
+            COVARIANT=90, CONTRAVARIANT=91, DEPRECATED=92, KINDOF=93, STRONG_QUALIFIER=94, 
+            TYPEOF=95, UNSAFE_UNRETAINED_QUALIFIER=96, UNUSED=97, WEAK_QUALIFIER=98, 
+            NULL_UNSPECIFIED=99, NULLABLE=100, NONNULL=101, NULL_RESETTABLE=102, 
+            NS_INLINE=103, NS_ENUM=104, NS_OPTIONS=105, ASSIGN=106, COPY=107, 
+            GETTER=108, SETTER=109, STRONG=110, READONLY=111, READWRITE=112, 
+            WEAK=113, UNSAFE_UNRETAINED=114, IB_OUTLET=115, IB_OUTLET_COLLECTION=116, 
+            IB_INSPECTABLE=117, IB_DESIGNABLE=118, NS_ASSUME_NONNULL_BEGIN=119, 
+            NS_ASSUME_NONNULL_END=120, EXTERN_SUFFIX=121, IOS_SUFFIX=122, 
+            MAC_SUFFIX=123, TVOS_PROHIBITED=124, IDENTIFIER=125, LP=126, 
+            RP=127, LBRACE=128, RBRACE=129, LBRACK=130, RBRACK=131, SEMI=132, 
+            COMMA=133, DOT=134, STRUCTACCESS=135, AT=136, ASSIGNMENT=137, 
+            GT=138, LT=139, BANG=140, TILDE=141, QUESTION=142, COLON=143, 
+            EQUAL=144, LE=145, GE=146, NOTEQUAL=147, AND=148, OR=149, INC=150, 
+            DEC=151, ADD=152, SUB=153, MUL=154, DIV=155, BITAND=156, BITOR=157, 
+            BITXOR=158, MOD=159, ADD_ASSIGN=160, SUB_ASSIGN=161, MUL_ASSIGN=162, 
+            DIV_ASSIGN=163, AND_ASSIGN=164, OR_ASSIGN=165, XOR_ASSIGN=166, 
+            MOD_ASSIGN=167, LSHIFT_ASSIGN=168, RSHIFT_ASSIGN=169, ELIPSIS=170, 
+            CHARACTER_LITERAL=171, STRING_START=172, HEX_LITERAL=173, OCTAL_LITERAL=174, 
+            BINARY_LITERAL=175, DECIMAL_LITERAL=176, FLOATING_POINT_LITERAL=177, 
+            WS=178, MULTI_COMMENT=179, SINGLE_COMMENT=180, BACKSLASH=181, 
+            STRING_NEWLINE=182, STRING_END=183, STRING_VALUE=184
+
+	public
+	static let COMMENTS_CHANNEL=2, IGNORED_MACROS=3
+	public
+	static let STRING_MODE=1
+	public
+	static let channelNames: [String] = [
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN", "COMMENTS_CHANNEL", "IGNORED_MACROS"
 	]
 
-	public static let modeNames: [String] = [
-		"DEFAULT_MODE"
+	public
+	static let modeNames: [String] = [
+		"DEFAULT_MODE", "STRING_MODE"
 	]
 
-	public static let ruleNames: [String] = [
+	public
+	static let ruleNames: [String] = [
+		"AUTO", "BREAK", "CASE", "CHAR", "CONST", "CONTINUE", "DEFAULT", "DO", 
+		"DOUBLE", "ELSE", "ENUM", "EXTERN", "FLOAT", "FOR", "GOTO", "IF", "INLINE", 
+		"INT", "LONG", "REGISTER", "RESTRICT", "RETURN", "SHORT", "SIGNED", "SIZEOF", 
+		"STATIC", "STRUCT", "SWITCH", "TYPEDEF", "UNION", "UNSIGNED", "VOID", 
+		"VOLATILE", "WHILE", "BOOL_", "COMPLEX", "IMAGINERY", "TRUE", "FALSE", 
+		"BOOL", "Class", "BYCOPY", "BYREF", "ID", "IMP", "IN", "INOUT", "NIL", 
+		"NO", "NULL", "ONEWAY", "OUT", "PROTOCOL_", "SEL", "SELF", "SUPER", "YES", 
 		"AUTORELEASEPOOL", "CATCH", "CLASS", "DYNAMIC", "ENCODE", "END", "FINALLY", 
 		"IMPLEMENTATION", "INTERFACE", "IMPORT", "PACKAGE", "PROTOCOL", "OPTIONAL", 
 		"PRIVATE", "PROPERTY", "PROTECTED", "PUBLIC", "REQUIRED", "SELECTOR", 
-		"SYNCHRONIZED", "SYNTHESIZE", "THROW", "TRY", "ABSTRACT", "AUTO", "BOOLEAN", 
-		"BREAK", "BYCOPY", "BYREF", "CASE", "CHAR", "CONST", "CONTINUE", "DEFAULT", 
-		"DO", "DOUBLE", "ELSE", "ENUM", "EXTERN", "FLOAT", "FOR", "ID", "IF", 
-		"IN", "INOUT", "INSTANCETYPE", "GOTO", "INT", "LONG", "ONEWAY", "OUT", 
-		"REGISTER", "RETURN", "SHORT", "SIGNED", "SIZEOF", "STATIC", "STRUCT", 
-		"SWITCH", "TYPEDEF", "UNION", "UNSIGNED", "VOID", "VOLATILE", "WHILE", 
-		"NS_OPTIONS", "NS_ENUM", "WWEAK", "WUNSAFE_UNRETAINED", "WUNUSED", "WDEPRECATED", 
-		"WAUTORELEASING", "TYPEOF", "TYPEOF__", "TYPEOF____", "KINDOF__", "COVARIANT", 
-		"CONTRAVARIANT", "ATTRIBUTE", "NULLABLE", "NONNULL", "NS_ASSUME_NONNULL_BEGIN", 
+		"SYNCHRONIZED", "SYNTHESIZE", "THROW", "TRY", "ATOMIC", "NONATOMIC", "RETAIN", 
+		"ATTRIBUTE", "AUTORELEASING_QUALIFIER", "BLOCK", "BRIDGE", "BRIDGE_RETAINED", 
+		"BRIDGE_TRANSFER", "COVARIANT", "CONTRAVARIANT", "DEPRECATED", "KINDOF", 
+		"STRONG_QUALIFIER", "TYPEOF", "UNSAFE_UNRETAINED_QUALIFIER", "UNUSED", 
+		"WEAK_QUALIFIER", "NULL_UNSPECIFIED", "NULLABLE", "NONNULL", "NULL_RESETTABLE", 
+		"NS_INLINE", "NS_ENUM", "NS_OPTIONS", "ASSIGN", "COPY", "GETTER", "SETTER", 
+		"STRONG", "READONLY", "READWRITE", "WEAK", "UNSAFE_UNRETAINED", "IB_OUTLET", 
+		"IB_OUTLET_COLLECTION", "IB_INSPECTABLE", "IB_DESIGNABLE", "NS_ASSUME_NONNULL_BEGIN", 
 		"NS_ASSUME_NONNULL_END", "EXTERN_SUFFIX", "IOS_SUFFIX", "MAC_SUFFIX", 
-		"TVOS_PROHIBITED", "LP", "RP", "LBRACE", "RBRACE", "LBRACK", "RBRACK", 
-		"SEMI", "COMMA", "DOT", "STRUCTACCESS", "AT", "ASSIGN", "GT", "LT", "BANG", 
-		"TILDE", "QUESTION", "COLON", "EQUAL", "LE", "GE", "NOTEQUAL", "AND", 
-		"OR", "INC", "DEC", "ADD", "SUB", "MUL", "DIV", "BITAND", "BITOR", "CARET", 
-		"MOD", "ADD_ASSIGN", "SUB_ASSIGN", "MUL_ASSIGN", "DIV_ASSIGN", "AND_ASSIGN", 
-		"OR_ASSIGN", "XOR_ASSIGN", "MOD_ASSIGN", "LSHIFT_ASSIGN", "RSHIFT_ASSIGN", 
-		"ELIPSIS", "ASSIGNPA", "GETTER", "NONATOMIC", "SETTER", "STRONG", "RETAIN", 
-		"READONLY", "READWRITE", "WEAK", "IB_OUTLET", "IB_OUTLET_COLLECTION", 
-		"IDENTIFIER", "CHARACTER_LITERAL", "QUOTE_STRING", "STRING", "HEX_LITERAL", 
+		"TVOS_PROHIBITED", "IDENTIFIER", "LP", "RP", "LBRACE", "RBRACE", "LBRACK", 
+		"RBRACK", "SEMI", "COMMA", "DOT", "STRUCTACCESS", "AT", "ASSIGNMENT", 
+		"GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", "LE", "GE", 
+		"NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", "DIV", "BITAND", 
+		"BITOR", "BITXOR", "MOD", "ADD_ASSIGN", "SUB_ASSIGN", "MUL_ASSIGN", "DIV_ASSIGN", 
+		"AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN", "MOD_ASSIGN", "LSHIFT_ASSIGN", 
+		"RSHIFT_ASSIGN", "ELIPSIS", "CHARACTER_LITERAL", "STRING_START", "HEX_LITERAL", 
 		"OCTAL_LITERAL", "BINARY_LITERAL", "DECIMAL_LITERAL", "FLOATING_POINT_LITERAL", 
-		"WS", "COMMENT", "LINE_COMMENT", "BACKSLASH", "LetterOrDec", "Letter", 
-		"IntegerTypeSuffix", "Exponent", "Dec", "FloatTypeSuffix", "EscapeSequence", 
-		"OctalEscape", "UnicodeEscape", "HexDigit", "StringFragment", "A", "B", 
-		"C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", 
-		"Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+		"WS", "MULTI_COMMENT", "SINGLE_COMMENT", "BACKSLASH", "STRING_NEWLINE", 
+		"STRING_ESCAPE", "STRING_END", "STRING_VALUE", "LetterOrDec", "Letter", 
+		"IntegerTypeSuffix", "Exponent", "Dec", "FloatTypeSuffix", "StringStart", 
+		"EscapeSequence", "OctalEscape", "UnicodeEscape", "HexDigit", "Ws", "A", 
+		"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", 
+		"P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
 	]
 
 	private static let _LITERAL_NAMES: [String?] = [
-		nil, "'@autoreleasepool'", "'@catch'", "'@class'", "'@dynamic'", "'@encode'", 
-		"'@end'", "'@finally'", "'@implementation'", "'@interface'", "'@import'", 
-		"'@package'", "'@protocol'", "'@optional'", "'@private'", "'@property'", 
-		"'@protected'", "'@public'", "'@required'", "'@selector'", "'@synchronized'", 
-		"'@synthesize'", "'@throw'", "'@try'", "'abstract'", "'auto'", "'boolean'", 
-		"'break'", "'bycopy'", "'byref'", "'case'", "'char'", "'const'", "'continue'", 
+		nil, "'auto'", "'break'", "'case'", "'char'", "'const'", "'continue'", 
 		"'default'", "'do'", "'double'", "'else'", "'enum'", "'extern'", "'float'", 
-		"'for'", "'id'", "'if'", "'in'", "'inout'", "'instancetype'", "'goto'", 
-		"'int'", "'long'", "'oneway'", "'out'", "'register'", "'return'", "'short'", 
-		"'signed'", "'sizeof'", "'static'", "'struct'", "'switch'", "'typedef'", 
-		"'union'", "'unsigned'", "'void'", "'volatile'", "'while'", "'NS_OPTIONS'", 
-		"'NS_ENUM'", "'__weak'", "'__unsafe_unretained'", "'__unused'", "'__deprecated'", 
-		"'__autoreleasing'", "'typeof'", "'__typeof'", "'__typeof__'", "'__kindof'", 
-		"'__covariant'", "'__contravariant'", "'__attribute__'", "'nullable'", 
-		"'nonnull'", nil, nil, nil, nil, nil, "'__TVOS_PROHIBITED'", "'('", "')'", 
-		"'{'", "'}'", "'['", "']'", "';'", "','", "'.'", "'->'", "'@'", "'='", 
-		"'>'", "'<'", "'!'", "'~'", "'?'", "':'", "'=='", "'<='", "'>='", "'!='", 
-		"'&&'", "'||'", "'++'", "'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", 
-		"'^'", "'%'", "'+='", "'-='", "'*='", "'/='", "'&='", "'|='", "'^='", 
-		"'%='", "'<<='", "'>>='", "'...'", "'assign'", "'getter'", "'nonatomic'", 
-		"'setter'", "'strong'", "'retain'", "'readonly'", "'readwrite'", "'weak'", 
-		"'IBOutlet'", "'IBOutletCollection'", nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, "'\\'"
+		"'for'", "'goto'", "'if'", "'inline'", "'int'", "'long'", "'register'", 
+		"'restrict'", "'return'", "'short'", "'signed'", "'sizeof'", "'static'", 
+		"'struct'", "'switch'", "'typedef'", "'union'", "'unsigned'", "'void'", 
+		"'volatile'", "'while'", "'_Bool'", "'_Complex'", "'_Imaginery'", "'true'", 
+		"'false'", "'BOOL'", "'Class'", "'bycopy'", "'byref'", "'id'", "'IMP'", 
+		"'in'", "'inout'", "'nil'", "'NO'", "'NULL'", "'oneway'", "'out'", "'Protocol'", 
+		"'SEL'", "'self'", "'super'", "'YES'", "'@autoreleasepool'", "'@catch'", 
+		"'@class'", "'@dynamic'", "'@encode'", "'@end'", "'@finally'", "'@implementation'", 
+		"'@interface'", "'@import'", "'@package'", "'@protocol'", "'@optional'", 
+		"'@private'", "'@property'", "'@protected'", "'@public'", "'@required'", 
+		"'@selector'", "'@synchronized'", "'@synthesize'", "'@throw'", "'@try'", 
+		"'atomic'", "'nonatomic'", "'retain'", "'__attribute__'", "'__autoreleasing'", 
+		"'__block'", "'__bridge'", "'__bridge_retained'", "'__bridge_transfer'", 
+		"'__covariant'", "'__contravariant'", "'__deprecated'", "'__kindof'", 
+		"'__strong'", nil, "'__unsafe_unretained'", "'__unused'", "'__weak'", 
+		nil, nil, nil, "'null_resettable'", "'NS_INLINE'", "'NS_ENUM'", "'NS_OPTIONS'", 
+		"'assign'", "'copy'", "'getter'", "'setter'", "'strong'", "'readonly'", 
+		"'readwrite'", "'weak'", "'unsafe_unretained'", "'IBOutlet'", "'IBOutletCollection'", 
+		"'IBInspectable'", "'IB_DESIGNABLE'", nil, nil, nil, nil, nil, "'__TVOS_PROHIBITED'", 
+		nil, "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", "'.'", "'->'", 
+		"'@'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'", "'=='", "'<='", 
+		"'>='", "'!='", "'&&'", "'||'", "'++'", "'--'", "'+'", "'-'", "'*'", "'/'", 
+		"'&'", "'|'", "'^'", "'%'", "'+='", "'-='", "'*='", "'/='", "'&='", "'|='", 
+		"'^='", "'%='", "'<<='", "'>>='", "'...'", nil, nil, nil, nil, nil, nil, 
+		nil, nil, nil, nil, "'\\'"
 	]
 	private static let _SYMBOLIC_NAMES: [String?] = [
-		nil, "AUTORELEASEPOOL", "CATCH", "CLASS", "DYNAMIC", "ENCODE", "END", 
+		nil, "AUTO", "BREAK", "CASE", "CHAR", "CONST", "CONTINUE", "DEFAULT", 
+		"DO", "DOUBLE", "ELSE", "ENUM", "EXTERN", "FLOAT", "FOR", "GOTO", "IF", 
+		"INLINE", "INT", "LONG", "REGISTER", "RESTRICT", "RETURN", "SHORT", "SIGNED", 
+		"SIZEOF", "STATIC", "STRUCT", "SWITCH", "TYPEDEF", "UNION", "UNSIGNED", 
+		"VOID", "VOLATILE", "WHILE", "BOOL_", "COMPLEX", "IMAGINERY", "TRUE", 
+		"FALSE", "BOOL", "Class", "BYCOPY", "BYREF", "ID", "IMP", "IN", "INOUT", 
+		"NIL", "NO", "NULL", "ONEWAY", "OUT", "PROTOCOL_", "SEL", "SELF", "SUPER", 
+		"YES", "AUTORELEASEPOOL", "CATCH", "CLASS", "DYNAMIC", "ENCODE", "END", 
 		"FINALLY", "IMPLEMENTATION", "INTERFACE", "IMPORT", "PACKAGE", "PROTOCOL", 
 		"OPTIONAL", "PRIVATE", "PROPERTY", "PROTECTED", "PUBLIC", "REQUIRED", 
-		"SELECTOR", "SYNCHRONIZED", "SYNTHESIZE", "THROW", "TRY", "ABSTRACT", 
-		"AUTO", "BOOLEAN", "BREAK", "BYCOPY", "BYREF", "CASE", "CHAR", "CONST", 
-		"CONTINUE", "DEFAULT", "DO", "DOUBLE", "ELSE", "ENUM", "EXTERN", "FLOAT", 
-		"FOR", "ID", "IF", "IN", "INOUT", "INSTANCETYPE", "GOTO", "INT", "LONG", 
-		"ONEWAY", "OUT", "REGISTER", "RETURN", "SHORT", "SIGNED", "SIZEOF", "STATIC", 
-		"STRUCT", "SWITCH", "TYPEDEF", "UNION", "UNSIGNED", "VOID", "VOLATILE", 
-		"WHILE", "NS_OPTIONS", "NS_ENUM", "WWEAK", "WUNSAFE_UNRETAINED", "WUNUSED", 
-		"WDEPRECATED", "WAUTORELEASING", "TYPEOF", "TYPEOF__", "TYPEOF____", "KINDOF__", 
-		"COVARIANT", "CONTRAVARIANT", "ATTRIBUTE", "NULLABLE", "NONNULL", "NS_ASSUME_NONNULL_BEGIN", 
+		"SELECTOR", "SYNCHRONIZED", "SYNTHESIZE", "THROW", "TRY", "ATOMIC", "NONATOMIC", 
+		"RETAIN", "ATTRIBUTE", "AUTORELEASING_QUALIFIER", "BLOCK", "BRIDGE", "BRIDGE_RETAINED", 
+		"BRIDGE_TRANSFER", "COVARIANT", "CONTRAVARIANT", "DEPRECATED", "KINDOF", 
+		"STRONG_QUALIFIER", "TYPEOF", "UNSAFE_UNRETAINED_QUALIFIER", "UNUSED", 
+		"WEAK_QUALIFIER", "NULL_UNSPECIFIED", "NULLABLE", "NONNULL", "NULL_RESETTABLE", 
+		"NS_INLINE", "NS_ENUM", "NS_OPTIONS", "ASSIGN", "COPY", "GETTER", "SETTER", 
+		"STRONG", "READONLY", "READWRITE", "WEAK", "UNSAFE_UNRETAINED", "IB_OUTLET", 
+		"IB_OUTLET_COLLECTION", "IB_INSPECTABLE", "IB_DESIGNABLE", "NS_ASSUME_NONNULL_BEGIN", 
 		"NS_ASSUME_NONNULL_END", "EXTERN_SUFFIX", "IOS_SUFFIX", "MAC_SUFFIX", 
-		"TVOS_PROHIBITED", "LP", "RP", "LBRACE", "RBRACE", "LBRACK", "RBRACK", 
-		"SEMI", "COMMA", "DOT", "STRUCTACCESS", "AT", "ASSIGN", "GT", "LT", "BANG", 
-		"TILDE", "QUESTION", "COLON", "EQUAL", "LE", "GE", "NOTEQUAL", "AND", 
-		"OR", "INC", "DEC", "ADD", "SUB", "MUL", "DIV", "BITAND", "BITOR", "CARET", 
-		"MOD", "ADD_ASSIGN", "SUB_ASSIGN", "MUL_ASSIGN", "DIV_ASSIGN", "AND_ASSIGN", 
-		"OR_ASSIGN", "XOR_ASSIGN", "MOD_ASSIGN", "LSHIFT_ASSIGN", "RSHIFT_ASSIGN", 
-		"ELIPSIS", "ASSIGNPA", "GETTER", "NONATOMIC", "SETTER", "STRONG", "RETAIN", 
-		"READONLY", "READWRITE", "WEAK", "IB_OUTLET", "IB_OUTLET_COLLECTION", 
-		"IDENTIFIER", "CHARACTER_LITERAL", "QUOTE_STRING", "STRING", "HEX_LITERAL", 
+		"TVOS_PROHIBITED", "IDENTIFIER", "LP", "RP", "LBRACE", "RBRACE", "LBRACK", 
+		"RBRACK", "SEMI", "COMMA", "DOT", "STRUCTACCESS", "AT", "ASSIGNMENT", 
+		"GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", "LE", "GE", 
+		"NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", "DIV", "BITAND", 
+		"BITOR", "BITXOR", "MOD", "ADD_ASSIGN", "SUB_ASSIGN", "MUL_ASSIGN", "DIV_ASSIGN", 
+		"AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN", "MOD_ASSIGN", "LSHIFT_ASSIGN", 
+		"RSHIFT_ASSIGN", "ELIPSIS", "CHARACTER_LITERAL", "STRING_START", "HEX_LITERAL", 
 		"OCTAL_LITERAL", "BINARY_LITERAL", "DECIMAL_LITERAL", "FLOATING_POINT_LITERAL", 
-		"WS", "COMMENT", "LINE_COMMENT", "BACKSLASH"
+		"WS", "MULTI_COMMENT", "SINGLE_COMMENT", "BACKSLASH", "STRING_NEWLINE", 
+		"STRING_END", "STRING_VALUE"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
+	override open
+	func getVocabulary() -> Vocabulary {
+		return ObjectiveCLexer.VOCABULARY
 	}
 
-    open override func getVocabulary() -> Vocabulary {
-        return ObjectiveCLexer.VOCABULARY
-    }
-
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, ObjectiveCLexer._ATN, ObjectiveCLexer._decisionToDFA, ObjectiveCLexer._sharedContextCache)
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "ObjectiveCLexer.g4" }
+	override open
+	func getGrammarFileName() -> String { return "ObjectiveCLexer.g4" }
 
-    override
-	open func getRuleNames() -> [String] { return ObjectiveCLexer.ruleNames }
+	override open
+	func getRuleNames() -> [String] { return ObjectiveCLexer.ruleNames }
 
-	override
-	open func getSerializedATN() -> String { return ObjectiveCLexer._serializedATN }
+	override open
+	func getSerializedATN() -> String { return ObjectiveCLexer._serializedATN }
 
-	override
-	open func getChannelNames() -> [String] { return ObjectiveCLexer.channelNames }
+	override open
+	func getChannelNames() -> [String] { return ObjectiveCLexer.channelNames }
 
-	override
-	open func getModeNames() -> [String] { return ObjectiveCLexer.modeNames }
+	override open
+	func getModeNames() -> [String] { return ObjectiveCLexer.modeNames }
 
-	override
-	open func getATN() -> ATN { return ObjectiveCLexer._ATN }
+	override open
+	func getATN() -> ATN { return ObjectiveCLexer._ATN }
 
-    public static let _serializedATN: String = ObjectiveCLexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = ObjectiveCLexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

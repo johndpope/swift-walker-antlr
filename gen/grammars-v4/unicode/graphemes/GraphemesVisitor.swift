@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/unicode/graphemes/Graphemes.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/unicode/graphemes/Graphemes.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class GraphemesVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmoji_sequence(_ ctx: GraphemesParser.Emoji_sequenceContext) -> T{
+	open func visitEmoji_sequence(_ ctx: GraphemesParser.Emoji_sequenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class GraphemesVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGrapheme_cluster(_ ctx: GraphemesParser.Grapheme_clusterContext) -> T{
+	open func visitGrapheme_cluster(_ ctx: GraphemesParser.Grapheme_clusterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class GraphemesVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGraphemes(_ ctx: GraphemesParser.GraphemesContext) -> T{
+	open func visitGraphemes(_ ctx: GraphemesParser.GraphemesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

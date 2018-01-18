@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/gff3/gff3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/gff3/gff3.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDocument(_ ctx: gff3Parser.DocumentContext) -> T{
+	open func visitDocument(_ ctx: gff3Parser.DocumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: gff3Parser.LineContext) -> T{
+	open func visitLine(_ ctx: gff3Parser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataline(_ ctx: gff3Parser.DatalineContext) -> T{
+	open func visitDataline(_ ctx: gff3Parser.DatalineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributes(_ ctx: gff3Parser.AttributesContext) -> T{
+	open func visitAttributes(_ ctx: gff3Parser.AttributesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttribute(_ ctx: gff3Parser.AttributeContext) -> T{
+	open func visitAttribute(_ ctx: gff3Parser.AttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSeqid(_ ctx: gff3Parser.SeqidContext) -> T{
+	open func visitSeqid(_ ctx: gff3Parser.SeqidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSource(_ ctx: gff3Parser.SourceContext) -> T{
+	open func visitSource(_ ctx: gff3Parser.SourceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: gff3Parser.TypeContext) -> T{
+	open func visitType(_ ctx: gff3Parser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStart(_ ctx: gff3Parser.StartContext) -> T{
+	open func visitStart(_ ctx: gff3Parser.StartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnd(_ ctx: gff3Parser.EndContext) -> T{
+	open func visitEnd(_ ctx: gff3Parser.EndContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStrand(_ ctx: gff3Parser.StrandContext) -> T{
+	open func visitStrand(_ ctx: gff3Parser.StrandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScore(_ ctx: gff3Parser.ScoreContext) -> T{
+	open func visitScore(_ ctx: gff3Parser.ScoreContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPhase(_ ctx: gff3Parser.PhaseContext) -> T{
+	open func visitPhase(_ ctx: gff3Parser.PhaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class gff3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommentline(_ ctx: gff3Parser.CommentlineContext) -> T{
+	open func visitCommentline(_ ctx: gff3Parser.CommentlineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

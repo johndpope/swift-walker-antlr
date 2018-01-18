@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/iri/IRI.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/iri/IRI.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class IRIParser: Parser {
@@ -11,8 +11,11 @@ open class IRIParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, UCSCHAR = 1, IPRIVATE = 2, D0 = 3, D1 = 4, D2 = 5, D3 = 6, 
                  D4 = 7, D5 = 8, D6 = 9, D7 = 10, D8 = 11, D9 = 12, A = 13, 
                  B = 14, C = 15, D = 16, E = 17, F = 18, G = 19, H = 20, 
@@ -25,21 +28,23 @@ open class IRIParser: Parser {
                  FSLASH2 = 57, FSLASH = 58, QMARK = 59, HASH = 60, OBRACK = 61, 
                  CBRACK = 62, AT = 63
 	}
-	public static let RULE_parse = 0, RULE_iri = 1, RULE_ihier_part = 2, RULE_iri_reference = 3, 
-                   RULE_absolute_iri = 4, RULE_irelative_ref = 5, RULE_irelative_part = 6, 
-                   RULE_iauthority = 7, RULE_iuserinfo = 8, RULE_ihost = 9, 
-                   RULE_ireg_name = 10, RULE_ipath = 11, RULE_ipath_abempty = 12, 
-                   RULE_ipath_absolute = 13, RULE_ipath_noscheme = 14, RULE_ipath_rootless = 15, 
-                   RULE_ipath_empty = 16, RULE_isegment = 17, RULE_isegment_nz = 18, 
-                   RULE_isegment_nz_nc = 19, RULE_ipchar = 20, RULE_iquery = 21, 
-                   RULE_ifragment = 22, RULE_iunreserved = 23, RULE_scheme = 24, 
-                   RULE_port = 25, RULE_ip_literal = 26, RULE_ip_v_future = 27, 
-                   RULE_ip_v6_address = 28, RULE_h16 = 29, RULE_ls32 = 30, 
-                   RULE_ip_v4_address = 31, RULE_dec_octet = 32, RULE_pct_encoded = 33, 
-                   RULE_unreserved = 34, RULE_reserved = 35, RULE_gen_delims = 36, 
-                   RULE_sub_delims = 37, RULE_alpha = 38, RULE_hexdig = 39, 
-                   RULE_digit = 40, RULE_non_zero_digit = 41
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_parse = 0, RULE_iri = 1, RULE_ihier_part = 2, RULE_iri_reference = 3, 
+            RULE_absolute_iri = 4, RULE_irelative_ref = 5, RULE_irelative_part = 6, 
+            RULE_iauthority = 7, RULE_iuserinfo = 8, RULE_ihost = 9, RULE_ireg_name = 10, 
+            RULE_ipath = 11, RULE_ipath_abempty = 12, RULE_ipath_absolute = 13, 
+            RULE_ipath_noscheme = 14, RULE_ipath_rootless = 15, RULE_ipath_empty = 16, 
+            RULE_isegment = 17, RULE_isegment_nz = 18, RULE_isegment_nz_nc = 19, 
+            RULE_ipchar = 20, RULE_iquery = 21, RULE_ifragment = 22, RULE_iunreserved = 23, 
+            RULE_scheme = 24, RULE_port = 25, RULE_ip_literal = 26, RULE_ip_v_future = 27, 
+            RULE_ip_v6_address = 28, RULE_h16 = 29, RULE_ls32 = 30, RULE_ip_v4_address = 31, 
+            RULE_dec_octet = 32, RULE_pct_encoded = 33, RULE_unreserved = 34, 
+            RULE_reserved = 35, RULE_gen_delims = 36, RULE_sub_delims = 37, 
+            RULE_alpha = 38, RULE_hexdig = 39, RULE_digit = 40, RULE_non_zero_digit = 41
+
+	public
+	static let ruleNames: [String] = [
 		"parse", "iri", "ihier_part", "iri_reference", "absolute_iri", "irelative_ref", 
 		"irelative_part", "iauthority", "iuserinfo", "ihost", "ireg_name", "ipath", 
 		"ipath_abempty", "ipath_absolute", "ipath_noscheme", "ipath_rootless", 
@@ -67,86 +72,73 @@ open class IRIParser: Parser {
 		"SCOL", "EQUALS", "FSLASH2", "FSLASH", "QMARK", "HASH", "OBRACK", "CBRACK", 
 		"AT"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "IRI.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return IRIParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "IRI.g4" }
+	override open
+	func getSerializedATN() -> String { return IRIParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return IRIParser.ruleNames }
+	override open
+	func getATN() -> ATN { return IRIParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return IRIParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return IRIParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return IRIParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,IRIParser._ATN,IRIParser._decisionToDFA, IRIParser._sharedContextCache)
 	}
-	open class ParseContext:ParserRuleContext {
-		open func iri() -> IriContext? {
-			return getRuleContext(IriContext.self,0)
+
+	public class ParseContext: ParserRuleContext {
+			open
+			func iri() -> IriContext? {
+				return getRuleContext(IriContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.EOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_parse
 		}
-		open func EOF() -> TerminalNode? { return getToken(IRIParser.Tokens.EOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_parse }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterParse(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterParse(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitParse(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitParse(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitParse(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitParse(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitParse(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitParse(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parse() throws -> ParseContext {
+	 open func parse() throws -> ParseContext {
 		var _localctx: ParseContext = ParseContext(_ctx, getState())
 		try enterRule(_localctx, 0, IRIParser.RULE_parse)
 		defer {
@@ -168,46 +160,55 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IriContext:ParserRuleContext {
-		open func scheme() -> SchemeContext? {
-			return getRuleContext(SchemeContext.self,0)
+
+	public class IriContext: ParserRuleContext {
+			open
+			func scheme() -> SchemeContext? {
+				return getRuleContext(SchemeContext.self, 0)
+			}
+			open
+			func ihier_part() -> Ihier_partContext? {
+				return getRuleContext(Ihier_partContext.self, 0)
+			}
+			open
+			func iquery() -> IqueryContext? {
+				return getRuleContext(IqueryContext.self, 0)
+			}
+			open
+			func ifragment() -> IfragmentContext? {
+				return getRuleContext(IfragmentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_iri
 		}
-		open func ihier_part() -> Ihier_partContext? {
-			return getRuleContext(Ihier_partContext.self,0)
-		}
-		open func iquery() -> IqueryContext? {
-			return getRuleContext(IqueryContext.self,0)
-		}
-		open func ifragment() -> IfragmentContext? {
-			return getRuleContext(IfragmentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_iri }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIri(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIri(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIri(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIri(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIri(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIri(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIri(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIri(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iri() throws -> IriContext {
+	 open func iri() throws -> IriContext {
 		var _localctx: IriContext = IriContext(_ctx, getState())
 		try enterRule(_localctx, 2, IRIParser.RULE_iri)
 		var _la: Int = 0
@@ -262,49 +263,59 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ihier_partContext:ParserRuleContext {
-		open func iauthority() -> IauthorityContext? {
-			return getRuleContext(IauthorityContext.self,0)
+
+	public class Ihier_partContext: ParserRuleContext {
+			open
+			func iauthority() -> IauthorityContext? {
+				return getRuleContext(IauthorityContext.self, 0)
+			}
+			open
+			func ipath_abempty() -> Ipath_abemptyContext? {
+				return getRuleContext(Ipath_abemptyContext.self, 0)
+			}
+			open
+			func ipath_absolute() -> Ipath_absoluteContext? {
+				return getRuleContext(Ipath_absoluteContext.self, 0)
+			}
+			open
+			func ipath_rootless() -> Ipath_rootlessContext? {
+				return getRuleContext(Ipath_rootlessContext.self, 0)
+			}
+			open
+			func ipath_empty() -> Ipath_emptyContext? {
+				return getRuleContext(Ipath_emptyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ihier_part
 		}
-		open func ipath_abempty() -> Ipath_abemptyContext? {
-			return getRuleContext(Ipath_abemptyContext.self,0)
-		}
-		open func ipath_absolute() -> Ipath_absoluteContext? {
-			return getRuleContext(Ipath_absoluteContext.self,0)
-		}
-		open func ipath_rootless() -> Ipath_rootlessContext? {
-			return getRuleContext(Ipath_rootlessContext.self,0)
-		}
-		open func ipath_empty() -> Ipath_emptyContext? {
-			return getRuleContext(Ipath_emptyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ihier_part }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIhier_part(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIhier_part(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIhier_part(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIhier_part(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIhier_part(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIhier_part(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIhier_part(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIhier_part(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ihier_part() throws -> Ihier_partContext {
+	 open func ihier_part() throws -> Ihier_partContext {
 		var _localctx: Ihier_partContext = Ihier_partContext(_ctx, getState())
 		try enterRule(_localctx, 4, IRIParser.RULE_ihier_part)
 		defer {
@@ -400,7 +411,7 @@ open class IRIParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -411,40 +422,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Iri_referenceContext:ParserRuleContext {
-		open func iri() -> IriContext? {
-			return getRuleContext(IriContext.self,0)
+
+	public class Iri_referenceContext: ParserRuleContext {
+			open
+			func iri() -> IriContext? {
+				return getRuleContext(IriContext.self, 0)
+			}
+			open
+			func irelative_ref() -> Irelative_refContext? {
+				return getRuleContext(Irelative_refContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_iri_reference
 		}
-		open func irelative_ref() -> Irelative_refContext? {
-			return getRuleContext(Irelative_refContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_iri_reference }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIri_reference(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIri_reference(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIri_reference(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIri_reference(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIri_reference(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIri_reference(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIri_reference(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIri_reference(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iri_reference() throws -> Iri_referenceContext {
+	 open func iri_reference() throws -> Iri_referenceContext {
 		var _localctx: Iri_referenceContext = Iri_referenceContext(_ctx, getState())
 		try enterRule(_localctx, 6, IRIParser.RULE_iri_reference)
 		defer {
@@ -477,43 +495,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Absolute_iriContext:ParserRuleContext {
-		open func scheme() -> SchemeContext? {
-			return getRuleContext(SchemeContext.self,0)
+
+	public class Absolute_iriContext: ParserRuleContext {
+			open
+			func scheme() -> SchemeContext? {
+				return getRuleContext(SchemeContext.self, 0)
+			}
+			open
+			func ihier_part() -> Ihier_partContext? {
+				return getRuleContext(Ihier_partContext.self, 0)
+			}
+			open
+			func iquery() -> IqueryContext? {
+				return getRuleContext(IqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_absolute_iri
 		}
-		open func ihier_part() -> Ihier_partContext? {
-			return getRuleContext(Ihier_partContext.self,0)
-		}
-		open func iquery() -> IqueryContext? {
-			return getRuleContext(IqueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_absolute_iri }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterAbsolute_iri(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterAbsolute_iri(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitAbsolute_iri(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitAbsolute_iri(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitAbsolute_iri(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitAbsolute_iri(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitAbsolute_iri(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitAbsolute_iri(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func absolute_iri() throws -> Absolute_iriContext {
+	 open func absolute_iri() throws -> Absolute_iriContext {
 		var _localctx: Absolute_iriContext = Absolute_iriContext(_ctx, getState())
 		try enterRule(_localctx, 8, IRIParser.RULE_absolute_iri)
 		var _la: Int = 0
@@ -553,43 +579,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Irelative_refContext:ParserRuleContext {
-		open func irelative_part() -> Irelative_partContext? {
-			return getRuleContext(Irelative_partContext.self,0)
+
+	public class Irelative_refContext: ParserRuleContext {
+			open
+			func irelative_part() -> Irelative_partContext? {
+				return getRuleContext(Irelative_partContext.self, 0)
+			}
+			open
+			func iquery() -> IqueryContext? {
+				return getRuleContext(IqueryContext.self, 0)
+			}
+			open
+			func ifragment() -> IfragmentContext? {
+				return getRuleContext(IfragmentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_irelative_ref
 		}
-		open func iquery() -> IqueryContext? {
-			return getRuleContext(IqueryContext.self,0)
-		}
-		open func ifragment() -> IfragmentContext? {
-			return getRuleContext(IfragmentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_irelative_ref }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIrelative_ref(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIrelative_ref(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIrelative_ref(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIrelative_ref(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIrelative_ref(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIrelative_ref(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIrelative_ref(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIrelative_ref(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func irelative_ref() throws -> Irelative_refContext {
+	 open func irelative_ref() throws -> Irelative_refContext {
 		var _localctx: Irelative_refContext = Irelative_refContext(_ctx, getState())
 		try enterRule(_localctx, 10, IRIParser.RULE_irelative_ref)
 		var _la: Int = 0
@@ -640,49 +674,59 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Irelative_partContext:ParserRuleContext {
-		open func iauthority() -> IauthorityContext? {
-			return getRuleContext(IauthorityContext.self,0)
+
+	public class Irelative_partContext: ParserRuleContext {
+			open
+			func iauthority() -> IauthorityContext? {
+				return getRuleContext(IauthorityContext.self, 0)
+			}
+			open
+			func ipath_abempty() -> Ipath_abemptyContext? {
+				return getRuleContext(Ipath_abemptyContext.self, 0)
+			}
+			open
+			func ipath_absolute() -> Ipath_absoluteContext? {
+				return getRuleContext(Ipath_absoluteContext.self, 0)
+			}
+			open
+			func ipath_noscheme() -> Ipath_noschemeContext? {
+				return getRuleContext(Ipath_noschemeContext.self, 0)
+			}
+			open
+			func ipath_empty() -> Ipath_emptyContext? {
+				return getRuleContext(Ipath_emptyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_irelative_part
 		}
-		open func ipath_abempty() -> Ipath_abemptyContext? {
-			return getRuleContext(Ipath_abemptyContext.self,0)
-		}
-		open func ipath_absolute() -> Ipath_absoluteContext? {
-			return getRuleContext(Ipath_absoluteContext.self,0)
-		}
-		open func ipath_noscheme() -> Ipath_noschemeContext? {
-			return getRuleContext(Ipath_noschemeContext.self,0)
-		}
-		open func ipath_empty() -> Ipath_emptyContext? {
-			return getRuleContext(Ipath_emptyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_irelative_part }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIrelative_part(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIrelative_part(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIrelative_part(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIrelative_part(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIrelative_part(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIrelative_part(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIrelative_part(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIrelative_part(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func irelative_part() throws -> Irelative_partContext {
+	 open func irelative_part() throws -> Irelative_partContext {
 		var _localctx: Irelative_partContext = Irelative_partContext(_ctx, getState())
 		try enterRule(_localctx, 12, IRIParser.RULE_irelative_part)
 		defer {
@@ -777,7 +821,7 @@ open class IRIParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -788,43 +832,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IauthorityContext:ParserRuleContext {
-		open func ihost() -> IhostContext? {
-			return getRuleContext(IhostContext.self,0)
+
+	public class IauthorityContext: ParserRuleContext {
+			open
+			func ihost() -> IhostContext? {
+				return getRuleContext(IhostContext.self, 0)
+			}
+			open
+			func iuserinfo() -> IuserinfoContext? {
+				return getRuleContext(IuserinfoContext.self, 0)
+			}
+			open
+			func port() -> PortContext? {
+				return getRuleContext(PortContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_iauthority
 		}
-		open func iuserinfo() -> IuserinfoContext? {
-			return getRuleContext(IuserinfoContext.self,0)
-		}
-		open func port() -> PortContext? {
-			return getRuleContext(PortContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_iauthority }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIauthority(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIauthority(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIauthority(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIauthority(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIauthority(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIauthority(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIauthority(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIauthority(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iauthority() throws -> IauthorityContext {
+	 open func iauthority() throws -> IauthorityContext {
 		var _localctx: IauthorityContext = IauthorityContext(_ctx, getState())
 		try enterRule(_localctx, 14, IRIParser.RULE_iauthority)
 		var _la: Int = 0
@@ -872,52 +924,63 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IuserinfoContext:ParserRuleContext {
-		open func iunreserved() -> Array<IunreservedContext> {
-			return getRuleContexts(IunreservedContext.self)
+
+	public class IuserinfoContext: ParserRuleContext {
+			open
+			func iunreserved() -> [IunreservedContext] {
+				return getRuleContexts(IunreservedContext.self)
+			}
+			open
+			func iunreserved(_ i: Int) -> IunreservedContext? {
+				return getRuleContext(IunreservedContext.self, i)
+			}
+			open
+			func pct_encoded() -> [Pct_encodedContext] {
+				return getRuleContexts(Pct_encodedContext.self)
+			}
+			open
+			func pct_encoded(_ i: Int) -> Pct_encodedContext? {
+				return getRuleContext(Pct_encodedContext.self, i)
+			}
+			open
+			func sub_delims() -> [Sub_delimsContext] {
+				return getRuleContexts(Sub_delimsContext.self)
+			}
+			open
+			func sub_delims(_ i: Int) -> Sub_delimsContext? {
+				return getRuleContext(Sub_delimsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_iuserinfo
 		}
-		open func iunreserved(_ i: Int) -> IunreservedContext? {
-			return getRuleContext(IunreservedContext.self,i)
-		}
-		open func pct_encoded() -> Array<Pct_encodedContext> {
-			return getRuleContexts(Pct_encodedContext.self)
-		}
-		open func pct_encoded(_ i: Int) -> Pct_encodedContext? {
-			return getRuleContext(Pct_encodedContext.self,i)
-		}
-		open func sub_delims() -> Array<Sub_delimsContext> {
-			return getRuleContexts(Sub_delimsContext.self)
-		}
-		open func sub_delims(_ i: Int) -> Sub_delimsContext? {
-			return getRuleContext(Sub_delimsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_iuserinfo }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIuserinfo(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIuserinfo(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIuserinfo(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIuserinfo(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIuserinfo(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIuserinfo(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIuserinfo(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIuserinfo(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iuserinfo() throws -> IuserinfoContext {
+	 open func iuserinfo() throws -> IuserinfoContext {
 		var _localctx: IuserinfoContext = IuserinfoContext(_ctx, getState())
 		try enterRule(_localctx, 16, IRIParser.RULE_iuserinfo)
 		var _la: Int = 0
@@ -1013,7 +1076,7 @@ open class IRIParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(154)
@@ -1030,43 +1093,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IhostContext:ParserRuleContext {
-		open func ip_literal() -> Ip_literalContext? {
-			return getRuleContext(Ip_literalContext.self,0)
+
+	public class IhostContext: ParserRuleContext {
+			open
+			func ip_literal() -> Ip_literalContext? {
+				return getRuleContext(Ip_literalContext.self, 0)
+			}
+			open
+			func ip_v4_address() -> Ip_v4_addressContext? {
+				return getRuleContext(Ip_v4_addressContext.self, 0)
+			}
+			open
+			func ireg_name() -> Ireg_nameContext? {
+				return getRuleContext(Ireg_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ihost
 		}
-		open func ip_v4_address() -> Ip_v4_addressContext? {
-			return getRuleContext(Ip_v4_addressContext.self,0)
-		}
-		open func ireg_name() -> Ireg_nameContext? {
-			return getRuleContext(Ireg_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ihost }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIhost(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIhost(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIhost(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIhost(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIhost(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIhost(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIhost(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIhost(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ihost() throws -> IhostContext {
+	 open func ihost() throws -> IhostContext {
 		var _localctx: IhostContext = IhostContext(_ctx, getState())
 		try enterRule(_localctx, 18, IRIParser.RULE_ihost)
 		defer {
@@ -1105,52 +1176,63 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ireg_nameContext:ParserRuleContext {
-		open func iunreserved() -> Array<IunreservedContext> {
-			return getRuleContexts(IunreservedContext.self)
+
+	public class Ireg_nameContext: ParserRuleContext {
+			open
+			func iunreserved() -> [IunreservedContext] {
+				return getRuleContexts(IunreservedContext.self)
+			}
+			open
+			func iunreserved(_ i: Int) -> IunreservedContext? {
+				return getRuleContext(IunreservedContext.self, i)
+			}
+			open
+			func pct_encoded() -> [Pct_encodedContext] {
+				return getRuleContexts(Pct_encodedContext.self)
+			}
+			open
+			func pct_encoded(_ i: Int) -> Pct_encodedContext? {
+				return getRuleContext(Pct_encodedContext.self, i)
+			}
+			open
+			func sub_delims() -> [Sub_delimsContext] {
+				return getRuleContexts(Sub_delimsContext.self)
+			}
+			open
+			func sub_delims(_ i: Int) -> Sub_delimsContext? {
+				return getRuleContext(Sub_delimsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ireg_name
 		}
-		open func iunreserved(_ i: Int) -> IunreservedContext? {
-			return getRuleContext(IunreservedContext.self,i)
-		}
-		open func pct_encoded() -> Array<Pct_encodedContext> {
-			return getRuleContexts(Pct_encodedContext.self)
-		}
-		open func pct_encoded(_ i: Int) -> Pct_encodedContext? {
-			return getRuleContext(Pct_encodedContext.self,i)
-		}
-		open func sub_delims() -> Array<Sub_delimsContext> {
-			return getRuleContexts(Sub_delimsContext.self)
-		}
-		open func sub_delims(_ i: Int) -> Sub_delimsContext? {
-			return getRuleContext(Sub_delimsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ireg_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIreg_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIreg_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIreg_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIreg_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIreg_name(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIreg_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIreg_name(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIreg_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ireg_name() throws -> Ireg_nameContext {
+	 open func ireg_name() throws -> Ireg_nameContext {
 		var _localctx: Ireg_nameContext = Ireg_nameContext(_ctx, getState())
 		try enterRule(_localctx, 20, IRIParser.RULE_ireg_name)
 		var _la: Int = 0
@@ -1240,7 +1322,7 @@ open class IRIParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(167)
@@ -1257,49 +1339,59 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IpathContext:ParserRuleContext {
-		open func ipath_abempty() -> Ipath_abemptyContext? {
-			return getRuleContext(Ipath_abemptyContext.self,0)
+
+	public class IpathContext: ParserRuleContext {
+			open
+			func ipath_abempty() -> Ipath_abemptyContext? {
+				return getRuleContext(Ipath_abemptyContext.self, 0)
+			}
+			open
+			func ipath_absolute() -> Ipath_absoluteContext? {
+				return getRuleContext(Ipath_absoluteContext.self, 0)
+			}
+			open
+			func ipath_noscheme() -> Ipath_noschemeContext? {
+				return getRuleContext(Ipath_noschemeContext.self, 0)
+			}
+			open
+			func ipath_rootless() -> Ipath_rootlessContext? {
+				return getRuleContext(Ipath_rootlessContext.self, 0)
+			}
+			open
+			func ipath_empty() -> Ipath_emptyContext? {
+				return getRuleContext(Ipath_emptyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ipath
 		}
-		open func ipath_absolute() -> Ipath_absoluteContext? {
-			return getRuleContext(Ipath_absoluteContext.self,0)
-		}
-		open func ipath_noscheme() -> Ipath_noschemeContext? {
-			return getRuleContext(Ipath_noschemeContext.self,0)
-		}
-		open func ipath_rootless() -> Ipath_rootlessContext? {
-			return getRuleContext(Ipath_rootlessContext.self,0)
-		}
-		open func ipath_empty() -> Ipath_emptyContext? {
-			return getRuleContext(Ipath_emptyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ipath }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIpath(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIpath(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIpath(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIpath(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIpath(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIpath(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIpath(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIpath(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ipath() throws -> IpathContext {
+	 open func ipath() throws -> IpathContext {
 		var _localctx: IpathContext = IpathContext(_ctx, getState())
 		try enterRule(_localctx, 22, IRIParser.RULE_ipath)
 		defer {
@@ -1350,40 +1442,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ipath_abemptyContext:ParserRuleContext {
-		open func isegment() -> Array<IsegmentContext> {
-			return getRuleContexts(IsegmentContext.self)
+
+	public class Ipath_abemptyContext: ParserRuleContext {
+			open
+			func isegment() -> [IsegmentContext] {
+				return getRuleContexts(IsegmentContext.self)
+			}
+			open
+			func isegment(_ i: Int) -> IsegmentContext? {
+				return getRuleContext(IsegmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ipath_abempty
 		}
-		open func isegment(_ i: Int) -> IsegmentContext? {
-			return getRuleContext(IsegmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ipath_abempty }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIpath_abempty(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIpath_abempty(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIpath_abempty(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIpath_abempty(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIpath_abempty(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIpath_abempty(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIpath_abempty(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIpath_abempty(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ipath_abempty() throws -> Ipath_abemptyContext {
+	 open func ipath_abempty() throws -> Ipath_abemptyContext {
 		var _localctx: Ipath_abemptyContext = Ipath_abemptyContext(_ctx, getState())
 		try enterRule(_localctx, 24, IRIParser.RULE_ipath_abempty)
 		var _la: Int = 0
@@ -1420,43 +1519,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ipath_absoluteContext:ParserRuleContext {
-		open func isegment_nz() -> Isegment_nzContext? {
-			return getRuleContext(Isegment_nzContext.self,0)
+
+	public class Ipath_absoluteContext: ParserRuleContext {
+			open
+			func isegment_nz() -> Isegment_nzContext? {
+				return getRuleContext(Isegment_nzContext.self, 0)
+			}
+			open
+			func isegment() -> [IsegmentContext] {
+				return getRuleContexts(IsegmentContext.self)
+			}
+			open
+			func isegment(_ i: Int) -> IsegmentContext? {
+				return getRuleContext(IsegmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ipath_absolute
 		}
-		open func isegment() -> Array<IsegmentContext> {
-			return getRuleContexts(IsegmentContext.self)
-		}
-		open func isegment(_ i: Int) -> IsegmentContext? {
-			return getRuleContext(IsegmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ipath_absolute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIpath_absolute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIpath_absolute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIpath_absolute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIpath_absolute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIpath_absolute(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIpath_absolute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIpath_absolute(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIpath_absolute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ipath_absolute() throws -> Ipath_absoluteContext {
+	 open func ipath_absolute() throws -> Ipath_absoluteContext {
 		var _localctx: Ipath_absoluteContext = Ipath_absoluteContext(_ctx, getState())
 		try enterRule(_localctx, 26, IRIParser.RULE_ipath_absolute)
 		var _la: Int = 0
@@ -1511,43 +1618,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ipath_noschemeContext:ParserRuleContext {
-		open func isegment_nz_nc() -> Isegment_nz_ncContext? {
-			return getRuleContext(Isegment_nz_ncContext.self,0)
+
+	public class Ipath_noschemeContext: ParserRuleContext {
+			open
+			func isegment_nz_nc() -> Isegment_nz_ncContext? {
+				return getRuleContext(Isegment_nz_ncContext.self, 0)
+			}
+			open
+			func isegment() -> [IsegmentContext] {
+				return getRuleContexts(IsegmentContext.self)
+			}
+			open
+			func isegment(_ i: Int) -> IsegmentContext? {
+				return getRuleContext(IsegmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ipath_noscheme
 		}
-		open func isegment() -> Array<IsegmentContext> {
-			return getRuleContexts(IsegmentContext.self)
-		}
-		open func isegment(_ i: Int) -> IsegmentContext? {
-			return getRuleContext(IsegmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ipath_noscheme }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIpath_noscheme(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIpath_noscheme(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIpath_noscheme(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIpath_noscheme(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIpath_noscheme(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIpath_noscheme(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIpath_noscheme(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIpath_noscheme(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ipath_noscheme() throws -> Ipath_noschemeContext {
+	 open func ipath_noscheme() throws -> Ipath_noschemeContext {
 		var _localctx: Ipath_noschemeContext = Ipath_noschemeContext(_ctx, getState())
 		try enterRule(_localctx, 28, IRIParser.RULE_ipath_noscheme)
 		var _la: Int = 0
@@ -1586,43 +1701,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ipath_rootlessContext:ParserRuleContext {
-		open func isegment_nz() -> Isegment_nzContext? {
-			return getRuleContext(Isegment_nzContext.self,0)
+
+	public class Ipath_rootlessContext: ParserRuleContext {
+			open
+			func isegment_nz() -> Isegment_nzContext? {
+				return getRuleContext(Isegment_nzContext.self, 0)
+			}
+			open
+			func isegment() -> [IsegmentContext] {
+				return getRuleContexts(IsegmentContext.self)
+			}
+			open
+			func isegment(_ i: Int) -> IsegmentContext? {
+				return getRuleContext(IsegmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ipath_rootless
 		}
-		open func isegment() -> Array<IsegmentContext> {
-			return getRuleContexts(IsegmentContext.self)
-		}
-		open func isegment(_ i: Int) -> IsegmentContext? {
-			return getRuleContext(IsegmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ipath_rootless }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIpath_rootless(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIpath_rootless(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIpath_rootless(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIpath_rootless(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIpath_rootless(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIpath_rootless(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIpath_rootless(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIpath_rootless(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ipath_rootless() throws -> Ipath_rootlessContext {
+	 open func ipath_rootless() throws -> Ipath_rootlessContext {
 		var _localctx: Ipath_rootlessContext = Ipath_rootlessContext(_ctx, getState())
 		try enterRule(_localctx, 30, IRIParser.RULE_ipath_rootless)
 		var _la: Int = 0
@@ -1661,34 +1784,39 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ipath_emptyContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ipath_empty }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIpath_empty(self)
+
+	public class Ipath_emptyContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ipath_empty
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIpath_empty(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIpath_empty(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIpath_empty(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIpath_empty(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIpath_empty(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIpath_empty(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIpath_empty(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ipath_empty() throws -> Ipath_emptyContext {
+	 open func ipath_empty() throws -> Ipath_emptyContext {
 		var _localctx: Ipath_emptyContext = Ipath_emptyContext(_ctx, getState())
 		try enterRule(_localctx, 32, IRIParser.RULE_ipath_empty)
 		defer {
@@ -1706,40 +1834,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IsegmentContext:ParserRuleContext {
-		open func ipchar() -> Array<IpcharContext> {
-			return getRuleContexts(IpcharContext.self)
+
+	public class IsegmentContext: ParserRuleContext {
+			open
+			func ipchar() -> [IpcharContext] {
+				return getRuleContexts(IpcharContext.self)
+			}
+			open
+			func ipchar(_ i: Int) -> IpcharContext? {
+				return getRuleContext(IpcharContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_isegment
 		}
-		open func ipchar(_ i: Int) -> IpcharContext? {
-			return getRuleContext(IpcharContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_isegment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIsegment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIsegment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIsegment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIsegment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIsegment(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIsegment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIsegment(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIsegment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func isegment() throws -> IsegmentContext {
+	 open func isegment() throws -> IsegmentContext {
 		var _localctx: IsegmentContext = IsegmentContext(_ctx, getState())
 		try enterRule(_localctx, 34, IRIParser.RULE_isegment)
 		var _la: Int = 0
@@ -1777,40 +1912,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Isegment_nzContext:ParserRuleContext {
-		open func ipchar() -> Array<IpcharContext> {
-			return getRuleContexts(IpcharContext.self)
+
+	public class Isegment_nzContext: ParserRuleContext {
+			open
+			func ipchar() -> [IpcharContext] {
+				return getRuleContexts(IpcharContext.self)
+			}
+			open
+			func ipchar(_ i: Int) -> IpcharContext? {
+				return getRuleContext(IpcharContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_isegment_nz
 		}
-		open func ipchar(_ i: Int) -> IpcharContext? {
-			return getRuleContext(IpcharContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_isegment_nz }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIsegment_nz(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIsegment_nz(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIsegment_nz(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIsegment_nz(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIsegment_nz(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIsegment_nz(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIsegment_nz(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIsegment_nz(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func isegment_nz() throws -> Isegment_nzContext {
+	 open func isegment_nz() throws -> Isegment_nzContext {
 		var _localctx: Isegment_nzContext = Isegment_nzContext(_ctx, getState())
 		try enterRule(_localctx, 36, IRIParser.RULE_isegment_nz)
 		var _la: Int = 0
@@ -1848,52 +1990,63 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Isegment_nz_ncContext:ParserRuleContext {
-		open func iunreserved() -> Array<IunreservedContext> {
-			return getRuleContexts(IunreservedContext.self)
+
+	public class Isegment_nz_ncContext: ParserRuleContext {
+			open
+			func iunreserved() -> [IunreservedContext] {
+				return getRuleContexts(IunreservedContext.self)
+			}
+			open
+			func iunreserved(_ i: Int) -> IunreservedContext? {
+				return getRuleContext(IunreservedContext.self, i)
+			}
+			open
+			func pct_encoded() -> [Pct_encodedContext] {
+				return getRuleContexts(Pct_encodedContext.self)
+			}
+			open
+			func pct_encoded(_ i: Int) -> Pct_encodedContext? {
+				return getRuleContext(Pct_encodedContext.self, i)
+			}
+			open
+			func sub_delims() -> [Sub_delimsContext] {
+				return getRuleContexts(Sub_delimsContext.self)
+			}
+			open
+			func sub_delims(_ i: Int) -> Sub_delimsContext? {
+				return getRuleContext(Sub_delimsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_isegment_nz_nc
 		}
-		open func iunreserved(_ i: Int) -> IunreservedContext? {
-			return getRuleContext(IunreservedContext.self,i)
-		}
-		open func pct_encoded() -> Array<Pct_encodedContext> {
-			return getRuleContexts(Pct_encodedContext.self)
-		}
-		open func pct_encoded(_ i: Int) -> Pct_encodedContext? {
-			return getRuleContext(Pct_encodedContext.self,i)
-		}
-		open func sub_delims() -> Array<Sub_delimsContext> {
-			return getRuleContexts(Sub_delimsContext.self)
-		}
-		open func sub_delims(_ i: Int) -> Sub_delimsContext? {
-			return getRuleContext(Sub_delimsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_isegment_nz_nc }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIsegment_nz_nc(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIsegment_nz_nc(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIsegment_nz_nc(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIsegment_nz_nc(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIsegment_nz_nc(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIsegment_nz_nc(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIsegment_nz_nc(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIsegment_nz_nc(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func isegment_nz_nc() throws -> Isegment_nz_ncContext {
+	 open func isegment_nz_nc() throws -> Isegment_nz_ncContext {
 		var _localctx: Isegment_nz_ncContext = Isegment_nz_ncContext(_ctx, getState())
 		try enterRule(_localctx, 38, IRIParser.RULE_isegment_nz_nc)
 		var _la: Int = 0
@@ -1982,7 +2135,7 @@ open class IRIParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(228); 
@@ -2006,43 +2159,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IpcharContext:ParserRuleContext {
-		open func iunreserved() -> IunreservedContext? {
-			return getRuleContext(IunreservedContext.self,0)
+
+	public class IpcharContext: ParserRuleContext {
+			open
+			func iunreserved() -> IunreservedContext? {
+				return getRuleContext(IunreservedContext.self, 0)
+			}
+			open
+			func pct_encoded() -> Pct_encodedContext? {
+				return getRuleContext(Pct_encodedContext.self, 0)
+			}
+			open
+			func sub_delims() -> Sub_delimsContext? {
+				return getRuleContext(Sub_delimsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ipchar
 		}
-		open func pct_encoded() -> Pct_encodedContext? {
-			return getRuleContext(Pct_encodedContext.self,0)
-		}
-		open func sub_delims() -> Sub_delimsContext? {
-			return getRuleContext(Sub_delimsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ipchar }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIpchar(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIpchar(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIpchar(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIpchar(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIpchar(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIpchar(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIpchar(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIpchar(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ipchar() throws -> IpcharContext {
+	 open func ipchar() throws -> IpcharContext {
 		var _localctx: IpcharContext = IpcharContext(_ctx, getState())
 		try enterRule(_localctx, 40, IRIParser.RULE_ipchar)
 		var _la: Int = 0
@@ -2141,7 +2302,7 @@ open class IRIParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2152,44 +2313,55 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IqueryContext:ParserRuleContext {
-		open func ipchar() -> Array<IpcharContext> {
-			return getRuleContexts(IpcharContext.self)
+
+	public class IqueryContext: ParserRuleContext {
+			open
+			func ipchar() -> [IpcharContext] {
+				return getRuleContexts(IpcharContext.self)
+			}
+			open
+			func ipchar(_ i: Int) -> IpcharContext? {
+				return getRuleContext(IpcharContext.self, i)
+			}
+			open
+			func IPRIVATE() -> [TerminalNode] {
+				return getTokens(IRIParser.Tokens.IPRIVATE.rawValue)
+			}
+			open
+			func IPRIVATE(_ i:Int) -> TerminalNode? {
+				return getToken(IRIParser.Tokens.IPRIVATE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_iquery
 		}
-		open func ipchar(_ i: Int) -> IpcharContext? {
-			return getRuleContext(IpcharContext.self,i)
-		}
-		open func IPRIVATE() -> Array<TerminalNode> { return getTokens(IRIParser.Tokens.IPRIVATE.rawValue) }
-		open func IPRIVATE(_ i:Int) -> TerminalNode?{
-			return getToken(IRIParser.Tokens.IPRIVATE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_iquery }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIquery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIquery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIquery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIquery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIquery(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIquery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIquery(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIquery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iquery() throws -> IqueryContext {
+	 open func iquery() throws -> IqueryContext {
 		var _localctx: IqueryContext = IqueryContext(_ctx, getState())
 		try enterRule(_localctx, 42, IRIParser.RULE_iquery)
 		var _la: Int = 0
@@ -2293,7 +2465,7 @@ open class IRIParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(242)
@@ -2310,40 +2482,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IfragmentContext:ParserRuleContext {
-		open func ipchar() -> Array<IpcharContext> {
-			return getRuleContexts(IpcharContext.self)
+
+	public class IfragmentContext: ParserRuleContext {
+			open
+			func ipchar() -> [IpcharContext] {
+				return getRuleContexts(IpcharContext.self)
+			}
+			open
+			func ipchar(_ i: Int) -> IpcharContext? {
+				return getRuleContext(IpcharContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ifragment
 		}
-		open func ipchar(_ i: Int) -> IpcharContext? {
-			return getRuleContext(IpcharContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ifragment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIfragment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIfragment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIfragment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIfragment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIfragment(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIfragment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIfragment(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIfragment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifragment() throws -> IfragmentContext {
+	 open func ifragment() throws -> IfragmentContext {
 		var _localctx: IfragmentContext = IfragmentContext(_ctx, getState())
 		try enterRule(_localctx, 44, IRIParser.RULE_ifragment)
 		var _la: Int = 0
@@ -2443,7 +2622,7 @@ open class IRIParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(249)
@@ -2460,41 +2639,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class IunreservedContext:ParserRuleContext {
-		open func alpha() -> AlphaContext? {
-			return getRuleContext(AlphaContext.self,0)
+
+	public class IunreservedContext: ParserRuleContext {
+			open
+			func alpha() -> AlphaContext? {
+				return getRuleContext(AlphaContext.self, 0)
+			}
+			open
+			func digit() -> DigitContext? {
+				return getRuleContext(DigitContext.self, 0)
+			}
+			open
+			func UCSCHAR() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.UCSCHAR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_iunreserved
 		}
-		open func digit() -> DigitContext? {
-			return getRuleContext(DigitContext.self,0)
-		}
-		open func UCSCHAR() -> TerminalNode? { return getToken(IRIParser.Tokens.UCSCHAR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_iunreserved }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIunreserved(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIunreserved(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIunreserved(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIunreserved(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIunreserved(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIunreserved(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIunreserved(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIunreserved(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iunreserved() throws -> IunreservedContext {
+	 open func iunreserved() throws -> IunreservedContext {
 		var _localctx: IunreservedContext = IunreservedContext(_ctx, getState())
 		try enterRule(_localctx, 46, IRIParser.RULE_iunreserved)
 		var _la: Int = 0
@@ -2576,7 +2765,7 @@ open class IRIParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2587,46 +2776,55 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class SchemeContext:ParserRuleContext {
-		open func alpha() -> Array<AlphaContext> {
-			return getRuleContexts(AlphaContext.self)
+
+	public class SchemeContext: ParserRuleContext {
+			open
+			func alpha() -> [AlphaContext] {
+				return getRuleContexts(AlphaContext.self)
+			}
+			open
+			func alpha(_ i: Int) -> AlphaContext? {
+				return getRuleContext(AlphaContext.self, i)
+			}
+			open
+			func digit() -> [DigitContext] {
+				return getRuleContexts(DigitContext.self)
+			}
+			open
+			func digit(_ i: Int) -> DigitContext? {
+				return getRuleContext(DigitContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_scheme
 		}
-		open func alpha(_ i: Int) -> AlphaContext? {
-			return getRuleContext(AlphaContext.self,i)
-		}
-		open func digit() -> Array<DigitContext> {
-			return getRuleContexts(DigitContext.self)
-		}
-		open func digit(_ i: Int) -> DigitContext? {
-			return getRuleContext(DigitContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_scheme }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterScheme(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterScheme(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitScheme(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitScheme(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitScheme(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitScheme(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitScheme(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitScheme(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func scheme() throws -> SchemeContext {
+	 open func scheme() throws -> SchemeContext {
 		var _localctx: SchemeContext = SchemeContext(_ctx, getState())
 		try enterRule(_localctx, 48, IRIParser.RULE_scheme)
 		var _la: Int = 0
@@ -2717,7 +2915,7 @@ open class IRIParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(263)
@@ -2734,40 +2932,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class PortContext:ParserRuleContext {
-		open func digit() -> Array<DigitContext> {
-			return getRuleContexts(DigitContext.self)
+
+	public class PortContext: ParserRuleContext {
+			open
+			func digit() -> [DigitContext] {
+				return getRuleContexts(DigitContext.self)
+			}
+			open
+			func digit(_ i: Int) -> DigitContext? {
+				return getRuleContext(DigitContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_port
 		}
-		open func digit(_ i: Int) -> DigitContext? {
-			return getRuleContext(DigitContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_port }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterPort(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterPort(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitPort(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitPort(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitPort(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitPort(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitPort(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitPort(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func port() throws -> PortContext {
+	 open func port() throws -> PortContext {
 		var _localctx: PortContext = PortContext(_ctx, getState())
 		try enterRule(_localctx, 50, IRIParser.RULE_port)
 		var _la: Int = 0
@@ -2805,40 +3010,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ip_literalContext:ParserRuleContext {
-		open func ip_v6_address() -> Ip_v6_addressContext? {
-			return getRuleContext(Ip_v6_addressContext.self,0)
+
+	public class Ip_literalContext: ParserRuleContext {
+			open
+			func ip_v6_address() -> Ip_v6_addressContext? {
+				return getRuleContext(Ip_v6_addressContext.self, 0)
+			}
+			open
+			func ip_v_future() -> Ip_v_futureContext? {
+				return getRuleContext(Ip_v_futureContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ip_literal
 		}
-		open func ip_v_future() -> Ip_v_futureContext? {
-			return getRuleContext(Ip_v_futureContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ip_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIp_literal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIp_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIp_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIp_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIp_literal(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIp_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIp_literal(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIp_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ip_literal() throws -> Ip_literalContext {
+	 open func ip_literal() throws -> Ip_literalContext {
 		var _localctx: Ip_literalContext = Ip_literalContext(_ctx, getState())
 		try enterRule(_localctx, 52, IRIParser.RULE_ip_literal)
 		defer {
@@ -2879,7 +3091,7 @@ open class IRIParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(275)
 		 	try match(IRIParser.Tokens.CBRACK.rawValue)
@@ -2893,53 +3105,67 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ip_v_futureContext:ParserRuleContext {
-		open func V() -> TerminalNode? { return getToken(IRIParser.Tokens.V.rawValue, 0) }
-		open func hexdig() -> Array<HexdigContext> {
-			return getRuleContexts(HexdigContext.self)
+
+	public class Ip_v_futureContext: ParserRuleContext {
+			open
+			func V() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.V.rawValue, 0)
+			}
+			open
+			func hexdig() -> [HexdigContext] {
+				return getRuleContexts(HexdigContext.self)
+			}
+			open
+			func hexdig(_ i: Int) -> HexdigContext? {
+				return getRuleContext(HexdigContext.self, i)
+			}
+			open
+			func unreserved() -> [UnreservedContext] {
+				return getRuleContexts(UnreservedContext.self)
+			}
+			open
+			func unreserved(_ i: Int) -> UnreservedContext? {
+				return getRuleContext(UnreservedContext.self, i)
+			}
+			open
+			func sub_delims() -> [Sub_delimsContext] {
+				return getRuleContexts(Sub_delimsContext.self)
+			}
+			open
+			func sub_delims(_ i: Int) -> Sub_delimsContext? {
+				return getRuleContext(Sub_delimsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ip_v_future
 		}
-		open func hexdig(_ i: Int) -> HexdigContext? {
-			return getRuleContext(HexdigContext.self,i)
-		}
-		open func unreserved() -> Array<UnreservedContext> {
-			return getRuleContexts(UnreservedContext.self)
-		}
-		open func unreserved(_ i: Int) -> UnreservedContext? {
-			return getRuleContext(UnreservedContext.self,i)
-		}
-		open func sub_delims() -> Array<Sub_delimsContext> {
-			return getRuleContexts(Sub_delimsContext.self)
-		}
-		open func sub_delims(_ i: Int) -> Sub_delimsContext? {
-			return getRuleContext(Sub_delimsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ip_v_future }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIp_v_future(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIp_v_future(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIp_v_future(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIp_v_future(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIp_v_future(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIp_v_future(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIp_v_future(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIp_v_future(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ip_v_future() throws -> Ip_v_futureContext {
+	 open func ip_v_future() throws -> Ip_v_futureContext {
 		var _localctx: Ip_v_futureContext = Ip_v_futureContext(_ctx, getState())
 		try enterRule(_localctx, 54, IRIParser.RULE_ip_v_future)
 		var _la: Int = 0
@@ -3044,7 +3270,7 @@ open class IRIParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(289); 
@@ -3068,43 +3294,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ip_v6_addressContext:ParserRuleContext {
-		open func h16() -> Array<H16Context> {
-			return getRuleContexts(H16Context.self)
+
+	public class Ip_v6_addressContext: ParserRuleContext {
+			open
+			func h16() -> [H16Context] {
+				return getRuleContexts(H16Context.self)
+			}
+			open
+			func h16(_ i: Int) -> H16Context? {
+				return getRuleContext(H16Context.self, i)
+			}
+			open
+			func ls32() -> Ls32Context? {
+				return getRuleContext(Ls32Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ip_v6_address
 		}
-		open func h16(_ i: Int) -> H16Context? {
-			return getRuleContext(H16Context.self,i)
-		}
-		open func ls32() -> Ls32Context? {
-			return getRuleContext(Ls32Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ip_v6_address }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIp_v6_address(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIp_v6_address(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIp_v6_address(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIp_v6_address(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIp_v6_address(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIp_v6_address(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIp_v6_address(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIp_v6_address(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ip_v6_address() throws -> Ip_v6_addressContext {
+	 open func ip_v6_address() throws -> Ip_v6_addressContext {
 		var _localctx: Ip_v6_addressContext = Ip_v6_addressContext(_ctx, getState())
 		try enterRule(_localctx, 56, IRIParser.RULE_ip_v6_address)
 		var _la: Int = 0
@@ -3642,40 +3876,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class H16Context:ParserRuleContext {
-		open func hexdig() -> Array<HexdigContext> {
-			return getRuleContexts(HexdigContext.self)
+
+	public class H16Context: ParserRuleContext {
+			open
+			func hexdig() -> [HexdigContext] {
+				return getRuleContexts(HexdigContext.self)
+			}
+			open
+			func hexdig(_ i: Int) -> HexdigContext? {
+				return getRuleContext(HexdigContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_h16
 		}
-		open func hexdig(_ i: Int) -> HexdigContext? {
-			return getRuleContext(HexdigContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_h16 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterH16(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterH16(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitH16(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitH16(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitH16(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitH16(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitH16(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitH16(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func h16() throws -> H16Context {
+	 open func h16() throws -> H16Context {
 		var _localctx: H16Context = H16Context(_ctx, getState())
 		try enterRule(_localctx, 58, IRIParser.RULE_h16)
 		defer {
@@ -3732,43 +3973,51 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ls32Context:ParserRuleContext {
-		open func h16() -> Array<H16Context> {
-			return getRuleContexts(H16Context.self)
+
+	public class Ls32Context: ParserRuleContext {
+			open
+			func h16() -> [H16Context] {
+				return getRuleContexts(H16Context.self)
+			}
+			open
+			func h16(_ i: Int) -> H16Context? {
+				return getRuleContext(H16Context.self, i)
+			}
+			open
+			func ip_v4_address() -> Ip_v4_addressContext? {
+				return getRuleContext(Ip_v4_addressContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ls32
 		}
-		open func h16(_ i: Int) -> H16Context? {
-			return getRuleContext(H16Context.self,i)
-		}
-		open func ip_v4_address() -> Ip_v4_addressContext? {
-			return getRuleContext(Ip_v4_addressContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ls32 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterLs32(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterLs32(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitLs32(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitLs32(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitLs32(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitLs32(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitLs32(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitLs32(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ls32() throws -> Ls32Context {
+	 open func ls32() throws -> Ls32Context {
 		var _localctx: Ls32Context = Ls32Context(_ctx, getState())
 		try enterRule(_localctx, 60, IRIParser.RULE_ls32)
 		defer {
@@ -3805,40 +4054,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Ip_v4_addressContext:ParserRuleContext {
-		open func dec_octet() -> Array<Dec_octetContext> {
-			return getRuleContexts(Dec_octetContext.self)
+
+	public class Ip_v4_addressContext: ParserRuleContext {
+			open
+			func dec_octet() -> [Dec_octetContext] {
+				return getRuleContexts(Dec_octetContext.self)
+			}
+			open
+			func dec_octet(_ i: Int) -> Dec_octetContext? {
+				return getRuleContext(Dec_octetContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_ip_v4_address
 		}
-		open func dec_octet(_ i: Int) -> Dec_octetContext? {
-			return getRuleContext(Dec_octetContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_ip_v4_address }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterIp_v4_address(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterIp_v4_address(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitIp_v4_address(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitIp_v4_address(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitIp_v4_address(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitIp_v4_address(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitIp_v4_address(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitIp_v4_address(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ip_v4_address() throws -> Ip_v4_addressContext {
+	 open func ip_v4_address() throws -> Ip_v4_addressContext {
 		var _localctx: Ip_v4_addressContext = Ip_v4_addressContext(_ctx, getState())
 		try enterRule(_localctx, 62, IRIParser.RULE_ip_v4_address)
 		defer {
@@ -3870,55 +4126,83 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Dec_octetContext:ParserRuleContext {
-		open func digit() -> Array<DigitContext> {
-			return getRuleContexts(DigitContext.self)
+
+	public class Dec_octetContext: ParserRuleContext {
+			open
+			func digit() -> [DigitContext] {
+				return getRuleContexts(DigitContext.self)
+			}
+			open
+			func digit(_ i: Int) -> DigitContext? {
+				return getRuleContext(DigitContext.self, i)
+			}
+			open
+			func non_zero_digit() -> Non_zero_digitContext? {
+				return getRuleContext(Non_zero_digitContext.self, 0)
+			}
+			open
+			func D1() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D1.rawValue, 0)
+			}
+			open
+			func D2() -> [TerminalNode] {
+				return getTokens(IRIParser.Tokens.D2.rawValue)
+			}
+			open
+			func D2(_ i:Int) -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D2.rawValue, i)
+			}
+			open
+			func D0() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D0.rawValue, 0)
+			}
+			open
+			func D3() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D3.rawValue, 0)
+			}
+			open
+			func D4() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D4.rawValue, 0)
+			}
+			open
+			func D5() -> [TerminalNode] {
+				return getTokens(IRIParser.Tokens.D5.rawValue)
+			}
+			open
+			func D5(_ i:Int) -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D5.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_dec_octet
 		}
-		open func digit(_ i: Int) -> DigitContext? {
-			return getRuleContext(DigitContext.self,i)
-		}
-		open func non_zero_digit() -> Non_zero_digitContext? {
-			return getRuleContext(Non_zero_digitContext.self,0)
-		}
-		open func D1() -> TerminalNode? { return getToken(IRIParser.Tokens.D1.rawValue, 0) }
-		open func D2() -> Array<TerminalNode> { return getTokens(IRIParser.Tokens.D2.rawValue) }
-		open func D2(_ i:Int) -> TerminalNode?{
-			return getToken(IRIParser.Tokens.D2.rawValue, i)
-		}
-		open func D0() -> TerminalNode? { return getToken(IRIParser.Tokens.D0.rawValue, 0) }
-		open func D3() -> TerminalNode? { return getToken(IRIParser.Tokens.D3.rawValue, 0) }
-		open func D4() -> TerminalNode? { return getToken(IRIParser.Tokens.D4.rawValue, 0) }
-		open func D5() -> Array<TerminalNode> { return getTokens(IRIParser.Tokens.D5.rawValue) }
-		open func D5(_ i:Int) -> TerminalNode?{
-			return getToken(IRIParser.Tokens.D5.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_dec_octet }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterDec_octet(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterDec_octet(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitDec_octet(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitDec_octet(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitDec_octet(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitDec_octet(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitDec_octet(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitDec_octet(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dec_octet() throws -> Dec_octetContext {
+	 open func dec_octet() throws -> Dec_octetContext {
 		var _localctx: Dec_octetContext = Dec_octetContext(_ctx, getState())
 		try enterRule(_localctx, 64, IRIParser.RULE_dec_octet)
 		var _la: Int = 0
@@ -4012,40 +4296,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Pct_encodedContext:ParserRuleContext {
-		open func hexdig() -> Array<HexdigContext> {
-			return getRuleContexts(HexdigContext.self)
+
+	public class Pct_encodedContext: ParserRuleContext {
+			open
+			func hexdig() -> [HexdigContext] {
+				return getRuleContexts(HexdigContext.self)
+			}
+			open
+			func hexdig(_ i: Int) -> HexdigContext? {
+				return getRuleContext(HexdigContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_pct_encoded
 		}
-		open func hexdig(_ i: Int) -> HexdigContext? {
-			return getRuleContext(HexdigContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_pct_encoded }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterPct_encoded(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterPct_encoded(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitPct_encoded(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitPct_encoded(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitPct_encoded(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitPct_encoded(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitPct_encoded(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitPct_encoded(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pct_encoded() throws -> Pct_encodedContext {
+	 open func pct_encoded() throws -> Pct_encodedContext {
 		var _localctx: Pct_encodedContext = Pct_encodedContext(_ctx, getState())
 		try enterRule(_localctx, 66, IRIParser.RULE_pct_encoded)
 		defer {
@@ -4069,40 +4360,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class UnreservedContext:ParserRuleContext {
-		open func alpha() -> AlphaContext? {
-			return getRuleContext(AlphaContext.self,0)
+
+	public class UnreservedContext: ParserRuleContext {
+			open
+			func alpha() -> AlphaContext? {
+				return getRuleContext(AlphaContext.self, 0)
+			}
+			open
+			func digit() -> DigitContext? {
+				return getRuleContext(DigitContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_unreserved
 		}
-		open func digit() -> DigitContext? {
-			return getRuleContext(DigitContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_unreserved }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterUnreserved(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterUnreserved(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitUnreserved(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitUnreserved(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitUnreserved(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitUnreserved(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitUnreserved(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitUnreserved(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unreserved() throws -> UnreservedContext {
+	 open func unreserved() throws -> UnreservedContext {
 		var _localctx: UnreservedContext = UnreservedContext(_ctx, getState())
 		try enterRule(_localctx, 68, IRIParser.RULE_unreserved)
 		var _la: Int = 0
@@ -4183,7 +4481,7 @@ open class IRIParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4194,40 +4492,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class ReservedContext:ParserRuleContext {
-		open func gen_delims() -> Gen_delimsContext? {
-			return getRuleContext(Gen_delimsContext.self,0)
+
+	public class ReservedContext: ParserRuleContext {
+			open
+			func gen_delims() -> Gen_delimsContext? {
+				return getRuleContext(Gen_delimsContext.self, 0)
+			}
+			open
+			func sub_delims() -> Sub_delimsContext? {
+				return getRuleContext(Sub_delimsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_reserved
 		}
-		open func sub_delims() -> Sub_delimsContext? {
-			return getRuleContext(Sub_delimsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_reserved }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterReserved(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterReserved(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitReserved(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitReserved(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitReserved(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitReserved(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitReserved(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitReserved(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reserved() throws -> ReservedContext {
+	 open func reserved() throws -> ReservedContext {
 		var _localctx: ReservedContext = ReservedContext(_ctx, getState())
 		try enterRule(_localctx, 70, IRIParser.RULE_reserved)
 		defer {
@@ -4266,7 +4571,7 @@ open class IRIParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4277,34 +4582,39 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Gen_delimsContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_gen_delims }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterGen_delims(self)
+
+	public class Gen_delimsContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_gen_delims
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterGen_delims(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitGen_delims(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitGen_delims(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitGen_delims(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitGen_delims(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitGen_delims(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitGen_delims(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func gen_delims() throws -> Gen_delimsContext {
+	 open func gen_delims() throws -> Gen_delimsContext {
 		var _localctx: Gen_delimsContext = Gen_delimsContext(_ctx, getState())
 		try enterRule(_localctx, 72, IRIParser.RULE_gen_delims)
 		var _la: Int = 0
@@ -4339,34 +4649,39 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Sub_delimsContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_sub_delims }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterSub_delims(self)
+
+	public class Sub_delimsContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_sub_delims
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterSub_delims(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitSub_delims(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitSub_delims(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitSub_delims(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitSub_delims(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitSub_delims(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitSub_delims(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sub_delims() throws -> Sub_delimsContext {
+	 open func sub_delims() throws -> Sub_delimsContext {
 		var _localctx: Sub_delimsContext = Sub_delimsContext(_ctx, getState())
 		try enterRule(_localctx, 74, IRIParser.RULE_sub_delims)
 		var _la: Int = 0
@@ -4401,60 +4716,143 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class AlphaContext:ParserRuleContext {
-		open func A() -> TerminalNode? { return getToken(IRIParser.Tokens.A.rawValue, 0) }
-		open func B() -> TerminalNode? { return getToken(IRIParser.Tokens.B.rawValue, 0) }
-		open func C() -> TerminalNode? { return getToken(IRIParser.Tokens.C.rawValue, 0) }
-		open func D() -> TerminalNode? { return getToken(IRIParser.Tokens.D.rawValue, 0) }
-		open func E() -> TerminalNode? { return getToken(IRIParser.Tokens.E.rawValue, 0) }
-		open func F() -> TerminalNode? { return getToken(IRIParser.Tokens.F.rawValue, 0) }
-		open func G() -> TerminalNode? { return getToken(IRIParser.Tokens.G.rawValue, 0) }
-		open func H() -> TerminalNode? { return getToken(IRIParser.Tokens.H.rawValue, 0) }
-		open func I() -> TerminalNode? { return getToken(IRIParser.Tokens.I.rawValue, 0) }
-		open func J() -> TerminalNode? { return getToken(IRIParser.Tokens.J.rawValue, 0) }
-		open func K() -> TerminalNode? { return getToken(IRIParser.Tokens.K.rawValue, 0) }
-		open func L() -> TerminalNode? { return getToken(IRIParser.Tokens.L.rawValue, 0) }
-		open func M() -> TerminalNode? { return getToken(IRIParser.Tokens.M.rawValue, 0) }
-		open func N() -> TerminalNode? { return getToken(IRIParser.Tokens.N.rawValue, 0) }
-		open func O() -> TerminalNode? { return getToken(IRIParser.Tokens.O.rawValue, 0) }
-		open func P() -> TerminalNode? { return getToken(IRIParser.Tokens.P.rawValue, 0) }
-		open func Q() -> TerminalNode? { return getToken(IRIParser.Tokens.Q.rawValue, 0) }
-		open func R() -> TerminalNode? { return getToken(IRIParser.Tokens.R.rawValue, 0) }
-		open func S() -> TerminalNode? { return getToken(IRIParser.Tokens.S.rawValue, 0) }
-		open func T() -> TerminalNode? { return getToken(IRIParser.Tokens.T.rawValue, 0) }
-		open func U() -> TerminalNode? { return getToken(IRIParser.Tokens.U.rawValue, 0) }
-		open func V() -> TerminalNode? { return getToken(IRIParser.Tokens.V.rawValue, 0) }
-		open func W() -> TerminalNode? { return getToken(IRIParser.Tokens.W.rawValue, 0) }
-		open func X() -> TerminalNode? { return getToken(IRIParser.Tokens.X.rawValue, 0) }
-		open func Y() -> TerminalNode? { return getToken(IRIParser.Tokens.Y.rawValue, 0) }
-		open func Z() -> TerminalNode? { return getToken(IRIParser.Tokens.Z.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_alpha }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterAlpha(self)
+
+	public class AlphaContext: ParserRuleContext {
+			open
+			func A() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.A.rawValue, 0)
+			}
+			open
+			func B() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.B.rawValue, 0)
+			}
+			open
+			func C() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.C.rawValue, 0)
+			}
+			open
+			func D() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D.rawValue, 0)
+			}
+			open
+			func E() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.E.rawValue, 0)
+			}
+			open
+			func F() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.F.rawValue, 0)
+			}
+			open
+			func G() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.G.rawValue, 0)
+			}
+			open
+			func H() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.H.rawValue, 0)
+			}
+			open
+			func I() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.I.rawValue, 0)
+			}
+			open
+			func J() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.J.rawValue, 0)
+			}
+			open
+			func K() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.K.rawValue, 0)
+			}
+			open
+			func L() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.L.rawValue, 0)
+			}
+			open
+			func M() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.M.rawValue, 0)
+			}
+			open
+			func N() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.N.rawValue, 0)
+			}
+			open
+			func O() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.O.rawValue, 0)
+			}
+			open
+			func P() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.P.rawValue, 0)
+			}
+			open
+			func Q() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.Q.rawValue, 0)
+			}
+			open
+			func R() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.R.rawValue, 0)
+			}
+			open
+			func S() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.S.rawValue, 0)
+			}
+			open
+			func T() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.T.rawValue, 0)
+			}
+			open
+			func U() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.U.rawValue, 0)
+			}
+			open
+			func V() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.V.rawValue, 0)
+			}
+			open
+			func W() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.W.rawValue, 0)
+			}
+			open
+			func X() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.X.rawValue, 0)
+			}
+			open
+			func Y() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.Y.rawValue, 0)
+			}
+			open
+			func Z() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.Z.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_alpha
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterAlpha(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitAlpha(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitAlpha(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitAlpha(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitAlpha(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitAlpha(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitAlpha(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func alpha() throws -> AlphaContext {
+	 open func alpha() throws -> AlphaContext {
 		var _localctx: AlphaContext = AlphaContext(_ctx, getState())
 		try enterRule(_localctx, 76, IRIParser.RULE_alpha)
 		var _la: Int = 0
@@ -4489,43 +4887,67 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class HexdigContext:ParserRuleContext {
-		open func digit() -> DigitContext? {
-			return getRuleContext(DigitContext.self,0)
+
+	public class HexdigContext: ParserRuleContext {
+			open
+			func digit() -> DigitContext? {
+				return getRuleContext(DigitContext.self, 0)
+			}
+			open
+			func A() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.A.rawValue, 0)
+			}
+			open
+			func B() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.B.rawValue, 0)
+			}
+			open
+			func C() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.C.rawValue, 0)
+			}
+			open
+			func D() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D.rawValue, 0)
+			}
+			open
+			func E() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.E.rawValue, 0)
+			}
+			open
+			func F() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.F.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_hexdig
 		}
-		open func A() -> TerminalNode? { return getToken(IRIParser.Tokens.A.rawValue, 0) }
-		open func B() -> TerminalNode? { return getToken(IRIParser.Tokens.B.rawValue, 0) }
-		open func C() -> TerminalNode? { return getToken(IRIParser.Tokens.C.rawValue, 0) }
-		open func D() -> TerminalNode? { return getToken(IRIParser.Tokens.D.rawValue, 0) }
-		open func E() -> TerminalNode? { return getToken(IRIParser.Tokens.E.rawValue, 0) }
-		open func F() -> TerminalNode? { return getToken(IRIParser.Tokens.F.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_hexdig }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterHexdig(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterHexdig(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitHexdig(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitHexdig(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitHexdig(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitHexdig(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitHexdig(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitHexdig(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hexdig() throws -> HexdigContext {
+	 open func hexdig() throws -> HexdigContext {
 		var _localctx: HexdigContext = HexdigContext(_ctx, getState())
 		try enterRule(_localctx, 78, IRIParser.RULE_hexdig)
 		var _la: Int = 0
@@ -4577,7 +4999,7 @@ open class IRIParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4588,38 +5010,47 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class DigitContext:ParserRuleContext {
-		open func D0() -> TerminalNode? { return getToken(IRIParser.Tokens.D0.rawValue, 0) }
-		open func non_zero_digit() -> Non_zero_digitContext? {
-			return getRuleContext(Non_zero_digitContext.self,0)
+
+	public class DigitContext: ParserRuleContext {
+			open
+			func D0() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D0.rawValue, 0)
+			}
+			open
+			func non_zero_digit() -> Non_zero_digitContext? {
+				return getRuleContext(Non_zero_digitContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_digit
 		}
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_digit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterDigit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterDigit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitDigit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitDigit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitDigit(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitDigit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitDigit(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitDigit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func digit() throws -> DigitContext {
+	 open func digit() throws -> DigitContext {
 		var _localctx: DigitContext = DigitContext(_ctx, getState())
 		try enterRule(_localctx, 80, IRIParser.RULE_digit)
 		defer {
@@ -4650,7 +5081,7 @@ open class IRIParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4661,43 +5092,75 @@ open class IRIParser: Parser {
 
 		return _localctx
 	}
-	open class Non_zero_digitContext:ParserRuleContext {
-		open func D1() -> TerminalNode? { return getToken(IRIParser.Tokens.D1.rawValue, 0) }
-		open func D2() -> TerminalNode? { return getToken(IRIParser.Tokens.D2.rawValue, 0) }
-		open func D3() -> TerminalNode? { return getToken(IRIParser.Tokens.D3.rawValue, 0) }
-		open func D4() -> TerminalNode? { return getToken(IRIParser.Tokens.D4.rawValue, 0) }
-		open func D5() -> TerminalNode? { return getToken(IRIParser.Tokens.D5.rawValue, 0) }
-		open func D6() -> TerminalNode? { return getToken(IRIParser.Tokens.D6.rawValue, 0) }
-		open func D7() -> TerminalNode? { return getToken(IRIParser.Tokens.D7.rawValue, 0) }
-		open func D8() -> TerminalNode? { return getToken(IRIParser.Tokens.D8.rawValue, 0) }
-		open func D9() -> TerminalNode? { return getToken(IRIParser.Tokens.D9.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return IRIParser.RULE_non_zero_digit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).enterNon_zero_digit(self)
+
+	public class Non_zero_digitContext: ParserRuleContext {
+			open
+			func D1() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D1.rawValue, 0)
+			}
+			open
+			func D2() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D2.rawValue, 0)
+			}
+			open
+			func D3() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D3.rawValue, 0)
+			}
+			open
+			func D4() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D4.rawValue, 0)
+			}
+			open
+			func D5() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D5.rawValue, 0)
+			}
+			open
+			func D6() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D6.rawValue, 0)
+			}
+			open
+			func D7() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D7.rawValue, 0)
+			}
+			open
+			func D8() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D8.rawValue, 0)
+			}
+			open
+			func D9() -> TerminalNode? {
+				return getToken(IRIParser.Tokens.D9.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return IRIParser.RULE_non_zero_digit
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.enterNon_zero_digit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is IRIListener {
-			 	(listener as! IRIListener).exitNon_zero_digit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? IRIListener {
+				listener.exitNon_zero_digit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is IRIVisitor {
-			     return (visitor as! IRIVisitor<T>).visitNon_zero_digit(self)
-			}else if visitor is IRIBaseVisitor {
-		    	 return (visitor as! IRIBaseVisitor<T>).visitNon_zero_digit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? IRIVisitor {
+			    return visitor.visitNon_zero_digit(self)
+			}
+			else if let visitor = visitor as? IRIBaseVisitor {
+			    return visitor.visitNon_zero_digit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func non_zero_digit() throws -> Non_zero_digitContext {
+	 open func non_zero_digit() throws -> Non_zero_digitContext {
 		var _localctx: Non_zero_digitContext = Non_zero_digitContext(_ctx, getState())
 		try enterRule(_localctx, 82, IRIParser.RULE_non_zero_digit)
 		var _la: Int = 0
@@ -4733,6 +5196,10 @@ open class IRIParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = IRIParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = IRIParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/p/p.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/p/p.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class pVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProg(_ ctx: pParser.ProgContext) -> T{
+	open func visitProg(_ ctx: pParser.ProgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class pVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbol(_ ctx: pParser.SymbolContext) -> T{
+	open func visitSymbol(_ ctx: pParser.SymbolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class pVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIterate(_ ctx: pParser.IterateContext) -> T{
+	open func visitIterate(_ ctx: pParser.IterateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class pVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: pParser.AtomContext) -> T{
+	open func visitAtom(_ ctx: pParser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

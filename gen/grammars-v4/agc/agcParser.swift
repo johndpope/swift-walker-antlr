@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/agc/agc.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/agc/agc.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class agcParser: Parser {
@@ -11,8 +11,11 @@ open class agcParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -57,15 +60,18 @@ open class agcParser: Parser {
                  PLUS = 188, MINUS = 189, TIMES = 190, DIV = 191, COMMA = 192, 
                  LPAREN = 193, RPAREN = 194, EOL = 195, WS = 196
 	}
-	public static let RULE_prog = 0, RULE_line = 1, RULE_blank_line = 2, RULE_comment_line = 3, 
-                   RULE_instruction_line = 4, RULE_erase_line = 5, RULE_assignment_line = 6, 
-                   RULE_opcodes = 7, RULE_argument = 8, RULE_ws = 9, RULE_eol = 10, 
-                   RULE_comment = 11, RULE_label = 12, RULE_variable = 13, 
-                   RULE_expression = 14, RULE_multiplyingExpression = 15, 
-                   RULE_atom = 16, RULE_inte = 17, RULE_decimal = 18, RULE_register = 19, 
-                   RULE_opcode = 20, RULE_axt_opcode = 21, RULE_pseudo_opcode = 22, 
-                   RULE_standard_opcode = 23
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_prog = 0, RULE_line = 1, RULE_blank_line = 2, RULE_comment_line = 3, 
+            RULE_instruction_line = 4, RULE_erase_line = 5, RULE_assignment_line = 6, 
+            RULE_opcodes = 7, RULE_argument = 8, RULE_ws = 9, RULE_eol = 10, 
+            RULE_comment = 11, RULE_label = 12, RULE_variable = 13, RULE_expression = 14, 
+            RULE_multiplyingExpression = 15, RULE_atom = 16, RULE_inte = 17, 
+            RULE_decimal = 18, RULE_register = 19, RULE_opcode = 20, RULE_axt_opcode = 21, 
+            RULE_pseudo_opcode = 22, RULE_standard_opcode = 23
+
+	public
+	static let ruleNames: [String] = [
 		"prog", "line", "blank_line", "comment_line", "instruction_line", "erase_line", 
 		"assignment_line", "opcodes", "argument", "ws", "eol", "comment", "label", 
 		"variable", "expression", "multiplyingExpression", "atom", "inte", "decimal", 
@@ -118,88 +124,73 @@ open class agcParser: Parser {
 		nil, nil, "LABEL", "INTE", "DECIMAL", "COMMENT", "PLUS", "MINUS", "TIMES", 
 		"DIV", "COMMA", "LPAREN", "RPAREN", "EOL", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "agc.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return agcParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "agc.g4" }
+	override open
+	func getSerializedATN() -> String { return agcParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return agcParser.ruleNames }
+	override open
+	func getATN() -> ATN { return agcParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return agcParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return agcParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return agcParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,agcParser._ATN,agcParser._decisionToDFA, agcParser._sharedContextCache)
 	}
-	open class ProgContext:ParserRuleContext {
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
+
+	public class ProgContext: ParserRuleContext {
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_prog
 		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_prog }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterProg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterProg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitProg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitProg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitProg(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitProg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitProg(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitProg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prog() throws -> ProgContext {
+	 open func prog() throws -> ProgContext {
 		var _localctx: ProgContext = ProgContext(_ctx, getState())
 		try enterRule(_localctx, 0, agcParser.RULE_prog)
 		var _la: Int = 0
@@ -237,49 +228,59 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func comment_line() -> Comment_lineContext? {
-			return getRuleContext(Comment_lineContext.self,0)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func comment_line() -> Comment_lineContext? {
+				return getRuleContext(Comment_lineContext.self, 0)
+			}
+			open
+			func blank_line() -> Blank_lineContext? {
+				return getRuleContext(Blank_lineContext.self, 0)
+			}
+			open
+			func instruction_line() -> Instruction_lineContext? {
+				return getRuleContext(Instruction_lineContext.self, 0)
+			}
+			open
+			func erase_line() -> Erase_lineContext? {
+				return getRuleContext(Erase_lineContext.self, 0)
+			}
+			open
+			func assignment_line() -> Assignment_lineContext? {
+				return getRuleContext(Assignment_lineContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_line
 		}
-		open func blank_line() -> Blank_lineContext? {
-			return getRuleContext(Blank_lineContext.self,0)
-		}
-		open func instruction_line() -> Instruction_lineContext? {
-			return getRuleContext(Instruction_lineContext.self,0)
-		}
-		open func erase_line() -> Erase_lineContext? {
-			return getRuleContext(Erase_lineContext.self,0)
-		}
-		open func assignment_line() -> Assignment_lineContext? {
-			return getRuleContext(Assignment_lineContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitLine(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 2, agcParser.RULE_line)
 		defer {
@@ -330,40 +331,47 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class Blank_lineContext:ParserRuleContext {
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
+
+	public class Blank_lineContext: ParserRuleContext {
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_blank_line
 		}
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_blank_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterBlank_line(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterBlank_line(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitBlank_line(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitBlank_line(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitBlank_line(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitBlank_line(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitBlank_line(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitBlank_line(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blank_line() throws -> Blank_lineContext {
+	 open func blank_line() throws -> Blank_lineContext {
 		var _localctx: Blank_lineContext = Blank_lineContext(_ctx, getState())
 		try enterRule(_localctx, 4, agcParser.RULE_blank_line)
 		var _la: Int = 0
@@ -397,43 +405,51 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class Comment_lineContext:ParserRuleContext {
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
+
+	public class Comment_lineContext: ParserRuleContext {
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_comment_line
 		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_comment_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterComment_line(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterComment_line(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitComment_line(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitComment_line(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitComment_line(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitComment_line(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitComment_line(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitComment_line(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment_line() throws -> Comment_lineContext {
+	 open func comment_line() throws -> Comment_lineContext {
 		var _localctx: Comment_lineContext = Comment_lineContext(_ctx, getState())
 		try enterRule(_localctx, 6, agcParser.RULE_comment_line)
 		var _la: Int = 0
@@ -469,58 +485,71 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class Instruction_lineContext:ParserRuleContext {
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
+
+	public class Instruction_lineContext: ParserRuleContext {
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+			open
+			func opcodes() -> OpcodesContext? {
+				return getRuleContext(OpcodesContext.self, 0)
+			}
+			open
+			func argument() -> [ArgumentContext] {
+				return getRuleContexts(ArgumentContext.self)
+			}
+			open
+			func argument(_ i: Int) -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, i)
+			}
+			open
+			func eol() -> [EolContext] {
+				return getRuleContexts(EolContext.self)
+			}
+			open
+			func eol(_ i: Int) -> EolContext? {
+				return getRuleContext(EolContext.self, i)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func comment_line() -> Comment_lineContext? {
+				return getRuleContext(Comment_lineContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_instruction_line
 		}
-		open func opcodes() -> OpcodesContext? {
-			return getRuleContext(OpcodesContext.self,0)
-		}
-		open func argument() -> Array<ArgumentContext> {
-			return getRuleContexts(ArgumentContext.self)
-		}
-		open func argument(_ i: Int) -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,i)
-		}
-		open func eol() -> Array<EolContext> {
-			return getRuleContexts(EolContext.self)
-		}
-		open func eol(_ i: Int) -> EolContext? {
-			return getRuleContext(EolContext.self,i)
-		}
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
-		}
-		open func comment_line() -> Comment_lineContext? {
-			return getRuleContext(Comment_lineContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_instruction_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterInstruction_line(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterInstruction_line(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitInstruction_line(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitInstruction_line(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitInstruction_line(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitInstruction_line(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitInstruction_line(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitInstruction_line(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func instruction_line() throws -> Instruction_lineContext {
+	 open func instruction_line() throws -> Instruction_lineContext {
 		var _localctx: Instruction_lineContext = Instruction_lineContext(_ctx, getState())
 		try enterRule(_localctx, 8, agcParser.RULE_instruction_line)
 		var _la: Int = 0
@@ -589,55 +618,67 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class Erase_lineContext:ParserRuleContext {
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
+
+	public class Erase_lineContext: ParserRuleContext {
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_erase_line
 		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_erase_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterErase_line(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterErase_line(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitErase_line(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitErase_line(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitErase_line(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitErase_line(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitErase_line(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitErase_line(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func erase_line() throws -> Erase_lineContext {
+	 open func erase_line() throws -> Erase_lineContext {
 		var _localctx: Erase_lineContext = Erase_lineContext(_ctx, getState())
 		try enterRule(_localctx, 10, agcParser.RULE_erase_line)
 		var _la: Int = 0
@@ -715,55 +756,67 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class Assignment_lineContext:ParserRuleContext {
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class Assignment_lineContext: ParserRuleContext {
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func eol() -> EolContext? {
+				return getRuleContext(EolContext.self, 0)
+			}
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_assignment_line
 		}
-		open func eol() -> EolContext? {
-			return getRuleContext(EolContext.self,0)
-		}
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
-		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_assignment_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterAssignment_line(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterAssignment_line(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitAssignment_line(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitAssignment_line(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitAssignment_line(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitAssignment_line(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitAssignment_line(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitAssignment_line(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignment_line() throws -> Assignment_lineContext {
+	 open func assignment_line() throws -> Assignment_lineContext {
 		var _localctx: Assignment_lineContext = Assignment_lineContext(_ctx, getState())
 		try enterRule(_localctx, 12, agcParser.RULE_assignment_line)
 		var _la: Int = 0
@@ -852,43 +905,51 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class OpcodesContext:ParserRuleContext {
-		open func opcode() -> Array<OpcodeContext> {
-			return getRuleContexts(OpcodeContext.self)
+
+	public class OpcodesContext: ParserRuleContext {
+			open
+			func opcode() -> [OpcodeContext] {
+				return getRuleContexts(OpcodeContext.self)
+			}
+			open
+			func opcode(_ i: Int) -> OpcodeContext? {
+				return getRuleContext(OpcodeContext.self, i)
+			}
+			open
+			func ws() -> WsContext? {
+				return getRuleContext(WsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_opcodes
 		}
-		open func opcode(_ i: Int) -> OpcodeContext? {
-			return getRuleContext(OpcodeContext.self,i)
-		}
-		open func ws() -> WsContext? {
-			return getRuleContext(WsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_opcodes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterOpcodes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterOpcodes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitOpcodes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitOpcodes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitOpcodes(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitOpcodes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitOpcodes(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitOpcodes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func opcodes() throws -> OpcodesContext {
+	 open func opcodes() throws -> OpcodesContext {
 		var _localctx: OpcodesContext = OpcodesContext(_ctx, getState())
 		try enterRule(_localctx, 14, agcParser.RULE_opcodes)
 		defer {
@@ -920,49 +981,59 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentContext:ParserRuleContext {
-		open func ws() -> Array<WsContext> {
-			return getRuleContexts(WsContext.self)
+
+	public class ArgumentContext: ParserRuleContext {
+			open
+			func ws() -> [WsContext] {
+				return getRuleContexts(WsContext.self)
+			}
+			open
+			func ws(_ i: Int) -> WsContext? {
+				return getRuleContext(WsContext.self, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_argument
 		}
-		open func ws(_ i: Int) -> WsContext? {
-			return getRuleContext(WsContext.self,i)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterArgument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterArgument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitArgument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitArgument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitArgument(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitArgument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitArgument(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitArgument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument() throws -> ArgumentContext {
+	 open func argument() throws -> ArgumentContext {
 		var _localctx: ArgumentContext = ArgumentContext(_ctx, getState())
 		try enterRule(_localctx, 16, agcParser.RULE_argument)
 		defer {
@@ -1009,35 +1080,43 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class WsContext:ParserRuleContext {
-		open func WS() -> TerminalNode? { return getToken(agcParser.Tokens.WS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return agcParser.RULE_ws }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterWs(self)
+
+	public class WsContext: ParserRuleContext {
+			open
+			func WS() -> TerminalNode? {
+				return getToken(agcParser.Tokens.WS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_ws
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterWs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitWs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitWs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitWs(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitWs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitWs(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitWs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ws() throws -> WsContext {
+	 open func ws() throws -> WsContext {
 		var _localctx: WsContext = WsContext(_ctx, getState())
 		try enterRule(_localctx, 18, agcParser.RULE_ws)
 		defer {
@@ -1057,36 +1136,47 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class EolContext:ParserRuleContext {
-		open func EOL() -> TerminalNode? { return getToken(agcParser.Tokens.EOL.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(agcParser.Tokens.WS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return agcParser.RULE_eol }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterEol(self)
+
+	public class EolContext: ParserRuleContext {
+			open
+			func EOL() -> TerminalNode? {
+				return getToken(agcParser.Tokens.EOL.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(agcParser.Tokens.WS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_eol
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterEol(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitEol(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitEol(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitEol(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitEol(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitEol(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitEol(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eol() throws -> EolContext {
+	 open func eol() throws -> EolContext {
 		var _localctx: EolContext = EolContext(_ctx, getState())
 		try enterRule(_localctx, 20, agcParser.RULE_eol)
 		var _la: Int = 0
@@ -1120,35 +1210,43 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func COMMENT() -> TerminalNode? { return getToken(agcParser.Tokens.COMMENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return agcParser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterComment(self)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(agcParser.Tokens.COMMENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_comment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitComment(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 22, agcParser.RULE_comment)
 		defer {
@@ -1168,35 +1266,43 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class LabelContext:ParserRuleContext {
-		open func LABEL() -> TerminalNode? { return getToken(agcParser.Tokens.LABEL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return agcParser.RULE_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterLabel(self)
+
+	public class LabelContext: ParserRuleContext {
+			open
+			func LABEL() -> TerminalNode? {
+				return getToken(agcParser.Tokens.LABEL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_label
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitLabel(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitLabel(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label() throws -> LabelContext {
+	 open func label() throws -> LabelContext {
 		var _localctx: LabelContext = LabelContext(_ctx, getState())
 		try enterRule(_localctx, 24, agcParser.RULE_label)
 		defer {
@@ -1216,37 +1322,51 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class VariableContext:ParserRuleContext {
-		open func LABEL() -> TerminalNode? { return getToken(agcParser.Tokens.LABEL.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(agcParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(agcParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return agcParser.RULE_variable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterVariable(self)
+
+	public class VariableContext: ParserRuleContext {
+			open
+			func LABEL() -> TerminalNode? {
+				return getToken(agcParser.Tokens.LABEL.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(agcParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(agcParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_variable
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitVariable(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitVariable(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable() throws -> VariableContext {
+	 open func variable() throws -> VariableContext {
 		var _localctx: VariableContext = VariableContext(_ctx, getState())
 		try enterRule(_localctx, 26, agcParser.RULE_variable)
 		defer {
@@ -1275,7 +1395,7 @@ open class agcParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1286,48 +1406,63 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func multiplyingExpression() -> Array<MultiplyingExpressionContext> {
-			return getRuleContexts(MultiplyingExpressionContext.self)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func multiplyingExpression() -> [MultiplyingExpressionContext] {
+				return getRuleContexts(MultiplyingExpressionContext.self)
+			}
+			open
+			func multiplyingExpression(_ i: Int) -> MultiplyingExpressionContext? {
+				return getRuleContext(MultiplyingExpressionContext.self, i)
+			}
+			open
+			func PLUS() -> [TerminalNode] {
+				return getTokens(agcParser.Tokens.PLUS.rawValue)
+			}
+			open
+			func PLUS(_ i:Int) -> TerminalNode? {
+				return getToken(agcParser.Tokens.PLUS.rawValue, i)
+			}
+			open
+			func MINUS() -> [TerminalNode] {
+				return getTokens(agcParser.Tokens.MINUS.rawValue)
+			}
+			open
+			func MINUS(_ i:Int) -> TerminalNode? {
+				return getToken(agcParser.Tokens.MINUS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_expression
 		}
-		open func multiplyingExpression(_ i: Int) -> MultiplyingExpressionContext? {
-			return getRuleContext(MultiplyingExpressionContext.self,i)
-		}
-		open func PLUS() -> Array<TerminalNode> { return getTokens(agcParser.Tokens.PLUS.rawValue) }
-		open func PLUS(_ i:Int) -> TerminalNode?{
-			return getToken(agcParser.Tokens.PLUS.rawValue, i)
-		}
-		open func MINUS() -> Array<TerminalNode> { return getTokens(agcParser.Tokens.MINUS.rawValue) }
-		open func MINUS(_ i:Int) -> TerminalNode?{
-			return getToken(agcParser.Tokens.MINUS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitExpression(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 28, agcParser.RULE_expression)
 		var _la: Int = 0
@@ -1376,48 +1511,63 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class MultiplyingExpressionContext:ParserRuleContext {
-		open func atom() -> Array<AtomContext> {
-			return getRuleContexts(AtomContext.self)
+
+	public class MultiplyingExpressionContext: ParserRuleContext {
+			open
+			func atom() -> [AtomContext] {
+				return getRuleContexts(AtomContext.self)
+			}
+			open
+			func atom(_ i: Int) -> AtomContext? {
+				return getRuleContext(AtomContext.self, i)
+			}
+			open
+			func TIMES() -> [TerminalNode] {
+				return getTokens(agcParser.Tokens.TIMES.rawValue)
+			}
+			open
+			func TIMES(_ i:Int) -> TerminalNode? {
+				return getToken(agcParser.Tokens.TIMES.rawValue, i)
+			}
+			open
+			func DIV() -> [TerminalNode] {
+				return getTokens(agcParser.Tokens.DIV.rawValue)
+			}
+			open
+			func DIV(_ i:Int) -> TerminalNode? {
+				return getToken(agcParser.Tokens.DIV.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_multiplyingExpression
 		}
-		open func atom(_ i: Int) -> AtomContext? {
-			return getRuleContext(AtomContext.self,i)
-		}
-		open func TIMES() -> Array<TerminalNode> { return getTokens(agcParser.Tokens.TIMES.rawValue) }
-		open func TIMES(_ i:Int) -> TerminalNode?{
-			return getToken(agcParser.Tokens.TIMES.rawValue, i)
-		}
-		open func DIV() -> Array<TerminalNode> { return getTokens(agcParser.Tokens.DIV.rawValue) }
-		open func DIV(_ i:Int) -> TerminalNode?{
-			return getToken(agcParser.Tokens.DIV.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_multiplyingExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterMultiplyingExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterMultiplyingExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitMultiplyingExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitMultiplyingExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitMultiplyingExpression(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitMultiplyingExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitMultiplyingExpression(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitMultiplyingExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiplyingExpression() throws -> MultiplyingExpressionContext {
+	 open func multiplyingExpression() throws -> MultiplyingExpressionContext {
 		var _localctx: MultiplyingExpressionContext = MultiplyingExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 30, agcParser.RULE_multiplyingExpression)
 		var _la: Int = 0
@@ -1467,49 +1617,59 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class AtomContext:ParserRuleContext {
-		open func inte() -> InteContext? {
-			return getRuleContext(InteContext.self,0)
+
+	public class AtomContext: ParserRuleContext {
+			open
+			func inte() -> InteContext? {
+				return getRuleContext(InteContext.self, 0)
+			}
+			open
+			func decimal() -> DecimalContext? {
+				return getRuleContext(DecimalContext.self, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func register() -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_atom
 		}
-		open func decimal() -> DecimalContext? {
-			return getRuleContext(DecimalContext.self,0)
-		}
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
-		}
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
-		}
-		open func register() -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_atom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitAtom(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitAtom(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atom() throws -> AtomContext {
+	 open func atom() throws -> AtomContext {
 		var _localctx: AtomContext = AtomContext(_ctx, getState())
 		try enterRule(_localctx, 32, agcParser.RULE_atom)
 		defer {
@@ -1560,35 +1720,43 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class InteContext:ParserRuleContext {
-		open func INTE() -> TerminalNode? { return getToken(agcParser.Tokens.INTE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return agcParser.RULE_inte }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterInte(self)
+
+	public class InteContext: ParserRuleContext {
+			open
+			func INTE() -> TerminalNode? {
+				return getToken(agcParser.Tokens.INTE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_inte
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterInte(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitInte(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitInte(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitInte(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitInte(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitInte(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitInte(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inte() throws -> InteContext {
+	 open func inte() throws -> InteContext {
 		var _localctx: InteContext = InteContext(_ctx, getState())
 		try enterRule(_localctx, 34, agcParser.RULE_inte)
 		defer {
@@ -1608,35 +1776,43 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class DecimalContext:ParserRuleContext {
-		open func DECIMAL() -> TerminalNode? { return getToken(agcParser.Tokens.DECIMAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return agcParser.RULE_decimal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterDecimal(self)
+
+	public class DecimalContext: ParserRuleContext {
+			open
+			func DECIMAL() -> TerminalNode? {
+				return getToken(agcParser.Tokens.DECIMAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_decimal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterDecimal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitDecimal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitDecimal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitDecimal(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitDecimal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitDecimal(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitDecimal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func decimal() throws -> DecimalContext {
+	 open func decimal() throws -> DecimalContext {
 		var _localctx: DecimalContext = DecimalContext(_ctx, getState())
 		try enterRule(_localctx, 36, agcParser.RULE_decimal)
 		var _la: Int = 0
@@ -1681,34 +1857,39 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class RegisterContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return agcParser.RULE_register }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterRegister(self)
+
+	public class RegisterContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_register
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterRegister(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitRegister(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitRegister(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitRegister(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitRegister(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitRegister(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitRegister(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func register() throws -> RegisterContext {
+	 open func register() throws -> RegisterContext {
 		var _localctx: RegisterContext = RegisterContext(_ctx, getState())
 		try enterRule(_localctx, 38, agcParser.RULE_register)
 		var _la: Int = 0
@@ -1743,43 +1924,51 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class OpcodeContext:ParserRuleContext {
-		open func standard_opcode() -> Standard_opcodeContext? {
-			return getRuleContext(Standard_opcodeContext.self,0)
+
+	public class OpcodeContext: ParserRuleContext {
+			open
+			func standard_opcode() -> Standard_opcodeContext? {
+				return getRuleContext(Standard_opcodeContext.self, 0)
+			}
+			open
+			func pseudo_opcode() -> Pseudo_opcodeContext? {
+				return getRuleContext(Pseudo_opcodeContext.self, 0)
+			}
+			open
+			func axt_opcode() -> Axt_opcodeContext? {
+				return getRuleContext(Axt_opcodeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_opcode
 		}
-		open func pseudo_opcode() -> Pseudo_opcodeContext? {
-			return getRuleContext(Pseudo_opcodeContext.self,0)
-		}
-		open func axt_opcode() -> Axt_opcodeContext? {
-			return getRuleContext(Axt_opcodeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return agcParser.RULE_opcode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterOpcode(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterOpcode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitOpcode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitOpcode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitOpcode(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitOpcode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitOpcode(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitOpcode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func opcode() throws -> OpcodeContext {
+	 open func opcode() throws -> OpcodeContext {
 		var _localctx: OpcodeContext = OpcodeContext(_ctx, getState())
 		try enterRule(_localctx, 40, agcParser.RULE_opcode)
 		defer {
@@ -1936,7 +2125,7 @@ open class agcParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1947,34 +2136,39 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class Axt_opcodeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return agcParser.RULE_axt_opcode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterAxt_opcode(self)
+
+	public class Axt_opcodeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_axt_opcode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterAxt_opcode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitAxt_opcode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitAxt_opcode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitAxt_opcode(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitAxt_opcode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitAxt_opcode(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitAxt_opcode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func axt_opcode() throws -> Axt_opcodeContext {
+	 open func axt_opcode() throws -> Axt_opcodeContext {
 		var _localctx: Axt_opcodeContext = Axt_opcodeContext(_ctx, getState())
 		try enterRule(_localctx, 42, agcParser.RULE_axt_opcode)
 		var _la: Int = 0
@@ -2006,34 +2200,39 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class Pseudo_opcodeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return agcParser.RULE_pseudo_opcode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterPseudo_opcode(self)
+
+	public class Pseudo_opcodeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_pseudo_opcode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterPseudo_opcode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitPseudo_opcode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitPseudo_opcode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitPseudo_opcode(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitPseudo_opcode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitPseudo_opcode(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitPseudo_opcode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pseudo_opcode() throws -> Pseudo_opcodeContext {
+	 open func pseudo_opcode() throws -> Pseudo_opcodeContext {
 		var _localctx: Pseudo_opcodeContext = Pseudo_opcodeContext(_ctx, getState())
 		try enterRule(_localctx, 44, agcParser.RULE_pseudo_opcode)
 		var _la: Int = 0
@@ -2068,34 +2267,39 @@ open class agcParser: Parser {
 
 		return _localctx
 	}
-	open class Standard_opcodeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return agcParser.RULE_standard_opcode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).enterStandard_opcode(self)
+
+	public class Standard_opcodeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return agcParser.RULE_standard_opcode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.enterStandard_opcode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is agcListener {
-			 	(listener as! agcListener).exitStandard_opcode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? agcListener {
+				listener.exitStandard_opcode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is agcVisitor {
-			     return (visitor as! agcVisitor<T>).visitStandard_opcode(self)
-			}else if visitor is agcBaseVisitor {
-		    	 return (visitor as! agcBaseVisitor<T>).visitStandard_opcode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? agcVisitor {
+			    return visitor.visitStandard_opcode(self)
+			}
+			else if let visitor = visitor as? agcBaseVisitor {
+			    return visitor.visitStandard_opcode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func standard_opcode() throws -> Standard_opcodeContext {
+	 open func standard_opcode() throws -> Standard_opcodeContext {
 		var _localctx: Standard_opcodeContext = Standard_opcodeContext(_ctx, getState())
 		try enterRule(_localctx, 46, agcParser.RULE_standard_opcode)
 		var _la: Int = 0
@@ -2135,6 +2339,10 @@ open class agcParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = agcParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = agcParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/sparql/Sparql.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/sparql/Sparql.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class SparqlParser: Parser {
@@ -11,8 +11,11 @@ open class SparqlParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -34,35 +37,35 @@ open class SparqlParser: Parser {
                  PN_CHARS_U = 83, VARNAME = 84, PN_PREFIX = 85, PN_LOCAL = 86, 
                  WS = 87
 	}
-	public static let RULE_query = 0, RULE_prologue = 1, RULE_baseDecl = 2, 
-                   RULE_prefixDecl = 3, RULE_selectQuery = 4, RULE_constructQuery = 5, 
-                   RULE_describeQuery = 6, RULE_askQuery = 7, RULE_datasetClause = 8, 
-                   RULE_defaultGraphClause = 9, RULE_namedGraphClause = 10, 
-                   RULE_sourceSelector = 11, RULE_whereClause = 12, RULE_solutionModifier = 13, 
-                   RULE_limitOffsetClauses = 14, RULE_orderClause = 15, 
-                   RULE_orderCondition = 16, RULE_limitClause = 17, RULE_offsetClause = 18, 
-                   RULE_groupGraphPattern = 19, RULE_triplesBlock = 20, 
-                   RULE_graphPatternNotTriples = 21, RULE_optionalGraphPattern = 22, 
-                   RULE_graphGraphPattern = 23, RULE_groupOrUnionGraphPattern = 24, 
-                   RULE_filter = 25, RULE_constraint = 26, RULE_functionCall = 27, 
-                   RULE_argList = 28, RULE_constructTemplate = 29, RULE_constructTriples = 30, 
-                   RULE_triplesSameSubject = 31, RULE_propertyListNotEmpty = 32, 
-                   RULE_propertyList = 33, RULE_objectList = 34, RULE_object = 35, 
-                   RULE_verb = 36, RULE_triplesNode = 37, RULE_blankNodePropertyList = 38, 
-                   RULE_collection = 39, RULE_graphNode = 40, RULE_varOrTerm = 41, 
-                   RULE_varOrIRIref = 42, RULE_var = 43, RULE_graphTerm = 44, 
-                   RULE_expression = 45, RULE_conditionalOrExpression = 46, 
-                   RULE_conditionalAndExpression = 47, RULE_valueLogical = 48, 
-                   RULE_relationalExpression = 49, RULE_numericExpression = 50, 
-                   RULE_additiveExpression = 51, RULE_multiplicativeExpression = 52, 
-                   RULE_unaryExpression = 53, RULE_primaryExpression = 54, 
-                   RULE_brackettedExpression = 55, RULE_builtInCall = 56, 
-                   RULE_regexExpression = 57, RULE_iriRefOrFunction = 58, 
-                   RULE_rdfLiteral = 59, RULE_numericLiteral = 60, RULE_numericLiteralUnsigned = 61, 
-                   RULE_numericLiteralPositive = 62, RULE_numericLiteralNegative = 63, 
-                   RULE_booleanLiteral = 64, RULE_string = 65, RULE_iriRef = 66, 
-                   RULE_prefixedName = 67, RULE_blankNode = 68
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_query = 0, RULE_prologue = 1, RULE_baseDecl = 2, RULE_prefixDecl = 3, 
+            RULE_selectQuery = 4, RULE_constructQuery = 5, RULE_describeQuery = 6, 
+            RULE_askQuery = 7, RULE_datasetClause = 8, RULE_defaultGraphClause = 9, 
+            RULE_namedGraphClause = 10, RULE_sourceSelector = 11, RULE_whereClause = 12, 
+            RULE_solutionModifier = 13, RULE_limitOffsetClauses = 14, RULE_orderClause = 15, 
+            RULE_orderCondition = 16, RULE_limitClause = 17, RULE_offsetClause = 18, 
+            RULE_groupGraphPattern = 19, RULE_triplesBlock = 20, RULE_graphPatternNotTriples = 21, 
+            RULE_optionalGraphPattern = 22, RULE_graphGraphPattern = 23, 
+            RULE_groupOrUnionGraphPattern = 24, RULE_filter = 25, RULE_constraint = 26, 
+            RULE_functionCall = 27, RULE_argList = 28, RULE_constructTemplate = 29, 
+            RULE_constructTriples = 30, RULE_triplesSameSubject = 31, RULE_propertyListNotEmpty = 32, 
+            RULE_propertyList = 33, RULE_objectList = 34, RULE_object = 35, 
+            RULE_verb = 36, RULE_triplesNode = 37, RULE_blankNodePropertyList = 38, 
+            RULE_collection = 39, RULE_graphNode = 40, RULE_varOrTerm = 41, 
+            RULE_varOrIRIref = 42, RULE_var = 43, RULE_graphTerm = 44, RULE_expression = 45, 
+            RULE_conditionalOrExpression = 46, RULE_conditionalAndExpression = 47, 
+            RULE_valueLogical = 48, RULE_relationalExpression = 49, RULE_numericExpression = 50, 
+            RULE_additiveExpression = 51, RULE_multiplicativeExpression = 52, 
+            RULE_unaryExpression = 53, RULE_primaryExpression = 54, RULE_brackettedExpression = 55, 
+            RULE_builtInCall = 56, RULE_regexExpression = 57, RULE_iriRefOrFunction = 58, 
+            RULE_rdfLiteral = 59, RULE_numericLiteral = 60, RULE_numericLiteralUnsigned = 61, 
+            RULE_numericLiteralPositive = 62, RULE_numericLiteralNegative = 63, 
+            RULE_booleanLiteral = 64, RULE_string = 65, RULE_iriRef = 66, 
+            RULE_prefixedName = 67, RULE_blankNode = 68
+
+	public
+	static let ruleNames: [String] = [
 		"query", "prologue", "baseDecl", "prefixDecl", "selectQuery", "constructQuery", 
 		"describeQuery", "askQuery", "datasetClause", "defaultGraphClause", "namedGraphClause", 
 		"sourceSelector", "whereClause", "solutionModifier", "limitOffsetClauses", 
@@ -102,98 +105,89 @@ open class SparqlParser: Parser {
 		"STRING_LITERAL_LONG2", "ECHAR", "NIL", "ANON", "PN_CHARS_U", "VARNAME", 
 		"PN_PREFIX", "PN_LOCAL", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Sparql.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return SparqlParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Sparql.g4" }
+	override open
+	func getSerializedATN() -> String { return SparqlParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return SparqlParser.ruleNames }
+	override open
+	func getATN() -> ATN { return SparqlParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return SparqlParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return SparqlParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return SparqlParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,SparqlParser._ATN,SparqlParser._decisionToDFA, SparqlParser._sharedContextCache)
 	}
-	open class QueryContext:ParserRuleContext {
-		open func prologue() -> PrologueContext? {
-			return getRuleContext(PrologueContext.self,0)
+
+	public class QueryContext: ParserRuleContext {
+			open
+			func prologue() -> PrologueContext? {
+				return getRuleContext(PrologueContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func selectQuery() -> SelectQueryContext? {
+				return getRuleContext(SelectQueryContext.self, 0)
+			}
+			open
+			func constructQuery() -> ConstructQueryContext? {
+				return getRuleContext(ConstructQueryContext.self, 0)
+			}
+			open
+			func describeQuery() -> DescribeQueryContext? {
+				return getRuleContext(DescribeQueryContext.self, 0)
+			}
+			open
+			func askQuery() -> AskQueryContext? {
+				return getRuleContext(AskQueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_query
 		}
-		open func EOF() -> TerminalNode? { return getToken(SparqlParser.Tokens.EOF.rawValue, 0) }
-		open func selectQuery() -> SelectQueryContext? {
-			return getRuleContext(SelectQueryContext.self,0)
-		}
-		open func constructQuery() -> ConstructQueryContext? {
-			return getRuleContext(ConstructQueryContext.self,0)
-		}
-		open func describeQuery() -> DescribeQueryContext? {
-			return getRuleContext(DescribeQueryContext.self,0)
-		}
-		open func askQuery() -> AskQueryContext? {
-			return getRuleContext(AskQueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_query }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterQuery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterQuery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitQuery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitQuery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitQuery(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitQuery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitQuery(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitQuery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func query() throws -> QueryContext {
+	 open func query() throws -> QueryContext {
 		var _localctx: QueryContext = QueryContext(_ctx, getState())
 		try enterRule(_localctx, 0, SparqlParser.RULE_query)
 		defer {
@@ -230,7 +224,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(145)
 		 	try match(SparqlParser.Tokens.EOF.rawValue)
@@ -244,43 +238,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class PrologueContext:ParserRuleContext {
-		open func baseDecl() -> BaseDeclContext? {
-			return getRuleContext(BaseDeclContext.self,0)
+
+	public class PrologueContext: ParserRuleContext {
+			open
+			func baseDecl() -> BaseDeclContext? {
+				return getRuleContext(BaseDeclContext.self, 0)
+			}
+			open
+			func prefixDecl() -> [PrefixDeclContext] {
+				return getRuleContexts(PrefixDeclContext.self)
+			}
+			open
+			func prefixDecl(_ i: Int) -> PrefixDeclContext? {
+				return getRuleContext(PrefixDeclContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_prologue
 		}
-		open func prefixDecl() -> Array<PrefixDeclContext> {
-			return getRuleContexts(PrefixDeclContext.self)
-		}
-		open func prefixDecl(_ i: Int) -> PrefixDeclContext? {
-			return getRuleContext(PrefixDeclContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_prologue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterPrologue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterPrologue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitPrologue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitPrologue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitPrologue(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitPrologue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitPrologue(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitPrologue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prologue() throws -> PrologueContext {
+	 open func prologue() throws -> PrologueContext {
 		var _localctx: PrologueContext = PrologueContext(_ctx, getState())
 		try enterRule(_localctx, 2, SparqlParser.RULE_prologue)
 		var _la: Int = 0
@@ -328,35 +330,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class BaseDeclContext:ParserRuleContext {
-		open func IRI_REF() -> TerminalNode? { return getToken(SparqlParser.Tokens.IRI_REF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_baseDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterBaseDecl(self)
+
+	public class BaseDeclContext: ParserRuleContext {
+			open
+			func IRI_REF() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.IRI_REF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_baseDecl
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterBaseDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitBaseDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitBaseDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitBaseDecl(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitBaseDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitBaseDecl(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitBaseDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func baseDecl() throws -> BaseDeclContext {
+	 open func baseDecl() throws -> BaseDeclContext {
 		var _localctx: BaseDeclContext = BaseDeclContext(_ctx, getState())
 		try enterRule(_localctx, 4, SparqlParser.RULE_baseDecl)
 		defer {
@@ -378,36 +388,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class PrefixDeclContext:ParserRuleContext {
-		open func PNAME_NS() -> TerminalNode? { return getToken(SparqlParser.Tokens.PNAME_NS.rawValue, 0) }
-		open func IRI_REF() -> TerminalNode? { return getToken(SparqlParser.Tokens.IRI_REF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_prefixDecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterPrefixDecl(self)
+
+	public class PrefixDeclContext: ParserRuleContext {
+			open
+			func PNAME_NS() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.PNAME_NS.rawValue, 0)
+			}
+			open
+			func IRI_REF() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.IRI_REF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_prefixDecl
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterPrefixDecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitPrefixDecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitPrefixDecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitPrefixDecl(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitPrefixDecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitPrefixDecl(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitPrefixDecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefixDecl() throws -> PrefixDeclContext {
+	 open func prefixDecl() throws -> PrefixDeclContext {
 		var _localctx: PrefixDeclContext = PrefixDeclContext(_ctx, getState())
 		try enterRule(_localctx, 6, SparqlParser.RULE_prefixDecl)
 		defer {
@@ -431,52 +452,63 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class SelectQueryContext:ParserRuleContext {
-		open func whereClause() -> WhereClauseContext? {
-			return getRuleContext(WhereClauseContext.self,0)
+
+	public class SelectQueryContext: ParserRuleContext {
+			open
+			func whereClause() -> WhereClauseContext? {
+				return getRuleContext(WhereClauseContext.self, 0)
+			}
+			open
+			func solutionModifier() -> SolutionModifierContext? {
+				return getRuleContext(SolutionModifierContext.self, 0)
+			}
+			open
+			func datasetClause() -> [DatasetClauseContext] {
+				return getRuleContexts(DatasetClauseContext.self)
+			}
+			open
+			func datasetClause(_ i: Int) -> DatasetClauseContext? {
+				return getRuleContext(DatasetClauseContext.self, i)
+			}
+			open
+			func var() -> [VarContext] {
+				return getRuleContexts(VarContext.self)
+			}
+			open
+			func var(_ i: Int) -> VarContext? {
+				return getRuleContext(VarContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_selectQuery
 		}
-		open func solutionModifier() -> SolutionModifierContext? {
-			return getRuleContext(SolutionModifierContext.self,0)
-		}
-		open func datasetClause() -> Array<DatasetClauseContext> {
-			return getRuleContexts(DatasetClauseContext.self)
-		}
-		open func datasetClause(_ i: Int) -> DatasetClauseContext? {
-			return getRuleContext(DatasetClauseContext.self,i)
-		}
-		open func var() -> Array<VarContext> {
-			return getRuleContexts(VarContext.self)
-		}
-		open func var(_ i: Int) -> VarContext? {
-			return getRuleContext(VarContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_selectQuery }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterSelectQuery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterSelectQuery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitSelectQuery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitSelectQuery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitSelectQuery(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitSelectQuery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitSelectQuery(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitSelectQuery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selectQuery() throws -> SelectQueryContext {
+	 open func selectQuery() throws -> SelectQueryContext {
 		var _localctx: SelectQueryContext = SelectQueryContext(_ctx, getState())
 		try enterRule(_localctx, 8, SparqlParser.RULE_selectQuery)
 		var _la: Int = 0
@@ -541,7 +573,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(178)
 		 	try _errHandler.sync(self)
@@ -573,49 +605,59 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ConstructQueryContext:ParserRuleContext {
-		open func constructTemplate() -> ConstructTemplateContext? {
-			return getRuleContext(ConstructTemplateContext.self,0)
+
+	public class ConstructQueryContext: ParserRuleContext {
+			open
+			func constructTemplate() -> ConstructTemplateContext? {
+				return getRuleContext(ConstructTemplateContext.self, 0)
+			}
+			open
+			func whereClause() -> WhereClauseContext? {
+				return getRuleContext(WhereClauseContext.self, 0)
+			}
+			open
+			func solutionModifier() -> SolutionModifierContext? {
+				return getRuleContext(SolutionModifierContext.self, 0)
+			}
+			open
+			func datasetClause() -> [DatasetClauseContext] {
+				return getRuleContexts(DatasetClauseContext.self)
+			}
+			open
+			func datasetClause(_ i: Int) -> DatasetClauseContext? {
+				return getRuleContext(DatasetClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_constructQuery
 		}
-		open func whereClause() -> WhereClauseContext? {
-			return getRuleContext(WhereClauseContext.self,0)
-		}
-		open func solutionModifier() -> SolutionModifierContext? {
-			return getRuleContext(SolutionModifierContext.self,0)
-		}
-		open func datasetClause() -> Array<DatasetClauseContext> {
-			return getRuleContexts(DatasetClauseContext.self)
-		}
-		open func datasetClause(_ i: Int) -> DatasetClauseContext? {
-			return getRuleContext(DatasetClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_constructQuery }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterConstructQuery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterConstructQuery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitConstructQuery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitConstructQuery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitConstructQuery(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitConstructQuery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitConstructQuery(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitConstructQuery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructQuery() throws -> ConstructQueryContext {
+	 open func constructQuery() throws -> ConstructQueryContext {
 		var _localctx: ConstructQueryContext = ConstructQueryContext(_ctx, getState())
 		try enterRule(_localctx, 10, SparqlParser.RULE_constructQuery)
 		var _la: Int = 0
@@ -658,52 +700,63 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class DescribeQueryContext:ParserRuleContext {
-		open func solutionModifier() -> SolutionModifierContext? {
-			return getRuleContext(SolutionModifierContext.self,0)
+
+	public class DescribeQueryContext: ParserRuleContext {
+			open
+			func solutionModifier() -> SolutionModifierContext? {
+				return getRuleContext(SolutionModifierContext.self, 0)
+			}
+			open
+			func datasetClause() -> [DatasetClauseContext] {
+				return getRuleContexts(DatasetClauseContext.self)
+			}
+			open
+			func datasetClause(_ i: Int) -> DatasetClauseContext? {
+				return getRuleContext(DatasetClauseContext.self, i)
+			}
+			open
+			func whereClause() -> WhereClauseContext? {
+				return getRuleContext(WhereClauseContext.self, 0)
+			}
+			open
+			func varOrIRIref() -> [VarOrIRIrefContext] {
+				return getRuleContexts(VarOrIRIrefContext.self)
+			}
+			open
+			func varOrIRIref(_ i: Int) -> VarOrIRIrefContext? {
+				return getRuleContext(VarOrIRIrefContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_describeQuery
 		}
-		open func datasetClause() -> Array<DatasetClauseContext> {
-			return getRuleContexts(DatasetClauseContext.self)
-		}
-		open func datasetClause(_ i: Int) -> DatasetClauseContext? {
-			return getRuleContext(DatasetClauseContext.self,i)
-		}
-		open func whereClause() -> WhereClauseContext? {
-			return getRuleContext(WhereClauseContext.self,0)
-		}
-		open func varOrIRIref() -> Array<VarOrIRIrefContext> {
-			return getRuleContexts(VarOrIRIrefContext.self)
-		}
-		open func varOrIRIref(_ i: Int) -> VarOrIRIrefContext? {
-			return getRuleContext(VarOrIRIrefContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_describeQuery }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterDescribeQuery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterDescribeQuery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitDescribeQuery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitDescribeQuery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitDescribeQuery(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitDescribeQuery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitDescribeQuery(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitDescribeQuery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func describeQuery() throws -> DescribeQueryContext {
+	 open func describeQuery() throws -> DescribeQueryContext {
 		var _localctx: DescribeQueryContext = DescribeQueryContext(_ctx, getState())
 		try enterRule(_localctx, 12, SparqlParser.RULE_describeQuery)
 		var _la: Int = 0
@@ -750,7 +803,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(207)
 		 	try _errHandler.sync(self)
@@ -793,43 +846,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class AskQueryContext:ParserRuleContext {
-		open func whereClause() -> WhereClauseContext? {
-			return getRuleContext(WhereClauseContext.self,0)
+
+	public class AskQueryContext: ParserRuleContext {
+			open
+			func whereClause() -> WhereClauseContext? {
+				return getRuleContext(WhereClauseContext.self, 0)
+			}
+			open
+			func datasetClause() -> [DatasetClauseContext] {
+				return getRuleContexts(DatasetClauseContext.self)
+			}
+			open
+			func datasetClause(_ i: Int) -> DatasetClauseContext? {
+				return getRuleContext(DatasetClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_askQuery
 		}
-		open func datasetClause() -> Array<DatasetClauseContext> {
-			return getRuleContexts(DatasetClauseContext.self)
-		}
-		open func datasetClause(_ i: Int) -> DatasetClauseContext? {
-			return getRuleContext(DatasetClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_askQuery }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterAskQuery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterAskQuery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitAskQuery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitAskQuery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitAskQuery(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitAskQuery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitAskQuery(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitAskQuery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func askQuery() throws -> AskQueryContext {
+	 open func askQuery() throws -> AskQueryContext {
 		var _localctx: AskQueryContext = AskQueryContext(_ctx, getState())
 		try enterRule(_localctx, 14, SparqlParser.RULE_askQuery)
 		var _la: Int = 0
@@ -868,40 +929,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class DatasetClauseContext:ParserRuleContext {
-		open func defaultGraphClause() -> DefaultGraphClauseContext? {
-			return getRuleContext(DefaultGraphClauseContext.self,0)
+
+	public class DatasetClauseContext: ParserRuleContext {
+			open
+			func defaultGraphClause() -> DefaultGraphClauseContext? {
+				return getRuleContext(DefaultGraphClauseContext.self, 0)
+			}
+			open
+			func namedGraphClause() -> NamedGraphClauseContext? {
+				return getRuleContext(NamedGraphClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_datasetClause
 		}
-		open func namedGraphClause() -> NamedGraphClauseContext? {
-			return getRuleContext(NamedGraphClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_datasetClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterDatasetClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterDatasetClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitDatasetClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitDatasetClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitDatasetClause(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitDatasetClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitDatasetClause(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitDatasetClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func datasetClause() throws -> DatasetClauseContext {
+	 open func datasetClause() throws -> DatasetClauseContext {
 		var _localctx: DatasetClauseContext = DatasetClauseContext(_ctx, getState())
 		try enterRule(_localctx, 16, SparqlParser.RULE_datasetClause)
 		defer {
@@ -928,7 +996,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -940,37 +1008,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class DefaultGraphClauseContext:ParserRuleContext {
-		open func sourceSelector() -> SourceSelectorContext? {
-			return getRuleContext(SourceSelectorContext.self,0)
+
+	public class DefaultGraphClauseContext: ParserRuleContext {
+			open
+			func sourceSelector() -> SourceSelectorContext? {
+				return getRuleContext(SourceSelectorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_defaultGraphClause
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_defaultGraphClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterDefaultGraphClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterDefaultGraphClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitDefaultGraphClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitDefaultGraphClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitDefaultGraphClause(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitDefaultGraphClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitDefaultGraphClause(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitDefaultGraphClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func defaultGraphClause() throws -> DefaultGraphClauseContext {
+	 open func defaultGraphClause() throws -> DefaultGraphClauseContext {
 		var _localctx: DefaultGraphClauseContext = DefaultGraphClauseContext(_ctx, getState())
 		try enterRule(_localctx, 18, SparqlParser.RULE_defaultGraphClause)
 		defer {
@@ -990,37 +1064,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class NamedGraphClauseContext:ParserRuleContext {
-		open func sourceSelector() -> SourceSelectorContext? {
-			return getRuleContext(SourceSelectorContext.self,0)
+
+	public class NamedGraphClauseContext: ParserRuleContext {
+			open
+			func sourceSelector() -> SourceSelectorContext? {
+				return getRuleContext(SourceSelectorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_namedGraphClause
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_namedGraphClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterNamedGraphClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterNamedGraphClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitNamedGraphClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitNamedGraphClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitNamedGraphClause(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitNamedGraphClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitNamedGraphClause(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitNamedGraphClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func namedGraphClause() throws -> NamedGraphClauseContext {
+	 open func namedGraphClause() throws -> NamedGraphClauseContext {
 		var _localctx: NamedGraphClauseContext = NamedGraphClauseContext(_ctx, getState())
 		try enterRule(_localctx, 20, SparqlParser.RULE_namedGraphClause)
 		defer {
@@ -1042,37 +1122,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class SourceSelectorContext:ParserRuleContext {
-		open func iriRef() -> IriRefContext? {
-			return getRuleContext(IriRefContext.self,0)
+
+	public class SourceSelectorContext: ParserRuleContext {
+			open
+			func iriRef() -> IriRefContext? {
+				return getRuleContext(IriRefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_sourceSelector
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_sourceSelector }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterSourceSelector(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterSourceSelector(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitSourceSelector(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitSourceSelector(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitSourceSelector(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitSourceSelector(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitSourceSelector(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitSourceSelector(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sourceSelector() throws -> SourceSelectorContext {
+	 open func sourceSelector() throws -> SourceSelectorContext {
 		var _localctx: SourceSelectorContext = SourceSelectorContext(_ctx, getState())
 		try enterRule(_localctx, 22, SparqlParser.RULE_sourceSelector)
 		defer {
@@ -1092,37 +1178,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class WhereClauseContext:ParserRuleContext {
-		open func groupGraphPattern() -> GroupGraphPatternContext? {
-			return getRuleContext(GroupGraphPatternContext.self,0)
+
+	public class WhereClauseContext: ParserRuleContext {
+			open
+			func groupGraphPattern() -> GroupGraphPatternContext? {
+				return getRuleContext(GroupGraphPatternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_whereClause
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_whereClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterWhereClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterWhereClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitWhereClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitWhereClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitWhereClause(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitWhereClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitWhereClause(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitWhereClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func whereClause() throws -> WhereClauseContext {
+	 open func whereClause() throws -> WhereClauseContext {
 		var _localctx: WhereClauseContext = WhereClauseContext(_ctx, getState())
 		try enterRule(_localctx, 24, SparqlParser.RULE_whereClause)
 		var _la: Int = 0
@@ -1156,40 +1248,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class SolutionModifierContext:ParserRuleContext {
-		open func orderClause() -> OrderClauseContext? {
-			return getRuleContext(OrderClauseContext.self,0)
+
+	public class SolutionModifierContext: ParserRuleContext {
+			open
+			func orderClause() -> OrderClauseContext? {
+				return getRuleContext(OrderClauseContext.self, 0)
+			}
+			open
+			func limitOffsetClauses() -> LimitOffsetClausesContext? {
+				return getRuleContext(LimitOffsetClausesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_solutionModifier
 		}
-		open func limitOffsetClauses() -> LimitOffsetClausesContext? {
-			return getRuleContext(LimitOffsetClausesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_solutionModifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterSolutionModifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterSolutionModifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitSolutionModifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitSolutionModifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitSolutionModifier(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitSolutionModifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitSolutionModifier(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitSolutionModifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func solutionModifier() throws -> SolutionModifierContext {
+	 open func solutionModifier() throws -> SolutionModifierContext {
 		var _localctx: SolutionModifierContext = SolutionModifierContext(_ctx, getState())
 		try enterRule(_localctx, 26, SparqlParser.RULE_solutionModifier)
 		var _la: Int = 0
@@ -1234,40 +1333,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class LimitOffsetClausesContext:ParserRuleContext {
-		open func limitClause() -> LimitClauseContext? {
-			return getRuleContext(LimitClauseContext.self,0)
+
+	public class LimitOffsetClausesContext: ParserRuleContext {
+			open
+			func limitClause() -> LimitClauseContext? {
+				return getRuleContext(LimitClauseContext.self, 0)
+			}
+			open
+			func offsetClause() -> OffsetClauseContext? {
+				return getRuleContext(OffsetClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_limitOffsetClauses
 		}
-		open func offsetClause() -> OffsetClauseContext? {
-			return getRuleContext(OffsetClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_limitOffsetClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterLimitOffsetClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterLimitOffsetClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitLimitOffsetClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitLimitOffsetClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitLimitOffsetClauses(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitLimitOffsetClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitLimitOffsetClauses(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitLimitOffsetClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func limitOffsetClauses() throws -> LimitOffsetClausesContext {
+	 open func limitOffsetClauses() throws -> LimitOffsetClausesContext {
 		var _localctx: LimitOffsetClausesContext = LimitOffsetClausesContext(_ctx, getState())
 		try enterRule(_localctx, 28, SparqlParser.RULE_limitOffsetClauses)
 		var _la: Int = 0
@@ -1317,7 +1423,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1329,40 +1435,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class OrderClauseContext:ParserRuleContext {
-		open func orderCondition() -> Array<OrderConditionContext> {
-			return getRuleContexts(OrderConditionContext.self)
+
+	public class OrderClauseContext: ParserRuleContext {
+			open
+			func orderCondition() -> [OrderConditionContext] {
+				return getRuleContexts(OrderConditionContext.self)
+			}
+			open
+			func orderCondition(_ i: Int) -> OrderConditionContext? {
+				return getRuleContext(OrderConditionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_orderClause
 		}
-		open func orderCondition(_ i: Int) -> OrderConditionContext? {
-			return getRuleContext(OrderConditionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_orderClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterOrderClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterOrderClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitOrderClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitOrderClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitOrderClause(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitOrderClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitOrderClause(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitOrderClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func orderClause() throws -> OrderClauseContext {
+	 open func orderClause() throws -> OrderClauseContext {
 		var _localctx: OrderClauseContext = OrderClauseContext(_ctx, getState())
 		try enterRule(_localctx, 30, SparqlParser.RULE_orderClause)
 		var _la: Int = 0
@@ -1404,43 +1517,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class OrderConditionContext:ParserRuleContext {
-		open func brackettedExpression() -> BrackettedExpressionContext? {
-			return getRuleContext(BrackettedExpressionContext.self,0)
+
+	public class OrderConditionContext: ParserRuleContext {
+			open
+			func brackettedExpression() -> BrackettedExpressionContext? {
+				return getRuleContext(BrackettedExpressionContext.self, 0)
+			}
+			open
+			func constraint() -> ConstraintContext? {
+				return getRuleContext(ConstraintContext.self, 0)
+			}
+			open
+			func var() -> VarContext? {
+				return getRuleContext(VarContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_orderCondition
 		}
-		open func constraint() -> ConstraintContext? {
-			return getRuleContext(ConstraintContext.self,0)
-		}
-		open func var() -> VarContext? {
-			return getRuleContext(VarContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_orderCondition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterOrderCondition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterOrderCondition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitOrderCondition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitOrderCondition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitOrderCondition(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitOrderCondition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitOrderCondition(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitOrderCondition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func orderCondition() throws -> OrderConditionContext {
+	 open func orderCondition() throws -> OrderConditionContext {
 		var _localctx: OrderConditionContext = OrderConditionContext(_ctx, getState())
 		try enterRule(_localctx, 32, SparqlParser.RULE_orderCondition)
 		var _la: Int = 0
@@ -1519,12 +1640,12 @@ open class SparqlParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1535,35 +1656,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class LimitClauseContext:ParserRuleContext {
-		open func INTEGER() -> TerminalNode? { return getToken(SparqlParser.Tokens.INTEGER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_limitClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterLimitClause(self)
+
+	public class LimitClauseContext: ParserRuleContext {
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.INTEGER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_limitClause
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterLimitClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitLimitClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitLimitClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitLimitClause(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitLimitClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitLimitClause(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitLimitClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func limitClause() throws -> LimitClauseContext {
+	 open func limitClause() throws -> LimitClauseContext {
 		var _localctx: LimitClauseContext = LimitClauseContext(_ctx, getState())
 		try enterRule(_localctx, 34, SparqlParser.RULE_limitClause)
 		defer {
@@ -1585,35 +1714,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class OffsetClauseContext:ParserRuleContext {
-		open func INTEGER() -> TerminalNode? { return getToken(SparqlParser.Tokens.INTEGER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_offsetClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterOffsetClause(self)
+
+	public class OffsetClauseContext: ParserRuleContext {
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.INTEGER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_offsetClause
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterOffsetClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitOffsetClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitOffsetClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitOffsetClause(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitOffsetClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitOffsetClause(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitOffsetClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func offsetClause() throws -> OffsetClauseContext {
+	 open func offsetClause() throws -> OffsetClauseContext {
 		var _localctx: OffsetClauseContext = OffsetClauseContext(_ctx, getState())
 		try enterRule(_localctx, 36, SparqlParser.RULE_offsetClause)
 		defer {
@@ -1635,52 +1772,63 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class GroupGraphPatternContext:ParserRuleContext {
-		open func triplesBlock() -> Array<TriplesBlockContext> {
-			return getRuleContexts(TriplesBlockContext.self)
+
+	public class GroupGraphPatternContext: ParserRuleContext {
+			open
+			func triplesBlock() -> [TriplesBlockContext] {
+				return getRuleContexts(TriplesBlockContext.self)
+			}
+			open
+			func triplesBlock(_ i: Int) -> TriplesBlockContext? {
+				return getRuleContext(TriplesBlockContext.self, i)
+			}
+			open
+			func graphPatternNotTriples() -> [GraphPatternNotTriplesContext] {
+				return getRuleContexts(GraphPatternNotTriplesContext.self)
+			}
+			open
+			func graphPatternNotTriples(_ i: Int) -> GraphPatternNotTriplesContext? {
+				return getRuleContext(GraphPatternNotTriplesContext.self, i)
+			}
+			open
+			func filter() -> [FilterContext] {
+				return getRuleContexts(FilterContext.self)
+			}
+			open
+			func filter(_ i: Int) -> FilterContext? {
+				return getRuleContext(FilterContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_groupGraphPattern
 		}
-		open func triplesBlock(_ i: Int) -> TriplesBlockContext? {
-			return getRuleContext(TriplesBlockContext.self,i)
-		}
-		open func graphPatternNotTriples() -> Array<GraphPatternNotTriplesContext> {
-			return getRuleContexts(GraphPatternNotTriplesContext.self)
-		}
-		open func graphPatternNotTriples(_ i: Int) -> GraphPatternNotTriplesContext? {
-			return getRuleContext(GraphPatternNotTriplesContext.self,i)
-		}
-		open func filter() -> Array<FilterContext> {
-			return getRuleContexts(FilterContext.self)
-		}
-		open func filter(_ i: Int) -> FilterContext? {
-			return getRuleContext(FilterContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_groupGraphPattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterGroupGraphPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterGroupGraphPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitGroupGraphPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitGroupGraphPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitGroupGraphPattern(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitGroupGraphPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitGroupGraphPattern(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitGroupGraphPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func groupGraphPattern() throws -> GroupGraphPatternContext {
+	 open func groupGraphPattern() throws -> GroupGraphPatternContext {
 		var _localctx: GroupGraphPatternContext = GroupGraphPatternContext(_ctx, getState())
 		try enterRule(_localctx, 38, SparqlParser.RULE_groupGraphPattern)
 		var _la: Int = 0
@@ -1735,7 +1883,7 @@ open class SparqlParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(287)
 		 		try _errHandler.sync(self)
@@ -1784,40 +1932,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class TriplesBlockContext:ParserRuleContext {
-		open func triplesSameSubject() -> TriplesSameSubjectContext? {
-			return getRuleContext(TriplesSameSubjectContext.self,0)
+
+	public class TriplesBlockContext: ParserRuleContext {
+			open
+			func triplesSameSubject() -> TriplesSameSubjectContext? {
+				return getRuleContext(TriplesSameSubjectContext.self, 0)
+			}
+			open
+			func triplesBlock() -> TriplesBlockContext? {
+				return getRuleContext(TriplesBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_triplesBlock
 		}
-		open func triplesBlock() -> TriplesBlockContext? {
-			return getRuleContext(TriplesBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_triplesBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterTriplesBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterTriplesBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitTriplesBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitTriplesBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitTriplesBlock(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitTriplesBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitTriplesBlock(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitTriplesBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func triplesBlock() throws -> TriplesBlockContext {
+	 open func triplesBlock() throws -> TriplesBlockContext {
 		var _localctx: TriplesBlockContext = TriplesBlockContext(_ctx, getState())
 		try enterRule(_localctx, 40, SparqlParser.RULE_triplesBlock)
 		var _la: Int = 0
@@ -1867,43 +2022,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class GraphPatternNotTriplesContext:ParserRuleContext {
-		open func optionalGraphPattern() -> OptionalGraphPatternContext? {
-			return getRuleContext(OptionalGraphPatternContext.self,0)
+
+	public class GraphPatternNotTriplesContext: ParserRuleContext {
+			open
+			func optionalGraphPattern() -> OptionalGraphPatternContext? {
+				return getRuleContext(OptionalGraphPatternContext.self, 0)
+			}
+			open
+			func groupOrUnionGraphPattern() -> GroupOrUnionGraphPatternContext? {
+				return getRuleContext(GroupOrUnionGraphPatternContext.self, 0)
+			}
+			open
+			func graphGraphPattern() -> GraphGraphPatternContext? {
+				return getRuleContext(GraphGraphPatternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_graphPatternNotTriples
 		}
-		open func groupOrUnionGraphPattern() -> GroupOrUnionGraphPatternContext? {
-			return getRuleContext(GroupOrUnionGraphPatternContext.self,0)
-		}
-		open func graphGraphPattern() -> GraphGraphPatternContext? {
-			return getRuleContext(GraphGraphPatternContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_graphPatternNotTriples }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterGraphPatternNotTriples(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterGraphPatternNotTriples(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitGraphPatternNotTriples(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitGraphPatternNotTriples(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitGraphPatternNotTriples(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitGraphPatternNotTriples(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitGraphPatternNotTriples(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitGraphPatternNotTriples(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func graphPatternNotTriples() throws -> GraphPatternNotTriplesContext {
+	 open func graphPatternNotTriples() throws -> GraphPatternNotTriplesContext {
 		var _localctx: GraphPatternNotTriplesContext = GraphPatternNotTriplesContext(_ctx, getState())
 		try enterRule(_localctx, 42, SparqlParser.RULE_graphPatternNotTriples)
 		defer {
@@ -1934,7 +2097,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1945,37 +2108,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class OptionalGraphPatternContext:ParserRuleContext {
-		open func groupGraphPattern() -> GroupGraphPatternContext? {
-			return getRuleContext(GroupGraphPatternContext.self,0)
+
+	public class OptionalGraphPatternContext: ParserRuleContext {
+			open
+			func groupGraphPattern() -> GroupGraphPatternContext? {
+				return getRuleContext(GroupGraphPatternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_optionalGraphPattern
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_optionalGraphPattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterOptionalGraphPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterOptionalGraphPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitOptionalGraphPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitOptionalGraphPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitOptionalGraphPattern(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitOptionalGraphPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitOptionalGraphPattern(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitOptionalGraphPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optionalGraphPattern() throws -> OptionalGraphPatternContext {
+	 open func optionalGraphPattern() throws -> OptionalGraphPatternContext {
 		var _localctx: OptionalGraphPatternContext = OptionalGraphPatternContext(_ctx, getState())
 		try enterRule(_localctx, 44, SparqlParser.RULE_optionalGraphPattern)
 		defer {
@@ -1997,40 +2166,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class GraphGraphPatternContext:ParserRuleContext {
-		open func varOrIRIref() -> VarOrIRIrefContext? {
-			return getRuleContext(VarOrIRIrefContext.self,0)
+
+	public class GraphGraphPatternContext: ParserRuleContext {
+			open
+			func varOrIRIref() -> VarOrIRIrefContext? {
+				return getRuleContext(VarOrIRIrefContext.self, 0)
+			}
+			open
+			func groupGraphPattern() -> GroupGraphPatternContext? {
+				return getRuleContext(GroupGraphPatternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_graphGraphPattern
 		}
-		open func groupGraphPattern() -> GroupGraphPatternContext? {
-			return getRuleContext(GroupGraphPatternContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_graphGraphPattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterGraphGraphPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterGraphGraphPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitGraphGraphPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitGraphGraphPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitGraphGraphPattern(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitGraphGraphPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitGraphGraphPattern(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitGraphGraphPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func graphGraphPattern() throws -> GraphGraphPatternContext {
+	 open func graphGraphPattern() throws -> GraphGraphPatternContext {
 		var _localctx: GraphGraphPatternContext = GraphGraphPatternContext(_ctx, getState())
 		try enterRule(_localctx, 46, SparqlParser.RULE_graphGraphPattern)
 		defer {
@@ -2054,40 +2230,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class GroupOrUnionGraphPatternContext:ParserRuleContext {
-		open func groupGraphPattern() -> Array<GroupGraphPatternContext> {
-			return getRuleContexts(GroupGraphPatternContext.self)
+
+	public class GroupOrUnionGraphPatternContext: ParserRuleContext {
+			open
+			func groupGraphPattern() -> [GroupGraphPatternContext] {
+				return getRuleContexts(GroupGraphPatternContext.self)
+			}
+			open
+			func groupGraphPattern(_ i: Int) -> GroupGraphPatternContext? {
+				return getRuleContext(GroupGraphPatternContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_groupOrUnionGraphPattern
 		}
-		open func groupGraphPattern(_ i: Int) -> GroupGraphPatternContext? {
-			return getRuleContext(GroupGraphPatternContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_groupOrUnionGraphPattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterGroupOrUnionGraphPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterGroupOrUnionGraphPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitGroupOrUnionGraphPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitGroupOrUnionGraphPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitGroupOrUnionGraphPattern(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitGroupOrUnionGraphPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitGroupOrUnionGraphPattern(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitGroupOrUnionGraphPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func groupOrUnionGraphPattern() throws -> GroupOrUnionGraphPatternContext {
+	 open func groupOrUnionGraphPattern() throws -> GroupOrUnionGraphPatternContext {
 		var _localctx: GroupOrUnionGraphPatternContext = GroupOrUnionGraphPatternContext(_ctx, getState())
 		try enterRule(_localctx, 48, SparqlParser.RULE_groupOrUnionGraphPattern)
 		var _la: Int = 0
@@ -2126,37 +2309,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class FilterContext:ParserRuleContext {
-		open func constraint() -> ConstraintContext? {
-			return getRuleContext(ConstraintContext.self,0)
+
+	public class FilterContext: ParserRuleContext {
+			open
+			func constraint() -> ConstraintContext? {
+				return getRuleContext(ConstraintContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_filter
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_filter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterFilter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterFilter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitFilter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitFilter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitFilter(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitFilter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitFilter(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitFilter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func filter() throws -> FilterContext {
+	 open func filter() throws -> FilterContext {
 		var _localctx: FilterContext = FilterContext(_ctx, getState())
 		try enterRule(_localctx, 50, SparqlParser.RULE_filter)
 		defer {
@@ -2178,43 +2367,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ConstraintContext:ParserRuleContext {
-		open func brackettedExpression() -> BrackettedExpressionContext? {
-			return getRuleContext(BrackettedExpressionContext.self,0)
+
+	public class ConstraintContext: ParserRuleContext {
+			open
+			func brackettedExpression() -> BrackettedExpressionContext? {
+				return getRuleContext(BrackettedExpressionContext.self, 0)
+			}
+			open
+			func builtInCall() -> BuiltInCallContext? {
+				return getRuleContext(BuiltInCallContext.self, 0)
+			}
+			open
+			func functionCall() -> FunctionCallContext? {
+				return getRuleContext(FunctionCallContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_constraint
 		}
-		open func builtInCall() -> BuiltInCallContext? {
-			return getRuleContext(BuiltInCallContext.self,0)
-		}
-		open func functionCall() -> FunctionCallContext? {
-			return getRuleContext(FunctionCallContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_constraint }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterConstraint(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterConstraint(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitConstraint(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitConstraint(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitConstraint(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitConstraint(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitConstraint(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitConstraint(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constraint() throws -> ConstraintContext {
+	 open func constraint() throws -> ConstraintContext {
 		var _localctx: ConstraintContext = ConstraintContext(_ctx, getState())
 		try enterRule(_localctx, 52, SparqlParser.RULE_constraint)
 		defer {
@@ -2255,7 +2452,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2266,40 +2463,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionCallContext:ParserRuleContext {
-		open func iriRef() -> IriRefContext? {
-			return getRuleContext(IriRefContext.self,0)
+
+	public class FunctionCallContext: ParserRuleContext {
+			open
+			func iriRef() -> IriRefContext? {
+				return getRuleContext(IriRefContext.self, 0)
+			}
+			open
+			func argList() -> ArgListContext? {
+				return getRuleContext(ArgListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_functionCall
 		}
-		open func argList() -> ArgListContext? {
-			return getRuleContext(ArgListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_functionCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterFunctionCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterFunctionCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitFunctionCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitFunctionCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitFunctionCall(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitFunctionCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitFunctionCall(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitFunctionCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionCall() throws -> FunctionCallContext {
+	 open func functionCall() throws -> FunctionCallContext {
 		var _localctx: FunctionCallContext = FunctionCallContext(_ctx, getState())
 		try enterRule(_localctx, 54, SparqlParser.RULE_functionCall)
 		defer {
@@ -2321,41 +2525,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ArgListContext:ParserRuleContext {
-		open func NIL() -> TerminalNode? { return getToken(SparqlParser.Tokens.NIL.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ArgListContext: ParserRuleContext {
+			open
+			func NIL() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.NIL.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_argList
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_argList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterArgList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterArgList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitArgList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitArgList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitArgList(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitArgList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitArgList(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitArgList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argList() throws -> ArgListContext {
+	 open func argList() throws -> ArgListContext {
 		var _localctx: ArgListContext = ArgListContext(_ctx, getState())
 		try enterRule(_localctx, 56, SparqlParser.RULE_argList)
 		var _la: Int = 0
@@ -2401,7 +2615,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -2413,37 +2627,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ConstructTemplateContext:ParserRuleContext {
-		open func constructTriples() -> ConstructTriplesContext? {
-			return getRuleContext(ConstructTriplesContext.self,0)
+
+	public class ConstructTemplateContext: ParserRuleContext {
+			open
+			func constructTriples() -> ConstructTriplesContext? {
+				return getRuleContext(ConstructTriplesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_constructTemplate
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_constructTemplate }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterConstructTemplate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterConstructTemplate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitConstructTemplate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitConstructTemplate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitConstructTemplate(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitConstructTemplate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitConstructTemplate(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitConstructTemplate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructTemplate() throws -> ConstructTemplateContext {
+	 open func constructTemplate() throws -> ConstructTemplateContext {
 		var _localctx: ConstructTemplateContext = ConstructTemplateContext(_ctx, getState())
 		try enterRule(_localctx, 58, SparqlParser.RULE_constructTemplate)
 		var _la: Int = 0
@@ -2482,40 +2702,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ConstructTriplesContext:ParserRuleContext {
-		open func triplesSameSubject() -> TriplesSameSubjectContext? {
-			return getRuleContext(TriplesSameSubjectContext.self,0)
+
+	public class ConstructTriplesContext: ParserRuleContext {
+			open
+			func triplesSameSubject() -> TriplesSameSubjectContext? {
+				return getRuleContext(TriplesSameSubjectContext.self, 0)
+			}
+			open
+			func constructTriples() -> ConstructTriplesContext? {
+				return getRuleContext(ConstructTriplesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_constructTriples
 		}
-		open func constructTriples() -> ConstructTriplesContext? {
-			return getRuleContext(ConstructTriplesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_constructTriples }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterConstructTriples(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterConstructTriples(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitConstructTriples(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitConstructTriples(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitConstructTriples(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitConstructTriples(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitConstructTriples(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitConstructTriples(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructTriples() throws -> ConstructTriplesContext {
+	 open func constructTriples() throws -> ConstructTriplesContext {
 		var _localctx: ConstructTriplesContext = ConstructTriplesContext(_ctx, getState())
 		try enterRule(_localctx, 60, SparqlParser.RULE_constructTriples)
 		var _la: Int = 0
@@ -2565,46 +2792,55 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class TriplesSameSubjectContext:ParserRuleContext {
-		open func varOrTerm() -> VarOrTermContext? {
-			return getRuleContext(VarOrTermContext.self,0)
+
+	public class TriplesSameSubjectContext: ParserRuleContext {
+			open
+			func varOrTerm() -> VarOrTermContext? {
+				return getRuleContext(VarOrTermContext.self, 0)
+			}
+			open
+			func propertyListNotEmpty() -> PropertyListNotEmptyContext? {
+				return getRuleContext(PropertyListNotEmptyContext.self, 0)
+			}
+			open
+			func triplesNode() -> TriplesNodeContext? {
+				return getRuleContext(TriplesNodeContext.self, 0)
+			}
+			open
+			func propertyList() -> PropertyListContext? {
+				return getRuleContext(PropertyListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_triplesSameSubject
 		}
-		open func propertyListNotEmpty() -> PropertyListNotEmptyContext? {
-			return getRuleContext(PropertyListNotEmptyContext.self,0)
-		}
-		open func triplesNode() -> TriplesNodeContext? {
-			return getRuleContext(TriplesNodeContext.self,0)
-		}
-		open func propertyList() -> PropertyListContext? {
-			return getRuleContext(PropertyListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_triplesSameSubject }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterTriplesSameSubject(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterTriplesSameSubject(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitTriplesSameSubject(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitTriplesSameSubject(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitTriplesSameSubject(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitTriplesSameSubject(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitTriplesSameSubject(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitTriplesSameSubject(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func triplesSameSubject() throws -> TriplesSameSubjectContext {
+	 open func triplesSameSubject() throws -> TriplesSameSubjectContext {
 		var _localctx: TriplesSameSubjectContext = TriplesSameSubjectContext(_ctx, getState())
 		try enterRule(_localctx, 62, SparqlParser.RULE_triplesSameSubject)
 		defer {
@@ -2652,7 +2888,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2663,46 +2899,55 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyListNotEmptyContext:ParserRuleContext {
-		open func verb() -> Array<VerbContext> {
-			return getRuleContexts(VerbContext.self)
+
+	public class PropertyListNotEmptyContext: ParserRuleContext {
+			open
+			func verb() -> [VerbContext] {
+				return getRuleContexts(VerbContext.self)
+			}
+			open
+			func verb(_ i: Int) -> VerbContext? {
+				return getRuleContext(VerbContext.self, i)
+			}
+			open
+			func objectList() -> [ObjectListContext] {
+				return getRuleContexts(ObjectListContext.self)
+			}
+			open
+			func objectList(_ i: Int) -> ObjectListContext? {
+				return getRuleContext(ObjectListContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_propertyListNotEmpty
 		}
-		open func verb(_ i: Int) -> VerbContext? {
-			return getRuleContext(VerbContext.self,i)
-		}
-		open func objectList() -> Array<ObjectListContext> {
-			return getRuleContexts(ObjectListContext.self)
-		}
-		open func objectList(_ i: Int) -> ObjectListContext? {
-			return getRuleContext(ObjectListContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_propertyListNotEmpty }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterPropertyListNotEmpty(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterPropertyListNotEmpty(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitPropertyListNotEmpty(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitPropertyListNotEmpty(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitPropertyListNotEmpty(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitPropertyListNotEmpty(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitPropertyListNotEmpty(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitPropertyListNotEmpty(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyListNotEmpty() throws -> PropertyListNotEmptyContext {
+	 open func propertyListNotEmpty() throws -> PropertyListNotEmptyContext {
 		var _localctx: PropertyListNotEmptyContext = PropertyListNotEmptyContext(_ctx, getState())
 		try enterRule(_localctx, 64, SparqlParser.RULE_propertyListNotEmpty)
 		var _la: Int = 0
@@ -2759,37 +3004,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyListContext:ParserRuleContext {
-		open func propertyListNotEmpty() -> PropertyListNotEmptyContext? {
-			return getRuleContext(PropertyListNotEmptyContext.self,0)
+
+	public class PropertyListContext: ParserRuleContext {
+			open
+			func propertyListNotEmpty() -> PropertyListNotEmptyContext? {
+				return getRuleContext(PropertyListNotEmptyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_propertyList
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_propertyList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterPropertyList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterPropertyList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitPropertyList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitPropertyList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitPropertyList(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitPropertyList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitPropertyList(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitPropertyList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyList() throws -> PropertyListContext {
+	 open func propertyList() throws -> PropertyListContext {
 		var _localctx: PropertyListContext = PropertyListContext(_ctx, getState())
 		try enterRule(_localctx, 66, SparqlParser.RULE_propertyList)
 		var _la: Int = 0
@@ -2824,40 +3075,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ObjectListContext:ParserRuleContext {
-		open func object() -> Array<ObjectContext> {
-			return getRuleContexts(ObjectContext.self)
+
+	public class ObjectListContext: ParserRuleContext {
+			open
+			func object() -> [ObjectContext] {
+				return getRuleContexts(ObjectContext.self)
+			}
+			open
+			func object(_ i: Int) -> ObjectContext? {
+				return getRuleContext(ObjectContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_objectList
 		}
-		open func object(_ i: Int) -> ObjectContext? {
-			return getRuleContext(ObjectContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_objectList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterObjectList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterObjectList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitObjectList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitObjectList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitObjectList(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitObjectList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitObjectList(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitObjectList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func objectList() throws -> ObjectListContext {
+	 open func objectList() throws -> ObjectListContext {
 		var _localctx: ObjectListContext = ObjectListContext(_ctx, getState())
 		try enterRule(_localctx, 68, SparqlParser.RULE_objectList)
 		var _la: Int = 0
@@ -2896,37 +3154,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ObjectContext:ParserRuleContext {
-		open func graphNode() -> GraphNodeContext? {
-			return getRuleContext(GraphNodeContext.self,0)
+
+	public class ObjectContext: ParserRuleContext {
+			open
+			func graphNode() -> GraphNodeContext? {
+				return getRuleContext(GraphNodeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_object
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_object }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterObject(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterObject(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitObject(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitObject(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitObject(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitObject(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitObject(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitObject(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func object() throws -> ObjectContext {
+	 open func object() throws -> ObjectContext {
 		var _localctx: ObjectContext = ObjectContext(_ctx, getState())
 		try enterRule(_localctx, 70, SparqlParser.RULE_object)
 		defer {
@@ -2946,37 +3210,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class VerbContext:ParserRuleContext {
-		open func varOrIRIref() -> VarOrIRIrefContext? {
-			return getRuleContext(VarOrIRIrefContext.self,0)
+
+	public class VerbContext: ParserRuleContext {
+			open
+			func varOrIRIref() -> VarOrIRIrefContext? {
+				return getRuleContext(VarOrIRIrefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_verb
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_verb }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterVerb(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterVerb(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitVerb(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitVerb(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitVerb(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitVerb(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitVerb(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitVerb(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func verb() throws -> VerbContext {
+	 open func verb() throws -> VerbContext {
 		var _localctx: VerbContext = VerbContext(_ctx, getState())
 		try enterRule(_localctx, 72, SparqlParser.RULE_verb)
 		defer {
@@ -3004,7 +3274,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3015,40 +3285,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class TriplesNodeContext:ParserRuleContext {
-		open func collection() -> CollectionContext? {
-			return getRuleContext(CollectionContext.self,0)
+
+	public class TriplesNodeContext: ParserRuleContext {
+			open
+			func collection() -> CollectionContext? {
+				return getRuleContext(CollectionContext.self, 0)
+			}
+			open
+			func blankNodePropertyList() -> BlankNodePropertyListContext? {
+				return getRuleContext(BlankNodePropertyListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_triplesNode
 		}
-		open func blankNodePropertyList() -> BlankNodePropertyListContext? {
-			return getRuleContext(BlankNodePropertyListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_triplesNode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterTriplesNode(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterTriplesNode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitTriplesNode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitTriplesNode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitTriplesNode(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitTriplesNode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitTriplesNode(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitTriplesNode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func triplesNode() throws -> TriplesNodeContext {
+	 open func triplesNode() throws -> TriplesNodeContext {
 		var _localctx: TriplesNodeContext = TriplesNodeContext(_ctx, getState())
 		try enterRule(_localctx, 74, SparqlParser.RULE_triplesNode)
 		defer {
@@ -3072,7 +3349,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3083,37 +3360,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class BlankNodePropertyListContext:ParserRuleContext {
-		open func propertyListNotEmpty() -> PropertyListNotEmptyContext? {
-			return getRuleContext(PropertyListNotEmptyContext.self,0)
+
+	public class BlankNodePropertyListContext: ParserRuleContext {
+			open
+			func propertyListNotEmpty() -> PropertyListNotEmptyContext? {
+				return getRuleContext(PropertyListNotEmptyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_blankNodePropertyList
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_blankNodePropertyList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterBlankNodePropertyList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterBlankNodePropertyList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitBlankNodePropertyList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitBlankNodePropertyList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitBlankNodePropertyList(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitBlankNodePropertyList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitBlankNodePropertyList(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitBlankNodePropertyList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blankNodePropertyList() throws -> BlankNodePropertyListContext {
+	 open func blankNodePropertyList() throws -> BlankNodePropertyListContext {
 		var _localctx: BlankNodePropertyListContext = BlankNodePropertyListContext(_ctx, getState())
 		try enterRule(_localctx, 76, SparqlParser.RULE_blankNodePropertyList)
 		defer {
@@ -3137,40 +3420,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class CollectionContext:ParserRuleContext {
-		open func graphNode() -> Array<GraphNodeContext> {
-			return getRuleContexts(GraphNodeContext.self)
+
+	public class CollectionContext: ParserRuleContext {
+			open
+			func graphNode() -> [GraphNodeContext] {
+				return getRuleContexts(GraphNodeContext.self)
+			}
+			open
+			func graphNode(_ i: Int) -> GraphNodeContext? {
+				return getRuleContext(GraphNodeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_collection
 		}
-		open func graphNode(_ i: Int) -> GraphNodeContext? {
-			return getRuleContext(GraphNodeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_collection }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterCollection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterCollection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitCollection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitCollection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitCollection(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitCollection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitCollection(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitCollection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collection() throws -> CollectionContext {
+	 open func collection() throws -> CollectionContext {
 		var _localctx: CollectionContext = CollectionContext(_ctx, getState())
 		try enterRule(_localctx, 78, SparqlParser.RULE_collection)
 		var _la: Int = 0
@@ -3212,40 +3502,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class GraphNodeContext:ParserRuleContext {
-		open func varOrTerm() -> VarOrTermContext? {
-			return getRuleContext(VarOrTermContext.self,0)
+
+	public class GraphNodeContext: ParserRuleContext {
+			open
+			func varOrTerm() -> VarOrTermContext? {
+				return getRuleContext(VarOrTermContext.self, 0)
+			}
+			open
+			func triplesNode() -> TriplesNodeContext? {
+				return getRuleContext(TriplesNodeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_graphNode
 		}
-		open func triplesNode() -> TriplesNodeContext? {
-			return getRuleContext(TriplesNodeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_graphNode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterGraphNode(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterGraphNode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitGraphNode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitGraphNode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitGraphNode(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitGraphNode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitGraphNode(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitGraphNode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func graphNode() throws -> GraphNodeContext {
+	 open func graphNode() throws -> GraphNodeContext {
 		var _localctx: GraphNodeContext = GraphNodeContext(_ctx, getState())
 		try enterRule(_localctx, 80, SparqlParser.RULE_graphNode)
 		defer {
@@ -3289,7 +3586,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3300,40 +3597,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class VarOrTermContext:ParserRuleContext {
-		open func var() -> VarContext? {
-			return getRuleContext(VarContext.self,0)
+
+	public class VarOrTermContext: ParserRuleContext {
+			open
+			func var() -> VarContext? {
+				return getRuleContext(VarContext.self, 0)
+			}
+			open
+			func graphTerm() -> GraphTermContext? {
+				return getRuleContext(GraphTermContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_varOrTerm
 		}
-		open func graphTerm() -> GraphTermContext? {
-			return getRuleContext(GraphTermContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_varOrTerm }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterVarOrTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterVarOrTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitVarOrTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitVarOrTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitVarOrTerm(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitVarOrTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitVarOrTerm(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitVarOrTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varOrTerm() throws -> VarOrTermContext {
+	 open func varOrTerm() throws -> VarOrTermContext {
 		var _localctx: VarOrTermContext = VarOrTermContext(_ctx, getState())
 		try enterRule(_localctx, 82, SparqlParser.RULE_varOrTerm)
 		defer {
@@ -3375,7 +3679,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3386,40 +3690,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class VarOrIRIrefContext:ParserRuleContext {
-		open func var() -> VarContext? {
-			return getRuleContext(VarContext.self,0)
+
+	public class VarOrIRIrefContext: ParserRuleContext {
+			open
+			func var() -> VarContext? {
+				return getRuleContext(VarContext.self, 0)
+			}
+			open
+			func iriRef() -> IriRefContext? {
+				return getRuleContext(IriRefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_varOrIRIref
 		}
-		open func iriRef() -> IriRefContext? {
-			return getRuleContext(IriRefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_varOrIRIref }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterVarOrIRIref(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterVarOrIRIref(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitVarOrIRIref(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitVarOrIRIref(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitVarOrIRIref(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitVarOrIRIref(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitVarOrIRIref(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitVarOrIRIref(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varOrIRIref() throws -> VarOrIRIrefContext {
+	 open func varOrIRIref() throws -> VarOrIRIrefContext {
 		var _localctx: VarOrIRIrefContext = VarOrIRIrefContext(_ctx, getState())
 		try enterRule(_localctx, 84, SparqlParser.RULE_varOrIRIref)
 		defer {
@@ -3445,7 +3756,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3456,36 +3767,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class VarContext:ParserRuleContext {
-		open func VAR1() -> TerminalNode? { return getToken(SparqlParser.Tokens.VAR1.rawValue, 0) }
-		open func VAR2() -> TerminalNode? { return getToken(SparqlParser.Tokens.VAR2.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_var }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterVar(self)
+
+	public class VarContext: ParserRuleContext {
+			open
+			func VAR1() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.VAR1.rawValue, 0)
+			}
+			open
+			func VAR2() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.VAR2.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_var
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterVar(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitVar(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitVar(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitVar(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitVar(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitVar(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitVar(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func var() throws -> VarContext {
+	 open func var() throws -> VarContext {
 		var _localctx: VarContext = VarContext(_ctx, getState())
 		try enterRule(_localctx, 86, SparqlParser.RULE_var)
 		var _la: Int = 0
@@ -3517,50 +3839,63 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class GraphTermContext:ParserRuleContext {
-		open func iriRef() -> IriRefContext? {
-			return getRuleContext(IriRefContext.self,0)
+
+	public class GraphTermContext: ParserRuleContext {
+			open
+			func iriRef() -> IriRefContext? {
+				return getRuleContext(IriRefContext.self, 0)
+			}
+			open
+			func rdfLiteral() -> RdfLiteralContext? {
+				return getRuleContext(RdfLiteralContext.self, 0)
+			}
+			open
+			func numericLiteral() -> NumericLiteralContext? {
+				return getRuleContext(NumericLiteralContext.self, 0)
+			}
+			open
+			func booleanLiteral() -> BooleanLiteralContext? {
+				return getRuleContext(BooleanLiteralContext.self, 0)
+			}
+			open
+			func blankNode() -> BlankNodeContext? {
+				return getRuleContext(BlankNodeContext.self, 0)
+			}
+			open
+			func NIL() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.NIL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_graphTerm
 		}
-		open func rdfLiteral() -> RdfLiteralContext? {
-			return getRuleContext(RdfLiteralContext.self,0)
-		}
-		open func numericLiteral() -> NumericLiteralContext? {
-			return getRuleContext(NumericLiteralContext.self,0)
-		}
-		open func booleanLiteral() -> BooleanLiteralContext? {
-			return getRuleContext(BooleanLiteralContext.self,0)
-		}
-		open func blankNode() -> BlankNodeContext? {
-			return getRuleContext(BlankNodeContext.self,0)
-		}
-		open func NIL() -> TerminalNode? { return getToken(SparqlParser.Tokens.NIL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_graphTerm }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterGraphTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterGraphTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitGraphTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitGraphTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitGraphTerm(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitGraphTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitGraphTerm(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitGraphTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func graphTerm() throws -> GraphTermContext {
+	 open func graphTerm() throws -> GraphTermContext {
 		var _localctx: GraphTermContext = GraphTermContext(_ctx, getState())
 		try enterRule(_localctx, 88, SparqlParser.RULE_graphTerm)
 		defer {
@@ -3621,7 +3956,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3632,37 +3967,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func conditionalOrExpression() -> ConditionalOrExpressionContext? {
-			return getRuleContext(ConditionalOrExpressionContext.self,0)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func conditionalOrExpression() -> ConditionalOrExpressionContext? {
+				return getRuleContext(ConditionalOrExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_expression
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 90, SparqlParser.RULE_expression)
 		defer {
@@ -3682,40 +4023,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ConditionalOrExpressionContext:ParserRuleContext {
-		open func conditionalAndExpression() -> Array<ConditionalAndExpressionContext> {
-			return getRuleContexts(ConditionalAndExpressionContext.self)
+
+	public class ConditionalOrExpressionContext: ParserRuleContext {
+			open
+			func conditionalAndExpression() -> [ConditionalAndExpressionContext] {
+				return getRuleContexts(ConditionalAndExpressionContext.self)
+			}
+			open
+			func conditionalAndExpression(_ i: Int) -> ConditionalAndExpressionContext? {
+				return getRuleContext(ConditionalAndExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_conditionalOrExpression
 		}
-		open func conditionalAndExpression(_ i: Int) -> ConditionalAndExpressionContext? {
-			return getRuleContext(ConditionalAndExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_conditionalOrExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterConditionalOrExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterConditionalOrExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitConditionalOrExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitConditionalOrExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitConditionalOrExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitConditionalOrExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitConditionalOrExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitConditionalOrExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditionalOrExpression() throws -> ConditionalOrExpressionContext {
+	 open func conditionalOrExpression() throws -> ConditionalOrExpressionContext {
 		var _localctx: ConditionalOrExpressionContext = ConditionalOrExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 92, SparqlParser.RULE_conditionalOrExpression)
 		var _la: Int = 0
@@ -3754,40 +4102,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ConditionalAndExpressionContext:ParserRuleContext {
-		open func valueLogical() -> Array<ValueLogicalContext> {
-			return getRuleContexts(ValueLogicalContext.self)
+
+	public class ConditionalAndExpressionContext: ParserRuleContext {
+			open
+			func valueLogical() -> [ValueLogicalContext] {
+				return getRuleContexts(ValueLogicalContext.self)
+			}
+			open
+			func valueLogical(_ i: Int) -> ValueLogicalContext? {
+				return getRuleContext(ValueLogicalContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_conditionalAndExpression
 		}
-		open func valueLogical(_ i: Int) -> ValueLogicalContext? {
-			return getRuleContext(ValueLogicalContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_conditionalAndExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterConditionalAndExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterConditionalAndExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitConditionalAndExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitConditionalAndExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitConditionalAndExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitConditionalAndExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitConditionalAndExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitConditionalAndExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditionalAndExpression() throws -> ConditionalAndExpressionContext {
+	 open func conditionalAndExpression() throws -> ConditionalAndExpressionContext {
 		var _localctx: ConditionalAndExpressionContext = ConditionalAndExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 94, SparqlParser.RULE_conditionalAndExpression)
 		var _la: Int = 0
@@ -3826,37 +4181,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class ValueLogicalContext:ParserRuleContext {
-		open func relationalExpression() -> RelationalExpressionContext? {
-			return getRuleContext(RelationalExpressionContext.self,0)
+
+	public class ValueLogicalContext: ParserRuleContext {
+			open
+			func relationalExpression() -> RelationalExpressionContext? {
+				return getRuleContext(RelationalExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_valueLogical
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_valueLogical }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterValueLogical(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterValueLogical(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitValueLogical(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitValueLogical(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitValueLogical(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitValueLogical(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitValueLogical(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitValueLogical(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func valueLogical() throws -> ValueLogicalContext {
+	 open func valueLogical() throws -> ValueLogicalContext {
 		var _localctx: ValueLogicalContext = ValueLogicalContext(_ctx, getState())
 		try enterRule(_localctx, 96, SparqlParser.RULE_valueLogical)
 		defer {
@@ -3876,40 +4237,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class RelationalExpressionContext:ParserRuleContext {
-		open func numericExpression() -> Array<NumericExpressionContext> {
-			return getRuleContexts(NumericExpressionContext.self)
+
+	public class RelationalExpressionContext: ParserRuleContext {
+			open
+			func numericExpression() -> [NumericExpressionContext] {
+				return getRuleContexts(NumericExpressionContext.self)
+			}
+			open
+			func numericExpression(_ i: Int) -> NumericExpressionContext? {
+				return getRuleContext(NumericExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_relationalExpression
 		}
-		open func numericExpression(_ i: Int) -> NumericExpressionContext? {
-			return getRuleContext(NumericExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_relationalExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterRelationalExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterRelationalExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitRelationalExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitRelationalExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitRelationalExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitRelationalExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitRelationalExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitRelationalExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func relationalExpression() throws -> RelationalExpressionContext {
+	 open func relationalExpression() throws -> RelationalExpressionContext {
 		var _localctx: RelationalExpressionContext = RelationalExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 98, SparqlParser.RULE_relationalExpression)
 		defer {
@@ -3987,37 +4355,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class NumericExpressionContext:ParserRuleContext {
-		open func additiveExpression() -> AdditiveExpressionContext? {
-			return getRuleContext(AdditiveExpressionContext.self,0)
+
+	public class NumericExpressionContext: ParserRuleContext {
+			open
+			func additiveExpression() -> AdditiveExpressionContext? {
+				return getRuleContext(AdditiveExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_numericExpression
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_numericExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterNumericExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterNumericExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitNumericExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitNumericExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitNumericExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitNumericExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitNumericExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitNumericExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numericExpression() throws -> NumericExpressionContext {
+	 open func numericExpression() throws -> NumericExpressionContext {
 		var _localctx: NumericExpressionContext = NumericExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 100, SparqlParser.RULE_numericExpression)
 		defer {
@@ -4037,52 +4411,63 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class AdditiveExpressionContext:ParserRuleContext {
-		open func multiplicativeExpression() -> Array<MultiplicativeExpressionContext> {
-			return getRuleContexts(MultiplicativeExpressionContext.self)
+
+	public class AdditiveExpressionContext: ParserRuleContext {
+			open
+			func multiplicativeExpression() -> [MultiplicativeExpressionContext] {
+				return getRuleContexts(MultiplicativeExpressionContext.self)
+			}
+			open
+			func multiplicativeExpression(_ i: Int) -> MultiplicativeExpressionContext? {
+				return getRuleContext(MultiplicativeExpressionContext.self, i)
+			}
+			open
+			func numericLiteralPositive() -> [NumericLiteralPositiveContext] {
+				return getRuleContexts(NumericLiteralPositiveContext.self)
+			}
+			open
+			func numericLiteralPositive(_ i: Int) -> NumericLiteralPositiveContext? {
+				return getRuleContext(NumericLiteralPositiveContext.self, i)
+			}
+			open
+			func numericLiteralNegative() -> [NumericLiteralNegativeContext] {
+				return getRuleContexts(NumericLiteralNegativeContext.self)
+			}
+			open
+			func numericLiteralNegative(_ i: Int) -> NumericLiteralNegativeContext? {
+				return getRuleContext(NumericLiteralNegativeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_additiveExpression
 		}
-		open func multiplicativeExpression(_ i: Int) -> MultiplicativeExpressionContext? {
-			return getRuleContext(MultiplicativeExpressionContext.self,i)
-		}
-		open func numericLiteralPositive() -> Array<NumericLiteralPositiveContext> {
-			return getRuleContexts(NumericLiteralPositiveContext.self)
-		}
-		open func numericLiteralPositive(_ i: Int) -> NumericLiteralPositiveContext? {
-			return getRuleContext(NumericLiteralPositiveContext.self,i)
-		}
-		open func numericLiteralNegative() -> Array<NumericLiteralNegativeContext> {
-			return getRuleContexts(NumericLiteralNegativeContext.self)
-		}
-		open func numericLiteralNegative(_ i: Int) -> NumericLiteralNegativeContext? {
-			return getRuleContext(NumericLiteralNegativeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_additiveExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterAdditiveExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterAdditiveExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitAdditiveExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitAdditiveExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitAdditiveExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitAdditiveExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitAdditiveExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitAdditiveExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func additiveExpression() throws -> AdditiveExpressionContext {
+	 open func additiveExpression() throws -> AdditiveExpressionContext {
 		var _localctx: AdditiveExpressionContext = AdditiveExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 102, SparqlParser.RULE_additiveExpression)
 		var _la: Int = 0
@@ -4137,7 +4522,7 @@ open class SparqlParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(488)
@@ -4154,40 +4539,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class MultiplicativeExpressionContext:ParserRuleContext {
-		open func unaryExpression() -> Array<UnaryExpressionContext> {
-			return getRuleContexts(UnaryExpressionContext.self)
+
+	public class MultiplicativeExpressionContext: ParserRuleContext {
+			open
+			func unaryExpression() -> [UnaryExpressionContext] {
+				return getRuleContexts(UnaryExpressionContext.self)
+			}
+			open
+			func unaryExpression(_ i: Int) -> UnaryExpressionContext? {
+				return getRuleContext(UnaryExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_multiplicativeExpression
 		}
-		open func unaryExpression(_ i: Int) -> UnaryExpressionContext? {
-			return getRuleContext(UnaryExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_multiplicativeExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterMultiplicativeExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterMultiplicativeExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitMultiplicativeExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitMultiplicativeExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitMultiplicativeExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitMultiplicativeExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitMultiplicativeExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitMultiplicativeExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiplicativeExpression() throws -> MultiplicativeExpressionContext {
+	 open func multiplicativeExpression() throws -> MultiplicativeExpressionContext {
 		var _localctx: MultiplicativeExpressionContext = MultiplicativeExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 104, SparqlParser.RULE_multiplicativeExpression)
 		var _la: Int = 0
@@ -4225,7 +4617,7 @@ open class SparqlParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(498)
@@ -4242,37 +4634,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class UnaryExpressionContext:ParserRuleContext {
-		open func primaryExpression() -> PrimaryExpressionContext? {
-			return getRuleContext(PrimaryExpressionContext.self,0)
+
+	public class UnaryExpressionContext: ParserRuleContext {
+			open
+			func primaryExpression() -> PrimaryExpressionContext? {
+				return getRuleContext(PrimaryExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_unaryExpression
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_unaryExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterUnaryExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterUnaryExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitUnaryExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitUnaryExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitUnaryExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitUnaryExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitUnaryExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitUnaryExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unaryExpression() throws -> UnaryExpressionContext {
+	 open func unaryExpression() throws -> UnaryExpressionContext {
 		var _localctx: UnaryExpressionContext = UnaryExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 106, SparqlParser.RULE_unaryExpression)
 		defer {
@@ -4344,7 +4742,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4355,55 +4753,67 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class PrimaryExpressionContext:ParserRuleContext {
-		open func brackettedExpression() -> BrackettedExpressionContext? {
-			return getRuleContext(BrackettedExpressionContext.self,0)
+
+	public class PrimaryExpressionContext: ParserRuleContext {
+			open
+			func brackettedExpression() -> BrackettedExpressionContext? {
+				return getRuleContext(BrackettedExpressionContext.self, 0)
+			}
+			open
+			func builtInCall() -> BuiltInCallContext? {
+				return getRuleContext(BuiltInCallContext.self, 0)
+			}
+			open
+			func iriRefOrFunction() -> IriRefOrFunctionContext? {
+				return getRuleContext(IriRefOrFunctionContext.self, 0)
+			}
+			open
+			func rdfLiteral() -> RdfLiteralContext? {
+				return getRuleContext(RdfLiteralContext.self, 0)
+			}
+			open
+			func numericLiteral() -> NumericLiteralContext? {
+				return getRuleContext(NumericLiteralContext.self, 0)
+			}
+			open
+			func booleanLiteral() -> BooleanLiteralContext? {
+				return getRuleContext(BooleanLiteralContext.self, 0)
+			}
+			open
+			func var() -> VarContext? {
+				return getRuleContext(VarContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_primaryExpression
 		}
-		open func builtInCall() -> BuiltInCallContext? {
-			return getRuleContext(BuiltInCallContext.self,0)
-		}
-		open func iriRefOrFunction() -> IriRefOrFunctionContext? {
-			return getRuleContext(IriRefOrFunctionContext.self,0)
-		}
-		open func rdfLiteral() -> RdfLiteralContext? {
-			return getRuleContext(RdfLiteralContext.self,0)
-		}
-		open func numericLiteral() -> NumericLiteralContext? {
-			return getRuleContext(NumericLiteralContext.self,0)
-		}
-		open func booleanLiteral() -> BooleanLiteralContext? {
-			return getRuleContext(BooleanLiteralContext.self,0)
-		}
-		open func var() -> VarContext? {
-			return getRuleContext(VarContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_primaryExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterPrimaryExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterPrimaryExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitPrimaryExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitPrimaryExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitPrimaryExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitPrimaryExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitPrimaryExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitPrimaryExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primaryExpression() throws -> PrimaryExpressionContext {
+	 open func primaryExpression() throws -> PrimaryExpressionContext {
 		var _localctx: PrimaryExpressionContext = PrimaryExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 108, SparqlParser.RULE_primaryExpression)
 		defer {
@@ -4479,7 +4889,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4490,37 +4900,43 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class BrackettedExpressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class BrackettedExpressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_brackettedExpression
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_brackettedExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterBrackettedExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterBrackettedExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitBrackettedExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitBrackettedExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitBrackettedExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitBrackettedExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitBrackettedExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitBrackettedExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func brackettedExpression() throws -> BrackettedExpressionContext {
+	 open func brackettedExpression() throws -> BrackettedExpressionContext {
 		var _localctx: BrackettedExpressionContext = BrackettedExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 110, SparqlParser.RULE_brackettedExpression)
 		defer {
@@ -4544,46 +4960,55 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class BuiltInCallContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class BuiltInCallContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func var() -> VarContext? {
+				return getRuleContext(VarContext.self, 0)
+			}
+			open
+			func regexExpression() -> RegexExpressionContext? {
+				return getRuleContext(RegexExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_builtInCall
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func var() -> VarContext? {
-			return getRuleContext(VarContext.self,0)
-		}
-		open func regexExpression() -> RegexExpressionContext? {
-			return getRuleContext(RegexExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_builtInCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterBuiltInCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterBuiltInCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitBuiltInCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitBuiltInCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitBuiltInCall(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitBuiltInCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitBuiltInCall(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitBuiltInCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func builtInCall() throws -> BuiltInCallContext {
+	 open func builtInCall() throws -> BuiltInCallContext {
 		var _localctx: BuiltInCallContext = BuiltInCallContext(_ctx, getState())
 		try enterRule(_localctx, 112, SparqlParser.RULE_builtInCall)
 		defer {
@@ -4738,7 +5163,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4749,40 +5174,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class RegexExpressionContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class RegexExpressionContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_regexExpression
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_regexExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterRegexExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterRegexExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitRegexExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitRegexExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitRegexExpression(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitRegexExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitRegexExpression(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitRegexExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func regexExpression() throws -> RegexExpressionContext {
+	 open func regexExpression() throws -> RegexExpressionContext {
 		var _localctx: RegexExpressionContext = RegexExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 114, SparqlParser.RULE_regexExpression)
 		var _la: Int = 0
@@ -4828,40 +5260,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class IriRefOrFunctionContext:ParserRuleContext {
-		open func iriRef() -> IriRefContext? {
-			return getRuleContext(IriRefContext.self,0)
+
+	public class IriRefOrFunctionContext: ParserRuleContext {
+			open
+			func iriRef() -> IriRefContext? {
+				return getRuleContext(IriRefContext.self, 0)
+			}
+			open
+			func argList() -> ArgListContext? {
+				return getRuleContext(ArgListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_iriRefOrFunction
 		}
-		open func argList() -> ArgListContext? {
-			return getRuleContext(ArgListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_iriRefOrFunction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterIriRefOrFunction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterIriRefOrFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitIriRefOrFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitIriRefOrFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitIriRefOrFunction(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitIriRefOrFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitIriRefOrFunction(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitIriRefOrFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iriRefOrFunction() throws -> IriRefOrFunctionContext {
+	 open func iriRefOrFunction() throws -> IriRefOrFunctionContext {
 		var _localctx: IriRefOrFunctionContext = IriRefOrFunctionContext(_ctx, getState())
 		try enterRule(_localctx, 116, SparqlParser.RULE_iriRefOrFunction)
 		var _la: Int = 0
@@ -4895,41 +5334,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class RdfLiteralContext:ParserRuleContext {
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
+
+	public class RdfLiteralContext: ParserRuleContext {
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func LANGTAG() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.LANGTAG.rawValue, 0)
+			}
+			open
+			func iriRef() -> IriRefContext? {
+				return getRuleContext(IriRefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_rdfLiteral
 		}
-		open func LANGTAG() -> TerminalNode? { return getToken(SparqlParser.Tokens.LANGTAG.rawValue, 0) }
-		open func iriRef() -> IriRefContext? {
-			return getRuleContext(IriRefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_rdfLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterRdfLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterRdfLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitRdfLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitRdfLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitRdfLiteral(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitRdfLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitRdfLiteral(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitRdfLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rdfLiteral() throws -> RdfLiteralContext {
+	 open func rdfLiteral() throws -> RdfLiteralContext {
 		var _localctx: RdfLiteralContext = RdfLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 118, SparqlParser.RULE_rdfLiteral)
 		defer {
@@ -5016,43 +5465,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class NumericLiteralContext:ParserRuleContext {
-		open func numericLiteralUnsigned() -> NumericLiteralUnsignedContext? {
-			return getRuleContext(NumericLiteralUnsignedContext.self,0)
+
+	public class NumericLiteralContext: ParserRuleContext {
+			open
+			func numericLiteralUnsigned() -> NumericLiteralUnsignedContext? {
+				return getRuleContext(NumericLiteralUnsignedContext.self, 0)
+			}
+			open
+			func numericLiteralPositive() -> NumericLiteralPositiveContext? {
+				return getRuleContext(NumericLiteralPositiveContext.self, 0)
+			}
+			open
+			func numericLiteralNegative() -> NumericLiteralNegativeContext? {
+				return getRuleContext(NumericLiteralNegativeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_numericLiteral
 		}
-		open func numericLiteralPositive() -> NumericLiteralPositiveContext? {
-			return getRuleContext(NumericLiteralPositiveContext.self,0)
-		}
-		open func numericLiteralNegative() -> NumericLiteralNegativeContext? {
-			return getRuleContext(NumericLiteralNegativeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_numericLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterNumericLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterNumericLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitNumericLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitNumericLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitNumericLiteral(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitNumericLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitNumericLiteral(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitNumericLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numericLiteral() throws -> NumericLiteralContext {
+	 open func numericLiteral() throws -> NumericLiteralContext {
 		var _localctx: NumericLiteralContext = NumericLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 120, SparqlParser.RULE_numericLiteral)
 		defer {
@@ -5087,7 +5544,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5098,37 +5555,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class NumericLiteralUnsignedContext:ParserRuleContext {
-		open func INTEGER() -> TerminalNode? { return getToken(SparqlParser.Tokens.INTEGER.rawValue, 0) }
-		open func DECIMAL() -> TerminalNode? { return getToken(SparqlParser.Tokens.DECIMAL.rawValue, 0) }
-		open func DOUBLE() -> TerminalNode? { return getToken(SparqlParser.Tokens.DOUBLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_numericLiteralUnsigned }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterNumericLiteralUnsigned(self)
+
+	public class NumericLiteralUnsignedContext: ParserRuleContext {
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.INTEGER.rawValue, 0)
+			}
+			open
+			func DECIMAL() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.DECIMAL.rawValue, 0)
+			}
+			open
+			func DOUBLE() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.DOUBLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_numericLiteralUnsigned
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterNumericLiteralUnsigned(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitNumericLiteralUnsigned(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitNumericLiteralUnsigned(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitNumericLiteralUnsigned(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitNumericLiteralUnsigned(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitNumericLiteralUnsigned(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitNumericLiteralUnsigned(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numericLiteralUnsigned() throws -> NumericLiteralUnsignedContext {
+	 open func numericLiteralUnsigned() throws -> NumericLiteralUnsignedContext {
 		var _localctx: NumericLiteralUnsignedContext = NumericLiteralUnsignedContext(_ctx, getState())
 		try enterRule(_localctx, 122, SparqlParser.RULE_numericLiteralUnsigned)
 		var _la: Int = 0
@@ -5163,37 +5634,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class NumericLiteralPositiveContext:ParserRuleContext {
-		open func INTEGER_POSITIVE() -> TerminalNode? { return getToken(SparqlParser.Tokens.INTEGER_POSITIVE.rawValue, 0) }
-		open func DECIMAL_POSITIVE() -> TerminalNode? { return getToken(SparqlParser.Tokens.DECIMAL_POSITIVE.rawValue, 0) }
-		open func DOUBLE_POSITIVE() -> TerminalNode? { return getToken(SparqlParser.Tokens.DOUBLE_POSITIVE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_numericLiteralPositive }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterNumericLiteralPositive(self)
+
+	public class NumericLiteralPositiveContext: ParserRuleContext {
+			open
+			func INTEGER_POSITIVE() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.INTEGER_POSITIVE.rawValue, 0)
+			}
+			open
+			func DECIMAL_POSITIVE() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.DECIMAL_POSITIVE.rawValue, 0)
+			}
+			open
+			func DOUBLE_POSITIVE() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.DOUBLE_POSITIVE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_numericLiteralPositive
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterNumericLiteralPositive(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitNumericLiteralPositive(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitNumericLiteralPositive(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitNumericLiteralPositive(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitNumericLiteralPositive(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitNumericLiteralPositive(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitNumericLiteralPositive(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numericLiteralPositive() throws -> NumericLiteralPositiveContext {
+	 open func numericLiteralPositive() throws -> NumericLiteralPositiveContext {
 		var _localctx: NumericLiteralPositiveContext = NumericLiteralPositiveContext(_ctx, getState())
 		try enterRule(_localctx, 124, SparqlParser.RULE_numericLiteralPositive)
 		var _la: Int = 0
@@ -5228,37 +5713,51 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class NumericLiteralNegativeContext:ParserRuleContext {
-		open func INTEGER_NEGATIVE() -> TerminalNode? { return getToken(SparqlParser.Tokens.INTEGER_NEGATIVE.rawValue, 0) }
-		open func DECIMAL_NEGATIVE() -> TerminalNode? { return getToken(SparqlParser.Tokens.DECIMAL_NEGATIVE.rawValue, 0) }
-		open func DOUBLE_NEGATIVE() -> TerminalNode? { return getToken(SparqlParser.Tokens.DOUBLE_NEGATIVE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_numericLiteralNegative }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterNumericLiteralNegative(self)
+
+	public class NumericLiteralNegativeContext: ParserRuleContext {
+			open
+			func INTEGER_NEGATIVE() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.INTEGER_NEGATIVE.rawValue, 0)
+			}
+			open
+			func DECIMAL_NEGATIVE() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.DECIMAL_NEGATIVE.rawValue, 0)
+			}
+			open
+			func DOUBLE_NEGATIVE() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.DOUBLE_NEGATIVE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_numericLiteralNegative
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterNumericLiteralNegative(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitNumericLiteralNegative(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitNumericLiteralNegative(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitNumericLiteralNegative(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitNumericLiteralNegative(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitNumericLiteralNegative(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitNumericLiteralNegative(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numericLiteralNegative() throws -> NumericLiteralNegativeContext {
+	 open func numericLiteralNegative() throws -> NumericLiteralNegativeContext {
 		var _localctx: NumericLiteralNegativeContext = NumericLiteralNegativeContext(_ctx, getState())
 		try enterRule(_localctx, 126, SparqlParser.RULE_numericLiteralNegative)
 		var _la: Int = 0
@@ -5293,34 +5792,39 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class BooleanLiteralContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_booleanLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterBooleanLiteral(self)
+
+	public class BooleanLiteralContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_booleanLiteral
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterBooleanLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitBooleanLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitBooleanLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitBooleanLiteral(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitBooleanLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitBooleanLiteral(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitBooleanLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func booleanLiteral() throws -> BooleanLiteralContext {
+	 open func booleanLiteral() throws -> BooleanLiteralContext {
 		var _localctx: BooleanLiteralContext = BooleanLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 128, SparqlParser.RULE_booleanLiteral)
 		var _la: Int = 0
@@ -5352,36 +5856,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class StringContext:ParserRuleContext {
-		open func STRING_LITERAL1() -> TerminalNode? { return getToken(SparqlParser.Tokens.STRING_LITERAL1.rawValue, 0) }
-		open func STRING_LITERAL2() -> TerminalNode? { return getToken(SparqlParser.Tokens.STRING_LITERAL2.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_string }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterString(self)
+
+	public class StringContext: ParserRuleContext {
+			open
+			func STRING_LITERAL1() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.STRING_LITERAL1.rawValue, 0)
+			}
+			open
+			func STRING_LITERAL2() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.STRING_LITERAL2.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_string
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitString(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitString(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string() throws -> StringContext {
+	 open func string() throws -> StringContext {
 		var _localctx: StringContext = StringContext(_ctx, getState())
 		try enterRule(_localctx, 130, SparqlParser.RULE_string)
 		var _la: Int = 0
@@ -5413,38 +5928,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class IriRefContext:ParserRuleContext {
-		open func IRI_REF() -> TerminalNode? { return getToken(SparqlParser.Tokens.IRI_REF.rawValue, 0) }
-		open func prefixedName() -> PrefixedNameContext? {
-			return getRuleContext(PrefixedNameContext.self,0)
+
+	public class IriRefContext: ParserRuleContext {
+			open
+			func IRI_REF() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.IRI_REF.rawValue, 0)
+			}
+			open
+			func prefixedName() -> PrefixedNameContext? {
+				return getRuleContext(PrefixedNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_iriRef
 		}
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_iriRef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterIriRef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterIriRef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitIriRef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitIriRef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitIriRef(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitIriRef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitIriRef(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitIriRef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iriRef() throws -> IriRefContext {
+	 open func iriRef() throws -> IriRefContext {
 		var _localctx: IriRefContext = IriRefContext(_ctx, getState())
 		try enterRule(_localctx, 132, SparqlParser.RULE_iriRef)
 		defer {
@@ -5468,7 +5992,7 @@ open class SparqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5479,36 +6003,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class PrefixedNameContext:ParserRuleContext {
-		open func PNAME_LN() -> TerminalNode? { return getToken(SparqlParser.Tokens.PNAME_LN.rawValue, 0) }
-		open func PNAME_NS() -> TerminalNode? { return getToken(SparqlParser.Tokens.PNAME_NS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_prefixedName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterPrefixedName(self)
+
+	public class PrefixedNameContext: ParserRuleContext {
+			open
+			func PNAME_LN() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.PNAME_LN.rawValue, 0)
+			}
+			open
+			func PNAME_NS() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.PNAME_NS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_prefixedName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterPrefixedName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitPrefixedName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitPrefixedName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitPrefixedName(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitPrefixedName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitPrefixedName(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitPrefixedName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefixedName() throws -> PrefixedNameContext {
+	 open func prefixedName() throws -> PrefixedNameContext {
 		var _localctx: PrefixedNameContext = PrefixedNameContext(_ctx, getState())
 		try enterRule(_localctx, 134, SparqlParser.RULE_prefixedName)
 		var _la: Int = 0
@@ -5540,36 +6075,47 @@ open class SparqlParser: Parser {
 
 		return _localctx
 	}
-	open class BlankNodeContext:ParserRuleContext {
-		open func BLANK_NODE_LABEL() -> TerminalNode? { return getToken(SparqlParser.Tokens.BLANK_NODE_LABEL.rawValue, 0) }
-		open func ANON() -> TerminalNode? { return getToken(SparqlParser.Tokens.ANON.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SparqlParser.RULE_blankNode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).enterBlankNode(self)
+
+	public class BlankNodeContext: ParserRuleContext {
+			open
+			func BLANK_NODE_LABEL() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.BLANK_NODE_LABEL.rawValue, 0)
+			}
+			open
+			func ANON() -> TerminalNode? {
+				return getToken(SparqlParser.Tokens.ANON.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SparqlParser.RULE_blankNode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.enterBlankNode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SparqlListener {
-			 	(listener as! SparqlListener).exitBlankNode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SparqlListener {
+				listener.exitBlankNode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SparqlVisitor {
-			     return (visitor as! SparqlVisitor<T>).visitBlankNode(self)
-			}else if visitor is SparqlBaseVisitor {
-		    	 return (visitor as! SparqlBaseVisitor<T>).visitBlankNode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SparqlVisitor {
+			    return visitor.visitBlankNode(self)
+			}
+			else if let visitor = visitor as? SparqlBaseVisitor {
+			    return visitor.visitBlankNode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blankNode() throws -> BlankNodeContext {
+	 open func blankNode() throws -> BlankNodeContext {
 		var _localctx: BlankNodeContext = BlankNodeContext(_ctx, getState())
 		try enterRule(_localctx, 136, SparqlParser.RULE_blankNode)
 		var _la: Int = 0
@@ -5602,6 +6148,10 @@ open class SparqlParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = SparqlParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = SparqlParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/lua/Lua.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/lua/Lua.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class LuaParser: Parser {
@@ -11,8 +11,11 @@ open class LuaParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -28,19 +31,21 @@ open class LuaParser: Parser {
                  HEX_FLOAT = 63, COMMENT = 64, LINE_COMMENT = 65, WS = 66, 
                  SHEBANG = 67
 	}
-	public static let RULE_chunk = 0, RULE_block = 1, RULE_stat = 2, RULE_retstat = 3, 
-                   RULE_label = 4, RULE_funcname = 5, RULE_varlist = 6, 
-                   RULE_namelist = 7, RULE_explist = 8, RULE_exp = 9, RULE_prefixexp = 10, 
-                   RULE_functioncall = 11, RULE_varOrExp = 12, RULE_var = 13, 
-                   RULE_varSuffix = 14, RULE_nameAndArgs = 15, RULE_args = 16, 
-                   RULE_functiondef = 17, RULE_funcbody = 18, RULE_parlist = 19, 
-                   RULE_tableconstructor = 20, RULE_fieldlist = 21, RULE_field = 22, 
-                   RULE_fieldsep = 23, RULE_operatorOr = 24, RULE_operatorAnd = 25, 
-                   RULE_operatorComparison = 26, RULE_operatorStrcat = 27, 
-                   RULE_operatorAddSub = 28, RULE_operatorMulDivMod = 29, 
-                   RULE_operatorBitwise = 30, RULE_operatorUnary = 31, RULE_operatorPower = 32, 
-                   RULE_number = 33, RULE_string = 34
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_chunk = 0, RULE_block = 1, RULE_stat = 2, RULE_retstat = 3, 
+            RULE_label = 4, RULE_funcname = 5, RULE_varlist = 6, RULE_namelist = 7, 
+            RULE_explist = 8, RULE_exp = 9, RULE_prefixexp = 10, RULE_functioncall = 11, 
+            RULE_varOrExp = 12, RULE_var = 13, RULE_varSuffix = 14, RULE_nameAndArgs = 15, 
+            RULE_args = 16, RULE_functiondef = 17, RULE_funcbody = 18, RULE_parlist = 19, 
+            RULE_tableconstructor = 20, RULE_fieldlist = 21, RULE_field = 22, 
+            RULE_fieldsep = 23, RULE_operatorOr = 24, RULE_operatorAnd = 25, 
+            RULE_operatorComparison = 26, RULE_operatorStrcat = 27, RULE_operatorAddSub = 28, 
+            RULE_operatorMulDivMod = 29, RULE_operatorBitwise = 30, RULE_operatorUnary = 31, 
+            RULE_operatorPower = 32, RULE_number = 33, RULE_string = 34
+
+	public
+	static let ruleNames: [String] = [
 		"chunk", "block", "stat", "retstat", "label", "funcname", "varlist", "namelist", 
 		"explist", "exp", "prefixexp", "functioncall", "varOrExp", "var", "varSuffix", 
 		"nameAndArgs", "args", "functiondef", "funcbody", "parlist", "tableconstructor", 
@@ -66,86 +71,73 @@ open class LuaParser: Parser {
 		"NAME", "NORMALSTRING", "CHARSTRING", "LONGSTRING", "INT", "HEX", "FLOAT", 
 		"HEX_FLOAT", "COMMENT", "LINE_COMMENT", "WS", "SHEBANG"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Lua.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return LuaParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Lua.g4" }
+	override open
+	func getSerializedATN() -> String { return LuaParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return LuaParser.ruleNames }
+	override open
+	func getATN() -> ATN { return LuaParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return LuaParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return LuaParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return LuaParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,LuaParser._ATN,LuaParser._decisionToDFA, LuaParser._sharedContextCache)
 	}
-	open class ChunkContext:ParserRuleContext {
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class ChunkContext: ParserRuleContext {
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.EOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_chunk
 		}
-		open func EOF() -> TerminalNode? { return getToken(LuaParser.Tokens.EOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_chunk }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterChunk(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterChunk(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitChunk(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitChunk(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitChunk(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitChunk(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitChunk(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitChunk(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func chunk() throws -> ChunkContext {
+	 open func chunk() throws -> ChunkContext {
 		var _localctx: ChunkContext = ChunkContext(_ctx, getState())
 		try enterRule(_localctx, 0, LuaParser.RULE_chunk)
 		defer {
@@ -167,43 +159,51 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func stat() -> Array<StatContext> {
-			return getRuleContexts(StatContext.self)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func stat() -> [StatContext] {
+				return getRuleContexts(StatContext.self)
+			}
+			open
+			func stat(_ i: Int) -> StatContext? {
+				return getRuleContext(StatContext.self, i)
+			}
+			open
+			func retstat() -> RetstatContext? {
+				return getRuleContext(RetstatContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_block
 		}
-		open func stat(_ i: Int) -> StatContext? {
-			return getRuleContext(StatContext.self,i)
-		}
-		open func retstat() -> RetstatContext? {
-			return getRuleContext(RetstatContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitBlock(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 2, LuaParser.RULE_block)
 		var _la: Int = 0
@@ -254,68 +254,87 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class StatContext:ParserRuleContext {
-		open func varlist() -> VarlistContext? {
-			return getRuleContext(VarlistContext.self,0)
+
+	public class StatContext: ParserRuleContext {
+			open
+			func varlist() -> VarlistContext? {
+				return getRuleContext(VarlistContext.self, 0)
+			}
+			open
+			func explist() -> ExplistContext? {
+				return getRuleContext(ExplistContext.self, 0)
+			}
+			open
+			func functioncall() -> FunctioncallContext? {
+				return getRuleContext(FunctioncallContext.self, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func block() -> [BlockContext] {
+				return getRuleContexts(BlockContext.self)
+			}
+			open
+			func block(_ i: Int) -> BlockContext? {
+				return getRuleContext(BlockContext.self, i)
+			}
+			open
+			func exp() -> [ExpContext] {
+				return getRuleContexts(ExpContext.self)
+			}
+			open
+			func exp(_ i: Int) -> ExpContext? {
+				return getRuleContext(ExpContext.self, i)
+			}
+			open
+			func namelist() -> NamelistContext? {
+				return getRuleContext(NamelistContext.self, 0)
+			}
+			open
+			func funcname() -> FuncnameContext? {
+				return getRuleContext(FuncnameContext.self, 0)
+			}
+			open
+			func funcbody() -> FuncbodyContext? {
+				return getRuleContext(FuncbodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_stat
 		}
-		open func explist() -> ExplistContext? {
-			return getRuleContext(ExplistContext.self,0)
-		}
-		open func functioncall() -> FunctioncallContext? {
-			return getRuleContext(FunctioncallContext.self,0)
-		}
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
-		}
-		open func NAME() -> TerminalNode? { return getToken(LuaParser.Tokens.NAME.rawValue, 0) }
-		open func block() -> Array<BlockContext> {
-			return getRuleContexts(BlockContext.self)
-		}
-		open func block(_ i: Int) -> BlockContext? {
-			return getRuleContext(BlockContext.self,i)
-		}
-		open func exp() -> Array<ExpContext> {
-			return getRuleContexts(ExpContext.self)
-		}
-		open func exp(_ i: Int) -> ExpContext? {
-			return getRuleContext(ExpContext.self,i)
-		}
-		open func namelist() -> NamelistContext? {
-			return getRuleContext(NamelistContext.self,0)
-		}
-		open func funcname() -> FuncnameContext? {
-			return getRuleContext(FuncnameContext.self,0)
-		}
-		open func funcbody() -> FuncbodyContext? {
-			return getRuleContext(FuncbodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_stat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterStat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterStat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitStat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitStat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitStat(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitStat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitStat(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitStat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stat() throws -> StatContext {
+	 open func stat() throws -> StatContext {
 		var _localctx: StatContext = StatContext(_ctx, getState())
 		try enterRule(_localctx, 4, LuaParser.RULE_stat)
 		var _la: Int = 0
@@ -566,37 +585,43 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class RetstatContext:ParserRuleContext {
-		open func explist() -> ExplistContext? {
-			return getRuleContext(ExplistContext.self,0)
+
+	public class RetstatContext: ParserRuleContext {
+			open
+			func explist() -> ExplistContext? {
+				return getRuleContext(ExplistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_retstat
 		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_retstat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterRetstat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterRetstat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitRetstat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitRetstat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitRetstat(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitRetstat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitRetstat(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitRetstat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func retstat() throws -> RetstatContext {
+	 open func retstat() throws -> RetstatContext {
 		var _localctx: RetstatContext = RetstatContext(_ctx, getState())
 		try enterRule(_localctx, 6, LuaParser.RULE_retstat)
 		var _la: Int = 0
@@ -646,35 +671,43 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class LabelContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(LuaParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterLabel(self)
+
+	public class LabelContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_label
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitLabel(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitLabel(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label() throws -> LabelContext {
+	 open func label() throws -> LabelContext {
 		var _localctx: LabelContext = LabelContext(_ctx, getState())
 		try enterRule(_localctx, 8, LuaParser.RULE_label)
 		defer {
@@ -698,38 +731,47 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class FuncnameContext:ParserRuleContext {
-		open func NAME() -> Array<TerminalNode> { return getTokens(LuaParser.Tokens.NAME.rawValue) }
-		open func NAME(_ i:Int) -> TerminalNode?{
-			return getToken(LuaParser.Tokens.NAME.rawValue, i)
+
+	public class FuncnameContext: ParserRuleContext {
+			open
+			func NAME() -> [TerminalNode] {
+				return getTokens(LuaParser.Tokens.NAME.rawValue)
+			}
+			open
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(LuaParser.Tokens.NAME.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_funcname
 		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_funcname }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterFuncname(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterFuncname(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitFuncname(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitFuncname(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitFuncname(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitFuncname(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitFuncname(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitFuncname(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funcname() throws -> FuncnameContext {
+	 open func funcname() throws -> FuncnameContext {
 		var _localctx: FuncnameContext = FuncnameContext(_ctx, getState())
 		try enterRule(_localctx, 10, LuaParser.RULE_funcname)
 		var _la: Int = 0
@@ -783,40 +825,47 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class VarlistContext:ParserRuleContext {
-		open func var() -> Array<VarContext> {
-			return getRuleContexts(VarContext.self)
+
+	public class VarlistContext: ParserRuleContext {
+			open
+			func var() -> [VarContext] {
+				return getRuleContexts(VarContext.self)
+			}
+			open
+			func var(_ i: Int) -> VarContext? {
+				return getRuleContext(VarContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_varlist
 		}
-		open func var(_ i: Int) -> VarContext? {
-			return getRuleContext(VarContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_varlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterVarlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterVarlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitVarlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitVarlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitVarlist(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitVarlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitVarlist(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitVarlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varlist() throws -> VarlistContext {
+	 open func varlist() throws -> VarlistContext {
 		var _localctx: VarlistContext = VarlistContext(_ctx, getState())
 		try enterRule(_localctx, 12, LuaParser.RULE_varlist)
 		var _la: Int = 0
@@ -855,38 +904,47 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class NamelistContext:ParserRuleContext {
-		open func NAME() -> Array<TerminalNode> { return getTokens(LuaParser.Tokens.NAME.rawValue) }
-		open func NAME(_ i:Int) -> TerminalNode?{
-			return getToken(LuaParser.Tokens.NAME.rawValue, i)
+
+	public class NamelistContext: ParserRuleContext {
+			open
+			func NAME() -> [TerminalNode] {
+				return getTokens(LuaParser.Tokens.NAME.rawValue)
+			}
+			open
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(LuaParser.Tokens.NAME.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_namelist
 		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_namelist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterNamelist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterNamelist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitNamelist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitNamelist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitNamelist(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitNamelist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitNamelist(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitNamelist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func namelist() throws -> NamelistContext {
+	 open func namelist() throws -> NamelistContext {
 		var _localctx: NamelistContext = NamelistContext(_ctx, getState())
 		try enterRule(_localctx, 14, LuaParser.RULE_namelist)
 		defer {
@@ -923,40 +981,47 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class ExplistContext:ParserRuleContext {
-		open func exp() -> Array<ExpContext> {
-			return getRuleContexts(ExpContext.self)
+
+	public class ExplistContext: ParserRuleContext {
+			open
+			func exp() -> [ExpContext] {
+				return getRuleContexts(ExpContext.self)
+			}
+			open
+			func exp(_ i: Int) -> ExpContext? {
+				return getRuleContext(ExpContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_explist
 		}
-		open func exp(_ i: Int) -> ExpContext? {
-			return getRuleContext(ExpContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_explist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterExplist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterExplist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitExplist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitExplist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitExplist(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitExplist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitExplist(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitExplist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func explist() throws -> ExplistContext {
+	 open func explist() throws -> ExplistContext {
 		var _localctx: ExplistContext = ExplistContext(_ctx, getState())
 		try enterRule(_localctx, 16, LuaParser.RULE_explist)
 		var _la: Int = 0
@@ -996,82 +1061,102 @@ open class LuaParser: Parser {
 		return _localctx
 	}
 
-	open class ExpContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+	public class ExpContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func functiondef() -> FunctiondefContext? {
+				return getRuleContext(FunctiondefContext.self, 0)
+			}
+			open
+			func prefixexp() -> PrefixexpContext? {
+				return getRuleContext(PrefixexpContext.self, 0)
+			}
+			open
+			func tableconstructor() -> TableconstructorContext? {
+				return getRuleContext(TableconstructorContext.self, 0)
+			}
+			open
+			func operatorUnary() -> OperatorUnaryContext? {
+				return getRuleContext(OperatorUnaryContext.self, 0)
+			}
+			open
+			func exp() -> [ExpContext] {
+				return getRuleContexts(ExpContext.self)
+			}
+			open
+			func exp(_ i: Int) -> ExpContext? {
+				return getRuleContext(ExpContext.self, i)
+			}
+			open
+			func operatorPower() -> OperatorPowerContext? {
+				return getRuleContext(OperatorPowerContext.self, 0)
+			}
+			open
+			func operatorMulDivMod() -> OperatorMulDivModContext? {
+				return getRuleContext(OperatorMulDivModContext.self, 0)
+			}
+			open
+			func operatorAddSub() -> OperatorAddSubContext? {
+				return getRuleContext(OperatorAddSubContext.self, 0)
+			}
+			open
+			func operatorStrcat() -> OperatorStrcatContext? {
+				return getRuleContext(OperatorStrcatContext.self, 0)
+			}
+			open
+			func operatorComparison() -> OperatorComparisonContext? {
+				return getRuleContext(OperatorComparisonContext.self, 0)
+			}
+			open
+			func operatorAnd() -> OperatorAndContext? {
+				return getRuleContext(OperatorAndContext.self, 0)
+			}
+			open
+			func operatorOr() -> OperatorOrContext? {
+				return getRuleContext(OperatorOrContext.self, 0)
+			}
+			open
+			func operatorBitwise() -> OperatorBitwiseContext? {
+				return getRuleContext(OperatorBitwiseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_exp
 		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func functiondef() -> FunctiondefContext? {
-			return getRuleContext(FunctiondefContext.self,0)
-		}
-		open func prefixexp() -> PrefixexpContext? {
-			return getRuleContext(PrefixexpContext.self,0)
-		}
-		open func tableconstructor() -> TableconstructorContext? {
-			return getRuleContext(TableconstructorContext.self,0)
-		}
-		open func operatorUnary() -> OperatorUnaryContext? {
-			return getRuleContext(OperatorUnaryContext.self,0)
-		}
-		open func exp() -> Array<ExpContext> {
-			return getRuleContexts(ExpContext.self)
-		}
-		open func exp(_ i: Int) -> ExpContext? {
-			return getRuleContext(ExpContext.self,i)
-		}
-		open func operatorPower() -> OperatorPowerContext? {
-			return getRuleContext(OperatorPowerContext.self,0)
-		}
-		open func operatorMulDivMod() -> OperatorMulDivModContext? {
-			return getRuleContext(OperatorMulDivModContext.self,0)
-		}
-		open func operatorAddSub() -> OperatorAddSubContext? {
-			return getRuleContext(OperatorAddSubContext.self,0)
-		}
-		open func operatorStrcat() -> OperatorStrcatContext? {
-			return getRuleContext(OperatorStrcatContext.self,0)
-		}
-		open func operatorComparison() -> OperatorComparisonContext? {
-			return getRuleContext(OperatorComparisonContext.self,0)
-		}
-		open func operatorAnd() -> OperatorAndContext? {
-			return getRuleContext(OperatorAndContext.self,0)
-		}
-		open func operatorOr() -> OperatorOrContext? {
-			return getRuleContext(OperatorOrContext.self,0)
-		}
-		open func operatorBitwise() -> OperatorBitwiseContext? {
-			return getRuleContext(OperatorBitwiseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_exp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitExp(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitExp(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func exp( ) throws -> ExpContext   {
+	 public final  func exp( ) throws -> ExpContext   {
 		return try exp(0)
 	}
 	@discardableResult
@@ -1158,7 +1243,7 @@ open class LuaParser: Parser {
 
 				break
 			default:
-				throw try ANTLRException.recognition(e: NoViableAltException(self))
+				throw ANTLRException.recognition(e: NoViableAltException(self))
 			}
 			_ctx!.stop = try _input.LT(-1)
 			setState(261)
@@ -1178,7 +1263,7 @@ open class LuaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, LuaParser.RULE_exp)
 						setState(227)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(228)
 						try operatorPower()
@@ -1191,7 +1276,7 @@ open class LuaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, LuaParser.RULE_exp)
 						setState(231)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(232)
 						try operatorMulDivMod()
@@ -1204,7 +1289,7 @@ open class LuaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, LuaParser.RULE_exp)
 						setState(235)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(236)
 						try operatorAddSub()
@@ -1217,7 +1302,7 @@ open class LuaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, LuaParser.RULE_exp)
 						setState(239)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(240)
 						try operatorStrcat()
@@ -1230,7 +1315,7 @@ open class LuaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, LuaParser.RULE_exp)
 						setState(243)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(244)
 						try operatorComparison()
@@ -1243,7 +1328,7 @@ open class LuaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, LuaParser.RULE_exp)
 						setState(247)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(248)
 						try operatorAnd()
@@ -1256,7 +1341,7 @@ open class LuaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, LuaParser.RULE_exp)
 						setState(251)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(252)
 						try operatorOr()
@@ -1269,7 +1354,7 @@ open class LuaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, LuaParser.RULE_exp)
 						setState(255)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(256)
 						try operatorBitwise()
@@ -1295,43 +1380,51 @@ open class LuaParser: Parser {
 
 		return _localctx;
 	}
-	open class PrefixexpContext:ParserRuleContext {
-		open func varOrExp() -> VarOrExpContext? {
-			return getRuleContext(VarOrExpContext.self,0)
+
+	public class PrefixexpContext: ParserRuleContext {
+			open
+			func varOrExp() -> VarOrExpContext? {
+				return getRuleContext(VarOrExpContext.self, 0)
+			}
+			open
+			func nameAndArgs() -> [NameAndArgsContext] {
+				return getRuleContexts(NameAndArgsContext.self)
+			}
+			open
+			func nameAndArgs(_ i: Int) -> NameAndArgsContext? {
+				return getRuleContext(NameAndArgsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_prefixexp
 		}
-		open func nameAndArgs() -> Array<NameAndArgsContext> {
-			return getRuleContexts(NameAndArgsContext.self)
-		}
-		open func nameAndArgs(_ i: Int) -> NameAndArgsContext? {
-			return getRuleContext(NameAndArgsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_prefixexp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterPrefixexp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterPrefixexp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitPrefixexp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitPrefixexp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitPrefixexp(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitPrefixexp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitPrefixexp(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitPrefixexp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefixexp() throws -> PrefixexpContext {
+	 open func prefixexp() throws -> PrefixexpContext {
 		var _localctx: PrefixexpContext = PrefixexpContext(_ctx, getState())
 		try enterRule(_localctx, 20, LuaParser.RULE_prefixexp)
 		defer {
@@ -1366,43 +1459,51 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class FunctioncallContext:ParserRuleContext {
-		open func varOrExp() -> VarOrExpContext? {
-			return getRuleContext(VarOrExpContext.self,0)
+
+	public class FunctioncallContext: ParserRuleContext {
+			open
+			func varOrExp() -> VarOrExpContext? {
+				return getRuleContext(VarOrExpContext.self, 0)
+			}
+			open
+			func nameAndArgs() -> [NameAndArgsContext] {
+				return getRuleContexts(NameAndArgsContext.self)
+			}
+			open
+			func nameAndArgs(_ i: Int) -> NameAndArgsContext? {
+				return getRuleContext(NameAndArgsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_functioncall
 		}
-		open func nameAndArgs() -> Array<NameAndArgsContext> {
-			return getRuleContexts(NameAndArgsContext.self)
-		}
-		open func nameAndArgs(_ i: Int) -> NameAndArgsContext? {
-			return getRuleContext(NameAndArgsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_functioncall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterFunctioncall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterFunctioncall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitFunctioncall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitFunctioncall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitFunctioncall(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitFunctioncall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitFunctioncall(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitFunctioncall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functioncall() throws -> FunctioncallContext {
+	 open func functioncall() throws -> FunctioncallContext {
 		var _localctx: FunctioncallContext = FunctioncallContext(_ctx, getState())
 		try enterRule(_localctx, 22, LuaParser.RULE_functioncall)
 		defer {
@@ -1425,7 +1526,7 @@ open class LuaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(275); 
 		 		try _errHandler.sync(self)
@@ -1441,40 +1542,47 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class VarOrExpContext:ParserRuleContext {
-		open func var() -> VarContext? {
-			return getRuleContext(VarContext.self,0)
+
+	public class VarOrExpContext: ParserRuleContext {
+			open
+			func var() -> VarContext? {
+				return getRuleContext(VarContext.self, 0)
+			}
+			open
+			func exp() -> ExpContext? {
+				return getRuleContext(ExpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_varOrExp
 		}
-		open func exp() -> ExpContext? {
-			return getRuleContext(ExpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_varOrExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterVarOrExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterVarOrExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitVarOrExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitVarOrExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitVarOrExp(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitVarOrExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitVarOrExp(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitVarOrExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varOrExp() throws -> VarOrExpContext {
+	 open func varOrExp() throws -> VarOrExpContext {
 		var _localctx: VarOrExpContext = VarOrExpContext(_ctx, getState())
 		try enterRule(_localctx, 24, LuaParser.RULE_varOrExp)
 		defer {
@@ -1511,44 +1619,55 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class VarContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(LuaParser.Tokens.NAME.rawValue, 0) }
-		open func exp() -> ExpContext? {
-			return getRuleContext(ExpContext.self,0)
+
+	public class VarContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func exp() -> ExpContext? {
+				return getRuleContext(ExpContext.self, 0)
+			}
+			open
+			func varSuffix() -> [VarSuffixContext] {
+				return getRuleContexts(VarSuffixContext.self)
+			}
+			open
+			func varSuffix(_ i: Int) -> VarSuffixContext? {
+				return getRuleContext(VarSuffixContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_var
 		}
-		open func varSuffix() -> Array<VarSuffixContext> {
-			return getRuleContexts(VarSuffixContext.self)
-		}
-		open func varSuffix(_ i: Int) -> VarSuffixContext? {
-			return getRuleContext(VarSuffixContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_var }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterVar(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterVar(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitVar(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitVar(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitVar(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitVar(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitVar(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitVar(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func var() throws -> VarContext {
+	 open func var() throws -> VarContext {
 		var _localctx: VarContext = VarContext(_ctx, getState())
 		try enterRule(_localctx, 26, LuaParser.RULE_var)
 		defer {
@@ -1578,7 +1697,7 @@ open class LuaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(295)
 		 	try _errHandler.sync(self)
@@ -1604,44 +1723,55 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class VarSuffixContext:ParserRuleContext {
-		open func exp() -> ExpContext? {
-			return getRuleContext(ExpContext.self,0)
+
+	public class VarSuffixContext: ParserRuleContext {
+			open
+			func exp() -> ExpContext? {
+				return getRuleContext(ExpContext.self, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func nameAndArgs() -> [NameAndArgsContext] {
+				return getRuleContexts(NameAndArgsContext.self)
+			}
+			open
+			func nameAndArgs(_ i: Int) -> NameAndArgsContext? {
+				return getRuleContext(NameAndArgsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_varSuffix
 		}
-		open func NAME() -> TerminalNode? { return getToken(LuaParser.Tokens.NAME.rawValue, 0) }
-		open func nameAndArgs() -> Array<NameAndArgsContext> {
-			return getRuleContexts(NameAndArgsContext.self)
-		}
-		open func nameAndArgs(_ i: Int) -> NameAndArgsContext? {
-			return getRuleContext(NameAndArgsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_varSuffix }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterVarSuffix(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterVarSuffix(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitVarSuffix(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitVarSuffix(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitVarSuffix(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitVarSuffix(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitVarSuffix(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitVarSuffix(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varSuffix() throws -> VarSuffixContext {
+	 open func varSuffix() throws -> VarSuffixContext {
 		var _localctx: VarSuffixContext = VarSuffixContext(_ctx, getState())
 		try enterRule(_localctx, 28, LuaParser.RULE_varSuffix)
 		var _la: Int = 0
@@ -1690,7 +1820,7 @@ open class LuaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1702,38 +1832,47 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class NameAndArgsContext:ParserRuleContext {
-		open func args() -> ArgsContext? {
-			return getRuleContext(ArgsContext.self,0)
+
+	public class NameAndArgsContext: ParserRuleContext {
+			open
+			func args() -> ArgsContext? {
+				return getRuleContext(ArgsContext.self, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_nameAndArgs
 		}
-		open func NAME() -> TerminalNode? { return getToken(LuaParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_nameAndArgs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterNameAndArgs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterNameAndArgs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitNameAndArgs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitNameAndArgs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitNameAndArgs(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitNameAndArgs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitNameAndArgs(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitNameAndArgs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nameAndArgs() throws -> NameAndArgsContext {
+	 open func nameAndArgs() throws -> NameAndArgsContext {
 		var _localctx: NameAndArgsContext = NameAndArgsContext(_ctx, getState())
 		try enterRule(_localctx, 30, LuaParser.RULE_nameAndArgs)
 		var _la: Int = 0
@@ -1769,43 +1908,51 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class ArgsContext:ParserRuleContext {
-		open func explist() -> ExplistContext? {
-			return getRuleContext(ExplistContext.self,0)
+
+	public class ArgsContext: ParserRuleContext {
+			open
+			func explist() -> ExplistContext? {
+				return getRuleContext(ExplistContext.self, 0)
+			}
+			open
+			func tableconstructor() -> TableconstructorContext? {
+				return getRuleContext(TableconstructorContext.self, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_args
 		}
-		open func tableconstructor() -> TableconstructorContext? {
-			return getRuleContext(TableconstructorContext.self,0)
-		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_args }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterArgs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterArgs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitArgs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitArgs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitArgs(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitArgs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitArgs(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitArgs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func args() throws -> ArgsContext {
+	 open func args() throws -> ArgsContext {
 		var _localctx: ArgsContext = ArgsContext(_ctx, getState())
 		try enterRule(_localctx, 32, LuaParser.RULE_args)
 		var _la: Int = 0
@@ -1856,7 +2003,7 @@ open class LuaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1867,37 +2014,43 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class FunctiondefContext:ParserRuleContext {
-		open func funcbody() -> FuncbodyContext? {
-			return getRuleContext(FuncbodyContext.self,0)
+
+	public class FunctiondefContext: ParserRuleContext {
+			open
+			func funcbody() -> FuncbodyContext? {
+				return getRuleContext(FuncbodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_functiondef
 		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_functiondef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterFunctiondef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterFunctiondef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitFunctiondef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitFunctiondef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitFunctiondef(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitFunctiondef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitFunctiondef(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitFunctiondef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functiondef() throws -> FunctiondefContext {
+	 open func functiondef() throws -> FunctiondefContext {
 		var _localctx: FunctiondefContext = FunctiondefContext(_ctx, getState())
 		try enterRule(_localctx, 34, LuaParser.RULE_functiondef)
 		defer {
@@ -1919,40 +2072,47 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class FuncbodyContext:ParserRuleContext {
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class FuncbodyContext: ParserRuleContext {
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func parlist() -> ParlistContext? {
+				return getRuleContext(ParlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_funcbody
 		}
-		open func parlist() -> ParlistContext? {
-			return getRuleContext(ParlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_funcbody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterFuncbody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterFuncbody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitFuncbody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitFuncbody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitFuncbody(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitFuncbody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitFuncbody(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitFuncbody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funcbody() throws -> FuncbodyContext {
+	 open func funcbody() throws -> FuncbodyContext {
 		var _localctx: FuncbodyContext = FuncbodyContext(_ctx, getState())
 		try enterRule(_localctx, 36, LuaParser.RULE_funcbody)
 		var _la: Int = 0
@@ -1992,37 +2152,43 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class ParlistContext:ParserRuleContext {
-		open func namelist() -> NamelistContext? {
-			return getRuleContext(NamelistContext.self,0)
+
+	public class ParlistContext: ParserRuleContext {
+			open
+			func namelist() -> NamelistContext? {
+				return getRuleContext(NamelistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_parlist
 		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_parlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterParlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterParlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitParlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitParlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitParlist(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitParlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitParlist(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitParlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parlist() throws -> ParlistContext {
+	 open func parlist() throws -> ParlistContext {
 		var _localctx: ParlistContext = ParlistContext(_ctx, getState())
 		try enterRule(_localctx, 38, LuaParser.RULE_parlist)
 		var _la: Int = 0
@@ -2062,7 +2228,7 @@ open class LuaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2073,37 +2239,43 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class TableconstructorContext:ParserRuleContext {
-		open func fieldlist() -> FieldlistContext? {
-			return getRuleContext(FieldlistContext.self,0)
+
+	public class TableconstructorContext: ParserRuleContext {
+			open
+			func fieldlist() -> FieldlistContext? {
+				return getRuleContext(FieldlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_tableconstructor
 		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_tableconstructor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterTableconstructor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterTableconstructor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitTableconstructor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitTableconstructor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitTableconstructor(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitTableconstructor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitTableconstructor(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitTableconstructor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tableconstructor() throws -> TableconstructorContext {
+	 open func tableconstructor() throws -> TableconstructorContext {
 		var _localctx: TableconstructorContext = TableconstructorContext(_ctx, getState())
 		try enterRule(_localctx, 40, LuaParser.RULE_tableconstructor)
 		var _la: Int = 0
@@ -2142,46 +2314,55 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class FieldlistContext:ParserRuleContext {
-		open func field() -> Array<FieldContext> {
-			return getRuleContexts(FieldContext.self)
+
+	public class FieldlistContext: ParserRuleContext {
+			open
+			func field() -> [FieldContext] {
+				return getRuleContexts(FieldContext.self)
+			}
+			open
+			func field(_ i: Int) -> FieldContext? {
+				return getRuleContext(FieldContext.self, i)
+			}
+			open
+			func fieldsep() -> [FieldsepContext] {
+				return getRuleContexts(FieldsepContext.self)
+			}
+			open
+			func fieldsep(_ i: Int) -> FieldsepContext? {
+				return getRuleContext(FieldsepContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_fieldlist
 		}
-		open func field(_ i: Int) -> FieldContext? {
-			return getRuleContext(FieldContext.self,i)
-		}
-		open func fieldsep() -> Array<FieldsepContext> {
-			return getRuleContexts(FieldsepContext.self)
-		}
-		open func fieldsep(_ i: Int) -> FieldsepContext? {
-			return getRuleContext(FieldsepContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_fieldlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterFieldlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterFieldlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitFieldlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitFieldlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitFieldlist(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitFieldlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitFieldlist(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitFieldlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldlist() throws -> FieldlistContext {
+	 open func fieldlist() throws -> FieldlistContext {
 		var _localctx: FieldlistContext = FieldlistContext(_ctx, getState())
 		try enterRule(_localctx, 42, LuaParser.RULE_fieldlist)
 		var _la: Int = 0
@@ -2232,41 +2413,51 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class FieldContext:ParserRuleContext {
-		open func exp() -> Array<ExpContext> {
-			return getRuleContexts(ExpContext.self)
+
+	public class FieldContext: ParserRuleContext {
+			open
+			func exp() -> [ExpContext] {
+				return getRuleContexts(ExpContext.self)
+			}
+			open
+			func exp(_ i: Int) -> ExpContext? {
+				return getRuleContext(ExpContext.self, i)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_field
 		}
-		open func exp(_ i: Int) -> ExpContext? {
-			return getRuleContext(ExpContext.self,i)
-		}
-		open func NAME() -> TerminalNode? { return getToken(LuaParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_field }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterField(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterField(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitField(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitField(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitField(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitField(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitField(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitField(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func field() throws -> FieldContext {
+	 open func field() throws -> FieldContext {
 		var _localctx: FieldContext = FieldContext(_ctx, getState())
 		try enterRule(_localctx, 44, LuaParser.RULE_field)
 		defer {
@@ -2317,34 +2508,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class FieldsepContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_fieldsep }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterFieldsep(self)
+
+	public class FieldsepContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_fieldsep
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterFieldsep(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitFieldsep(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitFieldsep(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitFieldsep(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitFieldsep(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitFieldsep(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitFieldsep(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldsep() throws -> FieldsepContext {
+	 open func fieldsep() throws -> FieldsepContext {
 		var _localctx: FieldsepContext = FieldsepContext(_ctx, getState())
 		try enterRule(_localctx, 46, LuaParser.RULE_fieldsep)
 		var _la: Int = 0
@@ -2376,34 +2572,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorOrContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_operatorOr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterOperatorOr(self)
+
+	public class OperatorOrContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_operatorOr
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterOperatorOr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitOperatorOr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitOperatorOr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitOperatorOr(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitOperatorOr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitOperatorOr(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitOperatorOr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorOr() throws -> OperatorOrContext {
+	 open func operatorOr() throws -> OperatorOrContext {
 		var _localctx: OperatorOrContext = OperatorOrContext(_ctx, getState())
 		try enterRule(_localctx, 48, LuaParser.RULE_operatorOr)
 		defer {
@@ -2423,34 +2624,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorAndContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_operatorAnd }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterOperatorAnd(self)
+
+	public class OperatorAndContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_operatorAnd
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterOperatorAnd(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitOperatorAnd(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitOperatorAnd(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitOperatorAnd(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitOperatorAnd(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitOperatorAnd(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitOperatorAnd(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorAnd() throws -> OperatorAndContext {
+	 open func operatorAnd() throws -> OperatorAndContext {
 		var _localctx: OperatorAndContext = OperatorAndContext(_ctx, getState())
 		try enterRule(_localctx, 50, LuaParser.RULE_operatorAnd)
 		defer {
@@ -2470,34 +2676,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorComparisonContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_operatorComparison }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterOperatorComparison(self)
+
+	public class OperatorComparisonContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_operatorComparison
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterOperatorComparison(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitOperatorComparison(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitOperatorComparison(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitOperatorComparison(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitOperatorComparison(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitOperatorComparison(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitOperatorComparison(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorComparison() throws -> OperatorComparisonContext {
+	 open func operatorComparison() throws -> OperatorComparisonContext {
 		var _localctx: OperatorComparisonContext = OperatorComparisonContext(_ctx, getState())
 		try enterRule(_localctx, 52, LuaParser.RULE_operatorComparison)
 		var _la: Int = 0
@@ -2532,34 +2743,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorStrcatContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_operatorStrcat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterOperatorStrcat(self)
+
+	public class OperatorStrcatContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_operatorStrcat
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterOperatorStrcat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitOperatorStrcat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitOperatorStrcat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitOperatorStrcat(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitOperatorStrcat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitOperatorStrcat(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitOperatorStrcat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorStrcat() throws -> OperatorStrcatContext {
+	 open func operatorStrcat() throws -> OperatorStrcatContext {
 		var _localctx: OperatorStrcatContext = OperatorStrcatContext(_ctx, getState())
 		try enterRule(_localctx, 54, LuaParser.RULE_operatorStrcat)
 		defer {
@@ -2579,34 +2795,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorAddSubContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_operatorAddSub }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterOperatorAddSub(self)
+
+	public class OperatorAddSubContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_operatorAddSub
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterOperatorAddSub(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitOperatorAddSub(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitOperatorAddSub(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitOperatorAddSub(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitOperatorAddSub(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitOperatorAddSub(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitOperatorAddSub(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorAddSub() throws -> OperatorAddSubContext {
+	 open func operatorAddSub() throws -> OperatorAddSubContext {
 		var _localctx: OperatorAddSubContext = OperatorAddSubContext(_ctx, getState())
 		try enterRule(_localctx, 56, LuaParser.RULE_operatorAddSub)
 		var _la: Int = 0
@@ -2638,34 +2859,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorMulDivModContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_operatorMulDivMod }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterOperatorMulDivMod(self)
+
+	public class OperatorMulDivModContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_operatorMulDivMod
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterOperatorMulDivMod(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitOperatorMulDivMod(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitOperatorMulDivMod(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitOperatorMulDivMod(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitOperatorMulDivMod(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitOperatorMulDivMod(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitOperatorMulDivMod(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorMulDivMod() throws -> OperatorMulDivModContext {
+	 open func operatorMulDivMod() throws -> OperatorMulDivModContext {
 		var _localctx: OperatorMulDivModContext = OperatorMulDivModContext(_ctx, getState())
 		try enterRule(_localctx, 58, LuaParser.RULE_operatorMulDivMod)
 		var _la: Int = 0
@@ -2700,34 +2926,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorBitwiseContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_operatorBitwise }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterOperatorBitwise(self)
+
+	public class OperatorBitwiseContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_operatorBitwise
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterOperatorBitwise(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitOperatorBitwise(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitOperatorBitwise(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitOperatorBitwise(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitOperatorBitwise(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitOperatorBitwise(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitOperatorBitwise(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorBitwise() throws -> OperatorBitwiseContext {
+	 open func operatorBitwise() throws -> OperatorBitwiseContext {
 		var _localctx: OperatorBitwiseContext = OperatorBitwiseContext(_ctx, getState())
 		try enterRule(_localctx, 60, LuaParser.RULE_operatorBitwise)
 		var _la: Int = 0
@@ -2762,34 +2993,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorUnaryContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_operatorUnary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterOperatorUnary(self)
+
+	public class OperatorUnaryContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_operatorUnary
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterOperatorUnary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitOperatorUnary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitOperatorUnary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitOperatorUnary(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitOperatorUnary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitOperatorUnary(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitOperatorUnary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorUnary() throws -> OperatorUnaryContext {
+	 open func operatorUnary() throws -> OperatorUnaryContext {
 		var _localctx: OperatorUnaryContext = OperatorUnaryContext(_ctx, getState())
 		try enterRule(_localctx, 62, LuaParser.RULE_operatorUnary)
 		var _la: Int = 0
@@ -2824,34 +3060,39 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorPowerContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_operatorPower }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterOperatorPower(self)
+
+	public class OperatorPowerContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_operatorPower
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterOperatorPower(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitOperatorPower(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitOperatorPower(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitOperatorPower(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitOperatorPower(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitOperatorPower(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitOperatorPower(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorPower() throws -> OperatorPowerContext {
+	 open func operatorPower() throws -> OperatorPowerContext {
 		var _localctx: OperatorPowerContext = OperatorPowerContext(_ctx, getState())
 		try enterRule(_localctx, 64, LuaParser.RULE_operatorPower)
 		defer {
@@ -2871,38 +3112,55 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class NumberContext:ParserRuleContext {
-		open func INT() -> TerminalNode? { return getToken(LuaParser.Tokens.INT.rawValue, 0) }
-		open func HEX() -> TerminalNode? { return getToken(LuaParser.Tokens.HEX.rawValue, 0) }
-		open func FLOAT() -> TerminalNode? { return getToken(LuaParser.Tokens.FLOAT.rawValue, 0) }
-		open func HEX_FLOAT() -> TerminalNode? { return getToken(LuaParser.Tokens.HEX_FLOAT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterNumber(self)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func INT() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.INT.rawValue, 0)
+			}
+			open
+			func HEX() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.HEX.rawValue, 0)
+			}
+			open
+			func FLOAT() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.FLOAT.rawValue, 0)
+			}
+			open
+			func HEX_FLOAT() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.HEX_FLOAT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_number
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitNumber(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 66, LuaParser.RULE_number)
 		var _la: Int = 0
@@ -2937,37 +3195,51 @@ open class LuaParser: Parser {
 
 		return _localctx
 	}
-	open class StringContext:ParserRuleContext {
-		open func NORMALSTRING() -> TerminalNode? { return getToken(LuaParser.Tokens.NORMALSTRING.rawValue, 0) }
-		open func CHARSTRING() -> TerminalNode? { return getToken(LuaParser.Tokens.CHARSTRING.rawValue, 0) }
-		open func LONGSTRING() -> TerminalNode? { return getToken(LuaParser.Tokens.LONGSTRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return LuaParser.RULE_string }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).enterString(self)
+
+	public class StringContext: ParserRuleContext {
+			open
+			func NORMALSTRING() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.NORMALSTRING.rawValue, 0)
+			}
+			open
+			func CHARSTRING() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.CHARSTRING.rawValue, 0)
+			}
+			open
+			func LONGSTRING() -> TerminalNode? {
+				return getToken(LuaParser.Tokens.LONGSTRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return LuaParser.RULE_string
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.enterString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is LuaListener {
-			 	(listener as! LuaListener).exitString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? LuaListener {
+				listener.exitString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is LuaVisitor {
-			     return (visitor as! LuaVisitor<T>).visitString(self)
-			}else if visitor is LuaBaseVisitor {
-		    	 return (visitor as! LuaBaseVisitor<T>).visitString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? LuaVisitor {
+			    return visitor.visitString(self)
+			}
+			else if let visitor = visitor as? LuaBaseVisitor {
+			    return visitor.visitString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string() throws -> StringContext {
+	 open func string() throws -> StringContext {
 		var _localctx: StringContext = StringContext(_ctx, getState())
 		try enterRule(_localctx, 68, LuaParser.RULE_string)
 		var _la: Int = 0
@@ -3003,8 +3275,8 @@ open class LuaParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  9:
 			return try exp_sempred(_localctx?.castdown(ExpContext.self), predIndex)
@@ -3025,6 +3297,10 @@ open class LuaParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = LuaParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = LuaParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

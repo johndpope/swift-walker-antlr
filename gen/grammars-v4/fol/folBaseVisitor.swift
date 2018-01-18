@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/fol/fol.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/fol/fol.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -30,41 +30,6 @@ open class folBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitDisjunction(_ ctx: folParser.DisjunctionContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitConjunction(_ ctx: folParser.ConjunctionContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitNegation(_ ctx: folParser.NegationContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitPredicate(_ ctx: folParser.PredicateContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitPredicateTuple(_ ctx: folParser.PredicateTupleContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
 	open func visitTerm(_ ctx: folParser.TermContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
@@ -72,12 +37,40 @@ open class folBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitFunction(_ ctx: folParser.FunctionContext) -> T? { return visitChildren(ctx) }
+	open func visitBin_connective(_ ctx: folParser.Bin_connectiveContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitFunctionTuple(_ ctx: folParser.FunctionTupleContext) -> T? { return visitChildren(ctx) }
+	open func visitVariable(_ ctx: folParser.VariableContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitPred_constant(_ ctx: folParser.Pred_constantContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitInd_constant(_ ctx: folParser.Ind_constantContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitFunc_constant(_ ctx: folParser.Func_constantContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitSeparator(_ ctx: folParser.SeparatorContext) -> T? { return visitChildren(ctx) }
 }

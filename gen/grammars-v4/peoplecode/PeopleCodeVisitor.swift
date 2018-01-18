@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/peoplecode/PeopleCode.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/peoplecode/PeopleCode.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: PeopleCodeParser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: PeopleCodeParser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtList(_ ctx: PeopleCodeParser.StmtListContext) -> T{
+	open func visitStmtList(_ ctx: PeopleCodeParser.StmtListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -36,7 +36,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtAppClassImport(_ ctx: PeopleCodeParser.StmtAppClassImportContext) -> T{
+	open func visitStmtAppClassImport(_ ctx: PeopleCodeParser.StmtAppClassImportContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -47,7 +47,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtExternalFuncImport(_ ctx: PeopleCodeParser.StmtExternalFuncImportContext) -> T{
+	open func visitStmtExternalFuncImport(_ ctx: PeopleCodeParser.StmtExternalFuncImportContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -58,7 +58,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtClassDeclaration(_ ctx: PeopleCodeParser.StmtClassDeclarationContext) -> T{
+	open func visitStmtClassDeclaration(_ ctx: PeopleCodeParser.StmtClassDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -69,7 +69,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtMethodImpl(_ ctx: PeopleCodeParser.StmtMethodImplContext) -> T{
+	open func visitStmtMethodImpl(_ ctx: PeopleCodeParser.StmtMethodImplContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -80,7 +80,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtGetImpl(_ ctx: PeopleCodeParser.StmtGetImplContext) -> T{
+	open func visitStmtGetImpl(_ ctx: PeopleCodeParser.StmtGetImplContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -91,7 +91,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtSetImpl(_ ctx: PeopleCodeParser.StmtSetImplContext) -> T{
+	open func visitStmtSetImpl(_ ctx: PeopleCodeParser.StmtSetImplContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -102,7 +102,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtFuncImpl(_ ctx: PeopleCodeParser.StmtFuncImplContext) -> T{
+	open func visitStmtFuncImpl(_ ctx: PeopleCodeParser.StmtFuncImplContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -113,7 +113,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtVarDeclaration(_ ctx: PeopleCodeParser.StmtVarDeclarationContext) -> T{
+	open func visitStmtVarDeclaration(_ ctx: PeopleCodeParser.StmtVarDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -124,7 +124,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtIf(_ ctx: PeopleCodeParser.StmtIfContext) -> T{
+	open func visitStmtIf(_ ctx: PeopleCodeParser.StmtIfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtFor(_ ctx: PeopleCodeParser.StmtForContext) -> T{
+	open func visitStmtFor(_ ctx: PeopleCodeParser.StmtForContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -146,7 +146,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtWhile(_ ctx: PeopleCodeParser.StmtWhileContext) -> T{
+	open func visitStmtWhile(_ ctx: PeopleCodeParser.StmtWhileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -157,7 +157,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtEvaluate(_ ctx: PeopleCodeParser.StmtEvaluateContext) -> T{
+	open func visitStmtEvaluate(_ ctx: PeopleCodeParser.StmtEvaluateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -168,7 +168,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtTryCatch(_ ctx: PeopleCodeParser.StmtTryCatchContext) -> T{
+	open func visitStmtTryCatch(_ ctx: PeopleCodeParser.StmtTryCatchContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -179,7 +179,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtExit(_ ctx: PeopleCodeParser.StmtExitContext) -> T{
+	open func visitStmtExit(_ ctx: PeopleCodeParser.StmtExitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -190,7 +190,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtBreak(_ ctx: PeopleCodeParser.StmtBreakContext) -> T{
+	open func visitStmtBreak(_ ctx: PeopleCodeParser.StmtBreakContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -201,7 +201,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtError(_ ctx: PeopleCodeParser.StmtErrorContext) -> T{
+	open func visitStmtError(_ ctx: PeopleCodeParser.StmtErrorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -212,7 +212,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtWarning(_ ctx: PeopleCodeParser.StmtWarningContext) -> T{
+	open func visitStmtWarning(_ ctx: PeopleCodeParser.StmtWarningContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -223,7 +223,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtReturn(_ ctx: PeopleCodeParser.StmtReturnContext) -> T{
+	open func visitStmtReturn(_ ctx: PeopleCodeParser.StmtReturnContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -234,7 +234,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtThrow(_ ctx: PeopleCodeParser.StmtThrowContext) -> T{
+	open func visitStmtThrow(_ ctx: PeopleCodeParser.StmtThrowContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtAssign(_ ctx: PeopleCodeParser.StmtAssignContext) -> T{
+	open func visitStmtAssign(_ ctx: PeopleCodeParser.StmtAssignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -256,7 +256,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmtExpr(_ ctx: PeopleCodeParser.StmtExprContext) -> T{
+	open func visitStmtExpr(_ ctx: PeopleCodeParser.StmtExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -267,7 +267,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprComparison(_ ctx: PeopleCodeParser.ExprComparisonContext) -> T{
+	open func visitExprComparison(_ ctx: PeopleCodeParser.ExprComparisonContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -278,7 +278,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprConcat(_ ctx: PeopleCodeParser.ExprConcatContext) -> T{
+	open func visitExprConcat(_ ctx: PeopleCodeParser.ExprConcatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -289,7 +289,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprCreate(_ ctx: PeopleCodeParser.ExprCreateContext) -> T{
+	open func visitExprCreate(_ ctx: PeopleCodeParser.ExprCreateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -300,7 +300,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprBoolean(_ ctx: PeopleCodeParser.ExprBooleanContext) -> T{
+	open func visitExprBoolean(_ ctx: PeopleCodeParser.ExprBooleanContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -311,7 +311,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprNot(_ ctx: PeopleCodeParser.ExprNotContext) -> T{
+	open func visitExprNot(_ ctx: PeopleCodeParser.ExprNotContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -322,7 +322,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprAddSub(_ ctx: PeopleCodeParser.ExprAddSubContext) -> T{
+	open func visitExprAddSub(_ ctx: PeopleCodeParser.ExprAddSubContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -333,7 +333,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprDotAccess(_ ctx: PeopleCodeParser.ExprDotAccessContext) -> T{
+	open func visitExprDotAccess(_ ctx: PeopleCodeParser.ExprDotAccessContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -344,7 +344,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprFnOrIdxCall(_ ctx: PeopleCodeParser.ExprFnOrIdxCallContext) -> T{
+	open func visitExprFnOrIdxCall(_ ctx: PeopleCodeParser.ExprFnOrIdxCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprParenthesized(_ ctx: PeopleCodeParser.ExprParenthesizedContext) -> T{
+	open func visitExprParenthesized(_ ctx: PeopleCodeParser.ExprParenthesizedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -366,7 +366,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprMulDiv(_ ctx: PeopleCodeParser.ExprMulDivContext) -> T{
+	open func visitExprMulDiv(_ ctx: PeopleCodeParser.ExprMulDivContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -377,7 +377,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprNegate(_ ctx: PeopleCodeParser.ExprNegateContext) -> T{
+	open func visitExprNegate(_ ctx: PeopleCodeParser.ExprNegateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -388,7 +388,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprArrayIndex(_ ctx: PeopleCodeParser.ExprArrayIndexContext) -> T{
+	open func visitExprArrayIndex(_ ctx: PeopleCodeParser.ExprArrayIndexContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -399,7 +399,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprLiteral(_ ctx: PeopleCodeParser.ExprLiteralContext) -> T{
+	open func visitExprLiteral(_ ctx: PeopleCodeParser.ExprLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -410,7 +410,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprEquality(_ ctx: PeopleCodeParser.ExprEqualityContext) -> T{
+	open func visitExprEquality(_ ctx: PeopleCodeParser.ExprEqualityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -421,7 +421,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprDynamicReference(_ ctx: PeopleCodeParser.ExprDynamicReferenceContext) -> T{
+	open func visitExprDynamicReference(_ ctx: PeopleCodeParser.ExprDynamicReferenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -432,7 +432,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprId(_ ctx: PeopleCodeParser.ExprIdContext) -> T{
+	open func visitExprId(_ ctx: PeopleCodeParser.ExprIdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -442,7 +442,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprList(_ ctx: PeopleCodeParser.ExprListContext) -> T{
+	open func visitExprList(_ ctx: PeopleCodeParser.ExprListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -452,7 +452,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarDeclaration(_ ctx: PeopleCodeParser.VarDeclarationContext) -> T{
+	open func visitVarDeclaration(_ ctx: PeopleCodeParser.VarDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -462,7 +462,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarDeclarator(_ ctx: PeopleCodeParser.VarDeclaratorContext) -> T{
+	open func visitVarDeclarator(_ ctx: PeopleCodeParser.VarDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -472,7 +472,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarType(_ ctx: PeopleCodeParser.VarTypeContext) -> T{
+	open func visitVarType(_ ctx: PeopleCodeParser.VarTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -482,7 +482,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAppClassImport(_ ctx: PeopleCodeParser.AppClassImportContext) -> T{
+	open func visitAppClassImport(_ ctx: PeopleCodeParser.AppClassImportContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -492,7 +492,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAppPkgPath(_ ctx: PeopleCodeParser.AppPkgPathContext) -> T{
+	open func visitAppPkgPath(_ ctx: PeopleCodeParser.AppPkgPathContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -502,7 +502,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAppClassPath(_ ctx: PeopleCodeParser.AppClassPathContext) -> T{
+	open func visitAppClassPath(_ ctx: PeopleCodeParser.AppClassPathContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -512,7 +512,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtFuncImport(_ ctx: PeopleCodeParser.ExtFuncImportContext) -> T{
+	open func visitExtFuncImport(_ ctx: PeopleCodeParser.ExtFuncImportContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -522,7 +522,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecDefnPath(_ ctx: PeopleCodeParser.RecDefnPathContext) -> T{
+	open func visitRecDefnPath(_ ctx: PeopleCodeParser.RecDefnPathContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -532,7 +532,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEvent(_ ctx: PeopleCodeParser.EventContext) -> T{
+	open func visitEvent(_ ctx: PeopleCodeParser.EventContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -542,7 +542,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassDeclaration(_ ctx: PeopleCodeParser.ClassDeclarationContext) -> T{
+	open func visitClassDeclaration(_ ctx: PeopleCodeParser.ClassDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -552,7 +552,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassBlock(_ ctx: PeopleCodeParser.ClassBlockContext) -> T{
+	open func visitClassBlock(_ ctx: PeopleCodeParser.ClassBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -562,7 +562,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassBlockStmt(_ ctx: PeopleCodeParser.ClassBlockStmtContext) -> T{
+	open func visitClassBlockStmt(_ ctx: PeopleCodeParser.ClassBlockStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -572,7 +572,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethod(_ ctx: PeopleCodeParser.MethodContext) -> T{
+	open func visitMethod(_ ctx: PeopleCodeParser.MethodContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -582,7 +582,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstant(_ ctx: PeopleCodeParser.ConstantContext) -> T{
+	open func visitConstant(_ ctx: PeopleCodeParser.ConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -592,7 +592,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProperty(_ ctx: PeopleCodeParser.PropertyContext) -> T{
+	open func visitProperty(_ ctx: PeopleCodeParser.PropertyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -602,7 +602,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInstance(_ ctx: PeopleCodeParser.InstanceContext) -> T{
+	open func visitInstance(_ ctx: PeopleCodeParser.InstanceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -612,7 +612,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodImpl(_ ctx: PeopleCodeParser.MethodImplContext) -> T{
+	open func visitMethodImpl(_ ctx: PeopleCodeParser.MethodImplContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -622,7 +622,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGetImpl(_ ctx: PeopleCodeParser.GetImplContext) -> T{
+	open func visitGetImpl(_ ctx: PeopleCodeParser.GetImplContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -632,7 +632,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetImpl(_ ctx: PeopleCodeParser.SetImplContext) -> T{
+	open func visitSetImpl(_ ctx: PeopleCodeParser.SetImplContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -642,7 +642,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFuncImpl(_ ctx: PeopleCodeParser.FuncImplContext) -> T{
+	open func visitFuncImpl(_ ctx: PeopleCodeParser.FuncImplContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -652,7 +652,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFuncSignature(_ ctx: PeopleCodeParser.FuncSignatureContext) -> T{
+	open func visitFuncSignature(_ ctx: PeopleCodeParser.FuncSignatureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -662,7 +662,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParamList(_ ctx: PeopleCodeParser.FormalParamListContext) -> T{
+	open func visitFormalParamList(_ ctx: PeopleCodeParser.FormalParamListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -672,7 +672,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParam(_ ctx: PeopleCodeParser.ParamContext) -> T{
+	open func visitParam(_ ctx: PeopleCodeParser.ParamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -682,7 +682,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturnType(_ ctx: PeopleCodeParser.ReturnTypeContext) -> T{
+	open func visitReturnType(_ ctx: PeopleCodeParser.ReturnTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -692,7 +692,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfStmt(_ ctx: PeopleCodeParser.IfStmtContext) -> T{
+	open func visitIfStmt(_ ctx: PeopleCodeParser.IfStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -702,7 +702,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForStmt(_ ctx: PeopleCodeParser.ForStmtContext) -> T{
+	open func visitForStmt(_ ctx: PeopleCodeParser.ForStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -712,7 +712,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhileStmt(_ ctx: PeopleCodeParser.WhileStmtContext) -> T{
+	open func visitWhileStmt(_ ctx: PeopleCodeParser.WhileStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -722,7 +722,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEvaluateStmt(_ ctx: PeopleCodeParser.EvaluateStmtContext) -> T{
+	open func visitEvaluateStmt(_ ctx: PeopleCodeParser.EvaluateStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -732,7 +732,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhenBranch(_ ctx: PeopleCodeParser.WhenBranchContext) -> T{
+	open func visitWhenBranch(_ ctx: PeopleCodeParser.WhenBranchContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -742,7 +742,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhenOtherBranch(_ ctx: PeopleCodeParser.WhenOtherBranchContext) -> T{
+	open func visitWhenOtherBranch(_ ctx: PeopleCodeParser.WhenOtherBranchContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -752,7 +752,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTryCatchStmt(_ ctx: PeopleCodeParser.TryCatchStmtContext) -> T{
+	open func visitTryCatchStmt(_ ctx: PeopleCodeParser.TryCatchStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -762,7 +762,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCatchSignature(_ ctx: PeopleCodeParser.CatchSignatureContext) -> T{
+	open func visitCatchSignature(_ ctx: PeopleCodeParser.CatchSignatureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -772,7 +772,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCreateInvocation(_ ctx: PeopleCodeParser.CreateInvocationContext) -> T{
+	open func visitCreateInvocation(_ ctx: PeopleCodeParser.CreateInvocationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -782,7 +782,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: PeopleCodeParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: PeopleCodeParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -792,7 +792,7 @@ open class PeopleCodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitId(_ ctx: PeopleCodeParser.IdContext) -> T{
+	open func visitId(_ ctx: PeopleCodeParser.IdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

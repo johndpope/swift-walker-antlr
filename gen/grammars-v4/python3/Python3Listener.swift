@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -78,6 +78,18 @@ public protocol Python3Listener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitDecorated(_ ctx: Python3Parser.DecoratedContext)
+	/**
+	 * Enter a parse tree produced by {@link Python3Parser#async_funcdef}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterAsync_funcdef(_ ctx: Python3Parser.Async_funcdefContext)
+	/**
+	 * Exit a parse tree produced by {@link Python3Parser#async_funcdef}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitAsync_funcdef(_ ctx: Python3Parser.Async_funcdefContext)
 	/**
 	 * Enter a parse tree produced by {@link Python3Parser#funcdef}.
 	 - Parameters:
@@ -198,6 +210,18 @@ public protocol Python3Listener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitExpr_stmt(_ ctx: Python3Parser.Expr_stmtContext)
+	/**
+	 * Enter a parse tree produced by {@link Python3Parser#annassign}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterAnnassign(_ ctx: Python3Parser.AnnassignContext)
+	/**
+	 * Exit a parse tree produced by {@link Python3Parser#annassign}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitAnnassign(_ ctx: Python3Parser.AnnassignContext)
 	/**
 	 * Enter a parse tree produced by {@link Python3Parser#testlist_star_expr}.
 	 - Parameters:
@@ -462,6 +486,18 @@ public protocol Python3Listener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitCompound_stmt(_ ctx: Python3Parser.Compound_stmtContext)
+	/**
+	 * Enter a parse tree produced by {@link Python3Parser#async_stmt}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterAsync_stmt(_ ctx: Python3Parser.Async_stmtContext)
+	/**
+	 * Exit a parse tree produced by {@link Python3Parser#async_stmt}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitAsync_stmt(_ ctx: Python3Parser.Async_stmtContext)
 	/**
 	 * Enter a parse tree produced by {@link Python3Parser#if_stmt}.
 	 - Parameters:
@@ -775,6 +811,18 @@ public protocol Python3Listener: ParseTreeListener {
 	 */
 	func exitPower(_ ctx: Python3Parser.PowerContext)
 	/**
+	 * Enter a parse tree produced by {@link Python3Parser#atom_expr}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterAtom_expr(_ ctx: Python3Parser.Atom_exprContext)
+	/**
+	 * Exit a parse tree produced by {@link Python3Parser#atom_expr}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitAtom_expr(_ ctx: Python3Parser.Atom_exprContext)
+	/**
 	 * Enter a parse tree produced by {@link Python3Parser#atom}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -955,6 +1003,18 @@ public protocol Python3Listener: ParseTreeListener {
 	 */
 	func exitComp_if(_ ctx: Python3Parser.Comp_ifContext)
 	/**
+	 * Enter a parse tree produced by {@link Python3Parser#encoding_decl}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterEncoding_decl(_ ctx: Python3Parser.Encoding_declContext)
+	/**
+	 * Exit a parse tree produced by {@link Python3Parser#encoding_decl}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitEncoding_decl(_ ctx: Python3Parser.Encoding_declContext)
+	/**
 	 * Enter a parse tree produced by {@link Python3Parser#yield_expr}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -978,40 +1038,4 @@ public protocol Python3Listener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitYield_arg(_ ctx: Python3Parser.Yield_argContext)
-	/**
-	 * Enter a parse tree produced by {@link Python3Parser#str}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterStr(_ ctx: Python3Parser.StrContext)
-	/**
-	 * Exit a parse tree produced by {@link Python3Parser#str}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitStr(_ ctx: Python3Parser.StrContext)
-	/**
-	 * Enter a parse tree produced by {@link Python3Parser#number}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterNumber(_ ctx: Python3Parser.NumberContext)
-	/**
-	 * Exit a parse tree produced by {@link Python3Parser#number}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitNumber(_ ctx: Python3Parser.NumberContext)
-	/**
-	 * Enter a parse tree produced by {@link Python3Parser#integer}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterInteger(_ ctx: Python3Parser.IntegerContext)
-	/**
-	 * Exit a parse tree produced by {@link Python3Parser#integer}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitInteger(_ ctx: Python3Parser.IntegerContext)
 }

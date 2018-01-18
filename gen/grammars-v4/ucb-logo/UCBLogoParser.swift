@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/ucb-logo/UCBLogo.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/ucb-logo/UCBLogo.g4 by ANTLR 4.7.1
 
   import java.util.Map;
   import java.util.HashMap;
@@ -15,8 +15,11 @@ open class UCBLogoParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, TO = 3, END = 4, MACRO = 5, WORD = 6, 
                  SKIP_ = 7, OPEN_ARRAY = 8, CLOSE_ARRAY = 9, OPEN_LIST = 10, 
                  CLOSE_LIST = 11, MINUS = 12, PLUS = 13, MULT = 14, DIV = 15, 
@@ -24,12 +27,16 @@ open class UCBLogoParser: Parser {
                  QUOTED_WORD = 22, NUMBER = 23, VARIABLE = 24, NAME = 25, 
                  ANY = 26
 	}
-	public static let RULE_parse = 0, RULE_instruction = 1, RULE_procedure_def = 2, 
-                   RULE_macro_def = 3, RULE_variables = 4, RULE_body_def = 5, 
-                   RULE_body_instruction = 6, RULE_procedure_call_extra_input = 7, 
-                   RULE_procedure_call = 8, RULE_expressions = 9, RULE_expression = 10, 
-                   RULE_array = 11, RULE_list = 12
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_parse = 0, RULE_instruction = 1, RULE_procedure_def = 2, 
+            RULE_macro_def = 3, RULE_variables = 4, RULE_body_def = 5, RULE_body_instruction = 6, 
+            RULE_procedure_call_extra_input = 7, RULE_procedure_call = 8, 
+            RULE_expressions = 9, RULE_expression = 10, RULE_array = 11, 
+            RULE_list = 12
+
+	public
+	static let ruleNames: [String] = [
 		"parse", "instruction", "procedure_def", "macro_def", "variables", "body_def", 
 		"body_instruction", "procedure_call_extra_input", "procedure_call", "expressions", 
 		"expression", "array", "list"
@@ -45,44 +52,20 @@ open class UCBLogoParser: Parser {
 		"EQ", "LT_EQ", "GT_EQ", "NOT_EQ", "QUOTED_WORD", "NUMBER", "VARIABLE", 
 		"NAME", "ANY"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "UCBLogo.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return UCBLogoParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "UCBLogo.g4" }
+	override open
+	func getSerializedATN() -> String { return UCBLogoParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return UCBLogoParser.ruleNames }
-
-	override
-	open func getSerializedATN() -> String { return UCBLogoParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return UCBLogoParser._ATN }
+	override open
+	func getATN() -> ATN { return UCBLogoParser._ATN }
 
 
 
@@ -585,50 +568,62 @@ open class UCBLogoParser: Parser {
 	    return token.getType() == NAME && procedures.containsKey(token.getText().toLowerCase());
 	  }
 
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return UCBLogoParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,UCBLogoParser._ATN,UCBLogoParser._decisionToDFA, UCBLogoParser._sharedContextCache)
 	}
-	open class ParseContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.EOF.rawValue, 0) }
-		open func instruction() -> Array<InstructionContext> {
-			return getRuleContexts(InstructionContext.self)
+
+	public class ParseContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func instruction() -> [InstructionContext] {
+				return getRuleContexts(InstructionContext.self)
+			}
+			open
+			func instruction(_ i: Int) -> InstructionContext? {
+				return getRuleContext(InstructionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_parse
 		}
-		open func instruction(_ i: Int) -> InstructionContext? {
-			return getRuleContext(InstructionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_parse }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterParse(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterParse(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitParse(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitParse(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitParse(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitParse(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitParse(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitParse(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parse() throws -> ParseContext {
+	 open func parse() throws -> ParseContext {
 		var _localctx: ParseContext = ParseContext(_ctx, getState())
 		try enterRule(_localctx, 0, UCBLogoParser.RULE_parse)
 		defer {
@@ -663,143 +658,164 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class InstructionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_instruction }
+
+	public class InstructionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_instruction
+		}
 	 
-		public  func copyFrom(_ ctx: InstructionContext) {
+		open
+		func copyFrom(_ ctx: InstructionContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class ProcedureCallInstructionContext: InstructionContext {
-		open func procedure_call() -> Procedure_callContext? {
-			return getRuleContext(Procedure_callContext.self,0)
-		}
-		public init(_ ctx: InstructionContext) {
+	public class ProcedureCallInstructionContext: InstructionContext {
+			open
+			func procedure_call() -> Procedure_callContext? {
+				return getRuleContext(Procedure_callContext.self, 0)
+			}
+
+		public
+		init(_ ctx: InstructionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterProcedureCallInstruction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterProcedureCallInstruction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitProcedureCallInstruction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitProcedureCallInstruction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitProcedureCallInstruction(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitProcedureCallInstruction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitProcedureCallInstruction(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitProcedureCallInstruction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class MacroDefInstructionContext: InstructionContext {
-		open func macro_def() -> Macro_defContext? {
-			return getRuleContext(Macro_defContext.self,0)
-		}
-		public init(_ ctx: InstructionContext) {
+	public class MacroDefInstructionContext: InstructionContext {
+			open
+			func macro_def() -> Macro_defContext? {
+				return getRuleContext(Macro_defContext.self, 0)
+			}
+
+		public
+		init(_ ctx: InstructionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterMacroDefInstruction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterMacroDefInstruction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitMacroDefInstruction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitMacroDefInstruction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitMacroDefInstruction(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitMacroDefInstruction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitMacroDefInstruction(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitMacroDefInstruction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ProcedureDefInstructionContext: InstructionContext {
-		open func procedure_def() -> Procedure_defContext? {
-			return getRuleContext(Procedure_defContext.self,0)
-		}
-		public init(_ ctx: InstructionContext) {
+	public class ProcedureDefInstructionContext: InstructionContext {
+			open
+			func procedure_def() -> Procedure_defContext? {
+				return getRuleContext(Procedure_defContext.self, 0)
+			}
+
+		public
+		init(_ ctx: InstructionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterProcedureDefInstruction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterProcedureDefInstruction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitProcedureDefInstruction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitProcedureDefInstruction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitProcedureDefInstruction(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitProcedureDefInstruction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitProcedureDefInstruction(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitProcedureDefInstruction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ProcedureCallExtraInputInstructionContext: InstructionContext {
-		open func procedure_call_extra_input() -> Procedure_call_extra_inputContext? {
-			return getRuleContext(Procedure_call_extra_inputContext.self,0)
-		}
-		public init(_ ctx: InstructionContext) {
+	public class ProcedureCallExtraInputInstructionContext: InstructionContext {
+			open
+			func procedure_call_extra_input() -> Procedure_call_extra_inputContext? {
+				return getRuleContext(Procedure_call_extra_inputContext.self, 0)
+			}
+
+		public
+		init(_ ctx: InstructionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterProcedureCallExtraInputInstruction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterProcedureCallExtraInputInstruction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitProcedureCallExtraInputInstruction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitProcedureCallExtraInputInstruction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitProcedureCallExtraInputInstruction(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitProcedureCallExtraInputInstruction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitProcedureCallExtraInputInstruction(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitProcedureCallExtraInputInstruction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func instruction() throws -> InstructionContext {
+	 open func instruction() throws -> InstructionContext {
 		var _localctx: InstructionContext = InstructionContext(_ctx, getState())
 		try enterRule(_localctx, 2, UCBLogoParser.RULE_instruction)
 		defer {
@@ -848,44 +864,57 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class Procedure_defContext:ParserRuleContext {
-		public var _NAME: Token!
-		public var _variables: VariablesContext!
-		open func TO() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.TO.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0) }
-		open func variables() -> VariablesContext? {
-			return getRuleContext(VariablesContext.self,0)
+
+	public class Procedure_defContext: ParserRuleContext {
+		open var _NAME: Token!
+		open var _variables: VariablesContext!
+			open
+			func TO() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func variables() -> VariablesContext? {
+				return getRuleContext(VariablesContext.self, 0)
+			}
+			open
+			func body_def() -> Body_defContext? {
+				return getRuleContext(Body_defContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_procedure_def
 		}
-		open func body_def() -> Body_defContext? {
-			return getRuleContext(Body_defContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_procedure_def }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterProcedure_def(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterProcedure_def(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitProcedure_def(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitProcedure_def(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitProcedure_def(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitProcedure_def(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitProcedure_def(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitProcedure_def(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedure_def() throws -> Procedure_defContext {
+	 open func procedure_def() throws -> Procedure_defContext {
 		var _localctx: Procedure_defContext = Procedure_defContext(_ctx, getState())
 		try enterRule(_localctx, 4, UCBLogoParser.RULE_procedure_def)
 		defer {
@@ -922,44 +951,57 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class Macro_defContext:ParserRuleContext {
-		public var _NAME: Token!
-		public var _variables: VariablesContext!
-		open func MACRO() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.MACRO.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0) }
-		open func variables() -> VariablesContext? {
-			return getRuleContext(VariablesContext.self,0)
+
+	public class Macro_defContext: ParserRuleContext {
+		open var _NAME: Token!
+		open var _variables: VariablesContext!
+			open
+			func MACRO() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.MACRO.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func variables() -> VariablesContext? {
+				return getRuleContext(VariablesContext.self, 0)
+			}
+			open
+			func body_def() -> Body_defContext? {
+				return getRuleContext(Body_defContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_macro_def
 		}
-		open func body_def() -> Body_defContext? {
-			return getRuleContext(Body_defContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_macro_def }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterMacro_def(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterMacro_def(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitMacro_def(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitMacro_def(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitMacro_def(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitMacro_def(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitMacro_def(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitMacro_def(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func macro_def() throws -> Macro_defContext {
+	 open func macro_def() throws -> Macro_defContext {
 		var _localctx: Macro_defContext = Macro_defContext(_ctx, getState())
 		try enterRule(_localctx, 6, UCBLogoParser.RULE_macro_def)
 		defer {
@@ -996,39 +1038,48 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class VariablesContext:ParserRuleContext {
-		public var amount: Int!
-		open func VARIABLE() -> Array<TerminalNode> { return getTokens(UCBLogoParser.Tokens.VARIABLE.rawValue) }
-		open func VARIABLE(_ i:Int) -> TerminalNode?{
-			return getToken(UCBLogoParser.Tokens.VARIABLE.rawValue, i)
+
+	public class VariablesContext: ParserRuleContext {
+		open var amount: Int!
+			open
+			func VARIABLE() -> [TerminalNode] {
+				return getTokens(UCBLogoParser.Tokens.VARIABLE.rawValue)
+			}
+			open
+			func VARIABLE(_ i:Int) -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.VARIABLE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_variables
 		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_variables }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterVariables(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterVariables(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitVariables(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitVariables(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitVariables(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitVariables(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitVariables(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitVariables(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variables() throws -> VariablesContext {
+	 open func variables() throws -> VariablesContext {
 		var _localctx: VariablesContext = VariablesContext(_ctx, getState())
 		try enterRule(_localctx, 8, UCBLogoParser.RULE_variables)
 		defer {
@@ -1063,44 +1114,55 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class Body_defContext:ParserRuleContext {
-		open func END() -> Array<TerminalNode> { return getTokens(UCBLogoParser.Tokens.END.rawValue) }
-		open func END(_ i:Int) -> TerminalNode?{
-			return getToken(UCBLogoParser.Tokens.END.rawValue, i)
+
+	public class Body_defContext: ParserRuleContext {
+			open
+			func END() -> [TerminalNode] {
+				return getTokens(UCBLogoParser.Tokens.END.rawValue)
+			}
+			open
+			func END(_ i:Int) -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.END.rawValue, i)
+			}
+			open
+			func body_instruction() -> [Body_instructionContext] {
+				return getRuleContexts(Body_instructionContext.self)
+			}
+			open
+			func body_instruction(_ i: Int) -> Body_instructionContext? {
+				return getRuleContext(Body_instructionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_body_def
 		}
-		open func body_instruction() -> Array<Body_instructionContext> {
-			return getRuleContexts(Body_instructionContext.self)
-		}
-		open func body_instruction(_ i: Int) -> Body_instructionContext? {
-			return getRuleContext(Body_instructionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_body_def }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterBody_def(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterBody_def(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitBody_def(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitBody_def(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitBody_def(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitBody_def(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitBody_def(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitBody_def(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func body_def() throws -> Body_defContext {
+	 open func body_def() throws -> Body_defContext {
 		var _localctx: Body_defContext = Body_defContext(_ctx, getState())
 		try enterRule(_localctx, 10, UCBLogoParser.RULE_body_def)
 		var _la: Int = 0
@@ -1116,7 +1178,7 @@ open class UCBLogoParser: Parser {
 		 		try enterOuterAlt(_localctx, 1)
 		 		setState(60)
 		 		if (!(discoveredAllProcedures)) {
-		 		    throw try ANTLRException.recognition(e:FailedPredicateException(self, "discoveredAllProcedures"))
+		 		    throw ANTLRException.recognition(e:FailedPredicateException(self, "discoveredAllProcedures"))
 		 		}
 		 		setState(64)
 		 		try _errHandler.sync(self)
@@ -1183,40 +1245,47 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class Body_instructionContext:ParserRuleContext {
-		open func procedure_call_extra_input() -> Procedure_call_extra_inputContext? {
-			return getRuleContext(Procedure_call_extra_inputContext.self,0)
+
+	public class Body_instructionContext: ParserRuleContext {
+			open
+			func procedure_call_extra_input() -> Procedure_call_extra_inputContext? {
+				return getRuleContext(Procedure_call_extra_inputContext.self, 0)
+			}
+			open
+			func procedure_call() -> Procedure_callContext? {
+				return getRuleContext(Procedure_callContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_body_instruction
 		}
-		open func procedure_call() -> Procedure_callContext? {
-			return getRuleContext(Procedure_callContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_body_instruction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterBody_instruction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterBody_instruction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitBody_instruction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitBody_instruction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitBody_instruction(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitBody_instruction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitBody_instruction(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitBody_instruction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func body_instruction() throws -> Body_instructionContext {
+	 open func body_instruction() throws -> Body_instructionContext {
 		var _localctx: Body_instructionContext = Body_instructionContext(_ctx, getState())
 		try enterRule(_localctx, 12, UCBLogoParser.RULE_body_instruction)
 		defer {
@@ -1249,41 +1318,51 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class Procedure_call_extra_inputContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Procedure_call_extra_inputContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_procedure_call_extra_input
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_procedure_call_extra_input }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterProcedure_call_extra_input(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterProcedure_call_extra_input(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitProcedure_call_extra_input(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitProcedure_call_extra_input(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitProcedure_call_extra_input(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitProcedure_call_extra_input(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitProcedure_call_extra_input(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitProcedure_call_extra_input(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedure_call_extra_input() throws -> Procedure_call_extra_inputContext {
+	 open func procedure_call_extra_input() throws -> Procedure_call_extra_inputContext {
 		var _localctx: Procedure_call_extra_inputContext = Procedure_call_extra_inputContext(_ctx, getState())
 		try enterRule(_localctx, 14, UCBLogoParser.RULE_procedure_call_extra_input)
 		defer {
@@ -1296,7 +1375,7 @@ open class UCBLogoParser: Parser {
 		 	try match(UCBLogoParser.Tokens.T__0.rawValue)
 		 	setState(82)
 		 	if (!(procedureNameAhead())) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "procedureNameAhead()"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "procedureNameAhead()"))
 		 	}
 		 	setState(83)
 		 	try match(UCBLogoParser.Tokens.NAME.rawValue)
@@ -1326,39 +1405,48 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class Procedure_callContext:ParserRuleContext {
-		public var _NAME: Token!
-		open func NAME() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0) }
-		open func expressions() -> ExpressionsContext? {
-			return getRuleContext(ExpressionsContext.self,0)
+
+	public class Procedure_callContext: ParserRuleContext {
+		open var _NAME: Token!
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func expressions() -> ExpressionsContext? {
+				return getRuleContext(ExpressionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_procedure_call
 		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_procedure_call }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterProcedure_call(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterProcedure_call(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitProcedure_call(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitProcedure_call(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitProcedure_call(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitProcedure_call(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitProcedure_call(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitProcedure_call(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedure_call() throws -> Procedure_callContext {
+	 open func procedure_call() throws -> Procedure_callContext {
 		var _localctx: Procedure_callContext = Procedure_callContext(_ctx, getState())
 		try enterRule(_localctx, 16, UCBLogoParser.RULE_procedure_call)
 		defer {
@@ -1368,7 +1456,7 @@ open class UCBLogoParser: Parser {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(92)
 		 	if (!(procedureNameAhead())) {
-		 	    throw try ANTLRException.recognition(e:FailedPredicateException(self, "procedureNameAhead()"))
+		 	    throw ANTLRException.recognition(e:FailedPredicateException(self, "procedureNameAhead()"))
 		 	}
 		 	setState(93)
 		 	try {
@@ -1388,48 +1476,56 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionsContext:ParserRuleContext {
-		public var name: String!
-		public var total: Int!
-		public var n: Int = 0
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		 public convenience init(_ parent: ParserRuleContext?, _ invokingState: Int, _ name: String!, _ total: Int!) {
+
+	public class ExpressionsContext: ParserRuleContext {
+		open var name: String!
+		open var total: Int!
+		open var n: Int = 0
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		public convenience init(_ parent: ParserRuleContext?, _ invokingState: Int, _ name: String!, _ total: Int!) {
 			self.init(parent, invokingState)
 			self.name = name;
 			self.total = total;
-		 }
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_expressions }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterExpressions(self)
+		}
+
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_expressions
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterExpressions(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitExpressions(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitExpressions(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitExpressions(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitExpressions(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitExpressions(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitExpressions(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressions(_ name: String!, _total: Int!) throws -> ExpressionsContext {
+	 open func expressions(_ name: String!, _total: Int!) throws -> ExpressionsContext {
 		var _localctx: ExpressionsContext = ExpressionsContext(_ctx, getState(), name, total)
 		try enterRule(_localctx, 18, UCBLogoParser.RULE_expressions)
 		defer {
@@ -1445,7 +1541,7 @@ open class UCBLogoParser: Parser {
 		 		if ( _alt==1 ) {
 		 			setState(96)
 		 			if (!(_localctx.n < _localctx.total)) {
-		 			    throw try ANTLRException.recognition(e:FailedPredicateException(self, "$n < $total"))
+		 			    throw ANTLRException.recognition(e:FailedPredicateException(self, "$n < $total"))
 		 			}
 		 			setState(97)
 		 			try expression(0)
@@ -1474,707 +1570,815 @@ open class UCBLogoParser: Parser {
 		return _localctx
 	}
 
-	open class ExpressionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_expression }
+	public class ExpressionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_expression
+		}
 	 
-		public  func copyFrom(_ ctx: ExpressionContext) {
+		open
+		func copyFrom(_ ctx: ExpressionContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class NotEqualsExpressionExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class NotEqualsExpressionExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterNotEqualsExpressionExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterNotEqualsExpressionExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitNotEqualsExpressionExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitNotEqualsExpressionExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitNotEqualsExpressionExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitNotEqualsExpressionExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitNotEqualsExpressionExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitNotEqualsExpressionExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ArrayExpressionContext: ExpressionContext {
-		open func array() -> ArrayContext? {
-			return getRuleContext(ArrayContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class ArrayExpressionContext: ExpressionContext {
+			open
+			func array() -> ArrayContext? {
+				return getRuleContext(ArrayContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterArrayExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterArrayExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitArrayExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitArrayExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitArrayExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitArrayExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitArrayExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitArrayExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AdditionExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class AdditionExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterAdditionExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterAdditionExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitAdditionExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitAdditionExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitAdditionExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitAdditionExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitAdditionExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitAdditionExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class WordExpressionContext: ExpressionContext {
-		open func WORD() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.WORD.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class WordExpressionContext: ExpressionContext {
+			open
+			func WORD() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.WORD.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterWordExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterWordExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitWordExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitWordExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitWordExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitWordExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitWordExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitWordExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class NumberExpressionContext: ExpressionContext {
-		open func NUMBER() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.NUMBER.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class NumberExpressionContext: ExpressionContext {
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.NUMBER.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterNumberExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterNumberExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitNumberExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitNumberExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitNumberExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitNumberExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitNumberExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitNumberExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ParensExpressionContext: ExpressionContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class ParensExpressionContext: ExpressionContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterParensExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterParensExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitParensExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitParensExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitParensExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitParensExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitParensExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitParensExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class MultiplyExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class MultiplyExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterMultiplyExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterMultiplyExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitMultiplyExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitMultiplyExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitMultiplyExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitMultiplyExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitMultiplyExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitMultiplyExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class GreaterThanExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class GreaterThanExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterGreaterThanExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterGreaterThanExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitGreaterThanExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitGreaterThanExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitGreaterThanExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitGreaterThanExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitGreaterThanExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitGreaterThanExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VariableExpressionContext: ExpressionContext {
-		open func VARIABLE() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.VARIABLE.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class VariableExpressionContext: ExpressionContext {
+			open
+			func VARIABLE() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.VARIABLE.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterVariableExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterVariableExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitVariableExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitVariableExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitVariableExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitVariableExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitVariableExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitVariableExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class DivideExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class DivideExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterDivideExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterDivideExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitDivideExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitDivideExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitDivideExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitDivideExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitDivideExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitDivideExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class LessThanEqualsExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class LessThanEqualsExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterLessThanEqualsExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterLessThanEqualsExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitLessThanEqualsExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitLessThanEqualsExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitLessThanEqualsExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitLessThanEqualsExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitLessThanEqualsExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitLessThanEqualsExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class GreaterThanEqualsExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class GreaterThanEqualsExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterGreaterThanEqualsExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterGreaterThanEqualsExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitGreaterThanEqualsExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitGreaterThanEqualsExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitGreaterThanEqualsExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitGreaterThanEqualsExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitGreaterThanEqualsExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitGreaterThanEqualsExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class UnaryMinusExpressionContext: ExpressionContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class UnaryMinusExpressionContext: ExpressionContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterUnaryMinusExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterUnaryMinusExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitUnaryMinusExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitUnaryMinusExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitUnaryMinusExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitUnaryMinusExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitUnaryMinusExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitUnaryMinusExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class QuotedWordExpressionContext: ExpressionContext {
-		open func QUOTED_WORD() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.QUOTED_WORD.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class QuotedWordExpressionContext: ExpressionContext {
+			open
+			func QUOTED_WORD() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.QUOTED_WORD.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterQuotedWordExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterQuotedWordExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitQuotedWordExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitQuotedWordExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitQuotedWordExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitQuotedWordExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitQuotedWordExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitQuotedWordExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class EqualsExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class EqualsExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterEqualsExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterEqualsExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitEqualsExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitEqualsExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitEqualsExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitEqualsExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitEqualsExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitEqualsExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class SubtractionExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class SubtractionExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterSubtractionExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterSubtractionExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitSubtractionExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitSubtractionExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitSubtractionExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitSubtractionExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitSubtractionExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitSubtractionExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ProcedureCallExpressionContext: ExpressionContext {
-		open func procedure_call() -> Procedure_callContext? {
-			return getRuleContext(Procedure_callContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class ProcedureCallExpressionContext: ExpressionContext {
+			open
+			func procedure_call() -> Procedure_callContext? {
+				return getRuleContext(Procedure_callContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterProcedureCallExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterProcedureCallExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitProcedureCallExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitProcedureCallExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitProcedureCallExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitProcedureCallExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitProcedureCallExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitProcedureCallExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class LessThanExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class LessThanExpressionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterLessThanExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterLessThanExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitLessThanExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitLessThanExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitLessThanExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitLessThanExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitLessThanExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitLessThanExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ProcedureCallExtraInputContext: ExpressionContext {
-		open func procedure_call_extra_input() -> Procedure_call_extra_inputContext? {
-			return getRuleContext(Procedure_call_extra_inputContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class ProcedureCallExtraInputContext: ExpressionContext {
+			open
+			func procedure_call_extra_input() -> Procedure_call_extra_inputContext? {
+				return getRuleContext(Procedure_call_extra_inputContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterProcedureCallExtraInput(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterProcedureCallExtraInput(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitProcedureCallExtraInput(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitProcedureCallExtraInput(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitProcedureCallExtraInput(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitProcedureCallExtraInput(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitProcedureCallExtraInput(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitProcedureCallExtraInput(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ListExpressionContext: ExpressionContext {
-		open func list() -> ListContext? {
-			return getRuleContext(ListContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class ListExpressionContext: ExpressionContext {
+			open
+			func list() -> ListContext? {
+				return getRuleContext(ListContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterListExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterListExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitListExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitListExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitListExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitListExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitListExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitListExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class NameExpressionContext: ExpressionContext {
-		open func NAME() -> TerminalNode? { return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class NameExpressionContext: ExpressionContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(UCBLogoParser.Tokens.NAME.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterNameExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterNameExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitNameExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitNameExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitNameExpression(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitNameExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitNameExpression(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitNameExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expression( ) throws -> ExpressionContext   {
+	 public final  func expression( ) throws -> ExpressionContext   {
 		return try expression(0)
 	}
 	@discardableResult
@@ -2309,7 +2513,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(125)
 						if (!(precpred(_ctx, 10))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
 						}
 						setState(126)
 						try match(UCBLogoParser.Tokens.MULT.rawValue)
@@ -2322,7 +2526,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(128)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(129)
 						try match(UCBLogoParser.Tokens.DIV.rawValue)
@@ -2335,7 +2539,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(131)
 						if (!(precpred(_ctx, 8))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
 						}
 						setState(132)
 						try match(UCBLogoParser.Tokens.PLUS.rawValue)
@@ -2348,7 +2552,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(134)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(135)
 						try match(UCBLogoParser.Tokens.MINUS.rawValue)
@@ -2361,7 +2565,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(137)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(138)
 						try match(UCBLogoParser.Tokens.LT.rawValue)
@@ -2374,7 +2578,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(140)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(141)
 						try match(UCBLogoParser.Tokens.GT.rawValue)
@@ -2387,7 +2591,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(143)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(144)
 						try match(UCBLogoParser.Tokens.LT_EQ.rawValue)
@@ -2400,7 +2604,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(146)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(147)
 						try match(UCBLogoParser.Tokens.GT_EQ.rawValue)
@@ -2413,7 +2617,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(149)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(150)
 						try match(UCBLogoParser.Tokens.EQ.rawValue)
@@ -2426,7 +2630,7 @@ open class UCBLogoParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, UCBLogoParser.RULE_expression)
 						setState(152)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(153)
 						try match(UCBLogoParser.Tokens.NOT_EQ.rawValue)
@@ -2452,40 +2656,47 @@ open class UCBLogoParser: Parser {
 
 		return _localctx;
 	}
-	open class ArrayContext:ParserRuleContext {
-		open func array() -> Array<ArrayContext> {
-			return getRuleContexts(ArrayContext.self)
+
+	public class ArrayContext: ParserRuleContext {
+			open
+			func array() -> [ArrayContext] {
+				return getRuleContexts(ArrayContext.self)
+			}
+			open
+			func array(_ i: Int) -> ArrayContext? {
+				return getRuleContext(ArrayContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_array
 		}
-		open func array(_ i: Int) -> ArrayContext? {
-			return getRuleContext(ArrayContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_array }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterArray(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterArray(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitArray(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitArray(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitArray(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitArray(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitArray(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitArray(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func array() throws -> ArrayContext {
+	 open func array() throws -> ArrayContext {
 		var _localctx: ArrayContext = ArrayContext(_ctx, getState())
 		try enterRule(_localctx, 22, UCBLogoParser.RULE_array)
 		var _la: Int = 0
@@ -2556,7 +2767,7 @@ open class UCBLogoParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(167)
@@ -2575,40 +2786,47 @@ open class UCBLogoParser: Parser {
 
 		return _localctx
 	}
-	open class ListContext:ParserRuleContext {
-		open func list() -> Array<ListContext> {
-			return getRuleContexts(ListContext.self)
+
+	public class ListContext: ParserRuleContext {
+			open
+			func list() -> [ListContext] {
+				return getRuleContexts(ListContext.self)
+			}
+			open
+			func list(_ i: Int) -> ListContext? {
+				return getRuleContext(ListContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return UCBLogoParser.RULE_list
 		}
-		open func list(_ i: Int) -> ListContext? {
-			return getRuleContext(ListContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return UCBLogoParser.RULE_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).enterList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.enterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is UCBLogoListener {
-			 	(listener as! UCBLogoListener).exitList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? UCBLogoListener {
+				listener.exitList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is UCBLogoVisitor {
-			     return (visitor as! UCBLogoVisitor<T>).visitList(self)
-			}else if visitor is UCBLogoBaseVisitor {
-		    	 return (visitor as! UCBLogoBaseVisitor<T>).visitList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? UCBLogoVisitor {
+			    return visitor.visitList(self)
+			}
+			else if let visitor = visitor as? UCBLogoBaseVisitor {
+			    return visitor.visitList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list() throws -> ListContext {
+	 open func list() throws -> ListContext {
 		var _localctx: ListContext = ListContext(_ctx, getState())
 		try enterRule(_localctx, 24, UCBLogoParser.RULE_list)
 		var _la: Int = 0
@@ -2679,7 +2897,7 @@ open class UCBLogoParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(177)
@@ -2699,8 +2917,8 @@ open class UCBLogoParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  5:
 			return try body_def_sempred(_localctx?.castdown(Body_defContext.self), predIndex)
@@ -2755,6 +2973,10 @@ open class UCBLogoParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = UCBLogoParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = UCBLogoParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

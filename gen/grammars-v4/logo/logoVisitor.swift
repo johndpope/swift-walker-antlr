@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/logo/logo.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/logo/logo.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProg(_ ctx: logoParser.ProgContext) -> T{
+	open func visitProg(_ ctx: logoParser.ProgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: logoParser.LineContext) -> T{
+	open func visitLine(_ ctx: logoParser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCmd(_ ctx: logoParser.CmdContext) -> T{
+	open func visitCmd(_ ctx: logoParser.CmdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureInvocation(_ ctx: logoParser.ProcedureInvocationContext) -> T{
+	open func visitProcedureInvocation(_ ctx: logoParser.ProcedureInvocationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureDeclaration(_ ctx: logoParser.ProcedureDeclarationContext) -> T{
+	open func visitProcedureDeclaration(_ ctx: logoParser.ProcedureDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterDeclarations(_ ctx: logoParser.ParameterDeclarationsContext) -> T{
+	open func visitParameterDeclarations(_ ctx: logoParser.ParameterDeclarationsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunc(_ ctx: logoParser.FuncContext) -> T{
+	open func visitFunc(_ ctx: logoParser.FuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRepeat(_ ctx: logoParser.RepeatContext) -> T{
+	open func visitRepeat(_ ctx: logoParser.RepeatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: logoParser.BlockContext) -> T{
+	open func visitBlock(_ ctx: logoParser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfe(_ ctx: logoParser.IfeContext) -> T{
+	open func visitIfe(_ ctx: logoParser.IfeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComparison(_ ctx: logoParser.ComparisonContext) -> T{
+	open func visitComparison(_ ctx: logoParser.ComparisonContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComparisonOperator(_ ctx: logoParser.ComparisonOperatorContext) -> T{
+	open func visitComparisonOperator(_ ctx: logoParser.ComparisonOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMake(_ ctx: logoParser.MakeContext) -> T{
+	open func visitMake(_ ctx: logoParser.MakeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrint(_ ctx: logoParser.PrintContext) -> T{
+	open func visitPrint(_ ctx: logoParser.PrintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuotedstring(_ ctx: logoParser.QuotedstringContext) -> T{
+	open func visitQuotedstring(_ ctx: logoParser.QuotedstringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitName(_ ctx: logoParser.NameContext) -> T{
+	open func visitName(_ ctx: logoParser.NameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: logoParser.ValueContext) -> T{
+	open func visitValue(_ ctx: logoParser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSignExpression(_ ctx: logoParser.SignExpressionContext) -> T{
+	open func visitSignExpression(_ ctx: logoParser.SignExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplyingExpression(_ ctx: logoParser.MultiplyingExpressionContext) -> T{
+	open func visitMultiplyingExpression(_ ctx: logoParser.MultiplyingExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: logoParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: logoParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeref(_ ctx: logoParser.DerefContext) -> T{
+	open func visitDeref(_ ctx: logoParser.DerefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFd(_ ctx: logoParser.FdContext) -> T{
+	open func visitFd(_ ctx: logoParser.FdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBk(_ ctx: logoParser.BkContext) -> T{
+	open func visitBk(_ ctx: logoParser.BkContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRt(_ ctx: logoParser.RtContext) -> T{
+	open func visitRt(_ ctx: logoParser.RtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLt(_ ctx: logoParser.LtContext) -> T{
+	open func visitLt(_ ctx: logoParser.LtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCs(_ ctx: logoParser.CsContext) -> T{
+	open func visitCs(_ ctx: logoParser.CsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPu(_ ctx: logoParser.PuContext) -> T{
+	open func visitPu(_ ctx: logoParser.PuContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPd(_ ctx: logoParser.PdContext) -> T{
+	open func visitPd(_ ctx: logoParser.PdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHt(_ ctx: logoParser.HtContext) -> T{
+	open func visitHt(_ ctx: logoParser.HtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSt(_ ctx: logoParser.StContext) -> T{
+	open func visitSt(_ ctx: logoParser.StContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHome(_ ctx: logoParser.HomeContext) -> T{
+	open func visitHome(_ ctx: logoParser.HomeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStop(_ ctx: logoParser.StopContext) -> T{
+	open func visitStop(_ ctx: logoParser.StopContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabel(_ ctx: logoParser.LabelContext) -> T{
+	open func visitLabel(_ ctx: logoParser.LabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetxy(_ ctx: logoParser.SetxyContext) -> T{
+	open func visitSetxy(_ ctx: logoParser.SetxyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRandom(_ ctx: logoParser.RandomContext) -> T{
+	open func visitRandom(_ ctx: logoParser.RandomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFore(_ ctx: logoParser.ForeContext) -> T{
+	open func visitFore(_ ctx: logoParser.ForeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: logoParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: logoParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class logoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: logoParser.CommentContext) -> T{
+	open func visitComment(_ ctx: logoParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

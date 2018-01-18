@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/memcached_protocol/memcached_protocol.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/memcached_protocol/memcached_protocol.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommand_line(_ ctx: memcached_protocolParser.Command_lineContext) -> T{
+	open func visitCommand_line(_ ctx: memcached_protocolParser.Command_lineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStorage_command(_ ctx: memcached_protocolParser.Storage_commandContext) -> T{
+	open func visitStorage_command(_ ctx: memcached_protocolParser.Storage_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStorage_command_name(_ ctx: memcached_protocolParser.Storage_command_nameContext) -> T{
+	open func visitStorage_command_name(_ ctx: memcached_protocolParser.Storage_command_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRetrieval_command(_ ctx: memcached_protocolParser.Retrieval_commandContext) -> T{
+	open func visitRetrieval_command(_ ctx: memcached_protocolParser.Retrieval_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelete_command(_ ctx: memcached_protocolParser.Delete_commandContext) -> T{
+	open func visitDelete_command(_ ctx: memcached_protocolParser.Delete_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIncrement_command(_ ctx: memcached_protocolParser.Increment_commandContext) -> T{
+	open func visitIncrement_command(_ ctx: memcached_protocolParser.Increment_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDecrement_command(_ ctx: memcached_protocolParser.Decrement_commandContext) -> T{
+	open func visitDecrement_command(_ ctx: memcached_protocolParser.Decrement_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatistics_command(_ ctx: memcached_protocolParser.Statistics_commandContext) -> T{
+	open func visitStatistics_command(_ ctx: memcached_protocolParser.Statistics_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatistics_option(_ ctx: memcached_protocolParser.Statistics_optionContext) -> T{
+	open func visitStatistics_option(_ ctx: memcached_protocolParser.Statistics_optionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFlush_command(_ ctx: memcached_protocolParser.Flush_commandContext) -> T{
+	open func visitFlush_command(_ ctx: memcached_protocolParser.Flush_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVersion_command(_ ctx: memcached_protocolParser.Version_commandContext) -> T{
+	open func visitVersion_command(_ ctx: memcached_protocolParser.Version_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVerbosity_command(_ ctx: memcached_protocolParser.Verbosity_commandContext) -> T{
+	open func visitVerbosity_command(_ ctx: memcached_protocolParser.Verbosity_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuit_command(_ ctx: memcached_protocolParser.Quit_commandContext) -> T{
+	open func visitQuit_command(_ ctx: memcached_protocolParser.Quit_commandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStorage_response(_ ctx: memcached_protocolParser.Storage_responseContext) -> T{
+	open func visitStorage_response(_ ctx: memcached_protocolParser.Storage_responseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRetrieval_response(_ ctx: memcached_protocolParser.Retrieval_responseContext) -> T{
+	open func visitRetrieval_response(_ ctx: memcached_protocolParser.Retrieval_responseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeletion_response(_ ctx: memcached_protocolParser.Deletion_responseContext) -> T{
+	open func visitDeletion_response(_ ctx: memcached_protocolParser.Deletion_responseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIncr_or_decr_response(_ ctx: memcached_protocolParser.Incr_or_decr_responseContext) -> T{
+	open func visitIncr_or_decr_response(_ ctx: memcached_protocolParser.Incr_or_decr_responseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatistics_response(_ ctx: memcached_protocolParser.Statistics_responseContext) -> T{
+	open func visitStatistics_response(_ ctx: memcached_protocolParser.Statistics_responseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitError_response(_ ctx: memcached_protocolParser.Error_responseContext) -> T{
+	open func visitError_response(_ ctx: memcached_protocolParser.Error_responseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGeneral_statistic(_ ctx: memcached_protocolParser.General_statisticContext) -> T{
+	open func visitGeneral_statistic(_ ctx: memcached_protocolParser.General_statisticContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSize_statistic(_ ctx: memcached_protocolParser.Size_statisticContext) -> T{
+	open func visitSize_statistic(_ ctx: memcached_protocolParser.Size_statisticContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGeneral_error(_ ctx: memcached_protocolParser.General_errorContext) -> T{
+	open func visitGeneral_error(_ ctx: memcached_protocolParser.General_errorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClient_error_message(_ ctx: memcached_protocolParser.Client_error_messageContext) -> T{
+	open func visitClient_error_message(_ ctx: memcached_protocolParser.Client_error_messageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitServer_error_message(_ ctx: memcached_protocolParser.Server_error_messageContext) -> T{
+	open func visitServer_error_message(_ ctx: memcached_protocolParser.Server_error_messageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnd(_ ctx: memcached_protocolParser.EndContext) -> T{
+	open func visitEnd(_ ctx: memcached_protocolParser.EndContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNoreply(_ ctx: memcached_protocolParser.NoreplyContext) -> T{
+	open func visitNoreply(_ ctx: memcached_protocolParser.NoreplyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKey(_ ctx: memcached_protocolParser.KeyContext) -> T{
+	open func visitKey(_ ctx: memcached_protocolParser.KeyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFlags(_ ctx: memcached_protocolParser.FlagsContext) -> T{
+	open func visitFlags(_ ctx: memcached_protocolParser.FlagsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExptime(_ ctx: memcached_protocolParser.ExptimeContext) -> T{
+	open func visitExptime(_ ctx: memcached_protocolParser.ExptimeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBytes(_ ctx: memcached_protocolParser.BytesContext) -> T{
+	open func visitBytes(_ ctx: memcached_protocolParser.BytesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCas_unique(_ ctx: memcached_protocolParser.Cas_uniqueContext) -> T{
+	open func visitCas_unique(_ ctx: memcached_protocolParser.Cas_uniqueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: memcached_protocolParser.ValueContext) -> T{
+	open func visitValue(_ ctx: memcached_protocolParser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTime(_ ctx: memcached_protocolParser.TimeContext) -> T{
+	open func visitTime(_ ctx: memcached_protocolParser.TimeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelay(_ ctx: memcached_protocolParser.DelayContext) -> T{
+	open func visitDelay(_ ctx: memcached_protocolParser.DelayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVerbosity_level(_ ctx: memcached_protocolParser.Verbosity_levelContext) -> T{
+	open func visitVerbosity_level(_ ctx: memcached_protocolParser.Verbosity_levelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatistic_name(_ ctx: memcached_protocolParser.Statistic_nameContext) -> T{
+	open func visitStatistic_name(_ ctx: memcached_protocolParser.Statistic_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatistic_value(_ ctx: memcached_protocolParser.Statistic_valueContext) -> T{
+	open func visitStatistic_value(_ ctx: memcached_protocolParser.Statistic_valueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSize(_ ctx: memcached_protocolParser.SizeContext) -> T{
+	open func visitSize(_ ctx: memcached_protocolParser.SizeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class memcached_protocolVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCount(_ ctx: memcached_protocolParser.CountContext) -> T{
+	open func visitCount(_ ctx: memcached_protocolParser.CountContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

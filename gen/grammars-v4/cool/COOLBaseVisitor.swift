@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -23,7 +23,7 @@ open class COOLBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitClass(_ ctx: COOLParser.ClassContext) -> T? { return visitChildren(ctx) }
+	open func visitClasses(_ ctx: COOLParser.ClassesContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -51,7 +51,7 @@ open class COOLBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitClassProperty(_ ctx: COOLParser.ClassPropertyContext) -> T? { return visitChildren(ctx) }
+	open func visitProperty(_ ctx: COOLParser.PropertyContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -66,13 +66,6 @@ open class COOLBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitLetIn(_ ctx: COOLParser.LetInContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitNewType(_ ctx: COOLParser.NewTypeContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -100,7 +93,7 @@ open class COOLBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitWhild(_ ctx: COOLParser.WhildContext) -> T? { return visitChildren(ctx) }
+	open func visitWhile(_ ctx: COOLParser.WhileContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -108,6 +101,13 @@ open class COOLBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitDivision(_ ctx: COOLParser.DivisionContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitNegative(_ ctx: COOLParser.NegativeContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -128,7 +128,7 @@ open class COOLBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitSuperClassMethod(_ ctx: COOLParser.SuperClassMethodContext) -> T? { return visitChildren(ctx) }
+	open func visitBlock(_ ctx: COOLParser.BlockContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -163,7 +163,21 @@ open class COOLBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	open func visitOwnMethodCall(_ ctx: COOLParser.OwnMethodCallContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	open func visitAdd(_ ctx: COOLParser.AddContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitNew(_ ctx: COOLParser.NewContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -205,20 +219,6 @@ open class COOLBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitMultipleExpression(_ ctx: COOLParser.MultipleExpressionContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitFunctionCall(_ ctx: COOLParser.FunctionCallContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
 	open func visitTrue(_ ctx: COOLParser.TrueContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
@@ -233,5 +233,5 @@ open class COOLBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitIntegerComplement(_ ctx: COOLParser.IntegerComplementContext) -> T? { return visitChildren(ctx) }
+	open func visitMethodCall(_ ctx: COOLParser.MethodCallContext) -> T? { return visitChildren(ctx) }
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/pcre/PCRE.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/pcre/PCRE.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class PCREParser: Parser {
@@ -11,8 +11,11 @@ open class PCREParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, Quoted = 1, BlockQuoted = 2, BellChar = 3, ControlChar = 4, 
                  EscapeChar = 5, FormFeed = 6, NewLine = 7, CarriageReturn = 8, 
                  Tab = 9, Backslash = 10, HexChar = 11, Dot = 12, OneDataUnit = 13, 
@@ -43,20 +46,23 @@ open class PCREParser: Parser {
                  D1 = 115, D2 = 116, D3 = 117, D4 = 118, D5 = 119, D6 = 120, 
                  D7 = 121, D8 = 122, D9 = 123, D0 = 124, OtherChar = 125
 	}
-	public static let RULE_parse = 0, RULE_alternation = 1, RULE_expr = 2, 
-                   RULE_element = 3, RULE_quantifier = 4, RULE_quantifier_type = 5, 
-                   RULE_character_class = 6, RULE_backreference = 7, RULE_backreference_or_octal = 8, 
-                   RULE_capture = 9, RULE_non_capture = 10, RULE_comment = 11, 
-                   RULE_option = 12, RULE_option_flags = 13, RULE_option_flag = 14, 
-                   RULE_look_around = 15, RULE_subroutine_reference = 16, 
-                   RULE_conditional = 17, RULE_backtrack_control = 18, RULE_newline_convention = 19, 
-                   RULE_callout = 20, RULE_atom = 21, RULE_cc_atom = 22, 
-                   RULE_shared_atom = 23, RULE_literal = 24, RULE_cc_literal = 25, 
-                   RULE_shared_literal = 26, RULE_number = 27, RULE_octal_char = 28, 
-                   RULE_octal_digit = 29, RULE_digits = 30, RULE_digit = 31, 
-                   RULE_name = 32, RULE_alpha_nums = 33, RULE_non_close_parens = 34, 
-                   RULE_non_close_paren = 35, RULE_letter = 36
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_parse = 0, RULE_alternation = 1, RULE_expr = 2, RULE_element = 3, 
+            RULE_quantifier = 4, RULE_quantifier_type = 5, RULE_character_class = 6, 
+            RULE_backreference = 7, RULE_backreference_or_octal = 8, RULE_capture = 9, 
+            RULE_non_capture = 10, RULE_comment = 11, RULE_option = 12, 
+            RULE_option_flags = 13, RULE_option_flag = 14, RULE_look_around = 15, 
+            RULE_subroutine_reference = 16, RULE_conditional = 17, RULE_backtrack_control = 18, 
+            RULE_newline_convention = 19, RULE_callout = 20, RULE_atom = 21, 
+            RULE_cc_atom = 22, RULE_shared_atom = 23, RULE_literal = 24, 
+            RULE_cc_literal = 25, RULE_shared_literal = 26, RULE_number = 27, 
+            RULE_octal_char = 28, RULE_octal_digit = 29, RULE_digits = 30, 
+            RULE_digit = 31, RULE_name = 32, RULE_alpha_nums = 33, RULE_non_close_parens = 34, 
+            RULE_non_close_paren = 35, RULE_letter = 36
+
+	public
+	static let ruleNames: [String] = [
 		"parse", "alternation", "expr", "element", "quantifier", "quantifier_type", 
 		"character_class", "backreference", "backreference_or_octal", "capture", 
 		"non_capture", "comment", "option", "option_flags", "option_flag", "look_around", 
@@ -102,86 +108,73 @@ open class PCREParser: Parser {
 		"PUC", "QUC", "RUC", "SUC", "TUC", "UUC", "VUC", "WUC", "XUC", "YUC", 
 		"ZUC", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D0", "OtherChar"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "PCRE.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return PCREParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "PCRE.g4" }
+	override open
+	func getSerializedATN() -> String { return PCREParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return PCREParser.ruleNames }
+	override open
+	func getATN() -> ATN { return PCREParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return PCREParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return PCREParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return PCREParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,PCREParser._ATN,PCREParser._decisionToDFA, PCREParser._sharedContextCache)
 	}
-	open class ParseContext:ParserRuleContext {
-		open func alternation() -> AlternationContext? {
-			return getRuleContext(AlternationContext.self,0)
+
+	public class ParseContext: ParserRuleContext {
+			open
+			func alternation() -> AlternationContext? {
+				return getRuleContext(AlternationContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.EOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_parse
 		}
-		open func EOF() -> TerminalNode? { return getToken(PCREParser.Tokens.EOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_parse }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterParse(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterParse(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitParse(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitParse(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitParse(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitParse(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitParse(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitParse(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parse() throws -> ParseContext {
+	 open func parse() throws -> ParseContext {
 		var _localctx: ParseContext = ParseContext(_ctx, getState())
 		try enterRule(_localctx, 0, PCREParser.RULE_parse)
 		defer {
@@ -203,40 +196,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class AlternationContext:ParserRuleContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+
+	public class AlternationContext: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_alternation
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_alternation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterAlternation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterAlternation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitAlternation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitAlternation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitAlternation(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitAlternation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitAlternation(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitAlternation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func alternation() throws -> AlternationContext {
+	 open func alternation() throws -> AlternationContext {
 		var _localctx: AlternationContext = AlternationContext(_ctx, getState())
 		try enterRule(_localctx, 2, PCREParser.RULE_alternation)
 		defer {
@@ -273,40 +273,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class ExprContext:ParserRuleContext {
-		open func element() -> Array<ElementContext> {
-			return getRuleContexts(ElementContext.self)
+
+	public class ExprContext: ParserRuleContext {
+			open
+			func element() -> [ElementContext] {
+				return getRuleContexts(ElementContext.self)
+			}
+			open
+			func element(_ i: Int) -> ElementContext? {
+				return getRuleContext(ElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_expr
 		}
-		open func element(_ i: Int) -> ElementContext? {
-			return getRuleContext(ElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitExpr(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr() throws -> ExprContext {
+	 open func expr() throws -> ExprContext {
 		var _localctx: ExprContext = ExprContext(_ctx, getState())
 		try enterRule(_localctx, 4, PCREParser.RULE_expr)
 		var _la: Int = 0
@@ -348,40 +355,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class ElementContext:ParserRuleContext {
-		open func atom() -> AtomContext? {
-			return getRuleContext(AtomContext.self,0)
+
+	public class ElementContext: ParserRuleContext {
+			open
+			func atom() -> AtomContext? {
+				return getRuleContext(AtomContext.self, 0)
+			}
+			open
+			func quantifier() -> QuantifierContext? {
+				return getRuleContext(QuantifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_element
 		}
-		open func quantifier() -> QuantifierContext? {
-			return getRuleContext(QuantifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_element }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitElement(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitElement(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func element() throws -> ElementContext {
+	 open func element() throws -> ElementContext {
 		var _localctx: ElementContext = ElementContext(_ctx, getState())
 		try enterRule(_localctx, 6, PCREParser.RULE_element)
 		defer {
@@ -411,43 +425,51 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class QuantifierContext:ParserRuleContext {
-		open func quantifier_type() -> Quantifier_typeContext? {
-			return getRuleContext(Quantifier_typeContext.self,0)
+
+	public class QuantifierContext: ParserRuleContext {
+			open
+			func quantifier_type() -> Quantifier_typeContext? {
+				return getRuleContext(Quantifier_typeContext.self, 0)
+			}
+			open
+			func number() -> [NumberContext] {
+				return getRuleContexts(NumberContext.self)
+			}
+			open
+			func number(_ i: Int) -> NumberContext? {
+				return getRuleContext(NumberContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_quantifier
 		}
-		open func number() -> Array<NumberContext> {
-			return getRuleContexts(NumberContext.self)
-		}
-		open func number(_ i: Int) -> NumberContext? {
-			return getRuleContext(NumberContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_quantifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterQuantifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterQuantifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitQuantifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitQuantifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitQuantifier(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitQuantifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitQuantifier(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitQuantifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func quantifier() throws -> QuantifierContext {
+	 open func quantifier() throws -> QuantifierContext {
 		var _localctx: QuantifierContext = QuantifierContext(_ctx, getState())
 		try enterRule(_localctx, 8, PCREParser.RULE_quantifier)
 		defer {
@@ -534,34 +556,39 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Quantifier_typeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_quantifier_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterQuantifier_type(self)
+
+	public class Quantifier_typeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_quantifier_type
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterQuantifier_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitQuantifier_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitQuantifier_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitQuantifier_type(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitQuantifier_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitQuantifier_type(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitQuantifier_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func quantifier_type() throws -> Quantifier_typeContext {
+	 open func quantifier_type() throws -> Quantifier_typeContext {
 		var _localctx: Quantifier_typeContext = Quantifier_typeContext(_ctx, getState())
 		try enterRule(_localctx, 10, PCREParser.RULE_quantifier_type)
 		defer {
@@ -711,7 +738,7 @@ open class PCREParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -722,42 +749,55 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Character_classContext:ParserRuleContext {
-		open func CharacterClassEnd() -> TerminalNode? { return getToken(PCREParser.Tokens.CharacterClassEnd.rawValue, 0) }
-		open func Hyphen() -> TerminalNode? { return getToken(PCREParser.Tokens.Hyphen.rawValue, 0) }
-		open func cc_atom() -> Array<Cc_atomContext> {
-			return getRuleContexts(Cc_atomContext.self)
+
+	public class Character_classContext: ParserRuleContext {
+			open
+			func CharacterClassEnd() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CharacterClassEnd.rawValue, 0)
+			}
+			open
+			func Hyphen() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Hyphen.rawValue, 0)
+			}
+			open
+			func cc_atom() -> [Cc_atomContext] {
+				return getRuleContexts(Cc_atomContext.self)
+			}
+			open
+			func cc_atom(_ i: Int) -> Cc_atomContext? {
+				return getRuleContext(Cc_atomContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_character_class
 		}
-		open func cc_atom(_ i: Int) -> Cc_atomContext? {
-			return getRuleContext(Cc_atomContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_character_class }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterCharacter_class(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterCharacter_class(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitCharacter_class(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitCharacter_class(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitCharacter_class(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitCharacter_class(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitCharacter_class(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitCharacter_class(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func character_class() throws -> Character_classContext {
+	 open func character_class() throws -> Character_classContext {
 		var _localctx: Character_classContext = Character_classContext(_ctx, getState())
 		try enterRule(_localctx, 12, PCREParser.RULE_character_class)
 		var _la: Int = 0
@@ -983,43 +1023,51 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class BackreferenceContext:ParserRuleContext {
-		open func backreference_or_octal() -> Backreference_or_octalContext? {
-			return getRuleContext(Backreference_or_octalContext.self,0)
+
+	public class BackreferenceContext: ParserRuleContext {
+			open
+			func backreference_or_octal() -> Backreference_or_octalContext? {
+				return getRuleContext(Backreference_or_octalContext.self, 0)
+			}
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_backreference
 		}
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
-		}
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_backreference }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterBackreference(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterBackreference(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitBackreference(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitBackreference(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitBackreference(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitBackreference(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitBackreference(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitBackreference(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func backreference() throws -> BackreferenceContext {
+	 open func backreference() throws -> BackreferenceContext {
 		var _localctx: BackreferenceContext = BackreferenceContext(_ctx, getState())
 		try enterRule(_localctx, 14, PCREParser.RULE_backreference)
 		defer {
@@ -1144,41 +1192,51 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Backreference_or_octalContext:ParserRuleContext {
-		open func octal_char() -> Octal_charContext? {
-			return getRuleContext(Octal_charContext.self,0)
+
+	public class Backreference_or_octalContext: ParserRuleContext {
+			open
+			func octal_char() -> Octal_charContext? {
+				return getRuleContext(Octal_charContext.self, 0)
+			}
+			open
+			func Backslash() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Backslash.rawValue, 0)
+			}
+			open
+			func digit() -> DigitContext? {
+				return getRuleContext(DigitContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_backreference_or_octal
 		}
-		open func Backslash() -> TerminalNode? { return getToken(PCREParser.Tokens.Backslash.rawValue, 0) }
-		open func digit() -> DigitContext? {
-			return getRuleContext(DigitContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_backreference_or_octal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterBackreference_or_octal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterBackreference_or_octal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitBackreference_or_octal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitBackreference_or_octal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitBackreference_or_octal(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitBackreference_or_octal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitBackreference_or_octal(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitBackreference_or_octal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func backreference_or_octal() throws -> Backreference_or_octalContext {
+	 open func backreference_or_octal() throws -> Backreference_or_octalContext {
 		var _localctx: Backreference_or_octalContext = Backreference_or_octalContext(_ctx, getState())
 		try enterRule(_localctx, 16, PCREParser.RULE_backreference_or_octal)
 		defer {
@@ -1213,40 +1271,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class CaptureContext:ParserRuleContext {
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
+
+	public class CaptureContext: ParserRuleContext {
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func alternation() -> AlternationContext? {
+				return getRuleContext(AlternationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_capture
 		}
-		open func alternation() -> AlternationContext? {
-			return getRuleContext(AlternationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_capture }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterCapture(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterCapture(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitCapture(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitCapture(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitCapture(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitCapture(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitCapture(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitCapture(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func capture() throws -> CaptureContext {
+	 open func capture() throws -> CaptureContext {
 		var _localctx: CaptureContext = CaptureContext(_ctx, getState())
 		try enterRule(_localctx, 18, PCREParser.RULE_capture)
 		defer {
@@ -1333,40 +1398,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Non_captureContext:ParserRuleContext {
-		open func alternation() -> AlternationContext? {
-			return getRuleContext(AlternationContext.self,0)
+
+	public class Non_captureContext: ParserRuleContext {
+			open
+			func alternation() -> AlternationContext? {
+				return getRuleContext(AlternationContext.self, 0)
+			}
+			open
+			func option_flags() -> Option_flagsContext? {
+				return getRuleContext(Option_flagsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_non_capture
 		}
-		open func option_flags() -> Option_flagsContext? {
-			return getRuleContext(Option_flagsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_non_capture }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterNon_capture(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterNon_capture(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitNon_capture(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitNon_capture(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitNon_capture(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitNon_capture(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitNon_capture(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitNon_capture(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func non_capture() throws -> Non_captureContext {
+	 open func non_capture() throws -> Non_captureContext {
 		var _localctx: Non_captureContext = Non_captureContext(_ctx, getState())
 		try enterRule(_localctx, 20, PCREParser.RULE_non_capture)
 		defer {
@@ -1445,37 +1517,43 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func non_close_parens() -> Non_close_parensContext? {
-			return getRuleContext(Non_close_parensContext.self,0)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func non_close_parens() -> Non_close_parensContext? {
+				return getRuleContext(Non_close_parensContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_comment
 		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterComment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitComment(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 22, PCREParser.RULE_comment)
 		defer {
@@ -1503,40 +1581,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class OptionContext:ParserRuleContext {
-		open func option_flags() -> Array<Option_flagsContext> {
-			return getRuleContexts(Option_flagsContext.self)
+
+	public class OptionContext: ParserRuleContext {
+			open
+			func option_flags() -> [Option_flagsContext] {
+				return getRuleContexts(Option_flagsContext.self)
+			}
+			open
+			func option_flags(_ i: Int) -> Option_flagsContext? {
+				return getRuleContext(Option_flagsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_option
 		}
-		open func option_flags(_ i: Int) -> Option_flagsContext? {
-			return getRuleContext(Option_flagsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_option }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterOption(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterOption(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitOption(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitOption(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitOption(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitOption(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitOption(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitOption(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func option() throws -> OptionContext {
+	 open func option() throws -> OptionContext {
 		var _localctx: OptionContext = OptionContext(_ctx, getState())
 		try enterRule(_localctx, 24, PCREParser.RULE_option)
 		defer {
@@ -1687,40 +1772,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Option_flagsContext:ParserRuleContext {
-		open func option_flag() -> Array<Option_flagContext> {
-			return getRuleContexts(Option_flagContext.self)
+
+	public class Option_flagsContext: ParserRuleContext {
+			open
+			func option_flag() -> [Option_flagContext] {
+				return getRuleContexts(Option_flagContext.self)
+			}
+			open
+			func option_flag(_ i: Int) -> Option_flagContext? {
+				return getRuleContext(Option_flagContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_option_flags
 		}
-		open func option_flag(_ i: Int) -> Option_flagContext? {
-			return getRuleContext(Option_flagContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_option_flags }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterOption_flags(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterOption_flags(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitOption_flags(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitOption_flags(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitOption_flags(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitOption_flags(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitOption_flags(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitOption_flags(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func option_flags() throws -> Option_flagsContext {
+	 open func option_flags() throws -> Option_flagsContext {
 		var _localctx: Option_flagsContext = Option_flagsContext(_ctx, getState())
 		try enterRule(_localctx, 26, PCREParser.RULE_option_flags)
 		var _la: Int = 0
@@ -1758,34 +1850,39 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Option_flagContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_option_flag }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterOption_flag(self)
+
+	public class Option_flagContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_option_flag
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterOption_flag(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitOption_flag(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitOption_flag(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitOption_flag(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitOption_flag(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitOption_flag(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitOption_flag(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func option_flag() throws -> Option_flagContext {
+	 open func option_flag() throws -> Option_flagContext {
 		var _localctx: Option_flagContext = Option_flagContext(_ctx, getState())
 		try enterRule(_localctx, 28, PCREParser.RULE_option_flag)
 		var _la: Int = 0
@@ -1820,37 +1917,43 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Look_aroundContext:ParserRuleContext {
-		open func alternation() -> AlternationContext? {
-			return getRuleContext(AlternationContext.self,0)
+
+	public class Look_aroundContext: ParserRuleContext {
+			open
+			func alternation() -> AlternationContext? {
+				return getRuleContext(AlternationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_look_around
 		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_look_around }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterLook_around(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterLook_around(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitLook_around(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitLook_around(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitLook_around(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitLook_around(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitLook_around(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitLook_around(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func look_around() throws -> Look_aroundContext {
+	 open func look_around() throws -> Look_aroundContext {
 		var _localctx: Look_aroundContext = Look_aroundContext(_ctx, getState())
 		try enterRule(_localctx, 30, PCREParser.RULE_look_around)
 		defer {
@@ -1931,40 +2034,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Subroutine_referenceContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class Subroutine_referenceContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_subroutine_reference
 		}
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_subroutine_reference }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterSubroutine_reference(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterSubroutine_reference(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitSubroutine_reference(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitSubroutine_reference(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitSubroutine_reference(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitSubroutine_reference(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitSubroutine_reference(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitSubroutine_reference(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subroutine_reference() throws -> Subroutine_referenceContext {
+	 open func subroutine_reference() throws -> Subroutine_referenceContext {
 		var _localctx: Subroutine_referenceContext = Subroutine_referenceContext(_ctx, getState())
 		try enterRule(_localctx, 32, PCREParser.RULE_subroutine_reference)
 		defer {
@@ -2171,46 +2281,55 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class ConditionalContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class ConditionalContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func alternation() -> [AlternationContext] {
+				return getRuleContexts(AlternationContext.self)
+			}
+			open
+			func alternation(_ i: Int) -> AlternationContext? {
+				return getRuleContext(AlternationContext.self, i)
+			}
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_conditional
 		}
-		open func alternation() -> Array<AlternationContext> {
-			return getRuleContexts(AlternationContext.self)
-		}
-		open func alternation(_ i: Int) -> AlternationContext? {
-			return getRuleContext(AlternationContext.self,i)
-		}
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_conditional }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterConditional(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterConditional(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitConditional(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitConditional(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitConditional(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitConditional(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitConditional(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitConditional(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditional() throws -> ConditionalContext {
+	 open func conditional() throws -> ConditionalContext {
 		var _localctx: ConditionalContext = ConditionalContext(_ctx, getState())
 		try enterRule(_localctx, 34, PCREParser.RULE_conditional)
 		var _la: Int = 0
@@ -2633,34 +2752,39 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Backtrack_controlContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_backtrack_control }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterBacktrack_control(self)
+
+	public class Backtrack_controlContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_backtrack_control
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterBacktrack_control(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitBacktrack_control(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitBacktrack_control(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitBacktrack_control(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitBacktrack_control(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitBacktrack_control(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitBacktrack_control(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func backtrack_control() throws -> Backtrack_controlContext {
+	 open func backtrack_control() throws -> Backtrack_controlContext {
 		var _localctx: Backtrack_controlContext = Backtrack_controlContext(_ctx, getState())
 		try enterRule(_localctx, 36, PCREParser.RULE_backtrack_control)
 		var _la: Int = 0
@@ -2936,34 +3060,39 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Newline_conventionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_newline_convention }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterNewline_convention(self)
+
+	public class Newline_conventionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_newline_convention
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterNewline_convention(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitNewline_convention(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitNewline_convention(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitNewline_convention(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitNewline_convention(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitNewline_convention(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitNewline_convention(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func newline_convention() throws -> Newline_conventionContext {
+	 open func newline_convention() throws -> Newline_conventionContext {
 		var _localctx: Newline_conventionContext = Newline_conventionContext(_ctx, getState())
 		try enterRule(_localctx, 38, PCREParser.RULE_newline_convention)
 		defer {
@@ -3134,37 +3263,43 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class CalloutContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class CalloutContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_callout
 		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_callout }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterCallout(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterCallout(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitCallout(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitCallout(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitCallout(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitCallout(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitCallout(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitCallout(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func callout() throws -> CalloutContext {
+	 open func callout() throws -> CalloutContext {
 		var _localctx: CalloutContext = CalloutContext(_ctx, getState())
 		try enterRule(_localctx, 40, PCREParser.RULE_callout)
 		defer {
@@ -3211,88 +3346,143 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class AtomContext:ParserRuleContext {
-		open func subroutine_reference() -> Subroutine_referenceContext? {
-			return getRuleContext(Subroutine_referenceContext.self,0)
+
+	public class AtomContext: ParserRuleContext {
+			open
+			func subroutine_reference() -> Subroutine_referenceContext? {
+				return getRuleContext(Subroutine_referenceContext.self, 0)
+			}
+			open
+			func shared_atom() -> Shared_atomContext? {
+				return getRuleContext(Shared_atomContext.self, 0)
+			}
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func character_class() -> Character_classContext? {
+				return getRuleContext(Character_classContext.self, 0)
+			}
+			open
+			func capture() -> CaptureContext? {
+				return getRuleContext(CaptureContext.self, 0)
+			}
+			open
+			func non_capture() -> Non_captureContext? {
+				return getRuleContext(Non_captureContext.self, 0)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+			open
+			func option() -> OptionContext? {
+				return getRuleContext(OptionContext.self, 0)
+			}
+			open
+			func look_around() -> Look_aroundContext? {
+				return getRuleContext(Look_aroundContext.self, 0)
+			}
+			open
+			func backreference() -> BackreferenceContext? {
+				return getRuleContext(BackreferenceContext.self, 0)
+			}
+			open
+			func conditional() -> ConditionalContext? {
+				return getRuleContext(ConditionalContext.self, 0)
+			}
+			open
+			func backtrack_control() -> Backtrack_controlContext? {
+				return getRuleContext(Backtrack_controlContext.self, 0)
+			}
+			open
+			func newline_convention() -> Newline_conventionContext? {
+				return getRuleContext(Newline_conventionContext.self, 0)
+			}
+			open
+			func callout() -> CalloutContext? {
+				return getRuleContext(CalloutContext.self, 0)
+			}
+			open
+			func Dot() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Dot.rawValue, 0)
+			}
+			open
+			func Caret() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Caret.rawValue, 0)
+			}
+			open
+			func StartOfSubject() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.StartOfSubject.rawValue, 0)
+			}
+			open
+			func WordBoundary() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.WordBoundary.rawValue, 0)
+			}
+			open
+			func NonWordBoundary() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NonWordBoundary.rawValue, 0)
+			}
+			open
+			func EndOfSubjectOrLine() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.EndOfSubjectOrLine.rawValue, 0)
+			}
+			open
+			func EndOfSubjectOrLineEndOfSubject() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.EndOfSubjectOrLineEndOfSubject.rawValue, 0)
+			}
+			open
+			func EndOfSubject() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.EndOfSubject.rawValue, 0)
+			}
+			open
+			func PreviousMatchInSubject() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.PreviousMatchInSubject.rawValue, 0)
+			}
+			open
+			func ResetStartMatch() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.ResetStartMatch.rawValue, 0)
+			}
+			open
+			func OneDataUnit() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.OneDataUnit.rawValue, 0)
+			}
+			open
+			func ExtendedUnicodeChar() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.ExtendedUnicodeChar.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_atom
 		}
-		open func shared_atom() -> Shared_atomContext? {
-			return getRuleContext(Shared_atomContext.self,0)
-		}
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		open func character_class() -> Character_classContext? {
-			return getRuleContext(Character_classContext.self,0)
-		}
-		open func capture() -> CaptureContext? {
-			return getRuleContext(CaptureContext.self,0)
-		}
-		open func non_capture() -> Non_captureContext? {
-			return getRuleContext(Non_captureContext.self,0)
-		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open func option() -> OptionContext? {
-			return getRuleContext(OptionContext.self,0)
-		}
-		open func look_around() -> Look_aroundContext? {
-			return getRuleContext(Look_aroundContext.self,0)
-		}
-		open func backreference() -> BackreferenceContext? {
-			return getRuleContext(BackreferenceContext.self,0)
-		}
-		open func conditional() -> ConditionalContext? {
-			return getRuleContext(ConditionalContext.self,0)
-		}
-		open func backtrack_control() -> Backtrack_controlContext? {
-			return getRuleContext(Backtrack_controlContext.self,0)
-		}
-		open func newline_convention() -> Newline_conventionContext? {
-			return getRuleContext(Newline_conventionContext.self,0)
-		}
-		open func callout() -> CalloutContext? {
-			return getRuleContext(CalloutContext.self,0)
-		}
-		open func Dot() -> TerminalNode? { return getToken(PCREParser.Tokens.Dot.rawValue, 0) }
-		open func Caret() -> TerminalNode? { return getToken(PCREParser.Tokens.Caret.rawValue, 0) }
-		open func StartOfSubject() -> TerminalNode? { return getToken(PCREParser.Tokens.StartOfSubject.rawValue, 0) }
-		open func WordBoundary() -> TerminalNode? { return getToken(PCREParser.Tokens.WordBoundary.rawValue, 0) }
-		open func NonWordBoundary() -> TerminalNode? { return getToken(PCREParser.Tokens.NonWordBoundary.rawValue, 0) }
-		open func EndOfSubjectOrLine() -> TerminalNode? { return getToken(PCREParser.Tokens.EndOfSubjectOrLine.rawValue, 0) }
-		open func EndOfSubjectOrLineEndOfSubject() -> TerminalNode? { return getToken(PCREParser.Tokens.EndOfSubjectOrLineEndOfSubject.rawValue, 0) }
-		open func EndOfSubject() -> TerminalNode? { return getToken(PCREParser.Tokens.EndOfSubject.rawValue, 0) }
-		open func PreviousMatchInSubject() -> TerminalNode? { return getToken(PCREParser.Tokens.PreviousMatchInSubject.rawValue, 0) }
-		open func ResetStartMatch() -> TerminalNode? { return getToken(PCREParser.Tokens.ResetStartMatch.rawValue, 0) }
-		open func OneDataUnit() -> TerminalNode? { return getToken(PCREParser.Tokens.OneDataUnit.rawValue, 0) }
-		open func ExtendedUnicodeChar() -> TerminalNode? { return getToken(PCREParser.Tokens.ExtendedUnicodeChar.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_atom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitAtom(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitAtom(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atom() throws -> AtomContext {
+	 open func atom() throws -> AtomContext {
 		var _localctx: AtomContext = AtomContext(_ctx, getState())
 		try enterRule(_localctx, 42, PCREParser.RULE_atom)
 		defer {
@@ -3469,47 +3659,59 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Cc_atomContext:ParserRuleContext {
-		open func cc_literal() -> Array<Cc_literalContext> {
-			return getRuleContexts(Cc_literalContext.self)
+
+	public class Cc_atomContext: ParserRuleContext {
+			open
+			func cc_literal() -> [Cc_literalContext] {
+				return getRuleContexts(Cc_literalContext.self)
+			}
+			open
+			func cc_literal(_ i: Int) -> Cc_literalContext? {
+				return getRuleContext(Cc_literalContext.self, i)
+			}
+			open
+			func Hyphen() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Hyphen.rawValue, 0)
+			}
+			open
+			func shared_atom() -> Shared_atomContext? {
+				return getRuleContext(Shared_atomContext.self, 0)
+			}
+			open
+			func backreference_or_octal() -> Backreference_or_octalContext? {
+				return getRuleContext(Backreference_or_octalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_cc_atom
 		}
-		open func cc_literal(_ i: Int) -> Cc_literalContext? {
-			return getRuleContext(Cc_literalContext.self,i)
-		}
-		open func Hyphen() -> TerminalNode? { return getToken(PCREParser.Tokens.Hyphen.rawValue, 0) }
-		open func shared_atom() -> Shared_atomContext? {
-			return getRuleContext(Shared_atomContext.self,0)
-		}
-		open func backreference_or_octal() -> Backreference_or_octalContext? {
-			return getRuleContext(Backreference_or_octalContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_cc_atom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterCc_atom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterCc_atom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitCc_atom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitCc_atom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitCc_atom(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitCc_atom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitCc_atom(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitCc_atom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cc_atom() throws -> Cc_atomContext {
+	 open func cc_atom() throws -> Cc_atomContext {
 		var _localctx: Cc_atomContext = Cc_atomContext(_ctx, getState())
 		try enterRule(_localctx, 44, PCREParser.RULE_cc_atom)
 		defer {
@@ -3558,51 +3760,107 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Shared_atomContext:ParserRuleContext {
-		open func POSIXNamedSet() -> TerminalNode? { return getToken(PCREParser.Tokens.POSIXNamedSet.rawValue, 0) }
-		open func POSIXNegatedNamedSet() -> TerminalNode? { return getToken(PCREParser.Tokens.POSIXNegatedNamedSet.rawValue, 0) }
-		open func ControlChar() -> TerminalNode? { return getToken(PCREParser.Tokens.ControlChar.rawValue, 0) }
-		open func DecimalDigit() -> TerminalNode? { return getToken(PCREParser.Tokens.DecimalDigit.rawValue, 0) }
-		open func NotDecimalDigit() -> TerminalNode? { return getToken(PCREParser.Tokens.NotDecimalDigit.rawValue, 0) }
-		open func HorizontalWhiteSpace() -> TerminalNode? { return getToken(PCREParser.Tokens.HorizontalWhiteSpace.rawValue, 0) }
-		open func NotHorizontalWhiteSpace() -> TerminalNode? { return getToken(PCREParser.Tokens.NotHorizontalWhiteSpace.rawValue, 0) }
-		open func NotNewLine() -> TerminalNode? { return getToken(PCREParser.Tokens.NotNewLine.rawValue, 0) }
-		open func CharWithProperty() -> TerminalNode? { return getToken(PCREParser.Tokens.CharWithProperty.rawValue, 0) }
-		open func CharWithoutProperty() -> TerminalNode? { return getToken(PCREParser.Tokens.CharWithoutProperty.rawValue, 0) }
-		open func NewLineSequence() -> TerminalNode? { return getToken(PCREParser.Tokens.NewLineSequence.rawValue, 0) }
-		open func WhiteSpace() -> TerminalNode? { return getToken(PCREParser.Tokens.WhiteSpace.rawValue, 0) }
-		open func NotWhiteSpace() -> TerminalNode? { return getToken(PCREParser.Tokens.NotWhiteSpace.rawValue, 0) }
-		open func VerticalWhiteSpace() -> TerminalNode? { return getToken(PCREParser.Tokens.VerticalWhiteSpace.rawValue, 0) }
-		open func NotVerticalWhiteSpace() -> TerminalNode? { return getToken(PCREParser.Tokens.NotVerticalWhiteSpace.rawValue, 0) }
-		open func WordChar() -> TerminalNode? { return getToken(PCREParser.Tokens.WordChar.rawValue, 0) }
-		open func NotWordChar() -> TerminalNode? { return getToken(PCREParser.Tokens.NotWordChar.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_shared_atom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterShared_atom(self)
+
+	public class Shared_atomContext: ParserRuleContext {
+			open
+			func POSIXNamedSet() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.POSIXNamedSet.rawValue, 0)
+			}
+			open
+			func POSIXNegatedNamedSet() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.POSIXNegatedNamedSet.rawValue, 0)
+			}
+			open
+			func ControlChar() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.ControlChar.rawValue, 0)
+			}
+			open
+			func DecimalDigit() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.DecimalDigit.rawValue, 0)
+			}
+			open
+			func NotDecimalDigit() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NotDecimalDigit.rawValue, 0)
+			}
+			open
+			func HorizontalWhiteSpace() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.HorizontalWhiteSpace.rawValue, 0)
+			}
+			open
+			func NotHorizontalWhiteSpace() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NotHorizontalWhiteSpace.rawValue, 0)
+			}
+			open
+			func NotNewLine() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NotNewLine.rawValue, 0)
+			}
+			open
+			func CharWithProperty() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CharWithProperty.rawValue, 0)
+			}
+			open
+			func CharWithoutProperty() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CharWithoutProperty.rawValue, 0)
+			}
+			open
+			func NewLineSequence() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NewLineSequence.rawValue, 0)
+			}
+			open
+			func WhiteSpace() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.WhiteSpace.rawValue, 0)
+			}
+			open
+			func NotWhiteSpace() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NotWhiteSpace.rawValue, 0)
+			}
+			open
+			func VerticalWhiteSpace() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.VerticalWhiteSpace.rawValue, 0)
+			}
+			open
+			func NotVerticalWhiteSpace() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NotVerticalWhiteSpace.rawValue, 0)
+			}
+			open
+			func WordChar() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.WordChar.rawValue, 0)
+			}
+			open
+			func NotWordChar() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NotWordChar.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_shared_atom
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterShared_atom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitShared_atom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitShared_atom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitShared_atom(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitShared_atom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitShared_atom(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitShared_atom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func shared_atom() throws -> Shared_atomContext {
+	 open func shared_atom() throws -> Shared_atomContext {
 		var _localctx: Shared_atomContext = Shared_atomContext(_ctx, getState())
 		try enterRule(_localctx, 46, PCREParser.RULE_shared_atom)
 		var _la: Int = 0
@@ -3637,38 +3895,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func shared_literal() -> Shared_literalContext? {
-			return getRuleContext(Shared_literalContext.self,0)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func shared_literal() -> Shared_literalContext? {
+				return getRuleContext(Shared_literalContext.self, 0)
+			}
+			open
+			func CharacterClassEnd() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CharacterClassEnd.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_literal
 		}
-		open func CharacterClassEnd() -> TerminalNode? { return getToken(PCREParser.Tokens.CharacterClassEnd.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitLiteral(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 48, PCREParser.RULE_literal)
 		defer {
@@ -3777,7 +4044,7 @@ open class PCREParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3788,48 +4055,87 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Cc_literalContext:ParserRuleContext {
-		open func shared_literal() -> Shared_literalContext? {
-			return getRuleContext(Shared_literalContext.self,0)
+
+	public class Cc_literalContext: ParserRuleContext {
+			open
+			func shared_literal() -> Shared_literalContext? {
+				return getRuleContext(Shared_literalContext.self, 0)
+			}
+			open
+			func Dot() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Dot.rawValue, 0)
+			}
+			open
+			func CharacterClassStart() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CharacterClassStart.rawValue, 0)
+			}
+			open
+			func Caret() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Caret.rawValue, 0)
+			}
+			open
+			func QuestionMark() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.QuestionMark.rawValue, 0)
+			}
+			open
+			func Plus() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Plus.rawValue, 0)
+			}
+			open
+			func Star() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Star.rawValue, 0)
+			}
+			open
+			func WordBoundary() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.WordBoundary.rawValue, 0)
+			}
+			open
+			func EndOfSubjectOrLine() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.EndOfSubjectOrLine.rawValue, 0)
+			}
+			open
+			func Pipe() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Pipe.rawValue, 0)
+			}
+			open
+			func OpenParen() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.OpenParen.rawValue, 0)
+			}
+			open
+			func CloseParen() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CloseParen.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_cc_literal
 		}
-		open func Dot() -> TerminalNode? { return getToken(PCREParser.Tokens.Dot.rawValue, 0) }
-		open func CharacterClassStart() -> TerminalNode? { return getToken(PCREParser.Tokens.CharacterClassStart.rawValue, 0) }
-		open func Caret() -> TerminalNode? { return getToken(PCREParser.Tokens.Caret.rawValue, 0) }
-		open func QuestionMark() -> TerminalNode? { return getToken(PCREParser.Tokens.QuestionMark.rawValue, 0) }
-		open func Plus() -> TerminalNode? { return getToken(PCREParser.Tokens.Plus.rawValue, 0) }
-		open func Star() -> TerminalNode? { return getToken(PCREParser.Tokens.Star.rawValue, 0) }
-		open func WordBoundary() -> TerminalNode? { return getToken(PCREParser.Tokens.WordBoundary.rawValue, 0) }
-		open func EndOfSubjectOrLine() -> TerminalNode? { return getToken(PCREParser.Tokens.EndOfSubjectOrLine.rawValue, 0) }
-		open func Pipe() -> TerminalNode? { return getToken(PCREParser.Tokens.Pipe.rawValue, 0) }
-		open func OpenParen() -> TerminalNode? { return getToken(PCREParser.Tokens.OpenParen.rawValue, 0) }
-		open func CloseParen() -> TerminalNode? { return getToken(PCREParser.Tokens.CloseParen.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_cc_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterCc_literal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterCc_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitCc_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitCc_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitCc_literal(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitCc_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitCc_literal(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitCc_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cc_literal() throws -> Cc_literalContext {
+	 open func cc_literal() throws -> Cc_literalContext {
 		var _localctx: Cc_literalContext = Cc_literalContext(_ctx, getState())
 		try enterRule(_localctx, 50, PCREParser.RULE_cc_literal)
 		defer {
@@ -4008,7 +4314,7 @@ open class PCREParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4019,66 +4325,143 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Shared_literalContext:ParserRuleContext {
-		open func octal_char() -> Octal_charContext? {
-			return getRuleContext(Octal_charContext.self,0)
+
+	public class Shared_literalContext: ParserRuleContext {
+			open
+			func octal_char() -> Octal_charContext? {
+				return getRuleContext(Octal_charContext.self, 0)
+			}
+			open
+			func letter() -> LetterContext? {
+				return getRuleContext(LetterContext.self, 0)
+			}
+			open
+			func digit() -> DigitContext? {
+				return getRuleContext(DigitContext.self, 0)
+			}
+			open
+			func BellChar() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.BellChar.rawValue, 0)
+			}
+			open
+			func EscapeChar() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.EscapeChar.rawValue, 0)
+			}
+			open
+			func FormFeed() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.FormFeed.rawValue, 0)
+			}
+			open
+			func NewLine() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NewLine.rawValue, 0)
+			}
+			open
+			func CarriageReturn() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CarriageReturn.rawValue, 0)
+			}
+			open
+			func Tab() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Tab.rawValue, 0)
+			}
+			open
+			func HexChar() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.HexChar.rawValue, 0)
+			}
+			open
+			func Quoted() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Quoted.rawValue, 0)
+			}
+			open
+			func BlockQuoted() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.BlockQuoted.rawValue, 0)
+			}
+			open
+			func OpenBrace() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.OpenBrace.rawValue, 0)
+			}
+			open
+			func CloseBrace() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CloseBrace.rawValue, 0)
+			}
+			open
+			func Comma() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Comma.rawValue, 0)
+			}
+			open
+			func Hyphen() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Hyphen.rawValue, 0)
+			}
+			open
+			func LessThan() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.LessThan.rawValue, 0)
+			}
+			open
+			func GreaterThan() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.GreaterThan.rawValue, 0)
+			}
+			open
+			func SingleQuote() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.SingleQuote.rawValue, 0)
+			}
+			open
+			func Underscore() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Underscore.rawValue, 0)
+			}
+			open
+			func Colon() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Colon.rawValue, 0)
+			}
+			open
+			func Hash() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Hash.rawValue, 0)
+			}
+			open
+			func Equals() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Equals.rawValue, 0)
+			}
+			open
+			func Exclamation() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Exclamation.rawValue, 0)
+			}
+			open
+			func Ampersand() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Ampersand.rawValue, 0)
+			}
+			open
+			func OtherChar() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.OtherChar.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_shared_literal
 		}
-		open func letter() -> LetterContext? {
-			return getRuleContext(LetterContext.self,0)
-		}
-		open func digit() -> DigitContext? {
-			return getRuleContext(DigitContext.self,0)
-		}
-		open func BellChar() -> TerminalNode? { return getToken(PCREParser.Tokens.BellChar.rawValue, 0) }
-		open func EscapeChar() -> TerminalNode? { return getToken(PCREParser.Tokens.EscapeChar.rawValue, 0) }
-		open func FormFeed() -> TerminalNode? { return getToken(PCREParser.Tokens.FormFeed.rawValue, 0) }
-		open func NewLine() -> TerminalNode? { return getToken(PCREParser.Tokens.NewLine.rawValue, 0) }
-		open func CarriageReturn() -> TerminalNode? { return getToken(PCREParser.Tokens.CarriageReturn.rawValue, 0) }
-		open func Tab() -> TerminalNode? { return getToken(PCREParser.Tokens.Tab.rawValue, 0) }
-		open func HexChar() -> TerminalNode? { return getToken(PCREParser.Tokens.HexChar.rawValue, 0) }
-		open func Quoted() -> TerminalNode? { return getToken(PCREParser.Tokens.Quoted.rawValue, 0) }
-		open func BlockQuoted() -> TerminalNode? { return getToken(PCREParser.Tokens.BlockQuoted.rawValue, 0) }
-		open func OpenBrace() -> TerminalNode? { return getToken(PCREParser.Tokens.OpenBrace.rawValue, 0) }
-		open func CloseBrace() -> TerminalNode? { return getToken(PCREParser.Tokens.CloseBrace.rawValue, 0) }
-		open func Comma() -> TerminalNode? { return getToken(PCREParser.Tokens.Comma.rawValue, 0) }
-		open func Hyphen() -> TerminalNode? { return getToken(PCREParser.Tokens.Hyphen.rawValue, 0) }
-		open func LessThan() -> TerminalNode? { return getToken(PCREParser.Tokens.LessThan.rawValue, 0) }
-		open func GreaterThan() -> TerminalNode? { return getToken(PCREParser.Tokens.GreaterThan.rawValue, 0) }
-		open func SingleQuote() -> TerminalNode? { return getToken(PCREParser.Tokens.SingleQuote.rawValue, 0) }
-		open func Underscore() -> TerminalNode? { return getToken(PCREParser.Tokens.Underscore.rawValue, 0) }
-		open func Colon() -> TerminalNode? { return getToken(PCREParser.Tokens.Colon.rawValue, 0) }
-		open func Hash() -> TerminalNode? { return getToken(PCREParser.Tokens.Hash.rawValue, 0) }
-		open func Equals() -> TerminalNode? { return getToken(PCREParser.Tokens.Equals.rawValue, 0) }
-		open func Exclamation() -> TerminalNode? { return getToken(PCREParser.Tokens.Exclamation.rawValue, 0) }
-		open func Ampersand() -> TerminalNode? { return getToken(PCREParser.Tokens.Ampersand.rawValue, 0) }
-		open func OtherChar() -> TerminalNode? { return getToken(PCREParser.Tokens.OtherChar.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_shared_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterShared_literal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterShared_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitShared_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitShared_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitShared_literal(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitShared_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitShared_literal(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitShared_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func shared_literal() throws -> Shared_literalContext {
+	 open func shared_literal() throws -> Shared_literalContext {
 		var _localctx: Shared_literalContext = Shared_literalContext(_ctx, getState())
 		try enterRule(_localctx, 52, PCREParser.RULE_shared_literal)
 		defer {
@@ -4328,7 +4711,7 @@ open class PCREParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4339,37 +4722,43 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class NumberContext:ParserRuleContext {
-		open func digits() -> DigitsContext? {
-			return getRuleContext(DigitsContext.self,0)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func digits() -> DigitsContext? {
+				return getRuleContext(DigitsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_number
 		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterNumber(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitNumber(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 54, PCREParser.RULE_number)
 		defer {
@@ -4389,45 +4778,67 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Octal_charContext:ParserRuleContext {
-		open func Backslash() -> TerminalNode? { return getToken(PCREParser.Tokens.Backslash.rawValue, 0) }
-		open func octal_digit() -> Array<Octal_digitContext> {
-			return getRuleContexts(Octal_digitContext.self)
+
+	public class Octal_charContext: ParserRuleContext {
+			open
+			func Backslash() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Backslash.rawValue, 0)
+			}
+			open
+			func octal_digit() -> [Octal_digitContext] {
+				return getRuleContexts(Octal_digitContext.self)
+			}
+			open
+			func octal_digit(_ i: Int) -> Octal_digitContext? {
+				return getRuleContext(Octal_digitContext.self, i)
+			}
+			open
+			func D0() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D0.rawValue, 0)
+			}
+			open
+			func D1() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D1.rawValue, 0)
+			}
+			open
+			func D2() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D2.rawValue, 0)
+			}
+			open
+			func D3() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D3.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_octal_char
 		}
-		open func octal_digit(_ i: Int) -> Octal_digitContext? {
-			return getRuleContext(Octal_digitContext.self,i)
-		}
-		open func D0() -> TerminalNode? { return getToken(PCREParser.Tokens.D0.rawValue, 0) }
-		open func D1() -> TerminalNode? { return getToken(PCREParser.Tokens.D1.rawValue, 0) }
-		open func D2() -> TerminalNode? { return getToken(PCREParser.Tokens.D2.rawValue, 0) }
-		open func D3() -> TerminalNode? { return getToken(PCREParser.Tokens.D3.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_octal_char }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterOctal_char(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterOctal_char(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitOctal_char(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitOctal_char(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitOctal_char(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitOctal_char(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitOctal_char(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitOctal_char(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func octal_char() throws -> Octal_charContext {
+	 open func octal_char() throws -> Octal_charContext {
 		var _localctx: Octal_charContext = Octal_charContext(_ctx, getState())
 		try enterRule(_localctx, 56, PCREParser.RULE_octal_char)
 		var _la: Int = 0
@@ -4485,42 +4896,71 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Octal_digitContext:ParserRuleContext {
-		open func D0() -> TerminalNode? { return getToken(PCREParser.Tokens.D0.rawValue, 0) }
-		open func D1() -> TerminalNode? { return getToken(PCREParser.Tokens.D1.rawValue, 0) }
-		open func D2() -> TerminalNode? { return getToken(PCREParser.Tokens.D2.rawValue, 0) }
-		open func D3() -> TerminalNode? { return getToken(PCREParser.Tokens.D3.rawValue, 0) }
-		open func D4() -> TerminalNode? { return getToken(PCREParser.Tokens.D4.rawValue, 0) }
-		open func D5() -> TerminalNode? { return getToken(PCREParser.Tokens.D5.rawValue, 0) }
-		open func D6() -> TerminalNode? { return getToken(PCREParser.Tokens.D6.rawValue, 0) }
-		open func D7() -> TerminalNode? { return getToken(PCREParser.Tokens.D7.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_octal_digit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterOctal_digit(self)
+
+	public class Octal_digitContext: ParserRuleContext {
+			open
+			func D0() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D0.rawValue, 0)
+			}
+			open
+			func D1() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D1.rawValue, 0)
+			}
+			open
+			func D2() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D2.rawValue, 0)
+			}
+			open
+			func D3() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D3.rawValue, 0)
+			}
+			open
+			func D4() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D4.rawValue, 0)
+			}
+			open
+			func D5() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D5.rawValue, 0)
+			}
+			open
+			func D6() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D6.rawValue, 0)
+			}
+			open
+			func D7() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D7.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_octal_digit
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterOctal_digit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitOctal_digit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitOctal_digit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitOctal_digit(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitOctal_digit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitOctal_digit(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitOctal_digit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func octal_digit() throws -> Octal_digitContext {
+	 open func octal_digit() throws -> Octal_digitContext {
 		var _localctx: Octal_digitContext = Octal_digitContext(_ctx, getState())
 		try enterRule(_localctx, 58, PCREParser.RULE_octal_digit)
 		var _la: Int = 0
@@ -4555,40 +4995,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class DigitsContext:ParserRuleContext {
-		open func digit() -> Array<DigitContext> {
-			return getRuleContexts(DigitContext.self)
+
+	public class DigitsContext: ParserRuleContext {
+			open
+			func digit() -> [DigitContext] {
+				return getRuleContexts(DigitContext.self)
+			}
+			open
+			func digit(_ i: Int) -> DigitContext? {
+				return getRuleContext(DigitContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_digits
 		}
-		open func digit(_ i: Int) -> DigitContext? {
-			return getRuleContext(DigitContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_digits }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterDigits(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterDigits(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitDigits(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitDigits(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitDigits(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitDigits(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitDigits(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitDigits(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func digits() throws -> DigitsContext {
+	 open func digits() throws -> DigitsContext {
 		var _localctx: DigitsContext = DigitsContext(_ctx, getState())
 		try enterRule(_localctx, 60, PCREParser.RULE_digits)
 		defer {
@@ -4609,7 +5056,7 @@ open class PCREParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(901); 
 		 		try _errHandler.sync(self)
@@ -4625,44 +5072,79 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class DigitContext:ParserRuleContext {
-		open func D0() -> TerminalNode? { return getToken(PCREParser.Tokens.D0.rawValue, 0) }
-		open func D1() -> TerminalNode? { return getToken(PCREParser.Tokens.D1.rawValue, 0) }
-		open func D2() -> TerminalNode? { return getToken(PCREParser.Tokens.D2.rawValue, 0) }
-		open func D3() -> TerminalNode? { return getToken(PCREParser.Tokens.D3.rawValue, 0) }
-		open func D4() -> TerminalNode? { return getToken(PCREParser.Tokens.D4.rawValue, 0) }
-		open func D5() -> TerminalNode? { return getToken(PCREParser.Tokens.D5.rawValue, 0) }
-		open func D6() -> TerminalNode? { return getToken(PCREParser.Tokens.D6.rawValue, 0) }
-		open func D7() -> TerminalNode? { return getToken(PCREParser.Tokens.D7.rawValue, 0) }
-		open func D8() -> TerminalNode? { return getToken(PCREParser.Tokens.D8.rawValue, 0) }
-		open func D9() -> TerminalNode? { return getToken(PCREParser.Tokens.D9.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_digit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterDigit(self)
+
+	public class DigitContext: ParserRuleContext {
+			open
+			func D0() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D0.rawValue, 0)
+			}
+			open
+			func D1() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D1.rawValue, 0)
+			}
+			open
+			func D2() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D2.rawValue, 0)
+			}
+			open
+			func D3() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D3.rawValue, 0)
+			}
+			open
+			func D4() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D4.rawValue, 0)
+			}
+			open
+			func D5() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D5.rawValue, 0)
+			}
+			open
+			func D6() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D6.rawValue, 0)
+			}
+			open
+			func D7() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D7.rawValue, 0)
+			}
+			open
+			func D8() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D8.rawValue, 0)
+			}
+			open
+			func D9() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.D9.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_digit
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterDigit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitDigit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitDigit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitDigit(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitDigit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitDigit(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitDigit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func digit() throws -> DigitContext {
+	 open func digit() throws -> DigitContext {
 		var _localctx: DigitContext = DigitContext(_ctx, getState())
 		try enterRule(_localctx, 62, PCREParser.RULE_digit)
 		var _la: Int = 0
@@ -4697,37 +5179,43 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class NameContext:ParserRuleContext {
-		open func alpha_nums() -> Alpha_numsContext? {
-			return getRuleContext(Alpha_numsContext.self,0)
+
+	public class NameContext: ParserRuleContext {
+			open
+			func alpha_nums() -> Alpha_numsContext? {
+				return getRuleContext(Alpha_numsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_name
 		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitName(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitName(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func name() throws -> NameContext {
+	 open func name() throws -> NameContext {
 		var _localctx: NameContext = NameContext(_ctx, getState())
 		try enterRule(_localctx, 64, PCREParser.RULE_name)
 		defer {
@@ -4747,50 +5235,63 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Alpha_numsContext:ParserRuleContext {
-		open func letter() -> Array<LetterContext> {
-			return getRuleContexts(LetterContext.self)
+
+	public class Alpha_numsContext: ParserRuleContext {
+			open
+			func letter() -> [LetterContext] {
+				return getRuleContexts(LetterContext.self)
+			}
+			open
+			func letter(_ i: Int) -> LetterContext? {
+				return getRuleContext(LetterContext.self, i)
+			}
+			open
+			func Underscore() -> [TerminalNode] {
+				return getTokens(PCREParser.Tokens.Underscore.rawValue)
+			}
+			open
+			func Underscore(_ i:Int) -> TerminalNode? {
+				return getToken(PCREParser.Tokens.Underscore.rawValue, i)
+			}
+			open
+			func digit() -> [DigitContext] {
+				return getRuleContexts(DigitContext.self)
+			}
+			open
+			func digit(_ i: Int) -> DigitContext? {
+				return getRuleContext(DigitContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_alpha_nums
 		}
-		open func letter(_ i: Int) -> LetterContext? {
-			return getRuleContext(LetterContext.self,i)
-		}
-		open func Underscore() -> Array<TerminalNode> { return getTokens(PCREParser.Tokens.Underscore.rawValue) }
-		open func Underscore(_ i:Int) -> TerminalNode?{
-			return getToken(PCREParser.Tokens.Underscore.rawValue, i)
-		}
-		open func digit() -> Array<DigitContext> {
-			return getRuleContexts(DigitContext.self)
-		}
-		open func digit(_ i: Int) -> DigitContext? {
-			return getRuleContext(DigitContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_alpha_nums }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterAlpha_nums(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterAlpha_nums(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitAlpha_nums(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitAlpha_nums(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitAlpha_nums(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitAlpha_nums(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitAlpha_nums(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitAlpha_nums(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func alpha_nums() throws -> Alpha_numsContext {
+	 open func alpha_nums() throws -> Alpha_numsContext {
 		var _localctx: Alpha_numsContext = Alpha_numsContext(_ctx, getState())
 		try enterRule(_localctx, 66, PCREParser.RULE_alpha_nums)
 		var _la: Int = 0
@@ -4865,7 +5366,7 @@ open class PCREParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(916)
 		 	try _errHandler.sync(self)
@@ -4959,7 +5460,7 @@ open class PCREParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(918)
@@ -4976,40 +5477,47 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Non_close_parensContext:ParserRuleContext {
-		open func non_close_paren() -> Array<Non_close_parenContext> {
-			return getRuleContexts(Non_close_parenContext.self)
+
+	public class Non_close_parensContext: ParserRuleContext {
+			open
+			func non_close_paren() -> [Non_close_parenContext] {
+				return getRuleContexts(Non_close_parenContext.self)
+			}
+			open
+			func non_close_paren(_ i: Int) -> Non_close_parenContext? {
+				return getRuleContext(Non_close_parenContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_non_close_parens
 		}
-		open func non_close_paren(_ i: Int) -> Non_close_parenContext? {
-			return getRuleContext(Non_close_parenContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_non_close_parens }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterNon_close_parens(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterNon_close_parens(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitNon_close_parens(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitNon_close_parens(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitNon_close_parens(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitNon_close_parens(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitNon_close_parens(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitNon_close_parens(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func non_close_parens() throws -> Non_close_parensContext {
+	 open func non_close_parens() throws -> Non_close_parensContext {
 		var _localctx: Non_close_parensContext = Non_close_parensContext(_ctx, getState())
 		try enterRule(_localctx, 68, PCREParser.RULE_non_close_parens)
 		var _la: Int = 0
@@ -5051,35 +5559,43 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class Non_close_parenContext:ParserRuleContext {
-		open func CloseParen() -> TerminalNode? { return getToken(PCREParser.Tokens.CloseParen.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_non_close_paren }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterNon_close_paren(self)
+
+	public class Non_close_parenContext: ParserRuleContext {
+			open
+			func CloseParen() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CloseParen.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_non_close_paren
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterNon_close_paren(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitNon_close_paren(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitNon_close_paren(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitNon_close_paren(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitNon_close_paren(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitNon_close_paren(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitNon_close_paren(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func non_close_paren() throws -> Non_close_parenContext {
+	 open func non_close_paren() throws -> Non_close_parenContext {
 		var _localctx: Non_close_parenContext = Non_close_parenContext(_ctx, getState())
 		try enterRule(_localctx, 70, PCREParser.RULE_non_close_paren)
 		var _la: Int = 0
@@ -5111,86 +5627,247 @@ open class PCREParser: Parser {
 
 		return _localctx
 	}
-	open class LetterContext:ParserRuleContext {
-		open func ALC() -> TerminalNode? { return getToken(PCREParser.Tokens.ALC.rawValue, 0) }
-		open func BLC() -> TerminalNode? { return getToken(PCREParser.Tokens.BLC.rawValue, 0) }
-		open func CLC() -> TerminalNode? { return getToken(PCREParser.Tokens.CLC.rawValue, 0) }
-		open func DLC() -> TerminalNode? { return getToken(PCREParser.Tokens.DLC.rawValue, 0) }
-		open func ELC() -> TerminalNode? { return getToken(PCREParser.Tokens.ELC.rawValue, 0) }
-		open func FLC() -> TerminalNode? { return getToken(PCREParser.Tokens.FLC.rawValue, 0) }
-		open func GLC() -> TerminalNode? { return getToken(PCREParser.Tokens.GLC.rawValue, 0) }
-		open func HLC() -> TerminalNode? { return getToken(PCREParser.Tokens.HLC.rawValue, 0) }
-		open func ILC() -> TerminalNode? { return getToken(PCREParser.Tokens.ILC.rawValue, 0) }
-		open func JLC() -> TerminalNode? { return getToken(PCREParser.Tokens.JLC.rawValue, 0) }
-		open func KLC() -> TerminalNode? { return getToken(PCREParser.Tokens.KLC.rawValue, 0) }
-		open func LLC() -> TerminalNode? { return getToken(PCREParser.Tokens.LLC.rawValue, 0) }
-		open func MLC() -> TerminalNode? { return getToken(PCREParser.Tokens.MLC.rawValue, 0) }
-		open func NLC() -> TerminalNode? { return getToken(PCREParser.Tokens.NLC.rawValue, 0) }
-		open func OLC() -> TerminalNode? { return getToken(PCREParser.Tokens.OLC.rawValue, 0) }
-		open func PLC() -> TerminalNode? { return getToken(PCREParser.Tokens.PLC.rawValue, 0) }
-		open func QLC() -> TerminalNode? { return getToken(PCREParser.Tokens.QLC.rawValue, 0) }
-		open func RLC() -> TerminalNode? { return getToken(PCREParser.Tokens.RLC.rawValue, 0) }
-		open func SLC() -> TerminalNode? { return getToken(PCREParser.Tokens.SLC.rawValue, 0) }
-		open func TLC() -> TerminalNode? { return getToken(PCREParser.Tokens.TLC.rawValue, 0) }
-		open func ULC() -> TerminalNode? { return getToken(PCREParser.Tokens.ULC.rawValue, 0) }
-		open func VLC() -> TerminalNode? { return getToken(PCREParser.Tokens.VLC.rawValue, 0) }
-		open func WLC() -> TerminalNode? { return getToken(PCREParser.Tokens.WLC.rawValue, 0) }
-		open func XLC() -> TerminalNode? { return getToken(PCREParser.Tokens.XLC.rawValue, 0) }
-		open func YLC() -> TerminalNode? { return getToken(PCREParser.Tokens.YLC.rawValue, 0) }
-		open func ZLC() -> TerminalNode? { return getToken(PCREParser.Tokens.ZLC.rawValue, 0) }
-		open func AUC() -> TerminalNode? { return getToken(PCREParser.Tokens.AUC.rawValue, 0) }
-		open func BUC() -> TerminalNode? { return getToken(PCREParser.Tokens.BUC.rawValue, 0) }
-		open func CUC() -> TerminalNode? { return getToken(PCREParser.Tokens.CUC.rawValue, 0) }
-		open func DUC() -> TerminalNode? { return getToken(PCREParser.Tokens.DUC.rawValue, 0) }
-		open func EUC() -> TerminalNode? { return getToken(PCREParser.Tokens.EUC.rawValue, 0) }
-		open func FUC() -> TerminalNode? { return getToken(PCREParser.Tokens.FUC.rawValue, 0) }
-		open func GUC() -> TerminalNode? { return getToken(PCREParser.Tokens.GUC.rawValue, 0) }
-		open func HUC() -> TerminalNode? { return getToken(PCREParser.Tokens.HUC.rawValue, 0) }
-		open func IUC() -> TerminalNode? { return getToken(PCREParser.Tokens.IUC.rawValue, 0) }
-		open func JUC() -> TerminalNode? { return getToken(PCREParser.Tokens.JUC.rawValue, 0) }
-		open func KUC() -> TerminalNode? { return getToken(PCREParser.Tokens.KUC.rawValue, 0) }
-		open func LUC() -> TerminalNode? { return getToken(PCREParser.Tokens.LUC.rawValue, 0) }
-		open func MUC() -> TerminalNode? { return getToken(PCREParser.Tokens.MUC.rawValue, 0) }
-		open func NUC() -> TerminalNode? { return getToken(PCREParser.Tokens.NUC.rawValue, 0) }
-		open func OUC() -> TerminalNode? { return getToken(PCREParser.Tokens.OUC.rawValue, 0) }
-		open func PUC() -> TerminalNode? { return getToken(PCREParser.Tokens.PUC.rawValue, 0) }
-		open func QUC() -> TerminalNode? { return getToken(PCREParser.Tokens.QUC.rawValue, 0) }
-		open func RUC() -> TerminalNode? { return getToken(PCREParser.Tokens.RUC.rawValue, 0) }
-		open func SUC() -> TerminalNode? { return getToken(PCREParser.Tokens.SUC.rawValue, 0) }
-		open func TUC() -> TerminalNode? { return getToken(PCREParser.Tokens.TUC.rawValue, 0) }
-		open func UUC() -> TerminalNode? { return getToken(PCREParser.Tokens.UUC.rawValue, 0) }
-		open func VUC() -> TerminalNode? { return getToken(PCREParser.Tokens.VUC.rawValue, 0) }
-		open func WUC() -> TerminalNode? { return getToken(PCREParser.Tokens.WUC.rawValue, 0) }
-		open func XUC() -> TerminalNode? { return getToken(PCREParser.Tokens.XUC.rawValue, 0) }
-		open func YUC() -> TerminalNode? { return getToken(PCREParser.Tokens.YUC.rawValue, 0) }
-		open func ZUC() -> TerminalNode? { return getToken(PCREParser.Tokens.ZUC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PCREParser.RULE_letter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).enterLetter(self)
+
+	public class LetterContext: ParserRuleContext {
+			open
+			func ALC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.ALC.rawValue, 0)
+			}
+			open
+			func BLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.BLC.rawValue, 0)
+			}
+			open
+			func CLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CLC.rawValue, 0)
+			}
+			open
+			func DLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.DLC.rawValue, 0)
+			}
+			open
+			func ELC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.ELC.rawValue, 0)
+			}
+			open
+			func FLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.FLC.rawValue, 0)
+			}
+			open
+			func GLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.GLC.rawValue, 0)
+			}
+			open
+			func HLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.HLC.rawValue, 0)
+			}
+			open
+			func ILC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.ILC.rawValue, 0)
+			}
+			open
+			func JLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.JLC.rawValue, 0)
+			}
+			open
+			func KLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.KLC.rawValue, 0)
+			}
+			open
+			func LLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.LLC.rawValue, 0)
+			}
+			open
+			func MLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.MLC.rawValue, 0)
+			}
+			open
+			func NLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NLC.rawValue, 0)
+			}
+			open
+			func OLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.OLC.rawValue, 0)
+			}
+			open
+			func PLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.PLC.rawValue, 0)
+			}
+			open
+			func QLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.QLC.rawValue, 0)
+			}
+			open
+			func RLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.RLC.rawValue, 0)
+			}
+			open
+			func SLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.SLC.rawValue, 0)
+			}
+			open
+			func TLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.TLC.rawValue, 0)
+			}
+			open
+			func ULC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.ULC.rawValue, 0)
+			}
+			open
+			func VLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.VLC.rawValue, 0)
+			}
+			open
+			func WLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.WLC.rawValue, 0)
+			}
+			open
+			func XLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.XLC.rawValue, 0)
+			}
+			open
+			func YLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.YLC.rawValue, 0)
+			}
+			open
+			func ZLC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.ZLC.rawValue, 0)
+			}
+			open
+			func AUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.AUC.rawValue, 0)
+			}
+			open
+			func BUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.BUC.rawValue, 0)
+			}
+			open
+			func CUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.CUC.rawValue, 0)
+			}
+			open
+			func DUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.DUC.rawValue, 0)
+			}
+			open
+			func EUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.EUC.rawValue, 0)
+			}
+			open
+			func FUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.FUC.rawValue, 0)
+			}
+			open
+			func GUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.GUC.rawValue, 0)
+			}
+			open
+			func HUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.HUC.rawValue, 0)
+			}
+			open
+			func IUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.IUC.rawValue, 0)
+			}
+			open
+			func JUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.JUC.rawValue, 0)
+			}
+			open
+			func KUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.KUC.rawValue, 0)
+			}
+			open
+			func LUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.LUC.rawValue, 0)
+			}
+			open
+			func MUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.MUC.rawValue, 0)
+			}
+			open
+			func NUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.NUC.rawValue, 0)
+			}
+			open
+			func OUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.OUC.rawValue, 0)
+			}
+			open
+			func PUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.PUC.rawValue, 0)
+			}
+			open
+			func QUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.QUC.rawValue, 0)
+			}
+			open
+			func RUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.RUC.rawValue, 0)
+			}
+			open
+			func SUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.SUC.rawValue, 0)
+			}
+			open
+			func TUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.TUC.rawValue, 0)
+			}
+			open
+			func UUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.UUC.rawValue, 0)
+			}
+			open
+			func VUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.VUC.rawValue, 0)
+			}
+			open
+			func WUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.WUC.rawValue, 0)
+			}
+			open
+			func XUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.XUC.rawValue, 0)
+			}
+			open
+			func YUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.YUC.rawValue, 0)
+			}
+			open
+			func ZUC() -> TerminalNode? {
+				return getToken(PCREParser.Tokens.ZUC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PCREParser.RULE_letter
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.enterLetter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PCREListener {
-			 	(listener as! PCREListener).exitLetter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PCREListener {
+				listener.exitLetter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PCREVisitor {
-			     return (visitor as! PCREVisitor<T>).visitLetter(self)
-			}else if visitor is PCREBaseVisitor {
-		    	 return (visitor as! PCREBaseVisitor<T>).visitLetter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PCREVisitor {
+			    return visitor.visitLetter(self)
+			}
+			else if let visitor = visitor as? PCREBaseVisitor {
+			    return visitor.visitLetter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func letter() throws -> LetterContext {
+	 open func letter() throws -> LetterContext {
 		var _localctx: LetterContext = LetterContext(_ctx, getState())
 		try enterRule(_localctx, 72, PCREParser.RULE_letter)
 		var _la: Int = 0
@@ -5226,6 +5903,10 @@ open class PCREParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = PCREParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = PCREParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

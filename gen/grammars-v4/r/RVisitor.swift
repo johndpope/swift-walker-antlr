@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/r/R.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/r/R.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class RVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProg(_ ctx: RParser.ProgContext) -> T{
+	open func visitProg(_ ctx: RParser.ProgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class RVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr(_ ctx: RParser.ExprContext) -> T{
+	open func visitExpr(_ ctx: RParser.ExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class RVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprlist(_ ctx: RParser.ExprlistContext) -> T{
+	open func visitExprlist(_ ctx: RParser.ExprlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class RVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormlist(_ ctx: RParser.FormlistContext) -> T{
+	open func visitFormlist(_ ctx: RParser.FormlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class RVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForm(_ ctx: RParser.FormContext) -> T{
+	open func visitForm(_ ctx: RParser.FormContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class RVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSublist(_ ctx: RParser.SublistContext) -> T{
+	open func visitSublist(_ ctx: RParser.SublistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class RVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSub(_ ctx: RParser.SubContext) -> T{
+	open func visitSub(_ ctx: RParser.SubContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

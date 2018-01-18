@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/robotwars/robotwar.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/robotwars/robotwar.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: robotwarParser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: robotwarParser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: robotwarParser.LineContext) -> T{
+	open func visitLine(_ ctx: robotwarParser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabel(_ ctx: robotwarParser.LabelContext) -> T{
+	open func visitLabel(_ ctx: robotwarParser.LabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: robotwarParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: robotwarParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAccumstatement(_ ctx: robotwarParser.AccumstatementContext) -> T{
+	open func visitAccumstatement(_ ctx: robotwarParser.AccumstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAccumexpression(_ ctx: robotwarParser.AccumexpressionContext) -> T{
+	open func visitAccumexpression(_ ctx: robotwarParser.AccumexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGosubstatement(_ ctx: robotwarParser.GosubstatementContext) -> T{
+	open func visitGosubstatement(_ ctx: robotwarParser.GosubstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGotostatement(_ ctx: robotwarParser.GotostatementContext) -> T{
+	open func visitGotostatement(_ ctx: robotwarParser.GotostatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTostatement(_ ctx: robotwarParser.TostatementContext) -> T{
+	open func visitTostatement(_ ctx: robotwarParser.TostatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEndsubstatement(_ ctx: robotwarParser.EndsubstatementContext) -> T{
+	open func visitEndsubstatement(_ ctx: robotwarParser.EndsubstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfstatement(_ ctx: robotwarParser.IfstatementContext) -> T{
+	open func visitIfstatement(_ ctx: robotwarParser.IfstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCondition(_ ctx: robotwarParser.ConditionContext) -> T{
+	open func visitCondition(_ ctx: robotwarParser.ConditionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: robotwarParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: robotwarParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperation(_ ctx: robotwarParser.OperationContext) -> T{
+	open func visitOperation(_ ctx: robotwarParser.OperationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComparison(_ ctx: robotwarParser.ComparisonContext) -> T{
+	open func visitComparison(_ ctx: robotwarParser.ComparisonContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgument(_ ctx: robotwarParser.ArgumentContext) -> T{
+	open func visitArgument(_ ctx: robotwarParser.ArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRegister(_ ctx: robotwarParser.RegisterContext) -> T{
+	open func visitRegister(_ ctx: robotwarParser.RegisterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: robotwarParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: robotwarParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class robotwarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: robotwarParser.CommentContext) -> T{
+	open func visitComment(_ ctx: robotwarParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

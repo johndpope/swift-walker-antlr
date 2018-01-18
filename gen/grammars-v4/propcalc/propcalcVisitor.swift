@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/propcalc/propcalc.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/propcalc/propcalc.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class propcalcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProposition(_ ctx: propcalcParser.PropositionContext) -> T{
+	open func visitProposition(_ ctx: propcalcParser.PropositionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class propcalcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: propcalcParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: propcalcParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class propcalcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelExpression(_ ctx: propcalcParser.RelExpressionContext) -> T{
+	open func visitRelExpression(_ ctx: propcalcParser.RelExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class propcalcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtoms(_ ctx: propcalcParser.AtomsContext) -> T{
+	open func visitAtoms(_ ctx: propcalcParser.AtomsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class propcalcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: propcalcParser.AtomContext) -> T{
+	open func visitAtom(_ ctx: propcalcParser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class propcalcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEquiv(_ ctx: propcalcParser.EquivContext) -> T{
+	open func visitEquiv(_ ctx: propcalcParser.EquivContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class propcalcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplies(_ ctx: propcalcParser.ImpliesContext) -> T{
+	open func visitImplies(_ ctx: propcalcParser.ImpliesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class propcalcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariable(_ ctx: propcalcParser.VariableContext) -> T{
+	open func visitVariable(_ ctx: propcalcParser.VariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

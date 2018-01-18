@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/sparql/Sparql.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/sparql/Sparql.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuery(_ ctx: SparqlParser.QueryContext) -> T{
+	open func visitQuery(_ ctx: SparqlParser.QueryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrologue(_ ctx: SparqlParser.PrologueContext) -> T{
+	open func visitPrologue(_ ctx: SparqlParser.PrologueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBaseDecl(_ ctx: SparqlParser.BaseDeclContext) -> T{
+	open func visitBaseDecl(_ ctx: SparqlParser.BaseDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrefixDecl(_ ctx: SparqlParser.PrefixDeclContext) -> T{
+	open func visitPrefixDecl(_ ctx: SparqlParser.PrefixDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelectQuery(_ ctx: SparqlParser.SelectQueryContext) -> T{
+	open func visitSelectQuery(_ ctx: SparqlParser.SelectQueryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructQuery(_ ctx: SparqlParser.ConstructQueryContext) -> T{
+	open func visitConstructQuery(_ ctx: SparqlParser.ConstructQueryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDescribeQuery(_ ctx: SparqlParser.DescribeQueryContext) -> T{
+	open func visitDescribeQuery(_ ctx: SparqlParser.DescribeQueryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAskQuery(_ ctx: SparqlParser.AskQueryContext) -> T{
+	open func visitAskQuery(_ ctx: SparqlParser.AskQueryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDatasetClause(_ ctx: SparqlParser.DatasetClauseContext) -> T{
+	open func visitDatasetClause(_ ctx: SparqlParser.DatasetClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefaultGraphClause(_ ctx: SparqlParser.DefaultGraphClauseContext) -> T{
+	open func visitDefaultGraphClause(_ ctx: SparqlParser.DefaultGraphClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamedGraphClause(_ ctx: SparqlParser.NamedGraphClauseContext) -> T{
+	open func visitNamedGraphClause(_ ctx: SparqlParser.NamedGraphClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSourceSelector(_ ctx: SparqlParser.SourceSelectorContext) -> T{
+	open func visitSourceSelector(_ ctx: SparqlParser.SourceSelectorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhereClause(_ ctx: SparqlParser.WhereClauseContext) -> T{
+	open func visitWhereClause(_ ctx: SparqlParser.WhereClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSolutionModifier(_ ctx: SparqlParser.SolutionModifierContext) -> T{
+	open func visitSolutionModifier(_ ctx: SparqlParser.SolutionModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLimitOffsetClauses(_ ctx: SparqlParser.LimitOffsetClausesContext) -> T{
+	open func visitLimitOffsetClauses(_ ctx: SparqlParser.LimitOffsetClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrderClause(_ ctx: SparqlParser.OrderClauseContext) -> T{
+	open func visitOrderClause(_ ctx: SparqlParser.OrderClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrderCondition(_ ctx: SparqlParser.OrderConditionContext) -> T{
+	open func visitOrderCondition(_ ctx: SparqlParser.OrderConditionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLimitClause(_ ctx: SparqlParser.LimitClauseContext) -> T{
+	open func visitLimitClause(_ ctx: SparqlParser.LimitClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOffsetClause(_ ctx: SparqlParser.OffsetClauseContext) -> T{
+	open func visitOffsetClause(_ ctx: SparqlParser.OffsetClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGroupGraphPattern(_ ctx: SparqlParser.GroupGraphPatternContext) -> T{
+	open func visitGroupGraphPattern(_ ctx: SparqlParser.GroupGraphPatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTriplesBlock(_ ctx: SparqlParser.TriplesBlockContext) -> T{
+	open func visitTriplesBlock(_ ctx: SparqlParser.TriplesBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGraphPatternNotTriples(_ ctx: SparqlParser.GraphPatternNotTriplesContext) -> T{
+	open func visitGraphPatternNotTriples(_ ctx: SparqlParser.GraphPatternNotTriplesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionalGraphPattern(_ ctx: SparqlParser.OptionalGraphPatternContext) -> T{
+	open func visitOptionalGraphPattern(_ ctx: SparqlParser.OptionalGraphPatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGraphGraphPattern(_ ctx: SparqlParser.GraphGraphPatternContext) -> T{
+	open func visitGraphGraphPattern(_ ctx: SparqlParser.GraphGraphPatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGroupOrUnionGraphPattern(_ ctx: SparqlParser.GroupOrUnionGraphPatternContext) -> T{
+	open func visitGroupOrUnionGraphPattern(_ ctx: SparqlParser.GroupOrUnionGraphPatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFilter(_ ctx: SparqlParser.FilterContext) -> T{
+	open func visitFilter(_ ctx: SparqlParser.FilterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstraint(_ ctx: SparqlParser.ConstraintContext) -> T{
+	open func visitConstraint(_ ctx: SparqlParser.ConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionCall(_ ctx: SparqlParser.FunctionCallContext) -> T{
+	open func visitFunctionCall(_ ctx: SparqlParser.FunctionCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgList(_ ctx: SparqlParser.ArgListContext) -> T{
+	open func visitArgList(_ ctx: SparqlParser.ArgListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructTemplate(_ ctx: SparqlParser.ConstructTemplateContext) -> T{
+	open func visitConstructTemplate(_ ctx: SparqlParser.ConstructTemplateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructTriples(_ ctx: SparqlParser.ConstructTriplesContext) -> T{
+	open func visitConstructTriples(_ ctx: SparqlParser.ConstructTriplesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTriplesSameSubject(_ ctx: SparqlParser.TriplesSameSubjectContext) -> T{
+	open func visitTriplesSameSubject(_ ctx: SparqlParser.TriplesSameSubjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyListNotEmpty(_ ctx: SparqlParser.PropertyListNotEmptyContext) -> T{
+	open func visitPropertyListNotEmpty(_ ctx: SparqlParser.PropertyListNotEmptyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyList(_ ctx: SparqlParser.PropertyListContext) -> T{
+	open func visitPropertyList(_ ctx: SparqlParser.PropertyListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectList(_ ctx: SparqlParser.ObjectListContext) -> T{
+	open func visitObjectList(_ ctx: SparqlParser.ObjectListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObject(_ ctx: SparqlParser.ObjectContext) -> T{
+	open func visitObject(_ ctx: SparqlParser.ObjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVerb(_ ctx: SparqlParser.VerbContext) -> T{
+	open func visitVerb(_ ctx: SparqlParser.VerbContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTriplesNode(_ ctx: SparqlParser.TriplesNodeContext) -> T{
+	open func visitTriplesNode(_ ctx: SparqlParser.TriplesNodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlankNodePropertyList(_ ctx: SparqlParser.BlankNodePropertyListContext) -> T{
+	open func visitBlankNodePropertyList(_ ctx: SparqlParser.BlankNodePropertyListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollection(_ ctx: SparqlParser.CollectionContext) -> T{
+	open func visitCollection(_ ctx: SparqlParser.CollectionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGraphNode(_ ctx: SparqlParser.GraphNodeContext) -> T{
+	open func visitGraphNode(_ ctx: SparqlParser.GraphNodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarOrTerm(_ ctx: SparqlParser.VarOrTermContext) -> T{
+	open func visitVarOrTerm(_ ctx: SparqlParser.VarOrTermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarOrIRIref(_ ctx: SparqlParser.VarOrIRIrefContext) -> T{
+	open func visitVarOrIRIref(_ ctx: SparqlParser.VarOrIRIrefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVar(_ ctx: SparqlParser.VarContext) -> T{
+	open func visitVar(_ ctx: SparqlParser.VarContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGraphTerm(_ ctx: SparqlParser.GraphTermContext) -> T{
+	open func visitGraphTerm(_ ctx: SparqlParser.GraphTermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: SparqlParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: SparqlParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditionalOrExpression(_ ctx: SparqlParser.ConditionalOrExpressionContext) -> T{
+	open func visitConditionalOrExpression(_ ctx: SparqlParser.ConditionalOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditionalAndExpression(_ ctx: SparqlParser.ConditionalAndExpressionContext) -> T{
+	open func visitConditionalAndExpression(_ ctx: SparqlParser.ConditionalAndExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValueLogical(_ ctx: SparqlParser.ValueLogicalContext) -> T{
+	open func visitValueLogical(_ ctx: SparqlParser.ValueLogicalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelationalExpression(_ ctx: SparqlParser.RelationalExpressionContext) -> T{
+	open func visitRelationalExpression(_ ctx: SparqlParser.RelationalExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericExpression(_ ctx: SparqlParser.NumericExpressionContext) -> T{
+	open func visitNumericExpression(_ ctx: SparqlParser.NumericExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditiveExpression(_ ctx: SparqlParser.AdditiveExpressionContext) -> T{
+	open func visitAdditiveExpression(_ ctx: SparqlParser.AdditiveExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplicativeExpression(_ ctx: SparqlParser.MultiplicativeExpressionContext) -> T{
+	open func visitMultiplicativeExpression(_ ctx: SparqlParser.MultiplicativeExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryExpression(_ ctx: SparqlParser.UnaryExpressionContext) -> T{
+	open func visitUnaryExpression(_ ctx: SparqlParser.UnaryExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryExpression(_ ctx: SparqlParser.PrimaryExpressionContext) -> T{
+	open func visitPrimaryExpression(_ ctx: SparqlParser.PrimaryExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBrackettedExpression(_ ctx: SparqlParser.BrackettedExpressionContext) -> T{
+	open func visitBrackettedExpression(_ ctx: SparqlParser.BrackettedExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBuiltInCall(_ ctx: SparqlParser.BuiltInCallContext) -> T{
+	open func visitBuiltInCall(_ ctx: SparqlParser.BuiltInCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRegexExpression(_ ctx: SparqlParser.RegexExpressionContext) -> T{
+	open func visitRegexExpression(_ ctx: SparqlParser.RegexExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIriRefOrFunction(_ ctx: SparqlParser.IriRefOrFunctionContext) -> T{
+	open func visitIriRefOrFunction(_ ctx: SparqlParser.IriRefOrFunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRdfLiteral(_ ctx: SparqlParser.RdfLiteralContext) -> T{
+	open func visitRdfLiteral(_ ctx: SparqlParser.RdfLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericLiteral(_ ctx: SparqlParser.NumericLiteralContext) -> T{
+	open func visitNumericLiteral(_ ctx: SparqlParser.NumericLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericLiteralUnsigned(_ ctx: SparqlParser.NumericLiteralUnsignedContext) -> T{
+	open func visitNumericLiteralUnsigned(_ ctx: SparqlParser.NumericLiteralUnsignedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericLiteralPositive(_ ctx: SparqlParser.NumericLiteralPositiveContext) -> T{
+	open func visitNumericLiteralPositive(_ ctx: SparqlParser.NumericLiteralPositiveContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericLiteralNegative(_ ctx: SparqlParser.NumericLiteralNegativeContext) -> T{
+	open func visitNumericLiteralNegative(_ ctx: SparqlParser.NumericLiteralNegativeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBooleanLiteral(_ ctx: SparqlParser.BooleanLiteralContext) -> T{
+	open func visitBooleanLiteral(_ ctx: SparqlParser.BooleanLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: SparqlParser.StringContext) -> T{
+	open func visitString(_ ctx: SparqlParser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIriRef(_ ctx: SparqlParser.IriRefContext) -> T{
+	open func visitIriRef(_ ctx: SparqlParser.IriRefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrefixedName(_ ctx: SparqlParser.PrefixedNameContext) -> T{
+	open func visitPrefixedName(_ ctx: SparqlParser.PrefixedNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class SparqlVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlankNode(_ ctx: SparqlParser.BlankNodeContext) -> T{
+	open func visitBlankNode(_ ctx: SparqlParser.BlankNodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

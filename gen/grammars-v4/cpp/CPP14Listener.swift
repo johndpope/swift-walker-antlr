@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cpp/CPP14.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cpp/CPP14.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -919,17 +919,17 @@ public protocol CPP14Listener: ParseTreeListener {
 	 */
 	func exitSimpletypespecifier(_ ctx: CPP14Parser.SimpletypespecifierContext)
 	/**
-	 * Enter a parse tree produced by {@link CPP14Parser#typename}.
+	 * Enter a parse tree produced by {@link CPP14Parser#thetypename}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterTypename(_ ctx: CPP14Parser.TypenameContext)
+	func enterThetypename(_ ctx: CPP14Parser.ThetypenameContext)
 	/**
-	 * Exit a parse tree produced by {@link CPP14Parser#typename}.
+	 * Exit a parse tree produced by {@link CPP14Parser#thetypename}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitTypename(_ ctx: CPP14Parser.TypenameContext)
+	func exitThetypename(_ ctx: CPP14Parser.ThetypenameContext)
 	/**
 	 * Enter a parse tree produced by {@link CPP14Parser#decltypespecifier}.
 	 - Parameters:
@@ -1519,17 +1519,17 @@ public protocol CPP14Listener: ParseTreeListener {
 	 */
 	func exitDeclaratorid(_ ctx: CPP14Parser.DeclaratoridContext)
 	/**
-	 * Enter a parse tree produced by {@link CPP14Parser#typeid}.
+	 * Enter a parse tree produced by {@link CPP14Parser#thetypeid}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterTypeid(_ ctx: CPP14Parser.TypeidContext)
+	func enterThetypeid(_ ctx: CPP14Parser.ThetypeidContext)
 	/**
-	 * Exit a parse tree produced by {@link CPP14Parser#typeid}.
+	 * Exit a parse tree produced by {@link CPP14Parser#thetypeid}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitTypeid(_ ctx: CPP14Parser.TypeidContext)
+	func exitThetypeid(_ ctx: CPP14Parser.ThetypeidContext)
 	/**
 	 * Enter a parse tree produced by {@link CPP14Parser#abstractdeclarator}.
 	 - Parameters:
@@ -2335,17 +2335,17 @@ public protocol CPP14Listener: ParseTreeListener {
 	 */
 	func exitRightShiftAssign(_ ctx: CPP14Parser.RightShiftAssignContext)
 	/**
-	 * Enter a parse tree produced by {@link CPP14Parser#operator}.
+	 * Enter a parse tree produced by {@link CPP14Parser#theoperator}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterOperator(_ ctx: CPP14Parser.OperatorContext)
+	func enterTheoperator(_ ctx: CPP14Parser.TheoperatorContext)
 	/**
-	 * Exit a parse tree produced by {@link CPP14Parser#operator}.
+	 * Exit a parse tree produced by {@link CPP14Parser#theoperator}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitOperator(_ ctx: CPP14Parser.OperatorContext)
+	func exitTheoperator(_ ctx: CPP14Parser.TheoperatorContext)
 	/**
 	 * Enter a parse tree produced by {@link CPP14Parser#literal}.
 	 - Parameters:

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/asn/ASN.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/asn/ASN.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleDefinition(_ ctx: ASNParser.ModuleDefinitionContext) -> T{
+	open func visitModuleDefinition(_ ctx: ASNParser.ModuleDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTagDefault(_ ctx: ASNParser.TagDefaultContext) -> T{
+	open func visitTagDefault(_ ctx: ASNParser.TagDefaultContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionDefault(_ ctx: ASNParser.ExtensionDefaultContext) -> T{
+	open func visitExtensionDefault(_ ctx: ASNParser.ExtensionDefaultContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleBody(_ ctx: ASNParser.ModuleBodyContext) -> T{
+	open func visitModuleBody(_ ctx: ASNParser.ModuleBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExports(_ ctx: ASNParser.ExportsContext) -> T{
+	open func visitExports(_ ctx: ASNParser.ExportsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbolsExported(_ ctx: ASNParser.SymbolsExportedContext) -> T{
+	open func visitSymbolsExported(_ ctx: ASNParser.SymbolsExportedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImports(_ ctx: ASNParser.ImportsContext) -> T{
+	open func visitImports(_ ctx: ASNParser.ImportsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbolsImported(_ ctx: ASNParser.SymbolsImportedContext) -> T{
+	open func visitSymbolsImported(_ ctx: ASNParser.SymbolsImportedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbolsFromModuleList(_ ctx: ASNParser.SymbolsFromModuleListContext) -> T{
+	open func visitSymbolsFromModuleList(_ ctx: ASNParser.SymbolsFromModuleListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbolsFromModule(_ ctx: ASNParser.SymbolsFromModuleContext) -> T{
+	open func visitSymbolsFromModule(_ ctx: ASNParser.SymbolsFromModuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGlobalModuleReference(_ ctx: ASNParser.GlobalModuleReferenceContext) -> T{
+	open func visitGlobalModuleReference(_ ctx: ASNParser.GlobalModuleReferenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignedIdentifier(_ ctx: ASNParser.AssignedIdentifierContext) -> T{
+	open func visitAssignedIdentifier(_ ctx: ASNParser.AssignedIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbolList(_ ctx: ASNParser.SymbolListContext) -> T{
+	open func visitSymbolList(_ ctx: ASNParser.SymbolListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbol(_ ctx: ASNParser.SymbolContext) -> T{
+	open func visitSymbol(_ ctx: ASNParser.SymbolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentList(_ ctx: ASNParser.AssignmentListContext) -> T{
+	open func visitAssignmentList(_ ctx: ASNParser.AssignmentListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignment(_ ctx: ASNParser.AssignmentContext) -> T{
+	open func visitAssignment(_ ctx: ASNParser.AssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSequenceType(_ ctx: ASNParser.SequenceTypeContext) -> T{
+	open func visitSequenceType(_ ctx: ASNParser.SequenceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionAndException(_ ctx: ASNParser.ExtensionAndExceptionContext) -> T{
+	open func visitExtensionAndException(_ ctx: ASNParser.ExtensionAndExceptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionalExtensionMarker(_ ctx: ASNParser.OptionalExtensionMarkerContext) -> T{
+	open func visitOptionalExtensionMarker(_ ctx: ASNParser.OptionalExtensionMarkerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponentTypeLists(_ ctx: ASNParser.ComponentTypeListsContext) -> T{
+	open func visitComponentTypeLists(_ ctx: ASNParser.ComponentTypeListsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRootComponentTypeList(_ ctx: ASNParser.RootComponentTypeListContext) -> T{
+	open func visitRootComponentTypeList(_ ctx: ASNParser.RootComponentTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponentTypeList(_ ctx: ASNParser.ComponentTypeListContext) -> T{
+	open func visitComponentTypeList(_ ctx: ASNParser.ComponentTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponentType(_ ctx: ASNParser.ComponentTypeContext) -> T{
+	open func visitComponentType(_ ctx: ASNParser.ComponentTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionAdditions(_ ctx: ASNParser.ExtensionAdditionsContext) -> T{
+	open func visitExtensionAdditions(_ ctx: ASNParser.ExtensionAdditionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionAdditionList(_ ctx: ASNParser.ExtensionAdditionListContext) -> T{
+	open func visitExtensionAdditionList(_ ctx: ASNParser.ExtensionAdditionListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionAddition(_ ctx: ASNParser.ExtensionAdditionContext) -> T{
+	open func visitExtensionAddition(_ ctx: ASNParser.ExtensionAdditionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionAdditionGroup(_ ctx: ASNParser.ExtensionAdditionGroupContext) -> T{
+	open func visitExtensionAdditionGroup(_ ctx: ASNParser.ExtensionAdditionGroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVersionNumber(_ ctx: ASNParser.VersionNumberContext) -> T{
+	open func visitVersionNumber(_ ctx: ASNParser.VersionNumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSequenceOfType(_ ctx: ASNParser.SequenceOfTypeContext) -> T{
+	open func visitSequenceOfType(_ ctx: ASNParser.SequenceOfTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSizeConstraint(_ ctx: ASNParser.SizeConstraintContext) -> T{
+	open func visitSizeConstraint(_ ctx: ASNParser.SizeConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterizedAssignment(_ ctx: ASNParser.ParameterizedAssignmentContext) -> T{
+	open func visitParameterizedAssignment(_ ctx: ASNParser.ParameterizedAssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterList(_ ctx: ASNParser.ParameterListContext) -> T{
+	open func visitParameterList(_ ctx: ASNParser.ParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameter(_ ctx: ASNParser.ParameterContext) -> T{
+	open func visitParameter(_ ctx: ASNParser.ParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParamGovernor(_ ctx: ASNParser.ParamGovernorContext) -> T{
+	open func visitParamGovernor(_ ctx: ASNParser.ParamGovernorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGovernor(_ ctx: ASNParser.GovernorContext) -> T{
+	open func visitGovernor(_ ctx: ASNParser.GovernorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectClassAssignment(_ ctx: ASNParser.ObjectClassAssignmentContext) -> T{
+	open func visitObjectClassAssignment(_ ctx: ASNParser.ObjectClassAssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectClass(_ ctx: ASNParser.ObjectClassContext) -> T{
+	open func visitObjectClass(_ ctx: ASNParser.ObjectClassContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinedObjectClass(_ ctx: ASNParser.DefinedObjectClassContext) -> T{
+	open func visitDefinedObjectClass(_ ctx: ASNParser.DefinedObjectClassContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUsefulObjectClassReference(_ ctx: ASNParser.UsefulObjectClassReferenceContext) -> T{
+	open func visitUsefulObjectClassReference(_ ctx: ASNParser.UsefulObjectClassReferenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExternalObjectClassReference(_ ctx: ASNParser.ExternalObjectClassReferenceContext) -> T{
+	open func visitExternalObjectClassReference(_ ctx: ASNParser.ExternalObjectClassReferenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectClassDefn(_ ctx: ASNParser.ObjectClassDefnContext) -> T{
+	open func visitObjectClassDefn(_ ctx: ASNParser.ObjectClassDefnContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWithSyntaxSpec(_ ctx: ASNParser.WithSyntaxSpecContext) -> T{
+	open func visitWithSyntaxSpec(_ ctx: ASNParser.WithSyntaxSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSyntaxList(_ ctx: ASNParser.SyntaxListContext) -> T{
+	open func visitSyntaxList(_ ctx: ASNParser.SyntaxListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTokenOrGroupSpec(_ ctx: ASNParser.TokenOrGroupSpecContext) -> T{
+	open func visitTokenOrGroupSpec(_ ctx: ASNParser.TokenOrGroupSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionalGroup(_ ctx: ASNParser.OptionalGroupContext) -> T{
+	open func visitOptionalGroup(_ ctx: ASNParser.OptionalGroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRequiredToken(_ ctx: ASNParser.RequiredTokenContext) -> T{
+	open func visitRequiredToken(_ ctx: ASNParser.RequiredTokenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: ASNParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: ASNParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimitiveFieldName(_ ctx: ASNParser.PrimitiveFieldNameContext) -> T{
+	open func visitPrimitiveFieldName(_ ctx: ASNParser.PrimitiveFieldNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldSpec(_ ctx: ASNParser.FieldSpecContext) -> T{
+	open func visitFieldSpec(_ ctx: ASNParser.FieldSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeFieldSpec(_ ctx: ASNParser.TypeFieldSpecContext) -> T{
+	open func visitTypeFieldSpec(_ ctx: ASNParser.TypeFieldSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeOptionalitySpec(_ ctx: ASNParser.TypeOptionalitySpecContext) -> T{
+	open func visitTypeOptionalitySpec(_ ctx: ASNParser.TypeOptionalitySpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFixedTypeValueFieldSpec(_ ctx: ASNParser.FixedTypeValueFieldSpecContext) -> T{
+	open func visitFixedTypeValueFieldSpec(_ ctx: ASNParser.FixedTypeValueFieldSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValueOptionalitySpec(_ ctx: ASNParser.ValueOptionalitySpecContext) -> T{
+	open func visitValueOptionalitySpec(_ ctx: ASNParser.ValueOptionalitySpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableTypeValueFieldSpec(_ ctx: ASNParser.VariableTypeValueFieldSpecContext) -> T{
+	open func visitVariableTypeValueFieldSpec(_ ctx: ASNParser.VariableTypeValueFieldSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFixedTypeValueSetFieldSpec(_ ctx: ASNParser.FixedTypeValueSetFieldSpecContext) -> T{
+	open func visitFixedTypeValueSetFieldSpec(_ ctx: ASNParser.FixedTypeValueSetFieldSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValueSetOptionalitySpec(_ ctx: ASNParser.ValueSetOptionalitySpecContext) -> T{
+	open func visitValueSetOptionalitySpec(_ ctx: ASNParser.ValueSetOptionalitySpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObject(_ ctx: ASNParser.ObjectContext) -> T{
+	open func visitObject(_ ctx: ASNParser.ObjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterizedObject(_ ctx: ASNParser.ParameterizedObjectContext) -> T{
+	open func visitParameterizedObject(_ ctx: ASNParser.ParameterizedObjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinedObject(_ ctx: ASNParser.DefinedObjectContext) -> T{
+	open func visitDefinedObject(_ ctx: ASNParser.DefinedObjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectSet(_ ctx: ASNParser.ObjectSetContext) -> T{
+	open func visitObjectSet(_ ctx: ASNParser.ObjectSetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectSetSpec(_ ctx: ASNParser.ObjectSetSpecContext) -> T{
+	open func visitObjectSetSpec(_ ctx: ASNParser.ObjectSetSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldName(_ ctx: ASNParser.FieldNameContext) -> T{
+	open func visitFieldName(_ ctx: ASNParser.FieldNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValueSet(_ ctx: ASNParser.ValueSetContext) -> T{
+	open func visitValueSet(_ ctx: ASNParser.ValueSetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementSetSpecs(_ ctx: ASNParser.ElementSetSpecsContext) -> T{
+	open func visitElementSetSpecs(_ ctx: ASNParser.ElementSetSpecsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRootElementSetSpec(_ ctx: ASNParser.RootElementSetSpecContext) -> T{
+	open func visitRootElementSetSpec(_ ctx: ASNParser.RootElementSetSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditionalElementSetSpec(_ ctx: ASNParser.AdditionalElementSetSpecContext) -> T{
+	open func visitAdditionalElementSetSpec(_ ctx: ASNParser.AdditionalElementSetSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementSetSpec(_ ctx: ASNParser.ElementSetSpecContext) -> T{
+	open func visitElementSetSpec(_ ctx: ASNParser.ElementSetSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnions(_ ctx: ASNParser.UnionsContext) -> T{
+	open func visitUnions(_ ctx: ASNParser.UnionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExclusions(_ ctx: ASNParser.ExclusionsContext) -> T{
+	open func visitExclusions(_ ctx: ASNParser.ExclusionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntersections(_ ctx: ASNParser.IntersectionsContext) -> T{
+	open func visitIntersections(_ ctx: ASNParser.IntersectionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionMark(_ ctx: ASNParser.UnionMarkContext) -> T{
+	open func visitUnionMark(_ ctx: ASNParser.UnionMarkContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntersectionMark(_ ctx: ASNParser.IntersectionMarkContext) -> T{
+	open func visitIntersectionMark(_ ctx: ASNParser.IntersectionMarkContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElements(_ ctx: ASNParser.ElementsContext) -> T{
+	open func visitElements(_ ctx: ASNParser.ElementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectSetElements(_ ctx: ASNParser.ObjectSetElementsContext) -> T{
+	open func visitObjectSetElements(_ ctx: ASNParser.ObjectSetElementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntersectionElements(_ ctx: ASNParser.IntersectionElementsContext) -> T{
+	open func visitIntersectionElements(_ ctx: ASNParser.IntersectionElementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubtypeElements(_ ctx: ASNParser.SubtypeElementsContext) -> T{
+	open func visitSubtypeElements(_ ctx: ASNParser.SubtypeElementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableTypeValueSetFieldSpec(_ ctx: ASNParser.VariableTypeValueSetFieldSpecContext) -> T{
+	open func visitVariableTypeValueSetFieldSpec(_ ctx: ASNParser.VariableTypeValueSetFieldSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectFieldSpec(_ ctx: ASNParser.ObjectFieldSpecContext) -> T{
+	open func visitObjectFieldSpec(_ ctx: ASNParser.ObjectFieldSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectOptionalitySpec(_ ctx: ASNParser.ObjectOptionalitySpecContext) -> T{
+	open func visitObjectOptionalitySpec(_ ctx: ASNParser.ObjectOptionalitySpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectSetFieldSpec(_ ctx: ASNParser.ObjectSetFieldSpecContext) -> T{
+	open func visitObjectSetFieldSpec(_ ctx: ASNParser.ObjectSetFieldSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectSetOptionalitySpec(_ ctx: ASNParser.ObjectSetOptionalitySpecContext) -> T{
+	open func visitObjectSetOptionalitySpec(_ ctx: ASNParser.ObjectSetOptionalitySpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeAssignment(_ ctx: ASNParser.TypeAssignmentContext) -> T{
+	open func visitTypeAssignment(_ ctx: ASNParser.TypeAssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,17 +835,17 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValueAssignment(_ ctx: ASNParser.ValueAssignmentContext) -> T{
+	open func visitValueAssignment(_ ctx: ASNParser.ValueAssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link ASNParser#type}.
+	 * Visit a parse tree produced by {@link ASNParser#asnType}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: ASNParser.TypeContext) -> T{
+	open func visitAsnType(_ ctx: ASNParser.AsnTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBuiltinType(_ ctx: ASNParser.BuiltinTypeContext) -> T{
+	open func visitBuiltinType(_ ctx: ASNParser.BuiltinTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectClassFieldType(_ ctx: ASNParser.ObjectClassFieldTypeContext) -> T{
+	open func visitObjectClassFieldType(_ ctx: ASNParser.ObjectClassFieldTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetType(_ ctx: ASNParser.SetTypeContext) -> T{
+	open func visitSetType(_ ctx: ASNParser.SetTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetOfType(_ ctx: ASNParser.SetOfTypeContext) -> T{
+	open func visitSetOfType(_ ctx: ASNParser.SetOfTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReferencedType(_ ctx: ASNParser.ReferencedTypeContext) -> T{
+	open func visitReferencedType(_ ctx: ASNParser.ReferencedTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinedType(_ ctx: ASNParser.DefinedTypeContext) -> T{
+	open func visitDefinedType(_ ctx: ASNParser.DefinedTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstraint(_ ctx: ASNParser.ConstraintContext) -> T{
+	open func visitConstraint(_ ctx: ASNParser.ConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstraintSpec(_ ctx: ASNParser.ConstraintSpecContext) -> T{
+	open func visitConstraintSpec(_ ctx: ASNParser.ConstraintSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUserDefinedConstraint(_ ctx: ASNParser.UserDefinedConstraintContext) -> T{
+	open func visitUserDefinedConstraint(_ ctx: ASNParser.UserDefinedConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGeneralConstraint(_ ctx: ASNParser.GeneralConstraintContext) -> T{
+	open func visitGeneralConstraint(_ ctx: ASNParser.GeneralConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUserDefinedConstraintParameter(_ ctx: ASNParser.UserDefinedConstraintParameterContext) -> T{
+	open func visitUserDefinedConstraintParameter(_ ctx: ASNParser.UserDefinedConstraintParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTableConstraint(_ ctx: ASNParser.TableConstraintContext) -> T{
+	open func visitTableConstraint(_ ctx: ASNParser.TableConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleTableConstraint(_ ctx: ASNParser.SimpleTableConstraintContext) -> T{
+	open func visitSimpleTableConstraint(_ ctx: ASNParser.SimpleTableConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContentsConstraint(_ ctx: ASNParser.ContentsConstraintContext) -> T{
+	open func visitContentsConstraint(_ ctx: ASNParser.ContentsConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubtypeConstraint(_ ctx: ASNParser.SubtypeConstraintContext) -> T{
+	open func visitSubtypeConstraint(_ ctx: ASNParser.SubtypeConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: ASNParser.ValueContext) -> T{
+	open func visitValue(_ ctx: ASNParser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBuiltinValue(_ ctx: ASNParser.BuiltinValueContext) -> T{
+	open func visitBuiltinValue(_ ctx: ASNParser.BuiltinValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1025,7 +1025,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectIdentifierValue(_ ctx: ASNParser.ObjectIdentifierValueContext) -> T{
+	open func visitObjectIdentifierValue(_ ctx: ASNParser.ObjectIdentifierValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1035,7 +1035,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjIdComponentsList(_ ctx: ASNParser.ObjIdComponentsListContext) -> T{
+	open func visitObjIdComponentsList(_ ctx: ASNParser.ObjIdComponentsListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1045,7 +1045,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjIdComponents(_ ctx: ASNParser.ObjIdComponentsContext) -> T{
+	open func visitObjIdComponents(_ ctx: ASNParser.ObjIdComponentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1055,7 +1055,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntegerValue(_ ctx: ASNParser.IntegerValueContext) -> T{
+	open func visitIntegerValue(_ ctx: ASNParser.IntegerValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1065,7 +1065,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitChoiceValue(_ ctx: ASNParser.ChoiceValueContext) -> T{
+	open func visitChoiceValue(_ ctx: ASNParser.ChoiceValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1075,7 +1075,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumeratedValue(_ ctx: ASNParser.EnumeratedValueContext) -> T{
+	open func visitEnumeratedValue(_ ctx: ASNParser.EnumeratedValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1085,7 +1085,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSignedNumber(_ ctx: ASNParser.SignedNumberContext) -> T{
+	open func visitSignedNumber(_ ctx: ASNParser.SignedNumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1095,7 +1095,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitChoiceType(_ ctx: ASNParser.ChoiceTypeContext) -> T{
+	open func visitChoiceType(_ ctx: ASNParser.ChoiceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1105,7 +1105,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlternativeTypeLists(_ ctx: ASNParser.AlternativeTypeListsContext) -> T{
+	open func visitAlternativeTypeLists(_ ctx: ASNParser.AlternativeTypeListsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1115,7 +1115,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionAdditionAlternatives(_ ctx: ASNParser.ExtensionAdditionAlternativesContext) -> T{
+	open func visitExtensionAdditionAlternatives(_ ctx: ASNParser.ExtensionAdditionAlternativesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1125,7 +1125,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionAdditionAlternativesList(_ ctx: ASNParser.ExtensionAdditionAlternativesListContext) -> T{
+	open func visitExtensionAdditionAlternativesList(_ ctx: ASNParser.ExtensionAdditionAlternativesListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1135,7 +1135,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionAdditionAlternative(_ ctx: ASNParser.ExtensionAdditionAlternativeContext) -> T{
+	open func visitExtensionAdditionAlternative(_ ctx: ASNParser.ExtensionAdditionAlternativeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1145,7 +1145,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionAdditionAlternativesGroup(_ ctx: ASNParser.ExtensionAdditionAlternativesGroupContext) -> T{
+	open func visitExtensionAdditionAlternativesGroup(_ ctx: ASNParser.ExtensionAdditionAlternativesGroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1155,7 +1155,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRootAlternativeTypeList(_ ctx: ASNParser.RootAlternativeTypeListContext) -> T{
+	open func visitRootAlternativeTypeList(_ ctx: ASNParser.RootAlternativeTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1165,7 +1165,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlternativeTypeList(_ ctx: ASNParser.AlternativeTypeListContext) -> T{
+	open func visitAlternativeTypeList(_ ctx: ASNParser.AlternativeTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1175,7 +1175,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamedType(_ ctx: ASNParser.NamedTypeContext) -> T{
+	open func visitNamedType(_ ctx: ASNParser.NamedTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1185,7 +1185,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumeratedType(_ ctx: ASNParser.EnumeratedTypeContext) -> T{
+	open func visitEnumeratedType(_ ctx: ASNParser.EnumeratedTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1195,7 +1195,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumerations(_ ctx: ASNParser.EnumerationsContext) -> T{
+	open func visitEnumerations(_ ctx: ASNParser.EnumerationsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1205,7 +1205,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRootEnumeration(_ ctx: ASNParser.RootEnumerationContext) -> T{
+	open func visitRootEnumeration(_ ctx: ASNParser.RootEnumerationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1215,7 +1215,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumeration(_ ctx: ASNParser.EnumerationContext) -> T{
+	open func visitEnumeration(_ ctx: ASNParser.EnumerationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1225,7 +1225,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumerationItem(_ ctx: ASNParser.EnumerationItemContext) -> T{
+	open func visitEnumerationItem(_ ctx: ASNParser.EnumerationItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1235,7 +1235,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamedNumber(_ ctx: ASNParser.NamedNumberContext) -> T{
+	open func visitNamedNumber(_ ctx: ASNParser.NamedNumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1245,7 +1245,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinedValue(_ ctx: ASNParser.DefinedValueContext) -> T{
+	open func visitDefinedValue(_ ctx: ASNParser.DefinedValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1255,7 +1255,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterizedValue(_ ctx: ASNParser.ParameterizedValueContext) -> T{
+	open func visitParameterizedValue(_ ctx: ASNParser.ParameterizedValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1265,7 +1265,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleDefinedValue(_ ctx: ASNParser.SimpleDefinedValueContext) -> T{
+	open func visitSimpleDefinedValue(_ ctx: ASNParser.SimpleDefinedValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1275,7 +1275,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActualParameterList(_ ctx: ASNParser.ActualParameterListContext) -> T{
+	open func visitActualParameterList(_ ctx: ASNParser.ActualParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1285,7 +1285,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActualParameter(_ ctx: ASNParser.ActualParameterContext) -> T{
+	open func visitActualParameter(_ ctx: ASNParser.ActualParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1295,7 +1295,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExceptionSpec(_ ctx: ASNParser.ExceptionSpecContext) -> T{
+	open func visitExceptionSpec(_ ctx: ASNParser.ExceptionSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1305,7 +1305,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExceptionIdentification(_ ctx: ASNParser.ExceptionIdentificationContext) -> T{
+	open func visitExceptionIdentification(_ ctx: ASNParser.ExceptionIdentificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1315,7 +1315,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditionalEnumeration(_ ctx: ASNParser.AdditionalEnumerationContext) -> T{
+	open func visitAdditionalEnumeration(_ ctx: ASNParser.AdditionalEnumerationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1325,7 +1325,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntegerType(_ ctx: ASNParser.IntegerTypeContext) -> T{
+	open func visitIntegerType(_ ctx: ASNParser.IntegerTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1335,7 +1335,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamedNumberList(_ ctx: ASNParser.NamedNumberListContext) -> T{
+	open func visitNamedNumberList(_ ctx: ASNParser.NamedNumberListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1345,7 +1345,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectidentifiertype(_ ctx: ASNParser.ObjectidentifiertypeContext) -> T{
+	open func visitObjectidentifiertype(_ ctx: ASNParser.ObjectidentifiertypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1355,7 +1355,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponentRelationConstraint(_ ctx: ASNParser.ComponentRelationConstraintContext) -> T{
+	open func visitComponentRelationConstraint(_ ctx: ASNParser.ComponentRelationConstraintContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1365,7 +1365,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtNotation(_ ctx: ASNParser.AtNotationContext) -> T{
+	open func visitAtNotation(_ ctx: ASNParser.AtNotationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1375,7 +1375,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLevel(_ ctx: ASNParser.LevelContext) -> T{
+	open func visitLevel(_ ctx: ASNParser.LevelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1385,7 +1385,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponentIdList(_ ctx: ASNParser.ComponentIdListContext) -> T{
+	open func visitComponentIdList(_ ctx: ASNParser.ComponentIdListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1395,7 +1395,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOctetStringType(_ ctx: ASNParser.OctetStringTypeContext) -> T{
+	open func visitOctetStringType(_ ctx: ASNParser.OctetStringTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1405,7 +1405,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitStringType(_ ctx: ASNParser.BitStringTypeContext) -> T{
+	open func visitBitStringType(_ ctx: ASNParser.BitStringTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1415,7 +1415,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamedBitList(_ ctx: ASNParser.NamedBitListContext) -> T{
+	open func visitNamedBitList(_ ctx: ASNParser.NamedBitListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1425,7 +1425,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamedBit(_ ctx: ASNParser.NamedBitContext) -> T{
+	open func visitNamedBit(_ ctx: ASNParser.NamedBitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1435,7 +1435,7 @@ open class ASNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBooleanValue(_ ctx: ASNParser.BooleanValueContext) -> T{
+	open func visitBooleanValue(_ ctx: ASNParser.BooleanValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

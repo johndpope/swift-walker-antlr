@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/brainfuck/brainfuck.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/brainfuck/brainfuck.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class brainfuckVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFile(_ ctx: brainfuckParser.FileContext) -> T{
+	open func visitFile(_ ctx: brainfuckParser.FileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class brainfuckVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpcode(_ ctx: brainfuckParser.OpcodeContext) -> T{
+	open func visitOpcode(_ ctx: brainfuckParser.OpcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

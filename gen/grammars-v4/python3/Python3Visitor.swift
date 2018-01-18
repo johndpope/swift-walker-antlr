@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingle_input(_ ctx: Python3Parser.Single_inputContext) -> T{
+	open func visitSingle_input(_ ctx: Python3Parser.Single_inputContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFile_input(_ ctx: Python3Parser.File_inputContext) -> T{
+	open func visitFile_input(_ ctx: Python3Parser.File_inputContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEval_input(_ ctx: Python3Parser.Eval_inputContext) -> T{
+	open func visitEval_input(_ ctx: Python3Parser.Eval_inputContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDecorator(_ ctx: Python3Parser.DecoratorContext) -> T{
+	open func visitDecorator(_ ctx: Python3Parser.DecoratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDecorators(_ ctx: Python3Parser.DecoratorsContext) -> T{
+	open func visitDecorators(_ ctx: Python3Parser.DecoratorsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,17 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDecorated(_ ctx: Python3Parser.DecoratedContext) -> T{
+	open func visitDecorated(_ ctx: Python3Parser.DecoratedContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Python3Parser#async_funcdef}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitAsync_funcdef(_ ctx: Python3Parser.Async_funcdefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +85,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFuncdef(_ ctx: Python3Parser.FuncdefContext) -> T{
+	open func visitFuncdef(_ ctx: Python3Parser.FuncdefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +95,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameters(_ ctx: Python3Parser.ParametersContext) -> T{
+	open func visitParameters(_ ctx: Python3Parser.ParametersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +105,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedargslist(_ ctx: Python3Parser.TypedargslistContext) -> T{
+	open func visitTypedargslist(_ ctx: Python3Parser.TypedargslistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +115,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTfpdef(_ ctx: Python3Parser.TfpdefContext) -> T{
+	open func visitTfpdef(_ ctx: Python3Parser.TfpdefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +125,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarargslist(_ ctx: Python3Parser.VarargslistContext) -> T{
+	open func visitVarargslist(_ ctx: Python3Parser.VarargslistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +135,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVfpdef(_ ctx: Python3Parser.VfpdefContext) -> T{
+	open func visitVfpdef(_ ctx: Python3Parser.VfpdefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +145,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmt(_ ctx: Python3Parser.StmtContext) -> T{
+	open func visitStmt(_ ctx: Python3Parser.StmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +155,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_stmt(_ ctx: Python3Parser.Simple_stmtContext) -> T{
+	open func visitSimple_stmt(_ ctx: Python3Parser.Simple_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +165,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSmall_stmt(_ ctx: Python3Parser.Small_stmtContext) -> T{
+	open func visitSmall_stmt(_ ctx: Python3Parser.Small_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +175,17 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr_stmt(_ ctx: Python3Parser.Expr_stmtContext) -> T{
+	open func visitExpr_stmt(_ ctx: Python3Parser.Expr_stmtContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Python3Parser#annassign}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitAnnassign(_ ctx: Python3Parser.AnnassignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +195,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTestlist_star_expr(_ ctx: Python3Parser.Testlist_star_exprContext) -> T{
+	open func visitTestlist_star_expr(_ ctx: Python3Parser.Testlist_star_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +205,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAugassign(_ ctx: Python3Parser.AugassignContext) -> T{
+	open func visitAugassign(_ ctx: Python3Parser.AugassignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +215,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDel_stmt(_ ctx: Python3Parser.Del_stmtContext) -> T{
+	open func visitDel_stmt(_ ctx: Python3Parser.Del_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +225,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPass_stmt(_ ctx: Python3Parser.Pass_stmtContext) -> T{
+	open func visitPass_stmt(_ ctx: Python3Parser.Pass_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +235,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFlow_stmt(_ ctx: Python3Parser.Flow_stmtContext) -> T{
+	open func visitFlow_stmt(_ ctx: Python3Parser.Flow_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +245,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBreak_stmt(_ ctx: Python3Parser.Break_stmtContext) -> T{
+	open func visitBreak_stmt(_ ctx: Python3Parser.Break_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +255,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContinue_stmt(_ ctx: Python3Parser.Continue_stmtContext) -> T{
+	open func visitContinue_stmt(_ ctx: Python3Parser.Continue_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +265,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturn_stmt(_ ctx: Python3Parser.Return_stmtContext) -> T{
+	open func visitReturn_stmt(_ ctx: Python3Parser.Return_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +275,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitYield_stmt(_ ctx: Python3Parser.Yield_stmtContext) -> T{
+	open func visitYield_stmt(_ ctx: Python3Parser.Yield_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +285,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRaise_stmt(_ ctx: Python3Parser.Raise_stmtContext) -> T{
+	open func visitRaise_stmt(_ ctx: Python3Parser.Raise_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +295,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImport_stmt(_ ctx: Python3Parser.Import_stmtContext) -> T{
+	open func visitImport_stmt(_ ctx: Python3Parser.Import_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +305,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImport_name(_ ctx: Python3Parser.Import_nameContext) -> T{
+	open func visitImport_name(_ ctx: Python3Parser.Import_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +315,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImport_from(_ ctx: Python3Parser.Import_fromContext) -> T{
+	open func visitImport_from(_ ctx: Python3Parser.Import_fromContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +325,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImport_as_name(_ ctx: Python3Parser.Import_as_nameContext) -> T{
+	open func visitImport_as_name(_ ctx: Python3Parser.Import_as_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +335,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDotted_as_name(_ ctx: Python3Parser.Dotted_as_nameContext) -> T{
+	open func visitDotted_as_name(_ ctx: Python3Parser.Dotted_as_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +345,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImport_as_names(_ ctx: Python3Parser.Import_as_namesContext) -> T{
+	open func visitImport_as_names(_ ctx: Python3Parser.Import_as_namesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +355,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDotted_as_names(_ ctx: Python3Parser.Dotted_as_namesContext) -> T{
+	open func visitDotted_as_names(_ ctx: Python3Parser.Dotted_as_namesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +365,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDotted_name(_ ctx: Python3Parser.Dotted_nameContext) -> T{
+	open func visitDotted_name(_ ctx: Python3Parser.Dotted_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +375,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGlobal_stmt(_ ctx: Python3Parser.Global_stmtContext) -> T{
+	open func visitGlobal_stmt(_ ctx: Python3Parser.Global_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +385,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNonlocal_stmt(_ ctx: Python3Parser.Nonlocal_stmtContext) -> T{
+	open func visitNonlocal_stmt(_ ctx: Python3Parser.Nonlocal_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +395,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssert_stmt(_ ctx: Python3Parser.Assert_stmtContext) -> T{
+	open func visitAssert_stmt(_ ctx: Python3Parser.Assert_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +405,17 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompound_stmt(_ ctx: Python3Parser.Compound_stmtContext) -> T{
+	open func visitCompound_stmt(_ ctx: Python3Parser.Compound_stmtContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Python3Parser#async_stmt}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitAsync_stmt(_ ctx: Python3Parser.Async_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +425,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIf_stmt(_ ctx: Python3Parser.If_stmtContext) -> T{
+	open func visitIf_stmt(_ ctx: Python3Parser.If_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +435,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhile_stmt(_ ctx: Python3Parser.While_stmtContext) -> T{
+	open func visitWhile_stmt(_ ctx: Python3Parser.While_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +445,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFor_stmt(_ ctx: Python3Parser.For_stmtContext) -> T{
+	open func visitFor_stmt(_ ctx: Python3Parser.For_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +455,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTry_stmt(_ ctx: Python3Parser.Try_stmtContext) -> T{
+	open func visitTry_stmt(_ ctx: Python3Parser.Try_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +465,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWith_stmt(_ ctx: Python3Parser.With_stmtContext) -> T{
+	open func visitWith_stmt(_ ctx: Python3Parser.With_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +475,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWith_item(_ ctx: Python3Parser.With_itemContext) -> T{
+	open func visitWith_item(_ ctx: Python3Parser.With_itemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +485,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExcept_clause(_ ctx: Python3Parser.Except_clauseContext) -> T{
+	open func visitExcept_clause(_ ctx: Python3Parser.Except_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +495,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSuite(_ ctx: Python3Parser.SuiteContext) -> T{
+	open func visitSuite(_ ctx: Python3Parser.SuiteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +505,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTest(_ ctx: Python3Parser.TestContext) -> T{
+	open func visitTest(_ ctx: Python3Parser.TestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +515,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTest_nocond(_ ctx: Python3Parser.Test_nocondContext) -> T{
+	open func visitTest_nocond(_ ctx: Python3Parser.Test_nocondContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +525,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambdef(_ ctx: Python3Parser.LambdefContext) -> T{
+	open func visitLambdef(_ ctx: Python3Parser.LambdefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +535,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambdef_nocond(_ ctx: Python3Parser.Lambdef_nocondContext) -> T{
+	open func visitLambdef_nocond(_ ctx: Python3Parser.Lambdef_nocondContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +545,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOr_test(_ ctx: Python3Parser.Or_testContext) -> T{
+	open func visitOr_test(_ ctx: Python3Parser.Or_testContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +555,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnd_test(_ ctx: Python3Parser.And_testContext) -> T{
+	open func visitAnd_test(_ ctx: Python3Parser.And_testContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +565,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNot_test(_ ctx: Python3Parser.Not_testContext) -> T{
+	open func visitNot_test(_ ctx: Python3Parser.Not_testContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +575,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComparison(_ ctx: Python3Parser.ComparisonContext) -> T{
+	open func visitComparison(_ ctx: Python3Parser.ComparisonContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +585,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComp_op(_ ctx: Python3Parser.Comp_opContext) -> T{
+	open func visitComp_op(_ ctx: Python3Parser.Comp_opContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +595,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStar_expr(_ ctx: Python3Parser.Star_exprContext) -> T{
+	open func visitStar_expr(_ ctx: Python3Parser.Star_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +605,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr(_ ctx: Python3Parser.ExprContext) -> T{
+	open func visitExpr(_ ctx: Python3Parser.ExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +615,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitXor_expr(_ ctx: Python3Parser.Xor_exprContext) -> T{
+	open func visitXor_expr(_ ctx: Python3Parser.Xor_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +625,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnd_expr(_ ctx: Python3Parser.And_exprContext) -> T{
+	open func visitAnd_expr(_ ctx: Python3Parser.And_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +635,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitShift_expr(_ ctx: Python3Parser.Shift_exprContext) -> T{
+	open func visitShift_expr(_ ctx: Python3Parser.Shift_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +645,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArith_expr(_ ctx: Python3Parser.Arith_exprContext) -> T{
+	open func visitArith_expr(_ ctx: Python3Parser.Arith_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +655,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: Python3Parser.TermContext) -> T{
+	open func visitTerm(_ ctx: Python3Parser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +665,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFactor(_ ctx: Python3Parser.FactorContext) -> T{
+	open func visitFactor(_ ctx: Python3Parser.FactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +675,17 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPower(_ ctx: Python3Parser.PowerContext) -> T{
+	open func visitPower(_ ctx: Python3Parser.PowerContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Python3Parser#atom_expr}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitAtom_expr(_ ctx: Python3Parser.Atom_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +695,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: Python3Parser.AtomContext) -> T{
+	open func visitAtom(_ ctx: Python3Parser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +705,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTestlist_comp(_ ctx: Python3Parser.Testlist_compContext) -> T{
+	open func visitTestlist_comp(_ ctx: Python3Parser.Testlist_compContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +715,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrailer(_ ctx: Python3Parser.TrailerContext) -> T{
+	open func visitTrailer(_ ctx: Python3Parser.TrailerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +725,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubscriptlist(_ ctx: Python3Parser.SubscriptlistContext) -> T{
+	open func visitSubscriptlist(_ ctx: Python3Parser.SubscriptlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +735,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubscript(_ ctx: Python3Parser.SubscriptContext) -> T{
+	open func visitSubscript(_ ctx: Python3Parser.SubscriptContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +745,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSliceop(_ ctx: Python3Parser.SliceopContext) -> T{
+	open func visitSliceop(_ ctx: Python3Parser.SliceopContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +755,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprlist(_ ctx: Python3Parser.ExprlistContext) -> T{
+	open func visitExprlist(_ ctx: Python3Parser.ExprlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +765,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTestlist(_ ctx: Python3Parser.TestlistContext) -> T{
+	open func visitTestlist(_ ctx: Python3Parser.TestlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +775,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDictorsetmaker(_ ctx: Python3Parser.DictorsetmakerContext) -> T{
+	open func visitDictorsetmaker(_ ctx: Python3Parser.DictorsetmakerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +785,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassdef(_ ctx: Python3Parser.ClassdefContext) -> T{
+	open func visitClassdef(_ ctx: Python3Parser.ClassdefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +795,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArglist(_ ctx: Python3Parser.ArglistContext) -> T{
+	open func visitArglist(_ ctx: Python3Parser.ArglistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +805,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgument(_ ctx: Python3Parser.ArgumentContext) -> T{
+	open func visitArgument(_ ctx: Python3Parser.ArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +815,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComp_iter(_ ctx: Python3Parser.Comp_iterContext) -> T{
+	open func visitComp_iter(_ ctx: Python3Parser.Comp_iterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +825,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComp_for(_ ctx: Python3Parser.Comp_forContext) -> T{
+	open func visitComp_for(_ ctx: Python3Parser.Comp_forContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +835,17 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComp_if(_ ctx: Python3Parser.Comp_ifContext) -> T{
+	open func visitComp_if(_ ctx: Python3Parser.Comp_ifContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Python3Parser#encoding_decl}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitEncoding_decl(_ ctx: Python3Parser.Encoding_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +855,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitYield_expr(_ ctx: Python3Parser.Yield_exprContext) -> T{
+	open func visitYield_expr(_ ctx: Python3Parser.Yield_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,37 +865,7 @@ open class Python3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitYield_arg(_ ctx: Python3Parser.Yield_argContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link Python3Parser#str}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitStr(_ ctx: Python3Parser.StrContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link Python3Parser#number}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitNumber(_ ctx: Python3Parser.NumberContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link Python3Parser#integer}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitInteger(_ ctx: Python3Parser.IntegerContext) -> T{
+	open func visitYield_arg(_ ctx: Python3Parser.Yield_argContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

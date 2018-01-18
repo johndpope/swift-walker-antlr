@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/vba/vba.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/vba/vba.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class vbaParser: Parser {
@@ -11,8 +11,11 @@ open class vbaParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, ACCESS = 9, ADDRESSOF = 10, ALIAS = 11, 
                  AND = 12, ATTRIBUTE = 13, APPACTIVATE = 14, APPEND = 15, 
@@ -63,61 +66,62 @@ open class vbaParser: Parser {
                  NEWLINE = 213, REMCOMMENT = 214, COMMENT = 215, SINGLEQUOTE = 216, 
                  COLON = 217, UNDERSCORE = 218, WS = 219, IDENTIFIER = 220
 	}
-	public static let RULE_startRule = 0, RULE_module = 1, RULE_moduleHeader = 2, 
-                   RULE_moduleConfig = 3, RULE_moduleConfigElement = 4, 
-                   RULE_moduleAttributes = 5, RULE_moduleDeclarations = 6, 
-                   RULE_moduleOption = 7, RULE_moduleDeclarationsElement = 8, 
-                   RULE_macroStmt = 9, RULE_moduleBody = 10, RULE_moduleBodyElement = 11, 
-                   RULE_attributeStmt = 12, RULE_block = 13, RULE_blockStmt = 14, 
-                   RULE_appactivateStmt = 15, RULE_beepStmt = 16, RULE_chdirStmt = 17, 
-                   RULE_chdriveStmt = 18, RULE_closeStmt = 19, RULE_constStmt = 20, 
-                   RULE_constSubStmt = 21, RULE_dateStmt = 22, RULE_declareStmt = 23, 
-                   RULE_deftypeStmt = 24, RULE_deleteSettingStmt = 25, RULE_doLoopStmt = 26, 
-                   RULE_endStmt = 27, RULE_enumerationStmt = 28, RULE_enumerationStmt_Constant = 29, 
-                   RULE_eraseStmt = 30, RULE_errorStmt = 31, RULE_eventStmt = 32, 
-                   RULE_exitStmt = 33, RULE_filecopyStmt = 34, RULE_forEachStmt = 35, 
-                   RULE_forNextStmt = 36, RULE_functionStmt = 37, RULE_getStmt = 38, 
-                   RULE_goSubStmt = 39, RULE_goToStmt = 40, RULE_ifThenElseStmt = 41, 
-                   RULE_ifBlockStmt = 42, RULE_ifConditionStmt = 43, RULE_ifElseIfBlockStmt = 44, 
-                   RULE_ifElseBlockStmt = 45, RULE_implementsStmt = 46, 
-                   RULE_inputStmt = 47, RULE_killStmt = 48, RULE_letStmt = 49, 
-                   RULE_lineInputStmt = 50, RULE_loadStmt = 51, RULE_lockStmt = 52, 
-                   RULE_lsetStmt = 53, RULE_macroConstStmt = 54, RULE_macroIfThenElseStmt = 55, 
-                   RULE_macroIfBlockStmt = 56, RULE_macroElseIfBlockStmt = 57, 
-                   RULE_macroElseBlockStmt = 58, RULE_midStmt = 59, RULE_mkdirStmt = 60, 
-                   RULE_nameStmt = 61, RULE_onErrorStmt = 62, RULE_onGoToStmt = 63, 
-                   RULE_onGoSubStmt = 64, RULE_openStmt = 65, RULE_outputList = 66, 
-                   RULE_outputList_Expression = 67, RULE_printStmt = 68, 
-                   RULE_propertyGetStmt = 69, RULE_propertySetStmt = 70, 
-                   RULE_propertyLetStmt = 71, RULE_putStmt = 72, RULE_raiseEventStmt = 73, 
-                   RULE_randomizeStmt = 74, RULE_redimStmt = 75, RULE_redimSubStmt = 76, 
-                   RULE_resetStmt = 77, RULE_resumeStmt = 78, RULE_returnStmt = 79, 
-                   RULE_rmdirStmt = 80, RULE_rsetStmt = 81, RULE_savepictureStmt = 82, 
-                   RULE_saveSettingStmt = 83, RULE_seekStmt = 84, RULE_selectCaseStmt = 85, 
-                   RULE_sC_Selection = 86, RULE_sC_Case = 87, RULE_sC_Cond = 88, 
-                   RULE_sendkeysStmt = 89, RULE_setattrStmt = 90, RULE_setStmt = 91, 
-                   RULE_stopStmt = 92, RULE_subStmt = 93, RULE_timeStmt = 94, 
-                   RULE_typeStmt = 95, RULE_typeStmt_Element = 96, RULE_typeOfStmt = 97, 
-                   RULE_unloadStmt = 98, RULE_unlockStmt = 99, RULE_valueStmt = 100, 
-                   RULE_variableStmt = 101, RULE_variableListStmt = 102, 
-                   RULE_variableSubStmt = 103, RULE_whileWendStmt = 104, 
-                   RULE_widthStmt = 105, RULE_withStmt = 106, RULE_writeStmt = 107, 
-                   RULE_fileNumber = 108, RULE_explicitCallStmt = 109, RULE_eCS_ProcedureCall = 110, 
-                   RULE_eCS_MemberProcedureCall = 111, RULE_implicitCallStmt_InBlock = 112, 
-                   RULE_iCS_B_MemberProcedureCall = 113, RULE_iCS_B_ProcedureCall = 114, 
-                   RULE_implicitCallStmt_InStmt = 115, RULE_iCS_S_VariableOrProcedureCall = 116, 
-                   RULE_iCS_S_ProcedureOrArrayCall = 117, RULE_iCS_S_MembersCall = 118, 
-                   RULE_iCS_S_MemberCall = 119, RULE_iCS_S_DictionaryCall = 120, 
-                   RULE_argsCall = 121, RULE_argCall = 122, RULE_dictionaryCallStmt = 123, 
-                   RULE_argList = 124, RULE_arg = 125, RULE_argDefaultValue = 126, 
-                   RULE_subscripts = 127, RULE_subscript = 128, RULE_ambiguousIdentifier = 129, 
-                   RULE_asTypeClause = 130, RULE_baseType = 131, RULE_certainIdentifier = 132, 
-                   RULE_comparisonOperator = 133, RULE_complexType = 134, 
-                   RULE_fieldLength = 135, RULE_letterrange = 136, RULE_lineLabel = 137, 
-                   RULE_literal = 138, RULE_type = 139, RULE_typeHint = 140, 
-                   RULE_visibility = 141, RULE_ambiguousKeyword = 142, RULE_remComment = 143, 
-                   RULE_comment = 144, RULE_endOfLine = 145, RULE_endOfStatement = 146
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_startRule = 0, RULE_module = 1, RULE_moduleHeader = 2, 
+            RULE_moduleConfig = 3, RULE_moduleConfigElement = 4, RULE_moduleAttributes = 5, 
+            RULE_moduleDeclarations = 6, RULE_moduleOption = 7, RULE_moduleDeclarationsElement = 8, 
+            RULE_macroStmt = 9, RULE_moduleBody = 10, RULE_moduleBodyElement = 11, 
+            RULE_attributeStmt = 12, RULE_block = 13, RULE_blockStmt = 14, 
+            RULE_appactivateStmt = 15, RULE_beepStmt = 16, RULE_chdirStmt = 17, 
+            RULE_chdriveStmt = 18, RULE_closeStmt = 19, RULE_constStmt = 20, 
+            RULE_constSubStmt = 21, RULE_dateStmt = 22, RULE_declareStmt = 23, 
+            RULE_deftypeStmt = 24, RULE_deleteSettingStmt = 25, RULE_doLoopStmt = 26, 
+            RULE_endStmt = 27, RULE_enumerationStmt = 28, RULE_enumerationStmt_Constant = 29, 
+            RULE_eraseStmt = 30, RULE_errorStmt = 31, RULE_eventStmt = 32, 
+            RULE_exitStmt = 33, RULE_filecopyStmt = 34, RULE_forEachStmt = 35, 
+            RULE_forNextStmt = 36, RULE_functionStmt = 37, RULE_getStmt = 38, 
+            RULE_goSubStmt = 39, RULE_goToStmt = 40, RULE_ifThenElseStmt = 41, 
+            RULE_ifBlockStmt = 42, RULE_ifConditionStmt = 43, RULE_ifElseIfBlockStmt = 44, 
+            RULE_ifElseBlockStmt = 45, RULE_implementsStmt = 46, RULE_inputStmt = 47, 
+            RULE_killStmt = 48, RULE_letStmt = 49, RULE_lineInputStmt = 50, 
+            RULE_loadStmt = 51, RULE_lockStmt = 52, RULE_lsetStmt = 53, 
+            RULE_macroConstStmt = 54, RULE_macroIfThenElseStmt = 55, RULE_macroIfBlockStmt = 56, 
+            RULE_macroElseIfBlockStmt = 57, RULE_macroElseBlockStmt = 58, 
+            RULE_midStmt = 59, RULE_mkdirStmt = 60, RULE_nameStmt = 61, 
+            RULE_onErrorStmt = 62, RULE_onGoToStmt = 63, RULE_onGoSubStmt = 64, 
+            RULE_openStmt = 65, RULE_outputList = 66, RULE_outputList_Expression = 67, 
+            RULE_printStmt = 68, RULE_propertyGetStmt = 69, RULE_propertySetStmt = 70, 
+            RULE_propertyLetStmt = 71, RULE_putStmt = 72, RULE_raiseEventStmt = 73, 
+            RULE_randomizeStmt = 74, RULE_redimStmt = 75, RULE_redimSubStmt = 76, 
+            RULE_resetStmt = 77, RULE_resumeStmt = 78, RULE_returnStmt = 79, 
+            RULE_rmdirStmt = 80, RULE_rsetStmt = 81, RULE_savepictureStmt = 82, 
+            RULE_saveSettingStmt = 83, RULE_seekStmt = 84, RULE_selectCaseStmt = 85, 
+            RULE_sC_Selection = 86, RULE_sC_Case = 87, RULE_sC_Cond = 88, 
+            RULE_sendkeysStmt = 89, RULE_setattrStmt = 90, RULE_setStmt = 91, 
+            RULE_stopStmt = 92, RULE_subStmt = 93, RULE_timeStmt = 94, RULE_typeStmt = 95, 
+            RULE_typeStmt_Element = 96, RULE_typeOfStmt = 97, RULE_unloadStmt = 98, 
+            RULE_unlockStmt = 99, RULE_valueStmt = 100, RULE_variableStmt = 101, 
+            RULE_variableListStmt = 102, RULE_variableSubStmt = 103, RULE_whileWendStmt = 104, 
+            RULE_widthStmt = 105, RULE_withStmt = 106, RULE_writeStmt = 107, 
+            RULE_fileNumber = 108, RULE_explicitCallStmt = 109, RULE_eCS_ProcedureCall = 110, 
+            RULE_eCS_MemberProcedureCall = 111, RULE_implicitCallStmt_InBlock = 112, 
+            RULE_iCS_B_MemberProcedureCall = 113, RULE_iCS_B_ProcedureCall = 114, 
+            RULE_implicitCallStmt_InStmt = 115, RULE_iCS_S_VariableOrProcedureCall = 116, 
+            RULE_iCS_S_ProcedureOrArrayCall = 117, RULE_iCS_S_MembersCall = 118, 
+            RULE_iCS_S_MemberCall = 119, RULE_iCS_S_DictionaryCall = 120, 
+            RULE_argsCall = 121, RULE_argCall = 122, RULE_dictionaryCallStmt = 123, 
+            RULE_argList = 124, RULE_arg = 125, RULE_argDefaultValue = 126, 
+            RULE_subscripts = 127, RULE_subscript = 128, RULE_ambiguousIdentifier = 129, 
+            RULE_asTypeClause = 130, RULE_baseType = 131, RULE_certainIdentifier = 132, 
+            RULE_comparisonOperator = 133, RULE_complexType = 134, RULE_fieldLength = 135, 
+            RULE_letterrange = 136, RULE_lineLabel = 137, RULE_literal = 138, 
+            RULE_type = 139, RULE_typeHint = 140, RULE_visibility = 141, 
+            RULE_ambiguousKeyword = 142, RULE_remComment = 143, RULE_comment = 144, 
+            RULE_endOfLine = 145, RULE_endOfStatement = 146
+
+	public
+	static let ruleNames: [String] = [
 		"startRule", "module", "moduleHeader", "moduleConfig", "moduleConfigElement", 
 		"moduleAttributes", "moduleDeclarations", "moduleOption", "moduleDeclarationsElement", 
 		"macroStmt", "moduleBody", "moduleBodyElement", "attributeStmt", "block", 
@@ -203,86 +207,73 @@ open class vbaParser: Parser {
 		"NEWLINE", "REMCOMMENT", "COMMENT", "SINGLEQUOTE", "COLON", "UNDERSCORE", 
 		"WS", "IDENTIFIER"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "vba.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return vbaParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "vba.g4" }
+	override open
+	func getSerializedATN() -> String { return vbaParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return vbaParser.ruleNames }
+	override open
+	func getATN() -> ATN { return vbaParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return vbaParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return vbaParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return vbaParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,vbaParser._ATN,vbaParser._decisionToDFA, vbaParser._sharedContextCache)
 	}
-	open class StartRuleContext:ParserRuleContext {
-		open func module() -> ModuleContext? {
-			return getRuleContext(ModuleContext.self,0)
+
+	public class StartRuleContext: ParserRuleContext {
+			open
+			func module() -> ModuleContext? {
+				return getRuleContext(ModuleContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_startRule
 		}
-		open func EOF() -> TerminalNode? { return getToken(vbaParser.Tokens.EOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_startRule }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterStartRule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterStartRule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitStartRule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitStartRule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitStartRule(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitStartRule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitStartRule(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitStartRule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func startRule() throws -> StartRuleContext {
+	 open func startRule() throws -> StartRuleContext {
 		var _localctx: StartRuleContext = StartRuleContext(_ctx, getState())
 		try enterRule(_localctx, 0, vbaParser.RULE_startRule)
 		defer {
@@ -304,59 +295,75 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleContext:ParserRuleContext {
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class ModuleContext: ParserRuleContext {
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func endOfLine() -> [EndOfLineContext] {
+				return getRuleContexts(EndOfLineContext.self)
+			}
+			open
+			func endOfLine(_ i: Int) -> EndOfLineContext? {
+				return getRuleContext(EndOfLineContext.self, i)
+			}
+			open
+			func moduleHeader() -> ModuleHeaderContext? {
+				return getRuleContext(ModuleHeaderContext.self, 0)
+			}
+			open
+			func moduleConfig() -> ModuleConfigContext? {
+				return getRuleContext(ModuleConfigContext.self, 0)
+			}
+			open
+			func moduleAttributes() -> ModuleAttributesContext? {
+				return getRuleContext(ModuleAttributesContext.self, 0)
+			}
+			open
+			func moduleDeclarations() -> ModuleDeclarationsContext? {
+				return getRuleContext(ModuleDeclarationsContext.self, 0)
+			}
+			open
+			func moduleBody() -> ModuleBodyContext? {
+				return getRuleContext(ModuleBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_module
 		}
-		open func endOfLine() -> Array<EndOfLineContext> {
-			return getRuleContexts(EndOfLineContext.self)
-		}
-		open func endOfLine(_ i: Int) -> EndOfLineContext? {
-			return getRuleContext(EndOfLineContext.self,i)
-		}
-		open func moduleHeader() -> ModuleHeaderContext? {
-			return getRuleContext(ModuleHeaderContext.self,0)
-		}
-		open func moduleConfig() -> ModuleConfigContext? {
-			return getRuleContext(ModuleConfigContext.self,0)
-		}
-		open func moduleAttributes() -> ModuleAttributesContext? {
-			return getRuleContext(ModuleAttributesContext.self,0)
-		}
-		open func moduleDeclarations() -> ModuleDeclarationsContext? {
-			return getRuleContext(ModuleDeclarationsContext.self,0)
-		}
-		open func moduleBody() -> ModuleBodyContext? {
-			return getRuleContext(ModuleBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_module }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterModule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterModule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitModule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitModule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitModule(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitModule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitModule(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitModule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module() throws -> ModuleContext {
+	 open func module() throws -> ModuleContext {
 		var _localctx: ModuleContext = ModuleContext(_ctx, getState())
 		try enterRule(_localctx, 2, vbaParser.RULE_module)
 		var _la: Int = 0
@@ -549,41 +556,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleHeaderContext:ParserRuleContext {
-		open func VERSION() -> TerminalNode? { return getToken(vbaParser.Tokens.VERSION.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class ModuleHeaderContext: ParserRuleContext {
+			open
+			func VERSION() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.VERSION.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func DOUBLELITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DOUBLELITERAL.rawValue, 0)
+			}
+			open
+			func CLASS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CLASS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_moduleHeader
 		}
-		open func DOUBLELITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.DOUBLELITERAL.rawValue, 0) }
-		open func CLASS() -> TerminalNode? { return getToken(vbaParser.Tokens.CLASS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_moduleHeader }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterModuleHeader(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterModuleHeader(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitModuleHeader(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitModuleHeader(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitModuleHeader(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitModuleHeader(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitModuleHeader(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitModuleHeader(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleHeader() throws -> ModuleHeaderContext {
+	 open func moduleHeader() throws -> ModuleHeaderContext {
 		var _localctx: ModuleHeaderContext = ModuleHeaderContext(_ctx, getState())
 		try enterRule(_localctx, 4, vbaParser.RULE_moduleHeader)
 		defer {
@@ -611,48 +636,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleConfigContext:ParserRuleContext {
-		open func BEGIN() -> TerminalNode? { return getToken(vbaParser.Tokens.BEGIN.rawValue, 0) }
-		open func END() -> TerminalNode? { return getToken(vbaParser.Tokens.END.rawValue, 0) }
-		open func endOfLine() -> Array<EndOfLineContext> {
-			return getRuleContexts(EndOfLineContext.self)
+
+	public class ModuleConfigContext: ParserRuleContext {
+			open
+			func BEGIN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BEGIN.rawValue, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func endOfLine() -> [EndOfLineContext] {
+				return getRuleContexts(EndOfLineContext.self)
+			}
+			open
+			func endOfLine(_ i: Int) -> EndOfLineContext? {
+				return getRuleContext(EndOfLineContext.self, i)
+			}
+			open
+			func moduleConfigElement() -> [ModuleConfigElementContext] {
+				return getRuleContexts(ModuleConfigElementContext.self)
+			}
+			open
+			func moduleConfigElement(_ i: Int) -> ModuleConfigElementContext? {
+				return getRuleContext(ModuleConfigElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_moduleConfig
 		}
-		open func endOfLine(_ i: Int) -> EndOfLineContext? {
-			return getRuleContext(EndOfLineContext.self,i)
-		}
-		open func moduleConfigElement() -> Array<ModuleConfigElementContext> {
-			return getRuleContexts(ModuleConfigElementContext.self)
-		}
-		open func moduleConfigElement(_ i: Int) -> ModuleConfigElementContext? {
-			return getRuleContext(ModuleConfigElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_moduleConfig }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterModuleConfig(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterModuleConfig(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitModuleConfig(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitModuleConfig(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitModuleConfig(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitModuleConfig(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitModuleConfig(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitModuleConfig(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleConfig() throws -> ModuleConfigContext {
+	 open func moduleConfig() throws -> ModuleConfigContext {
 		var _localctx: ModuleConfigContext = ModuleConfigContext(_ctx, getState())
 		try enterRule(_localctx, 6, vbaParser.RULE_moduleConfig)
 		var _la: Int = 0
@@ -695,7 +735,7 @@ open class vbaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(370); 
 		 		try _errHandler.sync(self)
@@ -713,51 +753,67 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleConfigElementContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class ModuleConfigElementContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func endOfLine() -> [EndOfLineContext] {
+				return getRuleContexts(EndOfLineContext.self)
+			}
+			open
+			func endOfLine(_ i: Int) -> EndOfLineContext? {
+				return getRuleContext(EndOfLineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_moduleConfigElement
 		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func endOfLine() -> Array<EndOfLineContext> {
-			return getRuleContexts(EndOfLineContext.self)
-		}
-		open func endOfLine(_ i: Int) -> EndOfLineContext? {
-			return getRuleContext(EndOfLineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_moduleConfigElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterModuleConfigElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterModuleConfigElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitModuleConfigElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitModuleConfigElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitModuleConfigElement(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitModuleConfigElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitModuleConfigElement(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitModuleConfigElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleConfigElement() throws -> ModuleConfigElementContext {
+	 open func moduleConfigElement() throws -> ModuleConfigElementContext {
 		var _localctx: ModuleConfigElementContext = ModuleConfigElementContext(_ctx, getState())
 		try enterRule(_localctx, 8, vbaParser.RULE_moduleConfigElement)
 		var _la: Int = 0
@@ -827,46 +883,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleAttributesContext:ParserRuleContext {
-		open func attributeStmt() -> Array<AttributeStmtContext> {
-			return getRuleContexts(AttributeStmtContext.self)
+
+	public class ModuleAttributesContext: ParserRuleContext {
+			open
+			func attributeStmt() -> [AttributeStmtContext] {
+				return getRuleContexts(AttributeStmtContext.self)
+			}
+			open
+			func attributeStmt(_ i: Int) -> AttributeStmtContext? {
+				return getRuleContext(AttributeStmtContext.self, i)
+			}
+			open
+			func endOfLine() -> [EndOfLineContext] {
+				return getRuleContexts(EndOfLineContext.self)
+			}
+			open
+			func endOfLine(_ i: Int) -> EndOfLineContext? {
+				return getRuleContext(EndOfLineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_moduleAttributes
 		}
-		open func attributeStmt(_ i: Int) -> AttributeStmtContext? {
-			return getRuleContext(AttributeStmtContext.self,i)
-		}
-		open func endOfLine() -> Array<EndOfLineContext> {
-			return getRuleContexts(EndOfLineContext.self)
-		}
-		open func endOfLine(_ i: Int) -> EndOfLineContext? {
-			return getRuleContext(EndOfLineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_moduleAttributes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterModuleAttributes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterModuleAttributes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitModuleAttributes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitModuleAttributes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitModuleAttributes(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitModuleAttributes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitModuleAttributes(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitModuleAttributes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleAttributes() throws -> ModuleAttributesContext {
+	 open func moduleAttributes() throws -> ModuleAttributesContext {
 		var _localctx: ModuleAttributesContext = ModuleAttributesContext(_ctx, getState())
 		try enterRule(_localctx, 10, vbaParser.RULE_moduleAttributes)
 		var _la: Int = 0
@@ -894,7 +959,7 @@ open class vbaParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(393); 
 		 			try _errHandler.sync(self)
@@ -920,46 +985,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleDeclarationsContext:ParserRuleContext {
-		open func moduleDeclarationsElement() -> Array<ModuleDeclarationsElementContext> {
-			return getRuleContexts(ModuleDeclarationsElementContext.self)
+
+	public class ModuleDeclarationsContext: ParserRuleContext {
+			open
+			func moduleDeclarationsElement() -> [ModuleDeclarationsElementContext] {
+				return getRuleContexts(ModuleDeclarationsElementContext.self)
+			}
+			open
+			func moduleDeclarationsElement(_ i: Int) -> ModuleDeclarationsElementContext? {
+				return getRuleContext(ModuleDeclarationsElementContext.self, i)
+			}
+			open
+			func endOfLine() -> [EndOfLineContext] {
+				return getRuleContexts(EndOfLineContext.self)
+			}
+			open
+			func endOfLine(_ i: Int) -> EndOfLineContext? {
+				return getRuleContext(EndOfLineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_moduleDeclarations
 		}
-		open func moduleDeclarationsElement(_ i: Int) -> ModuleDeclarationsElementContext? {
-			return getRuleContext(ModuleDeclarationsElementContext.self,i)
-		}
-		open func endOfLine() -> Array<EndOfLineContext> {
-			return getRuleContexts(EndOfLineContext.self)
-		}
-		open func endOfLine(_ i: Int) -> EndOfLineContext? {
-			return getRuleContext(EndOfLineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_moduleDeclarations }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterModuleDeclarations(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterModuleDeclarations(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitModuleDeclarations(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitModuleDeclarations(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitModuleDeclarations(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitModuleDeclarations(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitModuleDeclarations(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitModuleDeclarations(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleDeclarations() throws -> ModuleDeclarationsContext {
+	 open func moduleDeclarations() throws -> ModuleDeclarationsContext {
 		var _localctx: ModuleDeclarationsContext = ModuleDeclarationsContext(_ctx, getState())
 		try enterRule(_localctx, 12, vbaParser.RULE_moduleDeclarations)
 		defer {
@@ -987,7 +1061,7 @@ open class vbaParser: Parser {
 
 		 					break
 		 				default:
-		 					throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 					throw ANTLRException.recognition(e: NoViableAltException(self))
 		 				}
 		 				setState(403); 
 		 				try _errHandler.sync(self)
@@ -1026,141 +1100,188 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleOptionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_moduleOption }
+
+	public class ModuleOptionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_moduleOption
+		}
 	 
-		public  func copyFrom(_ ctx: ModuleOptionContext) {
+		open
+		func copyFrom(_ ctx: ModuleOptionContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class OptionExplicitStmtContext: ModuleOptionContext {
-		open func OPTION_EXPLICIT() -> TerminalNode? { return getToken(vbaParser.Tokens.OPTION_EXPLICIT.rawValue, 0) }
-		public init(_ ctx: ModuleOptionContext) {
+	public class OptionExplicitStmtContext: ModuleOptionContext {
+			open
+			func OPTION_EXPLICIT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OPTION_EXPLICIT.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ModuleOptionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOptionExplicitStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOptionExplicitStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOptionExplicitStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOptionExplicitStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOptionExplicitStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOptionExplicitStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOptionExplicitStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOptionExplicitStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class OptionBaseStmtContext: ModuleOptionContext {
-		open func OPTION_BASE() -> TerminalNode? { return getToken(vbaParser.Tokens.OPTION_BASE.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func SHORTLITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.SHORTLITERAL.rawValue, 0) }
-		public init(_ ctx: ModuleOptionContext) {
+	public class OptionBaseStmtContext: ModuleOptionContext {
+			open
+			func OPTION_BASE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OPTION_BASE.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func SHORTLITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SHORTLITERAL.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ModuleOptionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOptionBaseStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOptionBaseStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOptionBaseStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOptionBaseStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOptionBaseStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOptionBaseStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOptionBaseStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOptionBaseStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class OptionPrivateModuleStmtContext: ModuleOptionContext {
-		open func OPTION_PRIVATE_MODULE() -> TerminalNode? { return getToken(vbaParser.Tokens.OPTION_PRIVATE_MODULE.rawValue, 0) }
-		public init(_ ctx: ModuleOptionContext) {
+	public class OptionPrivateModuleStmtContext: ModuleOptionContext {
+			open
+			func OPTION_PRIVATE_MODULE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OPTION_PRIVATE_MODULE.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ModuleOptionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOptionPrivateModuleStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOptionPrivateModuleStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOptionPrivateModuleStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOptionPrivateModuleStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOptionPrivateModuleStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOptionPrivateModuleStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOptionPrivateModuleStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOptionPrivateModuleStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class OptionCompareStmtContext: ModuleOptionContext {
-		open func OPTION_COMPARE() -> TerminalNode? { return getToken(vbaParser.Tokens.OPTION_COMPARE.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func BINARY() -> TerminalNode? { return getToken(vbaParser.Tokens.BINARY.rawValue, 0) }
-		open func TEXT() -> TerminalNode? { return getToken(vbaParser.Tokens.TEXT.rawValue, 0) }
-		open func DATABASE() -> TerminalNode? { return getToken(vbaParser.Tokens.DATABASE.rawValue, 0) }
-		public init(_ ctx: ModuleOptionContext) {
+	public class OptionCompareStmtContext: ModuleOptionContext {
+			open
+			func OPTION_COMPARE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OPTION_COMPARE.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func BINARY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BINARY.rawValue, 0)
+			}
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TEXT.rawValue, 0)
+			}
+			open
+			func DATABASE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DATABASE.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ModuleOptionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOptionCompareStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOptionCompareStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOptionCompareStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOptionCompareStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOptionCompareStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOptionCompareStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOptionCompareStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOptionCompareStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleOption() throws -> ModuleOptionContext {
+	 open func moduleOption() throws -> ModuleOptionContext {
 		var _localctx: ModuleOptionContext = ModuleOptionContext(_ctx, getState())
 		try enterRule(_localctx, 14, vbaParser.RULE_moduleOption)
 		var _la: Int = 0
@@ -1223,7 +1344,7 @@ open class vbaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1234,64 +1355,79 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleDeclarationsElementContext:ParserRuleContext {
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
+
+	public class ModuleDeclarationsElementContext: ParserRuleContext {
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+			open
+			func declareStmt() -> DeclareStmtContext? {
+				return getRuleContext(DeclareStmtContext.self, 0)
+			}
+			open
+			func enumerationStmt() -> EnumerationStmtContext? {
+				return getRuleContext(EnumerationStmtContext.self, 0)
+			}
+			open
+			func eventStmt() -> EventStmtContext? {
+				return getRuleContext(EventStmtContext.self, 0)
+			}
+			open
+			func constStmt() -> ConstStmtContext? {
+				return getRuleContext(ConstStmtContext.self, 0)
+			}
+			open
+			func implementsStmt() -> ImplementsStmtContext? {
+				return getRuleContext(ImplementsStmtContext.self, 0)
+			}
+			open
+			func variableStmt() -> VariableStmtContext? {
+				return getRuleContext(VariableStmtContext.self, 0)
+			}
+			open
+			func moduleOption() -> ModuleOptionContext? {
+				return getRuleContext(ModuleOptionContext.self, 0)
+			}
+			open
+			func typeStmt() -> TypeStmtContext? {
+				return getRuleContext(TypeStmtContext.self, 0)
+			}
+			open
+			func macroStmt() -> MacroStmtContext? {
+				return getRuleContext(MacroStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_moduleDeclarationsElement
 		}
-		open func declareStmt() -> DeclareStmtContext? {
-			return getRuleContext(DeclareStmtContext.self,0)
-		}
-		open func enumerationStmt() -> EnumerationStmtContext? {
-			return getRuleContext(EnumerationStmtContext.self,0)
-		}
-		open func eventStmt() -> EventStmtContext? {
-			return getRuleContext(EventStmtContext.self,0)
-		}
-		open func constStmt() -> ConstStmtContext? {
-			return getRuleContext(ConstStmtContext.self,0)
-		}
-		open func implementsStmt() -> ImplementsStmtContext? {
-			return getRuleContext(ImplementsStmtContext.self,0)
-		}
-		open func variableStmt() -> VariableStmtContext? {
-			return getRuleContext(VariableStmtContext.self,0)
-		}
-		open func moduleOption() -> ModuleOptionContext? {
-			return getRuleContext(ModuleOptionContext.self,0)
-		}
-		open func typeStmt() -> TypeStmtContext? {
-			return getRuleContext(TypeStmtContext.self,0)
-		}
-		open func macroStmt() -> MacroStmtContext? {
-			return getRuleContext(MacroStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_moduleDeclarationsElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterModuleDeclarationsElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterModuleDeclarationsElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitModuleDeclarationsElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitModuleDeclarationsElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitModuleDeclarationsElement(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitModuleDeclarationsElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitModuleDeclarationsElement(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitModuleDeclarationsElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleDeclarationsElement() throws -> ModuleDeclarationsElementContext {
+	 open func moduleDeclarationsElement() throws -> ModuleDeclarationsElementContext {
 		var _localctx: ModuleDeclarationsElementContext = ModuleDeclarationsElementContext(_ctx, getState())
 		try enterRule(_localctx, 16, vbaParser.RULE_moduleDeclarationsElement)
 		defer {
@@ -1372,40 +1508,47 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class MacroStmtContext:ParserRuleContext {
-		open func macroConstStmt() -> MacroConstStmtContext? {
-			return getRuleContext(MacroConstStmtContext.self,0)
+
+	public class MacroStmtContext: ParserRuleContext {
+			open
+			func macroConstStmt() -> MacroConstStmtContext? {
+				return getRuleContext(MacroConstStmtContext.self, 0)
+			}
+			open
+			func macroIfThenElseStmt() -> MacroIfThenElseStmtContext? {
+				return getRuleContext(MacroIfThenElseStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_macroStmt
 		}
-		open func macroIfThenElseStmt() -> MacroIfThenElseStmtContext? {
-			return getRuleContext(MacroIfThenElseStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_macroStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterMacroStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterMacroStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitMacroStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitMacroStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitMacroStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitMacroStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitMacroStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitMacroStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func macroStmt() throws -> MacroStmtContext {
+	 open func macroStmt() throws -> MacroStmtContext {
 		var _localctx: MacroStmtContext = MacroStmtContext(_ctx, getState())
 		try enterRule(_localctx, 18, vbaParser.RULE_macroStmt)
 		defer {
@@ -1429,7 +1572,7 @@ open class vbaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1440,46 +1583,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleBodyContext:ParserRuleContext {
-		open func moduleBodyElement() -> Array<ModuleBodyElementContext> {
-			return getRuleContexts(ModuleBodyElementContext.self)
+
+	public class ModuleBodyContext: ParserRuleContext {
+			open
+			func moduleBodyElement() -> [ModuleBodyElementContext] {
+				return getRuleContexts(ModuleBodyElementContext.self)
+			}
+			open
+			func moduleBodyElement(_ i: Int) -> ModuleBodyElementContext? {
+				return getRuleContext(ModuleBodyElementContext.self, i)
+			}
+			open
+			func endOfLine() -> [EndOfLineContext] {
+				return getRuleContexts(EndOfLineContext.self)
+			}
+			open
+			func endOfLine(_ i: Int) -> EndOfLineContext? {
+				return getRuleContext(EndOfLineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_moduleBody
 		}
-		open func moduleBodyElement(_ i: Int) -> ModuleBodyElementContext? {
-			return getRuleContext(ModuleBodyElementContext.self,i)
-		}
-		open func endOfLine() -> Array<EndOfLineContext> {
-			return getRuleContexts(EndOfLineContext.self)
-		}
-		open func endOfLine(_ i: Int) -> EndOfLineContext? {
-			return getRuleContext(EndOfLineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_moduleBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterModuleBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterModuleBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitModuleBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitModuleBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitModuleBody(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitModuleBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitModuleBody(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitModuleBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleBody() throws -> ModuleBodyContext {
+	 open func moduleBody() throws -> ModuleBodyContext {
 		var _localctx: ModuleBodyContext = ModuleBodyContext(_ctx, getState())
 		try enterRule(_localctx, 20, vbaParser.RULE_moduleBody)
 		var _la: Int = 0
@@ -1548,52 +1700,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleBodyElementContext:ParserRuleContext {
-		open func functionStmt() -> FunctionStmtContext? {
-			return getRuleContext(FunctionStmtContext.self,0)
+
+	public class ModuleBodyElementContext: ParserRuleContext {
+			open
+			func functionStmt() -> FunctionStmtContext? {
+				return getRuleContext(FunctionStmtContext.self, 0)
+			}
+			open
+			func propertyGetStmt() -> PropertyGetStmtContext? {
+				return getRuleContext(PropertyGetStmtContext.self, 0)
+			}
+			open
+			func propertySetStmt() -> PropertySetStmtContext? {
+				return getRuleContext(PropertySetStmtContext.self, 0)
+			}
+			open
+			func propertyLetStmt() -> PropertyLetStmtContext? {
+				return getRuleContext(PropertyLetStmtContext.self, 0)
+			}
+			open
+			func subStmt() -> SubStmtContext? {
+				return getRuleContext(SubStmtContext.self, 0)
+			}
+			open
+			func macroStmt() -> MacroStmtContext? {
+				return getRuleContext(MacroStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_moduleBodyElement
 		}
-		open func propertyGetStmt() -> PropertyGetStmtContext? {
-			return getRuleContext(PropertyGetStmtContext.self,0)
-		}
-		open func propertySetStmt() -> PropertySetStmtContext? {
-			return getRuleContext(PropertySetStmtContext.self,0)
-		}
-		open func propertyLetStmt() -> PropertyLetStmtContext? {
-			return getRuleContext(PropertyLetStmtContext.self,0)
-		}
-		open func subStmt() -> SubStmtContext? {
-			return getRuleContext(SubStmtContext.self,0)
-		}
-		open func macroStmt() -> MacroStmtContext? {
-			return getRuleContext(MacroStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_moduleBodyElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterModuleBodyElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterModuleBodyElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitModuleBodyElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitModuleBodyElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitModuleBodyElement(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitModuleBodyElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitModuleBodyElement(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitModuleBodyElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleBodyElement() throws -> ModuleBodyElementContext {
+	 open func moduleBodyElement() throws -> ModuleBodyElementContext {
 		var _localctx: ModuleBodyElementContext = ModuleBodyElementContext(_ctx, getState())
 		try enterRule(_localctx, 22, vbaParser.RULE_moduleBodyElement)
 		defer {
@@ -1650,49 +1813,67 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class AttributeStmtContext:ParserRuleContext {
-		open func ATTRIBUTE() -> TerminalNode? { return getToken(vbaParser.Tokens.ATTRIBUTE.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class AttributeStmtContext: ParserRuleContext {
+			open
+			func ATTRIBUTE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ATTRIBUTE.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func literal() -> [LiteralContext] {
+				return getRuleContexts(LiteralContext.self)
+			}
+			open
+			func literal(_ i: Int) -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_attributeStmt
 		}
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
-		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func literal() -> Array<LiteralContext> {
-			return getRuleContexts(LiteralContext.self)
-		}
-		open func literal(_ i: Int) -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_attributeStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterAttributeStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterAttributeStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitAttributeStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitAttributeStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitAttributeStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitAttributeStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitAttributeStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitAttributeStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributeStmt() throws -> AttributeStmtContext {
+	 open func attributeStmt() throws -> AttributeStmtContext {
 		var _localctx: AttributeStmtContext = AttributeStmtContext(_ctx, getState())
 		try enterRule(_localctx, 24, vbaParser.RULE_attributeStmt)
 		var _la: Int = 0
@@ -1790,46 +1971,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func blockStmt() -> Array<BlockStmtContext> {
-			return getRuleContexts(BlockStmtContext.self)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func blockStmt() -> [BlockStmtContext] {
+				return getRuleContexts(BlockStmtContext.self)
+			}
+			open
+			func blockStmt(_ i: Int) -> BlockStmtContext? {
+				return getRuleContext(BlockStmtContext.self, i)
+			}
+			open
+			func endOfStatement() -> [EndOfStatementContext] {
+				return getRuleContexts(EndOfStatementContext.self)
+			}
+			open
+			func endOfStatement(_ i: Int) -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_block
 		}
-		open func blockStmt(_ i: Int) -> BlockStmtContext? {
-			return getRuleContext(BlockStmtContext.self,i)
-		}
-		open func endOfStatement() -> Array<EndOfStatementContext> {
-			return getRuleContexts(EndOfStatementContext.self)
-		}
-		open func endOfStatement(_ i: Int) -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitBlock(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 26, vbaParser.RULE_block)
 		defer {
@@ -1868,235 +2058,307 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class BlockStmtContext:ParserRuleContext {
-		open func lineLabel() -> LineLabelContext? {
-			return getRuleContext(LineLabelContext.self,0)
-		}
-		open func appactivateStmt() -> AppactivateStmtContext? {
-			return getRuleContext(AppactivateStmtContext.self,0)
-		}
-		open func attributeStmt() -> AttributeStmtContext? {
-			return getRuleContext(AttributeStmtContext.self,0)
-		}
-		open func beepStmt() -> BeepStmtContext? {
-			return getRuleContext(BeepStmtContext.self,0)
-		}
-		open func chdirStmt() -> ChdirStmtContext? {
-			return getRuleContext(ChdirStmtContext.self,0)
-		}
-		open func chdriveStmt() -> ChdriveStmtContext? {
-			return getRuleContext(ChdriveStmtContext.self,0)
-		}
-		open func closeStmt() -> CloseStmtContext? {
-			return getRuleContext(CloseStmtContext.self,0)
-		}
-		open func constStmt() -> ConstStmtContext? {
-			return getRuleContext(ConstStmtContext.self,0)
-		}
-		open func dateStmt() -> DateStmtContext? {
-			return getRuleContext(DateStmtContext.self,0)
-		}
-		open func deleteSettingStmt() -> DeleteSettingStmtContext? {
-			return getRuleContext(DeleteSettingStmtContext.self,0)
-		}
-		open func deftypeStmt() -> DeftypeStmtContext? {
-			return getRuleContext(DeftypeStmtContext.self,0)
-		}
-		open func doLoopStmt() -> DoLoopStmtContext? {
-			return getRuleContext(DoLoopStmtContext.self,0)
-		}
-		open func endStmt() -> EndStmtContext? {
-			return getRuleContext(EndStmtContext.self,0)
-		}
-		open func eraseStmt() -> EraseStmtContext? {
-			return getRuleContext(EraseStmtContext.self,0)
-		}
-		open func errorStmt() -> ErrorStmtContext? {
-			return getRuleContext(ErrorStmtContext.self,0)
-		}
-		open func exitStmt() -> ExitStmtContext? {
-			return getRuleContext(ExitStmtContext.self,0)
-		}
-		open func explicitCallStmt() -> ExplicitCallStmtContext? {
-			return getRuleContext(ExplicitCallStmtContext.self,0)
-		}
-		open func filecopyStmt() -> FilecopyStmtContext? {
-			return getRuleContext(FilecopyStmtContext.self,0)
-		}
-		open func forEachStmt() -> ForEachStmtContext? {
-			return getRuleContext(ForEachStmtContext.self,0)
-		}
-		open func forNextStmt() -> ForNextStmtContext? {
-			return getRuleContext(ForNextStmtContext.self,0)
-		}
-		open func getStmt() -> GetStmtContext? {
-			return getRuleContext(GetStmtContext.self,0)
-		}
-		open func goSubStmt() -> GoSubStmtContext? {
-			return getRuleContext(GoSubStmtContext.self,0)
-		}
-		open func goToStmt() -> GoToStmtContext? {
-			return getRuleContext(GoToStmtContext.self,0)
-		}
-		open func ifThenElseStmt() -> IfThenElseStmtContext? {
-			return getRuleContext(IfThenElseStmtContext.self,0)
-		}
-		open func implementsStmt() -> ImplementsStmtContext? {
-			return getRuleContext(ImplementsStmtContext.self,0)
-		}
-		open func inputStmt() -> InputStmtContext? {
-			return getRuleContext(InputStmtContext.self,0)
-		}
-		open func killStmt() -> KillStmtContext? {
-			return getRuleContext(KillStmtContext.self,0)
-		}
-		open func letStmt() -> LetStmtContext? {
-			return getRuleContext(LetStmtContext.self,0)
-		}
-		open func lineInputStmt() -> LineInputStmtContext? {
-			return getRuleContext(LineInputStmtContext.self,0)
-		}
-		open func loadStmt() -> LoadStmtContext? {
-			return getRuleContext(LoadStmtContext.self,0)
-		}
-		open func lockStmt() -> LockStmtContext? {
-			return getRuleContext(LockStmtContext.self,0)
-		}
-		open func lsetStmt() -> LsetStmtContext? {
-			return getRuleContext(LsetStmtContext.self,0)
-		}
-		open func macroStmt() -> MacroStmtContext? {
-			return getRuleContext(MacroStmtContext.self,0)
-		}
-		open func midStmt() -> MidStmtContext? {
-			return getRuleContext(MidStmtContext.self,0)
-		}
-		open func mkdirStmt() -> MkdirStmtContext? {
-			return getRuleContext(MkdirStmtContext.self,0)
-		}
-		open func nameStmt() -> NameStmtContext? {
-			return getRuleContext(NameStmtContext.self,0)
-		}
-		open func onErrorStmt() -> OnErrorStmtContext? {
-			return getRuleContext(OnErrorStmtContext.self,0)
-		}
-		open func onGoToStmt() -> OnGoToStmtContext? {
-			return getRuleContext(OnGoToStmtContext.self,0)
-		}
-		open func onGoSubStmt() -> OnGoSubStmtContext? {
-			return getRuleContext(OnGoSubStmtContext.self,0)
-		}
-		open func openStmt() -> OpenStmtContext? {
-			return getRuleContext(OpenStmtContext.self,0)
-		}
-		open func printStmt() -> PrintStmtContext? {
-			return getRuleContext(PrintStmtContext.self,0)
-		}
-		open func putStmt() -> PutStmtContext? {
-			return getRuleContext(PutStmtContext.self,0)
-		}
-		open func raiseEventStmt() -> RaiseEventStmtContext? {
-			return getRuleContext(RaiseEventStmtContext.self,0)
-		}
-		open func randomizeStmt() -> RandomizeStmtContext? {
-			return getRuleContext(RandomizeStmtContext.self,0)
-		}
-		open func redimStmt() -> RedimStmtContext? {
-			return getRuleContext(RedimStmtContext.self,0)
-		}
-		open func resetStmt() -> ResetStmtContext? {
-			return getRuleContext(ResetStmtContext.self,0)
-		}
-		open func resumeStmt() -> ResumeStmtContext? {
-			return getRuleContext(ResumeStmtContext.self,0)
-		}
-		open func returnStmt() -> ReturnStmtContext? {
-			return getRuleContext(ReturnStmtContext.self,0)
-		}
-		open func rmdirStmt() -> RmdirStmtContext? {
-			return getRuleContext(RmdirStmtContext.self,0)
-		}
-		open func rsetStmt() -> RsetStmtContext? {
-			return getRuleContext(RsetStmtContext.self,0)
-		}
-		open func savepictureStmt() -> SavepictureStmtContext? {
-			return getRuleContext(SavepictureStmtContext.self,0)
-		}
-		open func saveSettingStmt() -> SaveSettingStmtContext? {
-			return getRuleContext(SaveSettingStmtContext.self,0)
-		}
-		open func seekStmt() -> SeekStmtContext? {
-			return getRuleContext(SeekStmtContext.self,0)
-		}
-		open func selectCaseStmt() -> SelectCaseStmtContext? {
-			return getRuleContext(SelectCaseStmtContext.self,0)
-		}
-		open func sendkeysStmt() -> SendkeysStmtContext? {
-			return getRuleContext(SendkeysStmtContext.self,0)
-		}
-		open func setattrStmt() -> SetattrStmtContext? {
-			return getRuleContext(SetattrStmtContext.self,0)
-		}
-		open func setStmt() -> SetStmtContext? {
-			return getRuleContext(SetStmtContext.self,0)
-		}
-		open func stopStmt() -> StopStmtContext? {
-			return getRuleContext(StopStmtContext.self,0)
-		}
-		open func timeStmt() -> TimeStmtContext? {
-			return getRuleContext(TimeStmtContext.self,0)
-		}
-		open func unloadStmt() -> UnloadStmtContext? {
-			return getRuleContext(UnloadStmtContext.self,0)
-		}
-		open func unlockStmt() -> UnlockStmtContext? {
-			return getRuleContext(UnlockStmtContext.self,0)
-		}
-		open func variableStmt() -> VariableStmtContext? {
-			return getRuleContext(VariableStmtContext.self,0)
-		}
-		open func whileWendStmt() -> WhileWendStmtContext? {
-			return getRuleContext(WhileWendStmtContext.self,0)
-		}
-		open func widthStmt() -> WidthStmtContext? {
-			return getRuleContext(WidthStmtContext.self,0)
-		}
-		open func withStmt() -> WithStmtContext? {
-			return getRuleContext(WithStmtContext.self,0)
-		}
-		open func writeStmt() -> WriteStmtContext? {
-			return getRuleContext(WriteStmtContext.self,0)
-		}
-		open func implicitCallStmt_InBlock() -> ImplicitCallStmt_InBlockContext? {
-			return getRuleContext(ImplicitCallStmt_InBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_blockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterBlockStmt(self)
+
+	public class BlockStmtContext: ParserRuleContext {
+			open
+			func lineLabel() -> LineLabelContext? {
+				return getRuleContext(LineLabelContext.self, 0)
+			}
+			open
+			func appactivateStmt() -> AppactivateStmtContext? {
+				return getRuleContext(AppactivateStmtContext.self, 0)
+			}
+			open
+			func attributeStmt() -> AttributeStmtContext? {
+				return getRuleContext(AttributeStmtContext.self, 0)
+			}
+			open
+			func beepStmt() -> BeepStmtContext? {
+				return getRuleContext(BeepStmtContext.self, 0)
+			}
+			open
+			func chdirStmt() -> ChdirStmtContext? {
+				return getRuleContext(ChdirStmtContext.self, 0)
+			}
+			open
+			func chdriveStmt() -> ChdriveStmtContext? {
+				return getRuleContext(ChdriveStmtContext.self, 0)
+			}
+			open
+			func closeStmt() -> CloseStmtContext? {
+				return getRuleContext(CloseStmtContext.self, 0)
+			}
+			open
+			func constStmt() -> ConstStmtContext? {
+				return getRuleContext(ConstStmtContext.self, 0)
+			}
+			open
+			func dateStmt() -> DateStmtContext? {
+				return getRuleContext(DateStmtContext.self, 0)
+			}
+			open
+			func deleteSettingStmt() -> DeleteSettingStmtContext? {
+				return getRuleContext(DeleteSettingStmtContext.self, 0)
+			}
+			open
+			func deftypeStmt() -> DeftypeStmtContext? {
+				return getRuleContext(DeftypeStmtContext.self, 0)
+			}
+			open
+			func doLoopStmt() -> DoLoopStmtContext? {
+				return getRuleContext(DoLoopStmtContext.self, 0)
+			}
+			open
+			func endStmt() -> EndStmtContext? {
+				return getRuleContext(EndStmtContext.self, 0)
+			}
+			open
+			func eraseStmt() -> EraseStmtContext? {
+				return getRuleContext(EraseStmtContext.self, 0)
+			}
+			open
+			func errorStmt() -> ErrorStmtContext? {
+				return getRuleContext(ErrorStmtContext.self, 0)
+			}
+			open
+			func exitStmt() -> ExitStmtContext? {
+				return getRuleContext(ExitStmtContext.self, 0)
+			}
+			open
+			func explicitCallStmt() -> ExplicitCallStmtContext? {
+				return getRuleContext(ExplicitCallStmtContext.self, 0)
+			}
+			open
+			func filecopyStmt() -> FilecopyStmtContext? {
+				return getRuleContext(FilecopyStmtContext.self, 0)
+			}
+			open
+			func forEachStmt() -> ForEachStmtContext? {
+				return getRuleContext(ForEachStmtContext.self, 0)
+			}
+			open
+			func forNextStmt() -> ForNextStmtContext? {
+				return getRuleContext(ForNextStmtContext.self, 0)
+			}
+			open
+			func getStmt() -> GetStmtContext? {
+				return getRuleContext(GetStmtContext.self, 0)
+			}
+			open
+			func goSubStmt() -> GoSubStmtContext? {
+				return getRuleContext(GoSubStmtContext.self, 0)
+			}
+			open
+			func goToStmt() -> GoToStmtContext? {
+				return getRuleContext(GoToStmtContext.self, 0)
+			}
+			open
+			func ifThenElseStmt() -> IfThenElseStmtContext? {
+				return getRuleContext(IfThenElseStmtContext.self, 0)
+			}
+			open
+			func implementsStmt() -> ImplementsStmtContext? {
+				return getRuleContext(ImplementsStmtContext.self, 0)
+			}
+			open
+			func inputStmt() -> InputStmtContext? {
+				return getRuleContext(InputStmtContext.self, 0)
+			}
+			open
+			func killStmt() -> KillStmtContext? {
+				return getRuleContext(KillStmtContext.self, 0)
+			}
+			open
+			func letStmt() -> LetStmtContext? {
+				return getRuleContext(LetStmtContext.self, 0)
+			}
+			open
+			func lineInputStmt() -> LineInputStmtContext? {
+				return getRuleContext(LineInputStmtContext.self, 0)
+			}
+			open
+			func loadStmt() -> LoadStmtContext? {
+				return getRuleContext(LoadStmtContext.self, 0)
+			}
+			open
+			func lockStmt() -> LockStmtContext? {
+				return getRuleContext(LockStmtContext.self, 0)
+			}
+			open
+			func lsetStmt() -> LsetStmtContext? {
+				return getRuleContext(LsetStmtContext.self, 0)
+			}
+			open
+			func macroStmt() -> MacroStmtContext? {
+				return getRuleContext(MacroStmtContext.self, 0)
+			}
+			open
+			func midStmt() -> MidStmtContext? {
+				return getRuleContext(MidStmtContext.self, 0)
+			}
+			open
+			func mkdirStmt() -> MkdirStmtContext? {
+				return getRuleContext(MkdirStmtContext.self, 0)
+			}
+			open
+			func nameStmt() -> NameStmtContext? {
+				return getRuleContext(NameStmtContext.self, 0)
+			}
+			open
+			func onErrorStmt() -> OnErrorStmtContext? {
+				return getRuleContext(OnErrorStmtContext.self, 0)
+			}
+			open
+			func onGoToStmt() -> OnGoToStmtContext? {
+				return getRuleContext(OnGoToStmtContext.self, 0)
+			}
+			open
+			func onGoSubStmt() -> OnGoSubStmtContext? {
+				return getRuleContext(OnGoSubStmtContext.self, 0)
+			}
+			open
+			func openStmt() -> OpenStmtContext? {
+				return getRuleContext(OpenStmtContext.self, 0)
+			}
+			open
+			func printStmt() -> PrintStmtContext? {
+				return getRuleContext(PrintStmtContext.self, 0)
+			}
+			open
+			func putStmt() -> PutStmtContext? {
+				return getRuleContext(PutStmtContext.self, 0)
+			}
+			open
+			func raiseEventStmt() -> RaiseEventStmtContext? {
+				return getRuleContext(RaiseEventStmtContext.self, 0)
+			}
+			open
+			func randomizeStmt() -> RandomizeStmtContext? {
+				return getRuleContext(RandomizeStmtContext.self, 0)
+			}
+			open
+			func redimStmt() -> RedimStmtContext? {
+				return getRuleContext(RedimStmtContext.self, 0)
+			}
+			open
+			func resetStmt() -> ResetStmtContext? {
+				return getRuleContext(ResetStmtContext.self, 0)
+			}
+			open
+			func resumeStmt() -> ResumeStmtContext? {
+				return getRuleContext(ResumeStmtContext.self, 0)
+			}
+			open
+			func returnStmt() -> ReturnStmtContext? {
+				return getRuleContext(ReturnStmtContext.self, 0)
+			}
+			open
+			func rmdirStmt() -> RmdirStmtContext? {
+				return getRuleContext(RmdirStmtContext.self, 0)
+			}
+			open
+			func rsetStmt() -> RsetStmtContext? {
+				return getRuleContext(RsetStmtContext.self, 0)
+			}
+			open
+			func savepictureStmt() -> SavepictureStmtContext? {
+				return getRuleContext(SavepictureStmtContext.self, 0)
+			}
+			open
+			func saveSettingStmt() -> SaveSettingStmtContext? {
+				return getRuleContext(SaveSettingStmtContext.self, 0)
+			}
+			open
+			func seekStmt() -> SeekStmtContext? {
+				return getRuleContext(SeekStmtContext.self, 0)
+			}
+			open
+			func selectCaseStmt() -> SelectCaseStmtContext? {
+				return getRuleContext(SelectCaseStmtContext.self, 0)
+			}
+			open
+			func sendkeysStmt() -> SendkeysStmtContext? {
+				return getRuleContext(SendkeysStmtContext.self, 0)
+			}
+			open
+			func setattrStmt() -> SetattrStmtContext? {
+				return getRuleContext(SetattrStmtContext.self, 0)
+			}
+			open
+			func setStmt() -> SetStmtContext? {
+				return getRuleContext(SetStmtContext.self, 0)
+			}
+			open
+			func stopStmt() -> StopStmtContext? {
+				return getRuleContext(StopStmtContext.self, 0)
+			}
+			open
+			func timeStmt() -> TimeStmtContext? {
+				return getRuleContext(TimeStmtContext.self, 0)
+			}
+			open
+			func unloadStmt() -> UnloadStmtContext? {
+				return getRuleContext(UnloadStmtContext.self, 0)
+			}
+			open
+			func unlockStmt() -> UnlockStmtContext? {
+				return getRuleContext(UnlockStmtContext.self, 0)
+			}
+			open
+			func variableStmt() -> VariableStmtContext? {
+				return getRuleContext(VariableStmtContext.self, 0)
+			}
+			open
+			func whileWendStmt() -> WhileWendStmtContext? {
+				return getRuleContext(WhileWendStmtContext.self, 0)
+			}
+			open
+			func widthStmt() -> WidthStmtContext? {
+				return getRuleContext(WidthStmtContext.self, 0)
+			}
+			open
+			func withStmt() -> WithStmtContext? {
+				return getRuleContext(WithStmtContext.self, 0)
+			}
+			open
+			func writeStmt() -> WriteStmtContext? {
+				return getRuleContext(WriteStmtContext.self, 0)
+			}
+			open
+			func implicitCallStmt_InBlock() -> ImplicitCallStmt_InBlockContext? {
+				return getRuleContext(ImplicitCallStmt_InBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_blockStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterBlockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitBlockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitBlockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitBlockStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitBlockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitBlockStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitBlockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blockStmt() throws -> BlockStmtContext {
+	 open func blockStmt() throws -> BlockStmtContext {
 		var _localctx: BlockStmtContext = BlockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 28, vbaParser.RULE_blockStmt)
 		defer {
@@ -2519,45 +2781,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class AppactivateStmtContext:ParserRuleContext {
-		open func APPACTIVATE() -> TerminalNode? { return getToken(vbaParser.Tokens.APPACTIVATE.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class AppactivateStmtContext: ParserRuleContext {
+			open
+			func APPACTIVATE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.APPACTIVATE.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_appactivateStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_appactivateStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterAppactivateStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterAppactivateStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitAppactivateStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitAppactivateStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitAppactivateStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitAppactivateStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitAppactivateStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitAppactivateStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func appactivateStmt() throws -> AppactivateStmtContext {
+	 open func appactivateStmt() throws -> AppactivateStmtContext {
 		var _localctx: AppactivateStmtContext = AppactivateStmtContext(_ctx, getState())
 		try enterRule(_localctx, 30, vbaParser.RULE_appactivateStmt)
 		var _la: Int = 0
@@ -2620,35 +2896,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class BeepStmtContext:ParserRuleContext {
-		open func BEEP() -> TerminalNode? { return getToken(vbaParser.Tokens.BEEP.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_beepStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterBeepStmt(self)
+
+	public class BeepStmtContext: ParserRuleContext {
+			open
+			func BEEP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BEEP.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_beepStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterBeepStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitBeepStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitBeepStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitBeepStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitBeepStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitBeepStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitBeepStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func beepStmt() throws -> BeepStmtContext {
+	 open func beepStmt() throws -> BeepStmtContext {
 		var _localctx: BeepStmtContext = BeepStmtContext(_ctx, getState())
 		try enterRule(_localctx, 32, vbaParser.RULE_beepStmt)
 		defer {
@@ -2668,39 +2952,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ChdirStmtContext:ParserRuleContext {
-		open func CHDIR() -> TerminalNode? { return getToken(vbaParser.Tokens.CHDIR.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class ChdirStmtContext: ParserRuleContext {
+			open
+			func CHDIR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CHDIR.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_chdirStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_chdirStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterChdirStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterChdirStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitChdirStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitChdirStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitChdirStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitChdirStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitChdirStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitChdirStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func chdirStmt() throws -> ChdirStmtContext {
+	 open func chdirStmt() throws -> ChdirStmtContext {
 		var _localctx: ChdirStmtContext = ChdirStmtContext(_ctx, getState())
 		try enterRule(_localctx, 34, vbaParser.RULE_chdirStmt)
 		defer {
@@ -2724,39 +3020,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ChdriveStmtContext:ParserRuleContext {
-		open func CHDRIVE() -> TerminalNode? { return getToken(vbaParser.Tokens.CHDRIVE.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class ChdriveStmtContext: ParserRuleContext {
+			open
+			func CHDRIVE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CHDRIVE.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_chdriveStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_chdriveStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterChdriveStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterChdriveStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitChdriveStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitChdriveStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitChdriveStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitChdriveStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitChdriveStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitChdriveStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func chdriveStmt() throws -> ChdriveStmtContext {
+	 open func chdriveStmt() throws -> ChdriveStmtContext {
 		var _localctx: ChdriveStmtContext = ChdriveStmtContext(_ctx, getState())
 		try enterRule(_localctx, 36, vbaParser.RULE_chdriveStmt)
 		defer {
@@ -2780,45 +3088,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class CloseStmtContext:ParserRuleContext {
-		open func CLOSE() -> TerminalNode? { return getToken(vbaParser.Tokens.CLOSE.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class CloseStmtContext: ParserRuleContext {
+			open
+			func CLOSE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CLOSE.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> [FileNumberContext] {
+				return getRuleContexts(FileNumberContext.self)
+			}
+			open
+			func fileNumber(_ i: Int) -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_closeStmt
 		}
-		open func fileNumber() -> Array<FileNumberContext> {
-			return getRuleContexts(FileNumberContext.self)
-		}
-		open func fileNumber(_ i: Int) -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_closeStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterCloseStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterCloseStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitCloseStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitCloseStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitCloseStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitCloseStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitCloseStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitCloseStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func closeStmt() throws -> CloseStmtContext {
+	 open func closeStmt() throws -> CloseStmtContext {
 		var _localctx: CloseStmtContext = CloseStmtContext(_ctx, getState())
 		try enterRule(_localctx, 38, vbaParser.RULE_closeStmt)
 		var _la: Int = 0
@@ -2894,48 +3216,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ConstStmtContext:ParserRuleContext {
-		open func CONST() -> TerminalNode? { return getToken(vbaParser.Tokens.CONST.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class ConstStmtContext: ParserRuleContext {
+			open
+			func CONST() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CONST.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func constSubStmt() -> [ConstSubStmtContext] {
+				return getRuleContexts(ConstSubStmtContext.self)
+			}
+			open
+			func constSubStmt(_ i: Int) -> ConstSubStmtContext? {
+				return getRuleContext(ConstSubStmtContext.self, i)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_constStmt
 		}
-		open func constSubStmt() -> Array<ConstSubStmtContext> {
-			return getRuleContexts(ConstSubStmtContext.self)
-		}
-		open func constSubStmt(_ i: Int) -> ConstSubStmtContext? {
-			return getRuleContext(ConstSubStmtContext.self,i)
-		}
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_constStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterConstStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterConstStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitConstStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitConstStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitConstStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitConstStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitConstStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitConstStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constStmt() throws -> ConstStmtContext {
+	 open func constStmt() throws -> ConstStmtContext {
 		var _localctx: ConstStmtContext = ConstStmtContext(_ctx, getState())
 		try enterRule(_localctx, 40, vbaParser.RULE_constStmt)
 		var _la: Int = 0
@@ -3021,51 +3358,67 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ConstSubStmtContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class ConstSubStmtContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func asTypeClause() -> AsTypeClauseContext? {
+				return getRuleContext(AsTypeClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_constSubStmt
 		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func asTypeClause() -> AsTypeClauseContext? {
-			return getRuleContext(AsTypeClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_constSubStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterConstSubStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterConstSubStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitConstSubStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitConstSubStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitConstSubStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitConstSubStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitConstSubStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitConstSubStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constSubStmt() throws -> ConstSubStmtContext {
+	 open func constSubStmt() throws -> ConstSubStmtContext {
 		var _localctx: ConstSubStmtContext = ConstSubStmtContext(_ctx, getState())
 		try enterRule(_localctx, 42, vbaParser.RULE_constSubStmt)
 		var _la: Int = 0
@@ -3145,43 +3498,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class DateStmtContext:ParserRuleContext {
-		open func DATE() -> TerminalNode? { return getToken(vbaParser.Tokens.DATE.rawValue, 0) }
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class DateStmtContext: ParserRuleContext {
+			open
+			func DATE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DATE.rawValue, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_dateStmt
 		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_dateStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterDateStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterDateStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitDateStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitDateStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitDateStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitDateStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitDateStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitDateStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dateStmt() throws -> DateStmtContext {
+	 open func dateStmt() throws -> DateStmtContext {
 		var _localctx: DateStmtContext = DateStmtContext(_ctx, getState())
 		try enterRule(_localctx, 44, vbaParser.RULE_dateStmt)
 		var _la: Int = 0
@@ -3232,66 +3601,103 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class DeclareStmtContext:ParserRuleContext {
-		open func DECLARE() -> TerminalNode? { return getToken(vbaParser.Tokens.DECLARE.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class DeclareStmtContext: ParserRuleContext {
+			open
+			func DECLARE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DECLARE.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func LIB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LIB.rawValue, 0)
+			}
+			open
+			func STRINGLITERAL() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.STRINGLITERAL.rawValue)
+			}
+			open
+			func STRINGLITERAL(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STRINGLITERAL.rawValue, i)
+			}
+			open
+			func SUB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SUB.rawValue, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+			open
+			func PTRSAFE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PTRSAFE.rawValue, 0)
+			}
+			open
+			func typeHint() -> [TypeHintContext] {
+				return getRuleContexts(TypeHintContext.self)
+			}
+			open
+			func typeHint(_ i: Int) -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, i)
+			}
+			open
+			func ALIAS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ALIAS.rawValue, 0)
+			}
+			open
+			func argList() -> ArgListContext? {
+				return getRuleContext(ArgListContext.self, 0)
+			}
+			open
+			func asTypeClause() -> AsTypeClauseContext? {
+				return getRuleContext(AsTypeClauseContext.self, 0)
+			}
+			open
+			func FUNCTION() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FUNCTION.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_declareStmt
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func LIB() -> TerminalNode? { return getToken(vbaParser.Tokens.LIB.rawValue, 0) }
-		open func STRINGLITERAL() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.STRINGLITERAL.rawValue) }
-		open func STRINGLITERAL(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.STRINGLITERAL.rawValue, i)
-		}
-		open func SUB() -> TerminalNode? { return getToken(vbaParser.Tokens.SUB.rawValue, 0) }
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open func PTRSAFE() -> TerminalNode? { return getToken(vbaParser.Tokens.PTRSAFE.rawValue, 0) }
-		open func typeHint() -> Array<TypeHintContext> {
-			return getRuleContexts(TypeHintContext.self)
-		}
-		open func typeHint(_ i: Int) -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,i)
-		}
-		open func ALIAS() -> TerminalNode? { return getToken(vbaParser.Tokens.ALIAS.rawValue, 0) }
-		open func argList() -> ArgListContext? {
-			return getRuleContext(ArgListContext.self,0)
-		}
-		open func asTypeClause() -> AsTypeClauseContext? {
-			return getRuleContext(AsTypeClauseContext.self,0)
-		}
-		open func FUNCTION() -> TerminalNode? { return getToken(vbaParser.Tokens.FUNCTION.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_declareStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterDeclareStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterDeclareStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitDeclareStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitDeclareStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitDeclareStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitDeclareStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitDeclareStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitDeclareStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declareStmt() throws -> DeclareStmtContext {
+	 open func declareStmt() throws -> DeclareStmtContext {
 		var _localctx: DeclareStmtContext = DeclareStmtContext(_ctx, getState())
 		try enterRule(_localctx, 46, vbaParser.RULE_declareStmt)
 		var _la: Int = 0
@@ -3370,7 +3776,7 @@ open class vbaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(682)
 		 	try match(vbaParser.Tokens.WS.rawValue)
@@ -3462,56 +3868,103 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class DeftypeStmtContext:ParserRuleContext {
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class DeftypeStmtContext: ParserRuleContext {
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func letterrange() -> [LetterrangeContext] {
+				return getRuleContexts(LetterrangeContext.self)
+			}
+			open
+			func letterrange(_ i: Int) -> LetterrangeContext? {
+				return getRuleContext(LetterrangeContext.self, i)
+			}
+			open
+			func DEFBOOL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFBOOL.rawValue, 0)
+			}
+			open
+			func DEFBYTE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFBYTE.rawValue, 0)
+			}
+			open
+			func DEFINT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFINT.rawValue, 0)
+			}
+			open
+			func DEFLNG() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFLNG.rawValue, 0)
+			}
+			open
+			func DEFCUR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFCUR.rawValue, 0)
+			}
+			open
+			func DEFSNG() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFSNG.rawValue, 0)
+			}
+			open
+			func DEFDBL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFDBL.rawValue, 0)
+			}
+			open
+			func DEFDEC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFDEC.rawValue, 0)
+			}
+			open
+			func DEFDATE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFDATE.rawValue, 0)
+			}
+			open
+			func DEFSTR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFSTR.rawValue, 0)
+			}
+			open
+			func DEFOBJ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFOBJ.rawValue, 0)
+			}
+			open
+			func DEFVAR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFVAR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_deftypeStmt
 		}
-		open func letterrange() -> Array<LetterrangeContext> {
-			return getRuleContexts(LetterrangeContext.self)
-		}
-		open func letterrange(_ i: Int) -> LetterrangeContext? {
-			return getRuleContext(LetterrangeContext.self,i)
-		}
-		open func DEFBOOL() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFBOOL.rawValue, 0) }
-		open func DEFBYTE() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFBYTE.rawValue, 0) }
-		open func DEFINT() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFINT.rawValue, 0) }
-		open func DEFLNG() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFLNG.rawValue, 0) }
-		open func DEFCUR() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFCUR.rawValue, 0) }
-		open func DEFSNG() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFSNG.rawValue, 0) }
-		open func DEFDBL() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFDBL.rawValue, 0) }
-		open func DEFDEC() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFDEC.rawValue, 0) }
-		open func DEFDATE() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFDATE.rawValue, 0) }
-		open func DEFSTR() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFSTR.rawValue, 0) }
-		open func DEFOBJ() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFOBJ.rawValue, 0) }
-		open func DEFVAR() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFVAR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_deftypeStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterDeftypeStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterDeftypeStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitDeftypeStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitDeftypeStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitDeftypeStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitDeftypeStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitDeftypeStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitDeftypeStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func deftypeStmt() throws -> DeftypeStmtContext {
+	 open func deftypeStmt() throws -> DeftypeStmtContext {
 		var _localctx: DeftypeStmtContext = DeftypeStmtContext(_ctx, getState())
 		try enterRule(_localctx, 48, vbaParser.RULE_deftypeStmt)
 		var _la: Int = 0
@@ -3593,45 +4046,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class DeleteSettingStmtContext:ParserRuleContext {
-		open func DELETESETTING() -> TerminalNode? { return getToken(vbaParser.Tokens.DELETESETTING.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class DeleteSettingStmtContext: ParserRuleContext {
+			open
+			func DELETESETTING() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DELETESETTING.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_deleteSettingStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_deleteSettingStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterDeleteSettingStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterDeleteSettingStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitDeleteSettingStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitDeleteSettingStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitDeleteSettingStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitDeleteSettingStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitDeleteSettingStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitDeleteSettingStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func deleteSettingStmt() throws -> DeleteSettingStmtContext {
+	 open func deleteSettingStmt() throws -> DeleteSettingStmtContext {
 		var _localctx: DeleteSettingStmtContext = DeleteSettingStmtContext(_ctx, getState())
 		try enterRule(_localctx, 50, vbaParser.RULE_deleteSettingStmt)
 		var _la: Int = 0
@@ -3724,51 +4191,75 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class DoLoopStmtContext:ParserRuleContext {
-		open func DO() -> TerminalNode? { return getToken(vbaParser.Tokens.DO.rawValue, 0) }
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
+
+	public class DoLoopStmtContext: ParserRuleContext {
+			open
+			func DO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DO.rawValue, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func LOOP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LOOP.rawValue, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WHILE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WHILE.rawValue, 0)
+			}
+			open
+			func UNTIL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.UNTIL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_doLoopStmt
 		}
-		open func LOOP() -> TerminalNode? { return getToken(vbaParser.Tokens.LOOP.rawValue, 0) }
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WHILE() -> TerminalNode? { return getToken(vbaParser.Tokens.WHILE.rawValue, 0) }
-		open func UNTIL() -> TerminalNode? { return getToken(vbaParser.Tokens.UNTIL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_doLoopStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterDoLoopStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterDoLoopStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitDoLoopStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitDoLoopStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitDoLoopStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitDoLoopStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitDoLoopStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitDoLoopStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func doLoopStmt() throws -> DoLoopStmtContext {
+	 open func doLoopStmt() throws -> DoLoopStmtContext {
 		var _localctx: DoLoopStmtContext = DoLoopStmtContext(_ctx, getState())
 		try enterRule(_localctx, 52, vbaParser.RULE_doLoopStmt)
 		var _la: Int = 0
@@ -3880,35 +4371,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class EndStmtContext:ParserRuleContext {
-		open func END() -> TerminalNode? { return getToken(vbaParser.Tokens.END.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_endStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterEndStmt(self)
+
+	public class EndStmtContext: ParserRuleContext {
+			open
+			func END() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_endStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterEndStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitEndStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitEndStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitEndStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitEndStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitEndStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitEndStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func endStmt() throws -> EndStmtContext {
+	 open func endStmt() throws -> EndStmtContext {
 		var _localctx: EndStmtContext = EndStmtContext(_ctx, getState())
 		try enterRule(_localctx, 54, vbaParser.RULE_endStmt)
 		defer {
@@ -3928,55 +4427,75 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class EnumerationStmtContext:ParserRuleContext {
-		open func ENUM() -> TerminalNode? { return getToken(vbaParser.Tokens.ENUM.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class EnumerationStmtContext: ParserRuleContext {
+			open
+			func ENUM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ENUM.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func END_ENUM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_ENUM.rawValue, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+			open
+			func enumerationStmt_Constant() -> [EnumerationStmt_ConstantContext] {
+				return getRuleContexts(EnumerationStmt_ConstantContext.self)
+			}
+			open
+			func enumerationStmt_Constant(_ i: Int) -> EnumerationStmt_ConstantContext? {
+				return getRuleContext(EnumerationStmt_ConstantContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_enumerationStmt
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func END_ENUM() -> TerminalNode? { return getToken(vbaParser.Tokens.END_ENUM.rawValue, 0) }
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open func enumerationStmt_Constant() -> Array<EnumerationStmt_ConstantContext> {
-			return getRuleContexts(EnumerationStmt_ConstantContext.self)
-		}
-		open func enumerationStmt_Constant(_ i: Int) -> EnumerationStmt_ConstantContext? {
-			return getRuleContext(EnumerationStmt_ConstantContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_enumerationStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterEnumerationStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterEnumerationStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitEnumerationStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitEnumerationStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitEnumerationStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitEnumerationStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitEnumerationStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitEnumerationStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumerationStmt() throws -> EnumerationStmtContext {
+	 open func enumerationStmt() throws -> EnumerationStmtContext {
 		var _localctx: EnumerationStmtContext = EnumerationStmtContext(_ctx, getState())
 		try enterRule(_localctx, 56, vbaParser.RULE_enumerationStmt)
 		var _la: Int = 0
@@ -4051,48 +4570,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class EnumerationStmt_ConstantContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class EnumerationStmt_ConstantContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_enumerationStmt_Constant
 		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_enumerationStmt_Constant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterEnumerationStmt_Constant(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterEnumerationStmt_Constant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitEnumerationStmt_Constant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitEnumerationStmt_Constant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitEnumerationStmt_Constant(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitEnumerationStmt_Constant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitEnumerationStmt_Constant(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitEnumerationStmt_Constant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumerationStmt_Constant() throws -> EnumerationStmt_ConstantContext {
+	 open func enumerationStmt_Constant() throws -> EnumerationStmt_ConstantContext {
 		var _localctx: EnumerationStmt_ConstantContext = EnumerationStmt_ConstantContext(_ctx, getState())
 		try enterRule(_localctx, 58, vbaParser.RULE_enumerationStmt_Constant)
 		var _la: Int = 0
@@ -4153,39 +4687,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class EraseStmtContext:ParserRuleContext {
-		open func ERASE() -> TerminalNode? { return getToken(vbaParser.Tokens.ERASE.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class EraseStmtContext: ParserRuleContext {
+			open
+			func ERASE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ERASE.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_eraseStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_eraseStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterEraseStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterEraseStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitEraseStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitEraseStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitEraseStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitEraseStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitEraseStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitEraseStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eraseStmt() throws -> EraseStmtContext {
+	 open func eraseStmt() throws -> EraseStmtContext {
 		var _localctx: EraseStmtContext = EraseStmtContext(_ctx, getState())
 		try enterRule(_localctx, 60, vbaParser.RULE_eraseStmt)
 		defer {
@@ -4209,39 +4755,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ErrorStmtContext:ParserRuleContext {
-		open func ERROR() -> TerminalNode? { return getToken(vbaParser.Tokens.ERROR.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class ErrorStmtContext: ParserRuleContext {
+			open
+			func ERROR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ERROR.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_errorStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_errorStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterErrorStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterErrorStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitErrorStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitErrorStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitErrorStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitErrorStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitErrorStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitErrorStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func errorStmt() throws -> ErrorStmtContext {
+	 open func errorStmt() throws -> ErrorStmtContext {
 		var _localctx: ErrorStmtContext = ErrorStmtContext(_ctx, getState())
 		try enterRule(_localctx, 62, vbaParser.RULE_errorStmt)
 		defer {
@@ -4265,48 +4823,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class EventStmtContext:ParserRuleContext {
-		open func EVENT() -> TerminalNode? { return getToken(vbaParser.Tokens.EVENT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class EventStmtContext: ParserRuleContext {
+			open
+			func EVENT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EVENT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func argList() -> ArgListContext? {
+				return getRuleContext(ArgListContext.self, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_eventStmt
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func argList() -> ArgListContext? {
-			return getRuleContext(ArgListContext.self,0)
-		}
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_eventStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterEventStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterEventStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitEventStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitEventStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitEventStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitEventStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitEventStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitEventStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eventStmt() throws -> EventStmtContext {
+	 open func eventStmt() throws -> EventStmtContext {
 		var _localctx: EventStmtContext = EventStmtContext(_ctx, getState())
 		try enterRule(_localctx, 64, vbaParser.RULE_eventStmt)
 		var _la: Int = 0
@@ -4364,39 +4937,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ExitStmtContext:ParserRuleContext {
-		open func EXIT_DO() -> TerminalNode? { return getToken(vbaParser.Tokens.EXIT_DO.rawValue, 0) }
-		open func EXIT_FOR() -> TerminalNode? { return getToken(vbaParser.Tokens.EXIT_FOR.rawValue, 0) }
-		open func EXIT_FUNCTION() -> TerminalNode? { return getToken(vbaParser.Tokens.EXIT_FUNCTION.rawValue, 0) }
-		open func EXIT_PROPERTY() -> TerminalNode? { return getToken(vbaParser.Tokens.EXIT_PROPERTY.rawValue, 0) }
-		open func EXIT_SUB() -> TerminalNode? { return getToken(vbaParser.Tokens.EXIT_SUB.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_exitStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterExitStmt(self)
+
+	public class ExitStmtContext: ParserRuleContext {
+			open
+			func EXIT_DO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EXIT_DO.rawValue, 0)
+			}
+			open
+			func EXIT_FOR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EXIT_FOR.rawValue, 0)
+			}
+			open
+			func EXIT_FUNCTION() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EXIT_FUNCTION.rawValue, 0)
+			}
+			open
+			func EXIT_PROPERTY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EXIT_PROPERTY.rawValue, 0)
+			}
+			open
+			func EXIT_SUB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EXIT_SUB.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_exitStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterExitStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitExitStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitExitStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitExitStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitExitStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitExitStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitExitStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exitStmt() throws -> ExitStmtContext {
+	 open func exitStmt() throws -> ExitStmtContext {
 		var _localctx: ExitStmtContext = ExitStmtContext(_ctx, getState())
 		try enterRule(_localctx, 66, vbaParser.RULE_exitStmt)
 		var _la: Int = 0
@@ -4431,45 +5024,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class FilecopyStmtContext:ParserRuleContext {
-		open func FILECOPY() -> TerminalNode? { return getToken(vbaParser.Tokens.FILECOPY.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class FilecopyStmtContext: ParserRuleContext {
+			open
+			func FILECOPY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FILECOPY.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_filecopyStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_filecopyStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterFilecopyStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterFilecopyStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitFilecopyStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitFilecopyStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitFilecopyStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitFilecopyStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitFilecopyStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitFilecopyStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func filecopyStmt() throws -> FilecopyStmtContext {
+	 open func filecopyStmt() throws -> FilecopyStmtContext {
 		var _localctx: FilecopyStmtContext = FilecopyStmtContext(_ctx, getState())
 		try enterRule(_localctx, 68, vbaParser.RULE_filecopyStmt)
 		var _la: Int = 0
@@ -4524,60 +5131,87 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ForEachStmtContext:ParserRuleContext {
-		open func FOR() -> TerminalNode? { return getToken(vbaParser.Tokens.FOR.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class ForEachStmtContext: ParserRuleContext {
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func EACH() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EACH.rawValue, 0)
+			}
+			open
+			func ambiguousIdentifier() -> [AmbiguousIdentifierContext] {
+				return getRuleContexts(AmbiguousIdentifierContext.self)
+			}
+			open
+			func ambiguousIdentifier(_ i: Int) -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, i)
+			}
+			open
+			func IN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IN.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func NEXT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEXT.rawValue, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_forEachStmt
 		}
-		open func EACH() -> TerminalNode? { return getToken(vbaParser.Tokens.EACH.rawValue, 0) }
-		open func ambiguousIdentifier() -> Array<AmbiguousIdentifierContext> {
-			return getRuleContexts(AmbiguousIdentifierContext.self)
-		}
-		open func ambiguousIdentifier(_ i: Int) -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,i)
-		}
-		open func IN() -> TerminalNode? { return getToken(vbaParser.Tokens.IN.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func NEXT() -> TerminalNode? { return getToken(vbaParser.Tokens.NEXT.rawValue, 0) }
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_forEachStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterForEachStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterForEachStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitForEachStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitForEachStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitForEachStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitForEachStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitForEachStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitForEachStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forEachStmt() throws -> ForEachStmtContext {
+	 open func forEachStmt() throws -> ForEachStmtContext {
 		var _localctx: ForEachStmtContext = ForEachStmtContext(_ctx, getState())
 		try enterRule(_localctx, 70, vbaParser.RULE_forEachStmt)
 		var _la: Int = 0
@@ -4657,67 +5291,99 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ForNextStmtContext:ParserRuleContext {
-		open func FOR() -> TerminalNode? { return getToken(vbaParser.Tokens.FOR.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class ForNextStmtContext: ParserRuleContext {
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> [AmbiguousIdentifierContext] {
+				return getRuleContexts(AmbiguousIdentifierContext.self)
+			}
+			open
+			func ambiguousIdentifier(_ i: Int) -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, i)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func NEXT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEXT.rawValue, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func asTypeClause() -> AsTypeClauseContext? {
+				return getRuleContext(AsTypeClauseContext.self, 0)
+			}
+			open
+			func STEP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STEP.rawValue, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_forNextStmt
 		}
-		open func ambiguousIdentifier() -> Array<AmbiguousIdentifierContext> {
-			return getRuleContexts(AmbiguousIdentifierContext.self)
-		}
-		open func ambiguousIdentifier(_ i: Int) -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,i)
-		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func TO() -> TerminalNode? { return getToken(vbaParser.Tokens.TO.rawValue, 0) }
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func NEXT() -> TerminalNode? { return getToken(vbaParser.Tokens.NEXT.rawValue, 0) }
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func asTypeClause() -> AsTypeClauseContext? {
-			return getRuleContext(AsTypeClauseContext.self,0)
-		}
-		open func STEP() -> TerminalNode? { return getToken(vbaParser.Tokens.STEP.rawValue, 0) }
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_forNextStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterForNextStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterForNextStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitForNextStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitForNextStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitForNextStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitForNextStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitForNextStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitForNextStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forNextStmt() throws -> ForNextStmtContext {
+	 open func forNextStmt() throws -> ForNextStmtContext {
 		var _localctx: ForNextStmtContext = ForNextStmtContext(_ctx, getState())
 		try enterRule(_localctx, 72, vbaParser.RULE_forNextStmt)
 		var _la: Int = 0
@@ -4851,62 +5517,87 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionStmtContext:ParserRuleContext {
-		open func FUNCTION() -> TerminalNode? { return getToken(vbaParser.Tokens.FUNCTION.rawValue, 0) }
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class FunctionStmtContext: ParserRuleContext {
+			open
+			func FUNCTION() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FUNCTION.rawValue, 0)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func END_FUNCTION() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_FUNCTION.rawValue, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STATIC.rawValue, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func argList() -> ArgListContext? {
+				return getRuleContext(ArgListContext.self, 0)
+			}
+			open
+			func asTypeClause() -> AsTypeClauseContext? {
+				return getRuleContext(AsTypeClauseContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_functionStmt
 		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func END_FUNCTION() -> TerminalNode? { return getToken(vbaParser.Tokens.END_FUNCTION.rawValue, 0) }
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func STATIC() -> TerminalNode? { return getToken(vbaParser.Tokens.STATIC.rawValue, 0) }
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func argList() -> ArgListContext? {
-			return getRuleContext(ArgListContext.self,0)
-		}
-		open func asTypeClause() -> AsTypeClauseContext? {
-			return getRuleContext(AsTypeClauseContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_functionStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterFunctionStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterFunctionStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitFunctionStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitFunctionStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitFunctionStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitFunctionStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitFunctionStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitFunctionStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionStmt() throws -> FunctionStmtContext {
+	 open func functionStmt() throws -> FunctionStmtContext {
 		var _localctx: FunctionStmtContext = FunctionStmtContext(_ctx, getState())
 		try enterRule(_localctx, 74, vbaParser.RULE_functionStmt)
 		var _la: Int = 0
@@ -5060,48 +5751,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class GetStmtContext:ParserRuleContext {
-		open func GET() -> TerminalNode? { return getToken(vbaParser.Tokens.GET.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class GetStmtContext: ParserRuleContext {
+			open
+			func GET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GET.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_getStmt
 		}
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_getStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterGetStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterGetStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitGetStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitGetStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitGetStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitGetStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitGetStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitGetStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func getStmt() throws -> GetStmtContext {
+	 open func getStmt() throws -> GetStmtContext {
 		var _localctx: GetStmtContext = GetStmtContext(_ctx, getState())
 		try enterRule(_localctx, 76, vbaParser.RULE_getStmt)
 		var _la: Int = 0
@@ -5209,39 +5915,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class GoSubStmtContext:ParserRuleContext {
-		open func GOSUB() -> TerminalNode? { return getToken(vbaParser.Tokens.GOSUB.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class GoSubStmtContext: ParserRuleContext {
+			open
+			func GOSUB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GOSUB.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_goSubStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_goSubStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterGoSubStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterGoSubStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitGoSubStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitGoSubStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitGoSubStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitGoSubStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitGoSubStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitGoSubStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func goSubStmt() throws -> GoSubStmtContext {
+	 open func goSubStmt() throws -> GoSubStmtContext {
 		var _localctx: GoSubStmtContext = GoSubStmtContext(_ctx, getState())
 		try enterRule(_localctx, 78, vbaParser.RULE_goSubStmt)
 		defer {
@@ -5265,39 +5983,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class GoToStmtContext:ParserRuleContext {
-		open func GOTO() -> TerminalNode? { return getToken(vbaParser.Tokens.GOTO.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class GoToStmtContext: ParserRuleContext {
+			open
+			func GOTO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GOTO.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_goToStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_goToStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterGoToStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterGoToStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitGoToStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitGoToStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitGoToStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitGoToStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitGoToStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitGoToStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func goToStmt() throws -> GoToStmtContext {
+	 open func goToStmt() throws -> GoToStmtContext {
 		var _localctx: GoToStmtContext = GoToStmtContext(_ctx, getState())
 		try enterRule(_localctx, 80, vbaParser.RULE_goToStmt)
 		defer {
@@ -5321,102 +6051,136 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class IfThenElseStmtContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_ifThenElseStmt }
+
+	public class IfThenElseStmtContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_ifThenElseStmt
+		}
 	 
-		public  func copyFrom(_ ctx: IfThenElseStmtContext) {
+		open
+		func copyFrom(_ ctx: IfThenElseStmtContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class BlockIfThenElseContext: IfThenElseStmtContext {
-		open func ifBlockStmt() -> IfBlockStmtContext? {
-			return getRuleContext(IfBlockStmtContext.self,0)
-		}
-		open func END_IF() -> TerminalNode? { return getToken(vbaParser.Tokens.END_IF.rawValue, 0) }
-		open func ifElseIfBlockStmt() -> Array<IfElseIfBlockStmtContext> {
-			return getRuleContexts(IfElseIfBlockStmtContext.self)
-		}
-		open func ifElseIfBlockStmt(_ i: Int) -> IfElseIfBlockStmtContext? {
-			return getRuleContext(IfElseIfBlockStmtContext.self,i)
-		}
-		open func ifElseBlockStmt() -> IfElseBlockStmtContext? {
-			return getRuleContext(IfElseBlockStmtContext.self,0)
-		}
-		public init(_ ctx: IfThenElseStmtContext) {
+	public class BlockIfThenElseContext: IfThenElseStmtContext {
+			open
+			func ifBlockStmt() -> IfBlockStmtContext? {
+				return getRuleContext(IfBlockStmtContext.self, 0)
+			}
+			open
+			func END_IF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_IF.rawValue, 0)
+			}
+			open
+			func ifElseIfBlockStmt() -> [IfElseIfBlockStmtContext] {
+				return getRuleContexts(IfElseIfBlockStmtContext.self)
+			}
+			open
+			func ifElseIfBlockStmt(_ i: Int) -> IfElseIfBlockStmtContext? {
+				return getRuleContext(IfElseIfBlockStmtContext.self, i)
+			}
+			open
+			func ifElseBlockStmt() -> IfElseBlockStmtContext? {
+				return getRuleContext(IfElseBlockStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: IfThenElseStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterBlockIfThenElse(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterBlockIfThenElse(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitBlockIfThenElse(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitBlockIfThenElse(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitBlockIfThenElse(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitBlockIfThenElse(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitBlockIfThenElse(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitBlockIfThenElse(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class InlineIfThenElseContext: IfThenElseStmtContext {
-		open func IF() -> TerminalNode? { return getToken(vbaParser.Tokens.IF.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func ifConditionStmt() -> IfConditionStmtContext? {
-			return getRuleContext(IfConditionStmtContext.self,0)
-		}
-		open func THEN() -> TerminalNode? { return getToken(vbaParser.Tokens.THEN.rawValue, 0) }
-		open func blockStmt() -> Array<BlockStmtContext> {
-			return getRuleContexts(BlockStmtContext.self)
-		}
-		open func blockStmt(_ i: Int) -> BlockStmtContext? {
-			return getRuleContext(BlockStmtContext.self,i)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(vbaParser.Tokens.ELSE.rawValue, 0) }
-		public init(_ ctx: IfThenElseStmtContext) {
+	public class InlineIfThenElseContext: IfThenElseStmtContext {
+			open
+			func IF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IF.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ifConditionStmt() -> IfConditionStmtContext? {
+				return getRuleContext(IfConditionStmtContext.self, 0)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.THEN.rawValue, 0)
+			}
+			open
+			func blockStmt() -> [BlockStmtContext] {
+				return getRuleContexts(BlockStmtContext.self)
+			}
+			open
+			func blockStmt(_ i: Int) -> BlockStmtContext? {
+				return getRuleContext(BlockStmtContext.self, i)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ELSE.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: IfThenElseStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterInlineIfThenElse(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterInlineIfThenElse(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitInlineIfThenElse(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitInlineIfThenElse(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitInlineIfThenElse(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitInlineIfThenElse(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitInlineIfThenElse(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitInlineIfThenElse(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifThenElseStmt() throws -> IfThenElseStmtContext {
+	 open func ifThenElseStmt() throws -> IfThenElseStmtContext {
 		var _localctx: IfThenElseStmtContext = IfThenElseStmtContext(_ctx, getState())
 		try enterRule(_localctx, 82, vbaParser.RULE_ifThenElseStmt)
 		var _la: Int = 0
@@ -5511,49 +6275,67 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class IfBlockStmtContext:ParserRuleContext {
-		open func IF() -> TerminalNode? { return getToken(vbaParser.Tokens.IF.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class IfBlockStmtContext: ParserRuleContext {
+			open
+			func IF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IF.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ifConditionStmt() -> IfConditionStmtContext? {
+				return getRuleContext(IfConditionStmtContext.self, 0)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.THEN.rawValue, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_ifBlockStmt
 		}
-		open func ifConditionStmt() -> IfConditionStmtContext? {
-			return getRuleContext(IfConditionStmtContext.self,0)
-		}
-		open func THEN() -> TerminalNode? { return getToken(vbaParser.Tokens.THEN.rawValue, 0) }
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_ifBlockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterIfBlockStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterIfBlockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitIfBlockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitIfBlockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitIfBlockStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitIfBlockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitIfBlockStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitIfBlockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifBlockStmt() throws -> IfBlockStmtContext {
+	 open func ifBlockStmt() throws -> IfBlockStmtContext {
 		var _localctx: IfBlockStmtContext = IfBlockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 84, vbaParser.RULE_ifBlockStmt)
 		defer {
@@ -5593,37 +6375,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class IfConditionStmtContext:ParserRuleContext {
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class IfConditionStmtContext: ParserRuleContext {
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_ifConditionStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_ifConditionStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterIfConditionStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterIfConditionStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitIfConditionStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitIfConditionStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitIfConditionStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitIfConditionStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitIfConditionStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitIfConditionStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifConditionStmt() throws -> IfConditionStmtContext {
+	 open func ifConditionStmt() throws -> IfConditionStmtContext {
 		var _localctx: IfConditionStmtContext = IfConditionStmtContext(_ctx, getState())
 		try enterRule(_localctx, 86, vbaParser.RULE_ifConditionStmt)
 		defer {
@@ -5643,49 +6431,67 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class IfElseIfBlockStmtContext:ParserRuleContext {
-		open func ELSEIF() -> TerminalNode? { return getToken(vbaParser.Tokens.ELSEIF.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class IfElseIfBlockStmtContext: ParserRuleContext {
+			open
+			func ELSEIF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ELSEIF.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ifConditionStmt() -> IfConditionStmtContext? {
+				return getRuleContext(IfConditionStmtContext.self, 0)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.THEN.rawValue, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_ifElseIfBlockStmt
 		}
-		open func ifConditionStmt() -> IfConditionStmtContext? {
-			return getRuleContext(IfConditionStmtContext.self,0)
-		}
-		open func THEN() -> TerminalNode? { return getToken(vbaParser.Tokens.THEN.rawValue, 0) }
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_ifElseIfBlockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterIfElseIfBlockStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterIfElseIfBlockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitIfElseIfBlockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitIfElseIfBlockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitIfElseIfBlockStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitIfElseIfBlockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitIfElseIfBlockStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitIfElseIfBlockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifElseIfBlockStmt() throws -> IfElseIfBlockStmtContext {
+	 open func ifElseIfBlockStmt() throws -> IfElseIfBlockStmtContext {
 		var _localctx: IfElseIfBlockStmtContext = IfElseIfBlockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 88, vbaParser.RULE_ifElseIfBlockStmt)
 		defer {
@@ -5725,41 +6531,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class IfElseBlockStmtContext:ParserRuleContext {
-		open func ELSE() -> TerminalNode? { return getToken(vbaParser.Tokens.ELSE.rawValue, 0) }
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
+
+	public class IfElseBlockStmtContext: ParserRuleContext {
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ELSE.rawValue, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_ifElseBlockStmt
 		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_ifElseBlockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterIfElseBlockStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterIfElseBlockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitIfElseBlockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitIfElseBlockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitIfElseBlockStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitIfElseBlockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitIfElseBlockStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitIfElseBlockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifElseBlockStmt() throws -> IfElseBlockStmtContext {
+	 open func ifElseBlockStmt() throws -> IfElseBlockStmtContext {
 		var _localctx: IfElseBlockStmtContext = IfElseBlockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 90, vbaParser.RULE_ifElseBlockStmt)
 		var _la: Int = 0
@@ -5807,39 +6623,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ImplementsStmtContext:ParserRuleContext {
-		open func IMPLEMENTS() -> TerminalNode? { return getToken(vbaParser.Tokens.IMPLEMENTS.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class ImplementsStmtContext: ParserRuleContext {
+			open
+			func IMPLEMENTS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IMPLEMENTS.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_implementsStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_implementsStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterImplementsStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterImplementsStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitImplementsStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitImplementsStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitImplementsStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitImplementsStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitImplementsStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitImplementsStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func implementsStmt() throws -> ImplementsStmtContext {
+	 open func implementsStmt() throws -> ImplementsStmtContext {
 		var _localctx: ImplementsStmtContext = ImplementsStmtContext(_ctx, getState())
 		try enterRule(_localctx, 92, vbaParser.RULE_implementsStmt)
 		defer {
@@ -5863,48 +6691,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class InputStmtContext:ParserRuleContext {
-		open func INPUT() -> TerminalNode? { return getToken(vbaParser.Tokens.INPUT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class InputStmtContext: ParserRuleContext {
+			open
+			func INPUT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.INPUT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_inputStmt
 		}
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_inputStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterInputStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterInputStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitInputStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitInputStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitInputStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitInputStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitInputStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitInputStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inputStmt() throws -> InputStmtContext {
+	 open func inputStmt() throws -> InputStmtContext {
 		var _localctx: InputStmtContext = InputStmtContext(_ctx, getState())
 		try enterRule(_localctx, 94, vbaParser.RULE_inputStmt)
 		var _la: Int = 0
@@ -5960,7 +6803,7 @@ open class vbaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(1032); 
 		 		try _errHandler.sync(self)
@@ -5976,39 +6819,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class KillStmtContext:ParserRuleContext {
-		open func KILL() -> TerminalNode? { return getToken(vbaParser.Tokens.KILL.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class KillStmtContext: ParserRuleContext {
+			open
+			func KILL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.KILL.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_killStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_killStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterKillStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterKillStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitKillStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitKillStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitKillStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitKillStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitKillStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitKillStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func killStmt() throws -> KillStmtContext {
+	 open func killStmt() throws -> KillStmtContext {
 		var _localctx: KillStmtContext = KillStmtContext(_ctx, getState())
 		try enterRule(_localctx, 96, vbaParser.RULE_killStmt)
 		defer {
@@ -6032,48 +6887,71 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class LetStmtContext:ParserRuleContext {
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
+
+	public class LetStmtContext: ParserRuleContext {
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func PLUS_EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PLUS_EQ.rawValue, 0)
+			}
+			open
+			func MINUS_EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MINUS_EQ.rawValue, 0)
+			}
+			open
+			func LET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LET.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_letStmt
 		}
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func PLUS_EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.PLUS_EQ.rawValue, 0) }
-		open func MINUS_EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.MINUS_EQ.rawValue, 0) }
-		open func LET() -> TerminalNode? { return getToken(vbaParser.Tokens.LET.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_letStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterLetStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterLetStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitLetStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitLetStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitLetStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitLetStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitLetStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitLetStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func letStmt() throws -> LetStmtContext {
+	 open func letStmt() throws -> LetStmtContext {
 		var _localctx: LetStmtContext = LetStmtContext(_ctx, getState())
 		try enterRule(_localctx, 98, vbaParser.RULE_letStmt)
 		var _la: Int = 0
@@ -6150,45 +7028,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class LineInputStmtContext:ParserRuleContext {
-		open func LINE_INPUT() -> TerminalNode? { return getToken(vbaParser.Tokens.LINE_INPUT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class LineInputStmtContext: ParserRuleContext {
+			open
+			func LINE_INPUT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LINE_INPUT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_lineInputStmt
 		}
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_lineInputStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterLineInputStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterLineInputStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitLineInputStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitLineInputStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitLineInputStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitLineInputStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitLineInputStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitLineInputStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lineInputStmt() throws -> LineInputStmtContext {
+	 open func lineInputStmt() throws -> LineInputStmtContext {
 		var _localctx: LineInputStmtContext = LineInputStmtContext(_ctx, getState())
 		try enterRule(_localctx, 100, vbaParser.RULE_lineInputStmt)
 		var _la: Int = 0
@@ -6243,39 +7135,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class LoadStmtContext:ParserRuleContext {
-		open func LOAD() -> TerminalNode? { return getToken(vbaParser.Tokens.LOAD.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class LoadStmtContext: ParserRuleContext {
+			open
+			func LOAD() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LOAD.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_loadStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_loadStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterLoadStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterLoadStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitLoadStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitLoadStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitLoadStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitLoadStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitLoadStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitLoadStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func loadStmt() throws -> LoadStmtContext {
+	 open func loadStmt() throws -> LoadStmtContext {
 		var _localctx: LoadStmtContext = LoadStmtContext(_ctx, getState())
 		try enterRule(_localctx, 102, vbaParser.RULE_loadStmt)
 		defer {
@@ -6299,46 +7203,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class LockStmtContext:ParserRuleContext {
-		open func LOCK() -> TerminalNode? { return getToken(vbaParser.Tokens.LOCK.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class LockStmtContext: ParserRuleContext {
+			open
+			func LOCK() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LOCK.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TO.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_lockStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func TO() -> TerminalNode? { return getToken(vbaParser.Tokens.TO.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_lockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterLockStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterLockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitLockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitLockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitLockStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitLockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitLockStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitLockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lockStmt() throws -> LockStmtContext {
+	 open func lockStmt() throws -> LockStmtContext {
 		var _localctx: LockStmtContext = LockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 104, vbaParser.RULE_lockStmt)
 		var _la: Int = 0
@@ -6417,46 +7338,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class LsetStmtContext:ParserRuleContext {
-		open func LSET() -> TerminalNode? { return getToken(vbaParser.Tokens.LSET.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class LsetStmtContext: ParserRuleContext {
+			open
+			func LSET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LSET.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_lsetStmt
 		}
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
-		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_lsetStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterLsetStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterLsetStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitLsetStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitLsetStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitLsetStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitLsetStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitLsetStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitLsetStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lsetStmt() throws -> LsetStmtContext {
+	 open func lsetStmt() throws -> LsetStmtContext {
 		var _localctx: LsetStmtContext = LsetStmtContext(_ctx, getState())
 		try enterRule(_localctx, 106, vbaParser.RULE_lsetStmt)
 		var _la: Int = 0
@@ -6511,46 +7449,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class MacroConstStmtContext:ParserRuleContext {
-		open func MACRO_CONST() -> TerminalNode? { return getToken(vbaParser.Tokens.MACRO_CONST.rawValue, 0) }
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class MacroConstStmtContext: ParserRuleContext {
+			open
+			func MACRO_CONST() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MACRO_CONST.rawValue, 0)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_macroConstStmt
 		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_macroConstStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterMacroConstStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterMacroConstStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitMacroConstStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitMacroConstStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitMacroConstStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitMacroConstStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitMacroConstStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitMacroConstStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func macroConstStmt() throws -> MacroConstStmtContext {
+	 open func macroConstStmt() throws -> MacroConstStmtContext {
 		var _localctx: MacroConstStmtContext = MacroConstStmtContext(_ctx, getState())
 		try enterRule(_localctx, 108, vbaParser.RULE_macroConstStmt)
 		var _la: Int = 0
@@ -6616,47 +7571,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class MacroIfThenElseStmtContext:ParserRuleContext {
-		open func macroIfBlockStmt() -> MacroIfBlockStmtContext? {
-			return getRuleContext(MacroIfBlockStmtContext.self,0)
+
+	public class MacroIfThenElseStmtContext: ParserRuleContext {
+			open
+			func macroIfBlockStmt() -> MacroIfBlockStmtContext? {
+				return getRuleContext(MacroIfBlockStmtContext.self, 0)
+			}
+			open
+			func MACRO_END_IF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MACRO_END_IF.rawValue, 0)
+			}
+			open
+			func macroElseIfBlockStmt() -> [MacroElseIfBlockStmtContext] {
+				return getRuleContexts(MacroElseIfBlockStmtContext.self)
+			}
+			open
+			func macroElseIfBlockStmt(_ i: Int) -> MacroElseIfBlockStmtContext? {
+				return getRuleContext(MacroElseIfBlockStmtContext.self, i)
+			}
+			open
+			func macroElseBlockStmt() -> MacroElseBlockStmtContext? {
+				return getRuleContext(MacroElseBlockStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_macroIfThenElseStmt
 		}
-		open func MACRO_END_IF() -> TerminalNode? { return getToken(vbaParser.Tokens.MACRO_END_IF.rawValue, 0) }
-		open func macroElseIfBlockStmt() -> Array<MacroElseIfBlockStmtContext> {
-			return getRuleContexts(MacroElseIfBlockStmtContext.self)
-		}
-		open func macroElseIfBlockStmt(_ i: Int) -> MacroElseIfBlockStmtContext? {
-			return getRuleContext(MacroElseIfBlockStmtContext.self,i)
-		}
-		open func macroElseBlockStmt() -> MacroElseBlockStmtContext? {
-			return getRuleContext(MacroElseBlockStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_macroIfThenElseStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterMacroIfThenElseStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterMacroIfThenElseStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitMacroIfThenElseStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitMacroIfThenElseStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitMacroIfThenElseStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitMacroIfThenElseStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitMacroIfThenElseStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitMacroIfThenElseStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func macroIfThenElseStmt() throws -> MacroIfThenElseStmtContext {
+	 open func macroIfThenElseStmt() throws -> MacroIfThenElseStmtContext {
 		var _localctx: MacroIfThenElseStmtContext = MacroIfThenElseStmtContext(_ctx, getState())
 		try enterRule(_localctx, 110, vbaParser.RULE_macroIfThenElseStmt)
 		var _la: Int = 0
@@ -6708,64 +7675,87 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class MacroIfBlockStmtContext:ParserRuleContext {
-		open func MACRO_IF() -> TerminalNode? { return getToken(vbaParser.Tokens.MACRO_IF.rawValue, 0) }
-		open func ifConditionStmt() -> IfConditionStmtContext? {
-			return getRuleContext(IfConditionStmtContext.self,0)
+
+	public class MacroIfBlockStmtContext: ParserRuleContext {
+			open
+			func MACRO_IF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MACRO_IF.rawValue, 0)
+			}
+			open
+			func ifConditionStmt() -> IfConditionStmtContext? {
+				return getRuleContext(IfConditionStmtContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.THEN.rawValue, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func moduleDeclarations() -> [ModuleDeclarationsContext] {
+				return getRuleContexts(ModuleDeclarationsContext.self)
+			}
+			open
+			func moduleDeclarations(_ i: Int) -> ModuleDeclarationsContext? {
+				return getRuleContext(ModuleDeclarationsContext.self, i)
+			}
+			open
+			func moduleBody() -> [ModuleBodyContext] {
+				return getRuleContexts(ModuleBodyContext.self)
+			}
+			open
+			func moduleBody(_ i: Int) -> ModuleBodyContext? {
+				return getRuleContext(ModuleBodyContext.self, i)
+			}
+			open
+			func block() -> [BlockContext] {
+				return getRuleContexts(BlockContext.self)
+			}
+			open
+			func block(_ i: Int) -> BlockContext? {
+				return getRuleContext(BlockContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_macroIfBlockStmt
 		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func THEN() -> TerminalNode? { return getToken(vbaParser.Tokens.THEN.rawValue, 0) }
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func moduleDeclarations() -> Array<ModuleDeclarationsContext> {
-			return getRuleContexts(ModuleDeclarationsContext.self)
-		}
-		open func moduleDeclarations(_ i: Int) -> ModuleDeclarationsContext? {
-			return getRuleContext(ModuleDeclarationsContext.self,i)
-		}
-		open func moduleBody() -> Array<ModuleBodyContext> {
-			return getRuleContexts(ModuleBodyContext.self)
-		}
-		open func moduleBody(_ i: Int) -> ModuleBodyContext? {
-			return getRuleContext(ModuleBodyContext.self,i)
-		}
-		open func block() -> Array<BlockContext> {
-			return getRuleContexts(BlockContext.self)
-		}
-		open func block(_ i: Int) -> BlockContext? {
-			return getRuleContext(BlockContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_macroIfBlockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterMacroIfBlockStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterMacroIfBlockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitMacroIfBlockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitMacroIfBlockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitMacroIfBlockStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitMacroIfBlockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitMacroIfBlockStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitMacroIfBlockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func macroIfBlockStmt() throws -> MacroIfBlockStmtContext {
+	 open func macroIfBlockStmt() throws -> MacroIfBlockStmtContext {
 		var _localctx: MacroIfBlockStmtContext = MacroIfBlockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 112, vbaParser.RULE_macroIfBlockStmt)
 		var _la: Int = 0
@@ -6852,64 +7842,87 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class MacroElseIfBlockStmtContext:ParserRuleContext {
-		open func MACRO_ELSEIF() -> TerminalNode? { return getToken(vbaParser.Tokens.MACRO_ELSEIF.rawValue, 0) }
-		open func ifConditionStmt() -> IfConditionStmtContext? {
-			return getRuleContext(IfConditionStmtContext.self,0)
+
+	public class MacroElseIfBlockStmtContext: ParserRuleContext {
+			open
+			func MACRO_ELSEIF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MACRO_ELSEIF.rawValue, 0)
+			}
+			open
+			func ifConditionStmt() -> IfConditionStmtContext? {
+				return getRuleContext(IfConditionStmtContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.THEN.rawValue, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func moduleDeclarations() -> [ModuleDeclarationsContext] {
+				return getRuleContexts(ModuleDeclarationsContext.self)
+			}
+			open
+			func moduleDeclarations(_ i: Int) -> ModuleDeclarationsContext? {
+				return getRuleContext(ModuleDeclarationsContext.self, i)
+			}
+			open
+			func moduleBody() -> [ModuleBodyContext] {
+				return getRuleContexts(ModuleBodyContext.self)
+			}
+			open
+			func moduleBody(_ i: Int) -> ModuleBodyContext? {
+				return getRuleContext(ModuleBodyContext.self, i)
+			}
+			open
+			func block() -> [BlockContext] {
+				return getRuleContexts(BlockContext.self)
+			}
+			open
+			func block(_ i: Int) -> BlockContext? {
+				return getRuleContext(BlockContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_macroElseIfBlockStmt
 		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func THEN() -> TerminalNode? { return getToken(vbaParser.Tokens.THEN.rawValue, 0) }
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func moduleDeclarations() -> Array<ModuleDeclarationsContext> {
-			return getRuleContexts(ModuleDeclarationsContext.self)
-		}
-		open func moduleDeclarations(_ i: Int) -> ModuleDeclarationsContext? {
-			return getRuleContext(ModuleDeclarationsContext.self,i)
-		}
-		open func moduleBody() -> Array<ModuleBodyContext> {
-			return getRuleContexts(ModuleBodyContext.self)
-		}
-		open func moduleBody(_ i: Int) -> ModuleBodyContext? {
-			return getRuleContext(ModuleBodyContext.self,i)
-		}
-		open func block() -> Array<BlockContext> {
-			return getRuleContexts(BlockContext.self)
-		}
-		open func block(_ i: Int) -> BlockContext? {
-			return getRuleContext(BlockContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_macroElseIfBlockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterMacroElseIfBlockStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterMacroElseIfBlockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitMacroElseIfBlockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitMacroElseIfBlockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitMacroElseIfBlockStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitMacroElseIfBlockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitMacroElseIfBlockStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitMacroElseIfBlockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func macroElseIfBlockStmt() throws -> MacroElseIfBlockStmtContext {
+	 open func macroElseIfBlockStmt() throws -> MacroElseIfBlockStmtContext {
 		var _localctx: MacroElseIfBlockStmtContext = MacroElseIfBlockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 114, vbaParser.RULE_macroElseIfBlockStmt)
 		var _la: Int = 0
@@ -6996,56 +8009,71 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class MacroElseBlockStmtContext:ParserRuleContext {
-		open func MACRO_ELSE() -> TerminalNode? { return getToken(vbaParser.Tokens.MACRO_ELSE.rawValue, 0) }
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
+
+	public class MacroElseBlockStmtContext: ParserRuleContext {
+			open
+			func MACRO_ELSE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MACRO_ELSE.rawValue, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func moduleDeclarations() -> [ModuleDeclarationsContext] {
+				return getRuleContexts(ModuleDeclarationsContext.self)
+			}
+			open
+			func moduleDeclarations(_ i: Int) -> ModuleDeclarationsContext? {
+				return getRuleContext(ModuleDeclarationsContext.self, i)
+			}
+			open
+			func moduleBody() -> [ModuleBodyContext] {
+				return getRuleContexts(ModuleBodyContext.self)
+			}
+			open
+			func moduleBody(_ i: Int) -> ModuleBodyContext? {
+				return getRuleContext(ModuleBodyContext.self, i)
+			}
+			open
+			func block() -> [BlockContext] {
+				return getRuleContexts(BlockContext.self)
+			}
+			open
+			func block(_ i: Int) -> BlockContext? {
+				return getRuleContext(BlockContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_macroElseBlockStmt
 		}
-		open func moduleDeclarations() -> Array<ModuleDeclarationsContext> {
-			return getRuleContexts(ModuleDeclarationsContext.self)
-		}
-		open func moduleDeclarations(_ i: Int) -> ModuleDeclarationsContext? {
-			return getRuleContext(ModuleDeclarationsContext.self,i)
-		}
-		open func moduleBody() -> Array<ModuleBodyContext> {
-			return getRuleContexts(ModuleBodyContext.self)
-		}
-		open func moduleBody(_ i: Int) -> ModuleBodyContext? {
-			return getRuleContext(ModuleBodyContext.self,i)
-		}
-		open func block() -> Array<BlockContext> {
-			return getRuleContexts(BlockContext.self)
-		}
-		open func block(_ i: Int) -> BlockContext? {
-			return getRuleContext(BlockContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_macroElseBlockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterMacroElseBlockStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterMacroElseBlockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitMacroElseBlockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitMacroElseBlockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitMacroElseBlockStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitMacroElseBlockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitMacroElseBlockStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitMacroElseBlockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func macroElseBlockStmt() throws -> MacroElseBlockStmtContext {
+	 open func macroElseBlockStmt() throws -> MacroElseBlockStmtContext {
 		var _localctx: MacroElseBlockStmtContext = MacroElseBlockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 116, vbaParser.RULE_macroElseBlockStmt)
 		var _la: Int = 0
@@ -7113,44 +8141,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class MidStmtContext:ParserRuleContext {
-		open func MID() -> TerminalNode? { return getToken(vbaParser.Tokens.MID.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func argsCall() -> ArgsCallContext? {
-			return getRuleContext(ArgsCallContext.self,0)
+
+	public class MidStmtContext: ParserRuleContext {
+			open
+			func MID() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MID.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func argsCall() -> ArgsCallContext? {
+				return getRuleContext(ArgsCallContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_midStmt
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_midStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterMidStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterMidStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitMidStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitMidStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitMidStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitMidStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitMidStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitMidStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func midStmt() throws -> MidStmtContext {
+	 open func midStmt() throws -> MidStmtContext {
 		var _localctx: MidStmtContext = MidStmtContext(_ctx, getState())
 		try enterRule(_localctx, 118, vbaParser.RULE_midStmt)
 		var _la: Int = 0
@@ -7213,39 +8260,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class MkdirStmtContext:ParserRuleContext {
-		open func MKDIR() -> TerminalNode? { return getToken(vbaParser.Tokens.MKDIR.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class MkdirStmtContext: ParserRuleContext {
+			open
+			func MKDIR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MKDIR.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_mkdirStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_mkdirStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterMkdirStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterMkdirStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitMkdirStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitMkdirStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitMkdirStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitMkdirStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitMkdirStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitMkdirStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mkdirStmt() throws -> MkdirStmtContext {
+	 open func mkdirStmt() throws -> MkdirStmtContext {
 		var _localctx: MkdirStmtContext = MkdirStmtContext(_ctx, getState())
 		try enterRule(_localctx, 120, vbaParser.RULE_mkdirStmt)
 		defer {
@@ -7269,46 +8328,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class NameStmtContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(vbaParser.Tokens.NAME.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class NameStmtContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func AS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.AS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_nameStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func AS() -> TerminalNode? { return getToken(vbaParser.Tokens.AS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_nameStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterNameStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterNameStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitNameStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitNameStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitNameStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitNameStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitNameStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitNameStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nameStmt() throws -> NameStmtContext {
+	 open func nameStmt() throws -> NameStmtContext {
 		var _localctx: NameStmtContext = NameStmtContext(_ctx, getState())
 		try enterRule(_localctx, 122, vbaParser.RULE_nameStmt)
 		defer {
@@ -7340,46 +8416,71 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class OnErrorStmtContext:ParserRuleContext {
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class OnErrorStmtContext: ParserRuleContext {
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ON_ERROR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ON_ERROR.rawValue, 0)
+			}
+			open
+			func ON_LOCAL_ERROR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ON_LOCAL_ERROR.rawValue, 0)
+			}
+			open
+			func GOTO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GOTO.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func RESUME() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RESUME.rawValue, 0)
+			}
+			open
+			func NEXT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_onErrorStmt
 		}
-		open func ON_ERROR() -> TerminalNode? { return getToken(vbaParser.Tokens.ON_ERROR.rawValue, 0) }
-		open func ON_LOCAL_ERROR() -> TerminalNode? { return getToken(vbaParser.Tokens.ON_LOCAL_ERROR.rawValue, 0) }
-		open func GOTO() -> TerminalNode? { return getToken(vbaParser.Tokens.GOTO.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func RESUME() -> TerminalNode? { return getToken(vbaParser.Tokens.RESUME.rawValue, 0) }
-		open func NEXT() -> TerminalNode? { return getToken(vbaParser.Tokens.NEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_onErrorStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOnErrorStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOnErrorStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOnErrorStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOnErrorStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOnErrorStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOnErrorStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOnErrorStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOnErrorStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func onErrorStmt() throws -> OnErrorStmtContext {
+	 open func onErrorStmt() throws -> OnErrorStmtContext {
 		var _localctx: OnErrorStmtContext = OnErrorStmtContext(_ctx, getState())
 		try enterRule(_localctx, 124, vbaParser.RULE_onErrorStmt)
 		var _la: Int = 0
@@ -7426,7 +8527,7 @@ open class vbaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -7438,46 +8539,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class OnGoToStmtContext:ParserRuleContext {
-		open func ON() -> TerminalNode? { return getToken(vbaParser.Tokens.ON.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class OnGoToStmtContext: ParserRuleContext {
+			open
+			func ON() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func GOTO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GOTO.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_onGoToStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func GOTO() -> TerminalNode? { return getToken(vbaParser.Tokens.GOTO.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_onGoToStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOnGoToStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOnGoToStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOnGoToStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOnGoToStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOnGoToStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOnGoToStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOnGoToStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOnGoToStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func onGoToStmt() throws -> OnGoToStmtContext {
+	 open func onGoToStmt() throws -> OnGoToStmtContext {
 		var _localctx: OnGoToStmtContext = OnGoToStmtContext(_ctx, getState())
 		try enterRule(_localctx, 126, vbaParser.RULE_onGoToStmt)
 		var _la: Int = 0
@@ -7553,46 +8671,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class OnGoSubStmtContext:ParserRuleContext {
-		open func ON() -> TerminalNode? { return getToken(vbaParser.Tokens.ON.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class OnGoSubStmtContext: ParserRuleContext {
+			open
+			func ON() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func GOSUB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GOSUB.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_onGoSubStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func GOSUB() -> TerminalNode? { return getToken(vbaParser.Tokens.GOSUB.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_onGoSubStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOnGoSubStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOnGoSubStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOnGoSubStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOnGoSubStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOnGoSubStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOnGoSubStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOnGoSubStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOnGoSubStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func onGoSubStmt() throws -> OnGoSubStmtContext {
+	 open func onGoSubStmt() throws -> OnGoSubStmtContext {
 		var _localctx: OnGoSubStmtContext = OnGoSubStmtContext(_ctx, getState())
 		try enterRule(_localctx, 128, vbaParser.RULE_onGoSubStmt)
 		var _la: Int = 0
@@ -7668,65 +8803,131 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class OpenStmtContext:ParserRuleContext {
-		open func OPEN() -> TerminalNode? { return getToken(vbaParser.Tokens.OPEN.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class OpenStmtContext: ParserRuleContext {
+			open
+			func OPEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OPEN.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func AS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.AS.rawValue, 0)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func APPEND() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.APPEND.rawValue, 0)
+			}
+			open
+			func BINARY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BINARY.rawValue, 0)
+			}
+			open
+			func INPUT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.INPUT.rawValue, 0)
+			}
+			open
+			func OUTPUT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OUTPUT.rawValue, 0)
+			}
+			open
+			func RANDOM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RANDOM.rawValue, 0)
+			}
+			open
+			func ACCESS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ACCESS.rawValue, 0)
+			}
+			open
+			func LEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LEN.rawValue, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func READ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.READ.rawValue, 0)
+			}
+			open
+			func WRITE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WRITE.rawValue, 0)
+			}
+			open
+			func READ_WRITE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.READ_WRITE.rawValue, 0)
+			}
+			open
+			func SHARED() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SHARED.rawValue, 0)
+			}
+			open
+			func LOCK_READ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LOCK_READ.rawValue, 0)
+			}
+			open
+			func LOCK_WRITE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LOCK_WRITE.rawValue, 0)
+			}
+			open
+			func LOCK_READ_WRITE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LOCK_READ_WRITE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_openStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func FOR() -> TerminalNode? { return getToken(vbaParser.Tokens.FOR.rawValue, 0) }
-		open func AS() -> TerminalNode? { return getToken(vbaParser.Tokens.AS.rawValue, 0) }
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func APPEND() -> TerminalNode? { return getToken(vbaParser.Tokens.APPEND.rawValue, 0) }
-		open func BINARY() -> TerminalNode? { return getToken(vbaParser.Tokens.BINARY.rawValue, 0) }
-		open func INPUT() -> TerminalNode? { return getToken(vbaParser.Tokens.INPUT.rawValue, 0) }
-		open func OUTPUT() -> TerminalNode? { return getToken(vbaParser.Tokens.OUTPUT.rawValue, 0) }
-		open func RANDOM() -> TerminalNode? { return getToken(vbaParser.Tokens.RANDOM.rawValue, 0) }
-		open func ACCESS() -> TerminalNode? { return getToken(vbaParser.Tokens.ACCESS.rawValue, 0) }
-		open func LEN() -> TerminalNode? { return getToken(vbaParser.Tokens.LEN.rawValue, 0) }
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func READ() -> TerminalNode? { return getToken(vbaParser.Tokens.READ.rawValue, 0) }
-		open func WRITE() -> TerminalNode? { return getToken(vbaParser.Tokens.WRITE.rawValue, 0) }
-		open func READ_WRITE() -> TerminalNode? { return getToken(vbaParser.Tokens.READ_WRITE.rawValue, 0) }
-		open func SHARED() -> TerminalNode? { return getToken(vbaParser.Tokens.SHARED.rawValue, 0) }
-		open func LOCK_READ() -> TerminalNode? { return getToken(vbaParser.Tokens.LOCK_READ.rawValue, 0) }
-		open func LOCK_WRITE() -> TerminalNode? { return getToken(vbaParser.Tokens.LOCK_WRITE.rawValue, 0) }
-		open func LOCK_READ_WRITE() -> TerminalNode? { return getToken(vbaParser.Tokens.LOCK_READ_WRITE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_openStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOpenStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOpenStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOpenStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOpenStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOpenStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOpenStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOpenStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOpenStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func openStmt() throws -> OpenStmtContext {
+	 open func openStmt() throws -> OpenStmtContext {
 		var _localctx: OpenStmtContext = OpenStmtContext(_ctx, getState())
 		try enterRule(_localctx, 130, vbaParser.RULE_openStmt)
 		var _la: Int = 0
@@ -7880,44 +9081,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class OutputListContext:ParserRuleContext {
-		open func outputList_Expression() -> Array<OutputList_ExpressionContext> {
-			return getRuleContexts(OutputList_ExpressionContext.self)
+
+	public class OutputListContext: ParserRuleContext {
+			open
+			func outputList_Expression() -> [OutputList_ExpressionContext] {
+				return getRuleContexts(OutputList_ExpressionContext.self)
+			}
+			open
+			func outputList_Expression(_ i: Int) -> OutputList_ExpressionContext? {
+				return getRuleContext(OutputList_ExpressionContext.self, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_outputList
 		}
-		open func outputList_Expression(_ i: Int) -> OutputList_ExpressionContext? {
-			return getRuleContext(OutputList_ExpressionContext.self,i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_outputList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOutputList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOutputList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOutputList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOutputList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOutputList(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOutputList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOutputList(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOutputList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func outputList() throws -> OutputListContext {
+	 open func outputList() throws -> OutputListContext {
 		var _localctx: OutputListContext = OutputListContext(_ctx, getState())
 		try enterRule(_localctx, 132, vbaParser.RULE_outputList)
 		var _la: Int = 0
@@ -8079,7 +9291,7 @@ open class vbaParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(1307); 
 		 			try _errHandler.sync(self)
@@ -8098,48 +9310,71 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class OutputList_ExpressionContext:ParserRuleContext {
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class OutputList_ExpressionContext: ParserRuleContext {
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func SPC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SPC.rawValue, 0)
+			}
+			open
+			func TAB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TAB.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func argsCall() -> ArgsCallContext? {
+				return getRuleContext(ArgsCallContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_outputList_Expression
 		}
-		open func SPC() -> TerminalNode? { return getToken(vbaParser.Tokens.SPC.rawValue, 0) }
-		open func TAB() -> TerminalNode? { return getToken(vbaParser.Tokens.TAB.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func argsCall() -> ArgsCallContext? {
-			return getRuleContext(ArgsCallContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_outputList_Expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterOutputList_Expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterOutputList_Expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitOutputList_Expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitOutputList_Expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitOutputList_Expression(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitOutputList_Expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitOutputList_Expression(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitOutputList_Expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func outputList_Expression() throws -> OutputList_ExpressionContext {
+	 open func outputList_Expression() throws -> OutputList_ExpressionContext {
 		var _localctx: OutputList_ExpressionContext = OutputList_ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 134, vbaParser.RULE_outputList_Expression)
 		var _la: Int = 0
@@ -8234,45 +9469,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class PrintStmtContext:ParserRuleContext {
-		open func PRINT() -> TerminalNode? { return getToken(vbaParser.Tokens.PRINT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class PrintStmtContext: ParserRuleContext {
+			open
+			func PRINT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PRINT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func outputList() -> OutputListContext? {
+				return getRuleContext(OutputListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_printStmt
 		}
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func outputList() -> OutputListContext? {
-			return getRuleContext(OutputListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_printStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterPrintStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterPrintStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitPrintStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitPrintStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitPrintStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitPrintStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitPrintStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitPrintStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func printStmt() throws -> PrintStmtContext {
+	 open func printStmt() throws -> PrintStmtContext {
 		var _localctx: PrintStmtContext = PrintStmtContext(_ctx, getState())
 		try enterRule(_localctx, 136, vbaParser.RULE_printStmt)
 		var _la: Int = 0
@@ -8332,62 +9581,87 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyGetStmtContext:ParserRuleContext {
-		open func PROPERTY_GET() -> TerminalNode? { return getToken(vbaParser.Tokens.PROPERTY_GET.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class PropertyGetStmtContext: ParserRuleContext {
+			open
+			func PROPERTY_GET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PROPERTY_GET.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func END_PROPERTY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_PROPERTY.rawValue, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STATIC.rawValue, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func argList() -> ArgListContext? {
+				return getRuleContext(ArgListContext.self, 0)
+			}
+			open
+			func asTypeClause() -> AsTypeClauseContext? {
+				return getRuleContext(AsTypeClauseContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_propertyGetStmt
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func END_PROPERTY() -> TerminalNode? { return getToken(vbaParser.Tokens.END_PROPERTY.rawValue, 0) }
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open func STATIC() -> TerminalNode? { return getToken(vbaParser.Tokens.STATIC.rawValue, 0) }
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func argList() -> ArgListContext? {
-			return getRuleContext(ArgListContext.self,0)
-		}
-		open func asTypeClause() -> AsTypeClauseContext? {
-			return getRuleContext(AsTypeClauseContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_propertyGetStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterPropertyGetStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterPropertyGetStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitPropertyGetStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitPropertyGetStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitPropertyGetStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitPropertyGetStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitPropertyGetStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitPropertyGetStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyGetStmt() throws -> PropertyGetStmtContext {
+	 open func propertyGetStmt() throws -> PropertyGetStmtContext {
 		var _localctx: PropertyGetStmtContext = PropertyGetStmtContext(_ctx, getState())
 		try enterRule(_localctx, 138, vbaParser.RULE_propertyGetStmt)
 		var _la: Int = 0
@@ -8519,56 +9793,79 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class PropertySetStmtContext:ParserRuleContext {
-		open func PROPERTY_SET() -> TerminalNode? { return getToken(vbaParser.Tokens.PROPERTY_SET.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class PropertySetStmtContext: ParserRuleContext {
+			open
+			func PROPERTY_SET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PROPERTY_SET.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func END_PROPERTY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_PROPERTY.rawValue, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STATIC.rawValue, 0)
+			}
+			open
+			func argList() -> ArgListContext? {
+				return getRuleContext(ArgListContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_propertySetStmt
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func END_PROPERTY() -> TerminalNode? { return getToken(vbaParser.Tokens.END_PROPERTY.rawValue, 0) }
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open func STATIC() -> TerminalNode? { return getToken(vbaParser.Tokens.STATIC.rawValue, 0) }
-		open func argList() -> ArgListContext? {
-			return getRuleContext(ArgListContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_propertySetStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterPropertySetStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterPropertySetStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitPropertySetStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitPropertySetStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitPropertySetStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitPropertySetStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitPropertySetStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitPropertySetStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertySetStmt() throws -> PropertySetStmtContext {
+	 open func propertySetStmt() throws -> PropertySetStmtContext {
 		var _localctx: PropertySetStmtContext = PropertySetStmtContext(_ctx, getState())
 		try enterRule(_localctx, 140, vbaParser.RULE_propertySetStmt)
 		var _la: Int = 0
@@ -8678,56 +9975,79 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyLetStmtContext:ParserRuleContext {
-		open func PROPERTY_LET() -> TerminalNode? { return getToken(vbaParser.Tokens.PROPERTY_LET.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class PropertyLetStmtContext: ParserRuleContext {
+			open
+			func PROPERTY_LET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PROPERTY_LET.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func END_PROPERTY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_PROPERTY.rawValue, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STATIC.rawValue, 0)
+			}
+			open
+			func argList() -> ArgListContext? {
+				return getRuleContext(ArgListContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_propertyLetStmt
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func END_PROPERTY() -> TerminalNode? { return getToken(vbaParser.Tokens.END_PROPERTY.rawValue, 0) }
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open func STATIC() -> TerminalNode? { return getToken(vbaParser.Tokens.STATIC.rawValue, 0) }
-		open func argList() -> ArgListContext? {
-			return getRuleContext(ArgListContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_propertyLetStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterPropertyLetStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterPropertyLetStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitPropertyLetStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitPropertyLetStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitPropertyLetStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitPropertyLetStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitPropertyLetStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitPropertyLetStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyLetStmt() throws -> PropertyLetStmtContext {
+	 open func propertyLetStmt() throws -> PropertyLetStmtContext {
 		var _localctx: PropertyLetStmtContext = PropertyLetStmtContext(_ctx, getState())
 		try enterRule(_localctx, 142, vbaParser.RULE_propertyLetStmt)
 		var _la: Int = 0
@@ -8837,48 +10157,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class PutStmtContext:ParserRuleContext {
-		open func PUT() -> TerminalNode? { return getToken(vbaParser.Tokens.PUT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class PutStmtContext: ParserRuleContext {
+			open
+			func PUT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PUT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_putStmt
 		}
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_putStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterPutStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterPutStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitPutStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitPutStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitPutStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitPutStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitPutStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitPutStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func putStmt() throws -> PutStmtContext {
+	 open func putStmt() throws -> PutStmtContext {
 		var _localctx: PutStmtContext = PutStmtContext(_ctx, getState())
 		try enterRule(_localctx, 144, vbaParser.RULE_putStmt)
 		var _la: Int = 0
@@ -8986,47 +10321,67 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class RaiseEventStmtContext:ParserRuleContext {
-		open func RAISEEVENT() -> TerminalNode? { return getToken(vbaParser.Tokens.RAISEEVENT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class RaiseEventStmtContext: ParserRuleContext {
+			open
+			func RAISEEVENT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RAISEEVENT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func argsCall() -> ArgsCallContext? {
+				return getRuleContext(ArgsCallContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_raiseEventStmt
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func argsCall() -> ArgsCallContext? {
-			return getRuleContext(ArgsCallContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_raiseEventStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterRaiseEventStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterRaiseEventStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitRaiseEventStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitRaiseEventStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitRaiseEventStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitRaiseEventStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitRaiseEventStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitRaiseEventStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func raiseEventStmt() throws -> RaiseEventStmtContext {
+	 open func raiseEventStmt() throws -> RaiseEventStmtContext {
 		var _localctx: RaiseEventStmtContext = RaiseEventStmtContext(_ctx, getState())
 		try enterRule(_localctx, 146, vbaParser.RULE_raiseEventStmt)
 		var _la: Int = 0
@@ -9109,39 +10464,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class RandomizeStmtContext:ParserRuleContext {
-		open func RANDOMIZE() -> TerminalNode? { return getToken(vbaParser.Tokens.RANDOMIZE.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class RandomizeStmtContext: ParserRuleContext {
+			open
+			func RANDOMIZE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RANDOMIZE.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_randomizeStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_randomizeStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterRandomizeStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterRandomizeStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitRandomizeStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitRandomizeStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitRandomizeStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitRandomizeStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitRandomizeStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitRandomizeStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func randomizeStmt() throws -> RandomizeStmtContext {
+	 open func randomizeStmt() throws -> RandomizeStmtContext {
 		var _localctx: RandomizeStmtContext = RandomizeStmtContext(_ctx, getState())
 		try enterRule(_localctx, 148, vbaParser.RULE_randomizeStmt)
 		defer {
@@ -9173,46 +10540,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class RedimStmtContext:ParserRuleContext {
-		open func REDIM() -> TerminalNode? { return getToken(vbaParser.Tokens.REDIM.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class RedimStmtContext: ParserRuleContext {
+			open
+			func REDIM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.REDIM.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func redimSubStmt() -> [RedimSubStmtContext] {
+				return getRuleContexts(RedimSubStmtContext.self)
+			}
+			open
+			func redimSubStmt(_ i: Int) -> RedimSubStmtContext? {
+				return getRuleContext(RedimSubStmtContext.self, i)
+			}
+			open
+			func PRESERVE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PRESERVE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_redimStmt
 		}
-		open func redimSubStmt() -> Array<RedimSubStmtContext> {
-			return getRuleContexts(RedimSubStmtContext.self)
-		}
-		open func redimSubStmt(_ i: Int) -> RedimSubStmtContext? {
-			return getRuleContext(RedimSubStmtContext.self,i)
-		}
-		open func PRESERVE() -> TerminalNode? { return getToken(vbaParser.Tokens.PRESERVE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_redimStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterRedimStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterRedimStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitRedimStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitRedimStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitRedimStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitRedimStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitRedimStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitRedimStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func redimStmt() throws -> RedimStmtContext {
+	 open func redimStmt() throws -> RedimStmtContext {
 		var _localctx: RedimStmtContext = RedimStmtContext(_ctx, getState())
 		try enterRule(_localctx, 150, vbaParser.RULE_redimStmt)
 		var _la: Int = 0
@@ -9292,49 +10676,67 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class RedimSubStmtContext:ParserRuleContext {
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
+
+	public class RedimSubStmtContext: ParserRuleContext {
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func subscripts() -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func asTypeClause() -> AsTypeClauseContext? {
+				return getRuleContext(AsTypeClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_redimSubStmt
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func subscripts() -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func asTypeClause() -> AsTypeClauseContext? {
-			return getRuleContext(AsTypeClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_redimSubStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterRedimSubStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterRedimSubStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitRedimSubStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitRedimSubStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitRedimSubStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitRedimSubStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitRedimSubStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitRedimSubStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func redimSubStmt() throws -> RedimSubStmtContext {
+	 open func redimSubStmt() throws -> RedimSubStmtContext {
 		var _localctx: RedimSubStmtContext = RedimSubStmtContext(_ctx, getState())
 		try enterRule(_localctx, 152, vbaParser.RULE_redimSubStmt)
 		var _la: Int = 0
@@ -9412,35 +10814,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ResetStmtContext:ParserRuleContext {
-		open func RESET() -> TerminalNode? { return getToken(vbaParser.Tokens.RESET.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_resetStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterResetStmt(self)
+
+	public class ResetStmtContext: ParserRuleContext {
+			open
+			func RESET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RESET.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_resetStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterResetStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitResetStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitResetStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitResetStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitResetStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitResetStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitResetStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func resetStmt() throws -> ResetStmtContext {
+	 open func resetStmt() throws -> ResetStmtContext {
 		var _localctx: ResetStmtContext = ResetStmtContext(_ctx, getState())
 		try enterRule(_localctx, 154, vbaParser.RULE_resetStmt)
 		defer {
@@ -9460,40 +10870,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ResumeStmtContext:ParserRuleContext {
-		open func RESUME() -> TerminalNode? { return getToken(vbaParser.Tokens.RESUME.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func NEXT() -> TerminalNode? { return getToken(vbaParser.Tokens.NEXT.rawValue, 0) }
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class ResumeStmtContext: ParserRuleContext {
+			open
+			func RESUME() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RESUME.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func NEXT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEXT.rawValue, 0)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_resumeStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_resumeStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterResumeStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterResumeStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitResumeStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitResumeStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitResumeStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitResumeStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitResumeStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitResumeStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func resumeStmt() throws -> ResumeStmtContext {
+	 open func resumeStmt() throws -> ResumeStmtContext {
 		var _localctx: ResumeStmtContext = ResumeStmtContext(_ctx, getState())
 		try enterRule(_localctx, 156, vbaParser.RULE_resumeStmt)
 		defer {
@@ -9538,35 +10963,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ReturnStmtContext:ParserRuleContext {
-		open func RETURN() -> TerminalNode? { return getToken(vbaParser.Tokens.RETURN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_returnStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterReturnStmt(self)
+
+	public class ReturnStmtContext: ParserRuleContext {
+			open
+			func RETURN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RETURN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_returnStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterReturnStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitReturnStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitReturnStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitReturnStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitReturnStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitReturnStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitReturnStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func returnStmt() throws -> ReturnStmtContext {
+	 open func returnStmt() throws -> ReturnStmtContext {
 		var _localctx: ReturnStmtContext = ReturnStmtContext(_ctx, getState())
 		try enterRule(_localctx, 158, vbaParser.RULE_returnStmt)
 		defer {
@@ -9586,39 +11019,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class RmdirStmtContext:ParserRuleContext {
-		open func RMDIR() -> TerminalNode? { return getToken(vbaParser.Tokens.RMDIR.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class RmdirStmtContext: ParserRuleContext {
+			open
+			func RMDIR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RMDIR.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_rmdirStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_rmdirStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterRmdirStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterRmdirStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitRmdirStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitRmdirStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitRmdirStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitRmdirStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitRmdirStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitRmdirStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rmdirStmt() throws -> RmdirStmtContext {
+	 open func rmdirStmt() throws -> RmdirStmtContext {
 		var _localctx: RmdirStmtContext = RmdirStmtContext(_ctx, getState())
 		try enterRule(_localctx, 160, vbaParser.RULE_rmdirStmt)
 		defer {
@@ -9642,46 +11087,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class RsetStmtContext:ParserRuleContext {
-		open func RSET() -> TerminalNode? { return getToken(vbaParser.Tokens.RSET.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class RsetStmtContext: ParserRuleContext {
+			open
+			func RSET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RSET.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_rsetStmt
 		}
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
-		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_rsetStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterRsetStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterRsetStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitRsetStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitRsetStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitRsetStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitRsetStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitRsetStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitRsetStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rsetStmt() throws -> RsetStmtContext {
+	 open func rsetStmt() throws -> RsetStmtContext {
 		var _localctx: RsetStmtContext = RsetStmtContext(_ctx, getState())
 		try enterRule(_localctx, 162, vbaParser.RULE_rsetStmt)
 		var _la: Int = 0
@@ -9736,45 +11198,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SavepictureStmtContext:ParserRuleContext {
-		open func SAVEPICTURE() -> TerminalNode? { return getToken(vbaParser.Tokens.SAVEPICTURE.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class SavepictureStmtContext: ParserRuleContext {
+			open
+			func SAVEPICTURE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SAVEPICTURE.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_savepictureStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_savepictureStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSavepictureStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSavepictureStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSavepictureStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSavepictureStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSavepictureStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSavepictureStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSavepictureStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSavepictureStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func savepictureStmt() throws -> SavepictureStmtContext {
+	 open func savepictureStmt() throws -> SavepictureStmtContext {
 		var _localctx: SavepictureStmtContext = SavepictureStmtContext(_ctx, getState())
 		try enterRule(_localctx, 164, vbaParser.RULE_savepictureStmt)
 		var _la: Int = 0
@@ -9829,45 +11305,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SaveSettingStmtContext:ParserRuleContext {
-		open func SAVESETTING() -> TerminalNode? { return getToken(vbaParser.Tokens.SAVESETTING.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class SaveSettingStmtContext: ParserRuleContext {
+			open
+			func SAVESETTING() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SAVESETTING.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_saveSettingStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_saveSettingStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSaveSettingStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSaveSettingStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSaveSettingStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSaveSettingStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSaveSettingStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSaveSettingStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSaveSettingStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSaveSettingStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func saveSettingStmt() throws -> SaveSettingStmtContext {
+	 open func saveSettingStmt() throws -> SaveSettingStmtContext {
 		var _localctx: SaveSettingStmtContext = SaveSettingStmtContext(_ctx, getState())
 		try enterRule(_localctx, 166, vbaParser.RULE_saveSettingStmt)
 		var _la: Int = 0
@@ -9982,45 +11472,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SeekStmtContext:ParserRuleContext {
-		open func SEEK() -> TerminalNode? { return getToken(vbaParser.Tokens.SEEK.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class SeekStmtContext: ParserRuleContext {
+			open
+			func SEEK() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SEEK.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_seekStmt
 		}
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_seekStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSeekStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSeekStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSeekStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSeekStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSeekStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSeekStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSeekStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSeekStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func seekStmt() throws -> SeekStmtContext {
+	 open func seekStmt() throws -> SeekStmtContext {
 		var _localctx: SeekStmtContext = SeekStmtContext(_ctx, getState())
 		try enterRule(_localctx, 168, vbaParser.RULE_seekStmt)
 		var _la: Int = 0
@@ -10075,53 +11579,75 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SelectCaseStmtContext:ParserRuleContext {
-		open func SELECT() -> TerminalNode? { return getToken(vbaParser.Tokens.SELECT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class SelectCaseStmtContext: ParserRuleContext {
+			open
+			func SELECT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SELECT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func CASE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CASE.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func END_SELECT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_SELECT.rawValue, 0)
+			}
+			open
+			func sC_Case() -> [SC_CaseContext] {
+				return getRuleContexts(SC_CaseContext.self)
+			}
+			open
+			func sC_Case(_ i: Int) -> SC_CaseContext? {
+				return getRuleContext(SC_CaseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_selectCaseStmt
 		}
-		open func CASE() -> TerminalNode? { return getToken(vbaParser.Tokens.CASE.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func END_SELECT() -> TerminalNode? { return getToken(vbaParser.Tokens.END_SELECT.rawValue, 0) }
-		open func sC_Case() -> Array<SC_CaseContext> {
-			return getRuleContexts(SC_CaseContext.self)
-		}
-		open func sC_Case(_ i: Int) -> SC_CaseContext? {
-			return getRuleContext(SC_CaseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_selectCaseStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSelectCaseStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSelectCaseStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSelectCaseStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSelectCaseStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSelectCaseStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSelectCaseStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSelectCaseStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSelectCaseStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selectCaseStmt() throws -> SelectCaseStmtContext {
+	 open func selectCaseStmt() throws -> SelectCaseStmtContext {
 		var _localctx: SelectCaseStmtContext = SelectCaseStmtContext(_ctx, getState())
 		try enterRule(_localctx, 170, vbaParser.RULE_selectCaseStmt)
 		var _la: Int = 0
@@ -10170,127 +11696,160 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SC_SelectionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_sC_Selection }
+
+	public class SC_SelectionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_sC_Selection
+		}
 	 
-		public  func copyFrom(_ ctx: SC_SelectionContext) {
+		open
+		func copyFrom(_ ctx: SC_SelectionContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class CaseCondValueContext: SC_SelectionContext {
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		public init(_ ctx: SC_SelectionContext) {
+	public class CaseCondValueContext: SC_SelectionContext {
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: SC_SelectionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterCaseCondValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterCaseCondValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitCaseCondValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitCaseCondValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitCaseCondValue(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitCaseCondValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitCaseCondValue(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitCaseCondValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class CaseCondToContext: SC_SelectionContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func TO() -> TerminalNode? { return getToken(vbaParser.Tokens.TO.rawValue, 0) }
-		public init(_ ctx: SC_SelectionContext) {
+	public class CaseCondToContext: SC_SelectionContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TO.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: SC_SelectionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterCaseCondTo(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterCaseCondTo(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitCaseCondTo(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitCaseCondTo(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitCaseCondTo(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitCaseCondTo(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitCaseCondTo(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitCaseCondTo(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class CaseCondIsContext: SC_SelectionContext {
-		open func IS() -> TerminalNode? { return getToken(vbaParser.Tokens.IS.rawValue, 0) }
-		open func comparisonOperator() -> ComparisonOperatorContext? {
-			return getRuleContext(ComparisonOperatorContext.self,0)
-		}
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: SC_SelectionContext) {
+	public class CaseCondIsContext: SC_SelectionContext {
+			open
+			func IS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IS.rawValue, 0)
+			}
+			open
+			func comparisonOperator() -> ComparisonOperatorContext? {
+				return getRuleContext(ComparisonOperatorContext.self, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: SC_SelectionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterCaseCondIs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterCaseCondIs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitCaseCondIs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitCaseCondIs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitCaseCondIs(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitCaseCondIs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitCaseCondIs(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitCaseCondIs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sC_Selection() throws -> SC_SelectionContext {
+	 open func sC_Selection() throws -> SC_SelectionContext {
 		var _localctx: SC_SelectionContext = SC_SelectionContext(_ctx, getState())
 		try enterRule(_localctx, 172, vbaParser.RULE_sC_Selection)
 		var _la: Int = 0
@@ -10371,45 +11930,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SC_CaseContext:ParserRuleContext {
-		open func CASE() -> TerminalNode? { return getToken(vbaParser.Tokens.CASE.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func sC_Cond() -> SC_CondContext? {
-			return getRuleContext(SC_CondContext.self,0)
+
+	public class SC_CaseContext: ParserRuleContext {
+			open
+			func CASE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CASE.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func sC_Cond() -> SC_CondContext? {
+				return getRuleContext(SC_CondContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_sC_Case
 		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_sC_Case }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSC_Case(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSC_Case(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSC_Case(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSC_Case(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSC_Case(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSC_Case(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSC_Case(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSC_Case(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sC_Case() throws -> SC_CaseContext {
+	 open func sC_Case() throws -> SC_CaseContext {
 		var _localctx: SC_CaseContext = SC_CaseContext(_ctx, getState())
 		try enterRule(_localctx, 174, vbaParser.RULE_sC_Case)
 		defer {
@@ -10445,84 +12018,104 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SC_CondContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_sC_Cond }
+
+	public class SC_CondContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_sC_Cond
+		}
 	 
-		public  func copyFrom(_ ctx: SC_CondContext) {
+		open
+		func copyFrom(_ ctx: SC_CondContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class CaseCondSelectionContext: SC_CondContext {
-		open func sC_Selection() -> Array<SC_SelectionContext> {
-			return getRuleContexts(SC_SelectionContext.self)
-		}
-		open func sC_Selection(_ i: Int) -> SC_SelectionContext? {
-			return getRuleContext(SC_SelectionContext.self,i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: SC_CondContext) {
+	public class CaseCondSelectionContext: SC_CondContext {
+			open
+			func sC_Selection() -> [SC_SelectionContext] {
+				return getRuleContexts(SC_SelectionContext.self)
+			}
+			open
+			func sC_Selection(_ i: Int) -> SC_SelectionContext? {
+				return getRuleContext(SC_SelectionContext.self, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: SC_CondContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterCaseCondSelection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterCaseCondSelection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitCaseCondSelection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitCaseCondSelection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitCaseCondSelection(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitCaseCondSelection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitCaseCondSelection(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitCaseCondSelection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class CaseCondElseContext: SC_CondContext {
-		open func ELSE() -> TerminalNode? { return getToken(vbaParser.Tokens.ELSE.rawValue, 0) }
-		public init(_ ctx: SC_CondContext) {
+	public class CaseCondElseContext: SC_CondContext {
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ELSE.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: SC_CondContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterCaseCondElse(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterCaseCondElse(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitCaseCondElse(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitCaseCondElse(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitCaseCondElse(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitCaseCondElse(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitCaseCondElse(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitCaseCondElse(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sC_Cond() throws -> SC_CondContext {
+	 open func sC_Cond() throws -> SC_CondContext {
 		var _localctx: SC_CondContext = SC_CondContext(_ctx, getState())
 		try enterRule(_localctx, 176, vbaParser.RULE_sC_Cond)
 		var _la: Int = 0
@@ -10601,45 +12194,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SendkeysStmtContext:ParserRuleContext {
-		open func SENDKEYS() -> TerminalNode? { return getToken(vbaParser.Tokens.SENDKEYS.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class SendkeysStmtContext: ParserRuleContext {
+			open
+			func SENDKEYS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SENDKEYS.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_sendkeysStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_sendkeysStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSendkeysStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSendkeysStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSendkeysStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSendkeysStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSendkeysStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSendkeysStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSendkeysStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSendkeysStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sendkeysStmt() throws -> SendkeysStmtContext {
+	 open func sendkeysStmt() throws -> SendkeysStmtContext {
 		var _localctx: SendkeysStmtContext = SendkeysStmtContext(_ctx, getState())
 		try enterRule(_localctx, 178, vbaParser.RULE_sendkeysStmt)
 		var _la: Int = 0
@@ -10702,45 +12309,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SetattrStmtContext:ParserRuleContext {
-		open func SETATTR() -> TerminalNode? { return getToken(vbaParser.Tokens.SETATTR.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class SetattrStmtContext: ParserRuleContext {
+			open
+			func SETATTR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SETATTR.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_setattrStmt
 		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_setattrStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSetattrStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSetattrStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSetattrStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSetattrStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSetattrStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSetattrStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSetattrStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSetattrStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setattrStmt() throws -> SetattrStmtContext {
+	 open func setattrStmt() throws -> SetattrStmtContext {
 		var _localctx: SetattrStmtContext = SetattrStmtContext(_ctx, getState())
 		try enterRule(_localctx, 180, vbaParser.RULE_setattrStmt)
 		var _la: Int = 0
@@ -10795,46 +12416,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SetStmtContext:ParserRuleContext {
-		open func SET() -> TerminalNode? { return getToken(vbaParser.Tokens.SET.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class SetStmtContext: ParserRuleContext {
+			open
+			func SET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SET.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_setStmt
 		}
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
-		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_setStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSetStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSetStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSetStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSetStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSetStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSetStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSetStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSetStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setStmt() throws -> SetStmtContext {
+	 open func setStmt() throws -> SetStmtContext {
 		var _localctx: SetStmtContext = SetStmtContext(_ctx, getState())
 		try enterRule(_localctx, 182, vbaParser.RULE_setStmt)
 		var _la: Int = 0
@@ -10889,35 +12527,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class StopStmtContext:ParserRuleContext {
-		open func STOP() -> TerminalNode? { return getToken(vbaParser.Tokens.STOP.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_stopStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterStopStmt(self)
+
+	public class StopStmtContext: ParserRuleContext {
+			open
+			func STOP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STOP.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_stopStmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterStopStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitStopStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitStopStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitStopStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitStopStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitStopStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitStopStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stopStmt() throws -> StopStmtContext {
+	 open func stopStmt() throws -> StopStmtContext {
 		var _localctx: StopStmtContext = StopStmtContext(_ctx, getState())
 		try enterRule(_localctx, 184, vbaParser.RULE_stopStmt)
 		defer {
@@ -10937,56 +12583,79 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SubStmtContext:ParserRuleContext {
-		open func SUB() -> TerminalNode? { return getToken(vbaParser.Tokens.SUB.rawValue, 0) }
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class SubStmtContext: ParserRuleContext {
+			open
+			func SUB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SUB.rawValue, 0)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func END_SUB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_SUB.rawValue, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STATIC.rawValue, 0)
+			}
+			open
+			func argList() -> ArgListContext? {
+				return getRuleContext(ArgListContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_subStmt
 		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func END_SUB() -> TerminalNode? { return getToken(vbaParser.Tokens.END_SUB.rawValue, 0) }
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func STATIC() -> TerminalNode? { return getToken(vbaParser.Tokens.STATIC.rawValue, 0) }
-		open func argList() -> ArgListContext? {
-			return getRuleContext(ArgListContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_subStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSubStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSubStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSubStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSubStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSubStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSubStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSubStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSubStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subStmt() throws -> SubStmtContext {
+	 open func subStmt() throws -> SubStmtContext {
 		var _localctx: SubStmtContext = SubStmtContext(_ctx, getState())
 		try enterRule(_localctx, 186, vbaParser.RULE_subStmt)
 		var _la: Int = 0
@@ -11107,43 +12776,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class TimeStmtContext:ParserRuleContext {
-		open func TIME() -> TerminalNode? { return getToken(vbaParser.Tokens.TIME.rawValue, 0) }
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class TimeStmtContext: ParserRuleContext {
+			open
+			func TIME() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TIME.rawValue, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_timeStmt
 		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_timeStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterTimeStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterTimeStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitTimeStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitTimeStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitTimeStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitTimeStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitTimeStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitTimeStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func timeStmt() throws -> TimeStmtContext {
+	 open func timeStmt() throws -> TimeStmtContext {
 		var _localctx: TimeStmtContext = TimeStmtContext(_ctx, getState())
 		try enterRule(_localctx, 188, vbaParser.RULE_timeStmt)
 		var _la: Int = 0
@@ -11194,55 +12879,75 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeStmtContext:ParserRuleContext {
-		open func TYPE() -> TerminalNode? { return getToken(vbaParser.Tokens.TYPE.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class TypeStmtContext: ParserRuleContext {
+			open
+			func TYPE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TYPE.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func END_TYPE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_TYPE.rawValue, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+			open
+			func typeStmt_Element() -> [TypeStmt_ElementContext] {
+				return getRuleContexts(TypeStmt_ElementContext.self)
+			}
+			open
+			func typeStmt_Element(_ i: Int) -> TypeStmt_ElementContext? {
+				return getRuleContext(TypeStmt_ElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_typeStmt
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func END_TYPE() -> TerminalNode? { return getToken(vbaParser.Tokens.END_TYPE.rawValue, 0) }
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open func typeStmt_Element() -> Array<TypeStmt_ElementContext> {
-			return getRuleContexts(TypeStmt_ElementContext.self)
-		}
-		open func typeStmt_Element(_ i: Int) -> TypeStmt_ElementContext? {
-			return getRuleContext(TypeStmt_ElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_typeStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterTypeStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterTypeStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitTypeStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitTypeStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitTypeStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitTypeStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitTypeStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitTypeStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeStmt() throws -> TypeStmtContext {
+	 open func typeStmt() throws -> TypeStmtContext {
 		var _localctx: TypeStmtContext = TypeStmtContext(_ctx, getState())
 		try enterRule(_localctx, 190, vbaParser.RULE_typeStmt)
 		var _la: Int = 0
@@ -11317,52 +13022,71 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeStmt_ElementContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class TypeStmt_ElementContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func asTypeClause() -> AsTypeClauseContext? {
+				return getRuleContext(AsTypeClauseContext.self, 0)
+			}
+			open
+			func subscripts() -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_typeStmt_Element
 		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func asTypeClause() -> AsTypeClauseContext? {
-			return getRuleContext(AsTypeClauseContext.self,0)
-		}
-		open func subscripts() -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_typeStmt_Element }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterTypeStmt_Element(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterTypeStmt_Element(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitTypeStmt_Element(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitTypeStmt_Element(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitTypeStmt_Element(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitTypeStmt_Element(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitTypeStmt_Element(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitTypeStmt_Element(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeStmt_Element() throws -> TypeStmt_ElementContext {
+	 open func typeStmt_Element() throws -> TypeStmt_ElementContext {
 		var _localctx: TypeStmt_ElementContext = TypeStmt_ElementContext(_ctx, getState())
 		try enterRule(_localctx, 192, vbaParser.RULE_typeStmt_Element)
 		var _la: Int = 0
@@ -11458,46 +13182,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeOfStmtContext:ParserRuleContext {
-		open func TYPEOF() -> TerminalNode? { return getToken(vbaParser.Tokens.TYPEOF.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class TypeOfStmtContext: ParserRuleContext {
+			open
+			func TYPEOF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TYPEOF.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func IS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IS.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_typeOfStmt
 		}
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func IS() -> TerminalNode? { return getToken(vbaParser.Tokens.IS.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_typeOfStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterTypeOfStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterTypeOfStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitTypeOfStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitTypeOfStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitTypeOfStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitTypeOfStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitTypeOfStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitTypeOfStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeOfStmt() throws -> TypeOfStmtContext {
+	 open func typeOfStmt() throws -> TypeOfStmtContext {
 		var _localctx: TypeOfStmtContext = TypeOfStmtContext(_ctx, getState())
 		try enterRule(_localctx, 194, vbaParser.RULE_typeOfStmt)
 		defer {
@@ -11537,39 +13278,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class UnloadStmtContext:ParserRuleContext {
-		open func UNLOAD() -> TerminalNode? { return getToken(vbaParser.Tokens.UNLOAD.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class UnloadStmtContext: ParserRuleContext {
+			open
+			func UNLOAD() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.UNLOAD.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_unloadStmt
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_unloadStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterUnloadStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterUnloadStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitUnloadStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitUnloadStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitUnloadStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitUnloadStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitUnloadStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitUnloadStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unloadStmt() throws -> UnloadStmtContext {
+	 open func unloadStmt() throws -> UnloadStmtContext {
 		var _localctx: UnloadStmtContext = UnloadStmtContext(_ctx, getState())
 		try enterRule(_localctx, 196, vbaParser.RULE_unloadStmt)
 		defer {
@@ -11593,49 +13346,67 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class UnlockStmtContext:ParserRuleContext {
-		open func UNLOCK() -> TerminalNode? { return getToken(vbaParser.Tokens.UNLOCK.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class UnlockStmtContext: ParserRuleContext {
+			open
+			func UNLOCK() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.UNLOCK.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TO.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_unlockStmt
 		}
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func TO() -> TerminalNode? { return getToken(vbaParser.Tokens.TO.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_unlockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterUnlockStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterUnlockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitUnlockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitUnlockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitUnlockStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitUnlockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitUnlockStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitUnlockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unlockStmt() throws -> UnlockStmtContext {
+	 open func unlockStmt() throws -> UnlockStmtContext {
 		var _localctx: UnlockStmtContext = UnlockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 198, vbaParser.RULE_unlockStmt)
 		var _la: Int = 0
@@ -11715,1194 +13486,1531 @@ open class vbaParser: Parser {
 		return _localctx
 	}
 
-	open class ValueStmtContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_valueStmt }
+	public class ValueStmtContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_valueStmt
+		}
 	 
-		public  func copyFrom(_ ctx: ValueStmtContext) {
+		open
+		func copyFrom(_ ctx: ValueStmtContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class VsStructContext: ValueStmtContext {
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsStructContext: ValueStmtContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsStruct(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsStruct(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsStruct(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsStruct(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsStruct(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsStruct(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsStruct(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsStruct(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsAddContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func PLUS() -> TerminalNode? { return getToken(vbaParser.Tokens.PLUS.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsAddContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func PLUS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PLUS.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsAdd(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsAdd(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsAdd(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsAdd(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsAdd(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsAdd(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsAdd(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsAdd(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsLtContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func LT() -> TerminalNode? { return getToken(vbaParser.Tokens.LT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsLtContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func LT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsLt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsLt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsLt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsLt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsLt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsLt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsLt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsLt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsAddressOfContext: ValueStmtContext {
-		open func ADDRESSOF() -> TerminalNode? { return getToken(vbaParser.Tokens.ADDRESSOF.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		public init(_ ctx: ValueStmtContext) {
+	public class VsAddressOfContext: ValueStmtContext {
+			open
+			func ADDRESSOF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ADDRESSOF.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsAddressOf(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsAddressOf(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsAddressOf(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsAddressOf(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsAddressOf(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsAddressOf(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsAddressOf(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsAddressOf(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsNewContext: ValueStmtContext {
-		open func NEW() -> TerminalNode? { return getToken(vbaParser.Tokens.NEW.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		public init(_ ctx: ValueStmtContext) {
+	public class VsNewContext: ValueStmtContext {
+			open
+			func NEW() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEW.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsNew(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsNew(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsNew(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsNew(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsNew(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsNew(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsNew(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsNew(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsMultContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func MULT() -> TerminalNode? { return getToken(vbaParser.Tokens.MULT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsMultContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func MULT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MULT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsMult(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsMult(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsMult(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsMult(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsMult(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsMult(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsMult(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsMult(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsNegationContext: ValueStmtContext {
-		open func MINUS() -> TerminalNode? { return getToken(vbaParser.Tokens.MINUS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		public init(_ ctx: ValueStmtContext) {
+	public class VsNegationContext: ValueStmtContext {
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MINUS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsNegation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsNegation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsNegation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsNegation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsNegation(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsNegation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsNegation(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsNegation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsAssignContext: ValueStmtContext {
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
-		}
-		open func ASSIGN() -> TerminalNode? { return getToken(vbaParser.Tokens.ASSIGN.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsAssignContext: ValueStmtContext {
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func ASSIGN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ASSIGN.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsAssign(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsAssign(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsAssign(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsAssign(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsAssign(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsAssign(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsAssign(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsAssign(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsLikeContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func LIKE() -> TerminalNode? { return getToken(vbaParser.Tokens.LIKE.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsLikeContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func LIKE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LIKE.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsLike(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsLike(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsLike(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsLike(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsLike(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsLike(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsLike(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsLike(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsDivContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func DIV() -> TerminalNode? { return getToken(vbaParser.Tokens.DIV.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsDivContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func DIV() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DIV.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsDiv(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsDiv(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsDiv(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsDiv(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsDiv(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsDiv(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsDiv(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsDiv(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsPlusContext: ValueStmtContext {
-		open func PLUS() -> TerminalNode? { return getToken(vbaParser.Tokens.PLUS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		public init(_ ctx: ValueStmtContext) {
+	public class VsPlusContext: ValueStmtContext {
+			open
+			func PLUS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PLUS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsPlus(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsPlus(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsPlus(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsPlus(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsPlus(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsPlus(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsPlus(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsPlus(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsNotContext: ValueStmtContext {
-		open func NOT() -> TerminalNode? { return getToken(vbaParser.Tokens.NOT.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		public init(_ ctx: ValueStmtContext) {
+	public class VsNotContext: ValueStmtContext {
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsNot(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsNot(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsNot(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsNot(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsNot(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsNot(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsNot(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsNot(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsGeqContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func GEQ() -> TerminalNode? { return getToken(vbaParser.Tokens.GEQ.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsGeqContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func GEQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GEQ.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsGeq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsGeq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsGeq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsGeq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsGeq(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsGeq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsGeq(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsGeq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsTypeOfContext: ValueStmtContext {
-		open func typeOfStmt() -> TypeOfStmtContext? {
-			return getRuleContext(TypeOfStmtContext.self,0)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsTypeOfContext: ValueStmtContext {
+			open
+			func typeOfStmt() -> TypeOfStmtContext? {
+				return getRuleContext(TypeOfStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsTypeOf(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsTypeOf(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsTypeOf(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsTypeOf(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsTypeOf(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsTypeOf(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsTypeOf(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsTypeOf(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsICSContext: ValueStmtContext {
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsICSContext: ValueStmtContext {
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsICS(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsICS(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsICS(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsICS(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsICS(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsICS(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsICS(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsICS(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsNeqContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func NEQ() -> TerminalNode? { return getToken(vbaParser.Tokens.NEQ.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsNeqContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func NEQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEQ.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsNeq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsNeq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsNeq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsNeq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsNeq(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsNeq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsNeq(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsNeq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsXorContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func XOR() -> TerminalNode? { return getToken(vbaParser.Tokens.XOR.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsXorContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func XOR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.XOR.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsXor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsXor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsXor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsXor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsXor(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsXor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsXor(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsXor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsAndContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func AND() -> TerminalNode? { return getToken(vbaParser.Tokens.AND.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsAndContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func AND() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.AND.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsAnd(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsAnd(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsAnd(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsAnd(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsAnd(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsAnd(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsAnd(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsAnd(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsLeqContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func LEQ() -> TerminalNode? { return getToken(vbaParser.Tokens.LEQ.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsLeqContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func LEQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LEQ.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsLeq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsLeq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsLeq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsLeq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsLeq(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsLeq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsLeq(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsLeq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsPowContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func POW() -> TerminalNode? { return getToken(vbaParser.Tokens.POW.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsPowContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func POW() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.POW.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsPow(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsPow(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsPow(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsPow(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsPow(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsPow(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsPow(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsPow(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsIsContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func IS() -> TerminalNode? { return getToken(vbaParser.Tokens.IS.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsIsContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func IS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IS.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsIs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsIs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsIs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsIs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsIs(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsIs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsIs(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsIs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsModContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func MOD() -> TerminalNode? { return getToken(vbaParser.Tokens.MOD.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsModContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func MOD() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MOD.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsMod(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsMod(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsMod(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsMod(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsMod(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsMod(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsMod(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsMod(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsAmpContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func AMPERSAND() -> TerminalNode? { return getToken(vbaParser.Tokens.AMPERSAND.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsAmpContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func AMPERSAND() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.AMPERSAND.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsAmp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsAmp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsAmp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsAmp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsAmp(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsAmp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsAmp(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsAmp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsOrContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func OR() -> TerminalNode? { return getToken(vbaParser.Tokens.OR.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsOrContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func OR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OR.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsOr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsOr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsOr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsOr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsOr(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsOr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsOr(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsOr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsMinusContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func MINUS() -> TerminalNode? { return getToken(vbaParser.Tokens.MINUS.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsMinusContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MINUS.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsMinus(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsMinus(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsMinus(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsMinus(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsMinus(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsMinus(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsMinus(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsMinus(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsLiteralContext: ValueStmtContext {
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsLiteralContext: ValueStmtContext {
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsLiteral(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsLiteral(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsEqvContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func EQV() -> TerminalNode? { return getToken(vbaParser.Tokens.EQV.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsEqvContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func EQV() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQV.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsEqv(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsEqv(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsEqv(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsEqv(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsEqv(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsEqv(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsEqv(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsEqv(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsImpContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func IMP() -> TerminalNode? { return getToken(vbaParser.Tokens.IMP.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsImpContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func IMP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IMP.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsImp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsImp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsImp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsImp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsImp(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsImp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsImp(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsImp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsGtContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func GT() -> TerminalNode? { return getToken(vbaParser.Tokens.GT.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsGtContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func GT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GT.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsGt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsGt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsGt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsGt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsGt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsGt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsGt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsGt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsEqContext: ValueStmtContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
-		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsEqContext: ValueStmtContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsEq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsEq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsEq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsEq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsEq(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsEq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsEq(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsEq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class VsMidContext: ValueStmtContext {
-		open func midStmt() -> MidStmtContext? {
-			return getRuleContext(MidStmtContext.self,0)
-		}
-		public init(_ ctx: ValueStmtContext) {
+	public class VsMidContext: ValueStmtContext {
+			open
+			func midStmt() -> MidStmtContext? {
+				return getRuleContext(MidStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ValueStmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVsMid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVsMid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVsMid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVsMid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVsMid(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVsMid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVsMid(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVsMid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func valueStmt( ) throws -> ValueStmtContext   {
+	 public final  func valueStmt( ) throws -> ValueStmtContext   {
 		return try valueStmt(0)
 	}
 	@discardableResult
@@ -13199,7 +15307,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1851)
 						if (!(precpred(_ctx, 23))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 23)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 23)"))
 						}
 						setState(1853)
 						try _errHandler.sync(self)
@@ -13238,7 +15346,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1860)
 						if (!(precpred(_ctx, 22))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 22)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 22)"))
 						}
 						setState(1862)
 						try _errHandler.sync(self)
@@ -13277,7 +15385,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1869)
 						if (!(precpred(_ctx, 21))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 21)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 21)"))
 						}
 						setState(1871)
 						try _errHandler.sync(self)
@@ -13316,7 +15424,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1878)
 						if (!(precpred(_ctx, 20))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 20)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 20)"))
 						}
 						setState(1880)
 						try _errHandler.sync(self)
@@ -13355,7 +15463,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1887)
 						if (!(precpred(_ctx, 19))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
 						}
 						setState(1889)
 						try _errHandler.sync(self)
@@ -13394,7 +15502,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1896)
 						if (!(precpred(_ctx, 18))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 18)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 18)"))
 						}
 						setState(1898)
 						try _errHandler.sync(self)
@@ -13433,7 +15541,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1905)
 						if (!(precpred(_ctx, 17))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 17)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 17)"))
 						}
 						setState(1907)
 						try _errHandler.sync(self)
@@ -13472,7 +15580,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1914)
 						if (!(precpred(_ctx, 16))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 16)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 16)"))
 						}
 						setState(1916)
 						try _errHandler.sync(self)
@@ -13511,7 +15619,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1923)
 						if (!(precpred(_ctx, 15))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 15)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 15)"))
 						}
 						setState(1925)
 						try _errHandler.sync(self)
@@ -13550,7 +15658,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1932)
 						if (!(precpred(_ctx, 12))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
 						}
 						setState(1934)
 						try _errHandler.sync(self)
@@ -13589,7 +15697,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1941)
 						if (!(precpred(_ctx, 11))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
 						}
 						setState(1943)
 						try _errHandler.sync(self)
@@ -13628,7 +15736,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1950)
 						if (!(precpred(_ctx, 10))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
 						}
 						setState(1952)
 						try _errHandler.sync(self)
@@ -13667,7 +15775,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1959)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(1961)
 						try _errHandler.sync(self)
@@ -13706,7 +15814,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1968)
 						if (!(precpred(_ctx, 8))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
 						}
 						setState(1970)
 						try _errHandler.sync(self)
@@ -13745,7 +15853,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1977)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(1979)
 						try _errHandler.sync(self)
@@ -13784,7 +15892,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1986)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(1988)
 						try _errHandler.sync(self)
@@ -13823,7 +15931,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(1995)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(1997)
 						try _errHandler.sync(self)
@@ -13862,7 +15970,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(2004)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(2006)
 						try _errHandler.sync(self)
@@ -13901,7 +16009,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(2013)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(2015)
 						try _errHandler.sync(self)
@@ -13940,7 +16048,7 @@ open class vbaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, vbaParser.RULE_valueStmt)
 						setState(2022)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(2024)
 						try _errHandler.sync(self)
@@ -13992,47 +16100,67 @@ open class vbaParser: Parser {
 
 		return _localctx;
 	}
-	open class VariableStmtContext:ParserRuleContext {
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class VariableStmtContext: ParserRuleContext {
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func variableListStmt() -> VariableListStmtContext? {
+				return getRuleContext(VariableListStmtContext.self, 0)
+			}
+			open
+			func DIM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DIM.rawValue, 0)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STATIC.rawValue, 0)
+			}
+			open
+			func visibility() -> VisibilityContext? {
+				return getRuleContext(VisibilityContext.self, 0)
+			}
+			open
+			func WITHEVENTS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WITHEVENTS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_variableStmt
 		}
-		open func variableListStmt() -> VariableListStmtContext? {
-			return getRuleContext(VariableListStmtContext.self,0)
-		}
-		open func DIM() -> TerminalNode? { return getToken(vbaParser.Tokens.DIM.rawValue, 0) }
-		open func STATIC() -> TerminalNode? { return getToken(vbaParser.Tokens.STATIC.rawValue, 0) }
-		open func visibility() -> VisibilityContext? {
-			return getRuleContext(VisibilityContext.self,0)
-		}
-		open func WITHEVENTS() -> TerminalNode? { return getToken(vbaParser.Tokens.WITHEVENTS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_variableStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVariableStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVariableStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVariableStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVariableStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVariableStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVariableStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVariableStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVariableStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableStmt() throws -> VariableStmtContext {
+	 open func variableStmt() throws -> VariableStmtContext {
 		var _localctx: VariableStmtContext = VariableStmtContext(_ctx, getState())
 		try enterRule(_localctx, 202, vbaParser.RULE_variableStmt)
 		defer {
@@ -14063,7 +16191,7 @@ open class vbaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(2041)
 		 	try match(vbaParser.Tokens.WS.rawValue)
@@ -14091,44 +16219,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class VariableListStmtContext:ParserRuleContext {
-		open func variableSubStmt() -> Array<VariableSubStmtContext> {
-			return getRuleContexts(VariableSubStmtContext.self)
+
+	public class VariableListStmtContext: ParserRuleContext {
+			open
+			func variableSubStmt() -> [VariableSubStmtContext] {
+				return getRuleContexts(VariableSubStmtContext.self)
+			}
+			open
+			func variableSubStmt(_ i: Int) -> VariableSubStmtContext? {
+				return getRuleContext(VariableSubStmtContext.self, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_variableListStmt
 		}
-		open func variableSubStmt(_ i: Int) -> VariableSubStmtContext? {
-			return getRuleContext(VariableSubStmtContext.self,i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_variableListStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVariableListStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVariableListStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVariableListStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVariableListStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVariableListStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVariableListStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVariableListStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVariableListStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableListStmt() throws -> VariableListStmtContext {
+	 open func variableListStmt() throws -> VariableListStmtContext {
 		var _localctx: VariableListStmtContext = VariableListStmtContext(_ctx, getState())
 		try enterRule(_localctx, 204, vbaParser.RULE_variableListStmt)
 		var _la: Int = 0
@@ -14192,52 +16331,71 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class VariableSubStmtContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class VariableSubStmtContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func asTypeClause() -> AsTypeClauseContext? {
+				return getRuleContext(AsTypeClauseContext.self, 0)
+			}
+			open
+			func subscripts() -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_variableSubStmt
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func asTypeClause() -> AsTypeClauseContext? {
-			return getRuleContext(AsTypeClauseContext.self,0)
-		}
-		open func subscripts() -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_variableSubStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVariableSubStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVariableSubStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVariableSubStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVariableSubStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVariableSubStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVariableSubStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVariableSubStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVariableSubStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableSubStmt() throws -> VariableSubStmtContext {
+	 open func variableSubStmt() throws -> VariableSubStmtContext {
 		var _localctx: VariableSubStmtContext = VariableSubStmtContext(_ctx, getState())
 		try enterRule(_localctx, 206, vbaParser.RULE_variableSubStmt)
 		var _la: Int = 0
@@ -14369,46 +16527,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class WhileWendStmtContext:ParserRuleContext {
-		open func WHILE() -> TerminalNode? { return getToken(vbaParser.Tokens.WHILE.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class WhileWendStmtContext: ParserRuleContext {
+			open
+			func WHILE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WHILE.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func WEND() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WEND.rawValue, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_whileWendStmt
 		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func WEND() -> TerminalNode? { return getToken(vbaParser.Tokens.WEND.rawValue, 0) }
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_whileWendStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterWhileWendStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterWhileWendStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitWhileWendStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitWhileWendStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitWhileWendStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitWhileWendStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitWhileWendStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitWhileWendStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func whileWendStmt() throws -> WhileWendStmtContext {
+	 open func whileWendStmt() throws -> WhileWendStmtContext {
 		var _localctx: WhileWendStmtContext = WhileWendStmtContext(_ctx, getState())
 		try enterRule(_localctx, 208, vbaParser.RULE_whileWendStmt)
 		defer {
@@ -14446,45 +16621,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class WidthStmtContext:ParserRuleContext {
-		open func WIDTH() -> TerminalNode? { return getToken(vbaParser.Tokens.WIDTH.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class WidthStmtContext: ParserRuleContext {
+			open
+			func WIDTH() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WIDTH.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_widthStmt
 		}
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_widthStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterWidthStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterWidthStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitWidthStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitWidthStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitWidthStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitWidthStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitWidthStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitWidthStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func widthStmt() throws -> WidthStmtContext {
+	 open func widthStmt() throws -> WidthStmtContext {
 		var _localctx: WidthStmtContext = WidthStmtContext(_ctx, getState())
 		try enterRule(_localctx, 210, vbaParser.RULE_widthStmt)
 		var _la: Int = 0
@@ -14539,53 +16728,75 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class WithStmtContext:ParserRuleContext {
-		open func WITH() -> TerminalNode? { return getToken(vbaParser.Tokens.WITH.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class WithStmtContext: ParserRuleContext {
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func endOfStatement() -> EndOfStatementContext? {
+				return getRuleContext(EndOfStatementContext.self, 0)
+			}
+			open
+			func END_WITH() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END_WITH.rawValue, 0)
+			}
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func NEW() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEW.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_withStmt
 		}
-		open func endOfStatement() -> EndOfStatementContext? {
-			return getRuleContext(EndOfStatementContext.self,0)
-		}
-		open func END_WITH() -> TerminalNode? { return getToken(vbaParser.Tokens.END_WITH.rawValue, 0) }
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func NEW() -> TerminalNode? { return getToken(vbaParser.Tokens.NEW.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_withStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterWithStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterWithStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitWithStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitWithStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitWithStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitWithStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitWithStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitWithStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func withStmt() throws -> WithStmtContext {
+	 open func withStmt() throws -> WithStmtContext {
 		var _localctx: WithStmtContext = WithStmtContext(_ctx, getState())
 		try enterRule(_localctx, 212, vbaParser.RULE_withStmt)
 		var _la: Int = 0
@@ -14657,45 +16868,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class WriteStmtContext:ParserRuleContext {
-		open func WRITE() -> TerminalNode? { return getToken(vbaParser.Tokens.WRITE.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class WriteStmtContext: ParserRuleContext {
+			open
+			func WRITE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WRITE.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func fileNumber() -> FileNumberContext? {
+				return getRuleContext(FileNumberContext.self, 0)
+			}
+			open
+			func outputList() -> OutputListContext? {
+				return getRuleContext(OutputListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_writeStmt
 		}
-		open func fileNumber() -> FileNumberContext? {
-			return getRuleContext(FileNumberContext.self,0)
-		}
-		open func outputList() -> OutputListContext? {
-			return getRuleContext(OutputListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_writeStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterWriteStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterWriteStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitWriteStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitWriteStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitWriteStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitWriteStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitWriteStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitWriteStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func writeStmt() throws -> WriteStmtContext {
+	 open func writeStmt() throws -> WriteStmtContext {
 		var _localctx: WriteStmtContext = WriteStmtContext(_ctx, getState())
 		try enterRule(_localctx, 214, vbaParser.RULE_writeStmt)
 		var _la: Int = 0
@@ -14755,37 +16980,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class FileNumberContext:ParserRuleContext {
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class FileNumberContext: ParserRuleContext {
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_fileNumber
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_fileNumber }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterFileNumber(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterFileNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitFileNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitFileNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitFileNumber(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitFileNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitFileNumber(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitFileNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fileNumber() throws -> FileNumberContext {
+	 open func fileNumber() throws -> FileNumberContext {
 		var _localctx: FileNumberContext = FileNumberContext(_ctx, getState())
 		try enterRule(_localctx, 216, vbaParser.RULE_fileNumber)
 		var _la: Int = 0
@@ -14819,40 +17050,47 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ExplicitCallStmtContext:ParserRuleContext {
-		open func eCS_ProcedureCall() -> ECS_ProcedureCallContext? {
-			return getRuleContext(ECS_ProcedureCallContext.self,0)
+
+	public class ExplicitCallStmtContext: ParserRuleContext {
+			open
+			func eCS_ProcedureCall() -> ECS_ProcedureCallContext? {
+				return getRuleContext(ECS_ProcedureCallContext.self, 0)
+			}
+			open
+			func eCS_MemberProcedureCall() -> ECS_MemberProcedureCallContext? {
+				return getRuleContext(ECS_MemberProcedureCallContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_explicitCallStmt
 		}
-		open func eCS_MemberProcedureCall() -> ECS_MemberProcedureCallContext? {
-			return getRuleContext(ECS_MemberProcedureCallContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_explicitCallStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterExplicitCallStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterExplicitCallStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitExplicitCallStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitExplicitCallStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitExplicitCallStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitExplicitCallStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitExplicitCallStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitExplicitCallStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func explicitCallStmt() throws -> ExplicitCallStmtContext {
+	 open func explicitCallStmt() throws -> ExplicitCallStmtContext {
 		var _localctx: ExplicitCallStmtContext = ExplicitCallStmtContext(_ctx, getState())
 		try enterRule(_localctx, 218, vbaParser.RULE_explicitCallStmt)
 		defer {
@@ -14885,62 +17123,87 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ECS_ProcedureCallContext:ParserRuleContext {
-		open func CALL() -> TerminalNode? { return getToken(vbaParser.Tokens.CALL.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class ECS_ProcedureCallContext: ParserRuleContext {
+			open
+			func CALL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CALL.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func argsCall() -> ArgsCallContext? {
+				return getRuleContext(ArgsCallContext.self, 0)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func subscripts() -> [SubscriptsContext] {
+				return getRuleContexts(SubscriptsContext.self)
+			}
+			open
+			func subscripts(_ i: Int) -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_eCS_ProcedureCall
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func argsCall() -> ArgsCallContext? {
-			return getRuleContext(ArgsCallContext.self,0)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func subscripts() -> Array<SubscriptsContext> {
-			return getRuleContexts(SubscriptsContext.self)
-		}
-		open func subscripts(_ i: Int) -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_eCS_ProcedureCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterECS_ProcedureCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterECS_ProcedureCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitECS_ProcedureCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitECS_ProcedureCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitECS_ProcedureCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitECS_ProcedureCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitECS_ProcedureCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitECS_ProcedureCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eCS_ProcedureCall() throws -> ECS_ProcedureCallContext {
+	 open func eCS_ProcedureCall() throws -> ECS_ProcedureCallContext {
 		var _localctx: ECS_ProcedureCallContext = ECS_ProcedureCallContext(_ctx, getState())
 		try enterRule(_localctx, 220, vbaParser.RULE_eCS_ProcedureCall)
 		var _la: Int = 0
@@ -15057,65 +17320,91 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ECS_MemberProcedureCallContext:ParserRuleContext {
-		open func CALL() -> TerminalNode? { return getToken(vbaParser.Tokens.CALL.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
+
+	public class ECS_MemberProcedureCallContext: ParserRuleContext {
+			open
+			func CALL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CALL.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func argsCall() -> ArgsCallContext? {
+				return getRuleContext(ArgsCallContext.self, 0)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func subscripts() -> [SubscriptsContext] {
+				return getRuleContexts(SubscriptsContext.self)
+			}
+			open
+			func subscripts(_ i: Int) -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_eCS_MemberProcedureCall
 		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
-		}
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func argsCall() -> ArgsCallContext? {
-			return getRuleContext(ArgsCallContext.self,0)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func subscripts() -> Array<SubscriptsContext> {
-			return getRuleContexts(SubscriptsContext.self)
-		}
-		open func subscripts(_ i: Int) -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_eCS_MemberProcedureCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterECS_MemberProcedureCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterECS_MemberProcedureCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitECS_MemberProcedureCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitECS_MemberProcedureCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitECS_MemberProcedureCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitECS_MemberProcedureCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitECS_MemberProcedureCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitECS_MemberProcedureCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eCS_MemberProcedureCall() throws -> ECS_MemberProcedureCallContext {
+	 open func eCS_MemberProcedureCall() throws -> ECS_MemberProcedureCallContext {
 		var _localctx: ECS_MemberProcedureCallContext = ECS_MemberProcedureCallContext(_ctx, getState())
 		try enterRule(_localctx, 222, vbaParser.RULE_eCS_MemberProcedureCall)
 		var _la: Int = 0
@@ -15244,40 +17533,47 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ImplicitCallStmt_InBlockContext:ParserRuleContext {
-		open func iCS_B_MemberProcedureCall() -> ICS_B_MemberProcedureCallContext? {
-			return getRuleContext(ICS_B_MemberProcedureCallContext.self,0)
+
+	public class ImplicitCallStmt_InBlockContext: ParserRuleContext {
+			open
+			func iCS_B_MemberProcedureCall() -> ICS_B_MemberProcedureCallContext? {
+				return getRuleContext(ICS_B_MemberProcedureCallContext.self, 0)
+			}
+			open
+			func iCS_B_ProcedureCall() -> ICS_B_ProcedureCallContext? {
+				return getRuleContext(ICS_B_ProcedureCallContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_implicitCallStmt_InBlock
 		}
-		open func iCS_B_ProcedureCall() -> ICS_B_ProcedureCallContext? {
-			return getRuleContext(ICS_B_ProcedureCallContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_implicitCallStmt_InBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterImplicitCallStmt_InBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterImplicitCallStmt_InBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitImplicitCallStmt_InBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitImplicitCallStmt_InBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitImplicitCallStmt_InBlock(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitImplicitCallStmt_InBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitImplicitCallStmt_InBlock(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitImplicitCallStmt_InBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func implicitCallStmt_InBlock() throws -> ImplicitCallStmt_InBlockContext {
+	 open func implicitCallStmt_InBlock() throws -> ImplicitCallStmt_InBlockContext {
 		var _localctx: ImplicitCallStmt_InBlockContext = ImplicitCallStmt_InBlockContext(_ctx, getState())
 		try enterRule(_localctx, 224, vbaParser.RULE_implicitCallStmt_InBlock)
 		defer {
@@ -15310,67 +17606,91 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ICS_B_MemberProcedureCallContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class ICS_B_MemberProcedureCallContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
+				return getRuleContext(ImplicitCallStmt_InStmtContext.self, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func argsCall() -> ArgsCallContext? {
+				return getRuleContext(ArgsCallContext.self, 0)
+			}
+			open
+			func dictionaryCallStmt() -> DictionaryCallStmtContext? {
+				return getRuleContext(DictionaryCallStmtContext.self, 0)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func subscripts() -> [SubscriptsContext] {
+				return getRuleContexts(SubscriptsContext.self)
+			}
+			open
+			func subscripts(_ i: Int) -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_iCS_B_MemberProcedureCall
 		}
-		open func implicitCallStmt_InStmt() -> ImplicitCallStmt_InStmtContext? {
-			return getRuleContext(ImplicitCallStmt_InStmtContext.self,0)
-		}
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func argsCall() -> ArgsCallContext? {
-			return getRuleContext(ArgsCallContext.self,0)
-		}
-		open func dictionaryCallStmt() -> DictionaryCallStmtContext? {
-			return getRuleContext(DictionaryCallStmtContext.self,0)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func subscripts() -> Array<SubscriptsContext> {
-			return getRuleContexts(SubscriptsContext.self)
-		}
-		open func subscripts(_ i: Int) -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,i)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_iCS_B_MemberProcedureCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterICS_B_MemberProcedureCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterICS_B_MemberProcedureCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitICS_B_MemberProcedureCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitICS_B_MemberProcedureCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitICS_B_MemberProcedureCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitICS_B_MemberProcedureCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitICS_B_MemberProcedureCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitICS_B_MemberProcedureCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iCS_B_MemberProcedureCall() throws -> ICS_B_MemberProcedureCallContext {
+	 open func iCS_B_MemberProcedureCall() throws -> ICS_B_MemberProcedureCallContext {
 		var _localctx: ICS_B_MemberProcedureCallContext = ICS_B_MemberProcedureCallContext(_ctx, getState())
 		try enterRule(_localctx, 226, vbaParser.RULE_iCS_B_MemberProcedureCall)
 		var _la: Int = 0
@@ -15467,58 +17787,79 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ICS_B_ProcedureCallContext:ParserRuleContext {
-		open func certainIdentifier() -> CertainIdentifierContext? {
-			return getRuleContext(CertainIdentifierContext.self,0)
+
+	public class ICS_B_ProcedureCallContext: ParserRuleContext {
+			open
+			func certainIdentifier() -> CertainIdentifierContext? {
+				return getRuleContext(CertainIdentifierContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func argsCall() -> ArgsCallContext? {
+				return getRuleContext(ArgsCallContext.self, 0)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func subscripts() -> [SubscriptsContext] {
+				return getRuleContexts(SubscriptsContext.self)
+			}
+			open
+			func subscripts(_ i: Int) -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_iCS_B_ProcedureCall
 		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func argsCall() -> ArgsCallContext? {
-			return getRuleContext(ArgsCallContext.self,0)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func subscripts() -> Array<SubscriptsContext> {
-			return getRuleContexts(SubscriptsContext.self)
-		}
-		open func subscripts(_ i: Int) -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,i)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_iCS_B_ProcedureCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterICS_B_ProcedureCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterICS_B_ProcedureCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitICS_B_ProcedureCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitICS_B_ProcedureCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitICS_B_ProcedureCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitICS_B_ProcedureCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitICS_B_ProcedureCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitICS_B_ProcedureCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iCS_B_ProcedureCall() throws -> ICS_B_ProcedureCallContext {
+	 open func iCS_B_ProcedureCall() throws -> ICS_B_ProcedureCallContext {
 		var _localctx: ICS_B_ProcedureCallContext = ICS_B_ProcedureCallContext(_ctx, getState())
 		try enterRule(_localctx, 228, vbaParser.RULE_iCS_B_ProcedureCall)
 		var _la: Int = 0
@@ -15583,46 +17924,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ImplicitCallStmt_InStmtContext:ParserRuleContext {
-		open func iCS_S_MembersCall() -> ICS_S_MembersCallContext? {
-			return getRuleContext(ICS_S_MembersCallContext.self,0)
+
+	public class ImplicitCallStmt_InStmtContext: ParserRuleContext {
+			open
+			func iCS_S_MembersCall() -> ICS_S_MembersCallContext? {
+				return getRuleContext(ICS_S_MembersCallContext.self, 0)
+			}
+			open
+			func iCS_S_VariableOrProcedureCall() -> ICS_S_VariableOrProcedureCallContext? {
+				return getRuleContext(ICS_S_VariableOrProcedureCallContext.self, 0)
+			}
+			open
+			func iCS_S_ProcedureOrArrayCall() -> ICS_S_ProcedureOrArrayCallContext? {
+				return getRuleContext(ICS_S_ProcedureOrArrayCallContext.self, 0)
+			}
+			open
+			func iCS_S_DictionaryCall() -> ICS_S_DictionaryCallContext? {
+				return getRuleContext(ICS_S_DictionaryCallContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_implicitCallStmt_InStmt
 		}
-		open func iCS_S_VariableOrProcedureCall() -> ICS_S_VariableOrProcedureCallContext? {
-			return getRuleContext(ICS_S_VariableOrProcedureCallContext.self,0)
-		}
-		open func iCS_S_ProcedureOrArrayCall() -> ICS_S_ProcedureOrArrayCallContext? {
-			return getRuleContext(ICS_S_ProcedureOrArrayCallContext.self,0)
-		}
-		open func iCS_S_DictionaryCall() -> ICS_S_DictionaryCallContext? {
-			return getRuleContext(ICS_S_DictionaryCallContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_implicitCallStmt_InStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterImplicitCallStmt_InStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterImplicitCallStmt_InStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitImplicitCallStmt_InStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitImplicitCallStmt_InStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitImplicitCallStmt_InStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitImplicitCallStmt_InStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitImplicitCallStmt_InStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitImplicitCallStmt_InStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func implicitCallStmt_InStmt() throws -> ImplicitCallStmt_InStmtContext {
+	 open func implicitCallStmt_InStmt() throws -> ImplicitCallStmt_InStmtContext {
 		var _localctx: ImplicitCallStmt_InStmtContext = ImplicitCallStmt_InStmtContext(_ctx, getState())
 		try enterRule(_localctx, 230, vbaParser.RULE_implicitCallStmt_InStmt)
 		defer {
@@ -15667,61 +18017,83 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ICS_S_VariableOrProcedureCallContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class ICS_S_VariableOrProcedureCallContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func dictionaryCallStmt() -> DictionaryCallStmtContext? {
+				return getRuleContext(DictionaryCallStmtContext.self, 0)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func subscripts() -> [SubscriptsContext] {
+				return getRuleContexts(SubscriptsContext.self)
+			}
+			open
+			func subscripts(_ i: Int) -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_iCS_S_VariableOrProcedureCall
 		}
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func dictionaryCallStmt() -> DictionaryCallStmtContext? {
-			return getRuleContext(DictionaryCallStmtContext.self,0)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func subscripts() -> Array<SubscriptsContext> {
-			return getRuleContexts(SubscriptsContext.self)
-		}
-		open func subscripts(_ i: Int) -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,i)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_iCS_S_VariableOrProcedureCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterICS_S_VariableOrProcedureCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterICS_S_VariableOrProcedureCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitICS_S_VariableOrProcedureCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitICS_S_VariableOrProcedureCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitICS_S_VariableOrProcedureCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitICS_S_VariableOrProcedureCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitICS_S_VariableOrProcedureCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitICS_S_VariableOrProcedureCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iCS_S_VariableOrProcedureCall() throws -> ICS_S_VariableOrProcedureCallContext {
+	 open func iCS_S_VariableOrProcedureCall() throws -> ICS_S_VariableOrProcedureCallContext {
 		var _localctx: ICS_S_VariableOrProcedureCallContext = ICS_S_VariableOrProcedureCallContext(_ctx, getState())
 		try enterRule(_localctx, 232, vbaParser.RULE_iCS_S_VariableOrProcedureCall)
 		var _la: Int = 0
@@ -15794,67 +18166,91 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ICS_S_ProcedureOrArrayCallContext:ParserRuleContext {
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
+
+	public class ICS_S_ProcedureOrArrayCallContext: ParserRuleContext {
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func baseType() -> BaseTypeContext? {
+				return getRuleContext(BaseTypeContext.self, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func argsCall() -> ArgsCallContext? {
+				return getRuleContext(ArgsCallContext.self, 0)
+			}
+			open
+			func dictionaryCallStmt() -> DictionaryCallStmtContext? {
+				return getRuleContext(DictionaryCallStmtContext.self, 0)
+			}
+			open
+			func subscripts() -> [SubscriptsContext] {
+				return getRuleContexts(SubscriptsContext.self)
+			}
+			open
+			func subscripts(_ i: Int) -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_iCS_S_ProcedureOrArrayCall
 		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
-		}
-		open func baseType() -> BaseTypeContext? {
-			return getRuleContext(BaseTypeContext.self,0)
-		}
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func argsCall() -> ArgsCallContext? {
-			return getRuleContext(ArgsCallContext.self,0)
-		}
-		open func dictionaryCallStmt() -> DictionaryCallStmtContext? {
-			return getRuleContext(DictionaryCallStmtContext.self,0)
-		}
-		open func subscripts() -> Array<SubscriptsContext> {
-			return getRuleContexts(SubscriptsContext.self)
-		}
-		open func subscripts(_ i: Int) -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_iCS_S_ProcedureOrArrayCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterICS_S_ProcedureOrArrayCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterICS_S_ProcedureOrArrayCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitICS_S_ProcedureOrArrayCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitICS_S_ProcedureOrArrayCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitICS_S_ProcedureOrArrayCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitICS_S_ProcedureOrArrayCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitICS_S_ProcedureOrArrayCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitICS_S_ProcedureOrArrayCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iCS_S_ProcedureOrArrayCall() throws -> ICS_S_ProcedureOrArrayCallContext {
+	 open func iCS_S_ProcedureOrArrayCall() throws -> ICS_S_ProcedureOrArrayCallContext {
 		var _localctx: ICS_S_ProcedureOrArrayCallContext = ICS_S_ProcedureOrArrayCallContext(_ctx, getState())
 		try enterRule(_localctx, 234, vbaParser.RULE_iCS_S_ProcedureOrArrayCall)
 		var _la: Int = 0
@@ -15997,67 +18393,91 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ICS_S_MembersCallContext:ParserRuleContext {
-		open func iCS_S_VariableOrProcedureCall() -> ICS_S_VariableOrProcedureCallContext? {
-			return getRuleContext(ICS_S_VariableOrProcedureCallContext.self,0)
+
+	public class ICS_S_MembersCallContext: ParserRuleContext {
+			open
+			func iCS_S_VariableOrProcedureCall() -> ICS_S_VariableOrProcedureCallContext? {
+				return getRuleContext(ICS_S_VariableOrProcedureCallContext.self, 0)
+			}
+			open
+			func iCS_S_ProcedureOrArrayCall() -> ICS_S_ProcedureOrArrayCallContext? {
+				return getRuleContext(ICS_S_ProcedureOrArrayCallContext.self, 0)
+			}
+			open
+			func iCS_S_MemberCall() -> [ICS_S_MemberCallContext] {
+				return getRuleContexts(ICS_S_MemberCallContext.self)
+			}
+			open
+			func iCS_S_MemberCall(_ i: Int) -> ICS_S_MemberCallContext? {
+				return getRuleContext(ICS_S_MemberCallContext.self, i)
+			}
+			open
+			func dictionaryCallStmt() -> DictionaryCallStmtContext? {
+				return getRuleContext(DictionaryCallStmtContext.self, 0)
+			}
+			open
+			func LPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.LPAREN.rawValue)
+			}
+			open
+			func LPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
+			}
+			open
+			func subscripts() -> [SubscriptsContext] {
+				return getRuleContexts(SubscriptsContext.self)
+			}
+			open
+			func subscripts(_ i: Int) -> SubscriptsContext? {
+				return getRuleContext(SubscriptsContext.self, i)
+			}
+			open
+			func RPAREN() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.RPAREN.rawValue)
+			}
+			open
+			func RPAREN(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_iCS_S_MembersCall
 		}
-		open func iCS_S_ProcedureOrArrayCall() -> ICS_S_ProcedureOrArrayCallContext? {
-			return getRuleContext(ICS_S_ProcedureOrArrayCallContext.self,0)
-		}
-		open func iCS_S_MemberCall() -> Array<ICS_S_MemberCallContext> {
-			return getRuleContexts(ICS_S_MemberCallContext.self)
-		}
-		open func iCS_S_MemberCall(_ i: Int) -> ICS_S_MemberCallContext? {
-			return getRuleContext(ICS_S_MemberCallContext.self,i)
-		}
-		open func dictionaryCallStmt() -> DictionaryCallStmtContext? {
-			return getRuleContext(DictionaryCallStmtContext.self,0)
-		}
-		open func LPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.LPAREN.rawValue) }
-		open func LPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.LPAREN.rawValue, i)
-		}
-		open func subscripts() -> Array<SubscriptsContext> {
-			return getRuleContexts(SubscriptsContext.self)
-		}
-		open func subscripts(_ i: Int) -> SubscriptsContext? {
-			return getRuleContext(SubscriptsContext.self,i)
-		}
-		open func RPAREN() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.RPAREN.rawValue) }
-		open func RPAREN(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.RPAREN.rawValue, i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_iCS_S_MembersCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterICS_S_MembersCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterICS_S_MembersCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitICS_S_MembersCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitICS_S_MembersCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitICS_S_MembersCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitICS_S_MembersCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitICS_S_MembersCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitICS_S_MembersCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iCS_S_MembersCall() throws -> ICS_S_MembersCallContext {
+	 open func iCS_S_MembersCall() throws -> ICS_S_MembersCallContext {
 		var _localctx: ICS_S_MembersCallContext = ICS_S_MembersCallContext(_ctx, getState())
 		try enterRule(_localctx, 236, vbaParser.RULE_iCS_S_MembersCall)
 		var _la: Int = 0
@@ -16094,7 +18514,7 @@ open class vbaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2332); 
 		 		try _errHandler.sync(self)
@@ -16151,40 +18571,47 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ICS_S_MemberCallContext:ParserRuleContext {
-		open func iCS_S_VariableOrProcedureCall() -> ICS_S_VariableOrProcedureCallContext? {
-			return getRuleContext(ICS_S_VariableOrProcedureCallContext.self,0)
+
+	public class ICS_S_MemberCallContext: ParserRuleContext {
+			open
+			func iCS_S_VariableOrProcedureCall() -> ICS_S_VariableOrProcedureCallContext? {
+				return getRuleContext(ICS_S_VariableOrProcedureCallContext.self, 0)
+			}
+			open
+			func iCS_S_ProcedureOrArrayCall() -> ICS_S_ProcedureOrArrayCallContext? {
+				return getRuleContext(ICS_S_ProcedureOrArrayCallContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_iCS_S_MemberCall
 		}
-		open func iCS_S_ProcedureOrArrayCall() -> ICS_S_ProcedureOrArrayCallContext? {
-			return getRuleContext(ICS_S_ProcedureOrArrayCallContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_iCS_S_MemberCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterICS_S_MemberCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterICS_S_MemberCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitICS_S_MemberCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitICS_S_MemberCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitICS_S_MemberCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitICS_S_MemberCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitICS_S_MemberCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitICS_S_MemberCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iCS_S_MemberCall() throws -> ICS_S_MemberCallContext {
+	 open func iCS_S_MemberCall() throws -> ICS_S_MemberCallContext {
 		var _localctx: ICS_S_MemberCallContext = ICS_S_MemberCallContext(_ctx, getState())
 		try enterRule(_localctx, 238, vbaParser.RULE_iCS_S_MemberCall)
 		var _la: Int = 0
@@ -16231,37 +18658,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ICS_S_DictionaryCallContext:ParserRuleContext {
-		open func dictionaryCallStmt() -> DictionaryCallStmtContext? {
-			return getRuleContext(DictionaryCallStmtContext.self,0)
+
+	public class ICS_S_DictionaryCallContext: ParserRuleContext {
+			open
+			func dictionaryCallStmt() -> DictionaryCallStmtContext? {
+				return getRuleContext(DictionaryCallStmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_iCS_S_DictionaryCall
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_iCS_S_DictionaryCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterICS_S_DictionaryCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterICS_S_DictionaryCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitICS_S_DictionaryCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitICS_S_DictionaryCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitICS_S_DictionaryCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitICS_S_DictionaryCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitICS_S_DictionaryCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitICS_S_DictionaryCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iCS_S_DictionaryCall() throws -> ICS_S_DictionaryCallContext {
+	 open func iCS_S_DictionaryCall() throws -> ICS_S_DictionaryCallContext {
 		var _localctx: ICS_S_DictionaryCallContext = ICS_S_DictionaryCallContext(_ctx, getState())
 		try enterRule(_localctx, 240, vbaParser.RULE_iCS_S_DictionaryCall)
 		defer {
@@ -16281,44 +18714,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ArgsCallContext:ParserRuleContext {
-		open func argCall() -> Array<ArgCallContext> {
-			return getRuleContexts(ArgCallContext.self)
+
+	public class ArgsCallContext: ParserRuleContext {
+			open
+			func argCall() -> [ArgCallContext] {
+				return getRuleContexts(ArgCallContext.self)
+			}
+			open
+			func argCall(_ i: Int) -> ArgCallContext? {
+				return getRuleContext(ArgCallContext.self, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_argsCall
 		}
-		open func argCall(_ i: Int) -> ArgCallContext? {
-			return getRuleContext(ArgCallContext.self,i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_argsCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterArgsCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterArgsCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitArgsCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitArgsCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitArgsCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitArgsCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitArgsCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitArgsCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argsCall() throws -> ArgsCallContext {
+	 open func argsCall() throws -> ArgsCallContext {
 		var _localctx: ArgsCallContext = ArgsCallContext(_ctx, getState())
 		try enterRule(_localctx, 242, vbaParser.RULE_argsCall)
 		var _la: Int = 0
@@ -16474,43 +18918,67 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ArgCallContext:ParserRuleContext {
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class ArgCallContext: ParserRuleContext {
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func BYVAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BYVAL.rawValue, 0)
+			}
+			open
+			func BYREF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BYREF.rawValue, 0)
+			}
+			open
+			func PARAMARRAY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PARAMARRAY.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_argCall
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func BYVAL() -> TerminalNode? { return getToken(vbaParser.Tokens.BYVAL.rawValue, 0) }
-		open func BYREF() -> TerminalNode? { return getToken(vbaParser.Tokens.BYREF.rawValue, 0) }
-		open func PARAMARRAY() -> TerminalNode? { return getToken(vbaParser.Tokens.PARAMARRAY.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_argCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterArgCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterArgCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitArgCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitArgCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitArgCall(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitArgCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitArgCall(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitArgCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argCall() throws -> ArgCallContext {
+	 open func argCall() throws -> ArgCallContext {
 		var _localctx: ArgCallContext = ArgCallContext(_ctx, getState())
 		try enterRule(_localctx, 244, vbaParser.RULE_argCall)
 		var _la: Int = 0
@@ -16578,40 +19046,47 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class DictionaryCallStmtContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class DictionaryCallStmtContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_dictionaryCallStmt
 		}
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_dictionaryCallStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterDictionaryCallStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterDictionaryCallStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitDictionaryCallStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitDictionaryCallStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitDictionaryCallStmt(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitDictionaryCallStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitDictionaryCallStmt(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitDictionaryCallStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dictionaryCallStmt() throws -> DictionaryCallStmtContext {
+	 open func dictionaryCallStmt() throws -> DictionaryCallStmtContext {
 		var _localctx: DictionaryCallStmtContext = DictionaryCallStmtContext(_ctx, getState())
 		try enterRule(_localctx, 246, vbaParser.RULE_dictionaryCallStmt)
 		defer {
@@ -16643,46 +19118,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ArgListContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func arg() -> Array<ArgContext> {
-			return getRuleContexts(ArgContext.self)
+
+	public class ArgListContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func arg() -> [ArgContext] {
+				return getRuleContexts(ArgContext.self)
+			}
+			open
+			func arg(_ i: Int) -> ArgContext? {
+				return getRuleContext(ArgContext.self, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_argList
 		}
-		open func arg(_ i: Int) -> ArgContext? {
-			return getRuleContext(ArgContext.self,i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_argList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterArgList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterArgList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitArgList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitArgList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitArgList(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitArgList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitArgList(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitArgList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argList() throws -> ArgListContext {
+	 open func argList() throws -> ArgListContext {
 		var _localctx: ArgListContext = ArgListContext(_ctx, getState())
 		try enterRule(_localctx, 248, vbaParser.RULE_argList)
 		var _la: Int = 0
@@ -16784,56 +19276,87 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ArgContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class ArgContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func OPTIONAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OPTIONAL.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func PARAMARRAY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PARAMARRAY.rawValue, 0)
+			}
+			open
+			func typeHint() -> TypeHintContext? {
+				return getRuleContext(TypeHintContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func asTypeClause() -> AsTypeClauseContext? {
+				return getRuleContext(AsTypeClauseContext.self, 0)
+			}
+			open
+			func argDefaultValue() -> ArgDefaultValueContext? {
+				return getRuleContext(ArgDefaultValueContext.self, 0)
+			}
+			open
+			func BYVAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BYVAL.rawValue, 0)
+			}
+			open
+			func BYREF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BYREF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_arg
 		}
-		open func OPTIONAL() -> TerminalNode? { return getToken(vbaParser.Tokens.OPTIONAL.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func PARAMARRAY() -> TerminalNode? { return getToken(vbaParser.Tokens.PARAMARRAY.rawValue, 0) }
-		open func typeHint() -> TypeHintContext? {
-			return getRuleContext(TypeHintContext.self,0)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func asTypeClause() -> AsTypeClauseContext? {
-			return getRuleContext(AsTypeClauseContext.self,0)
-		}
-		open func argDefaultValue() -> ArgDefaultValueContext? {
-			return getRuleContext(ArgDefaultValueContext.self,0)
-		}
-		open func BYVAL() -> TerminalNode? { return getToken(vbaParser.Tokens.BYVAL.rawValue, 0) }
-		open func BYREF() -> TerminalNode? { return getToken(vbaParser.Tokens.BYREF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_arg }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterArg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterArg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitArg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitArg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitArg(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitArg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitArg(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitArg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arg() throws -> ArgContext {
+	 open func arg() throws -> ArgContext {
 		var _localctx: ArgContext = ArgContext(_ctx, getState())
 		try enterRule(_localctx, 250, vbaParser.RULE_arg)
 		var _la: Int = 0
@@ -17002,39 +19525,51 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ArgDefaultValueContext:ParserRuleContext {
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func valueStmt() -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,0)
+
+	public class ArgDefaultValueContext: ParserRuleContext {
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func valueStmt() -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_argDefaultValue
 		}
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_argDefaultValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterArgDefaultValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterArgDefaultValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitArgDefaultValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitArgDefaultValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitArgDefaultValue(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitArgDefaultValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitArgDefaultValue(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitArgDefaultValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argDefaultValue() throws -> ArgDefaultValueContext {
+	 open func argDefaultValue() throws -> ArgDefaultValueContext {
 		var _localctx: ArgDefaultValueContext = ArgDefaultValueContext(_ctx, getState())
 		try enterRule(_localctx, 252, vbaParser.RULE_argDefaultValue)
 		var _la: Int = 0
@@ -17070,44 +19605,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SubscriptsContext:ParserRuleContext {
-		open func subscript() -> Array<SubscriptContext> {
-			return getRuleContexts(SubscriptContext.self)
+
+	public class SubscriptsContext: ParserRuleContext {
+			open
+			func subscript() -> [SubscriptContext] {
+				return getRuleContexts(SubscriptContext.self)
+			}
+			open
+			func subscript(_ i: Int) -> SubscriptContext? {
+				return getRuleContext(SubscriptContext.self, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_subscripts
 		}
-		open func subscript(_ i: Int) -> SubscriptContext? {
-			return getRuleContext(SubscriptContext.self,i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_subscripts }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSubscripts(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSubscripts(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSubscripts(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSubscripts(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSubscripts(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSubscripts(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSubscripts(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSubscripts(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subscripts() throws -> SubscriptsContext {
+	 open func subscripts() throws -> SubscriptsContext {
 		var _localctx: SubscriptsContext = SubscriptsContext(_ctx, getState())
 		try enterRule(_localctx, 254, vbaParser.RULE_subscripts)
 		var _la: Int = 0
@@ -17171,45 +19717,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class SubscriptContext:ParserRuleContext {
-		open func valueStmt() -> Array<ValueStmtContext> {
-			return getRuleContexts(ValueStmtContext.self)
+
+	public class SubscriptContext: ParserRuleContext {
+			open
+			func valueStmt() -> [ValueStmtContext] {
+				return getRuleContexts(ValueStmtContext.self)
+			}
+			open
+			func valueStmt(_ i: Int) -> ValueStmtContext? {
+				return getRuleContext(ValueStmtContext.self, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TO.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_subscript
 		}
-		open func valueStmt(_ i: Int) -> ValueStmtContext? {
-			return getRuleContext(ValueStmtContext.self,i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func TO() -> TerminalNode? { return getToken(vbaParser.Tokens.TO.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_subscript }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterSubscript(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterSubscript(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitSubscript(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitSubscript(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitSubscript(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitSubscript(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitSubscript(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitSubscript(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subscript() throws -> SubscriptContext {
+	 open func subscript() throws -> SubscriptContext {
 		var _localctx: SubscriptContext = SubscriptContext(_ctx, getState())
 		try enterRule(_localctx, 256, vbaParser.RULE_subscript)
 		defer {
@@ -17245,44 +19805,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class AmbiguousIdentifierContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class AmbiguousIdentifierContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func ambiguousKeyword() -> [AmbiguousKeywordContext] {
+				return getRuleContexts(AmbiguousKeywordContext.self)
+			}
+			open
+			func ambiguousKeyword(_ i: Int) -> AmbiguousKeywordContext? {
+				return getRuleContext(AmbiguousKeywordContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_ambiguousIdentifier
 		}
-		open func ambiguousKeyword() -> Array<AmbiguousKeywordContext> {
-			return getRuleContexts(AmbiguousKeywordContext.self)
-		}
-		open func ambiguousKeyword(_ i: Int) -> AmbiguousKeywordContext? {
-			return getRuleContext(AmbiguousKeywordContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_ambiguousIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterAmbiguousIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterAmbiguousIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitAmbiguousIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitAmbiguousIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitAmbiguousIdentifier(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitAmbiguousIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitAmbiguousIdentifier(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitAmbiguousIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ambiguousIdentifier() throws -> AmbiguousIdentifierContext {
+	 open func ambiguousIdentifier() throws -> AmbiguousIdentifierContext {
 		var _localctx: AmbiguousIdentifierContext = AmbiguousIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 258, vbaParser.RULE_ambiguousIdentifier)
 		defer {
@@ -17454,12 +20025,12 @@ open class vbaParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(2500); 
 		 		try _errHandler.sync(self)
@@ -17475,46 +20046,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class AsTypeClauseContext:ParserRuleContext {
-		open func AS() -> TerminalNode? { return getToken(vbaParser.Tokens.AS.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class AsTypeClauseContext: ParserRuleContext {
+			open
+			func AS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.AS.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+			open
+			func NEW() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEW.rawValue, 0)
+			}
+			open
+			func fieldLength() -> FieldLengthContext? {
+				return getRuleContext(FieldLengthContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_asTypeClause
 		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open func NEW() -> TerminalNode? { return getToken(vbaParser.Tokens.NEW.rawValue, 0) }
-		open func fieldLength() -> FieldLengthContext? {
-			return getRuleContext(FieldLengthContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_asTypeClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterAsTypeClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterAsTypeClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitAsTypeClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitAsTypeClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitAsTypeClause(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitAsTypeClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitAsTypeClause(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitAsTypeClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func asTypeClause() throws -> AsTypeClauseContext {
+	 open func asTypeClause() throws -> AsTypeClauseContext {
 		var _localctx: AsTypeClauseContext = AsTypeClauseContext(_ctx, getState())
 		try enterRule(_localctx, 260, vbaParser.RULE_asTypeClause)
 		var _la: Int = 0
@@ -17585,44 +20173,79 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class BaseTypeContext:ParserRuleContext {
-		open func BOOLEAN() -> TerminalNode? { return getToken(vbaParser.Tokens.BOOLEAN.rawValue, 0) }
-		open func BYTE() -> TerminalNode? { return getToken(vbaParser.Tokens.BYTE.rawValue, 0) }
-		open func COLLECTION() -> TerminalNode? { return getToken(vbaParser.Tokens.COLLECTION.rawValue, 0) }
-		open func DATE() -> TerminalNode? { return getToken(vbaParser.Tokens.DATE.rawValue, 0) }
-		open func DOUBLE() -> TerminalNode? { return getToken(vbaParser.Tokens.DOUBLE.rawValue, 0) }
-		open func INTEGER() -> TerminalNode? { return getToken(vbaParser.Tokens.INTEGER.rawValue, 0) }
-		open func LONG() -> TerminalNode? { return getToken(vbaParser.Tokens.LONG.rawValue, 0) }
-		open func SINGLE() -> TerminalNode? { return getToken(vbaParser.Tokens.SINGLE.rawValue, 0) }
-		open func STRING() -> TerminalNode? { return getToken(vbaParser.Tokens.STRING.rawValue, 0) }
-		open func VARIANT() -> TerminalNode? { return getToken(vbaParser.Tokens.VARIANT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_baseType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterBaseType(self)
+
+	public class BaseTypeContext: ParserRuleContext {
+			open
+			func BOOLEAN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BOOLEAN.rawValue, 0)
+			}
+			open
+			func BYTE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BYTE.rawValue, 0)
+			}
+			open
+			func COLLECTION() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.COLLECTION.rawValue, 0)
+			}
+			open
+			func DATE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DATE.rawValue, 0)
+			}
+			open
+			func DOUBLE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DOUBLE.rawValue, 0)
+			}
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.INTEGER.rawValue, 0)
+			}
+			open
+			func LONG() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LONG.rawValue, 0)
+			}
+			open
+			func SINGLE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SINGLE.rawValue, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func VARIANT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.VARIANT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_baseType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterBaseType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitBaseType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitBaseType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitBaseType(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitBaseType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitBaseType(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitBaseType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func baseType() throws -> BaseTypeContext {
+	 open func baseType() throws -> BaseTypeContext {
 		var _localctx: BaseTypeContext = BaseTypeContext(_ctx, getState())
 		try enterRule(_localctx, 262, vbaParser.RULE_baseType)
 		var _la: Int = 0
@@ -17662,44 +20285,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class CertainIdentifierContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class CertainIdentifierContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func ambiguousKeyword() -> [AmbiguousKeywordContext] {
+				return getRuleContexts(AmbiguousKeywordContext.self)
+			}
+			open
+			func ambiguousKeyword(_ i: Int) -> AmbiguousKeywordContext? {
+				return getRuleContext(AmbiguousKeywordContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_certainIdentifier
 		}
-		open func ambiguousKeyword() -> Array<AmbiguousKeywordContext> {
-			return getRuleContexts(AmbiguousKeywordContext.self)
-		}
-		open func ambiguousKeyword(_ i: Int) -> AmbiguousKeywordContext? {
-			return getRuleContext(AmbiguousKeywordContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_certainIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterCertainIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterCertainIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitCertainIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitCertainIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitCertainIdentifier(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitCertainIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitCertainIdentifier(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitCertainIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func certainIdentifier() throws -> CertainIdentifierContext {
+	 open func certainIdentifier() throws -> CertainIdentifierContext {
 		var _localctx: CertainIdentifierContext = CertainIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 264, vbaParser.RULE_certainIdentifier)
 		defer {
@@ -17877,7 +20511,7 @@ open class vbaParser: Parser {
 
 		 					break
 		 				default:
-		 					throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 					throw ANTLRException.recognition(e: NoViableAltException(self))
 		 				}
 		 		 
 		 			}
@@ -18198,12 +20832,12 @@ open class vbaParser: Parser {
 
 		 					break
 		 				default:
-		 					throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 					throw ANTLRException.recognition(e: NoViableAltException(self))
 		 				}
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(2532); 
 		 			try _errHandler.sync(self)
@@ -18212,7 +20846,7 @@ open class vbaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -18223,42 +20857,71 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ComparisonOperatorContext:ParserRuleContext {
-		open func LT() -> TerminalNode? { return getToken(vbaParser.Tokens.LT.rawValue, 0) }
-		open func LEQ() -> TerminalNode? { return getToken(vbaParser.Tokens.LEQ.rawValue, 0) }
-		open func GT() -> TerminalNode? { return getToken(vbaParser.Tokens.GT.rawValue, 0) }
-		open func GEQ() -> TerminalNode? { return getToken(vbaParser.Tokens.GEQ.rawValue, 0) }
-		open func EQ() -> TerminalNode? { return getToken(vbaParser.Tokens.EQ.rawValue, 0) }
-		open func NEQ() -> TerminalNode? { return getToken(vbaParser.Tokens.NEQ.rawValue, 0) }
-		open func IS() -> TerminalNode? { return getToken(vbaParser.Tokens.IS.rawValue, 0) }
-		open func LIKE() -> TerminalNode? { return getToken(vbaParser.Tokens.LIKE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_comparisonOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterComparisonOperator(self)
+
+	public class ComparisonOperatorContext: ParserRuleContext {
+			open
+			func LT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LT.rawValue, 0)
+			}
+			open
+			func LEQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LEQ.rawValue, 0)
+			}
+			open
+			func GT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GT.rawValue, 0)
+			}
+			open
+			func GEQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GEQ.rawValue, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func NEQ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEQ.rawValue, 0)
+			}
+			open
+			func IS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IS.rawValue, 0)
+			}
+			open
+			func LIKE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LIKE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_comparisonOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterComparisonOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitComparisonOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitComparisonOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitComparisonOperator(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitComparisonOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitComparisonOperator(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitComparisonOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comparisonOperator() throws -> ComparisonOperatorContext {
+	 open func comparisonOperator() throws -> ComparisonOperatorContext {
 		var _localctx: ComparisonOperatorContext = ComparisonOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 266, vbaParser.RULE_comparisonOperator)
 		var _la: Int = 0
@@ -18294,40 +20957,47 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class ComplexTypeContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> Array<AmbiguousIdentifierContext> {
-			return getRuleContexts(AmbiguousIdentifierContext.self)
+
+	public class ComplexTypeContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> [AmbiguousIdentifierContext] {
+				return getRuleContexts(AmbiguousIdentifierContext.self)
+			}
+			open
+			func ambiguousIdentifier(_ i: Int) -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_complexType
 		}
-		open func ambiguousIdentifier(_ i: Int) -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_complexType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterComplexType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterComplexType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitComplexType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitComplexType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitComplexType(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitComplexType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitComplexType(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitComplexType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func complexType() throws -> ComplexTypeContext {
+	 open func complexType() throws -> ComplexTypeContext {
 		var _localctx: ComplexTypeContext = ComplexTypeContext(_ctx, getState())
 		try enterRule(_localctx, 268, vbaParser.RULE_complexType)
 		var _la: Int = 0
@@ -18376,40 +21046,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class FieldLengthContext:ParserRuleContext {
-		open func MULT() -> TerminalNode? { return getToken(vbaParser.Tokens.MULT.rawValue, 0) }
-		open func INTEGERLITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.INTEGERLITERAL.rawValue, 0) }
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class FieldLengthContext: ParserRuleContext {
+			open
+			func MULT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MULT.rawValue, 0)
+			}
+			open
+			func INTEGERLITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.INTEGERLITERAL.rawValue, 0)
+			}
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+			open
+			func WS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_fieldLength
 		}
-		open func WS() -> TerminalNode? { return getToken(vbaParser.Tokens.WS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_fieldLength }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterFieldLength(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterFieldLength(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitFieldLength(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitFieldLength(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitFieldLength(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitFieldLength(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitFieldLength(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitFieldLength(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldLength() throws -> FieldLengthContext {
+	 open func fieldLength() throws -> FieldLengthContext {
 		var _localctx: FieldLengthContext = FieldLengthContext(_ctx, getState())
 		try enterRule(_localctx, 270, vbaParser.RULE_fieldLength)
 		var _la: Int = 0
@@ -18591,7 +21276,7 @@ open class vbaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -18603,45 +21288,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class LetterrangeContext:ParserRuleContext {
-		open func certainIdentifier() -> Array<CertainIdentifierContext> {
-			return getRuleContexts(CertainIdentifierContext.self)
+
+	public class LetterrangeContext: ParserRuleContext {
+			open
+			func certainIdentifier() -> [CertainIdentifierContext] {
+				return getRuleContexts(CertainIdentifierContext.self)
+			}
+			open
+			func certainIdentifier(_ i: Int) -> CertainIdentifierContext? {
+				return getRuleContext(CertainIdentifierContext.self, i)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MINUS.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_letterrange
 		}
-		open func certainIdentifier(_ i: Int) -> CertainIdentifierContext? {
-			return getRuleContext(CertainIdentifierContext.self,i)
-		}
-		open func MINUS() -> TerminalNode? { return getToken(vbaParser.Tokens.MINUS.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_letterrange }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterLetterrange(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterLetterrange(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitLetterrange(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitLetterrange(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitLetterrange(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitLetterrange(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitLetterrange(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitLetterrange(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func letterrange() throws -> LetterrangeContext {
+	 open func letterrange() throws -> LetterrangeContext {
 		var _localctx: LetterrangeContext = LetterrangeContext(_ctx, getState())
 		try enterRule(_localctx, 272, vbaParser.RULE_letterrange)
 		var _la: Int = 0
@@ -18700,37 +21399,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class LineLabelContext:ParserRuleContext {
-		open func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
-			return getRuleContext(AmbiguousIdentifierContext.self,0)
+
+	public class LineLabelContext: ParserRuleContext {
+			open
+			func ambiguousIdentifier() -> AmbiguousIdentifierContext? {
+				return getRuleContext(AmbiguousIdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_lineLabel
 		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_lineLabel }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterLineLabel(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterLineLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitLineLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitLineLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitLineLabel(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitLineLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitLineLabel(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitLineLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lineLabel() throws -> LineLabelContext {
+	 open func lineLabel() throws -> LineLabelContext {
 		var _localctx: LineLabelContext = LineLabelContext(_ctx, getState())
 		try enterRule(_localctx, 274, vbaParser.RULE_lineLabel)
 		defer {
@@ -18752,45 +21457,83 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func HEXLITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.HEXLITERAL.rawValue, 0) }
-		open func OCTLITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.OCTLITERAL.rawValue, 0) }
-		open func DATELITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.DATELITERAL.rawValue, 0) }
-		open func DOUBLELITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.DOUBLELITERAL.rawValue, 0) }
-		open func INTEGERLITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.INTEGERLITERAL.rawValue, 0) }
-		open func SHORTLITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.SHORTLITERAL.rawValue, 0) }
-		open func STRINGLITERAL() -> TerminalNode? { return getToken(vbaParser.Tokens.STRINGLITERAL.rawValue, 0) }
-		open func TRUE() -> TerminalNode? { return getToken(vbaParser.Tokens.TRUE.rawValue, 0) }
-		open func FALSE() -> TerminalNode? { return getToken(vbaParser.Tokens.FALSE.rawValue, 0) }
-		open func NOTHING() -> TerminalNode? { return getToken(vbaParser.Tokens.NOTHING.rawValue, 0) }
-		open func NULL() -> TerminalNode? { return getToken(vbaParser.Tokens.NULL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterLiteral(self)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func HEXLITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.HEXLITERAL.rawValue, 0)
+			}
+			open
+			func OCTLITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OCTLITERAL.rawValue, 0)
+			}
+			open
+			func DATELITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DATELITERAL.rawValue, 0)
+			}
+			open
+			func DOUBLELITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DOUBLELITERAL.rawValue, 0)
+			}
+			open
+			func INTEGERLITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.INTEGERLITERAL.rawValue, 0)
+			}
+			open
+			func SHORTLITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SHORTLITERAL.rawValue, 0)
+			}
+			open
+			func STRINGLITERAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STRINGLITERAL.rawValue, 0)
+			}
+			open
+			func TRUE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TRUE.rawValue, 0)
+			}
+			open
+			func FALSE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FALSE.rawValue, 0)
+			}
+			open
+			func NOTHING() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NOTHING.rawValue, 0)
+			}
+			open
+			func NULL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NULL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitLiteral(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 276, vbaParser.RULE_literal)
 		var _la: Int = 0
@@ -18829,46 +21572,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func baseType() -> BaseTypeContext? {
-			return getRuleContext(BaseTypeContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func baseType() -> BaseTypeContext? {
+				return getRuleContext(BaseTypeContext.self, 0)
+			}
+			open
+			func complexType() -> ComplexTypeContext? {
+				return getRuleContext(ComplexTypeContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_type
 		}
-		open func complexType() -> ComplexTypeContext? {
-			return getRuleContext(ComplexTypeContext.self,0)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(vbaParser.Tokens.RPAREN.rawValue, 0) }
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitType(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 278, vbaParser.RULE_type)
 		var _la: Int = 0
@@ -18940,34 +21700,39 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeHintContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_typeHint }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterTypeHint(self)
+
+	public class TypeHintContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_typeHint
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterTypeHint(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitTypeHint(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitTypeHint(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitTypeHint(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitTypeHint(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitTypeHint(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitTypeHint(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeHint() throws -> TypeHintContext {
+	 open func typeHint() throws -> TypeHintContext {
 		var _localctx: TypeHintContext = TypeHintContext(_ctx, getState())
 		try enterRule(_localctx, 280, vbaParser.RULE_typeHint)
 		var _la: Int = 0
@@ -19003,38 +21768,55 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class VisibilityContext:ParserRuleContext {
-		open func PRIVATE() -> TerminalNode? { return getToken(vbaParser.Tokens.PRIVATE.rawValue, 0) }
-		open func PUBLIC() -> TerminalNode? { return getToken(vbaParser.Tokens.PUBLIC.rawValue, 0) }
-		open func FRIEND() -> TerminalNode? { return getToken(vbaParser.Tokens.FRIEND.rawValue, 0) }
-		open func GLOBAL() -> TerminalNode? { return getToken(vbaParser.Tokens.GLOBAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_visibility }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterVisibility(self)
+
+	public class VisibilityContext: ParserRuleContext {
+			open
+			func PRIVATE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PRIVATE.rawValue, 0)
+			}
+			open
+			func PUBLIC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PUBLIC.rawValue, 0)
+			}
+			open
+			func FRIEND() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FRIEND.rawValue, 0)
+			}
+			open
+			func GLOBAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GLOBAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_visibility
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterVisibility(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitVisibility(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitVisibility(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitVisibility(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitVisibility(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitVisibility(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitVisibility(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func visibility() throws -> VisibilityContext {
+	 open func visibility() throws -> VisibilityContext {
 		var _localctx: VisibilityContext = VisibilityContext(_ctx, getState())
 		try enterRule(_localctx, 282, vbaParser.RULE_visibility)
 		var _la: Int = 0
@@ -19069,178 +21851,615 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class AmbiguousKeywordContext:ParserRuleContext {
-		open func ACCESS() -> TerminalNode? { return getToken(vbaParser.Tokens.ACCESS.rawValue, 0) }
-		open func ADDRESSOF() -> TerminalNode? { return getToken(vbaParser.Tokens.ADDRESSOF.rawValue, 0) }
-		open func ALIAS() -> TerminalNode? { return getToken(vbaParser.Tokens.ALIAS.rawValue, 0) }
-		open func AND() -> TerminalNode? { return getToken(vbaParser.Tokens.AND.rawValue, 0) }
-		open func ATTRIBUTE() -> TerminalNode? { return getToken(vbaParser.Tokens.ATTRIBUTE.rawValue, 0) }
-		open func APPACTIVATE() -> TerminalNode? { return getToken(vbaParser.Tokens.APPACTIVATE.rawValue, 0) }
-		open func APPEND() -> TerminalNode? { return getToken(vbaParser.Tokens.APPEND.rawValue, 0) }
-		open func AS() -> TerminalNode? { return getToken(vbaParser.Tokens.AS.rawValue, 0) }
-		open func BEEP() -> TerminalNode? { return getToken(vbaParser.Tokens.BEEP.rawValue, 0) }
-		open func BEGIN() -> TerminalNode? { return getToken(vbaParser.Tokens.BEGIN.rawValue, 0) }
-		open func BINARY() -> TerminalNode? { return getToken(vbaParser.Tokens.BINARY.rawValue, 0) }
-		open func BOOLEAN() -> TerminalNode? { return getToken(vbaParser.Tokens.BOOLEAN.rawValue, 0) }
-		open func BYVAL() -> TerminalNode? { return getToken(vbaParser.Tokens.BYVAL.rawValue, 0) }
-		open func BYREF() -> TerminalNode? { return getToken(vbaParser.Tokens.BYREF.rawValue, 0) }
-		open func BYTE() -> TerminalNode? { return getToken(vbaParser.Tokens.BYTE.rawValue, 0) }
-		open func CALL() -> TerminalNode? { return getToken(vbaParser.Tokens.CALL.rawValue, 0) }
-		open func CASE() -> TerminalNode? { return getToken(vbaParser.Tokens.CASE.rawValue, 0) }
-		open func CLASS() -> TerminalNode? { return getToken(vbaParser.Tokens.CLASS.rawValue, 0) }
-		open func CLOSE() -> TerminalNode? { return getToken(vbaParser.Tokens.CLOSE.rawValue, 0) }
-		open func CHDIR() -> TerminalNode? { return getToken(vbaParser.Tokens.CHDIR.rawValue, 0) }
-		open func CHDRIVE() -> TerminalNode? { return getToken(vbaParser.Tokens.CHDRIVE.rawValue, 0) }
-		open func COLLECTION() -> TerminalNode? { return getToken(vbaParser.Tokens.COLLECTION.rawValue, 0) }
-		open func CONST() -> TerminalNode? { return getToken(vbaParser.Tokens.CONST.rawValue, 0) }
-		open func DATABASE() -> TerminalNode? { return getToken(vbaParser.Tokens.DATABASE.rawValue, 0) }
-		open func DATE() -> TerminalNode? { return getToken(vbaParser.Tokens.DATE.rawValue, 0) }
-		open func DECLARE() -> TerminalNode? { return getToken(vbaParser.Tokens.DECLARE.rawValue, 0) }
-		open func DEFBOOL() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFBOOL.rawValue, 0) }
-		open func DEFBYTE() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFBYTE.rawValue, 0) }
-		open func DEFCUR() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFCUR.rawValue, 0) }
-		open func DEFDBL() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFDBL.rawValue, 0) }
-		open func DEFDATE() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFDATE.rawValue, 0) }
-		open func DEFDEC() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFDEC.rawValue, 0) }
-		open func DEFINT() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFINT.rawValue, 0) }
-		open func DEFLNG() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFLNG.rawValue, 0) }
-		open func DEFOBJ() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFOBJ.rawValue, 0) }
-		open func DEFSNG() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFSNG.rawValue, 0) }
-		open func DEFSTR() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFSTR.rawValue, 0) }
-		open func DEFVAR() -> TerminalNode? { return getToken(vbaParser.Tokens.DEFVAR.rawValue, 0) }
-		open func DELETESETTING() -> TerminalNode? { return getToken(vbaParser.Tokens.DELETESETTING.rawValue, 0) }
-		open func DIM() -> TerminalNode? { return getToken(vbaParser.Tokens.DIM.rawValue, 0) }
-		open func DO() -> TerminalNode? { return getToken(vbaParser.Tokens.DO.rawValue, 0) }
-		open func DOUBLE() -> TerminalNode? { return getToken(vbaParser.Tokens.DOUBLE.rawValue, 0) }
-		open func EACH() -> TerminalNode? { return getToken(vbaParser.Tokens.EACH.rawValue, 0) }
-		open func ELSE() -> TerminalNode? { return getToken(vbaParser.Tokens.ELSE.rawValue, 0) }
-		open func ELSEIF() -> TerminalNode? { return getToken(vbaParser.Tokens.ELSEIF.rawValue, 0) }
-		open func END() -> TerminalNode? { return getToken(vbaParser.Tokens.END.rawValue, 0) }
-		open func ENUM() -> TerminalNode? { return getToken(vbaParser.Tokens.ENUM.rawValue, 0) }
-		open func EQV() -> TerminalNode? { return getToken(vbaParser.Tokens.EQV.rawValue, 0) }
-		open func ERASE() -> TerminalNode? { return getToken(vbaParser.Tokens.ERASE.rawValue, 0) }
-		open func ERROR() -> TerminalNode? { return getToken(vbaParser.Tokens.ERROR.rawValue, 0) }
-		open func EVENT() -> TerminalNode? { return getToken(vbaParser.Tokens.EVENT.rawValue, 0) }
-		open func FALSE() -> TerminalNode? { return getToken(vbaParser.Tokens.FALSE.rawValue, 0) }
-		open func FILECOPY() -> TerminalNode? { return getToken(vbaParser.Tokens.FILECOPY.rawValue, 0) }
-		open func FRIEND() -> TerminalNode? { return getToken(vbaParser.Tokens.FRIEND.rawValue, 0) }
-		open func FOR() -> TerminalNode? { return getToken(vbaParser.Tokens.FOR.rawValue, 0) }
-		open func FUNCTION() -> TerminalNode? { return getToken(vbaParser.Tokens.FUNCTION.rawValue, 0) }
-		open func GET() -> TerminalNode? { return getToken(vbaParser.Tokens.GET.rawValue, 0) }
-		open func GLOBAL() -> TerminalNode? { return getToken(vbaParser.Tokens.GLOBAL.rawValue, 0) }
-		open func GOSUB() -> TerminalNode? { return getToken(vbaParser.Tokens.GOSUB.rawValue, 0) }
-		open func GOTO() -> TerminalNode? { return getToken(vbaParser.Tokens.GOTO.rawValue, 0) }
-		open func IF() -> TerminalNode? { return getToken(vbaParser.Tokens.IF.rawValue, 0) }
-		open func IMP() -> TerminalNode? { return getToken(vbaParser.Tokens.IMP.rawValue, 0) }
-		open func IMPLEMENTS() -> TerminalNode? { return getToken(vbaParser.Tokens.IMPLEMENTS.rawValue, 0) }
-		open func IN() -> TerminalNode? { return getToken(vbaParser.Tokens.IN.rawValue, 0) }
-		open func INPUT() -> TerminalNode? { return getToken(vbaParser.Tokens.INPUT.rawValue, 0) }
-		open func IS() -> TerminalNode? { return getToken(vbaParser.Tokens.IS.rawValue, 0) }
-		open func INTEGER() -> TerminalNode? { return getToken(vbaParser.Tokens.INTEGER.rawValue, 0) }
-		open func KILL() -> TerminalNode? { return getToken(vbaParser.Tokens.KILL.rawValue, 0) }
-		open func LOAD() -> TerminalNode? { return getToken(vbaParser.Tokens.LOAD.rawValue, 0) }
-		open func LOCK() -> TerminalNode? { return getToken(vbaParser.Tokens.LOCK.rawValue, 0) }
-		open func LONG() -> TerminalNode? { return getToken(vbaParser.Tokens.LONG.rawValue, 0) }
-		open func LOOP() -> TerminalNode? { return getToken(vbaParser.Tokens.LOOP.rawValue, 0) }
-		open func LEN() -> TerminalNode? { return getToken(vbaParser.Tokens.LEN.rawValue, 0) }
-		open func LET() -> TerminalNode? { return getToken(vbaParser.Tokens.LET.rawValue, 0) }
-		open func LIB() -> TerminalNode? { return getToken(vbaParser.Tokens.LIB.rawValue, 0) }
-		open func LIKE() -> TerminalNode? { return getToken(vbaParser.Tokens.LIKE.rawValue, 0) }
-		open func LSET() -> TerminalNode? { return getToken(vbaParser.Tokens.LSET.rawValue, 0) }
-		open func ME() -> TerminalNode? { return getToken(vbaParser.Tokens.ME.rawValue, 0) }
-		open func MID() -> TerminalNode? { return getToken(vbaParser.Tokens.MID.rawValue, 0) }
-		open func MKDIR() -> TerminalNode? { return getToken(vbaParser.Tokens.MKDIR.rawValue, 0) }
-		open func MOD() -> TerminalNode? { return getToken(vbaParser.Tokens.MOD.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(vbaParser.Tokens.NAME.rawValue, 0) }
-		open func NEXT() -> TerminalNode? { return getToken(vbaParser.Tokens.NEXT.rawValue, 0) }
-		open func NEW() -> TerminalNode? { return getToken(vbaParser.Tokens.NEW.rawValue, 0) }
-		open func NOT() -> TerminalNode? { return getToken(vbaParser.Tokens.NOT.rawValue, 0) }
-		open func NOTHING() -> TerminalNode? { return getToken(vbaParser.Tokens.NOTHING.rawValue, 0) }
-		open func NULL() -> TerminalNode? { return getToken(vbaParser.Tokens.NULL.rawValue, 0) }
-		open func ON() -> TerminalNode? { return getToken(vbaParser.Tokens.ON.rawValue, 0) }
-		open func OPEN() -> TerminalNode? { return getToken(vbaParser.Tokens.OPEN.rawValue, 0) }
-		open func OPTIONAL() -> TerminalNode? { return getToken(vbaParser.Tokens.OPTIONAL.rawValue, 0) }
-		open func OR() -> TerminalNode? { return getToken(vbaParser.Tokens.OR.rawValue, 0) }
-		open func OUTPUT() -> TerminalNode? { return getToken(vbaParser.Tokens.OUTPUT.rawValue, 0) }
-		open func PARAMARRAY() -> TerminalNode? { return getToken(vbaParser.Tokens.PARAMARRAY.rawValue, 0) }
-		open func PRESERVE() -> TerminalNode? { return getToken(vbaParser.Tokens.PRESERVE.rawValue, 0) }
-		open func PRINT() -> TerminalNode? { return getToken(vbaParser.Tokens.PRINT.rawValue, 0) }
-		open func PRIVATE() -> TerminalNode? { return getToken(vbaParser.Tokens.PRIVATE.rawValue, 0) }
-		open func PUBLIC() -> TerminalNode? { return getToken(vbaParser.Tokens.PUBLIC.rawValue, 0) }
-		open func PUT() -> TerminalNode? { return getToken(vbaParser.Tokens.PUT.rawValue, 0) }
-		open func RANDOM() -> TerminalNode? { return getToken(vbaParser.Tokens.RANDOM.rawValue, 0) }
-		open func RANDOMIZE() -> TerminalNode? { return getToken(vbaParser.Tokens.RANDOMIZE.rawValue, 0) }
-		open func RAISEEVENT() -> TerminalNode? { return getToken(vbaParser.Tokens.RAISEEVENT.rawValue, 0) }
-		open func READ() -> TerminalNode? { return getToken(vbaParser.Tokens.READ.rawValue, 0) }
-		open func REDIM() -> TerminalNode? { return getToken(vbaParser.Tokens.REDIM.rawValue, 0) }
-		open func REM() -> TerminalNode? { return getToken(vbaParser.Tokens.REM.rawValue, 0) }
-		open func RESET() -> TerminalNode? { return getToken(vbaParser.Tokens.RESET.rawValue, 0) }
-		open func RESUME() -> TerminalNode? { return getToken(vbaParser.Tokens.RESUME.rawValue, 0) }
-		open func RETURN() -> TerminalNode? { return getToken(vbaParser.Tokens.RETURN.rawValue, 0) }
-		open func RMDIR() -> TerminalNode? { return getToken(vbaParser.Tokens.RMDIR.rawValue, 0) }
-		open func RSET() -> TerminalNode? { return getToken(vbaParser.Tokens.RSET.rawValue, 0) }
-		open func SAVEPICTURE() -> TerminalNode? { return getToken(vbaParser.Tokens.SAVEPICTURE.rawValue, 0) }
-		open func SAVESETTING() -> TerminalNode? { return getToken(vbaParser.Tokens.SAVESETTING.rawValue, 0) }
-		open func SEEK() -> TerminalNode? { return getToken(vbaParser.Tokens.SEEK.rawValue, 0) }
-		open func SELECT() -> TerminalNode? { return getToken(vbaParser.Tokens.SELECT.rawValue, 0) }
-		open func SENDKEYS() -> TerminalNode? { return getToken(vbaParser.Tokens.SENDKEYS.rawValue, 0) }
-		open func SET() -> TerminalNode? { return getToken(vbaParser.Tokens.SET.rawValue, 0) }
-		open func SETATTR() -> TerminalNode? { return getToken(vbaParser.Tokens.SETATTR.rawValue, 0) }
-		open func SHARED() -> TerminalNode? { return getToken(vbaParser.Tokens.SHARED.rawValue, 0) }
-		open func SINGLE() -> TerminalNode? { return getToken(vbaParser.Tokens.SINGLE.rawValue, 0) }
-		open func SPC() -> TerminalNode? { return getToken(vbaParser.Tokens.SPC.rawValue, 0) }
-		open func STATIC() -> TerminalNode? { return getToken(vbaParser.Tokens.STATIC.rawValue, 0) }
-		open func STEP() -> TerminalNode? { return getToken(vbaParser.Tokens.STEP.rawValue, 0) }
-		open func STOP() -> TerminalNode? { return getToken(vbaParser.Tokens.STOP.rawValue, 0) }
-		open func STRING() -> TerminalNode? { return getToken(vbaParser.Tokens.STRING.rawValue, 0) }
-		open func SUB() -> TerminalNode? { return getToken(vbaParser.Tokens.SUB.rawValue, 0) }
-		open func TAB() -> TerminalNode? { return getToken(vbaParser.Tokens.TAB.rawValue, 0) }
-		open func TEXT() -> TerminalNode? { return getToken(vbaParser.Tokens.TEXT.rawValue, 0) }
-		open func THEN() -> TerminalNode? { return getToken(vbaParser.Tokens.THEN.rawValue, 0) }
-		open func TIME() -> TerminalNode? { return getToken(vbaParser.Tokens.TIME.rawValue, 0) }
-		open func TO() -> TerminalNode? { return getToken(vbaParser.Tokens.TO.rawValue, 0) }
-		open func TRUE() -> TerminalNode? { return getToken(vbaParser.Tokens.TRUE.rawValue, 0) }
-		open func TYPE() -> TerminalNode? { return getToken(vbaParser.Tokens.TYPE.rawValue, 0) }
-		open func TYPEOF() -> TerminalNode? { return getToken(vbaParser.Tokens.TYPEOF.rawValue, 0) }
-		open func UNLOAD() -> TerminalNode? { return getToken(vbaParser.Tokens.UNLOAD.rawValue, 0) }
-		open func UNLOCK() -> TerminalNode? { return getToken(vbaParser.Tokens.UNLOCK.rawValue, 0) }
-		open func UNTIL() -> TerminalNode? { return getToken(vbaParser.Tokens.UNTIL.rawValue, 0) }
-		open func VARIANT() -> TerminalNode? { return getToken(vbaParser.Tokens.VARIANT.rawValue, 0) }
-		open func VERSION() -> TerminalNode? { return getToken(vbaParser.Tokens.VERSION.rawValue, 0) }
-		open func WEND() -> TerminalNode? { return getToken(vbaParser.Tokens.WEND.rawValue, 0) }
-		open func WHILE() -> TerminalNode? { return getToken(vbaParser.Tokens.WHILE.rawValue, 0) }
-		open func WIDTH() -> TerminalNode? { return getToken(vbaParser.Tokens.WIDTH.rawValue, 0) }
-		open func WITH() -> TerminalNode? { return getToken(vbaParser.Tokens.WITH.rawValue, 0) }
-		open func WITHEVENTS() -> TerminalNode? { return getToken(vbaParser.Tokens.WITHEVENTS.rawValue, 0) }
-		open func WRITE() -> TerminalNode? { return getToken(vbaParser.Tokens.WRITE.rawValue, 0) }
-		open func XOR() -> TerminalNode? { return getToken(vbaParser.Tokens.XOR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_ambiguousKeyword }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterAmbiguousKeyword(self)
+
+	public class AmbiguousKeywordContext: ParserRuleContext {
+			open
+			func ACCESS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ACCESS.rawValue, 0)
+			}
+			open
+			func ADDRESSOF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ADDRESSOF.rawValue, 0)
+			}
+			open
+			func ALIAS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ALIAS.rawValue, 0)
+			}
+			open
+			func AND() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.AND.rawValue, 0)
+			}
+			open
+			func ATTRIBUTE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ATTRIBUTE.rawValue, 0)
+			}
+			open
+			func APPACTIVATE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.APPACTIVATE.rawValue, 0)
+			}
+			open
+			func APPEND() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.APPEND.rawValue, 0)
+			}
+			open
+			func AS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.AS.rawValue, 0)
+			}
+			open
+			func BEEP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BEEP.rawValue, 0)
+			}
+			open
+			func BEGIN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BEGIN.rawValue, 0)
+			}
+			open
+			func BINARY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BINARY.rawValue, 0)
+			}
+			open
+			func BOOLEAN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BOOLEAN.rawValue, 0)
+			}
+			open
+			func BYVAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BYVAL.rawValue, 0)
+			}
+			open
+			func BYREF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BYREF.rawValue, 0)
+			}
+			open
+			func BYTE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.BYTE.rawValue, 0)
+			}
+			open
+			func CALL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CALL.rawValue, 0)
+			}
+			open
+			func CASE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CASE.rawValue, 0)
+			}
+			open
+			func CLASS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CLASS.rawValue, 0)
+			}
+			open
+			func CLOSE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CLOSE.rawValue, 0)
+			}
+			open
+			func CHDIR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CHDIR.rawValue, 0)
+			}
+			open
+			func CHDRIVE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CHDRIVE.rawValue, 0)
+			}
+			open
+			func COLLECTION() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.COLLECTION.rawValue, 0)
+			}
+			open
+			func CONST() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.CONST.rawValue, 0)
+			}
+			open
+			func DATABASE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DATABASE.rawValue, 0)
+			}
+			open
+			func DATE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DATE.rawValue, 0)
+			}
+			open
+			func DECLARE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DECLARE.rawValue, 0)
+			}
+			open
+			func DEFBOOL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFBOOL.rawValue, 0)
+			}
+			open
+			func DEFBYTE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFBYTE.rawValue, 0)
+			}
+			open
+			func DEFCUR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFCUR.rawValue, 0)
+			}
+			open
+			func DEFDBL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFDBL.rawValue, 0)
+			}
+			open
+			func DEFDATE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFDATE.rawValue, 0)
+			}
+			open
+			func DEFDEC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFDEC.rawValue, 0)
+			}
+			open
+			func DEFINT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFINT.rawValue, 0)
+			}
+			open
+			func DEFLNG() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFLNG.rawValue, 0)
+			}
+			open
+			func DEFOBJ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFOBJ.rawValue, 0)
+			}
+			open
+			func DEFSNG() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFSNG.rawValue, 0)
+			}
+			open
+			func DEFSTR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFSTR.rawValue, 0)
+			}
+			open
+			func DEFVAR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DEFVAR.rawValue, 0)
+			}
+			open
+			func DELETESETTING() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DELETESETTING.rawValue, 0)
+			}
+			open
+			func DIM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DIM.rawValue, 0)
+			}
+			open
+			func DO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DO.rawValue, 0)
+			}
+			open
+			func DOUBLE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.DOUBLE.rawValue, 0)
+			}
+			open
+			func EACH() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EACH.rawValue, 0)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ELSE.rawValue, 0)
+			}
+			open
+			func ELSEIF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ELSEIF.rawValue, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func ENUM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ENUM.rawValue, 0)
+			}
+			open
+			func EQV() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EQV.rawValue, 0)
+			}
+			open
+			func ERASE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ERASE.rawValue, 0)
+			}
+			open
+			func ERROR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ERROR.rawValue, 0)
+			}
+			open
+			func EVENT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.EVENT.rawValue, 0)
+			}
+			open
+			func FALSE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FALSE.rawValue, 0)
+			}
+			open
+			func FILECOPY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FILECOPY.rawValue, 0)
+			}
+			open
+			func FRIEND() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FRIEND.rawValue, 0)
+			}
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func FUNCTION() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.FUNCTION.rawValue, 0)
+			}
+			open
+			func GET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GET.rawValue, 0)
+			}
+			open
+			func GLOBAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GLOBAL.rawValue, 0)
+			}
+			open
+			func GOSUB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GOSUB.rawValue, 0)
+			}
+			open
+			func GOTO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.GOTO.rawValue, 0)
+			}
+			open
+			func IF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IF.rawValue, 0)
+			}
+			open
+			func IMP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IMP.rawValue, 0)
+			}
+			open
+			func IMPLEMENTS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IMPLEMENTS.rawValue, 0)
+			}
+			open
+			func IN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IN.rawValue, 0)
+			}
+			open
+			func INPUT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.INPUT.rawValue, 0)
+			}
+			open
+			func IS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.IS.rawValue, 0)
+			}
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.INTEGER.rawValue, 0)
+			}
+			open
+			func KILL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.KILL.rawValue, 0)
+			}
+			open
+			func LOAD() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LOAD.rawValue, 0)
+			}
+			open
+			func LOCK() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LOCK.rawValue, 0)
+			}
+			open
+			func LONG() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LONG.rawValue, 0)
+			}
+			open
+			func LOOP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LOOP.rawValue, 0)
+			}
+			open
+			func LEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LEN.rawValue, 0)
+			}
+			open
+			func LET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LET.rawValue, 0)
+			}
+			open
+			func LIB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LIB.rawValue, 0)
+			}
+			open
+			func LIKE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LIKE.rawValue, 0)
+			}
+			open
+			func LSET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.LSET.rawValue, 0)
+			}
+			open
+			func ME() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ME.rawValue, 0)
+			}
+			open
+			func MID() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MID.rawValue, 0)
+			}
+			open
+			func MKDIR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MKDIR.rawValue, 0)
+			}
+			open
+			func MOD() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.MOD.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func NEXT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEXT.rawValue, 0)
+			}
+			open
+			func NEW() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEW.rawValue, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func NOTHING() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NOTHING.rawValue, 0)
+			}
+			open
+			func NULL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NULL.rawValue, 0)
+			}
+			open
+			func ON() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func OPEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OPEN.rawValue, 0)
+			}
+			open
+			func OPTIONAL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OPTIONAL.rawValue, 0)
+			}
+			open
+			func OR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OR.rawValue, 0)
+			}
+			open
+			func OUTPUT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.OUTPUT.rawValue, 0)
+			}
+			open
+			func PARAMARRAY() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PARAMARRAY.rawValue, 0)
+			}
+			open
+			func PRESERVE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PRESERVE.rawValue, 0)
+			}
+			open
+			func PRINT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PRINT.rawValue, 0)
+			}
+			open
+			func PRIVATE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PRIVATE.rawValue, 0)
+			}
+			open
+			func PUBLIC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PUBLIC.rawValue, 0)
+			}
+			open
+			func PUT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.PUT.rawValue, 0)
+			}
+			open
+			func RANDOM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RANDOM.rawValue, 0)
+			}
+			open
+			func RANDOMIZE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RANDOMIZE.rawValue, 0)
+			}
+			open
+			func RAISEEVENT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RAISEEVENT.rawValue, 0)
+			}
+			open
+			func READ() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.READ.rawValue, 0)
+			}
+			open
+			func REDIM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.REDIM.rawValue, 0)
+			}
+			open
+			func REM() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.REM.rawValue, 0)
+			}
+			open
+			func RESET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RESET.rawValue, 0)
+			}
+			open
+			func RESUME() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RESUME.rawValue, 0)
+			}
+			open
+			func RETURN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RETURN.rawValue, 0)
+			}
+			open
+			func RMDIR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RMDIR.rawValue, 0)
+			}
+			open
+			func RSET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.RSET.rawValue, 0)
+			}
+			open
+			func SAVEPICTURE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SAVEPICTURE.rawValue, 0)
+			}
+			open
+			func SAVESETTING() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SAVESETTING.rawValue, 0)
+			}
+			open
+			func SEEK() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SEEK.rawValue, 0)
+			}
+			open
+			func SELECT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SELECT.rawValue, 0)
+			}
+			open
+			func SENDKEYS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SENDKEYS.rawValue, 0)
+			}
+			open
+			func SET() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SET.rawValue, 0)
+			}
+			open
+			func SETATTR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SETATTR.rawValue, 0)
+			}
+			open
+			func SHARED() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SHARED.rawValue, 0)
+			}
+			open
+			func SINGLE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SINGLE.rawValue, 0)
+			}
+			open
+			func SPC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SPC.rawValue, 0)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STATIC.rawValue, 0)
+			}
+			open
+			func STEP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STEP.rawValue, 0)
+			}
+			open
+			func STOP() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STOP.rawValue, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func SUB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.SUB.rawValue, 0)
+			}
+			open
+			func TAB() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TAB.rawValue, 0)
+			}
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TEXT.rawValue, 0)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.THEN.rawValue, 0)
+			}
+			open
+			func TIME() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TIME.rawValue, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func TRUE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TRUE.rawValue, 0)
+			}
+			open
+			func TYPE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TYPE.rawValue, 0)
+			}
+			open
+			func TYPEOF() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.TYPEOF.rawValue, 0)
+			}
+			open
+			func UNLOAD() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.UNLOAD.rawValue, 0)
+			}
+			open
+			func UNLOCK() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.UNLOCK.rawValue, 0)
+			}
+			open
+			func UNTIL() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.UNTIL.rawValue, 0)
+			}
+			open
+			func VARIANT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.VARIANT.rawValue, 0)
+			}
+			open
+			func VERSION() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.VERSION.rawValue, 0)
+			}
+			open
+			func WEND() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WEND.rawValue, 0)
+			}
+			open
+			func WHILE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WHILE.rawValue, 0)
+			}
+			open
+			func WIDTH() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WIDTH.rawValue, 0)
+			}
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func WITHEVENTS() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WITHEVENTS.rawValue, 0)
+			}
+			open
+			func WRITE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WRITE.rawValue, 0)
+			}
+			open
+			func XOR() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.XOR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_ambiguousKeyword
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterAmbiguousKeyword(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitAmbiguousKeyword(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitAmbiguousKeyword(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitAmbiguousKeyword(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitAmbiguousKeyword(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitAmbiguousKeyword(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitAmbiguousKeyword(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ambiguousKeyword() throws -> AmbiguousKeywordContext {
+	 open func ambiguousKeyword() throws -> AmbiguousKeywordContext {
 		var _localctx: AmbiguousKeywordContext = AmbiguousKeywordContext(_ctx, getState())
 		try enterRule(_localctx, 284, vbaParser.RULE_ambiguousKeyword)
 		var _la: Int = 0
@@ -19283,35 +22502,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class RemCommentContext:ParserRuleContext {
-		open func REMCOMMENT() -> TerminalNode? { return getToken(vbaParser.Tokens.REMCOMMENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_remComment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterRemComment(self)
+
+	public class RemCommentContext: ParserRuleContext {
+			open
+			func REMCOMMENT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.REMCOMMENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_remComment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterRemComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitRemComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitRemComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitRemComment(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitRemComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitRemComment(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitRemComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func remComment() throws -> RemCommentContext {
+	 open func remComment() throws -> RemCommentContext {
 		var _localctx: RemCommentContext = RemCommentContext(_ctx, getState())
 		try enterRule(_localctx, 286, vbaParser.RULE_remComment)
 		defer {
@@ -19331,35 +22558,43 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func COMMENT() -> TerminalNode? { return getToken(vbaParser.Tokens.COMMENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterComment(self)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.COMMENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_comment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitComment(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 288, vbaParser.RULE_comment)
 		defer {
@@ -19379,45 +22614,59 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class EndOfLineContext:ParserRuleContext {
-		open func NEWLINE() -> TerminalNode? { return getToken(vbaParser.Tokens.NEWLINE.rawValue, 0) }
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
+
+	public class EndOfLineContext: ParserRuleContext {
+			open
+			func NEWLINE() -> TerminalNode? {
+				return getToken(vbaParser.Tokens.NEWLINE.rawValue, 0)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+			open
+			func remComment() -> RemCommentContext? {
+				return getRuleContext(RemCommentContext.self, 0)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_endOfLine
 		}
-		open func remComment() -> RemCommentContext? {
-			return getRuleContext(RemCommentContext.self,0)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_endOfLine }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterEndOfLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterEndOfLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitEndOfLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitEndOfLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitEndOfLine(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitEndOfLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitEndOfLine(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitEndOfLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func endOfLine() throws -> EndOfLineContext {
+	 open func endOfLine() throws -> EndOfLineContext {
 		var _localctx: EndOfLineContext = EndOfLineContext(_ctx, getState())
 		try enterRule(_localctx, 290, vbaParser.RULE_endOfLine)
 		var _la: Int = 0
@@ -19460,7 +22709,7 @@ open class vbaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(2603)
 		 	try _errHandler.sync(self)
@@ -19482,48 +22731,63 @@ open class vbaParser: Parser {
 
 		return _localctx
 	}
-	open class EndOfStatementContext:ParserRuleContext {
-		open func endOfLine() -> Array<EndOfLineContext> {
-			return getRuleContexts(EndOfLineContext.self)
+
+	public class EndOfStatementContext: ParserRuleContext {
+			open
+			func endOfLine() -> [EndOfLineContext] {
+				return getRuleContexts(EndOfLineContext.self)
+			}
+			open
+			func endOfLine(_ i: Int) -> EndOfLineContext? {
+				return getRuleContext(EndOfLineContext.self, i)
+			}
+			open
+			func COLON() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.COLON.rawValue)
+			}
+			open
+			func COLON(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.COLON.rawValue, i)
+			}
+			open
+			func WS() -> [TerminalNode] {
+				return getTokens(vbaParser.Tokens.WS.rawValue)
+			}
+			open
+			func WS(_ i:Int) -> TerminalNode? {
+				return getToken(vbaParser.Tokens.WS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return vbaParser.RULE_endOfStatement
 		}
-		open func endOfLine(_ i: Int) -> EndOfLineContext? {
-			return getRuleContext(EndOfLineContext.self,i)
-		}
-		open func COLON() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.COLON.rawValue) }
-		open func COLON(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.COLON.rawValue, i)
-		}
-		open func WS() -> Array<TerminalNode> { return getTokens(vbaParser.Tokens.WS.rawValue) }
-		open func WS(_ i:Int) -> TerminalNode?{
-			return getToken(vbaParser.Tokens.WS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return vbaParser.RULE_endOfStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).enterEndOfStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.enterEndOfStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is vbaListener {
-			 	(listener as! vbaListener).exitEndOfStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? vbaListener {
+				listener.exitEndOfStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is vbaVisitor {
-			     return (visitor as! vbaVisitor<T>).visitEndOfStatement(self)
-			}else if visitor is vbaBaseVisitor {
-		    	 return (visitor as! vbaBaseVisitor<T>).visitEndOfStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? vbaVisitor {
+			    return visitor.visitEndOfStatement(self)
+			}
+			else if let visitor = visitor as? vbaBaseVisitor {
+			    return visitor.visitEndOfStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func endOfStatement() throws -> EndOfStatementContext {
+	 open func endOfStatement() throws -> EndOfStatementContext {
 		var _localctx: EndOfStatementContext = EndOfStatementContext(_ctx, getState())
 		try enterRule(_localctx, 292, vbaParser.RULE_endOfStatement)
 		var _la: Int = 0
@@ -19593,8 +22857,8 @@ open class vbaParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  100:
 			return try valueStmt_sempred(_localctx?.castdown(ValueStmtContext.self), predIndex)
@@ -19627,6 +22891,10 @@ open class vbaParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = vbaParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = vbaParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

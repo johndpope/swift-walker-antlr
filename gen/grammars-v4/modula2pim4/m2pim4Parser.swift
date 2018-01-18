@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/modula2pim4/m2pim4.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/modula2pim4/m2pim4.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class m2pim4Parser: Parser {
@@ -11,8 +11,11 @@ open class m2pim4Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -29,33 +32,36 @@ open class m2pim4Parser: Parser {
                  REAL = 70, STRING = 71, DIGIT = 72, OCTAL_DIGIT = 73, HEX_DIGIT = 74, 
                  SCALE_FACTOR = 75, COMMENT = 76, WS = 77
 	}
-	public static let RULE_ident = 0, RULE_number = 1, RULE_integer = 2, RULE_real = 3, 
-                   RULE_scaleFactor = 4, RULE_hexDigit = 5, RULE_digit = 6, 
-                   RULE_octalDigit = 7, RULE_string = 8, RULE_qualident = 9, 
-                   RULE_constantDeclaration = 10, RULE_constExpression = 11, 
-                   RULE_relation = 12, RULE_simpleConstExpr = 13, RULE_addOperator = 14, 
-                   RULE_constTerm = 15, RULE_mulOperator = 16, RULE_constFactor = 17, 
-                   RULE_setOrQualident = 18, RULE_set = 19, RULE_element = 20, 
-                   RULE_typeDeclaration = 21, RULE_type = 22, RULE_simpleType = 23, 
-                   RULE_enumeration = 24, RULE_identList = 25, RULE_subrangeType = 26, 
-                   RULE_arrayType = 27, RULE_recordType = 28, RULE_fieldListSequence = 29, 
-                   RULE_fieldList = 30, RULE_variant = 31, RULE_caseLabelList = 32, 
-                   RULE_caseLabels = 33, RULE_setType = 34, RULE_pointerType = 35, 
-                   RULE_procedureType = 36, RULE_formalTypeList = 37, RULE_variableDeclaration = 38, 
-                   RULE_designator = 39, RULE_designatorTail = 40, RULE_expList = 41, 
-                   RULE_expression = 42, RULE_simpleExpression = 43, RULE_term = 44, 
-                   RULE_factor = 45, RULE_setOrDesignatorOrProcCall = 46, 
-                   RULE_actualParameters = 47, RULE_statement = 48, RULE_assignmentOrProcCall = 49, 
-                   RULE_statementSequence = 50, RULE_ifStatement = 51, RULE_caseStatement = 52, 
-                   RULE_ccase = 53, RULE_whileStatement = 54, RULE_repeatStatement = 55, 
-                   RULE_forStatement = 56, RULE_loopStatement = 57, RULE_withStatement = 58, 
-                   RULE_procedureDeclaration = 59, RULE_procedureHeading = 60, 
-                   RULE_block = 61, RULE_declaration = 62, RULE_formalParameters = 63, 
-                   RULE_fpSection = 64, RULE_formalType = 65, RULE_moduleDeclaration = 66, 
-                   RULE_priority = 67, RULE_exportList = 68, RULE_importList = 69, 
-                   RULE_definitionModule = 70, RULE_definition = 71, RULE_programModule = 72, 
-                   RULE_compilationUnit = 73
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_ident = 0, RULE_number = 1, RULE_integer = 2, RULE_real = 3, 
+            RULE_scaleFactor = 4, RULE_hexDigit = 5, RULE_digit = 6, RULE_octalDigit = 7, 
+            RULE_string = 8, RULE_qualident = 9, RULE_constantDeclaration = 10, 
+            RULE_constExpression = 11, RULE_relation = 12, RULE_simpleConstExpr = 13, 
+            RULE_addOperator = 14, RULE_constTerm = 15, RULE_mulOperator = 16, 
+            RULE_constFactor = 17, RULE_setOrQualident = 18, RULE_set = 19, 
+            RULE_element = 20, RULE_typeDeclaration = 21, RULE_type = 22, 
+            RULE_simpleType = 23, RULE_enumeration = 24, RULE_identList = 25, 
+            RULE_subrangeType = 26, RULE_arrayType = 27, RULE_recordType = 28, 
+            RULE_fieldListSequence = 29, RULE_fieldList = 30, RULE_variant = 31, 
+            RULE_caseLabelList = 32, RULE_caseLabels = 33, RULE_setType = 34, 
+            RULE_pointerType = 35, RULE_procedureType = 36, RULE_formalTypeList = 37, 
+            RULE_variableDeclaration = 38, RULE_designator = 39, RULE_designatorTail = 40, 
+            RULE_expList = 41, RULE_expression = 42, RULE_simpleExpression = 43, 
+            RULE_term = 44, RULE_factor = 45, RULE_setOrDesignatorOrProcCall = 46, 
+            RULE_actualParameters = 47, RULE_statement = 48, RULE_assignmentOrProcCall = 49, 
+            RULE_statementSequence = 50, RULE_ifStatement = 51, RULE_caseStatement = 52, 
+            RULE_ccase = 53, RULE_whileStatement = 54, RULE_repeatStatement = 55, 
+            RULE_forStatement = 56, RULE_loopStatement = 57, RULE_withStatement = 58, 
+            RULE_procedureDeclaration = 59, RULE_procedureHeading = 60, 
+            RULE_block = 61, RULE_declaration = 62, RULE_formalParameters = 63, 
+            RULE_fpSection = 64, RULE_formalType = 65, RULE_moduleDeclaration = 66, 
+            RULE_priority = 67, RULE_exportList = 68, RULE_importList = 69, 
+            RULE_definitionModule = 70, RULE_definition = 71, RULE_programModule = 72, 
+            RULE_compilationUnit = 73
+
+	public
+	static let ruleNames: [String] = [
 		"ident", "number", "integer", "real", "scaleFactor", "hexDigit", "digit", 
 		"octalDigit", "string", "qualident", "constantDeclaration", "constExpression", 
 		"relation", "simpleConstExpr", "addOperator", "constTerm", "mulOperator", 
@@ -95,83 +101,69 @@ open class m2pim4Parser: Parser {
 		"STRING", "DIGIT", "OCTAL_DIGIT", "HEX_DIGIT", "SCALE_FACTOR", "COMMENT", 
 		"WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "m2pim4.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return m2pim4Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "m2pim4.g4" }
+	override open
+	func getSerializedATN() -> String { return m2pim4Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return m2pim4Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return m2pim4Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return m2pim4Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return m2pim4Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return m2pim4Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,m2pim4Parser._ATN,m2pim4Parser._decisionToDFA, m2pim4Parser._sharedContextCache)
 	}
-	open class IdentContext:ParserRuleContext {
-		open func IDENT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.IDENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_ident }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterIdent(self)
+
+	public class IdentContext: ParserRuleContext {
+			open
+			func IDENT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.IDENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_ident
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterIdent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitIdent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitIdent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitIdent(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitIdent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitIdent(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitIdent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ident() throws -> IdentContext {
+	 open func ident() throws -> IdentContext {
 		var _localctx: IdentContext = IdentContext(_ctx, getState())
 		try enterRule(_localctx, 0, m2pim4Parser.RULE_ident)
 		defer {
@@ -191,36 +183,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class NumberContext:ParserRuleContext {
-		open func INTEGER() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.INTEGER.rawValue, 0) }
-		open func REAL() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.REAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterNumber(self)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.INTEGER.rawValue, 0)
+			}
+			open
+			func REAL() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.REAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_number
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitNumber(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 2, m2pim4Parser.RULE_number)
 		var _la: Int = 0
@@ -252,35 +255,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class IntegerContext:ParserRuleContext {
-		open func INTEGER() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.INTEGER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_integer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterInteger(self)
+
+	public class IntegerContext: ParserRuleContext {
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.INTEGER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_integer
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterInteger(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitInteger(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitInteger(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitInteger(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitInteger(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitInteger(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitInteger(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integer() throws -> IntegerContext {
+	 open func integer() throws -> IntegerContext {
 		var _localctx: IntegerContext = IntegerContext(_ctx, getState())
 		try enterRule(_localctx, 4, m2pim4Parser.RULE_integer)
 		defer {
@@ -300,35 +311,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class RealContext:ParserRuleContext {
-		open func REAL() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.REAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_real }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterReal(self)
+
+	public class RealContext: ParserRuleContext {
+			open
+			func REAL() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.REAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_real
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterReal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitReal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitReal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitReal(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitReal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitReal(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitReal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func real() throws -> RealContext {
+	 open func real() throws -> RealContext {
 		var _localctx: RealContext = RealContext(_ctx, getState())
 		try enterRule(_localctx, 6, m2pim4Parser.RULE_real)
 		defer {
@@ -348,35 +367,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ScaleFactorContext:ParserRuleContext {
-		open func SCALE_FACTOR() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.SCALE_FACTOR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_scaleFactor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterScaleFactor(self)
+
+	public class ScaleFactorContext: ParserRuleContext {
+			open
+			func SCALE_FACTOR() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.SCALE_FACTOR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_scaleFactor
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterScaleFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitScaleFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitScaleFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitScaleFactor(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitScaleFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitScaleFactor(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitScaleFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func scaleFactor() throws -> ScaleFactorContext {
+	 open func scaleFactor() throws -> ScaleFactorContext {
 		var _localctx: ScaleFactorContext = ScaleFactorContext(_ctx, getState())
 		try enterRule(_localctx, 8, m2pim4Parser.RULE_scaleFactor)
 		defer {
@@ -396,35 +423,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class HexDigitContext:ParserRuleContext {
-		open func HEX_DIGIT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.HEX_DIGIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_hexDigit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterHexDigit(self)
+
+	public class HexDigitContext: ParserRuleContext {
+			open
+			func HEX_DIGIT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.HEX_DIGIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_hexDigit
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterHexDigit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitHexDigit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitHexDigit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitHexDigit(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitHexDigit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitHexDigit(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitHexDigit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hexDigit() throws -> HexDigitContext {
+	 open func hexDigit() throws -> HexDigitContext {
 		var _localctx: HexDigitContext = HexDigitContext(_ctx, getState())
 		try enterRule(_localctx, 10, m2pim4Parser.RULE_hexDigit)
 		defer {
@@ -444,35 +479,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class DigitContext:ParserRuleContext {
-		open func DIGIT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.DIGIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_digit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterDigit(self)
+
+	public class DigitContext: ParserRuleContext {
+			open
+			func DIGIT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.DIGIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_digit
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterDigit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitDigit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitDigit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitDigit(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitDigit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitDigit(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitDigit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func digit() throws -> DigitContext {
+	 open func digit() throws -> DigitContext {
 		var _localctx: DigitContext = DigitContext(_ctx, getState())
 		try enterRule(_localctx, 12, m2pim4Parser.RULE_digit)
 		defer {
@@ -492,35 +535,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class OctalDigitContext:ParserRuleContext {
-		open func OCTAL_DIGIT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.OCTAL_DIGIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_octalDigit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterOctalDigit(self)
+
+	public class OctalDigitContext: ParserRuleContext {
+			open
+			func OCTAL_DIGIT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.OCTAL_DIGIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_octalDigit
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterOctalDigit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitOctalDigit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitOctalDigit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitOctalDigit(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitOctalDigit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitOctalDigit(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitOctalDigit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func octalDigit() throws -> OctalDigitContext {
+	 open func octalDigit() throws -> OctalDigitContext {
 		var _localctx: OctalDigitContext = OctalDigitContext(_ctx, getState())
 		try enterRule(_localctx, 14, m2pim4Parser.RULE_octalDigit)
 		defer {
@@ -540,35 +591,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class StringContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_string }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterString(self)
+
+	public class StringContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_string
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitString(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitString(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string() throws -> StringContext {
+	 open func string() throws -> StringContext {
 		var _localctx: StringContext = StringContext(_ctx, getState())
 		try enterRule(_localctx, 16, m2pim4Parser.RULE_string)
 		defer {
@@ -588,40 +647,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class QualidentContext:ParserRuleContext {
-		open func ident() -> Array<IdentContext> {
-			return getRuleContexts(IdentContext.self)
+
+	public class QualidentContext: ParserRuleContext {
+			open
+			func ident() -> [IdentContext] {
+				return getRuleContexts(IdentContext.self)
+			}
+			open
+			func ident(_ i: Int) -> IdentContext? {
+				return getRuleContext(IdentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_qualident
 		}
-		open func ident(_ i: Int) -> IdentContext? {
-			return getRuleContext(IdentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_qualident }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterQualident(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterQualident(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitQualident(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitQualident(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitQualident(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitQualident(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitQualident(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitQualident(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qualident() throws -> QualidentContext {
+	 open func qualident() throws -> QualidentContext {
 		var _localctx: QualidentContext = QualidentContext(_ctx, getState())
 		try enterRule(_localctx, 18, m2pim4Parser.RULE_qualident)
 		var _la: Int = 0
@@ -660,40 +726,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ConstantDeclarationContext:ParserRuleContext {
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
+
+	public class ConstantDeclarationContext: ParserRuleContext {
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+			open
+			func constExpression() -> ConstExpressionContext? {
+				return getRuleContext(ConstExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_constantDeclaration
 		}
-		open func constExpression() -> ConstExpressionContext? {
-			return getRuleContext(ConstExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_constantDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterConstantDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterConstantDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitConstantDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitConstantDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitConstantDeclaration(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitConstantDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitConstantDeclaration(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitConstantDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constantDeclaration() throws -> ConstantDeclarationContext {
+	 open func constantDeclaration() throws -> ConstantDeclarationContext {
 		var _localctx: ConstantDeclarationContext = ConstantDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 20, m2pim4Parser.RULE_constantDeclaration)
 		defer {
@@ -717,43 +790,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ConstExpressionContext:ParserRuleContext {
-		open func simpleConstExpr() -> Array<SimpleConstExprContext> {
-			return getRuleContexts(SimpleConstExprContext.self)
+
+	public class ConstExpressionContext: ParserRuleContext {
+			open
+			func simpleConstExpr() -> [SimpleConstExprContext] {
+				return getRuleContexts(SimpleConstExprContext.self)
+			}
+			open
+			func simpleConstExpr(_ i: Int) -> SimpleConstExprContext? {
+				return getRuleContext(SimpleConstExprContext.self, i)
+			}
+			open
+			func relation() -> RelationContext? {
+				return getRuleContext(RelationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_constExpression
 		}
-		open func simpleConstExpr(_ i: Int) -> SimpleConstExprContext? {
-			return getRuleContext(SimpleConstExprContext.self,i)
-		}
-		open func relation() -> RelationContext? {
-			return getRuleContext(RelationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_constExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterConstExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterConstExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitConstExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitConstExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitConstExpression(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitConstExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitConstExpression(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitConstExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constExpression() throws -> ConstExpressionContext {
+	 open func constExpression() throws -> ConstExpressionContext {
 		var _localctx: ConstExpressionContext = ConstExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 22, m2pim4Parser.RULE_constExpression)
 		var _la: Int = 0
@@ -792,34 +873,39 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class RelationContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_relation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterRelation(self)
+
+	public class RelationContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_relation
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterRelation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitRelation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitRelation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitRelation(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitRelation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitRelation(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitRelation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func relation() throws -> RelationContext {
+	 open func relation() throws -> RelationContext {
 		var _localctx: RelationContext = RelationContext(_ctx, getState())
 		try enterRule(_localctx, 24, m2pim4Parser.RULE_relation)
 		defer {
@@ -886,7 +972,7 @@ open class m2pim4Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -897,46 +983,55 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class SimpleConstExprContext:ParserRuleContext {
-		open func constTerm() -> Array<ConstTermContext> {
-			return getRuleContexts(ConstTermContext.self)
+
+	public class SimpleConstExprContext: ParserRuleContext {
+			open
+			func constTerm() -> [ConstTermContext] {
+				return getRuleContexts(ConstTermContext.self)
+			}
+			open
+			func constTerm(_ i: Int) -> ConstTermContext? {
+				return getRuleContext(ConstTermContext.self, i)
+			}
+			open
+			func addOperator() -> [AddOperatorContext] {
+				return getRuleContexts(AddOperatorContext.self)
+			}
+			open
+			func addOperator(_ i: Int) -> AddOperatorContext? {
+				return getRuleContext(AddOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_simpleConstExpr
 		}
-		open func constTerm(_ i: Int) -> ConstTermContext? {
-			return getRuleContext(ConstTermContext.self,i)
-		}
-		open func addOperator() -> Array<AddOperatorContext> {
-			return getRuleContexts(AddOperatorContext.self)
-		}
-		open func addOperator(_ i: Int) -> AddOperatorContext? {
-			return getRuleContext(AddOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_simpleConstExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterSimpleConstExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterSimpleConstExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitSimpleConstExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitSimpleConstExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitSimpleConstExpr(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitSimpleConstExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitSimpleConstExpr(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitSimpleConstExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleConstExpr() throws -> SimpleConstExprContext {
+	 open func simpleConstExpr() throws -> SimpleConstExprContext {
 		var _localctx: SimpleConstExprContext = SimpleConstExprContext(_ctx, getState())
 		try enterRule(_localctx, 26, m2pim4Parser.RULE_simpleConstExpr)
 		var _la: Int = 0
@@ -1005,35 +1100,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class AddOperatorContext:ParserRuleContext {
-		open func OR() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.OR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_addOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterAddOperator(self)
+
+	public class AddOperatorContext: ParserRuleContext {
+			open
+			func OR() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.OR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_addOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterAddOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitAddOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitAddOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitAddOperator(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitAddOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitAddOperator(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitAddOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func addOperator() throws -> AddOperatorContext {
+	 open func addOperator() throws -> AddOperatorContext {
 		var _localctx: AddOperatorContext = AddOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 28, m2pim4Parser.RULE_addOperator)
 		var _la: Int = 0
@@ -1068,46 +1171,55 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ConstTermContext:ParserRuleContext {
-		open func constFactor() -> Array<ConstFactorContext> {
-			return getRuleContexts(ConstFactorContext.self)
+
+	public class ConstTermContext: ParserRuleContext {
+			open
+			func constFactor() -> [ConstFactorContext] {
+				return getRuleContexts(ConstFactorContext.self)
+			}
+			open
+			func constFactor(_ i: Int) -> ConstFactorContext? {
+				return getRuleContext(ConstFactorContext.self, i)
+			}
+			open
+			func mulOperator() -> [MulOperatorContext] {
+				return getRuleContexts(MulOperatorContext.self)
+			}
+			open
+			func mulOperator(_ i: Int) -> MulOperatorContext? {
+				return getRuleContext(MulOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_constTerm
 		}
-		open func constFactor(_ i: Int) -> ConstFactorContext? {
-			return getRuleContext(ConstFactorContext.self,i)
-		}
-		open func mulOperator() -> Array<MulOperatorContext> {
-			return getRuleContexts(MulOperatorContext.self)
-		}
-		open func mulOperator(_ i: Int) -> MulOperatorContext? {
-			return getRuleContext(MulOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_constTerm }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterConstTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterConstTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitConstTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitConstTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitConstTerm(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitConstTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitConstTerm(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitConstTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constTerm() throws -> ConstTermContext {
+	 open func constTerm() throws -> ConstTermContext {
 		var _localctx: ConstTermContext = ConstTermContext(_ctx, getState())
 		try enterRule(_localctx, 30, m2pim4Parser.RULE_constTerm)
 		var _la: Int = 0
@@ -1149,37 +1261,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class MulOperatorContext:ParserRuleContext {
-		open func DIV() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.DIV.rawValue, 0) }
-		open func MOD() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.MOD.rawValue, 0) }
-		open func AND() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.AND.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_mulOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterMulOperator(self)
+
+	public class MulOperatorContext: ParserRuleContext {
+			open
+			func DIV() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.DIV.rawValue, 0)
+			}
+			open
+			func MOD() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.MOD.rawValue, 0)
+			}
+			open
+			func AND() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.AND.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_mulOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterMulOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitMulOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitMulOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitMulOperator(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitMulOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitMulOperator(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitMulOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mulOperator() throws -> MulOperatorContext {
+	 open func mulOperator() throws -> MulOperatorContext {
 		var _localctx: MulOperatorContext = MulOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 32, m2pim4Parser.RULE_mulOperator)
 		var _la: Int = 0
@@ -1214,50 +1340,63 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ConstFactorContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class ConstFactorContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func setOrQualident() -> SetOrQualidentContext? {
+				return getRuleContext(SetOrQualidentContext.self, 0)
+			}
+			open
+			func constExpression() -> ConstExpressionContext? {
+				return getRuleContext(ConstExpressionContext.self, 0)
+			}
+			open
+			func constFactor() -> ConstFactorContext? {
+				return getRuleContext(ConstFactorContext.self, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.NOT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_constFactor
 		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func setOrQualident() -> SetOrQualidentContext? {
-			return getRuleContext(SetOrQualidentContext.self,0)
-		}
-		open func constExpression() -> ConstExpressionContext? {
-			return getRuleContext(ConstExpressionContext.self,0)
-		}
-		open func constFactor() -> ConstFactorContext? {
-			return getRuleContext(ConstFactorContext.self,0)
-		}
-		open func NOT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.NOT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_constFactor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterConstFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterConstFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitConstFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitConstFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitConstFactor(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitConstFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitConstFactor(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitConstFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constFactor() throws -> ConstFactorContext {
+	 open func constFactor() throws -> ConstFactorContext {
 		var _localctx: ConstFactorContext = ConstFactorContext(_ctx, getState())
 		try enterRule(_localctx, 34, m2pim4Parser.RULE_constFactor)
 		defer {
@@ -1318,14 +1457,14 @@ open class m2pim4Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(234)
 		 		try constFactor()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1336,40 +1475,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class SetOrQualidentContext:ParserRuleContext {
-		open func set() -> SetContext? {
-			return getRuleContext(SetContext.self,0)
+
+	public class SetOrQualidentContext: ParserRuleContext {
+			open
+			func set() -> SetContext? {
+				return getRuleContext(SetContext.self, 0)
+			}
+			open
+			func qualident() -> QualidentContext? {
+				return getRuleContext(QualidentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_setOrQualident
 		}
-		open func qualident() -> QualidentContext? {
-			return getRuleContext(QualidentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_setOrQualident }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterSetOrQualident(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterSetOrQualident(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitSetOrQualident(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitSetOrQualident(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitSetOrQualident(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitSetOrQualident(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitSetOrQualident(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitSetOrQualident(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setOrQualident() throws -> SetOrQualidentContext {
+	 open func setOrQualident() throws -> SetOrQualidentContext {
 		var _localctx: SetOrQualidentContext = SetOrQualidentContext(_ctx, getState())
 		try enterRule(_localctx, 36, m2pim4Parser.RULE_setOrQualident)
 		var _la: Int = 0
@@ -1407,7 +1553,7 @@ open class m2pim4Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1418,40 +1564,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class SetContext:ParserRuleContext {
-		open func element() -> Array<ElementContext> {
-			return getRuleContexts(ElementContext.self)
+
+	public class SetContext: ParserRuleContext {
+			open
+			func element() -> [ElementContext] {
+				return getRuleContexts(ElementContext.self)
+			}
+			open
+			func element(_ i: Int) -> ElementContext? {
+				return getRuleContext(ElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_set
 		}
-		open func element(_ i: Int) -> ElementContext? {
-			return getRuleContext(ElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_set }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterSet(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterSet(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitSet(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitSet(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitSet(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitSet(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitSet(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitSet(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func set() throws -> SetContext {
+	 open func set() throws -> SetContext {
 		var _localctx: SetContext = SetContext(_ctx, getState())
 		try enterRule(_localctx, 38, m2pim4Parser.RULE_set)
 		var _la: Int = 0
@@ -1508,40 +1661,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ElementContext:ParserRuleContext {
-		open func constExpression() -> Array<ConstExpressionContext> {
-			return getRuleContexts(ConstExpressionContext.self)
+
+	public class ElementContext: ParserRuleContext {
+			open
+			func constExpression() -> [ConstExpressionContext] {
+				return getRuleContexts(ConstExpressionContext.self)
+			}
+			open
+			func constExpression(_ i: Int) -> ConstExpressionContext? {
+				return getRuleContext(ConstExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_element
 		}
-		open func constExpression(_ i: Int) -> ConstExpressionContext? {
-			return getRuleContext(ConstExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_element }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitElement(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitElement(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func element() throws -> ElementContext {
+	 open func element() throws -> ElementContext {
 		var _localctx: ElementContext = ElementContext(_ctx, getState())
 		try enterRule(_localctx, 40, m2pim4Parser.RULE_element)
 		var _la: Int = 0
@@ -1577,40 +1737,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class TypeDeclarationContext:ParserRuleContext {
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
+
+	public class TypeDeclarationContext: ParserRuleContext {
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_typeDeclaration
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_typeDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterTypeDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterTypeDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitTypeDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitTypeDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitTypeDeclaration(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitTypeDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitTypeDeclaration(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitTypeDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeDeclaration() throws -> TypeDeclarationContext {
+	 open func typeDeclaration() throws -> TypeDeclarationContext {
 		var _localctx: TypeDeclarationContext = TypeDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 42, m2pim4Parser.RULE_typeDeclaration)
 		defer {
@@ -1634,52 +1801,63 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func simpleType() -> SimpleTypeContext? {
-			return getRuleContext(SimpleTypeContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func simpleType() -> SimpleTypeContext? {
+				return getRuleContext(SimpleTypeContext.self, 0)
+			}
+			open
+			func arrayType() -> ArrayTypeContext? {
+				return getRuleContext(ArrayTypeContext.self, 0)
+			}
+			open
+			func recordType() -> RecordTypeContext? {
+				return getRuleContext(RecordTypeContext.self, 0)
+			}
+			open
+			func setType() -> SetTypeContext? {
+				return getRuleContext(SetTypeContext.self, 0)
+			}
+			open
+			func pointerType() -> PointerTypeContext? {
+				return getRuleContext(PointerTypeContext.self, 0)
+			}
+			open
+			func procedureType() -> ProcedureTypeContext? {
+				return getRuleContext(ProcedureTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_type
 		}
-		open func arrayType() -> ArrayTypeContext? {
-			return getRuleContext(ArrayTypeContext.self,0)
-		}
-		open func recordType() -> RecordTypeContext? {
-			return getRuleContext(RecordTypeContext.self,0)
-		}
-		open func setType() -> SetTypeContext? {
-			return getRuleContext(SetTypeContext.self,0)
-		}
-		open func pointerType() -> PointerTypeContext? {
-			return getRuleContext(PointerTypeContext.self,0)
-		}
-		open func procedureType() -> ProcedureTypeContext? {
-			return getRuleContext(ProcedureTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitType(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 44, m2pim4Parser.RULE_type)
 		defer {
@@ -1733,7 +1911,7 @@ open class m2pim4Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1744,43 +1922,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class SimpleTypeContext:ParserRuleContext {
-		open func qualident() -> QualidentContext? {
-			return getRuleContext(QualidentContext.self,0)
+
+	public class SimpleTypeContext: ParserRuleContext {
+			open
+			func qualident() -> QualidentContext? {
+				return getRuleContext(QualidentContext.self, 0)
+			}
+			open
+			func enumeration() -> EnumerationContext? {
+				return getRuleContext(EnumerationContext.self, 0)
+			}
+			open
+			func subrangeType() -> SubrangeTypeContext? {
+				return getRuleContext(SubrangeTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_simpleType
 		}
-		open func enumeration() -> EnumerationContext? {
-			return getRuleContext(EnumerationContext.self,0)
-		}
-		open func subrangeType() -> SubrangeTypeContext? {
-			return getRuleContext(SubrangeTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_simpleType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterSimpleType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterSimpleType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitSimpleType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitSimpleType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitSimpleType(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitSimpleType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitSimpleType(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitSimpleType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleType() throws -> SimpleTypeContext {
+	 open func simpleType() throws -> SimpleTypeContext {
 		var _localctx: SimpleTypeContext = SimpleTypeContext(_ctx, getState())
 		try enterRule(_localctx, 46, m2pim4Parser.RULE_simpleType)
 		defer {
@@ -1811,7 +1997,7 @@ open class m2pim4Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1822,37 +2008,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumerationContext:ParserRuleContext {
-		open func identList() -> IdentListContext? {
-			return getRuleContext(IdentListContext.self,0)
+
+	public class EnumerationContext: ParserRuleContext {
+			open
+			func identList() -> IdentListContext? {
+				return getRuleContext(IdentListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_enumeration
 		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_enumeration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterEnumeration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterEnumeration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitEnumeration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitEnumeration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitEnumeration(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitEnumeration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitEnumeration(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitEnumeration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumeration() throws -> EnumerationContext {
+	 open func enumeration() throws -> EnumerationContext {
 		var _localctx: EnumerationContext = EnumerationContext(_ctx, getState())
 		try enterRule(_localctx, 48, m2pim4Parser.RULE_enumeration)
 		defer {
@@ -1876,40 +2068,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class IdentListContext:ParserRuleContext {
-		open func ident() -> Array<IdentContext> {
-			return getRuleContexts(IdentContext.self)
+
+	public class IdentListContext: ParserRuleContext {
+			open
+			func ident() -> [IdentContext] {
+				return getRuleContexts(IdentContext.self)
+			}
+			open
+			func ident(_ i: Int) -> IdentContext? {
+				return getRuleContext(IdentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_identList
 		}
-		open func ident(_ i: Int) -> IdentContext? {
-			return getRuleContext(IdentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_identList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterIdentList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterIdentList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitIdentList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitIdentList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitIdentList(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitIdentList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitIdentList(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitIdentList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identList() throws -> IdentListContext {
+	 open func identList() throws -> IdentListContext {
 		var _localctx: IdentListContext = IdentListContext(_ctx, getState())
 		try enterRule(_localctx, 50, m2pim4Parser.RULE_identList)
 		var _la: Int = 0
@@ -1948,40 +2147,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class SubrangeTypeContext:ParserRuleContext {
-		open func constExpression() -> Array<ConstExpressionContext> {
-			return getRuleContexts(ConstExpressionContext.self)
+
+	public class SubrangeTypeContext: ParserRuleContext {
+			open
+			func constExpression() -> [ConstExpressionContext] {
+				return getRuleContexts(ConstExpressionContext.self)
+			}
+			open
+			func constExpression(_ i: Int) -> ConstExpressionContext? {
+				return getRuleContext(ConstExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_subrangeType
 		}
-		open func constExpression(_ i: Int) -> ConstExpressionContext? {
-			return getRuleContext(ConstExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_subrangeType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterSubrangeType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterSubrangeType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitSubrangeType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitSubrangeType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitSubrangeType(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitSubrangeType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitSubrangeType(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitSubrangeType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subrangeType() throws -> SubrangeTypeContext {
+	 open func subrangeType() throws -> SubrangeTypeContext {
 		var _localctx: SubrangeTypeContext = SubrangeTypeContext(_ctx, getState())
 		try enterRule(_localctx, 52, m2pim4Parser.RULE_subrangeType)
 		defer {
@@ -2009,45 +2215,59 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ArrayTypeContext:ParserRuleContext {
-		open func ARRAY() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.ARRAY.rawValue, 0) }
-		open func simpleType() -> Array<SimpleTypeContext> {
-			return getRuleContexts(SimpleTypeContext.self)
+
+	public class ArrayTypeContext: ParserRuleContext {
+			open
+			func ARRAY() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.ARRAY.rawValue, 0)
+			}
+			open
+			func simpleType() -> [SimpleTypeContext] {
+				return getRuleContexts(SimpleTypeContext.self)
+			}
+			open
+			func simpleType(_ i: Int) -> SimpleTypeContext? {
+				return getRuleContext(SimpleTypeContext.self, i)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_arrayType
 		}
-		open func simpleType(_ i: Int) -> SimpleTypeContext? {
-			return getRuleContext(SimpleTypeContext.self,i)
-		}
-		open func OF() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.OF.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_arrayType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterArrayType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterArrayType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitArrayType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitArrayType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitArrayType(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitArrayType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitArrayType(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitArrayType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayType() throws -> ArrayTypeContext {
+	 open func arrayType() throws -> ArrayTypeContext {
 		var _localctx: ArrayTypeContext = ArrayTypeContext(_ctx, getState())
 		try enterRule(_localctx, 54, m2pim4Parser.RULE_arrayType)
 		var _la: Int = 0
@@ -2092,39 +2312,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class RecordTypeContext:ParserRuleContext {
-		open func RECORD() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.RECORD.rawValue, 0) }
-		open func fieldListSequence() -> FieldListSequenceContext? {
-			return getRuleContext(FieldListSequenceContext.self,0)
+
+	public class RecordTypeContext: ParserRuleContext {
+			open
+			func RECORD() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.RECORD.rawValue, 0)
+			}
+			open
+			func fieldListSequence() -> FieldListSequenceContext? {
+				return getRuleContext(FieldListSequenceContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_recordType
 		}
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_recordType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterRecordType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterRecordType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitRecordType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitRecordType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitRecordType(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitRecordType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitRecordType(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitRecordType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func recordType() throws -> RecordTypeContext {
+	 open func recordType() throws -> RecordTypeContext {
 		var _localctx: RecordTypeContext = RecordTypeContext(_ctx, getState())
 		try enterRule(_localctx, 56, m2pim4Parser.RULE_recordType)
 		defer {
@@ -2148,40 +2380,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class FieldListSequenceContext:ParserRuleContext {
-		open func fieldList() -> Array<FieldListContext> {
-			return getRuleContexts(FieldListContext.self)
+
+	public class FieldListSequenceContext: ParserRuleContext {
+			open
+			func fieldList() -> [FieldListContext] {
+				return getRuleContexts(FieldListContext.self)
+			}
+			open
+			func fieldList(_ i: Int) -> FieldListContext? {
+				return getRuleContext(FieldListContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_fieldListSequence
 		}
-		open func fieldList(_ i: Int) -> FieldListContext? {
-			return getRuleContext(FieldListContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_fieldListSequence }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterFieldListSequence(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterFieldListSequence(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitFieldListSequence(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitFieldListSequence(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitFieldListSequence(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitFieldListSequence(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitFieldListSequence(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitFieldListSequence(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldListSequence() throws -> FieldListSequenceContext {
+	 open func fieldListSequence() throws -> FieldListSequenceContext {
 		var _localctx: FieldListSequenceContext = FieldListSequenceContext(_ctx, getState())
 		try enterRule(_localctx, 58, m2pim4Parser.RULE_fieldListSequence)
 		var _la: Int = 0
@@ -2220,59 +2459,83 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class FieldListContext:ParserRuleContext {
-		open func identList() -> IdentListContext? {
-			return getRuleContext(IdentListContext.self,0)
+
+	public class FieldListContext: ParserRuleContext {
+			open
+			func identList() -> IdentListContext? {
+				return getRuleContext(IdentListContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func CASE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.CASE.rawValue, 0)
+			}
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func variant() -> [VariantContext] {
+				return getRuleContexts(VariantContext.self)
+			}
+			open
+			func variant(_ i: Int) -> VariantContext? {
+				return getRuleContext(VariantContext.self, i)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+			open
+			func qualident() -> QualidentContext? {
+				return getRuleContext(QualidentContext.self, 0)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.ELSE.rawValue, 0)
+			}
+			open
+			func fieldListSequence() -> FieldListSequenceContext? {
+				return getRuleContext(FieldListSequenceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_fieldList
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func CASE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.CASE.rawValue, 0) }
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
-		}
-		open func OF() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.OF.rawValue, 0) }
-		open func variant() -> Array<VariantContext> {
-			return getRuleContexts(VariantContext.self)
-		}
-		open func variant(_ i: Int) -> VariantContext? {
-			return getRuleContext(VariantContext.self,i)
-		}
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open func qualident() -> QualidentContext? {
-			return getRuleContext(QualidentContext.self,0)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.ELSE.rawValue, 0) }
-		open func fieldListSequence() -> FieldListSequenceContext? {
-			return getRuleContext(FieldListSequenceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_fieldList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterFieldList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterFieldList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitFieldList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitFieldList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitFieldList(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitFieldList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitFieldList(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitFieldList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldList() throws -> FieldListContext {
+	 open func fieldList() throws -> FieldListContext {
 		var _localctx: FieldListContext = FieldListContext(_ctx, getState())
 		try enterRule(_localctx, 60, m2pim4Parser.RULE_fieldList)
 		var _la: Int = 0
@@ -2323,7 +2586,7 @@ open class m2pim4Parser: Parser {
 
 		 	 			break
 		 	 		default:
-		 	 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 	 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	 		}
 		 	 		setState(332)
 		 	 		try qualident()
@@ -2389,40 +2652,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class VariantContext:ParserRuleContext {
-		open func caseLabelList() -> CaseLabelListContext? {
-			return getRuleContext(CaseLabelListContext.self,0)
+
+	public class VariantContext: ParserRuleContext {
+			open
+			func caseLabelList() -> CaseLabelListContext? {
+				return getRuleContext(CaseLabelListContext.self, 0)
+			}
+			open
+			func fieldListSequence() -> FieldListSequenceContext? {
+				return getRuleContext(FieldListSequenceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_variant
 		}
-		open func fieldListSequence() -> FieldListSequenceContext? {
-			return getRuleContext(FieldListSequenceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_variant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterVariant(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterVariant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitVariant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitVariant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitVariant(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitVariant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitVariant(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitVariant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variant() throws -> VariantContext {
+	 open func variant() throws -> VariantContext {
 		var _localctx: VariantContext = VariantContext(_ctx, getState())
 		try enterRule(_localctx, 62, m2pim4Parser.RULE_variant)
 		defer {
@@ -2446,40 +2716,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class CaseLabelListContext:ParserRuleContext {
-		open func caseLabels() -> Array<CaseLabelsContext> {
-			return getRuleContexts(CaseLabelsContext.self)
+
+	public class CaseLabelListContext: ParserRuleContext {
+			open
+			func caseLabels() -> [CaseLabelsContext] {
+				return getRuleContexts(CaseLabelsContext.self)
+			}
+			open
+			func caseLabels(_ i: Int) -> CaseLabelsContext? {
+				return getRuleContext(CaseLabelsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_caseLabelList
 		}
-		open func caseLabels(_ i: Int) -> CaseLabelsContext? {
-			return getRuleContext(CaseLabelsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_caseLabelList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterCaseLabelList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterCaseLabelList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitCaseLabelList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitCaseLabelList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitCaseLabelList(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitCaseLabelList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitCaseLabelList(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitCaseLabelList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseLabelList() throws -> CaseLabelListContext {
+	 open func caseLabelList() throws -> CaseLabelListContext {
 		var _localctx: CaseLabelListContext = CaseLabelListContext(_ctx, getState())
 		try enterRule(_localctx, 64, m2pim4Parser.RULE_caseLabelList)
 		var _la: Int = 0
@@ -2518,40 +2795,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class CaseLabelsContext:ParserRuleContext {
-		open func constExpression() -> Array<ConstExpressionContext> {
-			return getRuleContexts(ConstExpressionContext.self)
+
+	public class CaseLabelsContext: ParserRuleContext {
+			open
+			func constExpression() -> [ConstExpressionContext] {
+				return getRuleContexts(ConstExpressionContext.self)
+			}
+			open
+			func constExpression(_ i: Int) -> ConstExpressionContext? {
+				return getRuleContext(ConstExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_caseLabels
 		}
-		open func constExpression(_ i: Int) -> ConstExpressionContext? {
-			return getRuleContext(ConstExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_caseLabels }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterCaseLabels(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterCaseLabels(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitCaseLabels(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitCaseLabels(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitCaseLabels(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitCaseLabels(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitCaseLabels(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitCaseLabels(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseLabels() throws -> CaseLabelsContext {
+	 open func caseLabels() throws -> CaseLabelsContext {
 		var _localctx: CaseLabelsContext = CaseLabelsContext(_ctx, getState())
 		try enterRule(_localctx, 66, m2pim4Parser.RULE_caseLabels)
 		var _la: Int = 0
@@ -2587,39 +2871,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class SetTypeContext:ParserRuleContext {
-		open func SET() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.SET.rawValue, 0) }
-		open func OF() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.OF.rawValue, 0) }
-		open func simpleType() -> SimpleTypeContext? {
-			return getRuleContext(SimpleTypeContext.self,0)
+
+	public class SetTypeContext: ParserRuleContext {
+			open
+			func SET() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.SET.rawValue, 0)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func simpleType() -> SimpleTypeContext? {
+				return getRuleContext(SimpleTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_setType
 		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_setType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterSetType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterSetType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitSetType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitSetType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitSetType(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitSetType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitSetType(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitSetType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setType() throws -> SetTypeContext {
+	 open func setType() throws -> SetTypeContext {
 		var _localctx: SetTypeContext = SetTypeContext(_ctx, getState())
 		try enterRule(_localctx, 68, m2pim4Parser.RULE_setType)
 		defer {
@@ -2643,39 +2939,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class PointerTypeContext:ParserRuleContext {
-		open func POINTER() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.POINTER.rawValue, 0) }
-		open func TO() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.TO.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class PointerTypeContext: ParserRuleContext {
+			open
+			func POINTER() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.POINTER.rawValue, 0)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_pointerType
 		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_pointerType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterPointerType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterPointerType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitPointerType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitPointerType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitPointerType(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitPointerType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitPointerType(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitPointerType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pointerType() throws -> PointerTypeContext {
+	 open func pointerType() throws -> PointerTypeContext {
 		var _localctx: PointerTypeContext = PointerTypeContext(_ctx, getState())
 		try enterRule(_localctx, 70, m2pim4Parser.RULE_pointerType)
 		defer {
@@ -2699,38 +3007,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureTypeContext:ParserRuleContext {
-		open func PROCEDURE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.PROCEDURE.rawValue, 0) }
-		open func formalTypeList() -> FormalTypeListContext? {
-			return getRuleContext(FormalTypeListContext.self,0)
+
+	public class ProcedureTypeContext: ParserRuleContext {
+			open
+			func PROCEDURE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.PROCEDURE.rawValue, 0)
+			}
+			open
+			func formalTypeList() -> FormalTypeListContext? {
+				return getRuleContext(FormalTypeListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_procedureType
 		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_procedureType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterProcedureType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterProcedureType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitProcedureType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitProcedureType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitProcedureType(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitProcedureType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitProcedureType(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitProcedureType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureType() throws -> ProcedureTypeContext {
+	 open func procedureType() throws -> ProcedureTypeContext {
 		var _localctx: ProcedureTypeContext = ProcedureTypeContext(_ctx, getState())
 		try enterRule(_localctx, 72, m2pim4Parser.RULE_procedureType)
 		var _la: Int = 0
@@ -2764,47 +3081,59 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class FormalTypeListContext:ParserRuleContext {
-		open func formalType() -> Array<FormalTypeContext> {
-			return getRuleContexts(FormalTypeContext.self)
+
+	public class FormalTypeListContext: ParserRuleContext {
+			open
+			func formalType() -> [FormalTypeContext] {
+				return getRuleContexts(FormalTypeContext.self)
+			}
+			open
+			func formalType(_ i: Int) -> FormalTypeContext? {
+				return getRuleContext(FormalTypeContext.self, i)
+			}
+			open
+			func qualident() -> QualidentContext? {
+				return getRuleContext(QualidentContext.self, 0)
+			}
+			open
+			func VAR() -> [TerminalNode] {
+				return getTokens(m2pim4Parser.Tokens.VAR.rawValue)
+			}
+			open
+			func VAR(_ i:Int) -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.VAR.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_formalTypeList
 		}
-		open func formalType(_ i: Int) -> FormalTypeContext? {
-			return getRuleContext(FormalTypeContext.self,i)
-		}
-		open func qualident() -> QualidentContext? {
-			return getRuleContext(QualidentContext.self,0)
-		}
-		open func VAR() -> Array<TerminalNode> { return getTokens(m2pim4Parser.Tokens.VAR.rawValue) }
-		open func VAR(_ i:Int) -> TerminalNode?{
-			return getToken(m2pim4Parser.Tokens.VAR.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_formalTypeList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterFormalTypeList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterFormalTypeList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitFormalTypeList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitFormalTypeList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitFormalTypeList(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitFormalTypeList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitFormalTypeList(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitFormalTypeList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalTypeList() throws -> FormalTypeListContext {
+	 open func formalTypeList() throws -> FormalTypeListContext {
 		var _localctx: FormalTypeListContext = FormalTypeListContext(_ctx, getState())
 		try enterRule(_localctx, 74, m2pim4Parser.RULE_formalTypeList)
 		var _la: Int = 0
@@ -2902,40 +3231,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclarationContext:ParserRuleContext {
-		open func identList() -> IdentListContext? {
-			return getRuleContext(IdentListContext.self,0)
+
+	public class VariableDeclarationContext: ParserRuleContext {
+			open
+			func identList() -> IdentListContext? {
+				return getRuleContext(IdentListContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_variableDeclaration
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_variableDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterVariableDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterVariableDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitVariableDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitVariableDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitVariableDeclaration(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitVariableDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclaration() throws -> VariableDeclarationContext {
+	 open func variableDeclaration() throws -> VariableDeclarationContext {
 		var _localctx: VariableDeclarationContext = VariableDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 76, m2pim4Parser.RULE_variableDeclaration)
 		defer {
@@ -2959,40 +3295,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class DesignatorContext:ParserRuleContext {
-		open func qualident() -> QualidentContext? {
-			return getRuleContext(QualidentContext.self,0)
+
+	public class DesignatorContext: ParserRuleContext {
+			open
+			func qualident() -> QualidentContext? {
+				return getRuleContext(QualidentContext.self, 0)
+			}
+			open
+			func designatorTail() -> DesignatorTailContext? {
+				return getRuleContext(DesignatorTailContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_designator
 		}
-		open func designatorTail() -> DesignatorTailContext? {
-			return getRuleContext(DesignatorTailContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_designator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterDesignator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterDesignator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitDesignator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitDesignator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitDesignator(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitDesignator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitDesignator(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitDesignator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func designator() throws -> DesignatorContext {
+	 open func designator() throws -> DesignatorContext {
 		var _localctx: DesignatorContext = DesignatorContext(_ctx, getState())
 		try enterRule(_localctx, 78, m2pim4Parser.RULE_designator)
 		var _la: Int = 0
@@ -3026,46 +3369,55 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class DesignatorTailContext:ParserRuleContext {
-		open func expList() -> Array<ExpListContext> {
-			return getRuleContexts(ExpListContext.self)
+
+	public class DesignatorTailContext: ParserRuleContext {
+			open
+			func expList() -> [ExpListContext] {
+				return getRuleContexts(ExpListContext.self)
+			}
+			open
+			func expList(_ i: Int) -> ExpListContext? {
+				return getRuleContext(ExpListContext.self, i)
+			}
+			open
+			func ident() -> [IdentContext] {
+				return getRuleContexts(IdentContext.self)
+			}
+			open
+			func ident(_ i: Int) -> IdentContext? {
+				return getRuleContext(IdentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_designatorTail
 		}
-		open func expList(_ i: Int) -> ExpListContext? {
-			return getRuleContext(ExpListContext.self,i)
-		}
-		open func ident() -> Array<IdentContext> {
-			return getRuleContexts(IdentContext.self)
-		}
-		open func ident(_ i: Int) -> IdentContext? {
-			return getRuleContext(IdentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_designatorTail }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterDesignatorTail(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterDesignatorTail(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitDesignatorTail(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitDesignatorTail(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitDesignatorTail(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitDesignatorTail(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitDesignatorTail(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitDesignatorTail(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func designatorTail() throws -> DesignatorTailContext {
+	 open func designatorTail() throws -> DesignatorTailContext {
 		var _localctx: DesignatorTailContext = DesignatorTailContext(_ctx, getState())
 		try enterRule(_localctx, 80, m2pim4Parser.RULE_designatorTail)
 		var _la: Int = 0
@@ -3097,7 +3449,7 @@ open class m2pim4Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(422)
 		 		try _errHandler.sync(self)
@@ -3137,40 +3489,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ExpListContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ExpListContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_expList
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_expList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterExpList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterExpList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitExpList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitExpList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitExpList(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitExpList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitExpList(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitExpList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expList() throws -> ExpListContext {
+	 open func expList() throws -> ExpListContext {
 		var _localctx: ExpListContext = ExpListContext(_ctx, getState())
 		try enterRule(_localctx, 82, m2pim4Parser.RULE_expList)
 		var _la: Int = 0
@@ -3209,43 +3568,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func simpleExpression() -> Array<SimpleExpressionContext> {
-			return getRuleContexts(SimpleExpressionContext.self)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func simpleExpression() -> [SimpleExpressionContext] {
+				return getRuleContexts(SimpleExpressionContext.self)
+			}
+			open
+			func simpleExpression(_ i: Int) -> SimpleExpressionContext? {
+				return getRuleContext(SimpleExpressionContext.self, i)
+			}
+			open
+			func relation() -> RelationContext? {
+				return getRuleContext(RelationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_expression
 		}
-		open func simpleExpression(_ i: Int) -> SimpleExpressionContext? {
-			return getRuleContext(SimpleExpressionContext.self,i)
-		}
-		open func relation() -> RelationContext? {
-			return getRuleContext(RelationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitExpression(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 84, m2pim4Parser.RULE_expression)
 		var _la: Int = 0
@@ -3284,46 +3651,55 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class SimpleExpressionContext:ParserRuleContext {
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class SimpleExpressionContext: ParserRuleContext {
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+			open
+			func addOperator() -> [AddOperatorContext] {
+				return getRuleContexts(AddOperatorContext.self)
+			}
+			open
+			func addOperator(_ i: Int) -> AddOperatorContext? {
+				return getRuleContext(AddOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_simpleExpression
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open func addOperator() -> Array<AddOperatorContext> {
-			return getRuleContexts(AddOperatorContext.self)
-		}
-		open func addOperator(_ i: Int) -> AddOperatorContext? {
-			return getRuleContext(AddOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_simpleExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterSimpleExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterSimpleExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitSimpleExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitSimpleExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitSimpleExpression(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitSimpleExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitSimpleExpression(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitSimpleExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleExpression() throws -> SimpleExpressionContext {
+	 open func simpleExpression() throws -> SimpleExpressionContext {
 		var _localctx: SimpleExpressionContext = SimpleExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 86, m2pim4Parser.RULE_simpleExpression)
 		var _la: Int = 0
@@ -3392,46 +3768,55 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class TermContext:ParserRuleContext {
-		open func factor() -> Array<FactorContext> {
-			return getRuleContexts(FactorContext.self)
+
+	public class TermContext: ParserRuleContext {
+			open
+			func factor() -> [FactorContext] {
+				return getRuleContexts(FactorContext.self)
+			}
+			open
+			func factor(_ i: Int) -> FactorContext? {
+				return getRuleContext(FactorContext.self, i)
+			}
+			open
+			func mulOperator() -> [MulOperatorContext] {
+				return getRuleContexts(MulOperatorContext.self)
+			}
+			open
+			func mulOperator(_ i: Int) -> MulOperatorContext? {
+				return getRuleContext(MulOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_term
 		}
-		open func factor(_ i: Int) -> FactorContext? {
-			return getRuleContext(FactorContext.self,i)
-		}
-		open func mulOperator() -> Array<MulOperatorContext> {
-			return getRuleContexts(MulOperatorContext.self)
-		}
-		open func mulOperator(_ i: Int) -> MulOperatorContext? {
-			return getRuleContext(MulOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitTerm(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitTerm(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term() throws -> TermContext {
+	 open func term() throws -> TermContext {
 		var _localctx: TermContext = TermContext(_ctx, getState())
 		try enterRule(_localctx, 88, m2pim4Parser.RULE_term)
 		var _la: Int = 0
@@ -3473,50 +3858,63 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class FactorContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class FactorContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func setOrDesignatorOrProcCall() -> SetOrDesignatorOrProcCallContext? {
+				return getRuleContext(SetOrDesignatorOrProcCallContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func factor() -> FactorContext? {
+				return getRuleContext(FactorContext.self, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.NOT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_factor
 		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func setOrDesignatorOrProcCall() -> SetOrDesignatorOrProcCallContext? {
-			return getRuleContext(SetOrDesignatorOrProcCallContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func factor() -> FactorContext? {
-			return getRuleContext(FactorContext.self,0)
-		}
-		open func NOT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.NOT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_factor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitFactor(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitFactor(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func factor() throws -> FactorContext {
+	 open func factor() throws -> FactorContext {
 		var _localctx: FactorContext = FactorContext(_ctx, getState())
 		try enterRule(_localctx, 90, m2pim4Parser.RULE_factor)
 		defer {
@@ -3577,14 +3975,14 @@ open class m2pim4Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(478)
 		 		try factor()
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3595,46 +3993,55 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class SetOrDesignatorOrProcCallContext:ParserRuleContext {
-		open func set() -> SetContext? {
-			return getRuleContext(SetContext.self,0)
+
+	public class SetOrDesignatorOrProcCallContext: ParserRuleContext {
+			open
+			func set() -> SetContext? {
+				return getRuleContext(SetContext.self, 0)
+			}
+			open
+			func qualident() -> QualidentContext? {
+				return getRuleContext(QualidentContext.self, 0)
+			}
+			open
+			func designatorTail() -> DesignatorTailContext? {
+				return getRuleContext(DesignatorTailContext.self, 0)
+			}
+			open
+			func actualParameters() -> ActualParametersContext? {
+				return getRuleContext(ActualParametersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_setOrDesignatorOrProcCall
 		}
-		open func qualident() -> QualidentContext? {
-			return getRuleContext(QualidentContext.self,0)
-		}
-		open func designatorTail() -> DesignatorTailContext? {
-			return getRuleContext(DesignatorTailContext.self,0)
-		}
-		open func actualParameters() -> ActualParametersContext? {
-			return getRuleContext(ActualParametersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_setOrDesignatorOrProcCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterSetOrDesignatorOrProcCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterSetOrDesignatorOrProcCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitSetOrDesignatorOrProcCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitSetOrDesignatorOrProcCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitSetOrDesignatorOrProcCall(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitSetOrDesignatorOrProcCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitSetOrDesignatorOrProcCall(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitSetOrDesignatorOrProcCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setOrDesignatorOrProcCall() throws -> SetOrDesignatorOrProcCallContext {
+	 open func setOrDesignatorOrProcCall() throws -> SetOrDesignatorOrProcCallContext {
 		var _localctx: SetOrDesignatorOrProcCallContext = SetOrDesignatorOrProcCallContext(_ctx, getState())
 		try enterRule(_localctx, 92, m2pim4Parser.RULE_setOrDesignatorOrProcCall)
 		var _la: Int = 0
@@ -3727,12 +4134,12 @@ open class m2pim4Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3743,37 +4150,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ActualParametersContext:ParserRuleContext {
-		open func expList() -> ExpListContext? {
-			return getRuleContext(ExpListContext.self,0)
+
+	public class ActualParametersContext: ParserRuleContext {
+			open
+			func expList() -> ExpListContext? {
+				return getRuleContext(ExpListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_actualParameters
 		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_actualParameters }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterActualParameters(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterActualParameters(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitActualParameters(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitActualParameters(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitActualParameters(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitActualParameters(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitActualParameters(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitActualParameters(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func actualParameters() throws -> ActualParametersContext {
+	 open func actualParameters() throws -> ActualParametersContext {
 		var _localctx: ActualParametersContext = ActualParametersContext(_ctx, getState())
 		try enterRule(_localctx, 94, m2pim4Parser.RULE_actualParameters)
 		var _la: Int = 0
@@ -3812,63 +4225,83 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func assignmentOrProcCall() -> AssignmentOrProcCallContext? {
-			return getRuleContext(AssignmentOrProcCallContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func assignmentOrProcCall() -> AssignmentOrProcCallContext? {
+				return getRuleContext(AssignmentOrProcCallContext.self, 0)
+			}
+			open
+			func ifStatement() -> IfStatementContext? {
+				return getRuleContext(IfStatementContext.self, 0)
+			}
+			open
+			func caseStatement() -> CaseStatementContext? {
+				return getRuleContext(CaseStatementContext.self, 0)
+			}
+			open
+			func whileStatement() -> WhileStatementContext? {
+				return getRuleContext(WhileStatementContext.self, 0)
+			}
+			open
+			func repeatStatement() -> RepeatStatementContext? {
+				return getRuleContext(RepeatStatementContext.self, 0)
+			}
+			open
+			func loopStatement() -> LoopStatementContext? {
+				return getRuleContext(LoopStatementContext.self, 0)
+			}
+			open
+			func forStatement() -> ForStatementContext? {
+				return getRuleContext(ForStatementContext.self, 0)
+			}
+			open
+			func withStatement() -> WithStatementContext? {
+				return getRuleContext(WithStatementContext.self, 0)
+			}
+			open
+			func EXIT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.EXIT.rawValue, 0)
+			}
+			open
+			func RETURN() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.RETURN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_statement
 		}
-		open func ifStatement() -> IfStatementContext? {
-			return getRuleContext(IfStatementContext.self,0)
-		}
-		open func caseStatement() -> CaseStatementContext? {
-			return getRuleContext(CaseStatementContext.self,0)
-		}
-		open func whileStatement() -> WhileStatementContext? {
-			return getRuleContext(WhileStatementContext.self,0)
-		}
-		open func repeatStatement() -> RepeatStatementContext? {
-			return getRuleContext(RepeatStatementContext.self,0)
-		}
-		open func loopStatement() -> LoopStatementContext? {
-			return getRuleContext(LoopStatementContext.self,0)
-		}
-		open func forStatement() -> ForStatementContext? {
-			return getRuleContext(ForStatementContext.self,0)
-		}
-		open func withStatement() -> WithStatementContext? {
-			return getRuleContext(WithStatementContext.self,0)
-		}
-		open func EXIT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.EXIT.rawValue, 0) }
-		open func RETURN() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.RETURN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitStatement(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 96, m2pim4Parser.RULE_statement)
 		var _la: Int = 0
@@ -3975,43 +4408,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentOrProcCallContext:ParserRuleContext {
-		open func designator() -> DesignatorContext? {
-			return getRuleContext(DesignatorContext.self,0)
+
+	public class AssignmentOrProcCallContext: ParserRuleContext {
+			open
+			func designator() -> DesignatorContext? {
+				return getRuleContext(DesignatorContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func actualParameters() -> ActualParametersContext? {
+				return getRuleContext(ActualParametersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_assignmentOrProcCall
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func actualParameters() -> ActualParametersContext? {
-			return getRuleContext(ActualParametersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_assignmentOrProcCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterAssignmentOrProcCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterAssignmentOrProcCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitAssignmentOrProcCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitAssignmentOrProcCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitAssignmentOrProcCall(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitAssignmentOrProcCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitAssignmentOrProcCall(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitAssignmentOrProcCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignmentOrProcCall() throws -> AssignmentOrProcCallContext {
+	 open func assignmentOrProcCall() throws -> AssignmentOrProcCallContext {
 		var _localctx: AssignmentOrProcCallContext = AssignmentOrProcCallContext(_ctx, getState())
 		try enterRule(_localctx, 98, m2pim4Parser.RULE_assignmentOrProcCall)
 		var _la: Int = 0
@@ -4055,7 +4496,7 @@ open class m2pim4Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -4067,40 +4508,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class StatementSequenceContext:ParserRuleContext {
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
+
+	public class StatementSequenceContext: ParserRuleContext {
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_statementSequence
 		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_statementSequence }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterStatementSequence(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterStatementSequence(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitStatementSequence(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitStatementSequence(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitStatementSequence(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitStatementSequence(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitStatementSequence(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitStatementSequence(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statementSequence() throws -> StatementSequenceContext {
+	 open func statementSequence() throws -> StatementSequenceContext {
 		var _localctx: StatementSequenceContext = StatementSequenceContext(_ctx, getState())
 		try enterRule(_localctx, 100, m2pim4Parser.RULE_statementSequence)
 		var _la: Int = 0
@@ -4139,57 +4587,83 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class IfStatementContext:ParserRuleContext {
-		open func IF() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.IF.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class IfStatementContext: ParserRuleContext {
+			open
+			func IF() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.IF.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func THEN() -> [TerminalNode] {
+				return getTokens(m2pim4Parser.Tokens.THEN.rawValue)
+			}
+			open
+			func THEN(_ i:Int) -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.THEN.rawValue, i)
+			}
+			open
+			func statementSequence() -> [StatementSequenceContext] {
+				return getRuleContexts(StatementSequenceContext.self)
+			}
+			open
+			func statementSequence(_ i: Int) -> StatementSequenceContext? {
+				return getRuleContext(StatementSequenceContext.self, i)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+			open
+			func ELSIF() -> [TerminalNode] {
+				return getTokens(m2pim4Parser.Tokens.ELSIF.rawValue)
+			}
+			open
+			func ELSIF(_ i:Int) -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.ELSIF.rawValue, i)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.ELSE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_ifStatement
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func THEN() -> Array<TerminalNode> { return getTokens(m2pim4Parser.Tokens.THEN.rawValue) }
-		open func THEN(_ i:Int) -> TerminalNode?{
-			return getToken(m2pim4Parser.Tokens.THEN.rawValue, i)
-		}
-		open func statementSequence() -> Array<StatementSequenceContext> {
-			return getRuleContexts(StatementSequenceContext.self)
-		}
-		open func statementSequence(_ i: Int) -> StatementSequenceContext? {
-			return getRuleContext(StatementSequenceContext.self,i)
-		}
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open func ELSIF() -> Array<TerminalNode> { return getTokens(m2pim4Parser.Tokens.ELSIF.rawValue) }
-		open func ELSIF(_ i:Int) -> TerminalNode?{
-			return getToken(m2pim4Parser.Tokens.ELSIF.rawValue, i)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.ELSE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_ifStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterIfStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterIfStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitIfStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitIfStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitIfStatement(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitIfStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitIfStatement(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitIfStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifStatement() throws -> IfStatementContext {
+	 open func ifStatement() throws -> IfStatementContext {
 		var _localctx: IfStatementContext = IfStatementContext(_ctx, getState())
 		try enterRule(_localctx, 102, m2pim4Parser.RULE_ifStatement)
 		var _la: Int = 0
@@ -4255,50 +4729,71 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class CaseStatementContext:ParserRuleContext {
-		open func CASE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.CASE.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class CaseStatementContext: ParserRuleContext {
+			open
+			func CASE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.CASE.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func ccase() -> [CcaseContext] {
+				return getRuleContexts(CcaseContext.self)
+			}
+			open
+			func ccase(_ i: Int) -> CcaseContext? {
+				return getRuleContext(CcaseContext.self, i)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.ELSE.rawValue, 0)
+			}
+			open
+			func statementSequence() -> StatementSequenceContext? {
+				return getRuleContext(StatementSequenceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_caseStatement
 		}
-		open func OF() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.OF.rawValue, 0) }
-		open func ccase() -> Array<CcaseContext> {
-			return getRuleContexts(CcaseContext.self)
-		}
-		open func ccase(_ i: Int) -> CcaseContext? {
-			return getRuleContext(CcaseContext.self,i)
-		}
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open func ELSE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.ELSE.rawValue, 0) }
-		open func statementSequence() -> StatementSequenceContext? {
-			return getRuleContext(StatementSequenceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_caseStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterCaseStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterCaseStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitCaseStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitCaseStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitCaseStatement(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitCaseStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitCaseStatement(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitCaseStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseStatement() throws -> CaseStatementContext {
+	 open func caseStatement() throws -> CaseStatementContext {
 		var _localctx: CaseStatementContext = CaseStatementContext(_ctx, getState())
 		try enterRule(_localctx, 104, m2pim4Parser.RULE_caseStatement)
 		var _la: Int = 0
@@ -4360,40 +4855,47 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class CcaseContext:ParserRuleContext {
-		open func caseLabelList() -> CaseLabelListContext? {
-			return getRuleContext(CaseLabelListContext.self,0)
+
+	public class CcaseContext: ParserRuleContext {
+			open
+			func caseLabelList() -> CaseLabelListContext? {
+				return getRuleContext(CaseLabelListContext.self, 0)
+			}
+			open
+			func statementSequence() -> StatementSequenceContext? {
+				return getRuleContext(StatementSequenceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_ccase
 		}
-		open func statementSequence() -> StatementSequenceContext? {
-			return getRuleContext(StatementSequenceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_ccase }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterCcase(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterCcase(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitCcase(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitCcase(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitCcase(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitCcase(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitCcase(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitCcase(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ccase() throws -> CcaseContext {
+	 open func ccase() throws -> CcaseContext {
 		var _localctx: CcaseContext = CcaseContext(_ctx, getState())
 		try enterRule(_localctx, 106, m2pim4Parser.RULE_ccase)
 		defer {
@@ -4417,43 +4919,59 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class WhileStatementContext:ParserRuleContext {
-		open func WHILE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.WHILE.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class WhileStatementContext: ParserRuleContext {
+			open
+			func WHILE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.WHILE.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func DO() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.DO.rawValue, 0)
+			}
+			open
+			func statementSequence() -> StatementSequenceContext? {
+				return getRuleContext(StatementSequenceContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_whileStatement
 		}
-		open func DO() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.DO.rawValue, 0) }
-		open func statementSequence() -> StatementSequenceContext? {
-			return getRuleContext(StatementSequenceContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_whileStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterWhileStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterWhileStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitWhileStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitWhileStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitWhileStatement(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitWhileStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitWhileStatement(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitWhileStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func whileStatement() throws -> WhileStatementContext {
+	 open func whileStatement() throws -> WhileStatementContext {
 		var _localctx: WhileStatementContext = WhileStatementContext(_ctx, getState())
 		try enterRule(_localctx, 108, m2pim4Parser.RULE_whileStatement)
 		defer {
@@ -4481,42 +4999,55 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class RepeatStatementContext:ParserRuleContext {
-		open func REPEAT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.REPEAT.rawValue, 0) }
-		open func statementSequence() -> StatementSequenceContext? {
-			return getRuleContext(StatementSequenceContext.self,0)
+
+	public class RepeatStatementContext: ParserRuleContext {
+			open
+			func REPEAT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.REPEAT.rawValue, 0)
+			}
+			open
+			func statementSequence() -> StatementSequenceContext? {
+				return getRuleContext(StatementSequenceContext.self, 0)
+			}
+			open
+			func UNTIL() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.UNTIL.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_repeatStatement
 		}
-		open func UNTIL() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.UNTIL.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_repeatStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterRepeatStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterRepeatStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitRepeatStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitRepeatStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitRepeatStatement(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitRepeatStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitRepeatStatement(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitRepeatStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func repeatStatement() throws -> RepeatStatementContext {
+	 open func repeatStatement() throws -> RepeatStatementContext {
 		var _localctx: RepeatStatementContext = RepeatStatementContext(_ctx, getState())
 		try enterRule(_localctx, 110, m2pim4Parser.RULE_repeatStatement)
 		defer {
@@ -4542,54 +5073,79 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ForStatementContext:ParserRuleContext {
-		open func FOR() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.FOR.rawValue, 0) }
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
+
+	public class ForStatementContext: ParserRuleContext {
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func DO() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.DO.rawValue, 0)
+			}
+			open
+			func statementSequence() -> StatementSequenceContext? {
+				return getRuleContext(StatementSequenceContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+			open
+			func BY() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.BY.rawValue, 0)
+			}
+			open
+			func constExpression() -> ConstExpressionContext? {
+				return getRuleContext(ConstExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_forStatement
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func TO() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.TO.rawValue, 0) }
-		open func DO() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.DO.rawValue, 0) }
-		open func statementSequence() -> StatementSequenceContext? {
-			return getRuleContext(StatementSequenceContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open func BY() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.BY.rawValue, 0) }
-		open func constExpression() -> ConstExpressionContext? {
-			return getRuleContext(ConstExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_forStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterForStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterForStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitForStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitForStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitForStatement(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitForStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitForStatement(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitForStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forStatement() throws -> ForStatementContext {
+	 open func forStatement() throws -> ForStatementContext {
 		var _localctx: ForStatementContext = ForStatementContext(_ctx, getState())
 		try enterRule(_localctx, 112, m2pim4Parser.RULE_forStatement)
 		var _la: Int = 0
@@ -4641,39 +5197,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class LoopStatementContext:ParserRuleContext {
-		open func LOOP() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.LOOP.rawValue, 0) }
-		open func statementSequence() -> StatementSequenceContext? {
-			return getRuleContext(StatementSequenceContext.self,0)
+
+	public class LoopStatementContext: ParserRuleContext {
+			open
+			func LOOP() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.LOOP.rawValue, 0)
+			}
+			open
+			func statementSequence() -> StatementSequenceContext? {
+				return getRuleContext(StatementSequenceContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_loopStatement
 		}
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_loopStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterLoopStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterLoopStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitLoopStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitLoopStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitLoopStatement(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitLoopStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitLoopStatement(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitLoopStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func loopStatement() throws -> LoopStatementContext {
+	 open func loopStatement() throws -> LoopStatementContext {
 		var _localctx: LoopStatementContext = LoopStatementContext(_ctx, getState())
 		try enterRule(_localctx, 114, m2pim4Parser.RULE_loopStatement)
 		defer {
@@ -4697,43 +5265,59 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class WithStatementContext:ParserRuleContext {
-		open func WITH() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.WITH.rawValue, 0) }
-		open func designator() -> DesignatorContext? {
-			return getRuleContext(DesignatorContext.self,0)
+
+	public class WithStatementContext: ParserRuleContext {
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func designator() -> DesignatorContext? {
+				return getRuleContext(DesignatorContext.self, 0)
+			}
+			open
+			func DO() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.DO.rawValue, 0)
+			}
+			open
+			func statementSequence() -> StatementSequenceContext? {
+				return getRuleContext(StatementSequenceContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_withStatement
 		}
-		open func DO() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.DO.rawValue, 0) }
-		open func statementSequence() -> StatementSequenceContext? {
-			return getRuleContext(StatementSequenceContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_withStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterWithStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterWithStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitWithStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitWithStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitWithStatement(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitWithStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitWithStatement(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitWithStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func withStatement() throws -> WithStatementContext {
+	 open func withStatement() throws -> WithStatementContext {
 		var _localctx: WithStatementContext = WithStatementContext(_ctx, getState())
 		try enterRule(_localctx, 116, m2pim4Parser.RULE_withStatement)
 		defer {
@@ -4761,43 +5345,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureDeclarationContext:ParserRuleContext {
-		open func procedureHeading() -> ProcedureHeadingContext? {
-			return getRuleContext(ProcedureHeadingContext.self,0)
+
+	public class ProcedureDeclarationContext: ParserRuleContext {
+			open
+			func procedureHeading() -> ProcedureHeadingContext? {
+				return getRuleContext(ProcedureHeadingContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_procedureDeclaration
 		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_procedureDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterProcedureDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterProcedureDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitProcedureDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitProcedureDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitProcedureDeclaration(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitProcedureDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitProcedureDeclaration(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitProcedureDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureDeclaration() throws -> ProcedureDeclarationContext {
+	 open func procedureDeclaration() throws -> ProcedureDeclarationContext {
 		var _localctx: ProcedureDeclarationContext = ProcedureDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 118, m2pim4Parser.RULE_procedureDeclaration)
 		defer {
@@ -4823,41 +5415,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureHeadingContext:ParserRuleContext {
-		open func PROCEDURE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.PROCEDURE.rawValue, 0) }
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
+
+	public class ProcedureHeadingContext: ParserRuleContext {
+			open
+			func PROCEDURE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.PROCEDURE.rawValue, 0)
+			}
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+			open
+			func formalParameters() -> FormalParametersContext? {
+				return getRuleContext(FormalParametersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_procedureHeading
 		}
-		open func formalParameters() -> FormalParametersContext? {
-			return getRuleContext(FormalParametersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_procedureHeading }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterProcedureHeading(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterProcedureHeading(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitProcedureHeading(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitProcedureHeading(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitProcedureHeading(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitProcedureHeading(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitProcedureHeading(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitProcedureHeading(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureHeading() throws -> ProcedureHeadingContext {
+	 open func procedureHeading() throws -> ProcedureHeadingContext {
 		var _localctx: ProcedureHeadingContext = ProcedureHeadingContext(_ctx, getState())
 		try enterRule(_localctx, 120, m2pim4Parser.RULE_procedureHeading)
 		var _la: Int = 0
@@ -4893,45 +5495,59 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open func declaration() -> Array<DeclarationContext> {
-			return getRuleContexts(DeclarationContext.self)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+			open
+			func declaration() -> [DeclarationContext] {
+				return getRuleContexts(DeclarationContext.self)
+			}
+			open
+			func declaration(_ i: Int) -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, i)
+			}
+			open
+			func BEGIN() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.BEGIN.rawValue, 0)
+			}
+			open
+			func statementSequence() -> StatementSequenceContext? {
+				return getRuleContext(StatementSequenceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_block
 		}
-		open func declaration(_ i: Int) -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,i)
-		}
-		open func BEGIN() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.BEGIN.rawValue, 0) }
-		open func statementSequence() -> StatementSequenceContext? {
-			return getRuleContext(StatementSequenceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitBlock(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 122, m2pim4Parser.RULE_block)
 		var _la: Int = 0
@@ -4986,61 +5602,83 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationContext:ParserRuleContext {
-		open func CONST() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.CONST.rawValue, 0) }
-		open func constantDeclaration() -> Array<ConstantDeclarationContext> {
-			return getRuleContexts(ConstantDeclarationContext.self)
+
+	public class DeclarationContext: ParserRuleContext {
+			open
+			func CONST() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.CONST.rawValue, 0)
+			}
+			open
+			func constantDeclaration() -> [ConstantDeclarationContext] {
+				return getRuleContexts(ConstantDeclarationContext.self)
+			}
+			open
+			func constantDeclaration(_ i: Int) -> ConstantDeclarationContext? {
+				return getRuleContext(ConstantDeclarationContext.self, i)
+			}
+			open
+			func TYPE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.TYPE.rawValue, 0)
+			}
+			open
+			func typeDeclaration() -> [TypeDeclarationContext] {
+				return getRuleContexts(TypeDeclarationContext.self)
+			}
+			open
+			func typeDeclaration(_ i: Int) -> TypeDeclarationContext? {
+				return getRuleContext(TypeDeclarationContext.self, i)
+			}
+			open
+			func VAR() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.VAR.rawValue, 0)
+			}
+			open
+			func variableDeclaration() -> [VariableDeclarationContext] {
+				return getRuleContexts(VariableDeclarationContext.self)
+			}
+			open
+			func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
+				return getRuleContext(VariableDeclarationContext.self, i)
+			}
+			open
+			func procedureDeclaration() -> ProcedureDeclarationContext? {
+				return getRuleContext(ProcedureDeclarationContext.self, 0)
+			}
+			open
+			func moduleDeclaration() -> ModuleDeclarationContext? {
+				return getRuleContext(ModuleDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_declaration
 		}
-		open func constantDeclaration(_ i: Int) -> ConstantDeclarationContext? {
-			return getRuleContext(ConstantDeclarationContext.self,i)
-		}
-		open func TYPE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.TYPE.rawValue, 0) }
-		open func typeDeclaration() -> Array<TypeDeclarationContext> {
-			return getRuleContexts(TypeDeclarationContext.self)
-		}
-		open func typeDeclaration(_ i: Int) -> TypeDeclarationContext? {
-			return getRuleContext(TypeDeclarationContext.self,i)
-		}
-		open func VAR() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.VAR.rawValue, 0) }
-		open func variableDeclaration() -> Array<VariableDeclarationContext> {
-			return getRuleContexts(VariableDeclarationContext.self)
-		}
-		open func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
-			return getRuleContext(VariableDeclarationContext.self,i)
-		}
-		open func procedureDeclaration() -> ProcedureDeclarationContext? {
-			return getRuleContext(ProcedureDeclarationContext.self,0)
-		}
-		open func moduleDeclaration() -> ModuleDeclarationContext? {
-			return getRuleContext(ModuleDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitDeclaration(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitDeclaration(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration() throws -> DeclarationContext {
+	 open func declaration() throws -> DeclarationContext {
 		var _localctx: DeclarationContext = DeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 124, m2pim4Parser.RULE_declaration)
 		var _la: Int = 0
@@ -5144,7 +5782,7 @@ open class m2pim4Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5155,43 +5793,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class FormalParametersContext:ParserRuleContext {
-		open func fpSection() -> Array<FpSectionContext> {
-			return getRuleContexts(FpSectionContext.self)
+
+	public class FormalParametersContext: ParserRuleContext {
+			open
+			func fpSection() -> [FpSectionContext] {
+				return getRuleContexts(FpSectionContext.self)
+			}
+			open
+			func fpSection(_ i: Int) -> FpSectionContext? {
+				return getRuleContext(FpSectionContext.self, i)
+			}
+			open
+			func qualident() -> QualidentContext? {
+				return getRuleContext(QualidentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_formalParameters
 		}
-		open func fpSection(_ i: Int) -> FpSectionContext? {
-			return getRuleContext(FpSectionContext.self,i)
-		}
-		open func qualident() -> QualidentContext? {
-			return getRuleContext(QualidentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_formalParameters }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterFormalParameters(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterFormalParameters(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitFormalParameters(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitFormalParameters(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitFormalParameters(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitFormalParameters(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitFormalParameters(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitFormalParameters(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalParameters() throws -> FormalParametersContext {
+	 open func formalParameters() throws -> FormalParametersContext {
 		var _localctx: FormalParametersContext = FormalParametersContext(_ctx, getState())
 		try enterRule(_localctx, 126, m2pim4Parser.RULE_formalParameters)
 		var _la: Int = 0
@@ -5260,41 +5906,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class FpSectionContext:ParserRuleContext {
-		open func identList() -> IdentListContext? {
-			return getRuleContext(IdentListContext.self,0)
+
+	public class FpSectionContext: ParserRuleContext {
+			open
+			func identList() -> IdentListContext? {
+				return getRuleContext(IdentListContext.self, 0)
+			}
+			open
+			func formalType() -> FormalTypeContext? {
+				return getRuleContext(FormalTypeContext.self, 0)
+			}
+			open
+			func VAR() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.VAR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_fpSection
 		}
-		open func formalType() -> FormalTypeContext? {
-			return getRuleContext(FormalTypeContext.self,0)
-		}
-		open func VAR() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.VAR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_fpSection }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterFpSection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterFpSection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitFpSection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitFpSection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitFpSection(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitFpSection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitFpSection(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitFpSection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fpSection() throws -> FpSectionContext {
+	 open func fpSection() throws -> FpSectionContext {
 		var _localctx: FpSectionContext = FpSectionContext(_ctx, getState())
 		try enterRule(_localctx, 128, m2pim4Parser.RULE_fpSection)
 		var _la: Int = 0
@@ -5332,39 +5988,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class FormalTypeContext:ParserRuleContext {
-		open func qualident() -> QualidentContext? {
-			return getRuleContext(QualidentContext.self,0)
+
+	public class FormalTypeContext: ParserRuleContext {
+			open
+			func qualident() -> QualidentContext? {
+				return getRuleContext(QualidentContext.self, 0)
+			}
+			open
+			func ARRAY() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.ARRAY.rawValue, 0)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.OF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_formalType
 		}
-		open func ARRAY() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.ARRAY.rawValue, 0) }
-		open func OF() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.OF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_formalType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterFormalType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterFormalType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitFormalType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitFormalType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitFormalType(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitFormalType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitFormalType(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitFormalType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalType() throws -> FormalTypeContext {
+	 open func formalType() throws -> FormalTypeContext {
 		var _localctx: FormalTypeContext = FormalTypeContext(_ctx, getState())
 		try enterRule(_localctx, 130, m2pim4Parser.RULE_formalType)
 		var _la: Int = 0
@@ -5400,56 +6068,71 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ModuleDeclarationContext:ParserRuleContext {
-		open func MODULE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.MODULE.rawValue, 0) }
-		open func ident() -> Array<IdentContext> {
-			return getRuleContexts(IdentContext.self)
+
+	public class ModuleDeclarationContext: ParserRuleContext {
+			open
+			func MODULE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.MODULE.rawValue, 0)
+			}
+			open
+			func ident() -> [IdentContext] {
+				return getRuleContexts(IdentContext.self)
+			}
+			open
+			func ident(_ i: Int) -> IdentContext? {
+				return getRuleContext(IdentContext.self, i)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func priority() -> PriorityContext? {
+				return getRuleContext(PriorityContext.self, 0)
+			}
+			open
+			func importList() -> [ImportListContext] {
+				return getRuleContexts(ImportListContext.self)
+			}
+			open
+			func importList(_ i: Int) -> ImportListContext? {
+				return getRuleContext(ImportListContext.self, i)
+			}
+			open
+			func exportList() -> ExportListContext? {
+				return getRuleContext(ExportListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_moduleDeclaration
 		}
-		open func ident(_ i: Int) -> IdentContext? {
-			return getRuleContext(IdentContext.self,i)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func priority() -> PriorityContext? {
-			return getRuleContext(PriorityContext.self,0)
-		}
-		open func importList() -> Array<ImportListContext> {
-			return getRuleContexts(ImportListContext.self)
-		}
-		open func importList(_ i: Int) -> ImportListContext? {
-			return getRuleContext(ImportListContext.self,i)
-		}
-		open func exportList() -> ExportListContext? {
-			return getRuleContext(ExportListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_moduleDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterModuleDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterModuleDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitModuleDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitModuleDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitModuleDeclaration(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitModuleDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitModuleDeclaration(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitModuleDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleDeclaration() throws -> ModuleDeclarationContext {
+	 open func moduleDeclaration() throws -> ModuleDeclarationContext {
 		var _localctx: ModuleDeclarationContext = ModuleDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 132, m2pim4Parser.RULE_moduleDeclaration)
 		var _la: Int = 0
@@ -5520,37 +6203,43 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class PriorityContext:ParserRuleContext {
-		open func constExpression() -> ConstExpressionContext? {
-			return getRuleContext(ConstExpressionContext.self,0)
+
+	public class PriorityContext: ParserRuleContext {
+			open
+			func constExpression() -> ConstExpressionContext? {
+				return getRuleContext(ConstExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_priority
 		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_priority }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterPriority(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterPriority(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitPriority(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitPriority(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitPriority(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitPriority(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitPriority(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitPriority(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func priority() throws -> PriorityContext {
+	 open func priority() throws -> PriorityContext {
 		var _localctx: PriorityContext = PriorityContext(_ctx, getState())
 		try enterRule(_localctx, 134, m2pim4Parser.RULE_priority)
 		defer {
@@ -5574,39 +6263,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ExportListContext:ParserRuleContext {
-		open func EXPORT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.EXPORT.rawValue, 0) }
-		open func identList() -> IdentListContext? {
-			return getRuleContext(IdentListContext.self,0)
+
+	public class ExportListContext: ParserRuleContext {
+			open
+			func EXPORT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.EXPORT.rawValue, 0)
+			}
+			open
+			func identList() -> IdentListContext? {
+				return getRuleContext(IdentListContext.self, 0)
+			}
+			open
+			func QUALIFIED() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.QUALIFIED.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_exportList
 		}
-		open func QUALIFIED() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.QUALIFIED.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_exportList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterExportList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterExportList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitExportList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitExportList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitExportList(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitExportList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitExportList(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitExportList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exportList() throws -> ExportListContext {
+	 open func exportList() throws -> ExportListContext {
 		var _localctx: ExportListContext = ExportListContext(_ctx, getState())
 		try enterRule(_localctx, 136, m2pim4Parser.RULE_exportList)
 		var _la: Int = 0
@@ -5644,42 +6345,55 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ImportListContext:ParserRuleContext {
-		open func IMPORT() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.IMPORT.rawValue, 0) }
-		open func identList() -> IdentListContext? {
-			return getRuleContext(IdentListContext.self,0)
+
+	public class ImportListContext: ParserRuleContext {
+			open
+			func IMPORT() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.IMPORT.rawValue, 0)
+			}
+			open
+			func identList() -> IdentListContext? {
+				return getRuleContext(IdentListContext.self, 0)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_importList
 		}
-		open func FROM() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.FROM.rawValue, 0) }
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_importList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterImportList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterImportList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitImportList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitImportList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitImportList(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitImportList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitImportList(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitImportList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importList() throws -> ImportListContext {
+	 open func importList() throws -> ImportListContext {
 		var _localctx: ImportListContext = ImportListContext(_ctx, getState())
 		try enterRule(_localctx, 138, m2pim4Parser.RULE_importList)
 		var _la: Int = 0
@@ -5719,58 +6433,79 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class DefinitionModuleContext:ParserRuleContext {
-		open func DEFINITION() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.DEFINITION.rawValue, 0) }
-		open func MODULE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.MODULE.rawValue, 0) }
-		open func ident() -> Array<IdentContext> {
-			return getRuleContexts(IdentContext.self)
+
+	public class DefinitionModuleContext: ParserRuleContext {
+			open
+			func DEFINITION() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.DEFINITION.rawValue, 0)
+			}
+			open
+			func MODULE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.MODULE.rawValue, 0)
+			}
+			open
+			func ident() -> [IdentContext] {
+				return getRuleContexts(IdentContext.self)
+			}
+			open
+			func ident(_ i: Int) -> IdentContext? {
+				return getRuleContext(IdentContext.self, i)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.END.rawValue, 0)
+			}
+			open
+			func importList() -> [ImportListContext] {
+				return getRuleContexts(ImportListContext.self)
+			}
+			open
+			func importList(_ i: Int) -> ImportListContext? {
+				return getRuleContext(ImportListContext.self, i)
+			}
+			open
+			func exportList() -> ExportListContext? {
+				return getRuleContext(ExportListContext.self, 0)
+			}
+			open
+			func definition() -> [DefinitionContext] {
+				return getRuleContexts(DefinitionContext.self)
+			}
+			open
+			func definition(_ i: Int) -> DefinitionContext? {
+				return getRuleContext(DefinitionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_definitionModule
 		}
-		open func ident(_ i: Int) -> IdentContext? {
-			return getRuleContext(IdentContext.self,i)
-		}
-		open func END() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.END.rawValue, 0) }
-		open func importList() -> Array<ImportListContext> {
-			return getRuleContexts(ImportListContext.self)
-		}
-		open func importList(_ i: Int) -> ImportListContext? {
-			return getRuleContext(ImportListContext.self,i)
-		}
-		open func exportList() -> ExportListContext? {
-			return getRuleContext(ExportListContext.self,0)
-		}
-		open func definition() -> Array<DefinitionContext> {
-			return getRuleContexts(DefinitionContext.self)
-		}
-		open func definition(_ i: Int) -> DefinitionContext? {
-			return getRuleContext(DefinitionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_definitionModule }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterDefinitionModule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterDefinitionModule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitDefinitionModule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitDefinitionModule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitDefinitionModule(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitDefinitionModule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitDefinitionModule(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitDefinitionModule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func definitionModule() throws -> DefinitionModuleContext {
+	 open func definitionModule() throws -> DefinitionModuleContext {
 		var _localctx: DefinitionModuleContext = DefinitionModuleContext(_ctx, getState())
 		try enterRule(_localctx, 140, m2pim4Parser.RULE_definitionModule)
 		var _la: Int = 0
@@ -5851,64 +6586,87 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class DefinitionContext:ParserRuleContext {
-		open func CONST() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.CONST.rawValue, 0) }
-		open func constantDeclaration() -> Array<ConstantDeclarationContext> {
-			return getRuleContexts(ConstantDeclarationContext.self)
+
+	public class DefinitionContext: ParserRuleContext {
+			open
+			func CONST() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.CONST.rawValue, 0)
+			}
+			open
+			func constantDeclaration() -> [ConstantDeclarationContext] {
+				return getRuleContexts(ConstantDeclarationContext.self)
+			}
+			open
+			func constantDeclaration(_ i: Int) -> ConstantDeclarationContext? {
+				return getRuleContext(ConstantDeclarationContext.self, i)
+			}
+			open
+			func TYPE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.TYPE.rawValue, 0)
+			}
+			open
+			func ident() -> [IdentContext] {
+				return getRuleContexts(IdentContext.self)
+			}
+			open
+			func ident(_ i: Int) -> IdentContext? {
+				return getRuleContext(IdentContext.self, i)
+			}
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+			open
+			func VAR() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.VAR.rawValue, 0)
+			}
+			open
+			func variableDeclaration() -> [VariableDeclarationContext] {
+				return getRuleContexts(VariableDeclarationContext.self)
+			}
+			open
+			func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
+				return getRuleContext(VariableDeclarationContext.self, i)
+			}
+			open
+			func procedureHeading() -> ProcedureHeadingContext? {
+				return getRuleContext(ProcedureHeadingContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_definition
 		}
-		open func constantDeclaration(_ i: Int) -> ConstantDeclarationContext? {
-			return getRuleContext(ConstantDeclarationContext.self,i)
-		}
-		open func TYPE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.TYPE.rawValue, 0) }
-		open func ident() -> Array<IdentContext> {
-			return getRuleContexts(IdentContext.self)
-		}
-		open func ident(_ i: Int) -> IdentContext? {
-			return getRuleContext(IdentContext.self,i)
-		}
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
-		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open func VAR() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.VAR.rawValue, 0) }
-		open func variableDeclaration() -> Array<VariableDeclarationContext> {
-			return getRuleContexts(VariableDeclarationContext.self)
-		}
-		open func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
-			return getRuleContext(VariableDeclarationContext.self,i)
-		}
-		open func procedureHeading() -> ProcedureHeadingContext? {
-			return getRuleContext(ProcedureHeadingContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_definition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitDefinition(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitDefinition(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func definition() throws -> DefinitionContext {
+	 open func definition() throws -> DefinitionContext {
 		var _localctx: DefinitionContext = DefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 142, m2pim4Parser.RULE_definition)
 		var _la: Int = 0
@@ -6018,7 +6776,7 @@ open class m2pim4Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6029,53 +6787,67 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class ProgramModuleContext:ParserRuleContext {
-		open func MODULE() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.MODULE.rawValue, 0) }
-		open func ident() -> Array<IdentContext> {
-			return getRuleContexts(IdentContext.self)
+
+	public class ProgramModuleContext: ParserRuleContext {
+			open
+			func MODULE() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.MODULE.rawValue, 0)
+			}
+			open
+			func ident() -> [IdentContext] {
+				return getRuleContexts(IdentContext.self)
+			}
+			open
+			func ident(_ i: Int) -> IdentContext? {
+				return getRuleContext(IdentContext.self, i)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func priority() -> PriorityContext? {
+				return getRuleContext(PriorityContext.self, 0)
+			}
+			open
+			func importList() -> [ImportListContext] {
+				return getRuleContexts(ImportListContext.self)
+			}
+			open
+			func importList(_ i: Int) -> ImportListContext? {
+				return getRuleContext(ImportListContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_programModule
 		}
-		open func ident(_ i: Int) -> IdentContext? {
-			return getRuleContext(IdentContext.self,i)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func priority() -> PriorityContext? {
-			return getRuleContext(PriorityContext.self,0)
-		}
-		open func importList() -> Array<ImportListContext> {
-			return getRuleContexts(ImportListContext.self)
-		}
-		open func importList(_ i: Int) -> ImportListContext? {
-			return getRuleContext(ImportListContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_programModule }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterProgramModule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterProgramModule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitProgramModule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitProgramModule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitProgramModule(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitProgramModule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitProgramModule(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitProgramModule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func programModule() throws -> ProgramModuleContext {
+	 open func programModule() throws -> ProgramModuleContext {
 		var _localctx: ProgramModuleContext = ProgramModuleContext(_ctx, getState())
 		try enterRule(_localctx, 144, m2pim4Parser.RULE_programModule)
 		var _la: Int = 0
@@ -6135,41 +6907,51 @@ open class m2pim4Parser: Parser {
 
 		return _localctx
 	}
-	open class CompilationUnitContext:ParserRuleContext {
-		open func definitionModule() -> DefinitionModuleContext? {
-			return getRuleContext(DefinitionModuleContext.self,0)
+
+	public class CompilationUnitContext: ParserRuleContext {
+			open
+			func definitionModule() -> DefinitionModuleContext? {
+				return getRuleContext(DefinitionModuleContext.self, 0)
+			}
+			open
+			func programModule() -> ProgramModuleContext? {
+				return getRuleContext(ProgramModuleContext.self, 0)
+			}
+			open
+			func IMPLEMENTATION() -> TerminalNode? {
+				return getToken(m2pim4Parser.Tokens.IMPLEMENTATION.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return m2pim4Parser.RULE_compilationUnit
 		}
-		open func programModule() -> ProgramModuleContext? {
-			return getRuleContext(ProgramModuleContext.self,0)
-		}
-		open func IMPLEMENTATION() -> TerminalNode? { return getToken(m2pim4Parser.Tokens.IMPLEMENTATION.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return m2pim4Parser.RULE_compilationUnit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).enterCompilationUnit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.enterCompilationUnit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is m2pim4Listener {
-			 	(listener as! m2pim4Listener).exitCompilationUnit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? m2pim4Listener {
+				listener.exitCompilationUnit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is m2pim4Visitor {
-			     return (visitor as! m2pim4Visitor<T>).visitCompilationUnit(self)
-			}else if visitor is m2pim4BaseVisitor {
-		    	 return (visitor as! m2pim4BaseVisitor<T>).visitCompilationUnit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? m2pim4Visitor {
+			    return visitor.visitCompilationUnit(self)
+			}
+			else if let visitor = visitor as? m2pim4BaseVisitor {
+			    return visitor.visitCompilationUnit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compilationUnit() throws -> CompilationUnitContext {
+	 open func compilationUnit() throws -> CompilationUnitContext {
 		var _localctx: CompilationUnitContext = CompilationUnitContext(_ctx, getState())
 		try enterRule(_localctx, 146, m2pim4Parser.RULE_compilationUnit)
 		var _la: Int = 0
@@ -6207,7 +6989,7 @@ open class m2pim4Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6219,6 +7001,10 @@ open class m2pim4Parser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = m2pim4ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = m2pim4ParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

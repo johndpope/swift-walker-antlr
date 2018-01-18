@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/kuka/krl.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/kuka/krl.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class krlParser: Parser {
@@ -11,8 +11,11 @@ open class krlParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -37,34 +40,35 @@ open class krlParser: Parser {
                  CHARLITERAL = 106, STRINGLITERAL = 107, FLOATLITERAL = 108, 
                  INTLITERAL = 109, IDENTIFIER = 110
 	}
-	public static let RULE_module = 0, RULE_moduleRoutines = 1, RULE_mainRoutine = 2, 
-                   RULE_subRoutine = 3, RULE_procedureDefinition = 4, RULE_procedureName = 5, 
-                   RULE_functionDefinition = 6, RULE_functionName = 7, RULE_moduleData = 8, 
-                   RULE_moduleName = 9, RULE_dataList = 10, RULE_arrayInitialisation = 11, 
-                   RULE_typeDeclaration = 12, RULE_structureDefinition = 13, 
-                   RULE_enumDefinition = 14, RULE_enumValue = 15, RULE_variableDeclaration = 16, 
-                   RULE_signalDeclaration = 17, RULE_variableDeclarationInDataList = 18, 
-                   RULE_variableListRest = 19, RULE_variableInitialisation = 20, 
-                   RULE_structLiteral = 21, RULE_structElementList = 22, 
-                   RULE_structElement = 23, RULE_formalParameters = 24, 
-                   RULE_parameter = 25, RULE_routineBody = 26, RULE_routineDataSection = 27, 
-                   RULE_forwardDeclaration = 28, RULE_formalParametersWithType = 29, 
-                   RULE_parameterWithType = 30, RULE_parameterCallType = 31, 
-                   RULE_importStatement = 32, RULE_variableName = 33, RULE_arrayVariableSuffix = 34, 
-                   RULE_routineImplementationSection = 35, RULE_statementList = 36, 
-                   RULE_statement = 37, RULE_analogOutputStatement = 38, 
-                   RULE_analogInputStatement = 39, RULE_switchBlockStatementGroups = 40, 
-                   RULE_caseLabel = 41, RULE_defaultLabel = 42, RULE_expressionList = 43, 
-                   RULE_assignmentExpression = 44, RULE_expression = 45, 
-                   RULE_relationalOp = 46, RULE_conditionalOrExpression = 47, 
-                   RULE_exclusiveOrExpression = 48, RULE_conditionalAndExpression = 49, 
-                   RULE_additiveExpression = 50, RULE_multiplicativeExpression = 51, 
-                   RULE_geometricExpression = 52, RULE_unaryNotExpression = 53, 
-                   RULE_unaryPlusMinuxExpression = 54, RULE_primary = 55, 
-                   RULE_parExpression = 56, RULE_type = 57, RULE_typeName = 58, 
-                   RULE_primitiveType = 59, RULE_arguments = 60, RULE_literal = 61, 
-                   RULE_enumElement = 62
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_module = 0, RULE_moduleRoutines = 1, RULE_mainRoutine = 2, 
+            RULE_subRoutine = 3, RULE_procedureDefinition = 4, RULE_procedureName = 5, 
+            RULE_functionDefinition = 6, RULE_functionName = 7, RULE_moduleData = 8, 
+            RULE_moduleName = 9, RULE_dataList = 10, RULE_arrayInitialisation = 11, 
+            RULE_typeDeclaration = 12, RULE_structureDefinition = 13, RULE_enumDefinition = 14, 
+            RULE_enumValue = 15, RULE_variableDeclaration = 16, RULE_signalDeclaration = 17, 
+            RULE_variableDeclarationInDataList = 18, RULE_variableListRest = 19, 
+            RULE_variableInitialisation = 20, RULE_structLiteral = 21, RULE_structElementList = 22, 
+            RULE_structElement = 23, RULE_formalParameters = 24, RULE_parameter = 25, 
+            RULE_routineBody = 26, RULE_routineDataSection = 27, RULE_forwardDeclaration = 28, 
+            RULE_formalParametersWithType = 29, RULE_parameterWithType = 30, 
+            RULE_parameterCallType = 31, RULE_importStatement = 32, RULE_variableName = 33, 
+            RULE_arrayVariableSuffix = 34, RULE_routineImplementationSection = 35, 
+            RULE_statementList = 36, RULE_statement = 37, RULE_analogOutputStatement = 38, 
+            RULE_analogInputStatement = 39, RULE_switchBlockStatementGroups = 40, 
+            RULE_caseLabel = 41, RULE_defaultLabel = 42, RULE_expressionList = 43, 
+            RULE_assignmentExpression = 44, RULE_expression = 45, RULE_relationalOp = 46, 
+            RULE_conditionalOrExpression = 47, RULE_exclusiveOrExpression = 48, 
+            RULE_conditionalAndExpression = 49, RULE_additiveExpression = 50, 
+            RULE_multiplicativeExpression = 51, RULE_geometricExpression = 52, 
+            RULE_unaryNotExpression = 53, RULE_unaryPlusMinuxExpression = 54, 
+            RULE_primary = 55, RULE_parExpression = 56, RULE_type = 57, 
+            RULE_typeName = 58, RULE_primitiveType = 59, RULE_arguments = 60, 
+            RULE_literal = 61, RULE_enumElement = 62
+
+	public
+	static let ruleNames: [String] = [
 		"module", "moduleRoutines", "mainRoutine", "subRoutine", "procedureDefinition", 
 		"procedureName", "functionDefinition", "functionName", "moduleData", "moduleName", 
 		"dataList", "arrayInitialisation", "typeDeclaration", "structureDefinition", 
@@ -103,89 +107,77 @@ open class krlParser: Parser {
 		"EXOR", "HEADERLINE", "WS", "NEWLINE", "LINE_COMMENT", "CHARLITERAL", 
 		"STRINGLITERAL", "FLOATLITERAL", "INTLITERAL", "IDENTIFIER"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "krl.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return krlParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "krl.g4" }
+	override open
+	func getSerializedATN() -> String { return krlParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return krlParser.ruleNames }
+	override open
+	func getATN() -> ATN { return krlParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return krlParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return krlParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return krlParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,krlParser._ATN,krlParser._decisionToDFA, krlParser._sharedContextCache)
 	}
-	open class ModuleContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(krlParser.Tokens.EOF.rawValue, 0) }
-		open func moduleData() -> ModuleDataContext? {
-			return getRuleContext(ModuleDataContext.self,0)
+
+	public class ModuleContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(krlParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func moduleData() -> ModuleDataContext? {
+				return getRuleContext(ModuleDataContext.self, 0)
+			}
+			open
+			func moduleRoutines() -> ModuleRoutinesContext? {
+				return getRuleContext(ModuleRoutinesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_module
 		}
-		open func moduleRoutines() -> ModuleRoutinesContext? {
-			return getRuleContext(ModuleRoutinesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_module }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterModule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterModule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitModule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitModule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitModule(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitModule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitModule(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitModule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module() throws -> ModuleContext {
+	 open func module() throws -> ModuleContext {
 		var _localctx: ModuleContext = ModuleContext(_ctx, getState())
 		try enterRule(_localctx, 0, krlParser.RULE_module)
 		defer {
@@ -209,7 +201,7 @@ open class krlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(130)
 		 	try match(krlParser.Tokens.EOF.rawValue)
@@ -223,47 +215,59 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleRoutinesContext:ParserRuleContext {
-		open func mainRoutine() -> MainRoutineContext? {
-			return getRuleContext(MainRoutineContext.self,0)
+
+	public class ModuleRoutinesContext: ParserRuleContext {
+			open
+			func mainRoutine() -> MainRoutineContext? {
+				return getRuleContext(MainRoutineContext.self, 0)
+			}
+			open
+			func subRoutine() -> [SubRoutineContext] {
+				return getRuleContexts(SubRoutineContext.self)
+			}
+			open
+			func subRoutine(_ i: Int) -> SubRoutineContext? {
+				return getRuleContext(SubRoutineContext.self, i)
+			}
+			open
+			func NEWLINE() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.NEWLINE.rawValue)
+			}
+			open
+			func NEWLINE(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_moduleRoutines
 		}
-		open func subRoutine() -> Array<SubRoutineContext> {
-			return getRuleContexts(SubRoutineContext.self)
-		}
-		open func subRoutine(_ i: Int) -> SubRoutineContext? {
-			return getRuleContext(SubRoutineContext.self,i)
-		}
-		open func NEWLINE() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.NEWLINE.rawValue) }
-		open func NEWLINE(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_moduleRoutines }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterModuleRoutines(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterModuleRoutines(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitModuleRoutines(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitModuleRoutines(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitModuleRoutines(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitModuleRoutines(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitModuleRoutines(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitModuleRoutines(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleRoutines() throws -> ModuleRoutinesContext {
+	 open func moduleRoutines() throws -> ModuleRoutinesContext {
 		var _localctx: ModuleRoutinesContext = ModuleRoutinesContext(_ctx, getState())
 		try enterRule(_localctx, 2, krlParser.RULE_moduleRoutines)
 		var _la: Int = 0
@@ -302,7 +306,7 @@ open class krlParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(139)
@@ -319,40 +323,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class MainRoutineContext:ParserRuleContext {
-		open func procedureDefinition() -> ProcedureDefinitionContext? {
-			return getRuleContext(ProcedureDefinitionContext.self,0)
+
+	public class MainRoutineContext: ParserRuleContext {
+			open
+			func procedureDefinition() -> ProcedureDefinitionContext? {
+				return getRuleContext(ProcedureDefinitionContext.self, 0)
+			}
+			open
+			func functionDefinition() -> FunctionDefinitionContext? {
+				return getRuleContext(FunctionDefinitionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_mainRoutine
 		}
-		open func functionDefinition() -> FunctionDefinitionContext? {
-			return getRuleContext(FunctionDefinitionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_mainRoutine }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterMainRoutine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterMainRoutine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitMainRoutine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitMainRoutine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitMainRoutine(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitMainRoutine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitMainRoutine(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitMainRoutine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mainRoutine() throws -> MainRoutineContext {
+	 open func mainRoutine() throws -> MainRoutineContext {
 		var _localctx: MainRoutineContext = MainRoutineContext(_ctx, getState())
 		try enterRule(_localctx, 4, krlParser.RULE_mainRoutine)
 		defer {
@@ -385,40 +396,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class SubRoutineContext:ParserRuleContext {
-		open func procedureDefinition() -> ProcedureDefinitionContext? {
-			return getRuleContext(ProcedureDefinitionContext.self,0)
+
+	public class SubRoutineContext: ParserRuleContext {
+			open
+			func procedureDefinition() -> ProcedureDefinitionContext? {
+				return getRuleContext(ProcedureDefinitionContext.self, 0)
+			}
+			open
+			func functionDefinition() -> FunctionDefinitionContext? {
+				return getRuleContext(FunctionDefinitionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_subRoutine
 		}
-		open func functionDefinition() -> FunctionDefinitionContext? {
-			return getRuleContext(FunctionDefinitionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_subRoutine }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterSubRoutine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterSubRoutine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitSubRoutine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitSubRoutine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitSubRoutine(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitSubRoutine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitSubRoutine(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitSubRoutine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subRoutine() throws -> SubRoutineContext {
+	 open func subRoutine() throws -> SubRoutineContext {
 		var _localctx: SubRoutineContext = SubRoutineContext(_ctx, getState())
 		try enterRule(_localctx, 6, krlParser.RULE_subRoutine)
 		defer {
@@ -451,47 +469,67 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureDefinitionContext:ParserRuleContext {
-		open func DEF() -> TerminalNode? { return getToken(krlParser.Tokens.DEF.rawValue, 0) }
-		open func procedureName() -> ProcedureNameContext? {
-			return getRuleContext(ProcedureNameContext.self,0)
+
+	public class ProcedureDefinitionContext: ParserRuleContext {
+			open
+			func DEF() -> TerminalNode? {
+				return getToken(krlParser.Tokens.DEF.rawValue, 0)
+			}
+			open
+			func procedureName() -> ProcedureNameContext? {
+				return getRuleContext(ProcedureNameContext.self, 0)
+			}
+			open
+			func formalParameters() -> FormalParametersContext? {
+				return getRuleContext(FormalParametersContext.self, 0)
+			}
+			open
+			func NEWLINE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, 0)
+			}
+			open
+			func routineBody() -> RoutineBodyContext? {
+				return getRuleContext(RoutineBodyContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(krlParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func GLOBAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.GLOBAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_procedureDefinition
 		}
-		open func formalParameters() -> FormalParametersContext? {
-			return getRuleContext(FormalParametersContext.self,0)
-		}
-		open func NEWLINE() -> TerminalNode? { return getToken(krlParser.Tokens.NEWLINE.rawValue, 0) }
-		open func routineBody() -> RoutineBodyContext? {
-			return getRuleContext(RoutineBodyContext.self,0)
-		}
-		open func END() -> TerminalNode? { return getToken(krlParser.Tokens.END.rawValue, 0) }
-		open func GLOBAL() -> TerminalNode? { return getToken(krlParser.Tokens.GLOBAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_procedureDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterProcedureDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterProcedureDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitProcedureDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitProcedureDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitProcedureDefinition(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitProcedureDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitProcedureDefinition(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitProcedureDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureDefinition() throws -> ProcedureDefinitionContext {
+	 open func procedureDefinition() throws -> ProcedureDefinitionContext {
 		var _localctx: ProcedureDefinitionContext = ProcedureDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 8, krlParser.RULE_procedureDefinition)
 		var _la: Int = 0
@@ -535,35 +573,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureNameContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_procedureName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterProcedureName(self)
+
+	public class ProcedureNameContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_procedureName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterProcedureName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitProcedureName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitProcedureName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitProcedureName(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitProcedureName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitProcedureName(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitProcedureName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureName() throws -> ProcedureNameContext {
+	 open func procedureName() throws -> ProcedureNameContext {
 		var _localctx: ProcedureNameContext = ProcedureNameContext(_ctx, getState())
 		try enterRule(_localctx, 10, krlParser.RULE_procedureName)
 		defer {
@@ -583,50 +629,71 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionDefinitionContext:ParserRuleContext {
-		open func DEFFCT() -> TerminalNode? { return getToken(krlParser.Tokens.DEFFCT.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class FunctionDefinitionContext: ParserRuleContext {
+			open
+			func DEFFCT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.DEFFCT.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func functionName() -> FunctionNameContext? {
+				return getRuleContext(FunctionNameContext.self, 0)
+			}
+			open
+			func formalParameters() -> FormalParametersContext? {
+				return getRuleContext(FormalParametersContext.self, 0)
+			}
+			open
+			func NEWLINE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, 0)
+			}
+			open
+			func routineBody() -> RoutineBodyContext? {
+				return getRuleContext(RoutineBodyContext.self, 0)
+			}
+			open
+			func ENDFCT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ENDFCT.rawValue, 0)
+			}
+			open
+			func GLOBAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.GLOBAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_functionDefinition
 		}
-		open func functionName() -> FunctionNameContext? {
-			return getRuleContext(FunctionNameContext.self,0)
-		}
-		open func formalParameters() -> FormalParametersContext? {
-			return getRuleContext(FormalParametersContext.self,0)
-		}
-		open func NEWLINE() -> TerminalNode? { return getToken(krlParser.Tokens.NEWLINE.rawValue, 0) }
-		open func routineBody() -> RoutineBodyContext? {
-			return getRuleContext(RoutineBodyContext.self,0)
-		}
-		open func ENDFCT() -> TerminalNode? { return getToken(krlParser.Tokens.ENDFCT.rawValue, 0) }
-		open func GLOBAL() -> TerminalNode? { return getToken(krlParser.Tokens.GLOBAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_functionDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterFunctionDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterFunctionDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitFunctionDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitFunctionDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitFunctionDefinition(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitFunctionDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitFunctionDefinition(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitFunctionDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionDefinition() throws -> FunctionDefinitionContext {
+	 open func functionDefinition() throws -> FunctionDefinitionContext {
 		var _localctx: FunctionDefinitionContext = FunctionDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 12, krlParser.RULE_functionDefinition)
 		var _la: Int = 0
@@ -672,35 +739,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionNameContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_functionName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterFunctionName(self)
+
+	public class FunctionNameContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_functionName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterFunctionName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitFunctionName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitFunctionName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitFunctionName(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitFunctionName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitFunctionName(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitFunctionName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionName() throws -> FunctionNameContext {
+	 open func functionName() throws -> FunctionNameContext {
 		var _localctx: FunctionNameContext = FunctionNameContext(_ctx, getState())
 		try enterRule(_localctx, 14, krlParser.RULE_functionName)
 		defer {
@@ -720,47 +795,67 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleDataContext:ParserRuleContext {
-		open func DEFDAT() -> TerminalNode? { return getToken(krlParser.Tokens.DEFDAT.rawValue, 0) }
-		open func moduleName() -> ModuleNameContext? {
-			return getRuleContext(ModuleNameContext.self,0)
+
+	public class ModuleDataContext: ParserRuleContext {
+			open
+			func DEFDAT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.DEFDAT.rawValue, 0)
+			}
+			open
+			func moduleName() -> ModuleNameContext? {
+				return getRuleContext(ModuleNameContext.self, 0)
+			}
+			open
+			func NEWLINE() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.NEWLINE.rawValue)
+			}
+			open
+			func NEWLINE(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
+			}
+			open
+			func dataList() -> DataListContext? {
+				return getRuleContext(DataListContext.self, 0)
+			}
+			open
+			func ENDDAT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ENDDAT.rawValue, 0)
+			}
+			open
+			func PUBLIC() -> TerminalNode? {
+				return getToken(krlParser.Tokens.PUBLIC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_moduleData
 		}
-		open func NEWLINE() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.NEWLINE.rawValue) }
-		open func NEWLINE(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
-		}
-		open func dataList() -> DataListContext? {
-			return getRuleContext(DataListContext.self,0)
-		}
-		open func ENDDAT() -> TerminalNode? { return getToken(krlParser.Tokens.ENDDAT.rawValue, 0) }
-		open func PUBLIC() -> TerminalNode? { return getToken(krlParser.Tokens.PUBLIC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_moduleData }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterModuleData(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterModuleData(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitModuleData(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitModuleData(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitModuleData(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitModuleData(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitModuleData(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitModuleData(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleData() throws -> ModuleDataContext {
+	 open func moduleData() throws -> ModuleDataContext {
 		var _localctx: ModuleDataContext = ModuleDataContext(_ctx, getState())
 		try enterRule(_localctx, 16, krlParser.RULE_moduleData)
 		var _la: Int = 0
@@ -818,35 +913,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleNameContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_moduleName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterModuleName(self)
+
+	public class ModuleNameContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_moduleName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterModuleName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitModuleName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitModuleName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitModuleName(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitModuleName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitModuleName(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitModuleName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleName() throws -> ModuleNameContext {
+	 open func moduleName() throws -> ModuleNameContext {
 		var _localctx: ModuleNameContext = ModuleNameContext(_ctx, getState())
 		try enterRule(_localctx, 18, krlParser.RULE_moduleName)
 		defer {
@@ -866,68 +969,87 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class DataListContext:ParserRuleContext {
-		open func NEWLINE() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.NEWLINE.rawValue) }
-		open func NEWLINE(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
+
+	public class DataListContext: ParserRuleContext {
+			open
+			func NEWLINE() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.NEWLINE.rawValue)
+			}
+			open
+			func NEWLINE(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
+			}
+			open
+			func forwardDeclaration() -> [ForwardDeclarationContext] {
+				return getRuleContexts(ForwardDeclarationContext.self)
+			}
+			open
+			func forwardDeclaration(_ i: Int) -> ForwardDeclarationContext? {
+				return getRuleContext(ForwardDeclarationContext.self, i)
+			}
+			open
+			func typeDeclaration() -> [TypeDeclarationContext] {
+				return getRuleContexts(TypeDeclarationContext.self)
+			}
+			open
+			func typeDeclaration(_ i: Int) -> TypeDeclarationContext? {
+				return getRuleContext(TypeDeclarationContext.self, i)
+			}
+			open
+			func variableDeclarationInDataList() -> [VariableDeclarationInDataListContext] {
+				return getRuleContexts(VariableDeclarationInDataListContext.self)
+			}
+			open
+			func variableDeclarationInDataList(_ i: Int) -> VariableDeclarationInDataListContext? {
+				return getRuleContext(VariableDeclarationInDataListContext.self, i)
+			}
+			open
+			func arrayInitialisation() -> [ArrayInitialisationContext] {
+				return getRuleContexts(ArrayInitialisationContext.self)
+			}
+			open
+			func arrayInitialisation(_ i: Int) -> ArrayInitialisationContext? {
+				return getRuleContext(ArrayInitialisationContext.self, i)
+			}
+			open
+			func importStatement() -> [ImportStatementContext] {
+				return getRuleContexts(ImportStatementContext.self)
+			}
+			open
+			func importStatement(_ i: Int) -> ImportStatementContext? {
+				return getRuleContext(ImportStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_dataList
 		}
-		open func forwardDeclaration() -> Array<ForwardDeclarationContext> {
-			return getRuleContexts(ForwardDeclarationContext.self)
-		}
-		open func forwardDeclaration(_ i: Int) -> ForwardDeclarationContext? {
-			return getRuleContext(ForwardDeclarationContext.self,i)
-		}
-		open func typeDeclaration() -> Array<TypeDeclarationContext> {
-			return getRuleContexts(TypeDeclarationContext.self)
-		}
-		open func typeDeclaration(_ i: Int) -> TypeDeclarationContext? {
-			return getRuleContext(TypeDeclarationContext.self,i)
-		}
-		open func variableDeclarationInDataList() -> Array<VariableDeclarationInDataListContext> {
-			return getRuleContexts(VariableDeclarationInDataListContext.self)
-		}
-		open func variableDeclarationInDataList(_ i: Int) -> VariableDeclarationInDataListContext? {
-			return getRuleContext(VariableDeclarationInDataListContext.self,i)
-		}
-		open func arrayInitialisation() -> Array<ArrayInitialisationContext> {
-			return getRuleContexts(ArrayInitialisationContext.self)
-		}
-		open func arrayInitialisation(_ i: Int) -> ArrayInitialisationContext? {
-			return getRuleContext(ArrayInitialisationContext.self,i)
-		}
-		open func importStatement() -> Array<ImportStatementContext> {
-			return getRuleContexts(ImportStatementContext.self)
-		}
-		open func importStatement(_ i: Int) -> ImportStatementContext? {
-			return getRuleContext(ImportStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_dataList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterDataList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterDataList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitDataList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitDataList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitDataList(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitDataList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitDataList(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitDataList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dataList() throws -> DataListContext {
+	 open func dataList() throws -> DataListContext {
 		var _localctx: DataListContext = DataListContext(_ctx, getState())
 		try enterRule(_localctx, 20, krlParser.RULE_dataList)
 		var _la: Int = 0
@@ -1011,41 +1133,51 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayInitialisationContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func arrayVariableSuffix() -> ArrayVariableSuffixContext? {
-			return getRuleContext(ArrayVariableSuffixContext.self,0)
+
+	public class ArrayInitialisationContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func arrayVariableSuffix() -> ArrayVariableSuffixContext? {
+				return getRuleContext(ArrayVariableSuffixContext.self, 0)
+			}
+			open
+			func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
+				return getRuleContext(UnaryPlusMinuxExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_arrayInitialisation
 		}
-		open func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
-			return getRuleContext(UnaryPlusMinuxExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_arrayInitialisation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterArrayInitialisation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterArrayInitialisation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitArrayInitialisation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitArrayInitialisation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitArrayInitialisation(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitArrayInitialisation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitArrayInitialisation(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitArrayInitialisation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayInitialisation() throws -> ArrayInitialisationContext {
+	 open func arrayInitialisation() throws -> ArrayInitialisationContext {
 		var _localctx: ArrayInitialisationContext = ArrayInitialisationContext(_ctx, getState())
 		try enterRule(_localctx, 22, krlParser.RULE_arrayInitialisation)
 		defer {
@@ -1071,40 +1203,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class TypeDeclarationContext:ParserRuleContext {
-		open func structureDefinition() -> StructureDefinitionContext? {
-			return getRuleContext(StructureDefinitionContext.self,0)
+
+	public class TypeDeclarationContext: ParserRuleContext {
+			open
+			func structureDefinition() -> StructureDefinitionContext? {
+				return getRuleContext(StructureDefinitionContext.self, 0)
+			}
+			open
+			func enumDefinition() -> EnumDefinitionContext? {
+				return getRuleContext(EnumDefinitionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_typeDeclaration
 		}
-		open func enumDefinition() -> EnumDefinitionContext? {
-			return getRuleContext(EnumDefinitionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_typeDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterTypeDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterTypeDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitTypeDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitTypeDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitTypeDeclaration(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitTypeDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitTypeDeclaration(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitTypeDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeDeclaration() throws -> TypeDeclarationContext {
+	 open func typeDeclaration() throws -> TypeDeclarationContext {
 		var _localctx: TypeDeclarationContext = TypeDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 24, krlParser.RULE_typeDeclaration)
 		defer {
@@ -1137,57 +1276,75 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class StructureDefinitionContext:ParserRuleContext {
-		open func STRUC() -> TerminalNode? { return getToken(krlParser.Tokens.STRUC.rawValue, 0) }
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
+
+	public class StructureDefinitionContext: ParserRuleContext {
+			open
+			func STRUC() -> TerminalNode? {
+				return getToken(krlParser.Tokens.STRUC.rawValue, 0)
+			}
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+			open
+			func variableName() -> [VariableNameContext] {
+				return getRuleContexts(VariableNameContext.self)
+			}
+			open
+			func variableName(_ i: Int) -> VariableNameContext? {
+				return getRuleContext(VariableNameContext.self, i)
+			}
+			open
+			func variableListRest() -> [VariableListRestContext] {
+				return getRuleContexts(VariableListRestContext.self)
+			}
+			open
+			func variableListRest(_ i: Int) -> VariableListRestContext? {
+				return getRuleContext(VariableListRestContext.self, i)
+			}
+			open
+			func GLOBAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.GLOBAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_structureDefinition
 		}
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
-		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open func variableName() -> Array<VariableNameContext> {
-			return getRuleContexts(VariableNameContext.self)
-		}
-		open func variableName(_ i: Int) -> VariableNameContext? {
-			return getRuleContext(VariableNameContext.self,i)
-		}
-		open func variableListRest() -> Array<VariableListRestContext> {
-			return getRuleContexts(VariableListRestContext.self)
-		}
-		open func variableListRest(_ i: Int) -> VariableListRestContext? {
-			return getRuleContext(VariableListRestContext.self,i)
-		}
-		open func GLOBAL() -> TerminalNode? { return getToken(krlParser.Tokens.GLOBAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_structureDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterStructureDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterStructureDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitStructureDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitStructureDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitStructureDefinition(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitStructureDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitStructureDefinition(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitStructureDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func structureDefinition() throws -> StructureDefinitionContext {
+	 open func structureDefinition() throws -> StructureDefinitionContext {
 		var _localctx: StructureDefinitionContext = StructureDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 26, krlParser.RULE_structureDefinition)
 		var _la: Int = 0
@@ -1251,45 +1408,59 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class EnumDefinitionContext:ParserRuleContext {
-		open func ENUM() -> TerminalNode? { return getToken(krlParser.Tokens.ENUM.rawValue, 0) }
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
+
+	public class EnumDefinitionContext: ParserRuleContext {
+			open
+			func ENUM() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ENUM.rawValue, 0)
+			}
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+			open
+			func enumValue() -> [EnumValueContext] {
+				return getRuleContexts(EnumValueContext.self)
+			}
+			open
+			func enumValue(_ i: Int) -> EnumValueContext? {
+				return getRuleContext(EnumValueContext.self, i)
+			}
+			open
+			func GLOBAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.GLOBAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_enumDefinition
 		}
-		open func enumValue() -> Array<EnumValueContext> {
-			return getRuleContexts(EnumValueContext.self)
-		}
-		open func enumValue(_ i: Int) -> EnumValueContext? {
-			return getRuleContext(EnumValueContext.self,i)
-		}
-		open func GLOBAL() -> TerminalNode? { return getToken(krlParser.Tokens.GLOBAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_enumDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterEnumDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterEnumDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitEnumDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitEnumDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitEnumDefinition(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitEnumDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitEnumDefinition(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitEnumDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumDefinition() throws -> EnumDefinitionContext {
+	 open func enumDefinition() throws -> EnumDefinitionContext {
 		var _localctx: EnumDefinitionContext = EnumDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 28, krlParser.RULE_enumDefinition)
 		var _la: Int = 0
@@ -1345,35 +1516,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class EnumValueContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_enumValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterEnumValue(self)
+
+	public class EnumValueContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_enumValue
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterEnumValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitEnumValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitEnumValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitEnumValue(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitEnumValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitEnumValue(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitEnumValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumValue() throws -> EnumValueContext {
+	 open func enumValue() throws -> EnumValueContext {
 		var _localctx: EnumValueContext = EnumValueContext(_ctx, getState())
 		try enterRule(_localctx, 30, krlParser.RULE_enumValue)
 		defer {
@@ -1393,47 +1572,59 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclarationContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class VariableDeclarationContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func variableName() -> VariableNameContext? {
+				return getRuleContext(VariableNameContext.self, 0)
+			}
+			open
+			func variableListRest() -> VariableListRestContext? {
+				return getRuleContext(VariableListRestContext.self, 0)
+			}
+			open
+			func signalDeclaration() -> SignalDeclarationContext? {
+				return getRuleContext(SignalDeclarationContext.self, 0)
+			}
+			open
+			func DECL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.DECL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_variableDeclaration
 		}
-		open func variableName() -> VariableNameContext? {
-			return getRuleContext(VariableNameContext.self,0)
-		}
-		open func variableListRest() -> VariableListRestContext? {
-			return getRuleContext(VariableListRestContext.self,0)
-		}
-		open func signalDeclaration() -> SignalDeclarationContext? {
-			return getRuleContext(SignalDeclarationContext.self,0)
-		}
-		open func DECL() -> TerminalNode? { return getToken(krlParser.Tokens.DECL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_variableDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterVariableDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterVariableDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitVariableDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitVariableDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitVariableDeclaration(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitVariableDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclaration() throws -> VariableDeclarationContext {
+	 open func variableDeclaration() throws -> VariableDeclarationContext {
 		var _localctx: VariableDeclarationContext = VariableDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 32, krlParser.RULE_variableDeclaration)
 		var _la: Int = 0
@@ -1478,7 +1669,7 @@ open class krlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1490,43 +1681,59 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class SignalDeclarationContext:ParserRuleContext {
-		open func SIGNAL() -> TerminalNode? { return getToken(krlParser.Tokens.SIGNAL.rawValue, 0) }
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func primary() -> Array<PrimaryContext> {
-			return getRuleContexts(PrimaryContext.self)
+
+	public class SignalDeclarationContext: ParserRuleContext {
+			open
+			func SIGNAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.SIGNAL.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func primary() -> [PrimaryContext] {
+				return getRuleContexts(PrimaryContext.self)
+			}
+			open
+			func primary(_ i: Int) -> PrimaryContext? {
+				return getRuleContext(PrimaryContext.self, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(krlParser.Tokens.TO.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_signalDeclaration
 		}
-		open func primary(_ i: Int) -> PrimaryContext? {
-			return getRuleContext(PrimaryContext.self,i)
-		}
-		open func TO() -> TerminalNode? { return getToken(krlParser.Tokens.TO.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_signalDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterSignalDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterSignalDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitSignalDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitSignalDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitSignalDeclaration(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitSignalDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitSignalDeclaration(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitSignalDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func signalDeclaration() throws -> SignalDeclarationContext {
+	 open func signalDeclaration() throws -> SignalDeclarationContext {
 		var _localctx: SignalDeclarationContext = SignalDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 34, krlParser.RULE_signalDeclaration)
 		var _la: Int = 0
@@ -1566,52 +1773,71 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclarationInDataListContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class VariableDeclarationInDataListContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func variableName() -> VariableNameContext? {
+				return getRuleContext(VariableNameContext.self, 0)
+			}
+			open
+			func signalDeclaration() -> SignalDeclarationContext? {
+				return getRuleContext(SignalDeclarationContext.self, 0)
+			}
+			open
+			func DECL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.DECL.rawValue, 0)
+			}
+			open
+			func GLOBAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.GLOBAL.rawValue, 0)
+			}
+			open
+			func CONST() -> TerminalNode? {
+				return getToken(krlParser.Tokens.CONST.rawValue, 0)
+			}
+			open
+			func variableListRest() -> VariableListRestContext? {
+				return getRuleContext(VariableListRestContext.self, 0)
+			}
+			open
+			func variableInitialisation() -> VariableInitialisationContext? {
+				return getRuleContext(VariableInitialisationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_variableDeclarationInDataList
 		}
-		open func variableName() -> VariableNameContext? {
-			return getRuleContext(VariableNameContext.self,0)
-		}
-		open func signalDeclaration() -> SignalDeclarationContext? {
-			return getRuleContext(SignalDeclarationContext.self,0)
-		}
-		open func DECL() -> TerminalNode? { return getToken(krlParser.Tokens.DECL.rawValue, 0) }
-		open func GLOBAL() -> TerminalNode? { return getToken(krlParser.Tokens.GLOBAL.rawValue, 0) }
-		open func CONST() -> TerminalNode? { return getToken(krlParser.Tokens.CONST.rawValue, 0) }
-		open func variableListRest() -> VariableListRestContext? {
-			return getRuleContext(VariableListRestContext.self,0)
-		}
-		open func variableInitialisation() -> VariableInitialisationContext? {
-			return getRuleContext(VariableInitialisationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_variableDeclarationInDataList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterVariableDeclarationInDataList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterVariableDeclarationInDataList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitVariableDeclarationInDataList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitVariableDeclarationInDataList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitVariableDeclarationInDataList(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitVariableDeclarationInDataList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitVariableDeclarationInDataList(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitVariableDeclarationInDataList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclarationInDataList() throws -> VariableDeclarationInDataListContext {
+	 open func variableDeclarationInDataList() throws -> VariableDeclarationInDataListContext {
 		var _localctx: VariableDeclarationInDataListContext = VariableDeclarationInDataListContext(_ctx, getState())
 		try enterRule(_localctx, 36, krlParser.RULE_variableDeclarationInDataList)
 		var _la: Int = 0
@@ -1687,7 +1913,7 @@ open class krlParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -1698,7 +1924,7 @@ open class krlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1710,40 +1936,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class VariableListRestContext:ParserRuleContext {
-		open func variableName() -> Array<VariableNameContext> {
-			return getRuleContexts(VariableNameContext.self)
+
+	public class VariableListRestContext: ParserRuleContext {
+			open
+			func variableName() -> [VariableNameContext] {
+				return getRuleContexts(VariableNameContext.self)
+			}
+			open
+			func variableName(_ i: Int) -> VariableNameContext? {
+				return getRuleContext(VariableNameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_variableListRest
 		}
-		open func variableName(_ i: Int) -> VariableNameContext? {
-			return getRuleContext(VariableNameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_variableListRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterVariableListRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterVariableListRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitVariableListRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitVariableListRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitVariableListRest(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitVariableListRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitVariableListRest(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitVariableListRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableListRest() throws -> VariableListRestContext {
+	 open func variableListRest() throws -> VariableListRestContext {
 		var _localctx: VariableListRestContext = VariableListRestContext(_ctx, getState())
 		try enterRule(_localctx, 38, krlParser.RULE_variableListRest)
 		defer {
@@ -1778,37 +2011,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class VariableInitialisationContext:ParserRuleContext {
-		open func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
-			return getRuleContext(UnaryPlusMinuxExpressionContext.self,0)
+
+	public class VariableInitialisationContext: ParserRuleContext {
+			open
+			func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
+				return getRuleContext(UnaryPlusMinuxExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_variableInitialisation
 		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_variableInitialisation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterVariableInitialisation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterVariableInitialisation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitVariableInitialisation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitVariableInitialisation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitVariableInitialisation(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitVariableInitialisation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitVariableInitialisation(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitVariableInitialisation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableInitialisation() throws -> VariableInitialisationContext {
+	 open func variableInitialisation() throws -> VariableInitialisationContext {
 		var _localctx: VariableInitialisationContext = VariableInitialisationContext(_ctx, getState())
 		try enterRule(_localctx, 40, krlParser.RULE_variableInitialisation)
 		defer {
@@ -1830,40 +2069,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class StructLiteralContext:ParserRuleContext {
-		open func structElementList() -> StructElementListContext? {
-			return getRuleContext(StructElementListContext.self,0)
+
+	public class StructLiteralContext: ParserRuleContext {
+			open
+			func structElementList() -> StructElementListContext? {
+				return getRuleContext(StructElementListContext.self, 0)
+			}
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_structLiteral
 		}
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_structLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterStructLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterStructLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitStructLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitStructLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitStructLiteral(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitStructLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitStructLiteral(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitStructLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func structLiteral() throws -> StructLiteralContext {
+	 open func structLiteral() throws -> StructLiteralContext {
 		var _localctx: StructLiteralContext = StructLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 42, krlParser.RULE_structLiteral)
 		defer {
@@ -1899,40 +2145,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class StructElementListContext:ParserRuleContext {
-		open func structElement() -> Array<StructElementContext> {
-			return getRuleContexts(StructElementContext.self)
+
+	public class StructElementListContext: ParserRuleContext {
+			open
+			func structElement() -> [StructElementContext] {
+				return getRuleContexts(StructElementContext.self)
+			}
+			open
+			func structElement(_ i: Int) -> StructElementContext? {
+				return getRuleContext(StructElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_structElementList
 		}
-		open func structElement(_ i: Int) -> StructElementContext? {
-			return getRuleContext(StructElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_structElementList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterStructElementList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterStructElementList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitStructElementList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitStructElementList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitStructElementList(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitStructElementList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitStructElementList(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitStructElementList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func structElementList() throws -> StructElementListContext {
+	 open func structElementList() throws -> StructElementListContext {
 		var _localctx: StructElementListContext = StructElementListContext(_ctx, getState())
 		try enterRule(_localctx, 44, krlParser.RULE_structElementList)
 		var _la: Int = 0
@@ -1971,40 +2224,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class StructElementContext:ParserRuleContext {
-		open func variableName() -> VariableNameContext? {
-			return getRuleContext(VariableNameContext.self,0)
+
+	public class StructElementContext: ParserRuleContext {
+			open
+			func variableName() -> VariableNameContext? {
+				return getRuleContext(VariableNameContext.self, 0)
+			}
+			open
+			func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
+				return getRuleContext(UnaryPlusMinuxExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_structElement
 		}
-		open func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
-			return getRuleContext(UnaryPlusMinuxExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_structElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterStructElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterStructElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitStructElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitStructElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitStructElement(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitStructElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitStructElement(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitStructElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func structElement() throws -> StructElementContext {
+	 open func structElement() throws -> StructElementContext {
 		var _localctx: StructElementContext = StructElementContext(_ctx, getState())
 		try enterRule(_localctx, 46, krlParser.RULE_structElement)
 		defer {
@@ -2026,40 +2286,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class FormalParametersContext:ParserRuleContext {
-		open func parameter() -> Array<ParameterContext> {
-			return getRuleContexts(ParameterContext.self)
+
+	public class FormalParametersContext: ParserRuleContext {
+			open
+			func parameter() -> [ParameterContext] {
+				return getRuleContexts(ParameterContext.self)
+			}
+			open
+			func parameter(_ i: Int) -> ParameterContext? {
+				return getRuleContext(ParameterContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_formalParameters
 		}
-		open func parameter(_ i: Int) -> ParameterContext? {
-			return getRuleContext(ParameterContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_formalParameters }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterFormalParameters(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterFormalParameters(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitFormalParameters(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitFormalParameters(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitFormalParameters(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitFormalParameters(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitFormalParameters(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitFormalParameters(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalParameters() throws -> FormalParametersContext {
+	 open func formalParameters() throws -> FormalParametersContext {
 		var _localctx: FormalParametersContext = FormalParametersContext(_ctx, getState())
 		try enterRule(_localctx, 48, krlParser.RULE_formalParameters)
 		var _la: Int = 0
@@ -2113,40 +2380,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ParameterContext:ParserRuleContext {
-		open func variableName() -> VariableNameContext? {
-			return getRuleContext(VariableNameContext.self,0)
+
+	public class ParameterContext: ParserRuleContext {
+			open
+			func variableName() -> VariableNameContext? {
+				return getRuleContext(VariableNameContext.self, 0)
+			}
+			open
+			func parameterCallType() -> ParameterCallTypeContext? {
+				return getRuleContext(ParameterCallTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_parameter
 		}
-		open func parameterCallType() -> ParameterCallTypeContext? {
-			return getRuleContext(ParameterCallTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_parameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterParameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterParameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitParameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitParameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitParameter(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitParameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitParameter(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitParameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter() throws -> ParameterContext {
+	 open func parameter() throws -> ParameterContext {
 		var _localctx: ParameterContext = ParameterContext(_ctx, getState())
 		try enterRule(_localctx, 50, krlParser.RULE_parameter)
 		var _la: Int = 0
@@ -2180,40 +2454,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class RoutineBodyContext:ParserRuleContext {
-		open func routineDataSection() -> RoutineDataSectionContext? {
-			return getRuleContext(RoutineDataSectionContext.self,0)
+
+	public class RoutineBodyContext: ParserRuleContext {
+			open
+			func routineDataSection() -> RoutineDataSectionContext? {
+				return getRuleContext(RoutineDataSectionContext.self, 0)
+			}
+			open
+			func routineImplementationSection() -> RoutineImplementationSectionContext? {
+				return getRuleContext(RoutineImplementationSectionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_routineBody
 		}
-		open func routineImplementationSection() -> RoutineImplementationSectionContext? {
-			return getRuleContext(RoutineImplementationSectionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_routineBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterRoutineBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterRoutineBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitRoutineBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitRoutineBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitRoutineBody(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitRoutineBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitRoutineBody(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitRoutineBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func routineBody() throws -> RoutineBodyContext {
+	 open func routineBody() throws -> RoutineBodyContext {
 		var _localctx: RoutineBodyContext = RoutineBodyContext(_ctx, getState())
 		try enterRule(_localctx, 52, krlParser.RULE_routineBody)
 		defer {
@@ -2235,56 +2516,71 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class RoutineDataSectionContext:ParserRuleContext {
-		open func forwardDeclaration() -> Array<ForwardDeclarationContext> {
-			return getRuleContexts(ForwardDeclarationContext.self)
+
+	public class RoutineDataSectionContext: ParserRuleContext {
+			open
+			func forwardDeclaration() -> [ForwardDeclarationContext] {
+				return getRuleContexts(ForwardDeclarationContext.self)
+			}
+			open
+			func forwardDeclaration(_ i: Int) -> ForwardDeclarationContext? {
+				return getRuleContext(ForwardDeclarationContext.self, i)
+			}
+			open
+			func NEWLINE() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.NEWLINE.rawValue)
+			}
+			open
+			func NEWLINE(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
+			}
+			open
+			func variableDeclaration() -> [VariableDeclarationContext] {
+				return getRuleContexts(VariableDeclarationContext.self)
+			}
+			open
+			func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
+				return getRuleContext(VariableDeclarationContext.self, i)
+			}
+			open
+			func importStatement() -> [ImportStatementContext] {
+				return getRuleContexts(ImportStatementContext.self)
+			}
+			open
+			func importStatement(_ i: Int) -> ImportStatementContext? {
+				return getRuleContext(ImportStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_routineDataSection
 		}
-		open func forwardDeclaration(_ i: Int) -> ForwardDeclarationContext? {
-			return getRuleContext(ForwardDeclarationContext.self,i)
-		}
-		open func NEWLINE() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.NEWLINE.rawValue) }
-		open func NEWLINE(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
-		}
-		open func variableDeclaration() -> Array<VariableDeclarationContext> {
-			return getRuleContexts(VariableDeclarationContext.self)
-		}
-		open func variableDeclaration(_ i: Int) -> VariableDeclarationContext? {
-			return getRuleContext(VariableDeclarationContext.self,i)
-		}
-		open func importStatement() -> Array<ImportStatementContext> {
-			return getRuleContexts(ImportStatementContext.self)
-		}
-		open func importStatement(_ i: Int) -> ImportStatementContext? {
-			return getRuleContext(ImportStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_routineDataSection }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterRoutineDataSection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterRoutineDataSection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitRoutineDataSection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitRoutineDataSection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitRoutineDataSection(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitRoutineDataSection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitRoutineDataSection(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitRoutineDataSection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func routineDataSection() throws -> RoutineDataSectionContext {
+	 open func routineDataSection() throws -> RoutineDataSectionContext {
 		var _localctx: RoutineDataSectionContext = RoutineDataSectionContext(_ctx, getState())
 		try enterRule(_localctx, 54, krlParser.RULE_routineDataSection)
 		defer {
@@ -2340,7 +2636,7 @@ open class krlParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 	 
 		 		}
@@ -2358,48 +2654,63 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ForwardDeclarationContext:ParserRuleContext {
-		open func EXT() -> TerminalNode? { return getToken(krlParser.Tokens.EXT.rawValue, 0) }
-		open func procedureName() -> ProcedureNameContext? {
-			return getRuleContext(ProcedureNameContext.self,0)
+
+	public class ForwardDeclarationContext: ParserRuleContext {
+			open
+			func EXT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.EXT.rawValue, 0)
+			}
+			open
+			func procedureName() -> ProcedureNameContext? {
+				return getRuleContext(ProcedureNameContext.self, 0)
+			}
+			open
+			func formalParametersWithType() -> FormalParametersWithTypeContext? {
+				return getRuleContext(FormalParametersWithTypeContext.self, 0)
+			}
+			open
+			func EXTFCT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.EXTFCT.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func functionName() -> FunctionNameContext? {
+				return getRuleContext(FunctionNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_forwardDeclaration
 		}
-		open func formalParametersWithType() -> FormalParametersWithTypeContext? {
-			return getRuleContext(FormalParametersWithTypeContext.self,0)
-		}
-		open func EXTFCT() -> TerminalNode? { return getToken(krlParser.Tokens.EXTFCT.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func functionName() -> FunctionNameContext? {
-			return getRuleContext(FunctionNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_forwardDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterForwardDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterForwardDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitForwardDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitForwardDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitForwardDeclaration(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitForwardDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitForwardDeclaration(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitForwardDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forwardDeclaration() throws -> ForwardDeclarationContext {
+	 open func forwardDeclaration() throws -> ForwardDeclarationContext {
 		var _localctx: ForwardDeclarationContext = ForwardDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 56, krlParser.RULE_forwardDeclaration)
 		defer {
@@ -2433,7 +2744,7 @@ open class krlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2444,40 +2755,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class FormalParametersWithTypeContext:ParserRuleContext {
-		open func parameterWithType() -> Array<ParameterWithTypeContext> {
-			return getRuleContexts(ParameterWithTypeContext.self)
+
+	public class FormalParametersWithTypeContext: ParserRuleContext {
+			open
+			func parameterWithType() -> [ParameterWithTypeContext] {
+				return getRuleContexts(ParameterWithTypeContext.self)
+			}
+			open
+			func parameterWithType(_ i: Int) -> ParameterWithTypeContext? {
+				return getRuleContext(ParameterWithTypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_formalParametersWithType
 		}
-		open func parameterWithType(_ i: Int) -> ParameterWithTypeContext? {
-			return getRuleContext(ParameterWithTypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_formalParametersWithType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterFormalParametersWithType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterFormalParametersWithType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitFormalParametersWithType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitFormalParametersWithType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitFormalParametersWithType(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitFormalParametersWithType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitFormalParametersWithType(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitFormalParametersWithType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalParametersWithType() throws -> FormalParametersWithTypeContext {
+	 open func formalParametersWithType() throws -> FormalParametersWithTypeContext {
 		var _localctx: FormalParametersWithTypeContext = FormalParametersWithTypeContext(_ctx, getState())
 		try enterRule(_localctx, 58, krlParser.RULE_formalParametersWithType)
 		var _la: Int = 0
@@ -2535,40 +2853,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ParameterWithTypeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class ParameterWithTypeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func parameterCallType() -> ParameterCallTypeContext? {
+				return getRuleContext(ParameterCallTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_parameterWithType
 		}
-		open func parameterCallType() -> ParameterCallTypeContext? {
-			return getRuleContext(ParameterCallTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_parameterWithType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterParameterWithType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterParameterWithType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitParameterWithType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitParameterWithType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitParameterWithType(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitParameterWithType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitParameterWithType(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitParameterWithType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameterWithType() throws -> ParameterWithTypeContext {
+	 open func parameterWithType() throws -> ParameterWithTypeContext {
 		var _localctx: ParameterWithTypeContext = ParameterWithTypeContext(_ctx, getState())
 		try enterRule(_localctx, 60, krlParser.RULE_parameterWithType)
 		var _la: Int = 0
@@ -2602,35 +2927,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ParameterCallTypeContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_parameterCallType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterParameterCallType(self)
+
+	public class ParameterCallTypeContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_parameterCallType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterParameterCallType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitParameterCallType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitParameterCallType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitParameterCallType(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitParameterCallType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitParameterCallType(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitParameterCallType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameterCallType() throws -> ParameterCallTypeContext {
+	 open func parameterCallType() throws -> ParameterCallTypeContext {
 		var _localctx: ParameterCallTypeContext = ParameterCallTypeContext(_ctx, getState())
 		try enterRule(_localctx, 62, krlParser.RULE_parameterCallType)
 		defer {
@@ -2652,48 +2985,63 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ImportStatementContext:ParserRuleContext {
-		open func IMPORT() -> TerminalNode? { return getToken(krlParser.Tokens.IMPORT.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class ImportStatementContext: ParserRuleContext {
+			open
+			func IMPORT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IMPORT.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func variableName() -> [VariableNameContext] {
+				return getRuleContexts(VariableNameContext.self)
+			}
+			open
+			func variableName(_ i: Int) -> VariableNameContext? {
+				return getRuleContext(VariableNameContext.self, i)
+			}
+			open
+			func IS() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IS.rawValue, 0)
+			}
+			open
+			func moduleName() -> ModuleNameContext? {
+				return getRuleContext(ModuleNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_importStatement
 		}
-		open func variableName() -> Array<VariableNameContext> {
-			return getRuleContexts(VariableNameContext.self)
-		}
-		open func variableName(_ i: Int) -> VariableNameContext? {
-			return getRuleContext(VariableNameContext.self,i)
-		}
-		open func IS() -> TerminalNode? { return getToken(krlParser.Tokens.IS.rawValue, 0) }
-		open func moduleName() -> ModuleNameContext? {
-			return getRuleContext(ModuleNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_importStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterImportStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterImportStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitImportStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitImportStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitImportStatement(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitImportStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitImportStatement(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitImportStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importStatement() throws -> ImportStatementContext {
+	 open func importStatement() throws -> ImportStatementContext {
 		var _localctx: ImportStatementContext = ImportStatementContext(_ctx, getState())
 		try enterRule(_localctx, 64, krlParser.RULE_importStatement)
 		defer {
@@ -2727,38 +3075,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class VariableNameContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func arrayVariableSuffix() -> ArrayVariableSuffixContext? {
-			return getRuleContext(ArrayVariableSuffixContext.self,0)
+
+	public class VariableNameContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func arrayVariableSuffix() -> ArrayVariableSuffixContext? {
+				return getRuleContext(ArrayVariableSuffixContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_variableName
 		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_variableName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterVariableName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterVariableName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitVariableName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitVariableName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitVariableName(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitVariableName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitVariableName(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitVariableName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableName() throws -> VariableNameContext {
+	 open func variableName() throws -> VariableNameContext {
 		var _localctx: VariableNameContext = VariableNameContext(_ctx, getState())
 		try enterRule(_localctx, 66, krlParser.RULE_variableName)
 		var _la: Int = 0
@@ -2792,40 +3149,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayVariableSuffixContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ArrayVariableSuffixContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_arrayVariableSuffix
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_arrayVariableSuffix }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterArrayVariableSuffix(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterArrayVariableSuffix(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitArrayVariableSuffix(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitArrayVariableSuffix(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitArrayVariableSuffix(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitArrayVariableSuffix(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitArrayVariableSuffix(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitArrayVariableSuffix(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayVariableSuffix() throws -> ArrayVariableSuffixContext {
+	 open func arrayVariableSuffix() throws -> ArrayVariableSuffixContext {
 		var _localctx: ArrayVariableSuffixContext = ArrayVariableSuffixContext(_ctx, getState())
 		try enterRule(_localctx, 68, krlParser.RULE_arrayVariableSuffix)
 		var _la: Int = 0
@@ -2934,37 +3298,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class RoutineImplementationSectionContext:ParserRuleContext {
-		open func statementList() -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,0)
+
+	public class RoutineImplementationSectionContext: ParserRuleContext {
+			open
+			func statementList() -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_routineImplementationSection
 		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_routineImplementationSection }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterRoutineImplementationSection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterRoutineImplementationSection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitRoutineImplementationSection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitRoutineImplementationSection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitRoutineImplementationSection(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitRoutineImplementationSection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitRoutineImplementationSection(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitRoutineImplementationSection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func routineImplementationSection() throws -> RoutineImplementationSectionContext {
+	 open func routineImplementationSection() throws -> RoutineImplementationSectionContext {
 		var _localctx: RoutineImplementationSectionContext = RoutineImplementationSectionContext(_ctx, getState())
 		try enterRule(_localctx, 70, krlParser.RULE_routineImplementationSection)
 		defer {
@@ -2984,40 +3354,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class StatementListContext:ParserRuleContext {
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
+
+	public class StatementListContext: ParserRuleContext {
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_statementList
 		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_statementList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterStatementList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterStatementList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitStatementList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitStatementList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitStatementList(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitStatementList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitStatementList(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitStatementList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statementList() throws -> StatementListContext {
+	 open func statementList() throws -> StatementListContext {
 		var _localctx: StatementListContext = StatementListContext(_ctx, getState())
 		try enterRule(_localctx, 72, krlParser.RULE_statementList)
 		var _la: Int = 0
@@ -3059,119 +3436,267 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func CONTINUE() -> TerminalNode? { return getToken(krlParser.Tokens.CONTINUE.rawValue, 0) }
-		open func NEWLINE() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.NEWLINE.rawValue) }
-		open func NEWLINE(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func CONTINUE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.CONTINUE.rawValue, 0)
+			}
+			open
+			func NEWLINE() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.NEWLINE.rawValue)
+			}
+			open
+			func NEWLINE(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
+			}
+			open
+			func EXIT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.EXIT.rawValue, 0)
+			}
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(krlParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func TO() -> TerminalNode? {
+				return getToken(krlParser.Tokens.TO.rawValue, 0)
+			}
+			open
+			func statementList() -> [StatementListContext] {
+				return getRuleContexts(StatementListContext.self)
+			}
+			open
+			func statementList(_ i: Int) -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, i)
+			}
+			open
+			func ENDFOR() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ENDFOR.rawValue, 0)
+			}
+			open
+			func GOTO() -> TerminalNode? {
+				return getToken(krlParser.Tokens.GOTO.rawValue, 0)
+			}
+			open
+			func HALT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.HALT.rawValue, 0)
+			}
+			open
+			func IF() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IF.rawValue, 0)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(krlParser.Tokens.THEN.rawValue, 0)
+			}
+			open
+			func ENDIF() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ENDIF.rawValue, 0)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ELSE.rawValue, 0)
+			}
+			open
+			func LOOP() -> TerminalNode? {
+				return getToken(krlParser.Tokens.LOOP.rawValue, 0)
+			}
+			open
+			func ENDLOOP() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ENDLOOP.rawValue, 0)
+			}
+			open
+			func REPEAT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.REPEAT.rawValue, 0)
+			}
+			open
+			func UNTIL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.UNTIL.rawValue, 0)
+			}
+			open
+			func SWITCH() -> TerminalNode? {
+				return getToken(krlParser.Tokens.SWITCH.rawValue, 0)
+			}
+			open
+			func switchBlockStatementGroups() -> SwitchBlockStatementGroupsContext? {
+				return getRuleContext(SwitchBlockStatementGroupsContext.self, 0)
+			}
+			open
+			func ENDSWITCH() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ENDSWITCH.rawValue, 0)
+			}
+			open
+			func WAIT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.WAIT.rawValue, 0)
+			}
+			open
+			func SEC() -> TerminalNode? {
+				return getToken(krlParser.Tokens.SEC.rawValue, 0)
+			}
+			open
+			func WHILE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.WHILE.rawValue, 0)
+			}
+			open
+			func ENDWHILE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ENDWHILE.rawValue, 0)
+			}
+			open
+			func RETURN() -> TerminalNode? {
+				return getToken(krlParser.Tokens.RETURN.rawValue, 0)
+			}
+			open
+			func assignmentExpression() -> AssignmentExpressionContext? {
+				return getRuleContext(AssignmentExpressionContext.self, 0)
+			}
+			open
+			func BRAKE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.BRAKE.rawValue, 0)
+			}
+			open
+			func INTERRUPT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.INTERRUPT.rawValue, 0)
+			}
+			open
+			func DECL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.DECL.rawValue, 0)
+			}
+			open
+			func primary() -> PrimaryContext? {
+				return getRuleContext(PrimaryContext.self, 0)
+			}
+			open
+			func WHEN() -> TerminalNode? {
+				return getToken(krlParser.Tokens.WHEN.rawValue, 0)
+			}
+			open
+			func DO() -> TerminalNode? {
+				return getToken(krlParser.Tokens.DO.rawValue, 0)
+			}
+			open
+			func GLOBAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.GLOBAL.rawValue, 0)
+			}
+			open
+			func geometricExpression() -> [GeometricExpressionContext] {
+				return getRuleContexts(GeometricExpressionContext.self)
+			}
+			open
+			func geometricExpression(_ i: Int) -> GeometricExpressionContext? {
+				return getRuleContext(GeometricExpressionContext.self, i)
+			}
+			open
+			func PTP() -> TerminalNode? {
+				return getToken(krlParser.Tokens.PTP.rawValue, 0)
+			}
+			open
+			func PTP_REL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.PTP_REL.rawValue, 0)
+			}
+			open
+			func C_PTP() -> TerminalNode? {
+				return getToken(krlParser.Tokens.C_PTP.rawValue, 0)
+			}
+			open
+			func C_DIS() -> TerminalNode? {
+				return getToken(krlParser.Tokens.C_DIS.rawValue, 0)
+			}
+			open
+			func C_ORI() -> TerminalNode? {
+				return getToken(krlParser.Tokens.C_ORI.rawValue, 0)
+			}
+			open
+			func C_VEL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.C_VEL.rawValue, 0)
+			}
+			open
+			func LIN() -> TerminalNode? {
+				return getToken(krlParser.Tokens.LIN.rawValue, 0)
+			}
+			open
+			func LIN_REL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.LIN_REL.rawValue, 0)
+			}
+			open
+			func enumElement() -> EnumElementContext? {
+				return getRuleContext(EnumElementContext.self, 0)
+			}
+			open
+			func CIRC() -> TerminalNode? {
+				return getToken(krlParser.Tokens.CIRC.rawValue, 0)
+			}
+			open
+			func CIRC_REL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.CIRC_REL.rawValue, 0)
+			}
+			open
+			func TRIGGER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.TRIGGER.rawValue, 0)
+			}
+			open
+			func DELAY() -> TerminalNode? {
+				return getToken(krlParser.Tokens.DELAY.rawValue, 0)
+			}
+			open
+			func PRIO() -> TerminalNode? {
+				return getToken(krlParser.Tokens.PRIO.rawValue, 0)
+			}
+			open
+			func analogInputStatement() -> AnalogInputStatementContext? {
+				return getRuleContext(AnalogInputStatementContext.self, 0)
+			}
+			open
+			func analogOutputStatement() -> AnalogOutputStatementContext? {
+				return getRuleContext(AnalogOutputStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_statement
 		}
-		open func EXIT() -> TerminalNode? { return getToken(krlParser.Tokens.EXIT.rawValue, 0) }
-		open func FOR() -> TerminalNode? { return getToken(krlParser.Tokens.FOR.rawValue, 0) }
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.IDENTIFIER.rawValue, i)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func TO() -> TerminalNode? { return getToken(krlParser.Tokens.TO.rawValue, 0) }
-		open func statementList() -> Array<StatementListContext> {
-			return getRuleContexts(StatementListContext.self)
-		}
-		open func statementList(_ i: Int) -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,i)
-		}
-		open func ENDFOR() -> TerminalNode? { return getToken(krlParser.Tokens.ENDFOR.rawValue, 0) }
-		open func GOTO() -> TerminalNode? { return getToken(krlParser.Tokens.GOTO.rawValue, 0) }
-		open func HALT() -> TerminalNode? { return getToken(krlParser.Tokens.HALT.rawValue, 0) }
-		open func IF() -> TerminalNode? { return getToken(krlParser.Tokens.IF.rawValue, 0) }
-		open func THEN() -> TerminalNode? { return getToken(krlParser.Tokens.THEN.rawValue, 0) }
-		open func ENDIF() -> TerminalNode? { return getToken(krlParser.Tokens.ENDIF.rawValue, 0) }
-		open func ELSE() -> TerminalNode? { return getToken(krlParser.Tokens.ELSE.rawValue, 0) }
-		open func LOOP() -> TerminalNode? { return getToken(krlParser.Tokens.LOOP.rawValue, 0) }
-		open func ENDLOOP() -> TerminalNode? { return getToken(krlParser.Tokens.ENDLOOP.rawValue, 0) }
-		open func REPEAT() -> TerminalNode? { return getToken(krlParser.Tokens.REPEAT.rawValue, 0) }
-		open func UNTIL() -> TerminalNode? { return getToken(krlParser.Tokens.UNTIL.rawValue, 0) }
-		open func SWITCH() -> TerminalNode? { return getToken(krlParser.Tokens.SWITCH.rawValue, 0) }
-		open func switchBlockStatementGroups() -> SwitchBlockStatementGroupsContext? {
-			return getRuleContext(SwitchBlockStatementGroupsContext.self,0)
-		}
-		open func ENDSWITCH() -> TerminalNode? { return getToken(krlParser.Tokens.ENDSWITCH.rawValue, 0) }
-		open func WAIT() -> TerminalNode? { return getToken(krlParser.Tokens.WAIT.rawValue, 0) }
-		open func SEC() -> TerminalNode? { return getToken(krlParser.Tokens.SEC.rawValue, 0) }
-		open func WHILE() -> TerminalNode? { return getToken(krlParser.Tokens.WHILE.rawValue, 0) }
-		open func ENDWHILE() -> TerminalNode? { return getToken(krlParser.Tokens.ENDWHILE.rawValue, 0) }
-		open func RETURN() -> TerminalNode? { return getToken(krlParser.Tokens.RETURN.rawValue, 0) }
-		open func assignmentExpression() -> AssignmentExpressionContext? {
-			return getRuleContext(AssignmentExpressionContext.self,0)
-		}
-		open func BRAKE() -> TerminalNode? { return getToken(krlParser.Tokens.BRAKE.rawValue, 0) }
-		open func INTERRUPT() -> TerminalNode? { return getToken(krlParser.Tokens.INTERRUPT.rawValue, 0) }
-		open func DECL() -> TerminalNode? { return getToken(krlParser.Tokens.DECL.rawValue, 0) }
-		open func primary() -> PrimaryContext? {
-			return getRuleContext(PrimaryContext.self,0)
-		}
-		open func WHEN() -> TerminalNode? { return getToken(krlParser.Tokens.WHEN.rawValue, 0) }
-		open func DO() -> TerminalNode? { return getToken(krlParser.Tokens.DO.rawValue, 0) }
-		open func GLOBAL() -> TerminalNode? { return getToken(krlParser.Tokens.GLOBAL.rawValue, 0) }
-		open func geometricExpression() -> Array<GeometricExpressionContext> {
-			return getRuleContexts(GeometricExpressionContext.self)
-		}
-		open func geometricExpression(_ i: Int) -> GeometricExpressionContext? {
-			return getRuleContext(GeometricExpressionContext.self,i)
-		}
-		open func PTP() -> TerminalNode? { return getToken(krlParser.Tokens.PTP.rawValue, 0) }
-		open func PTP_REL() -> TerminalNode? { return getToken(krlParser.Tokens.PTP_REL.rawValue, 0) }
-		open func C_PTP() -> TerminalNode? { return getToken(krlParser.Tokens.C_PTP.rawValue, 0) }
-		open func C_DIS() -> TerminalNode? { return getToken(krlParser.Tokens.C_DIS.rawValue, 0) }
-		open func C_ORI() -> TerminalNode? { return getToken(krlParser.Tokens.C_ORI.rawValue, 0) }
-		open func C_VEL() -> TerminalNode? { return getToken(krlParser.Tokens.C_VEL.rawValue, 0) }
-		open func LIN() -> TerminalNode? { return getToken(krlParser.Tokens.LIN.rawValue, 0) }
-		open func LIN_REL() -> TerminalNode? { return getToken(krlParser.Tokens.LIN_REL.rawValue, 0) }
-		open func enumElement() -> EnumElementContext? {
-			return getRuleContext(EnumElementContext.self,0)
-		}
-		open func CIRC() -> TerminalNode? { return getToken(krlParser.Tokens.CIRC.rawValue, 0) }
-		open func CIRC_REL() -> TerminalNode? { return getToken(krlParser.Tokens.CIRC_REL.rawValue, 0) }
-		open func TRIGGER() -> TerminalNode? { return getToken(krlParser.Tokens.TRIGGER.rawValue, 0) }
-		open func DELAY() -> TerminalNode? { return getToken(krlParser.Tokens.DELAY.rawValue, 0) }
-		open func PRIO() -> TerminalNode? { return getToken(krlParser.Tokens.PRIO.rawValue, 0) }
-		open func analogInputStatement() -> AnalogInputStatementContext? {
-			return getRuleContext(AnalogInputStatementContext.self,0)
-		}
-		open func analogOutputStatement() -> AnalogOutputStatementContext? {
-			return getRuleContext(AnalogOutputStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitStatement(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 74, krlParser.RULE_statement)
 		var _la: Int = 0
@@ -3811,48 +4336,63 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class AnalogOutputStatementContext:ParserRuleContext {
-		open func ANOUT() -> TerminalNode? { return getToken(krlParser.Tokens.ANOUT.rawValue, 0) }
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class AnalogOutputStatementContext: ParserRuleContext {
+			open
+			func ANOUT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ANOUT.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func assignmentExpression() -> AssignmentExpressionContext? {
+				return getRuleContext(AssignmentExpressionContext.self, 0)
+			}
+			open
+			func literal() -> [LiteralContext] {
+				return getRuleContexts(LiteralContext.self)
+			}
+			open
+			func literal(_ i: Int) -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_analogOutputStatement
 		}
-		open func assignmentExpression() -> AssignmentExpressionContext? {
-			return getRuleContext(AssignmentExpressionContext.self,0)
-		}
-		open func literal() -> Array<LiteralContext> {
-			return getRuleContexts(LiteralContext.self)
-		}
-		open func literal(_ i: Int) -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_analogOutputStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterAnalogOutputStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterAnalogOutputStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitAnalogOutputStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitAnalogOutputStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitAnalogOutputStatement(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitAnalogOutputStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitAnalogOutputStatement(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitAnalogOutputStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func analogOutputStatement() throws -> AnalogOutputStatementContext {
+	 open func analogOutputStatement() throws -> AnalogOutputStatementContext {
 		var _localctx: AnalogOutputStatementContext = AnalogOutputStatementContext(_ctx, getState())
 		try enterRule(_localctx, 76, krlParser.RULE_analogOutputStatement)
 		var _la: Int = 0
@@ -3912,42 +4452,55 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class AnalogInputStatementContext:ParserRuleContext {
-		open func ANIN() -> TerminalNode? { return getToken(krlParser.Tokens.ANIN.rawValue, 0) }
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class AnalogInputStatementContext: ParserRuleContext {
+			open
+			func ANIN() -> TerminalNode? {
+				return getToken(krlParser.Tokens.ANIN.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func assignmentExpression() -> AssignmentExpressionContext? {
+				return getRuleContext(AssignmentExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_analogInputStatement
 		}
-		open func assignmentExpression() -> AssignmentExpressionContext? {
-			return getRuleContext(AssignmentExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_analogInputStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterAnalogInputStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterAnalogInputStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitAnalogInputStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitAnalogInputStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitAnalogInputStatement(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitAnalogInputStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitAnalogInputStatement(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitAnalogInputStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func analogInputStatement() throws -> AnalogInputStatementContext {
+	 open func analogInputStatement() throws -> AnalogInputStatementContext {
 		var _localctx: AnalogInputStatementContext = AnalogInputStatementContext(_ctx, getState())
 		try enterRule(_localctx, 78, krlParser.RULE_analogInputStatement)
 		defer {
@@ -3986,53 +4539,67 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class SwitchBlockStatementGroupsContext:ParserRuleContext {
-		open func NEWLINE() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.NEWLINE.rawValue) }
-		open func NEWLINE(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
+
+	public class SwitchBlockStatementGroupsContext: ParserRuleContext {
+			open
+			func NEWLINE() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.NEWLINE.rawValue)
+			}
+			open
+			func NEWLINE(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, i)
+			}
+			open
+			func caseLabel() -> [CaseLabelContext] {
+				return getRuleContexts(CaseLabelContext.self)
+			}
+			open
+			func caseLabel(_ i: Int) -> CaseLabelContext? {
+				return getRuleContext(CaseLabelContext.self, i)
+			}
+			open
+			func statementList() -> [StatementListContext] {
+				return getRuleContexts(StatementListContext.self)
+			}
+			open
+			func statementList(_ i: Int) -> StatementListContext? {
+				return getRuleContext(StatementListContext.self, i)
+			}
+			open
+			func defaultLabel() -> DefaultLabelContext? {
+				return getRuleContext(DefaultLabelContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_switchBlockStatementGroups
 		}
-		open func caseLabel() -> Array<CaseLabelContext> {
-			return getRuleContexts(CaseLabelContext.self)
-		}
-		open func caseLabel(_ i: Int) -> CaseLabelContext? {
-			return getRuleContext(CaseLabelContext.self,i)
-		}
-		open func statementList() -> Array<StatementListContext> {
-			return getRuleContexts(StatementListContext.self)
-		}
-		open func statementList(_ i: Int) -> StatementListContext? {
-			return getRuleContext(StatementListContext.self,i)
-		}
-		open func defaultLabel() -> DefaultLabelContext? {
-			return getRuleContext(DefaultLabelContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_switchBlockStatementGroups }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterSwitchBlockStatementGroups(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterSwitchBlockStatementGroups(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitSwitchBlockStatementGroups(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitSwitchBlockStatementGroups(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitSwitchBlockStatementGroups(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitSwitchBlockStatementGroups(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitSwitchBlockStatementGroups(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitSwitchBlockStatementGroups(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func switchBlockStatementGroups() throws -> SwitchBlockStatementGroupsContext {
+	 open func switchBlockStatementGroups() throws -> SwitchBlockStatementGroupsContext {
 		var _localctx: SwitchBlockStatementGroupsContext = SwitchBlockStatementGroupsContext(_ctx, getState())
 		try enterRule(_localctx, 80, krlParser.RULE_switchBlockStatementGroups)
 		var _la: Int = 0
@@ -4100,42 +4667,55 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class CaseLabelContext:ParserRuleContext {
-		open func CASE() -> TerminalNode? { return getToken(krlParser.Tokens.CASE.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class CaseLabelContext: ParserRuleContext {
+			open
+			func CASE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.CASE.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func NEWLINE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_caseLabel
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func NEWLINE() -> TerminalNode? { return getToken(krlParser.Tokens.NEWLINE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_caseLabel }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterCaseLabel(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterCaseLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitCaseLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitCaseLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitCaseLabel(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitCaseLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitCaseLabel(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitCaseLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseLabel() throws -> CaseLabelContext {
+	 open func caseLabel() throws -> CaseLabelContext {
 		var _localctx: CaseLabelContext = CaseLabelContext(_ctx, getState())
 		try enterRule(_localctx, 82, krlParser.RULE_caseLabel)
 		var _la: Int = 0
@@ -4178,36 +4758,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class DefaultLabelContext:ParserRuleContext {
-		open func DEFAULT() -> TerminalNode? { return getToken(krlParser.Tokens.DEFAULT.rawValue, 0) }
-		open func NEWLINE() -> TerminalNode? { return getToken(krlParser.Tokens.NEWLINE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_defaultLabel }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterDefaultLabel(self)
+
+	public class DefaultLabelContext: ParserRuleContext {
+			open
+			func DEFAULT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.DEFAULT.rawValue, 0)
+			}
+			open
+			func NEWLINE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.NEWLINE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_defaultLabel
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterDefaultLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitDefaultLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitDefaultLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitDefaultLabel(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitDefaultLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitDefaultLabel(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitDefaultLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func defaultLabel() throws -> DefaultLabelContext {
+	 open func defaultLabel() throws -> DefaultLabelContext {
 		var _localctx: DefaultLabelContext = DefaultLabelContext(_ctx, getState())
 		try enterRule(_localctx, 84, krlParser.RULE_defaultLabel)
 		defer {
@@ -4229,40 +4820,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionListContext:ParserRuleContext {
-		open func assignmentExpression() -> Array<AssignmentExpressionContext> {
-			return getRuleContexts(AssignmentExpressionContext.self)
+
+	public class ExpressionListContext: ParserRuleContext {
+			open
+			func assignmentExpression() -> [AssignmentExpressionContext] {
+				return getRuleContexts(AssignmentExpressionContext.self)
+			}
+			open
+			func assignmentExpression(_ i: Int) -> AssignmentExpressionContext? {
+				return getRuleContext(AssignmentExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_expressionList
 		}
-		open func assignmentExpression(_ i: Int) -> AssignmentExpressionContext? {
-			return getRuleContext(AssignmentExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_expressionList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterExpressionList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterExpressionList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitExpressionList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitExpressionList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitExpressionList(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitExpressionList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitExpressionList(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitExpressionList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionList() throws -> ExpressionListContext {
+	 open func expressionList() throws -> ExpressionListContext {
 		var _localctx: ExpressionListContext = ExpressionListContext(_ctx, getState())
 		try enterRule(_localctx, 86, krlParser.RULE_expressionList)
 		var _la: Int = 0
@@ -4301,40 +4899,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentExpressionContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class AssignmentExpressionContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_assignmentExpression
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_assignmentExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterAssignmentExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterAssignmentExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitAssignmentExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitAssignmentExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitAssignmentExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitAssignmentExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitAssignmentExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitAssignmentExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignmentExpression() throws -> AssignmentExpressionContext {
+	 open func assignmentExpression() throws -> AssignmentExpressionContext {
 		var _localctx: AssignmentExpressionContext = AssignmentExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 88, krlParser.RULE_assignmentExpression)
 		var _la: Int = 0
@@ -4373,46 +4978,55 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func conditionalOrExpression() -> Array<ConditionalOrExpressionContext> {
-			return getRuleContexts(ConditionalOrExpressionContext.self)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func conditionalOrExpression() -> [ConditionalOrExpressionContext] {
+				return getRuleContexts(ConditionalOrExpressionContext.self)
+			}
+			open
+			func conditionalOrExpression(_ i: Int) -> ConditionalOrExpressionContext? {
+				return getRuleContext(ConditionalOrExpressionContext.self, i)
+			}
+			open
+			func relationalOp() -> [RelationalOpContext] {
+				return getRuleContexts(RelationalOpContext.self)
+			}
+			open
+			func relationalOp(_ i: Int) -> RelationalOpContext? {
+				return getRuleContext(RelationalOpContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_expression
 		}
-		open func conditionalOrExpression(_ i: Int) -> ConditionalOrExpressionContext? {
-			return getRuleContext(ConditionalOrExpressionContext.self,i)
-		}
-		open func relationalOp() -> Array<RelationalOpContext> {
-			return getRuleContexts(RelationalOpContext.self)
-		}
-		open func relationalOp(_ i: Int) -> RelationalOpContext? {
-			return getRuleContext(RelationalOpContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 90, krlParser.RULE_expression)
 		var _la: Int = 0
@@ -4454,34 +5068,39 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class RelationalOpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return krlParser.RULE_relationalOp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterRelationalOp(self)
+
+	public class RelationalOpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_relationalOp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterRelationalOp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitRelationalOp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitRelationalOp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitRelationalOp(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitRelationalOp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitRelationalOp(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitRelationalOp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func relationalOp() throws -> RelationalOpContext {
+	 open func relationalOp() throws -> RelationalOpContext {
 		var _localctx: RelationalOpContext = RelationalOpContext(_ctx, getState())
 		try enterRule(_localctx, 92, krlParser.RULE_relationalOp)
 		var _la: Int = 0
@@ -4516,48 +5135,63 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ConditionalOrExpressionContext:ParserRuleContext {
-		open func exclusiveOrExpression() -> Array<ExclusiveOrExpressionContext> {
-			return getRuleContexts(ExclusiveOrExpressionContext.self)
+
+	public class ConditionalOrExpressionContext: ParserRuleContext {
+			open
+			func exclusiveOrExpression() -> [ExclusiveOrExpressionContext] {
+				return getRuleContexts(ExclusiveOrExpressionContext.self)
+			}
+			open
+			func exclusiveOrExpression(_ i: Int) -> ExclusiveOrExpressionContext? {
+				return getRuleContext(ExclusiveOrExpressionContext.self, i)
+			}
+			open
+			func OR() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.OR.rawValue)
+			}
+			open
+			func OR(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.OR.rawValue, i)
+			}
+			open
+			func B_OR() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.B_OR.rawValue)
+			}
+			open
+			func B_OR(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.B_OR.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_conditionalOrExpression
 		}
-		open func exclusiveOrExpression(_ i: Int) -> ExclusiveOrExpressionContext? {
-			return getRuleContext(ExclusiveOrExpressionContext.self,i)
-		}
-		open func OR() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.OR.rawValue) }
-		open func OR(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.OR.rawValue, i)
-		}
-		open func B_OR() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.B_OR.rawValue) }
-		open func B_OR(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.B_OR.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_conditionalOrExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterConditionalOrExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterConditionalOrExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitConditionalOrExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitConditionalOrExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitConditionalOrExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitConditionalOrExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitConditionalOrExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitConditionalOrExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditionalOrExpression() throws -> ConditionalOrExpressionContext {
+	 open func conditionalOrExpression() throws -> ConditionalOrExpressionContext {
 		var _localctx: ConditionalOrExpressionContext = ConditionalOrExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 94, krlParser.RULE_conditionalOrExpression)
 		var _la: Int = 0
@@ -4607,48 +5241,63 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ExclusiveOrExpressionContext:ParserRuleContext {
-		open func conditionalAndExpression() -> Array<ConditionalAndExpressionContext> {
-			return getRuleContexts(ConditionalAndExpressionContext.self)
+
+	public class ExclusiveOrExpressionContext: ParserRuleContext {
+			open
+			func conditionalAndExpression() -> [ConditionalAndExpressionContext] {
+				return getRuleContexts(ConditionalAndExpressionContext.self)
+			}
+			open
+			func conditionalAndExpression(_ i: Int) -> ConditionalAndExpressionContext? {
+				return getRuleContext(ConditionalAndExpressionContext.self, i)
+			}
+			open
+			func EXOR() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.EXOR.rawValue)
+			}
+			open
+			func EXOR(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.EXOR.rawValue, i)
+			}
+			open
+			func B_EXOR() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.B_EXOR.rawValue)
+			}
+			open
+			func B_EXOR(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.B_EXOR.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_exclusiveOrExpression
 		}
-		open func conditionalAndExpression(_ i: Int) -> ConditionalAndExpressionContext? {
-			return getRuleContext(ConditionalAndExpressionContext.self,i)
-		}
-		open func EXOR() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.EXOR.rawValue) }
-		open func EXOR(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.EXOR.rawValue, i)
-		}
-		open func B_EXOR() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.B_EXOR.rawValue) }
-		open func B_EXOR(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.B_EXOR.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_exclusiveOrExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterExclusiveOrExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterExclusiveOrExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitExclusiveOrExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitExclusiveOrExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitExclusiveOrExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitExclusiveOrExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitExclusiveOrExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitExclusiveOrExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exclusiveOrExpression() throws -> ExclusiveOrExpressionContext {
+	 open func exclusiveOrExpression() throws -> ExclusiveOrExpressionContext {
 		var _localctx: ExclusiveOrExpressionContext = ExclusiveOrExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 96, krlParser.RULE_exclusiveOrExpression)
 		var _la: Int = 0
@@ -4700,48 +5349,63 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ConditionalAndExpressionContext:ParserRuleContext {
-		open func additiveExpression() -> Array<AdditiveExpressionContext> {
-			return getRuleContexts(AdditiveExpressionContext.self)
+
+	public class ConditionalAndExpressionContext: ParserRuleContext {
+			open
+			func additiveExpression() -> [AdditiveExpressionContext] {
+				return getRuleContexts(AdditiveExpressionContext.self)
+			}
+			open
+			func additiveExpression(_ i: Int) -> AdditiveExpressionContext? {
+				return getRuleContext(AdditiveExpressionContext.self, i)
+			}
+			open
+			func AND() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.AND.rawValue)
+			}
+			open
+			func AND(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.AND.rawValue, i)
+			}
+			open
+			func B_AND() -> [TerminalNode] {
+				return getTokens(krlParser.Tokens.B_AND.rawValue)
+			}
+			open
+			func B_AND(_ i:Int) -> TerminalNode? {
+				return getToken(krlParser.Tokens.B_AND.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_conditionalAndExpression
 		}
-		open func additiveExpression(_ i: Int) -> AdditiveExpressionContext? {
-			return getRuleContext(AdditiveExpressionContext.self,i)
-		}
-		open func AND() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.AND.rawValue) }
-		open func AND(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.AND.rawValue, i)
-		}
-		open func B_AND() -> Array<TerminalNode> { return getTokens(krlParser.Tokens.B_AND.rawValue) }
-		open func B_AND(_ i:Int) -> TerminalNode?{
-			return getToken(krlParser.Tokens.B_AND.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_conditionalAndExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterConditionalAndExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterConditionalAndExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitConditionalAndExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitConditionalAndExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitConditionalAndExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitConditionalAndExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitConditionalAndExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitConditionalAndExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditionalAndExpression() throws -> ConditionalAndExpressionContext {
+	 open func conditionalAndExpression() throws -> ConditionalAndExpressionContext {
 		var _localctx: ConditionalAndExpressionContext = ConditionalAndExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 98, krlParser.RULE_conditionalAndExpression)
 		var _la: Int = 0
@@ -4791,40 +5455,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class AdditiveExpressionContext:ParserRuleContext {
-		open func multiplicativeExpression() -> Array<MultiplicativeExpressionContext> {
-			return getRuleContexts(MultiplicativeExpressionContext.self)
+
+	public class AdditiveExpressionContext: ParserRuleContext {
+			open
+			func multiplicativeExpression() -> [MultiplicativeExpressionContext] {
+				return getRuleContexts(MultiplicativeExpressionContext.self)
+			}
+			open
+			func multiplicativeExpression(_ i: Int) -> MultiplicativeExpressionContext? {
+				return getRuleContext(MultiplicativeExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_additiveExpression
 		}
-		open func multiplicativeExpression(_ i: Int) -> MultiplicativeExpressionContext? {
-			return getRuleContext(MultiplicativeExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_additiveExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterAdditiveExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterAdditiveExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitAdditiveExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitAdditiveExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitAdditiveExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitAdditiveExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitAdditiveExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitAdditiveExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func additiveExpression() throws -> AdditiveExpressionContext {
+	 open func additiveExpression() throws -> AdditiveExpressionContext {
 		var _localctx: AdditiveExpressionContext = AdditiveExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 100, krlParser.RULE_additiveExpression)
 		var _la: Int = 0
@@ -4874,40 +5545,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class MultiplicativeExpressionContext:ParserRuleContext {
-		open func geometricExpression() -> Array<GeometricExpressionContext> {
-			return getRuleContexts(GeometricExpressionContext.self)
+
+	public class MultiplicativeExpressionContext: ParserRuleContext {
+			open
+			func geometricExpression() -> [GeometricExpressionContext] {
+				return getRuleContexts(GeometricExpressionContext.self)
+			}
+			open
+			func geometricExpression(_ i: Int) -> GeometricExpressionContext? {
+				return getRuleContext(GeometricExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_multiplicativeExpression
 		}
-		open func geometricExpression(_ i: Int) -> GeometricExpressionContext? {
-			return getRuleContext(GeometricExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_multiplicativeExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterMultiplicativeExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterMultiplicativeExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitMultiplicativeExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitMultiplicativeExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitMultiplicativeExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitMultiplicativeExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitMultiplicativeExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitMultiplicativeExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiplicativeExpression() throws -> MultiplicativeExpressionContext {
+	 open func multiplicativeExpression() throws -> MultiplicativeExpressionContext {
 		var _localctx: MultiplicativeExpressionContext = MultiplicativeExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 102, krlParser.RULE_multiplicativeExpression)
 		var _la: Int = 0
@@ -4957,40 +5635,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class GeometricExpressionContext:ParserRuleContext {
-		open func unaryNotExpression() -> Array<UnaryNotExpressionContext> {
-			return getRuleContexts(UnaryNotExpressionContext.self)
+
+	public class GeometricExpressionContext: ParserRuleContext {
+			open
+			func unaryNotExpression() -> [UnaryNotExpressionContext] {
+				return getRuleContexts(UnaryNotExpressionContext.self)
+			}
+			open
+			func unaryNotExpression(_ i: Int) -> UnaryNotExpressionContext? {
+				return getRuleContext(UnaryNotExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_geometricExpression
 		}
-		open func unaryNotExpression(_ i: Int) -> UnaryNotExpressionContext? {
-			return getRuleContext(UnaryNotExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_geometricExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterGeometricExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterGeometricExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitGeometricExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitGeometricExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitGeometricExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitGeometricExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitGeometricExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitGeometricExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func geometricExpression() throws -> GeometricExpressionContext {
+	 open func geometricExpression() throws -> GeometricExpressionContext {
 		var _localctx: GeometricExpressionContext = GeometricExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 104, krlParser.RULE_geometricExpression)
 		var _la: Int = 0
@@ -5029,42 +5714,55 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class UnaryNotExpressionContext:ParserRuleContext {
-		open func NOT() -> TerminalNode? { return getToken(krlParser.Tokens.NOT.rawValue, 0) }
-		open func unaryNotExpression() -> UnaryNotExpressionContext? {
-			return getRuleContext(UnaryNotExpressionContext.self,0)
+
+	public class UnaryNotExpressionContext: ParserRuleContext {
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func unaryNotExpression() -> UnaryNotExpressionContext? {
+				return getRuleContext(UnaryNotExpressionContext.self, 0)
+			}
+			open
+			func B_NOT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.B_NOT.rawValue, 0)
+			}
+			open
+			func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
+				return getRuleContext(UnaryPlusMinuxExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_unaryNotExpression
 		}
-		open func B_NOT() -> TerminalNode? { return getToken(krlParser.Tokens.B_NOT.rawValue, 0) }
-		open func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
-			return getRuleContext(UnaryPlusMinuxExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_unaryNotExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterUnaryNotExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterUnaryNotExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitUnaryNotExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitUnaryNotExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitUnaryNotExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitUnaryNotExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitUnaryNotExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitUnaryNotExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unaryNotExpression() throws -> UnaryNotExpressionContext {
+	 open func unaryNotExpression() throws -> UnaryNotExpressionContext {
 		var _localctx: UnaryNotExpressionContext = UnaryNotExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 106, krlParser.RULE_unaryNotExpression)
 		defer {
@@ -5109,7 +5807,7 @@ open class krlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5120,40 +5818,47 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class UnaryPlusMinuxExpressionContext:ParserRuleContext {
-		open func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
-			return getRuleContext(UnaryPlusMinuxExpressionContext.self,0)
+
+	public class UnaryPlusMinuxExpressionContext: ParserRuleContext {
+			open
+			func unaryPlusMinuxExpression() -> UnaryPlusMinuxExpressionContext? {
+				return getRuleContext(UnaryPlusMinuxExpressionContext.self, 0)
+			}
+			open
+			func primary() -> PrimaryContext? {
+				return getRuleContext(PrimaryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_unaryPlusMinuxExpression
 		}
-		open func primary() -> PrimaryContext? {
-			return getRuleContext(PrimaryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_unaryPlusMinuxExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterUnaryPlusMinuxExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterUnaryPlusMinuxExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitUnaryPlusMinuxExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitUnaryPlusMinuxExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitUnaryPlusMinuxExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitUnaryPlusMinuxExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitUnaryPlusMinuxExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitUnaryPlusMinuxExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unaryPlusMinuxExpression() throws -> UnaryPlusMinuxExpressionContext {
+	 open func unaryPlusMinuxExpression() throws -> UnaryPlusMinuxExpressionContext {
 		var _localctx: UnaryPlusMinuxExpressionContext = UnaryPlusMinuxExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 108, krlParser.RULE_unaryPlusMinuxExpression)
 		defer {
@@ -5196,7 +5901,7 @@ open class krlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5207,49 +5912,59 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class PrimaryContext:ParserRuleContext {
-		open func parExpression() -> ParExpressionContext? {
-			return getRuleContext(ParExpressionContext.self,0)
+
+	public class PrimaryContext: ParserRuleContext {
+			open
+			func parExpression() -> ParExpressionContext? {
+				return getRuleContext(ParExpressionContext.self, 0)
+			}
+			open
+			func variableName() -> [VariableNameContext] {
+				return getRuleContexts(VariableNameContext.self)
+			}
+			open
+			func variableName(_ i: Int) -> VariableNameContext? {
+				return getRuleContext(VariableNameContext.self, i)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_primary
 		}
-		open func variableName() -> Array<VariableNameContext> {
-			return getRuleContexts(VariableNameContext.self)
-		}
-		open func variableName(_ i: Int) -> VariableNameContext? {
-			return getRuleContext(VariableNameContext.self,i)
-		}
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterPrimary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterPrimary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitPrimary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitPrimary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitPrimary(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitPrimary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitPrimary(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitPrimary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primary() throws -> PrimaryContext {
+	 open func primary() throws -> PrimaryContext {
 		var _localctx: PrimaryContext = PrimaryContext(_ctx, getState())
 		try enterRule(_localctx, 110, krlParser.RULE_primary)
 		var _la: Int = 0
@@ -5318,7 +6033,7 @@ open class krlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5329,37 +6044,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ParExpressionContext:ParserRuleContext {
-		open func assignmentExpression() -> AssignmentExpressionContext? {
-			return getRuleContext(AssignmentExpressionContext.self,0)
+
+	public class ParExpressionContext: ParserRuleContext {
+			open
+			func assignmentExpression() -> AssignmentExpressionContext? {
+				return getRuleContext(AssignmentExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_parExpression
 		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_parExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterParExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterParExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitParExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitParExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitParExpression(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitParExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitParExpression(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitParExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parExpression() throws -> ParExpressionContext {
+	 open func parExpression() throws -> ParExpressionContext {
 		var _localctx: ParExpressionContext = ParExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 112, krlParser.RULE_parExpression)
 		defer {
@@ -5383,41 +6104,51 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func primitiveType() -> PrimitiveTypeContext? {
-			return getRuleContext(PrimitiveTypeContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func primitiveType() -> PrimitiveTypeContext? {
+				return getRuleContext(PrimitiveTypeContext.self, 0)
+			}
+			open
+			func INTLITERAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.INTLITERAL.rawValue, 0)
+			}
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_type
 		}
-		open func INTLITERAL() -> TerminalNode? { return getToken(krlParser.Tokens.INTLITERAL.rawValue, 0) }
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitType(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 114, krlParser.RULE_type)
 		var _la: Int = 0
@@ -5501,7 +6232,7 @@ open class krlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5512,35 +6243,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class TypeNameContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_typeName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterTypeName(self)
+
+	public class TypeNameContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_typeName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterTypeName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitTypeName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitTypeName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitTypeName(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitTypeName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitTypeName(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitTypeName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeName() throws -> TypeNameContext {
+	 open func typeName() throws -> TypeNameContext {
 		var _localctx: TypeNameContext = TypeNameContext(_ctx, getState())
 		try enterRule(_localctx, 116, krlParser.RULE_typeName)
 		defer {
@@ -5560,38 +6299,55 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class PrimitiveTypeContext:ParserRuleContext {
-		open func BOOL() -> TerminalNode? { return getToken(krlParser.Tokens.BOOL.rawValue, 0) }
-		open func CHAR() -> TerminalNode? { return getToken(krlParser.Tokens.CHAR.rawValue, 0) }
-		open func INT() -> TerminalNode? { return getToken(krlParser.Tokens.INT.rawValue, 0) }
-		open func REAL() -> TerminalNode? { return getToken(krlParser.Tokens.REAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_primitiveType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterPrimitiveType(self)
+
+	public class PrimitiveTypeContext: ParserRuleContext {
+			open
+			func BOOL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.BOOL.rawValue, 0)
+			}
+			open
+			func CHAR() -> TerminalNode? {
+				return getToken(krlParser.Tokens.CHAR.rawValue, 0)
+			}
+			open
+			func INT() -> TerminalNode? {
+				return getToken(krlParser.Tokens.INT.rawValue, 0)
+			}
+			open
+			func REAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.REAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_primitiveType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterPrimitiveType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitPrimitiveType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitPrimitiveType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitPrimitiveType(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitPrimitiveType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitPrimitiveType(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitPrimitiveType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primitiveType() throws -> PrimitiveTypeContext {
+	 open func primitiveType() throws -> PrimitiveTypeContext {
 		var _localctx: PrimitiveTypeContext = PrimitiveTypeContext(_ctx, getState())
 		try enterRule(_localctx, 118, krlParser.RULE_primitiveType)
 		var _la: Int = 0
@@ -5626,37 +6382,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentsContext:ParserRuleContext {
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
+
+	public class ArgumentsContext: ParserRuleContext {
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_arguments
 		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_arguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterArguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterArguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitArguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitArguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitArguments(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitArguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitArguments(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitArguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arguments() throws -> ArgumentsContext {
+	 open func arguments() throws -> ArgumentsContext {
 		var _localctx: ArgumentsContext = ArgumentsContext(_ctx, getState())
 		try enterRule(_localctx, 120, krlParser.RULE_arguments)
 		var _la: Int = 0
@@ -5699,46 +6461,71 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func INTLITERAL() -> TerminalNode? { return getToken(krlParser.Tokens.INTLITERAL.rawValue, 0) }
-		open func FLOATLITERAL() -> TerminalNode? { return getToken(krlParser.Tokens.FLOATLITERAL.rawValue, 0) }
-		open func CHARLITERAL() -> TerminalNode? { return getToken(krlParser.Tokens.CHARLITERAL.rawValue, 0) }
-		open func STRINGLITERAL() -> TerminalNode? { return getToken(krlParser.Tokens.STRINGLITERAL.rawValue, 0) }
-		open func structLiteral() -> StructLiteralContext? {
-			return getRuleContext(StructLiteralContext.self,0)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func INTLITERAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.INTLITERAL.rawValue, 0)
+			}
+			open
+			func FLOATLITERAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.FLOATLITERAL.rawValue, 0)
+			}
+			open
+			func CHARLITERAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.CHARLITERAL.rawValue, 0)
+			}
+			open
+			func STRINGLITERAL() -> TerminalNode? {
+				return getToken(krlParser.Tokens.STRINGLITERAL.rawValue, 0)
+			}
+			open
+			func structLiteral() -> StructLiteralContext? {
+				return getRuleContext(StructLiteralContext.self, 0)
+			}
+			open
+			func TRUE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.TRUE.rawValue, 0)
+			}
+			open
+			func FALSE() -> TerminalNode? {
+				return getToken(krlParser.Tokens.FALSE.rawValue, 0)
+			}
+			open
+			func enumElement() -> EnumElementContext? {
+				return getRuleContext(EnumElementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_literal
 		}
-		open func TRUE() -> TerminalNode? { return getToken(krlParser.Tokens.TRUE.rawValue, 0) }
-		open func FALSE() -> TerminalNode? { return getToken(krlParser.Tokens.FALSE.rawValue, 0) }
-		open func enumElement() -> EnumElementContext? {
-			return getRuleContext(EnumElementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return krlParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitLiteral(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 122, krlParser.RULE_literal)
 		defer {
@@ -5804,7 +6591,7 @@ open class krlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5815,35 +6602,43 @@ open class krlParser: Parser {
 
 		return _localctx
 	}
-	open class EnumElementContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return krlParser.RULE_enumElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).enterEnumElement(self)
+
+	public class EnumElementContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(krlParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return krlParser.RULE_enumElement
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.enterEnumElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is krlListener {
-			 	(listener as! krlListener).exitEnumElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? krlListener {
+				listener.exitEnumElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is krlVisitor {
-			     return (visitor as! krlVisitor<T>).visitEnumElement(self)
-			}else if visitor is krlBaseVisitor {
-		    	 return (visitor as! krlBaseVisitor<T>).visitEnumElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? krlVisitor {
+			    return visitor.visitEnumElement(self)
+			}
+			else if let visitor = visitor as? krlBaseVisitor {
+			    return visitor.visitEnumElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumElement() throws -> EnumElementContext {
+	 open func enumElement() throws -> EnumElementContext {
 		var _localctx: EnumElementContext = EnumElementContext(_ctx, getState())
 		try enterRule(_localctx, 124, krlParser.RULE_enumElement)
 		defer {
@@ -5866,6 +6661,10 @@ open class krlParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = krlParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = krlParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

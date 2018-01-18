@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/jpa/JPA.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/jpa/JPA.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class JPAParser: Parser {
@@ -11,8 +11,11 @@ open class JPAParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -31,46 +34,47 @@ open class JPAParser: Parser {
                  IDENTIFICATION_VARIABLE = 78, CHARACTER = 79, STRINGLITERAL = 80, 
                  ESCAPE_CHARACTER = 81, WS = 82, TRIM_CHARACTER = 83, INT_NUMERAL = 84
 	}
-	public static let RULE_ql_statement = 0, RULE_select_statement = 1, RULE_update_statement = 2, 
-                   RULE_delete_statement = 3, RULE_from_clause = 4, RULE_identification_variable_declaration = 5, 
-                   RULE_range_variable_declaration = 6, RULE_join = 7, RULE_fetch_join = 8, 
-                   RULE_join_spec = 9, RULE_join_association_path_expression = 10, 
-                   RULE_join_collection_valued_path_expression = 11, RULE_join_single_valued_association_path_expression = 12, 
-                   RULE_collection_member_declaration = 13, RULE_single_valued_path_expression = 14, 
-                   RULE_state_field_path_expression = 15, RULE_single_valued_association_path_expression = 16, 
-                   RULE_collection_valued_path_expression = 17, RULE_state_field = 18, 
-                   RULE_update_clause = 19, RULE_update_item = 20, RULE_new_value = 21, 
-                   RULE_delete_clause = 22, RULE_select_clause = 23, RULE_select_expression = 24, 
-                   RULE_constructor_expression = 25, RULE_constructor_item = 26, 
-                   RULE_aggregate_expression = 27, RULE_where_clause = 28, 
-                   RULE_groupby_clause = 29, RULE_groupby_item = 30, RULE_having_clause = 31, 
-                   RULE_orderby_clause = 32, RULE_orderby_item = 33, RULE_subquery = 34, 
-                   RULE_subquery_from_clause = 35, RULE_subselect_identification_variable_declaration = 36, 
-                   RULE_association_path_expression = 37, RULE_simple_select_clause = 38, 
-                   RULE_simple_select_expression = 39, RULE_conditional_expression = 40, 
-                   RULE_conditional_term = 41, RULE_conditional_factor = 42, 
-                   RULE_conditional_primary = 43, RULE_simple_cond_expression = 44, 
-                   RULE_between_expression = 45, RULE_in_expression = 46, 
-                   RULE_in_item = 47, RULE_like_expression = 48, RULE_null_comparison_expression = 49, 
-                   RULE_empty_collection_comparison_expression = 50, RULE_collection_member_expression = 51, 
-                   RULE_exists_expression = 52, RULE_all_or_any_expression = 53, 
-                   RULE_comparison_expression = 54, RULE_comparison_operator = 55, 
-                   RULE_arithmetic_expression = 56, RULE_simple_arithmetic_expression = 57, 
-                   RULE_arithmetic_term = 58, RULE_arithmetic_factor = 59, 
-                   RULE_arithmetic_primary = 60, RULE_string_expression = 61, 
-                   RULE_string_primary = 62, RULE_datetime_expression = 63, 
-                   RULE_datetime_primary = 64, RULE_boolean_expression = 65, 
-                   RULE_boolean_primary = 66, RULE_enum_expression = 67, 
-                   RULE_enum_primary = 68, RULE_entity_expression = 69, 
-                   RULE_simple_entity_expression = 70, RULE_functions_returning_numerics = 71, 
-                   RULE_functions_returning_datetime = 72, RULE_functions_returning_strings = 73, 
-                   RULE_trim_specification = 74, RULE_numeric_literal = 75, 
-                   RULE_pattern_value = 76, RULE_input_parameter = 77, RULE_literal = 78, 
-                   RULE_constructor_name = 79, RULE_enum_literal = 80, RULE_boolean_literal = 81, 
-                   RULE_simple_state_field = 82, RULE_embedded_class_state_field = 83, 
-                   RULE_single_valued_association_field = 84, RULE_collection_valued_association_field = 85, 
-                   RULE_abstract_schema_name = 86
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_ql_statement = 0, RULE_select_statement = 1, RULE_update_statement = 2, 
+            RULE_delete_statement = 3, RULE_from_clause = 4, RULE_identification_variable_declaration = 5, 
+            RULE_range_variable_declaration = 6, RULE_join = 7, RULE_fetch_join = 8, 
+            RULE_join_spec = 9, RULE_join_association_path_expression = 10, 
+            RULE_join_collection_valued_path_expression = 11, RULE_join_single_valued_association_path_expression = 12, 
+            RULE_collection_member_declaration = 13, RULE_single_valued_path_expression = 14, 
+            RULE_state_field_path_expression = 15, RULE_single_valued_association_path_expression = 16, 
+            RULE_collection_valued_path_expression = 17, RULE_state_field = 18, 
+            RULE_update_clause = 19, RULE_update_item = 20, RULE_new_value = 21, 
+            RULE_delete_clause = 22, RULE_select_clause = 23, RULE_select_expression = 24, 
+            RULE_constructor_expression = 25, RULE_constructor_item = 26, 
+            RULE_aggregate_expression = 27, RULE_where_clause = 28, RULE_groupby_clause = 29, 
+            RULE_groupby_item = 30, RULE_having_clause = 31, RULE_orderby_clause = 32, 
+            RULE_orderby_item = 33, RULE_subquery = 34, RULE_subquery_from_clause = 35, 
+            RULE_subselect_identification_variable_declaration = 36, RULE_association_path_expression = 37, 
+            RULE_simple_select_clause = 38, RULE_simple_select_expression = 39, 
+            RULE_conditional_expression = 40, RULE_conditional_term = 41, 
+            RULE_conditional_factor = 42, RULE_conditional_primary = 43, 
+            RULE_simple_cond_expression = 44, RULE_between_expression = 45, 
+            RULE_in_expression = 46, RULE_in_item = 47, RULE_like_expression = 48, 
+            RULE_null_comparison_expression = 49, RULE_empty_collection_comparison_expression = 50, 
+            RULE_collection_member_expression = 51, RULE_exists_expression = 52, 
+            RULE_all_or_any_expression = 53, RULE_comparison_expression = 54, 
+            RULE_comparison_operator = 55, RULE_arithmetic_expression = 56, 
+            RULE_simple_arithmetic_expression = 57, RULE_arithmetic_term = 58, 
+            RULE_arithmetic_factor = 59, RULE_arithmetic_primary = 60, RULE_string_expression = 61, 
+            RULE_string_primary = 62, RULE_datetime_expression = 63, RULE_datetime_primary = 64, 
+            RULE_boolean_expression = 65, RULE_boolean_primary = 66, RULE_enum_expression = 67, 
+            RULE_enum_primary = 68, RULE_entity_expression = 69, RULE_simple_entity_expression = 70, 
+            RULE_functions_returning_numerics = 71, RULE_functions_returning_datetime = 72, 
+            RULE_functions_returning_strings = 73, RULE_trim_specification = 74, 
+            RULE_numeric_literal = 75, RULE_pattern_value = 76, RULE_input_parameter = 77, 
+            RULE_literal = 78, RULE_constructor_name = 79, RULE_enum_literal = 80, 
+            RULE_boolean_literal = 81, RULE_simple_state_field = 82, RULE_embedded_class_state_field = 83, 
+            RULE_single_valued_association_field = 84, RULE_collection_valued_association_field = 85, 
+            RULE_abstract_schema_name = 86
+
+	public
+	static let ruleNames: [String] = [
 		"ql_statement", "select_statement", "update_statement", "delete_statement", 
 		"from_clause", "identification_variable_declaration", "range_variable_declaration", 
 		"join", "fetch_join", "join_spec", "join_association_path_expression", 
@@ -121,91 +125,77 @@ open class JPAParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, "IDENTIFICATION_VARIABLE", "CHARACTER", 
 		"STRINGLITERAL", "ESCAPE_CHARACTER", "WS", "TRIM_CHARACTER", "INT_NUMERAL"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "JPA.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return JPAParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "JPA.g4" }
+	override open
+	func getSerializedATN() -> String { return JPAParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return JPAParser.ruleNames }
+	override open
+	func getATN() -> ATN { return JPAParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return JPAParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return JPAParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return JPAParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,JPAParser._ATN,JPAParser._decisionToDFA, JPAParser._sharedContextCache)
 	}
-	open class Ql_statementContext:ParserRuleContext {
-		open func select_statement() -> Select_statementContext? {
-			return getRuleContext(Select_statementContext.self,0)
+
+	public class Ql_statementContext: ParserRuleContext {
+			open
+			func select_statement() -> Select_statementContext? {
+				return getRuleContext(Select_statementContext.self, 0)
+			}
+			open
+			func update_statement() -> Update_statementContext? {
+				return getRuleContext(Update_statementContext.self, 0)
+			}
+			open
+			func delete_statement() -> Delete_statementContext? {
+				return getRuleContext(Delete_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_ql_statement
 		}
-		open func update_statement() -> Update_statementContext? {
-			return getRuleContext(Update_statementContext.self,0)
-		}
-		open func delete_statement() -> Delete_statementContext? {
-			return getRuleContext(Delete_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_ql_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterQl_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterQl_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitQl_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitQl_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitQl_statement(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitQl_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitQl_statement(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitQl_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ql_statement() throws -> Ql_statementContext {
+	 open func ql_statement() throws -> Ql_statementContext {
 		var _localctx: Ql_statementContext = Ql_statementContext(_ctx, getState())
 		try enterRule(_localctx, 0, JPAParser.RULE_ql_statement)
 		defer {
@@ -236,7 +226,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -247,52 +237,63 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Select_statementContext:ParserRuleContext {
-		open func select_clause() -> Select_clauseContext? {
-			return getRuleContext(Select_clauseContext.self,0)
+
+	public class Select_statementContext: ParserRuleContext {
+			open
+			func select_clause() -> Select_clauseContext? {
+				return getRuleContext(Select_clauseContext.self, 0)
+			}
+			open
+			func from_clause() -> From_clauseContext? {
+				return getRuleContext(From_clauseContext.self, 0)
+			}
+			open
+			func where_clause() -> Where_clauseContext? {
+				return getRuleContext(Where_clauseContext.self, 0)
+			}
+			open
+			func groupby_clause() -> Groupby_clauseContext? {
+				return getRuleContext(Groupby_clauseContext.self, 0)
+			}
+			open
+			func having_clause() -> Having_clauseContext? {
+				return getRuleContext(Having_clauseContext.self, 0)
+			}
+			open
+			func orderby_clause() -> Orderby_clauseContext? {
+				return getRuleContext(Orderby_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_select_statement
 		}
-		open func from_clause() -> From_clauseContext? {
-			return getRuleContext(From_clauseContext.self,0)
-		}
-		open func where_clause() -> Where_clauseContext? {
-			return getRuleContext(Where_clauseContext.self,0)
-		}
-		open func groupby_clause() -> Groupby_clauseContext? {
-			return getRuleContext(Groupby_clauseContext.self,0)
-		}
-		open func having_clause() -> Having_clauseContext? {
-			return getRuleContext(Having_clauseContext.self,0)
-		}
-		open func orderby_clause() -> Orderby_clauseContext? {
-			return getRuleContext(Orderby_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_select_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSelect_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSelect_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSelect_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSelect_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSelect_statement(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSelect_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSelect_statement(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSelect_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func select_statement() throws -> Select_statementContext {
+	 open func select_statement() throws -> Select_statementContext {
 		var _localctx: Select_statementContext = Select_statementContext(_ctx, getState())
 		try enterRule(_localctx, 2, JPAParser.RULE_select_statement)
 		var _la: Int = 0
@@ -367,40 +368,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Update_statementContext:ParserRuleContext {
-		open func update_clause() -> Update_clauseContext? {
-			return getRuleContext(Update_clauseContext.self,0)
+
+	public class Update_statementContext: ParserRuleContext {
+			open
+			func update_clause() -> Update_clauseContext? {
+				return getRuleContext(Update_clauseContext.self, 0)
+			}
+			open
+			func where_clause() -> Where_clauseContext? {
+				return getRuleContext(Where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_update_statement
 		}
-		open func where_clause() -> Where_clauseContext? {
-			return getRuleContext(Where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_update_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterUpdate_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterUpdate_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitUpdate_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitUpdate_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitUpdate_statement(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitUpdate_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitUpdate_statement(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitUpdate_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func update_statement() throws -> Update_statementContext {
+	 open func update_statement() throws -> Update_statementContext {
 		var _localctx: Update_statementContext = Update_statementContext(_ctx, getState())
 		try enterRule(_localctx, 4, JPAParser.RULE_update_statement)
 		var _la: Int = 0
@@ -434,40 +442,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Delete_statementContext:ParserRuleContext {
-		open func delete_clause() -> Delete_clauseContext? {
-			return getRuleContext(Delete_clauseContext.self,0)
+
+	public class Delete_statementContext: ParserRuleContext {
+			open
+			func delete_clause() -> Delete_clauseContext? {
+				return getRuleContext(Delete_clauseContext.self, 0)
+			}
+			open
+			func where_clause() -> Where_clauseContext? {
+				return getRuleContext(Where_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_delete_statement
 		}
-		open func where_clause() -> Where_clauseContext? {
-			return getRuleContext(Where_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_delete_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterDelete_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterDelete_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitDelete_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitDelete_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitDelete_statement(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitDelete_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitDelete_statement(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitDelete_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delete_statement() throws -> Delete_statementContext {
+	 open func delete_statement() throws -> Delete_statementContext {
 		var _localctx: Delete_statementContext = Delete_statementContext(_ctx, getState())
 		try enterRule(_localctx, 6, JPAParser.RULE_delete_statement)
 		var _la: Int = 0
@@ -501,46 +516,55 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class From_clauseContext:ParserRuleContext {
-		open func identification_variable_declaration() -> Array<Identification_variable_declarationContext> {
-			return getRuleContexts(Identification_variable_declarationContext.self)
+
+	public class From_clauseContext: ParserRuleContext {
+			open
+			func identification_variable_declaration() -> [Identification_variable_declarationContext] {
+				return getRuleContexts(Identification_variable_declarationContext.self)
+			}
+			open
+			func identification_variable_declaration(_ i: Int) -> Identification_variable_declarationContext? {
+				return getRuleContext(Identification_variable_declarationContext.self, i)
+			}
+			open
+			func collection_member_declaration() -> [Collection_member_declarationContext] {
+				return getRuleContexts(Collection_member_declarationContext.self)
+			}
+			open
+			func collection_member_declaration(_ i: Int) -> Collection_member_declarationContext? {
+				return getRuleContext(Collection_member_declarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_from_clause
 		}
-		open func identification_variable_declaration(_ i: Int) -> Identification_variable_declarationContext? {
-			return getRuleContext(Identification_variable_declarationContext.self,i)
-		}
-		open func collection_member_declaration() -> Array<Collection_member_declarationContext> {
-			return getRuleContexts(Collection_member_declarationContext.self)
-		}
-		open func collection_member_declaration(_ i: Int) -> Collection_member_declarationContext? {
-			return getRuleContext(Collection_member_declarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_from_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterFrom_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterFrom_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitFrom_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitFrom_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitFrom_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitFrom_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitFrom_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitFrom_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func from_clause() throws -> From_clauseContext {
+	 open func from_clause() throws -> From_clauseContext {
 		var _localctx: From_clauseContext = From_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 8, JPAParser.RULE_from_clause)
 		var _la: Int = 0
@@ -579,7 +603,7 @@ open class JPAParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 
@@ -597,49 +621,59 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Identification_variable_declarationContext:ParserRuleContext {
-		open func range_variable_declaration() -> Range_variable_declarationContext? {
-			return getRuleContext(Range_variable_declarationContext.self,0)
+
+	public class Identification_variable_declarationContext: ParserRuleContext {
+			open
+			func range_variable_declaration() -> Range_variable_declarationContext? {
+				return getRuleContext(Range_variable_declarationContext.self, 0)
+			}
+			open
+			func join() -> [JoinContext] {
+				return getRuleContexts(JoinContext.self)
+			}
+			open
+			func join(_ i: Int) -> JoinContext? {
+				return getRuleContext(JoinContext.self, i)
+			}
+			open
+			func fetch_join() -> [Fetch_joinContext] {
+				return getRuleContexts(Fetch_joinContext.self)
+			}
+			open
+			func fetch_join(_ i: Int) -> Fetch_joinContext? {
+				return getRuleContext(Fetch_joinContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_identification_variable_declaration
 		}
-		open func join() -> Array<JoinContext> {
-			return getRuleContexts(JoinContext.self)
-		}
-		open func join(_ i: Int) -> JoinContext? {
-			return getRuleContext(JoinContext.self,i)
-		}
-		open func fetch_join() -> Array<Fetch_joinContext> {
-			return getRuleContexts(Fetch_joinContext.self)
-		}
-		open func fetch_join(_ i: Int) -> Fetch_joinContext? {
-			return getRuleContext(Fetch_joinContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_identification_variable_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterIdentification_variable_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterIdentification_variable_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitIdentification_variable_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitIdentification_variable_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitIdentification_variable_declaration(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitIdentification_variable_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitIdentification_variable_declaration(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitIdentification_variable_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identification_variable_declaration() throws -> Identification_variable_declarationContext {
+	 open func identification_variable_declaration() throws -> Identification_variable_declarationContext {
 		var _localctx: Identification_variable_declarationContext = Identification_variable_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 10, JPAParser.RULE_identification_variable_declaration)
 		var _la: Int = 0
@@ -691,38 +725,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Range_variable_declarationContext:ParserRuleContext {
-		open func abstract_schema_name() -> Abstract_schema_nameContext? {
-			return getRuleContext(Abstract_schema_nameContext.self,0)
+
+	public class Range_variable_declarationContext: ParserRuleContext {
+			open
+			func abstract_schema_name() -> Abstract_schema_nameContext? {
+				return getRuleContext(Abstract_schema_nameContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_range_variable_declaration
 		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_range_variable_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterRange_variable_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterRange_variable_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitRange_variable_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitRange_variable_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitRange_variable_declaration(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitRange_variable_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitRange_variable_declaration(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitRange_variable_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func range_variable_declaration() throws -> Range_variable_declarationContext {
+	 open func range_variable_declaration() throws -> Range_variable_declarationContext {
 		var _localctx: Range_variable_declarationContext = Range_variable_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 12, JPAParser.RULE_range_variable_declaration)
 		var _la: Int = 0
@@ -758,41 +801,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class JoinContext:ParserRuleContext {
-		open func join_spec() -> Join_specContext? {
-			return getRuleContext(Join_specContext.self,0)
+
+	public class JoinContext: ParserRuleContext {
+			open
+			func join_spec() -> Join_specContext? {
+				return getRuleContext(Join_specContext.self, 0)
+			}
+			open
+			func join_association_path_expression() -> Join_association_path_expressionContext? {
+				return getRuleContext(Join_association_path_expressionContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_join
 		}
-		open func join_association_path_expression() -> Join_association_path_expressionContext? {
-			return getRuleContext(Join_association_path_expressionContext.self,0)
-		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_join }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterJoin(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterJoin(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitJoin(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitJoin(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitJoin(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitJoin(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitJoin(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitJoin(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func join() throws -> JoinContext {
+	 open func join() throws -> JoinContext {
 		var _localctx: JoinContext = JoinContext(_ctx, getState())
 		try enterRule(_localctx, 14, JPAParser.RULE_join)
 		var _la: Int = 0
@@ -830,40 +883,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Fetch_joinContext:ParserRuleContext {
-		open func join_spec() -> Join_specContext? {
-			return getRuleContext(Join_specContext.self,0)
+
+	public class Fetch_joinContext: ParserRuleContext {
+			open
+			func join_spec() -> Join_specContext? {
+				return getRuleContext(Join_specContext.self, 0)
+			}
+			open
+			func join_association_path_expression() -> Join_association_path_expressionContext? {
+				return getRuleContext(Join_association_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_fetch_join
 		}
-		open func join_association_path_expression() -> Join_association_path_expressionContext? {
-			return getRuleContext(Join_association_path_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_fetch_join }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterFetch_join(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterFetch_join(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitFetch_join(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitFetch_join(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitFetch_join(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitFetch_join(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitFetch_join(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitFetch_join(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fetch_join() throws -> Fetch_joinContext {
+	 open func fetch_join() throws -> Fetch_joinContext {
 		var _localctx: Fetch_joinContext = Fetch_joinContext(_ctx, getState())
 		try enterRule(_localctx, 16, JPAParser.RULE_fetch_join)
 		defer {
@@ -887,34 +947,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Join_specContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_join_spec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterJoin_spec(self)
+
+	public class Join_specContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_join_spec
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterJoin_spec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitJoin_spec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitJoin_spec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitJoin_spec(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitJoin_spec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitJoin_spec(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitJoin_spec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func join_spec() throws -> Join_specContext {
+	 open func join_spec() throws -> Join_specContext {
 		var _localctx: Join_specContext = Join_specContext(_ctx, getState())
 		try enterRule(_localctx, 18, JPAParser.RULE_join_spec)
 		var _la: Int = 0
@@ -969,40 +1034,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Join_association_path_expressionContext:ParserRuleContext {
-		open func join_collection_valued_path_expression() -> Join_collection_valued_path_expressionContext? {
-			return getRuleContext(Join_collection_valued_path_expressionContext.self,0)
+
+	public class Join_association_path_expressionContext: ParserRuleContext {
+			open
+			func join_collection_valued_path_expression() -> Join_collection_valued_path_expressionContext? {
+				return getRuleContext(Join_collection_valued_path_expressionContext.self, 0)
+			}
+			open
+			func join_single_valued_association_path_expression() -> Join_single_valued_association_path_expressionContext? {
+				return getRuleContext(Join_single_valued_association_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_join_association_path_expression
 		}
-		open func join_single_valued_association_path_expression() -> Join_single_valued_association_path_expressionContext? {
-			return getRuleContext(Join_single_valued_association_path_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_join_association_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterJoin_association_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterJoin_association_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitJoin_association_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitJoin_association_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitJoin_association_path_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitJoin_association_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitJoin_association_path_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitJoin_association_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func join_association_path_expression() throws -> Join_association_path_expressionContext {
+	 open func join_association_path_expression() throws -> Join_association_path_expressionContext {
 		var _localctx: Join_association_path_expressionContext = Join_association_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 20, JPAParser.RULE_join_association_path_expression)
 		defer {
@@ -1035,38 +1107,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Join_collection_valued_path_expressionContext:ParserRuleContext {
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open func collection_valued_association_field() -> Collection_valued_association_fieldContext? {
-			return getRuleContext(Collection_valued_association_fieldContext.self,0)
+
+	public class Join_collection_valued_path_expressionContext: ParserRuleContext {
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+			open
+			func collection_valued_association_field() -> Collection_valued_association_fieldContext? {
+				return getRuleContext(Collection_valued_association_fieldContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_join_collection_valued_path_expression
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_join_collection_valued_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterJoin_collection_valued_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterJoin_collection_valued_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitJoin_collection_valued_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitJoin_collection_valued_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitJoin_collection_valued_path_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitJoin_collection_valued_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitJoin_collection_valued_path_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitJoin_collection_valued_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func join_collection_valued_path_expression() throws -> Join_collection_valued_path_expressionContext {
+	 open func join_collection_valued_path_expression() throws -> Join_collection_valued_path_expressionContext {
 		var _localctx: Join_collection_valued_path_expressionContext = Join_collection_valued_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 22, JPAParser.RULE_join_collection_valued_path_expression)
 		defer {
@@ -1090,38 +1171,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Join_single_valued_association_path_expressionContext:ParserRuleContext {
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open func single_valued_association_field() -> Single_valued_association_fieldContext? {
-			return getRuleContext(Single_valued_association_fieldContext.self,0)
+
+	public class Join_single_valued_association_path_expressionContext: ParserRuleContext {
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+			open
+			func single_valued_association_field() -> Single_valued_association_fieldContext? {
+				return getRuleContext(Single_valued_association_fieldContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_join_single_valued_association_path_expression
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_join_single_valued_association_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterJoin_single_valued_association_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterJoin_single_valued_association_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitJoin_single_valued_association_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitJoin_single_valued_association_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitJoin_single_valued_association_path_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitJoin_single_valued_association_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitJoin_single_valued_association_path_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitJoin_single_valued_association_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func join_single_valued_association_path_expression() throws -> Join_single_valued_association_path_expressionContext {
+	 open func join_single_valued_association_path_expression() throws -> Join_single_valued_association_path_expressionContext {
 		var _localctx: Join_single_valued_association_path_expressionContext = Join_single_valued_association_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 24, JPAParser.RULE_join_single_valued_association_path_expression)
 		defer {
@@ -1145,38 +1235,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Collection_member_declarationContext:ParserRuleContext {
-		open func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
-			return getRuleContext(Collection_valued_path_expressionContext.self,0)
+
+	public class Collection_member_declarationContext: ParserRuleContext {
+			open
+			func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
+				return getRuleContext(Collection_valued_path_expressionContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_collection_member_declaration
 		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_collection_member_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterCollection_member_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterCollection_member_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitCollection_member_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitCollection_member_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitCollection_member_declaration(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitCollection_member_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitCollection_member_declaration(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitCollection_member_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collection_member_declaration() throws -> Collection_member_declarationContext {
+	 open func collection_member_declaration() throws -> Collection_member_declarationContext {
 		var _localctx: Collection_member_declarationContext = Collection_member_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 26, JPAParser.RULE_collection_member_declaration)
 		var _la: Int = 0
@@ -1218,40 +1317,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Single_valued_path_expressionContext:ParserRuleContext {
-		open func state_field_path_expression() -> State_field_path_expressionContext? {
-			return getRuleContext(State_field_path_expressionContext.self,0)
+
+	public class Single_valued_path_expressionContext: ParserRuleContext {
+			open
+			func state_field_path_expression() -> State_field_path_expressionContext? {
+				return getRuleContext(State_field_path_expressionContext.self, 0)
+			}
+			open
+			func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
+				return getRuleContext(Single_valued_association_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_single_valued_path_expression
 		}
-		open func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
-			return getRuleContext(Single_valued_association_path_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_single_valued_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSingle_valued_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSingle_valued_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSingle_valued_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSingle_valued_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSingle_valued_path_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSingle_valued_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSingle_valued_path_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSingle_valued_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func single_valued_path_expression() throws -> Single_valued_path_expressionContext {
+	 open func single_valued_path_expression() throws -> Single_valued_path_expressionContext {
 		var _localctx: Single_valued_path_expressionContext = Single_valued_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 28, JPAParser.RULE_single_valued_path_expression)
 		defer {
@@ -1284,41 +1390,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class State_field_path_expressionContext:ParserRuleContext {
-		open func state_field() -> State_fieldContext? {
-			return getRuleContext(State_fieldContext.self,0)
+
+	public class State_field_path_expressionContext: ParserRuleContext {
+			open
+			func state_field() -> State_fieldContext? {
+				return getRuleContext(State_fieldContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+			open
+			func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
+				return getRuleContext(Single_valued_association_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_state_field_path_expression
 		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
-			return getRuleContext(Single_valued_association_path_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_state_field_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterState_field_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterState_field_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitState_field_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitState_field_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitState_field_path_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitState_field_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitState_field_path_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitState_field_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func state_field_path_expression() throws -> State_field_path_expressionContext {
+	 open func state_field_path_expression() throws -> State_field_path_expressionContext {
 		var _localctx: State_field_path_expressionContext = State_field_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 30, JPAParser.RULE_state_field_path_expression)
 		defer {
@@ -1355,41 +1471,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Single_valued_association_path_expressionContext:ParserRuleContext {
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open func single_valued_association_field() -> Array<Single_valued_association_fieldContext> {
-			return getRuleContexts(Single_valued_association_fieldContext.self)
+
+	public class Single_valued_association_path_expressionContext: ParserRuleContext {
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+			open
+			func single_valued_association_field() -> [Single_valued_association_fieldContext] {
+				return getRuleContexts(Single_valued_association_fieldContext.self)
+			}
+			open
+			func single_valued_association_field(_ i: Int) -> Single_valued_association_fieldContext? {
+				return getRuleContext(Single_valued_association_fieldContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_single_valued_association_path_expression
 		}
-		open func single_valued_association_field(_ i: Int) -> Single_valued_association_fieldContext? {
-			return getRuleContext(Single_valued_association_fieldContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_single_valued_association_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSingle_valued_association_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSingle_valued_association_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSingle_valued_association_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSingle_valued_association_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSingle_valued_association_path_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSingle_valued_association_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSingle_valued_association_path_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSingle_valued_association_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func single_valued_association_path_expression() throws -> Single_valued_association_path_expressionContext {
+	 open func single_valued_association_path_expression() throws -> Single_valued_association_path_expressionContext {
 		var _localctx: Single_valued_association_path_expressionContext = Single_valued_association_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 32, JPAParser.RULE_single_valued_association_path_expression)
 		defer {
@@ -1430,44 +1556,55 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Collection_valued_path_expressionContext:ParserRuleContext {
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open func collection_valued_association_field() -> Collection_valued_association_fieldContext? {
-			return getRuleContext(Collection_valued_association_fieldContext.self,0)
+
+	public class Collection_valued_path_expressionContext: ParserRuleContext {
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+			open
+			func collection_valued_association_field() -> Collection_valued_association_fieldContext? {
+				return getRuleContext(Collection_valued_association_fieldContext.self, 0)
+			}
+			open
+			func single_valued_association_field() -> [Single_valued_association_fieldContext] {
+				return getRuleContexts(Single_valued_association_fieldContext.self)
+			}
+			open
+			func single_valued_association_field(_ i: Int) -> Single_valued_association_fieldContext? {
+				return getRuleContext(Single_valued_association_fieldContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_collection_valued_path_expression
 		}
-		open func single_valued_association_field() -> Array<Single_valued_association_fieldContext> {
-			return getRuleContexts(Single_valued_association_fieldContext.self)
-		}
-		open func single_valued_association_field(_ i: Int) -> Single_valued_association_fieldContext? {
-			return getRuleContext(Single_valued_association_fieldContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_collection_valued_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterCollection_valued_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterCollection_valued_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitCollection_valued_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitCollection_valued_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitCollection_valued_path_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitCollection_valued_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitCollection_valued_path_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitCollection_valued_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collection_valued_path_expression() throws -> Collection_valued_path_expressionContext {
+	 open func collection_valued_path_expression() throws -> Collection_valued_path_expressionContext {
 		var _localctx: Collection_valued_path_expressionContext = Collection_valued_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 34, JPAParser.RULE_collection_valued_path_expression)
 		var _la: Int = 0
@@ -1510,43 +1647,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class State_fieldContext:ParserRuleContext {
-		open func simple_state_field() -> Simple_state_fieldContext? {
-			return getRuleContext(Simple_state_fieldContext.self,0)
+
+	public class State_fieldContext: ParserRuleContext {
+			open
+			func simple_state_field() -> Simple_state_fieldContext? {
+				return getRuleContext(Simple_state_fieldContext.self, 0)
+			}
+			open
+			func embedded_class_state_field() -> [Embedded_class_state_fieldContext] {
+				return getRuleContexts(Embedded_class_state_fieldContext.self)
+			}
+			open
+			func embedded_class_state_field(_ i: Int) -> Embedded_class_state_fieldContext? {
+				return getRuleContext(Embedded_class_state_fieldContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_state_field
 		}
-		open func embedded_class_state_field() -> Array<Embedded_class_state_fieldContext> {
-			return getRuleContexts(Embedded_class_state_fieldContext.self)
-		}
-		open func embedded_class_state_field(_ i: Int) -> Embedded_class_state_fieldContext? {
-			return getRuleContext(Embedded_class_state_fieldContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_state_field }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterState_field(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterState_field(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitState_field(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitState_field(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitState_field(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitState_field(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitState_field(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitState_field(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func state_field() throws -> State_fieldContext {
+	 open func state_field() throws -> State_fieldContext {
 		var _localctx: State_fieldContext = State_fieldContext(_ctx, getState())
 		try enterRule(_localctx, 36, JPAParser.RULE_state_field)
 		var _la: Int = 0
@@ -1585,44 +1730,55 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Update_clauseContext:ParserRuleContext {
-		open func abstract_schema_name() -> Abstract_schema_nameContext? {
-			return getRuleContext(Abstract_schema_nameContext.self,0)
+
+	public class Update_clauseContext: ParserRuleContext {
+			open
+			func abstract_schema_name() -> Abstract_schema_nameContext? {
+				return getRuleContext(Abstract_schema_nameContext.self, 0)
+			}
+			open
+			func update_item() -> [Update_itemContext] {
+				return getRuleContexts(Update_itemContext.self)
+			}
+			open
+			func update_item(_ i: Int) -> Update_itemContext? {
+				return getRuleContext(Update_itemContext.self, i)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_update_clause
 		}
-		open func update_item() -> Array<Update_itemContext> {
-			return getRuleContexts(Update_itemContext.self)
-		}
-		open func update_item(_ i: Int) -> Update_itemContext? {
-			return getRuleContext(Update_itemContext.self,i)
-		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_update_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterUpdate_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterUpdate_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitUpdate_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitUpdate_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitUpdate_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitUpdate_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitUpdate_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitUpdate_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func update_clause() throws -> Update_clauseContext {
+	 open func update_clause() throws -> Update_clauseContext {
 		var _localctx: Update_clauseContext = Update_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 38, JPAParser.RULE_update_clause)
 		var _la: Int = 0
@@ -1694,44 +1850,55 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Update_itemContext:ParserRuleContext {
-		open func new_value() -> New_valueContext? {
-			return getRuleContext(New_valueContext.self,0)
+
+	public class Update_itemContext: ParserRuleContext {
+			open
+			func new_value() -> New_valueContext? {
+				return getRuleContext(New_valueContext.self, 0)
+			}
+			open
+			func state_field() -> State_fieldContext? {
+				return getRuleContext(State_fieldContext.self, 0)
+			}
+			open
+			func single_valued_association_field() -> Single_valued_association_fieldContext? {
+				return getRuleContext(Single_valued_association_fieldContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_update_item
 		}
-		open func state_field() -> State_fieldContext? {
-			return getRuleContext(State_fieldContext.self,0)
-		}
-		open func single_valued_association_field() -> Single_valued_association_fieldContext? {
-			return getRuleContext(Single_valued_association_fieldContext.self,0)
-		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_update_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterUpdate_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterUpdate_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitUpdate_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitUpdate_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitUpdate_item(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitUpdate_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitUpdate_item(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitUpdate_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func update_item() throws -> Update_itemContext {
+	 open func update_item() throws -> Update_itemContext {
 		var _localctx: Update_itemContext = Update_itemContext(_ctx, getState())
 		try enterRule(_localctx, 40, JPAParser.RULE_update_item)
 		var _la: Int = 0
@@ -1784,52 +1951,63 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class New_valueContext:ParserRuleContext {
-		open func simple_arithmetic_expression() -> Simple_arithmetic_expressionContext? {
-			return getRuleContext(Simple_arithmetic_expressionContext.self,0)
+
+	public class New_valueContext: ParserRuleContext {
+			open
+			func simple_arithmetic_expression() -> Simple_arithmetic_expressionContext? {
+				return getRuleContext(Simple_arithmetic_expressionContext.self, 0)
+			}
+			open
+			func string_primary() -> String_primaryContext? {
+				return getRuleContext(String_primaryContext.self, 0)
+			}
+			open
+			func datetime_primary() -> Datetime_primaryContext? {
+				return getRuleContext(Datetime_primaryContext.self, 0)
+			}
+			open
+			func boolean_primary() -> Boolean_primaryContext? {
+				return getRuleContext(Boolean_primaryContext.self, 0)
+			}
+			open
+			func enum_primary() -> Enum_primaryContext? {
+				return getRuleContext(Enum_primaryContext.self, 0)
+			}
+			open
+			func simple_entity_expression() -> Simple_entity_expressionContext? {
+				return getRuleContext(Simple_entity_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_new_value
 		}
-		open func string_primary() -> String_primaryContext? {
-			return getRuleContext(String_primaryContext.self,0)
-		}
-		open func datetime_primary() -> Datetime_primaryContext? {
-			return getRuleContext(Datetime_primaryContext.self,0)
-		}
-		open func boolean_primary() -> Boolean_primaryContext? {
-			return getRuleContext(Boolean_primaryContext.self,0)
-		}
-		open func enum_primary() -> Enum_primaryContext? {
-			return getRuleContext(Enum_primaryContext.self,0)
-		}
-		open func simple_entity_expression() -> Simple_entity_expressionContext? {
-			return getRuleContext(Simple_entity_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_new_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterNew_value(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterNew_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitNew_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitNew_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitNew_value(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitNew_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitNew_value(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitNew_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func new_value() throws -> New_valueContext {
+	 open func new_value() throws -> New_valueContext {
 		var _localctx: New_valueContext = New_valueContext(_ctx, getState())
 		try enterRule(_localctx, 42, JPAParser.RULE_new_value)
 		defer {
@@ -1892,38 +2070,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Delete_clauseContext:ParserRuleContext {
-		open func abstract_schema_name() -> Abstract_schema_nameContext? {
-			return getRuleContext(Abstract_schema_nameContext.self,0)
+
+	public class Delete_clauseContext: ParserRuleContext {
+			open
+			func abstract_schema_name() -> Abstract_schema_nameContext? {
+				return getRuleContext(Abstract_schema_nameContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_delete_clause
 		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_delete_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterDelete_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterDelete_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitDelete_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitDelete_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitDelete_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitDelete_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitDelete_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitDelete_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delete_clause() throws -> Delete_clauseContext {
+	 open func delete_clause() throws -> Delete_clauseContext {
 		var _localctx: Delete_clauseContext = Delete_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 44, JPAParser.RULE_delete_clause)
 		var _la: Int = 0
@@ -1975,40 +2162,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Select_clauseContext:ParserRuleContext {
-		open func select_expression() -> Array<Select_expressionContext> {
-			return getRuleContexts(Select_expressionContext.self)
+
+	public class Select_clauseContext: ParserRuleContext {
+			open
+			func select_expression() -> [Select_expressionContext] {
+				return getRuleContexts(Select_expressionContext.self)
+			}
+			open
+			func select_expression(_ i: Int) -> Select_expressionContext? {
+				return getRuleContext(Select_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_select_clause
 		}
-		open func select_expression(_ i: Int) -> Select_expressionContext? {
-			return getRuleContext(Select_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_select_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSelect_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSelect_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSelect_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSelect_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSelect_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSelect_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSelect_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSelect_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func select_clause() throws -> Select_clauseContext {
+	 open func select_clause() throws -> Select_clauseContext {
 		var _localctx: Select_clauseContext = Select_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 46, JPAParser.RULE_select_clause)
 		var _la: Int = 0
@@ -2062,44 +2256,55 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Select_expressionContext:ParserRuleContext {
-		open func single_valued_path_expression() -> Single_valued_path_expressionContext? {
-			return getRuleContext(Single_valued_path_expressionContext.self,0)
+
+	public class Select_expressionContext: ParserRuleContext {
+			open
+			func single_valued_path_expression() -> Single_valued_path_expressionContext? {
+				return getRuleContext(Single_valued_path_expressionContext.self, 0)
+			}
+			open
+			func aggregate_expression() -> Aggregate_expressionContext? {
+				return getRuleContext(Aggregate_expressionContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+			open
+			func constructor_expression() -> Constructor_expressionContext? {
+				return getRuleContext(Constructor_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_select_expression
 		}
-		open func aggregate_expression() -> Aggregate_expressionContext? {
-			return getRuleContext(Aggregate_expressionContext.self,0)
-		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open func constructor_expression() -> Constructor_expressionContext? {
-			return getRuleContext(Constructor_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_select_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSelect_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSelect_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSelect_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSelect_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSelect_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSelect_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSelect_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSelect_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func select_expression() throws -> Select_expressionContext {
+	 open func select_expression() throws -> Select_expressionContext {
 		var _localctx: Select_expressionContext = Select_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 48, JPAParser.RULE_select_expression)
 		defer {
@@ -2156,43 +2361,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Constructor_expressionContext:ParserRuleContext {
-		open func constructor_name() -> Constructor_nameContext? {
-			return getRuleContext(Constructor_nameContext.self,0)
+
+	public class Constructor_expressionContext: ParserRuleContext {
+			open
+			func constructor_name() -> Constructor_nameContext? {
+				return getRuleContext(Constructor_nameContext.self, 0)
+			}
+			open
+			func constructor_item() -> [Constructor_itemContext] {
+				return getRuleContexts(Constructor_itemContext.self)
+			}
+			open
+			func constructor_item(_ i: Int) -> Constructor_itemContext? {
+				return getRuleContext(Constructor_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_constructor_expression
 		}
-		open func constructor_item() -> Array<Constructor_itemContext> {
-			return getRuleContexts(Constructor_itemContext.self)
-		}
-		open func constructor_item(_ i: Int) -> Constructor_itemContext? {
-			return getRuleContext(Constructor_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_constructor_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterConstructor_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterConstructor_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitConstructor_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitConstructor_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitConstructor_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitConstructor_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitConstructor_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitConstructor_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructor_expression() throws -> Constructor_expressionContext {
+	 open func constructor_expression() throws -> Constructor_expressionContext {
 		var _localctx: Constructor_expressionContext = Constructor_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 50, JPAParser.RULE_constructor_expression)
 		var _la: Int = 0
@@ -2239,40 +2452,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Constructor_itemContext:ParserRuleContext {
-		open func single_valued_path_expression() -> Single_valued_path_expressionContext? {
-			return getRuleContext(Single_valued_path_expressionContext.self,0)
+
+	public class Constructor_itemContext: ParserRuleContext {
+			open
+			func single_valued_path_expression() -> Single_valued_path_expressionContext? {
+				return getRuleContext(Single_valued_path_expressionContext.self, 0)
+			}
+			open
+			func aggregate_expression() -> Aggregate_expressionContext? {
+				return getRuleContext(Aggregate_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_constructor_item
 		}
-		open func aggregate_expression() -> Aggregate_expressionContext? {
-			return getRuleContext(Aggregate_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_constructor_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterConstructor_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterConstructor_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitConstructor_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitConstructor_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitConstructor_item(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitConstructor_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitConstructor_item(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitConstructor_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructor_item() throws -> Constructor_itemContext {
+	 open func constructor_item() throws -> Constructor_itemContext {
 		var _localctx: Constructor_itemContext = Constructor_itemContext(_ctx, getState())
 		try enterRule(_localctx, 52, JPAParser.RULE_constructor_item)
 		defer {
@@ -2299,7 +2519,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2310,41 +2530,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Aggregate_expressionContext:ParserRuleContext {
-		open func state_field_path_expression() -> State_field_path_expressionContext? {
-			return getRuleContext(State_field_path_expressionContext.self,0)
+
+	public class Aggregate_expressionContext: ParserRuleContext {
+			open
+			func state_field_path_expression() -> State_field_path_expressionContext? {
+				return getRuleContext(State_field_path_expressionContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+			open
+			func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
+				return getRuleContext(Single_valued_association_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_aggregate_expression
 		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
-			return getRuleContext(Single_valued_association_path_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_aggregate_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterAggregate_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterAggregate_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitAggregate_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitAggregate_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitAggregate_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitAggregate_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitAggregate_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitAggregate_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func aggregate_expression() throws -> Aggregate_expressionContext {
+	 open func aggregate_expression() throws -> Aggregate_expressionContext {
 		var _localctx: Aggregate_expressionContext = Aggregate_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 54, JPAParser.RULE_aggregate_expression)
 		var _la: Int = 0
@@ -2442,7 +2672,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2453,37 +2683,43 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Where_clauseContext:ParserRuleContext {
-		open func conditional_expression() -> Conditional_expressionContext? {
-			return getRuleContext(Conditional_expressionContext.self,0)
+
+	public class Where_clauseContext: ParserRuleContext {
+			open
+			func conditional_expression() -> Conditional_expressionContext? {
+				return getRuleContext(Conditional_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_where_clause
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_where_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterWhere_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterWhere_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitWhere_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitWhere_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitWhere_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitWhere_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitWhere_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitWhere_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func where_clause() throws -> Where_clauseContext {
+	 open func where_clause() throws -> Where_clauseContext {
 		var _localctx: Where_clauseContext = Where_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 56, JPAParser.RULE_where_clause)
 		defer {
@@ -2505,40 +2741,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Groupby_clauseContext:ParserRuleContext {
-		open func groupby_item() -> Array<Groupby_itemContext> {
-			return getRuleContexts(Groupby_itemContext.self)
+
+	public class Groupby_clauseContext: ParserRuleContext {
+			open
+			func groupby_item() -> [Groupby_itemContext] {
+				return getRuleContexts(Groupby_itemContext.self)
+			}
+			open
+			func groupby_item(_ i: Int) -> Groupby_itemContext? {
+				return getRuleContext(Groupby_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_groupby_clause
 		}
-		open func groupby_item(_ i: Int) -> Groupby_itemContext? {
-			return getRuleContext(Groupby_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_groupby_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterGroupby_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterGroupby_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitGroupby_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitGroupby_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitGroupby_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitGroupby_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitGroupby_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitGroupby_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func groupby_clause() throws -> Groupby_clauseContext {
+	 open func groupby_clause() throws -> Groupby_clauseContext {
 		var _localctx: Groupby_clauseContext = Groupby_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 58, JPAParser.RULE_groupby_clause)
 		var _la: Int = 0
@@ -2581,38 +2824,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Groupby_itemContext:ParserRuleContext {
-		open func single_valued_path_expression() -> Single_valued_path_expressionContext? {
-			return getRuleContext(Single_valued_path_expressionContext.self,0)
+
+	public class Groupby_itemContext: ParserRuleContext {
+			open
+			func single_valued_path_expression() -> Single_valued_path_expressionContext? {
+				return getRuleContext(Single_valued_path_expressionContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_groupby_item
 		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_groupby_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterGroupby_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterGroupby_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitGroupby_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitGroupby_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitGroupby_item(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitGroupby_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitGroupby_item(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitGroupby_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func groupby_item() throws -> Groupby_itemContext {
+	 open func groupby_item() throws -> Groupby_itemContext {
 		var _localctx: Groupby_itemContext = Groupby_itemContext(_ctx, getState())
 		try enterRule(_localctx, 60, JPAParser.RULE_groupby_item)
 		defer {
@@ -2645,37 +2897,43 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Having_clauseContext:ParserRuleContext {
-		open func conditional_expression() -> Conditional_expressionContext? {
-			return getRuleContext(Conditional_expressionContext.self,0)
+
+	public class Having_clauseContext: ParserRuleContext {
+			open
+			func conditional_expression() -> Conditional_expressionContext? {
+				return getRuleContext(Conditional_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_having_clause
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_having_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterHaving_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterHaving_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitHaving_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitHaving_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitHaving_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitHaving_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitHaving_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitHaving_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func having_clause() throws -> Having_clauseContext {
+	 open func having_clause() throws -> Having_clauseContext {
 		var _localctx: Having_clauseContext = Having_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 62, JPAParser.RULE_having_clause)
 		defer {
@@ -2697,40 +2955,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Orderby_clauseContext:ParserRuleContext {
-		open func orderby_item() -> Array<Orderby_itemContext> {
-			return getRuleContexts(Orderby_itemContext.self)
+
+	public class Orderby_clauseContext: ParserRuleContext {
+			open
+			func orderby_item() -> [Orderby_itemContext] {
+				return getRuleContexts(Orderby_itemContext.self)
+			}
+			open
+			func orderby_item(_ i: Int) -> Orderby_itemContext? {
+				return getRuleContext(Orderby_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_orderby_clause
 		}
-		open func orderby_item(_ i: Int) -> Orderby_itemContext? {
-			return getRuleContext(Orderby_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_orderby_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterOrderby_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterOrderby_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitOrderby_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitOrderby_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitOrderby_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitOrderby_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitOrderby_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitOrderby_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func orderby_clause() throws -> Orderby_clauseContext {
+	 open func orderby_clause() throws -> Orderby_clauseContext {
 		var _localctx: Orderby_clauseContext = Orderby_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 64, JPAParser.RULE_orderby_clause)
 		var _la: Int = 0
@@ -2773,37 +3038,43 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Orderby_itemContext:ParserRuleContext {
-		open func state_field_path_expression() -> State_field_path_expressionContext? {
-			return getRuleContext(State_field_path_expressionContext.self,0)
+
+	public class Orderby_itemContext: ParserRuleContext {
+			open
+			func state_field_path_expression() -> State_field_path_expressionContext? {
+				return getRuleContext(State_field_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_orderby_item
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_orderby_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterOrderby_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterOrderby_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitOrderby_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitOrderby_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitOrderby_item(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitOrderby_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitOrderby_item(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitOrderby_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func orderby_item() throws -> Orderby_itemContext {
+	 open func orderby_item() throws -> Orderby_itemContext {
 		var _localctx: Orderby_itemContext = Orderby_itemContext(_ctx, getState())
 		try enterRule(_localctx, 66, JPAParser.RULE_orderby_item)
 		var _la: Int = 0
@@ -2848,49 +3119,59 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class SubqueryContext:ParserRuleContext {
-		open func simple_select_clause() -> Simple_select_clauseContext? {
-			return getRuleContext(Simple_select_clauseContext.self,0)
+
+	public class SubqueryContext: ParserRuleContext {
+			open
+			func simple_select_clause() -> Simple_select_clauseContext? {
+				return getRuleContext(Simple_select_clauseContext.self, 0)
+			}
+			open
+			func subquery_from_clause() -> Subquery_from_clauseContext? {
+				return getRuleContext(Subquery_from_clauseContext.self, 0)
+			}
+			open
+			func where_clause() -> Where_clauseContext? {
+				return getRuleContext(Where_clauseContext.self, 0)
+			}
+			open
+			func groupby_clause() -> Groupby_clauseContext? {
+				return getRuleContext(Groupby_clauseContext.self, 0)
+			}
+			open
+			func having_clause() -> Having_clauseContext? {
+				return getRuleContext(Having_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_subquery
 		}
-		open func subquery_from_clause() -> Subquery_from_clauseContext? {
-			return getRuleContext(Subquery_from_clauseContext.self,0)
-		}
-		open func where_clause() -> Where_clauseContext? {
-			return getRuleContext(Where_clauseContext.self,0)
-		}
-		open func groupby_clause() -> Groupby_clauseContext? {
-			return getRuleContext(Groupby_clauseContext.self,0)
-		}
-		open func having_clause() -> Having_clauseContext? {
-			return getRuleContext(Having_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_subquery }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSubquery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSubquery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSubquery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSubquery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSubquery(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSubquery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSubquery(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSubquery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subquery() throws -> SubqueryContext {
+	 open func subquery() throws -> SubqueryContext {
 		var _localctx: SubqueryContext = SubqueryContext(_ctx, getState())
 		try enterRule(_localctx, 68, JPAParser.RULE_subquery)
 		var _la: Int = 0
@@ -2952,40 +3233,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Subquery_from_clauseContext:ParserRuleContext {
-		open func subselect_identification_variable_declaration() -> Array<Subselect_identification_variable_declarationContext> {
-			return getRuleContexts(Subselect_identification_variable_declarationContext.self)
+
+	public class Subquery_from_clauseContext: ParserRuleContext {
+			open
+			func subselect_identification_variable_declaration() -> [Subselect_identification_variable_declarationContext] {
+				return getRuleContexts(Subselect_identification_variable_declarationContext.self)
+			}
+			open
+			func subselect_identification_variable_declaration(_ i: Int) -> Subselect_identification_variable_declarationContext? {
+				return getRuleContext(Subselect_identification_variable_declarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_subquery_from_clause
 		}
-		open func subselect_identification_variable_declaration(_ i: Int) -> Subselect_identification_variable_declarationContext? {
-			return getRuleContext(Subselect_identification_variable_declarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_subquery_from_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSubquery_from_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSubquery_from_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSubquery_from_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSubquery_from_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSubquery_from_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSubquery_from_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSubquery_from_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSubquery_from_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subquery_from_clause() throws -> Subquery_from_clauseContext {
+	 open func subquery_from_clause() throws -> Subquery_from_clauseContext {
 		var _localctx: Subquery_from_clauseContext = Subquery_from_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 70, JPAParser.RULE_subquery_from_clause)
 		var _la: Int = 0
@@ -3026,44 +3314,55 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Subselect_identification_variable_declarationContext:ParserRuleContext {
-		open func identification_variable_declaration() -> Identification_variable_declarationContext? {
-			return getRuleContext(Identification_variable_declarationContext.self,0)
+
+	public class Subselect_identification_variable_declarationContext: ParserRuleContext {
+			open
+			func identification_variable_declaration() -> Identification_variable_declarationContext? {
+				return getRuleContext(Identification_variable_declarationContext.self, 0)
+			}
+			open
+			func association_path_expression() -> Association_path_expressionContext? {
+				return getRuleContext(Association_path_expressionContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+			open
+			func collection_member_declaration() -> Collection_member_declarationContext? {
+				return getRuleContext(Collection_member_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_subselect_identification_variable_declaration
 		}
-		open func association_path_expression() -> Association_path_expressionContext? {
-			return getRuleContext(Association_path_expressionContext.self,0)
-		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open func collection_member_declaration() -> Collection_member_declarationContext? {
-			return getRuleContext(Collection_member_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_subselect_identification_variable_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSubselect_identification_variable_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSubselect_identification_variable_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSubselect_identification_variable_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSubselect_identification_variable_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSubselect_identification_variable_declaration(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSubselect_identification_variable_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSubselect_identification_variable_declaration(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSubselect_identification_variable_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subselect_identification_variable_declaration() throws -> Subselect_identification_variable_declarationContext {
+	 open func subselect_identification_variable_declaration() throws -> Subselect_identification_variable_declarationContext {
 		var _localctx: Subselect_identification_variable_declarationContext = Subselect_identification_variable_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 72, JPAParser.RULE_subselect_identification_variable_declaration)
 		var _la: Int = 0
@@ -3118,40 +3417,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Association_path_expressionContext:ParserRuleContext {
-		open func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
-			return getRuleContext(Collection_valued_path_expressionContext.self,0)
+
+	public class Association_path_expressionContext: ParserRuleContext {
+			open
+			func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
+				return getRuleContext(Collection_valued_path_expressionContext.self, 0)
+			}
+			open
+			func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
+				return getRuleContext(Single_valued_association_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_association_path_expression
 		}
-		open func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
-			return getRuleContext(Single_valued_association_path_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_association_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterAssociation_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterAssociation_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitAssociation_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitAssociation_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitAssociation_path_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitAssociation_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitAssociation_path_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitAssociation_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func association_path_expression() throws -> Association_path_expressionContext {
+	 open func association_path_expression() throws -> Association_path_expressionContext {
 		var _localctx: Association_path_expressionContext = Association_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 74, JPAParser.RULE_association_path_expression)
 		defer {
@@ -3184,37 +3490,43 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Simple_select_clauseContext:ParserRuleContext {
-		open func simple_select_expression() -> Simple_select_expressionContext? {
-			return getRuleContext(Simple_select_expressionContext.self,0)
+
+	public class Simple_select_clauseContext: ParserRuleContext {
+			open
+			func simple_select_expression() -> Simple_select_expressionContext? {
+				return getRuleContext(Simple_select_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_simple_select_clause
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_simple_select_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSimple_select_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSimple_select_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSimple_select_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSimple_select_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSimple_select_clause(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSimple_select_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSimple_select_clause(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSimple_select_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_select_clause() throws -> Simple_select_clauseContext {
+	 open func simple_select_clause() throws -> Simple_select_clauseContext {
 		var _localctx: Simple_select_clauseContext = Simple_select_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 76, JPAParser.RULE_simple_select_clause)
 		var _la: Int = 0
@@ -3250,41 +3562,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Simple_select_expressionContext:ParserRuleContext {
-		open func single_valued_path_expression() -> Single_valued_path_expressionContext? {
-			return getRuleContext(Single_valued_path_expressionContext.self,0)
+
+	public class Simple_select_expressionContext: ParserRuleContext {
+			open
+			func single_valued_path_expression() -> Single_valued_path_expressionContext? {
+				return getRuleContext(Single_valued_path_expressionContext.self, 0)
+			}
+			open
+			func aggregate_expression() -> Aggregate_expressionContext? {
+				return getRuleContext(Aggregate_expressionContext.self, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_simple_select_expression
 		}
-		open func aggregate_expression() -> Aggregate_expressionContext? {
-			return getRuleContext(Aggregate_expressionContext.self,0)
-		}
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_simple_select_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSimple_select_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSimple_select_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSimple_select_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSimple_select_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSimple_select_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSimple_select_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSimple_select_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSimple_select_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_select_expression() throws -> Simple_select_expressionContext {
+	 open func simple_select_expression() throws -> Simple_select_expressionContext {
 		var _localctx: Simple_select_expressionContext = Simple_select_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 78, JPAParser.RULE_simple_select_expression)
 		defer {
@@ -3323,40 +3645,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Conditional_expressionContext:ParserRuleContext {
-		open func conditional_term() -> Array<Conditional_termContext> {
-			return getRuleContexts(Conditional_termContext.self)
+
+	public class Conditional_expressionContext: ParserRuleContext {
+			open
+			func conditional_term() -> [Conditional_termContext] {
+				return getRuleContexts(Conditional_termContext.self)
+			}
+			open
+			func conditional_term(_ i: Int) -> Conditional_termContext? {
+				return getRuleContext(Conditional_termContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_conditional_expression
 		}
-		open func conditional_term(_ i: Int) -> Conditional_termContext? {
-			return getRuleContext(Conditional_termContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_conditional_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterConditional_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterConditional_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitConditional_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitConditional_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitConditional_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitConditional_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitConditional_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitConditional_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditional_expression() throws -> Conditional_expressionContext {
+	 open func conditional_expression() throws -> Conditional_expressionContext {
 		var _localctx: Conditional_expressionContext = Conditional_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 80, JPAParser.RULE_conditional_expression)
 		var _la: Int = 0
@@ -3396,40 +3725,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Conditional_termContext:ParserRuleContext {
-		open func conditional_factor() -> Array<Conditional_factorContext> {
-			return getRuleContexts(Conditional_factorContext.self)
+
+	public class Conditional_termContext: ParserRuleContext {
+			open
+			func conditional_factor() -> [Conditional_factorContext] {
+				return getRuleContexts(Conditional_factorContext.self)
+			}
+			open
+			func conditional_factor(_ i: Int) -> Conditional_factorContext? {
+				return getRuleContext(Conditional_factorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_conditional_term
 		}
-		open func conditional_factor(_ i: Int) -> Conditional_factorContext? {
-			return getRuleContext(Conditional_factorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_conditional_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterConditional_term(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterConditional_term(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitConditional_term(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitConditional_term(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitConditional_term(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitConditional_term(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitConditional_term(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitConditional_term(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditional_term() throws -> Conditional_termContext {
+	 open func conditional_term() throws -> Conditional_termContext {
 		var _localctx: Conditional_termContext = Conditional_termContext(_ctx, getState())
 		try enterRule(_localctx, 82, JPAParser.RULE_conditional_term)
 		var _la: Int = 0
@@ -3469,37 +3805,43 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Conditional_factorContext:ParserRuleContext {
-		open func conditional_primary() -> Conditional_primaryContext? {
-			return getRuleContext(Conditional_primaryContext.self,0)
+
+	public class Conditional_factorContext: ParserRuleContext {
+			open
+			func conditional_primary() -> Conditional_primaryContext? {
+				return getRuleContext(Conditional_primaryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_conditional_factor
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_conditional_factor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterConditional_factor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterConditional_factor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitConditional_factor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitConditional_factor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitConditional_factor(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitConditional_factor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitConditional_factor(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitConditional_factor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditional_factor() throws -> Conditional_factorContext {
+	 open func conditional_factor() throws -> Conditional_factorContext {
 		var _localctx: Conditional_factorContext = Conditional_factorContext(_ctx, getState())
 		try enterRule(_localctx, 84, JPAParser.RULE_conditional_factor)
 		defer {
@@ -3529,40 +3871,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Conditional_primaryContext:ParserRuleContext {
-		open func simple_cond_expression() -> Simple_cond_expressionContext? {
-			return getRuleContext(Simple_cond_expressionContext.self,0)
+
+	public class Conditional_primaryContext: ParserRuleContext {
+			open
+			func simple_cond_expression() -> Simple_cond_expressionContext? {
+				return getRuleContext(Simple_cond_expressionContext.self, 0)
+			}
+			open
+			func conditional_expression() -> Conditional_expressionContext? {
+				return getRuleContext(Conditional_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_conditional_primary
 		}
-		open func conditional_expression() -> Conditional_expressionContext? {
-			return getRuleContext(Conditional_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_conditional_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterConditional_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterConditional_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitConditional_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitConditional_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitConditional_primary(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitConditional_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitConditional_primary(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitConditional_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditional_primary() throws -> Conditional_primaryContext {
+	 open func conditional_primary() throws -> Conditional_primaryContext {
 		var _localctx: Conditional_primaryContext = Conditional_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 86, JPAParser.RULE_conditional_primary)
 		defer {
@@ -3599,58 +3948,71 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Simple_cond_expressionContext:ParserRuleContext {
-		open func comparison_expression() -> Comparison_expressionContext? {
-			return getRuleContext(Comparison_expressionContext.self,0)
+
+	public class Simple_cond_expressionContext: ParserRuleContext {
+			open
+			func comparison_expression() -> Comparison_expressionContext? {
+				return getRuleContext(Comparison_expressionContext.self, 0)
+			}
+			open
+			func between_expression() -> Between_expressionContext? {
+				return getRuleContext(Between_expressionContext.self, 0)
+			}
+			open
+			func like_expression() -> Like_expressionContext? {
+				return getRuleContext(Like_expressionContext.self, 0)
+			}
+			open
+			func in_expression() -> In_expressionContext? {
+				return getRuleContext(In_expressionContext.self, 0)
+			}
+			open
+			func null_comparison_expression() -> Null_comparison_expressionContext? {
+				return getRuleContext(Null_comparison_expressionContext.self, 0)
+			}
+			open
+			func empty_collection_comparison_expression() -> Empty_collection_comparison_expressionContext? {
+				return getRuleContext(Empty_collection_comparison_expressionContext.self, 0)
+			}
+			open
+			func collection_member_expression() -> Collection_member_expressionContext? {
+				return getRuleContext(Collection_member_expressionContext.self, 0)
+			}
+			open
+			func exists_expression() -> Exists_expressionContext? {
+				return getRuleContext(Exists_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_simple_cond_expression
 		}
-		open func between_expression() -> Between_expressionContext? {
-			return getRuleContext(Between_expressionContext.self,0)
-		}
-		open func like_expression() -> Like_expressionContext? {
-			return getRuleContext(Like_expressionContext.self,0)
-		}
-		open func in_expression() -> In_expressionContext? {
-			return getRuleContext(In_expressionContext.self,0)
-		}
-		open func null_comparison_expression() -> Null_comparison_expressionContext? {
-			return getRuleContext(Null_comparison_expressionContext.self,0)
-		}
-		open func empty_collection_comparison_expression() -> Empty_collection_comparison_expressionContext? {
-			return getRuleContext(Empty_collection_comparison_expressionContext.self,0)
-		}
-		open func collection_member_expression() -> Collection_member_expressionContext? {
-			return getRuleContext(Collection_member_expressionContext.self,0)
-		}
-		open func exists_expression() -> Exists_expressionContext? {
-			return getRuleContext(Exists_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_simple_cond_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSimple_cond_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSimple_cond_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSimple_cond_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSimple_cond_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSimple_cond_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSimple_cond_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSimple_cond_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSimple_cond_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_cond_expression() throws -> Simple_cond_expressionContext {
+	 open func simple_cond_expression() throws -> Simple_cond_expressionContext {
 		var _localctx: Simple_cond_expressionContext = Simple_cond_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 88, JPAParser.RULE_simple_cond_expression)
 		defer {
@@ -3719,52 +4081,63 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Between_expressionContext:ParserRuleContext {
-		open func arithmetic_expression() -> Array<Arithmetic_expressionContext> {
-			return getRuleContexts(Arithmetic_expressionContext.self)
+
+	public class Between_expressionContext: ParserRuleContext {
+			open
+			func arithmetic_expression() -> [Arithmetic_expressionContext] {
+				return getRuleContexts(Arithmetic_expressionContext.self)
+			}
+			open
+			func arithmetic_expression(_ i: Int) -> Arithmetic_expressionContext? {
+				return getRuleContext(Arithmetic_expressionContext.self, i)
+			}
+			open
+			func string_expression() -> [String_expressionContext] {
+				return getRuleContexts(String_expressionContext.self)
+			}
+			open
+			func string_expression(_ i: Int) -> String_expressionContext? {
+				return getRuleContext(String_expressionContext.self, i)
+			}
+			open
+			func datetime_expression() -> [Datetime_expressionContext] {
+				return getRuleContexts(Datetime_expressionContext.self)
+			}
+			open
+			func datetime_expression(_ i: Int) -> Datetime_expressionContext? {
+				return getRuleContext(Datetime_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_between_expression
 		}
-		open func arithmetic_expression(_ i: Int) -> Arithmetic_expressionContext? {
-			return getRuleContext(Arithmetic_expressionContext.self,i)
-		}
-		open func string_expression() -> Array<String_expressionContext> {
-			return getRuleContexts(String_expressionContext.self)
-		}
-		open func string_expression(_ i: Int) -> String_expressionContext? {
-			return getRuleContext(String_expressionContext.self,i)
-		}
-		open func datetime_expression() -> Array<Datetime_expressionContext> {
-			return getRuleContexts(Datetime_expressionContext.self)
-		}
-		open func datetime_expression(_ i: Int) -> Datetime_expressionContext? {
-			return getRuleContext(Datetime_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_between_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterBetween_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterBetween_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitBetween_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitBetween_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitBetween_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitBetween_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitBetween_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitBetween_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func between_expression() throws -> Between_expressionContext {
+	 open func between_expression() throws -> Between_expressionContext {
 		var _localctx: Between_expressionContext = Between_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 90, JPAParser.RULE_between_expression)
 		var _la: Int = 0
@@ -3867,46 +4240,55 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class In_expressionContext:ParserRuleContext {
-		open func state_field_path_expression() -> State_field_path_expressionContext? {
-			return getRuleContext(State_field_path_expressionContext.self,0)
+
+	public class In_expressionContext: ParserRuleContext {
+			open
+			func state_field_path_expression() -> State_field_path_expressionContext? {
+				return getRuleContext(State_field_path_expressionContext.self, 0)
+			}
+			open
+			func in_item() -> [In_itemContext] {
+				return getRuleContexts(In_itemContext.self)
+			}
+			open
+			func in_item(_ i: Int) -> In_itemContext? {
+				return getRuleContext(In_itemContext.self, i)
+			}
+			open
+			func subquery() -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_in_expression
 		}
-		open func in_item() -> Array<In_itemContext> {
-			return getRuleContexts(In_itemContext.self)
-		}
-		open func in_item(_ i: Int) -> In_itemContext? {
-			return getRuleContext(In_itemContext.self,i)
-		}
-		open func subquery() -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_in_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterIn_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterIn_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitIn_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitIn_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitIn_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitIn_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitIn_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitIn_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func in_expression() throws -> In_expressionContext {
+	 open func in_expression() throws -> In_expressionContext {
 		var _localctx: In_expressionContext = In_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 92, JPAParser.RULE_in_expression)
 		var _la: Int = 0
@@ -3970,7 +4352,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(582)
 		 	try match(JPAParser.Tokens.T__11.rawValue)
@@ -3984,40 +4366,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class In_itemContext:ParserRuleContext {
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
+
+	public class In_itemContext: ParserRuleContext {
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func input_parameter() -> Input_parameterContext? {
+				return getRuleContext(Input_parameterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_in_item
 		}
-		open func input_parameter() -> Input_parameterContext? {
-			return getRuleContext(Input_parameterContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_in_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterIn_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterIn_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitIn_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitIn_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitIn_item(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitIn_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitIn_item(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitIn_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func in_item() throws -> In_itemContext {
+	 open func in_item() throws -> In_itemContext {
 		var _localctx: In_itemContext = In_itemContext(_ctx, getState())
 		try enterRule(_localctx, 94, JPAParser.RULE_in_item)
 		defer {
@@ -4042,7 +4431,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4053,41 +4442,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Like_expressionContext:ParserRuleContext {
-		open func string_expression() -> String_expressionContext? {
-			return getRuleContext(String_expressionContext.self,0)
+
+	public class Like_expressionContext: ParserRuleContext {
+			open
+			func string_expression() -> String_expressionContext? {
+				return getRuleContext(String_expressionContext.self, 0)
+			}
+			open
+			func pattern_value() -> Pattern_valueContext? {
+				return getRuleContext(Pattern_valueContext.self, 0)
+			}
+			open
+			func ESCAPE_CHARACTER() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.ESCAPE_CHARACTER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_like_expression
 		}
-		open func pattern_value() -> Pattern_valueContext? {
-			return getRuleContext(Pattern_valueContext.self,0)
-		}
-		open func ESCAPE_CHARACTER() -> TerminalNode? { return getToken(JPAParser.Tokens.ESCAPE_CHARACTER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_like_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterLike_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterLike_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitLike_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitLike_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitLike_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitLike_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitLike_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitLike_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func like_expression() throws -> Like_expressionContext {
+	 open func like_expression() throws -> Like_expressionContext {
 		var _localctx: Like_expressionContext = Like_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 96, JPAParser.RULE_like_expression)
 		var _la: Int = 0
@@ -4140,40 +4539,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Null_comparison_expressionContext:ParserRuleContext {
-		open func single_valued_path_expression() -> Single_valued_path_expressionContext? {
-			return getRuleContext(Single_valued_path_expressionContext.self,0)
+
+	public class Null_comparison_expressionContext: ParserRuleContext {
+			open
+			func single_valued_path_expression() -> Single_valued_path_expressionContext? {
+				return getRuleContext(Single_valued_path_expressionContext.self, 0)
+			}
+			open
+			func input_parameter() -> Input_parameterContext? {
+				return getRuleContext(Input_parameterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_null_comparison_expression
 		}
-		open func input_parameter() -> Input_parameterContext? {
-			return getRuleContext(Input_parameterContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_null_comparison_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterNull_comparison_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterNull_comparison_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitNull_comparison_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitNull_comparison_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitNull_comparison_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitNull_comparison_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitNull_comparison_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitNull_comparison_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func null_comparison_expression() throws -> Null_comparison_expressionContext {
+	 open func null_comparison_expression() throws -> Null_comparison_expressionContext {
 		var _localctx: Null_comparison_expressionContext = Null_comparison_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 98, JPAParser.RULE_null_comparison_expression)
 		var _la: Int = 0
@@ -4197,7 +4603,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(602)
 		 	try match(JPAParser.Tokens.T__39.rawValue)
@@ -4226,37 +4632,43 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Empty_collection_comparison_expressionContext:ParserRuleContext {
-		open func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
-			return getRuleContext(Collection_valued_path_expressionContext.self,0)
+
+	public class Empty_collection_comparison_expressionContext: ParserRuleContext {
+			open
+			func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
+				return getRuleContext(Collection_valued_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_empty_collection_comparison_expression
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_empty_collection_comparison_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterEmpty_collection_comparison_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterEmpty_collection_comparison_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitEmpty_collection_comparison_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitEmpty_collection_comparison_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitEmpty_collection_comparison_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitEmpty_collection_comparison_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitEmpty_collection_comparison_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitEmpty_collection_comparison_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func empty_collection_comparison_expression() throws -> Empty_collection_comparison_expressionContext {
+	 open func empty_collection_comparison_expression() throws -> Empty_collection_comparison_expressionContext {
 		var _localctx: Empty_collection_comparison_expressionContext = Empty_collection_comparison_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 100, JPAParser.RULE_empty_collection_comparison_expression)
 		var _la: Int = 0
@@ -4294,40 +4706,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Collection_member_expressionContext:ParserRuleContext {
-		open func entity_expression() -> Entity_expressionContext? {
-			return getRuleContext(Entity_expressionContext.self,0)
+
+	public class Collection_member_expressionContext: ParserRuleContext {
+			open
+			func entity_expression() -> Entity_expressionContext? {
+				return getRuleContext(Entity_expressionContext.self, 0)
+			}
+			open
+			func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
+				return getRuleContext(Collection_valued_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_collection_member_expression
 		}
-		open func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
-			return getRuleContext(Collection_valued_path_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_collection_member_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterCollection_member_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterCollection_member_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitCollection_member_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitCollection_member_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitCollection_member_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitCollection_member_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitCollection_member_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitCollection_member_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collection_member_expression() throws -> Collection_member_expressionContext {
+	 open func collection_member_expression() throws -> Collection_member_expressionContext {
 		var _localctx: Collection_member_expressionContext = Collection_member_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 102, JPAParser.RULE_collection_member_expression)
 		var _la: Int = 0
@@ -4378,37 +4797,43 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Exists_expressionContext:ParserRuleContext {
-		open func subquery() -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,0)
+
+	public class Exists_expressionContext: ParserRuleContext {
+			open
+			func subquery() -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_exists_expression
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_exists_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterExists_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterExists_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitExists_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitExists_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitExists_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitExists_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitExists_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitExists_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exists_expression() throws -> Exists_expressionContext {
+	 open func exists_expression() throws -> Exists_expressionContext {
 		var _localctx: Exists_expressionContext = Exists_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 104, JPAParser.RULE_exists_expression)
 		var _la: Int = 0
@@ -4448,37 +4873,43 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class All_or_any_expressionContext:ParserRuleContext {
-		open func subquery() -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,0)
+
+	public class All_or_any_expressionContext: ParserRuleContext {
+			open
+			func subquery() -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_all_or_any_expression
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_all_or_any_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterAll_or_any_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterAll_or_any_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitAll_or_any_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitAll_or_any_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitAll_or_any_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitAll_or_any_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitAll_or_any_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitAll_or_any_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func all_or_any_expression() throws -> All_or_any_expressionContext {
+	 open func all_or_any_expression() throws -> All_or_any_expressionContext {
 		var _localctx: All_or_any_expressionContext = All_or_any_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 106, JPAParser.RULE_all_or_any_expression)
 		var _la: Int = 0
@@ -4519,76 +4950,95 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Comparison_expressionContext:ParserRuleContext {
-		open func string_expression() -> Array<String_expressionContext> {
-			return getRuleContexts(String_expressionContext.self)
+
+	public class Comparison_expressionContext: ParserRuleContext {
+			open
+			func string_expression() -> [String_expressionContext] {
+				return getRuleContexts(String_expressionContext.self)
+			}
+			open
+			func string_expression(_ i: Int) -> String_expressionContext? {
+				return getRuleContext(String_expressionContext.self, i)
+			}
+			open
+			func comparison_operator() -> Comparison_operatorContext? {
+				return getRuleContext(Comparison_operatorContext.self, 0)
+			}
+			open
+			func all_or_any_expression() -> All_or_any_expressionContext? {
+				return getRuleContext(All_or_any_expressionContext.self, 0)
+			}
+			open
+			func boolean_expression() -> [Boolean_expressionContext] {
+				return getRuleContexts(Boolean_expressionContext.self)
+			}
+			open
+			func boolean_expression(_ i: Int) -> Boolean_expressionContext? {
+				return getRuleContext(Boolean_expressionContext.self, i)
+			}
+			open
+			func enum_expression() -> [Enum_expressionContext] {
+				return getRuleContexts(Enum_expressionContext.self)
+			}
+			open
+			func enum_expression(_ i: Int) -> Enum_expressionContext? {
+				return getRuleContext(Enum_expressionContext.self, i)
+			}
+			open
+			func datetime_expression() -> [Datetime_expressionContext] {
+				return getRuleContexts(Datetime_expressionContext.self)
+			}
+			open
+			func datetime_expression(_ i: Int) -> Datetime_expressionContext? {
+				return getRuleContext(Datetime_expressionContext.self, i)
+			}
+			open
+			func entity_expression() -> [Entity_expressionContext] {
+				return getRuleContexts(Entity_expressionContext.self)
+			}
+			open
+			func entity_expression(_ i: Int) -> Entity_expressionContext? {
+				return getRuleContext(Entity_expressionContext.self, i)
+			}
+			open
+			func arithmetic_expression() -> [Arithmetic_expressionContext] {
+				return getRuleContexts(Arithmetic_expressionContext.self)
+			}
+			open
+			func arithmetic_expression(_ i: Int) -> Arithmetic_expressionContext? {
+				return getRuleContext(Arithmetic_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_comparison_expression
 		}
-		open func string_expression(_ i: Int) -> String_expressionContext? {
-			return getRuleContext(String_expressionContext.self,i)
-		}
-		open func comparison_operator() -> Comparison_operatorContext? {
-			return getRuleContext(Comparison_operatorContext.self,0)
-		}
-		open func all_or_any_expression() -> All_or_any_expressionContext? {
-			return getRuleContext(All_or_any_expressionContext.self,0)
-		}
-		open func boolean_expression() -> Array<Boolean_expressionContext> {
-			return getRuleContexts(Boolean_expressionContext.self)
-		}
-		open func boolean_expression(_ i: Int) -> Boolean_expressionContext? {
-			return getRuleContext(Boolean_expressionContext.self,i)
-		}
-		open func enum_expression() -> Array<Enum_expressionContext> {
-			return getRuleContexts(Enum_expressionContext.self)
-		}
-		open func enum_expression(_ i: Int) -> Enum_expressionContext? {
-			return getRuleContext(Enum_expressionContext.self,i)
-		}
-		open func datetime_expression() -> Array<Datetime_expressionContext> {
-			return getRuleContexts(Datetime_expressionContext.self)
-		}
-		open func datetime_expression(_ i: Int) -> Datetime_expressionContext? {
-			return getRuleContext(Datetime_expressionContext.self,i)
-		}
-		open func entity_expression() -> Array<Entity_expressionContext> {
-			return getRuleContexts(Entity_expressionContext.self)
-		}
-		open func entity_expression(_ i: Int) -> Entity_expressionContext? {
-			return getRuleContext(Entity_expressionContext.self,i)
-		}
-		open func arithmetic_expression() -> Array<Arithmetic_expressionContext> {
-			return getRuleContexts(Arithmetic_expressionContext.self)
-		}
-		open func arithmetic_expression(_ i: Int) -> Arithmetic_expressionContext? {
-			return getRuleContext(Arithmetic_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_comparison_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterComparison_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterComparison_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitComparison_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitComparison_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitComparison_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitComparison_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitComparison_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitComparison_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comparison_expression() throws -> Comparison_expressionContext {
+	 open func comparison_expression() throws -> Comparison_expressionContext {
 		var _localctx: Comparison_expressionContext = Comparison_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 108, JPAParser.RULE_comparison_expression)
 		var _la: Int = 0
@@ -4635,7 +5085,7 @@ open class JPAParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -4677,7 +5127,7 @@ open class JPAParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -4724,7 +5174,7 @@ open class JPAParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -4761,7 +5211,7 @@ open class JPAParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -4800,7 +5250,7 @@ open class JPAParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -4851,7 +5301,7 @@ open class JPAParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -4866,34 +5316,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Comparison_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_comparison_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterComparison_operator(self)
+
+	public class Comparison_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_comparison_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterComparison_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitComparison_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitComparison_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitComparison_operator(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitComparison_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitComparison_operator(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitComparison_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comparison_operator() throws -> Comparison_operatorContext {
+	 open func comparison_operator() throws -> Comparison_operatorContext {
 		var _localctx: Comparison_operatorContext = Comparison_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 110, JPAParser.RULE_comparison_operator)
 		var _la: Int = 0
@@ -4928,40 +5383,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Arithmetic_expressionContext:ParserRuleContext {
-		open func simple_arithmetic_expression() -> Simple_arithmetic_expressionContext? {
-			return getRuleContext(Simple_arithmetic_expressionContext.self,0)
+
+	public class Arithmetic_expressionContext: ParserRuleContext {
+			open
+			func simple_arithmetic_expression() -> Simple_arithmetic_expressionContext? {
+				return getRuleContext(Simple_arithmetic_expressionContext.self, 0)
+			}
+			open
+			func subquery() -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_arithmetic_expression
 		}
-		open func subquery() -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_arithmetic_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterArithmetic_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterArithmetic_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitArithmetic_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitArithmetic_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitArithmetic_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitArithmetic_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitArithmetic_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitArithmetic_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arithmetic_expression() throws -> Arithmetic_expressionContext {
+	 open func arithmetic_expression() throws -> Arithmetic_expressionContext {
 		var _localctx: Arithmetic_expressionContext = Arithmetic_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 112, JPAParser.RULE_arithmetic_expression)
 		defer {
@@ -4998,40 +5460,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Simple_arithmetic_expressionContext:ParserRuleContext {
-		open func arithmetic_term() -> Array<Arithmetic_termContext> {
-			return getRuleContexts(Arithmetic_termContext.self)
+
+	public class Simple_arithmetic_expressionContext: ParserRuleContext {
+			open
+			func arithmetic_term() -> [Arithmetic_termContext] {
+				return getRuleContexts(Arithmetic_termContext.self)
+			}
+			open
+			func arithmetic_term(_ i: Int) -> Arithmetic_termContext? {
+				return getRuleContext(Arithmetic_termContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_simple_arithmetic_expression
 		}
-		open func arithmetic_term(_ i: Int) -> Arithmetic_termContext? {
-			return getRuleContext(Arithmetic_termContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_simple_arithmetic_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSimple_arithmetic_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSimple_arithmetic_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSimple_arithmetic_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSimple_arithmetic_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSimple_arithmetic_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSimple_arithmetic_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSimple_arithmetic_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSimple_arithmetic_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_arithmetic_expression() throws -> Simple_arithmetic_expressionContext {
+	 open func simple_arithmetic_expression() throws -> Simple_arithmetic_expressionContext {
 		var _localctx: Simple_arithmetic_expressionContext = Simple_arithmetic_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 114, JPAParser.RULE_simple_arithmetic_expression)
 		var _la: Int = 0
@@ -5082,40 +5551,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Arithmetic_termContext:ParserRuleContext {
-		open func arithmetic_factor() -> Array<Arithmetic_factorContext> {
-			return getRuleContexts(Arithmetic_factorContext.self)
+
+	public class Arithmetic_termContext: ParserRuleContext {
+			open
+			func arithmetic_factor() -> [Arithmetic_factorContext] {
+				return getRuleContexts(Arithmetic_factorContext.self)
+			}
+			open
+			func arithmetic_factor(_ i: Int) -> Arithmetic_factorContext? {
+				return getRuleContext(Arithmetic_factorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_arithmetic_term
 		}
-		open func arithmetic_factor(_ i: Int) -> Arithmetic_factorContext? {
-			return getRuleContext(Arithmetic_factorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_arithmetic_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterArithmetic_term(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterArithmetic_term(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitArithmetic_term(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitArithmetic_term(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitArithmetic_term(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitArithmetic_term(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitArithmetic_term(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitArithmetic_term(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arithmetic_term() throws -> Arithmetic_termContext {
+	 open func arithmetic_term() throws -> Arithmetic_termContext {
 		var _localctx: Arithmetic_termContext = Arithmetic_termContext(_ctx, getState())
 		try enterRule(_localctx, 116, JPAParser.RULE_arithmetic_term)
 		var _la: Int = 0
@@ -5166,37 +5642,43 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Arithmetic_factorContext:ParserRuleContext {
-		open func arithmetic_primary() -> Arithmetic_primaryContext? {
-			return getRuleContext(Arithmetic_primaryContext.self,0)
+
+	public class Arithmetic_factorContext: ParserRuleContext {
+			open
+			func arithmetic_primary() -> Arithmetic_primaryContext? {
+				return getRuleContext(Arithmetic_primaryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_arithmetic_factor
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_arithmetic_factor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterArithmetic_factor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterArithmetic_factor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitArithmetic_factor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitArithmetic_factor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitArithmetic_factor(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitArithmetic_factor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitArithmetic_factor(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitArithmetic_factor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arithmetic_factor() throws -> Arithmetic_factorContext {
+	 open func arithmetic_factor() throws -> Arithmetic_factorContext {
 		var _localctx: Arithmetic_factorContext = Arithmetic_factorContext(_ctx, getState())
 		try enterRule(_localctx, 118, JPAParser.RULE_arithmetic_factor)
 		var _la: Int = 0
@@ -5238,52 +5720,63 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Arithmetic_primaryContext:ParserRuleContext {
-		open func state_field_path_expression() -> State_field_path_expressionContext? {
-			return getRuleContext(State_field_path_expressionContext.self,0)
+
+	public class Arithmetic_primaryContext: ParserRuleContext {
+			open
+			func state_field_path_expression() -> State_field_path_expressionContext? {
+				return getRuleContext(State_field_path_expressionContext.self, 0)
+			}
+			open
+			func numeric_literal() -> Numeric_literalContext? {
+				return getRuleContext(Numeric_literalContext.self, 0)
+			}
+			open
+			func simple_arithmetic_expression() -> Simple_arithmetic_expressionContext? {
+				return getRuleContext(Simple_arithmetic_expressionContext.self, 0)
+			}
+			open
+			func input_parameter() -> Input_parameterContext? {
+				return getRuleContext(Input_parameterContext.self, 0)
+			}
+			open
+			func functions_returning_numerics() -> Functions_returning_numericsContext? {
+				return getRuleContext(Functions_returning_numericsContext.self, 0)
+			}
+			open
+			func aggregate_expression() -> Aggregate_expressionContext? {
+				return getRuleContext(Aggregate_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_arithmetic_primary
 		}
-		open func numeric_literal() -> Numeric_literalContext? {
-			return getRuleContext(Numeric_literalContext.self,0)
-		}
-		open func simple_arithmetic_expression() -> Simple_arithmetic_expressionContext? {
-			return getRuleContext(Simple_arithmetic_expressionContext.self,0)
-		}
-		open func input_parameter() -> Input_parameterContext? {
-			return getRuleContext(Input_parameterContext.self,0)
-		}
-		open func functions_returning_numerics() -> Functions_returning_numericsContext? {
-			return getRuleContext(Functions_returning_numericsContext.self,0)
-		}
-		open func aggregate_expression() -> Aggregate_expressionContext? {
-			return getRuleContext(Aggregate_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_arithmetic_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterArithmetic_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterArithmetic_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitArithmetic_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitArithmetic_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitArithmetic_primary(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitArithmetic_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitArithmetic_primary(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitArithmetic_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arithmetic_primary() throws -> Arithmetic_primaryContext {
+	 open func arithmetic_primary() throws -> Arithmetic_primaryContext {
 		var _localctx: Arithmetic_primaryContext = Arithmetic_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 120, JPAParser.RULE_arithmetic_primary)
 		defer {
@@ -5365,7 +5858,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5376,40 +5869,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class String_expressionContext:ParserRuleContext {
-		open func string_primary() -> String_primaryContext? {
-			return getRuleContext(String_primaryContext.self,0)
+
+	public class String_expressionContext: ParserRuleContext {
+			open
+			func string_primary() -> String_primaryContext? {
+				return getRuleContext(String_primaryContext.self, 0)
+			}
+			open
+			func subquery() -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_string_expression
 		}
-		open func subquery() -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_string_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterString_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterString_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitString_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitString_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitString_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitString_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitString_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitString_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string_expression() throws -> String_expressionContext {
+	 open func string_expression() throws -> String_expressionContext {
 		var _localctx: String_expressionContext = String_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 122, JPAParser.RULE_string_expression)
 		defer {
@@ -5450,7 +5950,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5461,47 +5961,59 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class String_primaryContext:ParserRuleContext {
-		open func state_field_path_expression() -> State_field_path_expressionContext? {
-			return getRuleContext(State_field_path_expressionContext.self,0)
+
+	public class String_primaryContext: ParserRuleContext {
+			open
+			func state_field_path_expression() -> State_field_path_expressionContext? {
+				return getRuleContext(State_field_path_expressionContext.self, 0)
+			}
+			open
+			func STRINGLITERAL() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.STRINGLITERAL.rawValue, 0)
+			}
+			open
+			func input_parameter() -> Input_parameterContext? {
+				return getRuleContext(Input_parameterContext.self, 0)
+			}
+			open
+			func functions_returning_strings() -> Functions_returning_stringsContext? {
+				return getRuleContext(Functions_returning_stringsContext.self, 0)
+			}
+			open
+			func aggregate_expression() -> Aggregate_expressionContext? {
+				return getRuleContext(Aggregate_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_string_primary
 		}
-		open func STRINGLITERAL() -> TerminalNode? { return getToken(JPAParser.Tokens.STRINGLITERAL.rawValue, 0) }
-		open func input_parameter() -> Input_parameterContext? {
-			return getRuleContext(Input_parameterContext.self,0)
-		}
-		open func functions_returning_strings() -> Functions_returning_stringsContext? {
-			return getRuleContext(Functions_returning_stringsContext.self,0)
-		}
-		open func aggregate_expression() -> Aggregate_expressionContext? {
-			return getRuleContext(Aggregate_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_string_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterString_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterString_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitString_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitString_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitString_primary(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitString_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitString_primary(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitString_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string_primary() throws -> String_primaryContext {
+	 open func string_primary() throws -> String_primaryContext {
 		var _localctx: String_primaryContext = String_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 124, JPAParser.RULE_string_primary)
 		defer {
@@ -5552,7 +6064,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5563,40 +6075,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Datetime_expressionContext:ParserRuleContext {
-		open func datetime_primary() -> Datetime_primaryContext? {
-			return getRuleContext(Datetime_primaryContext.self,0)
+
+	public class Datetime_expressionContext: ParserRuleContext {
+			open
+			func datetime_primary() -> Datetime_primaryContext? {
+				return getRuleContext(Datetime_primaryContext.self, 0)
+			}
+			open
+			func subquery() -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_datetime_expression
 		}
-		open func subquery() -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_datetime_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterDatetime_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterDatetime_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitDatetime_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitDatetime_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitDatetime_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitDatetime_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitDatetime_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitDatetime_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func datetime_expression() throws -> Datetime_expressionContext {
+	 open func datetime_expression() throws -> Datetime_expressionContext {
 		var _localctx: Datetime_expressionContext = Datetime_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 126, JPAParser.RULE_datetime_expression)
 		defer {
@@ -5634,7 +6153,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5645,46 +6164,55 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Datetime_primaryContext:ParserRuleContext {
-		open func state_field_path_expression() -> State_field_path_expressionContext? {
-			return getRuleContext(State_field_path_expressionContext.self,0)
+
+	public class Datetime_primaryContext: ParserRuleContext {
+			open
+			func state_field_path_expression() -> State_field_path_expressionContext? {
+				return getRuleContext(State_field_path_expressionContext.self, 0)
+			}
+			open
+			func input_parameter() -> Input_parameterContext? {
+				return getRuleContext(Input_parameterContext.self, 0)
+			}
+			open
+			func functions_returning_datetime() -> Functions_returning_datetimeContext? {
+				return getRuleContext(Functions_returning_datetimeContext.self, 0)
+			}
+			open
+			func aggregate_expression() -> Aggregate_expressionContext? {
+				return getRuleContext(Aggregate_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_datetime_primary
 		}
-		open func input_parameter() -> Input_parameterContext? {
-			return getRuleContext(Input_parameterContext.self,0)
-		}
-		open func functions_returning_datetime() -> Functions_returning_datetimeContext? {
-			return getRuleContext(Functions_returning_datetimeContext.self,0)
-		}
-		open func aggregate_expression() -> Aggregate_expressionContext? {
-			return getRuleContext(Aggregate_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_datetime_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterDatetime_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterDatetime_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitDatetime_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitDatetime_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitDatetime_primary(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitDatetime_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitDatetime_primary(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitDatetime_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func datetime_primary() throws -> Datetime_primaryContext {
+	 open func datetime_primary() throws -> Datetime_primaryContext {
 		var _localctx: Datetime_primaryContext = Datetime_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 128, JPAParser.RULE_datetime_primary)
 		defer {
@@ -5726,7 +6254,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5737,40 +6265,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Boolean_expressionContext:ParserRuleContext {
-		open func boolean_primary() -> Boolean_primaryContext? {
-			return getRuleContext(Boolean_primaryContext.self,0)
+
+	public class Boolean_expressionContext: ParserRuleContext {
+			open
+			func boolean_primary() -> Boolean_primaryContext? {
+				return getRuleContext(Boolean_primaryContext.self, 0)
+			}
+			open
+			func subquery() -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_boolean_expression
 		}
-		open func subquery() -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_boolean_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterBoolean_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterBoolean_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitBoolean_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitBoolean_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitBoolean_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitBoolean_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitBoolean_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitBoolean_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func boolean_expression() throws -> Boolean_expressionContext {
+	 open func boolean_expression() throws -> Boolean_expressionContext {
 		var _localctx: Boolean_expressionContext = Boolean_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 130, JPAParser.RULE_boolean_expression)
 		defer {
@@ -5802,7 +6337,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5813,43 +6348,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Boolean_primaryContext:ParserRuleContext {
-		open func state_field_path_expression() -> State_field_path_expressionContext? {
-			return getRuleContext(State_field_path_expressionContext.self,0)
+
+	public class Boolean_primaryContext: ParserRuleContext {
+			open
+			func state_field_path_expression() -> State_field_path_expressionContext? {
+				return getRuleContext(State_field_path_expressionContext.self, 0)
+			}
+			open
+			func boolean_literal() -> Boolean_literalContext? {
+				return getRuleContext(Boolean_literalContext.self, 0)
+			}
+			open
+			func input_parameter() -> Input_parameterContext? {
+				return getRuleContext(Input_parameterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_boolean_primary
 		}
-		open func boolean_literal() -> Boolean_literalContext? {
-			return getRuleContext(Boolean_literalContext.self,0)
-		}
-		open func input_parameter() -> Input_parameterContext? {
-			return getRuleContext(Input_parameterContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_boolean_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterBoolean_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterBoolean_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitBoolean_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitBoolean_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitBoolean_primary(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitBoolean_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitBoolean_primary(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitBoolean_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func boolean_primary() throws -> Boolean_primaryContext {
+	 open func boolean_primary() throws -> Boolean_primaryContext {
 		var _localctx: Boolean_primaryContext = Boolean_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 132, JPAParser.RULE_boolean_primary)
 		defer {
@@ -5880,7 +6423,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5891,40 +6434,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Enum_expressionContext:ParserRuleContext {
-		open func enum_primary() -> Enum_primaryContext? {
-			return getRuleContext(Enum_primaryContext.self,0)
+
+	public class Enum_expressionContext: ParserRuleContext {
+			open
+			func enum_primary() -> Enum_primaryContext? {
+				return getRuleContext(Enum_primaryContext.self, 0)
+			}
+			open
+			func subquery() -> SubqueryContext? {
+				return getRuleContext(SubqueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_enum_expression
 		}
-		open func subquery() -> SubqueryContext? {
-			return getRuleContext(SubqueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_enum_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterEnum_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterEnum_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitEnum_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitEnum_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitEnum_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitEnum_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitEnum_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitEnum_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enum_expression() throws -> Enum_expressionContext {
+	 open func enum_expression() throws -> Enum_expressionContext {
 		var _localctx: Enum_expressionContext = Enum_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 134, JPAParser.RULE_enum_expression)
 		defer {
@@ -5963,7 +6513,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5974,43 +6524,51 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Enum_primaryContext:ParserRuleContext {
-		open func state_field_path_expression() -> State_field_path_expressionContext? {
-			return getRuleContext(State_field_path_expressionContext.self,0)
+
+	public class Enum_primaryContext: ParserRuleContext {
+			open
+			func state_field_path_expression() -> State_field_path_expressionContext? {
+				return getRuleContext(State_field_path_expressionContext.self, 0)
+			}
+			open
+			func enum_literal() -> Enum_literalContext? {
+				return getRuleContext(Enum_literalContext.self, 0)
+			}
+			open
+			func input_parameter() -> Input_parameterContext? {
+				return getRuleContext(Input_parameterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_enum_primary
 		}
-		open func enum_literal() -> Enum_literalContext? {
-			return getRuleContext(Enum_literalContext.self,0)
-		}
-		open func input_parameter() -> Input_parameterContext? {
-			return getRuleContext(Input_parameterContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_enum_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterEnum_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterEnum_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitEnum_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitEnum_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitEnum_primary(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitEnum_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitEnum_primary(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitEnum_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enum_primary() throws -> Enum_primaryContext {
+	 open func enum_primary() throws -> Enum_primaryContext {
 		var _localctx: Enum_primaryContext = Enum_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 136, JPAParser.RULE_enum_primary)
 		defer {
@@ -6050,7 +6608,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6061,40 +6619,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Entity_expressionContext:ParserRuleContext {
-		open func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
-			return getRuleContext(Single_valued_association_path_expressionContext.self,0)
+
+	public class Entity_expressionContext: ParserRuleContext {
+			open
+			func single_valued_association_path_expression() -> Single_valued_association_path_expressionContext? {
+				return getRuleContext(Single_valued_association_path_expressionContext.self, 0)
+			}
+			open
+			func simple_entity_expression() -> Simple_entity_expressionContext? {
+				return getRuleContext(Simple_entity_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_entity_expression
 		}
-		open func simple_entity_expression() -> Simple_entity_expressionContext? {
-			return getRuleContext(Simple_entity_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_entity_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterEntity_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterEntity_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitEntity_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitEntity_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitEntity_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitEntity_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitEntity_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitEntity_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func entity_expression() throws -> Entity_expressionContext {
+	 open func entity_expression() throws -> Entity_expressionContext {
 		var _localctx: Entity_expressionContext = Entity_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 138, JPAParser.RULE_entity_expression)
 		defer {
@@ -6127,38 +6692,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Simple_entity_expressionContext:ParserRuleContext {
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open func input_parameter() -> Input_parameterContext? {
-			return getRuleContext(Input_parameterContext.self,0)
+
+	public class Simple_entity_expressionContext: ParserRuleContext {
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+			open
+			func input_parameter() -> Input_parameterContext? {
+				return getRuleContext(Input_parameterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_simple_entity_expression
 		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_simple_entity_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSimple_entity_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSimple_entity_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSimple_entity_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSimple_entity_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSimple_entity_expression(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSimple_entity_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSimple_entity_expression(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSimple_entity_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_entity_expression() throws -> Simple_entity_expressionContext {
+	 open func simple_entity_expression() throws -> Simple_entity_expressionContext {
 		var _localctx: Simple_entity_expressionContext = Simple_entity_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 140, JPAParser.RULE_simple_entity_expression)
 		defer {
@@ -6182,7 +6756,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6193,49 +6767,59 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Functions_returning_numericsContext:ParserRuleContext {
-		open func string_primary() -> Array<String_primaryContext> {
-			return getRuleContexts(String_primaryContext.self)
+
+	public class Functions_returning_numericsContext: ParserRuleContext {
+			open
+			func string_primary() -> [String_primaryContext] {
+				return getRuleContexts(String_primaryContext.self)
+			}
+			open
+			func string_primary(_ i: Int) -> String_primaryContext? {
+				return getRuleContext(String_primaryContext.self, i)
+			}
+			open
+			func simple_arithmetic_expression() -> [Simple_arithmetic_expressionContext] {
+				return getRuleContexts(Simple_arithmetic_expressionContext.self)
+			}
+			open
+			func simple_arithmetic_expression(_ i: Int) -> Simple_arithmetic_expressionContext? {
+				return getRuleContext(Simple_arithmetic_expressionContext.self, i)
+			}
+			open
+			func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
+				return getRuleContext(Collection_valued_path_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_functions_returning_numerics
 		}
-		open func string_primary(_ i: Int) -> String_primaryContext? {
-			return getRuleContext(String_primaryContext.self,i)
-		}
-		open func simple_arithmetic_expression() -> Array<Simple_arithmetic_expressionContext> {
-			return getRuleContexts(Simple_arithmetic_expressionContext.self)
-		}
-		open func simple_arithmetic_expression(_ i: Int) -> Simple_arithmetic_expressionContext? {
-			return getRuleContext(Simple_arithmetic_expressionContext.self,i)
-		}
-		open func collection_valued_path_expression() -> Collection_valued_path_expressionContext? {
-			return getRuleContext(Collection_valued_path_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_functions_returning_numerics }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterFunctions_returning_numerics(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterFunctions_returning_numerics(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitFunctions_returning_numerics(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitFunctions_returning_numerics(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitFunctions_returning_numerics(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitFunctions_returning_numerics(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitFunctions_returning_numerics(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitFunctions_returning_numerics(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functions_returning_numerics() throws -> Functions_returning_numericsContext {
+	 open func functions_returning_numerics() throws -> Functions_returning_numericsContext {
 		var _localctx: Functions_returning_numericsContext = Functions_returning_numericsContext(_ctx, getState())
 		try enterRule(_localctx, 142, JPAParser.RULE_functions_returning_numerics)
 		var _la: Int = 0
@@ -6347,7 +6931,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6358,34 +6942,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Functions_returning_datetimeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_functions_returning_datetime }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterFunctions_returning_datetime(self)
+
+	public class Functions_returning_datetimeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_functions_returning_datetime
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterFunctions_returning_datetime(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitFunctions_returning_datetime(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitFunctions_returning_datetime(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitFunctions_returning_datetime(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitFunctions_returning_datetime(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitFunctions_returning_datetime(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitFunctions_returning_datetime(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functions_returning_datetime() throws -> Functions_returning_datetimeContext {
+	 open func functions_returning_datetime() throws -> Functions_returning_datetimeContext {
 		var _localctx: Functions_returning_datetimeContext = Functions_returning_datetimeContext(_ctx, getState())
 		try enterRule(_localctx, 144, JPAParser.RULE_functions_returning_datetime)
 		var _la: Int = 0
@@ -6420,50 +7009,63 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Functions_returning_stringsContext:ParserRuleContext {
-		open func string_primary() -> Array<String_primaryContext> {
-			return getRuleContexts(String_primaryContext.self)
+
+	public class Functions_returning_stringsContext: ParserRuleContext {
+			open
+			func string_primary() -> [String_primaryContext] {
+				return getRuleContexts(String_primaryContext.self)
+			}
+			open
+			func string_primary(_ i: Int) -> String_primaryContext? {
+				return getRuleContext(String_primaryContext.self, i)
+			}
+			open
+			func simple_arithmetic_expression() -> [Simple_arithmetic_expressionContext] {
+				return getRuleContexts(Simple_arithmetic_expressionContext.self)
+			}
+			open
+			func simple_arithmetic_expression(_ i: Int) -> Simple_arithmetic_expressionContext? {
+				return getRuleContext(Simple_arithmetic_expressionContext.self, i)
+			}
+			open
+			func trim_specification() -> Trim_specificationContext? {
+				return getRuleContext(Trim_specificationContext.self, 0)
+			}
+			open
+			func TRIM_CHARACTER() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.TRIM_CHARACTER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_functions_returning_strings
 		}
-		open func string_primary(_ i: Int) -> String_primaryContext? {
-			return getRuleContext(String_primaryContext.self,i)
-		}
-		open func simple_arithmetic_expression() -> Array<Simple_arithmetic_expressionContext> {
-			return getRuleContexts(Simple_arithmetic_expressionContext.self)
-		}
-		open func simple_arithmetic_expression(_ i: Int) -> Simple_arithmetic_expressionContext? {
-			return getRuleContext(Simple_arithmetic_expressionContext.self,i)
-		}
-		open func trim_specification() -> Trim_specificationContext? {
-			return getRuleContext(Trim_specificationContext.self,0)
-		}
-		open func TRIM_CHARACTER() -> TerminalNode? { return getToken(JPAParser.Tokens.TRIM_CHARACTER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_functions_returning_strings }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterFunctions_returning_strings(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterFunctions_returning_strings(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitFunctions_returning_strings(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitFunctions_returning_strings(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitFunctions_returning_strings(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitFunctions_returning_strings(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitFunctions_returning_strings(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitFunctions_returning_strings(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functions_returning_strings() throws -> Functions_returning_stringsContext {
+	 open func functions_returning_strings() throws -> Functions_returning_stringsContext {
 		var _localctx: Functions_returning_stringsContext = Functions_returning_stringsContext(_ctx, getState())
 		try enterRule(_localctx, 146, JPAParser.RULE_functions_returning_strings)
 		var _la: Int = 0
@@ -6597,7 +7199,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6608,34 +7210,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Trim_specificationContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_trim_specification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterTrim_specification(self)
+
+	public class Trim_specificationContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_trim_specification
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterTrim_specification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitTrim_specification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitTrim_specification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitTrim_specification(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitTrim_specification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitTrim_specification(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitTrim_specification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func trim_specification() throws -> Trim_specificationContext {
+	 open func trim_specification() throws -> Trim_specificationContext {
 		var _localctx: Trim_specificationContext = Trim_specificationContext(_ctx, getState())
 		try enterRule(_localctx, 148, JPAParser.RULE_trim_specification)
 		var _la: Int = 0
@@ -6670,34 +7277,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Numeric_literalContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_numeric_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterNumeric_literal(self)
+
+	public class Numeric_literalContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_numeric_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterNumeric_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitNumeric_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitNumeric_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitNumeric_literal(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitNumeric_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitNumeric_literal(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitNumeric_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numeric_literal() throws -> Numeric_literalContext {
+	 open func numeric_literal() throws -> Numeric_literalContext {
 		var _localctx: Numeric_literalContext = Numeric_literalContext(_ctx, getState())
 		try enterRule(_localctx, 150, JPAParser.RULE_numeric_literal)
 		defer {
@@ -6715,34 +7327,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Pattern_valueContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_pattern_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterPattern_value(self)
+
+	public class Pattern_valueContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_pattern_value
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterPattern_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitPattern_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitPattern_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitPattern_value(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitPattern_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitPattern_value(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitPattern_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pattern_value() throws -> Pattern_valueContext {
+	 open func pattern_value() throws -> Pattern_valueContext {
 		var _localctx: Pattern_valueContext = Pattern_valueContext(_ctx, getState())
 		try enterRule(_localctx, 152, JPAParser.RULE_pattern_value)
 		defer {
@@ -6760,36 +7377,47 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Input_parameterContext:ParserRuleContext {
-		open func INT_NUMERAL() -> TerminalNode? { return getToken(JPAParser.Tokens.INT_NUMERAL.rawValue, 0) }
-		open func IDENTIFICATION_VARIABLE() -> TerminalNode? { return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_input_parameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterInput_parameter(self)
+
+	public class Input_parameterContext: ParserRuleContext {
+			open
+			func INT_NUMERAL() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.INT_NUMERAL.rawValue, 0)
+			}
+			open
+			func IDENTIFICATION_VARIABLE() -> TerminalNode? {
+				return getToken(JPAParser.Tokens.IDENTIFICATION_VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_input_parameter
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterInput_parameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitInput_parameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitInput_parameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitInput_parameter(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitInput_parameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitInput_parameter(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitInput_parameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func input_parameter() throws -> Input_parameterContext {
+	 open func input_parameter() throws -> Input_parameterContext {
 		var _localctx: Input_parameterContext = Input_parameterContext(_ctx, getState())
 		try enterRule(_localctx, 154, JPAParser.RULE_input_parameter)
 		defer {
@@ -6817,7 +7445,7 @@ open class JPAParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6828,34 +7456,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterLiteral(self)
+
+	public class LiteralContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitLiteral(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 156, JPAParser.RULE_literal)
 		defer {
@@ -6873,34 +7506,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Constructor_nameContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_constructor_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterConstructor_name(self)
+
+	public class Constructor_nameContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_constructor_name
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterConstructor_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitConstructor_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitConstructor_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitConstructor_name(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitConstructor_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitConstructor_name(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitConstructor_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructor_name() throws -> Constructor_nameContext {
+	 open func constructor_name() throws -> Constructor_nameContext {
 		var _localctx: Constructor_nameContext = Constructor_nameContext(_ctx, getState())
 		try enterRule(_localctx, 158, JPAParser.RULE_constructor_name)
 		defer {
@@ -6918,34 +7556,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Enum_literalContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_enum_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterEnum_literal(self)
+
+	public class Enum_literalContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_enum_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterEnum_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitEnum_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitEnum_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitEnum_literal(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitEnum_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitEnum_literal(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitEnum_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enum_literal() throws -> Enum_literalContext {
+	 open func enum_literal() throws -> Enum_literalContext {
 		var _localctx: Enum_literalContext = Enum_literalContext(_ctx, getState())
 		try enterRule(_localctx, 160, JPAParser.RULE_enum_literal)
 		defer {
@@ -6963,34 +7606,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Boolean_literalContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_boolean_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterBoolean_literal(self)
+
+	public class Boolean_literalContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_boolean_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterBoolean_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitBoolean_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitBoolean_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitBoolean_literal(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitBoolean_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitBoolean_literal(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitBoolean_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func boolean_literal() throws -> Boolean_literalContext {
+	 open func boolean_literal() throws -> Boolean_literalContext {
 		var _localctx: Boolean_literalContext = Boolean_literalContext(_ctx, getState())
 		try enterRule(_localctx, 162, JPAParser.RULE_boolean_literal)
 		var _la: Int = 0
@@ -7022,34 +7670,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Simple_state_fieldContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_simple_state_field }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSimple_state_field(self)
+
+	public class Simple_state_fieldContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_simple_state_field
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSimple_state_field(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSimple_state_field(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSimple_state_field(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSimple_state_field(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSimple_state_field(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSimple_state_field(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSimple_state_field(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_state_field() throws -> Simple_state_fieldContext {
+	 open func simple_state_field() throws -> Simple_state_fieldContext {
 		var _localctx: Simple_state_fieldContext = Simple_state_fieldContext(_ctx, getState())
 		try enterRule(_localctx, 164, JPAParser.RULE_simple_state_field)
 		defer {
@@ -7067,34 +7720,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Embedded_class_state_fieldContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_embedded_class_state_field }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterEmbedded_class_state_field(self)
+
+	public class Embedded_class_state_fieldContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_embedded_class_state_field
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterEmbedded_class_state_field(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitEmbedded_class_state_field(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitEmbedded_class_state_field(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitEmbedded_class_state_field(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitEmbedded_class_state_field(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitEmbedded_class_state_field(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitEmbedded_class_state_field(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func embedded_class_state_field() throws -> Embedded_class_state_fieldContext {
+	 open func embedded_class_state_field() throws -> Embedded_class_state_fieldContext {
 		var _localctx: Embedded_class_state_fieldContext = Embedded_class_state_fieldContext(_ctx, getState())
 		try enterRule(_localctx, 166, JPAParser.RULE_embedded_class_state_field)
 		defer {
@@ -7112,34 +7770,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Single_valued_association_fieldContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_single_valued_association_field }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterSingle_valued_association_field(self)
+
+	public class Single_valued_association_fieldContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_single_valued_association_field
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterSingle_valued_association_field(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitSingle_valued_association_field(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitSingle_valued_association_field(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitSingle_valued_association_field(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitSingle_valued_association_field(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitSingle_valued_association_field(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitSingle_valued_association_field(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func single_valued_association_field() throws -> Single_valued_association_fieldContext {
+	 open func single_valued_association_field() throws -> Single_valued_association_fieldContext {
 		var _localctx: Single_valued_association_fieldContext = Single_valued_association_fieldContext(_ctx, getState())
 		try enterRule(_localctx, 168, JPAParser.RULE_single_valued_association_field)
 		defer {
@@ -7157,34 +7820,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Collection_valued_association_fieldContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_collection_valued_association_field }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterCollection_valued_association_field(self)
+
+	public class Collection_valued_association_fieldContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_collection_valued_association_field
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterCollection_valued_association_field(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitCollection_valued_association_field(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitCollection_valued_association_field(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitCollection_valued_association_field(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitCollection_valued_association_field(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitCollection_valued_association_field(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitCollection_valued_association_field(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collection_valued_association_field() throws -> Collection_valued_association_fieldContext {
+	 open func collection_valued_association_field() throws -> Collection_valued_association_fieldContext {
 		var _localctx: Collection_valued_association_fieldContext = Collection_valued_association_fieldContext(_ctx, getState())
 		try enterRule(_localctx, 170, JPAParser.RULE_collection_valued_association_field)
 		defer {
@@ -7202,34 +7870,39 @@ open class JPAParser: Parser {
 
 		return _localctx
 	}
-	open class Abstract_schema_nameContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return JPAParser.RULE_abstract_schema_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).enterAbstract_schema_name(self)
+
+	public class Abstract_schema_nameContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return JPAParser.RULE_abstract_schema_name
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.enterAbstract_schema_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JPAListener {
-			 	(listener as! JPAListener).exitAbstract_schema_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JPAListener {
+				listener.exitAbstract_schema_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JPAVisitor {
-			     return (visitor as! JPAVisitor<T>).visitAbstract_schema_name(self)
-			}else if visitor is JPABaseVisitor {
-		    	 return (visitor as! JPABaseVisitor<T>).visitAbstract_schema_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JPAVisitor {
+			    return visitor.visitAbstract_schema_name(self)
+			}
+			else if let visitor = visitor as? JPABaseVisitor {
+			    return visitor.visitAbstract_schema_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func abstract_schema_name() throws -> Abstract_schema_nameContext {
+	 open func abstract_schema_name() throws -> Abstract_schema_nameContext {
 		var _localctx: Abstract_schema_nameContext = Abstract_schema_nameContext(_ctx, getState())
 		try enterRule(_localctx, 172, JPAParser.RULE_abstract_schema_name)
 		defer {
@@ -7248,6 +7921,10 @@ open class JPAParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = JPAParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = JPAParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

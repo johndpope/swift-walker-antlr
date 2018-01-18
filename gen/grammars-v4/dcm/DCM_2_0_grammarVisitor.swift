@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/dcm/DCM_2_0_grammar.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/dcm/DCM_2_0_grammar.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKonservierung(_ ctx: DCM_2_0_grammarParser.KonservierungContext) -> T{
+	open func visitKonservierung(_ ctx: DCM_2_0_grammarParser.KonservierungContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKons_kopf(_ ctx: DCM_2_0_grammarParser.Kons_kopfContext) -> T{
+	open func visitKons_kopf(_ ctx: DCM_2_0_grammarParser.Kons_kopfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModulkopf_info(_ ctx: DCM_2_0_grammarParser.Modulkopf_infoContext) -> T{
+	open func visitModulkopf_info(_ ctx: DCM_2_0_grammarParser.Modulkopf_infoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMod_zeile(_ ctx: DCM_2_0_grammarParser.Mod_zeileContext) -> T{
+	open func visitMod_zeile(_ ctx: DCM_2_0_grammarParser.Mod_zeileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMod_anf_zeile(_ ctx: DCM_2_0_grammarParser.Mod_anf_zeileContext) -> T{
+	open func visitMod_anf_zeile(_ ctx: DCM_2_0_grammarParser.Mod_anf_zeileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMod_fort_zeile(_ ctx: DCM_2_0_grammarParser.Mod_fort_zeileContext) -> T{
+	open func visitMod_fort_zeile(_ ctx: DCM_2_0_grammarParser.Mod_fort_zeileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMod_ele_name(_ ctx: DCM_2_0_grammarParser.Mod_ele_nameContext) -> T{
+	open func visitMod_ele_name(_ ctx: DCM_2_0_grammarParser.Mod_ele_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMod_ele_wert(_ ctx: DCM_2_0_grammarParser.Mod_ele_wertContext) -> T{
+	open func visitMod_ele_wert(_ ctx: DCM_2_0_grammarParser.Mod_ele_wertContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunktionsdef(_ ctx: DCM_2_0_grammarParser.FunktionsdefContext) -> T{
+	open func visitFunktionsdef(_ ctx: DCM_2_0_grammarParser.FunktionsdefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunktionszeile(_ ctx: DCM_2_0_grammarParser.FunktionszeileContext) -> T{
+	open func visitFunktionszeile(_ ctx: DCM_2_0_grammarParser.FunktionszeileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFkt_version(_ ctx: DCM_2_0_grammarParser.Fkt_versionContext) -> T{
+	open func visitFkt_version(_ ctx: DCM_2_0_grammarParser.Fkt_versionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFkt_langname(_ ctx: DCM_2_0_grammarParser.Fkt_langnameContext) -> T{
+	open func visitFkt_langname(_ ctx: DCM_2_0_grammarParser.Fkt_langnameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariantendef(_ ctx: DCM_2_0_grammarParser.VariantendefContext) -> T{
+	open func visitVariantendef(_ ctx: DCM_2_0_grammarParser.VariantendefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariantenkrit(_ ctx: DCM_2_0_grammarParser.VariantenkritContext) -> T{
+	open func visitVariantenkrit(_ ctx: DCM_2_0_grammarParser.VariantenkritContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKrit_name(_ ctx: DCM_2_0_grammarParser.Krit_nameContext) -> T{
+	open func visitKrit_name(_ ctx: DCM_2_0_grammarParser.Krit_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKrit_wert(_ ctx: DCM_2_0_grammarParser.Krit_wertContext) -> T{
+	open func visitKrit_wert(_ ctx: DCM_2_0_grammarParser.Krit_wertContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKons_rumpf(_ ctx: DCM_2_0_grammarParser.Kons_rumpfContext) -> T{
+	open func visitKons_rumpf(_ ctx: DCM_2_0_grammarParser.Kons_rumpfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKenngroesse(_ ctx: DCM_2_0_grammarParser.KenngroesseContext) -> T{
+	open func visitKenngroesse(_ ctx: DCM_2_0_grammarParser.KenngroesseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKennwert(_ ctx: DCM_2_0_grammarParser.KennwertContext) -> T{
+	open func visitKennwert(_ ctx: DCM_2_0_grammarParser.KennwertContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKennwerteblock(_ ctx: DCM_2_0_grammarParser.KennwerteblockContext) -> T{
+	open func visitKennwerteblock(_ ctx: DCM_2_0_grammarParser.KennwerteblockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKennlinie(_ ctx: DCM_2_0_grammarParser.KennlinieContext) -> T{
+	open func visitKennlinie(_ ctx: DCM_2_0_grammarParser.KennlinieContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKennfeld(_ ctx: DCM_2_0_grammarParser.KennfeldContext) -> T{
+	open func visitKennfeld(_ ctx: DCM_2_0_grammarParser.KennfeldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGruppenstuetzstellen(_ ctx: DCM_2_0_grammarParser.GruppenstuetzstellenContext) -> T{
+	open func visitGruppenstuetzstellen(_ ctx: DCM_2_0_grammarParser.GruppenstuetzstellenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKenntext(_ ctx: DCM_2_0_grammarParser.KenntextContext) -> T{
+	open func visitKenntext(_ ctx: DCM_2_0_grammarParser.KenntextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKgr_info(_ ctx: DCM_2_0_grammarParser.Kgr_infoContext) -> T{
+	open func visitKgr_info(_ ctx: DCM_2_0_grammarParser.Kgr_infoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEinheit_x(_ ctx: DCM_2_0_grammarParser.Einheit_xContext) -> T{
+	open func visitEinheit_x(_ ctx: DCM_2_0_grammarParser.Einheit_xContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEinheit_y(_ ctx: DCM_2_0_grammarParser.Einheit_yContext) -> T{
+	open func visitEinheit_y(_ ctx: DCM_2_0_grammarParser.Einheit_yContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEinheit_w(_ ctx: DCM_2_0_grammarParser.Einheit_wContext) -> T{
+	open func visitEinheit_w(_ ctx: DCM_2_0_grammarParser.Einheit_wContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLangname(_ ctx: DCM_2_0_grammarParser.LangnameContext) -> T{
+	open func visitLangname(_ ctx: DCM_2_0_grammarParser.LangnameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDisplayname(_ ctx: DCM_2_0_grammarParser.DisplaynameContext) -> T{
+	open func visitDisplayname(_ ctx: DCM_2_0_grammarParser.DisplaynameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVar_abhangigkeiten(_ ctx: DCM_2_0_grammarParser.Var_abhangigkeitenContext) -> T{
+	open func visitVar_abhangigkeiten(_ ctx: DCM_2_0_grammarParser.Var_abhangigkeitenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVar_abh(_ ctx: DCM_2_0_grammarParser.Var_abhContext) -> T{
+	open func visitVar_abh(_ ctx: DCM_2_0_grammarParser.Var_abhContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunktionszugehorigkeit(_ ctx: DCM_2_0_grammarParser.FunktionszugehorigkeitContext) -> T{
+	open func visitFunktionszugehorigkeit(_ ctx: DCM_2_0_grammarParser.FunktionszugehorigkeitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnzahl_x(_ ctx: DCM_2_0_grammarParser.Anzahl_xContext) -> T{
+	open func visitAnzahl_x(_ ctx: DCM_2_0_grammarParser.Anzahl_xContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnzahl_y(_ ctx: DCM_2_0_grammarParser.Anzahl_yContext) -> T{
+	open func visitAnzahl_y(_ ctx: DCM_2_0_grammarParser.Anzahl_yContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWerteliste(_ ctx: DCM_2_0_grammarParser.WertelisteContext) -> T{
+	open func visitWerteliste(_ ctx: DCM_2_0_grammarParser.WertelisteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWerteliste_kwb(_ ctx: DCM_2_0_grammarParser.Werteliste_kwbContext) -> T{
+	open func visitWerteliste_kwb(_ ctx: DCM_2_0_grammarParser.Werteliste_kwbContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSst_liste_x(_ ctx: DCM_2_0_grammarParser.Sst_liste_xContext) -> T{
+	open func visitSst_liste_x(_ ctx: DCM_2_0_grammarParser.Sst_liste_xContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKf_zeile_liste(_ ctx: DCM_2_0_grammarParser.Kf_zeile_listeContext) -> T{
+	open func visitKf_zeile_liste(_ ctx: DCM_2_0_grammarParser.Kf_zeile_listeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKf_zeile_liste_r(_ ctx: DCM_2_0_grammarParser.Kf_zeile_liste_rContext) -> T{
+	open func visitKf_zeile_liste_r(_ ctx: DCM_2_0_grammarParser.Kf_zeile_liste_rContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKf_zeile_liste_tx(_ ctx: DCM_2_0_grammarParser.Kf_zeile_liste_txContext) -> T{
+	open func visitKf_zeile_liste_tx(_ ctx: DCM_2_0_grammarParser.Kf_zeile_liste_txContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class DCM_2_0_grammarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRealzahl(_ ctx: DCM_2_0_grammarParser.RealzahlContext) -> T{
+	open func visitRealzahl(_ ctx: DCM_2_0_grammarParser.RealzahlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/ucb-logo/UCBLogo.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/ucb-logo/UCBLogo.g4 by ANTLR 4.7.1
 
   import java.util.Map;
   import java.util.HashMap;
@@ -19,7 +19,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParse(_ ctx: UCBLogoParser.ParseContext) -> T{
+	open func visitParse(_ ctx: UCBLogoParser.ParseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -30,7 +30,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureDefInstruction(_ ctx: UCBLogoParser.ProcedureDefInstructionContext) -> T{
+	open func visitProcedureDefInstruction(_ ctx: UCBLogoParser.ProcedureDefInstructionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -41,7 +41,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMacroDefInstruction(_ ctx: UCBLogoParser.MacroDefInstructionContext) -> T{
+	open func visitMacroDefInstruction(_ ctx: UCBLogoParser.MacroDefInstructionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -52,7 +52,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureCallExtraInputInstruction(_ ctx: UCBLogoParser.ProcedureCallExtraInputInstructionContext) -> T{
+	open func visitProcedureCallExtraInputInstruction(_ ctx: UCBLogoParser.ProcedureCallExtraInputInstructionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -63,7 +63,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureCallInstruction(_ ctx: UCBLogoParser.ProcedureCallInstructionContext) -> T{
+	open func visitProcedureCallInstruction(_ ctx: UCBLogoParser.ProcedureCallInstructionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -73,7 +73,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedure_def(_ ctx: UCBLogoParser.Procedure_defContext) -> T{
+	open func visitProcedure_def(_ ctx: UCBLogoParser.Procedure_defContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -83,7 +83,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMacro_def(_ ctx: UCBLogoParser.Macro_defContext) -> T{
+	open func visitMacro_def(_ ctx: UCBLogoParser.Macro_defContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -93,7 +93,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariables(_ ctx: UCBLogoParser.VariablesContext) -> T{
+	open func visitVariables(_ ctx: UCBLogoParser.VariablesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -103,7 +103,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBody_def(_ ctx: UCBLogoParser.Body_defContext) -> T{
+	open func visitBody_def(_ ctx: UCBLogoParser.Body_defContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -113,7 +113,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBody_instruction(_ ctx: UCBLogoParser.Body_instructionContext) -> T{
+	open func visitBody_instruction(_ ctx: UCBLogoParser.Body_instructionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -123,7 +123,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedure_call_extra_input(_ ctx: UCBLogoParser.Procedure_call_extra_inputContext) -> T{
+	open func visitProcedure_call_extra_input(_ ctx: UCBLogoParser.Procedure_call_extra_inputContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -133,7 +133,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedure_call(_ ctx: UCBLogoParser.Procedure_callContext) -> T{
+	open func visitProcedure_call(_ ctx: UCBLogoParser.Procedure_callContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -143,7 +143,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressions(_ ctx: UCBLogoParser.ExpressionsContext) -> T{
+	open func visitExpressions(_ ctx: UCBLogoParser.ExpressionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -154,7 +154,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNotEqualsExpressionExpression(_ ctx: UCBLogoParser.NotEqualsExpressionExpressionContext) -> T{
+	open func visitNotEqualsExpressionExpression(_ ctx: UCBLogoParser.NotEqualsExpressionExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayExpression(_ ctx: UCBLogoParser.ArrayExpressionContext) -> T{
+	open func visitArrayExpression(_ ctx: UCBLogoParser.ArrayExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -176,7 +176,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditionExpression(_ ctx: UCBLogoParser.AdditionExpressionContext) -> T{
+	open func visitAdditionExpression(_ ctx: UCBLogoParser.AdditionExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -187,7 +187,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWordExpression(_ ctx: UCBLogoParser.WordExpressionContext) -> T{
+	open func visitWordExpression(_ ctx: UCBLogoParser.WordExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -198,7 +198,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumberExpression(_ ctx: UCBLogoParser.NumberExpressionContext) -> T{
+	open func visitNumberExpression(_ ctx: UCBLogoParser.NumberExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -209,7 +209,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParensExpression(_ ctx: UCBLogoParser.ParensExpressionContext) -> T{
+	open func visitParensExpression(_ ctx: UCBLogoParser.ParensExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -220,7 +220,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplyExpression(_ ctx: UCBLogoParser.MultiplyExpressionContext) -> T{
+	open func visitMultiplyExpression(_ ctx: UCBLogoParser.MultiplyExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -231,7 +231,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGreaterThanExpression(_ ctx: UCBLogoParser.GreaterThanExpressionContext) -> T{
+	open func visitGreaterThanExpression(_ ctx: UCBLogoParser.GreaterThanExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -242,7 +242,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableExpression(_ ctx: UCBLogoParser.VariableExpressionContext) -> T{
+	open func visitVariableExpression(_ ctx: UCBLogoParser.VariableExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -253,7 +253,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDivideExpression(_ ctx: UCBLogoParser.DivideExpressionContext) -> T{
+	open func visitDivideExpression(_ ctx: UCBLogoParser.DivideExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -264,7 +264,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLessThanEqualsExpression(_ ctx: UCBLogoParser.LessThanEqualsExpressionContext) -> T{
+	open func visitLessThanEqualsExpression(_ ctx: UCBLogoParser.LessThanEqualsExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGreaterThanEqualsExpression(_ ctx: UCBLogoParser.GreaterThanEqualsExpressionContext) -> T{
+	open func visitGreaterThanEqualsExpression(_ ctx: UCBLogoParser.GreaterThanEqualsExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -286,7 +286,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryMinusExpression(_ ctx: UCBLogoParser.UnaryMinusExpressionContext) -> T{
+	open func visitUnaryMinusExpression(_ ctx: UCBLogoParser.UnaryMinusExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -297,7 +297,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuotedWordExpression(_ ctx: UCBLogoParser.QuotedWordExpressionContext) -> T{
+	open func visitQuotedWordExpression(_ ctx: UCBLogoParser.QuotedWordExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -308,7 +308,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEqualsExpression(_ ctx: UCBLogoParser.EqualsExpressionContext) -> T{
+	open func visitEqualsExpression(_ ctx: UCBLogoParser.EqualsExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -319,7 +319,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubtractionExpression(_ ctx: UCBLogoParser.SubtractionExpressionContext) -> T{
+	open func visitSubtractionExpression(_ ctx: UCBLogoParser.SubtractionExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -330,7 +330,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureCallExpression(_ ctx: UCBLogoParser.ProcedureCallExpressionContext) -> T{
+	open func visitProcedureCallExpression(_ ctx: UCBLogoParser.ProcedureCallExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -341,7 +341,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLessThanExpression(_ ctx: UCBLogoParser.LessThanExpressionContext) -> T{
+	open func visitLessThanExpression(_ ctx: UCBLogoParser.LessThanExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -352,7 +352,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureCallExtraInput(_ ctx: UCBLogoParser.ProcedureCallExtraInputContext) -> T{
+	open func visitProcedureCallExtraInput(_ ctx: UCBLogoParser.ProcedureCallExtraInputContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -363,7 +363,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitListExpression(_ ctx: UCBLogoParser.ListExpressionContext) -> T{
+	open func visitListExpression(_ ctx: UCBLogoParser.ListExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -374,7 +374,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNameExpression(_ ctx: UCBLogoParser.NameExpressionContext) -> T{
+	open func visitNameExpression(_ ctx: UCBLogoParser.NameExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -384,7 +384,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArray(_ ctx: UCBLogoParser.ArrayContext) -> T{
+	open func visitArray(_ ctx: UCBLogoParser.ArrayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -394,7 +394,7 @@ open class UCBLogoVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitList(_ ctx: UCBLogoParser.ListContext) -> T{
+	open func visitList(_ ctx: UCBLogoParser.ListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

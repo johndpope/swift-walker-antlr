@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,18 +15,18 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: COOLParser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: COOLParser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by the {@code class}
+	 * Visit a parse tree produced by the {@code classes}
 	 * labeled alternative in {@link COOLParser#programBlocks}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClass(_ ctx: COOLParser.ClassContext) -> T{
+	open func visitClasses(_ ctx: COOLParser.ClassesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -37,7 +37,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEof(_ ctx: COOLParser.EofContext) -> T{
+	open func visitEof(_ ctx: COOLParser.EofContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -47,7 +47,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassDefine(_ ctx: COOLParser.ClassDefineContext) -> T{
+	open func visitClassDefine(_ ctx: COOLParser.ClassDefineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -58,18 +58,18 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethod(_ ctx: COOLParser.MethodContext) -> T{
+	open func visitMethod(_ ctx: COOLParser.MethodContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by the {@code classProperty}
+	 * Visit a parse tree produced by the {@code property}
 	 * labeled alternative in {@link COOLParser#feature}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassProperty(_ ctx: COOLParser.ClassPropertyContext) -> T{
+	open func visitProperty(_ ctx: COOLParser.PropertyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -79,7 +79,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormal(_ ctx: COOLParser.FormalContext) -> T{
+	open func visitFormal(_ ctx: COOLParser.FormalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -90,18 +90,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLetIn(_ ctx: COOLParser.LetInContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by the {@code newType}
-	 * labeled alternative in {@link COOLParser#expression}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitNewType(_ ctx: COOLParser.NewTypeContext) -> T{
+	open func visitLetIn(_ ctx: COOLParser.LetInContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -112,7 +101,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMinus(_ ctx: COOLParser.MinusContext) -> T{
+	open func visitMinus(_ ctx: COOLParser.MinusContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -123,7 +112,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: COOLParser.StringContext) -> T{
+	open func visitString(_ ctx: COOLParser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -134,18 +123,18 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIsvoid(_ ctx: COOLParser.IsvoidContext) -> T{
+	open func visitIsvoid(_ ctx: COOLParser.IsvoidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by the {@code whild}
+	 * Visit a parse tree produced by the {@code while}
 	 * labeled alternative in {@link COOLParser#expression}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhild(_ ctx: COOLParser.WhildContext) -> T{
+	open func visitWhile(_ ctx: COOLParser.WhileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -156,7 +145,18 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDivision(_ ctx: COOLParser.DivisionContext) -> T{
+	open func visitDivision(_ ctx: COOLParser.DivisionContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by the {@code negative}
+	 * labeled alternative in {@link COOLParser#expression}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitNegative(_ ctx: COOLParser.NegativeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -167,7 +167,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoolNot(_ ctx: COOLParser.BoolNotContext) -> T{
+	open func visitBoolNot(_ ctx: COOLParser.BoolNotContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -178,18 +178,18 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLessThan(_ ctx: COOLParser.LessThanContext) -> T{
+	open func visitLessThan(_ ctx: COOLParser.LessThanContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by the {@code superClassMethod}
+	 * Visit a parse tree produced by the {@code block}
 	 * labeled alternative in {@link COOLParser#expression}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSuperClassMethod(_ ctx: COOLParser.SuperClassMethodContext) -> T{
+	open func visitBlock(_ ctx: COOLParser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -200,7 +200,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitId(_ ctx: COOLParser.IdContext) -> T{
+	open func visitId(_ ctx: COOLParser.IdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -211,7 +211,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiply(_ ctx: COOLParser.MultiplyContext) -> T{
+	open func visitMultiply(_ ctx: COOLParser.MultiplyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -222,7 +222,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIf(_ ctx: COOLParser.IfContext) -> T{
+	open func visitIf(_ ctx: COOLParser.IfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -233,7 +233,18 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCase(_ ctx: COOLParser.CaseContext) -> T{
+	open func visitCase(_ ctx: COOLParser.CaseContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by the {@code ownMethodCall}
+	 * labeled alternative in {@link COOLParser#expression}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitOwnMethodCall(_ ctx: COOLParser.OwnMethodCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -244,7 +255,18 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdd(_ ctx: COOLParser.AddContext) -> T{
+	open func visitAdd(_ ctx: COOLParser.AddContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by the {@code new}
+	 * labeled alternative in {@link COOLParser#expression}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitNew(_ ctx: COOLParser.NewContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +277,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParentheses(_ ctx: COOLParser.ParenthesesContext) -> T{
+	open func visitParentheses(_ ctx: COOLParser.ParenthesesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -266,7 +288,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignment(_ ctx: COOLParser.AssignmentContext) -> T{
+	open func visitAssignment(_ ctx: COOLParser.AssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -277,7 +299,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFalse(_ ctx: COOLParser.FalseContext) -> T{
+	open func visitFalse(_ ctx: COOLParser.FalseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -288,7 +310,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInt(_ ctx: COOLParser.IntContext) -> T{
+	open func visitInt(_ ctx: COOLParser.IntContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -299,29 +321,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEqual(_ ctx: COOLParser.EqualContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by the {@code multipleExpression}
-	 * labeled alternative in {@link COOLParser#expression}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitMultipleExpression(_ ctx: COOLParser.MultipleExpressionContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by the {@code functionCall}
-	 * labeled alternative in {@link COOLParser#expression}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitFunctionCall(_ ctx: COOLParser.FunctionCallContext) -> T{
+	open func visitEqual(_ ctx: COOLParser.EqualContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -332,7 +332,7 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrue(_ ctx: COOLParser.TrueContext) -> T{
+	open func visitTrue(_ ctx: COOLParser.TrueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -343,18 +343,18 @@ open class COOLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLessEqual(_ ctx: COOLParser.LessEqualContext) -> T{
+	open func visitLessEqual(_ ctx: COOLParser.LessEqualContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by the {@code integerComplement}
+	 * Visit a parse tree produced by the {@code methodCall}
 	 * labeled alternative in {@link COOLParser#expression}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntegerComplement(_ ctx: COOLParser.IntegerComplementContext) -> T{
+	open func visitMethodCall(_ ctx: COOLParser.MethodCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

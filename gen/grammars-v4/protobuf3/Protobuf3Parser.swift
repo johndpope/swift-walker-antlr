@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/protobuf3/Protobuf3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/protobuf3/Protobuf3.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class Protobuf3Parser: Parser {
@@ -11,8 +11,11 @@ open class Protobuf3Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, BOOL = 1, BYTES = 2, DOUBLE = 3, ENUM = 4, FIXED32 = 5, 
                  FIXED64 = 6, FLOAT = 7, IMPORT = 8, INT32 = 9, INT64 = 10, 
                  MAP = 11, MESSAGE = 12, ONEOF = 13, OPTION = 14, PACKAGE = 15, 
@@ -26,21 +29,24 @@ open class Protobuf3Parser: Parser {
                  COMMA = 50, DOT = 51, MINUS = 52, PLUS = 53, ASSIGN = 54, 
                  WS = 55, COMMENT = 56, LINE_COMMENT = 57
 	}
-	public static let RULE_proto = 0, RULE_syntax = 1, RULE_importStatement = 2, 
-                   RULE_packageStatement = 3, RULE_option = 4, RULE_optionName = 5, 
-                   RULE_topLevelDef = 6, RULE_message = 7, RULE_messageBody = 8, 
-                   RULE_enumDefinition = 9, RULE_enumBody = 10, RULE_enumField = 11, 
-                   RULE_enumValueOption = 12, RULE_service = 13, RULE_rpc = 14, 
-                   RULE_reserved = 15, RULE_ranges = 16, RULE_range = 17, 
-                   RULE_fieldNames = 18, RULE_type = 19, RULE_fieldNumber = 20, 
-                   RULE_field = 21, RULE_fieldOptions = 22, RULE_fieldOption = 23, 
-                   RULE_oneof = 24, RULE_oneofField = 25, RULE_mapField = 26, 
-                   RULE_keyType = 27, RULE_fullIdent = 28, RULE_messageName = 29, 
-                   RULE_enumName = 30, RULE_messageOrEnumName = 31, RULE_fieldName = 32, 
-                   RULE_oneofName = 33, RULE_mapName = 34, RULE_serviceName = 35, 
-                   RULE_rpcName = 36, RULE_messageType = 37, RULE_messageOrEnumType = 38, 
-                   RULE_emptyStatement = 39, RULE_constant = 40
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_proto = 0, RULE_syntax = 1, RULE_importStatement = 2, RULE_packageStatement = 3, 
+            RULE_option = 4, RULE_optionName = 5, RULE_topLevelDef = 6, 
+            RULE_message = 7, RULE_messageBody = 8, RULE_enumDefinition = 9, 
+            RULE_enumBody = 10, RULE_enumField = 11, RULE_enumValueOption = 12, 
+            RULE_service = 13, RULE_rpc = 14, RULE_reserved = 15, RULE_ranges = 16, 
+            RULE_range = 17, RULE_fieldNames = 18, RULE_type = 19, RULE_fieldNumber = 20, 
+            RULE_field = 21, RULE_fieldOptions = 22, RULE_fieldOption = 23, 
+            RULE_oneof = 24, RULE_oneofField = 25, RULE_mapField = 26, RULE_keyType = 27, 
+            RULE_fullIdent = 28, RULE_messageName = 29, RULE_enumName = 30, 
+            RULE_messageOrEnumName = 31, RULE_fieldName = 32, RULE_oneofName = 33, 
+            RULE_mapName = 34, RULE_serviceName = 35, RULE_rpcName = 36, 
+            RULE_messageType = 37, RULE_messageOrEnumType = 38, RULE_emptyStatement = 39, 
+            RULE_constant = 40
+
+	public
+	static let ruleNames: [String] = [
 		"proto", "syntax", "importStatement", "packageStatement", "option", "optionName", 
 		"topLevelDef", "message", "messageBody", "enumDefinition", "enumBody", 
 		"enumField", "enumValueOption", "service", "rpc", "reserved", "ranges", 
@@ -71,116 +77,113 @@ open class Protobuf3Parser: Parser {
 		"RBRACE", "LBRACK", "RBRACK", "LCHEVR", "RCHEVR", "SEMI", "COMMA", "DOT", 
 		"MINUS", "PLUS", "ASSIGN", "WS", "COMMENT", "LINE_COMMENT"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Protobuf3.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return Protobuf3Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Protobuf3.g4" }
+	override open
+	func getSerializedATN() -> String { return Protobuf3Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return Protobuf3Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return Protobuf3Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return Protobuf3Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return Protobuf3Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return Protobuf3Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,Protobuf3Parser._ATN,Protobuf3Parser._decisionToDFA, Protobuf3Parser._sharedContextCache)
 	}
-	open class ProtoContext:ParserRuleContext {
-		open func syntax() -> SyntaxContext? {
-			return getRuleContext(SyntaxContext.self,0)
+
+	public class ProtoContext: ParserRuleContext {
+			open
+			func syntax() -> SyntaxContext? {
+				return getRuleContext(SyntaxContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func importStatement() -> [ImportStatementContext] {
+				return getRuleContexts(ImportStatementContext.self)
+			}
+			open
+			func importStatement(_ i: Int) -> ImportStatementContext? {
+				return getRuleContext(ImportStatementContext.self, i)
+			}
+			open
+			func packageStatement() -> [PackageStatementContext] {
+				return getRuleContexts(PackageStatementContext.self)
+			}
+			open
+			func packageStatement(_ i: Int) -> PackageStatementContext? {
+				return getRuleContext(PackageStatementContext.self, i)
+			}
+			open
+			func option() -> [OptionContext] {
+				return getRuleContexts(OptionContext.self)
+			}
+			open
+			func option(_ i: Int) -> OptionContext? {
+				return getRuleContext(OptionContext.self, i)
+			}
+			open
+			func topLevelDef() -> [TopLevelDefContext] {
+				return getRuleContexts(TopLevelDefContext.self)
+			}
+			open
+			func topLevelDef(_ i: Int) -> TopLevelDefContext? {
+				return getRuleContext(TopLevelDefContext.self, i)
+			}
+			open
+			func emptyStatement() -> [EmptyStatementContext] {
+				return getRuleContexts(EmptyStatementContext.self)
+			}
+			open
+			func emptyStatement(_ i: Int) -> EmptyStatementContext? {
+				return getRuleContext(EmptyStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_proto
 		}
-		open func EOF() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.EOF.rawValue, 0) }
-		open func importStatement() -> Array<ImportStatementContext> {
-			return getRuleContexts(ImportStatementContext.self)
-		}
-		open func importStatement(_ i: Int) -> ImportStatementContext? {
-			return getRuleContext(ImportStatementContext.self,i)
-		}
-		open func packageStatement() -> Array<PackageStatementContext> {
-			return getRuleContexts(PackageStatementContext.self)
-		}
-		open func packageStatement(_ i: Int) -> PackageStatementContext? {
-			return getRuleContext(PackageStatementContext.self,i)
-		}
-		open func option() -> Array<OptionContext> {
-			return getRuleContexts(OptionContext.self)
-		}
-		open func option(_ i: Int) -> OptionContext? {
-			return getRuleContext(OptionContext.self,i)
-		}
-		open func topLevelDef() -> Array<TopLevelDefContext> {
-			return getRuleContexts(TopLevelDefContext.self)
-		}
-		open func topLevelDef(_ i: Int) -> TopLevelDefContext? {
-			return getRuleContext(TopLevelDefContext.self,i)
-		}
-		open func emptyStatement() -> Array<EmptyStatementContext> {
-			return getRuleContexts(EmptyStatementContext.self)
-		}
-		open func emptyStatement(_ i: Int) -> EmptyStatementContext? {
-			return getRuleContext(EmptyStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_proto }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterProto(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterProto(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitProto(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitProto(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitProto(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitProto(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitProto(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitProto(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func proto() throws -> ProtoContext {
+	 open func proto() throws -> ProtoContext {
 		var _localctx: ProtoContext = ProtoContext(_ctx, getState())
 		try enterRule(_localctx, 0, Protobuf3Parser.RULE_proto)
 		var _la: Int = 0
@@ -236,7 +239,7 @@ open class Protobuf3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(92)
@@ -255,34 +258,39 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class SyntaxContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_syntax }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterSyntax(self)
+
+	public class SyntaxContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_syntax
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterSyntax(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitSyntax(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitSyntax(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitSyntax(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitSyntax(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitSyntax(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitSyntax(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func syntax() throws -> SyntaxContext {
+	 open func syntax() throws -> SyntaxContext {
 		var _localctx: SyntaxContext = SyntaxContext(_ctx, getState())
 		try enterRule(_localctx, 2, Protobuf3Parser.RULE_syntax)
 		var _la: Int = 0
@@ -320,35 +328,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class ImportStatementContext:ParserRuleContext {
-		open func StrLit() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.StrLit.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_importStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterImportStatement(self)
+
+	public class ImportStatementContext: ParserRuleContext {
+			open
+			func StrLit() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.StrLit.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_importStatement
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterImportStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitImportStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitImportStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitImportStatement(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitImportStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitImportStatement(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitImportStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importStatement() throws -> ImportStatementContext {
+	 open func importStatement() throws -> ImportStatementContext {
 		var _localctx: ImportStatementContext = ImportStatementContext(_ctx, getState())
 		try enterRule(_localctx, 4, Protobuf3Parser.RULE_importStatement)
 		var _la: Int = 0
@@ -397,37 +413,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class PackageStatementContext:ParserRuleContext {
-		open func fullIdent() -> FullIdentContext? {
-			return getRuleContext(FullIdentContext.self,0)
+
+	public class PackageStatementContext: ParserRuleContext {
+			open
+			func fullIdent() -> FullIdentContext? {
+				return getRuleContext(FullIdentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_packageStatement
 		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_packageStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterPackageStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterPackageStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitPackageStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitPackageStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitPackageStatement(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitPackageStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitPackageStatement(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitPackageStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func packageStatement() throws -> PackageStatementContext {
+	 open func packageStatement() throws -> PackageStatementContext {
 		var _localctx: PackageStatementContext = PackageStatementContext(_ctx, getState())
 		try enterRule(_localctx, 6, Protobuf3Parser.RULE_packageStatement)
 		defer {
@@ -451,40 +473,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class OptionContext:ParserRuleContext {
-		open func optionName() -> OptionNameContext? {
-			return getRuleContext(OptionNameContext.self,0)
+
+	public class OptionContext: ParserRuleContext {
+			open
+			func optionName() -> OptionNameContext? {
+				return getRuleContext(OptionNameContext.self, 0)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_option
 		}
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_option }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterOption(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterOption(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitOption(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitOption(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitOption(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitOption(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitOption(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitOption(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func option() throws -> OptionContext {
+	 open func option() throws -> OptionContext {
 		var _localctx: OptionContext = OptionContext(_ctx, getState())
 		try enterRule(_localctx, 8, Protobuf3Parser.RULE_option)
 		defer {
@@ -512,41 +541,51 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class OptionNameContext:ParserRuleContext {
-		open func Ident() -> Array<TerminalNode> { return getTokens(Protobuf3Parser.Tokens.Ident.rawValue) }
-		open func Ident(_ i:Int) -> TerminalNode?{
-			return getToken(Protobuf3Parser.Tokens.Ident.rawValue, i)
+
+	public class OptionNameContext: ParserRuleContext {
+			open
+			func Ident() -> [TerminalNode] {
+				return getTokens(Protobuf3Parser.Tokens.Ident.rawValue)
+			}
+			open
+			func Ident(_ i:Int) -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, i)
+			}
+			open
+			func fullIdent() -> FullIdentContext? {
+				return getRuleContext(FullIdentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_optionName
 		}
-		open func fullIdent() -> FullIdentContext? {
-			return getRuleContext(FullIdentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_optionName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterOptionName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterOptionName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitOptionName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitOptionName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitOptionName(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitOptionName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitOptionName(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitOptionName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optionName() throws -> OptionNameContext {
+	 open func optionName() throws -> OptionNameContext {
 		var _localctx: OptionNameContext = OptionNameContext(_ctx, getState())
 		try enterRule(_localctx, 10, Protobuf3Parser.RULE_optionName)
 		var _la: Int = 0
@@ -574,7 +613,7 @@ open class Protobuf3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(128)
 		 	try _errHandler.sync(self)
@@ -604,43 +643,51 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class TopLevelDefContext:ParserRuleContext {
-		open func message() -> MessageContext? {
-			return getRuleContext(MessageContext.self,0)
+
+	public class TopLevelDefContext: ParserRuleContext {
+			open
+			func message() -> MessageContext? {
+				return getRuleContext(MessageContext.self, 0)
+			}
+			open
+			func enumDefinition() -> EnumDefinitionContext? {
+				return getRuleContext(EnumDefinitionContext.self, 0)
+			}
+			open
+			func service() -> ServiceContext? {
+				return getRuleContext(ServiceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_topLevelDef
 		}
-		open func enumDefinition() -> EnumDefinitionContext? {
-			return getRuleContext(EnumDefinitionContext.self,0)
-		}
-		open func service() -> ServiceContext? {
-			return getRuleContext(ServiceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_topLevelDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterTopLevelDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterTopLevelDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitTopLevelDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitTopLevelDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitTopLevelDef(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitTopLevelDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitTopLevelDef(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitTopLevelDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func topLevelDef() throws -> TopLevelDefContext {
+	 open func topLevelDef() throws -> TopLevelDefContext {
 		var _localctx: TopLevelDefContext = TopLevelDefContext(_ctx, getState())
 		try enterRule(_localctx, 12, Protobuf3Parser.RULE_topLevelDef)
 		defer {
@@ -671,7 +718,7 @@ open class Protobuf3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -682,40 +729,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class MessageContext:ParserRuleContext {
-		open func messageName() -> MessageNameContext? {
-			return getRuleContext(MessageNameContext.self,0)
+
+	public class MessageContext: ParserRuleContext {
+			open
+			func messageName() -> MessageNameContext? {
+				return getRuleContext(MessageNameContext.self, 0)
+			}
+			open
+			func messageBody() -> MessageBodyContext? {
+				return getRuleContext(MessageBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_message
 		}
-		open func messageBody() -> MessageBodyContext? {
-			return getRuleContext(MessageBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_message }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterMessage(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterMessage(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitMessage(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitMessage(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitMessage(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitMessage(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitMessage(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitMessage(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func message() throws -> MessageContext {
+	 open func message() throws -> MessageContext {
 		var _localctx: MessageContext = MessageContext(_ctx, getState())
 		try enterRule(_localctx, 14, Protobuf3Parser.RULE_message)
 		defer {
@@ -739,82 +793,103 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class MessageBodyContext:ParserRuleContext {
-		open func field() -> Array<FieldContext> {
-			return getRuleContexts(FieldContext.self)
+
+	public class MessageBodyContext: ParserRuleContext {
+			open
+			func field() -> [FieldContext] {
+				return getRuleContexts(FieldContext.self)
+			}
+			open
+			func field(_ i: Int) -> FieldContext? {
+				return getRuleContext(FieldContext.self, i)
+			}
+			open
+			func enumDefinition() -> [EnumDefinitionContext] {
+				return getRuleContexts(EnumDefinitionContext.self)
+			}
+			open
+			func enumDefinition(_ i: Int) -> EnumDefinitionContext? {
+				return getRuleContext(EnumDefinitionContext.self, i)
+			}
+			open
+			func message() -> [MessageContext] {
+				return getRuleContexts(MessageContext.self)
+			}
+			open
+			func message(_ i: Int) -> MessageContext? {
+				return getRuleContext(MessageContext.self, i)
+			}
+			open
+			func option() -> [OptionContext] {
+				return getRuleContexts(OptionContext.self)
+			}
+			open
+			func option(_ i: Int) -> OptionContext? {
+				return getRuleContext(OptionContext.self, i)
+			}
+			open
+			func oneof() -> [OneofContext] {
+				return getRuleContexts(OneofContext.self)
+			}
+			open
+			func oneof(_ i: Int) -> OneofContext? {
+				return getRuleContext(OneofContext.self, i)
+			}
+			open
+			func mapField() -> [MapFieldContext] {
+				return getRuleContexts(MapFieldContext.self)
+			}
+			open
+			func mapField(_ i: Int) -> MapFieldContext? {
+				return getRuleContext(MapFieldContext.self, i)
+			}
+			open
+			func reserved() -> [ReservedContext] {
+				return getRuleContexts(ReservedContext.self)
+			}
+			open
+			func reserved(_ i: Int) -> ReservedContext? {
+				return getRuleContext(ReservedContext.self, i)
+			}
+			open
+			func emptyStatement() -> [EmptyStatementContext] {
+				return getRuleContexts(EmptyStatementContext.self)
+			}
+			open
+			func emptyStatement(_ i: Int) -> EmptyStatementContext? {
+				return getRuleContext(EmptyStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_messageBody
 		}
-		open func field(_ i: Int) -> FieldContext? {
-			return getRuleContext(FieldContext.self,i)
-		}
-		open func enumDefinition() -> Array<EnumDefinitionContext> {
-			return getRuleContexts(EnumDefinitionContext.self)
-		}
-		open func enumDefinition(_ i: Int) -> EnumDefinitionContext? {
-			return getRuleContext(EnumDefinitionContext.self,i)
-		}
-		open func message() -> Array<MessageContext> {
-			return getRuleContexts(MessageContext.self)
-		}
-		open func message(_ i: Int) -> MessageContext? {
-			return getRuleContext(MessageContext.self,i)
-		}
-		open func option() -> Array<OptionContext> {
-			return getRuleContexts(OptionContext.self)
-		}
-		open func option(_ i: Int) -> OptionContext? {
-			return getRuleContext(OptionContext.self,i)
-		}
-		open func oneof() -> Array<OneofContext> {
-			return getRuleContexts(OneofContext.self)
-		}
-		open func oneof(_ i: Int) -> OneofContext? {
-			return getRuleContext(OneofContext.self,i)
-		}
-		open func mapField() -> Array<MapFieldContext> {
-			return getRuleContexts(MapFieldContext.self)
-		}
-		open func mapField(_ i: Int) -> MapFieldContext? {
-			return getRuleContext(MapFieldContext.self,i)
-		}
-		open func reserved() -> Array<ReservedContext> {
-			return getRuleContexts(ReservedContext.self)
-		}
-		open func reserved(_ i: Int) -> ReservedContext? {
-			return getRuleContext(ReservedContext.self,i)
-		}
-		open func emptyStatement() -> Array<EmptyStatementContext> {
-			return getRuleContexts(EmptyStatementContext.self)
-		}
-		open func emptyStatement(_ i: Int) -> EmptyStatementContext? {
-			return getRuleContext(EmptyStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_messageBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterMessageBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterMessageBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitMessageBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitMessageBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitMessageBody(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitMessageBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitMessageBody(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitMessageBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func messageBody() throws -> MessageBodyContext {
+	 open func messageBody() throws -> MessageBodyContext {
 		var _localctx: MessageBodyContext = MessageBodyContext(_ctx, getState())
 		try enterRule(_localctx, 16, Protobuf3Parser.RULE_messageBody)
 		var _la: Int = 0
@@ -904,7 +979,7 @@ open class Protobuf3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(153)
@@ -923,40 +998,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumDefinitionContext:ParserRuleContext {
-		open func enumName() -> EnumNameContext? {
-			return getRuleContext(EnumNameContext.self,0)
+
+	public class EnumDefinitionContext: ParserRuleContext {
+			open
+			func enumName() -> EnumNameContext? {
+				return getRuleContext(EnumNameContext.self, 0)
+			}
+			open
+			func enumBody() -> EnumBodyContext? {
+				return getRuleContext(EnumBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_enumDefinition
 		}
-		open func enumBody() -> EnumBodyContext? {
-			return getRuleContext(EnumBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_enumDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterEnumDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterEnumDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitEnumDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitEnumDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitEnumDefinition(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitEnumDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitEnumDefinition(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitEnumDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumDefinition() throws -> EnumDefinitionContext {
+	 open func enumDefinition() throws -> EnumDefinitionContext {
 		var _localctx: EnumDefinitionContext = EnumDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 18, Protobuf3Parser.RULE_enumDefinition)
 		defer {
@@ -980,52 +1062,63 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumBodyContext:ParserRuleContext {
-		open func option() -> Array<OptionContext> {
-			return getRuleContexts(OptionContext.self)
+
+	public class EnumBodyContext: ParserRuleContext {
+			open
+			func option() -> [OptionContext] {
+				return getRuleContexts(OptionContext.self)
+			}
+			open
+			func option(_ i: Int) -> OptionContext? {
+				return getRuleContext(OptionContext.self, i)
+			}
+			open
+			func enumField() -> [EnumFieldContext] {
+				return getRuleContexts(EnumFieldContext.self)
+			}
+			open
+			func enumField(_ i: Int) -> EnumFieldContext? {
+				return getRuleContext(EnumFieldContext.self, i)
+			}
+			open
+			func emptyStatement() -> [EmptyStatementContext] {
+				return getRuleContexts(EmptyStatementContext.self)
+			}
+			open
+			func emptyStatement(_ i: Int) -> EmptyStatementContext? {
+				return getRuleContext(EmptyStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_enumBody
 		}
-		open func option(_ i: Int) -> OptionContext? {
-			return getRuleContext(OptionContext.self,i)
-		}
-		open func enumField() -> Array<EnumFieldContext> {
-			return getRuleContexts(EnumFieldContext.self)
-		}
-		open func enumField(_ i: Int) -> EnumFieldContext? {
-			return getRuleContext(EnumFieldContext.self,i)
-		}
-		open func emptyStatement() -> Array<EmptyStatementContext> {
-			return getRuleContexts(EmptyStatementContext.self)
-		}
-		open func emptyStatement(_ i: Int) -> EmptyStatementContext? {
-			return getRuleContext(EmptyStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_enumBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterEnumBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterEnumBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitEnumBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitEnumBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitEnumBody(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitEnumBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitEnumBody(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitEnumBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumBody() throws -> EnumBodyContext {
+	 open func enumBody() throws -> EnumBodyContext {
 		var _localctx: EnumBodyContext = EnumBodyContext(_ctx, getState())
 		try enterRule(_localctx, 20, Protobuf3Parser.RULE_enumBody)
 		var _la: Int = 0
@@ -1068,7 +1161,7 @@ open class Protobuf3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(168)
@@ -1087,42 +1180,55 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumFieldContext:ParserRuleContext {
-		open func Ident() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0) }
-		open func IntLit() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.IntLit.rawValue, 0) }
-		open func enumValueOption() -> Array<EnumValueOptionContext> {
-			return getRuleContexts(EnumValueOptionContext.self)
+
+	public class EnumFieldContext: ParserRuleContext {
+			open
+			func Ident() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0)
+			}
+			open
+			func IntLit() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.IntLit.rawValue, 0)
+			}
+			open
+			func enumValueOption() -> [EnumValueOptionContext] {
+				return getRuleContexts(EnumValueOptionContext.self)
+			}
+			open
+			func enumValueOption(_ i: Int) -> EnumValueOptionContext? {
+				return getRuleContext(EnumValueOptionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_enumField
 		}
-		open func enumValueOption(_ i: Int) -> EnumValueOptionContext? {
-			return getRuleContext(EnumValueOptionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_enumField }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterEnumField(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterEnumField(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitEnumField(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitEnumField(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitEnumField(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitEnumField(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitEnumField(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitEnumField(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumField() throws -> EnumFieldContext {
+	 open func enumField() throws -> EnumFieldContext {
 		var _localctx: EnumFieldContext = EnumFieldContext(_ctx, getState())
 		try enterRule(_localctx, 22, Protobuf3Parser.RULE_enumField)
 		var _la: Int = 0
@@ -1197,40 +1303,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumValueOptionContext:ParserRuleContext {
-		open func optionName() -> OptionNameContext? {
-			return getRuleContext(OptionNameContext.self,0)
+
+	public class EnumValueOptionContext: ParserRuleContext {
+			open
+			func optionName() -> OptionNameContext? {
+				return getRuleContext(OptionNameContext.self, 0)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_enumValueOption
 		}
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_enumValueOption }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterEnumValueOption(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterEnumValueOption(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitEnumValueOption(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitEnumValueOption(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitEnumValueOption(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitEnumValueOption(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitEnumValueOption(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitEnumValueOption(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumValueOption() throws -> EnumValueOptionContext {
+	 open func enumValueOption() throws -> EnumValueOptionContext {
 		var _localctx: EnumValueOptionContext = EnumValueOptionContext(_ctx, getState())
 		try enterRule(_localctx, 24, Protobuf3Parser.RULE_enumValueOption)
 		defer {
@@ -1254,55 +1367,67 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class ServiceContext:ParserRuleContext {
-		open func serviceName() -> ServiceNameContext? {
-			return getRuleContext(ServiceNameContext.self,0)
+
+	public class ServiceContext: ParserRuleContext {
+			open
+			func serviceName() -> ServiceNameContext? {
+				return getRuleContext(ServiceNameContext.self, 0)
+			}
+			open
+			func option() -> [OptionContext] {
+				return getRuleContexts(OptionContext.self)
+			}
+			open
+			func option(_ i: Int) -> OptionContext? {
+				return getRuleContext(OptionContext.self, i)
+			}
+			open
+			func rpc() -> [RpcContext] {
+				return getRuleContexts(RpcContext.self)
+			}
+			open
+			func rpc(_ i: Int) -> RpcContext? {
+				return getRuleContext(RpcContext.self, i)
+			}
+			open
+			func emptyStatement() -> [EmptyStatementContext] {
+				return getRuleContexts(EmptyStatementContext.self)
+			}
+			open
+			func emptyStatement(_ i: Int) -> EmptyStatementContext? {
+				return getRuleContext(EmptyStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_service
 		}
-		open func option() -> Array<OptionContext> {
-			return getRuleContexts(OptionContext.self)
-		}
-		open func option(_ i: Int) -> OptionContext? {
-			return getRuleContext(OptionContext.self,i)
-		}
-		open func rpc() -> Array<RpcContext> {
-			return getRuleContexts(RpcContext.self)
-		}
-		open func rpc(_ i: Int) -> RpcContext? {
-			return getRuleContext(RpcContext.self,i)
-		}
-		open func emptyStatement() -> Array<EmptyStatementContext> {
-			return getRuleContexts(EmptyStatementContext.self)
-		}
-		open func emptyStatement(_ i: Int) -> EmptyStatementContext? {
-			return getRuleContext(EmptyStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_service }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterService(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterService(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitService(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitService(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitService(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitService(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitService(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitService(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func service() throws -> ServiceContext {
+	 open func service() throws -> ServiceContext {
 		var _localctx: ServiceContext = ServiceContext(_ctx, getState())
 		try enterRule(_localctx, 26, Protobuf3Parser.RULE_service)
 		var _la: Int = 0
@@ -1349,7 +1474,7 @@ open class Protobuf3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(206)
@@ -1368,55 +1493,67 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class RpcContext:ParserRuleContext {
-		open func rpcName() -> RpcNameContext? {
-			return getRuleContext(RpcNameContext.self,0)
+
+	public class RpcContext: ParserRuleContext {
+			open
+			func rpcName() -> RpcNameContext? {
+				return getRuleContext(RpcNameContext.self, 0)
+			}
+			open
+			func messageType() -> [MessageTypeContext] {
+				return getRuleContexts(MessageTypeContext.self)
+			}
+			open
+			func messageType(_ i: Int) -> MessageTypeContext? {
+				return getRuleContext(MessageTypeContext.self, i)
+			}
+			open
+			func option() -> [OptionContext] {
+				return getRuleContexts(OptionContext.self)
+			}
+			open
+			func option(_ i: Int) -> OptionContext? {
+				return getRuleContext(OptionContext.self, i)
+			}
+			open
+			func emptyStatement() -> [EmptyStatementContext] {
+				return getRuleContexts(EmptyStatementContext.self)
+			}
+			open
+			func emptyStatement(_ i: Int) -> EmptyStatementContext? {
+				return getRuleContext(EmptyStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_rpc
 		}
-		open func messageType() -> Array<MessageTypeContext> {
-			return getRuleContexts(MessageTypeContext.self)
-		}
-		open func messageType(_ i: Int) -> MessageTypeContext? {
-			return getRuleContext(MessageTypeContext.self,i)
-		}
-		open func option() -> Array<OptionContext> {
-			return getRuleContexts(OptionContext.self)
-		}
-		open func option(_ i: Int) -> OptionContext? {
-			return getRuleContext(OptionContext.self,i)
-		}
-		open func emptyStatement() -> Array<EmptyStatementContext> {
-			return getRuleContexts(EmptyStatementContext.self)
-		}
-		open func emptyStatement(_ i: Int) -> EmptyStatementContext? {
-			return getRuleContext(EmptyStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_rpc }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterRpc(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterRpc(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitRpc(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitRpc(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitRpc(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitRpc(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitRpc(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitRpc(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rpc() throws -> RpcContext {
+	 open func rpc() throws -> RpcContext {
 		var _localctx: RpcContext = RpcContext(_ctx, getState())
 		try enterRule(_localctx, 28, Protobuf3Parser.RULE_rpc)
 		var _la: Int = 0
@@ -1498,7 +1635,7 @@ open class Protobuf3Parser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 
 		 			setState(231)
@@ -1517,7 +1654,7 @@ open class Protobuf3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1529,40 +1666,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class ReservedContext:ParserRuleContext {
-		open func ranges() -> RangesContext? {
-			return getRuleContext(RangesContext.self,0)
+
+	public class ReservedContext: ParserRuleContext {
+			open
+			func ranges() -> RangesContext? {
+				return getRuleContext(RangesContext.self, 0)
+			}
+			open
+			func fieldNames() -> FieldNamesContext? {
+				return getRuleContext(FieldNamesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_reserved
 		}
-		open func fieldNames() -> FieldNamesContext? {
-			return getRuleContext(FieldNamesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_reserved }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterReserved(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterReserved(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitReserved(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitReserved(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitReserved(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitReserved(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitReserved(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitReserved(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reserved() throws -> ReservedContext {
+	 open func reserved() throws -> ReservedContext {
 		var _localctx: ReservedContext = ReservedContext(_ctx, getState())
 		try enterRule(_localctx, 30, Protobuf3Parser.RULE_reserved)
 		defer {
@@ -1587,7 +1731,7 @@ open class Protobuf3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(241)
 		 	try match(Protobuf3Parser.Tokens.SEMI.rawValue)
@@ -1601,40 +1745,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class RangesContext:ParserRuleContext {
-		open func range() -> Array<RangeContext> {
-			return getRuleContexts(RangeContext.self)
+
+	public class RangesContext: ParserRuleContext {
+			open
+			func range() -> [RangeContext] {
+				return getRuleContexts(RangeContext.self)
+			}
+			open
+			func range(_ i: Int) -> RangeContext? {
+				return getRuleContext(RangeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_ranges
 		}
-		open func range(_ i: Int) -> RangeContext? {
-			return getRuleContext(RangeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_ranges }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterRanges(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterRanges(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitRanges(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitRanges(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitRanges(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitRanges(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitRanges(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitRanges(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ranges() throws -> RangesContext {
+	 open func ranges() throws -> RangesContext {
 		var _localctx: RangesContext = RangesContext(_ctx, getState())
 		try enterRule(_localctx, 32, Protobuf3Parser.RULE_ranges)
 		var _la: Int = 0
@@ -1673,38 +1824,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class RangeContext:ParserRuleContext {
-		open func IntLit() -> Array<TerminalNode> { return getTokens(Protobuf3Parser.Tokens.IntLit.rawValue) }
-		open func IntLit(_ i:Int) -> TerminalNode?{
-			return getToken(Protobuf3Parser.Tokens.IntLit.rawValue, i)
+
+	public class RangeContext: ParserRuleContext {
+			open
+			func IntLit() -> [TerminalNode] {
+				return getTokens(Protobuf3Parser.Tokens.IntLit.rawValue)
+			}
+			open
+			func IntLit(_ i:Int) -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.IntLit.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_range
 		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_range }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterRange(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterRange(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitRange(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitRange(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitRange(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitRange(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitRange(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitRange(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func range() throws -> RangeContext {
+	 open func range() throws -> RangeContext {
 		var _localctx: RangeContext = RangeContext(_ctx, getState())
 		try enterRule(_localctx, 34, Protobuf3Parser.RULE_range)
 		defer {
@@ -1741,38 +1901,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class FieldNamesContext:ParserRuleContext {
-		open func StrLit() -> Array<TerminalNode> { return getTokens(Protobuf3Parser.Tokens.StrLit.rawValue) }
-		open func StrLit(_ i:Int) -> TerminalNode?{
-			return getToken(Protobuf3Parser.Tokens.StrLit.rawValue, i)
+
+	public class FieldNamesContext: ParserRuleContext {
+			open
+			func StrLit() -> [TerminalNode] {
+				return getTokens(Protobuf3Parser.Tokens.StrLit.rawValue)
+			}
+			open
+			func StrLit(_ i:Int) -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.StrLit.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_fieldNames
 		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_fieldNames }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterFieldNames(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterFieldNames(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitFieldNames(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitFieldNames(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitFieldNames(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitFieldNames(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitFieldNames(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitFieldNames(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldNames() throws -> FieldNamesContext {
+	 open func fieldNames() throws -> FieldNamesContext {
 		var _localctx: FieldNamesContext = FieldNamesContext(_ctx, getState())
 		try enterRule(_localctx, 36, Protobuf3Parser.RULE_fieldNames)
 		var _la: Int = 0
@@ -1811,37 +1980,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func messageOrEnumType() -> MessageOrEnumTypeContext? {
-			return getRuleContext(MessageOrEnumTypeContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func messageOrEnumType() -> MessageOrEnumTypeContext? {
+				return getRuleContext(MessageOrEnumTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_type
 		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitType(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 38, Protobuf3Parser.RULE_type)
 		var _la: Int = 0
@@ -1894,7 +2069,7 @@ open class Protobuf3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1905,35 +2080,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class FieldNumberContext:ParserRuleContext {
-		open func IntLit() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.IntLit.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_fieldNumber }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterFieldNumber(self)
+
+	public class FieldNumberContext: ParserRuleContext {
+			open
+			func IntLit() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.IntLit.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_fieldNumber
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterFieldNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitFieldNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitFieldNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitFieldNumber(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitFieldNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitFieldNumber(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitFieldNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldNumber() throws -> FieldNumberContext {
+	 open func fieldNumber() throws -> FieldNumberContext {
 		var _localctx: FieldNumberContext = FieldNumberContext(_ctx, getState())
 		try enterRule(_localctx, 40, Protobuf3Parser.RULE_fieldNumber)
 		defer {
@@ -1953,46 +2136,55 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class FieldContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class FieldContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func fieldName() -> FieldNameContext? {
+				return getRuleContext(FieldNameContext.self, 0)
+			}
+			open
+			func fieldNumber() -> FieldNumberContext? {
+				return getRuleContext(FieldNumberContext.self, 0)
+			}
+			open
+			func fieldOptions() -> FieldOptionsContext? {
+				return getRuleContext(FieldOptionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_field
 		}
-		open func fieldName() -> FieldNameContext? {
-			return getRuleContext(FieldNameContext.self,0)
-		}
-		open func fieldNumber() -> FieldNumberContext? {
-			return getRuleContext(FieldNumberContext.self,0)
-		}
-		open func fieldOptions() -> FieldOptionsContext? {
-			return getRuleContext(FieldOptionsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_field }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterField(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterField(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitField(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitField(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitField(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitField(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitField(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitField(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func field() throws -> FieldContext {
+	 open func field() throws -> FieldContext {
 		var _localctx: FieldContext = FieldContext(_ctx, getState())
 		try enterRule(_localctx, 42, Protobuf3Parser.RULE_field)
 		var _la: Int = 0
@@ -2051,40 +2243,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class FieldOptionsContext:ParserRuleContext {
-		open func fieldOption() -> Array<FieldOptionContext> {
-			return getRuleContexts(FieldOptionContext.self)
+
+	public class FieldOptionsContext: ParserRuleContext {
+			open
+			func fieldOption() -> [FieldOptionContext] {
+				return getRuleContexts(FieldOptionContext.self)
+			}
+			open
+			func fieldOption(_ i: Int) -> FieldOptionContext? {
+				return getRuleContext(FieldOptionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_fieldOptions
 		}
-		open func fieldOption(_ i: Int) -> FieldOptionContext? {
-			return getRuleContext(FieldOptionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_fieldOptions }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterFieldOptions(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterFieldOptions(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitFieldOptions(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitFieldOptions(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitFieldOptions(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitFieldOptions(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitFieldOptions(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitFieldOptions(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldOptions() throws -> FieldOptionsContext {
+	 open func fieldOptions() throws -> FieldOptionsContext {
 		var _localctx: FieldOptionsContext = FieldOptionsContext(_ctx, getState())
 		try enterRule(_localctx, 44, Protobuf3Parser.RULE_fieldOptions)
 		var _la: Int = 0
@@ -2123,40 +2322,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class FieldOptionContext:ParserRuleContext {
-		open func optionName() -> OptionNameContext? {
-			return getRuleContext(OptionNameContext.self,0)
+
+	public class FieldOptionContext: ParserRuleContext {
+			open
+			func optionName() -> OptionNameContext? {
+				return getRuleContext(OptionNameContext.self, 0)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_fieldOption
 		}
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_fieldOption }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterFieldOption(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterFieldOption(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitFieldOption(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitFieldOption(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitFieldOption(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitFieldOption(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitFieldOption(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitFieldOption(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldOption() throws -> FieldOptionContext {
+	 open func fieldOption() throws -> FieldOptionContext {
 		var _localctx: FieldOptionContext = FieldOptionContext(_ctx, getState())
 		try enterRule(_localctx, 46, Protobuf3Parser.RULE_fieldOption)
 		defer {
@@ -2180,49 +2386,59 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class OneofContext:ParserRuleContext {
-		open func oneofName() -> OneofNameContext? {
-			return getRuleContext(OneofNameContext.self,0)
+
+	public class OneofContext: ParserRuleContext {
+			open
+			func oneofName() -> OneofNameContext? {
+				return getRuleContext(OneofNameContext.self, 0)
+			}
+			open
+			func oneofField() -> [OneofFieldContext] {
+				return getRuleContexts(OneofFieldContext.self)
+			}
+			open
+			func oneofField(_ i: Int) -> OneofFieldContext? {
+				return getRuleContext(OneofFieldContext.self, i)
+			}
+			open
+			func emptyStatement() -> [EmptyStatementContext] {
+				return getRuleContexts(EmptyStatementContext.self)
+			}
+			open
+			func emptyStatement(_ i: Int) -> EmptyStatementContext? {
+				return getRuleContext(EmptyStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_oneof
 		}
-		open func oneofField() -> Array<OneofFieldContext> {
-			return getRuleContexts(OneofFieldContext.self)
-		}
-		open func oneofField(_ i: Int) -> OneofFieldContext? {
-			return getRuleContext(OneofFieldContext.self,i)
-		}
-		open func emptyStatement() -> Array<EmptyStatementContext> {
-			return getRuleContexts(EmptyStatementContext.self)
-		}
-		open func emptyStatement(_ i: Int) -> EmptyStatementContext? {
-			return getRuleContext(EmptyStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_oneof }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterOneof(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterOneof(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitOneof(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitOneof(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitOneof(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitOneof(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitOneof(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitOneof(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oneof() throws -> OneofContext {
+	 open func oneof() throws -> OneofContext {
 		var _localctx: OneofContext = OneofContext(_ctx, getState())
 		try enterRule(_localctx, 48, Protobuf3Parser.RULE_oneof)
 		var _la: Int = 0
@@ -2279,7 +2495,7 @@ open class Protobuf3Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(307)
@@ -2298,46 +2514,55 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class OneofFieldContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class OneofFieldContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func fieldName() -> FieldNameContext? {
+				return getRuleContext(FieldNameContext.self, 0)
+			}
+			open
+			func fieldNumber() -> FieldNumberContext? {
+				return getRuleContext(FieldNumberContext.self, 0)
+			}
+			open
+			func fieldOptions() -> FieldOptionsContext? {
+				return getRuleContext(FieldOptionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_oneofField
 		}
-		open func fieldName() -> FieldNameContext? {
-			return getRuleContext(FieldNameContext.self,0)
-		}
-		open func fieldNumber() -> FieldNumberContext? {
-			return getRuleContext(FieldNumberContext.self,0)
-		}
-		open func fieldOptions() -> FieldOptionsContext? {
-			return getRuleContext(FieldOptionsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_oneofField }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterOneofField(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterOneofField(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitOneofField(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitOneofField(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitOneofField(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitOneofField(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitOneofField(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitOneofField(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oneofField() throws -> OneofFieldContext {
+	 open func oneofField() throws -> OneofFieldContext {
 		var _localctx: OneofFieldContext = OneofFieldContext(_ctx, getState())
 		try enterRule(_localctx, 50, Protobuf3Parser.RULE_oneofField)
 		var _la: Int = 0
@@ -2383,49 +2608,59 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class MapFieldContext:ParserRuleContext {
-		open func keyType() -> KeyTypeContext? {
-			return getRuleContext(KeyTypeContext.self,0)
+
+	public class MapFieldContext: ParserRuleContext {
+			open
+			func keyType() -> KeyTypeContext? {
+				return getRuleContext(KeyTypeContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func mapName() -> MapNameContext? {
+				return getRuleContext(MapNameContext.self, 0)
+			}
+			open
+			func fieldNumber() -> FieldNumberContext? {
+				return getRuleContext(FieldNumberContext.self, 0)
+			}
+			open
+			func fieldOptions() -> FieldOptionsContext? {
+				return getRuleContext(FieldOptionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_mapField
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func mapName() -> MapNameContext? {
-			return getRuleContext(MapNameContext.self,0)
-		}
-		open func fieldNumber() -> FieldNumberContext? {
-			return getRuleContext(FieldNumberContext.self,0)
-		}
-		open func fieldOptions() -> FieldOptionsContext? {
-			return getRuleContext(FieldOptionsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_mapField }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterMapField(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterMapField(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitMapField(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitMapField(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitMapField(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitMapField(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitMapField(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitMapField(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mapField() throws -> MapFieldContext {
+	 open func mapField() throws -> MapFieldContext {
 		var _localctx: MapFieldContext = MapFieldContext(_ctx, getState())
 		try enterRule(_localctx, 52, Protobuf3Parser.RULE_mapField)
 		var _la: Int = 0
@@ -2481,34 +2716,39 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class KeyTypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_keyType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterKeyType(self)
+
+	public class KeyTypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_keyType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterKeyType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitKeyType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitKeyType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitKeyType(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitKeyType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitKeyType(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitKeyType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keyType() throws -> KeyTypeContext {
+	 open func keyType() throws -> KeyTypeContext {
 		var _localctx: KeyTypeContext = KeyTypeContext(_ctx, getState())
 		try enterRule(_localctx, 54, Protobuf3Parser.RULE_keyType)
 		var _la: Int = 0
@@ -2543,38 +2783,47 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class FullIdentContext:ParserRuleContext {
-		open func Ident() -> Array<TerminalNode> { return getTokens(Protobuf3Parser.Tokens.Ident.rawValue) }
-		open func Ident(_ i:Int) -> TerminalNode?{
-			return getToken(Protobuf3Parser.Tokens.Ident.rawValue, i)
+
+	public class FullIdentContext: ParserRuleContext {
+			open
+			func Ident() -> [TerminalNode] {
+				return getTokens(Protobuf3Parser.Tokens.Ident.rawValue)
+			}
+			open
+			func Ident(_ i:Int) -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_fullIdent
 		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_fullIdent }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterFullIdent(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterFullIdent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitFullIdent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitFullIdent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitFullIdent(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitFullIdent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitFullIdent(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitFullIdent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fullIdent() throws -> FullIdentContext {
+	 open func fullIdent() throws -> FullIdentContext {
 		var _localctx: FullIdentContext = FullIdentContext(_ctx, getState())
 		try enterRule(_localctx, 56, Protobuf3Parser.RULE_fullIdent)
 		var _la: Int = 0
@@ -2613,35 +2862,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class MessageNameContext:ParserRuleContext {
-		open func Ident() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_messageName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterMessageName(self)
+
+	public class MessageNameContext: ParserRuleContext {
+			open
+			func Ident() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_messageName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterMessageName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitMessageName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitMessageName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitMessageName(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitMessageName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitMessageName(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitMessageName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func messageName() throws -> MessageNameContext {
+	 open func messageName() throws -> MessageNameContext {
 		var _localctx: MessageNameContext = MessageNameContext(_ctx, getState())
 		try enterRule(_localctx, 58, Protobuf3Parser.RULE_messageName)
 		defer {
@@ -2661,35 +2918,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumNameContext:ParserRuleContext {
-		open func Ident() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_enumName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterEnumName(self)
+
+	public class EnumNameContext: ParserRuleContext {
+			open
+			func Ident() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_enumName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterEnumName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitEnumName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitEnumName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitEnumName(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitEnumName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitEnumName(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitEnumName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumName() throws -> EnumNameContext {
+	 open func enumName() throws -> EnumNameContext {
 		var _localctx: EnumNameContext = EnumNameContext(_ctx, getState())
 		try enterRule(_localctx, 60, Protobuf3Parser.RULE_enumName)
 		defer {
@@ -2709,35 +2974,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class MessageOrEnumNameContext:ParserRuleContext {
-		open func Ident() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_messageOrEnumName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterMessageOrEnumName(self)
+
+	public class MessageOrEnumNameContext: ParserRuleContext {
+			open
+			func Ident() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_messageOrEnumName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterMessageOrEnumName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitMessageOrEnumName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitMessageOrEnumName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitMessageOrEnumName(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitMessageOrEnumName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitMessageOrEnumName(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitMessageOrEnumName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func messageOrEnumName() throws -> MessageOrEnumNameContext {
+	 open func messageOrEnumName() throws -> MessageOrEnumNameContext {
 		var _localctx: MessageOrEnumNameContext = MessageOrEnumNameContext(_ctx, getState())
 		try enterRule(_localctx, 62, Protobuf3Parser.RULE_messageOrEnumName)
 		defer {
@@ -2757,35 +3030,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class FieldNameContext:ParserRuleContext {
-		open func Ident() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_fieldName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterFieldName(self)
+
+	public class FieldNameContext: ParserRuleContext {
+			open
+			func Ident() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_fieldName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterFieldName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitFieldName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitFieldName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitFieldName(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitFieldName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitFieldName(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitFieldName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldName() throws -> FieldNameContext {
+	 open func fieldName() throws -> FieldNameContext {
 		var _localctx: FieldNameContext = FieldNameContext(_ctx, getState())
 		try enterRule(_localctx, 64, Protobuf3Parser.RULE_fieldName)
 		defer {
@@ -2805,35 +3086,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class OneofNameContext:ParserRuleContext {
-		open func Ident() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_oneofName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterOneofName(self)
+
+	public class OneofNameContext: ParserRuleContext {
+			open
+			func Ident() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_oneofName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterOneofName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitOneofName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitOneofName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitOneofName(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitOneofName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitOneofName(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitOneofName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oneofName() throws -> OneofNameContext {
+	 open func oneofName() throws -> OneofNameContext {
 		var _localctx: OneofNameContext = OneofNameContext(_ctx, getState())
 		try enterRule(_localctx, 66, Protobuf3Parser.RULE_oneofName)
 		defer {
@@ -2853,35 +3142,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class MapNameContext:ParserRuleContext {
-		open func Ident() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_mapName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterMapName(self)
+
+	public class MapNameContext: ParserRuleContext {
+			open
+			func Ident() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_mapName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterMapName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitMapName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitMapName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitMapName(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitMapName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitMapName(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitMapName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mapName() throws -> MapNameContext {
+	 open func mapName() throws -> MapNameContext {
 		var _localctx: MapNameContext = MapNameContext(_ctx, getState())
 		try enterRule(_localctx, 68, Protobuf3Parser.RULE_mapName)
 		defer {
@@ -2901,35 +3198,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class ServiceNameContext:ParserRuleContext {
-		open func Ident() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_serviceName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterServiceName(self)
+
+	public class ServiceNameContext: ParserRuleContext {
+			open
+			func Ident() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_serviceName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterServiceName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitServiceName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitServiceName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitServiceName(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitServiceName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitServiceName(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitServiceName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func serviceName() throws -> ServiceNameContext {
+	 open func serviceName() throws -> ServiceNameContext {
 		var _localctx: ServiceNameContext = ServiceNameContext(_ctx, getState())
 		try enterRule(_localctx, 70, Protobuf3Parser.RULE_serviceName)
 		defer {
@@ -2949,35 +3254,43 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class RpcNameContext:ParserRuleContext {
-		open func Ident() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_rpcName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterRpcName(self)
+
+	public class RpcNameContext: ParserRuleContext {
+			open
+			func Ident() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_rpcName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterRpcName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitRpcName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitRpcName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitRpcName(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitRpcName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitRpcName(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitRpcName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rpcName() throws -> RpcNameContext {
+	 open func rpcName() throws -> RpcNameContext {
 		var _localctx: RpcNameContext = RpcNameContext(_ctx, getState())
 		try enterRule(_localctx, 72, Protobuf3Parser.RULE_rpcName)
 		defer {
@@ -2997,41 +3310,51 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class MessageTypeContext:ParserRuleContext {
-		open func messageName() -> MessageNameContext? {
-			return getRuleContext(MessageNameContext.self,0)
+
+	public class MessageTypeContext: ParserRuleContext {
+			open
+			func messageName() -> MessageNameContext? {
+				return getRuleContext(MessageNameContext.self, 0)
+			}
+			open
+			func Ident() -> [TerminalNode] {
+				return getTokens(Protobuf3Parser.Tokens.Ident.rawValue)
+			}
+			open
+			func Ident(_ i:Int) -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_messageType
 		}
-		open func Ident() -> Array<TerminalNode> { return getTokens(Protobuf3Parser.Tokens.Ident.rawValue) }
-		open func Ident(_ i:Int) -> TerminalNode?{
-			return getToken(Protobuf3Parser.Tokens.Ident.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_messageType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterMessageType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterMessageType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitMessageType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitMessageType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitMessageType(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitMessageType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitMessageType(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitMessageType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func messageType() throws -> MessageTypeContext {
+	 open func messageType() throws -> MessageTypeContext {
 		var _localctx: MessageTypeContext = MessageTypeContext(_ctx, getState())
 		try enterRule(_localctx, 74, Protobuf3Parser.RULE_messageType)
 		var _la: Int = 0
@@ -3082,41 +3405,51 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class MessageOrEnumTypeContext:ParserRuleContext {
-		open func messageOrEnumName() -> MessageOrEnumNameContext? {
-			return getRuleContext(MessageOrEnumNameContext.self,0)
+
+	public class MessageOrEnumTypeContext: ParserRuleContext {
+			open
+			func messageOrEnumName() -> MessageOrEnumNameContext? {
+				return getRuleContext(MessageOrEnumNameContext.self, 0)
+			}
+			open
+			func Ident() -> [TerminalNode] {
+				return getTokens(Protobuf3Parser.Tokens.Ident.rawValue)
+			}
+			open
+			func Ident(_ i:Int) -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.Ident.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_messageOrEnumType
 		}
-		open func Ident() -> Array<TerminalNode> { return getTokens(Protobuf3Parser.Tokens.Ident.rawValue) }
-		open func Ident(_ i:Int) -> TerminalNode?{
-			return getToken(Protobuf3Parser.Tokens.Ident.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_messageOrEnumType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterMessageOrEnumType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterMessageOrEnumType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitMessageOrEnumType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitMessageOrEnumType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitMessageOrEnumType(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitMessageOrEnumType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitMessageOrEnumType(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitMessageOrEnumType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func messageOrEnumType() throws -> MessageOrEnumTypeContext {
+	 open func messageOrEnumType() throws -> MessageOrEnumTypeContext {
 		var _localctx: MessageOrEnumTypeContext = MessageOrEnumTypeContext(_ctx, getState())
 		try enterRule(_localctx, 76, Protobuf3Parser.RULE_messageOrEnumType)
 		var _la: Int = 0
@@ -3167,34 +3500,39 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class EmptyStatementContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_emptyStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterEmptyStatement(self)
+
+	public class EmptyStatementContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_emptyStatement
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterEmptyStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitEmptyStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitEmptyStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitEmptyStatement(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitEmptyStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitEmptyStatement(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitEmptyStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func emptyStatement() throws -> EmptyStatementContext {
+	 open func emptyStatement() throws -> EmptyStatementContext {
 		var _localctx: EmptyStatementContext = EmptyStatementContext(_ctx, getState())
 		try enterRule(_localctx, 78, Protobuf3Parser.RULE_emptyStatement)
 		defer {
@@ -3214,41 +3552,59 @@ open class Protobuf3Parser: Parser {
 
 		return _localctx
 	}
-	open class ConstantContext:ParserRuleContext {
-		open func fullIdent() -> FullIdentContext? {
-			return getRuleContext(FullIdentContext.self,0)
+
+	public class ConstantContext: ParserRuleContext {
+			open
+			func fullIdent() -> FullIdentContext? {
+				return getRuleContext(FullIdentContext.self, 0)
+			}
+			open
+			func IntLit() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.IntLit.rawValue, 0)
+			}
+			open
+			func FloatLit() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.FloatLit.rawValue, 0)
+			}
+			open
+			func StrLit() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.StrLit.rawValue, 0)
+			}
+			open
+			func BoolLit() -> TerminalNode? {
+				return getToken(Protobuf3Parser.Tokens.BoolLit.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Protobuf3Parser.RULE_constant
 		}
-		open func IntLit() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.IntLit.rawValue, 0) }
-		open func FloatLit() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.FloatLit.rawValue, 0) }
-		open func StrLit() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.StrLit.rawValue, 0) }
-		open func BoolLit() -> TerminalNode? { return getToken(Protobuf3Parser.Tokens.BoolLit.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Protobuf3Parser.RULE_constant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).enterConstant(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.enterConstant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Protobuf3Listener {
-			 	(listener as! Protobuf3Listener).exitConstant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Protobuf3Listener {
+				listener.exitConstant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Protobuf3Visitor {
-			     return (visitor as! Protobuf3Visitor<T>).visitConstant(self)
-			}else if visitor is Protobuf3BaseVisitor {
-		    	 return (visitor as! Protobuf3BaseVisitor<T>).visitConstant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Protobuf3Visitor {
+			    return visitor.visitConstant(self)
+			}
+			else if let visitor = visitor as? Protobuf3BaseVisitor {
+			    return visitor.visitConstant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant() throws -> ConstantContext {
+	 open func constant() throws -> ConstantContext {
 		var _localctx: ConstantContext = ConstantContext(_ctx, getState())
 		try enterRule(_localctx, 80, Protobuf3Parser.RULE_constant)
 		var _la: Int = 0
@@ -3354,6 +3710,10 @@ open class Protobuf3Parser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = Protobuf3ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = Protobuf3ParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/graphql/GraphQL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/graphql/GraphQL.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class GraphQLParser: Parser {
@@ -11,24 +11,31 @@ open class GraphQLParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
                  NAME = 18, STRING = 19, BOOLEAN = 20, NUMBER = 21, WS = 22
 	}
-	public static let RULE_document = 0, RULE_definition = 1, RULE_operationDefinition = 2, 
-                   RULE_selectionSet = 3, RULE_operationType = 4, RULE_selection = 5, 
-                   RULE_field = 6, RULE_fieldName = 7, RULE_alias = 8, RULE_arguments = 9, 
-                   RULE_argument = 10, RULE_fragmentSpread = 11, RULE_inlineFragment = 12, 
-                   RULE_fragmentDefinition = 13, RULE_fragmentName = 14, 
-                   RULE_directives = 15, RULE_directive = 16, RULE_typeCondition = 17, 
-                   RULE_variableDefinitions = 18, RULE_variableDefinition = 19, 
-                   RULE_variable = 20, RULE_defaultValue = 21, RULE_valueOrVariable = 22, 
-                   RULE_value = 23, RULE_type = 24, RULE_typeName = 25, 
-                   RULE_listType = 26, RULE_nonNullType = 27, RULE_array = 28
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_document = 0, RULE_definition = 1, RULE_operationDefinition = 2, 
+            RULE_selectionSet = 3, RULE_operationType = 4, RULE_selection = 5, 
+            RULE_field = 6, RULE_fieldName = 7, RULE_alias = 8, RULE_arguments = 9, 
+            RULE_argument = 10, RULE_fragmentSpread = 11, RULE_inlineFragment = 12, 
+            RULE_fragmentDefinition = 13, RULE_fragmentName = 14, RULE_directives = 15, 
+            RULE_directive = 16, RULE_typeCondition = 17, RULE_variableDefinitions = 18, 
+            RULE_variableDefinition = 19, RULE_variable = 20, RULE_defaultValue = 21, 
+            RULE_valueOrVariable = 22, RULE_value = 23, RULE_type = 24, 
+            RULE_typeName = 25, RULE_listType = 26, RULE_nonNullType = 27, 
+            RULE_array = 28
+
+	public
+	static let ruleNames: [String] = [
 		"document", "definition", "operationDefinition", "selectionSet", "operationType", 
 		"selection", "field", "fieldName", "alias", "arguments", "argument", "fragmentSpread", 
 		"inlineFragment", "fragmentDefinition", "fragmentName", "directives", 
@@ -45,88 +52,73 @@ open class GraphQLParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
 		nil, nil, nil, nil, "NAME", "STRING", "BOOLEAN", "NUMBER", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "GraphQL.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return GraphQLParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "GraphQL.g4" }
+	override open
+	func getSerializedATN() -> String { return GraphQLParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return GraphQLParser.ruleNames }
+	override open
+	func getATN() -> ATN { return GraphQLParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return GraphQLParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return GraphQLParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return GraphQLParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,GraphQLParser._ATN,GraphQLParser._decisionToDFA, GraphQLParser._sharedContextCache)
 	}
-	open class DocumentContext:ParserRuleContext {
-		open func definition() -> Array<DefinitionContext> {
-			return getRuleContexts(DefinitionContext.self)
+
+	public class DocumentContext: ParserRuleContext {
+			open
+			func definition() -> [DefinitionContext] {
+				return getRuleContexts(DefinitionContext.self)
+			}
+			open
+			func definition(_ i: Int) -> DefinitionContext? {
+				return getRuleContext(DefinitionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_document
 		}
-		open func definition(_ i: Int) -> DefinitionContext? {
-			return getRuleContext(DefinitionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_document }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterDocument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterDocument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitDocument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitDocument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitDocument(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitDocument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitDocument(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitDocument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func document() throws -> DocumentContext {
+	 open func document() throws -> DocumentContext {
 		var _localctx: DocumentContext = DocumentContext(_ctx, getState())
 		try enterRule(_localctx, 0, GraphQLParser.RULE_document)
 		var _la: Int = 0
@@ -164,40 +156,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class DefinitionContext:ParserRuleContext {
-		open func operationDefinition() -> OperationDefinitionContext? {
-			return getRuleContext(OperationDefinitionContext.self,0)
+
+	public class DefinitionContext: ParserRuleContext {
+			open
+			func operationDefinition() -> OperationDefinitionContext? {
+				return getRuleContext(OperationDefinitionContext.self, 0)
+			}
+			open
+			func fragmentDefinition() -> FragmentDefinitionContext? {
+				return getRuleContext(FragmentDefinitionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_definition
 		}
-		open func fragmentDefinition() -> FragmentDefinitionContext? {
-			return getRuleContext(FragmentDefinitionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_definition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitDefinition(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitDefinition(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func definition() throws -> DefinitionContext {
+	 open func definition() throws -> DefinitionContext {
 		var _localctx: DefinitionContext = DefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 2, GraphQLParser.RULE_definition)
 		defer {
@@ -223,7 +222,7 @@ open class GraphQLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -234,47 +233,59 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class OperationDefinitionContext:ParserRuleContext {
-		open func selectionSet() -> SelectionSetContext? {
-			return getRuleContext(SelectionSetContext.self,0)
+
+	public class OperationDefinitionContext: ParserRuleContext {
+			open
+			func selectionSet() -> SelectionSetContext? {
+				return getRuleContext(SelectionSetContext.self, 0)
+			}
+			open
+			func operationType() -> OperationTypeContext? {
+				return getRuleContext(OperationTypeContext.self, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func variableDefinitions() -> VariableDefinitionsContext? {
+				return getRuleContext(VariableDefinitionsContext.self, 0)
+			}
+			open
+			func directives() -> DirectivesContext? {
+				return getRuleContext(DirectivesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_operationDefinition
 		}
-		open func operationType() -> OperationTypeContext? {
-			return getRuleContext(OperationTypeContext.self,0)
-		}
-		open func NAME() -> TerminalNode? { return getToken(GraphQLParser.Tokens.NAME.rawValue, 0) }
-		open func variableDefinitions() -> VariableDefinitionsContext? {
-			return getRuleContext(VariableDefinitionsContext.self,0)
-		}
-		open func directives() -> DirectivesContext? {
-			return getRuleContext(DirectivesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_operationDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterOperationDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterOperationDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitOperationDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitOperationDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitOperationDefinition(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitOperationDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitOperationDefinition(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitOperationDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operationDefinition() throws -> OperationDefinitionContext {
+	 open func operationDefinition() throws -> OperationDefinitionContext {
 		var _localctx: OperationDefinitionContext = OperationDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 4, GraphQLParser.RULE_operationDefinition)
 		var _la: Int = 0
@@ -329,7 +340,7 @@ open class GraphQLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -340,40 +351,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class SelectionSetContext:ParserRuleContext {
-		open func selection() -> Array<SelectionContext> {
-			return getRuleContexts(SelectionContext.self)
+
+	public class SelectionSetContext: ParserRuleContext {
+			open
+			func selection() -> [SelectionContext] {
+				return getRuleContexts(SelectionContext.self)
+			}
+			open
+			func selection(_ i: Int) -> SelectionContext? {
+				return getRuleContext(SelectionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_selectionSet
 		}
-		open func selection(_ i: Int) -> SelectionContext? {
-			return getRuleContext(SelectionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_selectionSet }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterSelectionSet(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterSelectionSet(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitSelectionSet(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitSelectionSet(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitSelectionSet(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitSelectionSet(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitSelectionSet(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitSelectionSet(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selectionSet() throws -> SelectionSetContext {
+	 open func selectionSet() throws -> SelectionSetContext {
 		var _localctx: SelectionSetContext = SelectionSetContext(_ctx, getState())
 		try enterRule(_localctx, 6, GraphQLParser.RULE_selectionSet)
 		var _la: Int = 0
@@ -430,34 +448,39 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class OperationTypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_operationType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterOperationType(self)
+
+	public class OperationTypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_operationType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterOperationType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitOperationType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitOperationType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitOperationType(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitOperationType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitOperationType(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitOperationType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operationType() throws -> OperationTypeContext {
+	 open func operationType() throws -> OperationTypeContext {
 		var _localctx: OperationTypeContext = OperationTypeContext(_ctx, getState())
 		try enterRule(_localctx, 8, GraphQLParser.RULE_operationType)
 		var _la: Int = 0
@@ -489,43 +512,51 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class SelectionContext:ParserRuleContext {
-		open func field() -> FieldContext? {
-			return getRuleContext(FieldContext.self,0)
+
+	public class SelectionContext: ParserRuleContext {
+			open
+			func field() -> FieldContext? {
+				return getRuleContext(FieldContext.self, 0)
+			}
+			open
+			func fragmentSpread() -> FragmentSpreadContext? {
+				return getRuleContext(FragmentSpreadContext.self, 0)
+			}
+			open
+			func inlineFragment() -> InlineFragmentContext? {
+				return getRuleContext(InlineFragmentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_selection
 		}
-		open func fragmentSpread() -> FragmentSpreadContext? {
-			return getRuleContext(FragmentSpreadContext.self,0)
-		}
-		open func inlineFragment() -> InlineFragmentContext? {
-			return getRuleContext(InlineFragmentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_selection }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterSelection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterSelection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitSelection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitSelection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitSelection(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitSelection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitSelection(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitSelection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selection() throws -> SelectionContext {
+	 open func selection() throws -> SelectionContext {
 		var _localctx: SelectionContext = SelectionContext(_ctx, getState())
 		try enterRule(_localctx, 10, GraphQLParser.RULE_selection)
 		defer {
@@ -564,46 +595,55 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class FieldContext:ParserRuleContext {
-		open func fieldName() -> FieldNameContext? {
-			return getRuleContext(FieldNameContext.self,0)
+
+	public class FieldContext: ParserRuleContext {
+			open
+			func fieldName() -> FieldNameContext? {
+				return getRuleContext(FieldNameContext.self, 0)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+			open
+			func directives() -> DirectivesContext? {
+				return getRuleContext(DirectivesContext.self, 0)
+			}
+			open
+			func selectionSet() -> SelectionSetContext? {
+				return getRuleContext(SelectionSetContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_field
 		}
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		open func directives() -> DirectivesContext? {
-			return getRuleContext(DirectivesContext.self,0)
-		}
-		open func selectionSet() -> SelectionSetContext? {
-			return getRuleContext(SelectionSetContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_field }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterField(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterField(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitField(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitField(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitField(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitField(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitField(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitField(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func field() throws -> FieldContext {
+	 open func field() throws -> FieldContext {
 		var _localctx: FieldContext = FieldContext(_ctx, getState())
 		try enterRule(_localctx, 12, GraphQLParser.RULE_field)
 		var _la: Int = 0
@@ -663,38 +703,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class FieldNameContext:ParserRuleContext {
-		open func alias() -> AliasContext? {
-			return getRuleContext(AliasContext.self,0)
+
+	public class FieldNameContext: ParserRuleContext {
+			open
+			func alias() -> AliasContext? {
+				return getRuleContext(AliasContext.self, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_fieldName
 		}
-		open func NAME() -> TerminalNode? { return getToken(GraphQLParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_fieldName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterFieldName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterFieldName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitFieldName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitFieldName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitFieldName(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitFieldName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitFieldName(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitFieldName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldName() throws -> FieldNameContext {
+	 open func fieldName() throws -> FieldNameContext {
 		var _localctx: FieldNameContext = FieldNameContext(_ctx, getState())
 		try enterRule(_localctx, 14, GraphQLParser.RULE_fieldName)
 		defer {
@@ -727,38 +776,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class AliasContext:ParserRuleContext {
-		open func NAME() -> Array<TerminalNode> { return getTokens(GraphQLParser.Tokens.NAME.rawValue) }
-		open func NAME(_ i:Int) -> TerminalNode?{
-			return getToken(GraphQLParser.Tokens.NAME.rawValue, i)
+
+	public class AliasContext: ParserRuleContext {
+			open
+			func NAME() -> [TerminalNode] {
+				return getTokens(GraphQLParser.Tokens.NAME.rawValue)
+			}
+			open
+			func NAME(_ i:Int) -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.NAME.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_alias
 		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_alias }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterAlias(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterAlias(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitAlias(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitAlias(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitAlias(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitAlias(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitAlias(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitAlias(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func alias() throws -> AliasContext {
+	 open func alias() throws -> AliasContext {
 		var _localctx: AliasContext = AliasContext(_ctx, getState())
 		try enterRule(_localctx, 16, GraphQLParser.RULE_alias)
 		defer {
@@ -782,40 +840,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentsContext:ParserRuleContext {
-		open func argument() -> Array<ArgumentContext> {
-			return getRuleContexts(ArgumentContext.self)
+
+	public class ArgumentsContext: ParserRuleContext {
+			open
+			func argument() -> [ArgumentContext] {
+				return getRuleContexts(ArgumentContext.self)
+			}
+			open
+			func argument(_ i: Int) -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_arguments
 		}
-		open func argument(_ i: Int) -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_arguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterArguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterArguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitArguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitArguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitArguments(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitArguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitArguments(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitArguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arguments() throws -> ArgumentsContext {
+	 open func arguments() throws -> ArgumentsContext {
 		var _localctx: ArgumentsContext = ArgumentsContext(_ctx, getState())
 		try enterRule(_localctx, 18, GraphQLParser.RULE_arguments)
 		var _la: Int = 0
@@ -858,38 +923,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(GraphQLParser.Tokens.NAME.rawValue, 0) }
-		open func valueOrVariable() -> ValueOrVariableContext? {
-			return getRuleContext(ValueOrVariableContext.self,0)
+
+	public class ArgumentContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func valueOrVariable() -> ValueOrVariableContext? {
+				return getRuleContext(ValueOrVariableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_argument
 		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterArgument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterArgument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitArgument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitArgument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitArgument(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitArgument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitArgument(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitArgument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument() throws -> ArgumentContext {
+	 open func argument() throws -> ArgumentContext {
 		var _localctx: ArgumentContext = ArgumentContext(_ctx, getState())
 		try enterRule(_localctx, 20, GraphQLParser.RULE_argument)
 		defer {
@@ -913,40 +987,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class FragmentSpreadContext:ParserRuleContext {
-		open func fragmentName() -> FragmentNameContext? {
-			return getRuleContext(FragmentNameContext.self,0)
+
+	public class FragmentSpreadContext: ParserRuleContext {
+			open
+			func fragmentName() -> FragmentNameContext? {
+				return getRuleContext(FragmentNameContext.self, 0)
+			}
+			open
+			func directives() -> DirectivesContext? {
+				return getRuleContext(DirectivesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_fragmentSpread
 		}
-		open func directives() -> DirectivesContext? {
-			return getRuleContext(DirectivesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_fragmentSpread }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterFragmentSpread(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterFragmentSpread(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitFragmentSpread(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitFragmentSpread(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitFragmentSpread(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitFragmentSpread(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitFragmentSpread(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitFragmentSpread(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fragmentSpread() throws -> FragmentSpreadContext {
+	 open func fragmentSpread() throws -> FragmentSpreadContext {
 		var _localctx: FragmentSpreadContext = FragmentSpreadContext(_ctx, getState())
 		try enterRule(_localctx, 22, GraphQLParser.RULE_fragmentSpread)
 		var _la: Int = 0
@@ -982,43 +1063,51 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class InlineFragmentContext:ParserRuleContext {
-		open func typeCondition() -> TypeConditionContext? {
-			return getRuleContext(TypeConditionContext.self,0)
+
+	public class InlineFragmentContext: ParserRuleContext {
+			open
+			func typeCondition() -> TypeConditionContext? {
+				return getRuleContext(TypeConditionContext.self, 0)
+			}
+			open
+			func selectionSet() -> SelectionSetContext? {
+				return getRuleContext(SelectionSetContext.self, 0)
+			}
+			open
+			func directives() -> DirectivesContext? {
+				return getRuleContext(DirectivesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_inlineFragment
 		}
-		open func selectionSet() -> SelectionSetContext? {
-			return getRuleContext(SelectionSetContext.self,0)
-		}
-		open func directives() -> DirectivesContext? {
-			return getRuleContext(DirectivesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_inlineFragment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterInlineFragment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterInlineFragment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitInlineFragment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitInlineFragment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitInlineFragment(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitInlineFragment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitInlineFragment(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitInlineFragment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inlineFragment() throws -> InlineFragmentContext {
+	 open func inlineFragment() throws -> InlineFragmentContext {
 		var _localctx: InlineFragmentContext = InlineFragmentContext(_ctx, getState())
 		try enterRule(_localctx, 24, GraphQLParser.RULE_inlineFragment)
 		var _la: Int = 0
@@ -1058,46 +1147,55 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class FragmentDefinitionContext:ParserRuleContext {
-		open func fragmentName() -> FragmentNameContext? {
-			return getRuleContext(FragmentNameContext.self,0)
+
+	public class FragmentDefinitionContext: ParserRuleContext {
+			open
+			func fragmentName() -> FragmentNameContext? {
+				return getRuleContext(FragmentNameContext.self, 0)
+			}
+			open
+			func typeCondition() -> TypeConditionContext? {
+				return getRuleContext(TypeConditionContext.self, 0)
+			}
+			open
+			func selectionSet() -> SelectionSetContext? {
+				return getRuleContext(SelectionSetContext.self, 0)
+			}
+			open
+			func directives() -> DirectivesContext? {
+				return getRuleContext(DirectivesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_fragmentDefinition
 		}
-		open func typeCondition() -> TypeConditionContext? {
-			return getRuleContext(TypeConditionContext.self,0)
-		}
-		open func selectionSet() -> SelectionSetContext? {
-			return getRuleContext(SelectionSetContext.self,0)
-		}
-		open func directives() -> DirectivesContext? {
-			return getRuleContext(DirectivesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_fragmentDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterFragmentDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterFragmentDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitFragmentDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitFragmentDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitFragmentDefinition(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitFragmentDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitFragmentDefinition(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitFragmentDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fragmentDefinition() throws -> FragmentDefinitionContext {
+	 open func fragmentDefinition() throws -> FragmentDefinitionContext {
 		var _localctx: FragmentDefinitionContext = FragmentDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 26, GraphQLParser.RULE_fragmentDefinition)
 		var _la: Int = 0
@@ -1139,35 +1237,43 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class FragmentNameContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(GraphQLParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_fragmentName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterFragmentName(self)
+
+	public class FragmentNameContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_fragmentName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterFragmentName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitFragmentName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitFragmentName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitFragmentName(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitFragmentName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitFragmentName(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitFragmentName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fragmentName() throws -> FragmentNameContext {
+	 open func fragmentName() throws -> FragmentNameContext {
 		var _localctx: FragmentNameContext = FragmentNameContext(_ctx, getState())
 		try enterRule(_localctx, 28, GraphQLParser.RULE_fragmentName)
 		defer {
@@ -1187,40 +1293,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class DirectivesContext:ParserRuleContext {
-		open func directive() -> Array<DirectiveContext> {
-			return getRuleContexts(DirectiveContext.self)
+
+	public class DirectivesContext: ParserRuleContext {
+			open
+			func directive() -> [DirectiveContext] {
+				return getRuleContexts(DirectiveContext.self)
+			}
+			open
+			func directive(_ i: Int) -> DirectiveContext? {
+				return getRuleContext(DirectiveContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_directives
 		}
-		open func directive(_ i: Int) -> DirectiveContext? {
-			return getRuleContext(DirectiveContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_directives }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterDirectives(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterDirectives(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitDirectives(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitDirectives(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitDirectives(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitDirectives(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitDirectives(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitDirectives(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func directives() throws -> DirectivesContext {
+	 open func directives() throws -> DirectivesContext {
 		var _localctx: DirectivesContext = DirectivesContext(_ctx, getState())
 		try enterRule(_localctx, 30, GraphQLParser.RULE_directives)
 		var _la: Int = 0
@@ -1255,41 +1368,51 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class DirectiveContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(GraphQLParser.Tokens.NAME.rawValue, 0) }
-		open func valueOrVariable() -> ValueOrVariableContext? {
-			return getRuleContext(ValueOrVariableContext.self,0)
+
+	public class DirectiveContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.NAME.rawValue, 0)
+			}
+			open
+			func valueOrVariable() -> ValueOrVariableContext? {
+				return getRuleContext(ValueOrVariableContext.self, 0)
+			}
+			open
+			func argument() -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_directive
 		}
-		open func argument() -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_directive }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterDirective(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterDirective(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitDirective(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitDirective(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitDirective(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitDirective(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitDirective(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitDirective(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func directive() throws -> DirectiveContext {
+	 open func directive() throws -> DirectiveContext {
 		var _localctx: DirectiveContext = DirectiveContext(_ctx, getState())
 		try enterRule(_localctx, 32, GraphQLParser.RULE_directive)
 		defer {
@@ -1344,37 +1467,43 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class TypeConditionContext:ParserRuleContext {
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
+
+	public class TypeConditionContext: ParserRuleContext {
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_typeCondition
 		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_typeCondition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterTypeCondition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterTypeCondition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitTypeCondition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitTypeCondition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitTypeCondition(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitTypeCondition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitTypeCondition(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitTypeCondition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeCondition() throws -> TypeConditionContext {
+	 open func typeCondition() throws -> TypeConditionContext {
 		var _localctx: TypeConditionContext = TypeConditionContext(_ctx, getState())
 		try enterRule(_localctx, 34, GraphQLParser.RULE_typeCondition)
 		defer {
@@ -1394,40 +1523,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDefinitionsContext:ParserRuleContext {
-		open func variableDefinition() -> Array<VariableDefinitionContext> {
-			return getRuleContexts(VariableDefinitionContext.self)
+
+	public class VariableDefinitionsContext: ParserRuleContext {
+			open
+			func variableDefinition() -> [VariableDefinitionContext] {
+				return getRuleContexts(VariableDefinitionContext.self)
+			}
+			open
+			func variableDefinition(_ i: Int) -> VariableDefinitionContext? {
+				return getRuleContext(VariableDefinitionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_variableDefinitions
 		}
-		open func variableDefinition(_ i: Int) -> VariableDefinitionContext? {
-			return getRuleContext(VariableDefinitionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_variableDefinitions }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterVariableDefinitions(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterVariableDefinitions(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitVariableDefinitions(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitVariableDefinitions(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitVariableDefinitions(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitVariableDefinitions(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitVariableDefinitions(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitVariableDefinitions(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDefinitions() throws -> VariableDefinitionsContext {
+	 open func variableDefinitions() throws -> VariableDefinitionsContext {
 		var _localctx: VariableDefinitionsContext = VariableDefinitionsContext(_ctx, getState())
 		try enterRule(_localctx, 36, GraphQLParser.RULE_variableDefinitions)
 		var _la: Int = 0
@@ -1470,43 +1606,51 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDefinitionContext:ParserRuleContext {
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class VariableDefinitionContext: ParserRuleContext {
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func defaultValue() -> DefaultValueContext? {
+				return getRuleContext(DefaultValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_variableDefinition
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func defaultValue() -> DefaultValueContext? {
-			return getRuleContext(DefaultValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_variableDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterVariableDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterVariableDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitVariableDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitVariableDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitVariableDefinition(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitVariableDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitVariableDefinition(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitVariableDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDefinition() throws -> VariableDefinitionContext {
+	 open func variableDefinition() throws -> VariableDefinitionContext {
 		var _localctx: VariableDefinitionContext = VariableDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 38, GraphQLParser.RULE_variableDefinition)
 		var _la: Int = 0
@@ -1544,35 +1688,43 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class VariableContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(GraphQLParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_variable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterVariable(self)
+
+	public class VariableContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_variable
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitVariable(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitVariable(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable() throws -> VariableContext {
+	 open func variable() throws -> VariableContext {
 		var _localctx: VariableContext = VariableContext(_ctx, getState())
 		try enterRule(_localctx, 40, GraphQLParser.RULE_variable)
 		defer {
@@ -1594,37 +1746,43 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class DefaultValueContext:ParserRuleContext {
-		open func value() -> ValueContext? {
-			return getRuleContext(ValueContext.self,0)
+
+	public class DefaultValueContext: ParserRuleContext {
+			open
+			func value() -> ValueContext? {
+				return getRuleContext(ValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_defaultValue
 		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_defaultValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterDefaultValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterDefaultValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitDefaultValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitDefaultValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitDefaultValue(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitDefaultValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitDefaultValue(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitDefaultValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func defaultValue() throws -> DefaultValueContext {
+	 open func defaultValue() throws -> DefaultValueContext {
 		var _localctx: DefaultValueContext = DefaultValueContext(_ctx, getState())
 		try enterRule(_localctx, 42, GraphQLParser.RULE_defaultValue)
 		defer {
@@ -1646,40 +1804,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class ValueOrVariableContext:ParserRuleContext {
-		open func value() -> ValueContext? {
-			return getRuleContext(ValueContext.self,0)
+
+	public class ValueOrVariableContext: ParserRuleContext {
+			open
+			func value() -> ValueContext? {
+				return getRuleContext(ValueContext.self, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_valueOrVariable
 		}
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_valueOrVariable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterValueOrVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterValueOrVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitValueOrVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitValueOrVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitValueOrVariable(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitValueOrVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitValueOrVariable(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitValueOrVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func valueOrVariable() throws -> ValueOrVariableContext {
+	 open func valueOrVariable() throws -> ValueOrVariableContext {
 		var _localctx: ValueOrVariableContext = ValueOrVariableContext(_ctx, getState())
 		try enterRule(_localctx, 44, GraphQLParser.RULE_valueOrVariable)
 		defer {
@@ -1706,7 +1871,7 @@ open class GraphQLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1717,137 +1882,164 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class ValueContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_value }
+
+	public class ValueContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_value
+		}
 	 
-		public  func copyFrom(_ ctx: ValueContext) {
+		open
+		func copyFrom(_ ctx: ValueContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class StringValueContext: ValueContext {
-		open func STRING() -> TerminalNode? { return getToken(GraphQLParser.Tokens.STRING.rawValue, 0) }
-		public init(_ ctx: ValueContext) {
+	public class StringValueContext: ValueContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.STRING.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ValueContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterStringValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterStringValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitStringValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitStringValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitStringValue(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitStringValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitStringValue(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitStringValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class BooleanValueContext: ValueContext {
-		open func BOOLEAN() -> TerminalNode? { return getToken(GraphQLParser.Tokens.BOOLEAN.rawValue, 0) }
-		public init(_ ctx: ValueContext) {
+	public class BooleanValueContext: ValueContext {
+			open
+			func BOOLEAN() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.BOOLEAN.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ValueContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterBooleanValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterBooleanValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitBooleanValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitBooleanValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitBooleanValue(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitBooleanValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitBooleanValue(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitBooleanValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class NumberValueContext: ValueContext {
-		open func NUMBER() -> TerminalNode? { return getToken(GraphQLParser.Tokens.NUMBER.rawValue, 0) }
-		public init(_ ctx: ValueContext) {
+	public class NumberValueContext: ValueContext {
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.NUMBER.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ValueContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterNumberValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterNumberValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitNumberValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitNumberValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitNumberValue(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitNumberValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitNumberValue(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitNumberValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ArrayValueContext: ValueContext {
-		open func array() -> ArrayContext? {
-			return getRuleContext(ArrayContext.self,0)
-		}
-		public init(_ ctx: ValueContext) {
+	public class ArrayValueContext: ValueContext {
+			open
+			func array() -> ArrayContext? {
+				return getRuleContext(ArrayContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ValueContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterArrayValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterArrayValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitArrayValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitArrayValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitArrayValue(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitArrayValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitArrayValue(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitArrayValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value() throws -> ValueContext {
+	 open func value() throws -> ValueContext {
 		var _localctx: ValueContext = ValueContext(_ctx, getState())
 		try enterRule(_localctx, 46, GraphQLParser.RULE_value)
 		defer {
@@ -1889,7 +2081,7 @@ open class GraphQLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1900,43 +2092,51 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func typeName() -> TypeNameContext? {
-			return getRuleContext(TypeNameContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func typeName() -> TypeNameContext? {
+				return getRuleContext(TypeNameContext.self, 0)
+			}
+			open
+			func nonNullType() -> NonNullTypeContext? {
+				return getRuleContext(NonNullTypeContext.self, 0)
+			}
+			open
+			func listType() -> ListTypeContext? {
+				return getRuleContext(ListTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_type
 		}
-		open func nonNullType() -> NonNullTypeContext? {
-			return getRuleContext(NonNullTypeContext.self,0)
-		}
-		open func listType() -> ListTypeContext? {
-			return getRuleContext(ListTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitType(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 48, GraphQLParser.RULE_type)
 		var _la: Int = 0
@@ -1987,7 +2187,7 @@ open class GraphQLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1998,35 +2198,43 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class TypeNameContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(GraphQLParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_typeName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterTypeName(self)
+
+	public class TypeNameContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(GraphQLParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_typeName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterTypeName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitTypeName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitTypeName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitTypeName(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitTypeName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitTypeName(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitTypeName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeName() throws -> TypeNameContext {
+	 open func typeName() throws -> TypeNameContext {
 		var _localctx: TypeNameContext = TypeNameContext(_ctx, getState())
 		try enterRule(_localctx, 50, GraphQLParser.RULE_typeName)
 		defer {
@@ -2046,37 +2254,43 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class ListTypeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class ListTypeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_listType
 		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_listType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterListType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterListType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitListType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitListType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitListType(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitListType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitListType(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitListType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func listType() throws -> ListTypeContext {
+	 open func listType() throws -> ListTypeContext {
 		var _localctx: ListTypeContext = ListTypeContext(_ctx, getState())
 		try enterRule(_localctx, 52, GraphQLParser.RULE_listType)
 		defer {
@@ -2100,34 +2314,39 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class NonNullTypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_nonNullType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterNonNullType(self)
+
+	public class NonNullTypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_nonNullType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterNonNullType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitNonNullType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitNonNullType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitNonNullType(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitNonNullType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitNonNullType(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitNonNullType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nonNullType() throws -> NonNullTypeContext {
+	 open func nonNullType() throws -> NonNullTypeContext {
 		var _localctx: NonNullTypeContext = NonNullTypeContext(_ctx, getState())
 		try enterRule(_localctx, 54, GraphQLParser.RULE_nonNullType)
 		defer {
@@ -2147,40 +2366,47 @@ open class GraphQLParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayContext:ParserRuleContext {
-		open func value() -> Array<ValueContext> {
-			return getRuleContexts(ValueContext.self)
+
+	public class ArrayContext: ParserRuleContext {
+			open
+			func value() -> [ValueContext] {
+				return getRuleContexts(ValueContext.self)
+			}
+			open
+			func value(_ i: Int) -> ValueContext? {
+				return getRuleContext(ValueContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return GraphQLParser.RULE_array
 		}
-		open func value(_ i: Int) -> ValueContext? {
-			return getRuleContext(ValueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return GraphQLParser.RULE_array }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).enterArray(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.enterArray(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is GraphQLListener {
-			 	(listener as! GraphQLListener).exitArray(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? GraphQLListener {
+				listener.exitArray(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is GraphQLVisitor {
-			     return (visitor as! GraphQLVisitor<T>).visitArray(self)
-			}else if visitor is GraphQLBaseVisitor {
-		    	 return (visitor as! GraphQLBaseVisitor<T>).visitArray(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? GraphQLVisitor {
+			    return visitor.visitArray(self)
+			}
+			else if let visitor = visitor as? GraphQLBaseVisitor {
+			    return visitor.visitArray(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func array() throws -> ArrayContext {
+	 open func array() throws -> ArrayContext {
 		var _localctx: ArrayContext = ArrayContext(_ctx, getState())
 		try enterRule(_localctx, 56, GraphQLParser.RULE_array)
 		var _la: Int = 0
@@ -2239,6 +2465,10 @@ open class GraphQLParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = GraphQLParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = GraphQLParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

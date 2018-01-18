@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/postalcode/postalcode.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/postalcode/postalcode.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class postalcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostalcode(_ ctx: postalcodeParser.PostalcodeContext) -> T{
+	open func visitPostalcode(_ ctx: postalcodeParser.PostalcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

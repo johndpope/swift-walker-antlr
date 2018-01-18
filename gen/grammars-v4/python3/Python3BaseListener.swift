@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class Python3BaseListener: Python3Listener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -87,6 +87,19 @@ open class Python3BaseListener: Python3Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitDecorated(_ ctx: Python3Parser.DecoratedContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterAsync_funcdef(_ ctx: Python3Parser.Async_funcdefContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitAsync_funcdef(_ ctx: Python3Parser.Async_funcdefContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -217,6 +230,19 @@ open class Python3BaseListener: Python3Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitExpr_stmt(_ ctx: Python3Parser.Expr_stmtContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterAnnassign(_ ctx: Python3Parser.AnnassignContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitAnnassign(_ ctx: Python3Parser.AnnassignContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -503,6 +529,19 @@ open class Python3BaseListener: Python3Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitCompound_stmt(_ ctx: Python3Parser.Compound_stmtContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterAsync_stmt(_ ctx: Python3Parser.Async_stmtContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitAsync_stmt(_ ctx: Python3Parser.Async_stmtContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -847,6 +886,19 @@ open class Python3BaseListener: Python3Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterAtom_expr(_ ctx: Python3Parser.Atom_exprContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitAtom_expr(_ ctx: Python3Parser.Atom_exprContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterAtom(_ ctx: Python3Parser.AtomContext) { }
 	/**
 	 * {@inheritDoc}
@@ -1042,6 +1094,19 @@ open class Python3BaseListener: Python3Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterEncoding_decl(_ ctx: Python3Parser.Encoding_declContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitEncoding_decl(_ ctx: Python3Parser.Encoding_declContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterYield_expr(_ ctx: Python3Parser.Yield_exprContext) { }
 	/**
 	 * {@inheritDoc}
@@ -1062,45 +1127,6 @@ open class Python3BaseListener: Python3Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitYield_arg(_ ctx: Python3Parser.Yield_argContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterStr(_ ctx: Python3Parser.StrContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitStr(_ ctx: Python3Parser.StrContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterNumber(_ ctx: Python3Parser.NumberContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitNumber(_ ctx: Python3Parser.NumberContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterInteger(_ ctx: Python3Parser.IntegerContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitInteger(_ ctx: Python3Parser.IntegerContext) { }
 
 	/**
 	 * {@inheritDoc}

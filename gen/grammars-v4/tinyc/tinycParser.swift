@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/tinyc/tinyc.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/tinyc/tinyc.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class tinycParser: Parser {
@@ -11,16 +11,22 @@ open class tinycParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, STRING = 14, INT = 15, WS = 16
 	}
-	public static let RULE_program = 0, RULE_statement = 1, RULE_paren_expr = 2, 
-                   RULE_expr = 3, RULE_test = 4, RULE_sum = 5, RULE_term = 6, 
-                   RULE_id = 7, RULE_integer = 8
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_program = 0, RULE_statement = 1, RULE_paren_expr = 2, RULE_expr = 3, 
+            RULE_test = 4, RULE_sum = 5, RULE_term = 6, RULE_id = 7, RULE_integer = 8
+
+	public
+	static let ruleNames: [String] = [
 		"program", "statement", "paren_expr", "expr", "test", "sum", "term", "id", 
 		"integer"
 	]
@@ -33,88 +39,73 @@ open class tinycParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
 		"STRING", "INT", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "tinyc.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return tinycParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "tinyc.g4" }
+	override open
+	func getSerializedATN() -> String { return tinycParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return tinycParser.ruleNames }
+	override open
+	func getATN() -> ATN { return tinycParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return tinycParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return tinycParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return tinycParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,tinycParser._ATN,tinycParser._decisionToDFA, tinycParser._sharedContextCache)
 	}
-	open class ProgramContext:ParserRuleContext {
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
+
+	public class ProgramContext: ParserRuleContext {
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinycParser.RULE_program
 		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return tinycParser.RULE_program }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).enterProgram(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.enterProgram(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).exitProgram(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.exitProgram(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinycVisitor {
-			     return (visitor as! tinycVisitor<T>).visitProgram(self)
-			}else if visitor is tinycBaseVisitor {
-		    	 return (visitor as! tinycBaseVisitor<T>).visitProgram(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinycVisitor {
+			    return visitor.visitProgram(self)
+			}
+			else if let visitor = visitor as? tinycBaseVisitor {
+			    return visitor.visitProgram(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func program() throws -> ProgramContext {
+	 open func program() throws -> ProgramContext {
 		var _localctx: ProgramContext = ProgramContext(_ctx, getState())
 		try enterRule(_localctx, 0, tinycParser.RULE_program)
 		var _la: Int = 0
@@ -152,46 +143,55 @@ open class tinycParser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func paren_expr() -> Paren_exprContext? {
-			return getRuleContext(Paren_exprContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func paren_expr() -> Paren_exprContext? {
+				return getRuleContext(Paren_exprContext.self, 0)
+			}
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinycParser.RULE_statement
 		}
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
-		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinycParser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinycVisitor {
-			     return (visitor as! tinycVisitor<T>).visitStatement(self)
-			}else if visitor is tinycBaseVisitor {
-		    	 return (visitor as! tinycBaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinycVisitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? tinycBaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 2, tinycParser.RULE_statement)
 		var _la: Int = 0
@@ -302,37 +302,43 @@ open class tinycParser: Parser {
 
 		return _localctx
 	}
-	open class Paren_exprContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class Paren_exprContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinycParser.RULE_paren_expr
 		}
-		open override func getRuleIndex() -> Int { return tinycParser.RULE_paren_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).enterParen_expr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.enterParen_expr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).exitParen_expr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.exitParen_expr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinycVisitor {
-			     return (visitor as! tinycVisitor<T>).visitParen_expr(self)
-			}else if visitor is tinycBaseVisitor {
-		    	 return (visitor as! tinycBaseVisitor<T>).visitParen_expr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinycVisitor {
+			    return visitor.visitParen_expr(self)
+			}
+			else if let visitor = visitor as? tinycBaseVisitor {
+			    return visitor.visitParen_expr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func paren_expr() throws -> Paren_exprContext {
+	 open func paren_expr() throws -> Paren_exprContext {
 		var _localctx: Paren_exprContext = Paren_exprContext(_ctx, getState())
 		try enterRule(_localctx, 4, tinycParser.RULE_paren_expr)
 		defer {
@@ -356,43 +362,51 @@ open class tinycParser: Parser {
 
 		return _localctx
 	}
-	open class ExprContext:ParserRuleContext {
-		open func test() -> TestContext? {
-			return getRuleContext(TestContext.self,0)
+
+	public class ExprContext: ParserRuleContext {
+			open
+			func test() -> TestContext? {
+				return getRuleContext(TestContext.self, 0)
+			}
+			open
+			func id() -> IdContext? {
+				return getRuleContext(IdContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinycParser.RULE_expr
 		}
-		open func id() -> IdContext? {
-			return getRuleContext(IdContext.self,0)
-		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinycParser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).enterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).exitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinycVisitor {
-			     return (visitor as! tinycVisitor<T>).visitExpr(self)
-			}else if visitor is tinycBaseVisitor {
-		    	 return (visitor as! tinycBaseVisitor<T>).visitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinycVisitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? tinycBaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr() throws -> ExprContext {
+	 open func expr() throws -> ExprContext {
 		var _localctx: ExprContext = ExprContext(_ctx, getState())
 		try enterRule(_localctx, 6, tinycParser.RULE_expr)
 		defer {
@@ -429,40 +443,47 @@ open class tinycParser: Parser {
 
 		return _localctx
 	}
-	open class TestContext:ParserRuleContext {
-		open func sum() -> Array<SumContext> {
-			return getRuleContexts(SumContext.self)
+
+	public class TestContext: ParserRuleContext {
+			open
+			func sum() -> [SumContext] {
+				return getRuleContexts(SumContext.self)
+			}
+			open
+			func sum(_ i: Int) -> SumContext? {
+				return getRuleContext(SumContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinycParser.RULE_test
 		}
-		open func sum(_ i: Int) -> SumContext? {
-			return getRuleContext(SumContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return tinycParser.RULE_test }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).enterTest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.enterTest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).exitTest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.exitTest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinycVisitor {
-			     return (visitor as! tinycVisitor<T>).visitTest(self)
-			}else if visitor is tinycBaseVisitor {
-		    	 return (visitor as! tinycBaseVisitor<T>).visitTest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinycVisitor {
+			    return visitor.visitTest(self)
+			}
+			else if let visitor = visitor as? tinycBaseVisitor {
+			    return visitor.visitTest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func test() throws -> TestContext {
+	 open func test() throws -> TestContext {
 		var _localctx: TestContext = TestContext(_ctx, getState())
 		try enterRule(_localctx, 8, tinycParser.RULE_test)
 		defer {
@@ -500,40 +521,46 @@ open class tinycParser: Parser {
 		return _localctx
 	}
 
-	open class SumContext:ParserRuleContext {
-		open func term() -> TermContext? {
-			return getRuleContext(TermContext.self,0)
+	public class SumContext: ParserRuleContext {
+			open
+			func term() -> TermContext? {
+				return getRuleContext(TermContext.self, 0)
+			}
+			open
+			func sum() -> SumContext? {
+				return getRuleContext(SumContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinycParser.RULE_sum
 		}
-		open func sum() -> SumContext? {
-			return getRuleContext(SumContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinycParser.RULE_sum }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).enterSum(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.enterSum(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).exitSum(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.exitSum(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinycVisitor {
-			     return (visitor as! tinycVisitor<T>).visitSum(self)
-			}else if visitor is tinycBaseVisitor {
-		    	 return (visitor as! tinycBaseVisitor<T>).visitSum(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinycVisitor {
+			    return visitor.visitSum(self)
+			}
+			else if let visitor = visitor as? tinycBaseVisitor {
+			    return visitor.visitSum(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func sum( ) throws -> SumContext   {
+	 public final  func sum( ) throws -> SumContext   {
 		return try sum(0)
 	}
 	@discardableResult
@@ -571,7 +598,7 @@ open class tinycParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, tinycParser.RULE_sum)
 						setState(78)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(79)
 						try match(tinycParser.Tokens.T__11.rawValue)
@@ -584,7 +611,7 @@ open class tinycParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, tinycParser.RULE_sum)
 						setState(81)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(82)
 						try match(tinycParser.Tokens.T__12.rawValue)
@@ -610,43 +637,51 @@ open class tinycParser: Parser {
 
 		return _localctx;
 	}
-	open class TermContext:ParserRuleContext {
-		open func id() -> IdContext? {
-			return getRuleContext(IdContext.self,0)
+
+	public class TermContext: ParserRuleContext {
+			open
+			func id() -> IdContext? {
+				return getRuleContext(IdContext.self, 0)
+			}
+			open
+			func integer() -> IntegerContext? {
+				return getRuleContext(IntegerContext.self, 0)
+			}
+			open
+			func paren_expr() -> Paren_exprContext? {
+				return getRuleContext(Paren_exprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinycParser.RULE_term
 		}
-		open func integer() -> IntegerContext? {
-			return getRuleContext(IntegerContext.self,0)
-		}
-		open func paren_expr() -> Paren_exprContext? {
-			return getRuleContext(Paren_exprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinycParser.RULE_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).enterTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.enterTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).exitTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.exitTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinycVisitor {
-			     return (visitor as! tinycVisitor<T>).visitTerm(self)
-			}else if visitor is tinycBaseVisitor {
-		    	 return (visitor as! tinycBaseVisitor<T>).visitTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinycVisitor {
+			    return visitor.visitTerm(self)
+			}
+			else if let visitor = visitor as? tinycBaseVisitor {
+			    return visitor.visitTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term() throws -> TermContext {
+	 open func term() throws -> TermContext {
 		var _localctx: TermContext = TermContext(_ctx, getState())
 		try enterRule(_localctx, 12, tinycParser.RULE_term)
 		defer {
@@ -677,7 +712,7 @@ open class tinycParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -688,35 +723,43 @@ open class tinycParser: Parser {
 
 		return _localctx
 	}
-	open class IdContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(tinycParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return tinycParser.RULE_id }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).enterId(self)
+
+	public class IdContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(tinycParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinycParser.RULE_id
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.enterId(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).exitId(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.exitId(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinycVisitor {
-			     return (visitor as! tinycVisitor<T>).visitId(self)
-			}else if visitor is tinycBaseVisitor {
-		    	 return (visitor as! tinycBaseVisitor<T>).visitId(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinycVisitor {
+			    return visitor.visitId(self)
+			}
+			else if let visitor = visitor as? tinycBaseVisitor {
+			    return visitor.visitId(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func id() throws -> IdContext {
+	 open func id() throws -> IdContext {
 		var _localctx: IdContext = IdContext(_ctx, getState())
 		try enterRule(_localctx, 14, tinycParser.RULE_id)
 		defer {
@@ -736,35 +779,43 @@ open class tinycParser: Parser {
 
 		return _localctx
 	}
-	open class IntegerContext:ParserRuleContext {
-		open func INT() -> TerminalNode? { return getToken(tinycParser.Tokens.INT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return tinycParser.RULE_integer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).enterInteger(self)
+
+	public class IntegerContext: ParserRuleContext {
+			open
+			func INT() -> TerminalNode? {
+				return getToken(tinycParser.Tokens.INT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinycParser.RULE_integer
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.enterInteger(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinycListener {
-			 	(listener as! tinycListener).exitInteger(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinycListener {
+				listener.exitInteger(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinycVisitor {
-			     return (visitor as! tinycVisitor<T>).visitInteger(self)
-			}else if visitor is tinycBaseVisitor {
-		    	 return (visitor as! tinycBaseVisitor<T>).visitInteger(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinycVisitor {
+			    return visitor.visitInteger(self)
+			}
+			else if let visitor = visitor as? tinycBaseVisitor {
+			    return visitor.visitInteger(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integer() throws -> IntegerContext {
+	 open func integer() throws -> IntegerContext {
 		var _localctx: IntegerContext = IntegerContext(_ctx, getState())
 		try enterRule(_localctx, 16, tinycParser.RULE_integer)
 		defer {
@@ -785,8 +836,8 @@ open class tinycParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  5:
 			return try sum_sempred(_localctx?.castdown(SumContext.self), predIndex)
@@ -801,6 +852,10 @@ open class tinycParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = tinycParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = tinycParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

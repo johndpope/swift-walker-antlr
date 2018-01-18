@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/asn/ASN.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/asn/ASN.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class ASNBaseListener: ASNListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1094,13 +1094,13 @@ open class ASNBaseListener: ASNListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterType(_ ctx: ASNParser.TypeContext) { }
+	open func enterAsnType(_ ctx: ASNParser.AsnTypeContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitType(_ ctx: ASNParser.TypeContext) { }
+	open func exitAsnType(_ ctx: ASNParser.AsnTypeContext) { }
 
 	/**
 	 * {@inheritDoc}

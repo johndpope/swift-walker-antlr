@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/snobol/snobol.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/snobol/snobol.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class snobolParser: Parser {
@@ -11,8 +11,11 @@ open class snobolParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -25,19 +28,22 @@ open class snobolParser: Parser {
                  STRINGLITERAL2 = 49, STRING = 50, INTEGER = 51, REAL = 52, 
                  COMMENT = 53, EOL = 54, WS = 55
 	}
-	public static let RULE_prog = 0, RULE_lin = 1, RULE_line = 2, RULE_label = 3, 
-                   RULE_subject = 4, RULE_pattern = 5, RULE_expression = 6, 
-                   RULE_multiplyingExpression = 7, RULE_powExpression = 8, 
-                   RULE_atom = 9, RULE_command = 10, RULE_ident = 11, RULE_differ = 12, 
-                   RULE_eq = 13, RULE_ne = 14, RULE_ge = 15, RULE_gt = 16, 
-                   RULE_le = 17, RULE_lt = 18, RULE_integer = 19, RULE_lgt = 20, 
-                   RULE_atan = 21, RULE_chop = 22, RULE_cos = 23, RULE_exp = 24, 
-                   RULE_ln = 25, RULE_remdr = 26, RULE_sin = 27, RULE_tan = 28, 
-                   RULE_dupl = 29, RULE_reverse = 30, RULE_date = 31, RULE_replace = 32, 
-                   RULE_size = 33, RULE_trim = 34, RULE_array = 35, RULE_convert = 36, 
-                   RULE_table = 37, RULE_sort = 38, RULE_break_ = 39, RULE_transfer = 40, 
-                   RULE_transferpre = 41
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_prog = 0, RULE_lin = 1, RULE_line = 2, RULE_label = 3, 
+            RULE_subject = 4, RULE_pattern = 5, RULE_expression = 6, RULE_multiplyingExpression = 7, 
+            RULE_powExpression = 8, RULE_atom = 9, RULE_command = 10, RULE_ident = 11, 
+            RULE_differ = 12, RULE_eq = 13, RULE_ne = 14, RULE_ge = 15, 
+            RULE_gt = 16, RULE_le = 17, RULE_lt = 18, RULE_integer = 19, 
+            RULE_lgt = 20, RULE_atan = 21, RULE_chop = 22, RULE_cos = 23, 
+            RULE_exp = 24, RULE_ln = 25, RULE_remdr = 26, RULE_sin = 27, 
+            RULE_tan = 28, RULE_dupl = 29, RULE_reverse = 30, RULE_date = 31, 
+            RULE_replace = 32, RULE_size = 33, RULE_trim = 34, RULE_array = 35, 
+            RULE_convert = 36, RULE_table = 37, RULE_sort = 38, RULE_break_ = 39, 
+            RULE_transfer = 40, RULE_transferpre = 41
+
+	public
+	static let ruleNames: [String] = [
 		"prog", "lin", "line", "label", "subject", "pattern", "expression", "multiplyingExpression", 
 		"powExpression", "atom", "command", "ident", "differ", "eq", "ne", "ge", 
 		"gt", "le", "lt", "integer", "lgt", "atan", "chop", "cos", "exp", "ln", 
@@ -60,88 +66,73 @@ open class snobolParser: Parser {
 		"PLUS", "MINUS", "TIMES", "DIV", "POW", "EQ", "COLON", "END", "STRINGLITERAL1", 
 		"STRINGLITERAL2", "STRING", "INTEGER", "REAL", "COMMENT", "EOL", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "snobol.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return snobolParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "snobol.g4" }
+	override open
+	func getSerializedATN() -> String { return snobolParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return snobolParser.ruleNames }
+	override open
+	func getATN() -> ATN { return snobolParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return snobolParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return snobolParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return snobolParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,snobolParser._ATN,snobolParser._decisionToDFA, snobolParser._sharedContextCache)
 	}
-	open class ProgContext:ParserRuleContext {
-		open func lin() -> Array<LinContext> {
-			return getRuleContexts(LinContext.self)
+
+	public class ProgContext: ParserRuleContext {
+			open
+			func lin() -> [LinContext] {
+				return getRuleContexts(LinContext.self)
+			}
+			open
+			func lin(_ i: Int) -> LinContext? {
+				return getRuleContext(LinContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_prog
 		}
-		open func lin(_ i: Int) -> LinContext? {
-			return getRuleContext(LinContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_prog }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterProg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterProg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitProg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitProg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitProg(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitProg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitProg(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitProg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prog() throws -> ProgContext {
+	 open func prog() throws -> ProgContext {
 		var _localctx: ProgContext = ProgContext(_ctx, getState())
 		try enterRule(_localctx, 0, snobolParser.RULE_prog)
 		var _la: Int = 0
@@ -179,38 +170,47 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class LinContext:ParserRuleContext {
-		open func EOL() -> TerminalNode? { return getToken(snobolParser.Tokens.EOL.rawValue, 0) }
-		open func line() -> LineContext? {
-			return getRuleContext(LineContext.self,0)
+
+	public class LinContext: ParserRuleContext {
+			open
+			func EOL() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.EOL.rawValue, 0)
+			}
+			open
+			func line() -> LineContext? {
+				return getRuleContext(LineContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_lin
 		}
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_lin }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterLin(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterLin(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitLin(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitLin(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitLin(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitLin(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitLin(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitLin(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lin() throws -> LinContext {
+	 open func lin() throws -> LinContext {
 		var _localctx: LinContext = LinContext(_ctx, getState())
 		try enterRule(_localctx, 2, snobolParser.RULE_lin)
 		var _la: Int = 0
@@ -247,56 +247,79 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func subject() -> SubjectContext? {
-			return getRuleContext(SubjectContext.self,0)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func subject() -> SubjectContext? {
+				return getRuleContext(SubjectContext.self, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func COLON() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.COLON.rawValue, 0)
+			}
+			open
+			func transfer() -> TransferContext? {
+				return getRuleContext(TransferContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.COMMENT.rawValue, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.END.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_line
 		}
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
-		}
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
-		}
-		open func EQ() -> TerminalNode? { return getToken(snobolParser.Tokens.EQ.rawValue, 0) }
-		open func COLON() -> TerminalNode? { return getToken(snobolParser.Tokens.COLON.rawValue, 0) }
-		open func transfer() -> TransferContext? {
-			return getRuleContext(TransferContext.self,0)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMENT() -> TerminalNode? { return getToken(snobolParser.Tokens.COMMENT.rawValue, 0) }
-		open func END() -> TerminalNode? { return getToken(snobolParser.Tokens.END.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitLine(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 4, snobolParser.RULE_line)
 		var _la: Int = 0
@@ -414,7 +437,7 @@ open class snobolParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -425,35 +448,43 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class LabelContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(snobolParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterLabel(self)
+
+	public class LabelContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_label
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitLabel(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitLabel(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label() throws -> LabelContext {
+	 open func label() throws -> LabelContext {
 		var _localctx: LabelContext = LabelContext(_ctx, getState())
 		try enterRule(_localctx, 6, snobolParser.RULE_label)
 		defer {
@@ -473,39 +504,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class SubjectContext:ParserRuleContext {
-		open func STRING() -> Array<TerminalNode> { return getTokens(snobolParser.Tokens.STRING.rawValue) }
-		open func STRING(_ i:Int) -> TerminalNode?{
-			return getToken(snobolParser.Tokens.STRING.rawValue, i)
+
+	public class SubjectContext: ParserRuleContext {
+			open
+			func STRING() -> [TerminalNode] {
+				return getTokens(snobolParser.Tokens.STRING.rawValue)
+			}
+			open
+			func STRING(_ i:Int) -> TerminalNode? {
+				return getToken(snobolParser.Tokens.STRING.rawValue, i)
+			}
+			open
+			func AMP() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.AMP.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_subject
 		}
-		open func AMP() -> TerminalNode? { return getToken(snobolParser.Tokens.AMP.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_subject }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterSubject(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterSubject(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitSubject(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitSubject(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitSubject(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitSubject(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitSubject(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitSubject(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subject() throws -> SubjectContext {
+	 open func subject() throws -> SubjectContext {
 		var _localctx: SubjectContext = SubjectContext(_ctx, getState())
 		try enterRule(_localctx, 8, snobolParser.RULE_subject)
 		var _la: Int = 0
@@ -572,36 +615,47 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class PatternContext:ParserRuleContext {
-		open func STRINGLITERAL1() -> TerminalNode? { return getToken(snobolParser.Tokens.STRINGLITERAL1.rawValue, 0) }
-		open func STRINGLITERAL2() -> TerminalNode? { return getToken(snobolParser.Tokens.STRINGLITERAL2.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterPattern(self)
+
+	public class PatternContext: ParserRuleContext {
+			open
+			func STRINGLITERAL1() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.STRINGLITERAL1.rawValue, 0)
+			}
+			open
+			func STRINGLITERAL2() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.STRINGLITERAL2.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_pattern
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitPattern(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitPattern(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pattern() throws -> PatternContext {
+	 open func pattern() throws -> PatternContext {
 		var _localctx: PatternContext = PatternContext(_ctx, getState())
 		try enterRule(_localctx, 10, snobolParser.RULE_pattern)
 		var _la: Int = 0
@@ -633,48 +687,63 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func multiplyingExpression() -> Array<MultiplyingExpressionContext> {
-			return getRuleContexts(MultiplyingExpressionContext.self)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func multiplyingExpression() -> [MultiplyingExpressionContext] {
+				return getRuleContexts(MultiplyingExpressionContext.self)
+			}
+			open
+			func multiplyingExpression(_ i: Int) -> MultiplyingExpressionContext? {
+				return getRuleContext(MultiplyingExpressionContext.self, i)
+			}
+			open
+			func PLUS() -> [TerminalNode] {
+				return getTokens(snobolParser.Tokens.PLUS.rawValue)
+			}
+			open
+			func PLUS(_ i:Int) -> TerminalNode? {
+				return getToken(snobolParser.Tokens.PLUS.rawValue, i)
+			}
+			open
+			func MINUS() -> [TerminalNode] {
+				return getTokens(snobolParser.Tokens.MINUS.rawValue)
+			}
+			open
+			func MINUS(_ i:Int) -> TerminalNode? {
+				return getToken(snobolParser.Tokens.MINUS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_expression
 		}
-		open func multiplyingExpression(_ i: Int) -> MultiplyingExpressionContext? {
-			return getRuleContext(MultiplyingExpressionContext.self,i)
-		}
-		open func PLUS() -> Array<TerminalNode> { return getTokens(snobolParser.Tokens.PLUS.rawValue) }
-		open func PLUS(_ i:Int) -> TerminalNode?{
-			return getToken(snobolParser.Tokens.PLUS.rawValue, i)
-		}
-		open func MINUS() -> Array<TerminalNode> { return getTokens(snobolParser.Tokens.MINUS.rawValue) }
-		open func MINUS(_ i:Int) -> TerminalNode?{
-			return getToken(snobolParser.Tokens.MINUS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitExpression(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 12, snobolParser.RULE_expression)
 		var _la: Int = 0
@@ -723,48 +792,63 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class MultiplyingExpressionContext:ParserRuleContext {
-		open func powExpression() -> Array<PowExpressionContext> {
-			return getRuleContexts(PowExpressionContext.self)
+
+	public class MultiplyingExpressionContext: ParserRuleContext {
+			open
+			func powExpression() -> [PowExpressionContext] {
+				return getRuleContexts(PowExpressionContext.self)
+			}
+			open
+			func powExpression(_ i: Int) -> PowExpressionContext? {
+				return getRuleContext(PowExpressionContext.self, i)
+			}
+			open
+			func TIMES() -> [TerminalNode] {
+				return getTokens(snobolParser.Tokens.TIMES.rawValue)
+			}
+			open
+			func TIMES(_ i:Int) -> TerminalNode? {
+				return getToken(snobolParser.Tokens.TIMES.rawValue, i)
+			}
+			open
+			func DIV() -> [TerminalNode] {
+				return getTokens(snobolParser.Tokens.DIV.rawValue)
+			}
+			open
+			func DIV(_ i:Int) -> TerminalNode? {
+				return getToken(snobolParser.Tokens.DIV.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_multiplyingExpression
 		}
-		open func powExpression(_ i: Int) -> PowExpressionContext? {
-			return getRuleContext(PowExpressionContext.self,i)
-		}
-		open func TIMES() -> Array<TerminalNode> { return getTokens(snobolParser.Tokens.TIMES.rawValue) }
-		open func TIMES(_ i:Int) -> TerminalNode?{
-			return getToken(snobolParser.Tokens.TIMES.rawValue, i)
-		}
-		open func DIV() -> Array<TerminalNode> { return getTokens(snobolParser.Tokens.DIV.rawValue) }
-		open func DIV(_ i:Int) -> TerminalNode?{
-			return getToken(snobolParser.Tokens.DIV.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_multiplyingExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterMultiplyingExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterMultiplyingExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitMultiplyingExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitMultiplyingExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitMultiplyingExpression(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitMultiplyingExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitMultiplyingExpression(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitMultiplyingExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiplyingExpression() throws -> MultiplyingExpressionContext {
+	 open func multiplyingExpression() throws -> MultiplyingExpressionContext {
 		var _localctx: MultiplyingExpressionContext = MultiplyingExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 14, snobolParser.RULE_multiplyingExpression)
 		var _la: Int = 0
@@ -813,41 +897,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class PowExpressionContext:ParserRuleContext {
-		open func atom() -> AtomContext? {
-			return getRuleContext(AtomContext.self,0)
+
+	public class PowExpressionContext: ParserRuleContext {
+			open
+			func atom() -> AtomContext? {
+				return getRuleContext(AtomContext.self, 0)
+			}
+			open
+			func POW() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.POW.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_powExpression
 		}
-		open func POW() -> TerminalNode? { return getToken(snobolParser.Tokens.POW.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_powExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterPowExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterPowExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitPowExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitPowExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitPowExpression(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitPowExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitPowExpression(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitPowExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func powExpression() throws -> PowExpressionContext {
+	 open func powExpression() throws -> PowExpressionContext {
 		var _localctx: PowExpressionContext = PowExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 16, snobolParser.RULE_powExpression)
 		var _la: Int = 0
@@ -883,51 +977,75 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class AtomContext:ParserRuleContext {
-		open func STRINGLITERAL1() -> TerminalNode? { return getToken(snobolParser.Tokens.STRINGLITERAL1.rawValue, 0) }
-		open func STRINGLITERAL2() -> TerminalNode? { return getToken(snobolParser.Tokens.STRINGLITERAL2.rawValue, 0) }
-		open func INTEGER() -> TerminalNode? { return getToken(snobolParser.Tokens.INTEGER.rawValue, 0) }
-		open func subject() -> SubjectContext? {
-			return getRuleContext(SubjectContext.self,0)
+
+	public class AtomContext: ParserRuleContext {
+			open
+			func STRINGLITERAL1() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.STRINGLITERAL1.rawValue, 0)
+			}
+			open
+			func STRINGLITERAL2() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.STRINGLITERAL2.rawValue, 0)
+			}
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.INTEGER.rawValue, 0)
+			}
+			open
+			func subject() -> SubjectContext? {
+				return getRuleContext(SubjectContext.self, 0)
+			}
+			open
+			func command() -> CommandContext? {
+				return getRuleContext(CommandContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_atom
 		}
-		open func command() -> CommandContext? {
-			return getRuleContext(CommandContext.self,0)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_atom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitAtom(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitAtom(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atom() throws -> AtomContext {
+	 open func atom() throws -> AtomContext {
 		var _localctx: AtomContext = AtomContext(_ctx, getState())
 		try enterRule(_localctx, 18, snobolParser.RULE_atom)
 		var _la: Int = 0
@@ -1040,7 +1158,7 @@ open class snobolParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1051,115 +1169,147 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class CommandContext:ParserRuleContext {
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
+
+	public class CommandContext: ParserRuleContext {
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+			open
+			func differ() -> DifferContext? {
+				return getRuleContext(DifferContext.self, 0)
+			}
+			open
+			func eq() -> EqContext? {
+				return getRuleContext(EqContext.self, 0)
+			}
+			open
+			func ne() -> NeContext? {
+				return getRuleContext(NeContext.self, 0)
+			}
+			open
+			func ge() -> GeContext? {
+				return getRuleContext(GeContext.self, 0)
+			}
+			open
+			func le() -> LeContext? {
+				return getRuleContext(LeContext.self, 0)
+			}
+			open
+			func lt() -> LtContext? {
+				return getRuleContext(LtContext.self, 0)
+			}
+			open
+			func integer() -> IntegerContext? {
+				return getRuleContext(IntegerContext.self, 0)
+			}
+			open
+			func lgt() -> LgtContext? {
+				return getRuleContext(LgtContext.self, 0)
+			}
+			open
+			func atan() -> AtanContext? {
+				return getRuleContext(AtanContext.self, 0)
+			}
+			open
+			func chop() -> ChopContext? {
+				return getRuleContext(ChopContext.self, 0)
+			}
+			open
+			func cos() -> CosContext? {
+				return getRuleContext(CosContext.self, 0)
+			}
+			open
+			func exp() -> ExpContext? {
+				return getRuleContext(ExpContext.self, 0)
+			}
+			open
+			func ln() -> LnContext? {
+				return getRuleContext(LnContext.self, 0)
+			}
+			open
+			func remdr() -> RemdrContext? {
+				return getRuleContext(RemdrContext.self, 0)
+			}
+			open
+			func sin() -> SinContext? {
+				return getRuleContext(SinContext.self, 0)
+			}
+			open
+			func tan() -> TanContext? {
+				return getRuleContext(TanContext.self, 0)
+			}
+			open
+			func date() -> DateContext? {
+				return getRuleContext(DateContext.self, 0)
+			}
+			open
+			func dupl() -> DuplContext? {
+				return getRuleContext(DuplContext.self, 0)
+			}
+			open
+			func reverse() -> ReverseContext? {
+				return getRuleContext(ReverseContext.self, 0)
+			}
+			open
+			func replace() -> ReplaceContext? {
+				return getRuleContext(ReplaceContext.self, 0)
+			}
+			open
+			func size() -> SizeContext? {
+				return getRuleContext(SizeContext.self, 0)
+			}
+			open
+			func trim() -> TrimContext? {
+				return getRuleContext(TrimContext.self, 0)
+			}
+			open
+			func array() -> ArrayContext? {
+				return getRuleContext(ArrayContext.self, 0)
+			}
+			open
+			func sort() -> SortContext? {
+				return getRuleContext(SortContext.self, 0)
+			}
+			open
+			func table() -> TableContext? {
+				return getRuleContext(TableContext.self, 0)
+			}
+			open
+			func break_() -> Break_Context? {
+				return getRuleContext(Break_Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_command
 		}
-		open func differ() -> DifferContext? {
-			return getRuleContext(DifferContext.self,0)
-		}
-		open func eq() -> EqContext? {
-			return getRuleContext(EqContext.self,0)
-		}
-		open func ne() -> NeContext? {
-			return getRuleContext(NeContext.self,0)
-		}
-		open func ge() -> GeContext? {
-			return getRuleContext(GeContext.self,0)
-		}
-		open func le() -> LeContext? {
-			return getRuleContext(LeContext.self,0)
-		}
-		open func lt() -> LtContext? {
-			return getRuleContext(LtContext.self,0)
-		}
-		open func integer() -> IntegerContext? {
-			return getRuleContext(IntegerContext.self,0)
-		}
-		open func lgt() -> LgtContext? {
-			return getRuleContext(LgtContext.self,0)
-		}
-		open func atan() -> AtanContext? {
-			return getRuleContext(AtanContext.self,0)
-		}
-		open func chop() -> ChopContext? {
-			return getRuleContext(ChopContext.self,0)
-		}
-		open func cos() -> CosContext? {
-			return getRuleContext(CosContext.self,0)
-		}
-		open func exp() -> ExpContext? {
-			return getRuleContext(ExpContext.self,0)
-		}
-		open func ln() -> LnContext? {
-			return getRuleContext(LnContext.self,0)
-		}
-		open func remdr() -> RemdrContext? {
-			return getRuleContext(RemdrContext.self,0)
-		}
-		open func sin() -> SinContext? {
-			return getRuleContext(SinContext.self,0)
-		}
-		open func tan() -> TanContext? {
-			return getRuleContext(TanContext.self,0)
-		}
-		open func date() -> DateContext? {
-			return getRuleContext(DateContext.self,0)
-		}
-		open func dupl() -> DuplContext? {
-			return getRuleContext(DuplContext.self,0)
-		}
-		open func reverse() -> ReverseContext? {
-			return getRuleContext(ReverseContext.self,0)
-		}
-		open func replace() -> ReplaceContext? {
-			return getRuleContext(ReplaceContext.self,0)
-		}
-		open func size() -> SizeContext? {
-			return getRuleContext(SizeContext.self,0)
-		}
-		open func trim() -> TrimContext? {
-			return getRuleContext(TrimContext.self,0)
-		}
-		open func array() -> ArrayContext? {
-			return getRuleContext(ArrayContext.self,0)
-		}
-		open func sort() -> SortContext? {
-			return getRuleContext(SortContext.self,0)
-		}
-		open func table() -> TableContext? {
-			return getRuleContext(TableContext.self,0)
-		}
-		open func break_() -> Break_Context? {
-			return getRuleContext(Break_Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_command }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterCommand(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterCommand(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitCommand(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitCommand(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitCommand(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitCommand(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitCommand(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitCommand(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func command() throws -> CommandContext {
+	 open func command() throws -> CommandContext {
 		var _localctx: CommandContext = CommandContext(_ctx, getState())
 		try enterRule(_localctx, 20, snobolParser.RULE_command)
 		defer {
@@ -1358,7 +1508,7 @@ open class snobolParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1369,39 +1519,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class IdentContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class IdentContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_ident
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_ident }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterIdent(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterIdent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitIdent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitIdent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitIdent(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitIdent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitIdent(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitIdent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ident() throws -> IdentContext {
+	 open func ident() throws -> IdentContext {
 		var _localctx: IdentContext = IdentContext(_ctx, getState())
 		try enterRule(_localctx, 22, snobolParser.RULE_ident)
 		defer {
@@ -1427,39 +1589,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class DifferContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class DifferContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_differ
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_differ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterDiffer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterDiffer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitDiffer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitDiffer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitDiffer(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitDiffer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitDiffer(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitDiffer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func differ() throws -> DifferContext {
+	 open func differ() throws -> DifferContext {
 		var _localctx: DifferContext = DifferContext(_ctx, getState())
 		try enterRule(_localctx, 24, snobolParser.RULE_differ)
 		defer {
@@ -1485,39 +1659,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class EqContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class EqContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_eq
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_eq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterEq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterEq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitEq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitEq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitEq(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitEq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitEq(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitEq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eq() throws -> EqContext {
+	 open func eq() throws -> EqContext {
 		var _localctx: EqContext = EqContext(_ctx, getState())
 		try enterRule(_localctx, 26, snobolParser.RULE_eq)
 		defer {
@@ -1543,39 +1729,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class NeContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class NeContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_ne
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_ne }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterNe(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterNe(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitNe(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitNe(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitNe(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitNe(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitNe(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitNe(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ne() throws -> NeContext {
+	 open func ne() throws -> NeContext {
 		var _localctx: NeContext = NeContext(_ctx, getState())
 		try enterRule(_localctx, 28, snobolParser.RULE_ne)
 		defer {
@@ -1601,39 +1799,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class GeContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class GeContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_ge
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_ge }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterGe(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterGe(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitGe(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitGe(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitGe(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitGe(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitGe(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitGe(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ge() throws -> GeContext {
+	 open func ge() throws -> GeContext {
 		var _localctx: GeContext = GeContext(_ctx, getState())
 		try enterRule(_localctx, 30, snobolParser.RULE_ge)
 		defer {
@@ -1659,39 +1869,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class GtContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class GtContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_gt
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_gt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterGt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterGt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitGt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitGt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitGt(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitGt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitGt(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitGt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func gt() throws -> GtContext {
+	 open func gt() throws -> GtContext {
 		var _localctx: GtContext = GtContext(_ctx, getState())
 		try enterRule(_localctx, 32, snobolParser.RULE_gt)
 		defer {
@@ -1717,39 +1939,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class LeContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class LeContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_le
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_le }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterLe(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterLe(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitLe(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitLe(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitLe(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitLe(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitLe(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitLe(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func le() throws -> LeContext {
+	 open func le() throws -> LeContext {
 		var _localctx: LeContext = LeContext(_ctx, getState())
 		try enterRule(_localctx, 34, snobolParser.RULE_le)
 		defer {
@@ -1775,39 +2009,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class LtContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class LtContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_lt
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_lt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterLt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterLt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitLt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitLt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitLt(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitLt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitLt(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitLt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lt() throws -> LtContext {
+	 open func lt() throws -> LtContext {
 		var _localctx: LtContext = LtContext(_ctx, getState())
 		try enterRule(_localctx, 36, snobolParser.RULE_lt)
 		defer {
@@ -1833,39 +2079,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class IntegerContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class IntegerContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_integer
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_integer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterInteger(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterInteger(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitInteger(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitInteger(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitInteger(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitInteger(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitInteger(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitInteger(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integer() throws -> IntegerContext {
+	 open func integer() throws -> IntegerContext {
 		var _localctx: IntegerContext = IntegerContext(_ctx, getState())
 		try enterRule(_localctx, 38, snobolParser.RULE_integer)
 		defer {
@@ -1891,39 +2149,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class LgtContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class LgtContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_lgt
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_lgt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterLgt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterLgt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitLgt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitLgt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitLgt(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitLgt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitLgt(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitLgt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lgt() throws -> LgtContext {
+	 open func lgt() throws -> LgtContext {
 		var _localctx: LgtContext = LgtContext(_ctx, getState())
 		try enterRule(_localctx, 40, snobolParser.RULE_lgt)
 		defer {
@@ -1949,39 +2219,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class AtanContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class AtanContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_atan
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_atan }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterAtan(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterAtan(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitAtan(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitAtan(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitAtan(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitAtan(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitAtan(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitAtan(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atan() throws -> AtanContext {
+	 open func atan() throws -> AtanContext {
 		var _localctx: AtanContext = AtanContext(_ctx, getState())
 		try enterRule(_localctx, 42, snobolParser.RULE_atan)
 		defer {
@@ -2007,39 +2289,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class ChopContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ChopContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_chop
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_chop }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterChop(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterChop(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitChop(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitChop(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitChop(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitChop(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitChop(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitChop(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func chop() throws -> ChopContext {
+	 open func chop() throws -> ChopContext {
 		var _localctx: ChopContext = ChopContext(_ctx, getState())
 		try enterRule(_localctx, 44, snobolParser.RULE_chop)
 		defer {
@@ -2065,39 +2359,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class CosContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class CosContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_cos
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_cos }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterCos(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterCos(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitCos(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitCos(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitCos(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitCos(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitCos(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitCos(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cos() throws -> CosContext {
+	 open func cos() throws -> CosContext {
 		var _localctx: CosContext = CosContext(_ctx, getState())
 		try enterRule(_localctx, 46, snobolParser.RULE_cos)
 		defer {
@@ -2123,39 +2429,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class ExpContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ExpContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_exp
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_exp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitExp(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitExp(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exp() throws -> ExpContext {
+	 open func exp() throws -> ExpContext {
 		var _localctx: ExpContext = ExpContext(_ctx, getState())
 		try enterRule(_localctx, 48, snobolParser.RULE_exp)
 		defer {
@@ -2181,39 +2499,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class LnContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class LnContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_ln
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_ln }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterLn(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterLn(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitLn(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitLn(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitLn(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitLn(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitLn(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitLn(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ln() throws -> LnContext {
+	 open func ln() throws -> LnContext {
 		var _localctx: LnContext = LnContext(_ctx, getState())
 		try enterRule(_localctx, 50, snobolParser.RULE_ln)
 		defer {
@@ -2239,39 +2569,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class RemdrContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class RemdrContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_remdr
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_remdr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterRemdr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterRemdr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitRemdr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitRemdr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitRemdr(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitRemdr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitRemdr(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitRemdr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func remdr() throws -> RemdrContext {
+	 open func remdr() throws -> RemdrContext {
 		var _localctx: RemdrContext = RemdrContext(_ctx, getState())
 		try enterRule(_localctx, 52, snobolParser.RULE_remdr)
 		defer {
@@ -2297,39 +2639,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class SinContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class SinContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_sin
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_sin }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterSin(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterSin(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitSin(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitSin(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitSin(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitSin(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitSin(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitSin(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sin() throws -> SinContext {
+	 open func sin() throws -> SinContext {
 		var _localctx: SinContext = SinContext(_ctx, getState())
 		try enterRule(_localctx, 54, snobolParser.RULE_sin)
 		defer {
@@ -2355,39 +2709,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class TanContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class TanContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_tan
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_tan }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterTan(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterTan(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitTan(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitTan(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitTan(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitTan(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitTan(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitTan(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tan() throws -> TanContext {
+	 open func tan() throws -> TanContext {
 		var _localctx: TanContext = TanContext(_ctx, getState())
 		try enterRule(_localctx, 56, snobolParser.RULE_tan)
 		defer {
@@ -2413,43 +2779,59 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class DuplContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class DuplContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.COMMA.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_dupl
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> TerminalNode? { return getToken(snobolParser.Tokens.COMMA.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_dupl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterDupl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterDupl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitDupl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitDupl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitDupl(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitDupl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitDupl(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitDupl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dupl() throws -> DuplContext {
+	 open func dupl() throws -> DuplContext {
 		var _localctx: DuplContext = DuplContext(_ctx, getState())
 		try enterRule(_localctx, 58, snobolParser.RULE_dupl)
 		defer {
@@ -2479,39 +2861,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class ReverseContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ReverseContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_reverse
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_reverse }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterReverse(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterReverse(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitReverse(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitReverse(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitReverse(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitReverse(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitReverse(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitReverse(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reverse() throws -> ReverseContext {
+	 open func reverse() throws -> ReverseContext {
 		var _localctx: ReverseContext = ReverseContext(_ctx, getState())
 		try enterRule(_localctx, 60, snobolParser.RULE_reverse)
 		defer {
@@ -2537,36 +2931,47 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class DateContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_date }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterDate(self)
+
+	public class DateContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_date
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterDate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitDate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitDate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitDate(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitDate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitDate(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitDate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func date() throws -> DateContext {
+	 open func date() throws -> DateContext {
 		var _localctx: DateContext = DateContext(_ctx, getState())
 		try enterRule(_localctx, 62, snobolParser.RULE_date)
 		defer {
@@ -2590,46 +2995,63 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class ReplaceContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ReplaceContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(snobolParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(snobolParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_replace
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(snobolParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(snobolParser.Tokens.COMMA.rawValue, i)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_replace }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterReplace(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterReplace(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitReplace(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitReplace(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitReplace(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitReplace(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitReplace(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitReplace(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func replace() throws -> ReplaceContext {
+	 open func replace() throws -> ReplaceContext {
 		var _localctx: ReplaceContext = ReplaceContext(_ctx, getState())
 		try enterRule(_localctx, 64, snobolParser.RULE_replace)
 		defer {
@@ -2663,39 +3085,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class SizeContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class SizeContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_size
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_size }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterSize(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterSize(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitSize(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitSize(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitSize(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitSize(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitSize(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitSize(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func size() throws -> SizeContext {
+	 open func size() throws -> SizeContext {
 		var _localctx: SizeContext = SizeContext(_ctx, getState())
 		try enterRule(_localctx, 66, snobolParser.RULE_size)
 		defer {
@@ -2721,39 +3155,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class TrimContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class TrimContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_trim
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_trim }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterTrim(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterTrim(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitTrim(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitTrim(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitTrim(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitTrim(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitTrim(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitTrim(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func trim() throws -> TrimContext {
+	 open func trim() throws -> TrimContext {
 		var _localctx: TrimContext = TrimContext(_ctx, getState())
 		try enterRule(_localctx, 68, snobolParser.RULE_trim)
 		defer {
@@ -2779,43 +3225,59 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ArrayContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.COMMA.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_array
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> TerminalNode? { return getToken(snobolParser.Tokens.COMMA.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_array }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterArray(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterArray(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitArray(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitArray(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitArray(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitArray(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitArray(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitArray(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func array() throws -> ArrayContext {
+	 open func array() throws -> ArrayContext {
 		var _localctx: ArrayContext = ArrayContext(_ctx, getState())
 		try enterRule(_localctx, 70, snobolParser.RULE_array)
 		defer {
@@ -2845,43 +3307,59 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class ConvertContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ConvertContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.COMMA.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_convert
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> TerminalNode? { return getToken(snobolParser.Tokens.COMMA.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_convert }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterConvert(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterConvert(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitConvert(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitConvert(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitConvert(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitConvert(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitConvert(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitConvert(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func convert() throws -> ConvertContext {
+	 open func convert() throws -> ConvertContext {
 		var _localctx: ConvertContext = ConvertContext(_ctx, getState())
 		try enterRule(_localctx, 72, snobolParser.RULE_convert)
 		defer {
@@ -2911,39 +3389,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class TableContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class TableContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_table
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_table }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterTable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterTable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitTable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitTable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitTable(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitTable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitTable(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitTable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table() throws -> TableContext {
+	 open func table() throws -> TableContext {
 		var _localctx: TableContext = TableContext(_ctx, getState())
 		try enterRule(_localctx, 74, snobolParser.RULE_table)
 		defer {
@@ -2969,39 +3459,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class SortContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class SortContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_sort
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_sort }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterSort(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterSort(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitSort(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitSort(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitSort(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitSort(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitSort(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitSort(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sort() throws -> SortContext {
+	 open func sort() throws -> SortContext {
 		var _localctx: SortContext = SortContext(_ctx, getState())
 		try enterRule(_localctx, 76, snobolParser.RULE_sort)
 		defer {
@@ -3027,39 +3529,51 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class Break_Context:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Break_Context: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_break_
 		}
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_break_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterBreak_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterBreak_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitBreak_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitBreak_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitBreak_(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitBreak_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitBreak_(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitBreak_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func break_() throws -> Break_Context {
+	 open func break_() throws -> Break_Context {
 		var _localctx: Break_Context = Break_Context(_ctx, getState())
 		try enterRule(_localctx, 78, snobolParser.RULE_break_)
 		defer {
@@ -3085,43 +3599,59 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class TransferContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(snobolParser.Tokens.RPAREN.rawValue, 0) }
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
+
+	public class TransferContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(snobolParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func transferpre() -> TransferpreContext? {
+				return getRuleContext(TransferpreContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_transfer
 		}
-		open func END() -> TerminalNode? { return getToken(snobolParser.Tokens.END.rawValue, 0) }
-		open func transferpre() -> TransferpreContext? {
-			return getRuleContext(TransferpreContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_transfer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterTransfer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterTransfer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitTransfer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitTransfer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitTransfer(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitTransfer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitTransfer(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitTransfer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func transfer() throws -> TransferContext {
+	 open func transfer() throws -> TransferContext {
 		var _localctx: TransferContext = TransferContext(_ctx, getState())
 		try enterRule(_localctx, 80, snobolParser.RULE_transfer)
 		var _la: Int = 0
@@ -3174,7 +3704,7 @@ open class snobolParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(370)
 		 		try match(snobolParser.Tokens.RPAREN.rawValue)
@@ -3191,34 +3721,39 @@ open class snobolParser: Parser {
 
 		return _localctx
 	}
-	open class TransferpreContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return snobolParser.RULE_transferpre }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).enterTransferpre(self)
+
+	public class TransferpreContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return snobolParser.RULE_transferpre
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.enterTransferpre(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is snobolListener {
-			 	(listener as! snobolListener).exitTransferpre(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? snobolListener {
+				listener.exitTransferpre(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is snobolVisitor {
-			     return (visitor as! snobolVisitor<T>).visitTransferpre(self)
-			}else if visitor is snobolBaseVisitor {
-		    	 return (visitor as! snobolBaseVisitor<T>).visitTransferpre(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? snobolVisitor {
+			    return visitor.visitTransferpre(self)
+			}
+			else if let visitor = visitor as? snobolBaseVisitor {
+			    return visitor.visitTransferpre(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func transferpre() throws -> TransferpreContext {
+	 open func transferpre() throws -> TransferpreContext {
 		var _localctx: TransferpreContext = TransferpreContext(_ctx, getState())
 		try enterRule(_localctx, 82, snobolParser.RULE_transferpre)
 		var _la: Int = 0
@@ -3254,6 +3789,10 @@ open class snobolParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = snobolParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = snobolParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/erlang/Erlang.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/erlang/Erlang.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForms(_ ctx: ErlangParser.FormsContext) -> T{
+	open func visitForms(_ ctx: ErlangParser.FormsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForm(_ ctx: ErlangParser.FormContext) -> T{
+	open func visitForm(_ ctx: ErlangParser.FormContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTokAtom(_ ctx: ErlangParser.TokAtomContext) -> T{
+	open func visitTokAtom(_ ctx: ErlangParser.TokAtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTokVar(_ ctx: ErlangParser.TokVarContext) -> T{
+	open func visitTokVar(_ ctx: ErlangParser.TokVarContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTokFloat(_ ctx: ErlangParser.TokFloatContext) -> T{
+	open func visitTokFloat(_ ctx: ErlangParser.TokFloatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTokInteger(_ ctx: ErlangParser.TokIntegerContext) -> T{
+	open func visitTokInteger(_ ctx: ErlangParser.TokIntegerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTokChar(_ ctx: ErlangParser.TokCharContext) -> T{
+	open func visitTokChar(_ ctx: ErlangParser.TokCharContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTokString(_ ctx: ErlangParser.TokStringContext) -> T{
+	open func visitTokString(_ ctx: ErlangParser.TokStringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttribute(_ ctx: ErlangParser.AttributeContext) -> T{
+	open func visitAttribute(_ ctx: ErlangParser.AttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSpec(_ ctx: ErlangParser.TypeSpecContext) -> T{
+	open func visitTypeSpec(_ ctx: ErlangParser.TypeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpecFun(_ ctx: ErlangParser.SpecFunContext) -> T{
+	open func visitSpecFun(_ ctx: ErlangParser.SpecFunContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedAttrVal(_ ctx: ErlangParser.TypedAttrValContext) -> T{
+	open func visitTypedAttrVal(_ ctx: ErlangParser.TypedAttrValContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedRecordFields(_ ctx: ErlangParser.TypedRecordFieldsContext) -> T{
+	open func visitTypedRecordFields(_ ctx: ErlangParser.TypedRecordFieldsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedExprs(_ ctx: ErlangParser.TypedExprsContext) -> T{
+	open func visitTypedExprs(_ ctx: ErlangParser.TypedExprsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedExpr(_ ctx: ErlangParser.TypedExprContext) -> T{
+	open func visitTypedExpr(_ ctx: ErlangParser.TypedExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSigs(_ ctx: ErlangParser.TypeSigsContext) -> T{
+	open func visitTypeSigs(_ ctx: ErlangParser.TypeSigsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSig(_ ctx: ErlangParser.TypeSigContext) -> T{
+	open func visitTypeSig(_ ctx: ErlangParser.TypeSigContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeGuards(_ ctx: ErlangParser.TypeGuardsContext) -> T{
+	open func visitTypeGuards(_ ctx: ErlangParser.TypeGuardsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeGuard(_ ctx: ErlangParser.TypeGuardContext) -> T{
+	open func visitTypeGuard(_ ctx: ErlangParser.TypeGuardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTopTypes(_ ctx: ErlangParser.TopTypesContext) -> T{
+	open func visitTopTypes(_ ctx: ErlangParser.TopTypesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTopType(_ ctx: ErlangParser.TopTypeContext) -> T{
+	open func visitTopType(_ ctx: ErlangParser.TopTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTopType100(_ ctx: ErlangParser.TopType100Context) -> T{
+	open func visitTopType100(_ ctx: ErlangParser.TopType100Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType200(_ ctx: ErlangParser.Type200Context) -> T{
+	open func visitType200(_ ctx: ErlangParser.Type200Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType300(_ ctx: ErlangParser.Type300Context) -> T{
+	open func visitType300(_ ctx: ErlangParser.Type300Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType400(_ ctx: ErlangParser.Type400Context) -> T{
+	open func visitType400(_ ctx: ErlangParser.Type400Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType500(_ ctx: ErlangParser.Type500Context) -> T{
+	open func visitType500(_ ctx: ErlangParser.Type500Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: ErlangParser.TypeContext) -> T{
+	open func visitType(_ ctx: ErlangParser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunType100(_ ctx: ErlangParser.FunType100Context) -> T{
+	open func visitFunType100(_ ctx: ErlangParser.FunType100Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunType(_ ctx: ErlangParser.FunTypeContext) -> T{
+	open func visitFunType(_ ctx: ErlangParser.FunTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldTypes(_ ctx: ErlangParser.FieldTypesContext) -> T{
+	open func visitFieldTypes(_ ctx: ErlangParser.FieldTypesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldType(_ ctx: ErlangParser.FieldTypeContext) -> T{
+	open func visitFieldType(_ ctx: ErlangParser.FieldTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinaryType(_ ctx: ErlangParser.BinaryTypeContext) -> T{
+	open func visitBinaryType(_ ctx: ErlangParser.BinaryTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinBaseType(_ ctx: ErlangParser.BinBaseTypeContext) -> T{
+	open func visitBinBaseType(_ ctx: ErlangParser.BinBaseTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinUnitType(_ ctx: ErlangParser.BinUnitTypeContext) -> T{
+	open func visitBinUnitType(_ ctx: ErlangParser.BinUnitTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttrVal(_ ctx: ErlangParser.AttrValContext) -> T{
+	open func visitAttrVal(_ ctx: ErlangParser.AttrValContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunction(_ ctx: ErlangParser.FunctionContext) -> T{
+	open func visitFunction(_ ctx: ErlangParser.FunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionClause(_ ctx: ErlangParser.FunctionClauseContext) -> T{
+	open func visitFunctionClause(_ ctx: ErlangParser.FunctionClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClauseArgs(_ ctx: ErlangParser.ClauseArgsContext) -> T{
+	open func visitClauseArgs(_ ctx: ErlangParser.ClauseArgsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClauseGuard(_ ctx: ErlangParser.ClauseGuardContext) -> T{
+	open func visitClauseGuard(_ ctx: ErlangParser.ClauseGuardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClauseBody(_ ctx: ErlangParser.ClauseBodyContext) -> T{
+	open func visitClauseBody(_ ctx: ErlangParser.ClauseBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr(_ ctx: ErlangParser.ExprContext) -> T{
+	open func visitExpr(_ ctx: ErlangParser.ExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr100(_ ctx: ErlangParser.Expr100Context) -> T{
+	open func visitExpr100(_ ctx: ErlangParser.Expr100Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr150(_ ctx: ErlangParser.Expr150Context) -> T{
+	open func visitExpr150(_ ctx: ErlangParser.Expr150Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr160(_ ctx: ErlangParser.Expr160Context) -> T{
+	open func visitExpr160(_ ctx: ErlangParser.Expr160Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr200(_ ctx: ErlangParser.Expr200Context) -> T{
+	open func visitExpr200(_ ctx: ErlangParser.Expr200Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr300(_ ctx: ErlangParser.Expr300Context) -> T{
+	open func visitExpr300(_ ctx: ErlangParser.Expr300Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr400(_ ctx: ErlangParser.Expr400Context) -> T{
+	open func visitExpr400(_ ctx: ErlangParser.Expr400Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr500(_ ctx: ErlangParser.Expr500Context) -> T{
+	open func visitExpr500(_ ctx: ErlangParser.Expr500Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr600(_ ctx: ErlangParser.Expr600Context) -> T{
+	open func visitExpr600(_ ctx: ErlangParser.Expr600Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr700(_ ctx: ErlangParser.Expr700Context) -> T{
+	open func visitExpr700(_ ctx: ErlangParser.Expr700Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr800(_ ctx: ErlangParser.Expr800Context) -> T{
+	open func visitExpr800(_ ctx: ErlangParser.Expr800Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprMax(_ ctx: ErlangParser.ExprMaxContext) -> T{
+	open func visitExprMax(_ ctx: ErlangParser.ExprMaxContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitList(_ ctx: ErlangParser.ListContext) -> T{
+	open func visitList(_ ctx: ErlangParser.ListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTail(_ ctx: ErlangParser.TailContext) -> T{
+	open func visitTail(_ ctx: ErlangParser.TailContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary(_ ctx: ErlangParser.BinaryContext) -> T{
+	open func visitBinary(_ ctx: ErlangParser.BinaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinElements(_ ctx: ErlangParser.BinElementsContext) -> T{
+	open func visitBinElements(_ ctx: ErlangParser.BinElementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinElement(_ ctx: ErlangParser.BinElementContext) -> T{
+	open func visitBinElement(_ ctx: ErlangParser.BinElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitExpr(_ ctx: ErlangParser.BitExprContext) -> T{
+	open func visitBitExpr(_ ctx: ErlangParser.BitExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptBitSizeExpr(_ ctx: ErlangParser.OptBitSizeExprContext) -> T{
+	open func visitOptBitSizeExpr(_ ctx: ErlangParser.OptBitSizeExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptBitTypeList(_ ctx: ErlangParser.OptBitTypeListContext) -> T{
+	open func visitOptBitTypeList(_ ctx: ErlangParser.OptBitTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitTypeList(_ ctx: ErlangParser.BitTypeListContext) -> T{
+	open func visitBitTypeList(_ ctx: ErlangParser.BitTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitType(_ ctx: ErlangParser.BitTypeContext) -> T{
+	open func visitBitType(_ ctx: ErlangParser.BitTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitSizeExpr(_ ctx: ErlangParser.BitSizeExprContext) -> T{
+	open func visitBitSizeExpr(_ ctx: ErlangParser.BitSizeExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitListComprehension(_ ctx: ErlangParser.ListComprehensionContext) -> T{
+	open func visitListComprehension(_ ctx: ErlangParser.ListComprehensionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinaryComprehension(_ ctx: ErlangParser.BinaryComprehensionContext) -> T{
+	open func visitBinaryComprehension(_ ctx: ErlangParser.BinaryComprehensionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLcExprs(_ ctx: ErlangParser.LcExprsContext) -> T{
+	open func visitLcExprs(_ ctx: ErlangParser.LcExprsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLcExpr(_ ctx: ErlangParser.LcExprContext) -> T{
+	open func visitLcExpr(_ ctx: ErlangParser.LcExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTuple(_ ctx: ErlangParser.TupleContext) -> T{
+	open func visitTuple(_ ctx: ErlangParser.TupleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordExpr(_ ctx: ErlangParser.RecordExprContext) -> T{
+	open func visitRecordExpr(_ ctx: ErlangParser.RecordExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordTuple(_ ctx: ErlangParser.RecordTupleContext) -> T{
+	open func visitRecordTuple(_ ctx: ErlangParser.RecordTupleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordFields(_ ctx: ErlangParser.RecordFieldsContext) -> T{
+	open func visitRecordFields(_ ctx: ErlangParser.RecordFieldsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordField(_ ctx: ErlangParser.RecordFieldContext) -> T{
+	open func visitRecordField(_ ctx: ErlangParser.RecordFieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionCall(_ ctx: ErlangParser.FunctionCallContext) -> T{
+	open func visitFunctionCall(_ ctx: ErlangParser.FunctionCallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfExpr(_ ctx: ErlangParser.IfExprContext) -> T{
+	open func visitIfExpr(_ ctx: ErlangParser.IfExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfClauses(_ ctx: ErlangParser.IfClausesContext) -> T{
+	open func visitIfClauses(_ ctx: ErlangParser.IfClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfClause(_ ctx: ErlangParser.IfClauseContext) -> T{
+	open func visitIfClause(_ ctx: ErlangParser.IfClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseExpr(_ ctx: ErlangParser.CaseExprContext) -> T{
+	open func visitCaseExpr(_ ctx: ErlangParser.CaseExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCrClauses(_ ctx: ErlangParser.CrClausesContext) -> T{
+	open func visitCrClauses(_ ctx: ErlangParser.CrClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCrClause(_ ctx: ErlangParser.CrClauseContext) -> T{
+	open func visitCrClause(_ ctx: ErlangParser.CrClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReceiveExpr(_ ctx: ErlangParser.ReceiveExprContext) -> T{
+	open func visitReceiveExpr(_ ctx: ErlangParser.ReceiveExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunExpr(_ ctx: ErlangParser.FunExprContext) -> T{
+	open func visitFunExpr(_ ctx: ErlangParser.FunExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtomOrVar(_ ctx: ErlangParser.AtomOrVarContext) -> T{
+	open func visitAtomOrVar(_ ctx: ErlangParser.AtomOrVarContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntegerOrVar(_ ctx: ErlangParser.IntegerOrVarContext) -> T{
+	open func visitIntegerOrVar(_ ctx: ErlangParser.IntegerOrVarContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunClauses(_ ctx: ErlangParser.FunClausesContext) -> T{
+	open func visitFunClauses(_ ctx: ErlangParser.FunClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunClause(_ ctx: ErlangParser.FunClauseContext) -> T{
+	open func visitFunClause(_ ctx: ErlangParser.FunClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTryExpr(_ ctx: ErlangParser.TryExprContext) -> T{
+	open func visitTryExpr(_ ctx: ErlangParser.TryExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTryCatch(_ ctx: ErlangParser.TryCatchContext) -> T{
+	open func visitTryCatch(_ ctx: ErlangParser.TryCatchContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTryClauses(_ ctx: ErlangParser.TryClausesContext) -> T{
+	open func visitTryClauses(_ ctx: ErlangParser.TryClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTryClause(_ ctx: ErlangParser.TryClauseContext) -> T{
+	open func visitTryClause(_ ctx: ErlangParser.TryClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentList(_ ctx: ErlangParser.ArgumentListContext) -> T{
+	open func visitArgumentList(_ ctx: ErlangParser.ArgumentListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprs(_ ctx: ErlangParser.ExprsContext) -> T{
+	open func visitExprs(_ ctx: ErlangParser.ExprsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGuard(_ ctx: ErlangParser.GuardContext) -> T{
+	open func visitGuard(_ ctx: ErlangParser.GuardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtomic(_ ctx: ErlangParser.AtomicContext) -> T{
+	open func visitAtomic(_ ctx: ErlangParser.AtomicContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrefixOp(_ ctx: ErlangParser.PrefixOpContext) -> T{
+	open func visitPrefixOp(_ ctx: ErlangParser.PrefixOpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultOp(_ ctx: ErlangParser.MultOpContext) -> T{
+	open func visitMultOp(_ ctx: ErlangParser.MultOpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAddOp(_ ctx: ErlangParser.AddOpContext) -> T{
+	open func visitAddOp(_ ctx: ErlangParser.AddOpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitListOp(_ ctx: ErlangParser.ListOpContext) -> T{
+	open func visitListOp(_ ctx: ErlangParser.ListOpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompOp(_ ctx: ErlangParser.CompOpContext) -> T{
+	open func visitCompOp(_ ctx: ErlangParser.CompOpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRuleClauses(_ ctx: ErlangParser.RuleClausesContext) -> T{
+	open func visitRuleClauses(_ ctx: ErlangParser.RuleClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRuleClause(_ ctx: ErlangParser.RuleClauseContext) -> T{
+	open func visitRuleClause(_ ctx: ErlangParser.RuleClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class ErlangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRuleBody(_ ctx: ErlangParser.RuleBodyContext) -> T{
+	open func visitRuleBody(_ ctx: ErlangParser.RuleBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

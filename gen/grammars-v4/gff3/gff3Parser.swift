@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/gff3/gff3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/gff3/gff3.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class gff3Parser: Parser {
@@ -11,16 +11,23 @@ open class gff3Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, HEADER = 4, COMMENTLINE = 5, 
                  EOL = 6, TEXT = 7
 	}
-	public static let RULE_document = 0, RULE_line = 1, RULE_dataline = 2, 
-                   RULE_attributes = 3, RULE_attribute = 4, RULE_seqid = 5, 
-                   RULE_source = 6, RULE_type = 7, RULE_start = 8, RULE_end = 9, 
-                   RULE_strand = 10, RULE_score = 11, RULE_phase = 12, RULE_commentline = 13
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_document = 0, RULE_line = 1, RULE_dataline = 2, RULE_attributes = 3, 
+            RULE_attribute = 4, RULE_seqid = 5, RULE_source = 6, RULE_type = 7, 
+            RULE_start = 8, RULE_end = 9, RULE_strand = 10, RULE_score = 11, 
+            RULE_phase = 12, RULE_commentline = 13
+
+	public
+	static let ruleNames: [String] = [
 		"document", "line", "dataline", "attributes", "attribute", "seqid", "source", 
 		"type", "start", "end", "strand", "score", "phase", "commentline"
 	]
@@ -31,89 +38,77 @@ open class gff3Parser: Parser {
 	private static let _SYMBOLIC_NAMES: [String?] = [
 		nil, nil, nil, nil, "HEADER", "COMMENTLINE", "EOL", "TEXT"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "gff3.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return gff3Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "gff3.g4" }
+	override open
+	func getSerializedATN() -> String { return gff3Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return gff3Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return gff3Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return gff3Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return gff3Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return gff3Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,gff3Parser._ATN,gff3Parser._decisionToDFA, gff3Parser._sharedContextCache)
 	}
-	open class DocumentContext:ParserRuleContext {
-		open func HEADER() -> TerminalNode? { return getToken(gff3Parser.Tokens.HEADER.rawValue, 0) }
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
+
+	public class DocumentContext: ParserRuleContext {
+			open
+			func HEADER() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.HEADER.rawValue, 0)
+			}
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_document
 		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_document }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterDocument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterDocument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitDocument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitDocument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitDocument(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitDocument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitDocument(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitDocument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func document() throws -> DocumentContext {
+	 open func document() throws -> DocumentContext {
 		var _localctx: DocumentContext = DocumentContext(_ctx, getState())
 		try enterRule(_localctx, 0, gff3Parser.RULE_document)
 		var _la: Int = 0
@@ -150,40 +145,47 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func commentline() -> CommentlineContext? {
-			return getRuleContext(CommentlineContext.self,0)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func commentline() -> CommentlineContext? {
+				return getRuleContext(CommentlineContext.self, 0)
+			}
+			open
+			func dataline() -> DatalineContext? {
+				return getRuleContext(DatalineContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_line
 		}
-		open func dataline() -> DatalineContext? {
-			return getRuleContext(DatalineContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitLine(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 2, gff3Parser.RULE_line)
 		defer {
@@ -207,7 +209,7 @@ open class gff3Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -218,62 +220,79 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class DatalineContext:ParserRuleContext {
-		open func seqid() -> SeqidContext? {
-			return getRuleContext(SeqidContext.self,0)
+
+	public class DatalineContext: ParserRuleContext {
+			open
+			func seqid() -> SeqidContext? {
+				return getRuleContext(SeqidContext.self, 0)
+			}
+			open
+			func source() -> SourceContext? {
+				return getRuleContext(SourceContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func start() -> StartContext? {
+				return getRuleContext(StartContext.self, 0)
+			}
+			open
+			func end() -> EndContext? {
+				return getRuleContext(EndContext.self, 0)
+			}
+			open
+			func score() -> ScoreContext? {
+				return getRuleContext(ScoreContext.self, 0)
+			}
+			open
+			func strand() -> StrandContext? {
+				return getRuleContext(StrandContext.self, 0)
+			}
+			open
+			func phase() -> PhaseContext? {
+				return getRuleContext(PhaseContext.self, 0)
+			}
+			open
+			func EOL() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.EOL.rawValue, 0)
+			}
+			open
+			func attributes() -> AttributesContext? {
+				return getRuleContext(AttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_dataline
 		}
-		open func source() -> SourceContext? {
-			return getRuleContext(SourceContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func start() -> StartContext? {
-			return getRuleContext(StartContext.self,0)
-		}
-		open func end() -> EndContext? {
-			return getRuleContext(EndContext.self,0)
-		}
-		open func score() -> ScoreContext? {
-			return getRuleContext(ScoreContext.self,0)
-		}
-		open func strand() -> StrandContext? {
-			return getRuleContext(StrandContext.self,0)
-		}
-		open func phase() -> PhaseContext? {
-			return getRuleContext(PhaseContext.self,0)
-		}
-		open func EOL() -> TerminalNode? { return getToken(gff3Parser.Tokens.EOL.rawValue, 0) }
-		open func attributes() -> AttributesContext? {
-			return getRuleContext(AttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_dataline }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterDataline(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterDataline(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitDataline(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitDataline(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitDataline(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitDataline(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitDataline(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitDataline(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dataline() throws -> DatalineContext {
+	 open func dataline() throws -> DatalineContext {
 		var _localctx: DatalineContext = DatalineContext(_ctx, getState())
 		try enterRule(_localctx, 4, gff3Parser.RULE_dataline)
 		var _la: Int = 0
@@ -339,40 +358,47 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class AttributesContext:ParserRuleContext {
-		open func attribute() -> Array<AttributeContext> {
-			return getRuleContexts(AttributeContext.self)
+
+	public class AttributesContext: ParserRuleContext {
+			open
+			func attribute() -> [AttributeContext] {
+				return getRuleContexts(AttributeContext.self)
+			}
+			open
+			func attribute(_ i: Int) -> AttributeContext? {
+				return getRuleContext(AttributeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_attributes
 		}
-		open func attribute(_ i: Int) -> AttributeContext? {
-			return getRuleContext(AttributeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_attributes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterAttributes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterAttributes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitAttributes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitAttributes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitAttributes(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitAttributes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitAttributes(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitAttributes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributes() throws -> AttributesContext {
+	 open func attributes() throws -> AttributesContext {
 		var _localctx: AttributesContext = AttributesContext(_ctx, getState())
 		try enterRule(_localctx, 6, gff3Parser.RULE_attributes)
 		var _la: Int = 0
@@ -411,38 +437,47 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class AttributeContext:ParserRuleContext {
-		open func TEXT() -> Array<TerminalNode> { return getTokens(gff3Parser.Tokens.TEXT.rawValue) }
-		open func TEXT(_ i:Int) -> TerminalNode?{
-			return getToken(gff3Parser.Tokens.TEXT.rawValue, i)
+
+	public class AttributeContext: ParserRuleContext {
+			open
+			func TEXT() -> [TerminalNode] {
+				return getTokens(gff3Parser.Tokens.TEXT.rawValue)
+			}
+			open
+			func TEXT(_ i:Int) -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.TEXT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_attribute
 		}
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_attribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitAttribute(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitAttribute(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attribute() throws -> AttributeContext {
+	 open func attribute() throws -> AttributeContext {
 		var _localctx: AttributeContext = AttributeContext(_ctx, getState())
 		try enterRule(_localctx, 8, gff3Parser.RULE_attribute)
 		defer {
@@ -466,35 +501,43 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class SeqidContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(gff3Parser.Tokens.TEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_seqid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterSeqid(self)
+
+	public class SeqidContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.TEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_seqid
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterSeqid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitSeqid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitSeqid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitSeqid(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitSeqid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitSeqid(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitSeqid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func seqid() throws -> SeqidContext {
+	 open func seqid() throws -> SeqidContext {
 		var _localctx: SeqidContext = SeqidContext(_ctx, getState())
 		try enterRule(_localctx, 10, gff3Parser.RULE_seqid)
 		defer {
@@ -514,35 +557,43 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class SourceContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(gff3Parser.Tokens.TEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_source }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterSource(self)
+
+	public class SourceContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.TEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_source
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterSource(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitSource(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitSource(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitSource(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitSource(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitSource(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitSource(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func source() throws -> SourceContext {
+	 open func source() throws -> SourceContext {
 		var _localctx: SourceContext = SourceContext(_ctx, getState())
 		try enterRule(_localctx, 12, gff3Parser.RULE_source)
 		defer {
@@ -562,35 +613,43 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(gff3Parser.Tokens.TEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterType(self)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.TEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_type
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitType(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 14, gff3Parser.RULE_type)
 		defer {
@@ -610,35 +669,43 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class StartContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(gff3Parser.Tokens.TEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_start }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterStart(self)
+
+	public class StartContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.TEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_start
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterStart(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitStart(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitStart(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitStart(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitStart(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitStart(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitStart(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func start() throws -> StartContext {
+	 open func start() throws -> StartContext {
 		var _localctx: StartContext = StartContext(_ctx, getState())
 		try enterRule(_localctx, 16, gff3Parser.RULE_start)
 		defer {
@@ -658,35 +725,43 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class EndContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(gff3Parser.Tokens.TEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_end }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterEnd(self)
+
+	public class EndContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.TEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_end
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterEnd(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitEnd(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitEnd(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitEnd(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitEnd(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitEnd(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitEnd(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func end() throws -> EndContext {
+	 open func end() throws -> EndContext {
 		var _localctx: EndContext = EndContext(_ctx, getState())
 		try enterRule(_localctx, 18, gff3Parser.RULE_end)
 		defer {
@@ -706,35 +781,43 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class StrandContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(gff3Parser.Tokens.TEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_strand }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterStrand(self)
+
+	public class StrandContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.TEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_strand
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterStrand(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitStrand(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitStrand(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitStrand(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitStrand(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitStrand(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitStrand(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func strand() throws -> StrandContext {
+	 open func strand() throws -> StrandContext {
 		var _localctx: StrandContext = StrandContext(_ctx, getState())
 		try enterRule(_localctx, 20, gff3Parser.RULE_strand)
 		defer {
@@ -754,35 +837,43 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class ScoreContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(gff3Parser.Tokens.TEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_score }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterScore(self)
+
+	public class ScoreContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.TEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_score
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterScore(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitScore(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitScore(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitScore(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitScore(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitScore(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitScore(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func score() throws -> ScoreContext {
+	 open func score() throws -> ScoreContext {
 		var _localctx: ScoreContext = ScoreContext(_ctx, getState())
 		try enterRule(_localctx, 22, gff3Parser.RULE_score)
 		defer {
@@ -802,35 +893,43 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class PhaseContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(gff3Parser.Tokens.TEXT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_phase }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterPhase(self)
+
+	public class PhaseContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.TEXT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_phase
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterPhase(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitPhase(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitPhase(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitPhase(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitPhase(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitPhase(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitPhase(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func phase() throws -> PhaseContext {
+	 open func phase() throws -> PhaseContext {
 		var _localctx: PhaseContext = PhaseContext(_ctx, getState())
 		try enterRule(_localctx, 24, gff3Parser.RULE_phase)
 		defer {
@@ -850,35 +949,43 @@ open class gff3Parser: Parser {
 
 		return _localctx
 	}
-	open class CommentlineContext:ParserRuleContext {
-		open func COMMENTLINE() -> TerminalNode? { return getToken(gff3Parser.Tokens.COMMENTLINE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gff3Parser.RULE_commentline }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).enterCommentline(self)
+
+	public class CommentlineContext: ParserRuleContext {
+			open
+			func COMMENTLINE() -> TerminalNode? {
+				return getToken(gff3Parser.Tokens.COMMENTLINE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gff3Parser.RULE_commentline
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.enterCommentline(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gff3Listener {
-			 	(listener as! gff3Listener).exitCommentline(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gff3Listener {
+				listener.exitCommentline(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gff3Visitor {
-			     return (visitor as! gff3Visitor<T>).visitCommentline(self)
-			}else if visitor is gff3BaseVisitor {
-		    	 return (visitor as! gff3BaseVisitor<T>).visitCommentline(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gff3Visitor {
+			    return visitor.visitCommentline(self)
+			}
+			else if let visitor = visitor as? gff3BaseVisitor {
+			    return visitor.visitCommentline(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func commentline() throws -> CommentlineContext {
+	 open func commentline() throws -> CommentlineContext {
 		var _localctx: CommentlineContext = CommentlineContext(_ctx, getState())
 		try enterRule(_localctx, 26, gff3Parser.RULE_commentline)
 		defer {
@@ -899,6 +1006,10 @@ open class gff3Parser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = gff3ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = gff3ParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

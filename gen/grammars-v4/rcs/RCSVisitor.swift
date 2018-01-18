@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/rcs/RCS.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/rcs/RCS.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRcstext(_ ctx: RCSParser.RcstextContext) -> T{
+	open func visitRcstext(_ ctx: RCSParser.RcstextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRcsheader(_ ctx: RCSParser.RcsheaderContext) -> T{
+	open func visitRcsheader(_ ctx: RCSParser.RcsheaderContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRcsrevisions(_ ctx: RCSParser.RcsrevisionsContext) -> T{
+	open func visitRcsrevisions(_ ctx: RCSParser.RcsrevisionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdmin(_ ctx: RCSParser.AdminContext) -> T{
+	open func visitAdmin(_ ctx: RCSParser.AdminContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHead(_ ctx: RCSParser.HeadContext) -> T{
+	open func visitHead(_ ctx: RCSParser.HeadContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBranch(_ ctx: RCSParser.BranchContext) -> T{
+	open func visitBranch(_ ctx: RCSParser.BranchContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAccess(_ ctx: RCSParser.AccessContext) -> T{
+	open func visitAccess(_ ctx: RCSParser.AccessContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbols(_ ctx: RCSParser.SymbolsContext) -> T{
+	open func visitSymbols(_ ctx: RCSParser.SymbolsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTags(_ ctx: RCSParser.TagsContext) -> T{
+	open func visitTags(_ ctx: RCSParser.TagsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocks(_ ctx: RCSParser.LocksContext) -> T{
+	open func visitLocks(_ ctx: RCSParser.LocksContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStrict(_ ctx: RCSParser.StrictContext) -> T{
+	open func visitStrict(_ ctx: RCSParser.StrictContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: RCSParser.CommentContext) -> T{
+	open func visitComment(_ ctx: RCSParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpand(_ ctx: RCSParser.ExpandContext) -> T{
+	open func visitExpand(_ ctx: RCSParser.ExpandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeltalist(_ ctx: RCSParser.DeltalistContext) -> T{
+	open func visitDeltalist(_ ctx: RCSParser.DeltalistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelta(_ ctx: RCSParser.DeltaContext) -> T{
+	open func visitDelta(_ ctx: RCSParser.DeltaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelta_date(_ ctx: RCSParser.Delta_dateContext) -> T{
+	open func visitDelta_date(_ ctx: RCSParser.Delta_dateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelta_author(_ ctx: RCSParser.Delta_authorContext) -> T{
+	open func visitDelta_author(_ ctx: RCSParser.Delta_authorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelta_state(_ ctx: RCSParser.Delta_stateContext) -> T{
+	open func visitDelta_state(_ ctx: RCSParser.Delta_stateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelta_branches(_ ctx: RCSParser.Delta_branchesContext) -> T{
+	open func visitDelta_branches(_ ctx: RCSParser.Delta_branchesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelta_next(_ ctx: RCSParser.Delta_nextContext) -> T{
+	open func visitDelta_next(_ ctx: RCSParser.Delta_nextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDesc(_ ctx: RCSParser.DescContext) -> T{
+	open func visitDesc(_ ctx: RCSParser.DescContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeltatextlist(_ ctx: RCSParser.DeltatextlistContext) -> T{
+	open func visitDeltatextlist(_ ctx: RCSParser.DeltatextlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeltatext(_ ctx: RCSParser.DeltatextContext) -> T{
+	open func visitDeltatext(_ ctx: RCSParser.DeltatextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeltatext_log(_ ctx: RCSParser.Deltatext_logContext) -> T{
+	open func visitDeltatext_log(_ ctx: RCSParser.Deltatext_logContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeltatext_text(_ ctx: RCSParser.Deltatext_textContext) -> T{
+	open func visitDeltatext_text(_ ctx: RCSParser.Deltatext_textContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class RCSVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNewphrase(_ ctx: RCSParser.NewphraseContext) -> T{
+	open func visitNewphrase(_ ctx: RCSParser.NewphraseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

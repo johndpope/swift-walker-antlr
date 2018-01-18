@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/scala/Scala.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/scala/Scala.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: ScalaParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: ScalaParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualId(_ ctx: ScalaParser.QualIdContext) -> T{
+	open func visitQualId(_ ctx: ScalaParser.QualIdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIds(_ ctx: ScalaParser.IdsContext) -> T{
+	open func visitIds(_ ctx: ScalaParser.IdsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStableId(_ ctx: ScalaParser.StableIdContext) -> T{
+	open func visitStableId(_ ctx: ScalaParser.StableIdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassQualifier(_ ctx: ScalaParser.ClassQualifierContext) -> T{
+	open func visitClassQualifier(_ ctx: ScalaParser.ClassQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: ScalaParser.TypeContext) -> T{
+	open func visitType(_ ctx: ScalaParser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionArgTypes(_ ctx: ScalaParser.FunctionArgTypesContext) -> T{
+	open func visitFunctionArgTypes(_ ctx: ScalaParser.FunctionArgTypesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExistentialClause(_ ctx: ScalaParser.ExistentialClauseContext) -> T{
+	open func visitExistentialClause(_ ctx: ScalaParser.ExistentialClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExistentialDcl(_ ctx: ScalaParser.ExistentialDclContext) -> T{
+	open func visitExistentialDcl(_ ctx: ScalaParser.ExistentialDclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInfixType(_ ctx: ScalaParser.InfixTypeContext) -> T{
+	open func visitInfixType(_ ctx: ScalaParser.InfixTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompoundType(_ ctx: ScalaParser.CompoundTypeContext) -> T{
+	open func visitCompoundType(_ ctx: ScalaParser.CompoundTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotType(_ ctx: ScalaParser.AnnotTypeContext) -> T{
+	open func visitAnnotType(_ ctx: ScalaParser.AnnotTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleType(_ ctx: ScalaParser.SimpleTypeContext) -> T{
+	open func visitSimpleType(_ ctx: ScalaParser.SimpleTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeArgs(_ ctx: ScalaParser.TypeArgsContext) -> T{
+	open func visitTypeArgs(_ ctx: ScalaParser.TypeArgsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypes(_ ctx: ScalaParser.TypesContext) -> T{
+	open func visitTypes(_ ctx: ScalaParser.TypesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRefinement(_ ctx: ScalaParser.RefinementContext) -> T{
+	open func visitRefinement(_ ctx: ScalaParser.RefinementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRefineStat(_ ctx: ScalaParser.RefineStatContext) -> T{
+	open func visitRefineStat(_ ctx: ScalaParser.RefineStatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypePat(_ ctx: ScalaParser.TypePatContext) -> T{
+	open func visitTypePat(_ ctx: ScalaParser.TypePatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAscription(_ ctx: ScalaParser.AscriptionContext) -> T{
+	open func visitAscription(_ ctx: ScalaParser.AscriptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr(_ ctx: ScalaParser.ExprContext) -> T{
+	open func visitExpr(_ ctx: ScalaParser.ExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr1(_ ctx: ScalaParser.Expr1Context) -> T{
+	open func visitExpr1(_ ctx: ScalaParser.Expr1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostfixExpr(_ ctx: ScalaParser.PostfixExprContext) -> T{
+	open func visitPostfixExpr(_ ctx: ScalaParser.PostfixExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInfixExpr(_ ctx: ScalaParser.InfixExprContext) -> T{
+	open func visitInfixExpr(_ ctx: ScalaParser.InfixExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrefixExpr(_ ctx: ScalaParser.PrefixExprContext) -> T{
+	open func visitPrefixExpr(_ ctx: ScalaParser.PrefixExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleExpr1(_ ctx: ScalaParser.SimpleExpr1Context) -> T{
+	open func visitSimpleExpr1(_ ctx: ScalaParser.SimpleExpr1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprs(_ ctx: ScalaParser.ExprsContext) -> T{
+	open func visitExprs(_ ctx: ScalaParser.ExprsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentExprs(_ ctx: ScalaParser.ArgumentExprsContext) -> T{
+	open func visitArgumentExprs(_ ctx: ScalaParser.ArgumentExprsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockExpr(_ ctx: ScalaParser.BlockExprContext) -> T{
+	open func visitBlockExpr(_ ctx: ScalaParser.BlockExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: ScalaParser.BlockContext) -> T{
+	open func visitBlock(_ ctx: ScalaParser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockStat(_ ctx: ScalaParser.BlockStatContext) -> T{
+	open func visitBlockStat(_ ctx: ScalaParser.BlockStatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResultExpr(_ ctx: ScalaParser.ResultExprContext) -> T{
+	open func visitResultExpr(_ ctx: ScalaParser.ResultExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumerators(_ ctx: ScalaParser.EnumeratorsContext) -> T{
+	open func visitEnumerators(_ ctx: ScalaParser.EnumeratorsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGenerator(_ ctx: ScalaParser.GeneratorContext) -> T{
+	open func visitGenerator(_ ctx: ScalaParser.GeneratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseClauses(_ ctx: ScalaParser.CaseClausesContext) -> T{
+	open func visitCaseClauses(_ ctx: ScalaParser.CaseClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseClause(_ ctx: ScalaParser.CaseClauseContext) -> T{
+	open func visitCaseClause(_ ctx: ScalaParser.CaseClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGuard(_ ctx: ScalaParser.GuardContext) -> T{
+	open func visitGuard(_ ctx: ScalaParser.GuardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPattern(_ ctx: ScalaParser.PatternContext) -> T{
+	open func visitPattern(_ ctx: ScalaParser.PatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPattern1(_ ctx: ScalaParser.Pattern1Context) -> T{
+	open func visitPattern1(_ ctx: ScalaParser.Pattern1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPattern2(_ ctx: ScalaParser.Pattern2Context) -> T{
+	open func visitPattern2(_ ctx: ScalaParser.Pattern2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPattern3(_ ctx: ScalaParser.Pattern3Context) -> T{
+	open func visitPattern3(_ ctx: ScalaParser.Pattern3Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimplePattern(_ ctx: ScalaParser.SimplePatternContext) -> T{
+	open func visitSimplePattern(_ ctx: ScalaParser.SimplePatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPatterns(_ ctx: ScalaParser.PatternsContext) -> T{
+	open func visitPatterns(_ ctx: ScalaParser.PatternsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeParamClause(_ ctx: ScalaParser.TypeParamClauseContext) -> T{
+	open func visitTypeParamClause(_ ctx: ScalaParser.TypeParamClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunTypeParamClause(_ ctx: ScalaParser.FunTypeParamClauseContext) -> T{
+	open func visitFunTypeParamClause(_ ctx: ScalaParser.FunTypeParamClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariantTypeParam(_ ctx: ScalaParser.VariantTypeParamContext) -> T{
+	open func visitVariantTypeParam(_ ctx: ScalaParser.VariantTypeParamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeParam(_ ctx: ScalaParser.TypeParamContext) -> T{
+	open func visitTypeParam(_ ctx: ScalaParser.TypeParamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParamClauses(_ ctx: ScalaParser.ParamClausesContext) -> T{
+	open func visitParamClauses(_ ctx: ScalaParser.ParamClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParamClause(_ ctx: ScalaParser.ParamClauseContext) -> T{
+	open func visitParamClause(_ ctx: ScalaParser.ParamClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParams(_ ctx: ScalaParser.ParamsContext) -> T{
+	open func visitParams(_ ctx: ScalaParser.ParamsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParam(_ ctx: ScalaParser.ParamContext) -> T{
+	open func visitParam(_ ctx: ScalaParser.ParamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParamType(_ ctx: ScalaParser.ParamTypeContext) -> T{
+	open func visitParamType(_ ctx: ScalaParser.ParamTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassParamClauses(_ ctx: ScalaParser.ClassParamClausesContext) -> T{
+	open func visitClassParamClauses(_ ctx: ScalaParser.ClassParamClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassParamClause(_ ctx: ScalaParser.ClassParamClauseContext) -> T{
+	open func visitClassParamClause(_ ctx: ScalaParser.ClassParamClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassParams(_ ctx: ScalaParser.ClassParamsContext) -> T{
+	open func visitClassParams(_ ctx: ScalaParser.ClassParamsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassParam(_ ctx: ScalaParser.ClassParamContext) -> T{
+	open func visitClassParam(_ ctx: ScalaParser.ClassParamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBindings(_ ctx: ScalaParser.BindingsContext) -> T{
+	open func visitBindings(_ ctx: ScalaParser.BindingsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinding(_ ctx: ScalaParser.BindingContext) -> T{
+	open func visitBinding(_ ctx: ScalaParser.BindingContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModifier(_ ctx: ScalaParser.ModifierContext) -> T{
+	open func visitModifier(_ ctx: ScalaParser.ModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocalModifier(_ ctx: ScalaParser.LocalModifierContext) -> T{
+	open func visitLocalModifier(_ ctx: ScalaParser.LocalModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAccessModifier(_ ctx: ScalaParser.AccessModifierContext) -> T{
+	open func visitAccessModifier(_ ctx: ScalaParser.AccessModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAccessQualifier(_ ctx: ScalaParser.AccessQualifierContext) -> T{
+	open func visitAccessQualifier(_ ctx: ScalaParser.AccessQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotation(_ ctx: ScalaParser.AnnotationContext) -> T{
+	open func visitAnnotation(_ ctx: ScalaParser.AnnotationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstrAnnotation(_ ctx: ScalaParser.ConstrAnnotationContext) -> T{
+	open func visitConstrAnnotation(_ ctx: ScalaParser.ConstrAnnotationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplateBody(_ ctx: ScalaParser.TemplateBodyContext) -> T{
+	open func visitTemplateBody(_ ctx: ScalaParser.TemplateBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplateStat(_ ctx: ScalaParser.TemplateStatContext) -> T{
+	open func visitTemplateStat(_ ctx: ScalaParser.TemplateStatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelfType(_ ctx: ScalaParser.SelfTypeContext) -> T{
+	open func visitSelfType(_ ctx: ScalaParser.SelfTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImport_(_ ctx: ScalaParser.Import_Context) -> T{
+	open func visitImport_(_ ctx: ScalaParser.Import_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportExpr(_ ctx: ScalaParser.ImportExprContext) -> T{
+	open func visitImportExpr(_ ctx: ScalaParser.ImportExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportSelectors(_ ctx: ScalaParser.ImportSelectorsContext) -> T{
+	open func visitImportSelectors(_ ctx: ScalaParser.ImportSelectorsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportSelector(_ ctx: ScalaParser.ImportSelectorContext) -> T{
+	open func visitImportSelector(_ ctx: ScalaParser.ImportSelectorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDcl(_ ctx: ScalaParser.DclContext) -> T{
+	open func visitDcl(_ ctx: ScalaParser.DclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValDcl(_ ctx: ScalaParser.ValDclContext) -> T{
+	open func visitValDcl(_ ctx: ScalaParser.ValDclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarDcl(_ ctx: ScalaParser.VarDclContext) -> T{
+	open func visitVarDcl(_ ctx: ScalaParser.VarDclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunDcl(_ ctx: ScalaParser.FunDclContext) -> T{
+	open func visitFunDcl(_ ctx: ScalaParser.FunDclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunSig(_ ctx: ScalaParser.FunSigContext) -> T{
+	open func visitFunSig(_ ctx: ScalaParser.FunSigContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDcl(_ ctx: ScalaParser.TypeDclContext) -> T{
+	open func visitTypeDcl(_ ctx: ScalaParser.TypeDclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPatVarDef(_ ctx: ScalaParser.PatVarDefContext) -> T{
+	open func visitPatVarDef(_ ctx: ScalaParser.PatVarDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDef(_ ctx: ScalaParser.DefContext) -> T{
+	open func visitDef(_ ctx: ScalaParser.DefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPatDef(_ ctx: ScalaParser.PatDefContext) -> T{
+	open func visitPatDef(_ ctx: ScalaParser.PatDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarDef(_ ctx: ScalaParser.VarDefContext) -> T{
+	open func visitVarDef(_ ctx: ScalaParser.VarDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunDef(_ ctx: ScalaParser.FunDefContext) -> T{
+	open func visitFunDef(_ ctx: ScalaParser.FunDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDef(_ ctx: ScalaParser.TypeDefContext) -> T{
+	open func visitTypeDef(_ ctx: ScalaParser.TypeDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTmplDef(_ ctx: ScalaParser.TmplDefContext) -> T{
+	open func visitTmplDef(_ ctx: ScalaParser.TmplDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassDef(_ ctx: ScalaParser.ClassDefContext) -> T{
+	open func visitClassDef(_ ctx: ScalaParser.ClassDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTraitDef(_ ctx: ScalaParser.TraitDefContext) -> T{
+	open func visitTraitDef(_ ctx: ScalaParser.TraitDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectDef(_ ctx: ScalaParser.ObjectDefContext) -> T{
+	open func visitObjectDef(_ ctx: ScalaParser.ObjectDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassTemplateOpt(_ ctx: ScalaParser.ClassTemplateOptContext) -> T{
+	open func visitClassTemplateOpt(_ ctx: ScalaParser.ClassTemplateOptContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTraitTemplateOpt(_ ctx: ScalaParser.TraitTemplateOptContext) -> T{
+	open func visitTraitTemplateOpt(_ ctx: ScalaParser.TraitTemplateOptContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassTemplate(_ ctx: ScalaParser.ClassTemplateContext) -> T{
+	open func visitClassTemplate(_ ctx: ScalaParser.ClassTemplateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTraitTemplate(_ ctx: ScalaParser.TraitTemplateContext) -> T{
+	open func visitTraitTemplate(_ ctx: ScalaParser.TraitTemplateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassParents(_ ctx: ScalaParser.ClassParentsContext) -> T{
+	open func visitClassParents(_ ctx: ScalaParser.ClassParentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTraitParents(_ ctx: ScalaParser.TraitParentsContext) -> T{
+	open func visitTraitParents(_ ctx: ScalaParser.TraitParentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstr(_ ctx: ScalaParser.ConstrContext) -> T{
+	open func visitConstr(_ ctx: ScalaParser.ConstrContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEarlyDefs(_ ctx: ScalaParser.EarlyDefsContext) -> T{
+	open func visitEarlyDefs(_ ctx: ScalaParser.EarlyDefsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEarlyDef(_ ctx: ScalaParser.EarlyDefContext) -> T{
+	open func visitEarlyDef(_ ctx: ScalaParser.EarlyDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstrExpr(_ ctx: ScalaParser.ConstrExprContext) -> T{
+	open func visitConstrExpr(_ ctx: ScalaParser.ConstrExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstrBlock(_ ctx: ScalaParser.ConstrBlockContext) -> T{
+	open func visitConstrBlock(_ ctx: ScalaParser.ConstrBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelfInvocation(_ ctx: ScalaParser.SelfInvocationContext) -> T{
+	open func visitSelfInvocation(_ ctx: ScalaParser.SelfInvocationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTopStatSeq(_ ctx: ScalaParser.TopStatSeqContext) -> T{
+	open func visitTopStatSeq(_ ctx: ScalaParser.TopStatSeqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTopStat(_ ctx: ScalaParser.TopStatContext) -> T{
+	open func visitTopStat(_ ctx: ScalaParser.TopStatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackaging(_ ctx: ScalaParser.PackagingContext) -> T{
+	open func visitPackaging(_ ctx: ScalaParser.PackagingContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1025,7 +1025,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackageObject(_ ctx: ScalaParser.PackageObjectContext) -> T{
+	open func visitPackageObject(_ ctx: ScalaParser.PackageObjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1035,7 +1035,7 @@ open class ScalaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompilationUnit(_ ctx: ScalaParser.CompilationUnitContext) -> T{
+	open func visitCompilationUnit(_ ctx: ScalaParser.CompilationUnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

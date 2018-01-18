@@ -1,7 +1,8 @@
-// Generated from ./grammars-v4/json/JSON.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/json/JSON.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class JSONLexer: Lexer {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
           let length = JSONLexer._ATN.getNumberOfDecisions()
@@ -11,18 +12,24 @@ open class JSONLexer: Lexer {
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, 
-                   T__7=8, T__8=9, STRING=10, NUMBER=11, WS=12
-	public static let channelNames: [String] = [
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, 
+            T__8=9, STRING=10, NUMBER=11, WS=12
+
+	public
+	static let channelNames: [String] = [
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	]
 
-	public static let modeNames: [String] = [
+	public
+	static let modeNames: [String] = [
 		"DEFAULT_MODE"
 	]
 
-	public static let ruleNames: [String] = [
+	public
+	static let ruleNames: [String] = [
 		"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T__7", "T__8", 
 		"STRING", "ESC", "UNICODE", "HEX", "NUMBER", "INT", "EXP", "WS"
 	]
@@ -34,61 +41,44 @@ open class JSONLexer: Lexer {
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "STRING", "NUMBER", 
 		"WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
+	override open
+	func getVocabulary() -> Vocabulary {
+		return JSONLexer.VOCABULARY
 	}
 
-    open override func getVocabulary() -> Vocabulary {
-        return JSONLexer.VOCABULARY
-    }
-
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, JSONLexer._ATN, JSONLexer._decisionToDFA, JSONLexer._sharedContextCache)
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "JSON.g4" }
+	override open
+	func getGrammarFileName() -> String { return "JSON.g4" }
 
-    override
-	open func getRuleNames() -> [String] { return JSONLexer.ruleNames }
+	override open
+	func getRuleNames() -> [String] { return JSONLexer.ruleNames }
 
-	override
-	open func getSerializedATN() -> String { return JSONLexer._serializedATN }
+	override open
+	func getSerializedATN() -> String { return JSONLexer._serializedATN }
 
-	override
-	open func getChannelNames() -> [String] { return JSONLexer.channelNames }
+	override open
+	func getChannelNames() -> [String] { return JSONLexer.channelNames }
 
-	override
-	open func getModeNames() -> [String] { return JSONLexer.modeNames }
+	override open
+	func getModeNames() -> [String] { return JSONLexer.modeNames }
 
-	override
-	open func getATN() -> ATN { return JSONLexer._ATN }
+	override open
+	func getATN() -> ATN { return JSONLexer._ATN }
 
-    public static let _serializedATN: String = JSONLexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = JSONLexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

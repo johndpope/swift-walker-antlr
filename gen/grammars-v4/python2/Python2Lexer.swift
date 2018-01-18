@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/python2/Python2.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/python2/Python2.g4 by ANTLR 4.7.1
 
 from Python2Parser import Python2Parser
 from antlr4.Token  import CommonToken
@@ -19,6 +19,7 @@ class TokenQueue:
 import Antlr4
 
 open class Python2Lexer: Lexer {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
           let length = Python2Lexer._ATN.getNumberOfDecisions()
@@ -28,31 +29,36 @@ open class Python2Lexer: Lexer {
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, 
-                   T__7=8, T__8=9, T__9=10, T__10=11, T__11=12, T__12=13, 
-                   T__13=14, T__14=15, T__15=16, T__16=17, T__17=18, T__18=19, 
-                   T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, T__24=25, 
-                   T__25=26, T__26=27, T__27=28, T__28=29, T__29=30, T__30=31, 
-                   T__31=32, T__32=33, T__33=34, T__34=35, T__35=36, T__36=37, 
-                   T__37=38, T__38=39, T__39=40, T__40=41, T__41=42, T__42=43, 
-                   T__43=44, T__44=45, T__45=46, T__46=47, T__47=48, T__48=49, 
-                   T__49=50, T__50=51, T__51=52, T__52=53, T__53=54, T__54=55, 
-                   T__55=56, T__56=57, T__57=58, T__58=59, T__59=60, T__60=61, 
-                   T__61=62, T__62=63, T__63=64, T__64=65, T__65=66, T__66=67, 
-                   T__67=68, T__68=69, NAME=70, NUMBER=71, STRING=72, LINENDING=73, 
-                   WHITESPACE=74, COMMENT=75, OPEN_PAREN=76, CLOSE_PAREN=77, 
-                   OPEN_BRACE=78, CLOSE_BRACE=79, OPEN_BRACKET=80, CLOSE_BRACKET=81, 
-                   UNKNOWN=82
-	public static let channelNames: [String] = [
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, 
+            T__8=9, T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, 
+            T__15=16, T__16=17, T__17=18, T__18=19, T__19=20, T__20=21, 
+            T__21=22, T__22=23, T__23=24, T__24=25, T__25=26, T__26=27, 
+            T__27=28, T__28=29, T__29=30, T__30=31, T__31=32, T__32=33, 
+            T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, T__38=39, 
+            T__39=40, T__40=41, T__41=42, T__42=43, T__43=44, T__44=45, 
+            T__45=46, T__46=47, T__47=48, T__48=49, T__49=50, T__50=51, 
+            T__51=52, T__52=53, T__53=54, T__54=55, T__55=56, T__56=57, 
+            T__57=58, T__58=59, T__59=60, T__60=61, T__61=62, T__62=63, 
+            T__63=64, T__64=65, T__65=66, T__66=67, T__67=68, T__68=69, 
+            NAME=70, NUMBER=71, STRING=72, LINENDING=73, WHITESPACE=74, 
+            COMMENT=75, OPEN_PAREN=76, CLOSE_PAREN=77, OPEN_BRACE=78, CLOSE_BRACE=79, 
+            OPEN_BRACKET=80, CLOSE_BRACKET=81, UNKNOWN=82
+
+	public
+	static let channelNames: [String] = [
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	]
 
-	public static let modeNames: [String] = [
+	public
+	static let modeNames: [String] = [
 		"DEFAULT_MODE"
 	]
 
-	public static let ruleNames: [String] = [
+	public
+	static let ruleNames: [String] = [
 		"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T__7", "T__8", 
 		"T__9", "T__10", "T__11", "T__12", "T__13", "T__14", "T__15", "T__16", 
 		"T__17", "T__18", "T__19", "T__20", "T__21", "T__22", "T__23", "T__24", 
@@ -88,32 +94,8 @@ open class Python2Lexer: Lexer {
 		"CLOSE_PAREN", "OPEN_BRACE", "CLOSE_BRACE", "OPEN_BRACKET", "CLOSE_BRACKET", 
 		"UNKNOWN"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
-
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
-
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
 
 	    # Indented to append code to the constructor.
@@ -171,36 +153,39 @@ open class Python2Lexer: Lexer {
 	    t.text = text
 	    return t
 
-    open override func getVocabulary() -> Vocabulary {
-        return Python2Lexer.VOCABULARY
-    }
 
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override open
+	func getVocabulary() -> Vocabulary {
+		return Python2Lexer.VOCABULARY
+	}
+
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, Python2Lexer._ATN, Python2Lexer._decisionToDFA, Python2Lexer._sharedContextCache)
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "Python2.g4" }
+	override open
+	func getGrammarFileName() -> String { return "Python2.g4" }
 
-    override
-	open func getRuleNames() -> [String] { return Python2Lexer.ruleNames }
+	override open
+	func getRuleNames() -> [String] { return Python2Lexer.ruleNames }
 
-	override
-	open func getSerializedATN() -> String { return Python2Lexer._serializedATN }
+	override open
+	func getSerializedATN() -> String { return Python2Lexer._serializedATN }
 
-	override
-	open func getChannelNames() -> [String] { return Python2Lexer.channelNames }
+	override open
+	func getChannelNames() -> [String] { return Python2Lexer.channelNames }
 
-	override
-	open func getModeNames() -> [String] { return Python2Lexer.modeNames }
+	override open
+	func getModeNames() -> [String] { return Python2Lexer.modeNames }
 
-	override
-	open func getATN() -> ATN { return Python2Lexer._ATN }
+	override open
+	func getATN() -> ATN { return Python2Lexer._ATN }
 
-	override
-	open func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
+	override open
+	func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
 		switch (ruleIndex) {
 		case 72:
 			LINENDING_action((_localctx as RuleContext?), actionIndex)
@@ -330,6 +315,10 @@ open class Python2Lexer: Lexer {
 		}
 	}
 
-    public static let _serializedATN: String = Python2LexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = Python2LexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

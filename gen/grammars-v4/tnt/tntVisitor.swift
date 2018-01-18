@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/tnt/tnt.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/tnt/tnt.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class tntVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEquation(_ ctx: tntParser.EquationContext) -> T{
+	open func visitEquation(_ ctx: tntParser.EquationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class tntVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: tntParser.AtomContext) -> T{
+	open func visitAtom(_ ctx: tntParser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class tntVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: tntParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: tntParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class tntVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariable(_ ctx: tntParser.VariableContext) -> T{
+	open func visitVariable(_ ctx: tntParser.VariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class tntVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: tntParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: tntParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class tntVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForevery(_ ctx: tntParser.ForeveryContext) -> T{
+	open func visitForevery(_ ctx: tntParser.ForeveryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class tntVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExists(_ ctx: tntParser.ExistsContext) -> T{
+	open func visitExists(_ ctx: tntParser.ExistsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

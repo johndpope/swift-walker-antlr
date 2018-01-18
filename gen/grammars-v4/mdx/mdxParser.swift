@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/mdx/mdx.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/mdx/mdx.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class mdxParser: Parser {
@@ -11,8 +11,11 @@ open class mdxParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, QUOTE = 1, ASTERISK = 2, COLON = 3, SEMICOLON = 4, COMMA = 5, 
                  CONCAT = 6, DOT = 7, EQ = 8, GE = 9, GT = 10, LBRACE = 11, 
                  LE = 12, LPAREN = 13, LT = 14, MINUS = 15, NE = 16, PLUS = 17, 
@@ -25,27 +28,29 @@ open class mdxParser: Parser {
                  XOR = 47, WITH = 48, NUMBER = 49, F = 50, ID = 51, AMP_QUOTED_ID = 52, 
                  QUOTED_ID = 53, STRING = 54, WS = 55
 	}
-	public static let RULE_mdx_statement = 0, RULE_select_statement = 1, RULE_formula_specification = 2, 
-                   RULE_single_formula_specification = 3, RULE_set_specification = 4, 
-                   RULE_member_specification = 5, RULE_axis_specification_list = 6, 
-                   RULE_member_property_def_list = 7, RULE_member_name = 8, 
-                   RULE_member_property_definition = 9, RULE_set_name = 10, 
-                   RULE_compound_id = 11, RULE_axis_specification = 12, 
-                   RULE_axis_name = 13, RULE_dim_props = 14, RULE_property_list = 15, 
-                   RULE_property = 16, RULE_cube_specification = 17, RULE_cube_name = 18, 
-                   RULE_slicer_specification = 19, RULE_cell_props = 20, 
-                   RULE_cell_property_list = 21, RULE_cell_property = 22, 
-                   RULE_mandatory_cell_property = 23, RULE_provider_specific_cell_property = 24, 
-                   RULE_expression = 25, RULE_value_expression = 26, RULE_value_xor_expression = 27, 
-                   RULE_value_or_expression = 28, RULE_term5 = 29, RULE_term4 = 30, 
-                   RULE_term3 = 31, RULE_term2 = 32, RULE_term = 33, RULE_factor = 34, 
-                   RULE_function = 35, RULE_value_expression_primary = 36, 
-                   RULE_value_expression_primary0 = 37, RULE_exp_list = 38, 
-                   RULE_case_expression = 39, RULE_when_list = 40, RULE_when_clause = 41, 
-                   RULE_comp_op = 42, RULE_identifier = 43, RULE_unquoted_identifier = 44, 
-                   RULE_amp_quoted_identifier = 45, RULE_quoted_identifier = 46, 
-                   RULE_keyword = 47
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_mdx_statement = 0, RULE_select_statement = 1, RULE_formula_specification = 2, 
+            RULE_single_formula_specification = 3, RULE_set_specification = 4, 
+            RULE_member_specification = 5, RULE_axis_specification_list = 6, 
+            RULE_member_property_def_list = 7, RULE_member_name = 8, RULE_member_property_definition = 9, 
+            RULE_set_name = 10, RULE_compound_id = 11, RULE_axis_specification = 12, 
+            RULE_axis_name = 13, RULE_dim_props = 14, RULE_property_list = 15, 
+            RULE_property = 16, RULE_cube_specification = 17, RULE_cube_name = 18, 
+            RULE_slicer_specification = 19, RULE_cell_props = 20, RULE_cell_property_list = 21, 
+            RULE_cell_property = 22, RULE_mandatory_cell_property = 23, 
+            RULE_provider_specific_cell_property = 24, RULE_expression = 25, 
+            RULE_value_expression = 26, RULE_value_xor_expression = 27, 
+            RULE_value_or_expression = 28, RULE_term5 = 29, RULE_term4 = 30, 
+            RULE_term3 = 31, RULE_term2 = 32, RULE_term = 33, RULE_factor = 34, 
+            RULE_function = 35, RULE_value_expression_primary = 36, RULE_value_expression_primary0 = 37, 
+            RULE_exp_list = 38, RULE_case_expression = 39, RULE_when_list = 40, 
+            RULE_when_clause = 41, RULE_comp_op = 42, RULE_identifier = 43, 
+            RULE_unquoted_identifier = 44, RULE_amp_quoted_identifier = 45, 
+            RULE_quoted_identifier = 46, RULE_keyword = 47
+
+	public
+	static let ruleNames: [String] = [
 		"mdx_statement", "select_statement", "formula_specification", "single_formula_specification", 
 		"set_specification", "member_specification", "axis_specification_list", 
 		"member_property_def_list", "member_name", "member_property_definition", 
@@ -77,86 +82,73 @@ open class mdxParser: Parser {
 		"SESSION", "SET", "THEN", "VALUE", "WHEN", "WHERE", "XOR", "WITH", "NUMBER", 
 		"F", "ID", "AMP_QUOTED_ID", "QUOTED_ID", "STRING", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "mdx.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return mdxParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "mdx.g4" }
+	override open
+	func getSerializedATN() -> String { return mdxParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return mdxParser.ruleNames }
+	override open
+	func getATN() -> ATN { return mdxParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return mdxParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return mdxParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return mdxParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,mdxParser._ATN,mdxParser._decisionToDFA, mdxParser._sharedContextCache)
 	}
-	open class Mdx_statementContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(mdxParser.Tokens.EOF.rawValue, 0) }
-		open func select_statement() -> Select_statementContext? {
-			return getRuleContext(Select_statementContext.self,0)
+
+	public class Mdx_statementContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func select_statement() -> Select_statementContext? {
+				return getRuleContext(Select_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_mdx_statement
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_mdx_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterMdx_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterMdx_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitMdx_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitMdx_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitMdx_statement(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitMdx_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitMdx_statement(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitMdx_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mdx_statement() throws -> Mdx_statementContext {
+	 open func mdx_statement() throws -> Mdx_statementContext {
 		var _localctx: Mdx_statementContext = Mdx_statementContext(_ctx, getState())
 		try enterRule(_localctx, 0, mdxParser.RULE_mdx_statement)
 		defer {
@@ -179,53 +171,75 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Select_statementContext:ParserRuleContext {
-		open func SELECT() -> TerminalNode? { return getToken(mdxParser.Tokens.SELECT.rawValue, 0) }
-		open func FROM() -> TerminalNode? { return getToken(mdxParser.Tokens.FROM.rawValue, 0) }
-		open func cube_specification() -> Cube_specificationContext? {
-			return getRuleContext(Cube_specificationContext.self,0)
+
+	public class Select_statementContext: ParserRuleContext {
+			open
+			func SELECT() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.SELECT.rawValue, 0)
+			}
+			open
+			func FROM() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.FROM.rawValue, 0)
+			}
+			open
+			func cube_specification() -> Cube_specificationContext? {
+				return getRuleContext(Cube_specificationContext.self, 0)
+			}
+			open
+			func WITH() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.WITH.rawValue, 0)
+			}
+			open
+			func formula_specification() -> Formula_specificationContext? {
+				return getRuleContext(Formula_specificationContext.self, 0)
+			}
+			open
+			func axis_specification_list() -> Axis_specification_listContext? {
+				return getRuleContext(Axis_specification_listContext.self, 0)
+			}
+			open
+			func WHERE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.WHERE.rawValue, 0)
+			}
+			open
+			func slicer_specification() -> Slicer_specificationContext? {
+				return getRuleContext(Slicer_specificationContext.self, 0)
+			}
+			open
+			func cell_props() -> Cell_propsContext? {
+				return getRuleContext(Cell_propsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_select_statement
 		}
-		open func WITH() -> TerminalNode? { return getToken(mdxParser.Tokens.WITH.rawValue, 0) }
-		open func formula_specification() -> Formula_specificationContext? {
-			return getRuleContext(Formula_specificationContext.self,0)
-		}
-		open func axis_specification_list() -> Axis_specification_listContext? {
-			return getRuleContext(Axis_specification_listContext.self,0)
-		}
-		open func WHERE() -> TerminalNode? { return getToken(mdxParser.Tokens.WHERE.rawValue, 0) }
-		open func slicer_specification() -> Slicer_specificationContext? {
-			return getRuleContext(Slicer_specificationContext.self,0)
-		}
-		open func cell_props() -> Cell_propsContext? {
-			return getRuleContext(Cell_propsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_select_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterSelect_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterSelect_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitSelect_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitSelect_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitSelect_statement(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitSelect_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitSelect_statement(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitSelect_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func select_statement() throws -> Select_statementContext {
+	 open func select_statement() throws -> Select_statementContext {
 		var _localctx: Select_statementContext = Select_statementContext(_ctx, getState())
 		try enterRule(_localctx, 2, mdxParser.RULE_select_statement)
 		var _la: Int = 0
@@ -309,40 +323,47 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Formula_specificationContext:ParserRuleContext {
-		open func single_formula_specification() -> Array<Single_formula_specificationContext> {
-			return getRuleContexts(Single_formula_specificationContext.self)
+
+	public class Formula_specificationContext: ParserRuleContext {
+			open
+			func single_formula_specification() -> [Single_formula_specificationContext] {
+				return getRuleContexts(Single_formula_specificationContext.self)
+			}
+			open
+			func single_formula_specification(_ i: Int) -> Single_formula_specificationContext? {
+				return getRuleContext(Single_formula_specificationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_formula_specification
 		}
-		open func single_formula_specification(_ i: Int) -> Single_formula_specificationContext? {
-			return getRuleContext(Single_formula_specificationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_formula_specification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterFormula_specification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterFormula_specification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitFormula_specification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitFormula_specification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitFormula_specification(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitFormula_specification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitFormula_specification(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitFormula_specification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formula_specification() throws -> Formula_specificationContext {
+	 open func formula_specification() throws -> Formula_specificationContext {
 		var _localctx: Formula_specificationContext = Formula_specificationContext(_ctx, getState())
 		try enterRule(_localctx, 4, mdxParser.RULE_formula_specification)
 		var _la: Int = 0
@@ -377,40 +398,47 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Single_formula_specificationContext:ParserRuleContext {
-		open func member_specification() -> Member_specificationContext? {
-			return getRuleContext(Member_specificationContext.self,0)
+
+	public class Single_formula_specificationContext: ParserRuleContext {
+			open
+			func member_specification() -> Member_specificationContext? {
+				return getRuleContext(Member_specificationContext.self, 0)
+			}
+			open
+			func set_specification() -> Set_specificationContext? {
+				return getRuleContext(Set_specificationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_single_formula_specification
 		}
-		open func set_specification() -> Set_specificationContext? {
-			return getRuleContext(Set_specificationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_single_formula_specification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterSingle_formula_specification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterSingle_formula_specification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitSingle_formula_specification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitSingle_formula_specification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitSingle_formula_specification(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitSingle_formula_specification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitSingle_formula_specification(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitSingle_formula_specification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func single_formula_specification() throws -> Single_formula_specificationContext {
+	 open func single_formula_specification() throws -> Single_formula_specificationContext {
 		var _localctx: Single_formula_specificationContext = Single_formula_specificationContext(_ctx, getState())
 		try enterRule(_localctx, 6, mdxParser.RULE_single_formula_specification)
 		defer {
@@ -434,7 +462,7 @@ open class mdxParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -445,46 +473,63 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Set_specificationContext:ParserRuleContext {
-		open func SET() -> TerminalNode? { return getToken(mdxParser.Tokens.SET.rawValue, 0) }
-		open func set_name() -> Set_nameContext? {
-			return getRuleContext(Set_nameContext.self,0)
+
+	public class Set_specificationContext: ParserRuleContext {
+			open
+			func SET() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.SET.rawValue, 0)
+			}
+			open
+			func set_name() -> Set_nameContext? {
+				return getRuleContext(Set_nameContext.self, 0)
+			}
+			open
+			func AS() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.AS.rawValue, 0)
+			}
+			open
+			func QUOTE() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.QUOTE.rawValue)
+			}
+			open
+			func QUOTE(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.QUOTE.rawValue, i)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_set_specification
 		}
-		open func AS() -> TerminalNode? { return getToken(mdxParser.Tokens.AS.rawValue, 0) }
-		open func QUOTE() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.QUOTE.rawValue) }
-		open func QUOTE(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.QUOTE.rawValue, i)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_set_specification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterSet_specification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterSet_specification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitSet_specification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitSet_specification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitSet_specification(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitSet_specification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitSet_specification(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitSet_specification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func set_specification() throws -> Set_specificationContext {
+	 open func set_specification() throws -> Set_specificationContext {
 		var _localctx: Set_specificationContext = Set_specificationContext(_ctx, getState())
 		try enterRule(_localctx, 8, mdxParser.RULE_set_specification)
 		defer {
@@ -527,7 +572,7 @@ open class mdxParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -539,50 +584,71 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Member_specificationContext:ParserRuleContext {
-		open func MEMBER() -> TerminalNode? { return getToken(mdxParser.Tokens.MEMBER.rawValue, 0) }
-		open func member_name() -> Member_nameContext? {
-			return getRuleContext(Member_nameContext.self,0)
+
+	public class Member_specificationContext: ParserRuleContext {
+			open
+			func MEMBER() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.MEMBER.rawValue, 0)
+			}
+			open
+			func member_name() -> Member_nameContext? {
+				return getRuleContext(Member_nameContext.self, 0)
+			}
+			open
+			func AS() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.AS.rawValue, 0)
+			}
+			open
+			func COMMA() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.COMMA.rawValue, 0)
+			}
+			open
+			func QUOTE() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.QUOTE.rawValue)
+			}
+			open
+			func QUOTE(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.QUOTE.rawValue, i)
+			}
+			open
+			func value_expression() -> Value_expressionContext? {
+				return getRuleContext(Value_expressionContext.self, 0)
+			}
+			open
+			func member_property_def_list() -> Member_property_def_listContext? {
+				return getRuleContext(Member_property_def_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_member_specification
 		}
-		open func AS() -> TerminalNode? { return getToken(mdxParser.Tokens.AS.rawValue, 0) }
-		open func COMMA() -> TerminalNode? { return getToken(mdxParser.Tokens.COMMA.rawValue, 0) }
-		open func QUOTE() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.QUOTE.rawValue) }
-		open func QUOTE(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.QUOTE.rawValue, i)
-		}
-		open func value_expression() -> Value_expressionContext? {
-			return getRuleContext(Value_expressionContext.self,0)
-		}
-		open func member_property_def_list() -> Member_property_def_listContext? {
-			return getRuleContext(Member_property_def_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_member_specification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterMember_specification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterMember_specification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitMember_specification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitMember_specification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitMember_specification(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitMember_specification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitMember_specification(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitMember_specification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func member_specification() throws -> Member_specificationContext {
+	 open func member_specification() throws -> Member_specificationContext {
 		var _localctx: Member_specificationContext = Member_specificationContext(_ctx, getState())
 		try enterRule(_localctx, 10, mdxParser.RULE_member_specification)
 		var _la: Int = 0
@@ -627,7 +693,7 @@ open class mdxParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(145)
 		 	try match(mdxParser.Tokens.COMMA.rawValue)
@@ -658,44 +724,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Axis_specification_listContext:ParserRuleContext {
-		open func axis_specification() -> Array<Axis_specificationContext> {
-			return getRuleContexts(Axis_specificationContext.self)
+
+	public class Axis_specification_listContext: ParserRuleContext {
+			open
+			func axis_specification() -> [Axis_specificationContext] {
+				return getRuleContexts(Axis_specificationContext.self)
+			}
+			open
+			func axis_specification(_ i: Int) -> Axis_specificationContext? {
+				return getRuleContext(Axis_specificationContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_axis_specification_list
 		}
-		open func axis_specification(_ i: Int) -> Axis_specificationContext? {
-			return getRuleContext(Axis_specificationContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_axis_specification_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterAxis_specification_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterAxis_specification_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitAxis_specification_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitAxis_specification_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitAxis_specification_list(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitAxis_specification_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitAxis_specification_list(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitAxis_specification_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func axis_specification_list() throws -> Axis_specification_listContext {
+	 open func axis_specification_list() throws -> Axis_specification_listContext {
 		var _localctx: Axis_specification_listContext = Axis_specification_listContext(_ctx, getState())
 		try enterRule(_localctx, 12, mdxParser.RULE_axis_specification_list)
 		var _la: Int = 0
@@ -734,44 +811,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Member_property_def_listContext:ParserRuleContext {
-		open func member_property_definition() -> Array<Member_property_definitionContext> {
-			return getRuleContexts(Member_property_definitionContext.self)
+
+	public class Member_property_def_listContext: ParserRuleContext {
+			open
+			func member_property_definition() -> [Member_property_definitionContext] {
+				return getRuleContexts(Member_property_definitionContext.self)
+			}
+			open
+			func member_property_definition(_ i: Int) -> Member_property_definitionContext? {
+				return getRuleContext(Member_property_definitionContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_member_property_def_list
 		}
-		open func member_property_definition(_ i: Int) -> Member_property_definitionContext? {
-			return getRuleContext(Member_property_definitionContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_member_property_def_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterMember_property_def_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterMember_property_def_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitMember_property_def_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitMember_property_def_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitMember_property_def_list(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitMember_property_def_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitMember_property_def_list(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitMember_property_def_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func member_property_def_list() throws -> Member_property_def_listContext {
+	 open func member_property_def_list() throws -> Member_property_def_listContext {
 		var _localctx: Member_property_def_listContext = Member_property_def_listContext(_ctx, getState())
 		try enterRule(_localctx, 14, mdxParser.RULE_member_property_def_list)
 		var _la: Int = 0
@@ -810,37 +898,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Member_nameContext:ParserRuleContext {
-		open func compound_id() -> Compound_idContext? {
-			return getRuleContext(Compound_idContext.self,0)
+
+	public class Member_nameContext: ParserRuleContext {
+			open
+			func compound_id() -> Compound_idContext? {
+				return getRuleContext(Compound_idContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_member_name
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_member_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterMember_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterMember_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitMember_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitMember_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitMember_name(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitMember_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitMember_name(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitMember_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func member_name() throws -> Member_nameContext {
+	 open func member_name() throws -> Member_nameContext {
 		var _localctx: Member_nameContext = Member_nameContext(_ctx, getState())
 		try enterRule(_localctx, 16, mdxParser.RULE_member_name)
 		defer {
@@ -860,41 +954,51 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Member_property_definitionContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Member_property_definitionContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func value_expression() -> Value_expressionContext? {
+				return getRuleContext(Value_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_member_property_definition
 		}
-		open func EQ() -> TerminalNode? { return getToken(mdxParser.Tokens.EQ.rawValue, 0) }
-		open func value_expression() -> Value_expressionContext? {
-			return getRuleContext(Value_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_member_property_definition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterMember_property_definition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterMember_property_definition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitMember_property_definition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitMember_property_definition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitMember_property_definition(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitMember_property_definition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitMember_property_definition(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitMember_property_definition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func member_property_definition() throws -> Member_property_definitionContext {
+	 open func member_property_definition() throws -> Member_property_definitionContext {
 		var _localctx: Member_property_definitionContext = Member_property_definitionContext(_ctx, getState())
 		try enterRule(_localctx, 18, mdxParser.RULE_member_property_definition)
 		defer {
@@ -918,37 +1022,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Set_nameContext:ParserRuleContext {
-		open func compound_id() -> Compound_idContext? {
-			return getRuleContext(Compound_idContext.self,0)
+
+	public class Set_nameContext: ParserRuleContext {
+			open
+			func compound_id() -> Compound_idContext? {
+				return getRuleContext(Compound_idContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_set_name
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_set_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterSet_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterSet_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitSet_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitSet_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitSet_name(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitSet_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitSet_name(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitSet_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func set_name() throws -> Set_nameContext {
+	 open func set_name() throws -> Set_nameContext {
 		var _localctx: Set_nameContext = Set_nameContext(_ctx, getState())
 		try enterRule(_localctx, 20, mdxParser.RULE_set_name)
 		defer {
@@ -968,44 +1078,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Compound_idContext:ParserRuleContext {
-		open func identifier() -> Array<IdentifierContext> {
-			return getRuleContexts(IdentifierContext.self)
+
+	public class Compound_idContext: ParserRuleContext {
+			open
+			func identifier() -> [IdentifierContext] {
+				return getRuleContexts(IdentifierContext.self)
+			}
+			open
+			func identifier(_ i: Int) -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, i)
+			}
+			open
+			func DOT() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.DOT.rawValue)
+			}
+			open
+			func DOT(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.DOT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_compound_id
 		}
-		open func identifier(_ i: Int) -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,i)
-		}
-		open func DOT() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.DOT.rawValue) }
-		open func DOT(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.DOT.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_compound_id }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterCompound_id(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterCompound_id(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitCompound_id(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitCompound_id(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitCompound_id(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitCompound_id(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitCompound_id(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitCompound_id(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compound_id() throws -> Compound_idContext {
+	 open func compound_id() throws -> Compound_idContext {
 		var _localctx: Compound_idContext = Compound_idContext(_ctx, getState())
 		try enterRule(_localctx, 22, mdxParser.RULE_compound_id)
 		var _la: Int = 0
@@ -1044,46 +1165,63 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Axis_specificationContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Axis_specificationContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func ON() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.ON.rawValue, 0)
+			}
+			open
+			func axis_name() -> Axis_nameContext? {
+				return getRuleContext(Axis_nameContext.self, 0)
+			}
+			open
+			func NON() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.NON.rawValue, 0)
+			}
+			open
+			func EMPTY() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.EMPTY.rawValue, 0)
+			}
+			open
+			func dim_props() -> Dim_propsContext? {
+				return getRuleContext(Dim_propsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_axis_specification
 		}
-		open func ON() -> TerminalNode? { return getToken(mdxParser.Tokens.ON.rawValue, 0) }
-		open func axis_name() -> Axis_nameContext? {
-			return getRuleContext(Axis_nameContext.self,0)
-		}
-		open func NON() -> TerminalNode? { return getToken(mdxParser.Tokens.NON.rawValue, 0) }
-		open func EMPTY() -> TerminalNode? { return getToken(mdxParser.Tokens.EMPTY.rawValue, 0) }
-		open func dim_props() -> Dim_propsContext? {
-			return getRuleContext(Dim_propsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_axis_specification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterAxis_specification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterAxis_specification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitAxis_specification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitAxis_specification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitAxis_specification(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitAxis_specification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitAxis_specification(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitAxis_specification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func axis_specification() throws -> Axis_specificationContext {
+	 open func axis_specification() throws -> Axis_specificationContext {
 		var _localctx: Axis_specificationContext = Axis_specificationContext(_ctx, getState())
 		try enterRule(_localctx, 24, mdxParser.RULE_axis_specification)
 		var _la: Int = 0
@@ -1136,37 +1274,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Axis_nameContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Axis_nameContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_axis_name
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_axis_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterAxis_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterAxis_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitAxis_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitAxis_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitAxis_name(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitAxis_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitAxis_name(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitAxis_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func axis_name() throws -> Axis_nameContext {
+	 open func axis_name() throws -> Axis_nameContext {
 		var _localctx: Axis_nameContext = Axis_nameContext(_ctx, getState())
 		try enterRule(_localctx, 26, mdxParser.RULE_axis_name)
 		defer {
@@ -1186,39 +1330,51 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Dim_propsContext:ParserRuleContext {
-		open func PROPERTIES() -> TerminalNode? { return getToken(mdxParser.Tokens.PROPERTIES.rawValue, 0) }
-		open func property_list() -> Property_listContext? {
-			return getRuleContext(Property_listContext.self,0)
+
+	public class Dim_propsContext: ParserRuleContext {
+			open
+			func PROPERTIES() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.PROPERTIES.rawValue, 0)
+			}
+			open
+			func property_list() -> Property_listContext? {
+				return getRuleContext(Property_listContext.self, 0)
+			}
+			open
+			func DIMENSION() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.DIMENSION.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_dim_props
 		}
-		open func DIMENSION() -> TerminalNode? { return getToken(mdxParser.Tokens.DIMENSION.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_dim_props }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterDim_props(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterDim_props(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitDim_props(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitDim_props(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitDim_props(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitDim_props(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitDim_props(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitDim_props(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dim_props() throws -> Dim_propsContext {
+	 open func dim_props() throws -> Dim_propsContext {
 		var _localctx: Dim_propsContext = Dim_propsContext(_ctx, getState())
 		try enterRule(_localctx, 28, mdxParser.RULE_dim_props)
 		var _la: Int = 0
@@ -1254,44 +1410,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Property_listContext:ParserRuleContext {
-		open func property() -> Array<PropertyContext> {
-			return getRuleContexts(PropertyContext.self)
+
+	public class Property_listContext: ParserRuleContext {
+			open
+			func property() -> [PropertyContext] {
+				return getRuleContexts(PropertyContext.self)
+			}
+			open
+			func property(_ i: Int) -> PropertyContext? {
+				return getRuleContext(PropertyContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_property_list
 		}
-		open func property(_ i: Int) -> PropertyContext? {
-			return getRuleContext(PropertyContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_property_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterProperty_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterProperty_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitProperty_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitProperty_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitProperty_list(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitProperty_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitProperty_list(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitProperty_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func property_list() throws -> Property_listContext {
+	 open func property_list() throws -> Property_listContext {
 		var _localctx: Property_listContext = Property_listContext(_ctx, getState())
 		try enterRule(_localctx, 30, mdxParser.RULE_property_list)
 		var _la: Int = 0
@@ -1330,37 +1497,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyContext:ParserRuleContext {
-		open func compound_id() -> Compound_idContext? {
-			return getRuleContext(Compound_idContext.self,0)
+
+	public class PropertyContext: ParserRuleContext {
+			open
+			func compound_id() -> Compound_idContext? {
+				return getRuleContext(Compound_idContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_property
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_property }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterProperty(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterProperty(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitProperty(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitProperty(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitProperty(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitProperty(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitProperty(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitProperty(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func property() throws -> PropertyContext {
+	 open func property() throws -> PropertyContext {
 		var _localctx: PropertyContext = PropertyContext(_ctx, getState())
 		try enterRule(_localctx, 32, mdxParser.RULE_property)
 		defer {
@@ -1380,37 +1553,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Cube_specificationContext:ParserRuleContext {
-		open func cube_name() -> Cube_nameContext? {
-			return getRuleContext(Cube_nameContext.self,0)
+
+	public class Cube_specificationContext: ParserRuleContext {
+			open
+			func cube_name() -> Cube_nameContext? {
+				return getRuleContext(Cube_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_cube_specification
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_cube_specification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterCube_specification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterCube_specification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitCube_specification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitCube_specification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitCube_specification(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitCube_specification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitCube_specification(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitCube_specification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cube_specification() throws -> Cube_specificationContext {
+	 open func cube_specification() throws -> Cube_specificationContext {
 		var _localctx: Cube_specificationContext = Cube_specificationContext(_ctx, getState())
 		try enterRule(_localctx, 34, mdxParser.RULE_cube_specification)
 		defer {
@@ -1430,37 +1609,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Cube_nameContext:ParserRuleContext {
-		open func compound_id() -> Compound_idContext? {
-			return getRuleContext(Compound_idContext.self,0)
+
+	public class Cube_nameContext: ParserRuleContext {
+			open
+			func compound_id() -> Compound_idContext? {
+				return getRuleContext(Compound_idContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_cube_name
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_cube_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterCube_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterCube_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitCube_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitCube_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitCube_name(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitCube_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitCube_name(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitCube_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cube_name() throws -> Cube_nameContext {
+	 open func cube_name() throws -> Cube_nameContext {
 		var _localctx: Cube_nameContext = Cube_nameContext(_ctx, getState())
 		try enterRule(_localctx, 36, mdxParser.RULE_cube_name)
 		defer {
@@ -1480,37 +1665,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Slicer_specificationContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Slicer_specificationContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_slicer_specification
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_slicer_specification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterSlicer_specification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterSlicer_specification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitSlicer_specification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitSlicer_specification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitSlicer_specification(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitSlicer_specification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitSlicer_specification(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitSlicer_specification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func slicer_specification() throws -> Slicer_specificationContext {
+	 open func slicer_specification() throws -> Slicer_specificationContext {
 		var _localctx: Slicer_specificationContext = Slicer_specificationContext(_ctx, getState())
 		try enterRule(_localctx, 38, mdxParser.RULE_slicer_specification)
 		defer {
@@ -1530,39 +1721,51 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Cell_propsContext:ParserRuleContext {
-		open func PROPERTIES() -> TerminalNode? { return getToken(mdxParser.Tokens.PROPERTIES.rawValue, 0) }
-		open func cell_property_list() -> Cell_property_listContext? {
-			return getRuleContext(Cell_property_listContext.self,0)
+
+	public class Cell_propsContext: ParserRuleContext {
+			open
+			func PROPERTIES() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.PROPERTIES.rawValue, 0)
+			}
+			open
+			func cell_property_list() -> Cell_property_listContext? {
+				return getRuleContext(Cell_property_listContext.self, 0)
+			}
+			open
+			func CELL() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.CELL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_cell_props
 		}
-		open func CELL() -> TerminalNode? { return getToken(mdxParser.Tokens.CELL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_cell_props }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterCell_props(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterCell_props(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitCell_props(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitCell_props(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitCell_props(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitCell_props(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitCell_props(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitCell_props(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cell_props() throws -> Cell_propsContext {
+	 open func cell_props() throws -> Cell_propsContext {
 		var _localctx: Cell_propsContext = Cell_propsContext(_ctx, getState())
 		try enterRule(_localctx, 40, mdxParser.RULE_cell_props)
 		var _la: Int = 0
@@ -1598,41 +1801,51 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Cell_property_listContext:ParserRuleContext {
-		open func cell_property() -> Array<Cell_propertyContext> {
-			return getRuleContexts(Cell_propertyContext.self)
+
+	public class Cell_property_listContext: ParserRuleContext {
+			open
+			func cell_property() -> [Cell_propertyContext] {
+				return getRuleContexts(Cell_propertyContext.self)
+			}
+			open
+			func cell_property(_ i: Int) -> Cell_propertyContext? {
+				return getRuleContext(Cell_propertyContext.self, i)
+			}
+			open
+			func COMMA() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.COMMA.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_cell_property_list
 		}
-		open func cell_property(_ i: Int) -> Cell_propertyContext? {
-			return getRuleContext(Cell_propertyContext.self,i)
-		}
-		open func COMMA() -> TerminalNode? { return getToken(mdxParser.Tokens.COMMA.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_cell_property_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterCell_property_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterCell_property_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitCell_property_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitCell_property_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitCell_property_list(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitCell_property_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitCell_property_list(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitCell_property_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cell_property_list() throws -> Cell_property_listContext {
+	 open func cell_property_list() throws -> Cell_property_listContext {
 		var _localctx: Cell_property_listContext = Cell_property_listContext(_ctx, getState())
 		try enterRule(_localctx, 42, mdxParser.RULE_cell_property_list)
 		var _la: Int = 0
@@ -1674,40 +1887,47 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Cell_propertyContext:ParserRuleContext {
-		open func mandatory_cell_property() -> Mandatory_cell_propertyContext? {
-			return getRuleContext(Mandatory_cell_propertyContext.self,0)
+
+	public class Cell_propertyContext: ParserRuleContext {
+			open
+			func mandatory_cell_property() -> Mandatory_cell_propertyContext? {
+				return getRuleContext(Mandatory_cell_propertyContext.self, 0)
+			}
+			open
+			func provider_specific_cell_property() -> Provider_specific_cell_propertyContext? {
+				return getRuleContext(Provider_specific_cell_propertyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_cell_property
 		}
-		open func provider_specific_cell_property() -> Provider_specific_cell_propertyContext? {
-			return getRuleContext(Provider_specific_cell_propertyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_cell_property }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterCell_property(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterCell_property(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitCell_property(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitCell_property(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitCell_property(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitCell_property(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitCell_property(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitCell_property(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cell_property() throws -> Cell_propertyContext {
+	 open func cell_property() throws -> Cell_propertyContext {
 		var _localctx: Cell_propertyContext = Cell_propertyContext(_ctx, getState())
 		try enterRule(_localctx, 44, mdxParser.RULE_cell_property)
 		defer {
@@ -1735,7 +1955,7 @@ open class mdxParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1746,37 +1966,51 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Mandatory_cell_propertyContext:ParserRuleContext {
-		open func CELL_ORDINAL() -> TerminalNode? { return getToken(mdxParser.Tokens.CELL_ORDINAL.rawValue, 0) }
-		open func VALUE() -> TerminalNode? { return getToken(mdxParser.Tokens.VALUE.rawValue, 0) }
-		open func FORMATTED_VALUE() -> TerminalNode? { return getToken(mdxParser.Tokens.FORMATTED_VALUE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_mandatory_cell_property }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterMandatory_cell_property(self)
+
+	public class Mandatory_cell_propertyContext: ParserRuleContext {
+			open
+			func CELL_ORDINAL() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.CELL_ORDINAL.rawValue, 0)
+			}
+			open
+			func VALUE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.VALUE.rawValue, 0)
+			}
+			open
+			func FORMATTED_VALUE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.FORMATTED_VALUE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_mandatory_cell_property
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterMandatory_cell_property(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitMandatory_cell_property(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitMandatory_cell_property(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitMandatory_cell_property(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitMandatory_cell_property(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitMandatory_cell_property(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitMandatory_cell_property(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mandatory_cell_property() throws -> Mandatory_cell_propertyContext {
+	 open func mandatory_cell_property() throws -> Mandatory_cell_propertyContext {
 		var _localctx: Mandatory_cell_propertyContext = Mandatory_cell_propertyContext(_ctx, getState())
 		try enterRule(_localctx, 46, mdxParser.RULE_mandatory_cell_property)
 		var _la: Int = 0
@@ -1811,37 +2045,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Provider_specific_cell_propertyContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Provider_specific_cell_propertyContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_provider_specific_cell_property
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_provider_specific_cell_property }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterProvider_specific_cell_property(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterProvider_specific_cell_property(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitProvider_specific_cell_property(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitProvider_specific_cell_property(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitProvider_specific_cell_property(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitProvider_specific_cell_property(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitProvider_specific_cell_property(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitProvider_specific_cell_property(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func provider_specific_cell_property() throws -> Provider_specific_cell_propertyContext {
+	 open func provider_specific_cell_property() throws -> Provider_specific_cell_propertyContext {
 		var _localctx: Provider_specific_cell_propertyContext = Provider_specific_cell_propertyContext(_ctx, getState())
 		try enterRule(_localctx, 48, mdxParser.RULE_provider_specific_cell_property)
 		defer {
@@ -1861,44 +2101,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func value_expression() -> Array<Value_expressionContext> {
-			return getRuleContexts(Value_expressionContext.self)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func value_expression() -> [Value_expressionContext] {
+				return getRuleContexts(Value_expressionContext.self)
+			}
+			open
+			func value_expression(_ i: Int) -> Value_expressionContext? {
+				return getRuleContext(Value_expressionContext.self, i)
+			}
+			open
+			func COLON() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.COLON.rawValue)
+			}
+			open
+			func COLON(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.COLON.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_expression
 		}
-		open func value_expression(_ i: Int) -> Value_expressionContext? {
-			return getRuleContext(Value_expressionContext.self,i)
-		}
-		open func COLON() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.COLON.rawValue) }
-		open func COLON(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.COLON.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitExpression(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 50, mdxParser.RULE_expression)
 		var _la: Int = 0
@@ -1937,49 +2188,59 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Value_expressionContext:ParserRuleContext {
-		open func term5() -> Term5Context? {
-			return getRuleContext(Term5Context.self,0)
+
+	public class Value_expressionContext: ParserRuleContext {
+			open
+			func term5() -> Term5Context? {
+				return getRuleContext(Term5Context.self, 0)
+			}
+			open
+			func value_xor_expression() -> [Value_xor_expressionContext] {
+				return getRuleContexts(Value_xor_expressionContext.self)
+			}
+			open
+			func value_xor_expression(_ i: Int) -> Value_xor_expressionContext? {
+				return getRuleContext(Value_xor_expressionContext.self, i)
+			}
+			open
+			func value_or_expression() -> [Value_or_expressionContext] {
+				return getRuleContexts(Value_or_expressionContext.self)
+			}
+			open
+			func value_or_expression(_ i: Int) -> Value_or_expressionContext? {
+				return getRuleContext(Value_or_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_value_expression
 		}
-		open func value_xor_expression() -> Array<Value_xor_expressionContext> {
-			return getRuleContexts(Value_xor_expressionContext.self)
-		}
-		open func value_xor_expression(_ i: Int) -> Value_xor_expressionContext? {
-			return getRuleContext(Value_xor_expressionContext.self,i)
-		}
-		open func value_or_expression() -> Array<Value_or_expressionContext> {
-			return getRuleContexts(Value_or_expressionContext.self)
-		}
-		open func value_or_expression(_ i: Int) -> Value_or_expressionContext? {
-			return getRuleContext(Value_or_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_value_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterValue_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterValue_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitValue_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitValue_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitValue_expression(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitValue_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitValue_expression(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitValue_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value_expression() throws -> Value_expressionContext {
+	 open func value_expression() throws -> Value_expressionContext {
 		var _localctx: Value_expressionContext = Value_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 52, mdxParser.RULE_value_expression)
 		var _la: Int = 0
@@ -2013,7 +2274,7 @@ open class mdxParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(253)
@@ -2030,38 +2291,47 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Value_xor_expressionContext:ParserRuleContext {
-		open func XOR() -> TerminalNode? { return getToken(mdxParser.Tokens.XOR.rawValue, 0) }
-		open func term5() -> Term5Context? {
-			return getRuleContext(Term5Context.self,0)
+
+	public class Value_xor_expressionContext: ParserRuleContext {
+			open
+			func XOR() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.XOR.rawValue, 0)
+			}
+			open
+			func term5() -> Term5Context? {
+				return getRuleContext(Term5Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_value_xor_expression
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_value_xor_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterValue_xor_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterValue_xor_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitValue_xor_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitValue_xor_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitValue_xor_expression(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitValue_xor_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitValue_xor_expression(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitValue_xor_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value_xor_expression() throws -> Value_xor_expressionContext {
+	 open func value_xor_expression() throws -> Value_xor_expressionContext {
 		var _localctx: Value_xor_expressionContext = Value_xor_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 54, mdxParser.RULE_value_xor_expression)
 		defer {
@@ -2083,38 +2353,47 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Value_or_expressionContext:ParserRuleContext {
-		open func OR() -> TerminalNode? { return getToken(mdxParser.Tokens.OR.rawValue, 0) }
-		open func term5() -> Term5Context? {
-			return getRuleContext(Term5Context.self,0)
+
+	public class Value_or_expressionContext: ParserRuleContext {
+			open
+			func OR() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.OR.rawValue, 0)
+			}
+			open
+			func term5() -> Term5Context? {
+				return getRuleContext(Term5Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_value_or_expression
 		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_value_or_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterValue_or_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterValue_or_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitValue_or_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitValue_or_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitValue_or_expression(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitValue_or_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitValue_or_expression(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitValue_or_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value_or_expression() throws -> Value_or_expressionContext {
+	 open func value_or_expression() throws -> Value_or_expressionContext {
 		var _localctx: Value_or_expressionContext = Value_or_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 56, mdxParser.RULE_value_or_expression)
 		defer {
@@ -2136,44 +2415,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Term5Context:ParserRuleContext {
-		open func term4() -> Array<Term4Context> {
-			return getRuleContexts(Term4Context.self)
+
+	public class Term5Context: ParserRuleContext {
+			open
+			func term4() -> [Term4Context] {
+				return getRuleContexts(Term4Context.self)
+			}
+			open
+			func term4(_ i: Int) -> Term4Context? {
+				return getRuleContext(Term4Context.self, i)
+			}
+			open
+			func AND() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.AND.rawValue)
+			}
+			open
+			func AND(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.AND.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_term5
 		}
-		open func term4(_ i: Int) -> Term4Context? {
-			return getRuleContext(Term4Context.self,i)
-		}
-		open func AND() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.AND.rawValue) }
-		open func AND(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.AND.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_term5 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterTerm5(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterTerm5(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitTerm5(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitTerm5(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitTerm5(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitTerm5(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitTerm5(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitTerm5(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term5() throws -> Term5Context {
+	 open func term5() throws -> Term5Context {
 		var _localctx: Term5Context = Term5Context(_ctx, getState())
 		try enterRule(_localctx, 58, mdxParser.RULE_term5)
 		var _la: Int = 0
@@ -2212,41 +2502,51 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Term4Context:ParserRuleContext {
-		open func NOT() -> TerminalNode? { return getToken(mdxParser.Tokens.NOT.rawValue, 0) }
-		open func term4() -> Term4Context? {
-			return getRuleContext(Term4Context.self,0)
+
+	public class Term4Context: ParserRuleContext {
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func term4() -> Term4Context? {
+				return getRuleContext(Term4Context.self, 0)
+			}
+			open
+			func term3() -> Term3Context? {
+				return getRuleContext(Term3Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_term4
 		}
-		open func term3() -> Term3Context? {
-			return getRuleContext(Term3Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_term4 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterTerm4(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterTerm4(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitTerm4(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitTerm4(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitTerm4(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitTerm4(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitTerm4(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitTerm4(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term4() throws -> Term4Context {
+	 open func term4() throws -> Term4Context {
 		var _localctx: Term4Context = Term4Context(_ctx, getState())
 		try enterRule(_localctx, 60, mdxParser.RULE_term4)
 		defer {
@@ -2281,7 +2581,7 @@ open class mdxParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2292,46 +2592,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Term3Context:ParserRuleContext {
-		open func term2() -> Array<Term2Context> {
-			return getRuleContexts(Term2Context.self)
+
+	public class Term3Context: ParserRuleContext {
+			open
+			func term2() -> [Term2Context] {
+				return getRuleContexts(Term2Context.self)
+			}
+			open
+			func term2(_ i: Int) -> Term2Context? {
+				return getRuleContext(Term2Context.self, i)
+			}
+			open
+			func comp_op() -> [Comp_opContext] {
+				return getRuleContexts(Comp_opContext.self)
+			}
+			open
+			func comp_op(_ i: Int) -> Comp_opContext? {
+				return getRuleContext(Comp_opContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_term3
 		}
-		open func term2(_ i: Int) -> Term2Context? {
-			return getRuleContext(Term2Context.self,i)
-		}
-		open func comp_op() -> Array<Comp_opContext> {
-			return getRuleContexts(Comp_opContext.self)
-		}
-		open func comp_op(_ i: Int) -> Comp_opContext? {
-			return getRuleContext(Comp_opContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_term3 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterTerm3(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterTerm3(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitTerm3(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitTerm3(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitTerm3(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitTerm3(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitTerm3(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitTerm3(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term3() throws -> Term3Context {
+	 open func term3() throws -> Term3Context {
 		var _localctx: Term3Context = Term3Context(_ctx, getState())
 		try enterRule(_localctx, 62, mdxParser.RULE_term3)
 		var _la: Int = 0
@@ -2373,52 +2682,71 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Term2Context:ParserRuleContext {
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class Term2Context: ParserRuleContext {
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+			open
+			func CONCAT() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.CONCAT.rawValue)
+			}
+			open
+			func CONCAT(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.CONCAT.rawValue, i)
+			}
+			open
+			func PLUS() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.PLUS.rawValue)
+			}
+			open
+			func PLUS(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.PLUS.rawValue, i)
+			}
+			open
+			func MINUS() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.MINUS.rawValue)
+			}
+			open
+			func MINUS(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.MINUS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_term2
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open func CONCAT() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.CONCAT.rawValue) }
-		open func CONCAT(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.CONCAT.rawValue, i)
-		}
-		open func PLUS() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.PLUS.rawValue) }
-		open func PLUS(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.PLUS.rawValue, i)
-		}
-		open func MINUS() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.MINUS.rawValue) }
-		open func MINUS(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.MINUS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_term2 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterTerm2(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterTerm2(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitTerm2(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitTerm2(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitTerm2(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitTerm2(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitTerm2(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitTerm2(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term2() throws -> Term2Context {
+	 open func term2() throws -> Term2Context {
 		var _localctx: Term2Context = Term2Context(_ctx, getState())
 		try enterRule(_localctx, 64, mdxParser.RULE_term2)
 		var _la: Int = 0
@@ -2474,48 +2802,63 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class TermContext:ParserRuleContext {
-		open func factor() -> Array<FactorContext> {
-			return getRuleContexts(FactorContext.self)
+
+	public class TermContext: ParserRuleContext {
+			open
+			func factor() -> [FactorContext] {
+				return getRuleContexts(FactorContext.self)
+			}
+			open
+			func factor(_ i: Int) -> FactorContext? {
+				return getRuleContext(FactorContext.self, i)
+			}
+			open
+			func SOLIDUS() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.SOLIDUS.rawValue)
+			}
+			open
+			func SOLIDUS(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.SOLIDUS.rawValue, i)
+			}
+			open
+			func ASTERISK() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.ASTERISK.rawValue)
+			}
+			open
+			func ASTERISK(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.ASTERISK.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_term
 		}
-		open func factor(_ i: Int) -> FactorContext? {
-			return getRuleContext(FactorContext.self,i)
-		}
-		open func SOLIDUS() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.SOLIDUS.rawValue) }
-		open func SOLIDUS(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.SOLIDUS.rawValue, i)
-		}
-		open func ASTERISK() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.ASTERISK.rawValue) }
-		open func ASTERISK(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.ASTERISK.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitTerm(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitTerm(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term() throws -> TermContext {
+	 open func term() throws -> TermContext {
 		var _localctx: TermContext = TermContext(_ctx, getState())
 		try enterRule(_localctx, 66, mdxParser.RULE_term)
 		var _la: Int = 0
@@ -2565,39 +2908,51 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class FactorContext:ParserRuleContext {
-		open func MINUS() -> TerminalNode? { return getToken(mdxParser.Tokens.MINUS.rawValue, 0) }
-		open func value_expression_primary() -> Value_expression_primaryContext? {
-			return getRuleContext(Value_expression_primaryContext.self,0)
+
+	public class FactorContext: ParserRuleContext {
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.MINUS.rawValue, 0)
+			}
+			open
+			func value_expression_primary() -> Value_expression_primaryContext? {
+				return getRuleContext(Value_expression_primaryContext.self, 0)
+			}
+			open
+			func PLUS() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.PLUS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_factor
 		}
-		open func PLUS() -> TerminalNode? { return getToken(mdxParser.Tokens.PLUS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_factor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitFactor(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitFactor(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func factor() throws -> FactorContext {
+	 open func factor() throws -> FactorContext {
 		var _localctx: FactorContext = FactorContext(_ctx, getState())
 		try enterRule(_localctx, 68, mdxParser.RULE_factor)
 		defer {
@@ -2639,7 +2994,7 @@ open class mdxParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2650,42 +3005,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class FunctionContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func exp_list() -> Exp_listContext? {
+				return getRuleContext(Exp_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_function
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(mdxParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(mdxParser.Tokens.RPAREN.rawValue, 0) }
-		open func exp_list() -> Exp_listContext? {
-			return getRuleContext(Exp_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_function }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterFunction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterFunction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitFunction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitFunction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitFunction(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitFunction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitFunction(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitFunction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function() throws -> FunctionContext {
+	 open func function() throws -> FunctionContext {
 		var _localctx: FunctionContext = FunctionContext(_ctx, getState())
 		try enterRule(_localctx, 70, mdxParser.RULE_function)
 		var _la: Int = 0
@@ -2726,65 +3094,83 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Value_expression_primaryContext:ParserRuleContext {
-		open func value_expression_primary0() -> Value_expression_primary0Context? {
-			return getRuleContext(Value_expression_primary0Context.self,0)
+
+	public class Value_expression_primaryContext: ParserRuleContext {
+			open
+			func value_expression_primary0() -> Value_expression_primary0Context? {
+				return getRuleContext(Value_expression_primary0Context.self, 0)
+			}
+			open
+			func DOT() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.DOT.rawValue)
+			}
+			open
+			func DOT(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.DOT.rawValue, i)
+			}
+			open
+			func unquoted_identifier() -> [Unquoted_identifierContext] {
+				return getRuleContexts(Unquoted_identifierContext.self)
+			}
+			open
+			func unquoted_identifier(_ i: Int) -> Unquoted_identifierContext? {
+				return getRuleContext(Unquoted_identifierContext.self, i)
+			}
+			open
+			func quoted_identifier() -> [Quoted_identifierContext] {
+				return getRuleContexts(Quoted_identifierContext.self)
+			}
+			open
+			func quoted_identifier(_ i: Int) -> Quoted_identifierContext? {
+				return getRuleContext(Quoted_identifierContext.self, i)
+			}
+			open
+			func amp_quoted_identifier() -> [Amp_quoted_identifierContext] {
+				return getRuleContexts(Amp_quoted_identifierContext.self)
+			}
+			open
+			func amp_quoted_identifier(_ i: Int) -> Amp_quoted_identifierContext? {
+				return getRuleContext(Amp_quoted_identifierContext.self, i)
+			}
+			open
+			func function() -> [FunctionContext] {
+				return getRuleContexts(FunctionContext.self)
+			}
+			open
+			func function(_ i: Int) -> FunctionContext? {
+				return getRuleContext(FunctionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_value_expression_primary
 		}
-		open func DOT() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.DOT.rawValue) }
-		open func DOT(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.DOT.rawValue, i)
-		}
-		open func unquoted_identifier() -> Array<Unquoted_identifierContext> {
-			return getRuleContexts(Unquoted_identifierContext.self)
-		}
-		open func unquoted_identifier(_ i: Int) -> Unquoted_identifierContext? {
-			return getRuleContext(Unquoted_identifierContext.self,i)
-		}
-		open func quoted_identifier() -> Array<Quoted_identifierContext> {
-			return getRuleContexts(Quoted_identifierContext.self)
-		}
-		open func quoted_identifier(_ i: Int) -> Quoted_identifierContext? {
-			return getRuleContext(Quoted_identifierContext.self,i)
-		}
-		open func amp_quoted_identifier() -> Array<Amp_quoted_identifierContext> {
-			return getRuleContexts(Amp_quoted_identifierContext.self)
-		}
-		open func amp_quoted_identifier(_ i: Int) -> Amp_quoted_identifierContext? {
-			return getRuleContext(Amp_quoted_identifierContext.self,i)
-		}
-		open func function() -> Array<FunctionContext> {
-			return getRuleContexts(FunctionContext.self)
-		}
-		open func function(_ i: Int) -> FunctionContext? {
-			return getRuleContext(FunctionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_value_expression_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterValue_expression_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterValue_expression_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitValue_expression_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitValue_expression_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitValue_expression_primary(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitValue_expression_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitValue_expression_primary(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitValue_expression_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value_expression_primary() throws -> Value_expression_primaryContext {
+	 open func value_expression_primary() throws -> Value_expression_primaryContext {
 		var _localctx: Value_expression_primaryContext = Value_expression_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 72, mdxParser.RULE_value_expression_primary)
 		var _la: Int = 0
@@ -2846,52 +3232,79 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Value_expression_primary0Context:ParserRuleContext {
-		open func function() -> FunctionContext? {
-			return getRuleContext(FunctionContext.self,0)
+
+	public class Value_expression_primary0Context: ParserRuleContext {
+			open
+			func function() -> FunctionContext? {
+				return getRuleContext(FunctionContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func exp_list() -> Exp_listContext? {
+				return getRuleContext(Exp_listContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func LBRACE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.LBRACE.rawValue, 0)
+			}
+			open
+			func RBRACE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.RBRACE.rawValue, 0)
+			}
+			open
+			func case_expression() -> Case_expressionContext? {
+				return getRuleContext(Case_expressionContext.self, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.NUMBER.rawValue, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_value_expression_primary0
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(mdxParser.Tokens.LPAREN.rawValue, 0) }
-		open func exp_list() -> Exp_listContext? {
-			return getRuleContext(Exp_listContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(mdxParser.Tokens.RPAREN.rawValue, 0) }
-		open func LBRACE() -> TerminalNode? { return getToken(mdxParser.Tokens.LBRACE.rawValue, 0) }
-		open func RBRACE() -> TerminalNode? { return getToken(mdxParser.Tokens.RBRACE.rawValue, 0) }
-		open func case_expression() -> Case_expressionContext? {
-			return getRuleContext(Case_expressionContext.self,0)
-		}
-		open func STRING() -> TerminalNode? { return getToken(mdxParser.Tokens.STRING.rawValue, 0) }
-		open func NUMBER() -> TerminalNode? { return getToken(mdxParser.Tokens.NUMBER.rawValue, 0) }
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_value_expression_primary0 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterValue_expression_primary0(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterValue_expression_primary0(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitValue_expression_primary0(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitValue_expression_primary0(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitValue_expression_primary0(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitValue_expression_primary0(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitValue_expression_primary0(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitValue_expression_primary0(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value_expression_primary0() throws -> Value_expression_primary0Context {
+	 open func value_expression_primary0() throws -> Value_expression_primary0Context {
 		var _localctx: Value_expression_primary0Context = Value_expression_primary0Context(_ctx, getState())
 		try enterRule(_localctx, 74, mdxParser.RULE_value_expression_primary0)
 		var _la: Int = 0
@@ -2979,44 +3392,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Exp_listContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Exp_listContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mdxParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mdxParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_exp_list
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mdxParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mdxParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_exp_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterExp_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterExp_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitExp_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitExp_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitExp_list(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitExp_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitExp_list(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitExp_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exp_list() throws -> Exp_listContext {
+	 open func exp_list() throws -> Exp_listContext {
 		var _localctx: Exp_listContext = Exp_listContext(_ctx, getState())
 		try enterRule(_localctx, 76, mdxParser.RULE_exp_list)
 		var _la: Int = 0
@@ -3055,46 +3479,63 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Case_expressionContext:ParserRuleContext {
-		open func CASE() -> TerminalNode? { return getToken(mdxParser.Tokens.CASE.rawValue, 0) }
-		open func END() -> TerminalNode? { return getToken(mdxParser.Tokens.END.rawValue, 0) }
-		open func value_expression() -> Array<Value_expressionContext> {
-			return getRuleContexts(Value_expressionContext.self)
+
+	public class Case_expressionContext: ParserRuleContext {
+			open
+			func CASE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.CASE.rawValue, 0)
+			}
+			open
+			func END() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.END.rawValue, 0)
+			}
+			open
+			func value_expression() -> [Value_expressionContext] {
+				return getRuleContexts(Value_expressionContext.self)
+			}
+			open
+			func value_expression(_ i: Int) -> Value_expressionContext? {
+				return getRuleContext(Value_expressionContext.self, i)
+			}
+			open
+			func when_list() -> When_listContext? {
+				return getRuleContext(When_listContext.self, 0)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.ELSE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_case_expression
 		}
-		open func value_expression(_ i: Int) -> Value_expressionContext? {
-			return getRuleContext(Value_expressionContext.self,i)
-		}
-		open func when_list() -> When_listContext? {
-			return getRuleContext(When_listContext.self,0)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(mdxParser.Tokens.ELSE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_case_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterCase_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterCase_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitCase_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitCase_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitCase_expression(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitCase_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitCase_expression(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitCase_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func case_expression() throws -> Case_expressionContext {
+	 open func case_expression() throws -> Case_expressionContext {
 		var _localctx: Case_expressionContext = Case_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 78, mdxParser.RULE_case_expression)
 		var _la: Int = 0
@@ -3161,40 +3602,47 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class When_listContext:ParserRuleContext {
-		open func when_clause() -> Array<When_clauseContext> {
-			return getRuleContexts(When_clauseContext.self)
+
+	public class When_listContext: ParserRuleContext {
+			open
+			func when_clause() -> [When_clauseContext] {
+				return getRuleContexts(When_clauseContext.self)
+			}
+			open
+			func when_clause(_ i: Int) -> When_clauseContext? {
+				return getRuleContext(When_clauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_when_list
 		}
-		open func when_clause(_ i: Int) -> When_clauseContext? {
-			return getRuleContext(When_clauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_when_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterWhen_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterWhen_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitWhen_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitWhen_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitWhen_list(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitWhen_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitWhen_list(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitWhen_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func when_list() throws -> When_listContext {
+	 open func when_list() throws -> When_listContext {
 		var _localctx: When_listContext = When_listContext(_ctx, getState())
 		try enterRule(_localctx, 80, mdxParser.RULE_when_list)
 		var _la: Int = 0
@@ -3231,42 +3679,55 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class When_clauseContext:ParserRuleContext {
-		open func WHEN() -> TerminalNode? { return getToken(mdxParser.Tokens.WHEN.rawValue, 0) }
-		open func value_expression() -> Array<Value_expressionContext> {
-			return getRuleContexts(Value_expressionContext.self)
+
+	public class When_clauseContext: ParserRuleContext {
+			open
+			func WHEN() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.WHEN.rawValue, 0)
+			}
+			open
+			func value_expression() -> [Value_expressionContext] {
+				return getRuleContexts(Value_expressionContext.self)
+			}
+			open
+			func value_expression(_ i: Int) -> Value_expressionContext? {
+				return getRuleContext(Value_expressionContext.self, i)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.THEN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_when_clause
 		}
-		open func value_expression(_ i: Int) -> Value_expressionContext? {
-			return getRuleContext(Value_expressionContext.self,i)
-		}
-		open func THEN() -> TerminalNode? { return getToken(mdxParser.Tokens.THEN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_when_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterWhen_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterWhen_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitWhen_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitWhen_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitWhen_clause(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitWhen_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitWhen_clause(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitWhen_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func when_clause() throws -> When_clauseContext {
+	 open func when_clause() throws -> When_clauseContext {
 		var _localctx: When_clauseContext = When_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 82, mdxParser.RULE_when_clause)
 		defer {
@@ -3292,40 +3753,63 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Comp_opContext:ParserRuleContext {
-		open func EQ() -> TerminalNode? { return getToken(mdxParser.Tokens.EQ.rawValue, 0) }
-		open func NE() -> TerminalNode? { return getToken(mdxParser.Tokens.NE.rawValue, 0) }
-		open func LT() -> TerminalNode? { return getToken(mdxParser.Tokens.LT.rawValue, 0) }
-		open func GT() -> TerminalNode? { return getToken(mdxParser.Tokens.GT.rawValue, 0) }
-		open func LE() -> TerminalNode? { return getToken(mdxParser.Tokens.LE.rawValue, 0) }
-		open func GE() -> TerminalNode? { return getToken(mdxParser.Tokens.GE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_comp_op }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterComp_op(self)
+
+	public class Comp_opContext: ParserRuleContext {
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func NE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.NE.rawValue, 0)
+			}
+			open
+			func LT() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.LT.rawValue, 0)
+			}
+			open
+			func GT() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.GT.rawValue, 0)
+			}
+			open
+			func LE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.LE.rawValue, 0)
+			}
+			open
+			func GE() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.GE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_comp_op
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterComp_op(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitComp_op(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitComp_op(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitComp_op(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitComp_op(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitComp_op(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitComp_op(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comp_op() throws -> Comp_opContext {
+	 open func comp_op() throws -> Comp_opContext {
 		var _localctx: Comp_opContext = Comp_opContext(_ctx, getState())
 		try enterRule(_localctx, 84, mdxParser.RULE_comp_op)
 		var _la: Int = 0
@@ -3360,40 +3844,47 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class IdentifierContext:ParserRuleContext {
-		open func unquoted_identifier() -> Unquoted_identifierContext? {
-			return getRuleContext(Unquoted_identifierContext.self,0)
+
+	public class IdentifierContext: ParserRuleContext {
+			open
+			func unquoted_identifier() -> Unquoted_identifierContext? {
+				return getRuleContext(Unquoted_identifierContext.self, 0)
+			}
+			open
+			func quoted_identifier() -> Quoted_identifierContext? {
+				return getRuleContext(Quoted_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_identifier
 		}
-		open func quoted_identifier() -> Quoted_identifierContext? {
-			return getRuleContext(Quoted_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitIdentifier(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitIdentifier(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifier() throws -> IdentifierContext {
+	 open func identifier() throws -> IdentifierContext {
 		var _localctx: IdentifierContext = IdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 86, mdxParser.RULE_identifier)
 		defer {
@@ -3418,7 +3909,7 @@ open class mdxParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -3430,38 +3921,47 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Unquoted_identifierContext:ParserRuleContext {
-		open func keyword() -> KeywordContext? {
-			return getRuleContext(KeywordContext.self,0)
+
+	public class Unquoted_identifierContext: ParserRuleContext {
+			open
+			func keyword() -> KeywordContext? {
+				return getRuleContext(KeywordContext.self, 0)
+			}
+			open
+			func ID() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.ID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_unquoted_identifier
 		}
-		open func ID() -> TerminalNode? { return getToken(mdxParser.Tokens.ID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_unquoted_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterUnquoted_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterUnquoted_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitUnquoted_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitUnquoted_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitUnquoted_identifier(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitUnquoted_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitUnquoted_identifier(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitUnquoted_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unquoted_identifier() throws -> Unquoted_identifierContext {
+	 open func unquoted_identifier() throws -> Unquoted_identifierContext {
 		var _localctx: Unquoted_identifierContext = Unquoted_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 88, mdxParser.RULE_unquoted_identifier)
 		defer {
@@ -3486,7 +3986,7 @@ open class mdxParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3497,35 +3997,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Amp_quoted_identifierContext:ParserRuleContext {
-		open func AMP_QUOTED_ID() -> TerminalNode? { return getToken(mdxParser.Tokens.AMP_QUOTED_ID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_amp_quoted_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterAmp_quoted_identifier(self)
+
+	public class Amp_quoted_identifierContext: ParserRuleContext {
+			open
+			func AMP_QUOTED_ID() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.AMP_QUOTED_ID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_amp_quoted_identifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterAmp_quoted_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitAmp_quoted_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitAmp_quoted_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitAmp_quoted_identifier(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitAmp_quoted_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitAmp_quoted_identifier(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitAmp_quoted_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func amp_quoted_identifier() throws -> Amp_quoted_identifierContext {
+	 open func amp_quoted_identifier() throws -> Amp_quoted_identifierContext {
 		var _localctx: Amp_quoted_identifierContext = Amp_quoted_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 90, mdxParser.RULE_amp_quoted_identifier)
 		defer {
@@ -3545,35 +4053,43 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class Quoted_identifierContext:ParserRuleContext {
-		open func QUOTED_ID() -> TerminalNode? { return getToken(mdxParser.Tokens.QUOTED_ID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_quoted_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterQuoted_identifier(self)
+
+	public class Quoted_identifierContext: ParserRuleContext {
+			open
+			func QUOTED_ID() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.QUOTED_ID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_quoted_identifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterQuoted_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitQuoted_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitQuoted_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitQuoted_identifier(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitQuoted_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitQuoted_identifier(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitQuoted_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func quoted_identifier() throws -> Quoted_identifierContext {
+	 open func quoted_identifier() throws -> Quoted_identifierContext {
 		var _localctx: Quoted_identifierContext = Quoted_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 92, mdxParser.RULE_quoted_identifier)
 		defer {
@@ -3593,36 +4109,47 @@ open class mdxParser: Parser {
 
 		return _localctx
 	}
-	open class KeywordContext:ParserRuleContext {
-		open func DIMENSION() -> TerminalNode? { return getToken(mdxParser.Tokens.DIMENSION.rawValue, 0) }
-		open func PROPERTIES() -> TerminalNode? { return getToken(mdxParser.Tokens.PROPERTIES.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mdxParser.RULE_keyword }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).enterKeyword(self)
+
+	public class KeywordContext: ParserRuleContext {
+			open
+			func DIMENSION() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.DIMENSION.rawValue, 0)
+			}
+			open
+			func PROPERTIES() -> TerminalNode? {
+				return getToken(mdxParser.Tokens.PROPERTIES.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mdxParser.RULE_keyword
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.enterKeyword(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mdxListener {
-			 	(listener as! mdxListener).exitKeyword(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mdxListener {
+				listener.exitKeyword(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mdxVisitor {
-			     return (visitor as! mdxVisitor<T>).visitKeyword(self)
-			}else if visitor is mdxBaseVisitor {
-		    	 return (visitor as! mdxBaseVisitor<T>).visitKeyword(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mdxVisitor {
+			    return visitor.visitKeyword(self)
+			}
+			else if let visitor = visitor as? mdxBaseVisitor {
+			    return visitor.visitKeyword(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keyword() throws -> KeywordContext {
+	 open func keyword() throws -> KeywordContext {
 		var _localctx: KeywordContext = KeywordContext(_ctx, getState())
 		try enterRule(_localctx, 94, mdxParser.RULE_keyword)
 		var _la: Int = 0
@@ -3655,6 +4182,10 @@ open class mdxParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = mdxParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = mdxParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

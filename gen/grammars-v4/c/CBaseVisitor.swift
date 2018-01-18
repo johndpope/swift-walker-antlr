@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/c/C.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/c/C.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -556,6 +556,27 @@ open class CBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitIterationStatement(_ ctx: CParser.IterationStatementContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitForCondition(_ ctx: CParser.ForConditionContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitForDeclaration(_ ctx: CParser.ForDeclarationContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitForExpression(_ ctx: CParser.ForExpressionContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *

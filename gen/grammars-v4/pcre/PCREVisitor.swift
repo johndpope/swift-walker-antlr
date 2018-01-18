@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/pcre/PCRE.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/pcre/PCRE.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParse(_ ctx: PCREParser.ParseContext) -> T{
+	open func visitParse(_ ctx: PCREParser.ParseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlternation(_ ctx: PCREParser.AlternationContext) -> T{
+	open func visitAlternation(_ ctx: PCREParser.AlternationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr(_ ctx: PCREParser.ExprContext) -> T{
+	open func visitExpr(_ ctx: PCREParser.ExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement(_ ctx: PCREParser.ElementContext) -> T{
+	open func visitElement(_ ctx: PCREParser.ElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuantifier(_ ctx: PCREParser.QuantifierContext) -> T{
+	open func visitQuantifier(_ ctx: PCREParser.QuantifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuantifier_type(_ ctx: PCREParser.Quantifier_typeContext) -> T{
+	open func visitQuantifier_type(_ ctx: PCREParser.Quantifier_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharacter_class(_ ctx: PCREParser.Character_classContext) -> T{
+	open func visitCharacter_class(_ ctx: PCREParser.Character_classContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBackreference(_ ctx: PCREParser.BackreferenceContext) -> T{
+	open func visitBackreference(_ ctx: PCREParser.BackreferenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBackreference_or_octal(_ ctx: PCREParser.Backreference_or_octalContext) -> T{
+	open func visitBackreference_or_octal(_ ctx: PCREParser.Backreference_or_octalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCapture(_ ctx: PCREParser.CaptureContext) -> T{
+	open func visitCapture(_ ctx: PCREParser.CaptureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNon_capture(_ ctx: PCREParser.Non_captureContext) -> T{
+	open func visitNon_capture(_ ctx: PCREParser.Non_captureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: PCREParser.CommentContext) -> T{
+	open func visitComment(_ ctx: PCREParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOption(_ ctx: PCREParser.OptionContext) -> T{
+	open func visitOption(_ ctx: PCREParser.OptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOption_flags(_ ctx: PCREParser.Option_flagsContext) -> T{
+	open func visitOption_flags(_ ctx: PCREParser.Option_flagsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOption_flag(_ ctx: PCREParser.Option_flagContext) -> T{
+	open func visitOption_flag(_ ctx: PCREParser.Option_flagContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLook_around(_ ctx: PCREParser.Look_aroundContext) -> T{
+	open func visitLook_around(_ ctx: PCREParser.Look_aroundContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubroutine_reference(_ ctx: PCREParser.Subroutine_referenceContext) -> T{
+	open func visitSubroutine_reference(_ ctx: PCREParser.Subroutine_referenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditional(_ ctx: PCREParser.ConditionalContext) -> T{
+	open func visitConditional(_ ctx: PCREParser.ConditionalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBacktrack_control(_ ctx: PCREParser.Backtrack_controlContext) -> T{
+	open func visitBacktrack_control(_ ctx: PCREParser.Backtrack_controlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNewline_convention(_ ctx: PCREParser.Newline_conventionContext) -> T{
+	open func visitNewline_convention(_ ctx: PCREParser.Newline_conventionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCallout(_ ctx: PCREParser.CalloutContext) -> T{
+	open func visitCallout(_ ctx: PCREParser.CalloutContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: PCREParser.AtomContext) -> T{
+	open func visitAtom(_ ctx: PCREParser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCc_atom(_ ctx: PCREParser.Cc_atomContext) -> T{
+	open func visitCc_atom(_ ctx: PCREParser.Cc_atomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitShared_atom(_ ctx: PCREParser.Shared_atomContext) -> T{
+	open func visitShared_atom(_ ctx: PCREParser.Shared_atomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: PCREParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: PCREParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCc_literal(_ ctx: PCREParser.Cc_literalContext) -> T{
+	open func visitCc_literal(_ ctx: PCREParser.Cc_literalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitShared_literal(_ ctx: PCREParser.Shared_literalContext) -> T{
+	open func visitShared_literal(_ ctx: PCREParser.Shared_literalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: PCREParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: PCREParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOctal_char(_ ctx: PCREParser.Octal_charContext) -> T{
+	open func visitOctal_char(_ ctx: PCREParser.Octal_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOctal_digit(_ ctx: PCREParser.Octal_digitContext) -> T{
+	open func visitOctal_digit(_ ctx: PCREParser.Octal_digitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDigits(_ ctx: PCREParser.DigitsContext) -> T{
+	open func visitDigits(_ ctx: PCREParser.DigitsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDigit(_ ctx: PCREParser.DigitContext) -> T{
+	open func visitDigit(_ ctx: PCREParser.DigitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitName(_ ctx: PCREParser.NameContext) -> T{
+	open func visitName(_ ctx: PCREParser.NameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlpha_nums(_ ctx: PCREParser.Alpha_numsContext) -> T{
+	open func visitAlpha_nums(_ ctx: PCREParser.Alpha_numsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNon_close_parens(_ ctx: PCREParser.Non_close_parensContext) -> T{
+	open func visitNon_close_parens(_ ctx: PCREParser.Non_close_parensContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNon_close_paren(_ ctx: PCREParser.Non_close_parenContext) -> T{
+	open func visitNon_close_paren(_ ctx: PCREParser.Non_close_parenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class PCREVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLetter(_ ctx: PCREParser.LetterContext) -> T{
+	open func visitLetter(_ ctx: PCREParser.LetterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

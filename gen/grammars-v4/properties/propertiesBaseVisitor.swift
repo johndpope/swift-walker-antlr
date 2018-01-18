@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/properties/properties.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/properties/properties.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/bnf/bnf.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/bnf/bnf.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRulelist(_ ctx: bnfParser.RulelistContext) -> T{
+	open func visitRulelist(_ ctx: bnfParser.RulelistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRule_(_ ctx: bnfParser.Rule_Context) -> T{
+	open func visitRule_(_ ctx: bnfParser.Rule_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLhs(_ ctx: bnfParser.LhsContext) -> T{
+	open func visitLhs(_ ctx: bnfParser.LhsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRhs(_ ctx: bnfParser.RhsContext) -> T{
+	open func visitRhs(_ ctx: bnfParser.RhsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlternatives(_ ctx: bnfParser.AlternativesContext) -> T{
+	open func visitAlternatives(_ ctx: bnfParser.AlternativesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlternative(_ ctx: bnfParser.AlternativeContext) -> T{
+	open func visitAlternative(_ ctx: bnfParser.AlternativeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement(_ ctx: bnfParser.ElementContext) -> T{
+	open func visitElement(_ ctx: bnfParser.ElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptional(_ ctx: bnfParser.OptionalContext) -> T{
+	open func visitOptional(_ ctx: bnfParser.OptionalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitZeroormore(_ ctx: bnfParser.ZeroormoreContext) -> T{
+	open func visitZeroormore(_ ctx: bnfParser.ZeroormoreContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOneormore(_ ctx: bnfParser.OneormoreContext) -> T{
+	open func visitOneormore(_ ctx: bnfParser.OneormoreContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitText(_ ctx: bnfParser.TextContext) -> T{
+	open func visitText(_ ctx: bnfParser.TextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitId(_ ctx: bnfParser.IdContext) -> T{
+	open func visitId(_ ctx: bnfParser.IdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class bnfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRuleid(_ ctx: bnfParser.RuleidContext) -> T{
+	open func visitRuleid(_ ctx: bnfParser.RuleidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/mumps/mumps.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/mumps/mumps.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class mumpsParser: Parser {
@@ -11,8 +11,11 @@ open class mumpsParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, BREAK = 1, CLOSE = 2, DO = 3, ELSE = 4, FOR = 5, GOTO = 6, 
                  HALT = 7, HANG = 8, IF = 9, JOB = 10, KILL = 11, LOCK = 12, 
                  MERGE = 13, NEW = 14, OPEN = 15, QUIT = 16, READ = 17, 
@@ -27,17 +30,20 @@ open class mumpsParser: Parser {
                  STRING_LITERAL = 55, NUMBER = 56, SPACE = 57, NOT = 58, 
                  COMMENT = 59, CR = 60, WS = 61
 	}
-	public static let RULE_program = 0, RULE_eof = 1, RULE_line = 2, RULE_code = 3, 
-                   RULE_label = 4, RULE_routinedecl = 5, RULE_paramlist = 6, 
-                   RULE_param = 7, RULE_subproc = 8, RULE_command = 9, RULE_postcondition = 10, 
-                   RULE_expression = 11, RULE_term = 12, RULE_condition = 13, 
-                   RULE_identifier = 14, RULE_variable = 15, RULE_break_ = 16, 
-                   RULE_do_ = 17, RULE_for_ = 18, RULE_halt_ = 19, RULE_hang_ = 20, 
-                   RULE_if_ = 21, RULE_kill_ = 22, RULE_merge_ = 23, RULE_new_ = 24, 
-                   RULE_quit_ = 25, RULE_read_ = 26, RULE_set_ = 27, RULE_view_ = 28, 
-                   RULE_write_ = 29, RULE_xecute_ = 30, RULE_assign = 31, 
-                   RULE_arglist = 32, RULE_arg = 33
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_program = 0, RULE_eof = 1, RULE_line = 2, RULE_code = 3, 
+            RULE_label = 4, RULE_routinedecl = 5, RULE_paramlist = 6, RULE_param = 7, 
+            RULE_subproc = 8, RULE_command = 9, RULE_postcondition = 10, 
+            RULE_expression = 11, RULE_term = 12, RULE_condition = 13, RULE_identifier = 14, 
+            RULE_variable = 15, RULE_break_ = 16, RULE_do_ = 17, RULE_for_ = 18, 
+            RULE_halt_ = 19, RULE_hang_ = 20, RULE_if_ = 21, RULE_kill_ = 22, 
+            RULE_merge_ = 23, RULE_new_ = 24, RULE_quit_ = 25, RULE_read_ = 26, 
+            RULE_set_ = 27, RULE_view_ = 28, RULE_write_ = 29, RULE_xecute_ = 30, 
+            RULE_assign = 31, RULE_arglist = 32, RULE_arg = 33
+
+	public
+	static let ruleNames: [String] = [
 		"program", "eof", "line", "code", "label", "routinedecl", "paramlist", 
 		"param", "subproc", "command", "postcondition", "expression", "term", 
 		"condition", "identifier", "variable", "break_", "do_", "for_", "halt_", 
@@ -62,91 +68,77 @@ open class mumpsParser: Parser {
 		"EXPONENT", "EQUALS", "QUESTION", "DOT", "CONCAT", "IDENTIFIER", "STRING_LITERAL", 
 		"NUMBER", "SPACE", "NOT", "COMMENT", "CR", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "mumps.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return mumpsParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "mumps.g4" }
+	override open
+	func getSerializedATN() -> String { return mumpsParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return mumpsParser.ruleNames }
+	override open
+	func getATN() -> ATN { return mumpsParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return mumpsParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return mumpsParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return mumpsParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,mumpsParser._ATN,mumpsParser._decisionToDFA, mumpsParser._sharedContextCache)
 	}
-	open class ProgramContext:ParserRuleContext {
-		open func eof() -> EofContext? {
-			return getRuleContext(EofContext.self,0)
+
+	public class ProgramContext: ParserRuleContext {
+			open
+			func eof() -> EofContext? {
+				return getRuleContext(EofContext.self, 0)
+			}
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_program
 		}
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
-		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_program }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterProgram(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterProgram(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitProgram(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitProgram(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitProgram(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitProgram(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitProgram(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitProgram(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func program() throws -> ProgramContext {
+	 open func program() throws -> ProgramContext {
 		var _localctx: ProgramContext = ProgramContext(_ctx, getState())
 		try enterRule(_localctx, 0, mumpsParser.RULE_program)
 		defer {
@@ -167,7 +159,7 @@ open class mumpsParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(71); 
 		 		try _errHandler.sync(self)
@@ -185,39 +177,51 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class EofContext:ParserRuleContext {
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+
+	public class EofContext: ParserRuleContext {
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+			open
+			func CR() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.CR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_eof
 		}
-		open func CR() -> TerminalNode? { return getToken(mumpsParser.Tokens.CR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_eof }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterEof(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterEof(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitEof(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitEof(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitEof(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitEof(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitEof(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitEof(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eof() throws -> EofContext {
+	 open func eof() throws -> EofContext {
 		var _localctx: EofContext = EofContext(_ctx, getState())
 		try enterRule(_localctx, 2, mumpsParser.RULE_eof)
 		var _la: Int = 0
@@ -265,41 +269,51 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func code() -> CodeContext? {
-			return getRuleContext(CodeContext.self,0)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func code() -> CodeContext? {
+				return getRuleContext(CodeContext.self, 0)
+			}
+			open
+			func routinedecl() -> RoutinedeclContext? {
+				return getRuleContext(RoutinedeclContext.self, 0)
+			}
+			open
+			func CR() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.CR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_line
 		}
-		open func routinedecl() -> RoutinedeclContext? {
-			return getRuleContext(RoutinedeclContext.self,0)
-		}
-		open func CR() -> TerminalNode? { return getToken(mumpsParser.Tokens.CR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitLine(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 4, mumpsParser.RULE_line)
 		defer {
@@ -338,58 +352,79 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class CodeContext:ParserRuleContext {
-		open func CR() -> TerminalNode? { return getToken(mumpsParser.Tokens.CR.rawValue, 0) }
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
+
+	public class CodeContext: ParserRuleContext {
+			open
+			func CR() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.CR.rawValue, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func if_() -> If_Context? {
+				return getRuleContext(If_Context.self, 0)
+			}
+			open
+			func subproc() -> SubprocContext? {
+				return getRuleContext(SubprocContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+			open
+			func command() -> [CommandContext] {
+				return getRuleContexts(CommandContext.self)
+			}
+			open
+			func command(_ i: Int) -> CommandContext? {
+				return getRuleContext(CommandContext.self, i)
+			}
+			open
+			func DOT() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.DOT.rawValue)
+			}
+			open
+			func DOT(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.DOT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_code
 		}
-		open func if_() -> If_Context? {
-			return getRuleContext(If_Context.self,0)
-		}
-		open func subproc() -> SubprocContext? {
-			return getRuleContext(SubprocContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open func command() -> Array<CommandContext> {
-			return getRuleContexts(CommandContext.self)
-		}
-		open func command(_ i: Int) -> CommandContext? {
-			return getRuleContext(CommandContext.self,i)
-		}
-		open func DOT() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.DOT.rawValue) }
-		open func DOT(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.DOT.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_code }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterCode(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterCode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitCode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitCode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitCode(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitCode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitCode(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitCode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func code() throws -> CodeContext {
+	 open func code() throws -> CodeContext {
 		var _localctx: CodeContext = CodeContext(_ctx, getState())
 		try enterRule(_localctx, 6, mumpsParser.RULE_code)
 		var _la: Int = 0
@@ -456,7 +491,7 @@ open class mumpsParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(103); 
 		 			try _errHandler.sync(self)
@@ -561,41 +596,51 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class LabelContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class LabelContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_label
 		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterLabel(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitLabel(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitLabel(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label() throws -> LabelContext {
+	 open func label() throws -> LabelContext {
 		var _localctx: LabelContext = LabelContext(_ctx, getState())
 		try enterRule(_localctx, 8, mumpsParser.RULE_label)
 		defer {
@@ -618,7 +663,7 @@ open class mumpsParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(128); 
 		 		try _errHandler.sync(self)
@@ -634,48 +679,71 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class RoutinedeclContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class RoutinedeclContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func CR() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.CR.rawValue, 0)
+			}
+			open
+			func PERCENT() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.PERCENT.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+			open
+			func paramlist() -> ParamlistContext? {
+				return getRuleContext(ParamlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_routinedecl
 		}
-		open func CR() -> TerminalNode? { return getToken(mumpsParser.Tokens.CR.rawValue, 0) }
-		open func PERCENT() -> TerminalNode? { return getToken(mumpsParser.Tokens.PERCENT.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0) }
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open func paramlist() -> ParamlistContext? {
-			return getRuleContext(ParamlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_routinedecl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterRoutinedecl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterRoutinedecl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitRoutinedecl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitRoutinedecl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitRoutinedecl(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitRoutinedecl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitRoutinedecl(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitRoutinedecl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func routinedecl() throws -> RoutinedeclContext {
+	 open func routinedecl() throws -> RoutinedeclContext {
 		var _localctx: RoutinedeclContext = RoutinedeclContext(_ctx, getState())
 		try enterRule(_localctx, 10, mumpsParser.RULE_routinedecl)
 		var _la: Int = 0
@@ -758,44 +826,55 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class ParamlistContext:ParserRuleContext {
-		open func param() -> Array<ParamContext> {
-			return getRuleContexts(ParamContext.self)
+
+	public class ParamlistContext: ParserRuleContext {
+			open
+			func param() -> [ParamContext] {
+				return getRuleContexts(ParamContext.self)
+			}
+			open
+			func param(_ i: Int) -> ParamContext? {
+				return getRuleContext(ParamContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_paramlist
 		}
-		open func param(_ i: Int) -> ParamContext? {
-			return getRuleContext(ParamContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_paramlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterParamlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterParamlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitParamlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitParamlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitParamlist(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitParamlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitParamlist(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitParamlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func paramlist() throws -> ParamlistContext {
+	 open func paramlist() throws -> ParamlistContext {
 		var _localctx: ParamlistContext = ParamlistContext(_ctx, getState())
 		try enterRule(_localctx, 12, mumpsParser.RULE_paramlist)
 		var _la: Int = 0
@@ -834,37 +913,43 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class ParamContext:ParserRuleContext {
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class ParamContext: ParserRuleContext {
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_param
 		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_param }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterParam(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterParam(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitParam(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitParam(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitParam(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitParam(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitParam(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitParam(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func param() throws -> ParamContext {
+	 open func param() throws -> ParamContext {
 		var _localctx: ParamContext = ParamContext(_ctx, getState())
 		try enterRule(_localctx, 14, mumpsParser.RULE_param)
 		defer {
@@ -884,52 +969,71 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class SubprocContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class SubprocContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func command() -> [CommandContext] {
+				return getRuleContexts(CommandContext.self)
+			}
+			open
+			func command(_ i: Int) -> CommandContext? {
+				return getRuleContext(CommandContext.self, i)
+			}
+			open
+			func paramlist() -> ParamlistContext? {
+				return getRuleContext(ParamlistContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_subproc
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0) }
-		open func command() -> Array<CommandContext> {
-			return getRuleContexts(CommandContext.self)
-		}
-		open func command(_ i: Int) -> CommandContext? {
-			return getRuleContext(CommandContext.self,i)
-		}
-		open func paramlist() -> ParamlistContext? {
-			return getRuleContext(ParamlistContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_subproc }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterSubproc(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterSubproc(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitSubproc(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitSubproc(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitSubproc(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitSubproc(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitSubproc(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitSubproc(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subproc() throws -> SubprocContext {
+	 open func subproc() throws -> SubprocContext {
 		var _localctx: SubprocContext = SubprocContext(_ctx, getState())
 		try enterRule(_localctx, 16, mumpsParser.RULE_subproc)
 		var _la: Int = 0
@@ -1000,7 +1104,7 @@ open class mumpsParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(176); 
 		 		try _errHandler.sync(self)
@@ -1016,87 +1120,139 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class CommandContext:ParserRuleContext {
-		open func set_() -> Set_Context? {
-			return getRuleContext(Set_Context.self,0)
+
+	public class CommandContext: ParserRuleContext {
+			open
+			func set_() -> Set_Context? {
+				return getRuleContext(Set_Context.self, 0)
+			}
+			open
+			func for_() -> For_Context? {
+				return getRuleContext(For_Context.self, 0)
+			}
+			open
+			func write_() -> Write_Context? {
+				return getRuleContext(Write_Context.self, 0)
+			}
+			open
+			func read_() -> Read_Context? {
+				return getRuleContext(Read_Context.self, 0)
+			}
+			open
+			func quit_() -> Quit_Context? {
+				return getRuleContext(Quit_Context.self, 0)
+			}
+			open
+			func halt_() -> Halt_Context? {
+				return getRuleContext(Halt_Context.self, 0)
+			}
+			open
+			func hang_() -> Hang_Context? {
+				return getRuleContext(Hang_Context.self, 0)
+			}
+			open
+			func new_() -> New_Context? {
+				return getRuleContext(New_Context.self, 0)
+			}
+			open
+			func break_() -> Break_Context? {
+				return getRuleContext(Break_Context.self, 0)
+			}
+			open
+			func do_() -> Do_Context? {
+				return getRuleContext(Do_Context.self, 0)
+			}
+			open
+			func kill_() -> Kill_Context? {
+				return getRuleContext(Kill_Context.self, 0)
+			}
+			open
+			func view_() -> View_Context? {
+				return getRuleContext(View_Context.self, 0)
+			}
+			open
+			func merge_() -> Merge_Context? {
+				return getRuleContext(Merge_Context.self, 0)
+			}
+			open
+			func xecute_() -> Xecute_Context? {
+				return getRuleContext(Xecute_Context.self, 0)
+			}
+			open
+			func CLOSE() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.CLOSE.rawValue, 0)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.ELSE.rawValue, 0)
+			}
+			open
+			func GOTO() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.GOTO.rawValue, 0)
+			}
+			open
+			func JOB() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.JOB.rawValue, 0)
+			}
+			open
+			func LOCK() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.LOCK.rawValue, 0)
+			}
+			open
+			func OPEN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.OPEN.rawValue, 0)
+			}
+			open
+			func TCOMMIT() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.TCOMMIT.rawValue, 0)
+			}
+			open
+			func TRESTART() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.TRESTART.rawValue, 0)
+			}
+			open
+			func TROLLBACK() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.TROLLBACK.rawValue, 0)
+			}
+			open
+			func TSTART() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.TSTART.rawValue, 0)
+			}
+			open
+			func USE() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.USE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_command
 		}
-		open func for_() -> For_Context? {
-			return getRuleContext(For_Context.self,0)
-		}
-		open func write_() -> Write_Context? {
-			return getRuleContext(Write_Context.self,0)
-		}
-		open func read_() -> Read_Context? {
-			return getRuleContext(Read_Context.self,0)
-		}
-		open func quit_() -> Quit_Context? {
-			return getRuleContext(Quit_Context.self,0)
-		}
-		open func halt_() -> Halt_Context? {
-			return getRuleContext(Halt_Context.self,0)
-		}
-		open func hang_() -> Hang_Context? {
-			return getRuleContext(Hang_Context.self,0)
-		}
-		open func new_() -> New_Context? {
-			return getRuleContext(New_Context.self,0)
-		}
-		open func break_() -> Break_Context? {
-			return getRuleContext(Break_Context.self,0)
-		}
-		open func do_() -> Do_Context? {
-			return getRuleContext(Do_Context.self,0)
-		}
-		open func kill_() -> Kill_Context? {
-			return getRuleContext(Kill_Context.self,0)
-		}
-		open func view_() -> View_Context? {
-			return getRuleContext(View_Context.self,0)
-		}
-		open func merge_() -> Merge_Context? {
-			return getRuleContext(Merge_Context.self,0)
-		}
-		open func xecute_() -> Xecute_Context? {
-			return getRuleContext(Xecute_Context.self,0)
-		}
-		open func CLOSE() -> TerminalNode? { return getToken(mumpsParser.Tokens.CLOSE.rawValue, 0) }
-		open func ELSE() -> TerminalNode? { return getToken(mumpsParser.Tokens.ELSE.rawValue, 0) }
-		open func GOTO() -> TerminalNode? { return getToken(mumpsParser.Tokens.GOTO.rawValue, 0) }
-		open func JOB() -> TerminalNode? { return getToken(mumpsParser.Tokens.JOB.rawValue, 0) }
-		open func LOCK() -> TerminalNode? { return getToken(mumpsParser.Tokens.LOCK.rawValue, 0) }
-		open func OPEN() -> TerminalNode? { return getToken(mumpsParser.Tokens.OPEN.rawValue, 0) }
-		open func TCOMMIT() -> TerminalNode? { return getToken(mumpsParser.Tokens.TCOMMIT.rawValue, 0) }
-		open func TRESTART() -> TerminalNode? { return getToken(mumpsParser.Tokens.TRESTART.rawValue, 0) }
-		open func TROLLBACK() -> TerminalNode? { return getToken(mumpsParser.Tokens.TROLLBACK.rawValue, 0) }
-		open func TSTART() -> TerminalNode? { return getToken(mumpsParser.Tokens.TSTART.rawValue, 0) }
-		open func USE() -> TerminalNode? { return getToken(mumpsParser.Tokens.USE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_command }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterCommand(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterCommand(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitCommand(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitCommand(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitCommand(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitCommand(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitCommand(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitCommand(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func command() throws -> CommandContext {
+	 open func command() throws -> CommandContext {
 		var _localctx: CommandContext = CommandContext(_ctx, getState())
 		try enterRule(_localctx, 18, mumpsParser.RULE_command)
 		var _la: Int = 0
@@ -1235,7 +1391,7 @@ open class mumpsParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1246,38 +1402,47 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class PostconditionContext:ParserRuleContext {
-		open func COLON() -> TerminalNode? { return getToken(mumpsParser.Tokens.COLON.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class PostconditionContext: ParserRuleContext {
+			open
+			func COLON() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.COLON.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_postcondition
 		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_postcondition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterPostcondition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterPostcondition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitPostcondition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitPostcondition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitPostcondition(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitPostcondition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitPostcondition(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitPostcondition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func postcondition() throws -> PostconditionContext {
+	 open func postcondition() throws -> PostconditionContext {
 		var _localctx: PostconditionContext = PostconditionContext(_ctx, getState())
 		try enterRule(_localctx, 20, mumpsParser.RULE_postcondition)
 		defer {
@@ -1299,75 +1464,115 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func term() -> TermContext? {
-			return getRuleContext(TermContext.self,0)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func term() -> TermContext? {
+				return getRuleContext(TermContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func ADD() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.ADD.rawValue)
+			}
+			open
+			func ADD(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.ADD.rawValue, i)
+			}
+			open
+			func MULTIPLY() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.MULTIPLY.rawValue)
+			}
+			open
+			func MULTIPLY(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.MULTIPLY.rawValue, i)
+			}
+			open
+			func SUBTRACT() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SUBTRACT.rawValue)
+			}
+			open
+			func SUBTRACT(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SUBTRACT.rawValue, i)
+			}
+			open
+			func DIVIDE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.DIVIDE.rawValue)
+			}
+			open
+			func DIVIDE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.DIVIDE.rawValue, i)
+			}
+			open
+			func INTDIVIDE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.INTDIVIDE.rawValue)
+			}
+			open
+			func INTDIVIDE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.INTDIVIDE.rawValue, i)
+			}
+			open
+			func MODULO() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.MODULO.rawValue)
+			}
+			open
+			func MODULO(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.MODULO.rawValue, i)
+			}
+			open
+			func EXPONENT() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.EXPONENT.rawValue)
+			}
+			open
+			func EXPONENT(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.EXPONENT.rawValue, i)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_expression
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func ADD() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.ADD.rawValue) }
-		open func ADD(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.ADD.rawValue, i)
-		}
-		open func MULTIPLY() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.MULTIPLY.rawValue) }
-		open func MULTIPLY(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.MULTIPLY.rawValue, i)
-		}
-		open func SUBTRACT() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SUBTRACT.rawValue) }
-		open func SUBTRACT(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SUBTRACT.rawValue, i)
-		}
-		open func DIVIDE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.DIVIDE.rawValue) }
-		open func DIVIDE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.DIVIDE.rawValue, i)
-		}
-		open func INTDIVIDE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.INTDIVIDE.rawValue) }
-		open func INTDIVIDE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.INTDIVIDE.rawValue, i)
-		}
-		open func MODULO() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.MODULO.rawValue) }
-		open func MODULO(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.MODULO.rawValue, i)
-		}
-		open func EXPONENT() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.EXPONENT.rawValue) }
-		open func EXPONENT(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.EXPONENT.rawValue, i)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitExpression(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 22, mumpsParser.RULE_expression)
 		var _la: Int = 0
@@ -1435,43 +1640,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class TermContext:ParserRuleContext {
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class TermContext: ParserRuleContext {
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.NUMBER.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_term
 		}
-		open func NUMBER() -> TerminalNode? { return getToken(mumpsParser.Tokens.NUMBER.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitTerm(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitTerm(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term() throws -> TermContext {
+	 open func term() throws -> TermContext {
 		var _localctx: TermContext = TermContext(_ctx, getState())
 		try enterRule(_localctx, 24, mumpsParser.RULE_term)
 		defer {
@@ -1509,7 +1730,7 @@ open class mumpsParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1520,45 +1741,67 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class ConditionContext:ParserRuleContext {
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class ConditionContext: ParserRuleContext {
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+			open
+			func NGT() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.NGT.rawValue, 0)
+			}
+			open
+			func NLT() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.NLT.rawValue, 0)
+			}
+			open
+			func LT() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.LT.rawValue, 0)
+			}
+			open
+			func GT() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.GT.rawValue, 0)
+			}
+			open
+			func EQUALS() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.EQUALS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_condition
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open func NGT() -> TerminalNode? { return getToken(mumpsParser.Tokens.NGT.rawValue, 0) }
-		open func NLT() -> TerminalNode? { return getToken(mumpsParser.Tokens.NLT.rawValue, 0) }
-		open func LT() -> TerminalNode? { return getToken(mumpsParser.Tokens.LT.rawValue, 0) }
-		open func GT() -> TerminalNode? { return getToken(mumpsParser.Tokens.GT.rawValue, 0) }
-		open func EQUALS() -> TerminalNode? { return getToken(mumpsParser.Tokens.EQUALS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterCondition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterCondition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitCondition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitCondition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitCondition(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitCondition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitCondition(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitCondition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func condition() throws -> ConditionContext {
+	 open func condition() throws -> ConditionContext {
 		var _localctx: ConditionContext = ConditionContext(_ctx, getState())
 		try enterRule(_localctx, 26, mumpsParser.RULE_condition)
 		var _la: Int = 0
@@ -1611,35 +1854,43 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class IdentifierContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(mumpsParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterIdentifier(self)
+
+	public class IdentifierContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_identifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitIdentifier(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitIdentifier(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifier() throws -> IdentifierContext {
+	 open func identifier() throws -> IdentifierContext {
 		var _localctx: IdentifierContext = IdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 28, mumpsParser.RULE_identifier)
 		defer {
@@ -1659,54 +1910,79 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class VariableContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class VariableContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func arglist() -> ArglistContext? {
+				return getRuleContext(ArglistContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func CARAT() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.CARAT.rawValue)
+			}
+			open
+			func CARAT(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.CARAT.rawValue, i)
+			}
+			open
+			func DOLLAR() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.DOLLAR.rawValue)
+			}
+			open
+			func DOLLAR(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.DOLLAR.rawValue, i)
+			}
+			open
+			func AMPERSAND() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.AMPERSAND.rawValue)
+			}
+			open
+			func AMPERSAND(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.AMPERSAND.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_variable
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0) }
-		open func arglist() -> ArglistContext? {
-			return getRuleContext(ArglistContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0) }
-		open func CARAT() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.CARAT.rawValue) }
-		open func CARAT(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.CARAT.rawValue, i)
-		}
-		open func DOLLAR() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.DOLLAR.rawValue) }
-		open func DOLLAR(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.DOLLAR.rawValue, i)
-		}
-		open func AMPERSAND() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.AMPERSAND.rawValue) }
-		open func AMPERSAND(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.AMPERSAND.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_variable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterVariable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitVariable(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitVariable(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable() throws -> VariableContext {
+	 open func variable() throws -> VariableContext {
 		var _localctx: VariableContext = VariableContext(_ctx, getState())
 		try enterRule(_localctx, 30, mumpsParser.RULE_variable)
 		var _la: Int = 0
@@ -1777,38 +2053,47 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Break_Context:ParserRuleContext {
-		open func BREAK() -> TerminalNode? { return getToken(mumpsParser.Tokens.BREAK.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
+
+	public class Break_Context: ParserRuleContext {
+			open
+			func BREAK() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.BREAK.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_break_
 		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_break_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterBreak_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterBreak_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitBreak_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitBreak_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitBreak_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitBreak_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitBreak_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitBreak_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func break_() throws -> Break_Context {
+	 open func break_() throws -> Break_Context {
 		var _localctx: Break_Context = Break_Context(_ctx, getState())
 		try enterRule(_localctx, 32, mumpsParser.RULE_break_)
 		defer {
@@ -1839,50 +2124,71 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Do_Context:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Do_Context: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func DO() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.DO.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func paramlist() -> ParamlistContext? {
+				return getRuleContext(ParamlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_do_
 		}
-		open func DO() -> TerminalNode? { return getToken(mumpsParser.Tokens.DO.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0) }
-		open func paramlist() -> ParamlistContext? {
-			return getRuleContext(ParamlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_do_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterDo_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterDo_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitDo_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitDo_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitDo_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitDo_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitDo_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitDo_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func do_() throws -> Do_Context {
+	 open func do_() throws -> Do_Context {
 		var _localctx: Do_Context = Do_Context(_ctx, getState())
 		try enterRule(_localctx, 34, mumpsParser.RULE_do_)
 		var _la: Int = 0
@@ -1966,59 +2272,83 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class For_Context:ParserRuleContext {
-		open func FOR() -> TerminalNode? { return getToken(mumpsParser.Tokens.FOR.rawValue, 0) }
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class For_Context: ParserRuleContext {
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+			open
+			func EQUALS() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.EQUALS.rawValue, 0)
+			}
+			open
+			func COLON() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.COLON.rawValue)
+			}
+			open
+			func COLON(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.COLON.rawValue, i)
+			}
+			open
+			func condition() -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+			open
+			func command() -> [CommandContext] {
+				return getRuleContexts(CommandContext.self)
+			}
+			open
+			func command(_ i: Int) -> CommandContext? {
+				return getRuleContext(CommandContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_for_
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open func EQUALS() -> TerminalNode? { return getToken(mumpsParser.Tokens.EQUALS.rawValue, 0) }
-		open func COLON() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.COLON.rawValue) }
-		open func COLON(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.COLON.rawValue, i)
-		}
-		open func condition() -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open func command() -> Array<CommandContext> {
-			return getRuleContexts(CommandContext.self)
-		}
-		open func command(_ i: Int) -> CommandContext? {
-			return getRuleContext(CommandContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_for_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterFor_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterFor_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitFor_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitFor_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitFor_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitFor_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitFor_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitFor_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func for_() throws -> For_Context {
+	 open func for_() throws -> For_Context {
 		var _localctx: For_Context = For_Context(_ctx, getState())
 		try enterRule(_localctx, 36, mumpsParser.RULE_for_)
 		var _la: Int = 0
@@ -2145,38 +2475,47 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Halt_Context:ParserRuleContext {
-		open func HALT() -> TerminalNode? { return getToken(mumpsParser.Tokens.HALT.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
+
+	public class Halt_Context: ParserRuleContext {
+			open
+			func HALT() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.HALT.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_halt_
 		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_halt_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterHalt_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterHalt_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitHalt_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitHalt_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitHalt_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitHalt_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitHalt_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitHalt_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func halt_() throws -> Halt_Context {
+	 open func halt_() throws -> Halt_Context {
 		var _localctx: Halt_Context = Halt_Context(_ctx, getState())
 		try enterRule(_localctx, 38, mumpsParser.RULE_halt_)
 		defer {
@@ -2207,45 +2546,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Hang_Context:ParserRuleContext {
-		open func HANG() -> TerminalNode? { return getToken(mumpsParser.Tokens.HANG.rawValue, 0) }
-		open func term() -> TermContext? {
-			return getRuleContext(TermContext.self,0)
+
+	public class Hang_Context: ParserRuleContext {
+			open
+			func HANG() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.HANG.rawValue, 0)
+			}
+			open
+			func term() -> TermContext? {
+				return getRuleContext(TermContext.self, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_hang_
 		}
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_hang_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterHang_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterHang_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitHang_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitHang_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitHang_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitHang_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitHang_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitHang_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hang_() throws -> Hang_Context {
+	 open func hang_() throws -> Hang_Context {
 		var _localctx: Hang_Context = Hang_Context(_ctx, getState())
 		try enterRule(_localctx, 40, mumpsParser.RULE_hang_)
 		var _la: Int = 0
@@ -2297,45 +2650,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class If_Context:ParserRuleContext {
-		open func IF() -> TerminalNode? { return getToken(mumpsParser.Tokens.IF.rawValue, 0) }
-		open func condition() -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,0)
+
+	public class If_Context: ParserRuleContext {
+			open
+			func IF() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.IF.rawValue, 0)
+			}
+			open
+			func condition() -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, 0)
+			}
+			open
+			func command() -> CommandContext? {
+				return getRuleContext(CommandContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_if_
 		}
-		open func command() -> CommandContext? {
-			return getRuleContext(CommandContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_if_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterIf_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterIf_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitIf_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitIf_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitIf_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitIf_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitIf_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitIf_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func if_() throws -> If_Context {
+	 open func if_() throws -> If_Context {
 		var _localctx: If_Context = If_Context(_ctx, getState())
 		try enterRule(_localctx, 42, mumpsParser.RULE_if_)
 		var _la: Int = 0
@@ -2392,45 +2759,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Kill_Context:ParserRuleContext {
-		open func KILL() -> TerminalNode? { return getToken(mumpsParser.Tokens.KILL.rawValue, 0) }
-		open func arglist() -> ArglistContext? {
-			return getRuleContext(ArglistContext.self,0)
+
+	public class Kill_Context: ParserRuleContext {
+			open
+			func KILL() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.KILL.rawValue, 0)
+			}
+			open
+			func arglist() -> ArglistContext? {
+				return getRuleContext(ArglistContext.self, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_kill_
 		}
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_kill_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterKill_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterKill_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitKill_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitKill_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitKill_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitKill_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitKill_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitKill_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func kill_() throws -> Kill_Context {
+	 open func kill_() throws -> Kill_Context {
 		var _localctx: Kill_Context = Kill_Context(_ctx, getState())
 		try enterRule(_localctx, 44, mumpsParser.RULE_kill_)
 		var _la: Int = 0
@@ -2482,52 +2863,71 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Merge_Context:ParserRuleContext {
-		open func MERGE() -> TerminalNode? { return getToken(mumpsParser.Tokens.MERGE.rawValue, 0) }
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class Merge_Context: ParserRuleContext {
+			open
+			func MERGE() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.MERGE.rawValue, 0)
+			}
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+			open
+			func EQUALS() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.EQUALS.rawValue)
+			}
+			open
+			func EQUALS(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.EQUALS.rawValue, i)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_merge_
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open func EQUALS() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.EQUALS.rawValue) }
-		open func EQUALS(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.EQUALS.rawValue, i)
-		}
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_merge_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterMerge_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterMerge_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitMerge_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitMerge_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitMerge_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitMerge_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitMerge_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitMerge_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func merge_() throws -> Merge_Context {
+	 open func merge_() throws -> Merge_Context {
 		var _localctx: Merge_Context = Merge_Context(_ctx, getState())
 		try enterRule(_localctx, 46, mumpsParser.RULE_merge_)
 		var _la: Int = 0
@@ -2605,45 +3005,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class New_Context:ParserRuleContext {
-		open func arglist() -> ArglistContext? {
-			return getRuleContext(ArglistContext.self,0)
+
+	public class New_Context: ParserRuleContext {
+			open
+			func arglist() -> ArglistContext? {
+				return getRuleContext(ArglistContext.self, 0)
+			}
+			open
+			func NEW() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.NEW.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_new_
 		}
-		open func NEW() -> TerminalNode? { return getToken(mumpsParser.Tokens.NEW.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_new_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterNew_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterNew_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitNew_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitNew_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitNew_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitNew_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitNew_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitNew_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func new_() throws -> New_Context {
+	 open func new_() throws -> New_Context {
 		var _localctx: New_Context = New_Context(_ctx, getState())
 		try enterRule(_localctx, 48, mumpsParser.RULE_new_)
 		var _la: Int = 0
@@ -2696,45 +3110,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Quit_Context:ParserRuleContext {
-		open func QUIT() -> TerminalNode? { return getToken(mumpsParser.Tokens.QUIT.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
+
+	public class Quit_Context: ParserRuleContext {
+			open
+			func QUIT() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.QUIT.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func term() -> TermContext? {
+				return getRuleContext(TermContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_quit_
 		}
-		open func term() -> TermContext? {
-			return getRuleContext(TermContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_quit_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterQuit_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterQuit_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitQuit_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitQuit_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitQuit_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitQuit_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitQuit_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitQuit_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func quit_() throws -> Quit_Context {
+	 open func quit_() throws -> Quit_Context {
 		var _localctx: Quit_Context = Quit_Context(_ctx, getState())
 		try enterRule(_localctx, 50, mumpsParser.RULE_quit_)
 		var _la: Int = 0
@@ -2792,45 +3220,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Read_Context:ParserRuleContext {
-		open func arglist() -> ArglistContext? {
-			return getRuleContext(ArglistContext.self,0)
+
+	public class Read_Context: ParserRuleContext {
+			open
+			func arglist() -> ArglistContext? {
+				return getRuleContext(ArglistContext.self, 0)
+			}
+			open
+			func READ() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.READ.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_read_
 		}
-		open func READ() -> TerminalNode? { return getToken(mumpsParser.Tokens.READ.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_read_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterRead_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterRead_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitRead_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitRead_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitRead_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitRead_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitRead_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitRead_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func read_() throws -> Read_Context {
+	 open func read_() throws -> Read_Context {
 		var _localctx: Read_Context = Read_Context(_ctx, getState())
 		try enterRule(_localctx, 52, mumpsParser.RULE_read_)
 		var _la: Int = 0
@@ -2883,48 +3325,63 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Set_Context:ParserRuleContext {
-		open func assign() -> Array<AssignContext> {
-			return getRuleContexts(AssignContext.self)
+
+	public class Set_Context: ParserRuleContext {
+			open
+			func assign() -> [AssignContext] {
+				return getRuleContexts(AssignContext.self)
+			}
+			open
+			func assign(_ i: Int) -> AssignContext? {
+				return getRuleContext(AssignContext.self, i)
+			}
+			open
+			func SET() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SET.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_set_
 		}
-		open func assign(_ i: Int) -> AssignContext? {
-			return getRuleContext(AssignContext.self,i)
-		}
-		open func SET() -> TerminalNode? { return getToken(mumpsParser.Tokens.SET.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_set_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterSet_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterSet_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitSet_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitSet_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitSet_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitSet_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitSet_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitSet_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func set_() throws -> Set_Context {
+	 open func set_() throws -> Set_Context {
 		var _localctx: Set_Context = Set_Context(_ctx, getState())
 		try enterRule(_localctx, 54, mumpsParser.RULE_set_)
 		var _la: Int = 0
@@ -2962,7 +3419,7 @@ open class mumpsParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(406); 
 		 		try _errHandler.sync(self)
@@ -2998,43 +3455,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class View_Context:ParserRuleContext {
-		open func VIEW() -> TerminalNode? { return getToken(mumpsParser.Tokens.VIEW.rawValue, 0) }
-		open func IDENTIFIER() -> TerminalNode? { return getToken(mumpsParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
+
+	public class View_Context: ParserRuleContext {
+			open
+			func VIEW() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.VIEW.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_view_
 		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_view_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterView_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterView_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitView_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitView_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitView_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitView_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitView_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitView_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func view_() throws -> View_Context {
+	 open func view_() throws -> View_Context {
 		var _localctx: View_Context = View_Context(_ctx, getState())
 		try enterRule(_localctx, 56, mumpsParser.RULE_view_)
 		var _la: Int = 0
@@ -3086,45 +3559,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Write_Context:ParserRuleContext {
-		open func arglist() -> ArglistContext? {
-			return getRuleContext(ArglistContext.self,0)
+
+	public class Write_Context: ParserRuleContext {
+			open
+			func arglist() -> ArglistContext? {
+				return getRuleContext(ArglistContext.self, 0)
+			}
+			open
+			func WRITE() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.WRITE.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_write_
 		}
-		open func WRITE() -> TerminalNode? { return getToken(mumpsParser.Tokens.WRITE.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_write_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterWrite_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterWrite_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitWrite_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitWrite_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitWrite_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitWrite_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitWrite_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitWrite_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func write_() throws -> Write_Context {
+	 open func write_() throws -> Write_Context {
 		var _localctx: Write_Context = Write_Context(_ctx, getState())
 		try enterRule(_localctx, 58, mumpsParser.RULE_write_)
 		var _la: Int = 0
@@ -3177,43 +3664,59 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class Xecute_Context:ParserRuleContext {
-		open func XECUTE() -> TerminalNode? { return getToken(mumpsParser.Tokens.XECUTE.rawValue, 0) }
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(mumpsParser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open func postcondition() -> PostconditionContext? {
-			return getRuleContext(PostconditionContext.self,0)
+
+	public class Xecute_Context: ParserRuleContext {
+			open
+			func XECUTE() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.XECUTE.rawValue, 0)
+			}
+			open
+			func STRING_LITERAL() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.STRING_LITERAL.rawValue, 0)
+			}
+			open
+			func postcondition() -> PostconditionContext? {
+				return getRuleContext(PostconditionContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_xecute_
 		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_xecute_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterXecute_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterXecute_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitXecute_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitXecute_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitXecute_(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitXecute_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitXecute_(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitXecute_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func xecute_() throws -> Xecute_Context {
+	 open func xecute_() throws -> Xecute_Context {
 		var _localctx: Xecute_Context = Xecute_Context(_ctx, getState())
 		try enterRule(_localctx, 60, mumpsParser.RULE_xecute_)
 		var _la: Int = 0
@@ -3265,47 +3768,67 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class AssignContext:ParserRuleContext {
-		open func EQUALS() -> TerminalNode? { return getToken(mumpsParser.Tokens.EQUALS.rawValue, 0) }
-		open func arg() -> ArgContext? {
-			return getRuleContext(ArgContext.self,0)
+
+	public class AssignContext: ParserRuleContext {
+			open
+			func EQUALS() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.EQUALS.rawValue, 0)
+			}
+			open
+			func arg() -> ArgContext? {
+				return getRuleContext(ArgContext.self, 0)
+			}
+			open
+			func arglist() -> ArglistContext? {
+				return getRuleContext(ArglistContext.self, 0)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_assign
 		}
-		open func arglist() -> ArglistContext? {
-			return getRuleContext(ArglistContext.self,0)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open func LPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(mumpsParser.Tokens.RPAREN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_assign }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterAssign(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterAssign(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitAssign(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitAssign(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitAssign(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitAssign(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitAssign(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitAssign(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assign() throws -> AssignContext {
+	 open func assign() throws -> AssignContext {
 		var _localctx: AssignContext = AssignContext(_ctx, getState())
 		try enterRule(_localctx, 62, mumpsParser.RULE_assign)
 		var _la: Int = 0
@@ -3399,48 +3922,63 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class ArglistContext:ParserRuleContext {
-		open func arg() -> Array<ArgContext> {
-			return getRuleContexts(ArgContext.self)
+
+	public class ArglistContext: ParserRuleContext {
+			open
+			func arg() -> [ArgContext] {
+				return getRuleContexts(ArgContext.self)
+			}
+			open
+			func arg(_ i: Int) -> ArgContext? {
+				return getRuleContext(ArgContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func SPACE() -> [TerminalNode] {
+				return getTokens(mumpsParser.Tokens.SPACE.rawValue)
+			}
+			open
+			func SPACE(_ i:Int) -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_arglist
 		}
-		open func arg(_ i: Int) -> ArgContext? {
-			return getRuleContext(ArgContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.COMMA.rawValue, i)
-		}
-		open func SPACE() -> Array<TerminalNode> { return getTokens(mumpsParser.Tokens.SPACE.rawValue) }
-		open func SPACE(_ i:Int) -> TerminalNode?{
-			return getToken(mumpsParser.Tokens.SPACE.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_arglist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterArglist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterArglist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitArglist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitArglist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitArglist(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitArglist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitArglist(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitArglist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arglist() throws -> ArglistContext {
+	 open func arglist() throws -> ArglistContext {
 		var _localctx: ArglistContext = ArglistContext(_ctx, getState())
 		try enterRule(_localctx, 64, mumpsParser.RULE_arglist)
 		var _la: Int = 0
@@ -3494,39 +4032,51 @@ open class mumpsParser: Parser {
 
 		return _localctx
 	}
-	open class ArgContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ArgContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func BANG() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.BANG.rawValue, 0)
+			}
+			open
+			func STRING_LITERAL() -> TerminalNode? {
+				return getToken(mumpsParser.Tokens.STRING_LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumpsParser.RULE_arg
 		}
-		open func BANG() -> TerminalNode? { return getToken(mumpsParser.Tokens.BANG.rawValue, 0) }
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(mumpsParser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumpsParser.RULE_arg }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).enterArg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.enterArg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumpsListener {
-			 	(listener as! mumpsListener).exitArg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumpsListener {
+				listener.exitArg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumpsVisitor {
-			     return (visitor as! mumpsVisitor<T>).visitArg(self)
-			}else if visitor is mumpsBaseVisitor {
-		    	 return (visitor as! mumpsBaseVisitor<T>).visitArg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumpsVisitor {
+			    return visitor.visitArg(self)
+			}
+			else if let visitor = visitor as? mumpsBaseVisitor {
+			    return visitor.visitArg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arg() throws -> ArgContext {
+	 open func arg() throws -> ArgContext {
 		var _localctx: ArgContext = ArgContext(_ctx, getState())
 		try enterRule(_localctx, 66, mumpsParser.RULE_arg)
 		var _la: Int = 0
@@ -3567,7 +4117,7 @@ open class mumpsParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3579,6 +4129,10 @@ open class mumpsParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = mumpsParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = mumpsParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

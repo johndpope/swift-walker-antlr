@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/asm6502/asm6502.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/asm6502/asm6502.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class asm6502Parser: Parser {
@@ -11,8 +11,11 @@ open class asm6502Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, ASSEMBLER_INSTRUCTION = 9, ADC = 10, 
                  AND = 11, ASL = 12, BCC = 13, BCS = 14, BEQ = 15, BIT = 16, 
@@ -28,12 +31,15 @@ open class asm6502Parser: Parser {
                  NAME = 71, NUMBER = 72, COMMENT = 73, STRING = 74, EOL = 75, 
                  WS = 76
 	}
-	public static let RULE_prog = 0, RULE_line = 1, RULE_instruction = 2, RULE_assemblerinstruction = 3, 
-                   RULE_assembleropcode = 4, RULE_lbl = 5, RULE_argumentlist = 6, 
-                   RULE_label = 7, RULE_argument = 8, RULE_prefix = 9, RULE_string = 10, 
-                   RULE_name = 11, RULE_number = 12, RULE_comment = 13, 
-                   RULE_opcode = 14
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_prog = 0, RULE_line = 1, RULE_instruction = 2, RULE_assemblerinstruction = 3, 
+            RULE_assembleropcode = 4, RULE_lbl = 5, RULE_argumentlist = 6, 
+            RULE_label = 7, RULE_argument = 8, RULE_prefix = 9, RULE_string = 10, 
+            RULE_name = 11, RULE_number = 12, RULE_comment = 13, RULE_opcode = 14
+
+	public
+	static let ruleNames: [String] = [
 		"prog", "line", "instruction", "assemblerinstruction", "assembleropcode", 
 		"lbl", "argumentlist", "label", "argument", "prefix", "string", "name", 
 		"number", "comment", "opcode"
@@ -52,92 +58,81 @@ open class asm6502Parser: Parser {
 		"SEI", "STA", "STX", "STY", "STZ", "TAX", "TAY", "TSX", "TXA", "TXS", 
 		"TYA", "NAME", "NUMBER", "COMMENT", "STRING", "EOL", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "asm6502.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return asm6502Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "asm6502.g4" }
+	override open
+	func getSerializedATN() -> String { return asm6502Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return asm6502Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return asm6502Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return asm6502Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return asm6502Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return asm6502Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,asm6502Parser._ATN,asm6502Parser._decisionToDFA, asm6502Parser._sharedContextCache)
 	}
-	open class ProgContext:ParserRuleContext {
-		open func EOL() -> Array<TerminalNode> { return getTokens(asm6502Parser.Tokens.EOL.rawValue) }
-		open func EOL(_ i:Int) -> TerminalNode?{
-			return getToken(asm6502Parser.Tokens.EOL.rawValue, i)
+
+	public class ProgContext: ParserRuleContext {
+			open
+			func EOL() -> [TerminalNode] {
+				return getTokens(asm6502Parser.Tokens.EOL.rawValue)
+			}
+			open
+			func EOL(_ i:Int) -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.EOL.rawValue, i)
+			}
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_prog
 		}
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
-		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_prog }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterProg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterProg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitProg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitProg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitProg(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitProg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitProg(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitProg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prog() throws -> ProgContext {
+	 open func prog() throws -> ProgContext {
 		var _localctx: ProgContext = ProgContext(_ctx, getState())
 		try enterRule(_localctx, 0, asm6502Parser.RULE_prog)
 		var _la: Int = 0
@@ -199,46 +194,55 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+			open
+			func instruction() -> InstructionContext? {
+				return getRuleContext(InstructionContext.self, 0)
+			}
+			open
+			func assemblerinstruction() -> AssemblerinstructionContext? {
+				return getRuleContext(AssemblerinstructionContext.self, 0)
+			}
+			open
+			func lbl() -> LblContext? {
+				return getRuleContext(LblContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_line
 		}
-		open func instruction() -> InstructionContext? {
-			return getRuleContext(InstructionContext.self,0)
-		}
-		open func assemblerinstruction() -> AssemblerinstructionContext? {
-			return getRuleContext(AssemblerinstructionContext.self,0)
-		}
-		open func lbl() -> LblContext? {
-			return getRuleContext(LblContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitLine(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 2, asm6502Parser.RULE_line)
 		defer {
@@ -283,46 +287,55 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class InstructionContext:ParserRuleContext {
-		open func opcode() -> OpcodeContext? {
-			return getRuleContext(OpcodeContext.self,0)
+
+	public class InstructionContext: ParserRuleContext {
+			open
+			func opcode() -> OpcodeContext? {
+				return getRuleContext(OpcodeContext.self, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func argumentlist() -> ArgumentlistContext? {
+				return getRuleContext(ArgumentlistContext.self, 0)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_instruction
 		}
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
-		}
-		open func argumentlist() -> ArgumentlistContext? {
-			return getRuleContext(ArgumentlistContext.self,0)
-		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_instruction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterInstruction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterInstruction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitInstruction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitInstruction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitInstruction(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitInstruction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitInstruction(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitInstruction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func instruction() throws -> InstructionContext {
+	 open func instruction() throws -> InstructionContext {
 		var _localctx: InstructionContext = InstructionContext(_ctx, getState())
 		try enterRule(_localctx, 4, asm6502Parser.RULE_instruction)
 		var _la: Int = 0
@@ -389,46 +402,55 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class AssemblerinstructionContext:ParserRuleContext {
-		open func assembleropcode() -> AssembleropcodeContext? {
-			return getRuleContext(AssembleropcodeContext.self,0)
+
+	public class AssemblerinstructionContext: ParserRuleContext {
+			open
+			func assembleropcode() -> AssembleropcodeContext? {
+				return getRuleContext(AssembleropcodeContext.self, 0)
+			}
+			open
+			func argument() -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, 0)
+			}
+			open
+			func argumentlist() -> ArgumentlistContext? {
+				return getRuleContext(ArgumentlistContext.self, 0)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_assemblerinstruction
 		}
-		open func argument() -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,0)
-		}
-		open func argumentlist() -> ArgumentlistContext? {
-			return getRuleContext(ArgumentlistContext.self,0)
-		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_assemblerinstruction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterAssemblerinstruction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterAssemblerinstruction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitAssemblerinstruction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitAssemblerinstruction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitAssemblerinstruction(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitAssemblerinstruction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitAssemblerinstruction(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitAssemblerinstruction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assemblerinstruction() throws -> AssemblerinstructionContext {
+	 open func assemblerinstruction() throws -> AssemblerinstructionContext {
 		var _localctx: AssemblerinstructionContext = AssemblerinstructionContext(_ctx, getState())
 		try enterRule(_localctx, 6, asm6502Parser.RULE_assemblerinstruction)
 		var _la: Int = 0
@@ -502,35 +524,43 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class AssembleropcodeContext:ParserRuleContext {
-		open func ASSEMBLER_INSTRUCTION() -> TerminalNode? { return getToken(asm6502Parser.Tokens.ASSEMBLER_INSTRUCTION.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_assembleropcode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterAssembleropcode(self)
+
+	public class AssembleropcodeContext: ParserRuleContext {
+			open
+			func ASSEMBLER_INSTRUCTION() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.ASSEMBLER_INSTRUCTION.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_assembleropcode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterAssembleropcode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitAssembleropcode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitAssembleropcode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitAssembleropcode(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitAssembleropcode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitAssembleropcode(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitAssembleropcode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assembleropcode() throws -> AssembleropcodeContext {
+	 open func assembleropcode() throws -> AssembleropcodeContext {
 		var _localctx: AssembleropcodeContext = AssembleropcodeContext(_ctx, getState())
 		try enterRule(_localctx, 8, asm6502Parser.RULE_assembleropcode)
 		defer {
@@ -550,37 +580,43 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class LblContext:ParserRuleContext {
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
+
+	public class LblContext: ParserRuleContext {
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_lbl
 		}
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_lbl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterLbl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterLbl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitLbl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitLbl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitLbl(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitLbl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitLbl(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitLbl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lbl() throws -> LblContext {
+	 open func lbl() throws -> LblContext {
 		var _localctx: LblContext = LblContext(_ctx, getState())
 		try enterRule(_localctx, 10, asm6502Parser.RULE_lbl)
 		defer {
@@ -602,40 +638,47 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentlistContext:ParserRuleContext {
-		open func argument() -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,0)
+
+	public class ArgumentlistContext: ParserRuleContext {
+			open
+			func argument() -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, 0)
+			}
+			open
+			func argumentlist() -> ArgumentlistContext? {
+				return getRuleContext(ArgumentlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_argumentlist
 		}
-		open func argumentlist() -> ArgumentlistContext? {
-			return getRuleContext(ArgumentlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_argumentlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterArgumentlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterArgumentlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitArgumentlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitArgumentlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitArgumentlist(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitArgumentlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitArgumentlist(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitArgumentlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argumentlist() throws -> ArgumentlistContext {
+	 open func argumentlist() throws -> ArgumentlistContext {
 		var _localctx: ArgumentlistContext = ArgumentlistContext(_ctx, getState())
 		try enterRule(_localctx, 12, asm6502Parser.RULE_argumentlist)
 		var _la: Int = 0
@@ -671,37 +714,43 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class LabelContext:ParserRuleContext {
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
+
+	public class LabelContext: ParserRuleContext {
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_label
 		}
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterLabel(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitLabel(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitLabel(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label() throws -> LabelContext {
+	 open func label() throws -> LabelContext {
 		var _localctx: LabelContext = LabelContext(_ctx, getState())
 		try enterRule(_localctx, 14, asm6502Parser.RULE_label)
 		defer {
@@ -721,52 +770,63 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentContext:ParserRuleContext {
-		open func number() -> Array<NumberContext> {
-			return getRuleContexts(NumberContext.self)
+
+	public class ArgumentContext: ParserRuleContext {
+			open
+			func number() -> [NumberContext] {
+				return getRuleContexts(NumberContext.self)
+			}
+			open
+			func number(_ i: Int) -> NumberContext? {
+				return getRuleContext(NumberContext.self, i)
+			}
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func prefix() -> PrefixContext? {
+				return getRuleContext(PrefixContext.self, 0)
+			}
+			open
+			func argument() -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_argument
 		}
-		open func number(_ i: Int) -> NumberContext? {
-			return getRuleContext(NumberContext.self,i)
-		}
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
-		}
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func prefix() -> PrefixContext? {
-			return getRuleContext(PrefixContext.self,0)
-		}
-		open func argument() -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterArgument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterArgument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitArgument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitArgument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitArgument(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitArgument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitArgument(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitArgument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument() throws -> ArgumentContext {
+	 open func argument() throws -> ArgumentContext {
 		var _localctx: ArgumentContext = ArgumentContext(_ctx, getState())
 		try enterRule(_localctx, 16, asm6502Parser.RULE_argument)
 		var _la: Int = 0
@@ -823,7 +883,7 @@ open class asm6502Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(87)
 		 		try _errHandler.sync(self)
@@ -865,7 +925,7 @@ open class asm6502Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -876,34 +936,39 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class PrefixContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_prefix }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterPrefix(self)
+
+	public class PrefixContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_prefix
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterPrefix(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitPrefix(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitPrefix(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitPrefix(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitPrefix(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitPrefix(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitPrefix(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefix() throws -> PrefixContext {
+	 open func prefix() throws -> PrefixContext {
 		var _localctx: PrefixContext = PrefixContext(_ctx, getState())
 		try enterRule(_localctx, 18, asm6502Parser.RULE_prefix)
 		defer {
@@ -923,35 +988,43 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class StringContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(asm6502Parser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_string }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterString(self)
+
+	public class StringContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_string
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitString(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitString(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string() throws -> StringContext {
+	 open func string() throws -> StringContext {
 		var _localctx: StringContext = StringContext(_ctx, getState())
 		try enterRule(_localctx, 20, asm6502Parser.RULE_string)
 		defer {
@@ -971,35 +1044,43 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class NameContext:ParserRuleContext {
-		open func NAME() -> TerminalNode? { return getToken(asm6502Parser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterName(self)
+
+	public class NameContext: ParserRuleContext {
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_name
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitName(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitName(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func name() throws -> NameContext {
+	 open func name() throws -> NameContext {
 		var _localctx: NameContext = NameContext(_ctx, getState())
 		try enterRule(_localctx, 22, asm6502Parser.RULE_name)
 		defer {
@@ -1019,35 +1100,43 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class NumberContext:ParserRuleContext {
-		open func NUMBER() -> TerminalNode? { return getToken(asm6502Parser.Tokens.NUMBER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterNumber(self)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.NUMBER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_number
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitNumber(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 24, asm6502Parser.RULE_number)
 		defer {
@@ -1067,35 +1156,43 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func COMMENT() -> TerminalNode? { return getToken(asm6502Parser.Tokens.COMMENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterComment(self)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.COMMENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_comment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitComment(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 26, asm6502Parser.RULE_comment)
 		defer {
@@ -1115,95 +1212,283 @@ open class asm6502Parser: Parser {
 
 		return _localctx
 	}
-	open class OpcodeContext:ParserRuleContext {
-		open func ADC() -> TerminalNode? { return getToken(asm6502Parser.Tokens.ADC.rawValue, 0) }
-		open func AND() -> TerminalNode? { return getToken(asm6502Parser.Tokens.AND.rawValue, 0) }
-		open func ASL() -> TerminalNode? { return getToken(asm6502Parser.Tokens.ASL.rawValue, 0) }
-		open func BCC() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BCC.rawValue, 0) }
-		open func BCS() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BCS.rawValue, 0) }
-		open func BEQ() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BEQ.rawValue, 0) }
-		open func BIT() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BIT.rawValue, 0) }
-		open func BMI() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BMI.rawValue, 0) }
-		open func BNE() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BNE.rawValue, 0) }
-		open func BPL() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BPL.rawValue, 0) }
-		open func BRA() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BRA.rawValue, 0) }
-		open func BRK() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BRK.rawValue, 0) }
-		open func BVC() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BVC.rawValue, 0) }
-		open func BVS() -> TerminalNode? { return getToken(asm6502Parser.Tokens.BVS.rawValue, 0) }
-		open func CLC() -> TerminalNode? { return getToken(asm6502Parser.Tokens.CLC.rawValue, 0) }
-		open func CLD() -> TerminalNode? { return getToken(asm6502Parser.Tokens.CLD.rawValue, 0) }
-		open func CLI() -> TerminalNode? { return getToken(asm6502Parser.Tokens.CLI.rawValue, 0) }
-		open func CLV() -> TerminalNode? { return getToken(asm6502Parser.Tokens.CLV.rawValue, 0) }
-		open func CMP() -> TerminalNode? { return getToken(asm6502Parser.Tokens.CMP.rawValue, 0) }
-		open func CPX() -> TerminalNode? { return getToken(asm6502Parser.Tokens.CPX.rawValue, 0) }
-		open func CPY() -> TerminalNode? { return getToken(asm6502Parser.Tokens.CPY.rawValue, 0) }
-		open func DEC() -> TerminalNode? { return getToken(asm6502Parser.Tokens.DEC.rawValue, 0) }
-		open func DEX() -> TerminalNode? { return getToken(asm6502Parser.Tokens.DEX.rawValue, 0) }
-		open func DEY() -> TerminalNode? { return getToken(asm6502Parser.Tokens.DEY.rawValue, 0) }
-		open func EOR() -> TerminalNode? { return getToken(asm6502Parser.Tokens.EOR.rawValue, 0) }
-		open func INC() -> TerminalNode? { return getToken(asm6502Parser.Tokens.INC.rawValue, 0) }
-		open func INX() -> TerminalNode? { return getToken(asm6502Parser.Tokens.INX.rawValue, 0) }
-		open func INY() -> TerminalNode? { return getToken(asm6502Parser.Tokens.INY.rawValue, 0) }
-		open func JMP() -> TerminalNode? { return getToken(asm6502Parser.Tokens.JMP.rawValue, 0) }
-		open func JSR() -> TerminalNode? { return getToken(asm6502Parser.Tokens.JSR.rawValue, 0) }
-		open func LDA() -> TerminalNode? { return getToken(asm6502Parser.Tokens.LDA.rawValue, 0) }
-		open func LDY() -> TerminalNode? { return getToken(asm6502Parser.Tokens.LDY.rawValue, 0) }
-		open func LDX() -> TerminalNode? { return getToken(asm6502Parser.Tokens.LDX.rawValue, 0) }
-		open func LSR() -> TerminalNode? { return getToken(asm6502Parser.Tokens.LSR.rawValue, 0) }
-		open func NOP() -> TerminalNode? { return getToken(asm6502Parser.Tokens.NOP.rawValue, 0) }
-		open func ORA() -> TerminalNode? { return getToken(asm6502Parser.Tokens.ORA.rawValue, 0) }
-		open func PHA() -> TerminalNode? { return getToken(asm6502Parser.Tokens.PHA.rawValue, 0) }
-		open func PHX() -> TerminalNode? { return getToken(asm6502Parser.Tokens.PHX.rawValue, 0) }
-		open func PHY() -> TerminalNode? { return getToken(asm6502Parser.Tokens.PHY.rawValue, 0) }
-		open func PHP() -> TerminalNode? { return getToken(asm6502Parser.Tokens.PHP.rawValue, 0) }
-		open func PLA() -> TerminalNode? { return getToken(asm6502Parser.Tokens.PLA.rawValue, 0) }
-		open func PLP() -> TerminalNode? { return getToken(asm6502Parser.Tokens.PLP.rawValue, 0) }
-		open func PLY() -> TerminalNode? { return getToken(asm6502Parser.Tokens.PLY.rawValue, 0) }
-		open func ROL() -> TerminalNode? { return getToken(asm6502Parser.Tokens.ROL.rawValue, 0) }
-		open func ROR() -> TerminalNode? { return getToken(asm6502Parser.Tokens.ROR.rawValue, 0) }
-		open func RTI() -> TerminalNode? { return getToken(asm6502Parser.Tokens.RTI.rawValue, 0) }
-		open func RTS() -> TerminalNode? { return getToken(asm6502Parser.Tokens.RTS.rawValue, 0) }
-		open func SBC() -> TerminalNode? { return getToken(asm6502Parser.Tokens.SBC.rawValue, 0) }
-		open func SEC() -> TerminalNode? { return getToken(asm6502Parser.Tokens.SEC.rawValue, 0) }
-		open func SED() -> TerminalNode? { return getToken(asm6502Parser.Tokens.SED.rawValue, 0) }
-		open func SEI() -> TerminalNode? { return getToken(asm6502Parser.Tokens.SEI.rawValue, 0) }
-		open func STA() -> TerminalNode? { return getToken(asm6502Parser.Tokens.STA.rawValue, 0) }
-		open func STX() -> TerminalNode? { return getToken(asm6502Parser.Tokens.STX.rawValue, 0) }
-		open func STY() -> TerminalNode? { return getToken(asm6502Parser.Tokens.STY.rawValue, 0) }
-		open func STZ() -> TerminalNode? { return getToken(asm6502Parser.Tokens.STZ.rawValue, 0) }
-		open func TAX() -> TerminalNode? { return getToken(asm6502Parser.Tokens.TAX.rawValue, 0) }
-		open func TAY() -> TerminalNode? { return getToken(asm6502Parser.Tokens.TAY.rawValue, 0) }
-		open func TSX() -> TerminalNode? { return getToken(asm6502Parser.Tokens.TSX.rawValue, 0) }
-		open func TXA() -> TerminalNode? { return getToken(asm6502Parser.Tokens.TXA.rawValue, 0) }
-		open func TXS() -> TerminalNode? { return getToken(asm6502Parser.Tokens.TXS.rawValue, 0) }
-		open func TYA() -> TerminalNode? { return getToken(asm6502Parser.Tokens.TYA.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return asm6502Parser.RULE_opcode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).enterOpcode(self)
+
+	public class OpcodeContext: ParserRuleContext {
+			open
+			func ADC() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.ADC.rawValue, 0)
+			}
+			open
+			func AND() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.AND.rawValue, 0)
+			}
+			open
+			func ASL() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.ASL.rawValue, 0)
+			}
+			open
+			func BCC() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BCC.rawValue, 0)
+			}
+			open
+			func BCS() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BCS.rawValue, 0)
+			}
+			open
+			func BEQ() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BEQ.rawValue, 0)
+			}
+			open
+			func BIT() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BIT.rawValue, 0)
+			}
+			open
+			func BMI() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BMI.rawValue, 0)
+			}
+			open
+			func BNE() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BNE.rawValue, 0)
+			}
+			open
+			func BPL() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BPL.rawValue, 0)
+			}
+			open
+			func BRA() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BRA.rawValue, 0)
+			}
+			open
+			func BRK() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BRK.rawValue, 0)
+			}
+			open
+			func BVC() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BVC.rawValue, 0)
+			}
+			open
+			func BVS() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.BVS.rawValue, 0)
+			}
+			open
+			func CLC() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.CLC.rawValue, 0)
+			}
+			open
+			func CLD() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.CLD.rawValue, 0)
+			}
+			open
+			func CLI() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.CLI.rawValue, 0)
+			}
+			open
+			func CLV() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.CLV.rawValue, 0)
+			}
+			open
+			func CMP() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.CMP.rawValue, 0)
+			}
+			open
+			func CPX() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.CPX.rawValue, 0)
+			}
+			open
+			func CPY() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.CPY.rawValue, 0)
+			}
+			open
+			func DEC() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.DEC.rawValue, 0)
+			}
+			open
+			func DEX() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.DEX.rawValue, 0)
+			}
+			open
+			func DEY() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.DEY.rawValue, 0)
+			}
+			open
+			func EOR() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.EOR.rawValue, 0)
+			}
+			open
+			func INC() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.INC.rawValue, 0)
+			}
+			open
+			func INX() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.INX.rawValue, 0)
+			}
+			open
+			func INY() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.INY.rawValue, 0)
+			}
+			open
+			func JMP() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.JMP.rawValue, 0)
+			}
+			open
+			func JSR() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.JSR.rawValue, 0)
+			}
+			open
+			func LDA() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.LDA.rawValue, 0)
+			}
+			open
+			func LDY() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.LDY.rawValue, 0)
+			}
+			open
+			func LDX() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.LDX.rawValue, 0)
+			}
+			open
+			func LSR() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.LSR.rawValue, 0)
+			}
+			open
+			func NOP() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.NOP.rawValue, 0)
+			}
+			open
+			func ORA() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.ORA.rawValue, 0)
+			}
+			open
+			func PHA() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.PHA.rawValue, 0)
+			}
+			open
+			func PHX() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.PHX.rawValue, 0)
+			}
+			open
+			func PHY() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.PHY.rawValue, 0)
+			}
+			open
+			func PHP() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.PHP.rawValue, 0)
+			}
+			open
+			func PLA() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.PLA.rawValue, 0)
+			}
+			open
+			func PLP() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.PLP.rawValue, 0)
+			}
+			open
+			func PLY() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.PLY.rawValue, 0)
+			}
+			open
+			func ROL() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.ROL.rawValue, 0)
+			}
+			open
+			func ROR() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.ROR.rawValue, 0)
+			}
+			open
+			func RTI() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.RTI.rawValue, 0)
+			}
+			open
+			func RTS() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.RTS.rawValue, 0)
+			}
+			open
+			func SBC() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.SBC.rawValue, 0)
+			}
+			open
+			func SEC() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.SEC.rawValue, 0)
+			}
+			open
+			func SED() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.SED.rawValue, 0)
+			}
+			open
+			func SEI() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.SEI.rawValue, 0)
+			}
+			open
+			func STA() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.STA.rawValue, 0)
+			}
+			open
+			func STX() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.STX.rawValue, 0)
+			}
+			open
+			func STY() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.STY.rawValue, 0)
+			}
+			open
+			func STZ() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.STZ.rawValue, 0)
+			}
+			open
+			func TAX() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.TAX.rawValue, 0)
+			}
+			open
+			func TAY() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.TAY.rawValue, 0)
+			}
+			open
+			func TSX() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.TSX.rawValue, 0)
+			}
+			open
+			func TXA() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.TXA.rawValue, 0)
+			}
+			open
+			func TXS() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.TXS.rawValue, 0)
+			}
+			open
+			func TYA() -> TerminalNode? {
+				return getToken(asm6502Parser.Tokens.TYA.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return asm6502Parser.RULE_opcode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.enterOpcode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is asm6502Listener {
-			 	(listener as! asm6502Listener).exitOpcode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? asm6502Listener {
+				listener.exitOpcode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is asm6502Visitor {
-			     return (visitor as! asm6502Visitor<T>).visitOpcode(self)
-			}else if visitor is asm6502BaseVisitor {
-		    	 return (visitor as! asm6502BaseVisitor<T>).visitOpcode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? asm6502Visitor {
+			    return visitor.visitOpcode(self)
+			}
+			else if let visitor = visitor as? asm6502BaseVisitor {
+			    return visitor.visitOpcode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func opcode() throws -> OpcodeContext {
+	 open func opcode() throws -> OpcodeContext {
 		var _localctx: OpcodeContext = OpcodeContext(_ctx, getState())
 		try enterRule(_localctx, 28, asm6502Parser.RULE_opcode)
 		var _la: Int = 0
@@ -1239,6 +1524,10 @@ open class asm6502Parser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = asm6502ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = asm6502ParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

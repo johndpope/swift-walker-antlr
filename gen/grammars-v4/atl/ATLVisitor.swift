@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/atl/ATL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/atl/ATL.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnit(_ ctx: ATLParser.UnitContext) -> T{
+	open func visitUnit(_ ctx: ATLParser.UnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModule(_ ctx: ATLParser.ModuleContext) -> T{
+	open func visitModule(_ ctx: ATLParser.ModuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTargetModelPattern(_ ctx: ATLParser.TargetModelPatternContext) -> T{
+	open func visitTargetModelPattern(_ ctx: ATLParser.TargetModelPatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSourceModelPattern(_ ctx: ATLParser.SourceModelPatternContext) -> T{
+	open func visitSourceModelPattern(_ ctx: ATLParser.SourceModelPatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTransformationMode(_ ctx: ATLParser.TransformationModeContext) -> T{
+	open func visitTransformationMode(_ ctx: ATLParser.TransformationModeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLibrary(_ ctx: ATLParser.LibraryContext) -> T{
+	open func visitLibrary(_ ctx: ATLParser.LibraryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuery(_ ctx: ATLParser.QueryContext) -> T{
+	open func visitQuery(_ ctx: ATLParser.QueryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLibraryRef(_ ctx: ATLParser.LibraryRefContext) -> T{
+	open func visitLibraryRef(_ ctx: ATLParser.LibraryRefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModuleElement(_ ctx: ATLParser.ModuleElementContext) -> T{
+	open func visitModuleElement(_ ctx: ATLParser.ModuleElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHelper(_ ctx: ATLParser.HelperContext) -> T{
+	open func visitHelper(_ ctx: ATLParser.HelperContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclFeatureDefinition(_ ctx: ATLParser.OclFeatureDefinitionContext) -> T{
+	open func visitOclFeatureDefinition(_ ctx: ATLParser.OclFeatureDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclContextDefinition(_ ctx: ATLParser.OclContextDefinitionContext) -> T{
+	open func visitOclContextDefinition(_ ctx: ATLParser.OclContextDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclFeature(_ ctx: ATLParser.OclFeatureContext) -> T{
+	open func visitOclFeature(_ ctx: ATLParser.OclFeatureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperation(_ ctx: ATLParser.OperationContext) -> T{
+	open func visitOperation(_ ctx: ATLParser.OperationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameter(_ ctx: ATLParser.ParameterContext) -> T{
+	open func visitParameter(_ ctx: ATLParser.ParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttribute(_ ctx: ATLParser.AttributeContext) -> T{
+	open func visitAttribute(_ ctx: ATLParser.AttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArule(_ ctx: ATLParser.AruleContext) -> T{
+	open func visitArule(_ ctx: ATLParser.AruleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMatchedRule(_ ctx: ATLParser.MatchedRuleContext) -> T{
+	open func visitMatchedRule(_ ctx: ATLParser.MatchedRuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLazyMatchedRule(_ ctx: ATLParser.LazyMatchedRuleContext) -> T{
+	open func visitLazyMatchedRule(_ ctx: ATLParser.LazyMatchedRuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRuleVariableDeclaration(_ ctx: ATLParser.RuleVariableDeclarationContext) -> T{
+	open func visitRuleVariableDeclaration(_ ctx: ATLParser.RuleVariableDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCalledRule(_ ctx: ATLParser.CalledRuleContext) -> T{
+	open func visitCalledRule(_ ctx: ATLParser.CalledRuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInPattern(_ ctx: ATLParser.InPatternContext) -> T{
+	open func visitInPattern(_ ctx: ATLParser.InPatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInPatternElement(_ ctx: ATLParser.InPatternElementContext) -> T{
+	open func visitInPatternElement(_ ctx: ATLParser.InPatternElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleInPatternElement(_ ctx: ATLParser.SimpleInPatternElementContext) -> T{
+	open func visitSimpleInPatternElement(_ ctx: ATLParser.SimpleInPatternElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOutPattern(_ ctx: ATLParser.OutPatternContext) -> T{
+	open func visitOutPattern(_ ctx: ATLParser.OutPatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOutPatternElement(_ ctx: ATLParser.OutPatternElementContext) -> T{
+	open func visitOutPatternElement(_ ctx: ATLParser.OutPatternElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleOutPatternElement(_ ctx: ATLParser.SimpleOutPatternElementContext) -> T{
+	open func visitSimpleOutPatternElement(_ ctx: ATLParser.SimpleOutPatternElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForEachOutPatternElement(_ ctx: ATLParser.ForEachOutPatternElementContext) -> T{
+	open func visitForEachOutPatternElement(_ ctx: ATLParser.ForEachOutPatternElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinding(_ ctx: ATLParser.BindingContext) -> T{
+	open func visitBinding(_ ctx: ATLParser.BindingContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActionBlock(_ ctx: ATLParser.ActionBlockContext) -> T{
+	open func visitActionBlock(_ ctx: ATLParser.ActionBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: ATLParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: ATLParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBindingStat(_ ctx: ATLParser.BindingStatContext) -> T{
+	open func visitBindingStat(_ ctx: ATLParser.BindingStatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionStat(_ ctx: ATLParser.ExpressionStatContext) -> T{
+	open func visitExpressionStat(_ ctx: ATLParser.ExpressionStatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfStat(_ ctx: ATLParser.IfStatContext) -> T{
+	open func visitIfStat(_ ctx: ATLParser.IfStatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForStat(_ ctx: ATLParser.ForStatContext) -> T{
+	open func visitForStat(_ ctx: ATLParser.ForStatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclModel(_ ctx: ATLParser.OclModelContext) -> T{
+	open func visitOclModel(_ ctx: ATLParser.OclModelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclModelElement(_ ctx: ATLParser.OclModelElementContext) -> T{
+	open func visitOclModelElement(_ ctx: ATLParser.OclModelElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclExpression(_ ctx: ATLParser.OclExpressionContext) -> T{
+	open func visitOclExpression(_ ctx: ATLParser.OclExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIteratorExp(_ ctx: ATLParser.IteratorExpContext) -> T{
+	open func visitIteratorExp(_ ctx: ATLParser.IteratorExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIterateExp(_ ctx: ATLParser.IterateExpContext) -> T{
+	open func visitIterateExp(_ ctx: ATLParser.IterateExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollectionOperationCallExp(_ ctx: ATLParser.CollectionOperationCallExpContext) -> T{
+	open func visitCollectionOperationCallExp(_ ctx: ATLParser.CollectionOperationCallExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperationCallExp(_ ctx: ATLParser.OperationCallExpContext) -> T{
+	open func visitOperationCallExp(_ ctx: ATLParser.OperationCallExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNavigationOrAttributeCallExp(_ ctx: ATLParser.NavigationOrAttributeCallExpContext) -> T{
+	open func visitNavigationOrAttributeCallExp(_ ctx: ATLParser.NavigationOrAttributeCallExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIterator(_ ctx: ATLParser.IteratorContext) -> T{
+	open func visitIterator(_ ctx: ATLParser.IteratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclUndefinedExp(_ ctx: ATLParser.OclUndefinedExpContext) -> T{
+	open func visitOclUndefinedExp(_ ctx: ATLParser.OclUndefinedExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimitiveExp(_ ctx: ATLParser.PrimitiveExpContext) -> T{
+	open func visitPrimitiveExp(_ ctx: ATLParser.PrimitiveExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericExp(_ ctx: ATLParser.NumericExpContext) -> T{
+	open func visitNumericExp(_ ctx: ATLParser.NumericExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBooleanExp(_ ctx: ATLParser.BooleanExpContext) -> T{
+	open func visitBooleanExp(_ ctx: ATLParser.BooleanExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntegerExp(_ ctx: ATLParser.IntegerExpContext) -> T{
+	open func visitIntegerExp(_ ctx: ATLParser.IntegerExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRealExp(_ ctx: ATLParser.RealExpContext) -> T{
+	open func visitRealExp(_ ctx: ATLParser.RealExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStringExp(_ ctx: ATLParser.StringExpContext) -> T{
+	open func visitStringExp(_ ctx: ATLParser.StringExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfExp(_ ctx: ATLParser.IfExpContext) -> T{
+	open func visitIfExp(_ ctx: ATLParser.IfExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableExp(_ ctx: ATLParser.VariableExpContext) -> T{
+	open func visitVariableExp(_ ctx: ATLParser.VariableExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSuperExp(_ ctx: ATLParser.SuperExpContext) -> T{
+	open func visitSuperExp(_ ctx: ATLParser.SuperExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLetExp(_ ctx: ATLParser.LetExpContext) -> T{
+	open func visitLetExp(_ ctx: ATLParser.LetExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclaration(_ ctx: ATLParser.VariableDeclarationContext) -> T{
+	open func visitVariableDeclaration(_ ctx: ATLParser.VariableDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumLiteralExp(_ ctx: ATLParser.EnumLiteralExpContext) -> T{
+	open func visitEnumLiteralExp(_ ctx: ATLParser.EnumLiteralExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollectionExp(_ ctx: ATLParser.CollectionExpContext) -> T{
+	open func visitCollectionExp(_ ctx: ATLParser.CollectionExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBagExp(_ ctx: ATLParser.BagExpContext) -> T{
+	open func visitBagExp(_ ctx: ATLParser.BagExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetExp(_ ctx: ATLParser.SetExpContext) -> T{
+	open func visitSetExp(_ ctx: ATLParser.SetExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrderedSetExp(_ ctx: ATLParser.OrderedSetExpContext) -> T{
+	open func visitOrderedSetExp(_ ctx: ATLParser.OrderedSetExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSequenceExp(_ ctx: ATLParser.SequenceExpContext) -> T{
+	open func visitSequenceExp(_ ctx: ATLParser.SequenceExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMapExp(_ ctx: ATLParser.MapExpContext) -> T{
+	open func visitMapExp(_ ctx: ATLParser.MapExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMapElement(_ ctx: ATLParser.MapElementContext) -> T{
+	open func visitMapElement(_ ctx: ATLParser.MapElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTupleExp(_ ctx: ATLParser.TupleExpContext) -> T{
+	open func visitTupleExp(_ ctx: ATLParser.TupleExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTuplePart(_ ctx: ATLParser.TuplePartContext) -> T{
+	open func visitTuplePart(_ ctx: ATLParser.TuplePartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclType(_ ctx: ATLParser.OclTypeContext) -> T{
+	open func visitOclType(_ ctx: ATLParser.OclTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclAnyType(_ ctx: ATLParser.OclAnyTypeContext) -> T{
+	open func visitOclAnyType(_ ctx: ATLParser.OclAnyTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTupleType(_ ctx: ATLParser.TupleTypeContext) -> T{
+	open func visitTupleType(_ ctx: ATLParser.TupleTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTupleTypeAttribute(_ ctx: ATLParser.TupleTypeAttributeContext) -> T{
+	open func visitTupleTypeAttribute(_ ctx: ATLParser.TupleTypeAttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMapType(_ ctx: ATLParser.MapTypeContext) -> T{
+	open func visitMapType(_ ctx: ATLParser.MapTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimitive(_ ctx: ATLParser.PrimitiveContext) -> T{
+	open func visitPrimitive(_ ctx: ATLParser.PrimitiveContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericType(_ ctx: ATLParser.NumericTypeContext) -> T{
+	open func visitNumericType(_ ctx: ATLParser.NumericTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntegerType(_ ctx: ATLParser.IntegerTypeContext) -> T{
+	open func visitIntegerType(_ ctx: ATLParser.IntegerTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRealType(_ ctx: ATLParser.RealTypeContext) -> T{
+	open func visitRealType(_ ctx: ATLParser.RealTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBooleanType(_ ctx: ATLParser.BooleanTypeContext) -> T{
+	open func visitBooleanType(_ ctx: ATLParser.BooleanTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStringType(_ ctx: ATLParser.StringTypeContext) -> T{
+	open func visitStringType(_ ctx: ATLParser.StringTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollectionType(_ ctx: ATLParser.CollectionTypeContext) -> T{
+	open func visitCollectionType(_ ctx: ATLParser.CollectionTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBagType(_ ctx: ATLParser.BagTypeContext) -> T{
+	open func visitBagType(_ ctx: ATLParser.BagTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetType(_ ctx: ATLParser.SetTypeContext) -> T{
+	open func visitSetType(_ ctx: ATLParser.SetTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrderedSetType(_ ctx: ATLParser.OrderedSetTypeContext) -> T{
+	open func visitOrderedSetType(_ ctx: ATLParser.OrderedSetTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSequenceType(_ ctx: ATLParser.SequenceTypeContext) -> T{
+	open func visitSequenceType(_ ctx: ATLParser.SequenceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPriority_0(_ ctx: ATLParser.Priority_0Context) -> T{
+	open func visitPriority_0(_ ctx: ATLParser.Priority_0Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPriority_1(_ ctx: ATLParser.Priority_1Context) -> T{
+	open func visitPriority_1(_ ctx: ATLParser.Priority_1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPriority_2(_ ctx: ATLParser.Priority_2Context) -> T{
+	open func visitPriority_2(_ ctx: ATLParser.Priority_2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPriority_3(_ ctx: ATLParser.Priority_3Context) -> T{
+	open func visitPriority_3(_ ctx: ATLParser.Priority_3Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPriority_4(_ ctx: ATLParser.Priority_4Context) -> T{
+	open func visitPriority_4(_ ctx: ATLParser.Priority_4Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPriority_5(_ ctx: ATLParser.Priority_5Context) -> T{
+	open func visitPriority_5(_ ctx: ATLParser.Priority_5Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMatchedRule_abstractContents(_ ctx: ATLParser.MatchedRule_abstractContentsContext) -> T{
+	open func visitMatchedRule_abstractContents(_ ctx: ATLParser.MatchedRule_abstractContentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclType_abstractContents(_ ctx: ATLParser.OclType_abstractContentsContext) -> T{
+	open func visitOclType_abstractContents(_ ctx: ATLParser.OclType_abstractContentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOclAnyType_abstractContents(_ ctx: ATLParser.OclAnyType_abstractContentsContext) -> T{
+	open func visitOclAnyType_abstractContents(_ ctx: ATLParser.OclAnyType_abstractContentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollectionType_abstractContents(_ ctx: ATLParser.CollectionType_abstractContentsContext) -> T{
+	open func visitCollectionType_abstractContents(_ ctx: ATLParser.CollectionType_abstractContentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class ATLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimary_oclExpression(_ ctx: ATLParser.Primary_oclExpressionContext) -> T{
+	open func visitPrimary_oclExpression(_ ctx: ATLParser.Primary_oclExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

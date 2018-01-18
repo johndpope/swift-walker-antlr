@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/masm/MASM.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/masm/MASM.g4 by ANTLR 4.7.1
  
  	 package com.Ostermiller.Syntax;
  	 
@@ -12,7 +12,7 @@ import Antlr4
  * of the available methods.
  */
 open class MASMBaseListener: MASMListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/url/url.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/url/url.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -6,30 +6,6 @@ import Antlr4
  * {@link urlParser}.
  */
 public protocol urlListener: ParseTreeListener {
-	/**
-	 * Enter a parse tree produced by {@link urlParser#fragmentaddress}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterFragmentaddress(_ ctx: urlParser.FragmentaddressContext)
-	/**
-	 * Exit a parse tree produced by {@link urlParser#fragmentaddress}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitFragmentaddress(_ ctx: urlParser.FragmentaddressContext)
-	/**
-	 * Enter a parse tree produced by {@link urlParser#uri}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterUri(_ ctx: urlParser.UriContext)
-	/**
-	 * Exit a parse tree produced by {@link urlParser#uri}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitUri(_ ctx: urlParser.UriContext)
 	/**
 	 * Enter a parse tree produced by {@link urlParser#url}.
 	 - Parameters:
@@ -43,17 +19,29 @@ public protocol urlListener: ParseTreeListener {
 	 */
 	func exitUrl(_ ctx: urlParser.UrlContext)
 	/**
-	 * Enter a parse tree produced by {@link urlParser#authority}.
+	 * Enter a parse tree produced by {@link urlParser#uri}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterAuthority(_ ctx: urlParser.AuthorityContext)
+	func enterUri(_ ctx: urlParser.UriContext)
 	/**
-	 * Exit a parse tree produced by {@link urlParser#authority}.
+	 * Exit a parse tree produced by {@link urlParser#uri}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitAuthority(_ ctx: urlParser.AuthorityContext)
+	func exitUri(_ ctx: urlParser.UriContext)
+	/**
+	 * Enter a parse tree produced by {@link urlParser#scheme}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterScheme(_ ctx: urlParser.SchemeContext)
+	/**
+	 * Exit a parse tree produced by {@link urlParser#scheme}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitScheme(_ ctx: urlParser.SchemeContext)
 	/**
 	 * Enter a parse tree produced by {@link urlParser#host}.
 	 - Parameters:
@@ -115,30 +103,6 @@ public protocol urlListener: ParseTreeListener {
 	 */
 	func exitPath(_ ctx: urlParser.PathContext)
 	/**
-	 * Enter a parse tree produced by {@link urlParser#search}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterSearch(_ ctx: urlParser.SearchContext)
-	/**
-	 * Exit a parse tree produced by {@link urlParser#search}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitSearch(_ ctx: urlParser.SearchContext)
-	/**
-	 * Enter a parse tree produced by {@link urlParser#searchparameter}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterSearchparameter(_ ctx: urlParser.SearchparameterContext)
-	/**
-	 * Exit a parse tree produced by {@link urlParser#searchparameter}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitSearchparameter(_ ctx: urlParser.SearchparameterContext)
-	/**
 	 * Enter a parse tree produced by {@link urlParser#user}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -175,15 +139,63 @@ public protocol urlListener: ParseTreeListener {
 	 */
 	func exitPassword(_ ctx: urlParser.PasswordContext)
 	/**
-	 * Enter a parse tree produced by {@link urlParser#fragmentid}.
+	 * Enter a parse tree produced by {@link urlParser#frag}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterFragmentid(_ ctx: urlParser.FragmentidContext)
+	func enterFrag(_ ctx: urlParser.FragContext)
 	/**
-	 * Exit a parse tree produced by {@link urlParser#fragmentid}.
+	 * Exit a parse tree produced by {@link urlParser#frag}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitFragmentid(_ ctx: urlParser.FragmentidContext)
+	func exitFrag(_ ctx: urlParser.FragContext)
+	/**
+	 * Enter a parse tree produced by {@link urlParser#query}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterQuery(_ ctx: urlParser.QueryContext)
+	/**
+	 * Exit a parse tree produced by {@link urlParser#query}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitQuery(_ ctx: urlParser.QueryContext)
+	/**
+	 * Enter a parse tree produced by {@link urlParser#search}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterSearch(_ ctx: urlParser.SearchContext)
+	/**
+	 * Exit a parse tree produced by {@link urlParser#search}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitSearch(_ ctx: urlParser.SearchContext)
+	/**
+	 * Enter a parse tree produced by {@link urlParser#searchparameter}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterSearchparameter(_ ctx: urlParser.SearchparameterContext)
+	/**
+	 * Exit a parse tree produced by {@link urlParser#searchparameter}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitSearchparameter(_ ctx: urlParser.SearchparameterContext)
+	/**
+	 * Enter a parse tree produced by {@link urlParser#string}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterString(_ ctx: urlParser.StringContext)
+	/**
+	 * Exit a parse tree produced by {@link urlParser#string}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitString(_ ctx: urlParser.StringContext)
 }

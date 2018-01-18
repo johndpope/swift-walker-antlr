@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/fol/fol.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/fol/fol.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -31,66 +31,6 @@ public protocol folListener: ParseTreeListener {
 	 */
 	func exitFormula(_ ctx: folParser.FormulaContext)
 	/**
-	 * Enter a parse tree produced by {@link folParser#disjunction}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterDisjunction(_ ctx: folParser.DisjunctionContext)
-	/**
-	 * Exit a parse tree produced by {@link folParser#disjunction}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitDisjunction(_ ctx: folParser.DisjunctionContext)
-	/**
-	 * Enter a parse tree produced by {@link folParser#conjunction}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterConjunction(_ ctx: folParser.ConjunctionContext)
-	/**
-	 * Exit a parse tree produced by {@link folParser#conjunction}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitConjunction(_ ctx: folParser.ConjunctionContext)
-	/**
-	 * Enter a parse tree produced by {@link folParser#negation}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterNegation(_ ctx: folParser.NegationContext)
-	/**
-	 * Exit a parse tree produced by {@link folParser#negation}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitNegation(_ ctx: folParser.NegationContext)
-	/**
-	 * Enter a parse tree produced by {@link folParser#predicate}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterPredicate(_ ctx: folParser.PredicateContext)
-	/**
-	 * Exit a parse tree produced by {@link folParser#predicate}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitPredicate(_ ctx: folParser.PredicateContext)
-	/**
-	 * Enter a parse tree produced by {@link folParser#predicateTuple}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func enterPredicateTuple(_ ctx: folParser.PredicateTupleContext)
-	/**
-	 * Exit a parse tree produced by {@link folParser#predicateTuple}.
-	 - Parameters:
-	   - ctx: the parse tree
-	 */
-	func exitPredicateTuple(_ ctx: folParser.PredicateTupleContext)
-	/**
 	 * Enter a parse tree produced by {@link folParser#term}.
 	 - Parameters:
 	   - ctx: the parse tree
@@ -103,27 +43,75 @@ public protocol folListener: ParseTreeListener {
 	 */
 	func exitTerm(_ ctx: folParser.TermContext)
 	/**
-	 * Enter a parse tree produced by {@link folParser#function}.
+	 * Enter a parse tree produced by {@link folParser#bin_connective}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterFunction(_ ctx: folParser.FunctionContext)
+	func enterBin_connective(_ ctx: folParser.Bin_connectiveContext)
 	/**
-	 * Exit a parse tree produced by {@link folParser#function}.
+	 * Exit a parse tree produced by {@link folParser#bin_connective}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitFunction(_ ctx: folParser.FunctionContext)
+	func exitBin_connective(_ ctx: folParser.Bin_connectiveContext)
 	/**
-	 * Enter a parse tree produced by {@link folParser#functionTuple}.
+	 * Enter a parse tree produced by {@link folParser#variable}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func enterFunctionTuple(_ ctx: folParser.FunctionTupleContext)
+	func enterVariable(_ ctx: folParser.VariableContext)
 	/**
-	 * Exit a parse tree produced by {@link folParser#functionTuple}.
+	 * Exit a parse tree produced by {@link folParser#variable}.
 	 - Parameters:
 	   - ctx: the parse tree
 	 */
-	func exitFunctionTuple(_ ctx: folParser.FunctionTupleContext)
+	func exitVariable(_ ctx: folParser.VariableContext)
+	/**
+	 * Enter a parse tree produced by {@link folParser#pred_constant}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterPred_constant(_ ctx: folParser.Pred_constantContext)
+	/**
+	 * Exit a parse tree produced by {@link folParser#pred_constant}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitPred_constant(_ ctx: folParser.Pred_constantContext)
+	/**
+	 * Enter a parse tree produced by {@link folParser#ind_constant}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterInd_constant(_ ctx: folParser.Ind_constantContext)
+	/**
+	 * Exit a parse tree produced by {@link folParser#ind_constant}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitInd_constant(_ ctx: folParser.Ind_constantContext)
+	/**
+	 * Enter a parse tree produced by {@link folParser#func_constant}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterFunc_constant(_ ctx: folParser.Func_constantContext)
+	/**
+	 * Exit a parse tree produced by {@link folParser#func_constant}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitFunc_constant(_ ctx: folParser.Func_constantContext)
+	/**
+	 * Enter a parse tree produced by {@link folParser#separator}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterSeparator(_ ctx: folParser.SeparatorContext)
+	/**
+	 * Exit a parse tree produced by {@link folParser#separator}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitSeparator(_ ctx: folParser.SeparatorContext)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/iri/IRI.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/iri/IRI.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParse(_ ctx: IRIParser.ParseContext) -> T{
+	open func visitParse(_ ctx: IRIParser.ParseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIri(_ ctx: IRIParser.IriContext) -> T{
+	open func visitIri(_ ctx: IRIParser.IriContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIhier_part(_ ctx: IRIParser.Ihier_partContext) -> T{
+	open func visitIhier_part(_ ctx: IRIParser.Ihier_partContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIri_reference(_ ctx: IRIParser.Iri_referenceContext) -> T{
+	open func visitIri_reference(_ ctx: IRIParser.Iri_referenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAbsolute_iri(_ ctx: IRIParser.Absolute_iriContext) -> T{
+	open func visitAbsolute_iri(_ ctx: IRIParser.Absolute_iriContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIrelative_ref(_ ctx: IRIParser.Irelative_refContext) -> T{
+	open func visitIrelative_ref(_ ctx: IRIParser.Irelative_refContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIrelative_part(_ ctx: IRIParser.Irelative_partContext) -> T{
+	open func visitIrelative_part(_ ctx: IRIParser.Irelative_partContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIauthority(_ ctx: IRIParser.IauthorityContext) -> T{
+	open func visitIauthority(_ ctx: IRIParser.IauthorityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIuserinfo(_ ctx: IRIParser.IuserinfoContext) -> T{
+	open func visitIuserinfo(_ ctx: IRIParser.IuserinfoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIhost(_ ctx: IRIParser.IhostContext) -> T{
+	open func visitIhost(_ ctx: IRIParser.IhostContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIreg_name(_ ctx: IRIParser.Ireg_nameContext) -> T{
+	open func visitIreg_name(_ ctx: IRIParser.Ireg_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIpath(_ ctx: IRIParser.IpathContext) -> T{
+	open func visitIpath(_ ctx: IRIParser.IpathContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIpath_abempty(_ ctx: IRIParser.Ipath_abemptyContext) -> T{
+	open func visitIpath_abempty(_ ctx: IRIParser.Ipath_abemptyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIpath_absolute(_ ctx: IRIParser.Ipath_absoluteContext) -> T{
+	open func visitIpath_absolute(_ ctx: IRIParser.Ipath_absoluteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIpath_noscheme(_ ctx: IRIParser.Ipath_noschemeContext) -> T{
+	open func visitIpath_noscheme(_ ctx: IRIParser.Ipath_noschemeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIpath_rootless(_ ctx: IRIParser.Ipath_rootlessContext) -> T{
+	open func visitIpath_rootless(_ ctx: IRIParser.Ipath_rootlessContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIpath_empty(_ ctx: IRIParser.Ipath_emptyContext) -> T{
+	open func visitIpath_empty(_ ctx: IRIParser.Ipath_emptyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIsegment(_ ctx: IRIParser.IsegmentContext) -> T{
+	open func visitIsegment(_ ctx: IRIParser.IsegmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIsegment_nz(_ ctx: IRIParser.Isegment_nzContext) -> T{
+	open func visitIsegment_nz(_ ctx: IRIParser.Isegment_nzContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIsegment_nz_nc(_ ctx: IRIParser.Isegment_nz_ncContext) -> T{
+	open func visitIsegment_nz_nc(_ ctx: IRIParser.Isegment_nz_ncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIpchar(_ ctx: IRIParser.IpcharContext) -> T{
+	open func visitIpchar(_ ctx: IRIParser.IpcharContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIquery(_ ctx: IRIParser.IqueryContext) -> T{
+	open func visitIquery(_ ctx: IRIParser.IqueryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfragment(_ ctx: IRIParser.IfragmentContext) -> T{
+	open func visitIfragment(_ ctx: IRIParser.IfragmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIunreserved(_ ctx: IRIParser.IunreservedContext) -> T{
+	open func visitIunreserved(_ ctx: IRIParser.IunreservedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScheme(_ ctx: IRIParser.SchemeContext) -> T{
+	open func visitScheme(_ ctx: IRIParser.SchemeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPort(_ ctx: IRIParser.PortContext) -> T{
+	open func visitPort(_ ctx: IRIParser.PortContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIp_literal(_ ctx: IRIParser.Ip_literalContext) -> T{
+	open func visitIp_literal(_ ctx: IRIParser.Ip_literalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIp_v_future(_ ctx: IRIParser.Ip_v_futureContext) -> T{
+	open func visitIp_v_future(_ ctx: IRIParser.Ip_v_futureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIp_v6_address(_ ctx: IRIParser.Ip_v6_addressContext) -> T{
+	open func visitIp_v6_address(_ ctx: IRIParser.Ip_v6_addressContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitH16(_ ctx: IRIParser.H16Context) -> T{
+	open func visitH16(_ ctx: IRIParser.H16Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLs32(_ ctx: IRIParser.Ls32Context) -> T{
+	open func visitLs32(_ ctx: IRIParser.Ls32Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIp_v4_address(_ ctx: IRIParser.Ip_v4_addressContext) -> T{
+	open func visitIp_v4_address(_ ctx: IRIParser.Ip_v4_addressContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDec_octet(_ ctx: IRIParser.Dec_octetContext) -> T{
+	open func visitDec_octet(_ ctx: IRIParser.Dec_octetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPct_encoded(_ ctx: IRIParser.Pct_encodedContext) -> T{
+	open func visitPct_encoded(_ ctx: IRIParser.Pct_encodedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnreserved(_ ctx: IRIParser.UnreservedContext) -> T{
+	open func visitUnreserved(_ ctx: IRIParser.UnreservedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReserved(_ ctx: IRIParser.ReservedContext) -> T{
+	open func visitReserved(_ ctx: IRIParser.ReservedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGen_delims(_ ctx: IRIParser.Gen_delimsContext) -> T{
+	open func visitGen_delims(_ ctx: IRIParser.Gen_delimsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSub_delims(_ ctx: IRIParser.Sub_delimsContext) -> T{
+	open func visitSub_delims(_ ctx: IRIParser.Sub_delimsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlpha(_ ctx: IRIParser.AlphaContext) -> T{
+	open func visitAlpha(_ ctx: IRIParser.AlphaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHexdig(_ ctx: IRIParser.HexdigContext) -> T{
+	open func visitHexdig(_ ctx: IRIParser.HexdigContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDigit(_ ctx: IRIParser.DigitContext) -> T{
+	open func visitDigit(_ ctx: IRIParser.DigitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class IRIVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNon_zero_digit(_ ctx: IRIParser.Non_zero_digitContext) -> T{
+	open func visitNon_zero_digit(_ ctx: IRIParser.Non_zero_digitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

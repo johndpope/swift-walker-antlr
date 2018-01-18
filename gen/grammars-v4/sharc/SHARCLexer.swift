@@ -1,7 +1,8 @@
-// Generated from ./grammars-v4/sharc/SHARCLexer.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/sharc/SHARCLexer.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class SHARCLexer: Lexer {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
           let length = SHARCLexer._ATN.getNumberOfDecisions()
@@ -11,94 +12,92 @@ open class SHARCLexer: Lexer {
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let StringLiteral=1, CharLiteral=2, INT=3, WS=4, DOT_ADI_=5, 
-                   DOT_DATE_=6, DOT_FILE_=7, DOT_ALGIGN=8, DOT_COMPRESS=9, 
-                   DOT_ELIF=10, DOT_ELSE=11, DOT_ENDIF=12, DOT_EXTERN=13, 
-                   DOT_FILE=14, DOT_FILE_ATTR=15, DOT_FORCECOMPRESS=16, 
-                   DOT_GLOBAL=17, DOT_IF=18, DOT_IMPORT=19, DOT_INCBINARY=20, 
-                   DOT_LEFTMARGIN=21, DOT_LIST=22, DOT_LIST_DATA=23, DOT_LIST_DATFILE=24, 
-                   DOT_LIST_DEFTAB=25, DOT_LIST_LOCTAB=26, DOT_LIST_WRAPDATA=27, 
-                   DOT_NEWPAGE=28, DOT_NOCOMPRESS=29, DOT_NOLIST_DATA=30, 
-                   DOT_NOLIST_DATFILE=31, DOT_NOLIST_WRAPDATA=32, DOT_PAGELENGTH=33, 
-                   DOT_PAGEWIDTH=34, DOT_PRECISION=35, DOT_ROUND_MINUS=36, 
-                   DOT_ROUND_NEAREST=37, DOT_ROUND_PLUS=38, DOT_ROUND_ZERO=39, 
-                   DOT_PREVIOUS=40, DOT_SECTION=41, DOT_SEGMENT=42, DOT_ENDSEG=43, 
-                   DOT_STRUCT=44, DOT_TYPE=45, DOT_VAR=46, DOT_WEAK=47, 
-                   ABS=48, AC=49, ACS=50, ACT=51, ADDRESS=52, AND=53, ASHIFT=54, 
-                   ASTAT=55, AV=56, B0=57, B1=58, B2=59, B3=60, B4=61, B5=62, 
-                   B6=63, B7=64, B8=65, B9=66, B10=67, B11=68, B12=69, B13=70, 
-                   B14=71, B15=72, BB=73, BCLR=74, BF=75, BIT=76, BITREV=77, 
-                   BM=78, BSET=79, BTGL=80, BTST=81, BY=82, CA=83, CACHE=84, 
-                   CALL=85, CH=86, CI=87, CJUMP=88, CL=89, CLR=90, CLIP=91, 
-                   COMP=92, COPYSIGN=93, COS=94, CURLCNTR=95, DADDR=96, 
-                   DB=97, DEC=98, DEF=99, DIM=100, DM=101, DMA1E=102, DMA1s=103, 
-                   DMA2E=104, DMA2s=105, DMADR=106, DMABANK1=107, DMABANK2=108, 
-                   DMABANK3=109, DMAWAIT=110, DO=111, DOVL=112, EB=113, 
-                   ECE=114, EF=115, ELSE=116, EMUCLK=117, EMUCLK2=118, EMUIDLE=119, 
-                   EMUN=120, EOS=121, EQ=122, EX=123, EXP=124, EXP2=125, 
-                   F0=126, F1=127, F2=128, F3=129, F4=130, F5=131, F6=132, 
-                   F7=133, F8=134, F9=135, F10=136, F11=137, F12=138, F13=139, 
-                   F14=140, F15=141, FADDR=142, FDEP=143, FEXT=144, FILE=145, 
-                   FIX=146, FLAG0_IN=147, FLAG1_IN=148, FLAG2_IN=149, FLAG3_IN=150, 
-                   FLOAT=151, FLUSH=152, FMERG=153, FOREVER=154, FPACK=155, 
-                   FRACTIONAL=156, FTA=157, FTB=158, FTC=159, FUNPACK=160, 
-                   GCC_COMPILED=161, GE=162, GT=163, I0=164, I1=165, I2=166, 
-                   I3=167, I4=168, I5=169, I6=170, I7=171, I8=172, I9=173, 
-                   I10=174, I11=175, I12=176, I13=177, I14=178, I15=179, 
-                   IDLE=180, IDLE16=181, IDLEI15=182, IDLEI16=183, IF=184, 
-                   IMASK=185, IMASKP=186, INC=187, IRPTL=188, JUMP=189, 
-                   L0=190, L1=191, L2=192, L3=193, L4=194, L5=195, L6=196, 
-                   L7=197, L8=198, L9=199, L10=200, L11=201, L12=202, L13=203, 
-                   L14=204, L15=205, LA=206, LADDR=207, LCE=208, LCNTR=209, 
-                   LE=210, LEFTO=211, LEFTZ=212, LENGTH=213, LINE=214, LN=215, 
-                   LOAD=216, LOG2=217, LOGB=218, LOOP=219, LR=220, LSHIFT=221, 
-                   LT=222, M0=223, M1=224, M2=225, M3=226, M4=227, M5=228, 
-                   M6=229, M7=230, M8=231, M9=232, M10=233, M11=234, M12=235, 
-                   M13=236, M14=237, M15=238, MANT=239, MAX=240, MBM=241, 
-                   MIN=242, MOD=243, MODE1=244, MODE2=245, MODIFY=246, MR0B=247, 
-                   MR0F=248, MR1B=249, MR1F=250, MR2B=251, MR2F=252, MRB=253, 
-                   MRF=254, MS=255, MV=256, NBM=257, NE=258, NOFO=259, NOFZ=260, 
-                   NOP=261, NOPSPECIAL=262, NOT=263, NU=264, NW=265, OFFSETOF=266, 
-                   OR=267, P20=268, P32=269, P40=270, PACK=271, PAGE=272, 
-                   PASS=273, PC=274, PCSTK=275, PCSTKP=276, PM=277, PMADR=278, 
-                   PMBANK1=279, PMDAE=280, PMDAS=281, POP=282, POVL0=283, 
-                   POVL1=284, PSA1E=285, PSA1S=286, PSA2E=287, PSA3E=288, 
-                   PSA3S=289, PSA4E=290, PSA4S=291, PUSH=292, PX=293, PX1=294, 
-                   PX2=295, RETAIN_NAME=296, R0=297, R1=298, R2=299, R3=300, 
-                   R4=301, R5=302, R6=303, R7=304, R8=305, R9=306, R10=307, 
-                   R11=308, R12=309, R13=310, R14=311, R15=312, READ=313, 
-                   RECIPS=314, RFRAME=315, RND=316, ROT=317, RS=318, RSQRTS=319, 
-                   RTI=320, RTS=321, SAT=322, SCALB=323, SCL=324, SE=325, 
-                   SET=326, SF=327, SI=328, SIN=329, SIZE=330, SIZEOF=331, 
-                   SQR=332, SR=333, SSF=334, SSFR=335, SSI=336, SSIR=337, 
-                   ST=338, STEP=339, STKY=340, STRUCT=341, STS=342, SUF=343, 
-                   SUFR=344, SUI=345, SV=346, SW=347, SZ=348, TAG=349, TCOUNT=350, 
-                   TF=351, TGL=352, TPERIOD=353, TRUE=354, TRUNC=355, TST=356, 
-                   TYPE=357, TRAP=358, UF=359, UI=360, UNPACK=361, UNTIL=362, 
-                   UR=363, USF=364, USFR=365, USI=366, USIR=367, USTAT1=368, 
-                   USTAT2=369, UUF=370, UUFR=371, UUI=372, UUIR=373, VAL=374, 
-                   WITH=375, XOR=376, PLUS=377, MINUS=378, MULT=379, DIV=380, 
-                   DIV_MOD=381, EQU=382, I_OR=383, I_XOR=384, COMMA=385, 
-                   COLON=386, SEMICOLON=387, LPARENTHESE=388, RPARENTHESE=389, 
-                   LBRACKET=390, RBRACKET=391, LBRACE=392, RBRACE=393, AT=394, 
-                   NO_INIT=395, ZERO_INIT=396, RUNTIME_INIT=397, CODE=398, 
-                   DATA=399, DATA64=400, DMAONLY=401, SECTION=402, SECTION_INFO=403, 
-                   STMT=404, ADDR=405, BIT_DATA=406, JUMP_INT=407, JUMP_PC=408, 
-                   JUMP_MD=409, MODIFIER=410, MULTI_MOD=411, LABLE=412, 
-                   VARDEF=413, ARRDEF=414, DM_ACCESS=415, PM_ACCESS=416, 
-                   CONDITION=417, IF_STMT=418, VALUE_EXP=419, NULL=420, 
-                   CHAR_LITERAL=421, STR_LITERAL=422, DIRECTIVE=423, NEGATE=424, 
-                   ID=425, COMMENT=426
-	public static let channelNames: [String] = [
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let StringLiteral=1, CharLiteral=2, INT=3, WS=4, DOT_ADI_=5, DOT_DATE_=6, 
+            DOT_FILE_=7, DOT_ALGIGN=8, DOT_COMPRESS=9, DOT_ELIF=10, DOT_ELSE=11, 
+            DOT_ENDIF=12, DOT_EXTERN=13, DOT_FILE=14, DOT_FILE_ATTR=15, 
+            DOT_FORCECOMPRESS=16, DOT_GLOBAL=17, DOT_IF=18, DOT_IMPORT=19, 
+            DOT_INCBINARY=20, DOT_LEFTMARGIN=21, DOT_LIST=22, DOT_LIST_DATA=23, 
+            DOT_LIST_DATFILE=24, DOT_LIST_DEFTAB=25, DOT_LIST_LOCTAB=26, 
+            DOT_LIST_WRAPDATA=27, DOT_NEWPAGE=28, DOT_NOCOMPRESS=29, DOT_NOLIST_DATA=30, 
+            DOT_NOLIST_DATFILE=31, DOT_NOLIST_WRAPDATA=32, DOT_PAGELENGTH=33, 
+            DOT_PAGEWIDTH=34, DOT_PRECISION=35, DOT_ROUND_MINUS=36, DOT_ROUND_NEAREST=37, 
+            DOT_ROUND_PLUS=38, DOT_ROUND_ZERO=39, DOT_PREVIOUS=40, DOT_SECTION=41, 
+            DOT_SEGMENT=42, DOT_ENDSEG=43, DOT_STRUCT=44, DOT_TYPE=45, DOT_VAR=46, 
+            DOT_WEAK=47, ABS=48, AC=49, ACS=50, ACT=51, ADDRESS=52, AND=53, 
+            ASHIFT=54, ASTAT=55, AV=56, B0=57, B1=58, B2=59, B3=60, B4=61, 
+            B5=62, B6=63, B7=64, B8=65, B9=66, B10=67, B11=68, B12=69, B13=70, 
+            B14=71, B15=72, BB=73, BCLR=74, BF=75, BIT=76, BITREV=77, BM=78, 
+            BSET=79, BTGL=80, BTST=81, BY=82, CA=83, CACHE=84, CALL=85, 
+            CH=86, CI=87, CJUMP=88, CL=89, CLR=90, CLIP=91, COMP=92, COPYSIGN=93, 
+            COS=94, CURLCNTR=95, DADDR=96, DB=97, DEC=98, DEF=99, DIM=100, 
+            DM=101, DMA1E=102, DMA1s=103, DMA2E=104, DMA2s=105, DMADR=106, 
+            DMABANK1=107, DMABANK2=108, DMABANK3=109, DMAWAIT=110, DO=111, 
+            DOVL=112, EB=113, ECE=114, EF=115, ELSE=116, EMUCLK=117, EMUCLK2=118, 
+            EMUIDLE=119, EMUN=120, EOS=121, EQ=122, EX=123, EXP=124, EXP2=125, 
+            F0=126, F1=127, F2=128, F3=129, F4=130, F5=131, F6=132, F7=133, 
+            F8=134, F9=135, F10=136, F11=137, F12=138, F13=139, F14=140, 
+            F15=141, FADDR=142, FDEP=143, FEXT=144, FILE=145, FIX=146, FLAG0_IN=147, 
+            FLAG1_IN=148, FLAG2_IN=149, FLAG3_IN=150, FLOAT=151, FLUSH=152, 
+            FMERG=153, FOREVER=154, FPACK=155, FRACTIONAL=156, FTA=157, 
+            FTB=158, FTC=159, FUNPACK=160, GCC_COMPILED=161, GE=162, GT=163, 
+            I0=164, I1=165, I2=166, I3=167, I4=168, I5=169, I6=170, I7=171, 
+            I8=172, I9=173, I10=174, I11=175, I12=176, I13=177, I14=178, 
+            I15=179, IDLE=180, IDLE16=181, IDLEI15=182, IDLEI16=183, IF=184, 
+            IMASK=185, IMASKP=186, INC=187, IRPTL=188, JUMP=189, L0=190, 
+            L1=191, L2=192, L3=193, L4=194, L5=195, L6=196, L7=197, L8=198, 
+            L9=199, L10=200, L11=201, L12=202, L13=203, L14=204, L15=205, 
+            LA=206, LADDR=207, LCE=208, LCNTR=209, LE=210, LEFTO=211, LEFTZ=212, 
+            LENGTH=213, LINE=214, LN=215, LOAD=216, LOG2=217, LOGB=218, 
+            LOOP=219, LR=220, LSHIFT=221, LT=222, M0=223, M1=224, M2=225, 
+            M3=226, M4=227, M5=228, M6=229, M7=230, M8=231, M9=232, M10=233, 
+            M11=234, M12=235, M13=236, M14=237, M15=238, MANT=239, MAX=240, 
+            MBM=241, MIN=242, MOD=243, MODE1=244, MODE2=245, MODIFY=246, 
+            MR0B=247, MR0F=248, MR1B=249, MR1F=250, MR2B=251, MR2F=252, 
+            MRB=253, MRF=254, MS=255, MV=256, NBM=257, NE=258, NOFO=259, 
+            NOFZ=260, NOP=261, NOPSPECIAL=262, NOT=263, NU=264, NW=265, 
+            OFFSETOF=266, OR=267, P20=268, P32=269, P40=270, PACK=271, PAGE=272, 
+            PASS=273, PC=274, PCSTK=275, PCSTKP=276, PM=277, PMADR=278, 
+            PMBANK1=279, PMDAE=280, PMDAS=281, POP=282, POVL0=283, POVL1=284, 
+            PSA1E=285, PSA1S=286, PSA2E=287, PSA3E=288, PSA3S=289, PSA4E=290, 
+            PSA4S=291, PUSH=292, PX=293, PX1=294, PX2=295, RETAIN_NAME=296, 
+            R0=297, R1=298, R2=299, R3=300, R4=301, R5=302, R6=303, R7=304, 
+            R8=305, R9=306, R10=307, R11=308, R12=309, R13=310, R14=311, 
+            R15=312, READ=313, RECIPS=314, RFRAME=315, RND=316, ROT=317, 
+            RS=318, RSQRTS=319, RTI=320, RTS=321, SAT=322, SCALB=323, SCL=324, 
+            SE=325, SET=326, SF=327, SI=328, SIN=329, SIZE=330, SIZEOF=331, 
+            SQR=332, SR=333, SSF=334, SSFR=335, SSI=336, SSIR=337, ST=338, 
+            STEP=339, STKY=340, STRUCT=341, STS=342, SUF=343, SUFR=344, 
+            SUI=345, SV=346, SW=347, SZ=348, TAG=349, TCOUNT=350, TF=351, 
+            TGL=352, TPERIOD=353, TRUE=354, TRUNC=355, TST=356, TYPE=357, 
+            TRAP=358, UF=359, UI=360, UNPACK=361, UNTIL=362, UR=363, USF=364, 
+            USFR=365, USI=366, USIR=367, USTAT1=368, USTAT2=369, UUF=370, 
+            UUFR=371, UUI=372, UUIR=373, VAL=374, WITH=375, XOR=376, PLUS=377, 
+            MINUS=378, MULT=379, DIV=380, DIV_MOD=381, EQU=382, I_OR=383, 
+            I_XOR=384, COMMA=385, COLON=386, SEMICOLON=387, LPARENTHESE=388, 
+            RPARENTHESE=389, LBRACKET=390, RBRACKET=391, LBRACE=392, RBRACE=393, 
+            AT=394, NO_INIT=395, ZERO_INIT=396, RUNTIME_INIT=397, CODE=398, 
+            DATA=399, DATA64=400, DMAONLY=401, SECTION=402, SECTION_INFO=403, 
+            STMT=404, ADDR=405, BIT_DATA=406, JUMP_INT=407, JUMP_PC=408, 
+            JUMP_MD=409, MODIFIER=410, MULTI_MOD=411, LABLE=412, VARDEF=413, 
+            ARRDEF=414, DM_ACCESS=415, PM_ACCESS=416, CONDITION=417, IF_STMT=418, 
+            VALUE_EXP=419, NULL=420, CHAR_LITERAL=421, STR_LITERAL=422, 
+            DIRECTIVE=423, NEGATE=424, ID=425, COMMENT=426
+
+	public
+	static let channelNames: [String] = [
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	]
 
-	public static let modeNames: [String] = [
+	public
+	static let modeNames: [String] = [
 		"DEFAULT_MODE"
 	]
 
-	public static let ruleNames: [String] = [
+	public
+	static let ruleNames: [String] = [
 		"StringLiteral", "CharLiteral", "HexPrefix", "HexDigit", "INT", "Exponent", 
 		"LCHAR", "CHAR", "LC", "UC", "WS", "DOT_ADI_", "DOT_DATE_", "DOT_FILE_", 
 		"DOT_ALGIGN", "DOT_COMPRESS", "DOT_ELIF", "DOT_ELSE", "DOT_ENDIF", "DOT_EXTERN", 
@@ -267,61 +266,44 @@ open class SHARCLexer: Lexer {
 		"CONDITION", "IF_STMT", "VALUE_EXP", "NULL", "CHAR_LITERAL", "STR_LITERAL", 
 		"DIRECTIVE", "NEGATE", "ID", "COMMENT"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
+	override open
+	func getVocabulary() -> Vocabulary {
+		return SHARCLexer.VOCABULARY
 	}
 
-    open override func getVocabulary() -> Vocabulary {
-        return SHARCLexer.VOCABULARY
-    }
-
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, SHARCLexer._ATN, SHARCLexer._decisionToDFA, SHARCLexer._sharedContextCache)
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "SHARCLexer.g4" }
+	override open
+	func getGrammarFileName() -> String { return "SHARCLexer.g4" }
 
-    override
-	open func getRuleNames() -> [String] { return SHARCLexer.ruleNames }
+	override open
+	func getRuleNames() -> [String] { return SHARCLexer.ruleNames }
 
-	override
-	open func getSerializedATN() -> String { return SHARCLexer._serializedATN }
+	override open
+	func getSerializedATN() -> String { return SHARCLexer._serializedATN }
 
-	override
-	open func getChannelNames() -> [String] { return SHARCLexer.channelNames }
+	override open
+	func getChannelNames() -> [String] { return SHARCLexer.channelNames }
 
-	override
-	open func getModeNames() -> [String] { return SHARCLexer.modeNames }
+	override open
+	func getModeNames() -> [String] { return SHARCLexer.modeNames }
 
-	override
-	open func getATN() -> ATN { return SHARCLexer._ATN }
+	override open
+	func getATN() -> ATN { return SHARCLexer._ATN }
 
-    public static let _serializedATN: String = SHARCLexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = SHARCLexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

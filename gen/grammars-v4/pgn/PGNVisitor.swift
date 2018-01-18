@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/pgn/PGN.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/pgn/PGN.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParse(_ ctx: PGNParser.ParseContext) -> T{
+	open func visitParse(_ ctx: PGNParser.ParseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPgn_database(_ ctx: PGNParser.Pgn_databaseContext) -> T{
+	open func visitPgn_database(_ ctx: PGNParser.Pgn_databaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPgn_game(_ ctx: PGNParser.Pgn_gameContext) -> T{
+	open func visitPgn_game(_ ctx: PGNParser.Pgn_gameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTag_section(_ ctx: PGNParser.Tag_sectionContext) -> T{
+	open func visitTag_section(_ ctx: PGNParser.Tag_sectionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTag_pair(_ ctx: PGNParser.Tag_pairContext) -> T{
+	open func visitTag_pair(_ ctx: PGNParser.Tag_pairContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTag_name(_ ctx: PGNParser.Tag_nameContext) -> T{
+	open func visitTag_name(_ ctx: PGNParser.Tag_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTag_value(_ ctx: PGNParser.Tag_valueContext) -> T{
+	open func visitTag_value(_ ctx: PGNParser.Tag_valueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMovetext_section(_ ctx: PGNParser.Movetext_sectionContext) -> T{
+	open func visitMovetext_section(_ ctx: PGNParser.Movetext_sectionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement_sequence(_ ctx: PGNParser.Element_sequenceContext) -> T{
+	open func visitElement_sequence(_ ctx: PGNParser.Element_sequenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement(_ ctx: PGNParser.ElementContext) -> T{
+	open func visitElement(_ ctx: PGNParser.ElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMove_number_indication(_ ctx: PGNParser.Move_number_indicationContext) -> T{
+	open func visitMove_number_indication(_ ctx: PGNParser.Move_number_indicationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSan_move(_ ctx: PGNParser.San_moveContext) -> T{
+	open func visitSan_move(_ ctx: PGNParser.San_moveContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecursive_variation(_ ctx: PGNParser.Recursive_variationContext) -> T{
+	open func visitRecursive_variation(_ ctx: PGNParser.Recursive_variationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class PGNVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGame_termination(_ ctx: PGNParser.Game_terminationContext) -> T{
+	open func visitGame_termination(_ ctx: PGNParser.Game_terminationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

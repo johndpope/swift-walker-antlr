@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/mdx/mdx.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/mdx/mdx.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMdx_statement(_ ctx: mdxParser.Mdx_statementContext) -> T{
+	open func visitMdx_statement(_ ctx: mdxParser.Mdx_statementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelect_statement(_ ctx: mdxParser.Select_statementContext) -> T{
+	open func visitSelect_statement(_ ctx: mdxParser.Select_statementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormula_specification(_ ctx: mdxParser.Formula_specificationContext) -> T{
+	open func visitFormula_specification(_ ctx: mdxParser.Formula_specificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingle_formula_specification(_ ctx: mdxParser.Single_formula_specificationContext) -> T{
+	open func visitSingle_formula_specification(_ ctx: mdxParser.Single_formula_specificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSet_specification(_ ctx: mdxParser.Set_specificationContext) -> T{
+	open func visitSet_specification(_ ctx: mdxParser.Set_specificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMember_specification(_ ctx: mdxParser.Member_specificationContext) -> T{
+	open func visitMember_specification(_ ctx: mdxParser.Member_specificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAxis_specification_list(_ ctx: mdxParser.Axis_specification_listContext) -> T{
+	open func visitAxis_specification_list(_ ctx: mdxParser.Axis_specification_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMember_property_def_list(_ ctx: mdxParser.Member_property_def_listContext) -> T{
+	open func visitMember_property_def_list(_ ctx: mdxParser.Member_property_def_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMember_name(_ ctx: mdxParser.Member_nameContext) -> T{
+	open func visitMember_name(_ ctx: mdxParser.Member_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMember_property_definition(_ ctx: mdxParser.Member_property_definitionContext) -> T{
+	open func visitMember_property_definition(_ ctx: mdxParser.Member_property_definitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSet_name(_ ctx: mdxParser.Set_nameContext) -> T{
+	open func visitSet_name(_ ctx: mdxParser.Set_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompound_id(_ ctx: mdxParser.Compound_idContext) -> T{
+	open func visitCompound_id(_ ctx: mdxParser.Compound_idContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAxis_specification(_ ctx: mdxParser.Axis_specificationContext) -> T{
+	open func visitAxis_specification(_ ctx: mdxParser.Axis_specificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAxis_name(_ ctx: mdxParser.Axis_nameContext) -> T{
+	open func visitAxis_name(_ ctx: mdxParser.Axis_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDim_props(_ ctx: mdxParser.Dim_propsContext) -> T{
+	open func visitDim_props(_ ctx: mdxParser.Dim_propsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProperty_list(_ ctx: mdxParser.Property_listContext) -> T{
+	open func visitProperty_list(_ ctx: mdxParser.Property_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProperty(_ ctx: mdxParser.PropertyContext) -> T{
+	open func visitProperty(_ ctx: mdxParser.PropertyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCube_specification(_ ctx: mdxParser.Cube_specificationContext) -> T{
+	open func visitCube_specification(_ ctx: mdxParser.Cube_specificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCube_name(_ ctx: mdxParser.Cube_nameContext) -> T{
+	open func visitCube_name(_ ctx: mdxParser.Cube_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSlicer_specification(_ ctx: mdxParser.Slicer_specificationContext) -> T{
+	open func visitSlicer_specification(_ ctx: mdxParser.Slicer_specificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCell_props(_ ctx: mdxParser.Cell_propsContext) -> T{
+	open func visitCell_props(_ ctx: mdxParser.Cell_propsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCell_property_list(_ ctx: mdxParser.Cell_property_listContext) -> T{
+	open func visitCell_property_list(_ ctx: mdxParser.Cell_property_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCell_property(_ ctx: mdxParser.Cell_propertyContext) -> T{
+	open func visitCell_property(_ ctx: mdxParser.Cell_propertyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMandatory_cell_property(_ ctx: mdxParser.Mandatory_cell_propertyContext) -> T{
+	open func visitMandatory_cell_property(_ ctx: mdxParser.Mandatory_cell_propertyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProvider_specific_cell_property(_ ctx: mdxParser.Provider_specific_cell_propertyContext) -> T{
+	open func visitProvider_specific_cell_property(_ ctx: mdxParser.Provider_specific_cell_propertyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: mdxParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: mdxParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_expression(_ ctx: mdxParser.Value_expressionContext) -> T{
+	open func visitValue_expression(_ ctx: mdxParser.Value_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_xor_expression(_ ctx: mdxParser.Value_xor_expressionContext) -> T{
+	open func visitValue_xor_expression(_ ctx: mdxParser.Value_xor_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_or_expression(_ ctx: mdxParser.Value_or_expressionContext) -> T{
+	open func visitValue_or_expression(_ ctx: mdxParser.Value_or_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm5(_ ctx: mdxParser.Term5Context) -> T{
+	open func visitTerm5(_ ctx: mdxParser.Term5Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm4(_ ctx: mdxParser.Term4Context) -> T{
+	open func visitTerm4(_ ctx: mdxParser.Term4Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm3(_ ctx: mdxParser.Term3Context) -> T{
+	open func visitTerm3(_ ctx: mdxParser.Term3Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm2(_ ctx: mdxParser.Term2Context) -> T{
+	open func visitTerm2(_ ctx: mdxParser.Term2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: mdxParser.TermContext) -> T{
+	open func visitTerm(_ ctx: mdxParser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFactor(_ ctx: mdxParser.FactorContext) -> T{
+	open func visitFactor(_ ctx: mdxParser.FactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunction(_ ctx: mdxParser.FunctionContext) -> T{
+	open func visitFunction(_ ctx: mdxParser.FunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_expression_primary(_ ctx: mdxParser.Value_expression_primaryContext) -> T{
+	open func visitValue_expression_primary(_ ctx: mdxParser.Value_expression_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_expression_primary0(_ ctx: mdxParser.Value_expression_primary0Context) -> T{
+	open func visitValue_expression_primary0(_ ctx: mdxParser.Value_expression_primary0Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExp_list(_ ctx: mdxParser.Exp_listContext) -> T{
+	open func visitExp_list(_ ctx: mdxParser.Exp_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCase_expression(_ ctx: mdxParser.Case_expressionContext) -> T{
+	open func visitCase_expression(_ ctx: mdxParser.Case_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhen_list(_ ctx: mdxParser.When_listContext) -> T{
+	open func visitWhen_list(_ ctx: mdxParser.When_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhen_clause(_ ctx: mdxParser.When_clauseContext) -> T{
+	open func visitWhen_clause(_ ctx: mdxParser.When_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComp_op(_ ctx: mdxParser.Comp_opContext) -> T{
+	open func visitComp_op(_ ctx: mdxParser.Comp_opContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifier(_ ctx: mdxParser.IdentifierContext) -> T{
+	open func visitIdentifier(_ ctx: mdxParser.IdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnquoted_identifier(_ ctx: mdxParser.Unquoted_identifierContext) -> T{
+	open func visitUnquoted_identifier(_ ctx: mdxParser.Unquoted_identifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAmp_quoted_identifier(_ ctx: mdxParser.Amp_quoted_identifierContext) -> T{
+	open func visitAmp_quoted_identifier(_ ctx: mdxParser.Amp_quoted_identifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuoted_identifier(_ ctx: mdxParser.Quoted_identifierContext) -> T{
+	open func visitQuoted_identifier(_ ctx: mdxParser.Quoted_identifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class mdxVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeyword(_ ctx: mdxParser.KeywordContext) -> T{
+	open func visitKeyword(_ ctx: mdxParser.KeywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

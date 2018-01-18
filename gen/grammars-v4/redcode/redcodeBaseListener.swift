@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/redcode/redcode.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/redcode/redcode.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class redcodeBaseListener: redcodeListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *

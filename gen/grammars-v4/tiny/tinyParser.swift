@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/tiny/tiny.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/tiny/tiny.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class tinyParser: Parser {
@@ -11,16 +11,23 @@ open class tinyParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, ID = 9, NUMBER = 10, WS = 11
 	}
-	public static let RULE_program = 0, RULE_stmt_list = 1, RULE_stmt = 2, 
-                   RULE_assign_stmt = 3, RULE_read_stmt = 4, RULE_write_stmt = 5, 
-                   RULE_id_list = 6, RULE_expr_list = 7, RULE_expr = 8, 
-                   RULE_factor = 9, RULE_integer = 10, RULE_op = 11, RULE_ident = 12
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_program = 0, RULE_stmt_list = 1, RULE_stmt = 2, RULE_assign_stmt = 3, 
+            RULE_read_stmt = 4, RULE_write_stmt = 5, RULE_id_list = 6, RULE_expr_list = 7, 
+            RULE_expr = 8, RULE_factor = 9, RULE_integer = 10, RULE_op = 11, 
+            RULE_ident = 12
+
+	public
+	static let ruleNames: [String] = [
 		"program", "stmt_list", "stmt", "assign_stmt", "read_stmt", "write_stmt", 
 		"id_list", "expr_list", "expr", "factor", "integer", "op", "ident"
 	]
@@ -31,85 +38,69 @@ open class tinyParser: Parser {
 	private static let _SYMBOLIC_NAMES: [String?] = [
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, "ID", "NUMBER", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "tiny.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return tinyParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "tiny.g4" }
+	override open
+	func getSerializedATN() -> String { return tinyParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return tinyParser.ruleNames }
+	override open
+	func getATN() -> ATN { return tinyParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return tinyParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return tinyParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return tinyParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,tinyParser._ATN,tinyParser._decisionToDFA, tinyParser._sharedContextCache)
 	}
-	open class ProgramContext:ParserRuleContext {
-		open func stmt_list() -> Stmt_listContext? {
-			return getRuleContext(Stmt_listContext.self,0)
+
+	public class ProgramContext: ParserRuleContext {
+			open
+			func stmt_list() -> Stmt_listContext? {
+				return getRuleContext(Stmt_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_program
 		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_program }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterProgram(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterProgram(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitProgram(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitProgram(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitProgram(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitProgram(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitProgram(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitProgram(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func program() throws -> ProgramContext {
+	 open func program() throws -> ProgramContext {
 		var _localctx: ProgramContext = ProgramContext(_ctx, getState())
 		try enterRule(_localctx, 0, tinyParser.RULE_program)
 		defer {
@@ -134,40 +125,46 @@ open class tinyParser: Parser {
 		return _localctx
 	}
 
-	open class Stmt_listContext:ParserRuleContext {
-		open func stmt() -> StmtContext? {
-			return getRuleContext(StmtContext.self,0)
+	public class Stmt_listContext: ParserRuleContext {
+			open
+			func stmt() -> StmtContext? {
+				return getRuleContext(StmtContext.self, 0)
+			}
+			open
+			func stmt_list() -> Stmt_listContext? {
+				return getRuleContext(Stmt_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_stmt_list
 		}
-		open func stmt_list() -> Stmt_listContext? {
-			return getRuleContext(Stmt_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_stmt_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterStmt_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterStmt_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitStmt_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitStmt_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitStmt_list(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitStmt_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitStmt_list(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitStmt_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func stmt_list( ) throws -> Stmt_listContext   {
+	 public final  func stmt_list( ) throws -> Stmt_listContext   {
 		return try stmt_list(0)
 	}
 	@discardableResult
@@ -201,7 +198,7 @@ open class tinyParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, tinyParser.RULE_stmt_list)
 					setState(33)
 					if (!(precpred(_ctx, 2))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 					}
 					setState(34)
 					try stmt()
@@ -222,43 +219,51 @@ open class tinyParser: Parser {
 
 		return _localctx;
 	}
-	open class StmtContext:ParserRuleContext {
-		open func assign_stmt() -> Assign_stmtContext? {
-			return getRuleContext(Assign_stmtContext.self,0)
+
+	public class StmtContext: ParserRuleContext {
+			open
+			func assign_stmt() -> Assign_stmtContext? {
+				return getRuleContext(Assign_stmtContext.self, 0)
+			}
+			open
+			func read_stmt() -> Read_stmtContext? {
+				return getRuleContext(Read_stmtContext.self, 0)
+			}
+			open
+			func write_stmt() -> Write_stmtContext? {
+				return getRuleContext(Write_stmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_stmt
 		}
-		open func read_stmt() -> Read_stmtContext? {
-			return getRuleContext(Read_stmtContext.self,0)
-		}
-		open func write_stmt() -> Write_stmtContext? {
-			return getRuleContext(Write_stmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitStmt(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitStmt(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stmt() throws -> StmtContext {
+	 open func stmt() throws -> StmtContext {
 		var _localctx: StmtContext = StmtContext(_ctx, getState())
 		try enterRule(_localctx, 4, tinyParser.RULE_stmt)
 		defer {
@@ -289,7 +294,7 @@ open class tinyParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -300,40 +305,47 @@ open class tinyParser: Parser {
 
 		return _localctx
 	}
-	open class Assign_stmtContext:ParserRuleContext {
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
+
+	public class Assign_stmtContext: ParserRuleContext {
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_assign_stmt
 		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_assign_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterAssign_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterAssign_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitAssign_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitAssign_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitAssign_stmt(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitAssign_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitAssign_stmt(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitAssign_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assign_stmt() throws -> Assign_stmtContext {
+	 open func assign_stmt() throws -> Assign_stmtContext {
 		var _localctx: Assign_stmtContext = Assign_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 6, tinyParser.RULE_assign_stmt)
 		defer {
@@ -357,37 +369,43 @@ open class tinyParser: Parser {
 
 		return _localctx
 	}
-	open class Read_stmtContext:ParserRuleContext {
-		open func id_list() -> Id_listContext? {
-			return getRuleContext(Id_listContext.self,0)
+
+	public class Read_stmtContext: ParserRuleContext {
+			open
+			func id_list() -> Id_listContext? {
+				return getRuleContext(Id_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_read_stmt
 		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_read_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterRead_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterRead_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitRead_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitRead_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitRead_stmt(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitRead_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitRead_stmt(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitRead_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func read_stmt() throws -> Read_stmtContext {
+	 open func read_stmt() throws -> Read_stmtContext {
 		var _localctx: Read_stmtContext = Read_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 8, tinyParser.RULE_read_stmt)
 		defer {
@@ -409,37 +427,43 @@ open class tinyParser: Parser {
 
 		return _localctx
 	}
-	open class Write_stmtContext:ParserRuleContext {
-		open func expr_list() -> Expr_listContext? {
-			return getRuleContext(Expr_listContext.self,0)
+
+	public class Write_stmtContext: ParserRuleContext {
+			open
+			func expr_list() -> Expr_listContext? {
+				return getRuleContext(Expr_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_write_stmt
 		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_write_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterWrite_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterWrite_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitWrite_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitWrite_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitWrite_stmt(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitWrite_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitWrite_stmt(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitWrite_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func write_stmt() throws -> Write_stmtContext {
+	 open func write_stmt() throws -> Write_stmtContext {
 		var _localctx: Write_stmtContext = Write_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 10, tinyParser.RULE_write_stmt)
 		defer {
@@ -462,40 +486,46 @@ open class tinyParser: Parser {
 		return _localctx
 	}
 
-	open class Id_listContext:ParserRuleContext {
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
+	public class Id_listContext: ParserRuleContext {
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+			open
+			func id_list() -> Id_listContext? {
+				return getRuleContext(Id_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_id_list
 		}
-		open func id_list() -> Id_listContext? {
-			return getRuleContext(Id_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_id_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterId_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterId_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitId_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitId_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitId_list(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitId_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitId_list(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitId_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func id_list( ) throws -> Id_listContext   {
+	 public final  func id_list( ) throws -> Id_listContext   {
 		return try id_list(0)
 	}
 	@discardableResult
@@ -529,7 +559,7 @@ open class tinyParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, tinyParser.RULE_id_list)
 					setState(58)
 					if (!(precpred(_ctx, 2))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 					}
 					setState(59)
 					try match(tinyParser.Tokens.T__5.rawValue)
@@ -553,40 +583,46 @@ open class tinyParser: Parser {
 		return _localctx;
 	}
 
-	open class Expr_listContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+	public class Expr_listContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func expr_list() -> Expr_listContext? {
+				return getRuleContext(Expr_listContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_expr_list
 		}
-		open func expr_list() -> Expr_listContext? {
-			return getRuleContext(Expr_listContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_expr_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterExpr_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterExpr_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitExpr_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitExpr_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitExpr_list(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitExpr_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitExpr_list(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitExpr_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expr_list( ) throws -> Expr_listContext   {
+	 public final  func expr_list( ) throws -> Expr_listContext   {
 		return try expr_list(0)
 	}
 	@discardableResult
@@ -620,7 +656,7 @@ open class tinyParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, tinyParser.RULE_expr_list)
 					setState(69)
 					if (!(precpred(_ctx, 2))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 					}
 					setState(70)
 					try match(tinyParser.Tokens.T__5.rawValue)
@@ -644,43 +680,50 @@ open class tinyParser: Parser {
 		return _localctx;
 	}
 
-	open class ExprContext:ParserRuleContext {
-		open func factor() -> FactorContext? {
-			return getRuleContext(FactorContext.self,0)
+	public class ExprContext: ParserRuleContext {
+			open
+			func factor() -> FactorContext? {
+				return getRuleContext(FactorContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func op() -> OpContext? {
+				return getRuleContext(OpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_expr
 		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func op() -> OpContext? {
-			return getRuleContext(OpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitExpr(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expr( ) throws -> ExprContext   {
+	 public final  func expr( ) throws -> ExprContext   {
 		return try expr(0)
 	}
 	@discardableResult
@@ -714,7 +757,7 @@ open class tinyParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, tinyParser.RULE_expr)
 					setState(80)
 					if (!(precpred(_ctx, 2))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 					}
 					setState(81)
 					try op()
@@ -737,40 +780,47 @@ open class tinyParser: Parser {
 
 		return _localctx;
 	}
-	open class FactorContext:ParserRuleContext {
-		open func ident() -> IdentContext? {
-			return getRuleContext(IdentContext.self,0)
+
+	public class FactorContext: ParserRuleContext {
+			open
+			func ident() -> IdentContext? {
+				return getRuleContext(IdentContext.self, 0)
+			}
+			open
+			func integer() -> IntegerContext? {
+				return getRuleContext(IntegerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_factor
 		}
-		open func integer() -> IntegerContext? {
-			return getRuleContext(IntegerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_factor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitFactor(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitFactor(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func factor() throws -> FactorContext {
+	 open func factor() throws -> FactorContext {
 		var _localctx: FactorContext = FactorContext(_ctx, getState())
 		try enterRule(_localctx, 18, tinyParser.RULE_factor)
 		defer {
@@ -794,7 +844,7 @@ open class tinyParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -805,35 +855,43 @@ open class tinyParser: Parser {
 
 		return _localctx
 	}
-	open class IntegerContext:ParserRuleContext {
-		open func NUMBER() -> TerminalNode? { return getToken(tinyParser.Tokens.NUMBER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_integer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterInteger(self)
+
+	public class IntegerContext: ParserRuleContext {
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(tinyParser.Tokens.NUMBER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_integer
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterInteger(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitInteger(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitInteger(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitInteger(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitInteger(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitInteger(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitInteger(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integer() throws -> IntegerContext {
+	 open func integer() throws -> IntegerContext {
 		var _localctx: IntegerContext = IntegerContext(_ctx, getState())
 		try enterRule(_localctx, 20, tinyParser.RULE_integer)
 		var _la: Int = 0
@@ -867,34 +925,39 @@ open class tinyParser: Parser {
 
 		return _localctx
 	}
-	open class OpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_op }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterOp(self)
+
+	public class OpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_op
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterOp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitOp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitOp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitOp(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitOp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitOp(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitOp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func op() throws -> OpContext {
+	 open func op() throws -> OpContext {
 		var _localctx: OpContext = OpContext(_ctx, getState())
 		try enterRule(_localctx, 22, tinyParser.RULE_op)
 		var _la: Int = 0
@@ -926,35 +989,43 @@ open class tinyParser: Parser {
 
 		return _localctx
 	}
-	open class IdentContext:ParserRuleContext {
-		open func ID() -> TerminalNode? { return getToken(tinyParser.Tokens.ID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return tinyParser.RULE_ident }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).enterIdent(self)
+
+	public class IdentContext: ParserRuleContext {
+			open
+			func ID() -> TerminalNode? {
+				return getToken(tinyParser.Tokens.ID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return tinyParser.RULE_ident
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.enterIdent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is tinyListener {
-			 	(listener as! tinyListener).exitIdent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? tinyListener {
+				listener.exitIdent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is tinyVisitor {
-			     return (visitor as! tinyVisitor<T>).visitIdent(self)
-			}else if visitor is tinyBaseVisitor {
-		    	 return (visitor as! tinyBaseVisitor<T>).visitIdent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? tinyVisitor {
+			    return visitor.visitIdent(self)
+			}
+			else if let visitor = visitor as? tinyBaseVisitor {
+			    return visitor.visitIdent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ident() throws -> IdentContext {
+	 open func ident() throws -> IdentContext {
 		var _localctx: IdentContext = IdentContext(_ctx, getState())
 		try enterRule(_localctx, 24, tinyParser.RULE_ident)
 		defer {
@@ -975,8 +1046,8 @@ open class tinyParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  1:
 			return try stmt_list_sempred(_localctx?.castdown(Stmt_listContext.self), predIndex)
@@ -1014,6 +1085,10 @@ open class tinyParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = tinyParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = tinyParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

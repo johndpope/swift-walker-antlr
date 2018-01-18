@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/java8/Java8.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/java8/Java8.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: Java8Parser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: Java8Parser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: Java8Parser.TypeContext) -> T{
+	open func visitType(_ ctx: Java8Parser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimitiveType(_ ctx: Java8Parser.PrimitiveTypeContext) -> T{
+	open func visitPrimitiveType(_ ctx: Java8Parser.PrimitiveTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericType(_ ctx: Java8Parser.NumericTypeContext) -> T{
+	open func visitNumericType(_ ctx: Java8Parser.NumericTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntegralType(_ ctx: Java8Parser.IntegralTypeContext) -> T{
+	open func visitIntegralType(_ ctx: Java8Parser.IntegralTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFloatingPointType(_ ctx: Java8Parser.FloatingPointTypeContext) -> T{
+	open func visitFloatingPointType(_ ctx: Java8Parser.FloatingPointTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReferenceType(_ ctx: Java8Parser.ReferenceTypeContext) -> T{
+	open func visitReferenceType(_ ctx: Java8Parser.ReferenceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassOrInterfaceType(_ ctx: Java8Parser.ClassOrInterfaceTypeContext) -> T{
+	open func visitClassOrInterfaceType(_ ctx: Java8Parser.ClassOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassType(_ ctx: Java8Parser.ClassTypeContext) -> T{
+	open func visitClassType(_ ctx: Java8Parser.ClassTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassType_lf_classOrInterfaceType(_ ctx: Java8Parser.ClassType_lf_classOrInterfaceTypeContext) -> T{
+	open func visitClassType_lf_classOrInterfaceType(_ ctx: Java8Parser.ClassType_lf_classOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassType_lfno_classOrInterfaceType(_ ctx: Java8Parser.ClassType_lfno_classOrInterfaceTypeContext) -> T{
+	open func visitClassType_lfno_classOrInterfaceType(_ ctx: Java8Parser.ClassType_lfno_classOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceType(_ ctx: Java8Parser.InterfaceTypeContext) -> T{
+	open func visitInterfaceType(_ ctx: Java8Parser.InterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceType_lf_classOrInterfaceType(_ ctx: Java8Parser.InterfaceType_lf_classOrInterfaceTypeContext) -> T{
+	open func visitInterfaceType_lf_classOrInterfaceType(_ ctx: Java8Parser.InterfaceType_lf_classOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceType_lfno_classOrInterfaceType(_ ctx: Java8Parser.InterfaceType_lfno_classOrInterfaceTypeContext) -> T{
+	open func visitInterfaceType_lfno_classOrInterfaceType(_ ctx: Java8Parser.InterfaceType_lfno_classOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeVariable(_ ctx: Java8Parser.TypeVariableContext) -> T{
+	open func visitTypeVariable(_ ctx: Java8Parser.TypeVariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayType(_ ctx: Java8Parser.ArrayTypeContext) -> T{
+	open func visitArrayType(_ ctx: Java8Parser.ArrayTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDims(_ ctx: Java8Parser.DimsContext) -> T{
+	open func visitDims(_ ctx: Java8Parser.DimsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeParameter(_ ctx: Java8Parser.TypeParameterContext) -> T{
+	open func visitTypeParameter(_ ctx: Java8Parser.TypeParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeParameterModifier(_ ctx: Java8Parser.TypeParameterModifierContext) -> T{
+	open func visitTypeParameterModifier(_ ctx: Java8Parser.TypeParameterModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeBound(_ ctx: Java8Parser.TypeBoundContext) -> T{
+	open func visitTypeBound(_ ctx: Java8Parser.TypeBoundContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditionalBound(_ ctx: Java8Parser.AdditionalBoundContext) -> T{
+	open func visitAdditionalBound(_ ctx: Java8Parser.AdditionalBoundContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeArguments(_ ctx: Java8Parser.TypeArgumentsContext) -> T{
+	open func visitTypeArguments(_ ctx: Java8Parser.TypeArgumentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeArgumentList(_ ctx: Java8Parser.TypeArgumentListContext) -> T{
+	open func visitTypeArgumentList(_ ctx: Java8Parser.TypeArgumentListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeArgument(_ ctx: Java8Parser.TypeArgumentContext) -> T{
+	open func visitTypeArgument(_ ctx: Java8Parser.TypeArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWildcard(_ ctx: Java8Parser.WildcardContext) -> T{
+	open func visitWildcard(_ ctx: Java8Parser.WildcardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWildcardBounds(_ ctx: Java8Parser.WildcardBoundsContext) -> T{
+	open func visitWildcardBounds(_ ctx: Java8Parser.WildcardBoundsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackageName(_ ctx: Java8Parser.PackageNameContext) -> T{
+	open func visitPackageName(_ ctx: Java8Parser.PackageNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeName(_ ctx: Java8Parser.TypeNameContext) -> T{
+	open func visitTypeName(_ ctx: Java8Parser.TypeNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackageOrTypeName(_ ctx: Java8Parser.PackageOrTypeNameContext) -> T{
+	open func visitPackageOrTypeName(_ ctx: Java8Parser.PackageOrTypeNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionName(_ ctx: Java8Parser.ExpressionNameContext) -> T{
+	open func visitExpressionName(_ ctx: Java8Parser.ExpressionNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodName(_ ctx: Java8Parser.MethodNameContext) -> T{
+	open func visitMethodName(_ ctx: Java8Parser.MethodNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAmbiguousName(_ ctx: Java8Parser.AmbiguousNameContext) -> T{
+	open func visitAmbiguousName(_ ctx: Java8Parser.AmbiguousNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompilationUnit(_ ctx: Java8Parser.CompilationUnitContext) -> T{
+	open func visitCompilationUnit(_ ctx: Java8Parser.CompilationUnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackageDeclaration(_ ctx: Java8Parser.PackageDeclarationContext) -> T{
+	open func visitPackageDeclaration(_ ctx: Java8Parser.PackageDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackageModifier(_ ctx: Java8Parser.PackageModifierContext) -> T{
+	open func visitPackageModifier(_ ctx: Java8Parser.PackageModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportDeclaration(_ ctx: Java8Parser.ImportDeclarationContext) -> T{
+	open func visitImportDeclaration(_ ctx: Java8Parser.ImportDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingleTypeImportDeclaration(_ ctx: Java8Parser.SingleTypeImportDeclarationContext) -> T{
+	open func visitSingleTypeImportDeclaration(_ ctx: Java8Parser.SingleTypeImportDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeImportOnDemandDeclaration(_ ctx: Java8Parser.TypeImportOnDemandDeclarationContext) -> T{
+	open func visitTypeImportOnDemandDeclaration(_ ctx: Java8Parser.TypeImportOnDemandDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingleStaticImportDeclaration(_ ctx: Java8Parser.SingleStaticImportDeclarationContext) -> T{
+	open func visitSingleStaticImportDeclaration(_ ctx: Java8Parser.SingleStaticImportDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStaticImportOnDemandDeclaration(_ ctx: Java8Parser.StaticImportOnDemandDeclarationContext) -> T{
+	open func visitStaticImportOnDemandDeclaration(_ ctx: Java8Parser.StaticImportOnDemandDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDeclaration(_ ctx: Java8Parser.TypeDeclarationContext) -> T{
+	open func visitTypeDeclaration(_ ctx: Java8Parser.TypeDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassDeclaration(_ ctx: Java8Parser.ClassDeclarationContext) -> T{
+	open func visitClassDeclaration(_ ctx: Java8Parser.ClassDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNormalClassDeclaration(_ ctx: Java8Parser.NormalClassDeclarationContext) -> T{
+	open func visitNormalClassDeclaration(_ ctx: Java8Parser.NormalClassDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassModifier(_ ctx: Java8Parser.ClassModifierContext) -> T{
+	open func visitClassModifier(_ ctx: Java8Parser.ClassModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeParameters(_ ctx: Java8Parser.TypeParametersContext) -> T{
+	open func visitTypeParameters(_ ctx: Java8Parser.TypeParametersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeParameterList(_ ctx: Java8Parser.TypeParameterListContext) -> T{
+	open func visitTypeParameterList(_ ctx: Java8Parser.TypeParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSuperclass(_ ctx: Java8Parser.SuperclassContext) -> T{
+	open func visitSuperclass(_ ctx: Java8Parser.SuperclassContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSuperinterfaces(_ ctx: Java8Parser.SuperinterfacesContext) -> T{
+	open func visitSuperinterfaces(_ ctx: Java8Parser.SuperinterfacesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceTypeList(_ ctx: Java8Parser.InterfaceTypeListContext) -> T{
+	open func visitInterfaceTypeList(_ ctx: Java8Parser.InterfaceTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassBody(_ ctx: Java8Parser.ClassBodyContext) -> T{
+	open func visitClassBody(_ ctx: Java8Parser.ClassBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassBodyDeclaration(_ ctx: Java8Parser.ClassBodyDeclarationContext) -> T{
+	open func visitClassBodyDeclaration(_ ctx: Java8Parser.ClassBodyDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassMemberDeclaration(_ ctx: Java8Parser.ClassMemberDeclarationContext) -> T{
+	open func visitClassMemberDeclaration(_ ctx: Java8Parser.ClassMemberDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldDeclaration(_ ctx: Java8Parser.FieldDeclarationContext) -> T{
+	open func visitFieldDeclaration(_ ctx: Java8Parser.FieldDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldModifier(_ ctx: Java8Parser.FieldModifierContext) -> T{
+	open func visitFieldModifier(_ ctx: Java8Parser.FieldModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclaratorList(_ ctx: Java8Parser.VariableDeclaratorListContext) -> T{
+	open func visitVariableDeclaratorList(_ ctx: Java8Parser.VariableDeclaratorListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclarator(_ ctx: Java8Parser.VariableDeclaratorContext) -> T{
+	open func visitVariableDeclarator(_ ctx: Java8Parser.VariableDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclaratorId(_ ctx: Java8Parser.VariableDeclaratorIdContext) -> T{
+	open func visitVariableDeclaratorId(_ ctx: Java8Parser.VariableDeclaratorIdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableInitializer(_ ctx: Java8Parser.VariableInitializerContext) -> T{
+	open func visitVariableInitializer(_ ctx: Java8Parser.VariableInitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannType(_ ctx: Java8Parser.UnannTypeContext) -> T{
+	open func visitUnannType(_ ctx: Java8Parser.UnannTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannPrimitiveType(_ ctx: Java8Parser.UnannPrimitiveTypeContext) -> T{
+	open func visitUnannPrimitiveType(_ ctx: Java8Parser.UnannPrimitiveTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannReferenceType(_ ctx: Java8Parser.UnannReferenceTypeContext) -> T{
+	open func visitUnannReferenceType(_ ctx: Java8Parser.UnannReferenceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannClassOrInterfaceType(_ ctx: Java8Parser.UnannClassOrInterfaceTypeContext) -> T{
+	open func visitUnannClassOrInterfaceType(_ ctx: Java8Parser.UnannClassOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannClassType(_ ctx: Java8Parser.UnannClassTypeContext) -> T{
+	open func visitUnannClassType(_ ctx: Java8Parser.UnannClassTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannClassType_lf_unannClassOrInterfaceType(_ ctx: Java8Parser.UnannClassType_lf_unannClassOrInterfaceTypeContext) -> T{
+	open func visitUnannClassType_lf_unannClassOrInterfaceType(_ ctx: Java8Parser.UnannClassType_lf_unannClassOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannClassType_lfno_unannClassOrInterfaceType(_ ctx: Java8Parser.UnannClassType_lfno_unannClassOrInterfaceTypeContext) -> T{
+	open func visitUnannClassType_lfno_unannClassOrInterfaceType(_ ctx: Java8Parser.UnannClassType_lfno_unannClassOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannInterfaceType(_ ctx: Java8Parser.UnannInterfaceTypeContext) -> T{
+	open func visitUnannInterfaceType(_ ctx: Java8Parser.UnannInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannInterfaceType_lf_unannClassOrInterfaceType(_ ctx: Java8Parser.UnannInterfaceType_lf_unannClassOrInterfaceTypeContext) -> T{
+	open func visitUnannInterfaceType_lf_unannClassOrInterfaceType(_ ctx: Java8Parser.UnannInterfaceType_lf_unannClassOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannInterfaceType_lfno_unannClassOrInterfaceType(_ ctx: Java8Parser.UnannInterfaceType_lfno_unannClassOrInterfaceTypeContext) -> T{
+	open func visitUnannInterfaceType_lfno_unannClassOrInterfaceType(_ ctx: Java8Parser.UnannInterfaceType_lfno_unannClassOrInterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannTypeVariable(_ ctx: Java8Parser.UnannTypeVariableContext) -> T{
+	open func visitUnannTypeVariable(_ ctx: Java8Parser.UnannTypeVariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnannArrayType(_ ctx: Java8Parser.UnannArrayTypeContext) -> T{
+	open func visitUnannArrayType(_ ctx: Java8Parser.UnannArrayTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodDeclaration(_ ctx: Java8Parser.MethodDeclarationContext) -> T{
+	open func visitMethodDeclaration(_ ctx: Java8Parser.MethodDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodModifier(_ ctx: Java8Parser.MethodModifierContext) -> T{
+	open func visitMethodModifier(_ ctx: Java8Parser.MethodModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodHeader(_ ctx: Java8Parser.MethodHeaderContext) -> T{
+	open func visitMethodHeader(_ ctx: Java8Parser.MethodHeaderContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResult(_ ctx: Java8Parser.ResultContext) -> T{
+	open func visitResult(_ ctx: Java8Parser.ResultContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodDeclarator(_ ctx: Java8Parser.MethodDeclaratorContext) -> T{
+	open func visitMethodDeclarator(_ ctx: Java8Parser.MethodDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameterList(_ ctx: Java8Parser.FormalParameterListContext) -> T{
+	open func visitFormalParameterList(_ ctx: Java8Parser.FormalParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameters(_ ctx: Java8Parser.FormalParametersContext) -> T{
+	open func visitFormalParameters(_ ctx: Java8Parser.FormalParametersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameter(_ ctx: Java8Parser.FormalParameterContext) -> T{
+	open func visitFormalParameter(_ ctx: Java8Parser.FormalParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableModifier(_ ctx: Java8Parser.VariableModifierContext) -> T{
+	open func visitVariableModifier(_ ctx: Java8Parser.VariableModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLastFormalParameter(_ ctx: Java8Parser.LastFormalParameterContext) -> T{
+	open func visitLastFormalParameter(_ ctx: Java8Parser.LastFormalParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReceiverParameter(_ ctx: Java8Parser.ReceiverParameterContext) -> T{
+	open func visitReceiverParameter(_ ctx: Java8Parser.ReceiverParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitThrows_(_ ctx: Java8Parser.Throws_Context) -> T{
+	open func visitThrows_(_ ctx: Java8Parser.Throws_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExceptionTypeList(_ ctx: Java8Parser.ExceptionTypeListContext) -> T{
+	open func visitExceptionTypeList(_ ctx: Java8Parser.ExceptionTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExceptionType(_ ctx: Java8Parser.ExceptionTypeContext) -> T{
+	open func visitExceptionType(_ ctx: Java8Parser.ExceptionTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodBody(_ ctx: Java8Parser.MethodBodyContext) -> T{
+	open func visitMethodBody(_ ctx: Java8Parser.MethodBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInstanceInitializer(_ ctx: Java8Parser.InstanceInitializerContext) -> T{
+	open func visitInstanceInitializer(_ ctx: Java8Parser.InstanceInitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStaticInitializer(_ ctx: Java8Parser.StaticInitializerContext) -> T{
+	open func visitStaticInitializer(_ ctx: Java8Parser.StaticInitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructorDeclaration(_ ctx: Java8Parser.ConstructorDeclarationContext) -> T{
+	open func visitConstructorDeclaration(_ ctx: Java8Parser.ConstructorDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructorModifier(_ ctx: Java8Parser.ConstructorModifierContext) -> T{
+	open func visitConstructorModifier(_ ctx: Java8Parser.ConstructorModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructorDeclarator(_ ctx: Java8Parser.ConstructorDeclaratorContext) -> T{
+	open func visitConstructorDeclarator(_ ctx: Java8Parser.ConstructorDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleTypeName(_ ctx: Java8Parser.SimpleTypeNameContext) -> T{
+	open func visitSimpleTypeName(_ ctx: Java8Parser.SimpleTypeNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructorBody(_ ctx: Java8Parser.ConstructorBodyContext) -> T{
+	open func visitConstructorBody(_ ctx: Java8Parser.ConstructorBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExplicitConstructorInvocation(_ ctx: Java8Parser.ExplicitConstructorInvocationContext) -> T{
+	open func visitExplicitConstructorInvocation(_ ctx: Java8Parser.ExplicitConstructorInvocationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumDeclaration(_ ctx: Java8Parser.EnumDeclarationContext) -> T{
+	open func visitEnumDeclaration(_ ctx: Java8Parser.EnumDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumBody(_ ctx: Java8Parser.EnumBodyContext) -> T{
+	open func visitEnumBody(_ ctx: Java8Parser.EnumBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumConstantList(_ ctx: Java8Parser.EnumConstantListContext) -> T{
+	open func visitEnumConstantList(_ ctx: Java8Parser.EnumConstantListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumConstant(_ ctx: Java8Parser.EnumConstantContext) -> T{
+	open func visitEnumConstant(_ ctx: Java8Parser.EnumConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumConstantModifier(_ ctx: Java8Parser.EnumConstantModifierContext) -> T{
+	open func visitEnumConstantModifier(_ ctx: Java8Parser.EnumConstantModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumBodyDeclarations(_ ctx: Java8Parser.EnumBodyDeclarationsContext) -> T{
+	open func visitEnumBodyDeclarations(_ ctx: Java8Parser.EnumBodyDeclarationsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceDeclaration(_ ctx: Java8Parser.InterfaceDeclarationContext) -> T{
+	open func visitInterfaceDeclaration(_ ctx: Java8Parser.InterfaceDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNormalInterfaceDeclaration(_ ctx: Java8Parser.NormalInterfaceDeclarationContext) -> T{
+	open func visitNormalInterfaceDeclaration(_ ctx: Java8Parser.NormalInterfaceDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1025,7 +1025,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceModifier(_ ctx: Java8Parser.InterfaceModifierContext) -> T{
+	open func visitInterfaceModifier(_ ctx: Java8Parser.InterfaceModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1035,7 +1035,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendsInterfaces(_ ctx: Java8Parser.ExtendsInterfacesContext) -> T{
+	open func visitExtendsInterfaces(_ ctx: Java8Parser.ExtendsInterfacesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1045,7 +1045,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceBody(_ ctx: Java8Parser.InterfaceBodyContext) -> T{
+	open func visitInterfaceBody(_ ctx: Java8Parser.InterfaceBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1055,7 +1055,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceMemberDeclaration(_ ctx: Java8Parser.InterfaceMemberDeclarationContext) -> T{
+	open func visitInterfaceMemberDeclaration(_ ctx: Java8Parser.InterfaceMemberDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1065,7 +1065,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantDeclaration(_ ctx: Java8Parser.ConstantDeclarationContext) -> T{
+	open func visitConstantDeclaration(_ ctx: Java8Parser.ConstantDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1075,7 +1075,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantModifier(_ ctx: Java8Parser.ConstantModifierContext) -> T{
+	open func visitConstantModifier(_ ctx: Java8Parser.ConstantModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1085,7 +1085,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceMethodDeclaration(_ ctx: Java8Parser.InterfaceMethodDeclarationContext) -> T{
+	open func visitInterfaceMethodDeclaration(_ ctx: Java8Parser.InterfaceMethodDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1095,7 +1095,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceMethodModifier(_ ctx: Java8Parser.InterfaceMethodModifierContext) -> T{
+	open func visitInterfaceMethodModifier(_ ctx: Java8Parser.InterfaceMethodModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1105,7 +1105,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationTypeDeclaration(_ ctx: Java8Parser.AnnotationTypeDeclarationContext) -> T{
+	open func visitAnnotationTypeDeclaration(_ ctx: Java8Parser.AnnotationTypeDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1115,7 +1115,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationTypeBody(_ ctx: Java8Parser.AnnotationTypeBodyContext) -> T{
+	open func visitAnnotationTypeBody(_ ctx: Java8Parser.AnnotationTypeBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1125,7 +1125,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationTypeMemberDeclaration(_ ctx: Java8Parser.AnnotationTypeMemberDeclarationContext) -> T{
+	open func visitAnnotationTypeMemberDeclaration(_ ctx: Java8Parser.AnnotationTypeMemberDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1135,7 +1135,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationTypeElementDeclaration(_ ctx: Java8Parser.AnnotationTypeElementDeclarationContext) -> T{
+	open func visitAnnotationTypeElementDeclaration(_ ctx: Java8Parser.AnnotationTypeElementDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1145,7 +1145,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotationTypeElementModifier(_ ctx: Java8Parser.AnnotationTypeElementModifierContext) -> T{
+	open func visitAnnotationTypeElementModifier(_ ctx: Java8Parser.AnnotationTypeElementModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1155,7 +1155,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefaultValue(_ ctx: Java8Parser.DefaultValueContext) -> T{
+	open func visitDefaultValue(_ ctx: Java8Parser.DefaultValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1165,7 +1165,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnnotation(_ ctx: Java8Parser.AnnotationContext) -> T{
+	open func visitAnnotation(_ ctx: Java8Parser.AnnotationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1175,7 +1175,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNormalAnnotation(_ ctx: Java8Parser.NormalAnnotationContext) -> T{
+	open func visitNormalAnnotation(_ ctx: Java8Parser.NormalAnnotationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1185,7 +1185,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementValuePairList(_ ctx: Java8Parser.ElementValuePairListContext) -> T{
+	open func visitElementValuePairList(_ ctx: Java8Parser.ElementValuePairListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1195,7 +1195,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementValuePair(_ ctx: Java8Parser.ElementValuePairContext) -> T{
+	open func visitElementValuePair(_ ctx: Java8Parser.ElementValuePairContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1205,7 +1205,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementValue(_ ctx: Java8Parser.ElementValueContext) -> T{
+	open func visitElementValue(_ ctx: Java8Parser.ElementValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1215,7 +1215,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementValueArrayInitializer(_ ctx: Java8Parser.ElementValueArrayInitializerContext) -> T{
+	open func visitElementValueArrayInitializer(_ ctx: Java8Parser.ElementValueArrayInitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1225,7 +1225,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementValueList(_ ctx: Java8Parser.ElementValueListContext) -> T{
+	open func visitElementValueList(_ ctx: Java8Parser.ElementValueListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1235,7 +1235,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMarkerAnnotation(_ ctx: Java8Parser.MarkerAnnotationContext) -> T{
+	open func visitMarkerAnnotation(_ ctx: Java8Parser.MarkerAnnotationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1245,7 +1245,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingleElementAnnotation(_ ctx: Java8Parser.SingleElementAnnotationContext) -> T{
+	open func visitSingleElementAnnotation(_ ctx: Java8Parser.SingleElementAnnotationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1255,7 +1255,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayInitializer(_ ctx: Java8Parser.ArrayInitializerContext) -> T{
+	open func visitArrayInitializer(_ ctx: Java8Parser.ArrayInitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1265,7 +1265,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableInitializerList(_ ctx: Java8Parser.VariableInitializerListContext) -> T{
+	open func visitVariableInitializerList(_ ctx: Java8Parser.VariableInitializerListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1275,7 +1275,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: Java8Parser.BlockContext) -> T{
+	open func visitBlock(_ ctx: Java8Parser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1285,7 +1285,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockStatements(_ ctx: Java8Parser.BlockStatementsContext) -> T{
+	open func visitBlockStatements(_ ctx: Java8Parser.BlockStatementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1295,7 +1295,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockStatement(_ ctx: Java8Parser.BlockStatementContext) -> T{
+	open func visitBlockStatement(_ ctx: Java8Parser.BlockStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1305,7 +1305,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocalVariableDeclarationStatement(_ ctx: Java8Parser.LocalVariableDeclarationStatementContext) -> T{
+	open func visitLocalVariableDeclarationStatement(_ ctx: Java8Parser.LocalVariableDeclarationStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1315,7 +1315,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocalVariableDeclaration(_ ctx: Java8Parser.LocalVariableDeclarationContext) -> T{
+	open func visitLocalVariableDeclaration(_ ctx: Java8Parser.LocalVariableDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1325,7 +1325,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: Java8Parser.StatementContext) -> T{
+	open func visitStatement(_ ctx: Java8Parser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1335,7 +1335,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementNoShortIf(_ ctx: Java8Parser.StatementNoShortIfContext) -> T{
+	open func visitStatementNoShortIf(_ ctx: Java8Parser.StatementNoShortIfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1345,7 +1345,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementWithoutTrailingSubstatement(_ ctx: Java8Parser.StatementWithoutTrailingSubstatementContext) -> T{
+	open func visitStatementWithoutTrailingSubstatement(_ ctx: Java8Parser.StatementWithoutTrailingSubstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1355,7 +1355,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmptyStatement(_ ctx: Java8Parser.EmptyStatementContext) -> T{
+	open func visitEmptyStatement(_ ctx: Java8Parser.EmptyStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1365,7 +1365,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabeledStatement(_ ctx: Java8Parser.LabeledStatementContext) -> T{
+	open func visitLabeledStatement(_ ctx: Java8Parser.LabeledStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1375,7 +1375,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabeledStatementNoShortIf(_ ctx: Java8Parser.LabeledStatementNoShortIfContext) -> T{
+	open func visitLabeledStatementNoShortIf(_ ctx: Java8Parser.LabeledStatementNoShortIfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1385,7 +1385,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionStatement(_ ctx: Java8Parser.ExpressionStatementContext) -> T{
+	open func visitExpressionStatement(_ ctx: Java8Parser.ExpressionStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1395,7 +1395,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementExpression(_ ctx: Java8Parser.StatementExpressionContext) -> T{
+	open func visitStatementExpression(_ ctx: Java8Parser.StatementExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1405,7 +1405,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfThenStatement(_ ctx: Java8Parser.IfThenStatementContext) -> T{
+	open func visitIfThenStatement(_ ctx: Java8Parser.IfThenStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1415,7 +1415,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfThenElseStatement(_ ctx: Java8Parser.IfThenElseStatementContext) -> T{
+	open func visitIfThenElseStatement(_ ctx: Java8Parser.IfThenElseStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1425,7 +1425,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfThenElseStatementNoShortIf(_ ctx: Java8Parser.IfThenElseStatementNoShortIfContext) -> T{
+	open func visitIfThenElseStatementNoShortIf(_ ctx: Java8Parser.IfThenElseStatementNoShortIfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1435,7 +1435,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssertStatement(_ ctx: Java8Parser.AssertStatementContext) -> T{
+	open func visitAssertStatement(_ ctx: Java8Parser.AssertStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1445,7 +1445,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSwitchStatement(_ ctx: Java8Parser.SwitchStatementContext) -> T{
+	open func visitSwitchStatement(_ ctx: Java8Parser.SwitchStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1455,7 +1455,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSwitchBlock(_ ctx: Java8Parser.SwitchBlockContext) -> T{
+	open func visitSwitchBlock(_ ctx: Java8Parser.SwitchBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1465,7 +1465,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSwitchBlockStatementGroup(_ ctx: Java8Parser.SwitchBlockStatementGroupContext) -> T{
+	open func visitSwitchBlockStatementGroup(_ ctx: Java8Parser.SwitchBlockStatementGroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1475,7 +1475,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSwitchLabels(_ ctx: Java8Parser.SwitchLabelsContext) -> T{
+	open func visitSwitchLabels(_ ctx: Java8Parser.SwitchLabelsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1485,7 +1485,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSwitchLabel(_ ctx: Java8Parser.SwitchLabelContext) -> T{
+	open func visitSwitchLabel(_ ctx: Java8Parser.SwitchLabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1495,7 +1495,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumConstantName(_ ctx: Java8Parser.EnumConstantNameContext) -> T{
+	open func visitEnumConstantName(_ ctx: Java8Parser.EnumConstantNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1505,7 +1505,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhileStatement(_ ctx: Java8Parser.WhileStatementContext) -> T{
+	open func visitWhileStatement(_ ctx: Java8Parser.WhileStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1515,7 +1515,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhileStatementNoShortIf(_ ctx: Java8Parser.WhileStatementNoShortIfContext) -> T{
+	open func visitWhileStatementNoShortIf(_ ctx: Java8Parser.WhileStatementNoShortIfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1525,7 +1525,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDoStatement(_ ctx: Java8Parser.DoStatementContext) -> T{
+	open func visitDoStatement(_ ctx: Java8Parser.DoStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1535,7 +1535,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForStatement(_ ctx: Java8Parser.ForStatementContext) -> T{
+	open func visitForStatement(_ ctx: Java8Parser.ForStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1545,7 +1545,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForStatementNoShortIf(_ ctx: Java8Parser.ForStatementNoShortIfContext) -> T{
+	open func visitForStatementNoShortIf(_ ctx: Java8Parser.ForStatementNoShortIfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1555,7 +1555,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBasicForStatement(_ ctx: Java8Parser.BasicForStatementContext) -> T{
+	open func visitBasicForStatement(_ ctx: Java8Parser.BasicForStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1565,7 +1565,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBasicForStatementNoShortIf(_ ctx: Java8Parser.BasicForStatementNoShortIfContext) -> T{
+	open func visitBasicForStatementNoShortIf(_ ctx: Java8Parser.BasicForStatementNoShortIfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1575,7 +1575,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForInit(_ ctx: Java8Parser.ForInitContext) -> T{
+	open func visitForInit(_ ctx: Java8Parser.ForInitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1585,7 +1585,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForUpdate(_ ctx: Java8Parser.ForUpdateContext) -> T{
+	open func visitForUpdate(_ ctx: Java8Parser.ForUpdateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1595,7 +1595,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementExpressionList(_ ctx: Java8Parser.StatementExpressionListContext) -> T{
+	open func visitStatementExpressionList(_ ctx: Java8Parser.StatementExpressionListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1605,7 +1605,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnhancedForStatement(_ ctx: Java8Parser.EnhancedForStatementContext) -> T{
+	open func visitEnhancedForStatement(_ ctx: Java8Parser.EnhancedForStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1615,7 +1615,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnhancedForStatementNoShortIf(_ ctx: Java8Parser.EnhancedForStatementNoShortIfContext) -> T{
+	open func visitEnhancedForStatementNoShortIf(_ ctx: Java8Parser.EnhancedForStatementNoShortIfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1625,7 +1625,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBreakStatement(_ ctx: Java8Parser.BreakStatementContext) -> T{
+	open func visitBreakStatement(_ ctx: Java8Parser.BreakStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1635,7 +1635,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContinueStatement(_ ctx: Java8Parser.ContinueStatementContext) -> T{
+	open func visitContinueStatement(_ ctx: Java8Parser.ContinueStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1645,7 +1645,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturnStatement(_ ctx: Java8Parser.ReturnStatementContext) -> T{
+	open func visitReturnStatement(_ ctx: Java8Parser.ReturnStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1655,7 +1655,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitThrowStatement(_ ctx: Java8Parser.ThrowStatementContext) -> T{
+	open func visitThrowStatement(_ ctx: Java8Parser.ThrowStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1665,7 +1665,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSynchronizedStatement(_ ctx: Java8Parser.SynchronizedStatementContext) -> T{
+	open func visitSynchronizedStatement(_ ctx: Java8Parser.SynchronizedStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1675,7 +1675,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTryStatement(_ ctx: Java8Parser.TryStatementContext) -> T{
+	open func visitTryStatement(_ ctx: Java8Parser.TryStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1685,7 +1685,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCatches(_ ctx: Java8Parser.CatchesContext) -> T{
+	open func visitCatches(_ ctx: Java8Parser.CatchesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1695,7 +1695,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCatchClause(_ ctx: Java8Parser.CatchClauseContext) -> T{
+	open func visitCatchClause(_ ctx: Java8Parser.CatchClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1705,7 +1705,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCatchFormalParameter(_ ctx: Java8Parser.CatchFormalParameterContext) -> T{
+	open func visitCatchFormalParameter(_ ctx: Java8Parser.CatchFormalParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1715,7 +1715,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCatchType(_ ctx: Java8Parser.CatchTypeContext) -> T{
+	open func visitCatchType(_ ctx: Java8Parser.CatchTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1725,7 +1725,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFinally_(_ ctx: Java8Parser.Finally_Context) -> T{
+	open func visitFinally_(_ ctx: Java8Parser.Finally_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1735,7 +1735,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTryWithResourcesStatement(_ ctx: Java8Parser.TryWithResourcesStatementContext) -> T{
+	open func visitTryWithResourcesStatement(_ ctx: Java8Parser.TryWithResourcesStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1745,7 +1745,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResourceSpecification(_ ctx: Java8Parser.ResourceSpecificationContext) -> T{
+	open func visitResourceSpecification(_ ctx: Java8Parser.ResourceSpecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1755,7 +1755,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResourceList(_ ctx: Java8Parser.ResourceListContext) -> T{
+	open func visitResourceList(_ ctx: Java8Parser.ResourceListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1765,7 +1765,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResource(_ ctx: Java8Parser.ResourceContext) -> T{
+	open func visitResource(_ ctx: Java8Parser.ResourceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1775,7 +1775,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimary(_ ctx: Java8Parser.PrimaryContext) -> T{
+	open func visitPrimary(_ ctx: Java8Parser.PrimaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1785,7 +1785,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryNoNewArray(_ ctx: Java8Parser.PrimaryNoNewArrayContext) -> T{
+	open func visitPrimaryNoNewArray(_ ctx: Java8Parser.PrimaryNoNewArrayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1795,7 +1795,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryNoNewArray_lf_arrayAccess(_ ctx: Java8Parser.PrimaryNoNewArray_lf_arrayAccessContext) -> T{
+	open func visitPrimaryNoNewArray_lf_arrayAccess(_ ctx: Java8Parser.PrimaryNoNewArray_lf_arrayAccessContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1805,7 +1805,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryNoNewArray_lfno_arrayAccess(_ ctx: Java8Parser.PrimaryNoNewArray_lfno_arrayAccessContext) -> T{
+	open func visitPrimaryNoNewArray_lfno_arrayAccess(_ ctx: Java8Parser.PrimaryNoNewArray_lfno_arrayAccessContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1815,7 +1815,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryNoNewArray_lf_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lf_primaryContext) -> T{
+	open func visitPrimaryNoNewArray_lf_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lf_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1825,7 +1825,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext) -> T{
+	open func visitPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1835,7 +1835,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primaryContext) -> T{
+	open func visitPrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1845,7 +1845,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryNoNewArray_lfno_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lfno_primaryContext) -> T{
+	open func visitPrimaryNoNewArray_lfno_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lfno_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1855,7 +1855,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext) -> T{
+	open func visitPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1865,7 +1865,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext) -> T{
+	open func visitPrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary(_ ctx: Java8Parser.PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1875,7 +1875,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassInstanceCreationExpression(_ ctx: Java8Parser.ClassInstanceCreationExpressionContext) -> T{
+	open func visitClassInstanceCreationExpression(_ ctx: Java8Parser.ClassInstanceCreationExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1885,7 +1885,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassInstanceCreationExpression_lf_primary(_ ctx: Java8Parser.ClassInstanceCreationExpression_lf_primaryContext) -> T{
+	open func visitClassInstanceCreationExpression_lf_primary(_ ctx: Java8Parser.ClassInstanceCreationExpression_lf_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1895,7 +1895,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassInstanceCreationExpression_lfno_primary(_ ctx: Java8Parser.ClassInstanceCreationExpression_lfno_primaryContext) -> T{
+	open func visitClassInstanceCreationExpression_lfno_primary(_ ctx: Java8Parser.ClassInstanceCreationExpression_lfno_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1905,7 +1905,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeArgumentsOrDiamond(_ ctx: Java8Parser.TypeArgumentsOrDiamondContext) -> T{
+	open func visitTypeArgumentsOrDiamond(_ ctx: Java8Parser.TypeArgumentsOrDiamondContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1915,7 +1915,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldAccess(_ ctx: Java8Parser.FieldAccessContext) -> T{
+	open func visitFieldAccess(_ ctx: Java8Parser.FieldAccessContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1925,7 +1925,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldAccess_lf_primary(_ ctx: Java8Parser.FieldAccess_lf_primaryContext) -> T{
+	open func visitFieldAccess_lf_primary(_ ctx: Java8Parser.FieldAccess_lf_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1935,7 +1935,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldAccess_lfno_primary(_ ctx: Java8Parser.FieldAccess_lfno_primaryContext) -> T{
+	open func visitFieldAccess_lfno_primary(_ ctx: Java8Parser.FieldAccess_lfno_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1945,7 +1945,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayAccess(_ ctx: Java8Parser.ArrayAccessContext) -> T{
+	open func visitArrayAccess(_ ctx: Java8Parser.ArrayAccessContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1955,7 +1955,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayAccess_lf_primary(_ ctx: Java8Parser.ArrayAccess_lf_primaryContext) -> T{
+	open func visitArrayAccess_lf_primary(_ ctx: Java8Parser.ArrayAccess_lf_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1965,7 +1965,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayAccess_lfno_primary(_ ctx: Java8Parser.ArrayAccess_lfno_primaryContext) -> T{
+	open func visitArrayAccess_lfno_primary(_ ctx: Java8Parser.ArrayAccess_lfno_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1975,7 +1975,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodInvocation(_ ctx: Java8Parser.MethodInvocationContext) -> T{
+	open func visitMethodInvocation(_ ctx: Java8Parser.MethodInvocationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1985,7 +1985,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodInvocation_lf_primary(_ ctx: Java8Parser.MethodInvocation_lf_primaryContext) -> T{
+	open func visitMethodInvocation_lf_primary(_ ctx: Java8Parser.MethodInvocation_lf_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1995,7 +1995,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodInvocation_lfno_primary(_ ctx: Java8Parser.MethodInvocation_lfno_primaryContext) -> T{
+	open func visitMethodInvocation_lfno_primary(_ ctx: Java8Parser.MethodInvocation_lfno_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2005,7 +2005,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentList(_ ctx: Java8Parser.ArgumentListContext) -> T{
+	open func visitArgumentList(_ ctx: Java8Parser.ArgumentListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2015,7 +2015,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodReference(_ ctx: Java8Parser.MethodReferenceContext) -> T{
+	open func visitMethodReference(_ ctx: Java8Parser.MethodReferenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2025,7 +2025,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodReference_lf_primary(_ ctx: Java8Parser.MethodReference_lf_primaryContext) -> T{
+	open func visitMethodReference_lf_primary(_ ctx: Java8Parser.MethodReference_lf_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2035,7 +2035,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodReference_lfno_primary(_ ctx: Java8Parser.MethodReference_lfno_primaryContext) -> T{
+	open func visitMethodReference_lfno_primary(_ ctx: Java8Parser.MethodReference_lfno_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2045,7 +2045,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayCreationExpression(_ ctx: Java8Parser.ArrayCreationExpressionContext) -> T{
+	open func visitArrayCreationExpression(_ ctx: Java8Parser.ArrayCreationExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2055,7 +2055,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDimExprs(_ ctx: Java8Parser.DimExprsContext) -> T{
+	open func visitDimExprs(_ ctx: Java8Parser.DimExprsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2065,7 +2065,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDimExpr(_ ctx: Java8Parser.DimExprContext) -> T{
+	open func visitDimExpr(_ ctx: Java8Parser.DimExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2075,7 +2075,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantExpression(_ ctx: Java8Parser.ConstantExpressionContext) -> T{
+	open func visitConstantExpression(_ ctx: Java8Parser.ConstantExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2085,7 +2085,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: Java8Parser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: Java8Parser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2095,7 +2095,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambdaExpression(_ ctx: Java8Parser.LambdaExpressionContext) -> T{
+	open func visitLambdaExpression(_ ctx: Java8Parser.LambdaExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2105,7 +2105,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambdaParameters(_ ctx: Java8Parser.LambdaParametersContext) -> T{
+	open func visitLambdaParameters(_ ctx: Java8Parser.LambdaParametersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2115,7 +2115,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInferredFormalParameterList(_ ctx: Java8Parser.InferredFormalParameterListContext) -> T{
+	open func visitInferredFormalParameterList(_ ctx: Java8Parser.InferredFormalParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2125,7 +2125,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambdaBody(_ ctx: Java8Parser.LambdaBodyContext) -> T{
+	open func visitLambdaBody(_ ctx: Java8Parser.LambdaBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2135,7 +2135,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentExpression(_ ctx: Java8Parser.AssignmentExpressionContext) -> T{
+	open func visitAssignmentExpression(_ ctx: Java8Parser.AssignmentExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2145,7 +2145,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignment(_ ctx: Java8Parser.AssignmentContext) -> T{
+	open func visitAssignment(_ ctx: Java8Parser.AssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2155,7 +2155,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLeftHandSide(_ ctx: Java8Parser.LeftHandSideContext) -> T{
+	open func visitLeftHandSide(_ ctx: Java8Parser.LeftHandSideContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2165,7 +2165,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentOperator(_ ctx: Java8Parser.AssignmentOperatorContext) -> T{
+	open func visitAssignmentOperator(_ ctx: Java8Parser.AssignmentOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2175,7 +2175,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditionalExpression(_ ctx: Java8Parser.ConditionalExpressionContext) -> T{
+	open func visitConditionalExpression(_ ctx: Java8Parser.ConditionalExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2185,7 +2185,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditionalOrExpression(_ ctx: Java8Parser.ConditionalOrExpressionContext) -> T{
+	open func visitConditionalOrExpression(_ ctx: Java8Parser.ConditionalOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2195,7 +2195,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditionalAndExpression(_ ctx: Java8Parser.ConditionalAndExpressionContext) -> T{
+	open func visitConditionalAndExpression(_ ctx: Java8Parser.ConditionalAndExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2205,7 +2205,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInclusiveOrExpression(_ ctx: Java8Parser.InclusiveOrExpressionContext) -> T{
+	open func visitInclusiveOrExpression(_ ctx: Java8Parser.InclusiveOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2215,7 +2215,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExclusiveOrExpression(_ ctx: Java8Parser.ExclusiveOrExpressionContext) -> T{
+	open func visitExclusiveOrExpression(_ ctx: Java8Parser.ExclusiveOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2225,7 +2225,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAndExpression(_ ctx: Java8Parser.AndExpressionContext) -> T{
+	open func visitAndExpression(_ ctx: Java8Parser.AndExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2235,7 +2235,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEqualityExpression(_ ctx: Java8Parser.EqualityExpressionContext) -> T{
+	open func visitEqualityExpression(_ ctx: Java8Parser.EqualityExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2245,7 +2245,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelationalExpression(_ ctx: Java8Parser.RelationalExpressionContext) -> T{
+	open func visitRelationalExpression(_ ctx: Java8Parser.RelationalExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2255,7 +2255,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitShiftExpression(_ ctx: Java8Parser.ShiftExpressionContext) -> T{
+	open func visitShiftExpression(_ ctx: Java8Parser.ShiftExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2265,7 +2265,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditiveExpression(_ ctx: Java8Parser.AdditiveExpressionContext) -> T{
+	open func visitAdditiveExpression(_ ctx: Java8Parser.AdditiveExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2275,7 +2275,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplicativeExpression(_ ctx: Java8Parser.MultiplicativeExpressionContext) -> T{
+	open func visitMultiplicativeExpression(_ ctx: Java8Parser.MultiplicativeExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2285,7 +2285,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryExpression(_ ctx: Java8Parser.UnaryExpressionContext) -> T{
+	open func visitUnaryExpression(_ ctx: Java8Parser.UnaryExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2295,7 +2295,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPreIncrementExpression(_ ctx: Java8Parser.PreIncrementExpressionContext) -> T{
+	open func visitPreIncrementExpression(_ ctx: Java8Parser.PreIncrementExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2305,7 +2305,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPreDecrementExpression(_ ctx: Java8Parser.PreDecrementExpressionContext) -> T{
+	open func visitPreDecrementExpression(_ ctx: Java8Parser.PreDecrementExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2315,7 +2315,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryExpressionNotPlusMinus(_ ctx: Java8Parser.UnaryExpressionNotPlusMinusContext) -> T{
+	open func visitUnaryExpressionNotPlusMinus(_ ctx: Java8Parser.UnaryExpressionNotPlusMinusContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2325,7 +2325,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostfixExpression(_ ctx: Java8Parser.PostfixExpressionContext) -> T{
+	open func visitPostfixExpression(_ ctx: Java8Parser.PostfixExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2335,7 +2335,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostIncrementExpression(_ ctx: Java8Parser.PostIncrementExpressionContext) -> T{
+	open func visitPostIncrementExpression(_ ctx: Java8Parser.PostIncrementExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2345,7 +2345,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostIncrementExpression_lf_postfixExpression(_ ctx: Java8Parser.PostIncrementExpression_lf_postfixExpressionContext) -> T{
+	open func visitPostIncrementExpression_lf_postfixExpression(_ ctx: Java8Parser.PostIncrementExpression_lf_postfixExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2355,7 +2355,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostDecrementExpression(_ ctx: Java8Parser.PostDecrementExpressionContext) -> T{
+	open func visitPostDecrementExpression(_ ctx: Java8Parser.PostDecrementExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2365,7 +2365,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostDecrementExpression_lf_postfixExpression(_ ctx: Java8Parser.PostDecrementExpression_lf_postfixExpressionContext) -> T{
+	open func visitPostDecrementExpression_lf_postfixExpression(_ ctx: Java8Parser.PostDecrementExpression_lf_postfixExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2375,7 +2375,7 @@ open class Java8Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCastExpression(_ ctx: Java8Parser.CastExpressionContext) -> T{
+	open func visitCastExpression(_ ctx: Java8Parser.CastExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

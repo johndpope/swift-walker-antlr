@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/json/JSON.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/json/JSON.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class JSONVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJson(_ ctx: JSONParser.JsonContext) -> T{
+	open func visitJson(_ ctx: JSONParser.JsonContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class JSONVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObj(_ ctx: JSONParser.ObjContext) -> T{
+	open func visitObj(_ ctx: JSONParser.ObjContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class JSONVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPair(_ ctx: JSONParser.PairContext) -> T{
+	open func visitPair(_ ctx: JSONParser.PairContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class JSONVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArray(_ ctx: JSONParser.ArrayContext) -> T{
+	open func visitArray(_ ctx: JSONParser.ArrayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class JSONVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: JSONParser.ValueContext) -> T{
+	open func visitValue(_ ctx: JSONParser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

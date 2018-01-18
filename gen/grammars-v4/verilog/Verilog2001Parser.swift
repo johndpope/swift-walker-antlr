@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/verilog/Verilog2001.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/verilog/Verilog2001.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class Verilog2001Parser: Parser {
@@ -11,8 +11,11 @@ open class Verilog2001Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -54,154 +57,145 @@ open class Verilog2001Parser: Parser {
                  Block_comment = 174, Escaped_identifier = 175, Simple_identifier = 176, 
                  Dollar_Identifier = 177, Time_Identifier = 178, White_space = 179
 	}
-	public static let RULE_config_declaration = 0, RULE_design_statement = 1, 
-                   RULE_config_rule_statement = 2, RULE_default_clause = 3, 
-                   RULE_inst_clause = 4, RULE_inst_name = 5, RULE_liblist_clause = 6, 
-                   RULE_cell_clause = 7, RULE_use_clause = 8, RULE_source_text = 9, 
-                   RULE_description = 10, RULE_module_declaration = 11, 
-                   RULE_module_keyword = 12, RULE_module_parameter_port_list = 13, 
-                   RULE_list_of_ports = 14, RULE_list_of_port_declarations = 15, 
-                   RULE_port = 16, RULE_port_expression = 17, RULE_port_reference = 18, 
-                   RULE_port_declaration = 19, RULE_module_item = 20, RULE_module_or_generate_item = 21, 
-                   RULE_non_port_module_item = 22, RULE_module_or_generate_item_declaration = 23, 
-                   RULE_parameter_override = 24, RULE_local_parameter_declaration = 25, 
-                   RULE_parameter_declaration = 26, RULE_parameter_declaration_ = 27, 
-                   RULE_specparam_declaration = 28, RULE_inout_declaration = 29, 
-                   RULE_input_declaration = 30, RULE_output_declaration = 31, 
-                   RULE_event_declaration = 32, RULE_genvar_declaration = 33, 
-                   RULE_integer_declaration = 34, RULE_time_declaration = 35, 
-                   RULE_real_declaration = 36, RULE_realtime_declaration = 37, 
-                   RULE_reg_declaration = 38, RULE_net_declaration = 39, 
-                   RULE_net_type = 40, RULE_output_variable_type = 41, RULE_real_type = 42, 
-                   RULE_variable_type = 43, RULE_drive_strength = 44, RULE_strength0 = 45, 
-                   RULE_strength1 = 46, RULE_charge_strength = 47, RULE_delay3 = 48, 
-                   RULE_delay2 = 49, RULE_delay_value = 50, RULE_list_of_event_identifiers = 51, 
-                   RULE_list_of_net_identifiers = 52, RULE_list_of_genvar_identifiers = 53, 
-                   RULE_list_of_port_identifiers = 54, RULE_list_of_net_decl_assignments = 55, 
-                   RULE_list_of_param_assignments = 56, RULE_list_of_specparam_assignments = 57, 
-                   RULE_list_of_real_identifiers = 58, RULE_list_of_variable_identifiers = 59, 
-                   RULE_list_of_variable_port_identifiers = 60, RULE_net_decl_assignment = 61, 
-                   RULE_param_assignment = 62, RULE_specparam_assignment = 63, 
-                   RULE_pulse_control_specparam = 64, RULE_error_limit_value = 65, 
-                   RULE_reject_limit_value = 66, RULE_limit_value = 67, 
-                   RULE_dimension = 68, RULE_range = 69, RULE_function_declaration = 70, 
-                   RULE_function_item_declaration = 71, RULE_function_port_list = 72, 
-                   RULE_function_port = 73, RULE_range_or_type = 74, RULE_task_declaration = 75, 
-                   RULE_task_item_declaration = 76, RULE_task_port_list = 77, 
-                   RULE_task_port_item = 78, RULE_tf_decl_header = 79, RULE_tf_declaration = 80, 
-                   RULE_task_port_type = 81, RULE_block_item_declaration = 82, 
-                   RULE_block_reg_declaration = 83, RULE_list_of_block_variable_identifiers = 84, 
-                   RULE_block_variable_type = 85, RULE_gate_instantiation = 86, 
-                   RULE_cmos_switch_instance = 87, RULE_enable_gate_instance = 88, 
-                   RULE_mos_switch_instance = 89, RULE_n_input_gate_instance = 90, 
-                   RULE_n_output_gate_instance = 91, RULE_pass_switch_instance = 92, 
-                   RULE_pass_enable_switch_instance = 93, RULE_pull_gate_instance = 94, 
-                   RULE_name_of_gate_instance = 95, RULE_pulldown_strength = 96, 
-                   RULE_pullup_strength = 97, RULE_enable_terminal = 98, 
-                   RULE_ncontrol_terminal = 99, RULE_pcontrol_terminal = 100, 
-                   RULE_input_terminal = 101, RULE_inout_terminal = 102, 
-                   RULE_output_terminal = 103, RULE_cmos_switchtype = 104, 
-                   RULE_enable_gatetype = 105, RULE_mos_switchtype = 106, 
-                   RULE_n_input_gatetype = 107, RULE_n_output_gatetype = 108, 
-                   RULE_pass_en_switchtype = 109, RULE_pass_switchtype = 110, 
-                   RULE_module_instantiation = 111, RULE_parameter_value_assignment = 112, 
-                   RULE_list_of_parameter_assignments = 113, RULE_ordered_parameter_assignment = 114, 
-                   RULE_named_parameter_assignment = 115, RULE_module_instance = 116, 
-                   RULE_name_of_instance = 117, RULE_list_of_port_connections = 118, 
-                   RULE_ordered_port_connection = 119, RULE_named_port_connection = 120, 
-                   RULE_generated_instantiation = 121, RULE_generate_item_or_null = 122, 
-                   RULE_generate_item = 123, RULE_generate_conditional_statement = 124, 
-                   RULE_generate_case_statement = 125, RULE_genvar_case_item = 126, 
-                   RULE_generate_loop_statement = 127, RULE_genvar_assignment = 128, 
-                   RULE_generate_block = 129, RULE_continuous_assign = 130, 
-                   RULE_list_of_net_assignments = 131, RULE_net_assignment = 132, 
-                   RULE_initial_construct = 133, RULE_always_construct = 134, 
-                   RULE_blocking_assignment = 135, RULE_nonblocking_assignment = 136, 
-                   RULE_procedural_continuous_assignments = 137, RULE_function_blocking_assignment = 138, 
-                   RULE_function_statement_or_null = 139, RULE_function_seq_block = 140, 
-                   RULE_variable_assignment = 141, RULE_par_block = 142, 
-                   RULE_seq_block = 143, RULE_statement = 144, RULE_statement_or_null = 145, 
-                   RULE_function_statement = 146, RULE_delay_or_event_control = 147, 
-                   RULE_delay_control = 148, RULE_disable_statement = 149, 
-                   RULE_event_control = 150, RULE_event_trigger = 151, RULE_event_expression = 152, 
-                   RULE_event_primary = 153, RULE_procedural_timing_control_statement = 154, 
-                   RULE_wait_statement = 155, RULE_conditional_statement = 156, 
-                   RULE_if_else_if_statement = 157, RULE_function_conditional_statement = 158, 
-                   RULE_function_if_else_if_statement = 159, RULE_case_statement = 160, 
-                   RULE_case_item = 161, RULE_function_case_statement = 162, 
-                   RULE_function_case_item = 163, RULE_function_loop_statement = 164, 
-                   RULE_loop_statement = 165, RULE_system_task_enable = 166, 
-                   RULE_task_enable = 167, RULE_specify_block = 168, RULE_specify_item = 169, 
-                   RULE_pulsestyle_declaration = 170, RULE_showcancelled_declaration = 171, 
-                   RULE_path_declaration = 172, RULE_simple_path_declaration = 173, 
-                   RULE_parallel_path_description = 174, RULE_full_path_description = 175, 
-                   RULE_list_of_path_inputs = 176, RULE_list_of_path_outputs = 177, 
-                   RULE_specify_input_terminal_descriptor = 178, RULE_specify_output_terminal_descriptor = 179, 
-                   RULE_input_identifier = 180, RULE_output_identifier = 181, 
-                   RULE_path_delay_value = 182, RULE_list_of_path_delay_expressions = 183, 
-                   RULE_t_path_delay_expression = 184, RULE_trise_path_delay_expression = 185, 
-                   RULE_tfall_path_delay_expression = 186, RULE_tz_path_delay_expression = 187, 
-                   RULE_t01_path_delay_expression = 188, RULE_t10_path_delay_expression = 189, 
-                   RULE_t0z_path_delay_expression = 190, RULE_tz1_path_delay_expression = 191, 
-                   RULE_t1z_path_delay_expression = 192, RULE_tz0_path_delay_expression = 193, 
-                   RULE_t0x_path_delay_expression = 194, RULE_tx1_path_delay_expression = 195, 
-                   RULE_t1x_path_delay_expression = 196, RULE_tx0_path_delay_expression = 197, 
-                   RULE_txz_path_delay_expression = 198, RULE_tzx_path_delay_expression = 199, 
-                   RULE_path_delay_expression = 200, RULE_edge_sensitive_path_declaration = 201, 
-                   RULE_parallel_edge_sensitive_path_description = 202, 
-                   RULE_full_edge_sensitive_path_description = 203, RULE_data_source_expression = 204, 
-                   RULE_edge_identifier = 205, RULE_state_dependent_path_declaration = 206, 
-                   RULE_polarity_operator = 207, RULE_checktime_condition = 208, 
-                   RULE_delayed_data = 209, RULE_delayed_reference = 210, 
-                   RULE_end_edge_offset = 211, RULE_event_based_flag = 212, 
-                   RULE_notify_reg = 213, RULE_remain_active_flag = 214, 
-                   RULE_stamptime_condition = 215, RULE_start_edge_offset = 216, 
-                   RULE_threshold = 217, RULE_timing_check_limit = 218, 
-                   RULE_concatenation = 219, RULE_constant_concatenation = 220, 
-                   RULE_constant_multiple_concatenation = 221, RULE_module_path_concatenation = 222, 
-                   RULE_module_path_multiple_concatenation = 223, RULE_multiple_concatenation = 224, 
-                   RULE_net_concatenation = 225, RULE_net_concatenation_value = 226, 
-                   RULE_variable_concatenation = 227, RULE_variable_concatenation_value = 228, 
-                   RULE_constant_function_call = 229, RULE_function_call = 230, 
-                   RULE_system_function_call = 231, RULE_genvar_function_call = 232, 
-                   RULE_base_expression = 233, RULE_constant_base_expression = 234, 
-                   RULE_constant_expression = 235, RULE_constant_mintypmax_expression = 236, 
-                   RULE_constant_range_expression = 237, RULE_dimension_constant_expression = 238, 
-                   RULE_expression = 239, RULE_term = 240, RULE_lsb_constant_expression = 241, 
-                   RULE_mintypmax_expression = 242, RULE_module_path_conditional_expression = 243, 
-                   RULE_module_path_expression = 244, RULE_module_path_mintypmax_expression = 245, 
-                   RULE_msb_constant_expression = 246, RULE_range_expression = 247, 
-                   RULE_width_constant_expression = 248, RULE_constant_primary = 249, 
-                   RULE_module_path_primary = 250, RULE_primary = 251, RULE_net_lvalue = 252, 
-                   RULE_variable_lvalue = 253, RULE_unary_operator = 254, 
-                   RULE_binary_operator = 255, RULE_unary_module_path_operator = 256, 
-                   RULE_binary_module_path_operator = 257, RULE_number = 258, 
-                   RULE_timing_spec = 259, RULE_attribute_instance = 260, 
-                   RULE_attr_spec = 261, RULE_attr_name = 262, RULE_arrayed_identifier = 263, 
-                   RULE_block_identifier = 264, RULE_cell_identifier = 265, 
-                   RULE_config_identifier = 266, RULE_escaped_arrayed_identifier = 267, 
-                   RULE_escaped_hierarchical_identifier = 268, RULE_event_identifier = 269, 
-                   RULE_function_identifier = 270, RULE_gate_instance_identifier = 271, 
-                   RULE_generate_block_identifier = 272, RULE_genvar_function_identifier = 273, 
-                   RULE_genvar_identifier = 274, RULE_hierarchical_block_identifier = 275, 
-                   RULE_hierarchical_event_identifier = 276, RULE_hierarchical_function_identifier = 277, 
-                   RULE_hierarchical_identifier = 278, RULE_hierarchical_net_identifier = 279, 
-                   RULE_hierarchical_variable_identifier = 280, RULE_hierarchical_task_identifier = 281, 
-                   RULE_identifier = 282, RULE_inout_port_identifier = 283, 
-                   RULE_input_port_identifier = 284, RULE_instance_identifier = 285, 
-                   RULE_library_identifier = 286, RULE_memory_identifier = 287, 
-                   RULE_module_identifier = 288, RULE_module_instance_identifier = 289, 
-                   RULE_net_identifier = 290, RULE_output_port_identifier = 291, 
-                   RULE_parameter_identifier = 292, RULE_port_identifier = 293, 
-                   RULE_real_identifier = 294, RULE_simple_arrayed_identifier = 295, 
-                   RULE_simple_hierarchical_identifier = 296, RULE_specparam_identifier = 297, 
-                   RULE_system_function_identifier = 298, RULE_system_task_identifier = 299, 
-                   RULE_task_identifier = 300, RULE_terminal_identifier = 301, 
-                   RULE_text_macro_identifier = 302, RULE_topmodule_identifier = 303, 
-                   RULE_udp_identifier = 304, RULE_udp_instance_identifier = 305, 
-                   RULE_variable_identifier = 306, RULE_simple_hierarchical_branch = 307, 
-                   RULE_escaped_hierarchical_branch = 308
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_config_declaration = 0, RULE_design_statement = 1, RULE_config_rule_statement = 2, 
+            RULE_default_clause = 3, RULE_inst_clause = 4, RULE_inst_name = 5, 
+            RULE_liblist_clause = 6, RULE_cell_clause = 7, RULE_use_clause = 8, 
+            RULE_source_text = 9, RULE_description = 10, RULE_module_declaration = 11, 
+            RULE_module_keyword = 12, RULE_module_parameter_port_list = 13, 
+            RULE_list_of_ports = 14, RULE_list_of_port_declarations = 15, 
+            RULE_port = 16, RULE_port_expression = 17, RULE_port_reference = 18, 
+            RULE_port_declaration = 19, RULE_module_item = 20, RULE_module_or_generate_item = 21, 
+            RULE_non_port_module_item = 22, RULE_module_or_generate_item_declaration = 23, 
+            RULE_parameter_override = 24, RULE_local_parameter_declaration = 25, 
+            RULE_parameter_declaration = 26, RULE_parameter_declaration_ = 27, 
+            RULE_specparam_declaration = 28, RULE_inout_declaration = 29, 
+            RULE_input_declaration = 30, RULE_output_declaration = 31, RULE_event_declaration = 32, 
+            RULE_genvar_declaration = 33, RULE_integer_declaration = 34, 
+            RULE_time_declaration = 35, RULE_real_declaration = 36, RULE_realtime_declaration = 37, 
+            RULE_reg_declaration = 38, RULE_net_declaration = 39, RULE_net_type = 40, 
+            RULE_output_variable_type = 41, RULE_real_type = 42, RULE_variable_type = 43, 
+            RULE_drive_strength = 44, RULE_strength0 = 45, RULE_strength1 = 46, 
+            RULE_charge_strength = 47, RULE_delay3 = 48, RULE_delay2 = 49, 
+            RULE_delay_value = 50, RULE_list_of_event_identifiers = 51, 
+            RULE_list_of_net_identifiers = 52, RULE_list_of_genvar_identifiers = 53, 
+            RULE_list_of_port_identifiers = 54, RULE_list_of_net_decl_assignments = 55, 
+            RULE_list_of_param_assignments = 56, RULE_list_of_specparam_assignments = 57, 
+            RULE_list_of_real_identifiers = 58, RULE_list_of_variable_identifiers = 59, 
+            RULE_list_of_variable_port_identifiers = 60, RULE_net_decl_assignment = 61, 
+            RULE_param_assignment = 62, RULE_specparam_assignment = 63, 
+            RULE_pulse_control_specparam = 64, RULE_error_limit_value = 65, 
+            RULE_reject_limit_value = 66, RULE_limit_value = 67, RULE_dimension = 68, 
+            RULE_range = 69, RULE_function_declaration = 70, RULE_function_item_declaration = 71, 
+            RULE_function_port_list = 72, RULE_function_port = 73, RULE_range_or_type = 74, 
+            RULE_task_declaration = 75, RULE_task_item_declaration = 76, 
+            RULE_task_port_list = 77, RULE_task_port_item = 78, RULE_tf_decl_header = 79, 
+            RULE_tf_declaration = 80, RULE_task_port_type = 81, RULE_block_item_declaration = 82, 
+            RULE_block_reg_declaration = 83, RULE_list_of_block_variable_identifiers = 84, 
+            RULE_block_variable_type = 85, RULE_gate_instantiation = 86, 
+            RULE_cmos_switch_instance = 87, RULE_enable_gate_instance = 88, 
+            RULE_mos_switch_instance = 89, RULE_n_input_gate_instance = 90, 
+            RULE_n_output_gate_instance = 91, RULE_pass_switch_instance = 92, 
+            RULE_pass_enable_switch_instance = 93, RULE_pull_gate_instance = 94, 
+            RULE_name_of_gate_instance = 95, RULE_pulldown_strength = 96, 
+            RULE_pullup_strength = 97, RULE_enable_terminal = 98, RULE_ncontrol_terminal = 99, 
+            RULE_pcontrol_terminal = 100, RULE_input_terminal = 101, RULE_inout_terminal = 102, 
+            RULE_output_terminal = 103, RULE_cmos_switchtype = 104, RULE_enable_gatetype = 105, 
+            RULE_mos_switchtype = 106, RULE_n_input_gatetype = 107, RULE_n_output_gatetype = 108, 
+            RULE_pass_en_switchtype = 109, RULE_pass_switchtype = 110, RULE_module_instantiation = 111, 
+            RULE_parameter_value_assignment = 112, RULE_list_of_parameter_assignments = 113, 
+            RULE_ordered_parameter_assignment = 114, RULE_named_parameter_assignment = 115, 
+            RULE_module_instance = 116, RULE_name_of_instance = 117, RULE_list_of_port_connections = 118, 
+            RULE_ordered_port_connection = 119, RULE_named_port_connection = 120, 
+            RULE_generated_instantiation = 121, RULE_generate_item_or_null = 122, 
+            RULE_generate_item = 123, RULE_generate_conditional_statement = 124, 
+            RULE_generate_case_statement = 125, RULE_genvar_case_item = 126, 
+            RULE_generate_loop_statement = 127, RULE_genvar_assignment = 128, 
+            RULE_generate_block = 129, RULE_continuous_assign = 130, RULE_list_of_net_assignments = 131, 
+            RULE_net_assignment = 132, RULE_initial_construct = 133, RULE_always_construct = 134, 
+            RULE_blocking_assignment = 135, RULE_nonblocking_assignment = 136, 
+            RULE_procedural_continuous_assignments = 137, RULE_function_blocking_assignment = 138, 
+            RULE_function_statement_or_null = 139, RULE_function_seq_block = 140, 
+            RULE_variable_assignment = 141, RULE_par_block = 142, RULE_seq_block = 143, 
+            RULE_statement = 144, RULE_statement_or_null = 145, RULE_function_statement = 146, 
+            RULE_delay_or_event_control = 147, RULE_delay_control = 148, 
+            RULE_disable_statement = 149, RULE_event_control = 150, RULE_event_trigger = 151, 
+            RULE_event_expression = 152, RULE_event_primary = 153, RULE_procedural_timing_control_statement = 154, 
+            RULE_wait_statement = 155, RULE_conditional_statement = 156, 
+            RULE_if_else_if_statement = 157, RULE_function_conditional_statement = 158, 
+            RULE_function_if_else_if_statement = 159, RULE_case_statement = 160, 
+            RULE_case_item = 161, RULE_function_case_statement = 162, RULE_function_case_item = 163, 
+            RULE_function_loop_statement = 164, RULE_loop_statement = 165, 
+            RULE_system_task_enable = 166, RULE_task_enable = 167, RULE_specify_block = 168, 
+            RULE_specify_item = 169, RULE_pulsestyle_declaration = 170, 
+            RULE_showcancelled_declaration = 171, RULE_path_declaration = 172, 
+            RULE_simple_path_declaration = 173, RULE_parallel_path_description = 174, 
+            RULE_full_path_description = 175, RULE_list_of_path_inputs = 176, 
+            RULE_list_of_path_outputs = 177, RULE_specify_input_terminal_descriptor = 178, 
+            RULE_specify_output_terminal_descriptor = 179, RULE_input_identifier = 180, 
+            RULE_output_identifier = 181, RULE_path_delay_value = 182, RULE_list_of_path_delay_expressions = 183, 
+            RULE_t_path_delay_expression = 184, RULE_trise_path_delay_expression = 185, 
+            RULE_tfall_path_delay_expression = 186, RULE_tz_path_delay_expression = 187, 
+            RULE_t01_path_delay_expression = 188, RULE_t10_path_delay_expression = 189, 
+            RULE_t0z_path_delay_expression = 190, RULE_tz1_path_delay_expression = 191, 
+            RULE_t1z_path_delay_expression = 192, RULE_tz0_path_delay_expression = 193, 
+            RULE_t0x_path_delay_expression = 194, RULE_tx1_path_delay_expression = 195, 
+            RULE_t1x_path_delay_expression = 196, RULE_tx0_path_delay_expression = 197, 
+            RULE_txz_path_delay_expression = 198, RULE_tzx_path_delay_expression = 199, 
+            RULE_path_delay_expression = 200, RULE_edge_sensitive_path_declaration = 201, 
+            RULE_parallel_edge_sensitive_path_description = 202, RULE_full_edge_sensitive_path_description = 203, 
+            RULE_data_source_expression = 204, RULE_edge_identifier = 205, 
+            RULE_state_dependent_path_declaration = 206, RULE_polarity_operator = 207, 
+            RULE_checktime_condition = 208, RULE_delayed_data = 209, RULE_delayed_reference = 210, 
+            RULE_end_edge_offset = 211, RULE_event_based_flag = 212, RULE_notify_reg = 213, 
+            RULE_remain_active_flag = 214, RULE_stamptime_condition = 215, 
+            RULE_start_edge_offset = 216, RULE_threshold = 217, RULE_timing_check_limit = 218, 
+            RULE_concatenation = 219, RULE_constant_concatenation = 220, 
+            RULE_constant_multiple_concatenation = 221, RULE_module_path_concatenation = 222, 
+            RULE_module_path_multiple_concatenation = 223, RULE_multiple_concatenation = 224, 
+            RULE_net_concatenation = 225, RULE_net_concatenation_value = 226, 
+            RULE_variable_concatenation = 227, RULE_variable_concatenation_value = 228, 
+            RULE_constant_function_call = 229, RULE_function_call = 230, 
+            RULE_system_function_call = 231, RULE_genvar_function_call = 232, 
+            RULE_base_expression = 233, RULE_constant_base_expression = 234, 
+            RULE_constant_expression = 235, RULE_constant_mintypmax_expression = 236, 
+            RULE_constant_range_expression = 237, RULE_dimension_constant_expression = 238, 
+            RULE_expression = 239, RULE_term = 240, RULE_lsb_constant_expression = 241, 
+            RULE_mintypmax_expression = 242, RULE_module_path_conditional_expression = 243, 
+            RULE_module_path_expression = 244, RULE_module_path_mintypmax_expression = 245, 
+            RULE_msb_constant_expression = 246, RULE_range_expression = 247, 
+            RULE_width_constant_expression = 248, RULE_constant_primary = 249, 
+            RULE_module_path_primary = 250, RULE_primary = 251, RULE_net_lvalue = 252, 
+            RULE_variable_lvalue = 253, RULE_unary_operator = 254, RULE_binary_operator = 255, 
+            RULE_unary_module_path_operator = 256, RULE_binary_module_path_operator = 257, 
+            RULE_number = 258, RULE_timing_spec = 259, RULE_attribute_instance = 260, 
+            RULE_attr_spec = 261, RULE_attr_name = 262, RULE_arrayed_identifier = 263, 
+            RULE_block_identifier = 264, RULE_cell_identifier = 265, RULE_config_identifier = 266, 
+            RULE_escaped_arrayed_identifier = 267, RULE_escaped_hierarchical_identifier = 268, 
+            RULE_event_identifier = 269, RULE_function_identifier = 270, 
+            RULE_gate_instance_identifier = 271, RULE_generate_block_identifier = 272, 
+            RULE_genvar_function_identifier = 273, RULE_genvar_identifier = 274, 
+            RULE_hierarchical_block_identifier = 275, RULE_hierarchical_event_identifier = 276, 
+            RULE_hierarchical_function_identifier = 277, RULE_hierarchical_identifier = 278, 
+            RULE_hierarchical_net_identifier = 279, RULE_hierarchical_variable_identifier = 280, 
+            RULE_hierarchical_task_identifier = 281, RULE_identifier = 282, 
+            RULE_inout_port_identifier = 283, RULE_input_port_identifier = 284, 
+            RULE_instance_identifier = 285, RULE_library_identifier = 286, 
+            RULE_memory_identifier = 287, RULE_module_identifier = 288, 
+            RULE_module_instance_identifier = 289, RULE_net_identifier = 290, 
+            RULE_output_port_identifier = 291, RULE_parameter_identifier = 292, 
+            RULE_port_identifier = 293, RULE_real_identifier = 294, RULE_simple_arrayed_identifier = 295, 
+            RULE_simple_hierarchical_identifier = 296, RULE_specparam_identifier = 297, 
+            RULE_system_function_identifier = 298, RULE_system_task_identifier = 299, 
+            RULE_task_identifier = 300, RULE_terminal_identifier = 301, 
+            RULE_text_macro_identifier = 302, RULE_topmodule_identifier = 303, 
+            RULE_udp_identifier = 304, RULE_udp_instance_identifier = 305, 
+            RULE_variable_identifier = 306, RULE_simple_hierarchical_branch = 307, 
+            RULE_escaped_hierarchical_branch = 308
+
+	public
+	static let ruleNames: [String] = [
 		"config_declaration", "design_statement", "config_rule_statement", "default_clause", 
 		"inst_clause", "inst_name", "liblist_clause", "cell_clause", "use_clause", 
 		"source_text", "description", "module_declaration", "module_keyword", 
@@ -335,94 +329,81 @@ open class Verilog2001Parser: Parser {
 		"One_line_comment", "Block_comment", "Escaped_identifier", "Simple_identifier", 
 		"Dollar_Identifier", "Time_Identifier", "White_space"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Verilog2001.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return Verilog2001Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Verilog2001.g4" }
+	override open
+	func getSerializedATN() -> String { return Verilog2001Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return Verilog2001Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return Verilog2001Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return Verilog2001Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return Verilog2001Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return Verilog2001Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,Verilog2001Parser._ATN,Verilog2001Parser._decisionToDFA, Verilog2001Parser._sharedContextCache)
 	}
-	open class Config_declarationContext:ParserRuleContext {
-		open func config_identifier() -> Config_identifierContext? {
-			return getRuleContext(Config_identifierContext.self,0)
+
+	public class Config_declarationContext: ParserRuleContext {
+			open
+			func config_identifier() -> Config_identifierContext? {
+				return getRuleContext(Config_identifierContext.self, 0)
+			}
+			open
+			func design_statement() -> Design_statementContext? {
+				return getRuleContext(Design_statementContext.self, 0)
+			}
+			open
+			func config_rule_statement() -> [Config_rule_statementContext] {
+				return getRuleContexts(Config_rule_statementContext.self)
+			}
+			open
+			func config_rule_statement(_ i: Int) -> Config_rule_statementContext? {
+				return getRuleContext(Config_rule_statementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_config_declaration
 		}
-		open func design_statement() -> Design_statementContext? {
-			return getRuleContext(Design_statementContext.self,0)
-		}
-		open func config_rule_statement() -> Array<Config_rule_statementContext> {
-			return getRuleContexts(Config_rule_statementContext.self)
-		}
-		open func config_rule_statement(_ i: Int) -> Config_rule_statementContext? {
-			return getRuleContext(Config_rule_statementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_config_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConfig_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConfig_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConfig_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConfig_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConfig_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConfig_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConfig_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConfig_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func config_declaration() throws -> Config_declarationContext {
+	 open func config_declaration() throws -> Config_declarationContext {
 		var _localctx: Config_declarationContext = Config_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 0, Verilog2001Parser.RULE_config_declaration)
 		var _la: Int = 0
@@ -470,46 +451,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Design_statementContext:ParserRuleContext {
-		open func cell_identifier() -> Array<Cell_identifierContext> {
-			return getRuleContexts(Cell_identifierContext.self)
+
+	public class Design_statementContext: ParserRuleContext {
+			open
+			func cell_identifier() -> [Cell_identifierContext] {
+				return getRuleContexts(Cell_identifierContext.self)
+			}
+			open
+			func cell_identifier(_ i: Int) -> Cell_identifierContext? {
+				return getRuleContext(Cell_identifierContext.self, i)
+			}
+			open
+			func library_identifier() -> [Library_identifierContext] {
+				return getRuleContexts(Library_identifierContext.self)
+			}
+			open
+			func library_identifier(_ i: Int) -> Library_identifierContext? {
+				return getRuleContext(Library_identifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_design_statement
 		}
-		open func cell_identifier(_ i: Int) -> Cell_identifierContext? {
-			return getRuleContext(Cell_identifierContext.self,i)
-		}
-		open func library_identifier() -> Array<Library_identifierContext> {
-			return getRuleContexts(Library_identifierContext.self)
-		}
-		open func library_identifier(_ i: Int) -> Library_identifierContext? {
-			return getRuleContext(Library_identifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_design_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDesign_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDesign_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDesign_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDesign_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDesign_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDesign_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDesign_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDesign_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func design_statement() throws -> Design_statementContext {
+	 open func design_statement() throws -> Design_statementContext {
 		var _localctx: Design_statementContext = Design_statementContext(_ctx, getState())
 		try enterRule(_localctx, 2, Verilog2001Parser.RULE_design_statement)
 		var _la: Int = 0
@@ -560,49 +550,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Config_rule_statementContext:ParserRuleContext {
-		open func default_clause() -> Default_clauseContext? {
-			return getRuleContext(Default_clauseContext.self,0)
+
+	public class Config_rule_statementContext: ParserRuleContext {
+			open
+			func default_clause() -> Default_clauseContext? {
+				return getRuleContext(Default_clauseContext.self, 0)
+			}
+			open
+			func liblist_clause() -> Liblist_clauseContext? {
+				return getRuleContext(Liblist_clauseContext.self, 0)
+			}
+			open
+			func inst_clause() -> Inst_clauseContext? {
+				return getRuleContext(Inst_clauseContext.self, 0)
+			}
+			open
+			func use_clause() -> Use_clauseContext? {
+				return getRuleContext(Use_clauseContext.self, 0)
+			}
+			open
+			func cell_clause() -> Cell_clauseContext? {
+				return getRuleContext(Cell_clauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_config_rule_statement
 		}
-		open func liblist_clause() -> Liblist_clauseContext? {
-			return getRuleContext(Liblist_clauseContext.self,0)
-		}
-		open func inst_clause() -> Inst_clauseContext? {
-			return getRuleContext(Inst_clauseContext.self,0)
-		}
-		open func use_clause() -> Use_clauseContext? {
-			return getRuleContext(Use_clauseContext.self,0)
-		}
-		open func cell_clause() -> Cell_clauseContext? {
-			return getRuleContext(Cell_clauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_config_rule_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConfig_rule_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConfig_rule_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConfig_rule_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConfig_rule_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConfig_rule_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConfig_rule_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConfig_rule_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConfig_rule_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func config_rule_statement() throws -> Config_rule_statementContext {
+	 open func config_rule_statement() throws -> Config_rule_statementContext {
 		var _localctx: Config_rule_statementContext = Config_rule_statementContext(_ctx, getState())
 		try enterRule(_localctx, 4, Verilog2001Parser.RULE_config_rule_statement)
 		defer {
@@ -663,34 +663,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Default_clauseContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_default_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDefault_clause(self)
+
+	public class Default_clauseContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_default_clause
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDefault_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDefault_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDefault_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDefault_clause(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDefault_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDefault_clause(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDefault_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func default_clause() throws -> Default_clauseContext {
+	 open func default_clause() throws -> Default_clauseContext {
 		var _localctx: Default_clauseContext = Default_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 6, Verilog2001Parser.RULE_default_clause)
 		defer {
@@ -710,37 +715,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Inst_clauseContext:ParserRuleContext {
-		open func inst_name() -> Inst_nameContext? {
-			return getRuleContext(Inst_nameContext.self,0)
+
+	public class Inst_clauseContext: ParserRuleContext {
+			open
+			func inst_name() -> Inst_nameContext? {
+				return getRuleContext(Inst_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_inst_clause
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_inst_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInst_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInst_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInst_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInst_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInst_clause(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInst_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInst_clause(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInst_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inst_clause() throws -> Inst_clauseContext {
+	 open func inst_clause() throws -> Inst_clauseContext {
 		var _localctx: Inst_clauseContext = Inst_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 8, Verilog2001Parser.RULE_inst_clause)
 		defer {
@@ -762,43 +773,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Inst_nameContext:ParserRuleContext {
-		open func topmodule_identifier() -> Topmodule_identifierContext? {
-			return getRuleContext(Topmodule_identifierContext.self,0)
+
+	public class Inst_nameContext: ParserRuleContext {
+			open
+			func topmodule_identifier() -> Topmodule_identifierContext? {
+				return getRuleContext(Topmodule_identifierContext.self, 0)
+			}
+			open
+			func instance_identifier() -> [Instance_identifierContext] {
+				return getRuleContexts(Instance_identifierContext.self)
+			}
+			open
+			func instance_identifier(_ i: Int) -> Instance_identifierContext? {
+				return getRuleContext(Instance_identifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_inst_name
 		}
-		open func instance_identifier() -> Array<Instance_identifierContext> {
-			return getRuleContexts(Instance_identifierContext.self)
-		}
-		open func instance_identifier(_ i: Int) -> Instance_identifierContext? {
-			return getRuleContext(Instance_identifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_inst_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInst_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInst_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInst_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInst_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInst_name(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInst_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInst_name(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInst_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inst_name() throws -> Inst_nameContext {
+	 open func inst_name() throws -> Inst_nameContext {
 		var _localctx: Inst_nameContext = Inst_nameContext(_ctx, getState())
 		try enterRule(_localctx, 10, Verilog2001Parser.RULE_inst_name)
 		var _la: Int = 0
@@ -837,40 +856,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Liblist_clauseContext:ParserRuleContext {
-		open func library_identifier() -> Array<Library_identifierContext> {
-			return getRuleContexts(Library_identifierContext.self)
+
+	public class Liblist_clauseContext: ParserRuleContext {
+			open
+			func library_identifier() -> [Library_identifierContext] {
+				return getRuleContexts(Library_identifierContext.self)
+			}
+			open
+			func library_identifier(_ i: Int) -> Library_identifierContext? {
+				return getRuleContext(Library_identifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_liblist_clause
 		}
-		open func library_identifier(_ i: Int) -> Library_identifierContext? {
-			return getRuleContext(Library_identifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_liblist_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterLiblist_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterLiblist_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitLiblist_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitLiblist_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitLiblist_clause(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitLiblist_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitLiblist_clause(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitLiblist_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func liblist_clause() throws -> Liblist_clauseContext {
+	 open func liblist_clause() throws -> Liblist_clauseContext {
 		var _localctx: Liblist_clauseContext = Liblist_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 12, Verilog2001Parser.RULE_liblist_clause)
 		var _la: Int = 0
@@ -907,40 +933,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Cell_clauseContext:ParserRuleContext {
-		open func cell_identifier() -> Cell_identifierContext? {
-			return getRuleContext(Cell_identifierContext.self,0)
+
+	public class Cell_clauseContext: ParserRuleContext {
+			open
+			func cell_identifier() -> Cell_identifierContext? {
+				return getRuleContext(Cell_identifierContext.self, 0)
+			}
+			open
+			func library_identifier() -> Library_identifierContext? {
+				return getRuleContext(Library_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_cell_clause
 		}
-		open func library_identifier() -> Library_identifierContext? {
-			return getRuleContext(Library_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_cell_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterCell_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterCell_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitCell_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitCell_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitCell_clause(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitCell_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitCell_clause(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitCell_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cell_clause() throws -> Cell_clauseContext {
+	 open func cell_clause() throws -> Cell_clauseContext {
 		var _localctx: Cell_clauseContext = Cell_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 14, Verilog2001Parser.RULE_cell_clause)
 		defer {
@@ -974,40 +1007,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Use_clauseContext:ParserRuleContext {
-		open func cell_identifier() -> Cell_identifierContext? {
-			return getRuleContext(Cell_identifierContext.self,0)
+
+	public class Use_clauseContext: ParserRuleContext {
+			open
+			func cell_identifier() -> Cell_identifierContext? {
+				return getRuleContext(Cell_identifierContext.self, 0)
+			}
+			open
+			func library_identifier() -> Library_identifierContext? {
+				return getRuleContext(Library_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_use_clause
 		}
-		open func library_identifier() -> Library_identifierContext? {
-			return getRuleContext(Library_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_use_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterUse_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterUse_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitUse_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitUse_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitUse_clause(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitUse_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitUse_clause(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitUse_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func use_clause() throws -> Use_clauseContext {
+	 open func use_clause() throws -> Use_clauseContext {
 		var _localctx: Use_clauseContext = Use_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 16, Verilog2001Parser.RULE_use_clause)
 		var _la: Int = 0
@@ -1055,44 +1095,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Source_textContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.EOF.rawValue, 0) }
-		open func timing_spec() -> Timing_specContext? {
-			return getRuleContext(Timing_specContext.self,0)
+
+	public class Source_textContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func timing_spec() -> Timing_specContext? {
+				return getRuleContext(Timing_specContext.self, 0)
+			}
+			open
+			func description() -> [DescriptionContext] {
+				return getRuleContexts(DescriptionContext.self)
+			}
+			open
+			func description(_ i: Int) -> DescriptionContext? {
+				return getRuleContext(DescriptionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_source_text
 		}
-		open func description() -> Array<DescriptionContext> {
-			return getRuleContexts(DescriptionContext.self)
-		}
-		open func description(_ i: Int) -> DescriptionContext? {
-			return getRuleContext(DescriptionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_source_text }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSource_text(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSource_text(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSource_text(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSource_text(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSource_text(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSource_text(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSource_text(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSource_text(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func source_text() throws -> Source_textContext {
+	 open func source_text() throws -> Source_textContext {
 		var _localctx: Source_textContext = Source_textContext(_ctx, getState())
 		try enterRule(_localctx, 18, Verilog2001Parser.RULE_source_text)
 		var _la: Int = 0
@@ -1145,37 +1196,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class DescriptionContext:ParserRuleContext {
-		open func module_declaration() -> Module_declarationContext? {
-			return getRuleContext(Module_declarationContext.self,0)
+
+	public class DescriptionContext: ParserRuleContext {
+			open
+			func module_declaration() -> Module_declarationContext? {
+				return getRuleContext(Module_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_description
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_description }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDescription(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDescription(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDescription(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDescription(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDescription(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDescription(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDescription(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDescription(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func description() throws -> DescriptionContext {
+	 open func description() throws -> DescriptionContext {
 		var _localctx: DescriptionContext = DescriptionContext(_ctx, getState())
 		try enterRule(_localctx, 20, Verilog2001Parser.RULE_description)
 		defer {
@@ -1195,67 +1252,83 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_declarationContext:ParserRuleContext {
-		open func module_keyword() -> Module_keywordContext? {
-			return getRuleContext(Module_keywordContext.self,0)
+
+	public class Module_declarationContext: ParserRuleContext {
+			open
+			func module_keyword() -> Module_keywordContext? {
+				return getRuleContext(Module_keywordContext.self, 0)
+			}
+			open
+			func module_identifier() -> Module_identifierContext? {
+				return getRuleContext(Module_identifierContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func module_parameter_port_list() -> Module_parameter_port_listContext? {
+				return getRuleContext(Module_parameter_port_listContext.self, 0)
+			}
+			open
+			func list_of_ports() -> List_of_portsContext? {
+				return getRuleContext(List_of_portsContext.self, 0)
+			}
+			open
+			func module_item() -> [Module_itemContext] {
+				return getRuleContexts(Module_itemContext.self)
+			}
+			open
+			func module_item(_ i: Int) -> Module_itemContext? {
+				return getRuleContext(Module_itemContext.self, i)
+			}
+			open
+			func list_of_port_declarations() -> List_of_port_declarationsContext? {
+				return getRuleContext(List_of_port_declarationsContext.self, 0)
+			}
+			open
+			func non_port_module_item() -> [Non_port_module_itemContext] {
+				return getRuleContexts(Non_port_module_itemContext.self)
+			}
+			open
+			func non_port_module_item(_ i: Int) -> Non_port_module_itemContext? {
+				return getRuleContext(Non_port_module_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_declaration
 		}
-		open func module_identifier() -> Module_identifierContext? {
-			return getRuleContext(Module_identifierContext.self,0)
-		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func module_parameter_port_list() -> Module_parameter_port_listContext? {
-			return getRuleContext(Module_parameter_port_listContext.self,0)
-		}
-		open func list_of_ports() -> List_of_portsContext? {
-			return getRuleContext(List_of_portsContext.self,0)
-		}
-		open func module_item() -> Array<Module_itemContext> {
-			return getRuleContexts(Module_itemContext.self)
-		}
-		open func module_item(_ i: Int) -> Module_itemContext? {
-			return getRuleContext(Module_itemContext.self,i)
-		}
-		open func list_of_port_declarations() -> List_of_port_declarationsContext? {
-			return getRuleContext(List_of_port_declarationsContext.self,0)
-		}
-		open func non_port_module_item() -> Array<Non_port_module_itemContext> {
-			return getRuleContexts(Non_port_module_itemContext.self)
-		}
-		open func non_port_module_item(_ i: Int) -> Non_port_module_itemContext? {
-			return getRuleContext(Non_port_module_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_declaration() throws -> Module_declarationContext {
+	 open func module_declaration() throws -> Module_declarationContext {
 		var _localctx: Module_declarationContext = Module_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 22, Verilog2001Parser.RULE_module_declaration)
 		var _la: Int = 0
@@ -1433,34 +1506,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_keywordContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_keyword }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_keyword(self)
+
+	public class Module_keywordContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_keyword
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_keyword(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_keyword(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_keyword(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_keyword(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_keyword(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_keyword(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_keyword(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_keyword() throws -> Module_keywordContext {
+	 open func module_keyword() throws -> Module_keywordContext {
 		var _localctx: Module_keywordContext = Module_keywordContext(_ctx, getState())
 		try enterRule(_localctx, 24, Verilog2001Parser.RULE_module_keyword)
 		var _la: Int = 0
@@ -1492,40 +1570,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_parameter_port_listContext:ParserRuleContext {
-		open func parameter_declaration_() -> Array<Parameter_declaration_Context> {
-			return getRuleContexts(Parameter_declaration_Context.self)
+
+	public class Module_parameter_port_listContext: ParserRuleContext {
+			open
+			func parameter_declaration_() -> [Parameter_declaration_Context] {
+				return getRuleContexts(Parameter_declaration_Context.self)
+			}
+			open
+			func parameter_declaration_(_ i: Int) -> Parameter_declaration_Context? {
+				return getRuleContext(Parameter_declaration_Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_parameter_port_list
 		}
-		open func parameter_declaration_(_ i: Int) -> Parameter_declaration_Context? {
-			return getRuleContext(Parameter_declaration_Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_parameter_port_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_parameter_port_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_parameter_port_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_parameter_port_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_parameter_port_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_parameter_port_list(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_parameter_port_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_parameter_port_list(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_parameter_port_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_parameter_port_list() throws -> Module_parameter_port_listContext {
+	 open func module_parameter_port_list() throws -> Module_parameter_port_listContext {
 		var _localctx: Module_parameter_port_listContext = Module_parameter_port_listContext(_ctx, getState())
 		try enterRule(_localctx, 26, Verilog2001Parser.RULE_module_parameter_port_list)
 		var _la: Int = 0
@@ -1570,40 +1655,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_portsContext:ParserRuleContext {
-		open func port() -> Array<PortContext> {
-			return getRuleContexts(PortContext.self)
+
+	public class List_of_portsContext: ParserRuleContext {
+			open
+			func port() -> [PortContext] {
+				return getRuleContexts(PortContext.self)
+			}
+			open
+			func port(_ i: Int) -> PortContext? {
+				return getRuleContext(PortContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_ports
 		}
-		open func port(_ i: Int) -> PortContext? {
-			return getRuleContext(PortContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_ports }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_ports(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_ports(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_ports(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_ports(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_ports(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_ports(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_ports(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_ports(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_ports() throws -> List_of_portsContext {
+	 open func list_of_ports() throws -> List_of_portsContext {
 		var _localctx: List_of_portsContext = List_of_portsContext(_ctx, getState())
 		try enterRule(_localctx, 28, Verilog2001Parser.RULE_list_of_ports)
 		var _la: Int = 0
@@ -1646,40 +1738,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_port_declarationsContext:ParserRuleContext {
-		open func port_declaration() -> Array<Port_declarationContext> {
-			return getRuleContexts(Port_declarationContext.self)
+
+	public class List_of_port_declarationsContext: ParserRuleContext {
+			open
+			func port_declaration() -> [Port_declarationContext] {
+				return getRuleContexts(Port_declarationContext.self)
+			}
+			open
+			func port_declaration(_ i: Int) -> Port_declarationContext? {
+				return getRuleContext(Port_declarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_port_declarations
 		}
-		open func port_declaration(_ i: Int) -> Port_declarationContext? {
-			return getRuleContext(Port_declarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_port_declarations }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_port_declarations(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_port_declarations(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_port_declarations(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_port_declarations(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_port_declarations(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_port_declarations(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_port_declarations(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_port_declarations(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_port_declarations() throws -> List_of_port_declarationsContext {
+	 open func list_of_port_declarations() throws -> List_of_port_declarationsContext {
 		var _localctx: List_of_port_declarationsContext = List_of_port_declarationsContext(_ctx, getState())
 		try enterRule(_localctx, 30, Verilog2001Parser.RULE_list_of_port_declarations)
 		var _la: Int = 0
@@ -1737,40 +1836,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class PortContext:ParserRuleContext {
-		open func port_expression() -> Port_expressionContext? {
-			return getRuleContext(Port_expressionContext.self,0)
+
+	public class PortContext: ParserRuleContext {
+			open
+			func port_expression() -> Port_expressionContext? {
+				return getRuleContext(Port_expressionContext.self, 0)
+			}
+			open
+			func port_identifier() -> Port_identifierContext? {
+				return getRuleContext(Port_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_port
 		}
-		open func port_identifier() -> Port_identifierContext? {
-			return getRuleContext(Port_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_port }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPort(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPort(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPort(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPort(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPort(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPort(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPort(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPort(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func port() throws -> PortContext {
+	 open func port() throws -> PortContext {
 		var _localctx: PortContext = PortContext(_ctx, getState())
 		try enterRule(_localctx, 32, Verilog2001Parser.RULE_port)
 		var _la: Int = 0
@@ -1831,7 +1937,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1842,40 +1948,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Port_expressionContext:ParserRuleContext {
-		open func port_reference() -> Array<Port_referenceContext> {
-			return getRuleContexts(Port_referenceContext.self)
+
+	public class Port_expressionContext: ParserRuleContext {
+			open
+			func port_reference() -> [Port_referenceContext] {
+				return getRuleContexts(Port_referenceContext.self)
+			}
+			open
+			func port_reference(_ i: Int) -> Port_referenceContext? {
+				return getRuleContext(Port_referenceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_port_expression
 		}
-		open func port_reference(_ i: Int) -> Port_referenceContext? {
-			return getRuleContext(Port_referenceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_port_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPort_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPort_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPort_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPort_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPort_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPort_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPort_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPort_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func port_expression() throws -> Port_expressionContext {
+	 open func port_expression() throws -> Port_expressionContext {
 		var _localctx: Port_expressionContext = Port_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 34, Verilog2001Parser.RULE_port_expression)
 		var _la: Int = 0
@@ -1923,7 +2036,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1934,43 +2047,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Port_referenceContext:ParserRuleContext {
-		open func port_identifier() -> Port_identifierContext? {
-			return getRuleContext(Port_identifierContext.self,0)
+
+	public class Port_referenceContext: ParserRuleContext {
+			open
+			func port_identifier() -> Port_identifierContext? {
+				return getRuleContext(Port_identifierContext.self, 0)
+			}
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func range_expression() -> Range_expressionContext? {
+				return getRuleContext(Range_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_port_reference
 		}
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
-		}
-		open func range_expression() -> Range_expressionContext? {
-			return getRuleContext(Range_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_port_reference }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPort_reference(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPort_reference(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPort_reference(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPort_reference(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPort_reference(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPort_reference(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPort_reference(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPort_reference(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func port_reference() throws -> Port_referenceContext {
+	 open func port_reference() throws -> Port_referenceContext {
 		var _localctx: Port_referenceContext = Port_referenceContext(_ctx, getState())
 		try enterRule(_localctx, 36, Verilog2001Parser.RULE_port_reference)
 		defer {
@@ -2021,49 +2142,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Port_declarationContext:ParserRuleContext {
-		open func inout_declaration() -> Inout_declarationContext? {
-			return getRuleContext(Inout_declarationContext.self,0)
+
+	public class Port_declarationContext: ParserRuleContext {
+			open
+			func inout_declaration() -> Inout_declarationContext? {
+				return getRuleContext(Inout_declarationContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func input_declaration() -> Input_declarationContext? {
+				return getRuleContext(Input_declarationContext.self, 0)
+			}
+			open
+			func output_declaration() -> Output_declarationContext? {
+				return getRuleContext(Output_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_port_declaration
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func input_declaration() -> Input_declarationContext? {
-			return getRuleContext(Input_declarationContext.self,0)
-		}
-		open func output_declaration() -> Output_declarationContext? {
-			return getRuleContext(Output_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_port_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPort_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPort_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPort_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPort_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPort_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPort_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPort_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPort_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func port_declaration() throws -> Port_declarationContext {
+	 open func port_declaration() throws -> Port_declarationContext {
 		var _localctx: Port_declarationContext = Port_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 38, Verilog2001Parser.RULE_port_declaration)
 		var _la: Int = 0
@@ -2151,61 +2282,75 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_itemContext:ParserRuleContext {
-		open func module_or_generate_item() -> Module_or_generate_itemContext? {
-			return getRuleContext(Module_or_generate_itemContext.self,0)
+
+	public class Module_itemContext: ParserRuleContext {
+			open
+			func module_or_generate_item() -> Module_or_generate_itemContext? {
+				return getRuleContext(Module_or_generate_itemContext.self, 0)
+			}
+			open
+			func port_declaration() -> Port_declarationContext? {
+				return getRuleContext(Port_declarationContext.self, 0)
+			}
+			open
+			func generated_instantiation() -> Generated_instantiationContext? {
+				return getRuleContext(Generated_instantiationContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func local_parameter_declaration() -> Local_parameter_declarationContext? {
+				return getRuleContext(Local_parameter_declarationContext.self, 0)
+			}
+			open
+			func parameter_declaration() -> Parameter_declarationContext? {
+				return getRuleContext(Parameter_declarationContext.self, 0)
+			}
+			open
+			func specify_block() -> Specify_blockContext? {
+				return getRuleContext(Specify_blockContext.self, 0)
+			}
+			open
+			func specparam_declaration() -> Specparam_declarationContext? {
+				return getRuleContext(Specparam_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_item
 		}
-		open func port_declaration() -> Port_declarationContext? {
-			return getRuleContext(Port_declarationContext.self,0)
-		}
-		open func generated_instantiation() -> Generated_instantiationContext? {
-			return getRuleContext(Generated_instantiationContext.self,0)
-		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func local_parameter_declaration() -> Local_parameter_declarationContext? {
-			return getRuleContext(Local_parameter_declarationContext.self,0)
-		}
-		open func parameter_declaration() -> Parameter_declarationContext? {
-			return getRuleContext(Parameter_declarationContext.self,0)
-		}
-		open func specify_block() -> Specify_blockContext? {
-			return getRuleContext(Specify_blockContext.self,0)
-		}
-		open func specparam_declaration() -> Specparam_declarationContext? {
-			return getRuleContext(Specparam_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_item(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_item(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_item() throws -> Module_itemContext {
+	 open func module_item() throws -> Module_itemContext {
 		var _localctx: Module_itemContext = Module_itemContext(_ctx, getState())
 		try enterRule(_localctx, 40, Verilog2001Parser.RULE_module_item)
 		var _la: Int = 0
@@ -2351,61 +2496,75 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_or_generate_itemContext:ParserRuleContext {
-		open func module_or_generate_item_declaration() -> Module_or_generate_item_declarationContext? {
-			return getRuleContext(Module_or_generate_item_declarationContext.self,0)
+
+	public class Module_or_generate_itemContext: ParserRuleContext {
+			open
+			func module_or_generate_item_declaration() -> Module_or_generate_item_declarationContext? {
+				return getRuleContext(Module_or_generate_item_declarationContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func parameter_override() -> Parameter_overrideContext? {
+				return getRuleContext(Parameter_overrideContext.self, 0)
+			}
+			open
+			func continuous_assign() -> Continuous_assignContext? {
+				return getRuleContext(Continuous_assignContext.self, 0)
+			}
+			open
+			func gate_instantiation() -> Gate_instantiationContext? {
+				return getRuleContext(Gate_instantiationContext.self, 0)
+			}
+			open
+			func module_instantiation() -> Module_instantiationContext? {
+				return getRuleContext(Module_instantiationContext.self, 0)
+			}
+			open
+			func initial_construct() -> Initial_constructContext? {
+				return getRuleContext(Initial_constructContext.self, 0)
+			}
+			open
+			func always_construct() -> Always_constructContext? {
+				return getRuleContext(Always_constructContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_or_generate_item
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func parameter_override() -> Parameter_overrideContext? {
-			return getRuleContext(Parameter_overrideContext.self,0)
-		}
-		open func continuous_assign() -> Continuous_assignContext? {
-			return getRuleContext(Continuous_assignContext.self,0)
-		}
-		open func gate_instantiation() -> Gate_instantiationContext? {
-			return getRuleContext(Gate_instantiationContext.self,0)
-		}
-		open func module_instantiation() -> Module_instantiationContext? {
-			return getRuleContext(Module_instantiationContext.self,0)
-		}
-		open func initial_construct() -> Initial_constructContext? {
-			return getRuleContext(Initial_constructContext.self,0)
-		}
-		open func always_construct() -> Always_constructContext? {
-			return getRuleContext(Always_constructContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_or_generate_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_or_generate_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_or_generate_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_or_generate_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_or_generate_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_or_generate_item(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_or_generate_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_or_generate_item(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_or_generate_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_or_generate_item() throws -> Module_or_generate_itemContext {
+	 open func module_or_generate_item() throws -> Module_or_generate_itemContext {
 		var _localctx: Module_or_generate_itemContext = Module_or_generate_itemContext(_ctx, getState())
 		try enterRule(_localctx, 42, Verilog2001Parser.RULE_module_or_generate_item)
 		var _la: Int = 0
@@ -2581,58 +2740,71 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Non_port_module_itemContext:ParserRuleContext {
-		open func generated_instantiation() -> Generated_instantiationContext? {
-			return getRuleContext(Generated_instantiationContext.self,0)
+
+	public class Non_port_module_itemContext: ParserRuleContext {
+			open
+			func generated_instantiation() -> Generated_instantiationContext? {
+				return getRuleContext(Generated_instantiationContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func local_parameter_declaration() -> Local_parameter_declarationContext? {
+				return getRuleContext(Local_parameter_declarationContext.self, 0)
+			}
+			open
+			func module_or_generate_item() -> Module_or_generate_itemContext? {
+				return getRuleContext(Module_or_generate_itemContext.self, 0)
+			}
+			open
+			func parameter_declaration() -> Parameter_declarationContext? {
+				return getRuleContext(Parameter_declarationContext.self, 0)
+			}
+			open
+			func specify_block() -> Specify_blockContext? {
+				return getRuleContext(Specify_blockContext.self, 0)
+			}
+			open
+			func specparam_declaration() -> Specparam_declarationContext? {
+				return getRuleContext(Specparam_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_non_port_module_item
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func local_parameter_declaration() -> Local_parameter_declarationContext? {
-			return getRuleContext(Local_parameter_declarationContext.self,0)
-		}
-		open func module_or_generate_item() -> Module_or_generate_itemContext? {
-			return getRuleContext(Module_or_generate_itemContext.self,0)
-		}
-		open func parameter_declaration() -> Parameter_declarationContext? {
-			return getRuleContext(Parameter_declarationContext.self,0)
-		}
-		open func specify_block() -> Specify_blockContext? {
-			return getRuleContext(Specify_blockContext.self,0)
-		}
-		open func specparam_declaration() -> Specparam_declarationContext? {
-			return getRuleContext(Specparam_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_non_port_module_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNon_port_module_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNon_port_module_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNon_port_module_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNon_port_module_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNon_port_module_item(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNon_port_module_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNon_port_module_item(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNon_port_module_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func non_port_module_item() throws -> Non_port_module_itemContext {
+	 open func non_port_module_item() throws -> Non_port_module_itemContext {
 		var _localctx: Non_port_module_itemContext = Non_port_module_itemContext(_ctx, getState())
 		try enterRule(_localctx, 44, Verilog2001Parser.RULE_non_port_module_item)
 		var _la: Int = 0
@@ -2785,64 +2957,79 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_or_generate_item_declarationContext:ParserRuleContext {
-		open func net_declaration() -> Net_declarationContext? {
-			return getRuleContext(Net_declarationContext.self,0)
+
+	public class Module_or_generate_item_declarationContext: ParserRuleContext {
+			open
+			func net_declaration() -> Net_declarationContext? {
+				return getRuleContext(Net_declarationContext.self, 0)
+			}
+			open
+			func reg_declaration() -> Reg_declarationContext? {
+				return getRuleContext(Reg_declarationContext.self, 0)
+			}
+			open
+			func integer_declaration() -> Integer_declarationContext? {
+				return getRuleContext(Integer_declarationContext.self, 0)
+			}
+			open
+			func real_declaration() -> Real_declarationContext? {
+				return getRuleContext(Real_declarationContext.self, 0)
+			}
+			open
+			func time_declaration() -> Time_declarationContext? {
+				return getRuleContext(Time_declarationContext.self, 0)
+			}
+			open
+			func realtime_declaration() -> Realtime_declarationContext? {
+				return getRuleContext(Realtime_declarationContext.self, 0)
+			}
+			open
+			func event_declaration() -> Event_declarationContext? {
+				return getRuleContext(Event_declarationContext.self, 0)
+			}
+			open
+			func genvar_declaration() -> Genvar_declarationContext? {
+				return getRuleContext(Genvar_declarationContext.self, 0)
+			}
+			open
+			func task_declaration() -> Task_declarationContext? {
+				return getRuleContext(Task_declarationContext.self, 0)
+			}
+			open
+			func function_declaration() -> Function_declarationContext? {
+				return getRuleContext(Function_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_or_generate_item_declaration
 		}
-		open func reg_declaration() -> Reg_declarationContext? {
-			return getRuleContext(Reg_declarationContext.self,0)
-		}
-		open func integer_declaration() -> Integer_declarationContext? {
-			return getRuleContext(Integer_declarationContext.self,0)
-		}
-		open func real_declaration() -> Real_declarationContext? {
-			return getRuleContext(Real_declarationContext.self,0)
-		}
-		open func time_declaration() -> Time_declarationContext? {
-			return getRuleContext(Time_declarationContext.self,0)
-		}
-		open func realtime_declaration() -> Realtime_declarationContext? {
-			return getRuleContext(Realtime_declarationContext.self,0)
-		}
-		open func event_declaration() -> Event_declarationContext? {
-			return getRuleContext(Event_declarationContext.self,0)
-		}
-		open func genvar_declaration() -> Genvar_declarationContext? {
-			return getRuleContext(Genvar_declarationContext.self,0)
-		}
-		open func task_declaration() -> Task_declarationContext? {
-			return getRuleContext(Task_declarationContext.self,0)
-		}
-		open func function_declaration() -> Function_declarationContext? {
-			return getRuleContext(Function_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_or_generate_item_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_or_generate_item_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_or_generate_item_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_or_generate_item_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_or_generate_item_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_or_generate_item_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_or_generate_item_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_or_generate_item_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_or_generate_item_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_or_generate_item_declaration() throws -> Module_or_generate_item_declarationContext {
+	 open func module_or_generate_item_declaration() throws -> Module_or_generate_item_declarationContext {
 		var _localctx: Module_or_generate_item_declarationContext = Module_or_generate_item_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 46, Verilog2001Parser.RULE_module_or_generate_item_declaration)
 		defer {
@@ -2932,7 +3119,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2943,37 +3130,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Parameter_overrideContext:ParserRuleContext {
-		open func list_of_param_assignments() -> List_of_param_assignmentsContext? {
-			return getRuleContext(List_of_param_assignmentsContext.self,0)
+
+	public class Parameter_overrideContext: ParserRuleContext {
+			open
+			func list_of_param_assignments() -> List_of_param_assignmentsContext? {
+				return getRuleContext(List_of_param_assignmentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_parameter_override
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_parameter_override }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterParameter_override(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterParameter_override(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitParameter_override(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitParameter_override(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitParameter_override(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitParameter_override(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitParameter_override(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitParameter_override(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter_override() throws -> Parameter_overrideContext {
+	 open func parameter_override() throws -> Parameter_overrideContext {
 		var _localctx: Parameter_overrideContext = Parameter_overrideContext(_ctx, getState())
 		try enterRule(_localctx, 48, Verilog2001Parser.RULE_parameter_override)
 		defer {
@@ -2997,40 +3190,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Local_parameter_declarationContext:ParserRuleContext {
-		open func list_of_param_assignments() -> List_of_param_assignmentsContext? {
-			return getRuleContext(List_of_param_assignmentsContext.self,0)
+
+	public class Local_parameter_declarationContext: ParserRuleContext {
+			open
+			func list_of_param_assignments() -> List_of_param_assignmentsContext? {
+				return getRuleContext(List_of_param_assignmentsContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_local_parameter_declaration
 		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_local_parameter_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterLocal_parameter_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterLocal_parameter_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitLocal_parameter_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitLocal_parameter_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitLocal_parameter_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitLocal_parameter_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitLocal_parameter_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitLocal_parameter_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func local_parameter_declaration() throws -> Local_parameter_declarationContext {
+	 open func local_parameter_declaration() throws -> Local_parameter_declarationContext {
 		var _localctx: Local_parameter_declarationContext = Local_parameter_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 50, Verilog2001Parser.RULE_local_parameter_declaration)
 		var _la: Int = 0
@@ -3136,37 +3336,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Parameter_declarationContext:ParserRuleContext {
-		open func parameter_declaration_() -> Parameter_declaration_Context? {
-			return getRuleContext(Parameter_declaration_Context.self,0)
+
+	public class Parameter_declarationContext: ParserRuleContext {
+			open
+			func parameter_declaration_() -> Parameter_declaration_Context? {
+				return getRuleContext(Parameter_declaration_Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_parameter_declaration
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_parameter_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterParameter_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterParameter_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitParameter_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitParameter_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitParameter_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitParameter_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitParameter_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitParameter_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter_declaration() throws -> Parameter_declarationContext {
+	 open func parameter_declaration() throws -> Parameter_declarationContext {
 		var _localctx: Parameter_declarationContext = Parameter_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 52, Verilog2001Parser.RULE_parameter_declaration)
 		defer {
@@ -3188,40 +3394,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Parameter_declaration_Context:ParserRuleContext {
-		open func list_of_param_assignments() -> List_of_param_assignmentsContext? {
-			return getRuleContext(List_of_param_assignmentsContext.self,0)
+
+	public class Parameter_declaration_Context: ParserRuleContext {
+			open
+			func list_of_param_assignments() -> List_of_param_assignmentsContext? {
+				return getRuleContext(List_of_param_assignmentsContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_parameter_declaration_
 		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_parameter_declaration_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterParameter_declaration_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterParameter_declaration_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitParameter_declaration_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitParameter_declaration_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitParameter_declaration_(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitParameter_declaration_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitParameter_declaration_(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitParameter_declaration_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter_declaration_() throws -> Parameter_declaration_Context {
+	 open func parameter_declaration_() throws -> Parameter_declaration_Context {
 		var _localctx: Parameter_declaration_Context = Parameter_declaration_Context(_ctx, getState())
 		try enterRule(_localctx, 54, Verilog2001Parser.RULE_parameter_declaration_)
 		var _la: Int = 0
@@ -3317,40 +3530,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Specparam_declarationContext:ParserRuleContext {
-		open func list_of_specparam_assignments() -> List_of_specparam_assignmentsContext? {
-			return getRuleContext(List_of_specparam_assignmentsContext.self,0)
+
+	public class Specparam_declarationContext: ParserRuleContext {
+			open
+			func list_of_specparam_assignments() -> List_of_specparam_assignmentsContext? {
+				return getRuleContext(List_of_specparam_assignmentsContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_specparam_declaration
 		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_specparam_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSpecparam_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSpecparam_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSpecparam_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSpecparam_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSpecparam_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSpecparam_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSpecparam_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSpecparam_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specparam_declaration() throws -> Specparam_declarationContext {
+	 open func specparam_declaration() throws -> Specparam_declarationContext {
 		var _localctx: Specparam_declarationContext = Specparam_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 56, Verilog2001Parser.RULE_specparam_declaration)
 		var _la: Int = 0
@@ -3388,43 +3608,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Inout_declarationContext:ParserRuleContext {
-		open func list_of_port_identifiers() -> List_of_port_identifiersContext? {
-			return getRuleContext(List_of_port_identifiersContext.self,0)
+
+	public class Inout_declarationContext: ParserRuleContext {
+			open
+			func list_of_port_identifiers() -> List_of_port_identifiersContext? {
+				return getRuleContext(List_of_port_identifiersContext.self, 0)
+			}
+			open
+			func net_type() -> Net_typeContext? {
+				return getRuleContext(Net_typeContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_inout_declaration
 		}
-		open func net_type() -> Net_typeContext? {
-			return getRuleContext(Net_typeContext.self,0)
-		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_inout_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInout_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInout_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInout_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInout_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInout_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInout_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInout_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInout_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inout_declaration() throws -> Inout_declarationContext {
+	 open func inout_declaration() throws -> Inout_declarationContext {
 		var _localctx: Inout_declarationContext = Inout_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 58, Verilog2001Parser.RULE_inout_declaration)
 		var _la: Int = 0
@@ -3489,43 +3717,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Input_declarationContext:ParserRuleContext {
-		open func list_of_port_identifiers() -> List_of_port_identifiersContext? {
-			return getRuleContext(List_of_port_identifiersContext.self,0)
+
+	public class Input_declarationContext: ParserRuleContext {
+			open
+			func list_of_port_identifiers() -> List_of_port_identifiersContext? {
+				return getRuleContext(List_of_port_identifiersContext.self, 0)
+			}
+			open
+			func net_type() -> Net_typeContext? {
+				return getRuleContext(Net_typeContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_input_declaration
 		}
-		open func net_type() -> Net_typeContext? {
-			return getRuleContext(Net_typeContext.self,0)
-		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_input_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInput_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInput_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInput_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInput_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInput_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInput_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInput_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInput_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func input_declaration() throws -> Input_declarationContext {
+	 open func input_declaration() throws -> Input_declarationContext {
 		var _localctx: Input_declarationContext = Input_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 60, Verilog2001Parser.RULE_input_declaration)
 		var _la: Int = 0
@@ -3590,49 +3826,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Output_declarationContext:ParserRuleContext {
-		open func list_of_port_identifiers() -> List_of_port_identifiersContext? {
-			return getRuleContext(List_of_port_identifiersContext.self,0)
+
+	public class Output_declarationContext: ParserRuleContext {
+			open
+			func list_of_port_identifiers() -> List_of_port_identifiersContext? {
+				return getRuleContext(List_of_port_identifiersContext.self, 0)
+			}
+			open
+			func net_type() -> Net_typeContext? {
+				return getRuleContext(Net_typeContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+			open
+			func list_of_variable_port_identifiers() -> List_of_variable_port_identifiersContext? {
+				return getRuleContext(List_of_variable_port_identifiersContext.self, 0)
+			}
+			open
+			func output_variable_type() -> Output_variable_typeContext? {
+				return getRuleContext(Output_variable_typeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_output_declaration
 		}
-		open func net_type() -> Net_typeContext? {
-			return getRuleContext(Net_typeContext.self,0)
-		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open func list_of_variable_port_identifiers() -> List_of_variable_port_identifiersContext? {
-			return getRuleContext(List_of_variable_port_identifiersContext.self,0)
-		}
-		open func output_variable_type() -> Output_variable_typeContext? {
-			return getRuleContext(Output_variable_typeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_output_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterOutput_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterOutput_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitOutput_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitOutput_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitOutput_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitOutput_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitOutput_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitOutput_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func output_declaration() throws -> Output_declarationContext {
+	 open func output_declaration() throws -> Output_declarationContext {
 		var _localctx: Output_declarationContext = Output_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 62, Verilog2001Parser.RULE_output_declaration)
 		var _la: Int = 0
@@ -3818,37 +4064,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Event_declarationContext:ParserRuleContext {
-		open func list_of_event_identifiers() -> List_of_event_identifiersContext? {
-			return getRuleContext(List_of_event_identifiersContext.self,0)
+
+	public class Event_declarationContext: ParserRuleContext {
+			open
+			func list_of_event_identifiers() -> List_of_event_identifiersContext? {
+				return getRuleContext(List_of_event_identifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_event_declaration
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_event_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEvent_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEvent_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEvent_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEvent_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEvent_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEvent_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEvent_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEvent_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func event_declaration() throws -> Event_declarationContext {
+	 open func event_declaration() throws -> Event_declarationContext {
 		var _localctx: Event_declarationContext = Event_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 64, Verilog2001Parser.RULE_event_declaration)
 		defer {
@@ -3872,37 +4124,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Genvar_declarationContext:ParserRuleContext {
-		open func list_of_genvar_identifiers() -> List_of_genvar_identifiersContext? {
-			return getRuleContext(List_of_genvar_identifiersContext.self,0)
+
+	public class Genvar_declarationContext: ParserRuleContext {
+			open
+			func list_of_genvar_identifiers() -> List_of_genvar_identifiersContext? {
+				return getRuleContext(List_of_genvar_identifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_genvar_declaration
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_genvar_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenvar_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenvar_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenvar_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenvar_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenvar_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenvar_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenvar_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenvar_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func genvar_declaration() throws -> Genvar_declarationContext {
+	 open func genvar_declaration() throws -> Genvar_declarationContext {
 		var _localctx: Genvar_declarationContext = Genvar_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 66, Verilog2001Parser.RULE_genvar_declaration)
 		defer {
@@ -3926,37 +4184,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Integer_declarationContext:ParserRuleContext {
-		open func list_of_variable_identifiers() -> List_of_variable_identifiersContext? {
-			return getRuleContext(List_of_variable_identifiersContext.self,0)
+
+	public class Integer_declarationContext: ParserRuleContext {
+			open
+			func list_of_variable_identifiers() -> List_of_variable_identifiersContext? {
+				return getRuleContext(List_of_variable_identifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_integer_declaration
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_integer_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInteger_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInteger_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInteger_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInteger_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInteger_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInteger_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInteger_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInteger_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integer_declaration() throws -> Integer_declarationContext {
+	 open func integer_declaration() throws -> Integer_declarationContext {
 		var _localctx: Integer_declarationContext = Integer_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 68, Verilog2001Parser.RULE_integer_declaration)
 		defer {
@@ -3980,37 +4244,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Time_declarationContext:ParserRuleContext {
-		open func list_of_variable_identifiers() -> List_of_variable_identifiersContext? {
-			return getRuleContext(List_of_variable_identifiersContext.self,0)
+
+	public class Time_declarationContext: ParserRuleContext {
+			open
+			func list_of_variable_identifiers() -> List_of_variable_identifiersContext? {
+				return getRuleContext(List_of_variable_identifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_time_declaration
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_time_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTime_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTime_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTime_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTime_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTime_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTime_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTime_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTime_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func time_declaration() throws -> Time_declarationContext {
+	 open func time_declaration() throws -> Time_declarationContext {
 		var _localctx: Time_declarationContext = Time_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 70, Verilog2001Parser.RULE_time_declaration)
 		defer {
@@ -4034,37 +4304,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Real_declarationContext:ParserRuleContext {
-		open func list_of_real_identifiers() -> List_of_real_identifiersContext? {
-			return getRuleContext(List_of_real_identifiersContext.self,0)
+
+	public class Real_declarationContext: ParserRuleContext {
+			open
+			func list_of_real_identifiers() -> List_of_real_identifiersContext? {
+				return getRuleContext(List_of_real_identifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_real_declaration
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_real_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterReal_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterReal_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitReal_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitReal_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitReal_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitReal_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitReal_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitReal_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func real_declaration() throws -> Real_declarationContext {
+	 open func real_declaration() throws -> Real_declarationContext {
 		var _localctx: Real_declarationContext = Real_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 72, Verilog2001Parser.RULE_real_declaration)
 		defer {
@@ -4088,37 +4364,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Realtime_declarationContext:ParserRuleContext {
-		open func list_of_real_identifiers() -> List_of_real_identifiersContext? {
-			return getRuleContext(List_of_real_identifiersContext.self,0)
+
+	public class Realtime_declarationContext: ParserRuleContext {
+			open
+			func list_of_real_identifiers() -> List_of_real_identifiersContext? {
+				return getRuleContext(List_of_real_identifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_realtime_declaration
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_realtime_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterRealtime_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterRealtime_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitRealtime_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitRealtime_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitRealtime_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitRealtime_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitRealtime_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitRealtime_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func realtime_declaration() throws -> Realtime_declarationContext {
+	 open func realtime_declaration() throws -> Realtime_declarationContext {
 		var _localctx: Realtime_declarationContext = Realtime_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 74, Verilog2001Parser.RULE_realtime_declaration)
 		defer {
@@ -4142,40 +4424,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Reg_declarationContext:ParserRuleContext {
-		open func list_of_variable_identifiers() -> List_of_variable_identifiersContext? {
-			return getRuleContext(List_of_variable_identifiersContext.self,0)
+
+	public class Reg_declarationContext: ParserRuleContext {
+			open
+			func list_of_variable_identifiers() -> List_of_variable_identifiersContext? {
+				return getRuleContext(List_of_variable_identifiersContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_reg_declaration
 		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_reg_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterReg_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterReg_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitReg_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitReg_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitReg_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitReg_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitReg_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitReg_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reg_declaration() throws -> Reg_declarationContext {
+	 open func reg_declaration() throws -> Reg_declarationContext {
 		var _localctx: Reg_declarationContext = Reg_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 76, Verilog2001Parser.RULE_reg_declaration)
 		var _la: Int = 0
@@ -4226,55 +4515,67 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Net_declarationContext:ParserRuleContext {
-		open func net_type() -> Net_typeContext? {
-			return getRuleContext(Net_typeContext.self,0)
+
+	public class Net_declarationContext: ParserRuleContext {
+			open
+			func net_type() -> Net_typeContext? {
+				return getRuleContext(Net_typeContext.self, 0)
+			}
+			open
+			func list_of_net_identifiers() -> List_of_net_identifiersContext? {
+				return getRuleContext(List_of_net_identifiersContext.self, 0)
+			}
+			open
+			func delay3() -> Delay3Context? {
+				return getRuleContext(Delay3Context.self, 0)
+			}
+			open
+			func list_of_net_decl_assignments() -> List_of_net_decl_assignmentsContext? {
+				return getRuleContext(List_of_net_decl_assignmentsContext.self, 0)
+			}
+			open
+			func drive_strength() -> Drive_strengthContext? {
+				return getRuleContext(Drive_strengthContext.self, 0)
+			}
+			open
+			func charge_strength() -> Charge_strengthContext? {
+				return getRuleContext(Charge_strengthContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_net_declaration
 		}
-		open func list_of_net_identifiers() -> List_of_net_identifiersContext? {
-			return getRuleContext(List_of_net_identifiersContext.self,0)
-		}
-		open func delay3() -> Delay3Context? {
-			return getRuleContext(Delay3Context.self,0)
-		}
-		open func list_of_net_decl_assignments() -> List_of_net_decl_assignmentsContext? {
-			return getRuleContext(List_of_net_decl_assignmentsContext.self,0)
-		}
-		open func drive_strength() -> Drive_strengthContext? {
-			return getRuleContext(Drive_strengthContext.self,0)
-		}
-		open func charge_strength() -> Charge_strengthContext? {
-			return getRuleContext(Charge_strengthContext.self,0)
-		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_net_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNet_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNet_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNet_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNet_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNet_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNet_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNet_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNet_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func net_declaration() throws -> Net_declarationContext {
+	 open func net_declaration() throws -> Net_declarationContext {
 		var _localctx: Net_declarationContext = Net_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 78, Verilog2001Parser.RULE_net_declaration)
 		var _la: Int = 0
@@ -4778,34 +5079,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Net_typeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_net_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNet_type(self)
+
+	public class Net_typeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_net_type
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNet_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNet_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNet_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNet_type(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNet_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNet_type(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNet_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func net_type() throws -> Net_typeContext {
+	 open func net_type() throws -> Net_typeContext {
 		var _localctx: Net_typeContext = Net_typeContext(_ctx, getState())
 		try enterRule(_localctx, 80, Verilog2001Parser.RULE_net_type)
 		var _la: Int = 0
@@ -4840,34 +5146,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Output_variable_typeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_output_variable_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterOutput_variable_type(self)
+
+	public class Output_variable_typeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_output_variable_type
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterOutput_variable_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitOutput_variable_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitOutput_variable_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitOutput_variable_type(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitOutput_variable_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitOutput_variable_type(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitOutput_variable_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func output_variable_type() throws -> Output_variable_typeContext {
+	 open func output_variable_type() throws -> Output_variable_typeContext {
 		var _localctx: Output_variable_typeContext = Output_variable_typeContext(_ctx, getState())
 		try enterRule(_localctx, 82, Verilog2001Parser.RULE_output_variable_type)
 		var _la: Int = 0
@@ -4899,46 +5210,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Real_typeContext:ParserRuleContext {
-		open func real_identifier() -> Real_identifierContext? {
-			return getRuleContext(Real_identifierContext.self,0)
+
+	public class Real_typeContext: ParserRuleContext {
+			open
+			func real_identifier() -> Real_identifierContext? {
+				return getRuleContext(Real_identifierContext.self, 0)
+			}
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func dimension() -> [DimensionContext] {
+				return getRuleContexts(DimensionContext.self)
+			}
+			open
+			func dimension(_ i: Int) -> DimensionContext? {
+				return getRuleContext(DimensionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_real_type
 		}
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
-		}
-		open func dimension() -> Array<DimensionContext> {
-			return getRuleContexts(DimensionContext.self)
-		}
-		open func dimension(_ i: Int) -> DimensionContext? {
-			return getRuleContext(DimensionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_real_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterReal_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterReal_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitReal_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitReal_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitReal_type(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitReal_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitReal_type(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitReal_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func real_type() throws -> Real_typeContext {
+	 open func real_type() throws -> Real_typeContext {
 		var _localctx: Real_typeContext = Real_typeContext(_ctx, getState())
 		try enterRule(_localctx, 84, Verilog2001Parser.RULE_real_type)
 		var _la: Int = 0
@@ -5005,46 +5325,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Variable_typeContext:ParserRuleContext {
-		open func variable_identifier() -> Variable_identifierContext? {
-			return getRuleContext(Variable_identifierContext.self,0)
+
+	public class Variable_typeContext: ParserRuleContext {
+			open
+			func variable_identifier() -> Variable_identifierContext? {
+				return getRuleContext(Variable_identifierContext.self, 0)
+			}
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func dimension() -> [DimensionContext] {
+				return getRuleContexts(DimensionContext.self)
+			}
+			open
+			func dimension(_ i: Int) -> DimensionContext? {
+				return getRuleContext(DimensionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_variable_type
 		}
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
-		}
-		open func dimension() -> Array<DimensionContext> {
-			return getRuleContexts(DimensionContext.self)
-		}
-		open func dimension(_ i: Int) -> DimensionContext? {
-			return getRuleContext(DimensionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_variable_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterVariable_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterVariable_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitVariable_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitVariable_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitVariable_type(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitVariable_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitVariable_type(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitVariable_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable_type() throws -> Variable_typeContext {
+	 open func variable_type() throws -> Variable_typeContext {
 		var _localctx: Variable_typeContext = Variable_typeContext(_ctx, getState())
 		try enterRule(_localctx, 86, Verilog2001Parser.RULE_variable_type)
 		var _la: Int = 0
@@ -5111,40 +5440,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Drive_strengthContext:ParserRuleContext {
-		open func strength0() -> Strength0Context? {
-			return getRuleContext(Strength0Context.self,0)
+
+	public class Drive_strengthContext: ParserRuleContext {
+			open
+			func strength0() -> Strength0Context? {
+				return getRuleContext(Strength0Context.self, 0)
+			}
+			open
+			func strength1() -> Strength1Context? {
+				return getRuleContext(Strength1Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_drive_strength
 		}
-		open func strength1() -> Strength1Context? {
-			return getRuleContext(Strength1Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_drive_strength }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDrive_strength(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDrive_strength(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDrive_strength(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDrive_strength(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDrive_strength(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDrive_strength(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDrive_strength(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDrive_strength(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func drive_strength() throws -> Drive_strengthContext {
+	 open func drive_strength() throws -> Drive_strengthContext {
 		var _localctx: Drive_strengthContext = Drive_strengthContext(_ctx, getState())
 		try enterRule(_localctx, 88, Verilog2001Parser.RULE_drive_strength)
 		defer {
@@ -5231,34 +5567,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Strength0Context:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_strength0 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterStrength0(self)
+
+	public class Strength0Context: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_strength0
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterStrength0(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitStrength0(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitStrength0(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitStrength0(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitStrength0(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitStrength0(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitStrength0(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func strength0() throws -> Strength0Context {
+	 open func strength0() throws -> Strength0Context {
 		var _localctx: Strength0Context = Strength0Context(_ctx, getState())
 		try enterRule(_localctx, 90, Verilog2001Parser.RULE_strength0)
 		var _la: Int = 0
@@ -5293,34 +5634,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Strength1Context:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_strength1 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterStrength1(self)
+
+	public class Strength1Context: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_strength1
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterStrength1(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitStrength1(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitStrength1(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitStrength1(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitStrength1(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitStrength1(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitStrength1(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func strength1() throws -> Strength1Context {
+	 open func strength1() throws -> Strength1Context {
 		var _localctx: Strength1Context = Strength1Context(_ctx, getState())
 		try enterRule(_localctx, 92, Verilog2001Parser.RULE_strength1)
 		var _la: Int = 0
@@ -5355,34 +5701,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Charge_strengthContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_charge_strength }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterCharge_strength(self)
+
+	public class Charge_strengthContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_charge_strength
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterCharge_strength(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitCharge_strength(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitCharge_strength(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitCharge_strength(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitCharge_strength(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitCharge_strength(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitCharge_strength(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func charge_strength() throws -> Charge_strengthContext {
+	 open func charge_strength() throws -> Charge_strengthContext {
 		var _localctx: Charge_strengthContext = Charge_strengthContext(_ctx, getState())
 		try enterRule(_localctx, 94, Verilog2001Parser.RULE_charge_strength)
 		defer {
@@ -5433,40 +5784,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Delay3Context:ParserRuleContext {
-		open func delay_value() -> Array<Delay_valueContext> {
-			return getRuleContexts(Delay_valueContext.self)
+
+	public class Delay3Context: ParserRuleContext {
+			open
+			func delay_value() -> [Delay_valueContext] {
+				return getRuleContexts(Delay_valueContext.self)
+			}
+			open
+			func delay_value(_ i: Int) -> Delay_valueContext? {
+				return getRuleContext(Delay_valueContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_delay3
 		}
-		open func delay_value(_ i: Int) -> Delay_valueContext? {
-			return getRuleContext(Delay_valueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_delay3 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDelay3(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDelay3(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDelay3(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDelay3(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDelay3(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDelay3(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDelay3(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDelay3(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delay3() throws -> Delay3Context {
+	 open func delay3() throws -> Delay3Context {
 		var _localctx: Delay3Context = Delay3Context(_ctx, getState())
 		try enterRule(_localctx, 96, Verilog2001Parser.RULE_delay3)
 		var _la: Int = 0
@@ -5538,40 +5896,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Delay2Context:ParserRuleContext {
-		open func delay_value() -> Array<Delay_valueContext> {
-			return getRuleContexts(Delay_valueContext.self)
+
+	public class Delay2Context: ParserRuleContext {
+			open
+			func delay_value() -> [Delay_valueContext] {
+				return getRuleContexts(Delay_valueContext.self)
+			}
+			open
+			func delay_value(_ i: Int) -> Delay_valueContext? {
+				return getRuleContext(Delay_valueContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_delay2
 		}
-		open func delay_value(_ i: Int) -> Delay_valueContext? {
-			return getRuleContext(Delay_valueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_delay2 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDelay2(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDelay2(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDelay2(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDelay2(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDelay2(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDelay2(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDelay2(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDelay2(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delay2() throws -> Delay2Context {
+	 open func delay2() throws -> Delay2Context {
 		var _localctx: Delay2Context = Delay2Context(_ctx, getState())
 		try enterRule(_localctx, 98, Verilog2001Parser.RULE_delay2)
 		var _la: Int = 0
@@ -5628,44 +5993,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Delay_valueContext:ParserRuleContext {
-		open func Decimal_number() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Decimal_number.rawValue, 0) }
-		open func parameter_identifier() -> Parameter_identifierContext? {
-			return getRuleContext(Parameter_identifierContext.self,0)
+
+	public class Delay_valueContext: ParserRuleContext {
+			open
+			func Decimal_number() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Decimal_number.rawValue, 0)
+			}
+			open
+			func parameter_identifier() -> Parameter_identifierContext? {
+				return getRuleContext(Parameter_identifierContext.self, 0)
+			}
+			open
+			func specparam_identifier() -> Specparam_identifierContext? {
+				return getRuleContext(Specparam_identifierContext.self, 0)
+			}
+			open
+			func mintypmax_expression() -> Mintypmax_expressionContext? {
+				return getRuleContext(Mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_delay_value
 		}
-		open func specparam_identifier() -> Specparam_identifierContext? {
-			return getRuleContext(Specparam_identifierContext.self,0)
-		}
-		open func mintypmax_expression() -> Mintypmax_expressionContext? {
-			return getRuleContext(Mintypmax_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_delay_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDelay_value(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDelay_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDelay_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDelay_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDelay_value(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDelay_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDelay_value(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDelay_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delay_value() throws -> Delay_valueContext {
+	 open func delay_value() throws -> Delay_valueContext {
 		var _localctx: Delay_valueContext = Delay_valueContext(_ctx, getState())
 		try enterRule(_localctx, 100, Verilog2001Parser.RULE_delay_value)
 		defer {
@@ -5710,46 +6086,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_event_identifiersContext:ParserRuleContext {
-		open func event_identifier() -> Array<Event_identifierContext> {
-			return getRuleContexts(Event_identifierContext.self)
+
+	public class List_of_event_identifiersContext: ParserRuleContext {
+			open
+			func event_identifier() -> [Event_identifierContext] {
+				return getRuleContexts(Event_identifierContext.self)
+			}
+			open
+			func event_identifier(_ i: Int) -> Event_identifierContext? {
+				return getRuleContext(Event_identifierContext.self, i)
+			}
+			open
+			func dimension() -> [DimensionContext] {
+				return getRuleContexts(DimensionContext.self)
+			}
+			open
+			func dimension(_ i: Int) -> DimensionContext? {
+				return getRuleContext(DimensionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_event_identifiers
 		}
-		open func event_identifier(_ i: Int) -> Event_identifierContext? {
-			return getRuleContext(Event_identifierContext.self,i)
-		}
-		open func dimension() -> Array<DimensionContext> {
-			return getRuleContexts(DimensionContext.self)
-		}
-		open func dimension(_ i: Int) -> DimensionContext? {
-			return getRuleContext(DimensionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_event_identifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_event_identifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_event_identifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_event_identifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_event_identifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_event_identifiers(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_event_identifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_event_identifiers(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_event_identifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_event_identifiers() throws -> List_of_event_identifiersContext {
+	 open func list_of_event_identifiers() throws -> List_of_event_identifiersContext {
 		var _localctx: List_of_event_identifiersContext = List_of_event_identifiersContext(_ctx, getState())
 		try enterRule(_localctx, 102, Verilog2001Parser.RULE_list_of_event_identifiers)
 		var _la: Int = 0
@@ -5846,46 +6231,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_net_identifiersContext:ParserRuleContext {
-		open func net_identifier() -> Array<Net_identifierContext> {
-			return getRuleContexts(Net_identifierContext.self)
+
+	public class List_of_net_identifiersContext: ParserRuleContext {
+			open
+			func net_identifier() -> [Net_identifierContext] {
+				return getRuleContexts(Net_identifierContext.self)
+			}
+			open
+			func net_identifier(_ i: Int) -> Net_identifierContext? {
+				return getRuleContext(Net_identifierContext.self, i)
+			}
+			open
+			func dimension() -> [DimensionContext] {
+				return getRuleContexts(DimensionContext.self)
+			}
+			open
+			func dimension(_ i: Int) -> DimensionContext? {
+				return getRuleContext(DimensionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_net_identifiers
 		}
-		open func net_identifier(_ i: Int) -> Net_identifierContext? {
-			return getRuleContext(Net_identifierContext.self,i)
-		}
-		open func dimension() -> Array<DimensionContext> {
-			return getRuleContexts(DimensionContext.self)
-		}
-		open func dimension(_ i: Int) -> DimensionContext? {
-			return getRuleContext(DimensionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_net_identifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_net_identifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_net_identifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_net_identifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_net_identifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_net_identifiers(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_net_identifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_net_identifiers(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_net_identifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_net_identifiers() throws -> List_of_net_identifiersContext {
+	 open func list_of_net_identifiers() throws -> List_of_net_identifiersContext {
 		var _localctx: List_of_net_identifiersContext = List_of_net_identifiersContext(_ctx, getState())
 		try enterRule(_localctx, 104, Verilog2001Parser.RULE_list_of_net_identifiers)
 		var _la: Int = 0
@@ -5982,40 +6376,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_genvar_identifiersContext:ParserRuleContext {
-		open func genvar_identifier() -> Array<Genvar_identifierContext> {
-			return getRuleContexts(Genvar_identifierContext.self)
+
+	public class List_of_genvar_identifiersContext: ParserRuleContext {
+			open
+			func genvar_identifier() -> [Genvar_identifierContext] {
+				return getRuleContexts(Genvar_identifierContext.self)
+			}
+			open
+			func genvar_identifier(_ i: Int) -> Genvar_identifierContext? {
+				return getRuleContext(Genvar_identifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_genvar_identifiers
 		}
-		open func genvar_identifier(_ i: Int) -> Genvar_identifierContext? {
-			return getRuleContext(Genvar_identifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_genvar_identifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_genvar_identifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_genvar_identifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_genvar_identifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_genvar_identifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_genvar_identifiers(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_genvar_identifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_genvar_identifiers(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_genvar_identifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_genvar_identifiers() throws -> List_of_genvar_identifiersContext {
+	 open func list_of_genvar_identifiers() throws -> List_of_genvar_identifiersContext {
 		var _localctx: List_of_genvar_identifiersContext = List_of_genvar_identifiersContext(_ctx, getState())
 		try enterRule(_localctx, 106, Verilog2001Parser.RULE_list_of_genvar_identifiers)
 		var _la: Int = 0
@@ -6054,40 +6455,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_port_identifiersContext:ParserRuleContext {
-		open func port_identifier() -> Array<Port_identifierContext> {
-			return getRuleContexts(Port_identifierContext.self)
+
+	public class List_of_port_identifiersContext: ParserRuleContext {
+			open
+			func port_identifier() -> [Port_identifierContext] {
+				return getRuleContexts(Port_identifierContext.self)
+			}
+			open
+			func port_identifier(_ i: Int) -> Port_identifierContext? {
+				return getRuleContext(Port_identifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_port_identifiers
 		}
-		open func port_identifier(_ i: Int) -> Port_identifierContext? {
-			return getRuleContext(Port_identifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_port_identifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_port_identifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_port_identifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_port_identifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_port_identifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_port_identifiers(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_port_identifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_port_identifiers(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_port_identifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_port_identifiers() throws -> List_of_port_identifiersContext {
+	 open func list_of_port_identifiers() throws -> List_of_port_identifiersContext {
 		var _localctx: List_of_port_identifiersContext = List_of_port_identifiersContext(_ctx, getState())
 		try enterRule(_localctx, 108, Verilog2001Parser.RULE_list_of_port_identifiers)
 		defer {
@@ -6124,40 +6532,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_net_decl_assignmentsContext:ParserRuleContext {
-		open func net_decl_assignment() -> Array<Net_decl_assignmentContext> {
-			return getRuleContexts(Net_decl_assignmentContext.self)
+
+	public class List_of_net_decl_assignmentsContext: ParserRuleContext {
+			open
+			func net_decl_assignment() -> [Net_decl_assignmentContext] {
+				return getRuleContexts(Net_decl_assignmentContext.self)
+			}
+			open
+			func net_decl_assignment(_ i: Int) -> Net_decl_assignmentContext? {
+				return getRuleContext(Net_decl_assignmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_net_decl_assignments
 		}
-		open func net_decl_assignment(_ i: Int) -> Net_decl_assignmentContext? {
-			return getRuleContext(Net_decl_assignmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_net_decl_assignments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_net_decl_assignments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_net_decl_assignments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_net_decl_assignments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_net_decl_assignments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_net_decl_assignments(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_net_decl_assignments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_net_decl_assignments(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_net_decl_assignments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_net_decl_assignments() throws -> List_of_net_decl_assignmentsContext {
+	 open func list_of_net_decl_assignments() throws -> List_of_net_decl_assignmentsContext {
 		var _localctx: List_of_net_decl_assignmentsContext = List_of_net_decl_assignmentsContext(_ctx, getState())
 		try enterRule(_localctx, 110, Verilog2001Parser.RULE_list_of_net_decl_assignments)
 		var _la: Int = 0
@@ -6196,40 +6611,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_param_assignmentsContext:ParserRuleContext {
-		open func param_assignment() -> Array<Param_assignmentContext> {
-			return getRuleContexts(Param_assignmentContext.self)
+
+	public class List_of_param_assignmentsContext: ParserRuleContext {
+			open
+			func param_assignment() -> [Param_assignmentContext] {
+				return getRuleContexts(Param_assignmentContext.self)
+			}
+			open
+			func param_assignment(_ i: Int) -> Param_assignmentContext? {
+				return getRuleContext(Param_assignmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_param_assignments
 		}
-		open func param_assignment(_ i: Int) -> Param_assignmentContext? {
-			return getRuleContext(Param_assignmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_param_assignments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_param_assignments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_param_assignments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_param_assignments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_param_assignments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_param_assignments(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_param_assignments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_param_assignments(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_param_assignments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_param_assignments() throws -> List_of_param_assignmentsContext {
+	 open func list_of_param_assignments() throws -> List_of_param_assignmentsContext {
 		var _localctx: List_of_param_assignmentsContext = List_of_param_assignmentsContext(_ctx, getState())
 		try enterRule(_localctx, 112, Verilog2001Parser.RULE_list_of_param_assignments)
 		defer {
@@ -6266,40 +6688,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_specparam_assignmentsContext:ParserRuleContext {
-		open func specparam_assignment() -> Array<Specparam_assignmentContext> {
-			return getRuleContexts(Specparam_assignmentContext.self)
+
+	public class List_of_specparam_assignmentsContext: ParserRuleContext {
+			open
+			func specparam_assignment() -> [Specparam_assignmentContext] {
+				return getRuleContexts(Specparam_assignmentContext.self)
+			}
+			open
+			func specparam_assignment(_ i: Int) -> Specparam_assignmentContext? {
+				return getRuleContext(Specparam_assignmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_specparam_assignments
 		}
-		open func specparam_assignment(_ i: Int) -> Specparam_assignmentContext? {
-			return getRuleContext(Specparam_assignmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_specparam_assignments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_specparam_assignments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_specparam_assignments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_specparam_assignments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_specparam_assignments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_specparam_assignments(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_specparam_assignments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_specparam_assignments(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_specparam_assignments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_specparam_assignments() throws -> List_of_specparam_assignmentsContext {
+	 open func list_of_specparam_assignments() throws -> List_of_specparam_assignmentsContext {
 		var _localctx: List_of_specparam_assignmentsContext = List_of_specparam_assignmentsContext(_ctx, getState())
 		try enterRule(_localctx, 114, Verilog2001Parser.RULE_list_of_specparam_assignments)
 		var _la: Int = 0
@@ -6338,40 +6767,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_real_identifiersContext:ParserRuleContext {
-		open func real_type() -> Array<Real_typeContext> {
-			return getRuleContexts(Real_typeContext.self)
+
+	public class List_of_real_identifiersContext: ParserRuleContext {
+			open
+			func real_type() -> [Real_typeContext] {
+				return getRuleContexts(Real_typeContext.self)
+			}
+			open
+			func real_type(_ i: Int) -> Real_typeContext? {
+				return getRuleContext(Real_typeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_real_identifiers
 		}
-		open func real_type(_ i: Int) -> Real_typeContext? {
-			return getRuleContext(Real_typeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_real_identifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_real_identifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_real_identifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_real_identifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_real_identifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_real_identifiers(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_real_identifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_real_identifiers(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_real_identifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_real_identifiers() throws -> List_of_real_identifiersContext {
+	 open func list_of_real_identifiers() throws -> List_of_real_identifiersContext {
 		var _localctx: List_of_real_identifiersContext = List_of_real_identifiersContext(_ctx, getState())
 		try enterRule(_localctx, 116, Verilog2001Parser.RULE_list_of_real_identifiers)
 		var _la: Int = 0
@@ -6410,40 +6846,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_variable_identifiersContext:ParserRuleContext {
-		open func variable_type() -> Array<Variable_typeContext> {
-			return getRuleContexts(Variable_typeContext.self)
+
+	public class List_of_variable_identifiersContext: ParserRuleContext {
+			open
+			func variable_type() -> [Variable_typeContext] {
+				return getRuleContexts(Variable_typeContext.self)
+			}
+			open
+			func variable_type(_ i: Int) -> Variable_typeContext? {
+				return getRuleContext(Variable_typeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_variable_identifiers
 		}
-		open func variable_type(_ i: Int) -> Variable_typeContext? {
-			return getRuleContext(Variable_typeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_variable_identifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_variable_identifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_variable_identifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_variable_identifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_variable_identifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_variable_identifiers(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_variable_identifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_variable_identifiers(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_variable_identifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_variable_identifiers() throws -> List_of_variable_identifiersContext {
+	 open func list_of_variable_identifiers() throws -> List_of_variable_identifiersContext {
 		var _localctx: List_of_variable_identifiersContext = List_of_variable_identifiersContext(_ctx, getState())
 		try enterRule(_localctx, 118, Verilog2001Parser.RULE_list_of_variable_identifiers)
 		var _la: Int = 0
@@ -6482,46 +6925,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_variable_port_identifiersContext:ParserRuleContext {
-		open func port_identifier() -> Array<Port_identifierContext> {
-			return getRuleContexts(Port_identifierContext.self)
+
+	public class List_of_variable_port_identifiersContext: ParserRuleContext {
+			open
+			func port_identifier() -> [Port_identifierContext] {
+				return getRuleContexts(Port_identifierContext.self)
+			}
+			open
+			func port_identifier(_ i: Int) -> Port_identifierContext? {
+				return getRuleContext(Port_identifierContext.self, i)
+			}
+			open
+			func constant_expression() -> [Constant_expressionContext] {
+				return getRuleContexts(Constant_expressionContext.self)
+			}
+			open
+			func constant_expression(_ i: Int) -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_variable_port_identifiers
 		}
-		open func port_identifier(_ i: Int) -> Port_identifierContext? {
-			return getRuleContext(Port_identifierContext.self,i)
-		}
-		open func constant_expression() -> Array<Constant_expressionContext> {
-			return getRuleContexts(Constant_expressionContext.self)
-		}
-		open func constant_expression(_ i: Int) -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_variable_port_identifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_variable_port_identifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_variable_port_identifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_variable_port_identifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_variable_port_identifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_variable_port_identifiers(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_variable_port_identifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_variable_port_identifiers(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_variable_port_identifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_variable_port_identifiers() throws -> List_of_variable_port_identifiersContext {
+	 open func list_of_variable_port_identifiers() throws -> List_of_variable_port_identifiersContext {
 		var _localctx: List_of_variable_port_identifiersContext = List_of_variable_port_identifiersContext(_ctx, getState())
 		try enterRule(_localctx, 120, Verilog2001Parser.RULE_list_of_variable_port_identifiers)
 		var _la: Int = 0
@@ -6589,40 +7041,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Net_decl_assignmentContext:ParserRuleContext {
-		open func net_identifier() -> Net_identifierContext? {
-			return getRuleContext(Net_identifierContext.self,0)
+
+	public class Net_decl_assignmentContext: ParserRuleContext {
+			open
+			func net_identifier() -> Net_identifierContext? {
+				return getRuleContext(Net_identifierContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_net_decl_assignment
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_net_decl_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNet_decl_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNet_decl_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNet_decl_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNet_decl_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNet_decl_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNet_decl_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNet_decl_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNet_decl_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func net_decl_assignment() throws -> Net_decl_assignmentContext {
+	 open func net_decl_assignment() throws -> Net_decl_assignmentContext {
 		var _localctx: Net_decl_assignmentContext = Net_decl_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 122, Verilog2001Parser.RULE_net_decl_assignment)
 		defer {
@@ -6646,40 +7105,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Param_assignmentContext:ParserRuleContext {
-		open func parameter_identifier() -> Parameter_identifierContext? {
-			return getRuleContext(Parameter_identifierContext.self,0)
+
+	public class Param_assignmentContext: ParserRuleContext {
+			open
+			func parameter_identifier() -> Parameter_identifierContext? {
+				return getRuleContext(Parameter_identifierContext.self, 0)
+			}
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_param_assignment
 		}
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_param_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterParam_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterParam_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitParam_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitParam_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitParam_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitParam_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitParam_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitParam_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func param_assignment() throws -> Param_assignmentContext {
+	 open func param_assignment() throws -> Param_assignmentContext {
 		var _localctx: Param_assignmentContext = Param_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 124, Verilog2001Parser.RULE_param_assignment)
 		defer {
@@ -6703,43 +7169,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Specparam_assignmentContext:ParserRuleContext {
-		open func specparam_identifier() -> Specparam_identifierContext? {
-			return getRuleContext(Specparam_identifierContext.self,0)
+
+	public class Specparam_assignmentContext: ParserRuleContext {
+			open
+			func specparam_identifier() -> Specparam_identifierContext? {
+				return getRuleContext(Specparam_identifierContext.self, 0)
+			}
+			open
+			func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
+				return getRuleContext(Constant_mintypmax_expressionContext.self, 0)
+			}
+			open
+			func pulse_control_specparam() -> Pulse_control_specparamContext? {
+				return getRuleContext(Pulse_control_specparamContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_specparam_assignment
 		}
-		open func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
-			return getRuleContext(Constant_mintypmax_expressionContext.self,0)
-		}
-		open func pulse_control_specparam() -> Pulse_control_specparamContext? {
-			return getRuleContext(Pulse_control_specparamContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_specparam_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSpecparam_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSpecparam_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSpecparam_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSpecparam_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSpecparam_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSpecparam_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSpecparam_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSpecparam_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specparam_assignment() throws -> Specparam_assignmentContext {
+	 open func specparam_assignment() throws -> Specparam_assignmentContext {
 		var _localctx: Specparam_assignmentContext = Specparam_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 126, Verilog2001Parser.RULE_specparam_assignment)
 		defer {
@@ -6768,7 +7242,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6779,46 +7253,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pulse_control_specparamContext:ParserRuleContext {
-		open func reject_limit_value() -> Reject_limit_valueContext? {
-			return getRuleContext(Reject_limit_valueContext.self,0)
+
+	public class Pulse_control_specparamContext: ParserRuleContext {
+			open
+			func reject_limit_value() -> Reject_limit_valueContext? {
+				return getRuleContext(Reject_limit_valueContext.self, 0)
+			}
+			open
+			func error_limit_value() -> Error_limit_valueContext? {
+				return getRuleContext(Error_limit_valueContext.self, 0)
+			}
+			open
+			func specify_input_terminal_descriptor() -> Specify_input_terminal_descriptorContext? {
+				return getRuleContext(Specify_input_terminal_descriptorContext.self, 0)
+			}
+			open
+			func specify_output_terminal_descriptor() -> Specify_output_terminal_descriptorContext? {
+				return getRuleContext(Specify_output_terminal_descriptorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pulse_control_specparam
 		}
-		open func error_limit_value() -> Error_limit_valueContext? {
-			return getRuleContext(Error_limit_valueContext.self,0)
-		}
-		open func specify_input_terminal_descriptor() -> Specify_input_terminal_descriptorContext? {
-			return getRuleContext(Specify_input_terminal_descriptorContext.self,0)
-		}
-		open func specify_output_terminal_descriptor() -> Specify_output_terminal_descriptorContext? {
-			return getRuleContext(Specify_output_terminal_descriptorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pulse_control_specparam }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPulse_control_specparam(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPulse_control_specparam(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPulse_control_specparam(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPulse_control_specparam(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPulse_control_specparam(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPulse_control_specparam(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPulse_control_specparam(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPulse_control_specparam(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pulse_control_specparam() throws -> Pulse_control_specparamContext {
+	 open func pulse_control_specparam() throws -> Pulse_control_specparamContext {
 		var _localctx: Pulse_control_specparamContext = Pulse_control_specparamContext(_ctx, getState())
 		try enterRule(_localctx, 128, Verilog2001Parser.RULE_pulse_control_specparam)
 		var _la: Int = 0
@@ -6908,37 +7391,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Error_limit_valueContext:ParserRuleContext {
-		open func limit_value() -> Limit_valueContext? {
-			return getRuleContext(Limit_valueContext.self,0)
+
+	public class Error_limit_valueContext: ParserRuleContext {
+			open
+			func limit_value() -> Limit_valueContext? {
+				return getRuleContext(Limit_valueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_error_limit_value
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_error_limit_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterError_limit_value(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterError_limit_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitError_limit_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitError_limit_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitError_limit_value(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitError_limit_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitError_limit_value(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitError_limit_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func error_limit_value() throws -> Error_limit_valueContext {
+	 open func error_limit_value() throws -> Error_limit_valueContext {
 		var _localctx: Error_limit_valueContext = Error_limit_valueContext(_ctx, getState())
 		try enterRule(_localctx, 130, Verilog2001Parser.RULE_error_limit_value)
 		defer {
@@ -6958,37 +7447,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Reject_limit_valueContext:ParserRuleContext {
-		open func limit_value() -> Limit_valueContext? {
-			return getRuleContext(Limit_valueContext.self,0)
+
+	public class Reject_limit_valueContext: ParserRuleContext {
+			open
+			func limit_value() -> Limit_valueContext? {
+				return getRuleContext(Limit_valueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_reject_limit_value
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_reject_limit_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterReject_limit_value(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterReject_limit_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitReject_limit_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitReject_limit_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitReject_limit_value(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitReject_limit_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitReject_limit_value(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitReject_limit_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func reject_limit_value() throws -> Reject_limit_valueContext {
+	 open func reject_limit_value() throws -> Reject_limit_valueContext {
 		var _localctx: Reject_limit_valueContext = Reject_limit_valueContext(_ctx, getState())
 		try enterRule(_localctx, 132, Verilog2001Parser.RULE_reject_limit_value)
 		defer {
@@ -7008,37 +7503,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Limit_valueContext:ParserRuleContext {
-		open func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
-			return getRuleContext(Constant_mintypmax_expressionContext.self,0)
+
+	public class Limit_valueContext: ParserRuleContext {
+			open
+			func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
+				return getRuleContext(Constant_mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_limit_value
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_limit_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterLimit_value(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterLimit_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitLimit_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitLimit_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitLimit_value(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitLimit_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitLimit_value(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitLimit_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func limit_value() throws -> Limit_valueContext {
+	 open func limit_value() throws -> Limit_valueContext {
 		var _localctx: Limit_valueContext = Limit_valueContext(_ctx, getState())
 		try enterRule(_localctx, 134, Verilog2001Parser.RULE_limit_value)
 		defer {
@@ -7058,40 +7559,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class DimensionContext:ParserRuleContext {
-		open func dimension_constant_expression() -> Array<Dimension_constant_expressionContext> {
-			return getRuleContexts(Dimension_constant_expressionContext.self)
+
+	public class DimensionContext: ParserRuleContext {
+			open
+			func dimension_constant_expression() -> [Dimension_constant_expressionContext] {
+				return getRuleContexts(Dimension_constant_expressionContext.self)
+			}
+			open
+			func dimension_constant_expression(_ i: Int) -> Dimension_constant_expressionContext? {
+				return getRuleContext(Dimension_constant_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_dimension
 		}
-		open func dimension_constant_expression(_ i: Int) -> Dimension_constant_expressionContext? {
-			return getRuleContext(Dimension_constant_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_dimension }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDimension(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDimension(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDimension(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDimension(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDimension(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDimension(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDimension(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDimension(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dimension() throws -> DimensionContext {
+	 open func dimension() throws -> DimensionContext {
 		var _localctx: DimensionContext = DimensionContext(_ctx, getState())
 		try enterRule(_localctx, 136, Verilog2001Parser.RULE_dimension)
 		defer {
@@ -7119,40 +7627,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class RangeContext:ParserRuleContext {
-		open func msb_constant_expression() -> Msb_constant_expressionContext? {
-			return getRuleContext(Msb_constant_expressionContext.self,0)
+
+	public class RangeContext: ParserRuleContext {
+			open
+			func msb_constant_expression() -> Msb_constant_expressionContext? {
+				return getRuleContext(Msb_constant_expressionContext.self, 0)
+			}
+			open
+			func lsb_constant_expression() -> Lsb_constant_expressionContext? {
+				return getRuleContext(Lsb_constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_range
 		}
-		open func lsb_constant_expression() -> Lsb_constant_expressionContext? {
-			return getRuleContext(Lsb_constant_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_range }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterRange(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterRange(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitRange(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitRange(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitRange(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitRange(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitRange(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitRange(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func range() throws -> RangeContext {
+	 open func range() throws -> RangeContext {
 		var _localctx: RangeContext = RangeContext(_ctx, getState())
 		try enterRule(_localctx, 138, Verilog2001Parser.RULE_range)
 		defer {
@@ -7180,58 +7695,71 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_declarationContext:ParserRuleContext {
-		open func function_identifier() -> Function_identifierContext? {
-			return getRuleContext(Function_identifierContext.self,0)
+
+	public class Function_declarationContext: ParserRuleContext {
+			open
+			func function_identifier() -> Function_identifierContext? {
+				return getRuleContext(Function_identifierContext.self, 0)
+			}
+			open
+			func range_or_type() -> Range_or_typeContext? {
+				return getRuleContext(Range_or_typeContext.self, 0)
+			}
+			open
+			func function_item_declaration() -> [Function_item_declarationContext] {
+				return getRuleContexts(Function_item_declarationContext.self)
+			}
+			open
+			func function_item_declaration(_ i: Int) -> Function_item_declarationContext? {
+				return getRuleContext(Function_item_declarationContext.self, i)
+			}
+			open
+			func function_statement() -> Function_statementContext? {
+				return getRuleContext(Function_statementContext.self, 0)
+			}
+			open
+			func function_port_list() -> Function_port_listContext? {
+				return getRuleContext(Function_port_listContext.self, 0)
+			}
+			open
+			func block_item_declaration() -> [Block_item_declarationContext] {
+				return getRuleContexts(Block_item_declarationContext.self)
+			}
+			open
+			func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
+				return getRuleContext(Block_item_declarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_declaration
 		}
-		open func range_or_type() -> Range_or_typeContext? {
-			return getRuleContext(Range_or_typeContext.self,0)
-		}
-		open func function_item_declaration() -> Array<Function_item_declarationContext> {
-			return getRuleContexts(Function_item_declarationContext.self)
-		}
-		open func function_item_declaration(_ i: Int) -> Function_item_declarationContext? {
-			return getRuleContext(Function_item_declarationContext.self,i)
-		}
-		open func function_statement() -> Function_statementContext? {
-			return getRuleContext(Function_statementContext.self,0)
-		}
-		open func function_port_list() -> Function_port_listContext? {
-			return getRuleContext(Function_port_listContext.self,0)
-		}
-		open func block_item_declaration() -> Array<Block_item_declarationContext> {
-			return getRuleContexts(Block_item_declarationContext.self)
-		}
-		open func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
-			return getRuleContext(Block_item_declarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_declaration() throws -> Function_declarationContext {
+	 open func function_declaration() throws -> Function_declarationContext {
 		var _localctx: Function_declarationContext = Function_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 140, Verilog2001Parser.RULE_function_declaration)
 		var _la: Int = 0
@@ -7438,40 +7966,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_item_declarationContext:ParserRuleContext {
-		open func block_item_declaration() -> Block_item_declarationContext? {
-			return getRuleContext(Block_item_declarationContext.self,0)
+
+	public class Function_item_declarationContext: ParserRuleContext {
+			open
+			func block_item_declaration() -> Block_item_declarationContext? {
+				return getRuleContext(Block_item_declarationContext.self, 0)
+			}
+			open
+			func tf_declaration() -> Tf_declarationContext? {
+				return getRuleContext(Tf_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_item_declaration
 		}
-		open func tf_declaration() -> Tf_declarationContext? {
-			return getRuleContext(Tf_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_item_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_item_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_item_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_item_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_item_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_item_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_item_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_item_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_item_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_item_declaration() throws -> Function_item_declarationContext {
+	 open func function_item_declaration() throws -> Function_item_declarationContext {
 		var _localctx: Function_item_declarationContext = Function_item_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 142, Verilog2001Parser.RULE_function_item_declaration)
 		defer {
@@ -7506,7 +8041,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7517,40 +8052,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_port_listContext:ParserRuleContext {
-		open func function_port() -> Array<Function_portContext> {
-			return getRuleContexts(Function_portContext.self)
+
+	public class Function_port_listContext: ParserRuleContext {
+			open
+			func function_port() -> [Function_portContext] {
+				return getRuleContexts(Function_portContext.self)
+			}
+			open
+			func function_port(_ i: Int) -> Function_portContext? {
+				return getRuleContext(Function_portContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_port_list
 		}
-		open func function_port(_ i: Int) -> Function_portContext? {
-			return getRuleContext(Function_portContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_port_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_port_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_port_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_port_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_port_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_port_list(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_port_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_port_list(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_port_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_port_list() throws -> Function_port_listContext {
+	 open func function_port_list() throws -> Function_port_listContext {
 		var _localctx: Function_port_listContext = Function_port_listContext(_ctx, getState())
 		try enterRule(_localctx, 144, Verilog2001Parser.RULE_function_port_list)
 		var _la: Int = 0
@@ -7589,43 +8131,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_portContext:ParserRuleContext {
-		open func tf_declaration() -> Tf_declarationContext? {
-			return getRuleContext(Tf_declarationContext.self,0)
+
+	public class Function_portContext: ParserRuleContext {
+			open
+			func tf_declaration() -> Tf_declarationContext? {
+				return getRuleContext(Tf_declarationContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_port
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_port }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_port(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_port(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_port(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_port(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_port(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_port(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_port(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_port(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_port() throws -> Function_portContext {
+	 open func function_port() throws -> Function_portContext {
 		var _localctx: Function_portContext = Function_portContext(_ctx, getState())
 		try enterRule(_localctx, 146, Verilog2001Parser.RULE_function_port)
 		var _la: Int = 0
@@ -7662,37 +8212,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Range_or_typeContext:ParserRuleContext {
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
+
+	public class Range_or_typeContext: ParserRuleContext {
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_range_or_type
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_range_or_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterRange_or_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterRange_or_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitRange_or_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitRange_or_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitRange_or_type(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitRange_or_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitRange_or_type(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitRange_or_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func range_or_type() throws -> Range_or_typeContext {
+	 open func range_or_type() throws -> Range_or_typeContext {
 		var _localctx: Range_or_typeContext = Range_or_typeContext(_ctx, getState())
 		try enterRule(_localctx, 148, Verilog2001Parser.RULE_range_or_type)
 		defer {
@@ -7737,7 +8293,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7748,55 +8304,67 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Task_declarationContext:ParserRuleContext {
-		open func task_identifier() -> Task_identifierContext? {
-			return getRuleContext(Task_identifierContext.self,0)
+
+	public class Task_declarationContext: ParserRuleContext {
+			open
+			func task_identifier() -> Task_identifierContext? {
+				return getRuleContext(Task_identifierContext.self, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func task_item_declaration() -> [Task_item_declarationContext] {
+				return getRuleContexts(Task_item_declarationContext.self)
+			}
+			open
+			func task_item_declaration(_ i: Int) -> Task_item_declarationContext? {
+				return getRuleContext(Task_item_declarationContext.self, i)
+			}
+			open
+			func task_port_list() -> Task_port_listContext? {
+				return getRuleContext(Task_port_listContext.self, 0)
+			}
+			open
+			func block_item_declaration() -> [Block_item_declarationContext] {
+				return getRuleContexts(Block_item_declarationContext.self)
+			}
+			open
+			func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
+				return getRuleContext(Block_item_declarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_task_declaration
 		}
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		open func task_item_declaration() -> Array<Task_item_declarationContext> {
-			return getRuleContexts(Task_item_declarationContext.self)
-		}
-		open func task_item_declaration(_ i: Int) -> Task_item_declarationContext? {
-			return getRuleContext(Task_item_declarationContext.self,i)
-		}
-		open func task_port_list() -> Task_port_listContext? {
-			return getRuleContext(Task_port_listContext.self,0)
-		}
-		open func block_item_declaration() -> Array<Block_item_declarationContext> {
-			return getRuleContexts(Block_item_declarationContext.self)
-		}
-		open func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
-			return getRuleContext(Block_item_declarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_task_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTask_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTask_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTask_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTask_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTask_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTask_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTask_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTask_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func task_declaration() throws -> Task_declarationContext {
+	 open func task_declaration() throws -> Task_declarationContext {
 		var _localctx: Task_declarationContext = Task_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 150, Verilog2001Parser.RULE_task_declaration)
 		var _la: Int = 0
@@ -7921,46 +8489,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Task_item_declarationContext:ParserRuleContext {
-		open func block_item_declaration() -> Block_item_declarationContext? {
-			return getRuleContext(Block_item_declarationContext.self,0)
+
+	public class Task_item_declarationContext: ParserRuleContext {
+			open
+			func block_item_declaration() -> Block_item_declarationContext? {
+				return getRuleContext(Block_item_declarationContext.self, 0)
+			}
+			open
+			func tf_declaration() -> Tf_declarationContext? {
+				return getRuleContext(Tf_declarationContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_task_item_declaration
 		}
-		open func tf_declaration() -> Tf_declarationContext? {
-			return getRuleContext(Tf_declarationContext.self,0)
-		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_task_item_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTask_item_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTask_item_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTask_item_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTask_item_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTask_item_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTask_item_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTask_item_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTask_item_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func task_item_declaration() throws -> Task_item_declarationContext {
+	 open func task_item_declaration() throws -> Task_item_declarationContext {
 		var _localctx: Task_item_declarationContext = Task_item_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 152, Verilog2001Parser.RULE_task_item_declaration)
 		var _la: Int = 0
@@ -8012,40 +8589,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Task_port_listContext:ParserRuleContext {
-		open func task_port_item() -> Array<Task_port_itemContext> {
-			return getRuleContexts(Task_port_itemContext.self)
+
+	public class Task_port_listContext: ParserRuleContext {
+			open
+			func task_port_item() -> [Task_port_itemContext] {
+				return getRuleContexts(Task_port_itemContext.self)
+			}
+			open
+			func task_port_item(_ i: Int) -> Task_port_itemContext? {
+				return getRuleContext(Task_port_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_task_port_list
 		}
-		open func task_port_item(_ i: Int) -> Task_port_itemContext? {
-			return getRuleContext(Task_port_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_task_port_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTask_port_list(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTask_port_list(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTask_port_list(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTask_port_list(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTask_port_list(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTask_port_list(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTask_port_list(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTask_port_list(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func task_port_list() throws -> Task_port_listContext {
+	 open func task_port_list() throws -> Task_port_listContext {
 		var _localctx: Task_port_listContext = Task_port_listContext(_ctx, getState())
 		try enterRule(_localctx, 154, Verilog2001Parser.RULE_task_port_list)
 		var _la: Int = 0
@@ -8084,43 +8668,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Task_port_itemContext:ParserRuleContext {
-		open func tf_declaration() -> Tf_declarationContext? {
-			return getRuleContext(Tf_declarationContext.self,0)
+
+	public class Task_port_itemContext: ParserRuleContext {
+			open
+			func tf_declaration() -> Tf_declarationContext? {
+				return getRuleContext(Tf_declarationContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_task_port_item
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_task_port_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTask_port_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTask_port_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTask_port_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTask_port_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTask_port_item(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTask_port_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTask_port_item(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTask_port_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func task_port_item() throws -> Task_port_itemContext {
+	 open func task_port_item() throws -> Task_port_itemContext {
 		var _localctx: Task_port_itemContext = Task_port_itemContext(_ctx, getState())
 		try enterRule(_localctx, 156, Verilog2001Parser.RULE_task_port_item)
 		var _la: Int = 0
@@ -8157,43 +8749,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Tf_decl_headerContext:ParserRuleContext {
-		open func net_type() -> Net_typeContext? {
-			return getRuleContext(Net_typeContext.self,0)
+
+	public class Tf_decl_headerContext: ParserRuleContext {
+			open
+			func net_type() -> Net_typeContext? {
+				return getRuleContext(Net_typeContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+			open
+			func task_port_type() -> Task_port_typeContext? {
+				return getRuleContext(Task_port_typeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_tf_decl_header
 		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open func task_port_type() -> Task_port_typeContext? {
-			return getRuleContext(Task_port_typeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_tf_decl_header }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTf_decl_header(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTf_decl_header(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTf_decl_header(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTf_decl_header(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTf_decl_header(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTf_decl_header(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTf_decl_header(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTf_decl_header(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tf_decl_header() throws -> Tf_decl_headerContext {
+	 open func tf_decl_header() throws -> Tf_decl_headerContext {
 		var _localctx: Tf_decl_headerContext = Tf_decl_headerContext(_ctx, getState())
 		try enterRule(_localctx, 158, Verilog2001Parser.RULE_tf_decl_header)
 		var _la: Int = 0
@@ -8342,40 +8942,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Tf_declarationContext:ParserRuleContext {
-		open func tf_decl_header() -> Tf_decl_headerContext? {
-			return getRuleContext(Tf_decl_headerContext.self,0)
+
+	public class Tf_declarationContext: ParserRuleContext {
+			open
+			func tf_decl_header() -> Tf_decl_headerContext? {
+				return getRuleContext(Tf_decl_headerContext.self, 0)
+			}
+			open
+			func list_of_port_identifiers() -> List_of_port_identifiersContext? {
+				return getRuleContext(List_of_port_identifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_tf_declaration
 		}
-		open func list_of_port_identifiers() -> List_of_port_identifiersContext? {
-			return getRuleContext(List_of_port_identifiersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_tf_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTf_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTf_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTf_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTf_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTf_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTf_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTf_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTf_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tf_declaration() throws -> Tf_declarationContext {
+	 open func tf_declaration() throws -> Tf_declarationContext {
 		var _localctx: Tf_declarationContext = Tf_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 160, Verilog2001Parser.RULE_tf_declaration)
 		defer {
@@ -8397,34 +9004,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Task_port_typeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_task_port_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTask_port_type(self)
+
+	public class Task_port_typeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_task_port_type
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTask_port_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTask_port_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTask_port_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTask_port_type(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTask_port_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTask_port_type(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTask_port_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func task_port_type() throws -> Task_port_typeContext {
+	 open func task_port_type() throws -> Task_port_typeContext {
 		var _localctx: Task_port_typeContext = Task_port_typeContext(_ctx, getState())
 		try enterRule(_localctx, 162, Verilog2001Parser.RULE_task_port_type)
 		var _la: Int = 0
@@ -8459,64 +9071,79 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Block_item_declarationContext:ParserRuleContext {
-		open func block_reg_declaration() -> Block_reg_declarationContext? {
-			return getRuleContext(Block_reg_declarationContext.self,0)
+
+	public class Block_item_declarationContext: ParserRuleContext {
+			open
+			func block_reg_declaration() -> Block_reg_declarationContext? {
+				return getRuleContext(Block_reg_declarationContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func event_declaration() -> Event_declarationContext? {
+				return getRuleContext(Event_declarationContext.self, 0)
+			}
+			open
+			func integer_declaration() -> Integer_declarationContext? {
+				return getRuleContext(Integer_declarationContext.self, 0)
+			}
+			open
+			func local_parameter_declaration() -> Local_parameter_declarationContext? {
+				return getRuleContext(Local_parameter_declarationContext.self, 0)
+			}
+			open
+			func parameter_declaration() -> Parameter_declarationContext? {
+				return getRuleContext(Parameter_declarationContext.self, 0)
+			}
+			open
+			func real_declaration() -> Real_declarationContext? {
+				return getRuleContext(Real_declarationContext.self, 0)
+			}
+			open
+			func realtime_declaration() -> Realtime_declarationContext? {
+				return getRuleContext(Realtime_declarationContext.self, 0)
+			}
+			open
+			func time_declaration() -> Time_declarationContext? {
+				return getRuleContext(Time_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_block_item_declaration
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func event_declaration() -> Event_declarationContext? {
-			return getRuleContext(Event_declarationContext.self,0)
-		}
-		open func integer_declaration() -> Integer_declarationContext? {
-			return getRuleContext(Integer_declarationContext.self,0)
-		}
-		open func local_parameter_declaration() -> Local_parameter_declarationContext? {
-			return getRuleContext(Local_parameter_declarationContext.self,0)
-		}
-		open func parameter_declaration() -> Parameter_declarationContext? {
-			return getRuleContext(Parameter_declarationContext.self,0)
-		}
-		open func real_declaration() -> Real_declarationContext? {
-			return getRuleContext(Real_declarationContext.self,0)
-		}
-		open func realtime_declaration() -> Realtime_declarationContext? {
-			return getRuleContext(Realtime_declarationContext.self,0)
-		}
-		open func time_declaration() -> Time_declarationContext? {
-			return getRuleContext(Time_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_block_item_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterBlock_item_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterBlock_item_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitBlock_item_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitBlock_item_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitBlock_item_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitBlock_item_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitBlock_item_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitBlock_item_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block_item_declaration() throws -> Block_item_declarationContext {
+	 open func block_item_declaration() throws -> Block_item_declarationContext {
 		var _localctx: Block_item_declarationContext = Block_item_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 164, Verilog2001Parser.RULE_block_item_declaration)
 		var _la: Int = 0
@@ -8714,40 +9341,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Block_reg_declarationContext:ParserRuleContext {
-		open func list_of_block_variable_identifiers() -> List_of_block_variable_identifiersContext? {
-			return getRuleContext(List_of_block_variable_identifiersContext.self,0)
+
+	public class Block_reg_declarationContext: ParserRuleContext {
+			open
+			func list_of_block_variable_identifiers() -> List_of_block_variable_identifiersContext? {
+				return getRuleContext(List_of_block_variable_identifiersContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_block_reg_declaration
 		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_block_reg_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterBlock_reg_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterBlock_reg_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitBlock_reg_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitBlock_reg_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitBlock_reg_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitBlock_reg_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitBlock_reg_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitBlock_reg_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block_reg_declaration() throws -> Block_reg_declarationContext {
+	 open func block_reg_declaration() throws -> Block_reg_declarationContext {
 		var _localctx: Block_reg_declarationContext = Block_reg_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 166, Verilog2001Parser.RULE_block_reg_declaration)
 		var _la: Int = 0
@@ -8798,40 +9432,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_block_variable_identifiersContext:ParserRuleContext {
-		open func block_variable_type() -> Array<Block_variable_typeContext> {
-			return getRuleContexts(Block_variable_typeContext.self)
+
+	public class List_of_block_variable_identifiersContext: ParserRuleContext {
+			open
+			func block_variable_type() -> [Block_variable_typeContext] {
+				return getRuleContexts(Block_variable_typeContext.self)
+			}
+			open
+			func block_variable_type(_ i: Int) -> Block_variable_typeContext? {
+				return getRuleContext(Block_variable_typeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_block_variable_identifiers
 		}
-		open func block_variable_type(_ i: Int) -> Block_variable_typeContext? {
-			return getRuleContext(Block_variable_typeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_block_variable_identifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_block_variable_identifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_block_variable_identifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_block_variable_identifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_block_variable_identifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_block_variable_identifiers(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_block_variable_identifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_block_variable_identifiers(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_block_variable_identifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_block_variable_identifiers() throws -> List_of_block_variable_identifiersContext {
+	 open func list_of_block_variable_identifiers() throws -> List_of_block_variable_identifiersContext {
 		var _localctx: List_of_block_variable_identifiersContext = List_of_block_variable_identifiersContext(_ctx, getState())
 		try enterRule(_localctx, 168, Verilog2001Parser.RULE_list_of_block_variable_identifiers)
 		var _la: Int = 0
@@ -8870,43 +9511,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Block_variable_typeContext:ParserRuleContext {
-		open func variable_identifier() -> Variable_identifierContext? {
-			return getRuleContext(Variable_identifierContext.self,0)
+
+	public class Block_variable_typeContext: ParserRuleContext {
+			open
+			func variable_identifier() -> Variable_identifierContext? {
+				return getRuleContext(Variable_identifierContext.self, 0)
+			}
+			open
+			func dimension() -> [DimensionContext] {
+				return getRuleContexts(DimensionContext.self)
+			}
+			open
+			func dimension(_ i: Int) -> DimensionContext? {
+				return getRuleContext(DimensionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_block_variable_type
 		}
-		open func dimension() -> Array<DimensionContext> {
-			return getRuleContexts(DimensionContext.self)
-		}
-		open func dimension(_ i: Int) -> DimensionContext? {
-			return getRuleContext(DimensionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_block_variable_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterBlock_variable_type(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterBlock_variable_type(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitBlock_variable_type(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitBlock_variable_type(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitBlock_variable_type(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitBlock_variable_type(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitBlock_variable_type(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitBlock_variable_type(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block_variable_type() throws -> Block_variable_typeContext {
+	 open func block_variable_type() throws -> Block_variable_typeContext {
 		var _localctx: Block_variable_typeContext = Block_variable_typeContext(_ctx, getState())
 		try enterRule(_localctx, 170, Verilog2001Parser.RULE_block_variable_type)
 		var _la: Int = 0
@@ -8958,118 +9607,151 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Gate_instantiationContext:ParserRuleContext {
-		open func cmos_switchtype() -> Cmos_switchtypeContext? {
-			return getRuleContext(Cmos_switchtypeContext.self,0)
+
+	public class Gate_instantiationContext: ParserRuleContext {
+			open
+			func cmos_switchtype() -> Cmos_switchtypeContext? {
+				return getRuleContext(Cmos_switchtypeContext.self, 0)
+			}
+			open
+			func cmos_switch_instance() -> [Cmos_switch_instanceContext] {
+				return getRuleContexts(Cmos_switch_instanceContext.self)
+			}
+			open
+			func cmos_switch_instance(_ i: Int) -> Cmos_switch_instanceContext? {
+				return getRuleContext(Cmos_switch_instanceContext.self, i)
+			}
+			open
+			func delay3() -> Delay3Context? {
+				return getRuleContext(Delay3Context.self, 0)
+			}
+			open
+			func mos_switchtype() -> Mos_switchtypeContext? {
+				return getRuleContext(Mos_switchtypeContext.self, 0)
+			}
+			open
+			func mos_switch_instance() -> [Mos_switch_instanceContext] {
+				return getRuleContexts(Mos_switch_instanceContext.self)
+			}
+			open
+			func mos_switch_instance(_ i: Int) -> Mos_switch_instanceContext? {
+				return getRuleContext(Mos_switch_instanceContext.self, i)
+			}
+			open
+			func pass_switchtype() -> Pass_switchtypeContext? {
+				return getRuleContext(Pass_switchtypeContext.self, 0)
+			}
+			open
+			func pass_switch_instance() -> [Pass_switch_instanceContext] {
+				return getRuleContexts(Pass_switch_instanceContext.self)
+			}
+			open
+			func pass_switch_instance(_ i: Int) -> Pass_switch_instanceContext? {
+				return getRuleContext(Pass_switch_instanceContext.self, i)
+			}
+			open
+			func pull_gate_instance() -> [Pull_gate_instanceContext] {
+				return getRuleContexts(Pull_gate_instanceContext.self)
+			}
+			open
+			func pull_gate_instance(_ i: Int) -> Pull_gate_instanceContext? {
+				return getRuleContext(Pull_gate_instanceContext.self, i)
+			}
+			open
+			func pulldown_strength() -> Pulldown_strengthContext? {
+				return getRuleContext(Pulldown_strengthContext.self, 0)
+			}
+			open
+			func pullup_strength() -> Pullup_strengthContext? {
+				return getRuleContext(Pullup_strengthContext.self, 0)
+			}
+			open
+			func enable_gatetype() -> Enable_gatetypeContext? {
+				return getRuleContext(Enable_gatetypeContext.self, 0)
+			}
+			open
+			func enable_gate_instance() -> [Enable_gate_instanceContext] {
+				return getRuleContexts(Enable_gate_instanceContext.self)
+			}
+			open
+			func enable_gate_instance(_ i: Int) -> Enable_gate_instanceContext? {
+				return getRuleContext(Enable_gate_instanceContext.self, i)
+			}
+			open
+			func drive_strength() -> Drive_strengthContext? {
+				return getRuleContext(Drive_strengthContext.self, 0)
+			}
+			open
+			func n_input_gatetype() -> N_input_gatetypeContext? {
+				return getRuleContext(N_input_gatetypeContext.self, 0)
+			}
+			open
+			func n_input_gate_instance() -> [N_input_gate_instanceContext] {
+				return getRuleContexts(N_input_gate_instanceContext.self)
+			}
+			open
+			func n_input_gate_instance(_ i: Int) -> N_input_gate_instanceContext? {
+				return getRuleContext(N_input_gate_instanceContext.self, i)
+			}
+			open
+			func delay2() -> Delay2Context? {
+				return getRuleContext(Delay2Context.self, 0)
+			}
+			open
+			func n_output_gatetype() -> N_output_gatetypeContext? {
+				return getRuleContext(N_output_gatetypeContext.self, 0)
+			}
+			open
+			func n_output_gate_instance() -> [N_output_gate_instanceContext] {
+				return getRuleContexts(N_output_gate_instanceContext.self)
+			}
+			open
+			func n_output_gate_instance(_ i: Int) -> N_output_gate_instanceContext? {
+				return getRuleContext(N_output_gate_instanceContext.self, i)
+			}
+			open
+			func pass_en_switchtype() -> Pass_en_switchtypeContext? {
+				return getRuleContext(Pass_en_switchtypeContext.self, 0)
+			}
+			open
+			func pass_enable_switch_instance() -> [Pass_enable_switch_instanceContext] {
+				return getRuleContexts(Pass_enable_switch_instanceContext.self)
+			}
+			open
+			func pass_enable_switch_instance(_ i: Int) -> Pass_enable_switch_instanceContext? {
+				return getRuleContext(Pass_enable_switch_instanceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_gate_instantiation
 		}
-		open func cmos_switch_instance() -> Array<Cmos_switch_instanceContext> {
-			return getRuleContexts(Cmos_switch_instanceContext.self)
-		}
-		open func cmos_switch_instance(_ i: Int) -> Cmos_switch_instanceContext? {
-			return getRuleContext(Cmos_switch_instanceContext.self,i)
-		}
-		open func delay3() -> Delay3Context? {
-			return getRuleContext(Delay3Context.self,0)
-		}
-		open func mos_switchtype() -> Mos_switchtypeContext? {
-			return getRuleContext(Mos_switchtypeContext.self,0)
-		}
-		open func mos_switch_instance() -> Array<Mos_switch_instanceContext> {
-			return getRuleContexts(Mos_switch_instanceContext.self)
-		}
-		open func mos_switch_instance(_ i: Int) -> Mos_switch_instanceContext? {
-			return getRuleContext(Mos_switch_instanceContext.self,i)
-		}
-		open func pass_switchtype() -> Pass_switchtypeContext? {
-			return getRuleContext(Pass_switchtypeContext.self,0)
-		}
-		open func pass_switch_instance() -> Array<Pass_switch_instanceContext> {
-			return getRuleContexts(Pass_switch_instanceContext.self)
-		}
-		open func pass_switch_instance(_ i: Int) -> Pass_switch_instanceContext? {
-			return getRuleContext(Pass_switch_instanceContext.self,i)
-		}
-		open func pull_gate_instance() -> Array<Pull_gate_instanceContext> {
-			return getRuleContexts(Pull_gate_instanceContext.self)
-		}
-		open func pull_gate_instance(_ i: Int) -> Pull_gate_instanceContext? {
-			return getRuleContext(Pull_gate_instanceContext.self,i)
-		}
-		open func pulldown_strength() -> Pulldown_strengthContext? {
-			return getRuleContext(Pulldown_strengthContext.self,0)
-		}
-		open func pullup_strength() -> Pullup_strengthContext? {
-			return getRuleContext(Pullup_strengthContext.self,0)
-		}
-		open func enable_gatetype() -> Enable_gatetypeContext? {
-			return getRuleContext(Enable_gatetypeContext.self,0)
-		}
-		open func enable_gate_instance() -> Array<Enable_gate_instanceContext> {
-			return getRuleContexts(Enable_gate_instanceContext.self)
-		}
-		open func enable_gate_instance(_ i: Int) -> Enable_gate_instanceContext? {
-			return getRuleContext(Enable_gate_instanceContext.self,i)
-		}
-		open func drive_strength() -> Drive_strengthContext? {
-			return getRuleContext(Drive_strengthContext.self,0)
-		}
-		open func n_input_gatetype() -> N_input_gatetypeContext? {
-			return getRuleContext(N_input_gatetypeContext.self,0)
-		}
-		open func n_input_gate_instance() -> Array<N_input_gate_instanceContext> {
-			return getRuleContexts(N_input_gate_instanceContext.self)
-		}
-		open func n_input_gate_instance(_ i: Int) -> N_input_gate_instanceContext? {
-			return getRuleContext(N_input_gate_instanceContext.self,i)
-		}
-		open func delay2() -> Delay2Context? {
-			return getRuleContext(Delay2Context.self,0)
-		}
-		open func n_output_gatetype() -> N_output_gatetypeContext? {
-			return getRuleContext(N_output_gatetypeContext.self,0)
-		}
-		open func n_output_gate_instance() -> Array<N_output_gate_instanceContext> {
-			return getRuleContexts(N_output_gate_instanceContext.self)
-		}
-		open func n_output_gate_instance(_ i: Int) -> N_output_gate_instanceContext? {
-			return getRuleContext(N_output_gate_instanceContext.self,i)
-		}
-		open func pass_en_switchtype() -> Pass_en_switchtypeContext? {
-			return getRuleContext(Pass_en_switchtypeContext.self,0)
-		}
-		open func pass_enable_switch_instance() -> Array<Pass_enable_switch_instanceContext> {
-			return getRuleContexts(Pass_enable_switch_instanceContext.self)
-		}
-		open func pass_enable_switch_instance(_ i: Int) -> Pass_enable_switch_instanceContext? {
-			return getRuleContext(Pass_enable_switch_instanceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_gate_instantiation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGate_instantiation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGate_instantiation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGate_instantiation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGate_instantiation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGate_instantiation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGate_instantiation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGate_instantiation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGate_instantiation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func gate_instantiation() throws -> Gate_instantiationContext {
+	 open func gate_instantiation() throws -> Gate_instantiationContext {
 		var _localctx: Gate_instantiationContext = Gate_instantiationContext(_ctx, getState())
 		try enterRule(_localctx, 172, Verilog2001Parser.RULE_gate_instantiation)
 		var _la: Int = 0
@@ -9498,7 +10180,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9509,49 +10191,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Cmos_switch_instanceContext:ParserRuleContext {
-		open func output_terminal() -> Output_terminalContext? {
-			return getRuleContext(Output_terminalContext.self,0)
+
+	public class Cmos_switch_instanceContext: ParserRuleContext {
+			open
+			func output_terminal() -> Output_terminalContext? {
+				return getRuleContext(Output_terminalContext.self, 0)
+			}
+			open
+			func input_terminal() -> Input_terminalContext? {
+				return getRuleContext(Input_terminalContext.self, 0)
+			}
+			open
+			func ncontrol_terminal() -> Ncontrol_terminalContext? {
+				return getRuleContext(Ncontrol_terminalContext.self, 0)
+			}
+			open
+			func pcontrol_terminal() -> Pcontrol_terminalContext? {
+				return getRuleContext(Pcontrol_terminalContext.self, 0)
+			}
+			open
+			func name_of_gate_instance() -> Name_of_gate_instanceContext? {
+				return getRuleContext(Name_of_gate_instanceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_cmos_switch_instance
 		}
-		open func input_terminal() -> Input_terminalContext? {
-			return getRuleContext(Input_terminalContext.self,0)
-		}
-		open func ncontrol_terminal() -> Ncontrol_terminalContext? {
-			return getRuleContext(Ncontrol_terminalContext.self,0)
-		}
-		open func pcontrol_terminal() -> Pcontrol_terminalContext? {
-			return getRuleContext(Pcontrol_terminalContext.self,0)
-		}
-		open func name_of_gate_instance() -> Name_of_gate_instanceContext? {
-			return getRuleContext(Name_of_gate_instanceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_cmos_switch_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterCmos_switch_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterCmos_switch_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitCmos_switch_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitCmos_switch_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitCmos_switch_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitCmos_switch_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitCmos_switch_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitCmos_switch_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cmos_switch_instance() throws -> Cmos_switch_instanceContext {
+	 open func cmos_switch_instance() throws -> Cmos_switch_instanceContext {
 		var _localctx: Cmos_switch_instanceContext = Cmos_switch_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 174, Verilog2001Parser.RULE_cmos_switch_instance)
 		var _la: Int = 0
@@ -9601,46 +10293,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Enable_gate_instanceContext:ParserRuleContext {
-		open func output_terminal() -> Output_terminalContext? {
-			return getRuleContext(Output_terminalContext.self,0)
+
+	public class Enable_gate_instanceContext: ParserRuleContext {
+			open
+			func output_terminal() -> Output_terminalContext? {
+				return getRuleContext(Output_terminalContext.self, 0)
+			}
+			open
+			func input_terminal() -> Input_terminalContext? {
+				return getRuleContext(Input_terminalContext.self, 0)
+			}
+			open
+			func enable_terminal() -> Enable_terminalContext? {
+				return getRuleContext(Enable_terminalContext.self, 0)
+			}
+			open
+			func name_of_gate_instance() -> Name_of_gate_instanceContext? {
+				return getRuleContext(Name_of_gate_instanceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_enable_gate_instance
 		}
-		open func input_terminal() -> Input_terminalContext? {
-			return getRuleContext(Input_terminalContext.self,0)
-		}
-		open func enable_terminal() -> Enable_terminalContext? {
-			return getRuleContext(Enable_terminalContext.self,0)
-		}
-		open func name_of_gate_instance() -> Name_of_gate_instanceContext? {
-			return getRuleContext(Name_of_gate_instanceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_enable_gate_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEnable_gate_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEnable_gate_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEnable_gate_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEnable_gate_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEnable_gate_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEnable_gate_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEnable_gate_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEnable_gate_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enable_gate_instance() throws -> Enable_gate_instanceContext {
+	 open func enable_gate_instance() throws -> Enable_gate_instanceContext {
 		var _localctx: Enable_gate_instanceContext = Enable_gate_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 176, Verilog2001Parser.RULE_enable_gate_instance)
 		var _la: Int = 0
@@ -9686,46 +10387,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Mos_switch_instanceContext:ParserRuleContext {
-		open func output_terminal() -> Output_terminalContext? {
-			return getRuleContext(Output_terminalContext.self,0)
+
+	public class Mos_switch_instanceContext: ParserRuleContext {
+			open
+			func output_terminal() -> Output_terminalContext? {
+				return getRuleContext(Output_terminalContext.self, 0)
+			}
+			open
+			func input_terminal() -> Input_terminalContext? {
+				return getRuleContext(Input_terminalContext.self, 0)
+			}
+			open
+			func enable_terminal() -> Enable_terminalContext? {
+				return getRuleContext(Enable_terminalContext.self, 0)
+			}
+			open
+			func name_of_gate_instance() -> Name_of_gate_instanceContext? {
+				return getRuleContext(Name_of_gate_instanceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_mos_switch_instance
 		}
-		open func input_terminal() -> Input_terminalContext? {
-			return getRuleContext(Input_terminalContext.self,0)
-		}
-		open func enable_terminal() -> Enable_terminalContext? {
-			return getRuleContext(Enable_terminalContext.self,0)
-		}
-		open func name_of_gate_instance() -> Name_of_gate_instanceContext? {
-			return getRuleContext(Name_of_gate_instanceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_mos_switch_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterMos_switch_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterMos_switch_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitMos_switch_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitMos_switch_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitMos_switch_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitMos_switch_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitMos_switch_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitMos_switch_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mos_switch_instance() throws -> Mos_switch_instanceContext {
+	 open func mos_switch_instance() throws -> Mos_switch_instanceContext {
 		var _localctx: Mos_switch_instanceContext = Mos_switch_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 178, Verilog2001Parser.RULE_mos_switch_instance)
 		var _la: Int = 0
@@ -9771,46 +10481,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class N_input_gate_instanceContext:ParserRuleContext {
-		open func output_terminal() -> Output_terminalContext? {
-			return getRuleContext(Output_terminalContext.self,0)
+
+	public class N_input_gate_instanceContext: ParserRuleContext {
+			open
+			func output_terminal() -> Output_terminalContext? {
+				return getRuleContext(Output_terminalContext.self, 0)
+			}
+			open
+			func input_terminal() -> [Input_terminalContext] {
+				return getRuleContexts(Input_terminalContext.self)
+			}
+			open
+			func input_terminal(_ i: Int) -> Input_terminalContext? {
+				return getRuleContext(Input_terminalContext.self, i)
+			}
+			open
+			func name_of_gate_instance() -> Name_of_gate_instanceContext? {
+				return getRuleContext(Name_of_gate_instanceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_n_input_gate_instance
 		}
-		open func input_terminal() -> Array<Input_terminalContext> {
-			return getRuleContexts(Input_terminalContext.self)
-		}
-		open func input_terminal(_ i: Int) -> Input_terminalContext? {
-			return getRuleContext(Input_terminalContext.self,i)
-		}
-		open func name_of_gate_instance() -> Name_of_gate_instanceContext? {
-			return getRuleContext(Name_of_gate_instanceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_n_input_gate_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterN_input_gate_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterN_input_gate_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitN_input_gate_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitN_input_gate_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitN_input_gate_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitN_input_gate_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitN_input_gate_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitN_input_gate_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func n_input_gate_instance() throws -> N_input_gate_instanceContext {
+	 open func n_input_gate_instance() throws -> N_input_gate_instanceContext {
 		var _localctx: N_input_gate_instanceContext = N_input_gate_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 180, Verilog2001Parser.RULE_n_input_gate_instance)
 		var _la: Int = 0
@@ -9870,46 +10589,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class N_output_gate_instanceContext:ParserRuleContext {
-		open func output_terminal() -> Array<Output_terminalContext> {
-			return getRuleContexts(Output_terminalContext.self)
+
+	public class N_output_gate_instanceContext: ParserRuleContext {
+			open
+			func output_terminal() -> [Output_terminalContext] {
+				return getRuleContexts(Output_terminalContext.self)
+			}
+			open
+			func output_terminal(_ i: Int) -> Output_terminalContext? {
+				return getRuleContext(Output_terminalContext.self, i)
+			}
+			open
+			func input_terminal() -> Input_terminalContext? {
+				return getRuleContext(Input_terminalContext.self, 0)
+			}
+			open
+			func name_of_gate_instance() -> Name_of_gate_instanceContext? {
+				return getRuleContext(Name_of_gate_instanceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_n_output_gate_instance
 		}
-		open func output_terminal(_ i: Int) -> Output_terminalContext? {
-			return getRuleContext(Output_terminalContext.self,i)
-		}
-		open func input_terminal() -> Input_terminalContext? {
-			return getRuleContext(Input_terminalContext.self,0)
-		}
-		open func name_of_gate_instance() -> Name_of_gate_instanceContext? {
-			return getRuleContext(Name_of_gate_instanceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_n_output_gate_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterN_output_gate_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterN_output_gate_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitN_output_gate_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitN_output_gate_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitN_output_gate_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitN_output_gate_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitN_output_gate_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitN_output_gate_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func n_output_gate_instance() throws -> N_output_gate_instanceContext {
+	 open func n_output_gate_instance() throws -> N_output_gate_instanceContext {
 		var _localctx: N_output_gate_instanceContext = N_output_gate_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 182, Verilog2001Parser.RULE_n_output_gate_instance)
 		var _la: Int = 0
@@ -9968,43 +10696,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pass_switch_instanceContext:ParserRuleContext {
-		open func inout_terminal() -> Array<Inout_terminalContext> {
-			return getRuleContexts(Inout_terminalContext.self)
+
+	public class Pass_switch_instanceContext: ParserRuleContext {
+			open
+			func inout_terminal() -> [Inout_terminalContext] {
+				return getRuleContexts(Inout_terminalContext.self)
+			}
+			open
+			func inout_terminal(_ i: Int) -> Inout_terminalContext? {
+				return getRuleContext(Inout_terminalContext.self, i)
+			}
+			open
+			func name_of_gate_instance() -> Name_of_gate_instanceContext? {
+				return getRuleContext(Name_of_gate_instanceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pass_switch_instance
 		}
-		open func inout_terminal(_ i: Int) -> Inout_terminalContext? {
-			return getRuleContext(Inout_terminalContext.self,i)
-		}
-		open func name_of_gate_instance() -> Name_of_gate_instanceContext? {
-			return getRuleContext(Name_of_gate_instanceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pass_switch_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPass_switch_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPass_switch_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPass_switch_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPass_switch_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPass_switch_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPass_switch_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPass_switch_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPass_switch_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pass_switch_instance() throws -> Pass_switch_instanceContext {
+	 open func pass_switch_instance() throws -> Pass_switch_instanceContext {
 		var _localctx: Pass_switch_instanceContext = Pass_switch_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 184, Verilog2001Parser.RULE_pass_switch_instance)
 		var _la: Int = 0
@@ -10046,46 +10782,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pass_enable_switch_instanceContext:ParserRuleContext {
-		open func inout_terminal() -> Array<Inout_terminalContext> {
-			return getRuleContexts(Inout_terminalContext.self)
+
+	public class Pass_enable_switch_instanceContext: ParserRuleContext {
+			open
+			func inout_terminal() -> [Inout_terminalContext] {
+				return getRuleContexts(Inout_terminalContext.self)
+			}
+			open
+			func inout_terminal(_ i: Int) -> Inout_terminalContext? {
+				return getRuleContext(Inout_terminalContext.self, i)
+			}
+			open
+			func enable_terminal() -> Enable_terminalContext? {
+				return getRuleContext(Enable_terminalContext.self, 0)
+			}
+			open
+			func name_of_gate_instance() -> Name_of_gate_instanceContext? {
+				return getRuleContext(Name_of_gate_instanceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pass_enable_switch_instance
 		}
-		open func inout_terminal(_ i: Int) -> Inout_terminalContext? {
-			return getRuleContext(Inout_terminalContext.self,i)
-		}
-		open func enable_terminal() -> Enable_terminalContext? {
-			return getRuleContext(Enable_terminalContext.self,0)
-		}
-		open func name_of_gate_instance() -> Name_of_gate_instanceContext? {
-			return getRuleContext(Name_of_gate_instanceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pass_enable_switch_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPass_enable_switch_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPass_enable_switch_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPass_enable_switch_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPass_enable_switch_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPass_enable_switch_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPass_enable_switch_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPass_enable_switch_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPass_enable_switch_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pass_enable_switch_instance() throws -> Pass_enable_switch_instanceContext {
+	 open func pass_enable_switch_instance() throws -> Pass_enable_switch_instanceContext {
 		var _localctx: Pass_enable_switch_instanceContext = Pass_enable_switch_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 186, Verilog2001Parser.RULE_pass_enable_switch_instance)
 		var _la: Int = 0
@@ -10131,40 +10876,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pull_gate_instanceContext:ParserRuleContext {
-		open func output_terminal() -> Output_terminalContext? {
-			return getRuleContext(Output_terminalContext.self,0)
+
+	public class Pull_gate_instanceContext: ParserRuleContext {
+			open
+			func output_terminal() -> Output_terminalContext? {
+				return getRuleContext(Output_terminalContext.self, 0)
+			}
+			open
+			func name_of_gate_instance() -> Name_of_gate_instanceContext? {
+				return getRuleContext(Name_of_gate_instanceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pull_gate_instance
 		}
-		open func name_of_gate_instance() -> Name_of_gate_instanceContext? {
-			return getRuleContext(Name_of_gate_instanceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pull_gate_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPull_gate_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPull_gate_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPull_gate_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPull_gate_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPull_gate_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPull_gate_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPull_gate_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPull_gate_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pull_gate_instance() throws -> Pull_gate_instanceContext {
+	 open func pull_gate_instance() throws -> Pull_gate_instanceContext {
 		var _localctx: Pull_gate_instanceContext = Pull_gate_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 188, Verilog2001Parser.RULE_pull_gate_instance)
 		var _la: Int = 0
@@ -10202,40 +10954,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Name_of_gate_instanceContext:ParserRuleContext {
-		open func gate_instance_identifier() -> Gate_instance_identifierContext? {
-			return getRuleContext(Gate_instance_identifierContext.self,0)
+
+	public class Name_of_gate_instanceContext: ParserRuleContext {
+			open
+			func gate_instance_identifier() -> Gate_instance_identifierContext? {
+				return getRuleContext(Gate_instance_identifierContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_name_of_gate_instance
 		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_name_of_gate_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterName_of_gate_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterName_of_gate_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitName_of_gate_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitName_of_gate_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitName_of_gate_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitName_of_gate_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitName_of_gate_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitName_of_gate_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func name_of_gate_instance() throws -> Name_of_gate_instanceContext {
+	 open func name_of_gate_instance() throws -> Name_of_gate_instanceContext {
 		var _localctx: Name_of_gate_instanceContext = Name_of_gate_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 190, Verilog2001Parser.RULE_name_of_gate_instance)
 		var _la: Int = 0
@@ -10269,40 +11028,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pulldown_strengthContext:ParserRuleContext {
-		open func strength0() -> Strength0Context? {
-			return getRuleContext(Strength0Context.self,0)
+
+	public class Pulldown_strengthContext: ParserRuleContext {
+			open
+			func strength0() -> Strength0Context? {
+				return getRuleContext(Strength0Context.self, 0)
+			}
+			open
+			func strength1() -> Strength1Context? {
+				return getRuleContext(Strength1Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pulldown_strength
 		}
-		open func strength1() -> Strength1Context? {
-			return getRuleContext(Strength1Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pulldown_strength }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPulldown_strength(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPulldown_strength(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPulldown_strength(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPulldown_strength(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPulldown_strength(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPulldown_strength(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPulldown_strength(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPulldown_strength(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pulldown_strength() throws -> Pulldown_strengthContext {
+	 open func pulldown_strength() throws -> Pulldown_strengthContext {
 		var _localctx: Pulldown_strengthContext = Pulldown_strengthContext(_ctx, getState())
 		try enterRule(_localctx, 192, Verilog2001Parser.RULE_pulldown_strength)
 		defer {
@@ -10361,40 +11127,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pullup_strengthContext:ParserRuleContext {
-		open func strength0() -> Strength0Context? {
-			return getRuleContext(Strength0Context.self,0)
+
+	public class Pullup_strengthContext: ParserRuleContext {
+			open
+			func strength0() -> Strength0Context? {
+				return getRuleContext(Strength0Context.self, 0)
+			}
+			open
+			func strength1() -> Strength1Context? {
+				return getRuleContext(Strength1Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pullup_strength
 		}
-		open func strength1() -> Strength1Context? {
-			return getRuleContext(Strength1Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pullup_strength }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPullup_strength(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPullup_strength(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPullup_strength(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPullup_strength(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPullup_strength(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPullup_strength(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPullup_strength(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPullup_strength(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pullup_strength() throws -> Pullup_strengthContext {
+	 open func pullup_strength() throws -> Pullup_strengthContext {
 		var _localctx: Pullup_strengthContext = Pullup_strengthContext(_ctx, getState())
 		try enterRule(_localctx, 194, Verilog2001Parser.RULE_pullup_strength)
 		defer {
@@ -10453,37 +11226,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Enable_terminalContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Enable_terminalContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_enable_terminal
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_enable_terminal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEnable_terminal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEnable_terminal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEnable_terminal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEnable_terminal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEnable_terminal(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEnable_terminal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEnable_terminal(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEnable_terminal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enable_terminal() throws -> Enable_terminalContext {
+	 open func enable_terminal() throws -> Enable_terminalContext {
 		var _localctx: Enable_terminalContext = Enable_terminalContext(_ctx, getState())
 		try enterRule(_localctx, 196, Verilog2001Parser.RULE_enable_terminal)
 		defer {
@@ -10503,37 +11282,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Ncontrol_terminalContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Ncontrol_terminalContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_ncontrol_terminal
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_ncontrol_terminal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNcontrol_terminal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNcontrol_terminal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNcontrol_terminal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNcontrol_terminal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNcontrol_terminal(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNcontrol_terminal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNcontrol_terminal(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNcontrol_terminal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ncontrol_terminal() throws -> Ncontrol_terminalContext {
+	 open func ncontrol_terminal() throws -> Ncontrol_terminalContext {
 		var _localctx: Ncontrol_terminalContext = Ncontrol_terminalContext(_ctx, getState())
 		try enterRule(_localctx, 198, Verilog2001Parser.RULE_ncontrol_terminal)
 		defer {
@@ -10553,37 +11338,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pcontrol_terminalContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Pcontrol_terminalContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pcontrol_terminal
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pcontrol_terminal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPcontrol_terminal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPcontrol_terminal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPcontrol_terminal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPcontrol_terminal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPcontrol_terminal(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPcontrol_terminal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPcontrol_terminal(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPcontrol_terminal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pcontrol_terminal() throws -> Pcontrol_terminalContext {
+	 open func pcontrol_terminal() throws -> Pcontrol_terminalContext {
 		var _localctx: Pcontrol_terminalContext = Pcontrol_terminalContext(_ctx, getState())
 		try enterRule(_localctx, 200, Verilog2001Parser.RULE_pcontrol_terminal)
 		defer {
@@ -10603,37 +11394,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Input_terminalContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Input_terminalContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_input_terminal
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_input_terminal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInput_terminal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInput_terminal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInput_terminal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInput_terminal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInput_terminal(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInput_terminal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInput_terminal(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInput_terminal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func input_terminal() throws -> Input_terminalContext {
+	 open func input_terminal() throws -> Input_terminalContext {
 		var _localctx: Input_terminalContext = Input_terminalContext(_ctx, getState())
 		try enterRule(_localctx, 202, Verilog2001Parser.RULE_input_terminal)
 		defer {
@@ -10653,37 +11450,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Inout_terminalContext:ParserRuleContext {
-		open func net_lvalue() -> Net_lvalueContext? {
-			return getRuleContext(Net_lvalueContext.self,0)
+
+	public class Inout_terminalContext: ParserRuleContext {
+			open
+			func net_lvalue() -> Net_lvalueContext? {
+				return getRuleContext(Net_lvalueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_inout_terminal
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_inout_terminal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInout_terminal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInout_terminal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInout_terminal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInout_terminal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInout_terminal(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInout_terminal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInout_terminal(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInout_terminal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inout_terminal() throws -> Inout_terminalContext {
+	 open func inout_terminal() throws -> Inout_terminalContext {
 		var _localctx: Inout_terminalContext = Inout_terminalContext(_ctx, getState())
 		try enterRule(_localctx, 204, Verilog2001Parser.RULE_inout_terminal)
 		defer {
@@ -10703,37 +11506,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Output_terminalContext:ParserRuleContext {
-		open func net_lvalue() -> Net_lvalueContext? {
-			return getRuleContext(Net_lvalueContext.self,0)
+
+	public class Output_terminalContext: ParserRuleContext {
+			open
+			func net_lvalue() -> Net_lvalueContext? {
+				return getRuleContext(Net_lvalueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_output_terminal
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_output_terminal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterOutput_terminal(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterOutput_terminal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitOutput_terminal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitOutput_terminal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitOutput_terminal(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitOutput_terminal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitOutput_terminal(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitOutput_terminal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func output_terminal() throws -> Output_terminalContext {
+	 open func output_terminal() throws -> Output_terminalContext {
 		var _localctx: Output_terminalContext = Output_terminalContext(_ctx, getState())
 		try enterRule(_localctx, 206, Verilog2001Parser.RULE_output_terminal)
 		defer {
@@ -10753,34 +11562,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Cmos_switchtypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_cmos_switchtype }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterCmos_switchtype(self)
+
+	public class Cmos_switchtypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_cmos_switchtype
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterCmos_switchtype(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitCmos_switchtype(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitCmos_switchtype(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitCmos_switchtype(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitCmos_switchtype(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitCmos_switchtype(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitCmos_switchtype(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cmos_switchtype() throws -> Cmos_switchtypeContext {
+	 open func cmos_switchtype() throws -> Cmos_switchtypeContext {
 		var _localctx: Cmos_switchtypeContext = Cmos_switchtypeContext(_ctx, getState())
 		try enterRule(_localctx, 208, Verilog2001Parser.RULE_cmos_switchtype)
 		var _la: Int = 0
@@ -10812,34 +11626,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Enable_gatetypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_enable_gatetype }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEnable_gatetype(self)
+
+	public class Enable_gatetypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_enable_gatetype
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEnable_gatetype(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEnable_gatetype(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEnable_gatetype(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEnable_gatetype(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEnable_gatetype(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEnable_gatetype(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEnable_gatetype(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enable_gatetype() throws -> Enable_gatetypeContext {
+	 open func enable_gatetype() throws -> Enable_gatetypeContext {
 		var _localctx: Enable_gatetypeContext = Enable_gatetypeContext(_ctx, getState())
 		try enterRule(_localctx, 210, Verilog2001Parser.RULE_enable_gatetype)
 		var _la: Int = 0
@@ -10874,34 +11693,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Mos_switchtypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_mos_switchtype }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterMos_switchtype(self)
+
+	public class Mos_switchtypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_mos_switchtype
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterMos_switchtype(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitMos_switchtype(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitMos_switchtype(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitMos_switchtype(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitMos_switchtype(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitMos_switchtype(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitMos_switchtype(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mos_switchtype() throws -> Mos_switchtypeContext {
+	 open func mos_switchtype() throws -> Mos_switchtypeContext {
 		var _localctx: Mos_switchtypeContext = Mos_switchtypeContext(_ctx, getState())
 		try enterRule(_localctx, 212, Verilog2001Parser.RULE_mos_switchtype)
 		var _la: Int = 0
@@ -10936,34 +11760,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class N_input_gatetypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_n_input_gatetype }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterN_input_gatetype(self)
+
+	public class N_input_gatetypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_n_input_gatetype
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterN_input_gatetype(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitN_input_gatetype(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitN_input_gatetype(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitN_input_gatetype(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitN_input_gatetype(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitN_input_gatetype(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitN_input_gatetype(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func n_input_gatetype() throws -> N_input_gatetypeContext {
+	 open func n_input_gatetype() throws -> N_input_gatetypeContext {
 		var _localctx: N_input_gatetypeContext = N_input_gatetypeContext(_ctx, getState())
 		try enterRule(_localctx, 214, Verilog2001Parser.RULE_n_input_gatetype)
 		var _la: Int = 0
@@ -10998,34 +11827,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class N_output_gatetypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_n_output_gatetype }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterN_output_gatetype(self)
+
+	public class N_output_gatetypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_n_output_gatetype
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterN_output_gatetype(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitN_output_gatetype(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitN_output_gatetype(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitN_output_gatetype(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitN_output_gatetype(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitN_output_gatetype(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitN_output_gatetype(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func n_output_gatetype() throws -> N_output_gatetypeContext {
+	 open func n_output_gatetype() throws -> N_output_gatetypeContext {
 		var _localctx: N_output_gatetypeContext = N_output_gatetypeContext(_ctx, getState())
 		try enterRule(_localctx, 216, Verilog2001Parser.RULE_n_output_gatetype)
 		var _la: Int = 0
@@ -11057,34 +11891,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pass_en_switchtypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pass_en_switchtype }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPass_en_switchtype(self)
+
+	public class Pass_en_switchtypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pass_en_switchtype
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPass_en_switchtype(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPass_en_switchtype(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPass_en_switchtype(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPass_en_switchtype(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPass_en_switchtype(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPass_en_switchtype(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPass_en_switchtype(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pass_en_switchtype() throws -> Pass_en_switchtypeContext {
+	 open func pass_en_switchtype() throws -> Pass_en_switchtypeContext {
 		var _localctx: Pass_en_switchtypeContext = Pass_en_switchtypeContext(_ctx, getState())
 		try enterRule(_localctx, 218, Verilog2001Parser.RULE_pass_en_switchtype)
 		var _la: Int = 0
@@ -11119,34 +11958,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pass_switchtypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pass_switchtype }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPass_switchtype(self)
+
+	public class Pass_switchtypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pass_switchtype
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPass_switchtype(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPass_switchtype(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPass_switchtype(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPass_switchtype(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPass_switchtype(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPass_switchtype(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPass_switchtype(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pass_switchtype() throws -> Pass_switchtypeContext {
+	 open func pass_switchtype() throws -> Pass_switchtypeContext {
 		var _localctx: Pass_switchtypeContext = Pass_switchtypeContext(_ctx, getState())
 		try enterRule(_localctx, 220, Verilog2001Parser.RULE_pass_switchtype)
 		var _la: Int = 0
@@ -11178,46 +12022,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_instantiationContext:ParserRuleContext {
-		open func module_identifier() -> Module_identifierContext? {
-			return getRuleContext(Module_identifierContext.self,0)
+
+	public class Module_instantiationContext: ParserRuleContext {
+			open
+			func module_identifier() -> Module_identifierContext? {
+				return getRuleContext(Module_identifierContext.self, 0)
+			}
+			open
+			func module_instance() -> [Module_instanceContext] {
+				return getRuleContexts(Module_instanceContext.self)
+			}
+			open
+			func module_instance(_ i: Int) -> Module_instanceContext? {
+				return getRuleContext(Module_instanceContext.self, i)
+			}
+			open
+			func parameter_value_assignment() -> Parameter_value_assignmentContext? {
+				return getRuleContext(Parameter_value_assignmentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_instantiation
 		}
-		open func module_instance() -> Array<Module_instanceContext> {
-			return getRuleContexts(Module_instanceContext.self)
-		}
-		open func module_instance(_ i: Int) -> Module_instanceContext? {
-			return getRuleContext(Module_instanceContext.self,i)
-		}
-		open func parameter_value_assignment() -> Parameter_value_assignmentContext? {
-			return getRuleContext(Parameter_value_assignmentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_instantiation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_instantiation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_instantiation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_instantiation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_instantiation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_instantiation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_instantiation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_instantiation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_instantiation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_instantiation() throws -> Module_instantiationContext {
+	 open func module_instantiation() throws -> Module_instantiationContext {
 		var _localctx: Module_instantiationContext = Module_instantiationContext(_ctx, getState())
 		try enterRule(_localctx, 222, Verilog2001Parser.RULE_module_instantiation)
 		var _la: Int = 0
@@ -11273,37 +12126,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Parameter_value_assignmentContext:ParserRuleContext {
-		open func list_of_parameter_assignments() -> List_of_parameter_assignmentsContext? {
-			return getRuleContext(List_of_parameter_assignmentsContext.self,0)
+
+	public class Parameter_value_assignmentContext: ParserRuleContext {
+			open
+			func list_of_parameter_assignments() -> List_of_parameter_assignmentsContext? {
+				return getRuleContext(List_of_parameter_assignmentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_parameter_value_assignment
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_parameter_value_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterParameter_value_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterParameter_value_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitParameter_value_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitParameter_value_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitParameter_value_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitParameter_value_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitParameter_value_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitParameter_value_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter_value_assignment() throws -> Parameter_value_assignmentContext {
+	 open func parameter_value_assignment() throws -> Parameter_value_assignmentContext {
 		var _localctx: Parameter_value_assignmentContext = Parameter_value_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 224, Verilog2001Parser.RULE_parameter_value_assignment)
 		defer {
@@ -11329,46 +12188,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_parameter_assignmentsContext:ParserRuleContext {
-		open func ordered_parameter_assignment() -> Array<Ordered_parameter_assignmentContext> {
-			return getRuleContexts(Ordered_parameter_assignmentContext.self)
+
+	public class List_of_parameter_assignmentsContext: ParserRuleContext {
+			open
+			func ordered_parameter_assignment() -> [Ordered_parameter_assignmentContext] {
+				return getRuleContexts(Ordered_parameter_assignmentContext.self)
+			}
+			open
+			func ordered_parameter_assignment(_ i: Int) -> Ordered_parameter_assignmentContext? {
+				return getRuleContext(Ordered_parameter_assignmentContext.self, i)
+			}
+			open
+			func named_parameter_assignment() -> [Named_parameter_assignmentContext] {
+				return getRuleContexts(Named_parameter_assignmentContext.self)
+			}
+			open
+			func named_parameter_assignment(_ i: Int) -> Named_parameter_assignmentContext? {
+				return getRuleContext(Named_parameter_assignmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_parameter_assignments
 		}
-		open func ordered_parameter_assignment(_ i: Int) -> Ordered_parameter_assignmentContext? {
-			return getRuleContext(Ordered_parameter_assignmentContext.self,i)
-		}
-		open func named_parameter_assignment() -> Array<Named_parameter_assignmentContext> {
-			return getRuleContexts(Named_parameter_assignmentContext.self)
-		}
-		open func named_parameter_assignment(_ i: Int) -> Named_parameter_assignmentContext? {
-			return getRuleContext(Named_parameter_assignmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_parameter_assignments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_parameter_assignments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_parameter_assignments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_parameter_assignments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_parameter_assignments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_parameter_assignments(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_parameter_assignments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_parameter_assignments(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_parameter_assignments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_parameter_assignments() throws -> List_of_parameter_assignmentsContext {
+	 open func list_of_parameter_assignments() throws -> List_of_parameter_assignmentsContext {
 		var _localctx: List_of_parameter_assignmentsContext = List_of_parameter_assignmentsContext(_ctx, getState())
 		try enterRule(_localctx, 226, Verilog2001Parser.RULE_list_of_parameter_assignments)
 		var _la: Int = 0
@@ -11450,7 +12318,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -11461,37 +12329,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Ordered_parameter_assignmentContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Ordered_parameter_assignmentContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_ordered_parameter_assignment
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_ordered_parameter_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterOrdered_parameter_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterOrdered_parameter_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitOrdered_parameter_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitOrdered_parameter_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitOrdered_parameter_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitOrdered_parameter_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitOrdered_parameter_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitOrdered_parameter_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ordered_parameter_assignment() throws -> Ordered_parameter_assignmentContext {
+	 open func ordered_parameter_assignment() throws -> Ordered_parameter_assignmentContext {
 		var _localctx: Ordered_parameter_assignmentContext = Ordered_parameter_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 228, Verilog2001Parser.RULE_ordered_parameter_assignment)
 		defer {
@@ -11511,40 +12385,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Named_parameter_assignmentContext:ParserRuleContext {
-		open func parameter_identifier() -> Parameter_identifierContext? {
-			return getRuleContext(Parameter_identifierContext.self,0)
+
+	public class Named_parameter_assignmentContext: ParserRuleContext {
+			open
+			func parameter_identifier() -> Parameter_identifierContext? {
+				return getRuleContext(Parameter_identifierContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_named_parameter_assignment
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_named_parameter_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNamed_parameter_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNamed_parameter_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNamed_parameter_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNamed_parameter_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNamed_parameter_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNamed_parameter_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNamed_parameter_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNamed_parameter_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func named_parameter_assignment() throws -> Named_parameter_assignmentContext {
+	 open func named_parameter_assignment() throws -> Named_parameter_assignmentContext {
 		var _localctx: Named_parameter_assignmentContext = Named_parameter_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 230, Verilog2001Parser.RULE_named_parameter_assignment)
 		var _la: Int = 0
@@ -11588,40 +12469,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_instanceContext:ParserRuleContext {
-		open func name_of_instance() -> Name_of_instanceContext? {
-			return getRuleContext(Name_of_instanceContext.self,0)
+
+	public class Module_instanceContext: ParserRuleContext {
+			open
+			func name_of_instance() -> Name_of_instanceContext? {
+				return getRuleContext(Name_of_instanceContext.self, 0)
+			}
+			open
+			func list_of_port_connections() -> List_of_port_connectionsContext? {
+				return getRuleContext(List_of_port_connectionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_instance
 		}
-		open func list_of_port_connections() -> List_of_port_connectionsContext? {
-			return getRuleContext(List_of_port_connectionsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_instance() throws -> Module_instanceContext {
+	 open func module_instance() throws -> Module_instanceContext {
 		var _localctx: Module_instanceContext = Module_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 232, Verilog2001Parser.RULE_module_instance)
 		defer {
@@ -11647,40 +12535,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Name_of_instanceContext:ParserRuleContext {
-		open func module_instance_identifier() -> Module_instance_identifierContext? {
-			return getRuleContext(Module_instance_identifierContext.self,0)
+
+	public class Name_of_instanceContext: ParserRuleContext {
+			open
+			func module_instance_identifier() -> Module_instance_identifierContext? {
+				return getRuleContext(Module_instance_identifierContext.self, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_name_of_instance
 		}
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_name_of_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterName_of_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterName_of_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitName_of_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitName_of_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitName_of_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitName_of_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitName_of_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitName_of_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func name_of_instance() throws -> Name_of_instanceContext {
+	 open func name_of_instance() throws -> Name_of_instanceContext {
 		var _localctx: Name_of_instanceContext = Name_of_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 234, Verilog2001Parser.RULE_name_of_instance)
 		var _la: Int = 0
@@ -11714,46 +12609,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_port_connectionsContext:ParserRuleContext {
-		open func ordered_port_connection() -> Array<Ordered_port_connectionContext> {
-			return getRuleContexts(Ordered_port_connectionContext.self)
+
+	public class List_of_port_connectionsContext: ParserRuleContext {
+			open
+			func ordered_port_connection() -> [Ordered_port_connectionContext] {
+				return getRuleContexts(Ordered_port_connectionContext.self)
+			}
+			open
+			func ordered_port_connection(_ i: Int) -> Ordered_port_connectionContext? {
+				return getRuleContext(Ordered_port_connectionContext.self, i)
+			}
+			open
+			func named_port_connection() -> [Named_port_connectionContext] {
+				return getRuleContexts(Named_port_connectionContext.self)
+			}
+			open
+			func named_port_connection(_ i: Int) -> Named_port_connectionContext? {
+				return getRuleContext(Named_port_connectionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_port_connections
 		}
-		open func ordered_port_connection(_ i: Int) -> Ordered_port_connectionContext? {
-			return getRuleContext(Ordered_port_connectionContext.self,i)
-		}
-		open func named_port_connection() -> Array<Named_port_connectionContext> {
-			return getRuleContexts(Named_port_connectionContext.self)
-		}
-		open func named_port_connection(_ i: Int) -> Named_port_connectionContext? {
-			return getRuleContext(Named_port_connectionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_port_connections }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_port_connections(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_port_connections(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_port_connections(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_port_connections(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_port_connections(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_port_connections(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_port_connections(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_port_connections(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_port_connections() throws -> List_of_port_connectionsContext {
+	 open func list_of_port_connections() throws -> List_of_port_connectionsContext {
 		var _localctx: List_of_port_connectionsContext = List_of_port_connectionsContext(_ctx, getState())
 		try enterRule(_localctx, 236, Verilog2001Parser.RULE_list_of_port_connections)
 		var _la: Int = 0
@@ -11823,43 +12727,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Ordered_port_connectionContext:ParserRuleContext {
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
+
+	public class Ordered_port_connectionContext: ParserRuleContext {
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_ordered_port_connection
 		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_ordered_port_connection }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterOrdered_port_connection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterOrdered_port_connection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitOrdered_port_connection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitOrdered_port_connection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitOrdered_port_connection(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitOrdered_port_connection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitOrdered_port_connection(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitOrdered_port_connection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ordered_port_connection() throws -> Ordered_port_connectionContext {
+	 open func ordered_port_connection() throws -> Ordered_port_connectionContext {
 		var _localctx: Ordered_port_connectionContext = Ordered_port_connectionContext(_ctx, getState())
 		try enterRule(_localctx, 238, Verilog2001Parser.RULE_ordered_port_connection)
 		var _la: Int = 0
@@ -11910,46 +12822,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Named_port_connectionContext:ParserRuleContext {
-		open func port_identifier() -> Port_identifierContext? {
-			return getRuleContext(Port_identifierContext.self,0)
+
+	public class Named_port_connectionContext: ParserRuleContext {
+			open
+			func port_identifier() -> Port_identifierContext? {
+				return getRuleContext(Port_identifierContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_named_port_connection
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_named_port_connection }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNamed_port_connection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNamed_port_connection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNamed_port_connection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNamed_port_connection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNamed_port_connection(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNamed_port_connection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNamed_port_connection(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNamed_port_connection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func named_port_connection() throws -> Named_port_connectionContext {
+	 open func named_port_connection() throws -> Named_port_connectionContext {
 		var _localctx: Named_port_connectionContext = Named_port_connectionContext(_ctx, getState())
 		try enterRule(_localctx, 240, Verilog2001Parser.RULE_named_port_connection)
 		var _la: Int = 0
@@ -12009,40 +12930,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Generated_instantiationContext:ParserRuleContext {
-		open func generate_item() -> Array<Generate_itemContext> {
-			return getRuleContexts(Generate_itemContext.self)
+
+	public class Generated_instantiationContext: ParserRuleContext {
+			open
+			func generate_item() -> [Generate_itemContext] {
+				return getRuleContexts(Generate_itemContext.self)
+			}
+			open
+			func generate_item(_ i: Int) -> Generate_itemContext? {
+				return getRuleContext(Generate_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_generated_instantiation
 		}
-		open func generate_item(_ i: Int) -> Generate_itemContext? {
-			return getRuleContext(Generate_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_generated_instantiation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenerated_instantiation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenerated_instantiation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenerated_instantiation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenerated_instantiation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenerated_instantiation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenerated_instantiation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenerated_instantiation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenerated_instantiation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generated_instantiation() throws -> Generated_instantiationContext {
+	 open func generated_instantiation() throws -> Generated_instantiationContext {
 		var _localctx: Generated_instantiationContext = Generated_instantiationContext(_ctx, getState())
 		try enterRule(_localctx, 242, Verilog2001Parser.RULE_generated_instantiation)
 		var _la: Int = 0
@@ -12089,37 +13017,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Generate_item_or_nullContext:ParserRuleContext {
-		open func generate_item() -> Generate_itemContext? {
-			return getRuleContext(Generate_itemContext.self,0)
+
+	public class Generate_item_or_nullContext: ParserRuleContext {
+			open
+			func generate_item() -> Generate_itemContext? {
+				return getRuleContext(Generate_itemContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_generate_item_or_null
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_generate_item_or_null }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenerate_item_or_null(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenerate_item_or_null(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenerate_item_or_null(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenerate_item_or_null(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenerate_item_or_null(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenerate_item_or_null(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenerate_item_or_null(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenerate_item_or_null(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generate_item_or_null() throws -> Generate_item_or_nullContext {
+	 open func generate_item_or_null() throws -> Generate_item_or_nullContext {
 		var _localctx: Generate_item_or_nullContext = Generate_item_or_nullContext(_ctx, getState())
 		try enterRule(_localctx, 244, Verilog2001Parser.RULE_generate_item_or_null)
 		defer {
@@ -12199,7 +13133,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12210,49 +13144,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Generate_itemContext:ParserRuleContext {
-		open func generate_conditional_statement() -> Generate_conditional_statementContext? {
-			return getRuleContext(Generate_conditional_statementContext.self,0)
+
+	public class Generate_itemContext: ParserRuleContext {
+			open
+			func generate_conditional_statement() -> Generate_conditional_statementContext? {
+				return getRuleContext(Generate_conditional_statementContext.self, 0)
+			}
+			open
+			func generate_case_statement() -> Generate_case_statementContext? {
+				return getRuleContext(Generate_case_statementContext.self, 0)
+			}
+			open
+			func generate_loop_statement() -> Generate_loop_statementContext? {
+				return getRuleContext(Generate_loop_statementContext.self, 0)
+			}
+			open
+			func generate_block() -> Generate_blockContext? {
+				return getRuleContext(Generate_blockContext.self, 0)
+			}
+			open
+			func module_or_generate_item() -> Module_or_generate_itemContext? {
+				return getRuleContext(Module_or_generate_itemContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_generate_item
 		}
-		open func generate_case_statement() -> Generate_case_statementContext? {
-			return getRuleContext(Generate_case_statementContext.self,0)
-		}
-		open func generate_loop_statement() -> Generate_loop_statementContext? {
-			return getRuleContext(Generate_loop_statementContext.self,0)
-		}
-		open func generate_block() -> Generate_blockContext? {
-			return getRuleContext(Generate_blockContext.self,0)
-		}
-		open func module_or_generate_item() -> Module_or_generate_itemContext? {
-			return getRuleContext(Module_or_generate_itemContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_generate_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenerate_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenerate_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenerate_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenerate_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenerate_item(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenerate_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenerate_item(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenerate_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generate_item() throws -> Generate_itemContext {
+	 open func generate_item() throws -> Generate_itemContext {
 		var _localctx: Generate_itemContext = Generate_itemContext(_ctx, getState())
 		try enterRule(_localctx, 246, Verilog2001Parser.RULE_generate_item)
 		defer {
@@ -12348,7 +13292,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12359,43 +13303,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Generate_conditional_statementContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Generate_conditional_statementContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func generate_item_or_null() -> [Generate_item_or_nullContext] {
+				return getRuleContexts(Generate_item_or_nullContext.self)
+			}
+			open
+			func generate_item_or_null(_ i: Int) -> Generate_item_or_nullContext? {
+				return getRuleContext(Generate_item_or_nullContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_generate_conditional_statement
 		}
-		open func generate_item_or_null() -> Array<Generate_item_or_nullContext> {
-			return getRuleContexts(Generate_item_or_nullContext.self)
-		}
-		open func generate_item_or_null(_ i: Int) -> Generate_item_or_nullContext? {
-			return getRuleContext(Generate_item_or_nullContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_generate_conditional_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenerate_conditional_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenerate_conditional_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenerate_conditional_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenerate_conditional_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenerate_conditional_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenerate_conditional_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenerate_conditional_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenerate_conditional_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generate_conditional_statement() throws -> Generate_conditional_statementContext {
+	 open func generate_conditional_statement() throws -> Generate_conditional_statementContext {
 		var _localctx: Generate_conditional_statementContext = Generate_conditional_statementContext(_ctx, getState())
 		try enterRule(_localctx, 248, Verilog2001Parser.RULE_generate_conditional_statement)
 		defer {
@@ -12435,43 +13387,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Generate_case_statementContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Generate_case_statementContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func genvar_case_item() -> [Genvar_case_itemContext] {
+				return getRuleContexts(Genvar_case_itemContext.self)
+			}
+			open
+			func genvar_case_item(_ i: Int) -> Genvar_case_itemContext? {
+				return getRuleContext(Genvar_case_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_generate_case_statement
 		}
-		open func genvar_case_item() -> Array<Genvar_case_itemContext> {
-			return getRuleContexts(Genvar_case_itemContext.self)
-		}
-		open func genvar_case_item(_ i: Int) -> Genvar_case_itemContext? {
-			return getRuleContext(Genvar_case_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_generate_case_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenerate_case_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenerate_case_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenerate_case_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenerate_case_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenerate_case_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenerate_case_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenerate_case_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenerate_case_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generate_case_statement() throws -> Generate_case_statementContext {
+	 open func generate_case_statement() throws -> Generate_case_statementContext {
 		var _localctx: Generate_case_statementContext = Generate_case_statementContext(_ctx, getState())
 		try enterRule(_localctx, 250, Verilog2001Parser.RULE_generate_case_statement)
 		var _la: Int = 0
@@ -12525,43 +13485,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Genvar_case_itemContext:ParserRuleContext {
-		open func constant_expression() -> Array<Constant_expressionContext> {
-			return getRuleContexts(Constant_expressionContext.self)
+
+	public class Genvar_case_itemContext: ParserRuleContext {
+			open
+			func constant_expression() -> [Constant_expressionContext] {
+				return getRuleContexts(Constant_expressionContext.self)
+			}
+			open
+			func constant_expression(_ i: Int) -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, i)
+			}
+			open
+			func generate_item_or_null() -> Generate_item_or_nullContext? {
+				return getRuleContext(Generate_item_or_nullContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_genvar_case_item
 		}
-		open func constant_expression(_ i: Int) -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,i)
-		}
-		open func generate_item_or_null() -> Generate_item_or_nullContext? {
-			return getRuleContext(Generate_item_or_nullContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_genvar_case_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenvar_case_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenvar_case_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenvar_case_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenvar_case_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenvar_case_item(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenvar_case_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenvar_case_item(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenvar_case_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func genvar_case_item() throws -> Genvar_case_itemContext {
+	 open func genvar_case_item() throws -> Genvar_case_itemContext {
 		var _localctx: Genvar_case_itemContext = Genvar_case_itemContext(_ctx, getState())
 		try enterRule(_localctx, 252, Verilog2001Parser.RULE_genvar_case_item)
 		var _la: Int = 0
@@ -12644,7 +13612,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12655,46 +13623,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Generate_loop_statementContext:ParserRuleContext {
-		open func genvar_assignment() -> Array<Genvar_assignmentContext> {
-			return getRuleContexts(Genvar_assignmentContext.self)
+
+	public class Generate_loop_statementContext: ParserRuleContext {
+			open
+			func genvar_assignment() -> [Genvar_assignmentContext] {
+				return getRuleContexts(Genvar_assignmentContext.self)
+			}
+			open
+			func genvar_assignment(_ i: Int) -> Genvar_assignmentContext? {
+				return getRuleContext(Genvar_assignmentContext.self, i)
+			}
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func generate_block() -> Generate_blockContext? {
+				return getRuleContext(Generate_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_generate_loop_statement
 		}
-		open func genvar_assignment(_ i: Int) -> Genvar_assignmentContext? {
-			return getRuleContext(Genvar_assignmentContext.self,i)
-		}
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
-		}
-		open func generate_block() -> Generate_blockContext? {
-			return getRuleContext(Generate_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_generate_loop_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenerate_loop_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenerate_loop_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenerate_loop_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenerate_loop_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenerate_loop_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenerate_loop_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenerate_loop_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenerate_loop_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generate_loop_statement() throws -> Generate_loop_statementContext {
+	 open func generate_loop_statement() throws -> Generate_loop_statementContext {
 		var _localctx: Generate_loop_statementContext = Generate_loop_statementContext(_ctx, getState())
 		try enterRule(_localctx, 254, Verilog2001Parser.RULE_generate_loop_statement)
 		defer {
@@ -12730,40 +13707,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Genvar_assignmentContext:ParserRuleContext {
-		open func genvar_identifier() -> Genvar_identifierContext? {
-			return getRuleContext(Genvar_identifierContext.self,0)
+
+	public class Genvar_assignmentContext: ParserRuleContext {
+			open
+			func genvar_identifier() -> Genvar_identifierContext? {
+				return getRuleContext(Genvar_identifierContext.self, 0)
+			}
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_genvar_assignment
 		}
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_genvar_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenvar_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenvar_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenvar_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenvar_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenvar_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenvar_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenvar_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenvar_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func genvar_assignment() throws -> Genvar_assignmentContext {
+	 open func genvar_assignment() throws -> Genvar_assignmentContext {
 		var _localctx: Genvar_assignmentContext = Genvar_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 256, Verilog2001Parser.RULE_genvar_assignment)
 		defer {
@@ -12787,43 +13771,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Generate_blockContext:ParserRuleContext {
-		open func generate_block_identifier() -> Generate_block_identifierContext? {
-			return getRuleContext(Generate_block_identifierContext.self,0)
+
+	public class Generate_blockContext: ParserRuleContext {
+			open
+			func generate_block_identifier() -> Generate_block_identifierContext? {
+				return getRuleContext(Generate_block_identifierContext.self, 0)
+			}
+			open
+			func generate_item() -> [Generate_itemContext] {
+				return getRuleContexts(Generate_itemContext.self)
+			}
+			open
+			func generate_item(_ i: Int) -> Generate_itemContext? {
+				return getRuleContext(Generate_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_generate_block
 		}
-		open func generate_item() -> Array<Generate_itemContext> {
-			return getRuleContexts(Generate_itemContext.self)
-		}
-		open func generate_item(_ i: Int) -> Generate_itemContext? {
-			return getRuleContext(Generate_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_generate_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenerate_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenerate_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenerate_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenerate_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenerate_block(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenerate_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenerate_block(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenerate_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generate_block() throws -> Generate_blockContext {
+	 open func generate_block() throws -> Generate_blockContext {
 		var _localctx: Generate_blockContext = Generate_blockContext(_ctx, getState())
 		try enterRule(_localctx, 258, Verilog2001Parser.RULE_generate_block)
 		var _la: Int = 0
@@ -12885,43 +13877,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Continuous_assignContext:ParserRuleContext {
-		open func list_of_net_assignments() -> List_of_net_assignmentsContext? {
-			return getRuleContext(List_of_net_assignmentsContext.self,0)
+
+	public class Continuous_assignContext: ParserRuleContext {
+			open
+			func list_of_net_assignments() -> List_of_net_assignmentsContext? {
+				return getRuleContext(List_of_net_assignmentsContext.self, 0)
+			}
+			open
+			func drive_strength() -> Drive_strengthContext? {
+				return getRuleContext(Drive_strengthContext.self, 0)
+			}
+			open
+			func delay3() -> Delay3Context? {
+				return getRuleContext(Delay3Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_continuous_assign
 		}
-		open func drive_strength() -> Drive_strengthContext? {
-			return getRuleContext(Drive_strengthContext.self,0)
-		}
-		open func delay3() -> Delay3Context? {
-			return getRuleContext(Delay3Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_continuous_assign }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterContinuous_assign(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterContinuous_assign(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitContinuous_assign(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitContinuous_assign(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitContinuous_assign(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitContinuous_assign(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitContinuous_assign(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitContinuous_assign(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func continuous_assign() throws -> Continuous_assignContext {
+	 open func continuous_assign() throws -> Continuous_assignContext {
 		var _localctx: Continuous_assignContext = Continuous_assignContext(_ctx, getState())
 		try enterRule(_localctx, 260, Verilog2001Parser.RULE_continuous_assign)
 		var _la: Int = 0
@@ -12975,40 +13975,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_net_assignmentsContext:ParserRuleContext {
-		open func net_assignment() -> Array<Net_assignmentContext> {
-			return getRuleContexts(Net_assignmentContext.self)
+
+	public class List_of_net_assignmentsContext: ParserRuleContext {
+			open
+			func net_assignment() -> [Net_assignmentContext] {
+				return getRuleContexts(Net_assignmentContext.self)
+			}
+			open
+			func net_assignment(_ i: Int) -> Net_assignmentContext? {
+				return getRuleContext(Net_assignmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_net_assignments
 		}
-		open func net_assignment(_ i: Int) -> Net_assignmentContext? {
-			return getRuleContext(Net_assignmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_net_assignments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_net_assignments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_net_assignments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_net_assignments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_net_assignments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_net_assignments(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_net_assignments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_net_assignments(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_net_assignments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_net_assignments() throws -> List_of_net_assignmentsContext {
+	 open func list_of_net_assignments() throws -> List_of_net_assignmentsContext {
 		var _localctx: List_of_net_assignmentsContext = List_of_net_assignmentsContext(_ctx, getState())
 		try enterRule(_localctx, 262, Verilog2001Parser.RULE_list_of_net_assignments)
 		var _la: Int = 0
@@ -13047,40 +14054,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Net_assignmentContext:ParserRuleContext {
-		open func net_lvalue() -> Net_lvalueContext? {
-			return getRuleContext(Net_lvalueContext.self,0)
+
+	public class Net_assignmentContext: ParserRuleContext {
+			open
+			func net_lvalue() -> Net_lvalueContext? {
+				return getRuleContext(Net_lvalueContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_net_assignment
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_net_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNet_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNet_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNet_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNet_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNet_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNet_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNet_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNet_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func net_assignment() throws -> Net_assignmentContext {
+	 open func net_assignment() throws -> Net_assignmentContext {
 		var _localctx: Net_assignmentContext = Net_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 264, Verilog2001Parser.RULE_net_assignment)
 		defer {
@@ -13104,37 +14118,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Initial_constructContext:ParserRuleContext {
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
+
+	public class Initial_constructContext: ParserRuleContext {
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_initial_construct
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_initial_construct }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInitial_construct(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInitial_construct(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInitial_construct(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInitial_construct(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInitial_construct(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInitial_construct(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInitial_construct(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInitial_construct(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initial_construct() throws -> Initial_constructContext {
+	 open func initial_construct() throws -> Initial_constructContext {
 		var _localctx: Initial_constructContext = Initial_constructContext(_ctx, getState())
 		try enterRule(_localctx, 266, Verilog2001Parser.RULE_initial_construct)
 		defer {
@@ -13156,37 +14176,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Always_constructContext:ParserRuleContext {
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
+
+	public class Always_constructContext: ParserRuleContext {
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_always_construct
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_always_construct }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterAlways_construct(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterAlways_construct(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitAlways_construct(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitAlways_construct(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitAlways_construct(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitAlways_construct(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitAlways_construct(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitAlways_construct(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func always_construct() throws -> Always_constructContext {
+	 open func always_construct() throws -> Always_constructContext {
 		var _localctx: Always_constructContext = Always_constructContext(_ctx, getState())
 		try enterRule(_localctx, 268, Verilog2001Parser.RULE_always_construct)
 		defer {
@@ -13208,43 +14234,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Blocking_assignmentContext:ParserRuleContext {
-		open func variable_lvalue() -> Variable_lvalueContext? {
-			return getRuleContext(Variable_lvalueContext.self,0)
+
+	public class Blocking_assignmentContext: ParserRuleContext {
+			open
+			func variable_lvalue() -> Variable_lvalueContext? {
+				return getRuleContext(Variable_lvalueContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func delay_or_event_control() -> Delay_or_event_controlContext? {
+				return getRuleContext(Delay_or_event_controlContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_blocking_assignment
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func delay_or_event_control() -> Delay_or_event_controlContext? {
-			return getRuleContext(Delay_or_event_controlContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_blocking_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterBlocking_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterBlocking_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitBlocking_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitBlocking_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitBlocking_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitBlocking_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitBlocking_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitBlocking_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blocking_assignment() throws -> Blocking_assignmentContext {
+	 open func blocking_assignment() throws -> Blocking_assignmentContext {
 		var _localctx: Blocking_assignmentContext = Blocking_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 270, Verilog2001Parser.RULE_blocking_assignment)
 		var _la: Int = 0
@@ -13283,43 +14317,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Nonblocking_assignmentContext:ParserRuleContext {
-		open func variable_lvalue() -> Variable_lvalueContext? {
-			return getRuleContext(Variable_lvalueContext.self,0)
+
+	public class Nonblocking_assignmentContext: ParserRuleContext {
+			open
+			func variable_lvalue() -> Variable_lvalueContext? {
+				return getRuleContext(Variable_lvalueContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func delay_or_event_control() -> Delay_or_event_controlContext? {
+				return getRuleContext(Delay_or_event_controlContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_nonblocking_assignment
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func delay_or_event_control() -> Delay_or_event_controlContext? {
-			return getRuleContext(Delay_or_event_controlContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_nonblocking_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNonblocking_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNonblocking_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNonblocking_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNonblocking_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNonblocking_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNonblocking_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNonblocking_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNonblocking_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nonblocking_assignment() throws -> Nonblocking_assignmentContext {
+	 open func nonblocking_assignment() throws -> Nonblocking_assignmentContext {
 		var _localctx: Nonblocking_assignmentContext = Nonblocking_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 272, Verilog2001Parser.RULE_nonblocking_assignment)
 		var _la: Int = 0
@@ -13358,46 +14400,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Procedural_continuous_assignmentsContext:ParserRuleContext {
-		open func variable_assignment() -> Variable_assignmentContext? {
-			return getRuleContext(Variable_assignmentContext.self,0)
+
+	public class Procedural_continuous_assignmentsContext: ParserRuleContext {
+			open
+			func variable_assignment() -> Variable_assignmentContext? {
+				return getRuleContext(Variable_assignmentContext.self, 0)
+			}
+			open
+			func variable_lvalue() -> Variable_lvalueContext? {
+				return getRuleContext(Variable_lvalueContext.self, 0)
+			}
+			open
+			func net_assignment() -> Net_assignmentContext? {
+				return getRuleContext(Net_assignmentContext.self, 0)
+			}
+			open
+			func net_lvalue() -> Net_lvalueContext? {
+				return getRuleContext(Net_lvalueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_procedural_continuous_assignments
 		}
-		open func variable_lvalue() -> Variable_lvalueContext? {
-			return getRuleContext(Variable_lvalueContext.self,0)
-		}
-		open func net_assignment() -> Net_assignmentContext? {
-			return getRuleContext(Net_assignmentContext.self,0)
-		}
-		open func net_lvalue() -> Net_lvalueContext? {
-			return getRuleContext(Net_lvalueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_procedural_continuous_assignments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterProcedural_continuous_assignments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterProcedural_continuous_assignments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitProcedural_continuous_assignments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitProcedural_continuous_assignments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitProcedural_continuous_assignments(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitProcedural_continuous_assignments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitProcedural_continuous_assignments(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitProcedural_continuous_assignments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedural_continuous_assignments() throws -> Procedural_continuous_assignmentsContext {
+	 open func procedural_continuous_assignments() throws -> Procedural_continuous_assignmentsContext {
 		var _localctx: Procedural_continuous_assignmentsContext = Procedural_continuous_assignmentsContext(_ctx, getState())
 		try enterRule(_localctx, 274, Verilog2001Parser.RULE_procedural_continuous_assignments)
 		defer {
@@ -13466,40 +14517,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_blocking_assignmentContext:ParserRuleContext {
-		open func variable_lvalue() -> Variable_lvalueContext? {
-			return getRuleContext(Variable_lvalueContext.self,0)
+
+	public class Function_blocking_assignmentContext: ParserRuleContext {
+			open
+			func variable_lvalue() -> Variable_lvalueContext? {
+				return getRuleContext(Variable_lvalueContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_blocking_assignment
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_blocking_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_blocking_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_blocking_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_blocking_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_blocking_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_blocking_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_blocking_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_blocking_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_blocking_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_blocking_assignment() throws -> Function_blocking_assignmentContext {
+	 open func function_blocking_assignment() throws -> Function_blocking_assignmentContext {
 		var _localctx: Function_blocking_assignmentContext = Function_blocking_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 276, Verilog2001Parser.RULE_function_blocking_assignment)
 		defer {
@@ -13523,43 +14581,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_statement_or_nullContext:ParserRuleContext {
-		open func function_statement() -> Function_statementContext? {
-			return getRuleContext(Function_statementContext.self,0)
+
+	public class Function_statement_or_nullContext: ParserRuleContext {
+			open
+			func function_statement() -> Function_statementContext? {
+				return getRuleContext(Function_statementContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_statement_or_null
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_statement_or_null }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_statement_or_null(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_statement_or_null(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_statement_or_null(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_statement_or_null(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_statement_or_null(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_statement_or_null(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_statement_or_null(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_statement_or_null(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_statement_or_null() throws -> Function_statement_or_nullContext {
+	 open func function_statement_or_null() throws -> Function_statement_or_nullContext {
 		var _localctx: Function_statement_or_nullContext = Function_statement_or_nullContext(_ctx, getState())
 		try enterRule(_localctx, 278, Verilog2001Parser.RULE_function_statement_or_null)
 		var _la: Int = 0
@@ -13609,49 +14675,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_seq_blockContext:ParserRuleContext {
-		open func block_identifier() -> Block_identifierContext? {
-			return getRuleContext(Block_identifierContext.self,0)
+
+	public class Function_seq_blockContext: ParserRuleContext {
+			open
+			func block_identifier() -> Block_identifierContext? {
+				return getRuleContext(Block_identifierContext.self, 0)
+			}
+			open
+			func function_statement() -> [Function_statementContext] {
+				return getRuleContexts(Function_statementContext.self)
+			}
+			open
+			func function_statement(_ i: Int) -> Function_statementContext? {
+				return getRuleContext(Function_statementContext.self, i)
+			}
+			open
+			func block_item_declaration() -> [Block_item_declarationContext] {
+				return getRuleContexts(Block_item_declarationContext.self)
+			}
+			open
+			func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
+				return getRuleContext(Block_item_declarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_seq_block
 		}
-		open func function_statement() -> Array<Function_statementContext> {
-			return getRuleContexts(Function_statementContext.self)
-		}
-		open func function_statement(_ i: Int) -> Function_statementContext? {
-			return getRuleContext(Function_statementContext.self,i)
-		}
-		open func block_item_declaration() -> Array<Block_item_declarationContext> {
-			return getRuleContexts(Block_item_declarationContext.self)
-		}
-		open func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
-			return getRuleContext(Block_item_declarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_seq_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_seq_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_seq_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_seq_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_seq_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_seq_block(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_seq_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_seq_block(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_seq_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_seq_block() throws -> Function_seq_blockContext {
+	 open func function_seq_block() throws -> Function_seq_blockContext {
 		var _localctx: Function_seq_blockContext = Function_seq_blockContext(_ctx, getState())
 		try enterRule(_localctx, 280, Verilog2001Parser.RULE_function_seq_block)
 		var _la: Int = 0
@@ -13728,40 +14804,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Variable_assignmentContext:ParserRuleContext {
-		open func variable_lvalue() -> Variable_lvalueContext? {
-			return getRuleContext(Variable_lvalueContext.self,0)
+
+	public class Variable_assignmentContext: ParserRuleContext {
+			open
+			func variable_lvalue() -> Variable_lvalueContext? {
+				return getRuleContext(Variable_lvalueContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_variable_assignment
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_variable_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterVariable_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterVariable_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitVariable_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitVariable_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitVariable_assignment(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitVariable_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitVariable_assignment(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitVariable_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable_assignment() throws -> Variable_assignmentContext {
+	 open func variable_assignment() throws -> Variable_assignmentContext {
 		var _localctx: Variable_assignmentContext = Variable_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 282, Verilog2001Parser.RULE_variable_assignment)
 		defer {
@@ -13785,49 +14868,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Par_blockContext:ParserRuleContext {
-		open func block_identifier() -> Block_identifierContext? {
-			return getRuleContext(Block_identifierContext.self,0)
+
+	public class Par_blockContext: ParserRuleContext {
+			open
+			func block_identifier() -> Block_identifierContext? {
+				return getRuleContext(Block_identifierContext.self, 0)
+			}
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+			open
+			func block_item_declaration() -> [Block_item_declarationContext] {
+				return getRuleContexts(Block_item_declarationContext.self)
+			}
+			open
+			func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
+				return getRuleContext(Block_item_declarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_par_block
 		}
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
-		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open func block_item_declaration() -> Array<Block_item_declarationContext> {
-			return getRuleContexts(Block_item_declarationContext.self)
-		}
-		open func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
-			return getRuleContext(Block_item_declarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_par_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPar_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPar_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPar_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPar_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPar_block(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPar_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPar_block(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPar_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func par_block() throws -> Par_blockContext {
+	 open func par_block() throws -> Par_blockContext {
 		var _localctx: Par_blockContext = Par_blockContext(_ctx, getState())
 		try enterRule(_localctx, 284, Verilog2001Parser.RULE_par_block)
 		var _la: Int = 0
@@ -13907,49 +15000,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Seq_blockContext:ParserRuleContext {
-		open func block_identifier() -> Block_identifierContext? {
-			return getRuleContext(Block_identifierContext.self,0)
+
+	public class Seq_blockContext: ParserRuleContext {
+			open
+			func block_identifier() -> Block_identifierContext? {
+				return getRuleContext(Block_identifierContext.self, 0)
+			}
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+			open
+			func block_item_declaration() -> [Block_item_declarationContext] {
+				return getRuleContexts(Block_item_declarationContext.self)
+			}
+			open
+			func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
+				return getRuleContext(Block_item_declarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_seq_block
 		}
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
-		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open func block_item_declaration() -> Array<Block_item_declarationContext> {
-			return getRuleContexts(Block_item_declarationContext.self)
-		}
-		open func block_item_declaration(_ i: Int) -> Block_item_declarationContext? {
-			return getRuleContext(Block_item_declarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_seq_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSeq_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSeq_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSeq_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSeq_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSeq_block(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSeq_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSeq_block(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSeq_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func seq_block() throws -> Seq_blockContext {
+	 open func seq_block() throws -> Seq_blockContext {
 		var _localctx: Seq_blockContext = Seq_blockContext(_ctx, getState())
 		try enterRule(_localctx, 286, Verilog2001Parser.RULE_seq_block)
 		var _la: Int = 0
@@ -14029,82 +15132,103 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func blocking_assignment() -> Blocking_assignmentContext? {
-			return getRuleContext(Blocking_assignmentContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func blocking_assignment() -> Blocking_assignmentContext? {
+				return getRuleContext(Blocking_assignmentContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func case_statement() -> Case_statementContext? {
+				return getRuleContext(Case_statementContext.self, 0)
+			}
+			open
+			func conditional_statement() -> Conditional_statementContext? {
+				return getRuleContext(Conditional_statementContext.self, 0)
+			}
+			open
+			func disable_statement() -> Disable_statementContext? {
+				return getRuleContext(Disable_statementContext.self, 0)
+			}
+			open
+			func event_trigger() -> Event_triggerContext? {
+				return getRuleContext(Event_triggerContext.self, 0)
+			}
+			open
+			func loop_statement() -> Loop_statementContext? {
+				return getRuleContext(Loop_statementContext.self, 0)
+			}
+			open
+			func nonblocking_assignment() -> Nonblocking_assignmentContext? {
+				return getRuleContext(Nonblocking_assignmentContext.self, 0)
+			}
+			open
+			func par_block() -> Par_blockContext? {
+				return getRuleContext(Par_blockContext.self, 0)
+			}
+			open
+			func procedural_continuous_assignments() -> Procedural_continuous_assignmentsContext? {
+				return getRuleContext(Procedural_continuous_assignmentsContext.self, 0)
+			}
+			open
+			func procedural_timing_control_statement() -> Procedural_timing_control_statementContext? {
+				return getRuleContext(Procedural_timing_control_statementContext.self, 0)
+			}
+			open
+			func seq_block() -> Seq_blockContext? {
+				return getRuleContext(Seq_blockContext.self, 0)
+			}
+			open
+			func system_task_enable() -> System_task_enableContext? {
+				return getRuleContext(System_task_enableContext.self, 0)
+			}
+			open
+			func task_enable() -> Task_enableContext? {
+				return getRuleContext(Task_enableContext.self, 0)
+			}
+			open
+			func wait_statement() -> Wait_statementContext? {
+				return getRuleContext(Wait_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_statement
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func case_statement() -> Case_statementContext? {
-			return getRuleContext(Case_statementContext.self,0)
-		}
-		open func conditional_statement() -> Conditional_statementContext? {
-			return getRuleContext(Conditional_statementContext.self,0)
-		}
-		open func disable_statement() -> Disable_statementContext? {
-			return getRuleContext(Disable_statementContext.self,0)
-		}
-		open func event_trigger() -> Event_triggerContext? {
-			return getRuleContext(Event_triggerContext.self,0)
-		}
-		open func loop_statement() -> Loop_statementContext? {
-			return getRuleContext(Loop_statementContext.self,0)
-		}
-		open func nonblocking_assignment() -> Nonblocking_assignmentContext? {
-			return getRuleContext(Nonblocking_assignmentContext.self,0)
-		}
-		open func par_block() -> Par_blockContext? {
-			return getRuleContext(Par_blockContext.self,0)
-		}
-		open func procedural_continuous_assignments() -> Procedural_continuous_assignmentsContext? {
-			return getRuleContext(Procedural_continuous_assignmentsContext.self,0)
-		}
-		open func procedural_timing_control_statement() -> Procedural_timing_control_statementContext? {
-			return getRuleContext(Procedural_timing_control_statementContext.self,0)
-		}
-		open func seq_block() -> Seq_blockContext? {
-			return getRuleContext(Seq_blockContext.self,0)
-		}
-		open func system_task_enable() -> System_task_enableContext? {
-			return getRuleContext(System_task_enableContext.self,0)
-		}
-		open func task_enable() -> Task_enableContext? {
-			return getRuleContext(Task_enableContext.self,0)
-		}
-		open func wait_statement() -> Wait_statementContext? {
-			return getRuleContext(Wait_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitStatement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 288, Verilog2001Parser.RULE_statement)
 		var _la: Int = 0
@@ -14440,43 +15564,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Statement_or_nullContext:ParserRuleContext {
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
+
+	public class Statement_or_nullContext: ParserRuleContext {
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_statement_or_null
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_statement_or_null }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterStatement_or_null(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterStatement_or_null(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitStatement_or_null(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitStatement_or_null(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitStatement_or_null(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitStatement_or_null(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitStatement_or_null(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitStatement_or_null(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement_or_null() throws -> Statement_or_nullContext {
+	 open func statement_or_null() throws -> Statement_or_nullContext {
 		var _localctx: Statement_or_nullContext = Statement_or_nullContext(_ctx, getState())
 		try enterRule(_localctx, 290, Verilog2001Parser.RULE_statement_or_null)
 		var _la: Int = 0
@@ -14526,61 +15658,75 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_statementContext:ParserRuleContext {
-		open func function_blocking_assignment() -> Function_blocking_assignmentContext? {
-			return getRuleContext(Function_blocking_assignmentContext.self,0)
+
+	public class Function_statementContext: ParserRuleContext {
+			open
+			func function_blocking_assignment() -> Function_blocking_assignmentContext? {
+				return getRuleContext(Function_blocking_assignmentContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func function_case_statement() -> Function_case_statementContext? {
+				return getRuleContext(Function_case_statementContext.self, 0)
+			}
+			open
+			func function_conditional_statement() -> Function_conditional_statementContext? {
+				return getRuleContext(Function_conditional_statementContext.self, 0)
+			}
+			open
+			func function_loop_statement() -> Function_loop_statementContext? {
+				return getRuleContext(Function_loop_statementContext.self, 0)
+			}
+			open
+			func function_seq_block() -> Function_seq_blockContext? {
+				return getRuleContext(Function_seq_blockContext.self, 0)
+			}
+			open
+			func disable_statement() -> Disable_statementContext? {
+				return getRuleContext(Disable_statementContext.self, 0)
+			}
+			open
+			func system_task_enable() -> System_task_enableContext? {
+				return getRuleContext(System_task_enableContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_statement
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func function_case_statement() -> Function_case_statementContext? {
-			return getRuleContext(Function_case_statementContext.self,0)
-		}
-		open func function_conditional_statement() -> Function_conditional_statementContext? {
-			return getRuleContext(Function_conditional_statementContext.self,0)
-		}
-		open func function_loop_statement() -> Function_loop_statementContext? {
-			return getRuleContext(Function_loop_statementContext.self,0)
-		}
-		open func function_seq_block() -> Function_seq_blockContext? {
-			return getRuleContext(Function_seq_blockContext.self,0)
-		}
-		open func disable_statement() -> Disable_statementContext? {
-			return getRuleContext(Disable_statementContext.self,0)
-		}
-		open func system_task_enable() -> System_task_enableContext? {
-			return getRuleContext(System_task_enableContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_statement() throws -> Function_statementContext {
+	 open func function_statement() throws -> Function_statementContext {
 		var _localctx: Function_statementContext = Function_statementContext(_ctx, getState())
 		try enterRule(_localctx, 292, Verilog2001Parser.RULE_function_statement)
 		var _la: Int = 0
@@ -14758,43 +15904,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Delay_or_event_controlContext:ParserRuleContext {
-		open func delay_control() -> Delay_controlContext? {
-			return getRuleContext(Delay_controlContext.self,0)
+
+	public class Delay_or_event_controlContext: ParserRuleContext {
+			open
+			func delay_control() -> Delay_controlContext? {
+				return getRuleContext(Delay_controlContext.self, 0)
+			}
+			open
+			func event_control() -> Event_controlContext? {
+				return getRuleContext(Event_controlContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_delay_or_event_control
 		}
-		open func event_control() -> Event_controlContext? {
-			return getRuleContext(Event_controlContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_delay_or_event_control }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDelay_or_event_control(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDelay_or_event_control(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDelay_or_event_control(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDelay_or_event_control(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDelay_or_event_control(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDelay_or_event_control(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDelay_or_event_control(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDelay_or_event_control(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delay_or_event_control() throws -> Delay_or_event_controlContext {
+	 open func delay_or_event_control() throws -> Delay_or_event_controlContext {
 		var _localctx: Delay_or_event_controlContext = Delay_or_event_controlContext(_ctx, getState())
 		try enterRule(_localctx, 294, Verilog2001Parser.RULE_delay_or_event_control)
 		defer {
@@ -14833,7 +15987,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -14844,40 +15998,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Delay_controlContext:ParserRuleContext {
-		open func delay_value() -> Delay_valueContext? {
-			return getRuleContext(Delay_valueContext.self,0)
+
+	public class Delay_controlContext: ParserRuleContext {
+			open
+			func delay_value() -> Delay_valueContext? {
+				return getRuleContext(Delay_valueContext.self, 0)
+			}
+			open
+			func mintypmax_expression() -> Mintypmax_expressionContext? {
+				return getRuleContext(Mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_delay_control
 		}
-		open func mintypmax_expression() -> Mintypmax_expressionContext? {
-			return getRuleContext(Mintypmax_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_delay_control }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDelay_control(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDelay_control(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDelay_control(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDelay_control(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDelay_control(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDelay_control(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDelay_control(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDelay_control(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delay_control() throws -> Delay_controlContext {
+	 open func delay_control() throws -> Delay_controlContext {
 		var _localctx: Delay_controlContext = Delay_controlContext(_ctx, getState())
 		try enterRule(_localctx, 296, Verilog2001Parser.RULE_delay_control)
 		defer {
@@ -14918,40 +16079,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Disable_statementContext:ParserRuleContext {
-		open func hierarchical_task_identifier() -> Hierarchical_task_identifierContext? {
-			return getRuleContext(Hierarchical_task_identifierContext.self,0)
+
+	public class Disable_statementContext: ParserRuleContext {
+			open
+			func hierarchical_task_identifier() -> Hierarchical_task_identifierContext? {
+				return getRuleContext(Hierarchical_task_identifierContext.self, 0)
+			}
+			open
+			func hierarchical_block_identifier() -> Hierarchical_block_identifierContext? {
+				return getRuleContext(Hierarchical_block_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_disable_statement
 		}
-		open func hierarchical_block_identifier() -> Hierarchical_block_identifierContext? {
-			return getRuleContext(Hierarchical_block_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_disable_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDisable_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDisable_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDisable_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDisable_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDisable_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDisable_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDisable_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDisable_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func disable_statement() throws -> Disable_statementContext {
+	 open func disable_statement() throws -> Disable_statementContext {
 		var _localctx: Disable_statementContext = Disable_statementContext(_ctx, getState())
 		try enterRule(_localctx, 298, Verilog2001Parser.RULE_disable_statement)
 		defer {
@@ -14992,40 +16160,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Event_controlContext:ParserRuleContext {
-		open func event_identifier() -> Event_identifierContext? {
-			return getRuleContext(Event_identifierContext.self,0)
+
+	public class Event_controlContext: ParserRuleContext {
+			open
+			func event_identifier() -> Event_identifierContext? {
+				return getRuleContext(Event_identifierContext.self, 0)
+			}
+			open
+			func event_expression() -> Event_expressionContext? {
+				return getRuleContext(Event_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_event_control
 		}
-		open func event_expression() -> Event_expressionContext? {
-			return getRuleContext(Event_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_event_control }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEvent_control(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEvent_control(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEvent_control(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEvent_control(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEvent_control(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEvent_control(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEvent_control(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEvent_control(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func event_control() throws -> Event_controlContext {
+	 open func event_control() throws -> Event_controlContext {
 		var _localctx: Event_controlContext = Event_controlContext(_ctx, getState())
 		try enterRule(_localctx, 300, Verilog2001Parser.RULE_event_control)
 		defer {
@@ -15086,37 +16261,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Event_triggerContext:ParserRuleContext {
-		open func hierarchical_event_identifier() -> Hierarchical_event_identifierContext? {
-			return getRuleContext(Hierarchical_event_identifierContext.self,0)
+
+	public class Event_triggerContext: ParserRuleContext {
+			open
+			func hierarchical_event_identifier() -> Hierarchical_event_identifierContext? {
+				return getRuleContext(Hierarchical_event_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_event_trigger
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_event_trigger }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEvent_trigger(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEvent_trigger(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEvent_trigger(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEvent_trigger(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEvent_trigger(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEvent_trigger(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEvent_trigger(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEvent_trigger(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func event_trigger() throws -> Event_triggerContext {
+	 open func event_trigger() throws -> Event_triggerContext {
 		var _localctx: Event_triggerContext = Event_triggerContext(_ctx, getState())
 		try enterRule(_localctx, 302, Verilog2001Parser.RULE_event_trigger)
 		defer {
@@ -15140,40 +16321,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Event_expressionContext:ParserRuleContext {
-		open func event_primary() -> Array<Event_primaryContext> {
-			return getRuleContexts(Event_primaryContext.self)
+
+	public class Event_expressionContext: ParserRuleContext {
+			open
+			func event_primary() -> [Event_primaryContext] {
+				return getRuleContexts(Event_primaryContext.self)
+			}
+			open
+			func event_primary(_ i: Int) -> Event_primaryContext? {
+				return getRuleContext(Event_primaryContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_event_expression
 		}
-		open func event_primary(_ i: Int) -> Event_primaryContext? {
-			return getRuleContext(Event_primaryContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_event_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEvent_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEvent_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEvent_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEvent_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEvent_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEvent_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEvent_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEvent_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func event_expression() throws -> Event_expressionContext {
+	 open func event_expression() throws -> Event_expressionContext {
 		var _localctx: Event_expressionContext = Event_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 304, Verilog2001Parser.RULE_event_expression)
 		var _la: Int = 0
@@ -15212,7 +16400,7 @@ open class Verilog2001Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(2682)
@@ -15229,37 +16417,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Event_primaryContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Event_primaryContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_event_primary
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_event_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEvent_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEvent_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEvent_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEvent_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEvent_primary(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEvent_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEvent_primary(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEvent_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func event_primary() throws -> Event_primaryContext {
+	 open func event_primary() throws -> Event_primaryContext {
 		var _localctx: Event_primaryContext = Event_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 306, Verilog2001Parser.RULE_event_primary)
 		defer {
@@ -15313,7 +16507,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -15325,40 +16519,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Procedural_timing_control_statementContext:ParserRuleContext {
-		open func delay_or_event_control() -> Delay_or_event_controlContext? {
-			return getRuleContext(Delay_or_event_controlContext.self,0)
+
+	public class Procedural_timing_control_statementContext: ParserRuleContext {
+			open
+			func delay_or_event_control() -> Delay_or_event_controlContext? {
+				return getRuleContext(Delay_or_event_controlContext.self, 0)
+			}
+			open
+			func statement_or_null() -> Statement_or_nullContext? {
+				return getRuleContext(Statement_or_nullContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_procedural_timing_control_statement
 		}
-		open func statement_or_null() -> Statement_or_nullContext? {
-			return getRuleContext(Statement_or_nullContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_procedural_timing_control_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterProcedural_timing_control_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterProcedural_timing_control_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitProcedural_timing_control_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitProcedural_timing_control_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitProcedural_timing_control_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitProcedural_timing_control_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitProcedural_timing_control_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitProcedural_timing_control_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedural_timing_control_statement() throws -> Procedural_timing_control_statementContext {
+	 open func procedural_timing_control_statement() throws -> Procedural_timing_control_statementContext {
 		var _localctx: Procedural_timing_control_statementContext = Procedural_timing_control_statementContext(_ctx, getState())
 		try enterRule(_localctx, 308, Verilog2001Parser.RULE_procedural_timing_control_statement)
 		defer {
@@ -15380,40 +16581,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Wait_statementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Wait_statementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func statement_or_null() -> Statement_or_nullContext? {
+				return getRuleContext(Statement_or_nullContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_wait_statement
 		}
-		open func statement_or_null() -> Statement_or_nullContext? {
-			return getRuleContext(Statement_or_nullContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_wait_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterWait_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterWait_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitWait_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitWait_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitWait_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitWait_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitWait_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitWait_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func wait_statement() throws -> Wait_statementContext {
+	 open func wait_statement() throws -> Wait_statementContext {
 		var _localctx: Wait_statementContext = Wait_statementContext(_ctx, getState())
 		try enterRule(_localctx, 310, Verilog2001Parser.RULE_wait_statement)
 		defer {
@@ -15441,46 +16649,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Conditional_statementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Conditional_statementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func statement_or_null() -> [Statement_or_nullContext] {
+				return getRuleContexts(Statement_or_nullContext.self)
+			}
+			open
+			func statement_or_null(_ i: Int) -> Statement_or_nullContext? {
+				return getRuleContext(Statement_or_nullContext.self, i)
+			}
+			open
+			func if_else_if_statement() -> If_else_if_statementContext? {
+				return getRuleContext(If_else_if_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_conditional_statement
 		}
-		open func statement_or_null() -> Array<Statement_or_nullContext> {
-			return getRuleContexts(Statement_or_nullContext.self)
-		}
-		open func statement_or_null(_ i: Int) -> Statement_or_nullContext? {
-			return getRuleContext(Statement_or_nullContext.self,i)
-		}
-		open func if_else_if_statement() -> If_else_if_statementContext? {
-			return getRuleContext(If_else_if_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_conditional_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConditional_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConditional_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConditional_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConditional_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConditional_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConditional_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConditional_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConditional_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditional_statement() throws -> Conditional_statementContext {
+	 open func conditional_statement() throws -> Conditional_statementContext {
 		var _localctx: Conditional_statementContext = Conditional_statementContext(_ctx, getState())
 		try enterRule(_localctx, 312, Verilog2001Parser.RULE_conditional_statement)
 		defer {
@@ -15533,46 +16750,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class If_else_if_statementContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class If_else_if_statementContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func statement_or_null() -> [Statement_or_nullContext] {
+				return getRuleContexts(Statement_or_nullContext.self)
+			}
+			open
+			func statement_or_null(_ i: Int) -> Statement_or_nullContext? {
+				return getRuleContext(Statement_or_nullContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_if_else_if_statement
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func statement_or_null() -> Array<Statement_or_nullContext> {
-			return getRuleContexts(Statement_or_nullContext.self)
-		}
-		open func statement_or_null(_ i: Int) -> Statement_or_nullContext? {
-			return getRuleContext(Statement_or_nullContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_if_else_if_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterIf_else_if_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterIf_else_if_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitIf_else_if_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitIf_else_if_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitIf_else_if_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitIf_else_if_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitIf_else_if_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitIf_else_if_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func if_else_if_statement() throws -> If_else_if_statementContext {
+	 open func if_else_if_statement() throws -> If_else_if_statementContext {
 		var _localctx: If_else_if_statementContext = If_else_if_statementContext(_ctx, getState())
 		try enterRule(_localctx, 314, Verilog2001Parser.RULE_if_else_if_statement)
 		defer {
@@ -15637,46 +16863,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_conditional_statementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Function_conditional_statementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func function_statement_or_null() -> [Function_statement_or_nullContext] {
+				return getRuleContexts(Function_statement_or_nullContext.self)
+			}
+			open
+			func function_statement_or_null(_ i: Int) -> Function_statement_or_nullContext? {
+				return getRuleContext(Function_statement_or_nullContext.self, i)
+			}
+			open
+			func function_if_else_if_statement() -> Function_if_else_if_statementContext? {
+				return getRuleContext(Function_if_else_if_statementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_conditional_statement
 		}
-		open func function_statement_or_null() -> Array<Function_statement_or_nullContext> {
-			return getRuleContexts(Function_statement_or_nullContext.self)
-		}
-		open func function_statement_or_null(_ i: Int) -> Function_statement_or_nullContext? {
-			return getRuleContext(Function_statement_or_nullContext.self,i)
-		}
-		open func function_if_else_if_statement() -> Function_if_else_if_statementContext? {
-			return getRuleContext(Function_if_else_if_statementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_conditional_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_conditional_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_conditional_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_conditional_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_conditional_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_conditional_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_conditional_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_conditional_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_conditional_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_conditional_statement() throws -> Function_conditional_statementContext {
+	 open func function_conditional_statement() throws -> Function_conditional_statementContext {
 		var _localctx: Function_conditional_statementContext = Function_conditional_statementContext(_ctx, getState())
 		try enterRule(_localctx, 316, Verilog2001Parser.RULE_function_conditional_statement)
 		defer {
@@ -15729,46 +16964,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_if_else_if_statementContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Function_if_else_if_statementContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func function_statement_or_null() -> [Function_statement_or_nullContext] {
+				return getRuleContexts(Function_statement_or_nullContext.self)
+			}
+			open
+			func function_statement_or_null(_ i: Int) -> Function_statement_or_nullContext? {
+				return getRuleContext(Function_statement_or_nullContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_if_else_if_statement
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func function_statement_or_null() -> Array<Function_statement_or_nullContext> {
-			return getRuleContexts(Function_statement_or_nullContext.self)
-		}
-		open func function_statement_or_null(_ i: Int) -> Function_statement_or_nullContext? {
-			return getRuleContext(Function_statement_or_nullContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_if_else_if_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_if_else_if_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_if_else_if_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_if_else_if_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_if_else_if_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_if_else_if_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_if_else_if_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_if_else_if_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_if_else_if_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_if_else_if_statement() throws -> Function_if_else_if_statementContext {
+	 open func function_if_else_if_statement() throws -> Function_if_else_if_statementContext {
 		var _localctx: Function_if_else_if_statementContext = Function_if_else_if_statementContext(_ctx, getState())
 		try enterRule(_localctx, 318, Verilog2001Parser.RULE_function_if_else_if_statement)
 		defer {
@@ -15833,43 +17077,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Case_statementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Case_statementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func case_item() -> [Case_itemContext] {
+				return getRuleContexts(Case_itemContext.self)
+			}
+			open
+			func case_item(_ i: Int) -> Case_itemContext? {
+				return getRuleContext(Case_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_case_statement
 		}
-		open func case_item() -> Array<Case_itemContext> {
-			return getRuleContexts(Case_itemContext.self)
-		}
-		open func case_item(_ i: Int) -> Case_itemContext? {
-			return getRuleContext(Case_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_case_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterCase_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterCase_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitCase_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitCase_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitCase_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitCase_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitCase_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitCase_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func case_statement() throws -> Case_statementContext {
+	 open func case_statement() throws -> Case_statementContext {
 		var _localctx: Case_statementContext = Case_statementContext(_ctx, getState())
 		try enterRule(_localctx, 320, Verilog2001Parser.RULE_case_statement)
 		var _la: Int = 0
@@ -16000,7 +17252,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16011,43 +17263,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Case_itemContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Case_itemContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func statement_or_null() -> Statement_or_nullContext? {
+				return getRuleContext(Statement_or_nullContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_case_item
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func statement_or_null() -> Statement_or_nullContext? {
-			return getRuleContext(Statement_or_nullContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_case_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterCase_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterCase_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitCase_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitCase_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitCase_item(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitCase_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitCase_item(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitCase_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func case_item() throws -> Case_itemContext {
+	 open func case_item() throws -> Case_itemContext {
 		var _localctx: Case_itemContext = Case_itemContext(_ctx, getState())
 		try enterRule(_localctx, 322, Verilog2001Parser.RULE_case_item)
 		var _la: Int = 0
@@ -16130,7 +17390,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16141,43 +17401,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_case_statementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Function_case_statementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func function_case_item() -> [Function_case_itemContext] {
+				return getRuleContexts(Function_case_itemContext.self)
+			}
+			open
+			func function_case_item(_ i: Int) -> Function_case_itemContext? {
+				return getRuleContext(Function_case_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_case_statement
 		}
-		open func function_case_item() -> Array<Function_case_itemContext> {
-			return getRuleContexts(Function_case_itemContext.self)
-		}
-		open func function_case_item(_ i: Int) -> Function_case_itemContext? {
-			return getRuleContext(Function_case_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_case_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_case_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_case_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_case_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_case_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_case_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_case_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_case_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_case_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_case_statement() throws -> Function_case_statementContext {
+	 open func function_case_statement() throws -> Function_case_statementContext {
 		var _localctx: Function_case_statementContext = Function_case_statementContext(_ctx, getState())
 		try enterRule(_localctx, 324, Verilog2001Parser.RULE_function_case_statement)
 		var _la: Int = 0
@@ -16308,7 +17576,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16319,43 +17587,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_case_itemContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Function_case_itemContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func function_statement_or_null() -> Function_statement_or_nullContext? {
+				return getRuleContext(Function_statement_or_nullContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_case_item
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func function_statement_or_null() -> Function_statement_or_nullContext? {
-			return getRuleContext(Function_statement_or_nullContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_case_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_case_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_case_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_case_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_case_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_case_item(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_case_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_case_item(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_case_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_case_item() throws -> Function_case_itemContext {
+	 open func function_case_item() throws -> Function_case_itemContext {
 		var _localctx: Function_case_itemContext = Function_case_itemContext(_ctx, getState())
 		try enterRule(_localctx, 326, Verilog2001Parser.RULE_function_case_item)
 		var _la: Int = 0
@@ -16438,7 +17714,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16449,46 +17725,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_loop_statementContext:ParserRuleContext {
-		open func function_statement() -> Function_statementContext? {
-			return getRuleContext(Function_statementContext.self,0)
+
+	public class Function_loop_statementContext: ParserRuleContext {
+			open
+			func function_statement() -> Function_statementContext? {
+				return getRuleContext(Function_statementContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func variable_assignment() -> [Variable_assignmentContext] {
+				return getRuleContexts(Variable_assignmentContext.self)
+			}
+			open
+			func variable_assignment(_ i: Int) -> Variable_assignmentContext? {
+				return getRuleContext(Variable_assignmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_loop_statement
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func variable_assignment() -> Array<Variable_assignmentContext> {
-			return getRuleContexts(Variable_assignmentContext.self)
-		}
-		open func variable_assignment(_ i: Int) -> Variable_assignmentContext? {
-			return getRuleContext(Variable_assignmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_loop_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_loop_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_loop_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_loop_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_loop_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_loop_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_loop_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_loop_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_loop_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_loop_statement() throws -> Function_loop_statementContext {
+	 open func function_loop_statement() throws -> Function_loop_statementContext {
 		var _localctx: Function_loop_statementContext = Function_loop_statementContext(_ctx, getState())
 		try enterRule(_localctx, 328, Verilog2001Parser.RULE_function_loop_statement)
 		defer {
@@ -16560,7 +17845,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16571,46 +17856,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Loop_statementContext:ParserRuleContext {
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
+
+	public class Loop_statementContext: ParserRuleContext {
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func variable_assignment() -> [Variable_assignmentContext] {
+				return getRuleContexts(Variable_assignmentContext.self)
+			}
+			open
+			func variable_assignment(_ i: Int) -> Variable_assignmentContext? {
+				return getRuleContext(Variable_assignmentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_loop_statement
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func variable_assignment() -> Array<Variable_assignmentContext> {
-			return getRuleContexts(Variable_assignmentContext.self)
-		}
-		open func variable_assignment(_ i: Int) -> Variable_assignmentContext? {
-			return getRuleContext(Variable_assignmentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_loop_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterLoop_statement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterLoop_statement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitLoop_statement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitLoop_statement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitLoop_statement(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitLoop_statement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitLoop_statement(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitLoop_statement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func loop_statement() throws -> Loop_statementContext {
+	 open func loop_statement() throws -> Loop_statementContext {
 		var _localctx: Loop_statementContext = Loop_statementContext(_ctx, getState())
 		try enterRule(_localctx, 330, Verilog2001Parser.RULE_loop_statement)
 		defer {
@@ -16682,7 +17976,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -16693,43 +17987,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class System_task_enableContext:ParserRuleContext {
-		open func system_task_identifier() -> System_task_identifierContext? {
-			return getRuleContext(System_task_identifierContext.self,0)
+
+	public class System_task_enableContext: ParserRuleContext {
+			open
+			func system_task_identifier() -> System_task_identifierContext? {
+				return getRuleContext(System_task_identifierContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_system_task_enable
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_system_task_enable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSystem_task_enable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSystem_task_enable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSystem_task_enable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSystem_task_enable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSystem_task_enable(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSystem_task_enable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSystem_task_enable(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSystem_task_enable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func system_task_enable() throws -> System_task_enableContext {
+	 open func system_task_enable() throws -> System_task_enableContext {
 		var _localctx: System_task_enableContext = System_task_enableContext(_ctx, getState())
 		try enterRule(_localctx, 332, Verilog2001Parser.RULE_system_task_enable)
 		var _la: Int = 0
@@ -16802,43 +18104,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Task_enableContext:ParserRuleContext {
-		open func hierarchical_task_identifier() -> Hierarchical_task_identifierContext? {
-			return getRuleContext(Hierarchical_task_identifierContext.self,0)
+
+	public class Task_enableContext: ParserRuleContext {
+			open
+			func hierarchical_task_identifier() -> Hierarchical_task_identifierContext? {
+				return getRuleContext(Hierarchical_task_identifierContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_task_enable
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_task_enable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTask_enable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTask_enable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTask_enable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTask_enable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTask_enable(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTask_enable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTask_enable(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTask_enable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func task_enable() throws -> Task_enableContext {
+	 open func task_enable() throws -> Task_enableContext {
 		var _localctx: Task_enableContext = Task_enableContext(_ctx, getState())
 		try enterRule(_localctx, 334, Verilog2001Parser.RULE_task_enable)
 		var _la: Int = 0
@@ -16911,40 +18221,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Specify_blockContext:ParserRuleContext {
-		open func specify_item() -> Array<Specify_itemContext> {
-			return getRuleContexts(Specify_itemContext.self)
+
+	public class Specify_blockContext: ParserRuleContext {
+			open
+			func specify_item() -> [Specify_itemContext] {
+				return getRuleContexts(Specify_itemContext.self)
+			}
+			open
+			func specify_item(_ i: Int) -> Specify_itemContext? {
+				return getRuleContext(Specify_itemContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_specify_block
 		}
-		open func specify_item(_ i: Int) -> Specify_itemContext? {
-			return getRuleContext(Specify_itemContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_specify_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSpecify_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSpecify_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSpecify_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSpecify_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSpecify_block(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSpecify_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSpecify_block(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSpecify_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specify_block() throws -> Specify_blockContext {
+	 open func specify_block() throws -> Specify_blockContext {
 		var _localctx: Specify_blockContext = Specify_blockContext(_ctx, getState())
 		try enterRule(_localctx, 336, Verilog2001Parser.RULE_specify_block)
 		var _la: Int = 0
@@ -16988,46 +18305,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Specify_itemContext:ParserRuleContext {
-		open func specparam_declaration() -> Specparam_declarationContext? {
-			return getRuleContext(Specparam_declarationContext.self,0)
+
+	public class Specify_itemContext: ParserRuleContext {
+			open
+			func specparam_declaration() -> Specparam_declarationContext? {
+				return getRuleContext(Specparam_declarationContext.self, 0)
+			}
+			open
+			func pulsestyle_declaration() -> Pulsestyle_declarationContext? {
+				return getRuleContext(Pulsestyle_declarationContext.self, 0)
+			}
+			open
+			func showcancelled_declaration() -> Showcancelled_declarationContext? {
+				return getRuleContext(Showcancelled_declarationContext.self, 0)
+			}
+			open
+			func path_declaration() -> Path_declarationContext? {
+				return getRuleContext(Path_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_specify_item
 		}
-		open func pulsestyle_declaration() -> Pulsestyle_declarationContext? {
-			return getRuleContext(Pulsestyle_declarationContext.self,0)
-		}
-		open func showcancelled_declaration() -> Showcancelled_declarationContext? {
-			return getRuleContext(Showcancelled_declarationContext.self,0)
-		}
-		open func path_declaration() -> Path_declarationContext? {
-			return getRuleContext(Path_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_specify_item }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSpecify_item(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSpecify_item(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSpecify_item(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSpecify_item(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSpecify_item(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSpecify_item(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSpecify_item(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSpecify_item(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specify_item() throws -> Specify_itemContext {
+	 open func specify_item() throws -> Specify_itemContext {
 		var _localctx: Specify_itemContext = Specify_itemContext(_ctx, getState())
 		try enterRule(_localctx, 338, Verilog2001Parser.RULE_specify_item)
 		defer {
@@ -17068,7 +18394,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -17079,37 +18405,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Pulsestyle_declarationContext:ParserRuleContext {
-		open func list_of_path_outputs() -> List_of_path_outputsContext? {
-			return getRuleContext(List_of_path_outputsContext.self,0)
+
+	public class Pulsestyle_declarationContext: ParserRuleContext {
+			open
+			func list_of_path_outputs() -> List_of_path_outputsContext? {
+				return getRuleContext(List_of_path_outputsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_pulsestyle_declaration
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_pulsestyle_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPulsestyle_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPulsestyle_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPulsestyle_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPulsestyle_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPulsestyle_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPulsestyle_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPulsestyle_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPulsestyle_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pulsestyle_declaration() throws -> Pulsestyle_declarationContext {
+	 open func pulsestyle_declaration() throws -> Pulsestyle_declarationContext {
 		var _localctx: Pulsestyle_declarationContext = Pulsestyle_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 340, Verilog2001Parser.RULE_pulsestyle_declaration)
 		defer {
@@ -17141,7 +18473,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -17152,37 +18484,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Showcancelled_declarationContext:ParserRuleContext {
-		open func list_of_path_outputs() -> List_of_path_outputsContext? {
-			return getRuleContext(List_of_path_outputsContext.self,0)
+
+	public class Showcancelled_declarationContext: ParserRuleContext {
+			open
+			func list_of_path_outputs() -> List_of_path_outputsContext? {
+				return getRuleContext(List_of_path_outputsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_showcancelled_declaration
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_showcancelled_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterShowcancelled_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterShowcancelled_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitShowcancelled_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitShowcancelled_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitShowcancelled_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitShowcancelled_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitShowcancelled_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitShowcancelled_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func showcancelled_declaration() throws -> Showcancelled_declarationContext {
+	 open func showcancelled_declaration() throws -> Showcancelled_declarationContext {
 		var _localctx: Showcancelled_declarationContext = Showcancelled_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 342, Verilog2001Parser.RULE_showcancelled_declaration)
 		defer {
@@ -17214,7 +18552,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -17225,43 +18563,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Path_declarationContext:ParserRuleContext {
-		open func simple_path_declaration() -> Simple_path_declarationContext? {
-			return getRuleContext(Simple_path_declarationContext.self,0)
+
+	public class Path_declarationContext: ParserRuleContext {
+			open
+			func simple_path_declaration() -> Simple_path_declarationContext? {
+				return getRuleContext(Simple_path_declarationContext.self, 0)
+			}
+			open
+			func edge_sensitive_path_declaration() -> Edge_sensitive_path_declarationContext? {
+				return getRuleContext(Edge_sensitive_path_declarationContext.self, 0)
+			}
+			open
+			func state_dependent_path_declaration() -> State_dependent_path_declarationContext? {
+				return getRuleContext(State_dependent_path_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_path_declaration
 		}
-		open func edge_sensitive_path_declaration() -> Edge_sensitive_path_declarationContext? {
-			return getRuleContext(Edge_sensitive_path_declarationContext.self,0)
-		}
-		open func state_dependent_path_declaration() -> State_dependent_path_declarationContext? {
-			return getRuleContext(State_dependent_path_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_path_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPath_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPath_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPath_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPath_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPath_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPath_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPath_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPath_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func path_declaration() throws -> Path_declarationContext {
+	 open func path_declaration() throws -> Path_declarationContext {
 		var _localctx: Path_declarationContext = Path_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 344, Verilog2001Parser.RULE_path_declaration)
 		defer {
@@ -17306,43 +18652,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Simple_path_declarationContext:ParserRuleContext {
-		open func parallel_path_description() -> Parallel_path_descriptionContext? {
-			return getRuleContext(Parallel_path_descriptionContext.self,0)
+
+	public class Simple_path_declarationContext: ParserRuleContext {
+			open
+			func parallel_path_description() -> Parallel_path_descriptionContext? {
+				return getRuleContext(Parallel_path_descriptionContext.self, 0)
+			}
+			open
+			func path_delay_value() -> Path_delay_valueContext? {
+				return getRuleContext(Path_delay_valueContext.self, 0)
+			}
+			open
+			func full_path_description() -> Full_path_descriptionContext? {
+				return getRuleContext(Full_path_descriptionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_simple_path_declaration
 		}
-		open func path_delay_value() -> Path_delay_valueContext? {
-			return getRuleContext(Path_delay_valueContext.self,0)
-		}
-		open func full_path_description() -> Full_path_descriptionContext? {
-			return getRuleContext(Full_path_descriptionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_simple_path_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSimple_path_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSimple_path_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSimple_path_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSimple_path_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSimple_path_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSimple_path_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSimple_path_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSimple_path_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_path_declaration() throws -> Simple_path_declarationContext {
+	 open func simple_path_declaration() throws -> Simple_path_declarationContext {
 		var _localctx: Simple_path_declarationContext = Simple_path_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 346, Verilog2001Parser.RULE_simple_path_declaration)
 		defer {
@@ -17375,7 +18729,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -17386,43 +18740,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Parallel_path_descriptionContext:ParserRuleContext {
-		open func specify_input_terminal_descriptor() -> Specify_input_terminal_descriptorContext? {
-			return getRuleContext(Specify_input_terminal_descriptorContext.self,0)
+
+	public class Parallel_path_descriptionContext: ParserRuleContext {
+			open
+			func specify_input_terminal_descriptor() -> Specify_input_terminal_descriptorContext? {
+				return getRuleContext(Specify_input_terminal_descriptorContext.self, 0)
+			}
+			open
+			func specify_output_terminal_descriptor() -> Specify_output_terminal_descriptorContext? {
+				return getRuleContext(Specify_output_terminal_descriptorContext.self, 0)
+			}
+			open
+			func polarity_operator() -> Polarity_operatorContext? {
+				return getRuleContext(Polarity_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_parallel_path_description
 		}
-		open func specify_output_terminal_descriptor() -> Specify_output_terminal_descriptorContext? {
-			return getRuleContext(Specify_output_terminal_descriptorContext.self,0)
-		}
-		open func polarity_operator() -> Polarity_operatorContext? {
-			return getRuleContext(Polarity_operatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_parallel_path_description }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterParallel_path_description(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterParallel_path_description(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitParallel_path_description(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitParallel_path_description(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitParallel_path_description(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitParallel_path_description(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitParallel_path_description(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitParallel_path_description(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parallel_path_description() throws -> Parallel_path_descriptionContext {
+	 open func parallel_path_description() throws -> Parallel_path_descriptionContext {
 		var _localctx: Parallel_path_descriptionContext = Parallel_path_descriptionContext(_ctx, getState())
 		try enterRule(_localctx, 348, Verilog2001Parser.RULE_parallel_path_description)
 		var _la: Int = 0
@@ -17461,43 +18823,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Full_path_descriptionContext:ParserRuleContext {
-		open func list_of_path_inputs() -> List_of_path_inputsContext? {
-			return getRuleContext(List_of_path_inputsContext.self,0)
+
+	public class Full_path_descriptionContext: ParserRuleContext {
+			open
+			func list_of_path_inputs() -> List_of_path_inputsContext? {
+				return getRuleContext(List_of_path_inputsContext.self, 0)
+			}
+			open
+			func list_of_path_outputs() -> List_of_path_outputsContext? {
+				return getRuleContext(List_of_path_outputsContext.self, 0)
+			}
+			open
+			func polarity_operator() -> Polarity_operatorContext? {
+				return getRuleContext(Polarity_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_full_path_description
 		}
-		open func list_of_path_outputs() -> List_of_path_outputsContext? {
-			return getRuleContext(List_of_path_outputsContext.self,0)
-		}
-		open func polarity_operator() -> Polarity_operatorContext? {
-			return getRuleContext(Polarity_operatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_full_path_description }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFull_path_description(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFull_path_description(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFull_path_description(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFull_path_description(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFull_path_description(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFull_path_description(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFull_path_description(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFull_path_description(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func full_path_description() throws -> Full_path_descriptionContext {
+	 open func full_path_description() throws -> Full_path_descriptionContext {
 		var _localctx: Full_path_descriptionContext = Full_path_descriptionContext(_ctx, getState())
 		try enterRule(_localctx, 350, Verilog2001Parser.RULE_full_path_description)
 		var _la: Int = 0
@@ -17539,40 +18909,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_path_inputsContext:ParserRuleContext {
-		open func specify_input_terminal_descriptor() -> Array<Specify_input_terminal_descriptorContext> {
-			return getRuleContexts(Specify_input_terminal_descriptorContext.self)
+
+	public class List_of_path_inputsContext: ParserRuleContext {
+			open
+			func specify_input_terminal_descriptor() -> [Specify_input_terminal_descriptorContext] {
+				return getRuleContexts(Specify_input_terminal_descriptorContext.self)
+			}
+			open
+			func specify_input_terminal_descriptor(_ i: Int) -> Specify_input_terminal_descriptorContext? {
+				return getRuleContext(Specify_input_terminal_descriptorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_path_inputs
 		}
-		open func specify_input_terminal_descriptor(_ i: Int) -> Specify_input_terminal_descriptorContext? {
-			return getRuleContext(Specify_input_terminal_descriptorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_path_inputs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_path_inputs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_path_inputs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_path_inputs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_path_inputs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_path_inputs(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_path_inputs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_path_inputs(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_path_inputs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_path_inputs() throws -> List_of_path_inputsContext {
+	 open func list_of_path_inputs() throws -> List_of_path_inputsContext {
 		var _localctx: List_of_path_inputsContext = List_of_path_inputsContext(_ctx, getState())
 		try enterRule(_localctx, 352, Verilog2001Parser.RULE_list_of_path_inputs)
 		var _la: Int = 0
@@ -17611,40 +18988,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_path_outputsContext:ParserRuleContext {
-		open func specify_output_terminal_descriptor() -> Array<Specify_output_terminal_descriptorContext> {
-			return getRuleContexts(Specify_output_terminal_descriptorContext.self)
+
+	public class List_of_path_outputsContext: ParserRuleContext {
+			open
+			func specify_output_terminal_descriptor() -> [Specify_output_terminal_descriptorContext] {
+				return getRuleContexts(Specify_output_terminal_descriptorContext.self)
+			}
+			open
+			func specify_output_terminal_descriptor(_ i: Int) -> Specify_output_terminal_descriptorContext? {
+				return getRuleContext(Specify_output_terminal_descriptorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_path_outputs
 		}
-		open func specify_output_terminal_descriptor(_ i: Int) -> Specify_output_terminal_descriptorContext? {
-			return getRuleContext(Specify_output_terminal_descriptorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_path_outputs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_path_outputs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_path_outputs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_path_outputs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_path_outputs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_path_outputs(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_path_outputs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_path_outputs(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_path_outputs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_path_outputs() throws -> List_of_path_outputsContext {
+	 open func list_of_path_outputs() throws -> List_of_path_outputsContext {
 		var _localctx: List_of_path_outputsContext = List_of_path_outputsContext(_ctx, getState())
 		try enterRule(_localctx, 354, Verilog2001Parser.RULE_list_of_path_outputs)
 		var _la: Int = 0
@@ -17683,43 +19067,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Specify_input_terminal_descriptorContext:ParserRuleContext {
-		open func input_identifier() -> Input_identifierContext? {
-			return getRuleContext(Input_identifierContext.self,0)
+
+	public class Specify_input_terminal_descriptorContext: ParserRuleContext {
+			open
+			func input_identifier() -> Input_identifierContext? {
+				return getRuleContext(Input_identifierContext.self, 0)
+			}
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func range_expression() -> Range_expressionContext? {
+				return getRuleContext(Range_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_specify_input_terminal_descriptor
 		}
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
-		}
-		open func range_expression() -> Range_expressionContext? {
-			return getRuleContext(Range_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_specify_input_terminal_descriptor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSpecify_input_terminal_descriptor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSpecify_input_terminal_descriptor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSpecify_input_terminal_descriptor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSpecify_input_terminal_descriptor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSpecify_input_terminal_descriptor(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSpecify_input_terminal_descriptor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSpecify_input_terminal_descriptor(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSpecify_input_terminal_descriptor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specify_input_terminal_descriptor() throws -> Specify_input_terminal_descriptorContext {
+	 open func specify_input_terminal_descriptor() throws -> Specify_input_terminal_descriptorContext {
 		var _localctx: Specify_input_terminal_descriptorContext = Specify_input_terminal_descriptorContext(_ctx, getState())
 		try enterRule(_localctx, 356, Verilog2001Parser.RULE_specify_input_terminal_descriptor)
 		defer {
@@ -17770,43 +19162,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Specify_output_terminal_descriptorContext:ParserRuleContext {
-		open func output_identifier() -> Output_identifierContext? {
-			return getRuleContext(Output_identifierContext.self,0)
+
+	public class Specify_output_terminal_descriptorContext: ParserRuleContext {
+			open
+			func output_identifier() -> Output_identifierContext? {
+				return getRuleContext(Output_identifierContext.self, 0)
+			}
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func range_expression() -> Range_expressionContext? {
+				return getRuleContext(Range_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_specify_output_terminal_descriptor
 		}
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
-		}
-		open func range_expression() -> Range_expressionContext? {
-			return getRuleContext(Range_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_specify_output_terminal_descriptor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSpecify_output_terminal_descriptor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSpecify_output_terminal_descriptor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSpecify_output_terminal_descriptor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSpecify_output_terminal_descriptor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSpecify_output_terminal_descriptor(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSpecify_output_terminal_descriptor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSpecify_output_terminal_descriptor(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSpecify_output_terminal_descriptor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specify_output_terminal_descriptor() throws -> Specify_output_terminal_descriptorContext {
+	 open func specify_output_terminal_descriptor() throws -> Specify_output_terminal_descriptorContext {
 		var _localctx: Specify_output_terminal_descriptorContext = Specify_output_terminal_descriptorContext(_ctx, getState())
 		try enterRule(_localctx, 358, Verilog2001Parser.RULE_specify_output_terminal_descriptor)
 		defer {
@@ -17857,40 +19257,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Input_identifierContext:ParserRuleContext {
-		open func input_port_identifier() -> Input_port_identifierContext? {
-			return getRuleContext(Input_port_identifierContext.self,0)
+
+	public class Input_identifierContext: ParserRuleContext {
+			open
+			func input_port_identifier() -> Input_port_identifierContext? {
+				return getRuleContext(Input_port_identifierContext.self, 0)
+			}
+			open
+			func inout_port_identifier() -> Inout_port_identifierContext? {
+				return getRuleContext(Inout_port_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_input_identifier
 		}
-		open func inout_port_identifier() -> Inout_port_identifierContext? {
-			return getRuleContext(Inout_port_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_input_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInput_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInput_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInput_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInput_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInput_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInput_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInput_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInput_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func input_identifier() throws -> Input_identifierContext {
+	 open func input_identifier() throws -> Input_identifierContext {
 		var _localctx: Input_identifierContext = Input_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 360, Verilog2001Parser.RULE_input_identifier)
 		defer {
@@ -17923,40 +19330,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Output_identifierContext:ParserRuleContext {
-		open func output_port_identifier() -> Output_port_identifierContext? {
-			return getRuleContext(Output_port_identifierContext.self,0)
+
+	public class Output_identifierContext: ParserRuleContext {
+			open
+			func output_port_identifier() -> Output_port_identifierContext? {
+				return getRuleContext(Output_port_identifierContext.self, 0)
+			}
+			open
+			func inout_port_identifier() -> Inout_port_identifierContext? {
+				return getRuleContext(Inout_port_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_output_identifier
 		}
-		open func inout_port_identifier() -> Inout_port_identifierContext? {
-			return getRuleContext(Inout_port_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_output_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterOutput_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterOutput_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitOutput_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitOutput_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitOutput_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitOutput_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitOutput_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitOutput_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func output_identifier() throws -> Output_identifierContext {
+	 open func output_identifier() throws -> Output_identifierContext {
 		var _localctx: Output_identifierContext = Output_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 362, Verilog2001Parser.RULE_output_identifier)
 		defer {
@@ -17989,37 +19403,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Path_delay_valueContext:ParserRuleContext {
-		open func list_of_path_delay_expressions() -> List_of_path_delay_expressionsContext? {
-			return getRuleContext(List_of_path_delay_expressionsContext.self,0)
+
+	public class Path_delay_valueContext: ParserRuleContext {
+			open
+			func list_of_path_delay_expressions() -> List_of_path_delay_expressionsContext? {
+				return getRuleContext(List_of_path_delay_expressionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_path_delay_value
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_path_delay_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPath_delay_value(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPath_delay_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPath_delay_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPath_delay_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPath_delay_value(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPath_delay_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPath_delay_value(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPath_delay_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func path_delay_value() throws -> Path_delay_valueContext {
+	 open func path_delay_value() throws -> Path_delay_valueContext {
 		var _localctx: Path_delay_valueContext = Path_delay_valueContext(_ctx, getState())
 		try enterRule(_localctx, 364, Verilog2001Parser.RULE_path_delay_value)
 		defer {
@@ -18056,82 +19476,103 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class List_of_path_delay_expressionsContext:ParserRuleContext {
-		open func t_path_delay_expression() -> T_path_delay_expressionContext? {
-			return getRuleContext(T_path_delay_expressionContext.self,0)
+
+	public class List_of_path_delay_expressionsContext: ParserRuleContext {
+			open
+			func t_path_delay_expression() -> T_path_delay_expressionContext? {
+				return getRuleContext(T_path_delay_expressionContext.self, 0)
+			}
+			open
+			func trise_path_delay_expression() -> Trise_path_delay_expressionContext? {
+				return getRuleContext(Trise_path_delay_expressionContext.self, 0)
+			}
+			open
+			func tfall_path_delay_expression() -> Tfall_path_delay_expressionContext? {
+				return getRuleContext(Tfall_path_delay_expressionContext.self, 0)
+			}
+			open
+			func tz_path_delay_expression() -> Tz_path_delay_expressionContext? {
+				return getRuleContext(Tz_path_delay_expressionContext.self, 0)
+			}
+			open
+			func t01_path_delay_expression() -> T01_path_delay_expressionContext? {
+				return getRuleContext(T01_path_delay_expressionContext.self, 0)
+			}
+			open
+			func t10_path_delay_expression() -> T10_path_delay_expressionContext? {
+				return getRuleContext(T10_path_delay_expressionContext.self, 0)
+			}
+			open
+			func t0z_path_delay_expression() -> T0z_path_delay_expressionContext? {
+				return getRuleContext(T0z_path_delay_expressionContext.self, 0)
+			}
+			open
+			func tz1_path_delay_expression() -> Tz1_path_delay_expressionContext? {
+				return getRuleContext(Tz1_path_delay_expressionContext.self, 0)
+			}
+			open
+			func t1z_path_delay_expression() -> T1z_path_delay_expressionContext? {
+				return getRuleContext(T1z_path_delay_expressionContext.self, 0)
+			}
+			open
+			func tz0_path_delay_expression() -> Tz0_path_delay_expressionContext? {
+				return getRuleContext(Tz0_path_delay_expressionContext.self, 0)
+			}
+			open
+			func t0x_path_delay_expression() -> T0x_path_delay_expressionContext? {
+				return getRuleContext(T0x_path_delay_expressionContext.self, 0)
+			}
+			open
+			func tx1_path_delay_expression() -> Tx1_path_delay_expressionContext? {
+				return getRuleContext(Tx1_path_delay_expressionContext.self, 0)
+			}
+			open
+			func t1x_path_delay_expression() -> T1x_path_delay_expressionContext? {
+				return getRuleContext(T1x_path_delay_expressionContext.self, 0)
+			}
+			open
+			func tx0_path_delay_expression() -> Tx0_path_delay_expressionContext? {
+				return getRuleContext(Tx0_path_delay_expressionContext.self, 0)
+			}
+			open
+			func txz_path_delay_expression() -> Txz_path_delay_expressionContext? {
+				return getRuleContext(Txz_path_delay_expressionContext.self, 0)
+			}
+			open
+			func tzx_path_delay_expression() -> Tzx_path_delay_expressionContext? {
+				return getRuleContext(Tzx_path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_list_of_path_delay_expressions
 		}
-		open func trise_path_delay_expression() -> Trise_path_delay_expressionContext? {
-			return getRuleContext(Trise_path_delay_expressionContext.self,0)
-		}
-		open func tfall_path_delay_expression() -> Tfall_path_delay_expressionContext? {
-			return getRuleContext(Tfall_path_delay_expressionContext.self,0)
-		}
-		open func tz_path_delay_expression() -> Tz_path_delay_expressionContext? {
-			return getRuleContext(Tz_path_delay_expressionContext.self,0)
-		}
-		open func t01_path_delay_expression() -> T01_path_delay_expressionContext? {
-			return getRuleContext(T01_path_delay_expressionContext.self,0)
-		}
-		open func t10_path_delay_expression() -> T10_path_delay_expressionContext? {
-			return getRuleContext(T10_path_delay_expressionContext.self,0)
-		}
-		open func t0z_path_delay_expression() -> T0z_path_delay_expressionContext? {
-			return getRuleContext(T0z_path_delay_expressionContext.self,0)
-		}
-		open func tz1_path_delay_expression() -> Tz1_path_delay_expressionContext? {
-			return getRuleContext(Tz1_path_delay_expressionContext.self,0)
-		}
-		open func t1z_path_delay_expression() -> T1z_path_delay_expressionContext? {
-			return getRuleContext(T1z_path_delay_expressionContext.self,0)
-		}
-		open func tz0_path_delay_expression() -> Tz0_path_delay_expressionContext? {
-			return getRuleContext(Tz0_path_delay_expressionContext.self,0)
-		}
-		open func t0x_path_delay_expression() -> T0x_path_delay_expressionContext? {
-			return getRuleContext(T0x_path_delay_expressionContext.self,0)
-		}
-		open func tx1_path_delay_expression() -> Tx1_path_delay_expressionContext? {
-			return getRuleContext(Tx1_path_delay_expressionContext.self,0)
-		}
-		open func t1x_path_delay_expression() -> T1x_path_delay_expressionContext? {
-			return getRuleContext(T1x_path_delay_expressionContext.self,0)
-		}
-		open func tx0_path_delay_expression() -> Tx0_path_delay_expressionContext? {
-			return getRuleContext(Tx0_path_delay_expressionContext.self,0)
-		}
-		open func txz_path_delay_expression() -> Txz_path_delay_expressionContext? {
-			return getRuleContext(Txz_path_delay_expressionContext.self,0)
-		}
-		open func tzx_path_delay_expression() -> Tzx_path_delay_expressionContext? {
-			return getRuleContext(Tzx_path_delay_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_list_of_path_delay_expressions }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterList_of_path_delay_expressions(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterList_of_path_delay_expressions(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitList_of_path_delay_expressions(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitList_of_path_delay_expressions(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitList_of_path_delay_expressions(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitList_of_path_delay_expressions(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitList_of_path_delay_expressions(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitList_of_path_delay_expressions(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list_of_path_delay_expressions() throws -> List_of_path_delay_expressionsContext {
+	 open func list_of_path_delay_expressions() throws -> List_of_path_delay_expressionsContext {
 		var _localctx: List_of_path_delay_expressionsContext = List_of_path_delay_expressionsContext(_ctx, getState())
 		try enterRule(_localctx, 366, Verilog2001Parser.RULE_list_of_path_delay_expressions)
 		defer {
@@ -18258,37 +19699,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class T_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class T_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_t_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_t_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterT_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterT_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitT_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitT_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitT_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitT_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitT_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitT_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func t_path_delay_expression() throws -> T_path_delay_expressionContext {
+	 open func t_path_delay_expression() throws -> T_path_delay_expressionContext {
 		var _localctx: T_path_delay_expressionContext = T_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 368, Verilog2001Parser.RULE_t_path_delay_expression)
 		defer {
@@ -18308,37 +19755,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Trise_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class Trise_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_trise_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_trise_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTrise_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTrise_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTrise_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTrise_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTrise_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTrise_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTrise_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTrise_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func trise_path_delay_expression() throws -> Trise_path_delay_expressionContext {
+	 open func trise_path_delay_expression() throws -> Trise_path_delay_expressionContext {
 		var _localctx: Trise_path_delay_expressionContext = Trise_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 370, Verilog2001Parser.RULE_trise_path_delay_expression)
 		defer {
@@ -18358,37 +19811,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Tfall_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class Tfall_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_tfall_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_tfall_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTfall_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTfall_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTfall_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTfall_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTfall_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTfall_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTfall_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTfall_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tfall_path_delay_expression() throws -> Tfall_path_delay_expressionContext {
+	 open func tfall_path_delay_expression() throws -> Tfall_path_delay_expressionContext {
 		var _localctx: Tfall_path_delay_expressionContext = Tfall_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 372, Verilog2001Parser.RULE_tfall_path_delay_expression)
 		defer {
@@ -18408,37 +19867,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Tz_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class Tz_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_tz_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_tz_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTz_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTz_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTz_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTz_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTz_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTz_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTz_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTz_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tz_path_delay_expression() throws -> Tz_path_delay_expressionContext {
+	 open func tz_path_delay_expression() throws -> Tz_path_delay_expressionContext {
 		var _localctx: Tz_path_delay_expressionContext = Tz_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 374, Verilog2001Parser.RULE_tz_path_delay_expression)
 		defer {
@@ -18458,37 +19923,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class T01_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class T01_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_t01_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_t01_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterT01_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterT01_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitT01_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitT01_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitT01_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitT01_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitT01_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitT01_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func t01_path_delay_expression() throws -> T01_path_delay_expressionContext {
+	 open func t01_path_delay_expression() throws -> T01_path_delay_expressionContext {
 		var _localctx: T01_path_delay_expressionContext = T01_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 376, Verilog2001Parser.RULE_t01_path_delay_expression)
 		defer {
@@ -18508,37 +19979,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class T10_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class T10_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_t10_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_t10_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterT10_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterT10_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitT10_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitT10_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitT10_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitT10_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitT10_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitT10_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func t10_path_delay_expression() throws -> T10_path_delay_expressionContext {
+	 open func t10_path_delay_expression() throws -> T10_path_delay_expressionContext {
 		var _localctx: T10_path_delay_expressionContext = T10_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 378, Verilog2001Parser.RULE_t10_path_delay_expression)
 		defer {
@@ -18558,37 +20035,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class T0z_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class T0z_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_t0z_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_t0z_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterT0z_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterT0z_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitT0z_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitT0z_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitT0z_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitT0z_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitT0z_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitT0z_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func t0z_path_delay_expression() throws -> T0z_path_delay_expressionContext {
+	 open func t0z_path_delay_expression() throws -> T0z_path_delay_expressionContext {
 		var _localctx: T0z_path_delay_expressionContext = T0z_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 380, Verilog2001Parser.RULE_t0z_path_delay_expression)
 		defer {
@@ -18608,37 +20091,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Tz1_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class Tz1_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_tz1_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_tz1_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTz1_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTz1_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTz1_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTz1_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTz1_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTz1_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTz1_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTz1_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tz1_path_delay_expression() throws -> Tz1_path_delay_expressionContext {
+	 open func tz1_path_delay_expression() throws -> Tz1_path_delay_expressionContext {
 		var _localctx: Tz1_path_delay_expressionContext = Tz1_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 382, Verilog2001Parser.RULE_tz1_path_delay_expression)
 		defer {
@@ -18658,37 +20147,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class T1z_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class T1z_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_t1z_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_t1z_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterT1z_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterT1z_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitT1z_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitT1z_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitT1z_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitT1z_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitT1z_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitT1z_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func t1z_path_delay_expression() throws -> T1z_path_delay_expressionContext {
+	 open func t1z_path_delay_expression() throws -> T1z_path_delay_expressionContext {
 		var _localctx: T1z_path_delay_expressionContext = T1z_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 384, Verilog2001Parser.RULE_t1z_path_delay_expression)
 		defer {
@@ -18708,37 +20203,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Tz0_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class Tz0_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_tz0_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_tz0_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTz0_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTz0_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTz0_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTz0_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTz0_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTz0_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTz0_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTz0_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tz0_path_delay_expression() throws -> Tz0_path_delay_expressionContext {
+	 open func tz0_path_delay_expression() throws -> Tz0_path_delay_expressionContext {
 		var _localctx: Tz0_path_delay_expressionContext = Tz0_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 386, Verilog2001Parser.RULE_tz0_path_delay_expression)
 		defer {
@@ -18758,37 +20259,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class T0x_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class T0x_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_t0x_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_t0x_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterT0x_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterT0x_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitT0x_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitT0x_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitT0x_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitT0x_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitT0x_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitT0x_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func t0x_path_delay_expression() throws -> T0x_path_delay_expressionContext {
+	 open func t0x_path_delay_expression() throws -> T0x_path_delay_expressionContext {
 		var _localctx: T0x_path_delay_expressionContext = T0x_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 388, Verilog2001Parser.RULE_t0x_path_delay_expression)
 		defer {
@@ -18808,37 +20315,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Tx1_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class Tx1_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_tx1_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_tx1_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTx1_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTx1_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTx1_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTx1_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTx1_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTx1_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTx1_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTx1_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tx1_path_delay_expression() throws -> Tx1_path_delay_expressionContext {
+	 open func tx1_path_delay_expression() throws -> Tx1_path_delay_expressionContext {
 		var _localctx: Tx1_path_delay_expressionContext = Tx1_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 390, Verilog2001Parser.RULE_tx1_path_delay_expression)
 		defer {
@@ -18858,37 +20371,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class T1x_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class T1x_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_t1x_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_t1x_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterT1x_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterT1x_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitT1x_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitT1x_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitT1x_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitT1x_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitT1x_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitT1x_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func t1x_path_delay_expression() throws -> T1x_path_delay_expressionContext {
+	 open func t1x_path_delay_expression() throws -> T1x_path_delay_expressionContext {
 		var _localctx: T1x_path_delay_expressionContext = T1x_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 392, Verilog2001Parser.RULE_t1x_path_delay_expression)
 		defer {
@@ -18908,37 +20427,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Tx0_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class Tx0_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_tx0_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_tx0_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTx0_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTx0_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTx0_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTx0_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTx0_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTx0_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTx0_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTx0_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tx0_path_delay_expression() throws -> Tx0_path_delay_expressionContext {
+	 open func tx0_path_delay_expression() throws -> Tx0_path_delay_expressionContext {
 		var _localctx: Tx0_path_delay_expressionContext = Tx0_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 394, Verilog2001Parser.RULE_tx0_path_delay_expression)
 		defer {
@@ -18958,37 +20483,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Txz_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class Txz_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_txz_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_txz_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTxz_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTxz_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTxz_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTxz_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTxz_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTxz_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTxz_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTxz_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func txz_path_delay_expression() throws -> Txz_path_delay_expressionContext {
+	 open func txz_path_delay_expression() throws -> Txz_path_delay_expressionContext {
 		var _localctx: Txz_path_delay_expressionContext = Txz_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 396, Verilog2001Parser.RULE_txz_path_delay_expression)
 		defer {
@@ -19008,37 +20539,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Tzx_path_delay_expressionContext:ParserRuleContext {
-		open func path_delay_expression() -> Path_delay_expressionContext? {
-			return getRuleContext(Path_delay_expressionContext.self,0)
+
+	public class Tzx_path_delay_expressionContext: ParserRuleContext {
+			open
+			func path_delay_expression() -> Path_delay_expressionContext? {
+				return getRuleContext(Path_delay_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_tzx_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_tzx_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTzx_path_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTzx_path_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTzx_path_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTzx_path_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTzx_path_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTzx_path_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTzx_path_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTzx_path_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tzx_path_delay_expression() throws -> Tzx_path_delay_expressionContext {
+	 open func tzx_path_delay_expression() throws -> Tzx_path_delay_expressionContext {
 		var _localctx: Tzx_path_delay_expressionContext = Tzx_path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 398, Verilog2001Parser.RULE_tzx_path_delay_expression)
 		defer {
@@ -19058,37 +20595,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Path_delay_expressionContext:ParserRuleContext {
-		open func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
-			return getRuleContext(Constant_mintypmax_expressionContext.self,0)
+
+	public class Path_delay_expressionContext: ParserRuleContext {
+			open
+			func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
+				return getRuleContext(Constant_mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_path_delay_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_path_delay_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPath_delay_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPath_delay_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPath_delay_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPath_delay_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPath_delay_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPath_delay_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPath_delay_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPath_delay_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func path_delay_expression() throws -> Path_delay_expressionContext {
+	 open func path_delay_expression() throws -> Path_delay_expressionContext {
 		var _localctx: Path_delay_expressionContext = Path_delay_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 400, Verilog2001Parser.RULE_path_delay_expression)
 		defer {
@@ -19108,43 +20651,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Edge_sensitive_path_declarationContext:ParserRuleContext {
-		open func parallel_edge_sensitive_path_description() -> Parallel_edge_sensitive_path_descriptionContext? {
-			return getRuleContext(Parallel_edge_sensitive_path_descriptionContext.self,0)
+
+	public class Edge_sensitive_path_declarationContext: ParserRuleContext {
+			open
+			func parallel_edge_sensitive_path_description() -> Parallel_edge_sensitive_path_descriptionContext? {
+				return getRuleContext(Parallel_edge_sensitive_path_descriptionContext.self, 0)
+			}
+			open
+			func path_delay_value() -> Path_delay_valueContext? {
+				return getRuleContext(Path_delay_valueContext.self, 0)
+			}
+			open
+			func full_edge_sensitive_path_description() -> Full_edge_sensitive_path_descriptionContext? {
+				return getRuleContext(Full_edge_sensitive_path_descriptionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_edge_sensitive_path_declaration
 		}
-		open func path_delay_value() -> Path_delay_valueContext? {
-			return getRuleContext(Path_delay_valueContext.self,0)
-		}
-		open func full_edge_sensitive_path_description() -> Full_edge_sensitive_path_descriptionContext? {
-			return getRuleContext(Full_edge_sensitive_path_descriptionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_edge_sensitive_path_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEdge_sensitive_path_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEdge_sensitive_path_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEdge_sensitive_path_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEdge_sensitive_path_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEdge_sensitive_path_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEdge_sensitive_path_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEdge_sensitive_path_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEdge_sensitive_path_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func edge_sensitive_path_declaration() throws -> Edge_sensitive_path_declarationContext {
+	 open func edge_sensitive_path_declaration() throws -> Edge_sensitive_path_declarationContext {
 		var _localctx: Edge_sensitive_path_declarationContext = Edge_sensitive_path_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 402, Verilog2001Parser.RULE_edge_sensitive_path_declaration)
 		defer {
@@ -19185,49 +20736,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Parallel_edge_sensitive_path_descriptionContext:ParserRuleContext {
-		open func specify_input_terminal_descriptor() -> Specify_input_terminal_descriptorContext? {
-			return getRuleContext(Specify_input_terminal_descriptorContext.self,0)
+
+	public class Parallel_edge_sensitive_path_descriptionContext: ParserRuleContext {
+			open
+			func specify_input_terminal_descriptor() -> Specify_input_terminal_descriptorContext? {
+				return getRuleContext(Specify_input_terminal_descriptorContext.self, 0)
+			}
+			open
+			func specify_output_terminal_descriptor() -> Specify_output_terminal_descriptorContext? {
+				return getRuleContext(Specify_output_terminal_descriptorContext.self, 0)
+			}
+			open
+			func data_source_expression() -> Data_source_expressionContext? {
+				return getRuleContext(Data_source_expressionContext.self, 0)
+			}
+			open
+			func edge_identifier() -> Edge_identifierContext? {
+				return getRuleContext(Edge_identifierContext.self, 0)
+			}
+			open
+			func polarity_operator() -> Polarity_operatorContext? {
+				return getRuleContext(Polarity_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_parallel_edge_sensitive_path_description
 		}
-		open func specify_output_terminal_descriptor() -> Specify_output_terminal_descriptorContext? {
-			return getRuleContext(Specify_output_terminal_descriptorContext.self,0)
-		}
-		open func data_source_expression() -> Data_source_expressionContext? {
-			return getRuleContext(Data_source_expressionContext.self,0)
-		}
-		open func edge_identifier() -> Edge_identifierContext? {
-			return getRuleContext(Edge_identifierContext.self,0)
-		}
-		open func polarity_operator() -> Polarity_operatorContext? {
-			return getRuleContext(Polarity_operatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_parallel_edge_sensitive_path_description }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterParallel_edge_sensitive_path_description(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterParallel_edge_sensitive_path_description(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitParallel_edge_sensitive_path_description(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitParallel_edge_sensitive_path_description(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitParallel_edge_sensitive_path_description(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitParallel_edge_sensitive_path_description(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitParallel_edge_sensitive_path_description(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitParallel_edge_sensitive_path_description(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parallel_edge_sensitive_path_description() throws -> Parallel_edge_sensitive_path_descriptionContext {
+	 open func parallel_edge_sensitive_path_description() throws -> Parallel_edge_sensitive_path_descriptionContext {
 		var _localctx: Parallel_edge_sensitive_path_descriptionContext = Parallel_edge_sensitive_path_descriptionContext(_ctx, getState())
 		try enterRule(_localctx, 404, Verilog2001Parser.RULE_parallel_edge_sensitive_path_description)
 		var _la: Int = 0
@@ -19286,49 +20847,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Full_edge_sensitive_path_descriptionContext:ParserRuleContext {
-		open func list_of_path_inputs() -> List_of_path_inputsContext? {
-			return getRuleContext(List_of_path_inputsContext.self,0)
+
+	public class Full_edge_sensitive_path_descriptionContext: ParserRuleContext {
+			open
+			func list_of_path_inputs() -> List_of_path_inputsContext? {
+				return getRuleContext(List_of_path_inputsContext.self, 0)
+			}
+			open
+			func list_of_path_outputs() -> List_of_path_outputsContext? {
+				return getRuleContext(List_of_path_outputsContext.self, 0)
+			}
+			open
+			func data_source_expression() -> Data_source_expressionContext? {
+				return getRuleContext(Data_source_expressionContext.self, 0)
+			}
+			open
+			func edge_identifier() -> Edge_identifierContext? {
+				return getRuleContext(Edge_identifierContext.self, 0)
+			}
+			open
+			func polarity_operator() -> Polarity_operatorContext? {
+				return getRuleContext(Polarity_operatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_full_edge_sensitive_path_description
 		}
-		open func list_of_path_outputs() -> List_of_path_outputsContext? {
-			return getRuleContext(List_of_path_outputsContext.self,0)
-		}
-		open func data_source_expression() -> Data_source_expressionContext? {
-			return getRuleContext(Data_source_expressionContext.self,0)
-		}
-		open func edge_identifier() -> Edge_identifierContext? {
-			return getRuleContext(Edge_identifierContext.self,0)
-		}
-		open func polarity_operator() -> Polarity_operatorContext? {
-			return getRuleContext(Polarity_operatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_full_edge_sensitive_path_description }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFull_edge_sensitive_path_description(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFull_edge_sensitive_path_description(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFull_edge_sensitive_path_description(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFull_edge_sensitive_path_description(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFull_edge_sensitive_path_description(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFull_edge_sensitive_path_description(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFull_edge_sensitive_path_description(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFull_edge_sensitive_path_description(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func full_edge_sensitive_path_description() throws -> Full_edge_sensitive_path_descriptionContext {
+	 open func full_edge_sensitive_path_description() throws -> Full_edge_sensitive_path_descriptionContext {
 		var _localctx: Full_edge_sensitive_path_descriptionContext = Full_edge_sensitive_path_descriptionContext(_ctx, getState())
 		try enterRule(_localctx, 406, Verilog2001Parser.RULE_full_edge_sensitive_path_description)
 		var _la: Int = 0
@@ -19387,37 +20958,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Data_source_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Data_source_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_data_source_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_data_source_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterData_source_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterData_source_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitData_source_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitData_source_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitData_source_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitData_source_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitData_source_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitData_source_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func data_source_expression() throws -> Data_source_expressionContext {
+	 open func data_source_expression() throws -> Data_source_expressionContext {
 		var _localctx: Data_source_expressionContext = Data_source_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 408, Verilog2001Parser.RULE_data_source_expression)
 		defer {
@@ -19437,34 +21014,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Edge_identifierContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_edge_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEdge_identifier(self)
+
+	public class Edge_identifierContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_edge_identifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEdge_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEdge_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEdge_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEdge_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEdge_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEdge_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEdge_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func edge_identifier() throws -> Edge_identifierContext {
+	 open func edge_identifier() throws -> Edge_identifierContext {
 		var _localctx: Edge_identifierContext = Edge_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 410, Verilog2001Parser.RULE_edge_identifier)
 		var _la: Int = 0
@@ -19496,43 +21078,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class State_dependent_path_declarationContext:ParserRuleContext {
-		open func module_path_expression() -> Module_path_expressionContext? {
-			return getRuleContext(Module_path_expressionContext.self,0)
+
+	public class State_dependent_path_declarationContext: ParserRuleContext {
+			open
+			func module_path_expression() -> Module_path_expressionContext? {
+				return getRuleContext(Module_path_expressionContext.self, 0)
+			}
+			open
+			func simple_path_declaration() -> Simple_path_declarationContext? {
+				return getRuleContext(Simple_path_declarationContext.self, 0)
+			}
+			open
+			func edge_sensitive_path_declaration() -> Edge_sensitive_path_declarationContext? {
+				return getRuleContext(Edge_sensitive_path_declarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_state_dependent_path_declaration
 		}
-		open func simple_path_declaration() -> Simple_path_declarationContext? {
-			return getRuleContext(Simple_path_declarationContext.self,0)
-		}
-		open func edge_sensitive_path_declaration() -> Edge_sensitive_path_declarationContext? {
-			return getRuleContext(Edge_sensitive_path_declarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_state_dependent_path_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterState_dependent_path_declaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterState_dependent_path_declaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitState_dependent_path_declaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitState_dependent_path_declaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitState_dependent_path_declaration(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitState_dependent_path_declaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitState_dependent_path_declaration(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitState_dependent_path_declaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func state_dependent_path_declaration() throws -> State_dependent_path_declarationContext {
+	 open func state_dependent_path_declaration() throws -> State_dependent_path_declarationContext {
 		var _localctx: State_dependent_path_declarationContext = State_dependent_path_declarationContext(_ctx, getState())
 		try enterRule(_localctx, 412, Verilog2001Parser.RULE_state_dependent_path_declaration)
 		defer {
@@ -19589,34 +21179,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Polarity_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_polarity_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPolarity_operator(self)
+
+	public class Polarity_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_polarity_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPolarity_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPolarity_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPolarity_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPolarity_operator(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPolarity_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPolarity_operator(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPolarity_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func polarity_operator() throws -> Polarity_operatorContext {
+	 open func polarity_operator() throws -> Polarity_operatorContext {
 		var _localctx: Polarity_operatorContext = Polarity_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 414, Verilog2001Parser.RULE_polarity_operator)
 		var _la: Int = 0
@@ -19648,37 +21243,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Checktime_conditionContext:ParserRuleContext {
-		open func mintypmax_expression() -> Mintypmax_expressionContext? {
-			return getRuleContext(Mintypmax_expressionContext.self,0)
+
+	public class Checktime_conditionContext: ParserRuleContext {
+			open
+			func mintypmax_expression() -> Mintypmax_expressionContext? {
+				return getRuleContext(Mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_checktime_condition
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_checktime_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterChecktime_condition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterChecktime_condition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitChecktime_condition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitChecktime_condition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitChecktime_condition(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitChecktime_condition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitChecktime_condition(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitChecktime_condition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func checktime_condition() throws -> Checktime_conditionContext {
+	 open func checktime_condition() throws -> Checktime_conditionContext {
 		var _localctx: Checktime_conditionContext = Checktime_conditionContext(_ctx, getState())
 		try enterRule(_localctx, 416, Verilog2001Parser.RULE_checktime_condition)
 		defer {
@@ -19698,40 +21299,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Delayed_dataContext:ParserRuleContext {
-		open func terminal_identifier() -> Terminal_identifierContext? {
-			return getRuleContext(Terminal_identifierContext.self,0)
+
+	public class Delayed_dataContext: ParserRuleContext {
+			open
+			func terminal_identifier() -> Terminal_identifierContext? {
+				return getRuleContext(Terminal_identifierContext.self, 0)
+			}
+			open
+			func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
+				return getRuleContext(Constant_mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_delayed_data
 		}
-		open func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
-			return getRuleContext(Constant_mintypmax_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_delayed_data }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDelayed_data(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDelayed_data(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDelayed_data(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDelayed_data(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDelayed_data(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDelayed_data(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDelayed_data(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDelayed_data(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delayed_data() throws -> Delayed_dataContext {
+	 open func delayed_data() throws -> Delayed_dataContext {
 		var _localctx: Delayed_dataContext = Delayed_dataContext(_ctx, getState())
 		try enterRule(_localctx, 418, Verilog2001Parser.RULE_delayed_data)
 		defer {
@@ -19770,40 +21378,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Delayed_referenceContext:ParserRuleContext {
-		open func terminal_identifier() -> Terminal_identifierContext? {
-			return getRuleContext(Terminal_identifierContext.self,0)
+
+	public class Delayed_referenceContext: ParserRuleContext {
+			open
+			func terminal_identifier() -> Terminal_identifierContext? {
+				return getRuleContext(Terminal_identifierContext.self, 0)
+			}
+			open
+			func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
+				return getRuleContext(Constant_mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_delayed_reference
 		}
-		open func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
-			return getRuleContext(Constant_mintypmax_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_delayed_reference }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDelayed_reference(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDelayed_reference(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDelayed_reference(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDelayed_reference(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDelayed_reference(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDelayed_reference(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDelayed_reference(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDelayed_reference(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delayed_reference() throws -> Delayed_referenceContext {
+	 open func delayed_reference() throws -> Delayed_referenceContext {
 		var _localctx: Delayed_referenceContext = Delayed_referenceContext(_ctx, getState())
 		try enterRule(_localctx, 420, Verilog2001Parser.RULE_delayed_reference)
 		defer {
@@ -19842,37 +21457,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class End_edge_offsetContext:ParserRuleContext {
-		open func mintypmax_expression() -> Mintypmax_expressionContext? {
-			return getRuleContext(Mintypmax_expressionContext.self,0)
+
+	public class End_edge_offsetContext: ParserRuleContext {
+			open
+			func mintypmax_expression() -> Mintypmax_expressionContext? {
+				return getRuleContext(Mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_end_edge_offset
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_end_edge_offset }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEnd_edge_offset(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEnd_edge_offset(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEnd_edge_offset(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEnd_edge_offset(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEnd_edge_offset(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEnd_edge_offset(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEnd_edge_offset(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEnd_edge_offset(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func end_edge_offset() throws -> End_edge_offsetContext {
+	 open func end_edge_offset() throws -> End_edge_offsetContext {
 		var _localctx: End_edge_offsetContext = End_edge_offsetContext(_ctx, getState())
 		try enterRule(_localctx, 422, Verilog2001Parser.RULE_end_edge_offset)
 		defer {
@@ -19892,37 +21513,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Event_based_flagContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Event_based_flagContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_event_based_flag
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_event_based_flag }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEvent_based_flag(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEvent_based_flag(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEvent_based_flag(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEvent_based_flag(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEvent_based_flag(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEvent_based_flag(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEvent_based_flag(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEvent_based_flag(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func event_based_flag() throws -> Event_based_flagContext {
+	 open func event_based_flag() throws -> Event_based_flagContext {
 		var _localctx: Event_based_flagContext = Event_based_flagContext(_ctx, getState())
 		try enterRule(_localctx, 424, Verilog2001Parser.RULE_event_based_flag)
 		defer {
@@ -19942,37 +21569,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Notify_regContext:ParserRuleContext {
-		open func variable_identifier() -> Variable_identifierContext? {
-			return getRuleContext(Variable_identifierContext.self,0)
+
+	public class Notify_regContext: ParserRuleContext {
+			open
+			func variable_identifier() -> Variable_identifierContext? {
+				return getRuleContext(Variable_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_notify_reg
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_notify_reg }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNotify_reg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNotify_reg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNotify_reg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNotify_reg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNotify_reg(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNotify_reg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNotify_reg(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNotify_reg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func notify_reg() throws -> Notify_regContext {
+	 open func notify_reg() throws -> Notify_regContext {
 		var _localctx: Notify_regContext = Notify_regContext(_ctx, getState())
 		try enterRule(_localctx, 426, Verilog2001Parser.RULE_notify_reg)
 		defer {
@@ -19992,37 +21625,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Remain_active_flagContext:ParserRuleContext {
-		open func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
-			return getRuleContext(Constant_mintypmax_expressionContext.self,0)
+
+	public class Remain_active_flagContext: ParserRuleContext {
+			open
+			func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
+				return getRuleContext(Constant_mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_remain_active_flag
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_remain_active_flag }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterRemain_active_flag(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterRemain_active_flag(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitRemain_active_flag(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitRemain_active_flag(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitRemain_active_flag(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitRemain_active_flag(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitRemain_active_flag(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitRemain_active_flag(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func remain_active_flag() throws -> Remain_active_flagContext {
+	 open func remain_active_flag() throws -> Remain_active_flagContext {
 		var _localctx: Remain_active_flagContext = Remain_active_flagContext(_ctx, getState())
 		try enterRule(_localctx, 428, Verilog2001Parser.RULE_remain_active_flag)
 		defer {
@@ -20042,37 +21681,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Stamptime_conditionContext:ParserRuleContext {
-		open func mintypmax_expression() -> Mintypmax_expressionContext? {
-			return getRuleContext(Mintypmax_expressionContext.self,0)
+
+	public class Stamptime_conditionContext: ParserRuleContext {
+			open
+			func mintypmax_expression() -> Mintypmax_expressionContext? {
+				return getRuleContext(Mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_stamptime_condition
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_stamptime_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterStamptime_condition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterStamptime_condition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitStamptime_condition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitStamptime_condition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitStamptime_condition(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitStamptime_condition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitStamptime_condition(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitStamptime_condition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stamptime_condition() throws -> Stamptime_conditionContext {
+	 open func stamptime_condition() throws -> Stamptime_conditionContext {
 		var _localctx: Stamptime_conditionContext = Stamptime_conditionContext(_ctx, getState())
 		try enterRule(_localctx, 430, Verilog2001Parser.RULE_stamptime_condition)
 		defer {
@@ -20092,37 +21737,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Start_edge_offsetContext:ParserRuleContext {
-		open func mintypmax_expression() -> Mintypmax_expressionContext? {
-			return getRuleContext(Mintypmax_expressionContext.self,0)
+
+	public class Start_edge_offsetContext: ParserRuleContext {
+			open
+			func mintypmax_expression() -> Mintypmax_expressionContext? {
+				return getRuleContext(Mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_start_edge_offset
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_start_edge_offset }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterStart_edge_offset(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterStart_edge_offset(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitStart_edge_offset(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitStart_edge_offset(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitStart_edge_offset(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitStart_edge_offset(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitStart_edge_offset(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitStart_edge_offset(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func start_edge_offset() throws -> Start_edge_offsetContext {
+	 open func start_edge_offset() throws -> Start_edge_offsetContext {
 		var _localctx: Start_edge_offsetContext = Start_edge_offsetContext(_ctx, getState())
 		try enterRule(_localctx, 432, Verilog2001Parser.RULE_start_edge_offset)
 		defer {
@@ -20142,37 +21793,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class ThresholdContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class ThresholdContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_threshold
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_threshold }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterThreshold(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterThreshold(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitThreshold(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitThreshold(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitThreshold(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitThreshold(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitThreshold(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitThreshold(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func threshold() throws -> ThresholdContext {
+	 open func threshold() throws -> ThresholdContext {
 		var _localctx: ThresholdContext = ThresholdContext(_ctx, getState())
 		try enterRule(_localctx, 434, Verilog2001Parser.RULE_threshold)
 		defer {
@@ -20192,37 +21849,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Timing_check_limitContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Timing_check_limitContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_timing_check_limit
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_timing_check_limit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTiming_check_limit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTiming_check_limit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTiming_check_limit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTiming_check_limit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTiming_check_limit(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTiming_check_limit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTiming_check_limit(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTiming_check_limit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func timing_check_limit() throws -> Timing_check_limitContext {
+	 open func timing_check_limit() throws -> Timing_check_limitContext {
 		var _localctx: Timing_check_limitContext = Timing_check_limitContext(_ctx, getState())
 		try enterRule(_localctx, 436, Verilog2001Parser.RULE_timing_check_limit)
 		defer {
@@ -20242,40 +21905,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class ConcatenationContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ConcatenationContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_concatenation
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_concatenation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConcatenation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConcatenation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConcatenation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConcatenation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConcatenation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConcatenation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConcatenation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConcatenation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func concatenation() throws -> ConcatenationContext {
+	 open func concatenation() throws -> ConcatenationContext {
 		var _localctx: ConcatenationContext = ConcatenationContext(_ctx, getState())
 		try enterRule(_localctx, 438, Verilog2001Parser.RULE_concatenation)
 		var _la: Int = 0
@@ -20318,40 +21988,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Constant_concatenationContext:ParserRuleContext {
-		open func constant_expression() -> Array<Constant_expressionContext> {
-			return getRuleContexts(Constant_expressionContext.self)
+
+	public class Constant_concatenationContext: ParserRuleContext {
+			open
+			func constant_expression() -> [Constant_expressionContext] {
+				return getRuleContexts(Constant_expressionContext.self)
+			}
+			open
+			func constant_expression(_ i: Int) -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_constant_concatenation
 		}
-		open func constant_expression(_ i: Int) -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_constant_concatenation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConstant_concatenation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConstant_concatenation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConstant_concatenation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConstant_concatenation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConstant_concatenation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConstant_concatenation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConstant_concatenation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConstant_concatenation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant_concatenation() throws -> Constant_concatenationContext {
+	 open func constant_concatenation() throws -> Constant_concatenationContext {
 		var _localctx: Constant_concatenationContext = Constant_concatenationContext(_ctx, getState())
 		try enterRule(_localctx, 440, Verilog2001Parser.RULE_constant_concatenation)
 		var _la: Int = 0
@@ -20394,40 +22071,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Constant_multiple_concatenationContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Constant_multiple_concatenationContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func constant_concatenation() -> Constant_concatenationContext? {
+				return getRuleContext(Constant_concatenationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_constant_multiple_concatenation
 		}
-		open func constant_concatenation() -> Constant_concatenationContext? {
-			return getRuleContext(Constant_concatenationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_constant_multiple_concatenation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConstant_multiple_concatenation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConstant_multiple_concatenation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConstant_multiple_concatenation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConstant_multiple_concatenation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConstant_multiple_concatenation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConstant_multiple_concatenation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConstant_multiple_concatenation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConstant_multiple_concatenation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant_multiple_concatenation() throws -> Constant_multiple_concatenationContext {
+	 open func constant_multiple_concatenation() throws -> Constant_multiple_concatenationContext {
 		var _localctx: Constant_multiple_concatenationContext = Constant_multiple_concatenationContext(_ctx, getState())
 		try enterRule(_localctx, 442, Verilog2001Parser.RULE_constant_multiple_concatenation)
 		defer {
@@ -20453,40 +22137,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_path_concatenationContext:ParserRuleContext {
-		open func module_path_expression() -> Array<Module_path_expressionContext> {
-			return getRuleContexts(Module_path_expressionContext.self)
+
+	public class Module_path_concatenationContext: ParserRuleContext {
+			open
+			func module_path_expression() -> [Module_path_expressionContext] {
+				return getRuleContexts(Module_path_expressionContext.self)
+			}
+			open
+			func module_path_expression(_ i: Int) -> Module_path_expressionContext? {
+				return getRuleContext(Module_path_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_path_concatenation
 		}
-		open func module_path_expression(_ i: Int) -> Module_path_expressionContext? {
-			return getRuleContext(Module_path_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_path_concatenation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_path_concatenation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_path_concatenation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_path_concatenation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_path_concatenation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_path_concatenation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_path_concatenation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_path_concatenation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_path_concatenation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_path_concatenation() throws -> Module_path_concatenationContext {
+	 open func module_path_concatenation() throws -> Module_path_concatenationContext {
 		var _localctx: Module_path_concatenationContext = Module_path_concatenationContext(_ctx, getState())
 		try enterRule(_localctx, 444, Verilog2001Parser.RULE_module_path_concatenation)
 		var _la: Int = 0
@@ -20529,40 +22220,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_path_multiple_concatenationContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Module_path_multiple_concatenationContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func module_path_concatenation() -> Module_path_concatenationContext? {
+				return getRuleContext(Module_path_concatenationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_path_multiple_concatenation
 		}
-		open func module_path_concatenation() -> Module_path_concatenationContext? {
-			return getRuleContext(Module_path_concatenationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_path_multiple_concatenation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_path_multiple_concatenation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_path_multiple_concatenation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_path_multiple_concatenation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_path_multiple_concatenation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_path_multiple_concatenation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_path_multiple_concatenation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_path_multiple_concatenation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_path_multiple_concatenation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_path_multiple_concatenation() throws -> Module_path_multiple_concatenationContext {
+	 open func module_path_multiple_concatenation() throws -> Module_path_multiple_concatenationContext {
 		var _localctx: Module_path_multiple_concatenationContext = Module_path_multiple_concatenationContext(_ctx, getState())
 		try enterRule(_localctx, 446, Verilog2001Parser.RULE_module_path_multiple_concatenation)
 		defer {
@@ -20588,40 +22286,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Multiple_concatenationContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Multiple_concatenationContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func concatenation() -> ConcatenationContext? {
+				return getRuleContext(ConcatenationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_multiple_concatenation
 		}
-		open func concatenation() -> ConcatenationContext? {
-			return getRuleContext(ConcatenationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_multiple_concatenation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterMultiple_concatenation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterMultiple_concatenation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitMultiple_concatenation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitMultiple_concatenation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitMultiple_concatenation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitMultiple_concatenation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitMultiple_concatenation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitMultiple_concatenation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiple_concatenation() throws -> Multiple_concatenationContext {
+	 open func multiple_concatenation() throws -> Multiple_concatenationContext {
 		var _localctx: Multiple_concatenationContext = Multiple_concatenationContext(_ctx, getState())
 		try enterRule(_localctx, 448, Verilog2001Parser.RULE_multiple_concatenation)
 		defer {
@@ -20647,40 +22352,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Net_concatenationContext:ParserRuleContext {
-		open func net_concatenation_value() -> Array<Net_concatenation_valueContext> {
-			return getRuleContexts(Net_concatenation_valueContext.self)
+
+	public class Net_concatenationContext: ParserRuleContext {
+			open
+			func net_concatenation_value() -> [Net_concatenation_valueContext] {
+				return getRuleContexts(Net_concatenation_valueContext.self)
+			}
+			open
+			func net_concatenation_value(_ i: Int) -> Net_concatenation_valueContext? {
+				return getRuleContext(Net_concatenation_valueContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_net_concatenation
 		}
-		open func net_concatenation_value(_ i: Int) -> Net_concatenation_valueContext? {
-			return getRuleContext(Net_concatenation_valueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_net_concatenation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNet_concatenation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNet_concatenation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNet_concatenation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNet_concatenation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNet_concatenation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNet_concatenation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNet_concatenation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNet_concatenation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func net_concatenation() throws -> Net_concatenationContext {
+	 open func net_concatenation() throws -> Net_concatenationContext {
 		var _localctx: Net_concatenationContext = Net_concatenationContext(_ctx, getState())
 		try enterRule(_localctx, 450, Verilog2001Parser.RULE_net_concatenation)
 		var _la: Int = 0
@@ -20723,49 +22435,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Net_concatenation_valueContext:ParserRuleContext {
-		open func hierarchical_net_identifier() -> Hierarchical_net_identifierContext? {
-			return getRuleContext(Hierarchical_net_identifierContext.self,0)
+
+	public class Net_concatenation_valueContext: ParserRuleContext {
+			open
+			func hierarchical_net_identifier() -> Hierarchical_net_identifierContext? {
+				return getRuleContext(Hierarchical_net_identifierContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func range_expression() -> Range_expressionContext? {
+				return getRuleContext(Range_expressionContext.self, 0)
+			}
+			open
+			func net_concatenation() -> Net_concatenationContext? {
+				return getRuleContext(Net_concatenationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_net_concatenation_value
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func range_expression() -> Range_expressionContext? {
-			return getRuleContext(Range_expressionContext.self,0)
-		}
-		open func net_concatenation() -> Net_concatenationContext? {
-			return getRuleContext(Net_concatenationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_net_concatenation_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNet_concatenation_value(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNet_concatenation_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNet_concatenation_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNet_concatenation_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNet_concatenation_value(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNet_concatenation_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNet_concatenation_value(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNet_concatenation_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func net_concatenation_value() throws -> Net_concatenation_valueContext {
+	 open func net_concatenation_value() throws -> Net_concatenation_valueContext {
 		var _localctx: Net_concatenation_valueContext = Net_concatenation_valueContext(_ctx, getState())
 		try enterRule(_localctx, 452, Verilog2001Parser.RULE_net_concatenation_value)
 		var _la: Int = 0
@@ -20880,40 +22602,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Variable_concatenationContext:ParserRuleContext {
-		open func variable_concatenation_value() -> Array<Variable_concatenation_valueContext> {
-			return getRuleContexts(Variable_concatenation_valueContext.self)
+
+	public class Variable_concatenationContext: ParserRuleContext {
+			open
+			func variable_concatenation_value() -> [Variable_concatenation_valueContext] {
+				return getRuleContexts(Variable_concatenation_valueContext.self)
+			}
+			open
+			func variable_concatenation_value(_ i: Int) -> Variable_concatenation_valueContext? {
+				return getRuleContext(Variable_concatenation_valueContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_variable_concatenation
 		}
-		open func variable_concatenation_value(_ i: Int) -> Variable_concatenation_valueContext? {
-			return getRuleContext(Variable_concatenation_valueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_variable_concatenation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterVariable_concatenation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterVariable_concatenation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitVariable_concatenation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitVariable_concatenation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitVariable_concatenation(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitVariable_concatenation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitVariable_concatenation(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitVariable_concatenation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable_concatenation() throws -> Variable_concatenationContext {
+	 open func variable_concatenation() throws -> Variable_concatenationContext {
 		var _localctx: Variable_concatenationContext = Variable_concatenationContext(_ctx, getState())
 		try enterRule(_localctx, 454, Verilog2001Parser.RULE_variable_concatenation)
 		var _la: Int = 0
@@ -20956,49 +22685,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Variable_concatenation_valueContext:ParserRuleContext {
-		open func hierarchical_variable_identifier() -> Hierarchical_variable_identifierContext? {
-			return getRuleContext(Hierarchical_variable_identifierContext.self,0)
+
+	public class Variable_concatenation_valueContext: ParserRuleContext {
+			open
+			func hierarchical_variable_identifier() -> Hierarchical_variable_identifierContext? {
+				return getRuleContext(Hierarchical_variable_identifierContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func range_expression() -> Range_expressionContext? {
+				return getRuleContext(Range_expressionContext.self, 0)
+			}
+			open
+			func variable_concatenation() -> Variable_concatenationContext? {
+				return getRuleContext(Variable_concatenationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_variable_concatenation_value
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func range_expression() -> Range_expressionContext? {
-			return getRuleContext(Range_expressionContext.self,0)
-		}
-		open func variable_concatenation() -> Variable_concatenationContext? {
-			return getRuleContext(Variable_concatenationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_variable_concatenation_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterVariable_concatenation_value(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterVariable_concatenation_value(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitVariable_concatenation_value(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitVariable_concatenation_value(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitVariable_concatenation_value(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitVariable_concatenation_value(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitVariable_concatenation_value(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitVariable_concatenation_value(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable_concatenation_value() throws -> Variable_concatenation_valueContext {
+	 open func variable_concatenation_value() throws -> Variable_concatenation_valueContext {
 		var _localctx: Variable_concatenation_valueContext = Variable_concatenation_valueContext(_ctx, getState())
 		try enterRule(_localctx, 456, Verilog2001Parser.RULE_variable_concatenation_value)
 		var _la: Int = 0
@@ -21113,49 +22852,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Constant_function_callContext:ParserRuleContext {
-		open func function_identifier() -> Function_identifierContext? {
-			return getRuleContext(Function_identifierContext.self,0)
+
+	public class Constant_function_callContext: ParserRuleContext {
+			open
+			func function_identifier() -> Function_identifierContext? {
+				return getRuleContext(Function_identifierContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func constant_expression() -> [Constant_expressionContext] {
+				return getRuleContexts(Constant_expressionContext.self)
+			}
+			open
+			func constant_expression(_ i: Int) -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_constant_function_call
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func constant_expression() -> Array<Constant_expressionContext> {
-			return getRuleContexts(Constant_expressionContext.self)
-		}
-		open func constant_expression(_ i: Int) -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_constant_function_call }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConstant_function_call(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConstant_function_call(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConstant_function_call(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConstant_function_call(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConstant_function_call(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConstant_function_call(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConstant_function_call(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConstant_function_call(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant_function_call() throws -> Constant_function_callContext {
+	 open func constant_function_call() throws -> Constant_function_callContext {
 		var _localctx: Constant_function_callContext = Constant_function_callContext(_ctx, getState())
 		try enterRule(_localctx, 458, Verilog2001Parser.RULE_constant_function_call)
 		var _la: Int = 0
@@ -21230,49 +22979,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_callContext:ParserRuleContext {
-		open func hierarchical_function_identifier() -> Hierarchical_function_identifierContext? {
-			return getRuleContext(Hierarchical_function_identifierContext.self,0)
+
+	public class Function_callContext: ParserRuleContext {
+			open
+			func hierarchical_function_identifier() -> Hierarchical_function_identifierContext? {
+				return getRuleContext(Hierarchical_function_identifierContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_call
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_call }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_call(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_call(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_call(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_call(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_call(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_call(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_call(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_call(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_call() throws -> Function_callContext {
+	 open func function_call() throws -> Function_callContext {
 		var _localctx: Function_callContext = Function_callContext(_ctx, getState())
 		try enterRule(_localctx, 460, Verilog2001Parser.RULE_function_call)
 		var _la: Int = 0
@@ -21347,43 +23106,51 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class System_function_callContext:ParserRuleContext {
-		open func system_function_identifier() -> System_function_identifierContext? {
-			return getRuleContext(System_function_identifierContext.self,0)
+
+	public class System_function_callContext: ParserRuleContext {
+			open
+			func system_function_identifier() -> System_function_identifierContext? {
+				return getRuleContext(System_function_identifierContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_system_function_call
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_system_function_call }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSystem_function_call(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSystem_function_call(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSystem_function_call(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSystem_function_call(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSystem_function_call(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSystem_function_call(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSystem_function_call(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSystem_function_call(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func system_function_call() throws -> System_function_callContext {
+	 open func system_function_call() throws -> System_function_callContext {
 		var _localctx: System_function_callContext = System_function_callContext(_ctx, getState())
 		try enterRule(_localctx, 462, Verilog2001Parser.RULE_system_function_call)
 		defer {
@@ -21430,49 +23197,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Genvar_function_callContext:ParserRuleContext {
-		open func genvar_function_identifier() -> Genvar_function_identifierContext? {
-			return getRuleContext(Genvar_function_identifierContext.self,0)
+
+	public class Genvar_function_callContext: ParserRuleContext {
+			open
+			func genvar_function_identifier() -> Genvar_function_identifierContext? {
+				return getRuleContext(Genvar_function_identifierContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func constant_expression() -> [Constant_expressionContext] {
+				return getRuleContexts(Constant_expressionContext.self)
+			}
+			open
+			func constant_expression(_ i: Int) -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_genvar_function_call
 		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func constant_expression() -> Array<Constant_expressionContext> {
-			return getRuleContexts(Constant_expressionContext.self)
-		}
-		open func constant_expression(_ i: Int) -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_genvar_function_call }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenvar_function_call(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenvar_function_call(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenvar_function_call(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenvar_function_call(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenvar_function_call(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenvar_function_call(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenvar_function_call(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenvar_function_call(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func genvar_function_call() throws -> Genvar_function_callContext {
+	 open func genvar_function_call() throws -> Genvar_function_callContext {
 		var _localctx: Genvar_function_callContext = Genvar_function_callContext(_ctx, getState())
 		try enterRule(_localctx, 464, Verilog2001Parser.RULE_genvar_function_call)
 		var _la: Int = 0
@@ -21547,37 +23324,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Base_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Base_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_base_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_base_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterBase_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterBase_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitBase_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitBase_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitBase_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitBase_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitBase_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitBase_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func base_expression() throws -> Base_expressionContext {
+	 open func base_expression() throws -> Base_expressionContext {
 		var _localctx: Base_expressionContext = Base_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 466, Verilog2001Parser.RULE_base_expression)
 		defer {
@@ -21597,37 +23380,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Constant_base_expressionContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Constant_base_expressionContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_constant_base_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_constant_base_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConstant_base_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConstant_base_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConstant_base_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConstant_base_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConstant_base_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConstant_base_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConstant_base_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConstant_base_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant_base_expression() throws -> Constant_base_expressionContext {
+	 open func constant_base_expression() throws -> Constant_base_expressionContext {
 		var _localctx: Constant_base_expressionContext = Constant_base_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 468, Verilog2001Parser.RULE_constant_base_expression)
 		defer {
@@ -21647,37 +23436,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Constant_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Constant_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_constant_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_constant_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConstant_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConstant_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConstant_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConstant_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConstant_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConstant_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConstant_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConstant_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant_expression() throws -> Constant_expressionContext {
+	 open func constant_expression() throws -> Constant_expressionContext {
 		var _localctx: Constant_expressionContext = Constant_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 470, Verilog2001Parser.RULE_constant_expression)
 		defer {
@@ -21697,40 +23492,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Constant_mintypmax_expressionContext:ParserRuleContext {
-		open func constant_expression() -> Array<Constant_expressionContext> {
-			return getRuleContexts(Constant_expressionContext.self)
+
+	public class Constant_mintypmax_expressionContext: ParserRuleContext {
+			open
+			func constant_expression() -> [Constant_expressionContext] {
+				return getRuleContexts(Constant_expressionContext.self)
+			}
+			open
+			func constant_expression(_ i: Int) -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_constant_mintypmax_expression
 		}
-		open func constant_expression(_ i: Int) -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_constant_mintypmax_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConstant_mintypmax_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConstant_mintypmax_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConstant_mintypmax_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConstant_mintypmax_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConstant_mintypmax_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConstant_mintypmax_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConstant_mintypmax_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConstant_mintypmax_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant_mintypmax_expression() throws -> Constant_mintypmax_expressionContext {
+	 open func constant_mintypmax_expression() throws -> Constant_mintypmax_expressionContext {
 		var _localctx: Constant_mintypmax_expressionContext = Constant_mintypmax_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 472, Verilog2001Parser.RULE_constant_mintypmax_expression)
 		defer {
@@ -21771,49 +23573,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Constant_range_expressionContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Constant_range_expressionContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+			open
+			func msb_constant_expression() -> Msb_constant_expressionContext? {
+				return getRuleContext(Msb_constant_expressionContext.self, 0)
+			}
+			open
+			func lsb_constant_expression() -> Lsb_constant_expressionContext? {
+				return getRuleContext(Lsb_constant_expressionContext.self, 0)
+			}
+			open
+			func constant_base_expression() -> Constant_base_expressionContext? {
+				return getRuleContext(Constant_base_expressionContext.self, 0)
+			}
+			open
+			func width_constant_expression() -> Width_constant_expressionContext? {
+				return getRuleContext(Width_constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_constant_range_expression
 		}
-		open func msb_constant_expression() -> Msb_constant_expressionContext? {
-			return getRuleContext(Msb_constant_expressionContext.self,0)
-		}
-		open func lsb_constant_expression() -> Lsb_constant_expressionContext? {
-			return getRuleContext(Lsb_constant_expressionContext.self,0)
-		}
-		open func constant_base_expression() -> Constant_base_expressionContext? {
-			return getRuleContext(Constant_base_expressionContext.self,0)
-		}
-		open func width_constant_expression() -> Width_constant_expressionContext? {
-			return getRuleContext(Width_constant_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_constant_range_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConstant_range_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConstant_range_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConstant_range_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConstant_range_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConstant_range_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConstant_range_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConstant_range_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConstant_range_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant_range_expression() throws -> Constant_range_expressionContext {
+	 open func constant_range_expression() throws -> Constant_range_expressionContext {
 		var _localctx: Constant_range_expressionContext = Constant_range_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 474, Verilog2001Parser.RULE_constant_range_expression)
 		defer {
@@ -21870,37 +23682,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Dimension_constant_expressionContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Dimension_constant_expressionContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_dimension_constant_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_dimension_constant_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterDimension_constant_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterDimension_constant_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitDimension_constant_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitDimension_constant_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitDimension_constant_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitDimension_constant_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitDimension_constant_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitDimension_constant_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dimension_constant_expression() throws -> Dimension_constant_expressionContext {
+	 open func dimension_constant_expression() throws -> Dimension_constant_expressionContext {
 		var _localctx: Dimension_constant_expressionContext = Dimension_constant_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 476, Verilog2001Parser.RULE_dimension_constant_expression)
 		defer {
@@ -21920,58 +23738,71 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+			open
+			func binary_operator() -> [Binary_operatorContext] {
+				return getRuleContexts(Binary_operatorContext.self)
+			}
+			open
+			func binary_operator(_ i: Int) -> Binary_operatorContext? {
+				return getRuleContext(Binary_operatorContext.self, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_expression
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open func binary_operator() -> Array<Binary_operatorContext> {
-			return getRuleContexts(Binary_operatorContext.self)
-		}
-		open func binary_operator(_ i: Int) -> Binary_operatorContext? {
-			return getRuleContext(Binary_operatorContext.self,i)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitExpression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 478, Verilog2001Parser.RULE_expression)
 		defer {
@@ -22062,7 +23893,7 @@ open class Verilog2001Parser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 	 
 		 		}
@@ -22080,47 +23911,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class TermContext:ParserRuleContext {
-		open func unary_operator() -> Unary_operatorContext? {
-			return getRuleContext(Unary_operatorContext.self,0)
+
+	public class TermContext: ParserRuleContext {
+			open
+			func unary_operator() -> Unary_operatorContext? {
+				return getRuleContext(Unary_operatorContext.self, 0)
+			}
+			open
+			func primary() -> PrimaryContext? {
+				return getRuleContext(PrimaryContext.self, 0)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+			open
+			func String() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.String.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_term
 		}
-		open func primary() -> PrimaryContext? {
-			return getRuleContext(PrimaryContext.self,0)
-		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open func String() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.String.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTerm(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTerm(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term() throws -> TermContext {
+	 open func term() throws -> TermContext {
 		var _localctx: TermContext = TermContext(_ctx, getState())
 		try enterRule(_localctx, 480, Verilog2001Parser.RULE_term)
 		defer {
@@ -22186,7 +24029,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -22197,37 +24040,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Lsb_constant_expressionContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Lsb_constant_expressionContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_lsb_constant_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_lsb_constant_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterLsb_constant_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterLsb_constant_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitLsb_constant_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitLsb_constant_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitLsb_constant_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitLsb_constant_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitLsb_constant_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitLsb_constant_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lsb_constant_expression() throws -> Lsb_constant_expressionContext {
+	 open func lsb_constant_expression() throws -> Lsb_constant_expressionContext {
 		var _localctx: Lsb_constant_expressionContext = Lsb_constant_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 482, Verilog2001Parser.RULE_lsb_constant_expression)
 		defer {
@@ -22247,40 +24096,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Mintypmax_expressionContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Mintypmax_expressionContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_mintypmax_expression
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_mintypmax_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterMintypmax_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterMintypmax_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitMintypmax_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitMintypmax_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitMintypmax_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitMintypmax_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitMintypmax_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitMintypmax_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mintypmax_expression() throws -> Mintypmax_expressionContext {
+	 open func mintypmax_expression() throws -> Mintypmax_expressionContext {
 		var _localctx: Mintypmax_expressionContext = Mintypmax_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 484, Verilog2001Parser.RULE_mintypmax_expression)
 		var _la: Int = 0
@@ -22320,46 +24176,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_path_conditional_expressionContext:ParserRuleContext {
-		open func module_path_expression() -> Array<Module_path_expressionContext> {
-			return getRuleContexts(Module_path_expressionContext.self)
+
+	public class Module_path_conditional_expressionContext: ParserRuleContext {
+			open
+			func module_path_expression() -> [Module_path_expressionContext] {
+				return getRuleContexts(Module_path_expressionContext.self)
+			}
+			open
+			func module_path_expression(_ i: Int) -> Module_path_expressionContext? {
+				return getRuleContext(Module_path_expressionContext.self, i)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_path_conditional_expression
 		}
-		open func module_path_expression(_ i: Int) -> Module_path_expressionContext? {
-			return getRuleContext(Module_path_expressionContext.self,i)
-		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_path_conditional_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_path_conditional_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_path_conditional_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_path_conditional_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_path_conditional_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_path_conditional_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_path_conditional_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_path_conditional_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_path_conditional_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_path_conditional_expression() throws -> Module_path_conditional_expressionContext {
+	 open func module_path_conditional_expression() throws -> Module_path_conditional_expressionContext {
 		var _localctx: Module_path_conditional_expressionContext = Module_path_conditional_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 486, Verilog2001Parser.RULE_module_path_conditional_expression)
 		defer {
@@ -22402,58 +24267,71 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_path_expressionContext:ParserRuleContext {
-		open func module_path_primary() -> Module_path_primaryContext? {
-			return getRuleContext(Module_path_primaryContext.self,0)
+
+	public class Module_path_expressionContext: ParserRuleContext {
+			open
+			func module_path_primary() -> Module_path_primaryContext? {
+				return getRuleContext(Module_path_primaryContext.self, 0)
+			}
+			open
+			func unary_module_path_operator() -> Unary_module_path_operatorContext? {
+				return getRuleContext(Unary_module_path_operatorContext.self, 0)
+			}
+			open
+			func binary_module_path_operator() -> [Binary_module_path_operatorContext] {
+				return getRuleContexts(Binary_module_path_operatorContext.self)
+			}
+			open
+			func binary_module_path_operator(_ i: Int) -> Binary_module_path_operatorContext? {
+				return getRuleContext(Binary_module_path_operatorContext.self, i)
+			}
+			open
+			func module_path_expression() -> [Module_path_expressionContext] {
+				return getRuleContexts(Module_path_expressionContext.self)
+			}
+			open
+			func module_path_expression(_ i: Int) -> Module_path_expressionContext? {
+				return getRuleContext(Module_path_expressionContext.self, i)
+			}
+			open
+			func attribute_instance() -> [Attribute_instanceContext] {
+				return getRuleContexts(Attribute_instanceContext.self)
+			}
+			open
+			func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
+				return getRuleContext(Attribute_instanceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_path_expression
 		}
-		open func unary_module_path_operator() -> Unary_module_path_operatorContext? {
-			return getRuleContext(Unary_module_path_operatorContext.self,0)
-		}
-		open func binary_module_path_operator() -> Array<Binary_module_path_operatorContext> {
-			return getRuleContexts(Binary_module_path_operatorContext.self)
-		}
-		open func binary_module_path_operator(_ i: Int) -> Binary_module_path_operatorContext? {
-			return getRuleContext(Binary_module_path_operatorContext.self,i)
-		}
-		open func module_path_expression() -> Array<Module_path_expressionContext> {
-			return getRuleContexts(Module_path_expressionContext.self)
-		}
-		open func module_path_expression(_ i: Int) -> Module_path_expressionContext? {
-			return getRuleContext(Module_path_expressionContext.self,i)
-		}
-		open func attribute_instance() -> Array<Attribute_instanceContext> {
-			return getRuleContexts(Attribute_instanceContext.self)
-		}
-		open func attribute_instance(_ i: Int) -> Attribute_instanceContext? {
-			return getRuleContext(Attribute_instanceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_path_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_path_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_path_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_path_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_path_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_path_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_path_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_path_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_path_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_path_expression() throws -> Module_path_expressionContext {
+	 open func module_path_expression() throws -> Module_path_expressionContext {
 		var _localctx: Module_path_expressionContext = Module_path_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 488, Verilog2001Parser.RULE_module_path_expression)
 		defer {
@@ -22509,7 +24387,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(3621)
 		 	try _errHandler.sync(self)
@@ -22575,7 +24453,7 @@ open class Verilog2001Parser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 	 
 		 		}
@@ -22593,40 +24471,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_path_mintypmax_expressionContext:ParserRuleContext {
-		open func module_path_expression() -> Array<Module_path_expressionContext> {
-			return getRuleContexts(Module_path_expressionContext.self)
+
+	public class Module_path_mintypmax_expressionContext: ParserRuleContext {
+			open
+			func module_path_expression() -> [Module_path_expressionContext] {
+				return getRuleContexts(Module_path_expressionContext.self)
+			}
+			open
+			func module_path_expression(_ i: Int) -> Module_path_expressionContext? {
+				return getRuleContext(Module_path_expressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_path_mintypmax_expression
 		}
-		open func module_path_expression(_ i: Int) -> Module_path_expressionContext? {
-			return getRuleContext(Module_path_expressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_path_mintypmax_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_path_mintypmax_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_path_mintypmax_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_path_mintypmax_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_path_mintypmax_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_path_mintypmax_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_path_mintypmax_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_path_mintypmax_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_path_mintypmax_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_path_mintypmax_expression() throws -> Module_path_mintypmax_expressionContext {
+	 open func module_path_mintypmax_expression() throws -> Module_path_mintypmax_expressionContext {
 		var _localctx: Module_path_mintypmax_expressionContext = Module_path_mintypmax_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 490, Verilog2001Parser.RULE_module_path_mintypmax_expression)
 		var _la: Int = 0
@@ -22666,37 +24551,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Msb_constant_expressionContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Msb_constant_expressionContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_msb_constant_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_msb_constant_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterMsb_constant_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterMsb_constant_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitMsb_constant_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitMsb_constant_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitMsb_constant_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitMsb_constant_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitMsb_constant_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitMsb_constant_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func msb_constant_expression() throws -> Msb_constant_expressionContext {
+	 open func msb_constant_expression() throws -> Msb_constant_expressionContext {
 		var _localctx: Msb_constant_expressionContext = Msb_constant_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 492, Verilog2001Parser.RULE_msb_constant_expression)
 		defer {
@@ -22716,49 +24607,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Range_expressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Range_expressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func msb_constant_expression() -> Msb_constant_expressionContext? {
+				return getRuleContext(Msb_constant_expressionContext.self, 0)
+			}
+			open
+			func lsb_constant_expression() -> Lsb_constant_expressionContext? {
+				return getRuleContext(Lsb_constant_expressionContext.self, 0)
+			}
+			open
+			func base_expression() -> Base_expressionContext? {
+				return getRuleContext(Base_expressionContext.self, 0)
+			}
+			open
+			func width_constant_expression() -> Width_constant_expressionContext? {
+				return getRuleContext(Width_constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_range_expression
 		}
-		open func msb_constant_expression() -> Msb_constant_expressionContext? {
-			return getRuleContext(Msb_constant_expressionContext.self,0)
-		}
-		open func lsb_constant_expression() -> Lsb_constant_expressionContext? {
-			return getRuleContext(Lsb_constant_expressionContext.self,0)
-		}
-		open func base_expression() -> Base_expressionContext? {
-			return getRuleContext(Base_expressionContext.self,0)
-		}
-		open func width_constant_expression() -> Width_constant_expressionContext? {
-			return getRuleContext(Width_constant_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_range_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterRange_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterRange_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitRange_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitRange_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitRange_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitRange_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitRange_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitRange_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func range_expression() throws -> Range_expressionContext {
+	 open func range_expression() throws -> Range_expressionContext {
 		var _localctx: Range_expressionContext = Range_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 494, Verilog2001Parser.RULE_range_expression)
 		defer {
@@ -22815,37 +24716,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Width_constant_expressionContext:ParserRuleContext {
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
+
+	public class Width_constant_expressionContext: ParserRuleContext {
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_width_constant_expression
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_width_constant_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterWidth_constant_expression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterWidth_constant_expression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitWidth_constant_expression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitWidth_constant_expression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitWidth_constant_expression(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitWidth_constant_expression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitWidth_constant_expression(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitWidth_constant_expression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func width_constant_expression() throws -> Width_constant_expressionContext {
+	 open func width_constant_expression() throws -> Width_constant_expressionContext {
 		var _localctx: Width_constant_expressionContext = Width_constant_expressionContext(_ctx, getState())
 		try enterRule(_localctx, 496, Verilog2001Parser.RULE_width_constant_expression)
 		defer {
@@ -22865,58 +24772,71 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Constant_primaryContext:ParserRuleContext {
-		open func constant_concatenation() -> Constant_concatenationContext? {
-			return getRuleContext(Constant_concatenationContext.self,0)
+
+	public class Constant_primaryContext: ParserRuleContext {
+			open
+			func constant_concatenation() -> Constant_concatenationContext? {
+				return getRuleContext(Constant_concatenationContext.self, 0)
+			}
+			open
+			func constant_function_call() -> Constant_function_callContext? {
+				return getRuleContext(Constant_function_callContext.self, 0)
+			}
+			open
+			func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
+				return getRuleContext(Constant_mintypmax_expressionContext.self, 0)
+			}
+			open
+			func constant_multiple_concatenation() -> Constant_multiple_concatenationContext? {
+				return getRuleContext(Constant_multiple_concatenationContext.self, 0)
+			}
+			open
+			func genvar_identifier() -> Genvar_identifierContext? {
+				return getRuleContext(Genvar_identifierContext.self, 0)
+			}
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func parameter_identifier() -> Parameter_identifierContext? {
+				return getRuleContext(Parameter_identifierContext.self, 0)
+			}
+			open
+			func specparam_identifier() -> Specparam_identifierContext? {
+				return getRuleContext(Specparam_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_constant_primary
 		}
-		open func constant_function_call() -> Constant_function_callContext? {
-			return getRuleContext(Constant_function_callContext.self,0)
-		}
-		open func constant_mintypmax_expression() -> Constant_mintypmax_expressionContext? {
-			return getRuleContext(Constant_mintypmax_expressionContext.self,0)
-		}
-		open func constant_multiple_concatenation() -> Constant_multiple_concatenationContext? {
-			return getRuleContext(Constant_multiple_concatenationContext.self,0)
-		}
-		open func genvar_identifier() -> Genvar_identifierContext? {
-			return getRuleContext(Genvar_identifierContext.self,0)
-		}
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
-		}
-		open func parameter_identifier() -> Parameter_identifierContext? {
-			return getRuleContext(Parameter_identifierContext.self,0)
-		}
-		open func specparam_identifier() -> Specparam_identifierContext? {
-			return getRuleContext(Specparam_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_constant_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConstant_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConstant_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConstant_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConstant_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConstant_primary(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConstant_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConstant_primary(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConstant_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant_primary() throws -> Constant_primaryContext {
+	 open func constant_primary() throws -> Constant_primaryContext {
 		var _localctx: Constant_primaryContext = Constant_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 498, Verilog2001Parser.RULE_constant_primary)
 		defer {
@@ -22989,58 +24909,71 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_path_primaryContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class Module_path_primaryContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func module_path_concatenation() -> Module_path_concatenationContext? {
+				return getRuleContext(Module_path_concatenationContext.self, 0)
+			}
+			open
+			func module_path_multiple_concatenation() -> Module_path_multiple_concatenationContext? {
+				return getRuleContext(Module_path_multiple_concatenationContext.self, 0)
+			}
+			open
+			func function_call() -> Function_callContext? {
+				return getRuleContext(Function_callContext.self, 0)
+			}
+			open
+			func system_function_call() -> System_function_callContext? {
+				return getRuleContext(System_function_callContext.self, 0)
+			}
+			open
+			func constant_function_call() -> Constant_function_callContext? {
+				return getRuleContext(Constant_function_callContext.self, 0)
+			}
+			open
+			func module_path_mintypmax_expression() -> Module_path_mintypmax_expressionContext? {
+				return getRuleContext(Module_path_mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_path_primary
 		}
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
-		}
-		open func module_path_concatenation() -> Module_path_concatenationContext? {
-			return getRuleContext(Module_path_concatenationContext.self,0)
-		}
-		open func module_path_multiple_concatenation() -> Module_path_multiple_concatenationContext? {
-			return getRuleContext(Module_path_multiple_concatenationContext.self,0)
-		}
-		open func function_call() -> Function_callContext? {
-			return getRuleContext(Function_callContext.self,0)
-		}
-		open func system_function_call() -> System_function_callContext? {
-			return getRuleContext(System_function_callContext.self,0)
-		}
-		open func constant_function_call() -> Constant_function_callContext? {
-			return getRuleContext(Constant_function_callContext.self,0)
-		}
-		open func module_path_mintypmax_expression() -> Module_path_mintypmax_expressionContext? {
-			return getRuleContext(Module_path_mintypmax_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_path_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_path_primary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_path_primary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_path_primary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_path_primary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_path_primary(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_path_primary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_path_primary(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_path_primary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_path_primary() throws -> Module_path_primaryContext {
+	 open func module_path_primary() throws -> Module_path_primaryContext {
 		var _localctx: Module_path_primaryContext = Module_path_primaryContext(_ctx, getState())
 		try enterRule(_localctx, 500, Verilog2001Parser.RULE_module_path_primary)
 		defer {
@@ -23113,67 +25046,83 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class PrimaryContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class PrimaryContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func hierarchical_identifier() -> Hierarchical_identifierContext? {
+				return getRuleContext(Hierarchical_identifierContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func range_expression() -> Range_expressionContext? {
+				return getRuleContext(Range_expressionContext.self, 0)
+			}
+			open
+			func concatenation() -> ConcatenationContext? {
+				return getRuleContext(ConcatenationContext.self, 0)
+			}
+			open
+			func multiple_concatenation() -> Multiple_concatenationContext? {
+				return getRuleContext(Multiple_concatenationContext.self, 0)
+			}
+			open
+			func function_call() -> Function_callContext? {
+				return getRuleContext(Function_callContext.self, 0)
+			}
+			open
+			func system_function_call() -> System_function_callContext? {
+				return getRuleContext(System_function_callContext.self, 0)
+			}
+			open
+			func constant_function_call() -> Constant_function_callContext? {
+				return getRuleContext(Constant_function_callContext.self, 0)
+			}
+			open
+			func mintypmax_expression() -> Mintypmax_expressionContext? {
+				return getRuleContext(Mintypmax_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_primary
 		}
-		open func hierarchical_identifier() -> Hierarchical_identifierContext? {
-			return getRuleContext(Hierarchical_identifierContext.self,0)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func range_expression() -> Range_expressionContext? {
-			return getRuleContext(Range_expressionContext.self,0)
-		}
-		open func concatenation() -> ConcatenationContext? {
-			return getRuleContext(ConcatenationContext.self,0)
-		}
-		open func multiple_concatenation() -> Multiple_concatenationContext? {
-			return getRuleContext(Multiple_concatenationContext.self,0)
-		}
-		open func function_call() -> Function_callContext? {
-			return getRuleContext(Function_callContext.self,0)
-		}
-		open func system_function_call() -> System_function_callContext? {
-			return getRuleContext(System_function_callContext.self,0)
-		}
-		open func constant_function_call() -> Constant_function_callContext? {
-			return getRuleContext(Constant_function_callContext.self,0)
-		}
-		open func mintypmax_expression() -> Mintypmax_expressionContext? {
-			return getRuleContext(Mintypmax_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPrimary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPrimary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPrimary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPrimary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPrimary(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPrimary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPrimary(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPrimary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primary() throws -> PrimaryContext {
+	 open func primary() throws -> PrimaryContext {
 		var _localctx: PrimaryContext = PrimaryContext(_ctx, getState())
 		try enterRule(_localctx, 502, Verilog2001Parser.RULE_primary)
 		var _la: Int = 0
@@ -23243,7 +25192,7 @@ open class Verilog2001Parser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(3695); 
 		 			try _errHandler.sync(self)
@@ -23320,49 +25269,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Net_lvalueContext:ParserRuleContext {
-		open func hierarchical_net_identifier() -> Hierarchical_net_identifierContext? {
-			return getRuleContext(Hierarchical_net_identifierContext.self,0)
+
+	public class Net_lvalueContext: ParserRuleContext {
+			open
+			func hierarchical_net_identifier() -> Hierarchical_net_identifierContext? {
+				return getRuleContext(Hierarchical_net_identifierContext.self, 0)
+			}
+			open
+			func constant_expression() -> [Constant_expressionContext] {
+				return getRuleContexts(Constant_expressionContext.self)
+			}
+			open
+			func constant_expression(_ i: Int) -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, i)
+			}
+			open
+			func constant_range_expression() -> Constant_range_expressionContext? {
+				return getRuleContext(Constant_range_expressionContext.self, 0)
+			}
+			open
+			func net_concatenation() -> Net_concatenationContext? {
+				return getRuleContext(Net_concatenationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_net_lvalue
 		}
-		open func constant_expression() -> Array<Constant_expressionContext> {
-			return getRuleContexts(Constant_expressionContext.self)
-		}
-		open func constant_expression(_ i: Int) -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,i)
-		}
-		open func constant_range_expression() -> Constant_range_expressionContext? {
-			return getRuleContext(Constant_range_expressionContext.self,0)
-		}
-		open func net_concatenation() -> Net_concatenationContext? {
-			return getRuleContext(Net_concatenationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_net_lvalue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNet_lvalue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNet_lvalue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNet_lvalue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNet_lvalue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNet_lvalue(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNet_lvalue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNet_lvalue(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNet_lvalue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func net_lvalue() throws -> Net_lvalueContext {
+	 open func net_lvalue() throws -> Net_lvalueContext {
 		var _localctx: Net_lvalueContext = Net_lvalueContext(_ctx, getState())
 		try enterRule(_localctx, 504, Verilog2001Parser.RULE_net_lvalue)
 		var _la: Int = 0
@@ -23477,49 +25436,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Variable_lvalueContext:ParserRuleContext {
-		open func hierarchical_variable_identifier() -> Hierarchical_variable_identifierContext? {
-			return getRuleContext(Hierarchical_variable_identifierContext.self,0)
+
+	public class Variable_lvalueContext: ParserRuleContext {
+			open
+			func hierarchical_variable_identifier() -> Hierarchical_variable_identifierContext? {
+				return getRuleContext(Hierarchical_variable_identifierContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func range_expression() -> Range_expressionContext? {
+				return getRuleContext(Range_expressionContext.self, 0)
+			}
+			open
+			func variable_concatenation() -> Variable_concatenationContext? {
+				return getRuleContext(Variable_concatenationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_variable_lvalue
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func range_expression() -> Range_expressionContext? {
-			return getRuleContext(Range_expressionContext.self,0)
-		}
-		open func variable_concatenation() -> Variable_concatenationContext? {
-			return getRuleContext(Variable_concatenationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_variable_lvalue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterVariable_lvalue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterVariable_lvalue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitVariable_lvalue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitVariable_lvalue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitVariable_lvalue(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitVariable_lvalue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitVariable_lvalue(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitVariable_lvalue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable_lvalue() throws -> Variable_lvalueContext {
+	 open func variable_lvalue() throws -> Variable_lvalueContext {
 		var _localctx: Variable_lvalueContext = Variable_lvalueContext(_ctx, getState())
 		try enterRule(_localctx, 506, Verilog2001Parser.RULE_variable_lvalue)
 		var _la: Int = 0
@@ -23634,34 +25603,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Unary_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_unary_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterUnary_operator(self)
+
+	public class Unary_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_unary_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterUnary_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitUnary_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitUnary_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitUnary_operator(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitUnary_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitUnary_operator(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitUnary_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unary_operator() throws -> Unary_operatorContext {
+	 open func unary_operator() throws -> Unary_operatorContext {
 		var _localctx: Unary_operatorContext = Unary_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 508, Verilog2001Parser.RULE_unary_operator)
 		var _la: Int = 0
@@ -23696,34 +25670,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Binary_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_binary_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterBinary_operator(self)
+
+	public class Binary_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_binary_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterBinary_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitBinary_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitBinary_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitBinary_operator(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitBinary_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitBinary_operator(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitBinary_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_operator() throws -> Binary_operatorContext {
+	 open func binary_operator() throws -> Binary_operatorContext {
 		var _localctx: Binary_operatorContext = Binary_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 510, Verilog2001Parser.RULE_binary_operator)
 		var _la: Int = 0
@@ -23758,34 +25737,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Unary_module_path_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_unary_module_path_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterUnary_module_path_operator(self)
+
+	public class Unary_module_path_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_unary_module_path_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterUnary_module_path_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitUnary_module_path_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitUnary_module_path_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitUnary_module_path_operator(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitUnary_module_path_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitUnary_module_path_operator(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitUnary_module_path_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unary_module_path_operator() throws -> Unary_module_path_operatorContext {
+	 open func unary_module_path_operator() throws -> Unary_module_path_operatorContext {
 		var _localctx: Unary_module_path_operatorContext = Unary_module_path_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 512, Verilog2001Parser.RULE_unary_module_path_operator)
 		var _la: Int = 0
@@ -23820,34 +25804,39 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Binary_module_path_operatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_binary_module_path_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterBinary_module_path_operator(self)
+
+	public class Binary_module_path_operatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_binary_module_path_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterBinary_module_path_operator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitBinary_module_path_operator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitBinary_module_path_operator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitBinary_module_path_operator(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitBinary_module_path_operator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitBinary_module_path_operator(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitBinary_module_path_operator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_module_path_operator() throws -> Binary_module_path_operatorContext {
+	 open func binary_module_path_operator() throws -> Binary_module_path_operatorContext {
 		var _localctx: Binary_module_path_operatorContext = Binary_module_path_operatorContext(_ctx, getState())
 		try enterRule(_localctx, 514, Verilog2001Parser.RULE_binary_module_path_operator)
 		var _la: Int = 0
@@ -23882,39 +25871,59 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class NumberContext:ParserRuleContext {
-		open func Decimal_number() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Decimal_number.rawValue, 0) }
-		open func Octal_number() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Octal_number.rawValue, 0) }
-		open func Binary_number() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Binary_number.rawValue, 0) }
-		open func Hex_number() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Hex_number.rawValue, 0) }
-		open func Real_number() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Real_number.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNumber(self)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func Decimal_number() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Decimal_number.rawValue, 0)
+			}
+			open
+			func Octal_number() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Octal_number.rawValue, 0)
+			}
+			open
+			func Binary_number() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Binary_number.rawValue, 0)
+			}
+			open
+			func Hex_number() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Hex_number.rawValue, 0)
+			}
+			open
+			func Real_number() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Real_number.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_number
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNumber(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 516, Verilog2001Parser.RULE_number)
 		var _la: Int = 0
@@ -23949,38 +25958,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Timing_specContext:ParserRuleContext {
-		open func Time_Identifier() -> Array<TerminalNode> { return getTokens(Verilog2001Parser.Tokens.Time_Identifier.rawValue) }
-		open func Time_Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(Verilog2001Parser.Tokens.Time_Identifier.rawValue, i)
+
+	public class Timing_specContext: ParserRuleContext {
+			open
+			func Time_Identifier() -> [TerminalNode] {
+				return getTokens(Verilog2001Parser.Tokens.Time_Identifier.rawValue)
+			}
+			open
+			func Time_Identifier(_ i:Int) -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Time_Identifier.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_timing_spec
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_timing_spec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTiming_spec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTiming_spec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTiming_spec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTiming_spec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTiming_spec(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTiming_spec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTiming_spec(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTiming_spec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func timing_spec() throws -> Timing_specContext {
+	 open func timing_spec() throws -> Timing_specContext {
 		var _localctx: Timing_specContext = Timing_specContext(_ctx, getState())
 		try enterRule(_localctx, 518, Verilog2001Parser.RULE_timing_spec)
 		defer {
@@ -24006,40 +26024,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Attribute_instanceContext:ParserRuleContext {
-		open func attr_spec() -> Array<Attr_specContext> {
-			return getRuleContexts(Attr_specContext.self)
+
+	public class Attribute_instanceContext: ParserRuleContext {
+			open
+			func attr_spec() -> [Attr_specContext] {
+				return getRuleContexts(Attr_specContext.self)
+			}
+			open
+			func attr_spec(_ i: Int) -> Attr_specContext? {
+				return getRuleContext(Attr_specContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_attribute_instance
 		}
-		open func attr_spec(_ i: Int) -> Attr_specContext? {
-			return getRuleContext(Attr_specContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_attribute_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterAttribute_instance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterAttribute_instance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitAttribute_instance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitAttribute_instance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitAttribute_instance(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitAttribute_instance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitAttribute_instance(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitAttribute_instance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attribute_instance() throws -> Attribute_instanceContext {
+	 open func attribute_instance() throws -> Attribute_instanceContext {
 		var _localctx: Attribute_instanceContext = Attribute_instanceContext(_ctx, getState())
 		try enterRule(_localctx, 520, Verilog2001Parser.RULE_attribute_instance)
 		var _la: Int = 0
@@ -24086,40 +26111,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Attr_specContext:ParserRuleContext {
-		open func attr_name() -> Attr_nameContext? {
-			return getRuleContext(Attr_nameContext.self,0)
+
+	public class Attr_specContext: ParserRuleContext {
+			open
+			func attr_name() -> Attr_nameContext? {
+				return getRuleContext(Attr_nameContext.self, 0)
+			}
+			open
+			func constant_expression() -> Constant_expressionContext? {
+				return getRuleContext(Constant_expressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_attr_spec
 		}
-		open func constant_expression() -> Constant_expressionContext? {
-			return getRuleContext(Constant_expressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_attr_spec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterAttr_spec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterAttr_spec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitAttr_spec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitAttr_spec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitAttr_spec(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitAttr_spec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitAttr_spec(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitAttr_spec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attr_spec() throws -> Attr_specContext {
+	 open func attr_spec() throws -> Attr_specContext {
 		var _localctx: Attr_specContext = Attr_specContext(_ctx, getState())
 		try enterRule(_localctx, 522, Verilog2001Parser.RULE_attr_spec)
 		defer {
@@ -24156,37 +26188,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Attr_nameContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Attr_nameContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_attr_name
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_attr_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterAttr_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterAttr_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitAttr_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitAttr_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitAttr_name(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitAttr_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitAttr_name(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitAttr_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attr_name() throws -> Attr_nameContext {
+	 open func attr_name() throws -> Attr_nameContext {
 		var _localctx: Attr_nameContext = Attr_nameContext(_ctx, getState())
 		try enterRule(_localctx, 524, Verilog2001Parser.RULE_attr_name)
 		defer {
@@ -24206,40 +26244,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Arrayed_identifierContext:ParserRuleContext {
-		open func simple_arrayed_identifier() -> Simple_arrayed_identifierContext? {
-			return getRuleContext(Simple_arrayed_identifierContext.self,0)
+
+	public class Arrayed_identifierContext: ParserRuleContext {
+			open
+			func simple_arrayed_identifier() -> Simple_arrayed_identifierContext? {
+				return getRuleContext(Simple_arrayed_identifierContext.self, 0)
+			}
+			open
+			func escaped_arrayed_identifier() -> Escaped_arrayed_identifierContext? {
+				return getRuleContext(Escaped_arrayed_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_arrayed_identifier
 		}
-		open func escaped_arrayed_identifier() -> Escaped_arrayed_identifierContext? {
-			return getRuleContext(Escaped_arrayed_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_arrayed_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterArrayed_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterArrayed_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitArrayed_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitArrayed_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitArrayed_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitArrayed_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitArrayed_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitArrayed_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayed_identifier() throws -> Arrayed_identifierContext {
+	 open func arrayed_identifier() throws -> Arrayed_identifierContext {
 		var _localctx: Arrayed_identifierContext = Arrayed_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 526, Verilog2001Parser.RULE_arrayed_identifier)
 		defer {
@@ -24263,7 +26308,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -24274,37 +26319,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Block_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Block_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_block_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_block_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterBlock_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterBlock_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitBlock_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitBlock_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitBlock_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitBlock_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitBlock_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitBlock_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block_identifier() throws -> Block_identifierContext {
+	 open func block_identifier() throws -> Block_identifierContext {
 		var _localctx: Block_identifierContext = Block_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 528, Verilog2001Parser.RULE_block_identifier)
 		defer {
@@ -24324,37 +26375,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Cell_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Cell_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_cell_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_cell_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterCell_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterCell_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitCell_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitCell_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitCell_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitCell_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitCell_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitCell_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cell_identifier() throws -> Cell_identifierContext {
+	 open func cell_identifier() throws -> Cell_identifierContext {
 		var _localctx: Cell_identifierContext = Cell_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 530, Verilog2001Parser.RULE_cell_identifier)
 		defer {
@@ -24374,37 +26431,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Config_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Config_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_config_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_config_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterConfig_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterConfig_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitConfig_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitConfig_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitConfig_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitConfig_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitConfig_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitConfig_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func config_identifier() throws -> Config_identifierContext {
+	 open func config_identifier() throws -> Config_identifierContext {
 		var _localctx: Config_identifierContext = Config_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 532, Verilog2001Parser.RULE_config_identifier)
 		defer {
@@ -24424,38 +26487,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Escaped_arrayed_identifierContext:ParserRuleContext {
-		open func Escaped_identifier() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Escaped_identifier.rawValue, 0) }
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
+
+	public class Escaped_arrayed_identifierContext: ParserRuleContext {
+			open
+			func Escaped_identifier() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Escaped_identifier.rawValue, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_escaped_arrayed_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_escaped_arrayed_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEscaped_arrayed_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEscaped_arrayed_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEscaped_arrayed_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEscaped_arrayed_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEscaped_arrayed_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEscaped_arrayed_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEscaped_arrayed_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEscaped_arrayed_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func escaped_arrayed_identifier() throws -> Escaped_arrayed_identifierContext {
+	 open func escaped_arrayed_identifier() throws -> Escaped_arrayed_identifierContext {
 		var _localctx: Escaped_arrayed_identifierContext = Escaped_arrayed_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 534, Verilog2001Parser.RULE_escaped_arrayed_identifier)
 		defer {
@@ -24485,46 +26557,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Escaped_hierarchical_identifierContext:ParserRuleContext {
-		open func escaped_hierarchical_branch() -> Array<Escaped_hierarchical_branchContext> {
-			return getRuleContexts(Escaped_hierarchical_branchContext.self)
+
+	public class Escaped_hierarchical_identifierContext: ParserRuleContext {
+			open
+			func escaped_hierarchical_branch() -> [Escaped_hierarchical_branchContext] {
+				return getRuleContexts(Escaped_hierarchical_branchContext.self)
+			}
+			open
+			func escaped_hierarchical_branch(_ i: Int) -> Escaped_hierarchical_branchContext? {
+				return getRuleContext(Escaped_hierarchical_branchContext.self, i)
+			}
+			open
+			func simple_hierarchical_branch() -> [Simple_hierarchical_branchContext] {
+				return getRuleContexts(Simple_hierarchical_branchContext.self)
+			}
+			open
+			func simple_hierarchical_branch(_ i: Int) -> Simple_hierarchical_branchContext? {
+				return getRuleContext(Simple_hierarchical_branchContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_escaped_hierarchical_identifier
 		}
-		open func escaped_hierarchical_branch(_ i: Int) -> Escaped_hierarchical_branchContext? {
-			return getRuleContext(Escaped_hierarchical_branchContext.self,i)
-		}
-		open func simple_hierarchical_branch() -> Array<Simple_hierarchical_branchContext> {
-			return getRuleContexts(Simple_hierarchical_branchContext.self)
-		}
-		open func simple_hierarchical_branch(_ i: Int) -> Simple_hierarchical_branchContext? {
-			return getRuleContext(Simple_hierarchical_branchContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_escaped_hierarchical_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEscaped_hierarchical_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEscaped_hierarchical_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEscaped_hierarchical_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEscaped_hierarchical_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEscaped_hierarchical_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEscaped_hierarchical_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEscaped_hierarchical_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEscaped_hierarchical_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func escaped_hierarchical_identifier() throws -> Escaped_hierarchical_identifierContext {
+	 open func escaped_hierarchical_identifier() throws -> Escaped_hierarchical_identifierContext {
 		var _localctx: Escaped_hierarchical_identifierContext = Escaped_hierarchical_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 536, Verilog2001Parser.RULE_escaped_hierarchical_identifier)
 		var _la: Int = 0
@@ -24577,37 +26658,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Event_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Event_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_event_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_event_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEvent_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEvent_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEvent_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEvent_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEvent_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEvent_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEvent_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEvent_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func event_identifier() throws -> Event_identifierContext {
+	 open func event_identifier() throws -> Event_identifierContext {
 		var _localctx: Event_identifierContext = Event_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 538, Verilog2001Parser.RULE_event_identifier)
 		defer {
@@ -24627,37 +26714,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Function_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Function_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_function_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_function_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterFunction_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterFunction_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitFunction_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitFunction_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitFunction_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitFunction_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitFunction_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitFunction_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func function_identifier() throws -> Function_identifierContext {
+	 open func function_identifier() throws -> Function_identifierContext {
 		var _localctx: Function_identifierContext = Function_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 540, Verilog2001Parser.RULE_function_identifier)
 		defer {
@@ -24677,37 +26770,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Gate_instance_identifierContext:ParserRuleContext {
-		open func arrayed_identifier() -> Arrayed_identifierContext? {
-			return getRuleContext(Arrayed_identifierContext.self,0)
+
+	public class Gate_instance_identifierContext: ParserRuleContext {
+			open
+			func arrayed_identifier() -> Arrayed_identifierContext? {
+				return getRuleContext(Arrayed_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_gate_instance_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_gate_instance_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGate_instance_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGate_instance_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGate_instance_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGate_instance_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGate_instance_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGate_instance_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGate_instance_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGate_instance_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func gate_instance_identifier() throws -> Gate_instance_identifierContext {
+	 open func gate_instance_identifier() throws -> Gate_instance_identifierContext {
 		var _localctx: Gate_instance_identifierContext = Gate_instance_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 542, Verilog2001Parser.RULE_gate_instance_identifier)
 		defer {
@@ -24727,37 +26826,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Generate_block_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Generate_block_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_generate_block_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_generate_block_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenerate_block_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenerate_block_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenerate_block_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenerate_block_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenerate_block_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenerate_block_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenerate_block_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenerate_block_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generate_block_identifier() throws -> Generate_block_identifierContext {
+	 open func generate_block_identifier() throws -> Generate_block_identifierContext {
 		var _localctx: Generate_block_identifierContext = Generate_block_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 544, Verilog2001Parser.RULE_generate_block_identifier)
 		defer {
@@ -24777,37 +26882,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Genvar_function_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Genvar_function_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_genvar_function_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_genvar_function_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenvar_function_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenvar_function_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenvar_function_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenvar_function_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenvar_function_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenvar_function_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenvar_function_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenvar_function_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func genvar_function_identifier() throws -> Genvar_function_identifierContext {
+	 open func genvar_function_identifier() throws -> Genvar_function_identifierContext {
 		var _localctx: Genvar_function_identifierContext = Genvar_function_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 546, Verilog2001Parser.RULE_genvar_function_identifier)
 		defer {
@@ -24827,37 +26938,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Genvar_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Genvar_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_genvar_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_genvar_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterGenvar_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterGenvar_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitGenvar_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitGenvar_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitGenvar_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitGenvar_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitGenvar_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitGenvar_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func genvar_identifier() throws -> Genvar_identifierContext {
+	 open func genvar_identifier() throws -> Genvar_identifierContext {
 		var _localctx: Genvar_identifierContext = Genvar_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 548, Verilog2001Parser.RULE_genvar_identifier)
 		defer {
@@ -24877,37 +26994,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Hierarchical_block_identifierContext:ParserRuleContext {
-		open func hierarchical_identifier() -> Hierarchical_identifierContext? {
-			return getRuleContext(Hierarchical_identifierContext.self,0)
+
+	public class Hierarchical_block_identifierContext: ParserRuleContext {
+			open
+			func hierarchical_identifier() -> Hierarchical_identifierContext? {
+				return getRuleContext(Hierarchical_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_hierarchical_block_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_hierarchical_block_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterHierarchical_block_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterHierarchical_block_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitHierarchical_block_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitHierarchical_block_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitHierarchical_block_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitHierarchical_block_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitHierarchical_block_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitHierarchical_block_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hierarchical_block_identifier() throws -> Hierarchical_block_identifierContext {
+	 open func hierarchical_block_identifier() throws -> Hierarchical_block_identifierContext {
 		var _localctx: Hierarchical_block_identifierContext = Hierarchical_block_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 550, Verilog2001Parser.RULE_hierarchical_block_identifier)
 		defer {
@@ -24927,37 +27050,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Hierarchical_event_identifierContext:ParserRuleContext {
-		open func hierarchical_identifier() -> Hierarchical_identifierContext? {
-			return getRuleContext(Hierarchical_identifierContext.self,0)
+
+	public class Hierarchical_event_identifierContext: ParserRuleContext {
+			open
+			func hierarchical_identifier() -> Hierarchical_identifierContext? {
+				return getRuleContext(Hierarchical_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_hierarchical_event_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_hierarchical_event_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterHierarchical_event_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterHierarchical_event_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitHierarchical_event_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitHierarchical_event_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitHierarchical_event_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitHierarchical_event_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitHierarchical_event_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitHierarchical_event_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hierarchical_event_identifier() throws -> Hierarchical_event_identifierContext {
+	 open func hierarchical_event_identifier() throws -> Hierarchical_event_identifierContext {
 		var _localctx: Hierarchical_event_identifierContext = Hierarchical_event_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 552, Verilog2001Parser.RULE_hierarchical_event_identifier)
 		defer {
@@ -24977,37 +27106,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Hierarchical_function_identifierContext:ParserRuleContext {
-		open func hierarchical_identifier() -> Hierarchical_identifierContext? {
-			return getRuleContext(Hierarchical_identifierContext.self,0)
+
+	public class Hierarchical_function_identifierContext: ParserRuleContext {
+			open
+			func hierarchical_identifier() -> Hierarchical_identifierContext? {
+				return getRuleContext(Hierarchical_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_hierarchical_function_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_hierarchical_function_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterHierarchical_function_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterHierarchical_function_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitHierarchical_function_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitHierarchical_function_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitHierarchical_function_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitHierarchical_function_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitHierarchical_function_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitHierarchical_function_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hierarchical_function_identifier() throws -> Hierarchical_function_identifierContext {
+	 open func hierarchical_function_identifier() throws -> Hierarchical_function_identifierContext {
 		var _localctx: Hierarchical_function_identifierContext = Hierarchical_function_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 554, Verilog2001Parser.RULE_hierarchical_function_identifier)
 		defer {
@@ -25027,40 +27162,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Hierarchical_identifierContext:ParserRuleContext {
-		open func simple_hierarchical_identifier() -> Simple_hierarchical_identifierContext? {
-			return getRuleContext(Simple_hierarchical_identifierContext.self,0)
+
+	public class Hierarchical_identifierContext: ParserRuleContext {
+			open
+			func simple_hierarchical_identifier() -> Simple_hierarchical_identifierContext? {
+				return getRuleContext(Simple_hierarchical_identifierContext.self, 0)
+			}
+			open
+			func escaped_hierarchical_identifier() -> Escaped_hierarchical_identifierContext? {
+				return getRuleContext(Escaped_hierarchical_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_hierarchical_identifier
 		}
-		open func escaped_hierarchical_identifier() -> Escaped_hierarchical_identifierContext? {
-			return getRuleContext(Escaped_hierarchical_identifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_hierarchical_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterHierarchical_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterHierarchical_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitHierarchical_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitHierarchical_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitHierarchical_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitHierarchical_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitHierarchical_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitHierarchical_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hierarchical_identifier() throws -> Hierarchical_identifierContext {
+	 open func hierarchical_identifier() throws -> Hierarchical_identifierContext {
 		var _localctx: Hierarchical_identifierContext = Hierarchical_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 556, Verilog2001Parser.RULE_hierarchical_identifier)
 		defer {
@@ -25084,7 +27226,7 @@ open class Verilog2001Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -25095,37 +27237,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Hierarchical_net_identifierContext:ParserRuleContext {
-		open func hierarchical_identifier() -> Hierarchical_identifierContext? {
-			return getRuleContext(Hierarchical_identifierContext.self,0)
+
+	public class Hierarchical_net_identifierContext: ParserRuleContext {
+			open
+			func hierarchical_identifier() -> Hierarchical_identifierContext? {
+				return getRuleContext(Hierarchical_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_hierarchical_net_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_hierarchical_net_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterHierarchical_net_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterHierarchical_net_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitHierarchical_net_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitHierarchical_net_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitHierarchical_net_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitHierarchical_net_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitHierarchical_net_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitHierarchical_net_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hierarchical_net_identifier() throws -> Hierarchical_net_identifierContext {
+	 open func hierarchical_net_identifier() throws -> Hierarchical_net_identifierContext {
 		var _localctx: Hierarchical_net_identifierContext = Hierarchical_net_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 558, Verilog2001Parser.RULE_hierarchical_net_identifier)
 		defer {
@@ -25145,37 +27293,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Hierarchical_variable_identifierContext:ParserRuleContext {
-		open func hierarchical_identifier() -> Hierarchical_identifierContext? {
-			return getRuleContext(Hierarchical_identifierContext.self,0)
+
+	public class Hierarchical_variable_identifierContext: ParserRuleContext {
+			open
+			func hierarchical_identifier() -> Hierarchical_identifierContext? {
+				return getRuleContext(Hierarchical_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_hierarchical_variable_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_hierarchical_variable_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterHierarchical_variable_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterHierarchical_variable_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitHierarchical_variable_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitHierarchical_variable_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitHierarchical_variable_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitHierarchical_variable_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitHierarchical_variable_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitHierarchical_variable_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hierarchical_variable_identifier() throws -> Hierarchical_variable_identifierContext {
+	 open func hierarchical_variable_identifier() throws -> Hierarchical_variable_identifierContext {
 		var _localctx: Hierarchical_variable_identifierContext = Hierarchical_variable_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 560, Verilog2001Parser.RULE_hierarchical_variable_identifier)
 		defer {
@@ -25195,37 +27349,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Hierarchical_task_identifierContext:ParserRuleContext {
-		open func hierarchical_identifier() -> Hierarchical_identifierContext? {
-			return getRuleContext(Hierarchical_identifierContext.self,0)
+
+	public class Hierarchical_task_identifierContext: ParserRuleContext {
+			open
+			func hierarchical_identifier() -> Hierarchical_identifierContext? {
+				return getRuleContext(Hierarchical_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_hierarchical_task_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_hierarchical_task_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterHierarchical_task_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterHierarchical_task_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitHierarchical_task_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitHierarchical_task_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitHierarchical_task_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitHierarchical_task_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitHierarchical_task_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitHierarchical_task_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hierarchical_task_identifier() throws -> Hierarchical_task_identifierContext {
+	 open func hierarchical_task_identifier() throws -> Hierarchical_task_identifierContext {
 		var _localctx: Hierarchical_task_identifierContext = Hierarchical_task_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 562, Verilog2001Parser.RULE_hierarchical_task_identifier)
 		defer {
@@ -25245,36 +27405,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class IdentifierContext:ParserRuleContext {
-		open func Simple_identifier() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Simple_identifier.rawValue, 0) }
-		open func Escaped_identifier() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Escaped_identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterIdentifier(self)
+
+	public class IdentifierContext: ParserRuleContext {
+			open
+			func Simple_identifier() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Simple_identifier.rawValue, 0)
+			}
+			open
+			func Escaped_identifier() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Escaped_identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_identifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitIdentifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitIdentifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifier() throws -> IdentifierContext {
+	 open func identifier() throws -> IdentifierContext {
 		var _localctx: IdentifierContext = IdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 564, Verilog2001Parser.RULE_identifier)
 		var _la: Int = 0
@@ -25306,37 +27477,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Inout_port_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Inout_port_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_inout_port_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_inout_port_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInout_port_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInout_port_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInout_port_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInout_port_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInout_port_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInout_port_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInout_port_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInout_port_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inout_port_identifier() throws -> Inout_port_identifierContext {
+	 open func inout_port_identifier() throws -> Inout_port_identifierContext {
 		var _localctx: Inout_port_identifierContext = Inout_port_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 566, Verilog2001Parser.RULE_inout_port_identifier)
 		defer {
@@ -25356,37 +27533,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Input_port_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Input_port_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_input_port_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_input_port_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInput_port_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInput_port_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInput_port_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInput_port_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInput_port_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInput_port_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInput_port_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInput_port_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func input_port_identifier() throws -> Input_port_identifierContext {
+	 open func input_port_identifier() throws -> Input_port_identifierContext {
 		var _localctx: Input_port_identifierContext = Input_port_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 568, Verilog2001Parser.RULE_input_port_identifier)
 		defer {
@@ -25406,37 +27589,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Instance_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Instance_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_instance_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_instance_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterInstance_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterInstance_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitInstance_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitInstance_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitInstance_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitInstance_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitInstance_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitInstance_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func instance_identifier() throws -> Instance_identifierContext {
+	 open func instance_identifier() throws -> Instance_identifierContext {
 		var _localctx: Instance_identifierContext = Instance_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 570, Verilog2001Parser.RULE_instance_identifier)
 		defer {
@@ -25456,37 +27645,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Library_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Library_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_library_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_library_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterLibrary_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterLibrary_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitLibrary_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitLibrary_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitLibrary_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitLibrary_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitLibrary_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitLibrary_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func library_identifier() throws -> Library_identifierContext {
+	 open func library_identifier() throws -> Library_identifierContext {
 		var _localctx: Library_identifierContext = Library_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 572, Verilog2001Parser.RULE_library_identifier)
 		defer {
@@ -25506,37 +27701,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Memory_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Memory_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_memory_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_memory_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterMemory_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterMemory_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitMemory_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitMemory_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitMemory_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitMemory_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitMemory_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitMemory_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func memory_identifier() throws -> Memory_identifierContext {
+	 open func memory_identifier() throws -> Memory_identifierContext {
 		var _localctx: Memory_identifierContext = Memory_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 574, Verilog2001Parser.RULE_memory_identifier)
 		defer {
@@ -25556,37 +27757,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Module_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_identifier() throws -> Module_identifierContext {
+	 open func module_identifier() throws -> Module_identifierContext {
 		var _localctx: Module_identifierContext = Module_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 576, Verilog2001Parser.RULE_module_identifier)
 		defer {
@@ -25606,37 +27813,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Module_instance_identifierContext:ParserRuleContext {
-		open func arrayed_identifier() -> Arrayed_identifierContext? {
-			return getRuleContext(Arrayed_identifierContext.self,0)
+
+	public class Module_instance_identifierContext: ParserRuleContext {
+			open
+			func arrayed_identifier() -> Arrayed_identifierContext? {
+				return getRuleContext(Arrayed_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_module_instance_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_module_instance_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterModule_instance_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterModule_instance_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitModule_instance_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitModule_instance_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitModule_instance_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitModule_instance_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitModule_instance_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitModule_instance_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module_instance_identifier() throws -> Module_instance_identifierContext {
+	 open func module_instance_identifier() throws -> Module_instance_identifierContext {
 		var _localctx: Module_instance_identifierContext = Module_instance_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 578, Verilog2001Parser.RULE_module_instance_identifier)
 		defer {
@@ -25656,37 +27869,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Net_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Net_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_net_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_net_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterNet_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterNet_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitNet_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitNet_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitNet_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitNet_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitNet_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitNet_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func net_identifier() throws -> Net_identifierContext {
+	 open func net_identifier() throws -> Net_identifierContext {
 		var _localctx: Net_identifierContext = Net_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 580, Verilog2001Parser.RULE_net_identifier)
 		defer {
@@ -25706,37 +27925,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Output_port_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Output_port_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_output_port_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_output_port_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterOutput_port_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterOutput_port_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitOutput_port_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitOutput_port_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitOutput_port_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitOutput_port_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitOutput_port_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitOutput_port_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func output_port_identifier() throws -> Output_port_identifierContext {
+	 open func output_port_identifier() throws -> Output_port_identifierContext {
 		var _localctx: Output_port_identifierContext = Output_port_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 582, Verilog2001Parser.RULE_output_port_identifier)
 		defer {
@@ -25756,37 +27981,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Parameter_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Parameter_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_parameter_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_parameter_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterParameter_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterParameter_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitParameter_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitParameter_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitParameter_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitParameter_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitParameter_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitParameter_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter_identifier() throws -> Parameter_identifierContext {
+	 open func parameter_identifier() throws -> Parameter_identifierContext {
 		var _localctx: Parameter_identifierContext = Parameter_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 584, Verilog2001Parser.RULE_parameter_identifier)
 		defer {
@@ -25806,37 +28037,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Port_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Port_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_port_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_port_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterPort_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterPort_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitPort_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitPort_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitPort_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitPort_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitPort_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitPort_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func port_identifier() throws -> Port_identifierContext {
+	 open func port_identifier() throws -> Port_identifierContext {
 		var _localctx: Port_identifierContext = Port_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 586, Verilog2001Parser.RULE_port_identifier)
 		defer {
@@ -25856,37 +28093,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Real_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Real_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_real_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_real_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterReal_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterReal_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitReal_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitReal_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitReal_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitReal_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitReal_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitReal_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func real_identifier() throws -> Real_identifierContext {
+	 open func real_identifier() throws -> Real_identifierContext {
 		var _localctx: Real_identifierContext = Real_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 588, Verilog2001Parser.RULE_real_identifier)
 		defer {
@@ -25906,38 +28149,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Simple_arrayed_identifierContext:ParserRuleContext {
-		open func Simple_identifier() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Simple_identifier.rawValue, 0) }
-		open func range() -> RangeContext? {
-			return getRuleContext(RangeContext.self,0)
+
+	public class Simple_arrayed_identifierContext: ParserRuleContext {
+			open
+			func Simple_identifier() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Simple_identifier.rawValue, 0)
+			}
+			open
+			func range() -> RangeContext? {
+				return getRuleContext(RangeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_simple_arrayed_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_simple_arrayed_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSimple_arrayed_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSimple_arrayed_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSimple_arrayed_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSimple_arrayed_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSimple_arrayed_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSimple_arrayed_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSimple_arrayed_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSimple_arrayed_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_arrayed_identifier() throws -> Simple_arrayed_identifierContext {
+	 open func simple_arrayed_identifier() throws -> Simple_arrayed_identifierContext {
 		var _localctx: Simple_arrayed_identifierContext = Simple_arrayed_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 590, Verilog2001Parser.RULE_simple_arrayed_identifier)
 		defer {
@@ -25967,38 +28219,47 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Simple_hierarchical_identifierContext:ParserRuleContext {
-		open func simple_hierarchical_branch() -> Simple_hierarchical_branchContext? {
-			return getRuleContext(Simple_hierarchical_branchContext.self,0)
+
+	public class Simple_hierarchical_identifierContext: ParserRuleContext {
+			open
+			func simple_hierarchical_branch() -> Simple_hierarchical_branchContext? {
+				return getRuleContext(Simple_hierarchical_branchContext.self, 0)
+			}
+			open
+			func Escaped_identifier() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Escaped_identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_simple_hierarchical_identifier
 		}
-		open func Escaped_identifier() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Escaped_identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_simple_hierarchical_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSimple_hierarchical_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSimple_hierarchical_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSimple_hierarchical_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSimple_hierarchical_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSimple_hierarchical_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSimple_hierarchical_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSimple_hierarchical_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSimple_hierarchical_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_hierarchical_identifier() throws -> Simple_hierarchical_identifierContext {
+	 open func simple_hierarchical_identifier() throws -> Simple_hierarchical_identifierContext {
 		var _localctx: Simple_hierarchical_identifierContext = Simple_hierarchical_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 592, Verilog2001Parser.RULE_simple_hierarchical_identifier)
 		var _la: Int = 0
@@ -26034,37 +28295,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Specparam_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Specparam_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_specparam_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_specparam_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSpecparam_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSpecparam_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSpecparam_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSpecparam_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSpecparam_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSpecparam_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSpecparam_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSpecparam_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specparam_identifier() throws -> Specparam_identifierContext {
+	 open func specparam_identifier() throws -> Specparam_identifierContext {
 		var _localctx: Specparam_identifierContext = Specparam_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 594, Verilog2001Parser.RULE_specparam_identifier)
 		defer {
@@ -26084,35 +28351,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class System_function_identifierContext:ParserRuleContext {
-		open func Dollar_Identifier() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Dollar_Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_system_function_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSystem_function_identifier(self)
+
+	public class System_function_identifierContext: ParserRuleContext {
+			open
+			func Dollar_Identifier() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Dollar_Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_system_function_identifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSystem_function_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSystem_function_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSystem_function_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSystem_function_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSystem_function_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSystem_function_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSystem_function_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func system_function_identifier() throws -> System_function_identifierContext {
+	 open func system_function_identifier() throws -> System_function_identifierContext {
 		var _localctx: System_function_identifierContext = System_function_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 596, Verilog2001Parser.RULE_system_function_identifier)
 		defer {
@@ -26132,35 +28407,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class System_task_identifierContext:ParserRuleContext {
-		open func Dollar_Identifier() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Dollar_Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_system_task_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSystem_task_identifier(self)
+
+	public class System_task_identifierContext: ParserRuleContext {
+			open
+			func Dollar_Identifier() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Dollar_Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_system_task_identifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSystem_task_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSystem_task_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSystem_task_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSystem_task_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSystem_task_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSystem_task_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSystem_task_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func system_task_identifier() throws -> System_task_identifierContext {
+	 open func system_task_identifier() throws -> System_task_identifierContext {
 		var _localctx: System_task_identifierContext = System_task_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 598, Verilog2001Parser.RULE_system_task_identifier)
 		defer {
@@ -26180,37 +28463,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Task_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Task_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_task_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_task_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTask_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTask_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTask_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTask_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTask_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTask_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTask_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTask_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func task_identifier() throws -> Task_identifierContext {
+	 open func task_identifier() throws -> Task_identifierContext {
 		var _localctx: Task_identifierContext = Task_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 600, Verilog2001Parser.RULE_task_identifier)
 		defer {
@@ -26230,37 +28519,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Terminal_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Terminal_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_terminal_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_terminal_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTerminal_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTerminal_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTerminal_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTerminal_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTerminal_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTerminal_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTerminal_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTerminal_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func terminal_identifier() throws -> Terminal_identifierContext {
+	 open func terminal_identifier() throws -> Terminal_identifierContext {
 		var _localctx: Terminal_identifierContext = Terminal_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 602, Verilog2001Parser.RULE_terminal_identifier)
 		defer {
@@ -26280,35 +28575,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Text_macro_identifierContext:ParserRuleContext {
-		open func Simple_identifier() -> TerminalNode? { return getToken(Verilog2001Parser.Tokens.Simple_identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_text_macro_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterText_macro_identifier(self)
+
+	public class Text_macro_identifierContext: ParserRuleContext {
+			open
+			func Simple_identifier() -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Simple_identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_text_macro_identifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterText_macro_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitText_macro_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitText_macro_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitText_macro_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitText_macro_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitText_macro_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitText_macro_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func text_macro_identifier() throws -> Text_macro_identifierContext {
+	 open func text_macro_identifier() throws -> Text_macro_identifierContext {
 		var _localctx: Text_macro_identifierContext = Text_macro_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 604, Verilog2001Parser.RULE_text_macro_identifier)
 		defer {
@@ -26328,37 +28631,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Topmodule_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Topmodule_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_topmodule_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_topmodule_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterTopmodule_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterTopmodule_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitTopmodule_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitTopmodule_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitTopmodule_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitTopmodule_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitTopmodule_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitTopmodule_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func topmodule_identifier() throws -> Topmodule_identifierContext {
+	 open func topmodule_identifier() throws -> Topmodule_identifierContext {
 		var _localctx: Topmodule_identifierContext = Topmodule_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 606, Verilog2001Parser.RULE_topmodule_identifier)
 		defer {
@@ -26378,37 +28687,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Udp_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Udp_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_udp_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_udp_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterUdp_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterUdp_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitUdp_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitUdp_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitUdp_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitUdp_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitUdp_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitUdp_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func udp_identifier() throws -> Udp_identifierContext {
+	 open func udp_identifier() throws -> Udp_identifierContext {
 		var _localctx: Udp_identifierContext = Udp_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 608, Verilog2001Parser.RULE_udp_identifier)
 		defer {
@@ -26428,37 +28743,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Udp_instance_identifierContext:ParserRuleContext {
-		open func arrayed_identifier() -> Arrayed_identifierContext? {
-			return getRuleContext(Arrayed_identifierContext.self,0)
+
+	public class Udp_instance_identifierContext: ParserRuleContext {
+			open
+			func arrayed_identifier() -> Arrayed_identifierContext? {
+				return getRuleContext(Arrayed_identifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_udp_instance_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_udp_instance_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterUdp_instance_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterUdp_instance_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitUdp_instance_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitUdp_instance_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitUdp_instance_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitUdp_instance_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitUdp_instance_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitUdp_instance_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func udp_instance_identifier() throws -> Udp_instance_identifierContext {
+	 open func udp_instance_identifier() throws -> Udp_instance_identifierContext {
 		var _localctx: Udp_instance_identifierContext = Udp_instance_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 610, Verilog2001Parser.RULE_udp_instance_identifier)
 		defer {
@@ -26478,37 +28799,43 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Variable_identifierContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Variable_identifierContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_variable_identifier
 		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_variable_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterVariable_identifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterVariable_identifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitVariable_identifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitVariable_identifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitVariable_identifier(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitVariable_identifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitVariable_identifier(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitVariable_identifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable_identifier() throws -> Variable_identifierContext {
+	 open func variable_identifier() throws -> Variable_identifierContext {
 		var _localctx: Variable_identifierContext = Variable_identifierContext(_ctx, getState())
 		try enterRule(_localctx, 612, Verilog2001Parser.RULE_variable_identifier)
 		defer {
@@ -26528,42 +28855,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Simple_hierarchical_branchContext:ParserRuleContext {
-		open func Simple_identifier() -> Array<TerminalNode> { return getTokens(Verilog2001Parser.Tokens.Simple_identifier.rawValue) }
-		open func Simple_identifier(_ i:Int) -> TerminalNode?{
-			return getToken(Verilog2001Parser.Tokens.Simple_identifier.rawValue, i)
+
+	public class Simple_hierarchical_branchContext: ParserRuleContext {
+			open
+			func Simple_identifier() -> [TerminalNode] {
+				return getTokens(Verilog2001Parser.Tokens.Simple_identifier.rawValue)
+			}
+			open
+			func Simple_identifier(_ i:Int) -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Simple_identifier.rawValue, i)
+			}
+			open
+			func Decimal_number() -> [TerminalNode] {
+				return getTokens(Verilog2001Parser.Tokens.Decimal_number.rawValue)
+			}
+			open
+			func Decimal_number(_ i:Int) -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Decimal_number.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_simple_hierarchical_branch
 		}
-		open func Decimal_number() -> Array<TerminalNode> { return getTokens(Verilog2001Parser.Tokens.Decimal_number.rawValue) }
-		open func Decimal_number(_ i:Int) -> TerminalNode?{
-			return getToken(Verilog2001Parser.Tokens.Decimal_number.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_simple_hierarchical_branch }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterSimple_hierarchical_branch(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterSimple_hierarchical_branch(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitSimple_hierarchical_branch(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitSimple_hierarchical_branch(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitSimple_hierarchical_branch(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitSimple_hierarchical_branch(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitSimple_hierarchical_branch(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitSimple_hierarchical_branch(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simple_hierarchical_branch() throws -> Simple_hierarchical_branchContext {
+	 open func simple_hierarchical_branch() throws -> Simple_hierarchical_branchContext {
 		var _localctx: Simple_hierarchical_branchContext = Simple_hierarchical_branchContext(_ctx, getState())
 		try enterRule(_localctx, 614, Verilog2001Parser.RULE_simple_hierarchical_branch)
 		defer {
@@ -26628,42 +28968,55 @@ open class Verilog2001Parser: Parser {
 
 		return _localctx
 	}
-	open class Escaped_hierarchical_branchContext:ParserRuleContext {
-		open func Escaped_identifier() -> Array<TerminalNode> { return getTokens(Verilog2001Parser.Tokens.Escaped_identifier.rawValue) }
-		open func Escaped_identifier(_ i:Int) -> TerminalNode?{
-			return getToken(Verilog2001Parser.Tokens.Escaped_identifier.rawValue, i)
+
+	public class Escaped_hierarchical_branchContext: ParserRuleContext {
+			open
+			func Escaped_identifier() -> [TerminalNode] {
+				return getTokens(Verilog2001Parser.Tokens.Escaped_identifier.rawValue)
+			}
+			open
+			func Escaped_identifier(_ i:Int) -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Escaped_identifier.rawValue, i)
+			}
+			open
+			func Decimal_number() -> [TerminalNode] {
+				return getTokens(Verilog2001Parser.Tokens.Decimal_number.rawValue)
+			}
+			open
+			func Decimal_number(_ i:Int) -> TerminalNode? {
+				return getToken(Verilog2001Parser.Tokens.Decimal_number.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return Verilog2001Parser.RULE_escaped_hierarchical_branch
 		}
-		open func Decimal_number() -> Array<TerminalNode> { return getTokens(Verilog2001Parser.Tokens.Decimal_number.rawValue) }
-		open func Decimal_number(_ i:Int) -> TerminalNode?{
-			return getToken(Verilog2001Parser.Tokens.Decimal_number.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return Verilog2001Parser.RULE_escaped_hierarchical_branch }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).enterEscaped_hierarchical_branch(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.enterEscaped_hierarchical_branch(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is Verilog2001Listener {
-			 	(listener as! Verilog2001Listener).exitEscaped_hierarchical_branch(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? Verilog2001Listener {
+				listener.exitEscaped_hierarchical_branch(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is Verilog2001Visitor {
-			     return (visitor as! Verilog2001Visitor<T>).visitEscaped_hierarchical_branch(self)
-			}else if visitor is Verilog2001BaseVisitor {
-		    	 return (visitor as! Verilog2001BaseVisitor<T>).visitEscaped_hierarchical_branch(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? Verilog2001Visitor {
+			    return visitor.visitEscaped_hierarchical_branch(self)
+			}
+			else if let visitor = visitor as? Verilog2001BaseVisitor {
+			    return visitor.visitEscaped_hierarchical_branch(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func escaped_hierarchical_branch() throws -> Escaped_hierarchical_branchContext {
+	 open func escaped_hierarchical_branch() throws -> Escaped_hierarchical_branchContext {
 		var _localctx: Escaped_hierarchical_branchContext = Escaped_hierarchical_branchContext(_ctx, getState())
 		try enterRule(_localctx, 616, Verilog2001Parser.RULE_escaped_hierarchical_branch)
 		defer {
@@ -26729,6 +29082,10 @@ open class Verilog2001Parser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = Verilog2001ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = Verilog2001ParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

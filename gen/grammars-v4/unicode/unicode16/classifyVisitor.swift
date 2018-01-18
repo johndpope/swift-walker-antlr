@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/unicode/unicode16/classify.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/unicode/unicode16/classify.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class classifyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCodepoint(_ ctx: classifyParser.CodepointContext) -> T{
+	open func visitCodepoint(_ ctx: classifyParser.CodepointContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

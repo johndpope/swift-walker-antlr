@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/masm/MASM.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/masm/MASM.g4 by ANTLR 4.7.1
  
  	 package com.Ostermiller.Syntax;
  	 
@@ -18,7 +18,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompilationUnit(_ ctx: MASMParser.CompilationUnitContext) -> T{
+	open func visitCompilationUnit(_ ctx: MASMParser.CompilationUnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -28,7 +28,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSegments(_ ctx: MASMParser.SegmentsContext) -> T{
+	open func visitSegments(_ ctx: MASMParser.SegmentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -38,7 +38,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProc(_ ctx: MASMParser.ProcContext) -> T{
+	open func visitProc(_ ctx: MASMParser.ProcContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -48,7 +48,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCode(_ ctx: MASMParser.CodeContext) -> T{
+	open func visitCode(_ ctx: MASMParser.CodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -58,7 +58,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp1(_ ctx: MASMParser.Binary_exp1Context) -> T{
+	open func visitBinary_exp1(_ ctx: MASMParser.Binary_exp1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -68,7 +68,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnuary_exp1(_ ctx: MASMParser.Unuary_exp1Context) -> T{
+	open func visitUnuary_exp1(_ ctx: MASMParser.Unuary_exp1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -78,7 +78,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnuary_exp2(_ ctx: MASMParser.Unuary_exp2Context) -> T{
+	open func visitUnuary_exp2(_ ctx: MASMParser.Unuary_exp2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -88,7 +88,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp2(_ ctx: MASMParser.Binary_exp2Context) -> T{
+	open func visitBinary_exp2(_ ctx: MASMParser.Binary_exp2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -98,7 +98,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNotarguments(_ ctx: MASMParser.NotargumentsContext) -> T{
+	open func visitNotarguments(_ ctx: MASMParser.NotargumentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -108,7 +108,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp3(_ ctx: MASMParser.Binary_exp3Context) -> T{
+	open func visitBinary_exp3(_ ctx: MASMParser.Binary_exp3Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -118,7 +118,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnuary_exp3(_ ctx: MASMParser.Unuary_exp3Context) -> T{
+	open func visitUnuary_exp3(_ ctx: MASMParser.Unuary_exp3Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -128,7 +128,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp4(_ ctx: MASMParser.Binary_exp4Context) -> T{
+	open func visitBinary_exp4(_ ctx: MASMParser.Binary_exp4Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -138,7 +138,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp5(_ ctx: MASMParser.Binary_exp5Context) -> T{
+	open func visitBinary_exp5(_ ctx: MASMParser.Binary_exp5Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -148,7 +148,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp6(_ ctx: MASMParser.Binary_exp6Context) -> T{
+	open func visitBinary_exp6(_ ctx: MASMParser.Binary_exp6Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -158,7 +158,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp7(_ ctx: MASMParser.Binary_exp7Context) -> T{
+	open func visitBinary_exp7(_ ctx: MASMParser.Binary_exp7Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -168,7 +168,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp8(_ ctx: MASMParser.Binary_exp8Context) -> T{
+	open func visitBinary_exp8(_ ctx: MASMParser.Binary_exp8Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -178,7 +178,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp9(_ ctx: MASMParser.Binary_exp9Context) -> T{
+	open func visitBinary_exp9(_ ctx: MASMParser.Binary_exp9Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -188,7 +188,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnuary_exp4(_ ctx: MASMParser.Unuary_exp4Context) -> T{
+	open func visitUnuary_exp4(_ ctx: MASMParser.Unuary_exp4Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -198,7 +198,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnuary_exp5(_ ctx: MASMParser.Unuary_exp5Context) -> T{
+	open func visitUnuary_exp5(_ ctx: MASMParser.Unuary_exp5Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -208,7 +208,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp10(_ ctx: MASMParser.Binary_exp10Context) -> T{
+	open func visitBinary_exp10(_ ctx: MASMParser.Binary_exp10Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -218,7 +218,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp11(_ ctx: MASMParser.Binary_exp11Context) -> T{
+	open func visitBinary_exp11(_ ctx: MASMParser.Binary_exp11Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -228,7 +228,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary_exp12(_ ctx: MASMParser.Binary_exp12Context) -> T{
+	open func visitBinary_exp12(_ ctx: MASMParser.Binary_exp12Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -238,7 +238,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDirective_exp1(_ ctx: MASMParser.Directive_exp1Context) -> T{
+	open func visitDirective_exp1(_ ctx: MASMParser.Directive_exp1Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -248,7 +248,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariabledeclaration(_ ctx: MASMParser.VariabledeclarationContext) -> T{
+	open func visitVariabledeclaration(_ ctx: MASMParser.VariabledeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -258,7 +258,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMemory(_ ctx: MASMParser.MemoryContext) -> T{
+	open func visitMemory(_ ctx: MASMParser.MemoryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -268,7 +268,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSegmentos(_ ctx: MASMParser.SegmentosContext) -> T{
+	open func visitSegmentos(_ ctx: MASMParser.SegmentosContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -278,7 +278,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRegister(_ ctx: MASMParser.RegisterContext) -> T{
+	open func visitRegister(_ ctx: MASMParser.RegisterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -288,7 +288,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitO(_ ctx: MASMParser.OContext) -> T{
+	open func visitO(_ ctx: MASMParser.OContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -298,7 +298,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOp(_ ctx: MASMParser.OpContext) -> T{
+	open func visitOp(_ ctx: MASMParser.OpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -308,7 +308,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpe(_ ctx: MASMParser.OpeContext) -> T{
+	open func visitOpe(_ ctx: MASMParser.OpeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -318,7 +318,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOper(_ ctx: MASMParser.OperContext) -> T{
+	open func visitOper(_ ctx: MASMParser.OperContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -328,7 +328,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpera(_ ctx: MASMParser.OperaContext) -> T{
+	open func visitOpera(_ ctx: MASMParser.OperaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -338,7 +338,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperat(_ ctx: MASMParser.OperatContext) -> T{
+	open func visitOperat(_ ctx: MASMParser.OperatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -348,7 +348,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperato(_ ctx: MASMParser.OperatoContext) -> T{
+	open func visitOperato(_ ctx: MASMParser.OperatoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -358,7 +358,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperator(_ ctx: MASMParser.OperatorContext) -> T{
+	open func visitOperator(_ ctx: MASMParser.OperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -368,7 +368,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitL(_ ctx: MASMParser.LContext) -> T{
+	open func visitL(_ ctx: MASMParser.LContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -378,7 +378,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitX(_ ctx: MASMParser.XContext) -> T{
+	open func visitX(_ ctx: MASMParser.XContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -388,7 +388,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitS(_ ctx: MASMParser.SContext) -> T{
+	open func visitS(_ ctx: MASMParser.SContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -398,7 +398,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSh(_ ctx: MASMParser.ShContext) -> T{
+	open func visitSh(_ ctx: MASMParser.ShContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -408,7 +408,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitB(_ ctx: MASMParser.BContext) -> T{
+	open func visitB(_ ctx: MASMParser.BContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -418,7 +418,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCall(_ ctx: MASMParser.CallContext) -> T{
+	open func visitCall(_ ctx: MASMParser.CallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -428,7 +428,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterruption(_ ctx: MASMParser.InterruptionContext) -> T{
+	open func visitInterruption(_ ctx: MASMParser.InterruptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -438,7 +438,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIn(_ ctx: MASMParser.InContext) -> T{
+	open func visitIn(_ ctx: MASMParser.InContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -448,7 +448,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOut(_ ctx: MASMParser.OutContext) -> T{
+	open func visitOut(_ ctx: MASMParser.OutContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -458,7 +458,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRe(_ ctx: MASMParser.ReContext) -> T{
+	open func visitRe(_ ctx: MASMParser.ReContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -468,7 +468,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDirectives(_ ctx: MASMParser.DirectivesContext) -> T{
+	open func visitDirectives(_ ctx: MASMParser.DirectivesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -478,7 +478,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTy(_ ctx: MASMParser.TyContext) -> T{
+	open func visitTy(_ ctx: MASMParser.TyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -488,7 +488,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuestion(_ ctx: MASMParser.QuestionContext) -> T{
+	open func visitQuestion(_ ctx: MASMParser.QuestionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -498,7 +498,7 @@ open class MASMVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTime(_ ctx: MASMParser.TimeContext) -> T{
+	open func visitTime(_ ctx: MASMParser.TimeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

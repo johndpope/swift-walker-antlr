@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/informix/informix.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/informix/informix.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompilation_unit(_ ctx: informixParser.Compilation_unitContext) -> T{
+	open func visitCompilation_unit(_ ctx: informixParser.Compilation_unitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifier(_ ctx: informixParser.IdentifierContext) -> T{
+	open func visitIdentifier(_ ctx: informixParser.IdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMainBlock(_ ctx: informixParser.MainBlockContext) -> T{
+	open func visitMainBlock(_ ctx: informixParser.MainBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMainStatements(_ ctx: informixParser.MainStatementsContext) -> T{
+	open func visitMainStatements(_ ctx: informixParser.MainStatementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeferStatement(_ ctx: informixParser.DeferStatementContext) -> T{
+	open func visitDeferStatement(_ ctx: informixParser.DeferStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionOrReportDefinitions(_ ctx: informixParser.FunctionOrReportDefinitionsContext) -> T{
+	open func visitFunctionOrReportDefinitions(_ ctx: informixParser.FunctionOrReportDefinitionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturnStatement(_ ctx: informixParser.ReturnStatementContext) -> T{
+	open func visitReturnStatement(_ ctx: informixParser.ReturnStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionDefinition(_ ctx: informixParser.FunctionDefinitionContext) -> T{
+	open func visitFunctionDefinition(_ ctx: informixParser.FunctionDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterList(_ ctx: informixParser.ParameterListContext) -> T{
+	open func visitParameterList(_ ctx: informixParser.ParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterGroup(_ ctx: informixParser.ParameterGroupContext) -> T{
+	open func visitParameterGroup(_ ctx: informixParser.ParameterGroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGlobalDeclaration(_ ctx: informixParser.GlobalDeclarationContext) -> T{
+	open func visitGlobalDeclaration(_ ctx: informixParser.GlobalDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDeclarations(_ ctx: informixParser.TypeDeclarationsContext) -> T{
+	open func visitTypeDeclarations(_ ctx: informixParser.TypeDeclarationsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDeclaration(_ ctx: informixParser.TypeDeclarationContext) -> T{
+	open func visitTypeDeclaration(_ ctx: informixParser.TypeDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclaration(_ ctx: informixParser.VariableDeclarationContext) -> T{
+	open func visitVariableDeclaration(_ ctx: informixParser.VariableDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: informixParser.TypeContext) -> T{
+	open func visitType(_ ctx: informixParser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIndirectType(_ ctx: informixParser.IndirectTypeContext) -> T{
+	open func visitIndirectType(_ ctx: informixParser.IndirectTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeIdentifier(_ ctx: informixParser.TypeIdentifierContext) -> T{
+	open func visitTypeIdentifier(_ ctx: informixParser.TypeIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLargeType(_ ctx: informixParser.LargeTypeContext) -> T{
+	open func visitLargeType(_ ctx: informixParser.LargeTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumberType(_ ctx: informixParser.NumberTypeContext) -> T{
+	open func visitNumberType(_ ctx: informixParser.NumberTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharType(_ ctx: informixParser.CharTypeContext) -> T{
+	open func visitCharType(_ ctx: informixParser.CharTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTimeType(_ ctx: informixParser.TimeTypeContext) -> T{
+	open func visitTimeType(_ ctx: informixParser.TimeTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDatetimeQualifier(_ ctx: informixParser.DatetimeQualifierContext) -> T{
+	open func visitDatetimeQualifier(_ ctx: informixParser.DatetimeQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntervalQualifier(_ ctx: informixParser.IntervalQualifierContext) -> T{
+	open func visitIntervalQualifier(_ ctx: informixParser.IntervalQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnitType(_ ctx: informixParser.UnitTypeContext) -> T{
+	open func visitUnitType(_ ctx: informixParser.UnitTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitYearQualifier(_ ctx: informixParser.YearQualifierContext) -> T{
+	open func visitYearQualifier(_ ctx: informixParser.YearQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMonthQualifier(_ ctx: informixParser.MonthQualifierContext) -> T{
+	open func visitMonthQualifier(_ ctx: informixParser.MonthQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDayQualifier(_ ctx: informixParser.DayQualifierContext) -> T{
+	open func visitDayQualifier(_ ctx: informixParser.DayQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHourQualifier(_ ctx: informixParser.HourQualifierContext) -> T{
+	open func visitHourQualifier(_ ctx: informixParser.HourQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMinuteQualifier(_ ctx: informixParser.MinuteQualifierContext) -> T{
+	open func visitMinuteQualifier(_ ctx: informixParser.MinuteQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSecondQualifier(_ ctx: informixParser.SecondQualifierContext) -> T{
+	open func visitSecondQualifier(_ ctx: informixParser.SecondQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFractionQualifier(_ ctx: informixParser.FractionQualifierContext) -> T{
+	open func visitFractionQualifier(_ ctx: informixParser.FractionQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructuredType(_ ctx: informixParser.StructuredTypeContext) -> T{
+	open func visitStructuredType(_ ctx: informixParser.StructuredTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordType(_ ctx: informixParser.RecordTypeContext) -> T{
+	open func visitRecordType(_ ctx: informixParser.RecordTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayIndexer(_ ctx: informixParser.ArrayIndexerContext) -> T{
+	open func visitArrayIndexer(_ ctx: informixParser.ArrayIndexerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayType(_ ctx: informixParser.ArrayTypeContext) -> T{
+	open func visitArrayType(_ ctx: informixParser.ArrayTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDynArrayType(_ ctx: informixParser.DynArrayTypeContext) -> T{
+	open func visitDynArrayType(_ ctx: informixParser.DynArrayTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: informixParser.StringContext) -> T{
+	open func visitString(_ ctx: informixParser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: informixParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: informixParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCodeBlock(_ ctx: informixParser.CodeBlockContext) -> T{
+	open func visitCodeBlock(_ ctx: informixParser.CodeBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabel(_ ctx: informixParser.LabelContext) -> T{
+	open func visitLabel(_ ctx: informixParser.LabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnlabelledStatement(_ ctx: informixParser.UnlabelledStatementContext) -> T{
+	open func visitUnlabelledStatement(_ ctx: informixParser.UnlabelledStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleStatement(_ ctx: informixParser.SimpleStatementContext) -> T{
+	open func visitSimpleStatement(_ ctx: informixParser.SimpleStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRunStatement(_ ctx: informixParser.RunStatementContext) -> T{
+	open func visitRunStatement(_ ctx: informixParser.RunStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentStatement(_ ctx: informixParser.AssignmentStatementContext) -> T{
+	open func visitAssignmentStatement(_ ctx: informixParser.AssignmentStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureStatement(_ ctx: informixParser.ProcedureStatementContext) -> T{
+	open func visitProcedureStatement(_ ctx: informixParser.ProcedureStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureIdentifier(_ ctx: informixParser.ProcedureIdentifierContext) -> T{
+	open func visitProcedureIdentifier(_ ctx: informixParser.ProcedureIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActualParameter(_ ctx: informixParser.ActualParameterContext) -> T{
+	open func visitActualParameter(_ ctx: informixParser.ActualParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGotoStatement(_ ctx: informixParser.GotoStatementContext) -> T{
+	open func visitGotoStatement(_ ctx: informixParser.GotoStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCondition(_ ctx: informixParser.ConditionContext) -> T{
+	open func visitCondition(_ ctx: informixParser.ConditionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalTerm(_ ctx: informixParser.LogicalTermContext) -> T{
+	open func visitLogicalTerm(_ ctx: informixParser.LogicalTermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalFactor(_ ctx: informixParser.LogicalFactorContext) -> T{
+	open func visitLogicalFactor(_ ctx: informixParser.LogicalFactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuantifiedFactor(_ ctx: informixParser.QuantifiedFactorContext) -> T{
+	open func visitQuantifiedFactor(_ ctx: informixParser.QuantifiedFactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionSet(_ ctx: informixParser.ExpressionSetContext) -> T{
+	open func visitExpressionSet(_ ctx: informixParser.ExpressionSetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubquery(_ ctx: informixParser.SubqueryContext) -> T{
+	open func visitSubquery(_ ctx: informixParser.SubqueryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlExpression(_ ctx: informixParser.SqlExpressionContext) -> T{
+	open func visitSqlExpression(_ ctx: informixParser.SqlExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlAlias(_ ctx: informixParser.SqlAliasContext) -> T{
+	open func visitSqlAlias(_ ctx: informixParser.SqlAliasContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlTerm(_ ctx: informixParser.SqlTermContext) -> T{
+	open func visitSqlTerm(_ ctx: informixParser.SqlTermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlMultiply(_ ctx: informixParser.SqlMultiplyContext) -> T{
+	open func visitSqlMultiply(_ ctx: informixParser.SqlMultiplyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlFactor(_ ctx: informixParser.SqlFactorContext) -> T{
+	open func visitSqlFactor(_ ctx: informixParser.SqlFactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlFactor2(_ ctx: informixParser.SqlFactor2Context) -> T{
+	open func visitSqlFactor2(_ ctx: informixParser.SqlFactor2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlExpressionList(_ ctx: informixParser.SqlExpressionListContext) -> T{
+	open func visitSqlExpressionList(_ ctx: informixParser.SqlExpressionListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlLiteral(_ ctx: informixParser.SqlLiteralContext) -> T{
+	open func visitSqlLiteral(_ ctx: informixParser.SqlLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlVariable(_ ctx: informixParser.SqlVariableContext) -> T{
+	open func visitSqlVariable(_ ctx: informixParser.SqlVariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlFunction(_ ctx: informixParser.SqlFunctionContext) -> T{
+	open func visitSqlFunction(_ ctx: informixParser.SqlFunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDateFunction(_ ctx: informixParser.DateFunctionContext) -> T{
+	open func visitDateFunction(_ ctx: informixParser.DateFunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumberFunction(_ ctx: informixParser.NumberFunctionContext) -> T{
+	open func visitNumberFunction(_ ctx: informixParser.NumberFunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharFunction(_ ctx: informixParser.CharFunctionContext) -> T{
+	open func visitCharFunction(_ ctx: informixParser.CharFunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGroupFunction(_ ctx: informixParser.GroupFunctionContext) -> T{
+	open func visitGroupFunction(_ ctx: informixParser.GroupFunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOtherFunction(_ ctx: informixParser.OtherFunctionContext) -> T{
+	open func visitOtherFunction(_ ctx: informixParser.OtherFunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlPseudoColumn(_ ctx: informixParser.SqlPseudoColumnContext) -> T{
+	open func visitSqlPseudoColumn(_ ctx: informixParser.SqlPseudoColumnContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelationalOperator(_ ctx: informixParser.RelationalOperatorContext) -> T{
+	open func visitRelationalOperator(_ ctx: informixParser.RelationalOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfCondition(_ ctx: informixParser.IfConditionContext) -> T{
+	open func visitIfCondition(_ ctx: informixParser.IfConditionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfCondition2(_ ctx: informixParser.IfCondition2Context) -> T{
+	open func visitIfCondition2(_ ctx: informixParser.IfCondition2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfLogicalTerm(_ ctx: informixParser.IfLogicalTermContext) -> T{
+	open func visitIfLogicalTerm(_ ctx: informixParser.IfLogicalTermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: informixParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: informixParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfLogicalFactor(_ ctx: informixParser.IfLogicalFactorContext) -> T{
+	open func visitIfLogicalFactor(_ ctx: informixParser.IfLogicalFactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleExpression(_ ctx: informixParser.SimpleExpressionContext) -> T{
+	open func visitSimpleExpression(_ ctx: informixParser.SimpleExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAddingOperator(_ ctx: informixParser.AddingOperatorContext) -> T{
+	open func visitAddingOperator(_ ctx: informixParser.AddingOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: informixParser.TermContext) -> T{
+	open func visitTerm(_ ctx: informixParser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplyingOperator(_ ctx: informixParser.MultiplyingOperatorContext) -> T{
+	open func visitMultiplyingOperator(_ ctx: informixParser.MultiplyingOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFactor(_ ctx: informixParser.FactorContext) -> T{
+	open func visitFactor(_ ctx: informixParser.FactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionDesignator(_ ctx: informixParser.FunctionDesignatorContext) -> T{
+	open func visitFunctionDesignator(_ ctx: informixParser.FunctionDesignatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionIdentifier(_ ctx: informixParser.FunctionIdentifierContext) -> T{
+	open func visitFunctionIdentifier(_ ctx: informixParser.FunctionIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedConstant(_ ctx: informixParser.UnsignedConstantContext) -> T{
+	open func visitUnsignedConstant(_ ctx: informixParser.UnsignedConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstant(_ ctx: informixParser.ConstantContext) -> T{
+	open func visitConstant(_ ctx: informixParser.ConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericConstant(_ ctx: informixParser.NumericConstantContext) -> T{
+	open func visitNumericConstant(_ ctx: informixParser.NumericConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariable(_ ctx: informixParser.VariableContext) -> T{
+	open func visitVariable(_ ctx: informixParser.VariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEntireVariable(_ ctx: informixParser.EntireVariableContext) -> T{
+	open func visitEntireVariable(_ ctx: informixParser.EntireVariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableIdentifier(_ ctx: informixParser.VariableIdentifierContext) -> T{
+	open func visitVariableIdentifier(_ ctx: informixParser.VariableIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIndexingVariable(_ ctx: informixParser.IndexingVariableContext) -> T{
+	open func visitIndexingVariable(_ ctx: informixParser.IndexingVariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponentVariable(_ ctx: informixParser.ComponentVariableContext) -> T{
+	open func visitComponentVariable(_ ctx: informixParser.ComponentVariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordVariable(_ ctx: informixParser.RecordVariableContext) -> T{
+	open func visitRecordVariable(_ ctx: informixParser.RecordVariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldIdentifier(_ ctx: informixParser.FieldIdentifierContext) -> T{
+	open func visitFieldIdentifier(_ ctx: informixParser.FieldIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructuredStatement(_ ctx: informixParser.StructuredStatementContext) -> T{
+	open func visitStructuredStatement(_ ctx: informixParser.StructuredStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditionalStatement(_ ctx: informixParser.ConditionalStatementContext) -> T{
+	open func visitConditionalStatement(_ ctx: informixParser.ConditionalStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfStatement(_ ctx: informixParser.IfStatementContext) -> T{
+	open func visitIfStatement(_ ctx: informixParser.IfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRepetetiveStatement(_ ctx: informixParser.RepetetiveStatementContext) -> T{
+	open func visitRepetetiveStatement(_ ctx: informixParser.RepetetiveStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhileStatement(_ ctx: informixParser.WhileStatementContext) -> T{
+	open func visitWhileStatement(_ ctx: informixParser.WhileStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForStatement(_ ctx: informixParser.ForStatementContext) -> T{
+	open func visitForStatement(_ ctx: informixParser.ForStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForList(_ ctx: informixParser.ForListContext) -> T{
+	open func visitForList(_ ctx: informixParser.ForListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlVariable(_ ctx: informixParser.ControlVariableContext) -> T{
+	open func visitControlVariable(_ ctx: informixParser.ControlVariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1025,7 +1025,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitialValue(_ ctx: informixParser.InitialValueContext) -> T{
+	open func visitInitialValue(_ ctx: informixParser.InitialValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1035,7 +1035,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFinalValue(_ ctx: informixParser.FinalValueContext) -> T{
+	open func visitFinalValue(_ ctx: informixParser.FinalValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1045,7 +1045,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForEachStatement(_ ctx: informixParser.ForEachStatementContext) -> T{
+	open func visitForEachStatement(_ ctx: informixParser.ForEachStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1055,7 +1055,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableList(_ ctx: informixParser.VariableListContext) -> T{
+	open func visitVariableList(_ ctx: informixParser.VariableListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1065,7 +1065,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableOrConstantList(_ ctx: informixParser.VariableOrConstantListContext) -> T{
+	open func visitVariableOrConstantList(_ ctx: informixParser.VariableOrConstantListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1075,7 +1075,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseStatement(_ ctx: informixParser.CaseStatementContext) -> T{
+	open func visitCaseStatement(_ ctx: informixParser.CaseStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1085,7 +1085,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOtherFGLStatement(_ ctx: informixParser.OtherFGLStatementContext) -> T{
+	open func visitOtherFGLStatement(_ ctx: informixParser.OtherFGLStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1095,7 +1095,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOtherProgramFlowStatement(_ ctx: informixParser.OtherProgramFlowStatementContext) -> T{
+	open func visitOtherProgramFlowStatement(_ ctx: informixParser.OtherProgramFlowStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1105,7 +1105,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExitTypes(_ ctx: informixParser.ExitTypesContext) -> T{
+	open func visitExitTypes(_ ctx: informixParser.ExitTypesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1115,7 +1115,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExitStatements(_ ctx: informixParser.ExitStatementsContext) -> T{
+	open func visitExitStatements(_ ctx: informixParser.ExitStatementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1125,7 +1125,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContinueStatements(_ ctx: informixParser.ContinueStatementsContext) -> T{
+	open func visitContinueStatements(_ ctx: informixParser.ContinueStatementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1135,7 +1135,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOtherStorageStatement(_ ctx: informixParser.OtherStorageStatementContext) -> T{
+	open func visitOtherStorageStatement(_ ctx: informixParser.OtherStorageStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1145,7 +1145,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrintExpressionItem(_ ctx: informixParser.PrintExpressionItemContext) -> T{
+	open func visitPrintExpressionItem(_ ctx: informixParser.PrintExpressionItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1155,7 +1155,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrintExpressionList(_ ctx: informixParser.PrintExpressionListContext) -> T{
+	open func visitPrintExpressionList(_ ctx: informixParser.PrintExpressionListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1165,7 +1165,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReportStatement(_ ctx: informixParser.ReportStatementContext) -> T{
+	open func visitReportStatement(_ ctx: informixParser.ReportStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1175,7 +1175,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldName(_ ctx: informixParser.FieldNameContext) -> T{
+	open func visitFieldName(_ ctx: informixParser.FieldNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1185,7 +1185,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitThruNotation(_ ctx: informixParser.ThruNotationContext) -> T{
+	open func visitThruNotation(_ ctx: informixParser.ThruNotationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1195,7 +1195,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldList(_ ctx: informixParser.FieldListContext) -> T{
+	open func visitFieldList(_ ctx: informixParser.FieldListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1205,7 +1205,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeyList(_ ctx: informixParser.KeyListContext) -> T{
+	open func visitKeyList(_ ctx: informixParser.KeyListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1215,7 +1215,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructEvents(_ ctx: informixParser.ConstructEventsContext) -> T{
+	open func visitConstructEvents(_ ctx: informixParser.ConstructEventsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1225,7 +1225,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructInsideStatement(_ ctx: informixParser.ConstructInsideStatementContext) -> T{
+	open func visitConstructInsideStatement(_ ctx: informixParser.ConstructInsideStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1235,7 +1235,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpecialAttribute(_ ctx: informixParser.SpecialAttributeContext) -> T{
+	open func visitSpecialAttribute(_ ctx: informixParser.SpecialAttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1245,7 +1245,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttribute(_ ctx: informixParser.AttributeContext) -> T{
+	open func visitAttribute(_ ctx: informixParser.AttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1255,7 +1255,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributeList(_ ctx: informixParser.AttributeListContext) -> T{
+	open func visitAttributeList(_ ctx: informixParser.AttributeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1265,7 +1265,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructGroupStatement(_ ctx: informixParser.ConstructGroupStatementContext) -> T{
+	open func visitConstructGroupStatement(_ ctx: informixParser.ConstructGroupStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1275,7 +1275,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructStatement(_ ctx: informixParser.ConstructStatementContext) -> T{
+	open func visitConstructStatement(_ ctx: informixParser.ConstructStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1285,7 +1285,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDisplayArrayStatement(_ ctx: informixParser.DisplayArrayStatementContext) -> T{
+	open func visitDisplayArrayStatement(_ ctx: informixParser.DisplayArrayStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1295,7 +1295,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDisplayInsideStatement(_ ctx: informixParser.DisplayInsideStatementContext) -> T{
+	open func visitDisplayInsideStatement(_ ctx: informixParser.DisplayInsideStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1305,7 +1305,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDisplayEvents(_ ctx: informixParser.DisplayEventsContext) -> T{
+	open func visitDisplayEvents(_ ctx: informixParser.DisplayEventsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1315,7 +1315,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDisplayStatement(_ ctx: informixParser.DisplayStatementContext) -> T{
+	open func visitDisplayStatement(_ ctx: informixParser.DisplayStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1325,7 +1325,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitErrorStatement(_ ctx: informixParser.ErrorStatementContext) -> T{
+	open func visitErrorStatement(_ ctx: informixParser.ErrorStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1335,7 +1335,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessageStatement(_ ctx: informixParser.MessageStatementContext) -> T{
+	open func visitMessageStatement(_ ctx: informixParser.MessageStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1345,7 +1345,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPromptStatement(_ ctx: informixParser.PromptStatementContext) -> T{
+	open func visitPromptStatement(_ ctx: informixParser.PromptStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1355,7 +1355,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInputEvents(_ ctx: informixParser.InputEventsContext) -> T{
+	open func visitInputEvents(_ ctx: informixParser.InputEventsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1365,7 +1365,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInputInsideStatement(_ ctx: informixParser.InputInsideStatementContext) -> T{
+	open func visitInputInsideStatement(_ ctx: informixParser.InputInsideStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1375,7 +1375,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInputGroupStatement(_ ctx: informixParser.InputGroupStatementContext) -> T{
+	open func visitInputGroupStatement(_ ctx: informixParser.InputGroupStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1385,7 +1385,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInputStatement(_ ctx: informixParser.InputStatementContext) -> T{
+	open func visitInputStatement(_ ctx: informixParser.InputStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1395,7 +1395,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInputArrayStatement(_ ctx: informixParser.InputArrayStatementContext) -> T{
+	open func visitInputArrayStatement(_ ctx: informixParser.InputArrayStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1405,7 +1405,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMenuEvents(_ ctx: informixParser.MenuEventsContext) -> T{
+	open func visitMenuEvents(_ ctx: informixParser.MenuEventsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1415,7 +1415,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMenuInsideStatement(_ ctx: informixParser.MenuInsideStatementContext) -> T{
+	open func visitMenuInsideStatement(_ ctx: informixParser.MenuInsideStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1425,7 +1425,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMenuGroupStatement(_ ctx: informixParser.MenuGroupStatementContext) -> T{
+	open func visitMenuGroupStatement(_ ctx: informixParser.MenuGroupStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1435,7 +1435,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMenuStatement(_ ctx: informixParser.MenuStatementContext) -> T{
+	open func visitMenuStatement(_ ctx: informixParser.MenuStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1445,7 +1445,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReservedLinePosition(_ ctx: informixParser.ReservedLinePositionContext) -> T{
+	open func visitReservedLinePosition(_ ctx: informixParser.ReservedLinePositionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1455,7 +1455,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpecialWindowAttribute(_ ctx: informixParser.SpecialWindowAttributeContext) -> T{
+	open func visitSpecialWindowAttribute(_ ctx: informixParser.SpecialWindowAttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1465,7 +1465,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWindowAttribute(_ ctx: informixParser.WindowAttributeContext) -> T{
+	open func visitWindowAttribute(_ ctx: informixParser.WindowAttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1475,7 +1475,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWindowAttributeList(_ ctx: informixParser.WindowAttributeListContext) -> T{
+	open func visitWindowAttributeList(_ ctx: informixParser.WindowAttributeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1485,7 +1485,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionStatement(_ ctx: informixParser.OptionStatementContext) -> T{
+	open func visitOptionStatement(_ ctx: informixParser.OptionStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1495,7 +1495,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionsStatement(_ ctx: informixParser.OptionsStatementContext) -> T{
+	open func visitOptionsStatement(_ ctx: informixParser.OptionsStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1505,7 +1505,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScreenStatement(_ ctx: informixParser.ScreenStatementContext) -> T{
+	open func visitScreenStatement(_ ctx: informixParser.ScreenStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1515,7 +1515,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlStatements(_ ctx: informixParser.SqlStatementsContext) -> T{
+	open func visitSqlStatements(_ ctx: informixParser.SqlStatementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1525,7 +1525,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCursorManipulationStatement(_ ctx: informixParser.CursorManipulationStatementContext) -> T{
+	open func visitCursorManipulationStatement(_ ctx: informixParser.CursorManipulationStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1535,7 +1535,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumnsList(_ ctx: informixParser.ColumnsListContext) -> T{
+	open func visitColumnsList(_ ctx: informixParser.ColumnsListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1545,7 +1545,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementId(_ ctx: informixParser.StatementIdContext) -> T{
+	open func visitStatementId(_ ctx: informixParser.StatementIdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1555,7 +1555,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCursorName(_ ctx: informixParser.CursorNameContext) -> T{
+	open func visitCursorName(_ ctx: informixParser.CursorNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1565,7 +1565,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataType(_ ctx: informixParser.DataTypeContext) -> T{
+	open func visitDataType(_ ctx: informixParser.DataTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1575,7 +1575,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumnItem(_ ctx: informixParser.ColumnItemContext) -> T{
+	open func visitColumnItem(_ ctx: informixParser.ColumnItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1585,7 +1585,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataDefinitionStatement(_ ctx: informixParser.DataDefinitionStatementContext) -> T{
+	open func visitDataDefinitionStatement(_ ctx: informixParser.DataDefinitionStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1595,7 +1595,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataManipulationStatement(_ ctx: informixParser.DataManipulationStatementContext) -> T{
+	open func visitDataManipulationStatement(_ ctx: informixParser.DataManipulationStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1605,7 +1605,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlSelectStatement(_ ctx: informixParser.SqlSelectStatementContext) -> T{
+	open func visitSqlSelectStatement(_ ctx: informixParser.SqlSelectStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1615,7 +1615,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitColumnsTableId(_ ctx: informixParser.ColumnsTableIdContext) -> T{
+	open func visitColumnsTableId(_ ctx: informixParser.ColumnsTableIdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1625,7 +1625,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelectList(_ ctx: informixParser.SelectListContext) -> T{
+	open func visitSelectList(_ ctx: informixParser.SelectListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1635,7 +1635,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHeadSelectStatement(_ ctx: informixParser.HeadSelectStatementContext) -> T{
+	open func visitHeadSelectStatement(_ ctx: informixParser.HeadSelectStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1645,7 +1645,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTableQualifier(_ ctx: informixParser.TableQualifierContext) -> T{
+	open func visitTableQualifier(_ ctx: informixParser.TableQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1655,7 +1655,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTableIdentifier(_ ctx: informixParser.TableIdentifierContext) -> T{
+	open func visitTableIdentifier(_ ctx: informixParser.TableIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1665,7 +1665,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFromTable(_ ctx: informixParser.FromTableContext) -> T{
+	open func visitFromTable(_ ctx: informixParser.FromTableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1675,7 +1675,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTableExpression(_ ctx: informixParser.TableExpressionContext) -> T{
+	open func visitTableExpression(_ ctx: informixParser.TableExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1685,7 +1685,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFromSelectStatement(_ ctx: informixParser.FromSelectStatementContext) -> T{
+	open func visitFromSelectStatement(_ ctx: informixParser.FromSelectStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1695,7 +1695,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAliasName(_ ctx: informixParser.AliasNameContext) -> T{
+	open func visitAliasName(_ ctx: informixParser.AliasNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1705,7 +1705,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMainSelectStatement(_ ctx: informixParser.MainSelectStatementContext) -> T{
+	open func visitMainSelectStatement(_ ctx: informixParser.MainSelectStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1715,7 +1715,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionSelectStatement(_ ctx: informixParser.UnionSelectStatementContext) -> T{
+	open func visitUnionSelectStatement(_ ctx: informixParser.UnionSelectStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1725,7 +1725,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleSelectStatement(_ ctx: informixParser.SimpleSelectStatementContext) -> T{
+	open func visitSimpleSelectStatement(_ ctx: informixParser.SimpleSelectStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1735,7 +1735,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhereStatement(_ ctx: informixParser.WhereStatementContext) -> T{
+	open func visitWhereStatement(_ ctx: informixParser.WhereStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1745,7 +1745,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGroupByStatement(_ ctx: informixParser.GroupByStatementContext) -> T{
+	open func visitGroupByStatement(_ ctx: informixParser.GroupByStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1755,7 +1755,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHavingStatement(_ ctx: informixParser.HavingStatementContext) -> T{
+	open func visitHavingStatement(_ ctx: informixParser.HavingStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1765,7 +1765,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrderbyColumn(_ ctx: informixParser.OrderbyColumnContext) -> T{
+	open func visitOrderbyColumn(_ ctx: informixParser.OrderbyColumnContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1775,7 +1775,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrderbyStatement(_ ctx: informixParser.OrderbyStatementContext) -> T{
+	open func visitOrderbyStatement(_ ctx: informixParser.OrderbyStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1785,7 +1785,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlLoadStatement(_ ctx: informixParser.SqlLoadStatementContext) -> T{
+	open func visitSqlLoadStatement(_ ctx: informixParser.SqlLoadStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1795,7 +1795,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlUnLoadStatement(_ ctx: informixParser.SqlUnLoadStatementContext) -> T{
+	open func visitSqlUnLoadStatement(_ ctx: informixParser.SqlUnLoadStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1805,7 +1805,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlInsertStatement(_ ctx: informixParser.SqlInsertStatementContext) -> T{
+	open func visitSqlInsertStatement(_ ctx: informixParser.SqlInsertStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1815,7 +1815,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlUpdateStatement(_ ctx: informixParser.SqlUpdateStatementContext) -> T{
+	open func visitSqlUpdateStatement(_ ctx: informixParser.SqlUpdateStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1825,7 +1825,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSqlDeleteStatement(_ ctx: informixParser.SqlDeleteStatementContext) -> T{
+	open func visitSqlDeleteStatement(_ ctx: informixParser.SqlDeleteStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1835,7 +1835,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActualParameterList(_ ctx: informixParser.ActualParameterListContext) -> T{
+	open func visitActualParameterList(_ ctx: informixParser.ActualParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1845,7 +1845,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDynamicManagementStatement(_ ctx: informixParser.DynamicManagementStatementContext) -> T{
+	open func visitDynamicManagementStatement(_ ctx: informixParser.DynamicManagementStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1855,7 +1855,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQueryOptimizationStatement(_ ctx: informixParser.QueryOptimizationStatementContext) -> T{
+	open func visitQueryOptimizationStatement(_ ctx: informixParser.QueryOptimizationStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1865,7 +1865,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDatabaseDeclaration(_ ctx: informixParser.DatabaseDeclarationContext) -> T{
+	open func visitDatabaseDeclaration(_ ctx: informixParser.DatabaseDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1875,7 +1875,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClientServerStatement(_ ctx: informixParser.ClientServerStatementContext) -> T{
+	open func visitClientServerStatement(_ ctx: informixParser.ClientServerStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1885,7 +1885,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDataIntegrityStatement(_ ctx: informixParser.DataIntegrityStatementContext) -> T{
+	open func visitDataIntegrityStatement(_ ctx: informixParser.DataIntegrityStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1895,7 +1895,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWheneverStatement(_ ctx: informixParser.WheneverStatementContext) -> T{
+	open func visitWheneverStatement(_ ctx: informixParser.WheneverStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1905,7 +1905,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWheneverType(_ ctx: informixParser.WheneverTypeContext) -> T{
+	open func visitWheneverType(_ ctx: informixParser.WheneverTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1915,7 +1915,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWheneverFlow(_ ctx: informixParser.WheneverFlowContext) -> T{
+	open func visitWheneverFlow(_ ctx: informixParser.WheneverFlowContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1925,7 +1925,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReportDefinition(_ ctx: informixParser.ReportDefinitionContext) -> T{
+	open func visitReportDefinition(_ ctx: informixParser.ReportDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1935,7 +1935,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOutputReport(_ ctx: informixParser.OutputReportContext) -> T{
+	open func visitOutputReport(_ ctx: informixParser.OutputReportContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1945,7 +1945,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormatReport(_ ctx: informixParser.FormatReportContext) -> T{
+	open func visitFormatReport(_ ctx: informixParser.FormatReportContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1955,7 +1955,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEol(_ ctx: informixParser.EolContext) -> T{
+	open func visitEol(_ ctx: informixParser.EolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1965,7 +1965,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedNumber(_ ctx: informixParser.UnsignedNumberContext) -> T{
+	open func visitUnsignedNumber(_ ctx: informixParser.UnsignedNumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1975,7 +1975,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedInteger(_ ctx: informixParser.UnsignedIntegerContext) -> T{
+	open func visitUnsignedInteger(_ ctx: informixParser.UnsignedIntegerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1985,7 +1985,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedReal(_ ctx: informixParser.UnsignedRealContext) -> T{
+	open func visitUnsignedReal(_ ctx: informixParser.UnsignedRealContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1995,7 +1995,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSign(_ ctx: informixParser.SignContext) -> T{
+	open func visitSign(_ ctx: informixParser.SignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2005,7 +2005,7 @@ open class informixVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantIdentifier(_ ctx: informixParser.ConstantIdentifierContext) -> T{
+	open func visitConstantIdentifier(_ ctx: informixParser.ConstantIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

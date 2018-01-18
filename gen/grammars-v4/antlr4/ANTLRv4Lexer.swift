@@ -1,7 +1,8 @@
-// Generated from ./grammars-v4/antlr4/ANTLRv4Lexer.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/antlr4/ANTLRv4Lexer.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class ANTLRv4Lexer: LexerAdaptor {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
           let length = ANTLRv4Lexer._ATN.getNumberOfDecisions()
@@ -11,34 +12,39 @@ open class ANTLRv4Lexer: LexerAdaptor {
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let TOKEN_REF=1, RULE_REF=2, LEXER_CHAR_SET=3, DOC_COMMENT=4, 
-                   BLOCK_COMMENT=5, LINE_COMMENT=6, INT=7, STRING_LITERAL=8, 
-                   UNTERMINATED_STRING_LITERAL=9, BEGIN_ARGUMENT=10, BEGIN_ACTION=11, 
-                   OPTIONS=12, TOKENS=13, CHANNELS=14, IMPORT=15, FRAGMENT=16, 
-                   LEXER=17, PARSER=18, GRAMMAR=19, PROTECTED=20, PUBLIC=21, 
-                   PRIVATE=22, RETURNS=23, LOCALS=24, THROWS=25, CATCH=26, 
-                   FINALLY=27, MODE=28, COLON=29, COLONCOLON=30, COMMA=31, 
-                   SEMI=32, LPAREN=33, RPAREN=34, LBRACE=35, RBRACE=36, 
-                   RARROW=37, LT=38, GT=39, ASSIGN=40, QUESTION=41, STAR=42, 
-                   PLUS_ASSIGN=43, PLUS=44, OR=45, DOLLAR=46, RANGE=47, 
-                   DOT=48, AT=49, POUND=50, NOT=51, ID=52, WS=53, ERRCHAR=54, 
-                   END_ARGUMENT=55, UNTERMINATED_ARGUMENT=56, ARGUMENT_CONTENT=57, 
-                   END_ACTION=58, UNTERMINATED_ACTION=59, ACTION_CONTENT=60, 
-                   UNTERMINATED_CHAR_SET=61
-	public static let OFF_CHANNEL=2
-	public static let Argument=1, Action=2, Options=3, Tokens=4, Channels=5, 
-                   LexerCharSet=6
-	public static let channelNames: [String] = [
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let TOKEN_REF=1, RULE_REF=2, LEXER_CHAR_SET=3, DOC_COMMENT=4, BLOCK_COMMENT=5, 
+            LINE_COMMENT=6, INT=7, STRING_LITERAL=8, UNTERMINATED_STRING_LITERAL=9, 
+            BEGIN_ARGUMENT=10, BEGIN_ACTION=11, OPTIONS=12, TOKENS=13, CHANNELS=14, 
+            IMPORT=15, FRAGMENT=16, LEXER=17, PARSER=18, GRAMMAR=19, PROTECTED=20, 
+            PUBLIC=21, PRIVATE=22, RETURNS=23, LOCALS=24, THROWS=25, CATCH=26, 
+            FINALLY=27, MODE=28, COLON=29, COLONCOLON=30, COMMA=31, SEMI=32, 
+            LPAREN=33, RPAREN=34, LBRACE=35, RBRACE=36, RARROW=37, LT=38, 
+            GT=39, ASSIGN=40, QUESTION=41, STAR=42, PLUS_ASSIGN=43, PLUS=44, 
+            OR=45, DOLLAR=46, RANGE=47, DOT=48, AT=49, POUND=50, NOT=51, 
+            ID=52, WS=53, ERRCHAR=54, END_ARGUMENT=55, UNTERMINATED_ARGUMENT=56, 
+            ARGUMENT_CONTENT=57, END_ACTION=58, UNTERMINATED_ACTION=59, 
+            ACTION_CONTENT=60, UNTERMINATED_CHAR_SET=61
+
+	public
+	static let OFF_CHANNEL=2
+	public
+	static let Argument=1, Action=2, Options=3, Tokens=4, Channels=5, LexerCharSet=6
+	public
+	static let channelNames: [String] = [
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN", "OFF_CHANNEL"
 	]
 
-	public static let modeNames: [String] = [
+	public
+	static let modeNames: [String] = [
 		"DEFAULT_MODE", "Argument", "Action", "Options", "Tokens", "Channels", 
 		"LexerCharSet"
 	]
 
-	public static let ruleNames: [String] = [
+	public
+	static let ruleNames: [String] = [
 		"DOC_COMMENT", "BLOCK_COMMENT", "LINE_COMMENT", "INT", "STRING_LITERAL", 
 		"UNTERMINATED_STRING_LITERAL", "BEGIN_ARGUMENT", "BEGIN_ACTION", "OPTIONS", 
 		"TOKENS", "CHANNELS", "IMPORT", "FRAGMENT", "LEXER", "PARSER", "GRAMMAR", 
@@ -85,63 +91,42 @@ open class ANTLRv4Lexer: LexerAdaptor {
 		"UNTERMINATED_ARGUMENT", "ARGUMENT_CONTENT", "END_ACTION", "UNTERMINATED_ACTION", 
 		"ACTION_CONTENT", "UNTERMINATED_CHAR_SET"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
+	override open
+	func getVocabulary() -> Vocabulary {
+		return ANTLRv4Lexer.VOCABULARY
 	}
 
-    open override func getVocabulary() -> Vocabulary {
-        return ANTLRv4Lexer.VOCABULARY
-    }
-
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, ANTLRv4Lexer._ATN, ANTLRv4Lexer._decisionToDFA, ANTLRv4Lexer._sharedContextCache)
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "ANTLRv4Lexer.g4" }
+	override open
+	func getGrammarFileName() -> String { return "ANTLRv4Lexer.g4" }
 
-    override
-	open func getRuleNames() -> [String] { return ANTLRv4Lexer.ruleNames }
+	override open
+	func getRuleNames() -> [String] { return ANTLRv4Lexer.ruleNames }
 
-	override
-	open func getSerializedATN() -> String { return ANTLRv4Lexer._serializedATN }
+	override open
+	func getSerializedATN() -> String { return ANTLRv4Lexer._serializedATN }
 
-	override
-	open func getChannelNames() -> [String] { return ANTLRv4Lexer.channelNames }
+	override open
+	func getChannelNames() -> [String] { return ANTLRv4Lexer.channelNames }
 
-	override
-	open func getModeNames() -> [String] { return ANTLRv4Lexer.modeNames }
+	override open
+	func getModeNames() -> [String] { return ANTLRv4Lexer.modeNames }
 
-	override
-	open func getATN() -> ATN { return ANTLRv4Lexer._ATN }
+	override open
+	func getATN() -> ATN { return ANTLRv4Lexer._ATN }
 
-	override
-	open func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
+	override open
+	func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
 		switch (ruleIndex) {
 		case 6:
 			BEGIN_ARGUMENT_action((_localctx as RuleContext?), actionIndex)
@@ -180,6 +165,10 @@ open class ANTLRv4Lexer: LexerAdaptor {
 		}
 	}
 
-    public static let _serializedATN: String = ANTLRv4LexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = ANTLRv4LexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

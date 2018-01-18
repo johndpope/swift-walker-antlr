@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/xpath/xpath.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/xpath/xpath.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class xpathParser: Parser {
@@ -11,8 +11,11 @@ open class xpathParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, NodeType = 9, Number = 10, AxisName = 11, 
                  PATHSEP = 12, ABRPATH = 13, LPAR = 14, RPAR = 15, LBRAC = 16, 
@@ -21,17 +24,20 @@ open class xpathParser: Parser {
                  MORE_ = 27, LE = 28, GE = 29, COLON = 30, CC = 31, APOS = 32, 
                  QUOT = 33, Literal = 34, Whitespace = 35, NCName = 36
 	}
-	public static let RULE_main = 0, RULE_locationPath = 1, RULE_absoluteLocationPathNoroot = 2, 
-                   RULE_relativeLocationPath = 3, RULE_step = 4, RULE_axisSpecifier = 5, 
-                   RULE_nodeTest = 6, RULE_predicate = 7, RULE_abbreviatedStep = 8, 
-                   RULE_expr = 9, RULE_primaryExpr = 10, RULE_functionCall = 11, 
-                   RULE_unionExprNoRoot = 12, RULE_pathExprNoRoot = 13, 
-                   RULE_filterExpr = 14, RULE_orExpr = 15, RULE_andExpr = 16, 
-                   RULE_equalityExpr = 17, RULE_relationalExpr = 18, RULE_additiveExpr = 19, 
-                   RULE_multiplicativeExpr = 20, RULE_unaryExprNoRoot = 21, 
-                   RULE_qName = 22, RULE_functionName = 23, RULE_variableReference = 24, 
-                   RULE_nameTest = 25, RULE_nCName = 26
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_main = 0, RULE_locationPath = 1, RULE_absoluteLocationPathNoroot = 2, 
+            RULE_relativeLocationPath = 3, RULE_step = 4, RULE_axisSpecifier = 5, 
+            RULE_nodeTest = 6, RULE_predicate = 7, RULE_abbreviatedStep = 8, 
+            RULE_expr = 9, RULE_primaryExpr = 10, RULE_functionCall = 11, 
+            RULE_unionExprNoRoot = 12, RULE_pathExprNoRoot = 13, RULE_filterExpr = 14, 
+            RULE_orExpr = 15, RULE_andExpr = 16, RULE_equalityExpr = 17, 
+            RULE_relationalExpr = 18, RULE_additiveExpr = 19, RULE_multiplicativeExpr = 20, 
+            RULE_unaryExprNoRoot = 21, RULE_qName = 22, RULE_functionName = 23, 
+            RULE_variableReference = 24, RULE_nameTest = 25, RULE_nCName = 26
+
+	public
+	static let ruleNames: [String] = [
 		"main", "locationPath", "absoluteLocationPathNoroot", "relativeLocationPath", 
 		"step", "axisSpecifier", "nodeTest", "predicate", "abbreviatedStep", "expr", 
 		"primaryExpr", "functionCall", "unionExprNoRoot", "pathExprNoRoot", "filterExpr", 
@@ -52,85 +58,69 @@ open class xpathParser: Parser {
 		"DOT", "MUL", "DOTDOT", "AT", "COMMA", "PIPE", "LESS", "MORE_", "LE", 
 		"GE", "COLON", "CC", "APOS", "QUOT", "Literal", "Whitespace", "NCName"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "xpath.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return xpathParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "xpath.g4" }
+	override open
+	func getSerializedATN() -> String { return xpathParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return xpathParser.ruleNames }
+	override open
+	func getATN() -> ATN { return xpathParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return xpathParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return xpathParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return xpathParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,xpathParser._ATN,xpathParser._decisionToDFA, xpathParser._sharedContextCache)
 	}
-	open class MainContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class MainContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_main
 		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_main }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterMain(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterMain(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitMain(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitMain(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitMain(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitMain(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitMain(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitMain(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func main() throws -> MainContext {
+	 open func main() throws -> MainContext {
 		var _localctx: MainContext = MainContext(_ctx, getState())
 		try enterRule(_localctx, 0, xpathParser.RULE_main)
 		defer {
@@ -150,40 +140,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class LocationPathContext:ParserRuleContext {
-		open func relativeLocationPath() -> RelativeLocationPathContext? {
-			return getRuleContext(RelativeLocationPathContext.self,0)
+
+	public class LocationPathContext: ParserRuleContext {
+			open
+			func relativeLocationPath() -> RelativeLocationPathContext? {
+				return getRuleContext(RelativeLocationPathContext.self, 0)
+			}
+			open
+			func absoluteLocationPathNoroot() -> AbsoluteLocationPathNorootContext? {
+				return getRuleContext(AbsoluteLocationPathNorootContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_locationPath
 		}
-		open func absoluteLocationPathNoroot() -> AbsoluteLocationPathNorootContext? {
-			return getRuleContext(AbsoluteLocationPathNorootContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_locationPath }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterLocationPath(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterLocationPath(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitLocationPath(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitLocationPath(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitLocationPath(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitLocationPath(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitLocationPath(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitLocationPath(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func locationPath() throws -> LocationPathContext {
+	 open func locationPath() throws -> LocationPathContext {
 		var _localctx: LocationPathContext = LocationPathContext(_ctx, getState())
 		try enterRule(_localctx, 2, xpathParser.RULE_locationPath)
 		defer {
@@ -214,7 +211,7 @@ open class xpathParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -225,37 +222,43 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class AbsoluteLocationPathNorootContext:ParserRuleContext {
-		open func relativeLocationPath() -> RelativeLocationPathContext? {
-			return getRuleContext(RelativeLocationPathContext.self,0)
+
+	public class AbsoluteLocationPathNorootContext: ParserRuleContext {
+			open
+			func relativeLocationPath() -> RelativeLocationPathContext? {
+				return getRuleContext(RelativeLocationPathContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_absoluteLocationPathNoroot
 		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_absoluteLocationPathNoroot }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterAbsoluteLocationPathNoroot(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterAbsoluteLocationPathNoroot(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitAbsoluteLocationPathNoroot(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitAbsoluteLocationPathNoroot(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitAbsoluteLocationPathNoroot(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitAbsoluteLocationPathNoroot(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitAbsoluteLocationPathNoroot(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitAbsoluteLocationPathNoroot(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func absoluteLocationPathNoroot() throws -> AbsoluteLocationPathNorootContext {
+	 open func absoluteLocationPathNoroot() throws -> AbsoluteLocationPathNorootContext {
 		var _localctx: AbsoluteLocationPathNorootContext = AbsoluteLocationPathNorootContext(_ctx, getState())
 		try enterRule(_localctx, 4, xpathParser.RULE_absoluteLocationPathNoroot)
 		defer {
@@ -283,7 +286,7 @@ open class xpathParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -294,40 +297,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class RelativeLocationPathContext:ParserRuleContext {
-		open func step() -> Array<StepContext> {
-			return getRuleContexts(StepContext.self)
+
+	public class RelativeLocationPathContext: ParserRuleContext {
+			open
+			func step() -> [StepContext] {
+				return getRuleContexts(StepContext.self)
+			}
+			open
+			func step(_ i: Int) -> StepContext? {
+				return getRuleContext(StepContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_relativeLocationPath
 		}
-		open func step(_ i: Int) -> StepContext? {
-			return getRuleContext(StepContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_relativeLocationPath }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterRelativeLocationPath(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterRelativeLocationPath(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitRelativeLocationPath(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitRelativeLocationPath(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitRelativeLocationPath(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitRelativeLocationPath(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitRelativeLocationPath(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitRelativeLocationPath(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func relativeLocationPath() throws -> RelativeLocationPathContext {
+	 open func relativeLocationPath() throws -> RelativeLocationPathContext {
 		var _localctx: RelativeLocationPathContext = RelativeLocationPathContext(_ctx, getState())
 		try enterRule(_localctx, 6, xpathParser.RULE_relativeLocationPath)
 		var _la: Int = 0
@@ -377,49 +387,59 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class StepContext:ParserRuleContext {
-		open func axisSpecifier() -> AxisSpecifierContext? {
-			return getRuleContext(AxisSpecifierContext.self,0)
+
+	public class StepContext: ParserRuleContext {
+			open
+			func axisSpecifier() -> AxisSpecifierContext? {
+				return getRuleContext(AxisSpecifierContext.self, 0)
+			}
+			open
+			func nodeTest() -> NodeTestContext? {
+				return getRuleContext(NodeTestContext.self, 0)
+			}
+			open
+			func predicate() -> [PredicateContext] {
+				return getRuleContexts(PredicateContext.self)
+			}
+			open
+			func predicate(_ i: Int) -> PredicateContext? {
+				return getRuleContext(PredicateContext.self, i)
+			}
+			open
+			func abbreviatedStep() -> AbbreviatedStepContext? {
+				return getRuleContext(AbbreviatedStepContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_step
 		}
-		open func nodeTest() -> NodeTestContext? {
-			return getRuleContext(NodeTestContext.self,0)
-		}
-		open func predicate() -> Array<PredicateContext> {
-			return getRuleContexts(PredicateContext.self)
-		}
-		open func predicate(_ i: Int) -> PredicateContext? {
-			return getRuleContext(PredicateContext.self,i)
-		}
-		open func abbreviatedStep() -> AbbreviatedStepContext? {
-			return getRuleContext(AbbreviatedStepContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_step }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterStep(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterStep(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitStep(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitStep(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitStep(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitStep(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitStep(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitStep(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func step() throws -> StepContext {
+	 open func step() throws -> StepContext {
 		var _localctx: StepContext = StepContext(_ctx, getState())
 		try enterRule(_localctx, 8, xpathParser.RULE_step)
 		var _la: Int = 0
@@ -467,7 +487,7 @@ open class xpathParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -478,35 +498,43 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class AxisSpecifierContext:ParserRuleContext {
-		open func AxisName() -> TerminalNode? { return getToken(xpathParser.Tokens.AxisName.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_axisSpecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterAxisSpecifier(self)
+
+	public class AxisSpecifierContext: ParserRuleContext {
+			open
+			func AxisName() -> TerminalNode? {
+				return getToken(xpathParser.Tokens.AxisName.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_axisSpecifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterAxisSpecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitAxisSpecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitAxisSpecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitAxisSpecifier(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitAxisSpecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitAxisSpecifier(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitAxisSpecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func axisSpecifier() throws -> AxisSpecifierContext {
+	 open func axisSpecifier() throws -> AxisSpecifierContext {
 		var _localctx: AxisSpecifierContext = AxisSpecifierContext(_ctx, getState())
 		try enterRule(_localctx, 10, xpathParser.RULE_axisSpecifier)
 		var _la: Int = 0
@@ -553,39 +581,51 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class NodeTestContext:ParserRuleContext {
-		open func nameTest() -> NameTestContext? {
-			return getRuleContext(NameTestContext.self,0)
+
+	public class NodeTestContext: ParserRuleContext {
+			open
+			func nameTest() -> NameTestContext? {
+				return getRuleContext(NameTestContext.self, 0)
+			}
+			open
+			func NodeType() -> TerminalNode? {
+				return getToken(xpathParser.Tokens.NodeType.rawValue, 0)
+			}
+			open
+			func Literal() -> TerminalNode? {
+				return getToken(xpathParser.Tokens.Literal.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_nodeTest
 		}
-		open func NodeType() -> TerminalNode? { return getToken(xpathParser.Tokens.NodeType.rawValue, 0) }
-		open func Literal() -> TerminalNode? { return getToken(xpathParser.Tokens.Literal.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_nodeTest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterNodeTest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterNodeTest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitNodeTest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitNodeTest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitNodeTest(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitNodeTest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitNodeTest(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitNodeTest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nodeTest() throws -> NodeTestContext {
+	 open func nodeTest() throws -> NodeTestContext {
 		var _localctx: NodeTestContext = NodeTestContext(_ctx, getState())
 		try enterRule(_localctx, 12, xpathParser.RULE_nodeTest)
 		defer {
@@ -628,7 +668,7 @@ open class xpathParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -639,37 +679,43 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class PredicateContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class PredicateContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_predicate
 		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_predicate }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterPredicate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterPredicate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitPredicate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitPredicate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitPredicate(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitPredicate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitPredicate(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitPredicate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func predicate() throws -> PredicateContext {
+	 open func predicate() throws -> PredicateContext {
 		var _localctx: PredicateContext = PredicateContext(_ctx, getState())
 		try enterRule(_localctx, 14, xpathParser.RULE_predicate)
 		defer {
@@ -693,34 +739,39 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class AbbreviatedStepContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_abbreviatedStep }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterAbbreviatedStep(self)
+
+	public class AbbreviatedStepContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_abbreviatedStep
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterAbbreviatedStep(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitAbbreviatedStep(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitAbbreviatedStep(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitAbbreviatedStep(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitAbbreviatedStep(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitAbbreviatedStep(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitAbbreviatedStep(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func abbreviatedStep() throws -> AbbreviatedStepContext {
+	 open func abbreviatedStep() throws -> AbbreviatedStepContext {
 		var _localctx: AbbreviatedStepContext = AbbreviatedStepContext(_ctx, getState())
 		try enterRule(_localctx, 16, xpathParser.RULE_abbreviatedStep)
 		var _la: Int = 0
@@ -752,37 +803,43 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class ExprContext:ParserRuleContext {
-		open func orExpr() -> OrExprContext? {
-			return getRuleContext(OrExprContext.self,0)
+
+	public class ExprContext: ParserRuleContext {
+			open
+			func orExpr() -> OrExprContext? {
+				return getRuleContext(OrExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_expr
 		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitExpr(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr() throws -> ExprContext {
+	 open func expr() throws -> ExprContext {
 		var _localctx: ExprContext = ExprContext(_ctx, getState())
 		try enterRule(_localctx, 18, xpathParser.RULE_expr)
 		defer {
@@ -802,45 +859,59 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class PrimaryExprContext:ParserRuleContext {
-		open func variableReference() -> VariableReferenceContext? {
-			return getRuleContext(VariableReferenceContext.self,0)
+
+	public class PrimaryExprContext: ParserRuleContext {
+			open
+			func variableReference() -> VariableReferenceContext? {
+				return getRuleContext(VariableReferenceContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func Literal() -> TerminalNode? {
+				return getToken(xpathParser.Tokens.Literal.rawValue, 0)
+			}
+			open
+			func Number() -> TerminalNode? {
+				return getToken(xpathParser.Tokens.Number.rawValue, 0)
+			}
+			open
+			func functionCall() -> FunctionCallContext? {
+				return getRuleContext(FunctionCallContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_primaryExpr
 		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func Literal() -> TerminalNode? { return getToken(xpathParser.Tokens.Literal.rawValue, 0) }
-		open func Number() -> TerminalNode? { return getToken(xpathParser.Tokens.Number.rawValue, 0) }
-		open func functionCall() -> FunctionCallContext? {
-			return getRuleContext(FunctionCallContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_primaryExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterPrimaryExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterPrimaryExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitPrimaryExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitPrimaryExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitPrimaryExpr(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitPrimaryExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitPrimaryExpr(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitPrimaryExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primaryExpr() throws -> PrimaryExprContext {
+	 open func primaryExpr() throws -> PrimaryExprContext {
 		var _localctx: PrimaryExprContext = PrimaryExprContext(_ctx, getState())
 		try enterRule(_localctx, 20, xpathParser.RULE_primaryExpr)
 		defer {
@@ -889,7 +960,7 @@ open class xpathParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -900,43 +971,51 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionCallContext:ParserRuleContext {
-		open func functionName() -> FunctionNameContext? {
-			return getRuleContext(FunctionNameContext.self,0)
+
+	public class FunctionCallContext: ParserRuleContext {
+			open
+			func functionName() -> FunctionNameContext? {
+				return getRuleContext(FunctionNameContext.self, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_functionCall
 		}
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_functionCall }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterFunctionCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterFunctionCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitFunctionCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitFunctionCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitFunctionCall(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitFunctionCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitFunctionCall(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitFunctionCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionCall() throws -> FunctionCallContext {
+	 open func functionCall() throws -> FunctionCallContext {
 		var _localctx: FunctionCallContext = FunctionCallContext(_ctx, getState())
 		try enterRule(_localctx, 22, xpathParser.RULE_functionCall)
 		var _la: Int = 0
@@ -995,40 +1074,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class UnionExprNoRootContext:ParserRuleContext {
-		open func pathExprNoRoot() -> PathExprNoRootContext? {
-			return getRuleContext(PathExprNoRootContext.self,0)
+
+	public class UnionExprNoRootContext: ParserRuleContext {
+			open
+			func pathExprNoRoot() -> PathExprNoRootContext? {
+				return getRuleContext(PathExprNoRootContext.self, 0)
+			}
+			open
+			func unionExprNoRoot() -> UnionExprNoRootContext? {
+				return getRuleContext(UnionExprNoRootContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_unionExprNoRoot
 		}
-		open func unionExprNoRoot() -> UnionExprNoRootContext? {
-			return getRuleContext(UnionExprNoRootContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_unionExprNoRoot }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterUnionExprNoRoot(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterUnionExprNoRoot(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitUnionExprNoRoot(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitUnionExprNoRoot(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitUnionExprNoRoot(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitUnionExprNoRoot(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitUnionExprNoRoot(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitUnionExprNoRoot(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unionExprNoRoot() throws -> UnionExprNoRootContext {
+	 open func unionExprNoRoot() throws -> UnionExprNoRootContext {
 		var _localctx: UnionExprNoRootContext = UnionExprNoRootContext(_ctx, getState())
 		try enterRule(_localctx, 24, xpathParser.RULE_unionExprNoRoot)
 		var _la: Int = 0
@@ -1081,43 +1167,51 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class PathExprNoRootContext:ParserRuleContext {
-		open func locationPath() -> LocationPathContext? {
-			return getRuleContext(LocationPathContext.self,0)
+
+	public class PathExprNoRootContext: ParserRuleContext {
+			open
+			func locationPath() -> LocationPathContext? {
+				return getRuleContext(LocationPathContext.self, 0)
+			}
+			open
+			func filterExpr() -> FilterExprContext? {
+				return getRuleContext(FilterExprContext.self, 0)
+			}
+			open
+			func relativeLocationPath() -> RelativeLocationPathContext? {
+				return getRuleContext(RelativeLocationPathContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_pathExprNoRoot
 		}
-		open func filterExpr() -> FilterExprContext? {
-			return getRuleContext(FilterExprContext.self,0)
-		}
-		open func relativeLocationPath() -> RelativeLocationPathContext? {
-			return getRuleContext(RelativeLocationPathContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_pathExprNoRoot }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterPathExprNoRoot(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterPathExprNoRoot(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitPathExprNoRoot(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitPathExprNoRoot(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitPathExprNoRoot(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitPathExprNoRoot(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitPathExprNoRoot(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitPathExprNoRoot(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pathExprNoRoot() throws -> PathExprNoRootContext {
+	 open func pathExprNoRoot() throws -> PathExprNoRootContext {
 		var _localctx: PathExprNoRootContext = PathExprNoRootContext(_ctx, getState())
 		try enterRule(_localctx, 26, xpathParser.RULE_pathExprNoRoot)
 		var _la: Int = 0
@@ -1177,43 +1271,51 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class FilterExprContext:ParserRuleContext {
-		open func primaryExpr() -> PrimaryExprContext? {
-			return getRuleContext(PrimaryExprContext.self,0)
+
+	public class FilterExprContext: ParserRuleContext {
+			open
+			func primaryExpr() -> PrimaryExprContext? {
+				return getRuleContext(PrimaryExprContext.self, 0)
+			}
+			open
+			func predicate() -> [PredicateContext] {
+				return getRuleContexts(PredicateContext.self)
+			}
+			open
+			func predicate(_ i: Int) -> PredicateContext? {
+				return getRuleContext(PredicateContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_filterExpr
 		}
-		open func predicate() -> Array<PredicateContext> {
-			return getRuleContexts(PredicateContext.self)
-		}
-		open func predicate(_ i: Int) -> PredicateContext? {
-			return getRuleContext(PredicateContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_filterExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterFilterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterFilterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitFilterExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitFilterExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitFilterExpr(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitFilterExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitFilterExpr(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitFilterExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func filterExpr() throws -> FilterExprContext {
+	 open func filterExpr() throws -> FilterExprContext {
 		var _localctx: FilterExprContext = FilterExprContext(_ctx, getState())
 		try enterRule(_localctx, 28, xpathParser.RULE_filterExpr)
 		var _la: Int = 0
@@ -1250,40 +1352,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class OrExprContext:ParserRuleContext {
-		open func andExpr() -> Array<AndExprContext> {
-			return getRuleContexts(AndExprContext.self)
+
+	public class OrExprContext: ParserRuleContext {
+			open
+			func andExpr() -> [AndExprContext] {
+				return getRuleContexts(AndExprContext.self)
+			}
+			open
+			func andExpr(_ i: Int) -> AndExprContext? {
+				return getRuleContext(AndExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_orExpr
 		}
-		open func andExpr(_ i: Int) -> AndExprContext? {
-			return getRuleContext(AndExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_orExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterOrExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterOrExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitOrExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitOrExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitOrExpr(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitOrExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitOrExpr(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitOrExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func orExpr() throws -> OrExprContext {
+	 open func orExpr() throws -> OrExprContext {
 		var _localctx: OrExprContext = OrExprContext(_ctx, getState())
 		try enterRule(_localctx, 30, xpathParser.RULE_orExpr)
 		var _la: Int = 0
@@ -1322,40 +1431,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class AndExprContext:ParserRuleContext {
-		open func equalityExpr() -> Array<EqualityExprContext> {
-			return getRuleContexts(EqualityExprContext.self)
+
+	public class AndExprContext: ParserRuleContext {
+			open
+			func equalityExpr() -> [EqualityExprContext] {
+				return getRuleContexts(EqualityExprContext.self)
+			}
+			open
+			func equalityExpr(_ i: Int) -> EqualityExprContext? {
+				return getRuleContext(EqualityExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_andExpr
 		}
-		open func equalityExpr(_ i: Int) -> EqualityExprContext? {
-			return getRuleContext(EqualityExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_andExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterAndExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterAndExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitAndExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitAndExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitAndExpr(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitAndExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitAndExpr(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitAndExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func andExpr() throws -> AndExprContext {
+	 open func andExpr() throws -> AndExprContext {
 		var _localctx: AndExprContext = AndExprContext(_ctx, getState())
 		try enterRule(_localctx, 32, xpathParser.RULE_andExpr)
 		var _la: Int = 0
@@ -1394,40 +1510,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class EqualityExprContext:ParserRuleContext {
-		open func relationalExpr() -> Array<RelationalExprContext> {
-			return getRuleContexts(RelationalExprContext.self)
+
+	public class EqualityExprContext: ParserRuleContext {
+			open
+			func relationalExpr() -> [RelationalExprContext] {
+				return getRuleContexts(RelationalExprContext.self)
+			}
+			open
+			func relationalExpr(_ i: Int) -> RelationalExprContext? {
+				return getRuleContext(RelationalExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_equalityExpr
 		}
-		open func relationalExpr(_ i: Int) -> RelationalExprContext? {
-			return getRuleContext(RelationalExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_equalityExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterEqualityExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterEqualityExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitEqualityExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitEqualityExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitEqualityExpr(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitEqualityExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitEqualityExpr(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitEqualityExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func equalityExpr() throws -> EqualityExprContext {
+	 open func equalityExpr() throws -> EqualityExprContext {
 		var _localctx: EqualityExprContext = EqualityExprContext(_ctx, getState())
 		try enterRule(_localctx, 34, xpathParser.RULE_equalityExpr)
 		var _la: Int = 0
@@ -1477,40 +1600,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class RelationalExprContext:ParserRuleContext {
-		open func additiveExpr() -> Array<AdditiveExprContext> {
-			return getRuleContexts(AdditiveExprContext.self)
+
+	public class RelationalExprContext: ParserRuleContext {
+			open
+			func additiveExpr() -> [AdditiveExprContext] {
+				return getRuleContexts(AdditiveExprContext.self)
+			}
+			open
+			func additiveExpr(_ i: Int) -> AdditiveExprContext? {
+				return getRuleContext(AdditiveExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_relationalExpr
 		}
-		open func additiveExpr(_ i: Int) -> AdditiveExprContext? {
-			return getRuleContext(AdditiveExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_relationalExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterRelationalExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterRelationalExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitRelationalExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitRelationalExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitRelationalExpr(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitRelationalExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitRelationalExpr(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitRelationalExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func relationalExpr() throws -> RelationalExprContext {
+	 open func relationalExpr() throws -> RelationalExprContext {
 		var _localctx: RelationalExprContext = RelationalExprContext(_ctx, getState())
 		try enterRule(_localctx, 36, xpathParser.RULE_relationalExpr)
 		var _la: Int = 0
@@ -1566,40 +1696,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class AdditiveExprContext:ParserRuleContext {
-		open func multiplicativeExpr() -> Array<MultiplicativeExprContext> {
-			return getRuleContexts(MultiplicativeExprContext.self)
+
+	public class AdditiveExprContext: ParserRuleContext {
+			open
+			func multiplicativeExpr() -> [MultiplicativeExprContext] {
+				return getRuleContexts(MultiplicativeExprContext.self)
+			}
+			open
+			func multiplicativeExpr(_ i: Int) -> MultiplicativeExprContext? {
+				return getRuleContext(MultiplicativeExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_additiveExpr
 		}
-		open func multiplicativeExpr(_ i: Int) -> MultiplicativeExprContext? {
-			return getRuleContext(MultiplicativeExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_additiveExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterAdditiveExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterAdditiveExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitAdditiveExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitAdditiveExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitAdditiveExpr(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitAdditiveExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitAdditiveExpr(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitAdditiveExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func additiveExpr() throws -> AdditiveExprContext {
+	 open func additiveExpr() throws -> AdditiveExprContext {
 		var _localctx: AdditiveExprContext = AdditiveExprContext(_ctx, getState())
 		try enterRule(_localctx, 38, xpathParser.RULE_additiveExpr)
 		var _la: Int = 0
@@ -1649,40 +1786,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class MultiplicativeExprContext:ParserRuleContext {
-		open func unaryExprNoRoot() -> UnaryExprNoRootContext? {
-			return getRuleContext(UnaryExprNoRootContext.self,0)
+
+	public class MultiplicativeExprContext: ParserRuleContext {
+			open
+			func unaryExprNoRoot() -> UnaryExprNoRootContext? {
+				return getRuleContext(UnaryExprNoRootContext.self, 0)
+			}
+			open
+			func multiplicativeExpr() -> MultiplicativeExprContext? {
+				return getRuleContext(MultiplicativeExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_multiplicativeExpr
 		}
-		open func multiplicativeExpr() -> MultiplicativeExprContext? {
-			return getRuleContext(MultiplicativeExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_multiplicativeExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterMultiplicativeExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterMultiplicativeExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitMultiplicativeExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitMultiplicativeExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitMultiplicativeExpr(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitMultiplicativeExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitMultiplicativeExpr(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitMultiplicativeExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiplicativeExpr() throws -> MultiplicativeExprContext {
+	 open func multiplicativeExpr() throws -> MultiplicativeExprContext {
 		var _localctx: MultiplicativeExprContext = MultiplicativeExprContext(_ctx, getState())
 		try enterRule(_localctx, 40, xpathParser.RULE_multiplicativeExpr)
 		var _la: Int = 0
@@ -1774,37 +1918,43 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class UnaryExprNoRootContext:ParserRuleContext {
-		open func unionExprNoRoot() -> UnionExprNoRootContext? {
-			return getRuleContext(UnionExprNoRootContext.self,0)
+
+	public class UnaryExprNoRootContext: ParserRuleContext {
+			open
+			func unionExprNoRoot() -> UnionExprNoRootContext? {
+				return getRuleContext(UnionExprNoRootContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_unaryExprNoRoot
 		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_unaryExprNoRoot }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterUnaryExprNoRoot(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterUnaryExprNoRoot(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitUnaryExprNoRoot(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitUnaryExprNoRoot(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitUnaryExprNoRoot(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitUnaryExprNoRoot(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitUnaryExprNoRoot(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitUnaryExprNoRoot(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unaryExprNoRoot() throws -> UnaryExprNoRootContext {
+	 open func unaryExprNoRoot() throws -> UnaryExprNoRootContext {
 		var _localctx: UnaryExprNoRootContext = UnaryExprNoRootContext(_ctx, getState())
 		try enterRule(_localctx, 42, xpathParser.RULE_unaryExprNoRoot)
 		var _la: Int = 0
@@ -1841,40 +1991,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class QNameContext:ParserRuleContext {
-		open func nCName() -> Array<NCNameContext> {
-			return getRuleContexts(NCNameContext.self)
+
+	public class QNameContext: ParserRuleContext {
+			open
+			func nCName() -> [NCNameContext] {
+				return getRuleContexts(NCNameContext.self)
+			}
+			open
+			func nCName(_ i: Int) -> NCNameContext? {
+				return getRuleContext(NCNameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_qName
 		}
-		open func nCName(_ i: Int) -> NCNameContext? {
-			return getRuleContext(NCNameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_qName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterQName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterQName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitQName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitQName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitQName(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitQName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitQName(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitQName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qName() throws -> QNameContext {
+	 open func qName() throws -> QNameContext {
 		var _localctx: QNameContext = QNameContext(_ctx, getState())
 		try enterRule(_localctx, 44, xpathParser.RULE_qName)
 		var _la: Int = 0
@@ -1910,37 +2067,43 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionNameContext:ParserRuleContext {
-		open func qName() -> QNameContext? {
-			return getRuleContext(QNameContext.self,0)
+
+	public class FunctionNameContext: ParserRuleContext {
+			open
+			func qName() -> QNameContext? {
+				return getRuleContext(QNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_functionName
 		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_functionName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterFunctionName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterFunctionName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitFunctionName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitFunctionName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitFunctionName(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitFunctionName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitFunctionName(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitFunctionName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionName() throws -> FunctionNameContext {
+	 open func functionName() throws -> FunctionNameContext {
 		var _localctx: FunctionNameContext = FunctionNameContext(_ctx, getState())
 		try enterRule(_localctx, 46, xpathParser.RULE_functionName)
 		defer {
@@ -1960,37 +2123,43 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class VariableReferenceContext:ParserRuleContext {
-		open func qName() -> QNameContext? {
-			return getRuleContext(QNameContext.self,0)
+
+	public class VariableReferenceContext: ParserRuleContext {
+			open
+			func qName() -> QNameContext? {
+				return getRuleContext(QNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_variableReference
 		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_variableReference }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterVariableReference(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterVariableReference(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitVariableReference(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitVariableReference(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitVariableReference(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitVariableReference(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitVariableReference(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitVariableReference(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableReference() throws -> VariableReferenceContext {
+	 open func variableReference() throws -> VariableReferenceContext {
 		var _localctx: VariableReferenceContext = VariableReferenceContext(_ctx, getState())
 		try enterRule(_localctx, 48, xpathParser.RULE_variableReference)
 		defer {
@@ -2012,40 +2181,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class NameTestContext:ParserRuleContext {
-		open func nCName() -> NCNameContext? {
-			return getRuleContext(NCNameContext.self,0)
+
+	public class NameTestContext: ParserRuleContext {
+			open
+			func nCName() -> NCNameContext? {
+				return getRuleContext(NCNameContext.self, 0)
+			}
+			open
+			func qName() -> QNameContext? {
+				return getRuleContext(QNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_nameTest
 		}
-		open func qName() -> QNameContext? {
-			return getRuleContext(QNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_nameTest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterNameTest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterNameTest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitNameTest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitNameTest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitNameTest(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitNameTest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitNameTest(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitNameTest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nameTest() throws -> NameTestContext {
+	 open func nameTest() throws -> NameTestContext {
 		var _localctx: NameTestContext = NameTestContext(_ctx, getState())
 		try enterRule(_localctx, 50, xpathParser.RULE_nameTest)
 		defer {
@@ -2088,36 +2264,47 @@ open class xpathParser: Parser {
 
 		return _localctx
 	}
-	open class NCNameContext:ParserRuleContext {
-		open func NCName() -> TerminalNode? { return getToken(xpathParser.Tokens.NCName.rawValue, 0) }
-		open func AxisName() -> TerminalNode? { return getToken(xpathParser.Tokens.AxisName.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return xpathParser.RULE_nCName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).enterNCName(self)
+
+	public class NCNameContext: ParserRuleContext {
+			open
+			func NCName() -> TerminalNode? {
+				return getToken(xpathParser.Tokens.NCName.rawValue, 0)
+			}
+			open
+			func AxisName() -> TerminalNode? {
+				return getToken(xpathParser.Tokens.AxisName.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return xpathParser.RULE_nCName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.enterNCName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is xpathListener {
-			 	(listener as! xpathListener).exitNCName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? xpathListener {
+				listener.exitNCName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is xpathVisitor {
-			     return (visitor as! xpathVisitor<T>).visitNCName(self)
-			}else if visitor is xpathBaseVisitor {
-		    	 return (visitor as! xpathBaseVisitor<T>).visitNCName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? xpathVisitor {
+			    return visitor.visitNCName(self)
+			}
+			else if let visitor = visitor as? xpathBaseVisitor {
+			    return visitor.visitNCName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nCName() throws -> NCNameContext {
+	 open func nCName() throws -> NCNameContext {
 		var _localctx: NCNameContext = NCNameContext(_ctx, getState())
 		try enterRule(_localctx, 52, xpathParser.RULE_nCName)
 		var _la: Int = 0
@@ -2150,6 +2337,10 @@ open class xpathParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = xpathParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = xpathParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/vb6/VisualBasic6.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/vb6/VisualBasic6.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -24,6 +24,34 @@ open class VisualBasic6BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitModule(_ ctx: VisualBasic6Parser.ModuleContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitModuleReferences(_ ctx: VisualBasic6Parser.ModuleReferencesContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitModuleReference(_ ctx: VisualBasic6Parser.ModuleReferenceContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitModuleReferenceGUID(_ ctx: VisualBasic6Parser.ModuleReferenceGUIDContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitModuleReferenceComponent(_ ctx: VisualBasic6Parser.ModuleReferenceComponentContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -107,6 +135,55 @@ open class VisualBasic6BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	open func visitControlProperties(_ ctx: VisualBasic6Parser.ControlPropertiesContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCp_Properties(_ ctx: VisualBasic6Parser.Cp_PropertiesContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCp_SingleProperty(_ ctx: VisualBasic6Parser.Cp_SinglePropertyContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCp_PropertyName(_ ctx: VisualBasic6Parser.Cp_PropertyNameContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCp_NestedProperty(_ ctx: VisualBasic6Parser.Cp_NestedPropertyContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCp_ControlType(_ ctx: VisualBasic6Parser.Cp_ControlTypeContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitCp_ControlIdentifier(_ ctx: VisualBasic6Parser.Cp_ControlIdentifierContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	open func visitModuleBlock(_ ctx: VisualBasic6Parser.ModuleBlockContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
@@ -135,7 +212,7 @@ open class VisualBasic6BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitAppactivateStmt(_ ctx: VisualBasic6Parser.AppactivateStmtContext) -> T? { return visitChildren(ctx) }
+	open func visitAppActivateStmt(_ ctx: VisualBasic6Parser.AppActivateStmtContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -149,14 +226,14 @@ open class VisualBasic6BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitChdirStmt(_ ctx: VisualBasic6Parser.ChdirStmtContext) -> T? { return visitChildren(ctx) }
+	open func visitChDirStmt(_ ctx: VisualBasic6Parser.ChDirStmtContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitChdriveStmt(_ ctx: VisualBasic6Parser.ChdriveStmtContext) -> T? { return visitChildren(ctx) }
+	open func visitChDriveStmt(_ ctx: VisualBasic6Parser.ChDriveStmtContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -807,14 +884,14 @@ open class VisualBasic6BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitVsLike(_ ctx: VisualBasic6Parser.VsLikeContext) -> T? { return visitChildren(ctx) }
+	open func visitVsDiv(_ ctx: VisualBasic6Parser.VsDivContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitVsDiv(_ ctx: VisualBasic6Parser.VsDivContext) -> T? { return visitChildren(ctx) }
+	open func visitVsLike(_ ctx: VisualBasic6Parser.VsLikeContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -877,14 +954,14 @@ open class VisualBasic6BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext) -> T? { return visitChildren(ctx) }
+	open func visitVsPow(_ ctx: VisualBasic6Parser.VsPowContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitVsPow(_ ctx: VisualBasic6Parser.VsPowContext) -> T? { return visitChildren(ctx) }
+	open func visitVsLeq(_ ctx: VisualBasic6Parser.VsLeqContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1221,6 +1298,20 @@ open class VisualBasic6BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitLiteral(_ ctx: VisualBasic6Parser.LiteralContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitPublicPrivateVisibility(_ ctx: VisualBasic6Parser.PublicPrivateVisibilityContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitPublicPrivateGlobalVisibility(_ ctx: VisualBasic6Parser.PublicPrivateGlobalVisibilityContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *

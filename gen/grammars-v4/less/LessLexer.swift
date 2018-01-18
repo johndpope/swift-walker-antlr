@@ -1,7 +1,8 @@
-// Generated from ./grammars-v4/less/LessLexer.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/less/LessLexer.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class LessLexer: Lexer {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
           let length = LessLexer._ATN.getNumberOfDecisions()
@@ -11,45 +12,49 @@ open class LessLexer: Lexer {
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let NULL=1, IN=2, Unit=3, Ellipsis=4, InterpolationStart=5, 
-                   LPAREN=6, RPAREN=7, BlockStart=8, BlockEnd=9, LBRACK=10, 
-                   RBRACK=11, GT=12, TIL=13, LT=14, COLON=15, SEMI=16, COMMA=17, 
-                   DOT=18, DOLLAR=19, AT=20, PARENTREF=21, HASH=22, COLONCOLON=23, 
-                   PLUS=24, TIMES=25, DIV=26, MINUS=27, PERC=28, EQEQ=29, 
-                   GTEQ=30, LTEQ=31, NOTEQ=32, EQ=33, PIPE_EQ=34, TILD_EQ=35, 
-                   URL=36, UrlStart=37, IMPORT=38, MEDIA=39, EXTEND=40, 
-                   IMPORTANT=41, ARGUMENTS=42, REST=43, REFERENCE=44, INLINE=45, 
-                   LESS=46, CSS=47, ONCE=48, MULTIPLE=49, WHEN=50, NOT=51, 
-                   AND=52, Identifier=53, StringLiteral=54, Number=55, Color=56, 
-                   WS=57, SL_COMMENT=58, COMMENT=59, FUNCTION_NAME=60, COLOR=61, 
-                   CONVERT=62, DATA_URI=63, DEFAULT=64, UNIT=65, GET_UNIT=66, 
-                   SVG_GRADIENT=67, ESCAPE=68, E=69, FORMAT=70, REPLACE=71, 
-                   LENGTH=72, EXTRACT=73, CEIL=74, FLOOR=75, PERCENTAGE=76, 
-                   ROUND=77, SQRT=78, ABS=79, SIN=80, ASIN=81, COS=82, ACOS=83, 
-                   TAN=84, ATAN=85, PI=86, POW=87, MOD=88, MIN=89, MAX=90, 
-                   ISNUMBER=91, ISSTRING=92, ISCOLOR=93, ISKEYWORD=94, ISURL=95, 
-                   ISPIXEL=96, ISEM=97, ISPERCENTAGE=98, ISUNIT=99, RGB=100, 
-                   RGBA=101, ARGB=102, HSL=103, HSLA=104, HSV=105, HSVA=106, 
-                   HUE=107, SATURATION=108, LIGHTNESS=109, HSVHUE=110, HSVSATURATION=111, 
-                   HSVVALUE=112, RED=113, GREEN=114, BLUE=115, ALPHA=116, 
-                   LUMA=117, LUMINANCE=118, SATURATE=119, DESATURATE=120, 
-                   LIGHTEN=121, DARKEN=122, FADEIN=123, FADEOUT=124, FADE=125, 
-                   SPIN=126, MIX=127, GREYSCALE=128, CONTRAST=129, MULTIPLY=130, 
-                   SCREEN=131, OVERLAY=132, SOFTLIGHT=133, HARDLIGHT=134, 
-                   DIFFERENCE=135, EXCLUSION=136, AVERAGE=137, NEGATION=138, 
-                   UrlEnd=139, Url=140, SPACE=141, InterpolationStartAfter=142, 
-                   IdentifierAfter=143
-	public static let URL_STARTED=1, IDENTIFY=2
-	public static let channelNames: [String] = [
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let NULL=1, IN=2, Unit=3, Ellipsis=4, InterpolationStart=5, LPAREN=6, 
+            RPAREN=7, BlockStart=8, BlockEnd=9, LBRACK=10, RBRACK=11, GT=12, 
+            TIL=13, LT=14, COLON=15, SEMI=16, COMMA=17, DOT=18, DOLLAR=19, 
+            AT=20, PARENTREF=21, HASH=22, COLONCOLON=23, PLUS=24, TIMES=25, 
+            DIV=26, MINUS=27, PERC=28, EQEQ=29, GTEQ=30, LTEQ=31, NOTEQ=32, 
+            EQ=33, PIPE_EQ=34, TILD_EQ=35, URL=36, UrlStart=37, IMPORT=38, 
+            MEDIA=39, EXTEND=40, IMPORTANT=41, ARGUMENTS=42, REST=43, REFERENCE=44, 
+            INLINE=45, LESS=46, CSS=47, ONCE=48, MULTIPLE=49, WHEN=50, NOT=51, 
+            AND=52, Identifier=53, StringLiteral=54, Number=55, Color=56, 
+            WS=57, SL_COMMENT=58, COMMENT=59, FUNCTION_NAME=60, COLOR=61, 
+            CONVERT=62, DATA_URI=63, DEFAULT=64, UNIT=65, GET_UNIT=66, SVG_GRADIENT=67, 
+            ESCAPE=68, E=69, FORMAT=70, REPLACE=71, LENGTH=72, EXTRACT=73, 
+            CEIL=74, FLOOR=75, PERCENTAGE=76, ROUND=77, SQRT=78, ABS=79, 
+            SIN=80, ASIN=81, COS=82, ACOS=83, TAN=84, ATAN=85, PI=86, POW=87, 
+            MOD=88, MIN=89, MAX=90, ISNUMBER=91, ISSTRING=92, ISCOLOR=93, 
+            ISKEYWORD=94, ISURL=95, ISPIXEL=96, ISEM=97, ISPERCENTAGE=98, 
+            ISUNIT=99, RGB=100, RGBA=101, ARGB=102, HSL=103, HSLA=104, HSV=105, 
+            HSVA=106, HUE=107, SATURATION=108, LIGHTNESS=109, HSVHUE=110, 
+            HSVSATURATION=111, HSVVALUE=112, RED=113, GREEN=114, BLUE=115, 
+            ALPHA=116, LUMA=117, LUMINANCE=118, SATURATE=119, DESATURATE=120, 
+            LIGHTEN=121, DARKEN=122, FADEIN=123, FADEOUT=124, FADE=125, 
+            SPIN=126, MIX=127, GREYSCALE=128, CONTRAST=129, MULTIPLY=130, 
+            SCREEN=131, OVERLAY=132, SOFTLIGHT=133, HARDLIGHT=134, DIFFERENCE=135, 
+            EXCLUSION=136, AVERAGE=137, NEGATION=138, UrlEnd=139, Url=140, 
+            SPACE=141, InterpolationStartAfter=142, IdentifierAfter=143
+
+	public
+	static let URL_STARTED=1, IDENTIFY=2
+	public
+	static let channelNames: [String] = [
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	]
 
-	public static let modeNames: [String] = [
+	public
+	static let modeNames: [String] = [
 		"DEFAULT_MODE", "URL_STARTED", "IDENTIFY"
 	]
 
-	public static let ruleNames: [String] = [
+	public
+	static let ruleNames: [String] = [
 		"NULL", "IN", "Unit", "Ellipsis", "InterpolationStart", "LPAREN", "RPAREN", 
 		"BlockStart", "BlockEnd", "LBRACK", "RBRACK", "GT", "TIL", "LT", "COLON", 
 		"SEMI", "COMMA", "DOT", "DOLLAR", "AT", "PARENTREF", "HASH", "COLONCOLON", 
@@ -116,61 +121,44 @@ open class LessLexer: Lexer {
 		"AVERAGE", "NEGATION", "UrlEnd", "Url", "SPACE", "InterpolationStartAfter", 
 		"IdentifierAfter"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
+	override open
+	func getVocabulary() -> Vocabulary {
+		return LessLexer.VOCABULARY
 	}
 
-    open override func getVocabulary() -> Vocabulary {
-        return LessLexer.VOCABULARY
-    }
-
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, LessLexer._ATN, LessLexer._decisionToDFA, LessLexer._sharedContextCache)
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "LessLexer.g4" }
+	override open
+	func getGrammarFileName() -> String { return "LessLexer.g4" }
 
-    override
-	open func getRuleNames() -> [String] { return LessLexer.ruleNames }
+	override open
+	func getRuleNames() -> [String] { return LessLexer.ruleNames }
 
-	override
-	open func getSerializedATN() -> String { return LessLexer._serializedATN }
+	override open
+	func getSerializedATN() -> String { return LessLexer._serializedATN }
 
-	override
-	open func getChannelNames() -> [String] { return LessLexer.channelNames }
+	override open
+	func getChannelNames() -> [String] { return LessLexer.channelNames }
 
-	override
-	open func getModeNames() -> [String] { return LessLexer.modeNames }
+	override open
+	func getModeNames() -> [String] { return LessLexer.modeNames }
 
-	override
-	open func getATN() -> ATN { return LessLexer._ATN }
+	override open
+	func getATN() -> ATN { return LessLexer._ATN }
 
-    public static let _serializedATN: String = LessLexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = LessLexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/webidl/WebIDL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/webidl/WebIDL.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWebIDL(_ ctx: WebIDLParser.WebIDLContext) -> T{
+	open func visitWebIDL(_ ctx: WebIDLParser.WebIDLContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinitions(_ ctx: WebIDLParser.DefinitionsContext) -> T{
+	open func visitDefinitions(_ ctx: WebIDLParser.DefinitionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinition(_ ctx: WebIDLParser.DefinitionContext) -> T{
+	open func visitDefinition(_ ctx: WebIDLParser.DefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCallbackOrInterface(_ ctx: WebIDLParser.CallbackOrInterfaceContext) -> T{
+	open func visitCallbackOrInterface(_ ctx: WebIDLParser.CallbackOrInterfaceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCallbackRestOrInterface(_ ctx: WebIDLParser.CallbackRestOrInterfaceContext) -> T{
+	open func visitCallbackRestOrInterface(_ ctx: WebIDLParser.CallbackRestOrInterfaceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterface_(_ ctx: WebIDLParser.Interface_Context) -> T{
+	open func visitInterface_(_ ctx: WebIDLParser.Interface_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClass_(_ ctx: WebIDLParser.Class_Context) -> T{
+	open func visitClass_(_ ctx: WebIDLParser.Class_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPartial(_ ctx: WebIDLParser.PartialContext) -> T{
+	open func visitPartial(_ ctx: WebIDLParser.PartialContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPartialDefinition(_ ctx: WebIDLParser.PartialDefinitionContext) -> T{
+	open func visitPartialDefinition(_ ctx: WebIDLParser.PartialDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPartialInterface(_ ctx: WebIDLParser.PartialInterfaceContext) -> T{
+	open func visitPartialInterface(_ ctx: WebIDLParser.PartialInterfaceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceMembers(_ ctx: WebIDLParser.InterfaceMembersContext) -> T{
+	open func visitInterfaceMembers(_ ctx: WebIDLParser.InterfaceMembersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceMember(_ ctx: WebIDLParser.InterfaceMemberContext) -> T{
+	open func visitInterfaceMember(_ ctx: WebIDLParser.InterfaceMemberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDictionary(_ ctx: WebIDLParser.DictionaryContext) -> T{
+	open func visitDictionary(_ ctx: WebIDLParser.DictionaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDictionaryMembers(_ ctx: WebIDLParser.DictionaryMembersContext) -> T{
+	open func visitDictionaryMembers(_ ctx: WebIDLParser.DictionaryMembersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDictionaryMember(_ ctx: WebIDLParser.DictionaryMemberContext) -> T{
+	open func visitDictionaryMember(_ ctx: WebIDLParser.DictionaryMemberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRequired(_ ctx: WebIDLParser.RequiredContext) -> T{
+	open func visitRequired(_ ctx: WebIDLParser.RequiredContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPartialDictionary(_ ctx: WebIDLParser.PartialDictionaryContext) -> T{
+	open func visitPartialDictionary(_ ctx: WebIDLParser.PartialDictionaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefault_(_ ctx: WebIDLParser.Default_Context) -> T{
+	open func visitDefault_(_ ctx: WebIDLParser.Default_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefaultValue(_ ctx: WebIDLParser.DefaultValueContext) -> T{
+	open func visitDefaultValue(_ ctx: WebIDLParser.DefaultValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInheritance(_ ctx: WebIDLParser.InheritanceContext) -> T{
+	open func visitInheritance(_ ctx: WebIDLParser.InheritanceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtension(_ ctx: WebIDLParser.ExtensionContext) -> T{
+	open func visitExtension(_ ctx: WebIDLParser.ExtensionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnum_(_ ctx: WebIDLParser.Enum_Context) -> T{
+	open func visitEnum_(_ ctx: WebIDLParser.Enum_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumValueList(_ ctx: WebIDLParser.EnumValueListContext) -> T{
+	open func visitEnumValueList(_ ctx: WebIDLParser.EnumValueListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumValueListComma(_ ctx: WebIDLParser.EnumValueListCommaContext) -> T{
+	open func visitEnumValueListComma(_ ctx: WebIDLParser.EnumValueListCommaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumValueListString(_ ctx: WebIDLParser.EnumValueListStringContext) -> T{
+	open func visitEnumValueListString(_ ctx: WebIDLParser.EnumValueListStringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCallbackRest(_ ctx: WebIDLParser.CallbackRestContext) -> T{
+	open func visitCallbackRest(_ ctx: WebIDLParser.CallbackRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedef(_ ctx: WebIDLParser.TypedefContext) -> T{
+	open func visitTypedef(_ ctx: WebIDLParser.TypedefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImplementsStatement(_ ctx: WebIDLParser.ImplementsStatementContext) -> T{
+	open func visitImplementsStatement(_ ctx: WebIDLParser.ImplementsStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConst_(_ ctx: WebIDLParser.Const_Context) -> T{
+	open func visitConst_(_ ctx: WebIDLParser.Const_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstValue(_ ctx: WebIDLParser.ConstValueContext) -> T{
+	open func visitConstValue(_ ctx: WebIDLParser.ConstValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBooleanLiteral(_ ctx: WebIDLParser.BooleanLiteralContext) -> T{
+	open func visitBooleanLiteral(_ ctx: WebIDLParser.BooleanLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFloatLiteral(_ ctx: WebIDLParser.FloatLiteralContext) -> T{
+	open func visitFloatLiteral(_ ctx: WebIDLParser.FloatLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSerializer(_ ctx: WebIDLParser.SerializerContext) -> T{
+	open func visitSerializer(_ ctx: WebIDLParser.SerializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSerializerRest(_ ctx: WebIDLParser.SerializerRestContext) -> T{
+	open func visitSerializerRest(_ ctx: WebIDLParser.SerializerRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSerializationPattern(_ ctx: WebIDLParser.SerializationPatternContext) -> T{
+	open func visitSerializationPattern(_ ctx: WebIDLParser.SerializationPatternContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSerializationPatternMap(_ ctx: WebIDLParser.SerializationPatternMapContext) -> T{
+	open func visitSerializationPatternMap(_ ctx: WebIDLParser.SerializationPatternMapContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSerializationPatternList(_ ctx: WebIDLParser.SerializationPatternListContext) -> T{
+	open func visitSerializationPatternList(_ ctx: WebIDLParser.SerializationPatternListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStringifier(_ ctx: WebIDLParser.StringifierContext) -> T{
+	open func visitStringifier(_ ctx: WebIDLParser.StringifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStringifierRest(_ ctx: WebIDLParser.StringifierRestContext) -> T{
+	open func visitStringifierRest(_ ctx: WebIDLParser.StringifierRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStaticMember(_ ctx: WebIDLParser.StaticMemberContext) -> T{
+	open func visitStaticMember(_ ctx: WebIDLParser.StaticMemberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStaticMemberRest(_ ctx: WebIDLParser.StaticMemberRestContext) -> T{
+	open func visitStaticMemberRest(_ ctx: WebIDLParser.StaticMemberRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadonlyMember(_ ctx: WebIDLParser.ReadonlyMemberContext) -> T{
+	open func visitReadonlyMember(_ ctx: WebIDLParser.ReadonlyMemberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadonlyMemberRest(_ ctx: WebIDLParser.ReadonlyMemberRestContext) -> T{
+	open func visitReadonlyMemberRest(_ ctx: WebIDLParser.ReadonlyMemberRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadWriteAttribute(_ ctx: WebIDLParser.ReadWriteAttributeContext) -> T{
+	open func visitReadWriteAttribute(_ ctx: WebIDLParser.ReadWriteAttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributeRest(_ ctx: WebIDLParser.AttributeRestContext) -> T{
+	open func visitAttributeRest(_ ctx: WebIDLParser.AttributeRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributeName(_ ctx: WebIDLParser.AttributeNameContext) -> T{
+	open func visitAttributeName(_ ctx: WebIDLParser.AttributeNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributeNameKeyword(_ ctx: WebIDLParser.AttributeNameKeywordContext) -> T{
+	open func visitAttributeNameKeyword(_ ctx: WebIDLParser.AttributeNameKeywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInherit(_ ctx: WebIDLParser.InheritContext) -> T{
+	open func visitInherit(_ ctx: WebIDLParser.InheritContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadOnly(_ ctx: WebIDLParser.ReadOnlyContext) -> T{
+	open func visitReadOnly(_ ctx: WebIDLParser.ReadOnlyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperation(_ ctx: WebIDLParser.OperationContext) -> T{
+	open func visitOperation(_ ctx: WebIDLParser.OperationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpecialOperation(_ ctx: WebIDLParser.SpecialOperationContext) -> T{
+	open func visitSpecialOperation(_ ctx: WebIDLParser.SpecialOperationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpecials(_ ctx: WebIDLParser.SpecialsContext) -> T{
+	open func visitSpecials(_ ctx: WebIDLParser.SpecialsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpecial(_ ctx: WebIDLParser.SpecialContext) -> T{
+	open func visitSpecial(_ ctx: WebIDLParser.SpecialContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperationRest(_ ctx: WebIDLParser.OperationRestContext) -> T{
+	open func visitOperationRest(_ ctx: WebIDLParser.OperationRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionalIdentifier(_ ctx: WebIDLParser.OptionalIdentifierContext) -> T{
+	open func visitOptionalIdentifier(_ ctx: WebIDLParser.OptionalIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentList(_ ctx: WebIDLParser.ArgumentListContext) -> T{
+	open func visitArgumentList(_ ctx: WebIDLParser.ArgumentListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArguments(_ ctx: WebIDLParser.ArgumentsContext) -> T{
+	open func visitArguments(_ ctx: WebIDLParser.ArgumentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgument(_ ctx: WebIDLParser.ArgumentContext) -> T{
+	open func visitArgument(_ ctx: WebIDLParser.ArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionalOrRequiredArgument(_ ctx: WebIDLParser.OptionalOrRequiredArgumentContext) -> T{
+	open func visitOptionalOrRequiredArgument(_ ctx: WebIDLParser.OptionalOrRequiredArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentName(_ ctx: WebIDLParser.ArgumentNameContext) -> T{
+	open func visitArgumentName(_ ctx: WebIDLParser.ArgumentNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEllipsis(_ ctx: WebIDLParser.EllipsisContext) -> T{
+	open func visitEllipsis(_ ctx: WebIDLParser.EllipsisContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIterable(_ ctx: WebIDLParser.IterableContext) -> T{
+	open func visitIterable(_ ctx: WebIDLParser.IterableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionalType(_ ctx: WebIDLParser.OptionalTypeContext) -> T{
+	open func visitOptionalType(_ ctx: WebIDLParser.OptionalTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadWriteMaplike(_ ctx: WebIDLParser.ReadWriteMaplikeContext) -> T{
+	open func visitReadWriteMaplike(_ ctx: WebIDLParser.ReadWriteMaplikeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadWriteSetlike(_ ctx: WebIDLParser.ReadWriteSetlikeContext) -> T{
+	open func visitReadWriteSetlike(_ ctx: WebIDLParser.ReadWriteSetlikeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMaplikeRest(_ ctx: WebIDLParser.MaplikeRestContext) -> T{
+	open func visitMaplikeRest(_ ctx: WebIDLParser.MaplikeRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetlikeRest(_ ctx: WebIDLParser.SetlikeRestContext) -> T{
+	open func visitSetlikeRest(_ ctx: WebIDLParser.SetlikeRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttributeList(_ ctx: WebIDLParser.ExtendedAttributeListContext) -> T{
+	open func visitExtendedAttributeList(_ ctx: WebIDLParser.ExtendedAttributeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttributes(_ ctx: WebIDLParser.ExtendedAttributesContext) -> T{
+	open func visitExtendedAttributes(_ ctx: WebIDLParser.ExtendedAttributesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttribute(_ ctx: WebIDLParser.ExtendedAttributeContext) -> T{
+	open func visitExtendedAttribute(_ ctx: WebIDLParser.ExtendedAttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttributeRest(_ ctx: WebIDLParser.ExtendedAttributeRestContext) -> T{
+	open func visitExtendedAttributeRest(_ ctx: WebIDLParser.ExtendedAttributeRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttributeInner(_ ctx: WebIDLParser.ExtendedAttributeInnerContext) -> T{
+	open func visitExtendedAttributeInner(_ ctx: WebIDLParser.ExtendedAttributeInnerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOther(_ ctx: WebIDLParser.OtherContext) -> T{
+	open func visitOther(_ ctx: WebIDLParser.OtherContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentNameKeyword(_ ctx: WebIDLParser.ArgumentNameKeywordContext) -> T{
+	open func visitArgumentNameKeyword(_ ctx: WebIDLParser.ArgumentNameKeywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOtherOrComma(_ ctx: WebIDLParser.OtherOrCommaContext) -> T{
+	open func visitOtherOrComma(_ ctx: WebIDLParser.OtherOrCommaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: WebIDLParser.TypeContext) -> T{
+	open func visitType(_ ctx: WebIDLParser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingleType(_ ctx: WebIDLParser.SingleTypeContext) -> T{
+	open func visitSingleType(_ ctx: WebIDLParser.SingleTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionType(_ ctx: WebIDLParser.UnionTypeContext) -> T{
+	open func visitUnionType(_ ctx: WebIDLParser.UnionTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionMemberType(_ ctx: WebIDLParser.UnionMemberTypeContext) -> T{
+	open func visitUnionMemberType(_ ctx: WebIDLParser.UnionMemberTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionMemberTypes(_ ctx: WebIDLParser.UnionMemberTypesContext) -> T{
+	open func visitUnionMemberTypes(_ ctx: WebIDLParser.UnionMemberTypesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNonAnyType(_ ctx: WebIDLParser.NonAnyTypeContext) -> T{
+	open func visitNonAnyType(_ ctx: WebIDLParser.NonAnyTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBufferRelatedType(_ ctx: WebIDLParser.BufferRelatedTypeContext) -> T{
+	open func visitBufferRelatedType(_ ctx: WebIDLParser.BufferRelatedTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstType(_ ctx: WebIDLParser.ConstTypeContext) -> T{
+	open func visitConstType(_ ctx: WebIDLParser.ConstTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimitiveType(_ ctx: WebIDLParser.PrimitiveTypeContext) -> T{
+	open func visitPrimitiveType(_ ctx: WebIDLParser.PrimitiveTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnrestrictedFloatType(_ ctx: WebIDLParser.UnrestrictedFloatTypeContext) -> T{
+	open func visitUnrestrictedFloatType(_ ctx: WebIDLParser.UnrestrictedFloatTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFloatType(_ ctx: WebIDLParser.FloatTypeContext) -> T{
+	open func visitFloatType(_ ctx: WebIDLParser.FloatTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedIntegerType(_ ctx: WebIDLParser.UnsignedIntegerTypeContext) -> T{
+	open func visitUnsignedIntegerType(_ ctx: WebIDLParser.UnsignedIntegerTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIntegerType(_ ctx: WebIDLParser.IntegerTypeContext) -> T{
+	open func visitIntegerType(_ ctx: WebIDLParser.IntegerTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionalLong(_ ctx: WebIDLParser.OptionalLongContext) -> T{
+	open func visitOptionalLong(_ ctx: WebIDLParser.OptionalLongContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPromiseType(_ ctx: WebIDLParser.PromiseTypeContext) -> T{
+	open func visitPromiseType(_ ctx: WebIDLParser.PromiseTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNull_(_ ctx: WebIDLParser.Null_Context) -> T{
+	open func visitNull_(_ ctx: WebIDLParser.Null_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturnType(_ ctx: WebIDLParser.ReturnTypeContext) -> T{
+	open func visitReturnType(_ ctx: WebIDLParser.ReturnTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifierList(_ ctx: WebIDLParser.IdentifierListContext) -> T{
+	open func visitIdentifierList(_ ctx: WebIDLParser.IdentifierListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifiers(_ ctx: WebIDLParser.IdentifiersContext) -> T{
+	open func visitIdentifiers(_ ctx: WebIDLParser.IdentifiersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttributeNoArgs(_ ctx: WebIDLParser.ExtendedAttributeNoArgsContext) -> T{
+	open func visitExtendedAttributeNoArgs(_ ctx: WebIDLParser.ExtendedAttributeNoArgsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttributeArgList(_ ctx: WebIDLParser.ExtendedAttributeArgListContext) -> T{
+	open func visitExtendedAttributeArgList(_ ctx: WebIDLParser.ExtendedAttributeArgListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttributeIdent(_ ctx: WebIDLParser.ExtendedAttributeIdentContext) -> T{
+	open func visitExtendedAttributeIdent(_ ctx: WebIDLParser.ExtendedAttributeIdentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttributeIdentList(_ ctx: WebIDLParser.ExtendedAttributeIdentListContext) -> T{
+	open func visitExtendedAttributeIdentList(_ ctx: WebIDLParser.ExtendedAttributeIdentListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class WebIDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtendedAttributeNamedArgList(_ ctx: WebIDLParser.ExtendedAttributeNamedArgListContext) -> T{
+	open func visitExtendedAttributeNamedArgList(_ ctx: WebIDLParser.ExtendedAttributeNamedArgListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

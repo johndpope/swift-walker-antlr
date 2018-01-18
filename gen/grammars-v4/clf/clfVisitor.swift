@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/clf/clf.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/clf/clf.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLog(_ ctx: clfParser.LogContext) -> T{
+	open func visitLog(_ ctx: clfParser.LogContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: clfParser.LineContext) -> T{
+	open func visitLine(_ ctx: clfParser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHost(_ ctx: clfParser.HostContext) -> T{
+	open func visitHost(_ ctx: clfParser.HostContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogname(_ ctx: clfParser.LognameContext) -> T{
+	open func visitLogname(_ ctx: clfParser.LognameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUsername(_ ctx: clfParser.UsernameContext) -> T{
+	open func visitUsername(_ ctx: clfParser.UsernameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDatetimetz(_ ctx: clfParser.DatetimetzContext) -> T{
+	open func visitDatetimetz(_ ctx: clfParser.DatetimetzContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReferer(_ ctx: clfParser.RefererContext) -> T{
+	open func visitReferer(_ ctx: clfParser.RefererContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRequest(_ ctx: clfParser.RequestContext) -> T{
+	open func visitRequest(_ ctx: clfParser.RequestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUseragent(_ ctx: clfParser.UseragentContext) -> T{
+	open func visitUseragent(_ ctx: clfParser.UseragentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatuscode(_ ctx: clfParser.StatuscodeContext) -> T{
+	open func visitStatuscode(_ ctx: clfParser.StatuscodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class clfVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBytes(_ ctx: clfParser.BytesContext) -> T{
+	open func visitBytes(_ ctx: clfParser.BytesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

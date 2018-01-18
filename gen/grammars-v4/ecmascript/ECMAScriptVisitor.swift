@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/ecmascript/ECMAScript.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/ecmascript/ECMAScript.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: ECMAScriptParser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: ECMAScriptParser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSourceElements(_ ctx: ECMAScriptParser.SourceElementsContext) -> T{
+	open func visitSourceElements(_ ctx: ECMAScriptParser.SourceElementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSourceElement(_ ctx: ECMAScriptParser.SourceElementContext) -> T{
+	open func visitSourceElement(_ ctx: ECMAScriptParser.SourceElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: ECMAScriptParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: ECMAScriptParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: ECMAScriptParser.BlockContext) -> T{
+	open func visitBlock(_ ctx: ECMAScriptParser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementList(_ ctx: ECMAScriptParser.StatementListContext) -> T{
+	open func visitStatementList(_ ctx: ECMAScriptParser.StatementListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableStatement(_ ctx: ECMAScriptParser.VariableStatementContext) -> T{
+	open func visitVariableStatement(_ ctx: ECMAScriptParser.VariableStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclarationList(_ ctx: ECMAScriptParser.VariableDeclarationListContext) -> T{
+	open func visitVariableDeclarationList(_ ctx: ECMAScriptParser.VariableDeclarationListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclaration(_ ctx: ECMAScriptParser.VariableDeclarationContext) -> T{
+	open func visitVariableDeclaration(_ ctx: ECMAScriptParser.VariableDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitialiser(_ ctx: ECMAScriptParser.InitialiserContext) -> T{
+	open func visitInitialiser(_ ctx: ECMAScriptParser.InitialiserContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmptyStatement(_ ctx: ECMAScriptParser.EmptyStatementContext) -> T{
+	open func visitEmptyStatement(_ ctx: ECMAScriptParser.EmptyStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionStatement(_ ctx: ECMAScriptParser.ExpressionStatementContext) -> T{
+	open func visitExpressionStatement(_ ctx: ECMAScriptParser.ExpressionStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfStatement(_ ctx: ECMAScriptParser.IfStatementContext) -> T{
+	open func visitIfStatement(_ ctx: ECMAScriptParser.IfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -146,7 +146,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDoStatement(_ ctx: ECMAScriptParser.DoStatementContext) -> T{
+	open func visitDoStatement(_ ctx: ECMAScriptParser.DoStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -157,7 +157,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhileStatement(_ ctx: ECMAScriptParser.WhileStatementContext) -> T{
+	open func visitWhileStatement(_ ctx: ECMAScriptParser.WhileStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -168,7 +168,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForStatement(_ ctx: ECMAScriptParser.ForStatementContext) -> T{
+	open func visitForStatement(_ ctx: ECMAScriptParser.ForStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -179,7 +179,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForVarStatement(_ ctx: ECMAScriptParser.ForVarStatementContext) -> T{
+	open func visitForVarStatement(_ ctx: ECMAScriptParser.ForVarStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -190,7 +190,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForInStatement(_ ctx: ECMAScriptParser.ForInStatementContext) -> T{
+	open func visitForInStatement(_ ctx: ECMAScriptParser.ForInStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -201,7 +201,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForVarInStatement(_ ctx: ECMAScriptParser.ForVarInStatementContext) -> T{
+	open func visitForVarInStatement(_ ctx: ECMAScriptParser.ForVarInStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -211,7 +211,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContinueStatement(_ ctx: ECMAScriptParser.ContinueStatementContext) -> T{
+	open func visitContinueStatement(_ ctx: ECMAScriptParser.ContinueStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -221,7 +221,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBreakStatement(_ ctx: ECMAScriptParser.BreakStatementContext) -> T{
+	open func visitBreakStatement(_ ctx: ECMAScriptParser.BreakStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -231,7 +231,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturnStatement(_ ctx: ECMAScriptParser.ReturnStatementContext) -> T{
+	open func visitReturnStatement(_ ctx: ECMAScriptParser.ReturnStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -241,7 +241,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWithStatement(_ ctx: ECMAScriptParser.WithStatementContext) -> T{
+	open func visitWithStatement(_ ctx: ECMAScriptParser.WithStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -251,7 +251,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSwitchStatement(_ ctx: ECMAScriptParser.SwitchStatementContext) -> T{
+	open func visitSwitchStatement(_ ctx: ECMAScriptParser.SwitchStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -261,7 +261,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseBlock(_ ctx: ECMAScriptParser.CaseBlockContext) -> T{
+	open func visitCaseBlock(_ ctx: ECMAScriptParser.CaseBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -271,7 +271,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseClauses(_ ctx: ECMAScriptParser.CaseClausesContext) -> T{
+	open func visitCaseClauses(_ ctx: ECMAScriptParser.CaseClausesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -281,7 +281,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseClause(_ ctx: ECMAScriptParser.CaseClauseContext) -> T{
+	open func visitCaseClause(_ ctx: ECMAScriptParser.CaseClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -291,7 +291,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefaultClause(_ ctx: ECMAScriptParser.DefaultClauseContext) -> T{
+	open func visitDefaultClause(_ ctx: ECMAScriptParser.DefaultClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -301,7 +301,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabelledStatement(_ ctx: ECMAScriptParser.LabelledStatementContext) -> T{
+	open func visitLabelledStatement(_ ctx: ECMAScriptParser.LabelledStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -311,7 +311,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitThrowStatement(_ ctx: ECMAScriptParser.ThrowStatementContext) -> T{
+	open func visitThrowStatement(_ ctx: ECMAScriptParser.ThrowStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -321,7 +321,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTryStatement(_ ctx: ECMAScriptParser.TryStatementContext) -> T{
+	open func visitTryStatement(_ ctx: ECMAScriptParser.TryStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -331,7 +331,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCatchProduction(_ ctx: ECMAScriptParser.CatchProductionContext) -> T{
+	open func visitCatchProduction(_ ctx: ECMAScriptParser.CatchProductionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -341,7 +341,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFinallyProduction(_ ctx: ECMAScriptParser.FinallyProductionContext) -> T{
+	open func visitFinallyProduction(_ ctx: ECMAScriptParser.FinallyProductionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -351,7 +351,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDebuggerStatement(_ ctx: ECMAScriptParser.DebuggerStatementContext) -> T{
+	open func visitDebuggerStatement(_ ctx: ECMAScriptParser.DebuggerStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -361,7 +361,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionDeclaration(_ ctx: ECMAScriptParser.FunctionDeclarationContext) -> T{
+	open func visitFunctionDeclaration(_ ctx: ECMAScriptParser.FunctionDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -371,7 +371,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameterList(_ ctx: ECMAScriptParser.FormalParameterListContext) -> T{
+	open func visitFormalParameterList(_ ctx: ECMAScriptParser.FormalParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -381,7 +381,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionBody(_ ctx: ECMAScriptParser.FunctionBodyContext) -> T{
+	open func visitFunctionBody(_ ctx: ECMAScriptParser.FunctionBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -391,7 +391,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayLiteral(_ ctx: ECMAScriptParser.ArrayLiteralContext) -> T{
+	open func visitArrayLiteral(_ ctx: ECMAScriptParser.ArrayLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -401,7 +401,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementList(_ ctx: ECMAScriptParser.ElementListContext) -> T{
+	open func visitElementList(_ ctx: ECMAScriptParser.ElementListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -411,7 +411,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElision(_ ctx: ECMAScriptParser.ElisionContext) -> T{
+	open func visitElision(_ ctx: ECMAScriptParser.ElisionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -421,7 +421,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectLiteral(_ ctx: ECMAScriptParser.ObjectLiteralContext) -> T{
+	open func visitObjectLiteral(_ ctx: ECMAScriptParser.ObjectLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -431,7 +431,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyNameAndValueList(_ ctx: ECMAScriptParser.PropertyNameAndValueListContext) -> T{
+	open func visitPropertyNameAndValueList(_ ctx: ECMAScriptParser.PropertyNameAndValueListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -442,7 +442,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyExpressionAssignment(_ ctx: ECMAScriptParser.PropertyExpressionAssignmentContext) -> T{
+	open func visitPropertyExpressionAssignment(_ ctx: ECMAScriptParser.PropertyExpressionAssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -453,7 +453,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyGetter(_ ctx: ECMAScriptParser.PropertyGetterContext) -> T{
+	open func visitPropertyGetter(_ ctx: ECMAScriptParser.PropertyGetterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -464,7 +464,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertySetter(_ ctx: ECMAScriptParser.PropertySetterContext) -> T{
+	open func visitPropertySetter(_ ctx: ECMAScriptParser.PropertySetterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -474,7 +474,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertyName(_ ctx: ECMAScriptParser.PropertyNameContext) -> T{
+	open func visitPropertyName(_ ctx: ECMAScriptParser.PropertyNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -484,7 +484,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPropertySetParameterList(_ ctx: ECMAScriptParser.PropertySetParameterListContext) -> T{
+	open func visitPropertySetParameterList(_ ctx: ECMAScriptParser.PropertySetParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -494,7 +494,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArguments(_ ctx: ECMAScriptParser.ArgumentsContext) -> T{
+	open func visitArguments(_ ctx: ECMAScriptParser.ArgumentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -504,7 +504,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentList(_ ctx: ECMAScriptParser.ArgumentListContext) -> T{
+	open func visitArgumentList(_ ctx: ECMAScriptParser.ArgumentListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -514,7 +514,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionSequence(_ ctx: ECMAScriptParser.ExpressionSequenceContext) -> T{
+	open func visitExpressionSequence(_ ctx: ECMAScriptParser.ExpressionSequenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTernaryExpression(_ ctx: ECMAScriptParser.TernaryExpressionContext) -> T{
+	open func visitTernaryExpression(_ ctx: ECMAScriptParser.TernaryExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -536,7 +536,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalAndExpression(_ ctx: ECMAScriptParser.LogicalAndExpressionContext) -> T{
+	open func visitLogicalAndExpression(_ ctx: ECMAScriptParser.LogicalAndExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -547,7 +547,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPreIncrementExpression(_ ctx: ECMAScriptParser.PreIncrementExpressionContext) -> T{
+	open func visitPreIncrementExpression(_ ctx: ECMAScriptParser.PreIncrementExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -558,7 +558,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectLiteralExpression(_ ctx: ECMAScriptParser.ObjectLiteralExpressionContext) -> T{
+	open func visitObjectLiteralExpression(_ ctx: ECMAScriptParser.ObjectLiteralExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -569,7 +569,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInExpression(_ ctx: ECMAScriptParser.InExpressionContext) -> T{
+	open func visitInExpression(_ ctx: ECMAScriptParser.InExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -580,7 +580,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalOrExpression(_ ctx: ECMAScriptParser.LogicalOrExpressionContext) -> T{
+	open func visitLogicalOrExpression(_ ctx: ECMAScriptParser.LogicalOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -591,7 +591,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNotExpression(_ ctx: ECMAScriptParser.NotExpressionContext) -> T{
+	open func visitNotExpression(_ ctx: ECMAScriptParser.NotExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -602,7 +602,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPreDecreaseExpression(_ ctx: ECMAScriptParser.PreDecreaseExpressionContext) -> T{
+	open func visitPreDecreaseExpression(_ ctx: ECMAScriptParser.PreDecreaseExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -613,7 +613,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentsExpression(_ ctx: ECMAScriptParser.ArgumentsExpressionContext) -> T{
+	open func visitArgumentsExpression(_ ctx: ECMAScriptParser.ArgumentsExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -624,7 +624,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitThisExpression(_ ctx: ECMAScriptParser.ThisExpressionContext) -> T{
+	open func visitThisExpression(_ ctx: ECMAScriptParser.ThisExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionExpression(_ ctx: ECMAScriptParser.FunctionExpressionContext) -> T{
+	open func visitFunctionExpression(_ ctx: ECMAScriptParser.FunctionExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -646,7 +646,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryMinusExpression(_ ctx: ECMAScriptParser.UnaryMinusExpressionContext) -> T{
+	open func visitUnaryMinusExpression(_ ctx: ECMAScriptParser.UnaryMinusExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -657,7 +657,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentExpression(_ ctx: ECMAScriptParser.AssignmentExpressionContext) -> T{
+	open func visitAssignmentExpression(_ ctx: ECMAScriptParser.AssignmentExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -668,7 +668,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostDecreaseExpression(_ ctx: ECMAScriptParser.PostDecreaseExpressionContext) -> T{
+	open func visitPostDecreaseExpression(_ ctx: ECMAScriptParser.PostDecreaseExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -679,7 +679,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeofExpression(_ ctx: ECMAScriptParser.TypeofExpressionContext) -> T{
+	open func visitTypeofExpression(_ ctx: ECMAScriptParser.TypeofExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -690,7 +690,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInstanceofExpression(_ ctx: ECMAScriptParser.InstanceofExpressionContext) -> T{
+	open func visitInstanceofExpression(_ ctx: ECMAScriptParser.InstanceofExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -701,7 +701,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryPlusExpression(_ ctx: ECMAScriptParser.UnaryPlusExpressionContext) -> T{
+	open func visitUnaryPlusExpression(_ ctx: ECMAScriptParser.UnaryPlusExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -712,7 +712,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeleteExpression(_ ctx: ECMAScriptParser.DeleteExpressionContext) -> T{
+	open func visitDeleteExpression(_ ctx: ECMAScriptParser.DeleteExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -723,7 +723,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEqualityExpression(_ ctx: ECMAScriptParser.EqualityExpressionContext) -> T{
+	open func visitEqualityExpression(_ ctx: ECMAScriptParser.EqualityExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -734,7 +734,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitXOrExpression(_ ctx: ECMAScriptParser.BitXOrExpressionContext) -> T{
+	open func visitBitXOrExpression(_ ctx: ECMAScriptParser.BitXOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplicativeExpression(_ ctx: ECMAScriptParser.MultiplicativeExpressionContext) -> T{
+	open func visitMultiplicativeExpression(_ ctx: ECMAScriptParser.MultiplicativeExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -756,7 +756,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitShiftExpression(_ ctx: ECMAScriptParser.BitShiftExpressionContext) -> T{
+	open func visitBitShiftExpression(_ ctx: ECMAScriptParser.BitShiftExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -767,7 +767,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParenthesizedExpression(_ ctx: ECMAScriptParser.ParenthesizedExpressionContext) -> T{
+	open func visitParenthesizedExpression(_ ctx: ECMAScriptParser.ParenthesizedExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -778,7 +778,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditiveExpression(_ ctx: ECMAScriptParser.AdditiveExpressionContext) -> T{
+	open func visitAdditiveExpression(_ ctx: ECMAScriptParser.AdditiveExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -789,7 +789,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelationalExpression(_ ctx: ECMAScriptParser.RelationalExpressionContext) -> T{
+	open func visitRelationalExpression(_ ctx: ECMAScriptParser.RelationalExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -800,7 +800,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostIncrementExpression(_ ctx: ECMAScriptParser.PostIncrementExpressionContext) -> T{
+	open func visitPostIncrementExpression(_ ctx: ECMAScriptParser.PostIncrementExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -811,7 +811,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitNotExpression(_ ctx: ECMAScriptParser.BitNotExpressionContext) -> T{
+	open func visitBitNotExpression(_ ctx: ECMAScriptParser.BitNotExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -822,7 +822,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNewExpression(_ ctx: ECMAScriptParser.NewExpressionContext) -> T{
+	open func visitNewExpression(_ ctx: ECMAScriptParser.NewExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -833,7 +833,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteralExpression(_ ctx: ECMAScriptParser.LiteralExpressionContext) -> T{
+	open func visitLiteralExpression(_ ctx: ECMAScriptParser.LiteralExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -844,7 +844,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayLiteralExpression(_ ctx: ECMAScriptParser.ArrayLiteralExpressionContext) -> T{
+	open func visitArrayLiteralExpression(_ ctx: ECMAScriptParser.ArrayLiteralExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMemberDotExpression(_ ctx: ECMAScriptParser.MemberDotExpressionContext) -> T{
+	open func visitMemberDotExpression(_ ctx: ECMAScriptParser.MemberDotExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -866,7 +866,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMemberIndexExpression(_ ctx: ECMAScriptParser.MemberIndexExpressionContext) -> T{
+	open func visitMemberIndexExpression(_ ctx: ECMAScriptParser.MemberIndexExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -877,7 +877,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifierExpression(_ ctx: ECMAScriptParser.IdentifierExpressionContext) -> T{
+	open func visitIdentifierExpression(_ ctx: ECMAScriptParser.IdentifierExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -888,7 +888,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitAndExpression(_ ctx: ECMAScriptParser.BitAndExpressionContext) -> T{
+	open func visitBitAndExpression(_ ctx: ECMAScriptParser.BitAndExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -899,7 +899,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBitOrExpression(_ ctx: ECMAScriptParser.BitOrExpressionContext) -> T{
+	open func visitBitOrExpression(_ ctx: ECMAScriptParser.BitOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -910,7 +910,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentOperatorExpression(_ ctx: ECMAScriptParser.AssignmentOperatorExpressionContext) -> T{
+	open func visitAssignmentOperatorExpression(_ ctx: ECMAScriptParser.AssignmentOperatorExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -921,7 +921,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVoidExpression(_ ctx: ECMAScriptParser.VoidExpressionContext) -> T{
+	open func visitVoidExpression(_ ctx: ECMAScriptParser.VoidExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -931,7 +931,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentOperator(_ ctx: ECMAScriptParser.AssignmentOperatorContext) -> T{
+	open func visitAssignmentOperator(_ ctx: ECMAScriptParser.AssignmentOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -941,7 +941,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: ECMAScriptParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: ECMAScriptParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -951,7 +951,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumericLiteral(_ ctx: ECMAScriptParser.NumericLiteralContext) -> T{
+	open func visitNumericLiteral(_ ctx: ECMAScriptParser.NumericLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -961,7 +961,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifierName(_ ctx: ECMAScriptParser.IdentifierNameContext) -> T{
+	open func visitIdentifierName(_ ctx: ECMAScriptParser.IdentifierNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -971,7 +971,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReservedWord(_ ctx: ECMAScriptParser.ReservedWordContext) -> T{
+	open func visitReservedWord(_ ctx: ECMAScriptParser.ReservedWordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -981,7 +981,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeyword(_ ctx: ECMAScriptParser.KeywordContext) -> T{
+	open func visitKeyword(_ ctx: ECMAScriptParser.KeywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -991,7 +991,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFutureReservedWord(_ ctx: ECMAScriptParser.FutureReservedWordContext) -> T{
+	open func visitFutureReservedWord(_ ctx: ECMAScriptParser.FutureReservedWordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1001,7 +1001,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGetter(_ ctx: ECMAScriptParser.GetterContext) -> T{
+	open func visitGetter(_ ctx: ECMAScriptParser.GetterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1011,7 +1011,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetter(_ ctx: ECMAScriptParser.SetterContext) -> T{
+	open func visitSetter(_ ctx: ECMAScriptParser.SetterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1021,7 +1021,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEos(_ ctx: ECMAScriptParser.EosContext) -> T{
+	open func visitEos(_ ctx: ECMAScriptParser.EosContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1031,7 +1031,7 @@ open class ECMAScriptVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEof(_ ctx: ECMAScriptParser.EofContext) -> T{
+	open func visitEof(_ ctx: ECMAScriptParser.EofContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

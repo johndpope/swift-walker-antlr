@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/json/JSON.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/json/JSON.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class JSONParser: Parser {
@@ -11,15 +11,22 @@ open class JSONParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, STRING = 10, NUMBER = 11, 
                  WS = 12
 	}
-	public static let RULE_json = 0, RULE_obj = 1, RULE_pair = 2, RULE_array = 3, 
-                   RULE_value = 4
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_json = 0, RULE_obj = 1, RULE_pair = 2, RULE_array = 3, 
+            RULE_value = 4
+
+	public
+	static let ruleNames: [String] = [
 		"json", "obj", "pair", "array", "value"
 	]
 
@@ -30,85 +37,69 @@ open class JSONParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "STRING", "NUMBER", 
 		"WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "JSON.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return JSONParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "JSON.g4" }
+	override open
+	func getSerializedATN() -> String { return JSONParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return JSONParser.ruleNames }
+	override open
+	func getATN() -> ATN { return JSONParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return JSONParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return JSONParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return JSONParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,JSONParser._ATN,JSONParser._decisionToDFA, JSONParser._sharedContextCache)
 	}
-	open class JsonContext:ParserRuleContext {
-		open func value() -> ValueContext? {
-			return getRuleContext(ValueContext.self,0)
+
+	public class JsonContext: ParserRuleContext {
+			open
+			func value() -> ValueContext? {
+				return getRuleContext(ValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JSONParser.RULE_json
 		}
-		open override func getRuleIndex() -> Int { return JSONParser.RULE_json }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).enterJson(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.enterJson(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).exitJson(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.exitJson(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JSONVisitor {
-			     return (visitor as! JSONVisitor<T>).visitJson(self)
-			}else if visitor is JSONBaseVisitor {
-		    	 return (visitor as! JSONBaseVisitor<T>).visitJson(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JSONVisitor {
+			    return visitor.visitJson(self)
+			}
+			else if let visitor = visitor as? JSONBaseVisitor {
+			    return visitor.visitJson(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func json() throws -> JsonContext {
+	 open func json() throws -> JsonContext {
 		var _localctx: JsonContext = JsonContext(_ctx, getState())
 		try enterRule(_localctx, 0, JSONParser.RULE_json)
 		defer {
@@ -128,40 +119,47 @@ open class JSONParser: Parser {
 
 		return _localctx
 	}
-	open class ObjContext:ParserRuleContext {
-		open func pair() -> Array<PairContext> {
-			return getRuleContexts(PairContext.self)
+
+	public class ObjContext: ParserRuleContext {
+			open
+			func pair() -> [PairContext] {
+				return getRuleContexts(PairContext.self)
+			}
+			open
+			func pair(_ i: Int) -> PairContext? {
+				return getRuleContext(PairContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JSONParser.RULE_obj
 		}
-		open func pair(_ i: Int) -> PairContext? {
-			return getRuleContext(PairContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JSONParser.RULE_obj }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).enterObj(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.enterObj(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).exitObj(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.exitObj(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JSONVisitor {
-			     return (visitor as! JSONVisitor<T>).visitObj(self)
-			}else if visitor is JSONBaseVisitor {
-		    	 return (visitor as! JSONBaseVisitor<T>).visitObj(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JSONVisitor {
+			    return visitor.visitObj(self)
+			}
+			else if let visitor = visitor as? JSONBaseVisitor {
+			    return visitor.visitObj(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func obj() throws -> ObjContext {
+	 open func obj() throws -> ObjContext {
 		var _localctx: ObjContext = ObjContext(_ctx, getState())
 		try enterRule(_localctx, 2, JSONParser.RULE_obj)
 		var _la: Int = 0
@@ -219,38 +217,47 @@ open class JSONParser: Parser {
 
 		return _localctx
 	}
-	open class PairContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(JSONParser.Tokens.STRING.rawValue, 0) }
-		open func value() -> ValueContext? {
-			return getRuleContext(ValueContext.self,0)
+
+	public class PairContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(JSONParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func value() -> ValueContext? {
+				return getRuleContext(ValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JSONParser.RULE_pair
 		}
-		open override func getRuleIndex() -> Int { return JSONParser.RULE_pair }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).enterPair(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.enterPair(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).exitPair(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.exitPair(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JSONVisitor {
-			     return (visitor as! JSONVisitor<T>).visitPair(self)
-			}else if visitor is JSONBaseVisitor {
-		    	 return (visitor as! JSONBaseVisitor<T>).visitPair(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JSONVisitor {
+			    return visitor.visitPair(self)
+			}
+			else if let visitor = visitor as? JSONBaseVisitor {
+			    return visitor.visitPair(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pair() throws -> PairContext {
+	 open func pair() throws -> PairContext {
 		var _localctx: PairContext = PairContext(_ctx, getState())
 		try enterRule(_localctx, 4, JSONParser.RULE_pair)
 		defer {
@@ -274,40 +281,47 @@ open class JSONParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayContext:ParserRuleContext {
-		open func value() -> Array<ValueContext> {
-			return getRuleContexts(ValueContext.self)
+
+	public class ArrayContext: ParserRuleContext {
+			open
+			func value() -> [ValueContext] {
+				return getRuleContexts(ValueContext.self)
+			}
+			open
+			func value(_ i: Int) -> ValueContext? {
+				return getRuleContext(ValueContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JSONParser.RULE_array
 		}
-		open func value(_ i: Int) -> ValueContext? {
-			return getRuleContext(ValueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return JSONParser.RULE_array }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).enterArray(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.enterArray(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).exitArray(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.exitArray(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JSONVisitor {
-			     return (visitor as! JSONVisitor<T>).visitArray(self)
-			}else if visitor is JSONBaseVisitor {
-		    	 return (visitor as! JSONBaseVisitor<T>).visitArray(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JSONVisitor {
+			    return visitor.visitArray(self)
+			}
+			else if let visitor = visitor as? JSONBaseVisitor {
+			    return visitor.visitArray(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func array() throws -> ArrayContext {
+	 open func array() throws -> ArrayContext {
 		var _localctx: ArrayContext = ArrayContext(_ctx, getState())
 		try enterRule(_localctx, 6, JSONParser.RULE_array)
 		var _la: Int = 0
@@ -365,42 +379,55 @@ open class JSONParser: Parser {
 
 		return _localctx
 	}
-	open class ValueContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(JSONParser.Tokens.STRING.rawValue, 0) }
-		open func NUMBER() -> TerminalNode? { return getToken(JSONParser.Tokens.NUMBER.rawValue, 0) }
-		open func obj() -> ObjContext? {
-			return getRuleContext(ObjContext.self,0)
+
+	public class ValueContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(JSONParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(JSONParser.Tokens.NUMBER.rawValue, 0)
+			}
+			open
+			func obj() -> ObjContext? {
+				return getRuleContext(ObjContext.self, 0)
+			}
+			open
+			func array() -> ArrayContext? {
+				return getRuleContext(ArrayContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return JSONParser.RULE_value
 		}
-		open func array() -> ArrayContext? {
-			return getRuleContext(ArrayContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return JSONParser.RULE_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).enterValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.enterValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is JSONListener {
-			 	(listener as! JSONListener).exitValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? JSONListener {
+				listener.exitValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is JSONVisitor {
-			     return (visitor as! JSONVisitor<T>).visitValue(self)
-			}else if visitor is JSONBaseVisitor {
-		    	 return (visitor as! JSONBaseVisitor<T>).visitValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? JSONVisitor {
+			    return visitor.visitValue(self)
+			}
+			else if let visitor = visitor as? JSONBaseVisitor {
+			    return visitor.visitValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value() throws -> ValueContext {
+	 open func value() throws -> ValueContext {
 		var _localctx: ValueContext = ValueContext(_ctx, getState())
 		try enterRule(_localctx, 8, JSONParser.RULE_value)
 		defer {
@@ -459,7 +486,7 @@ open class JSONParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -471,6 +498,10 @@ open class JSONParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = JSONParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = JSONParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

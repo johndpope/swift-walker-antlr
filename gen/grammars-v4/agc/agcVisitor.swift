@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/agc/agc.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/agc/agc.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProg(_ ctx: agcParser.ProgContext) -> T{
+	open func visitProg(_ ctx: agcParser.ProgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: agcParser.LineContext) -> T{
+	open func visitLine(_ ctx: agcParser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlank_line(_ ctx: agcParser.Blank_lineContext) -> T{
+	open func visitBlank_line(_ ctx: agcParser.Blank_lineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment_line(_ ctx: agcParser.Comment_lineContext) -> T{
+	open func visitComment_line(_ ctx: agcParser.Comment_lineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInstruction_line(_ ctx: agcParser.Instruction_lineContext) -> T{
+	open func visitInstruction_line(_ ctx: agcParser.Instruction_lineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitErase_line(_ ctx: agcParser.Erase_lineContext) -> T{
+	open func visitErase_line(_ ctx: agcParser.Erase_lineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignment_line(_ ctx: agcParser.Assignment_lineContext) -> T{
+	open func visitAssignment_line(_ ctx: agcParser.Assignment_lineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpcodes(_ ctx: agcParser.OpcodesContext) -> T{
+	open func visitOpcodes(_ ctx: agcParser.OpcodesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgument(_ ctx: agcParser.ArgumentContext) -> T{
+	open func visitArgument(_ ctx: agcParser.ArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWs(_ ctx: agcParser.WsContext) -> T{
+	open func visitWs(_ ctx: agcParser.WsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEol(_ ctx: agcParser.EolContext) -> T{
+	open func visitEol(_ ctx: agcParser.EolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: agcParser.CommentContext) -> T{
+	open func visitComment(_ ctx: agcParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabel(_ ctx: agcParser.LabelContext) -> T{
+	open func visitLabel(_ ctx: agcParser.LabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariable(_ ctx: agcParser.VariableContext) -> T{
+	open func visitVariable(_ ctx: agcParser.VariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: agcParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: agcParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplyingExpression(_ ctx: agcParser.MultiplyingExpressionContext) -> T{
+	open func visitMultiplyingExpression(_ ctx: agcParser.MultiplyingExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: agcParser.AtomContext) -> T{
+	open func visitAtom(_ ctx: agcParser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInte(_ ctx: agcParser.InteContext) -> T{
+	open func visitInte(_ ctx: agcParser.InteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDecimal(_ ctx: agcParser.DecimalContext) -> T{
+	open func visitDecimal(_ ctx: agcParser.DecimalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRegister(_ ctx: agcParser.RegisterContext) -> T{
+	open func visitRegister(_ ctx: agcParser.RegisterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpcode(_ ctx: agcParser.OpcodeContext) -> T{
+	open func visitOpcode(_ ctx: agcParser.OpcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAxt_opcode(_ ctx: agcParser.Axt_opcodeContext) -> T{
+	open func visitAxt_opcode(_ ctx: agcParser.Axt_opcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPseudo_opcode(_ ctx: agcParser.Pseudo_opcodeContext) -> T{
+	open func visitPseudo_opcode(_ ctx: agcParser.Pseudo_opcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class agcVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStandard_opcode(_ ctx: agcParser.Standard_opcodeContext) -> T{
+	open func visitStandard_opcode(_ ctx: agcParser.Standard_opcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

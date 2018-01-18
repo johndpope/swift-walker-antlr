@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/golang/Golang.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/golang/Golang.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSourceFile(_ ctx: GolangParser.SourceFileContext) -> T{
+	open func visitSourceFile(_ ctx: GolangParser.SourceFileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPackageClause(_ ctx: GolangParser.PackageClauseContext) -> T{
+	open func visitPackageClause(_ ctx: GolangParser.PackageClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportDecl(_ ctx: GolangParser.ImportDeclContext) -> T{
+	open func visitImportDecl(_ ctx: GolangParser.ImportDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportSpec(_ ctx: GolangParser.ImportSpecContext) -> T{
+	open func visitImportSpec(_ ctx: GolangParser.ImportSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImportPath(_ ctx: GolangParser.ImportPathContext) -> T{
+	open func visitImportPath(_ ctx: GolangParser.ImportPathContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTopLevelDecl(_ ctx: GolangParser.TopLevelDeclContext) -> T{
+	open func visitTopLevelDecl(_ ctx: GolangParser.TopLevelDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclaration(_ ctx: GolangParser.DeclarationContext) -> T{
+	open func visitDeclaration(_ ctx: GolangParser.DeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstDecl(_ ctx: GolangParser.ConstDeclContext) -> T{
+	open func visitConstDecl(_ ctx: GolangParser.ConstDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstSpec(_ ctx: GolangParser.ConstSpecContext) -> T{
+	open func visitConstSpec(_ ctx: GolangParser.ConstSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifierList(_ ctx: GolangParser.IdentifierListContext) -> T{
+	open func visitIdentifierList(_ ctx: GolangParser.IdentifierListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionList(_ ctx: GolangParser.ExpressionListContext) -> T{
+	open func visitExpressionList(_ ctx: GolangParser.ExpressionListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDecl(_ ctx: GolangParser.TypeDeclContext) -> T{
+	open func visitTypeDecl(_ ctx: GolangParser.TypeDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSpec(_ ctx: GolangParser.TypeSpecContext) -> T{
+	open func visitTypeSpec(_ ctx: GolangParser.TypeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionDecl(_ ctx: GolangParser.FunctionDeclContext) -> T{
+	open func visitFunctionDecl(_ ctx: GolangParser.FunctionDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunction(_ ctx: GolangParser.FunctionContext) -> T{
+	open func visitFunction(_ ctx: GolangParser.FunctionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodDecl(_ ctx: GolangParser.MethodDeclContext) -> T{
+	open func visitMethodDecl(_ ctx: GolangParser.MethodDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReceiver(_ ctx: GolangParser.ReceiverContext) -> T{
+	open func visitReceiver(_ ctx: GolangParser.ReceiverContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarDecl(_ ctx: GolangParser.VarDeclContext) -> T{
+	open func visitVarDecl(_ ctx: GolangParser.VarDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarSpec(_ ctx: GolangParser.VarSpecContext) -> T{
+	open func visitVarSpec(_ ctx: GolangParser.VarSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: GolangParser.BlockContext) -> T{
+	open func visitBlock(_ ctx: GolangParser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementList(_ ctx: GolangParser.StatementListContext) -> T{
+	open func visitStatementList(_ ctx: GolangParser.StatementListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: GolangParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: GolangParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleStmt(_ ctx: GolangParser.SimpleStmtContext) -> T{
+	open func visitSimpleStmt(_ ctx: GolangParser.SimpleStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionStmt(_ ctx: GolangParser.ExpressionStmtContext) -> T{
+	open func visitExpressionStmt(_ ctx: GolangParser.ExpressionStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSendStmt(_ ctx: GolangParser.SendStmtContext) -> T{
+	open func visitSendStmt(_ ctx: GolangParser.SendStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIncDecStmt(_ ctx: GolangParser.IncDecStmtContext) -> T{
+	open func visitIncDecStmt(_ ctx: GolangParser.IncDecStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignment(_ ctx: GolangParser.AssignmentContext) -> T{
+	open func visitAssignment(_ ctx: GolangParser.AssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssign_op(_ ctx: GolangParser.Assign_opContext) -> T{
+	open func visitAssign_op(_ ctx: GolangParser.Assign_opContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitShortVarDecl(_ ctx: GolangParser.ShortVarDeclContext) -> T{
+	open func visitShortVarDecl(_ ctx: GolangParser.ShortVarDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmptyStmt(_ ctx: GolangParser.EmptyStmtContext) -> T{
+	open func visitEmptyStmt(_ ctx: GolangParser.EmptyStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabeledStmt(_ ctx: GolangParser.LabeledStmtContext) -> T{
+	open func visitLabeledStmt(_ ctx: GolangParser.LabeledStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReturnStmt(_ ctx: GolangParser.ReturnStmtContext) -> T{
+	open func visitReturnStmt(_ ctx: GolangParser.ReturnStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBreakStmt(_ ctx: GolangParser.BreakStmtContext) -> T{
+	open func visitBreakStmt(_ ctx: GolangParser.BreakStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContinueStmt(_ ctx: GolangParser.ContinueStmtContext) -> T{
+	open func visitContinueStmt(_ ctx: GolangParser.ContinueStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGotoStmt(_ ctx: GolangParser.GotoStmtContext) -> T{
+	open func visitGotoStmt(_ ctx: GolangParser.GotoStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFallthroughStmt(_ ctx: GolangParser.FallthroughStmtContext) -> T{
+	open func visitFallthroughStmt(_ ctx: GolangParser.FallthroughStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeferStmt(_ ctx: GolangParser.DeferStmtContext) -> T{
+	open func visitDeferStmt(_ ctx: GolangParser.DeferStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfStmt(_ ctx: GolangParser.IfStmtContext) -> T{
+	open func visitIfStmt(_ ctx: GolangParser.IfStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSwitchStmt(_ ctx: GolangParser.SwitchStmtContext) -> T{
+	open func visitSwitchStmt(_ ctx: GolangParser.SwitchStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprSwitchStmt(_ ctx: GolangParser.ExprSwitchStmtContext) -> T{
+	open func visitExprSwitchStmt(_ ctx: GolangParser.ExprSwitchStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprCaseClause(_ ctx: GolangParser.ExprCaseClauseContext) -> T{
+	open func visitExprCaseClause(_ ctx: GolangParser.ExprCaseClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExprSwitchCase(_ ctx: GolangParser.ExprSwitchCaseContext) -> T{
+	open func visitExprSwitchCase(_ ctx: GolangParser.ExprSwitchCaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSwitchStmt(_ ctx: GolangParser.TypeSwitchStmtContext) -> T{
+	open func visitTypeSwitchStmt(_ ctx: GolangParser.TypeSwitchStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSwitchGuard(_ ctx: GolangParser.TypeSwitchGuardContext) -> T{
+	open func visitTypeSwitchGuard(_ ctx: GolangParser.TypeSwitchGuardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeCaseClause(_ ctx: GolangParser.TypeCaseClauseContext) -> T{
+	open func visitTypeCaseClause(_ ctx: GolangParser.TypeCaseClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSwitchCase(_ ctx: GolangParser.TypeSwitchCaseContext) -> T{
+	open func visitTypeSwitchCase(_ ctx: GolangParser.TypeSwitchCaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeList(_ ctx: GolangParser.TypeListContext) -> T{
+	open func visitTypeList(_ ctx: GolangParser.TypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelectStmt(_ ctx: GolangParser.SelectStmtContext) -> T{
+	open func visitSelectStmt(_ ctx: GolangParser.SelectStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommClause(_ ctx: GolangParser.CommClauseContext) -> T{
+	open func visitCommClause(_ ctx: GolangParser.CommClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommCase(_ ctx: GolangParser.CommCaseContext) -> T{
+	open func visitCommCase(_ ctx: GolangParser.CommCaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecvStmt(_ ctx: GolangParser.RecvStmtContext) -> T{
+	open func visitRecvStmt(_ ctx: GolangParser.RecvStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForStmt(_ ctx: GolangParser.ForStmtContext) -> T{
+	open func visitForStmt(_ ctx: GolangParser.ForStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForClause(_ ctx: GolangParser.ForClauseContext) -> T{
+	open func visitForClause(_ ctx: GolangParser.ForClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRangeClause(_ ctx: GolangParser.RangeClauseContext) -> T{
+	open func visitRangeClause(_ ctx: GolangParser.RangeClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGoStmt(_ ctx: GolangParser.GoStmtContext) -> T{
+	open func visitGoStmt(_ ctx: GolangParser.GoStmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: GolangParser.TypeContext) -> T{
+	open func visitType(_ ctx: GolangParser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeName(_ ctx: GolangParser.TypeNameContext) -> T{
+	open func visitTypeName(_ ctx: GolangParser.TypeNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeLit(_ ctx: GolangParser.TypeLitContext) -> T{
+	open func visitTypeLit(_ ctx: GolangParser.TypeLitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayType(_ ctx: GolangParser.ArrayTypeContext) -> T{
+	open func visitArrayType(_ ctx: GolangParser.ArrayTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayLength(_ ctx: GolangParser.ArrayLengthContext) -> T{
+	open func visitArrayLength(_ ctx: GolangParser.ArrayLengthContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementType(_ ctx: GolangParser.ElementTypeContext) -> T{
+	open func visitElementType(_ ctx: GolangParser.ElementTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPointerType(_ ctx: GolangParser.PointerTypeContext) -> T{
+	open func visitPointerType(_ ctx: GolangParser.PointerTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterfaceType(_ ctx: GolangParser.InterfaceTypeContext) -> T{
+	open func visitInterfaceType(_ ctx: GolangParser.InterfaceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSliceType(_ ctx: GolangParser.SliceTypeContext) -> T{
+	open func visitSliceType(_ ctx: GolangParser.SliceTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMapType(_ ctx: GolangParser.MapTypeContext) -> T{
+	open func visitMapType(_ ctx: GolangParser.MapTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitChannelType(_ ctx: GolangParser.ChannelTypeContext) -> T{
+	open func visitChannelType(_ ctx: GolangParser.ChannelTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodSpec(_ ctx: GolangParser.MethodSpecContext) -> T{
+	open func visitMethodSpec(_ ctx: GolangParser.MethodSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionType(_ ctx: GolangParser.FunctionTypeContext) -> T{
+	open func visitFunctionType(_ ctx: GolangParser.FunctionTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSignature(_ ctx: GolangParser.SignatureContext) -> T{
+	open func visitSignature(_ ctx: GolangParser.SignatureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResult(_ ctx: GolangParser.ResultContext) -> T{
+	open func visitResult(_ ctx: GolangParser.ResultContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameters(_ ctx: GolangParser.ParametersContext) -> T{
+	open func visitParameters(_ ctx: GolangParser.ParametersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterList(_ ctx: GolangParser.ParameterListContext) -> T{
+	open func visitParameterList(_ ctx: GolangParser.ParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterDecl(_ ctx: GolangParser.ParameterDeclContext) -> T{
+	open func visitParameterDecl(_ ctx: GolangParser.ParameterDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperand(_ ctx: GolangParser.OperandContext) -> T{
+	open func visitOperand(_ ctx: GolangParser.OperandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: GolangParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: GolangParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBasicLit(_ ctx: GolangParser.BasicLitContext) -> T{
+	open func visitBasicLit(_ ctx: GolangParser.BasicLitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperandName(_ ctx: GolangParser.OperandNameContext) -> T{
+	open func visitOperandName(_ ctx: GolangParser.OperandNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualifiedIdent(_ ctx: GolangParser.QualifiedIdentContext) -> T{
+	open func visitQualifiedIdent(_ ctx: GolangParser.QualifiedIdentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompositeLit(_ ctx: GolangParser.CompositeLitContext) -> T{
+	open func visitCompositeLit(_ ctx: GolangParser.CompositeLitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteralType(_ ctx: GolangParser.LiteralTypeContext) -> T{
+	open func visitLiteralType(_ ctx: GolangParser.LiteralTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteralValue(_ ctx: GolangParser.LiteralValueContext) -> T{
+	open func visitLiteralValue(_ ctx: GolangParser.LiteralValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementList(_ ctx: GolangParser.ElementListContext) -> T{
+	open func visitElementList(_ ctx: GolangParser.ElementListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeyedElement(_ ctx: GolangParser.KeyedElementContext) -> T{
+	open func visitKeyedElement(_ ctx: GolangParser.KeyedElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKey(_ ctx: GolangParser.KeyContext) -> T{
+	open func visitKey(_ ctx: GolangParser.KeyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement(_ ctx: GolangParser.ElementContext) -> T{
+	open func visitElement(_ ctx: GolangParser.ElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructType(_ ctx: GolangParser.StructTypeContext) -> T{
+	open func visitStructType(_ ctx: GolangParser.StructTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldDecl(_ ctx: GolangParser.FieldDeclContext) -> T{
+	open func visitFieldDecl(_ ctx: GolangParser.FieldDeclContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnonymousField(_ ctx: GolangParser.AnonymousFieldContext) -> T{
+	open func visitAnonymousField(_ ctx: GolangParser.AnonymousFieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionLit(_ ctx: GolangParser.FunctionLitContext) -> T{
+	open func visitFunctionLit(_ ctx: GolangParser.FunctionLitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryExpr(_ ctx: GolangParser.PrimaryExprContext) -> T{
+	open func visitPrimaryExpr(_ ctx: GolangParser.PrimaryExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelector(_ ctx: GolangParser.SelectorContext) -> T{
+	open func visitSelector(_ ctx: GolangParser.SelectorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIndex(_ ctx: GolangParser.IndexContext) -> T{
+	open func visitIndex(_ ctx: GolangParser.IndexContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSlice(_ ctx: GolangParser.SliceContext) -> T{
+	open func visitSlice(_ ctx: GolangParser.SliceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeAssertion(_ ctx: GolangParser.TypeAssertionContext) -> T{
+	open func visitTypeAssertion(_ ctx: GolangParser.TypeAssertionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArguments(_ ctx: GolangParser.ArgumentsContext) -> T{
+	open func visitArguments(_ ctx: GolangParser.ArgumentsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethodExpr(_ ctx: GolangParser.MethodExprContext) -> T{
+	open func visitMethodExpr(_ ctx: GolangParser.MethodExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReceiverType(_ ctx: GolangParser.ReceiverTypeContext) -> T{
+	open func visitReceiverType(_ ctx: GolangParser.ReceiverTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: GolangParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: GolangParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryExpr(_ ctx: GolangParser.UnaryExprContext) -> T{
+	open func visitUnaryExpr(_ ctx: GolangParser.UnaryExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConversion(_ ctx: GolangParser.ConversionContext) -> T{
+	open func visitConversion(_ ctx: GolangParser.ConversionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class GolangVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEos(_ ctx: GolangParser.EosContext) -> T{
+	open func visitEos(_ ctx: GolangParser.EosContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

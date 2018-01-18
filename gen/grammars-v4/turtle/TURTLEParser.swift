@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/turtle/TURTLE.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/turtle/TURTLE.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class TURTLEParser: Parser {
@@ -11,8 +11,11 @@ open class TURTLEParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, NumericLiteral = 14, BooleanLiteral = 15, String = 16, 
@@ -25,14 +28,17 @@ open class TURTLEParser: Parser {
                  PN_CHARS_U = 39, PN_CHARS = 40, PN_LOCAL = 41, PLX = 42, 
                  PERCENT = 43, HEX = 44, PN_LOCAL_ESC = 45
 	}
-	public static let RULE_turtleDoc = 0, RULE_statement = 1, RULE_directive = 2, 
-                   RULE_prefixID = 3, RULE_base = 4, RULE_sparqlBase = 5, 
-                   RULE_sparqlPrefix = 6, RULE_triples = 7, RULE_predicateObjectList = 8, 
-                   RULE_objectList = 9, RULE_verb = 10, RULE_subject = 11, 
-                   RULE_predicate = 12, RULE_object = 13, RULE_literal = 14, 
-                   RULE_blankNodePropertyList = 15, RULE_collection = 16, 
-                   RULE_rdfLiteral = 17, RULE_iri = 18
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_turtleDoc = 0, RULE_statement = 1, RULE_directive = 2, 
+            RULE_prefixID = 3, RULE_base = 4, RULE_sparqlBase = 5, RULE_sparqlPrefix = 6, 
+            RULE_triples = 7, RULE_predicateObjectList = 8, RULE_objectList = 9, 
+            RULE_verb = 10, RULE_subject = 11, RULE_predicate = 12, RULE_object = 13, 
+            RULE_literal = 14, RULE_blankNodePropertyList = 15, RULE_collection = 16, 
+            RULE_rdfLiteral = 17, RULE_iri = 18
+
+	public
+	static let ruleNames: [String] = [
 		"turtleDoc", "statement", "directive", "prefixID", "base", "sparqlBase", 
 		"sparqlPrefix", "triples", "predicateObjectList", "objectList", "verb", 
 		"subject", "predicate", "object", "literal", "blankNodePropertyList", 
@@ -52,88 +58,73 @@ open class TURTLEParser: Parser {
 		"UCHAR", "ECHAR", "ANON_WS", "ANON", "PN_CHARS_BASE", "PN_CHARS_U", "PN_CHARS", 
 		"PN_LOCAL", "PLX", "PERCENT", "HEX", "PN_LOCAL_ESC"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "TURTLE.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return TURTLEParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "TURTLE.g4" }
+	override open
+	func getSerializedATN() -> String { return TURTLEParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return TURTLEParser.ruleNames }
+	override open
+	func getATN() -> ATN { return TURTLEParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return TURTLEParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return TURTLEParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return TURTLEParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,TURTLEParser._ATN,TURTLEParser._decisionToDFA, TURTLEParser._sharedContextCache)
 	}
-	open class TurtleDocContext:ParserRuleContext {
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
+
+	public class TurtleDocContext: ParserRuleContext {
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_turtleDoc
 		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_turtleDoc }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterTurtleDoc(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterTurtleDoc(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitTurtleDoc(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitTurtleDoc(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitTurtleDoc(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitTurtleDoc(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitTurtleDoc(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitTurtleDoc(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func turtleDoc() throws -> TurtleDocContext {
+	 open func turtleDoc() throws -> TurtleDocContext {
 		var _localctx: TurtleDocContext = TurtleDocContext(_ctx, getState())
 		try enterRule(_localctx, 0, TURTLEParser.RULE_turtleDoc)
 		var _la: Int = 0
@@ -171,40 +162,47 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func directive() -> DirectiveContext? {
-			return getRuleContext(DirectiveContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func directive() -> DirectiveContext? {
+				return getRuleContext(DirectiveContext.self, 0)
+			}
+			open
+			func triples() -> TriplesContext? {
+				return getRuleContext(TriplesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_statement
 		}
-		open func triples() -> TriplesContext? {
-			return getRuleContext(TriplesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitStatement(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 2, TURTLEParser.RULE_statement)
 		defer {
@@ -236,7 +234,7 @@ open class TURTLEParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -247,46 +245,55 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class DirectiveContext:ParserRuleContext {
-		open func prefixID() -> PrefixIDContext? {
-			return getRuleContext(PrefixIDContext.self,0)
+
+	public class DirectiveContext: ParserRuleContext {
+			open
+			func prefixID() -> PrefixIDContext? {
+				return getRuleContext(PrefixIDContext.self, 0)
+			}
+			open
+			func base() -> BaseContext? {
+				return getRuleContext(BaseContext.self, 0)
+			}
+			open
+			func sparqlPrefix() -> SparqlPrefixContext? {
+				return getRuleContext(SparqlPrefixContext.self, 0)
+			}
+			open
+			func sparqlBase() -> SparqlBaseContext? {
+				return getRuleContext(SparqlBaseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_directive
 		}
-		open func base() -> BaseContext? {
-			return getRuleContext(BaseContext.self,0)
-		}
-		open func sparqlPrefix() -> SparqlPrefixContext? {
-			return getRuleContext(SparqlPrefixContext.self,0)
-		}
-		open func sparqlBase() -> SparqlBaseContext? {
-			return getRuleContext(SparqlBaseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_directive }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterDirective(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterDirective(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitDirective(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitDirective(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitDirective(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitDirective(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitDirective(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitDirective(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func directive() throws -> DirectiveContext {
+	 open func directive() throws -> DirectiveContext {
 		var _localctx: DirectiveContext = DirectiveContext(_ctx, getState())
 		try enterRule(_localctx, 4, TURTLEParser.RULE_directive)
 		defer {
@@ -324,7 +331,7 @@ open class TURTLEParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -335,36 +342,47 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class PrefixIDContext:ParserRuleContext {
-		open func PNAME_NS() -> TerminalNode? { return getToken(TURTLEParser.Tokens.PNAME_NS.rawValue, 0) }
-		open func IRIREF() -> TerminalNode? { return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_prefixID }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterPrefixID(self)
+
+	public class PrefixIDContext: ParserRuleContext {
+			open
+			func PNAME_NS() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.PNAME_NS.rawValue, 0)
+			}
+			open
+			func IRIREF() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_prefixID
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterPrefixID(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitPrefixID(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitPrefixID(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitPrefixID(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitPrefixID(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitPrefixID(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitPrefixID(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefixID() throws -> PrefixIDContext {
+	 open func prefixID() throws -> PrefixIDContext {
 		var _localctx: PrefixIDContext = PrefixIDContext(_ctx, getState())
 		try enterRule(_localctx, 6, TURTLEParser.RULE_prefixID)
 		defer {
@@ -390,35 +408,43 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class BaseContext:ParserRuleContext {
-		open func IRIREF() -> TerminalNode? { return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_base }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterBase(self)
+
+	public class BaseContext: ParserRuleContext {
+			open
+			func IRIREF() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_base
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterBase(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitBase(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitBase(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitBase(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitBase(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitBase(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitBase(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func base() throws -> BaseContext {
+	 open func base() throws -> BaseContext {
 		var _localctx: BaseContext = BaseContext(_ctx, getState())
 		try enterRule(_localctx, 8, TURTLEParser.RULE_base)
 		defer {
@@ -442,35 +468,43 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class SparqlBaseContext:ParserRuleContext {
-		open func IRIREF() -> TerminalNode? { return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_sparqlBase }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterSparqlBase(self)
+
+	public class SparqlBaseContext: ParserRuleContext {
+			open
+			func IRIREF() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_sparqlBase
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterSparqlBase(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitSparqlBase(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitSparqlBase(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitSparqlBase(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitSparqlBase(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitSparqlBase(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitSparqlBase(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sparqlBase() throws -> SparqlBaseContext {
+	 open func sparqlBase() throws -> SparqlBaseContext {
 		var _localctx: SparqlBaseContext = SparqlBaseContext(_ctx, getState())
 		try enterRule(_localctx, 10, TURTLEParser.RULE_sparqlBase)
 		defer {
@@ -492,36 +526,47 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class SparqlPrefixContext:ParserRuleContext {
-		open func PNAME_NS() -> TerminalNode? { return getToken(TURTLEParser.Tokens.PNAME_NS.rawValue, 0) }
-		open func IRIREF() -> TerminalNode? { return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_sparqlPrefix }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterSparqlPrefix(self)
+
+	public class SparqlPrefixContext: ParserRuleContext {
+			open
+			func PNAME_NS() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.PNAME_NS.rawValue, 0)
+			}
+			open
+			func IRIREF() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_sparqlPrefix
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterSparqlPrefix(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitSparqlPrefix(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitSparqlPrefix(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitSparqlPrefix(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitSparqlPrefix(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitSparqlPrefix(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitSparqlPrefix(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sparqlPrefix() throws -> SparqlPrefixContext {
+	 open func sparqlPrefix() throws -> SparqlPrefixContext {
 		var _localctx: SparqlPrefixContext = SparqlPrefixContext(_ctx, getState())
 		try enterRule(_localctx, 12, TURTLEParser.RULE_sparqlPrefix)
 		defer {
@@ -545,43 +590,51 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class TriplesContext:ParserRuleContext {
-		open func subject() -> SubjectContext? {
-			return getRuleContext(SubjectContext.self,0)
+
+	public class TriplesContext: ParserRuleContext {
+			open
+			func subject() -> SubjectContext? {
+				return getRuleContext(SubjectContext.self, 0)
+			}
+			open
+			func predicateObjectList() -> PredicateObjectListContext? {
+				return getRuleContext(PredicateObjectListContext.self, 0)
+			}
+			open
+			func blankNodePropertyList() -> BlankNodePropertyListContext? {
+				return getRuleContext(BlankNodePropertyListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_triples
 		}
-		open func predicateObjectList() -> PredicateObjectListContext? {
-			return getRuleContext(PredicateObjectListContext.self,0)
-		}
-		open func blankNodePropertyList() -> BlankNodePropertyListContext? {
-			return getRuleContext(BlankNodePropertyListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_triples }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterTriples(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterTriples(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitTriples(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitTriples(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitTriples(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitTriples(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitTriples(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitTriples(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func triples() throws -> TriplesContext {
+	 open func triples() throws -> TriplesContext {
 		var _localctx: TriplesContext = TriplesContext(_ctx, getState())
 		try enterRule(_localctx, 14, TURTLEParser.RULE_triples)
 		var _la: Int = 0
@@ -627,7 +680,7 @@ open class TURTLEParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -638,46 +691,55 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class PredicateObjectListContext:ParserRuleContext {
-		open func verb() -> Array<VerbContext> {
-			return getRuleContexts(VerbContext.self)
+
+	public class PredicateObjectListContext: ParserRuleContext {
+			open
+			func verb() -> [VerbContext] {
+				return getRuleContexts(VerbContext.self)
+			}
+			open
+			func verb(_ i: Int) -> VerbContext? {
+				return getRuleContext(VerbContext.self, i)
+			}
+			open
+			func objectList() -> [ObjectListContext] {
+				return getRuleContexts(ObjectListContext.self)
+			}
+			open
+			func objectList(_ i: Int) -> ObjectListContext? {
+				return getRuleContext(ObjectListContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_predicateObjectList
 		}
-		open func verb(_ i: Int) -> VerbContext? {
-			return getRuleContext(VerbContext.self,i)
-		}
-		open func objectList() -> Array<ObjectListContext> {
-			return getRuleContexts(ObjectListContext.self)
-		}
-		open func objectList(_ i: Int) -> ObjectListContext? {
-			return getRuleContext(ObjectListContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_predicateObjectList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterPredicateObjectList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterPredicateObjectList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitPredicateObjectList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitPredicateObjectList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitPredicateObjectList(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitPredicateObjectList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitPredicateObjectList(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitPredicateObjectList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func predicateObjectList() throws -> PredicateObjectListContext {
+	 open func predicateObjectList() throws -> PredicateObjectListContext {
 		var _localctx: PredicateObjectListContext = PredicateObjectListContext(_ctx, getState())
 		try enterRule(_localctx, 16, TURTLEParser.RULE_predicateObjectList)
 		var _la: Int = 0
@@ -734,40 +796,47 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class ObjectListContext:ParserRuleContext {
-		open func object() -> Array<ObjectContext> {
-			return getRuleContexts(ObjectContext.self)
+
+	public class ObjectListContext: ParserRuleContext {
+			open
+			func object() -> [ObjectContext] {
+				return getRuleContexts(ObjectContext.self)
+			}
+			open
+			func object(_ i: Int) -> ObjectContext? {
+				return getRuleContext(ObjectContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_objectList
 		}
-		open func object(_ i: Int) -> ObjectContext? {
-			return getRuleContext(ObjectContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_objectList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterObjectList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterObjectList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitObjectList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitObjectList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitObjectList(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitObjectList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitObjectList(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitObjectList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func objectList() throws -> ObjectListContext {
+	 open func objectList() throws -> ObjectListContext {
 		var _localctx: ObjectListContext = ObjectListContext(_ctx, getState())
 		try enterRule(_localctx, 18, TURTLEParser.RULE_objectList)
 		var _la: Int = 0
@@ -806,37 +875,43 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class VerbContext:ParserRuleContext {
-		open func predicate() -> PredicateContext? {
-			return getRuleContext(PredicateContext.self,0)
+
+	public class VerbContext: ParserRuleContext {
+			open
+			func predicate() -> PredicateContext? {
+				return getRuleContext(PredicateContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_verb
 		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_verb }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterVerb(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterVerb(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitVerb(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitVerb(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitVerb(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitVerb(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitVerb(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitVerb(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func verb() throws -> VerbContext {
+	 open func verb() throws -> VerbContext {
 		var _localctx: VerbContext = VerbContext(_ctx, getState())
 		try enterRule(_localctx, 20, TURTLEParser.RULE_verb)
 		defer {
@@ -861,7 +936,7 @@ open class TURTLEParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -872,41 +947,51 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class SubjectContext:ParserRuleContext {
-		open func iri() -> IriContext? {
-			return getRuleContext(IriContext.self,0)
+
+	public class SubjectContext: ParserRuleContext {
+			open
+			func iri() -> IriContext? {
+				return getRuleContext(IriContext.self, 0)
+			}
+			open
+			func BlankNode() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.BlankNode.rawValue, 0)
+			}
+			open
+			func collection() -> CollectionContext? {
+				return getRuleContext(CollectionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_subject
 		}
-		open func BlankNode() -> TerminalNode? { return getToken(TURTLEParser.Tokens.BlankNode.rawValue, 0) }
-		open func collection() -> CollectionContext? {
-			return getRuleContext(CollectionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_subject }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterSubject(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterSubject(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitSubject(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitSubject(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitSubject(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitSubject(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitSubject(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitSubject(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func subject() throws -> SubjectContext {
+	 open func subject() throws -> SubjectContext {
 		var _localctx: SubjectContext = SubjectContext(_ctx, getState())
 		try enterRule(_localctx, 22, TURTLEParser.RULE_subject)
 		defer {
@@ -938,7 +1023,7 @@ open class TURTLEParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -949,37 +1034,43 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class PredicateContext:ParserRuleContext {
-		open func iri() -> IriContext? {
-			return getRuleContext(IriContext.self,0)
+
+	public class PredicateContext: ParserRuleContext {
+			open
+			func iri() -> IriContext? {
+				return getRuleContext(IriContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_predicate
 		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_predicate }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterPredicate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterPredicate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitPredicate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitPredicate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitPredicate(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitPredicate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitPredicate(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitPredicate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func predicate() throws -> PredicateContext {
+	 open func predicate() throws -> PredicateContext {
 		var _localctx: PredicateContext = PredicateContext(_ctx, getState())
 		try enterRule(_localctx, 24, TURTLEParser.RULE_predicate)
 		defer {
@@ -999,47 +1090,59 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class ObjectContext:ParserRuleContext {
-		open func iri() -> IriContext? {
-			return getRuleContext(IriContext.self,0)
+
+	public class ObjectContext: ParserRuleContext {
+			open
+			func iri() -> IriContext? {
+				return getRuleContext(IriContext.self, 0)
+			}
+			open
+			func BlankNode() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.BlankNode.rawValue, 0)
+			}
+			open
+			func collection() -> CollectionContext? {
+				return getRuleContext(CollectionContext.self, 0)
+			}
+			open
+			func blankNodePropertyList() -> BlankNodePropertyListContext? {
+				return getRuleContext(BlankNodePropertyListContext.self, 0)
+			}
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_object
 		}
-		open func BlankNode() -> TerminalNode? { return getToken(TURTLEParser.Tokens.BlankNode.rawValue, 0) }
-		open func collection() -> CollectionContext? {
-			return getRuleContext(CollectionContext.self,0)
-		}
-		open func blankNodePropertyList() -> BlankNodePropertyListContext? {
-			return getRuleContext(BlankNodePropertyListContext.self,0)
-		}
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_object }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterObject(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterObject(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitObject(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitObject(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitObject(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitObject(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitObject(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitObject(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func object() throws -> ObjectContext {
+	 open func object() throws -> ObjectContext {
 		var _localctx: ObjectContext = ObjectContext(_ctx, getState())
 		try enterRule(_localctx, 26, TURTLEParser.RULE_object)
 		defer {
@@ -1086,7 +1189,7 @@ open class TURTLEParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1097,39 +1200,51 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func rdfLiteral() -> RdfLiteralContext? {
-			return getRuleContext(RdfLiteralContext.self,0)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func rdfLiteral() -> RdfLiteralContext? {
+				return getRuleContext(RdfLiteralContext.self, 0)
+			}
+			open
+			func NumericLiteral() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.NumericLiteral.rawValue, 0)
+			}
+			open
+			func BooleanLiteral() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.BooleanLiteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_literal
 		}
-		open func NumericLiteral() -> TerminalNode? { return getToken(TURTLEParser.Tokens.NumericLiteral.rawValue, 0) }
-		open func BooleanLiteral() -> TerminalNode? { return getToken(TURTLEParser.Tokens.BooleanLiteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitLiteral(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 28, TURTLEParser.RULE_literal)
 		defer {
@@ -1160,7 +1275,7 @@ open class TURTLEParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1171,37 +1286,43 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class BlankNodePropertyListContext:ParserRuleContext {
-		open func predicateObjectList() -> PredicateObjectListContext? {
-			return getRuleContext(PredicateObjectListContext.self,0)
+
+	public class BlankNodePropertyListContext: ParserRuleContext {
+			open
+			func predicateObjectList() -> PredicateObjectListContext? {
+				return getRuleContext(PredicateObjectListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_blankNodePropertyList
 		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_blankNodePropertyList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterBlankNodePropertyList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterBlankNodePropertyList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitBlankNodePropertyList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitBlankNodePropertyList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitBlankNodePropertyList(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitBlankNodePropertyList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitBlankNodePropertyList(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitBlankNodePropertyList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blankNodePropertyList() throws -> BlankNodePropertyListContext {
+	 open func blankNodePropertyList() throws -> BlankNodePropertyListContext {
 		var _localctx: BlankNodePropertyListContext = BlankNodePropertyListContext(_ctx, getState())
 		try enterRule(_localctx, 30, TURTLEParser.RULE_blankNodePropertyList)
 		defer {
@@ -1225,40 +1346,47 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class CollectionContext:ParserRuleContext {
-		open func object() -> Array<ObjectContext> {
-			return getRuleContexts(ObjectContext.self)
+
+	public class CollectionContext: ParserRuleContext {
+			open
+			func object() -> [ObjectContext] {
+				return getRuleContexts(ObjectContext.self)
+			}
+			open
+			func object(_ i: Int) -> ObjectContext? {
+				return getRuleContext(ObjectContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_collection
 		}
-		open func object(_ i: Int) -> ObjectContext? {
-			return getRuleContext(ObjectContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_collection }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterCollection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterCollection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitCollection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitCollection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitCollection(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitCollection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitCollection(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitCollection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collection() throws -> CollectionContext {
+	 open func collection() throws -> CollectionContext {
 		var _localctx: CollectionContext = CollectionContext(_ctx, getState())
 		try enterRule(_localctx, 32, TURTLEParser.RULE_collection)
 		var _la: Int = 0
@@ -1300,39 +1428,51 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class RdfLiteralContext:ParserRuleContext {
-		open func String() -> TerminalNode? { return getToken(TURTLEParser.Tokens.String.rawValue, 0) }
-		open func LANGTAG() -> TerminalNode? { return getToken(TURTLEParser.Tokens.LANGTAG.rawValue, 0) }
-		open func iri() -> IriContext? {
-			return getRuleContext(IriContext.self,0)
+
+	public class RdfLiteralContext: ParserRuleContext {
+			open
+			func String() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.String.rawValue, 0)
+			}
+			open
+			func LANGTAG() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.LANGTAG.rawValue, 0)
+			}
+			open
+			func iri() -> IriContext? {
+				return getRuleContext(IriContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_rdfLiteral
 		}
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_rdfLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterRdfLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterRdfLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitRdfLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitRdfLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitRdfLiteral(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitRdfLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitRdfLiteral(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitRdfLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rdfLiteral() throws -> RdfLiteralContext {
+	 open func rdfLiteral() throws -> RdfLiteralContext {
 		var _localctx: RdfLiteralContext = RdfLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 34, TURTLEParser.RULE_rdfLiteral)
 		defer {
@@ -1385,36 +1525,47 @@ open class TURTLEParser: Parser {
 
 		return _localctx
 	}
-	open class IriContext:ParserRuleContext {
-		open func IRIREF() -> TerminalNode? { return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0) }
-		open func PrefixedName() -> TerminalNode? { return getToken(TURTLEParser.Tokens.PrefixedName.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return TURTLEParser.RULE_iri }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).enterIri(self)
+
+	public class IriContext: ParserRuleContext {
+			open
+			func IRIREF() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.IRIREF.rawValue, 0)
+			}
+			open
+			func PrefixedName() -> TerminalNode? {
+				return getToken(TURTLEParser.Tokens.PrefixedName.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return TURTLEParser.RULE_iri
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.enterIri(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is TURTLEListener {
-			 	(listener as! TURTLEListener).exitIri(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? TURTLEListener {
+				listener.exitIri(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is TURTLEVisitor {
-			     return (visitor as! TURTLEVisitor<T>).visitIri(self)
-			}else if visitor is TURTLEBaseVisitor {
-		    	 return (visitor as! TURTLEBaseVisitor<T>).visitIri(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? TURTLEVisitor {
+			    return visitor.visitIri(self)
+			}
+			else if let visitor = visitor as? TURTLEBaseVisitor {
+			    return visitor.visitIri(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iri() throws -> IriContext {
+	 open func iri() throws -> IriContext {
 		var _localctx: IriContext = IriContext(_ctx, getState())
 		try enterRule(_localctx, 36, TURTLEParser.RULE_iri)
 		var _la: Int = 0
@@ -1447,6 +1598,10 @@ open class TURTLEParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = TURTLEParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = TURTLEParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

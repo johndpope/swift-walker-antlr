@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/mumath/mumath.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/mumath/mumath.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class mumathParser: Parser {
@@ -11,25 +11,31 @@ open class mumathParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, BLOCK = 1, ENDBLOCK = 2, FUNCTION = 3, ENDFUN = 4, EQF = 5, 
-                 LOOP = 6, ENDLOOP = 7, WHEN = 8, EXIT = 9, OR = 10, WS = 11, 
-                 COMMENT = 12, EQUATION = 13, QUOTE = 14, PLUS = 15, MINUS = 16, 
-                 STAR = 17, SLASH = 18, COMMA = 19, SEMI = 20, DOLLAR = 21, 
-                 COLON = 22, EQC = 23, NOT_EQUAL = 24, LT = 25, LE = 26, 
-                 GE = 27, GT = 28, LPAREN = 29, RPAREN = 30, POWER = 31, 
-                 ID = 32, ARR = 33, STRING = 34, NUMBER = 35, MOD = 36, 
-                 AND = 37, NOT = 38
+                 LOOP = 6, ENDLOOP = 7, WHEN = 8, EXIT = 9, OR = 10, AND = 11, 
+                 NOT = 12, MOD = 13, WS = 14, COMMENT = 15, EQUATION = 16, 
+                 QUOTE = 17, PLUS = 18, MINUS = 19, STAR = 20, SLASH = 21, 
+                 COMMA = 22, SEMI = 23, DOLLAR = 24, COLON = 25, EQC = 26, 
+                 NOT_EQUAL = 27, LT = 28, LE = 29, GE = 30, GT = 31, LPAREN = 32, 
+                 RPAREN = 33, POWER = 34, ID = 35, ARR = 36, STRING = 37, 
+                 NUMBER = 38
 	}
-	public static let RULE_program = 0, RULE_assignment = 1, RULE_list = 2, 
-                   RULE_functionDefinition = 3, RULE_actualParameter = 4, 
-                   RULE_statments = 5, RULE_block = 6, RULE_loop = 7, RULE_when = 8, 
-                   RULE_expression = 9, RULE_relationalOperator = 10, RULE_simpleExpression = 11, 
-                   RULE_addingOperator = 12, RULE_term = 13, RULE_multiplyingOperator = 14, 
-                   RULE_factor = 15, RULE_constant = 16, RULE_functionDesignator = 17, 
-                   RULE_equal = 18
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_program = 0, RULE_assignment = 1, RULE_list = 2, RULE_functionDefinition = 3, 
+            RULE_actualParameter = 4, RULE_statments = 5, RULE_block = 6, 
+            RULE_loop = 7, RULE_when = 8, RULE_expression = 9, RULE_relationalOperator = 10, 
+            RULE_simpleExpression = 11, RULE_addingOperator = 12, RULE_term = 13, 
+            RULE_multiplyingOperator = 14, RULE_factor = 15, RULE_constant = 16, 
+            RULE_functionDesignator = 17, RULE_equal = 18
+
+	public
+	static let ruleNames: [String] = [
 		"program", "assignment", "list", "functionDefinition", "actualParameter", 
 		"statments", "block", "loop", "when", "expression", "relationalOperator", 
 		"simpleExpression", "addingOperator", "term", "multiplyingOperator", "factor", 
@@ -38,120 +44,120 @@ open class mumathParser: Parser {
 
 	private static let _LITERAL_NAMES: [String?] = [
 		nil, "'BLOCK'", "'ENDBLOCK'", "'FUNCTION'", "'ENDFUN'", "'EQ'", "'LOOP'", 
-		"'ENDLOOP'", "'WHEN'", "'EXIT'", "'OR'", nil, nil, "'=='", "'''", "'+'", 
-		"'-'", "'*'", "'/'", "','", "';'", "'$'", "':'", "'='", "'<>'", "'<'", 
-		"'<='", "'>='", "'>'", "'('", "')'", "'^'"
+		"'ENDLOOP'", "'WHEN'", "'EXIT'", "'OR'", "'AND'", "'NOT'", "'mod'", nil, 
+		nil, "'=='", "'''", "'+'", "'-'", "'*'", "'/'", "','", "';'", "'$'", "':'", 
+		"'='", "'<>'", "'<'", "'<='", "'>='", "'>'", "'('", "')'", "'^'"
 	]
 	private static let _SYMBOLIC_NAMES: [String?] = [
 		nil, "BLOCK", "ENDBLOCK", "FUNCTION", "ENDFUN", "EQF", "LOOP", "ENDLOOP", 
-		"WHEN", "EXIT", "OR", "WS", "COMMENT", "EQUATION", "QUOTE", "PLUS", "MINUS", 
-		"STAR", "SLASH", "COMMA", "SEMI", "DOLLAR", "COLON", "EQC", "NOT_EQUAL", 
-		"LT", "LE", "GE", "GT", "LPAREN", "RPAREN", "POWER", "ID", "ARR", "STRING", 
-		"NUMBER", "MOD", "AND", "NOT"
+		"WHEN", "EXIT", "OR", "AND", "NOT", "MOD", "WS", "COMMENT", "EQUATION", 
+		"QUOTE", "PLUS", "MINUS", "STAR", "SLASH", "COMMA", "SEMI", "DOLLAR", 
+		"COLON", "EQC", "NOT_EQUAL", "LT", "LE", "GE", "GT", "LPAREN", "RPAREN", 
+		"POWER", "ID", "ARR", "STRING", "NUMBER"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "mumath.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return mumathParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "mumath.g4" }
+	override open
+	func getSerializedATN() -> String { return mumathParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return mumathParser.ruleNames }
+	override open
+	func getATN() -> ATN { return mumathParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return mumathParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return mumathParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return mumathParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,mumathParser._ATN,mumathParser._decisionToDFA, mumathParser._sharedContextCache)
 	}
-	open class ProgramContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(mumathParser.Tokens.EOF.rawValue, 0) }
-		open func SEMI() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.SEMI.rawValue) }
-		open func SEMI(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.SEMI.rawValue, i)
+
+	public class ProgramContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func SEMI() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.SEMI.rawValue)
+			}
+			open
+			func SEMI(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.SEMI.rawValue, i)
+			}
+			open
+			func DOLLAR() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.DOLLAR.rawValue)
+			}
+			open
+			func DOLLAR(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.DOLLAR.rawValue, i)
+			}
+			open
+			func functionDefinition() -> [FunctionDefinitionContext] {
+				return getRuleContexts(FunctionDefinitionContext.self)
+			}
+			open
+			func functionDefinition(_ i: Int) -> FunctionDefinitionContext? {
+				return getRuleContext(FunctionDefinitionContext.self, i)
+			}
+			open
+			func assignment() -> [AssignmentContext] {
+				return getRuleContexts(AssignmentContext.self)
+			}
+			open
+			func assignment(_ i: Int) -> AssignmentContext? {
+				return getRuleContext(AssignmentContext.self, i)
+			}
+			open
+			func functionDesignator() -> [FunctionDesignatorContext] {
+				return getRuleContexts(FunctionDesignatorContext.self)
+			}
+			open
+			func functionDesignator(_ i: Int) -> FunctionDesignatorContext? {
+				return getRuleContext(FunctionDesignatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_program
 		}
-		open func DOLLAR() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.DOLLAR.rawValue) }
-		open func DOLLAR(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.DOLLAR.rawValue, i)
-		}
-		open func functionDefinition() -> Array<FunctionDefinitionContext> {
-			return getRuleContexts(FunctionDefinitionContext.self)
-		}
-		open func functionDefinition(_ i: Int) -> FunctionDefinitionContext? {
-			return getRuleContext(FunctionDefinitionContext.self,i)
-		}
-		open func assignment() -> Array<AssignmentContext> {
-			return getRuleContexts(AssignmentContext.self)
-		}
-		open func assignment(_ i: Int) -> AssignmentContext? {
-			return getRuleContext(AssignmentContext.self,i)
-		}
-		open func functionDesignator() -> Array<FunctionDesignatorContext> {
-			return getRuleContexts(FunctionDesignatorContext.self)
-		}
-		open func functionDesignator(_ i: Int) -> FunctionDesignatorContext? {
-			return getRuleContext(FunctionDesignatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_program }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterProgram(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterProgram(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitProgram(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitProgram(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitProgram(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitProgram(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitProgram(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitProgram(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func program() throws -> ProgramContext {
+	 open func program() throws -> ProgramContext {
 		var _localctx: ProgramContext = ProgramContext(_ctx, getState())
 		try enterRule(_localctx, 0, mumathParser.RULE_program)
 		var _la: Int = 0
@@ -219,45 +225,59 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class AssignmentContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func ID() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.ID.rawValue)
+			}
+			open
+			func ID(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.ID.rawValue, i)
+			}
+			open
+			func COLON() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.COLON.rawValue)
+			}
+			open
+			func COLON(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.COLON.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_assignment
 		}
-		open func ID() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.ID.rawValue) }
-		open func ID(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.ID.rawValue, i)
-		}
-		open func COLON() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.COLON.rawValue) }
-		open func COLON(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.COLON.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterAssignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterAssignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitAssignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitAssignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitAssignment(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitAssignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitAssignment(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitAssignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignment() throws -> AssignmentContext {
+	 open func assignment() throws -> AssignmentContext {
 		var _localctx: AssignmentContext = AssignmentContext(_ctx, getState())
 		try enterRule(_localctx, 2, mumathParser.RULE_assignment)
 		defer {
@@ -280,7 +300,7 @@ open class mumathParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(56); 
 		 		try _errHandler.sync(self)
@@ -298,44 +318,63 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class ListContext:ParserRuleContext {
-		open func LPAREN() -> TerminalNode? { return getToken(mumathParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(mumathParser.Tokens.RPAREN.rawValue, 0) }
-		open func ID() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.ID.rawValue) }
-		open func ID(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.ID.rawValue, i)
+
+	public class ListContext: ParserRuleContext {
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func ID() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.ID.rawValue)
+			}
+			open
+			func ID(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.ID.rawValue, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_list
 		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitList(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitList(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list() throws -> ListContext {
+	 open func list() throws -> ListContext {
 		var _localctx: ListContext = ListContext(_ctx, getState())
 		try enterRule(_localctx, 4, mumathParser.RULE_list)
 		var _la: Int = 0
@@ -381,7 +420,7 @@ open class mumathParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -393,47 +432,67 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionDefinitionContext:ParserRuleContext {
-		open func FUNCTION() -> TerminalNode? { return getToken(mumathParser.Tokens.FUNCTION.rawValue, 0) }
-		open func ID() -> TerminalNode? { return getToken(mumathParser.Tokens.ID.rawValue, 0) }
-		open func list() -> ListContext? {
-			return getRuleContext(ListContext.self,0)
+
+	public class FunctionDefinitionContext: ParserRuleContext {
+			open
+			func FUNCTION() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.FUNCTION.rawValue, 0)
+			}
+			open
+			func ID() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.ID.rawValue, 0)
+			}
+			open
+			func list() -> ListContext? {
+				return getRuleContext(ListContext.self, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func statments() -> StatmentsContext? {
+				return getRuleContext(StatmentsContext.self, 0)
+			}
+			open
+			func ENDFUN() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.ENDFUN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_functionDefinition
 		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.COMMA.rawValue, i)
-		}
-		open func statments() -> StatmentsContext? {
-			return getRuleContext(StatmentsContext.self,0)
-		}
-		open func ENDFUN() -> TerminalNode? { return getToken(mumathParser.Tokens.ENDFUN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_functionDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterFunctionDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterFunctionDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitFunctionDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitFunctionDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitFunctionDefinition(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitFunctionDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitFunctionDefinition(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitFunctionDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionDefinition() throws -> FunctionDefinitionContext {
+	 open func functionDefinition() throws -> FunctionDefinitionContext {
 		var _localctx: FunctionDefinitionContext = FunctionDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 6, mumathParser.RULE_functionDefinition)
 		var _la: Int = 0
@@ -477,40 +536,47 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class ActualParameterContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ActualParameterContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func assignment() -> AssignmentContext? {
+				return getRuleContext(AssignmentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_actualParameter
 		}
-		open func assignment() -> AssignmentContext? {
-			return getRuleContext(AssignmentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_actualParameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterActualParameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterActualParameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitActualParameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitActualParameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitActualParameter(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitActualParameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitActualParameter(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitActualParameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func actualParameter() throws -> ActualParameterContext {
+	 open func actualParameter() throws -> ActualParameterContext {
 		var _localctx: ActualParameterContext = ActualParameterContext(_ctx, getState())
 		try enterRule(_localctx, 8, mumathParser.RULE_actualParameter)
 		defer {
@@ -543,62 +609,79 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class StatmentsContext:ParserRuleContext {
-		open func loop() -> LoopContext? {
-			return getRuleContext(LoopContext.self,0)
+
+	public class StatmentsContext: ParserRuleContext {
+			open
+			func loop() -> LoopContext? {
+				return getRuleContext(LoopContext.self, 0)
+			}
+			open
+			func when() -> WhenContext? {
+				return getRuleContext(WhenContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func assignment() -> AssignmentContext? {
+				return getRuleContext(AssignmentContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func functionDesignator() -> FunctionDesignatorContext? {
+				return getRuleContext(FunctionDesignatorContext.self, 0)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func statments() -> [StatmentsContext] {
+				return getRuleContexts(StatmentsContext.self)
+			}
+			open
+			func statments(_ i: Int) -> StatmentsContext? {
+				return getRuleContext(StatmentsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_statments
 		}
-		open func when() -> WhenContext? {
-			return getRuleContext(WhenContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func assignment() -> AssignmentContext? {
-			return getRuleContext(AssignmentContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func functionDesignator() -> FunctionDesignatorContext? {
-			return getRuleContext(FunctionDesignatorContext.self,0)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.COMMA.rawValue, i)
-		}
-		open func statments() -> Array<StatmentsContext> {
-			return getRuleContexts(StatmentsContext.self)
-		}
-		open func statments(_ i: Int) -> StatmentsContext? {
-			return getRuleContext(StatmentsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_statments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterStatments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterStatments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitStatments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitStatments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitStatments(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitStatments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitStatments(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitStatments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statments() throws -> StatmentsContext {
+	 open func statments() throws -> StatmentsContext {
 		var _localctx: StatmentsContext = StatmentsContext(_ctx, getState())
 		try enterRule(_localctx, 10, mumathParser.RULE_statments)
 		defer {
@@ -668,40 +751,55 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func BLOCK() -> TerminalNode? { return getToken(mumathParser.Tokens.BLOCK.rawValue, 0) }
-		open func statments() -> StatmentsContext? {
-			return getRuleContext(StatmentsContext.self,0)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func BLOCK() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.BLOCK.rawValue, 0)
+			}
+			open
+			func statments() -> StatmentsContext? {
+				return getRuleContext(StatmentsContext.self, 0)
+			}
+			open
+			func COMMA() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.COMMA.rawValue, 0)
+			}
+			open
+			func ENDBLOCK() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.ENDBLOCK.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_block
 		}
-		open func COMMA() -> TerminalNode? { return getToken(mumathParser.Tokens.COMMA.rawValue, 0) }
-		open func ENDBLOCK() -> TerminalNode? { return getToken(mumathParser.Tokens.ENDBLOCK.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitBlock(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 12, mumathParser.RULE_block)
 		defer {
@@ -727,40 +825,55 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class LoopContext:ParserRuleContext {
-		open func LOOP() -> TerminalNode? { return getToken(mumathParser.Tokens.LOOP.rawValue, 0) }
-		open func statments() -> StatmentsContext? {
-			return getRuleContext(StatmentsContext.self,0)
+
+	public class LoopContext: ParserRuleContext {
+			open
+			func LOOP() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.LOOP.rawValue, 0)
+			}
+			open
+			func statments() -> StatmentsContext? {
+				return getRuleContext(StatmentsContext.self, 0)
+			}
+			open
+			func ENDLOOP() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.ENDLOOP.rawValue, 0)
+			}
+			open
+			func COMMA() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.COMMA.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_loop
 		}
-		open func ENDLOOP() -> TerminalNode? { return getToken(mumathParser.Tokens.ENDLOOP.rawValue, 0) }
-		open func COMMA() -> TerminalNode? { return getToken(mumathParser.Tokens.COMMA.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_loop }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterLoop(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterLoop(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitLoop(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitLoop(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitLoop(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitLoop(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitLoop(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitLoop(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func loop() throws -> LoopContext {
+	 open func loop() throws -> LoopContext {
 		var _localctx: LoopContext = LoopContext(_ctx, getState())
 		try enterRule(_localctx, 14, mumathParser.RULE_loop)
 		var _la: Int = 0
@@ -798,49 +911,67 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class WhenContext:ParserRuleContext {
-		open func WHEN() -> TerminalNode? { return getToken(mumathParser.Tokens.WHEN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class WhenContext: ParserRuleContext {
+			open
+			func WHEN() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.WHEN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func EXIT() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.EXIT.rawValue)
+			}
+			open
+			func EXIT(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.EXIT.rawValue, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.COMMA.rawValue, i)
+			}
+			open
+			func statments() -> StatmentsContext? {
+				return getRuleContext(StatmentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_when
 		}
-		open func EXIT() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.EXIT.rawValue) }
-		open func EXIT(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.EXIT.rawValue, i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.COMMA.rawValue, i)
-		}
-		open func statments() -> StatmentsContext? {
-			return getRuleContext(StatmentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_when }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterWhen(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterWhen(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitWhen(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitWhen(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitWhen(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitWhen(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitWhen(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitWhen(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func when() throws -> WhenContext {
+	 open func when() throws -> WhenContext {
 		var _localctx: WhenContext = WhenContext(_ctx, getState())
 		try enterRule(_localctx, 16, mumathParser.RULE_when)
 		var _la: Int = 0
@@ -899,46 +1030,55 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func simpleExpression() -> Array<SimpleExpressionContext> {
-			return getRuleContexts(SimpleExpressionContext.self)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func simpleExpression() -> [SimpleExpressionContext] {
+				return getRuleContexts(SimpleExpressionContext.self)
+			}
+			open
+			func simpleExpression(_ i: Int) -> SimpleExpressionContext? {
+				return getRuleContext(SimpleExpressionContext.self, i)
+			}
+			open
+			func relationalOperator() -> [RelationalOperatorContext] {
+				return getRuleContexts(RelationalOperatorContext.self)
+			}
+			open
+			func relationalOperator(_ i: Int) -> RelationalOperatorContext? {
+				return getRuleContext(RelationalOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_expression
 		}
-		open func simpleExpression(_ i: Int) -> SimpleExpressionContext? {
-			return getRuleContext(SimpleExpressionContext.self,i)
-		}
-		open func relationalOperator() -> Array<RelationalOperatorContext> {
-			return getRuleContexts(RelationalOperatorContext.self)
-		}
-		open func relationalOperator(_ i: Int) -> RelationalOperatorContext? {
-			return getRuleContext(RelationalOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitExpression(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 18, mumathParser.RULE_expression)
 		var _la: Int = 0
@@ -980,43 +1120,67 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class RelationalOperatorContext:ParserRuleContext {
-		open func equal() -> EqualContext? {
-			return getRuleContext(EqualContext.self,0)
+
+	public class RelationalOperatorContext: ParserRuleContext {
+			open
+			func equal() -> EqualContext? {
+				return getRuleContext(EqualContext.self, 0)
+			}
+			open
+			func NOT_EQUAL() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.NOT_EQUAL.rawValue, 0)
+			}
+			open
+			func LT() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.LT.rawValue, 0)
+			}
+			open
+			func LE() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.LE.rawValue, 0)
+			}
+			open
+			func GE() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.GE.rawValue, 0)
+			}
+			open
+			func GT() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.GT.rawValue, 0)
+			}
+			open
+			func EQUATION() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.EQUATION.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_relationalOperator
 		}
-		open func NOT_EQUAL() -> TerminalNode? { return getToken(mumathParser.Tokens.NOT_EQUAL.rawValue, 0) }
-		open func LT() -> TerminalNode? { return getToken(mumathParser.Tokens.LT.rawValue, 0) }
-		open func LE() -> TerminalNode? { return getToken(mumathParser.Tokens.LE.rawValue, 0) }
-		open func GE() -> TerminalNode? { return getToken(mumathParser.Tokens.GE.rawValue, 0) }
-		open func GT() -> TerminalNode? { return getToken(mumathParser.Tokens.GT.rawValue, 0) }
-		open func EQUATION() -> TerminalNode? { return getToken(mumathParser.Tokens.EQUATION.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_relationalOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterRelationalOperator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterRelationalOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitRelationalOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitRelationalOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitRelationalOperator(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitRelationalOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitRelationalOperator(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitRelationalOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func relationalOperator() throws -> RelationalOperatorContext {
+	 open func relationalOperator() throws -> RelationalOperatorContext {
 		var _localctx: RelationalOperatorContext = RelationalOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 20, mumathParser.RULE_relationalOperator)
 		var _la: Int = 0
@@ -1060,7 +1224,7 @@ open class mumathParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1071,47 +1235,59 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class SimpleExpressionContext:ParserRuleContext {
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class SimpleExpressionContext: ParserRuleContext {
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.MINUS.rawValue, 0)
+			}
+			open
+			func addingOperator() -> [AddingOperatorContext] {
+				return getRuleContexts(AddingOperatorContext.self)
+			}
+			open
+			func addingOperator(_ i: Int) -> AddingOperatorContext? {
+				return getRuleContext(AddingOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_simpleExpression
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open func MINUS() -> TerminalNode? { return getToken(mumathParser.Tokens.MINUS.rawValue, 0) }
-		open func addingOperator() -> Array<AddingOperatorContext> {
-			return getRuleContexts(AddingOperatorContext.self)
-		}
-		open func addingOperator(_ i: Int) -> AddingOperatorContext? {
-			return getRuleContext(AddingOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_simpleExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterSimpleExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterSimpleExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitSimpleExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitSimpleExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitSimpleExpression(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitSimpleExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitSimpleExpression(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitSimpleExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleExpression() throws -> SimpleExpressionContext {
+	 open func simpleExpression() throws -> SimpleExpressionContext {
 		var _localctx: SimpleExpressionContext = SimpleExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 22, mumathParser.RULE_simpleExpression)
 		var _la: Int = 0
@@ -1166,37 +1342,51 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class AddingOperatorContext:ParserRuleContext {
-		open func PLUS() -> TerminalNode? { return getToken(mumathParser.Tokens.PLUS.rawValue, 0) }
-		open func MINUS() -> TerminalNode? { return getToken(mumathParser.Tokens.MINUS.rawValue, 0) }
-		open func OR() -> TerminalNode? { return getToken(mumathParser.Tokens.OR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_addingOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterAddingOperator(self)
+
+	public class AddingOperatorContext: ParserRuleContext {
+			open
+			func PLUS() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.PLUS.rawValue, 0)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.MINUS.rawValue, 0)
+			}
+			open
+			func OR() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.OR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_addingOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterAddingOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitAddingOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitAddingOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitAddingOperator(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitAddingOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitAddingOperator(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitAddingOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func addingOperator() throws -> AddingOperatorContext {
+	 open func addingOperator() throws -> AddingOperatorContext {
 		var _localctx: AddingOperatorContext = AddingOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 24, mumathParser.RULE_addingOperator)
 		var _la: Int = 0
@@ -1231,46 +1421,55 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class TermContext:ParserRuleContext {
-		open func factor() -> Array<FactorContext> {
-			return getRuleContexts(FactorContext.self)
+
+	public class TermContext: ParserRuleContext {
+			open
+			func factor() -> [FactorContext] {
+				return getRuleContexts(FactorContext.self)
+			}
+			open
+			func factor(_ i: Int) -> FactorContext? {
+				return getRuleContext(FactorContext.self, i)
+			}
+			open
+			func multiplyingOperator() -> [MultiplyingOperatorContext] {
+				return getRuleContexts(MultiplyingOperatorContext.self)
+			}
+			open
+			func multiplyingOperator(_ i: Int) -> MultiplyingOperatorContext? {
+				return getRuleContext(MultiplyingOperatorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_term
 		}
-		open func factor(_ i: Int) -> FactorContext? {
-			return getRuleContext(FactorContext.self,i)
-		}
-		open func multiplyingOperator() -> Array<MultiplyingOperatorContext> {
-			return getRuleContexts(MultiplyingOperatorContext.self)
-		}
-		open func multiplyingOperator(_ i: Int) -> MultiplyingOperatorContext? {
-			return getRuleContext(MultiplyingOperatorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitTerm(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitTerm(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term() throws -> TermContext {
+	 open func term() throws -> TermContext {
 		var _localctx: TermContext = TermContext(_ctx, getState())
 		try enterRule(_localctx, 26, mumathParser.RULE_term)
 		var _la: Int = 0
@@ -1287,7 +1486,7 @@ open class mumathParser: Parser {
 		 	while (//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, mumathParser.Tokens.STAR.rawValue,mumathParser.Tokens.SLASH.rawValue,mumathParser.Tokens.POWER.rawValue,mumathParser.Tokens.MOD.rawValue,mumathParser.Tokens.AND.rawValue]
+		 	   let testArray: [Int] = [_la, mumathParser.Tokens.AND.rawValue,mumathParser.Tokens.MOD.rawValue,mumathParser.Tokens.STAR.rawValue,mumathParser.Tokens.SLASH.rawValue,mumathParser.Tokens.POWER.rawValue]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	      return testSet
@@ -1312,39 +1511,59 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class MultiplyingOperatorContext:ParserRuleContext {
-		open func STAR() -> TerminalNode? { return getToken(mumathParser.Tokens.STAR.rawValue, 0) }
-		open func SLASH() -> TerminalNode? { return getToken(mumathParser.Tokens.SLASH.rawValue, 0) }
-		open func MOD() -> TerminalNode? { return getToken(mumathParser.Tokens.MOD.rawValue, 0) }
-		open func AND() -> TerminalNode? { return getToken(mumathParser.Tokens.AND.rawValue, 0) }
-		open func POWER() -> TerminalNode? { return getToken(mumathParser.Tokens.POWER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_multiplyingOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterMultiplyingOperator(self)
+
+	public class MultiplyingOperatorContext: ParserRuleContext {
+			open
+			func STAR() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.STAR.rawValue, 0)
+			}
+			open
+			func SLASH() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.SLASH.rawValue, 0)
+			}
+			open
+			func MOD() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.MOD.rawValue, 0)
+			}
+			open
+			func AND() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.AND.rawValue, 0)
+			}
+			open
+			func POWER() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.POWER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_multiplyingOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterMultiplyingOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitMultiplyingOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitMultiplyingOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitMultiplyingOperator(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitMultiplyingOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitMultiplyingOperator(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitMultiplyingOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiplyingOperator() throws -> MultiplyingOperatorContext {
+	 open func multiplyingOperator() throws -> MultiplyingOperatorContext {
 		var _localctx: MultiplyingOperatorContext = MultiplyingOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 28, mumathParser.RULE_multiplyingOperator)
 		var _la: Int = 0
@@ -1358,7 +1577,7 @@ open class mumathParser: Parser {
 		 	if (!(//closure
 		 	 { () -> Bool in
 		 	      let testSet: Bool = {  () -> Bool in
-		 	   let testArray: [Int] = [_la, mumathParser.Tokens.STAR.rawValue,mumathParser.Tokens.SLASH.rawValue,mumathParser.Tokens.POWER.rawValue,mumathParser.Tokens.MOD.rawValue,mumathParser.Tokens.AND.rawValue]
+		 	   let testArray: [Int] = [_la, mumathParser.Tokens.AND.rawValue,mumathParser.Tokens.MOD.rawValue,mumathParser.Tokens.STAR.rawValue,mumathParser.Tokens.SLASH.rawValue,mumathParser.Tokens.POWER.rawValue]
 		 	    return  Utils.testBitLeftShiftArray(testArray, 0)
 		 	}()
 		 	      return testSet
@@ -1379,50 +1598,71 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class FactorContext:ParserRuleContext {
-		open func ID() -> TerminalNode? { return getToken(mumathParser.Tokens.ID.rawValue, 0) }
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
+
+	public class FactorContext: ParserRuleContext {
+			open
+			func ID() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.ID.rawValue, 0)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func functionDesignator() -> FunctionDesignatorContext? {
+				return getRuleContext(FunctionDesignatorContext.self, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func factor() -> FactorContext? {
+				return getRuleContext(FactorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_factor
 		}
-		open func LPAREN() -> TerminalNode? { return getToken(mumathParser.Tokens.LPAREN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func RPAREN() -> TerminalNode? { return getToken(mumathParser.Tokens.RPAREN.rawValue, 0) }
-		open func functionDesignator() -> FunctionDesignatorContext? {
-			return getRuleContext(FunctionDesignatorContext.self,0)
-		}
-		open func NOT() -> TerminalNode? { return getToken(mumathParser.Tokens.NOT.rawValue, 0) }
-		open func factor() -> FactorContext? {
-			return getRuleContext(FactorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_factor }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterFactor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterFactor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitFactor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitFactor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitFactor(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitFactor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitFactor(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitFactor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func factor() throws -> FactorContext {
+	 open func factor() throws -> FactorContext {
 		var _localctx: FactorContext = FactorContext(_ctx, getState())
 		try enterRule(_localctx, 30, mumathParser.RULE_factor)
 		defer {
@@ -1479,38 +1719,55 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class ConstantContext:ParserRuleContext {
-		open func NUMBER() -> TerminalNode? { return getToken(mumathParser.Tokens.NUMBER.rawValue, 0) }
-		open func STRING() -> TerminalNode? { return getToken(mumathParser.Tokens.STRING.rawValue, 0) }
-		open func QUOTE() -> TerminalNode? { return getToken(mumathParser.Tokens.QUOTE.rawValue, 0) }
-		open func ID() -> TerminalNode? { return getToken(mumathParser.Tokens.ID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_constant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterConstant(self)
+
+	public class ConstantContext: ParserRuleContext {
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.NUMBER.rawValue, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func QUOTE() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.QUOTE.rawValue, 0)
+			}
+			open
+			func ID() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.ID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_constant
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterConstant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitConstant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitConstant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitConstant(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitConstant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitConstant(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitConstant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant() throws -> ConstantContext {
+	 open func constant() throws -> ConstantContext {
 		var _localctx: ConstantContext = ConstantContext(_ctx, getState())
 		try enterRule(_localctx, 32, mumathParser.RULE_constant)
 		defer {
@@ -1557,47 +1814,67 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionDesignatorContext:ParserRuleContext {
-		open func ID() -> TerminalNode? { return getToken(mumathParser.Tokens.ID.rawValue, 0) }
-		open func LPAREN() -> TerminalNode? { return getToken(mumathParser.Tokens.LPAREN.rawValue, 0) }
-		open func RPAREN() -> TerminalNode? { return getToken(mumathParser.Tokens.RPAREN.rawValue, 0) }
-		open func actualParameter() -> Array<ActualParameterContext> {
-			return getRuleContexts(ActualParameterContext.self)
+
+	public class FunctionDesignatorContext: ParserRuleContext {
+			open
+			func ID() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.ID.rawValue, 0)
+			}
+			open
+			func LPAREN() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.LPAREN.rawValue, 0)
+			}
+			open
+			func RPAREN() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.RPAREN.rawValue, 0)
+			}
+			open
+			func actualParameter() -> [ActualParameterContext] {
+				return getRuleContexts(ActualParameterContext.self)
+			}
+			open
+			func actualParameter(_ i: Int) -> ActualParameterContext? {
+				return getRuleContext(ActualParameterContext.self, i)
+			}
+			open
+			func COMMA() -> [TerminalNode] {
+				return getTokens(mumathParser.Tokens.COMMA.rawValue)
+			}
+			open
+			func COMMA(_ i:Int) -> TerminalNode? {
+				return getToken(mumathParser.Tokens.COMMA.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_functionDesignator
 		}
-		open func actualParameter(_ i: Int) -> ActualParameterContext? {
-			return getRuleContext(ActualParameterContext.self,i)
-		}
-		open func COMMA() -> Array<TerminalNode> { return getTokens(mumathParser.Tokens.COMMA.rawValue) }
-		open func COMMA(_ i:Int) -> TerminalNode?{
-			return getToken(mumathParser.Tokens.COMMA.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_functionDesignator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterFunctionDesignator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterFunctionDesignator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitFunctionDesignator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitFunctionDesignator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitFunctionDesignator(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitFunctionDesignator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitFunctionDesignator(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitFunctionDesignator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionDesignator() throws -> FunctionDesignatorContext {
+	 open func functionDesignator() throws -> FunctionDesignatorContext {
 		var _localctx: FunctionDesignatorContext = FunctionDesignatorContext(_ctx, getState())
 		try enterRule(_localctx, 34, mumathParser.RULE_functionDesignator)
 		var _la: Int = 0
@@ -1613,13 +1890,13 @@ open class mumathParser: Parser {
 		 	setState(195)
 		 	try _errHandler.sync(self)
 		 	switch (mumathParser.Tokens(rawValue: try _input.LA(1))!) {
+		 	case .NOT:fallthrough
 		 	case .QUOTE:fallthrough
 		 	case .MINUS:fallthrough
 		 	case .LPAREN:fallthrough
 		 	case .ID:fallthrough
 		 	case .STRING:fallthrough
-		 	case .NUMBER:fallthrough
-		 	case .NOT:
+		 	case .NUMBER:
 		 		setState(186)
 		 		try actualParameter()
 		 		setState(191)
@@ -1647,7 +1924,7 @@ open class mumathParser: Parser {
 		 	case .RPAREN:
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(197)
 		 	try match(mumathParser.Tokens.RPAREN.rawValue)
@@ -1661,36 +1938,47 @@ open class mumathParser: Parser {
 
 		return _localctx
 	}
-	open class EqualContext:ParserRuleContext {
-		open func EQF() -> TerminalNode? { return getToken(mumathParser.Tokens.EQF.rawValue, 0) }
-		open func EQC() -> TerminalNode? { return getToken(mumathParser.Tokens.EQC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return mumathParser.RULE_equal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).enterEqual(self)
+
+	public class EqualContext: ParserRuleContext {
+			open
+			func EQF() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.EQF.rawValue, 0)
+			}
+			open
+			func EQC() -> TerminalNode? {
+				return getToken(mumathParser.Tokens.EQC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return mumathParser.RULE_equal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.enterEqual(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is mumathListener {
-			 	(listener as! mumathListener).exitEqual(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? mumathListener {
+				listener.exitEqual(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is mumathVisitor {
-			     return (visitor as! mumathVisitor<T>).visitEqual(self)
-			}else if visitor is mumathBaseVisitor {
-		    	 return (visitor as! mumathBaseVisitor<T>).visitEqual(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? mumathVisitor {
+			    return visitor.visitEqual(self)
+			}
+			else if let visitor = visitor as? mumathBaseVisitor {
+			    return visitor.visitEqual(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func equal() throws -> EqualContext {
+	 open func equal() throws -> EqualContext {
 		var _localctx: EqualContext = EqualContext(_ctx, getState())
 		try enterRule(_localctx, 36, mumathParser.RULE_equal)
 		var _la: Int = 0
@@ -1723,6 +2011,10 @@ open class mumathParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = mumathParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = mumathParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

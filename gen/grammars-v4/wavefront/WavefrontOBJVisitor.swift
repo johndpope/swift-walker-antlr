@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/wavefront/WavefrontOBJ.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/wavefront/WavefrontOBJ.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class WavefrontOBJVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStart(_ ctx: WavefrontOBJParser.StartContext) -> T{
+	open func visitStart(_ ctx: WavefrontOBJParser.StartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class WavefrontOBJVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: WavefrontOBJParser.LineContext) -> T{
+	open func visitLine(_ ctx: WavefrontOBJParser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class WavefrontOBJVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFace(_ ctx: WavefrontOBJParser.FaceContext) -> T{
+	open func visitFace(_ ctx: WavefrontOBJParser.FaceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class WavefrontOBJVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVertex(_ ctx: WavefrontOBJParser.VertexContext) -> T{
+	open func visitVertex(_ ctx: WavefrontOBJParser.VertexContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class WavefrontOBJVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMtllib(_ ctx: WavefrontOBJParser.MtllibContext) -> T{
+	open func visitMtllib(_ ctx: WavefrontOBJParser.MtllibContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class WavefrontOBJVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObject(_ ctx: WavefrontOBJParser.ObjectContext) -> T{
+	open func visitObject(_ ctx: WavefrontOBJParser.ObjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class WavefrontOBJVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUse_material(_ ctx: WavefrontOBJParser.Use_materialContext) -> T{
+	open func visitUse_material(_ ctx: WavefrontOBJParser.Use_materialContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class WavefrontOBJVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGroup(_ ctx: WavefrontOBJParser.GroupContext) -> T{
+	open func visitGroup(_ ctx: WavefrontOBJParser.GroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

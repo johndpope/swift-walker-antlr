@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/arithmetic/arithmetic.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/arithmetic/arithmetic.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class arithmeticBaseListener: arithmeticListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -67,6 +67,19 @@ open class arithmeticBaseListener: arithmeticListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterSignedAtom(_ ctx: arithmeticParser.SignedAtomContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitSignedAtom(_ ctx: arithmeticParser.SignedAtomContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterAtom(_ ctx: arithmeticParser.AtomContext) { }
 	/**
 	 * {@inheritDoc}
@@ -93,32 +106,6 @@ open class arithmeticBaseListener: arithmeticListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterRelop(_ ctx: arithmeticParser.RelopContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitRelop(_ ctx: arithmeticParser.RelopContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterNumber(_ ctx: arithmeticParser.NumberContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitNumber(_ ctx: arithmeticParser.NumberContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	open func enterVariable(_ ctx: arithmeticParser.VariableContext) { }
 	/**
 	 * {@inheritDoc}
@@ -126,6 +113,19 @@ open class arithmeticBaseListener: arithmeticListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitVariable(_ ctx: arithmeticParser.VariableContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterRelop(_ ctx: arithmeticParser.RelopContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitRelop(_ ctx: arithmeticParser.RelopContext) { }
 
 	/**
 	 * {@inheritDoc}

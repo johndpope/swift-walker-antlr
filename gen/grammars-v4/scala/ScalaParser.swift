@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/scala/Scala.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/scala/Scala.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class ScalaParser: Parser {
@@ -11,8 +11,11 @@ open class ScalaParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -30,42 +33,42 @@ open class ScalaParser: Parser {
                  Varid = 69, WS = 70, Semi = 71, Paren = 72, Delim = 73, 
                  Comment = 74
 	}
-	public static let RULE_literal = 0, RULE_qualId = 1, RULE_ids = 2, RULE_stableId = 3, 
-                   RULE_classQualifier = 4, RULE_type = 5, RULE_functionArgTypes = 6, 
-                   RULE_existentialClause = 7, RULE_existentialDcl = 8, 
-                   RULE_infixType = 9, RULE_compoundType = 10, RULE_annotType = 11, 
-                   RULE_simpleType = 12, RULE_typeArgs = 13, RULE_types = 14, 
-                   RULE_refinement = 15, RULE_refineStat = 16, RULE_typePat = 17, 
-                   RULE_ascription = 18, RULE_expr = 19, RULE_expr1 = 20, 
-                   RULE_postfixExpr = 21, RULE_infixExpr = 22, RULE_prefixExpr = 23, 
-                   RULE_simpleExpr1 = 24, RULE_exprs = 25, RULE_argumentExprs = 26, 
-                   RULE_blockExpr = 27, RULE_block = 28, RULE_blockStat = 29, 
-                   RULE_resultExpr = 30, RULE_enumerators = 31, RULE_generator = 32, 
-                   RULE_caseClauses = 33, RULE_caseClause = 34, RULE_guard = 35, 
-                   RULE_pattern = 36, RULE_pattern1 = 37, RULE_pattern2 = 38, 
-                   RULE_pattern3 = 39, RULE_simplePattern = 40, RULE_patterns = 41, 
-                   RULE_typeParamClause = 42, RULE_funTypeParamClause = 43, 
-                   RULE_variantTypeParam = 44, RULE_typeParam = 45, RULE_paramClauses = 46, 
-                   RULE_paramClause = 47, RULE_params = 48, RULE_param = 49, 
-                   RULE_paramType = 50, RULE_classParamClauses = 51, RULE_classParamClause = 52, 
-                   RULE_classParams = 53, RULE_classParam = 54, RULE_bindings = 55, 
-                   RULE_binding = 56, RULE_modifier = 57, RULE_localModifier = 58, 
-                   RULE_accessModifier = 59, RULE_accessQualifier = 60, 
-                   RULE_annotation = 61, RULE_constrAnnotation = 62, RULE_templateBody = 63, 
-                   RULE_templateStat = 64, RULE_selfType = 65, RULE_import_ = 66, 
-                   RULE_importExpr = 67, RULE_importSelectors = 68, RULE_importSelector = 69, 
-                   RULE_dcl = 70, RULE_valDcl = 71, RULE_varDcl = 72, RULE_funDcl = 73, 
-                   RULE_funSig = 74, RULE_typeDcl = 75, RULE_patVarDef = 76, 
-                   RULE_def = 77, RULE_patDef = 78, RULE_varDef = 79, RULE_funDef = 80, 
-                   RULE_typeDef = 81, RULE_tmplDef = 82, RULE_classDef = 83, 
-                   RULE_traitDef = 84, RULE_objectDef = 85, RULE_classTemplateOpt = 86, 
-                   RULE_traitTemplateOpt = 87, RULE_classTemplate = 88, 
-                   RULE_traitTemplate = 89, RULE_classParents = 90, RULE_traitParents = 91, 
-                   RULE_constr = 92, RULE_earlyDefs = 93, RULE_earlyDef = 94, 
-                   RULE_constrExpr = 95, RULE_constrBlock = 96, RULE_selfInvocation = 97, 
-                   RULE_topStatSeq = 98, RULE_topStat = 99, RULE_packaging = 100, 
-                   RULE_packageObject = 101, RULE_compilationUnit = 102
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_literal = 0, RULE_qualId = 1, RULE_ids = 2, RULE_stableId = 3, 
+            RULE_classQualifier = 4, RULE_type = 5, RULE_functionArgTypes = 6, 
+            RULE_existentialClause = 7, RULE_existentialDcl = 8, RULE_infixType = 9, 
+            RULE_compoundType = 10, RULE_annotType = 11, RULE_simpleType = 12, 
+            RULE_typeArgs = 13, RULE_types = 14, RULE_refinement = 15, RULE_refineStat = 16, 
+            RULE_typePat = 17, RULE_ascription = 18, RULE_expr = 19, RULE_expr1 = 20, 
+            RULE_postfixExpr = 21, RULE_infixExpr = 22, RULE_prefixExpr = 23, 
+            RULE_simpleExpr1 = 24, RULE_exprs = 25, RULE_argumentExprs = 26, 
+            RULE_blockExpr = 27, RULE_block = 28, RULE_blockStat = 29, RULE_resultExpr = 30, 
+            RULE_enumerators = 31, RULE_generator = 32, RULE_caseClauses = 33, 
+            RULE_caseClause = 34, RULE_guard = 35, RULE_pattern = 36, RULE_pattern1 = 37, 
+            RULE_pattern2 = 38, RULE_pattern3 = 39, RULE_simplePattern = 40, 
+            RULE_patterns = 41, RULE_typeParamClause = 42, RULE_funTypeParamClause = 43, 
+            RULE_variantTypeParam = 44, RULE_typeParam = 45, RULE_paramClauses = 46, 
+            RULE_paramClause = 47, RULE_params = 48, RULE_param = 49, RULE_paramType = 50, 
+            RULE_classParamClauses = 51, RULE_classParamClause = 52, RULE_classParams = 53, 
+            RULE_classParam = 54, RULE_bindings = 55, RULE_binding = 56, 
+            RULE_modifier = 57, RULE_localModifier = 58, RULE_accessModifier = 59, 
+            RULE_accessQualifier = 60, RULE_annotation = 61, RULE_constrAnnotation = 62, 
+            RULE_templateBody = 63, RULE_templateStat = 64, RULE_selfType = 65, 
+            RULE_import_ = 66, RULE_importExpr = 67, RULE_importSelectors = 68, 
+            RULE_importSelector = 69, RULE_dcl = 70, RULE_valDcl = 71, RULE_varDcl = 72, 
+            RULE_funDcl = 73, RULE_funSig = 74, RULE_typeDcl = 75, RULE_patVarDef = 76, 
+            RULE_def = 77, RULE_patDef = 78, RULE_varDef = 79, RULE_funDef = 80, 
+            RULE_typeDef = 81, RULE_tmplDef = 82, RULE_classDef = 83, RULE_traitDef = 84, 
+            RULE_objectDef = 85, RULE_classTemplateOpt = 86, RULE_traitTemplateOpt = 87, 
+            RULE_classTemplate = 88, RULE_traitTemplate = 89, RULE_classParents = 90, 
+            RULE_traitParents = 91, RULE_constr = 92, RULE_earlyDefs = 93, 
+            RULE_earlyDef = 94, RULE_constrExpr = 95, RULE_constrBlock = 96, 
+            RULE_selfInvocation = 97, RULE_topStatSeq = 98, RULE_topStat = 99, 
+            RULE_packaging = 100, RULE_packageObject = 101, RULE_compilationUnit = 102
+
+	public
+	static let ruleNames: [String] = [
 		"literal", "qualId", "ids", "stableId", "classQualifier", "type", "functionArgTypes", 
 		"existentialClause", "existentialDcl", "infixType", "compoundType", "annotType", 
 		"simpleType", "typeArgs", "types", "refinement", "refineStat", "typePat", 
@@ -107,88 +110,89 @@ open class ScalaParser: Parser {
 		"SymbolLiteral", "IntegerLiteral", "FloatingPointLiteral", "Id", "Varid", 
 		"WS", "Semi", "Paren", "Delim", "Comment"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "Scala.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return ScalaParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "Scala.g4" }
+	override open
+	func getSerializedATN() -> String { return ScalaParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return ScalaParser.ruleNames }
+	override open
+	func getATN() -> ATN { return ScalaParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return ScalaParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return ScalaParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return ScalaParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,ScalaParser._ATN,ScalaParser._decisionToDFA, ScalaParser._sharedContextCache)
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func IntegerLiteral() -> TerminalNode? { return getToken(ScalaParser.Tokens.IntegerLiteral.rawValue, 0) }
-		open func FloatingPointLiteral() -> TerminalNode? { return getToken(ScalaParser.Tokens.FloatingPointLiteral.rawValue, 0) }
-		open func BooleanLiteral() -> TerminalNode? { return getToken(ScalaParser.Tokens.BooleanLiteral.rawValue, 0) }
-		open func CharacterLiteral() -> TerminalNode? { return getToken(ScalaParser.Tokens.CharacterLiteral.rawValue, 0) }
-		open func StringLiteral() -> TerminalNode? { return getToken(ScalaParser.Tokens.StringLiteral.rawValue, 0) }
-		open func SymbolLiteral() -> TerminalNode? { return getToken(ScalaParser.Tokens.SymbolLiteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterLiteral(self)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func IntegerLiteral() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.IntegerLiteral.rawValue, 0)
+			}
+			open
+			func FloatingPointLiteral() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.FloatingPointLiteral.rawValue, 0)
+			}
+			open
+			func BooleanLiteral() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.BooleanLiteral.rawValue, 0)
+			}
+			open
+			func CharacterLiteral() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.CharacterLiteral.rawValue, 0)
+			}
+			open
+			func StringLiteral() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.StringLiteral.rawValue, 0)
+			}
+			open
+			func SymbolLiteral() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.SymbolLiteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitLiteral(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 0, ScalaParser.RULE_literal)
 		var _la: Int = 0
@@ -278,38 +282,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class QualIdContext:ParserRuleContext {
-		open func Id() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Id.rawValue) }
-		open func Id(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Id.rawValue, i)
+
+	public class QualIdContext: ParserRuleContext {
+			open
+			func Id() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Id.rawValue)
+			}
+			open
+			func Id(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_qualId
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_qualId }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterQualId(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterQualId(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitQualId(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitQualId(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitQualId(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitQualId(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitQualId(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitQualId(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qualId() throws -> QualIdContext {
+	 open func qualId() throws -> QualIdContext {
 		var _localctx: QualIdContext = QualIdContext(_ctx, getState())
 		try enterRule(_localctx, 2, ScalaParser.RULE_qualId)
 		var _la: Int = 0
@@ -348,38 +361,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class IdsContext:ParserRuleContext {
-		open func Id() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Id.rawValue) }
-		open func Id(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Id.rawValue, i)
+
+	public class IdsContext: ParserRuleContext {
+			open
+			func Id() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Id.rawValue)
+			}
+			open
+			func Id(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_ids
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_ids }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterIds(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterIds(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitIds(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitIds(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitIds(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitIds(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitIds(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitIds(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ids() throws -> IdsContext {
+	 open func ids() throws -> IdsContext {
 		var _localctx: IdsContext = IdsContext(_ctx, getState())
 		try enterRule(_localctx, 4, ScalaParser.RULE_ids)
 		var _la: Int = 0
@@ -418,41 +440,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class StableIdContext:ParserRuleContext {
-		open func Id() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Id.rawValue) }
-		open func Id(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Id.rawValue, i)
+
+	public class StableIdContext: ParserRuleContext {
+			open
+			func Id() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Id.rawValue)
+			}
+			open
+			func Id(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, i)
+			}
+			open
+			func classQualifier() -> ClassQualifierContext? {
+				return getRuleContext(ClassQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_stableId
 		}
-		open func classQualifier() -> ClassQualifierContext? {
-			return getRuleContext(ClassQualifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_stableId }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterStableId(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterStableId(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitStableId(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitStableId(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitStableId(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitStableId(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitStableId(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitStableId(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stableId() throws -> StableIdContext {
+	 open func stableId() throws -> StableIdContext {
 		var _localctx: StableIdContext = StableIdContext(_ctx, getState())
 		try enterRule(_localctx, 6, ScalaParser.RULE_stableId)
 		var _la: Int = 0
@@ -550,35 +582,43 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ClassQualifierContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_classQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterClassQualifier(self)
+
+	public class ClassQualifierContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_classQualifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterClassQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitClassQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitClassQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitClassQualifier(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitClassQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitClassQualifier(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitClassQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classQualifier() throws -> ClassQualifierContext {
+	 open func classQualifier() throws -> ClassQualifierContext {
 		var _localctx: ClassQualifierContext = ClassQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 8, ScalaParser.RULE_classQualifier)
 		defer {
@@ -602,46 +642,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func functionArgTypes() -> FunctionArgTypesContext? {
-			return getRuleContext(FunctionArgTypesContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func functionArgTypes() -> FunctionArgTypesContext? {
+				return getRuleContext(FunctionArgTypesContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func infixType() -> InfixTypeContext? {
+				return getRuleContext(InfixTypeContext.self, 0)
+			}
+			open
+			func existentialClause() -> ExistentialClauseContext? {
+				return getRuleContext(ExistentialClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_type
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func infixType() -> InfixTypeContext? {
-			return getRuleContext(InfixTypeContext.self,0)
-		}
-		open func existentialClause() -> ExistentialClauseContext? {
-			return getRuleContext(ExistentialClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitType(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 10, ScalaParser.RULE_type)
 		var _la: Int = 0
@@ -692,43 +741,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class FunctionArgTypesContext:ParserRuleContext {
-		open func infixType() -> InfixTypeContext? {
-			return getRuleContext(InfixTypeContext.self,0)
+
+	public class FunctionArgTypesContext: ParserRuleContext {
+			open
+			func infixType() -> InfixTypeContext? {
+				return getRuleContext(InfixTypeContext.self, 0)
+			}
+			open
+			func paramType() -> [ParamTypeContext] {
+				return getRuleContexts(ParamTypeContext.self)
+			}
+			open
+			func paramType(_ i: Int) -> ParamTypeContext? {
+				return getRuleContext(ParamTypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_functionArgTypes
 		}
-		open func paramType() -> Array<ParamTypeContext> {
-			return getRuleContexts(ParamTypeContext.self)
-		}
-		open func paramType(_ i: Int) -> ParamTypeContext? {
-			return getRuleContext(ParamTypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_functionArgTypes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterFunctionArgTypes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterFunctionArgTypes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitFunctionArgTypes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitFunctionArgTypes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitFunctionArgTypes(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitFunctionArgTypes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitFunctionArgTypes(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitFunctionArgTypes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionArgTypes() throws -> FunctionArgTypesContext {
+	 open func functionArgTypes() throws -> FunctionArgTypesContext {
 		var _localctx: FunctionArgTypesContext = FunctionArgTypesContext(_ctx, getState())
 		try enterRule(_localctx, 12, ScalaParser.RULE_functionArgTypes)
 		var _la: Int = 0
@@ -798,44 +855,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ExistentialClauseContext:ParserRuleContext {
-		open func existentialDcl() -> Array<ExistentialDclContext> {
-			return getRuleContexts(ExistentialDclContext.self)
+
+	public class ExistentialClauseContext: ParserRuleContext {
+			open
+			func existentialDcl() -> [ExistentialDclContext] {
+				return getRuleContexts(ExistentialDclContext.self)
+			}
+			open
+			func existentialDcl(_ i: Int) -> ExistentialDclContext? {
+				return getRuleContext(ExistentialDclContext.self, i)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_existentialClause
 		}
-		open func existentialDcl(_ i: Int) -> ExistentialDclContext? {
-			return getRuleContext(ExistentialDclContext.self,i)
-		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_existentialClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterExistentialClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterExistentialClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitExistentialClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitExistentialClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitExistentialClause(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitExistentialClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitExistentialClause(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitExistentialClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func existentialClause() throws -> ExistentialClauseContext {
+	 open func existentialClause() throws -> ExistentialClauseContext {
 		var _localctx: ExistentialClauseContext = ExistentialClauseContext(_ctx, getState())
 		try enterRule(_localctx, 14, ScalaParser.RULE_existentialClause)
 		var _la: Int = 0
@@ -880,40 +948,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ExistentialDclContext:ParserRuleContext {
-		open func typeDcl() -> TypeDclContext? {
-			return getRuleContext(TypeDclContext.self,0)
+
+	public class ExistentialDclContext: ParserRuleContext {
+			open
+			func typeDcl() -> TypeDclContext? {
+				return getRuleContext(TypeDclContext.self, 0)
+			}
+			open
+			func valDcl() -> ValDclContext? {
+				return getRuleContext(ValDclContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_existentialDcl
 		}
-		open func valDcl() -> ValDclContext? {
-			return getRuleContext(ValDclContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_existentialDcl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterExistentialDcl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterExistentialDcl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitExistentialDcl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitExistentialDcl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitExistentialDcl(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitExistentialDcl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitExistentialDcl(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitExistentialDcl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func existentialDcl() throws -> ExistentialDclContext {
+	 open func existentialDcl() throws -> ExistentialDclContext {
 		var _localctx: ExistentialDclContext = ExistentialDclContext(_ctx, getState())
 		try enterRule(_localctx, 16, ScalaParser.RULE_existentialDcl)
 		defer {
@@ -941,7 +1016,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -952,44 +1027,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class InfixTypeContext:ParserRuleContext {
-		open func compoundType() -> Array<CompoundTypeContext> {
-			return getRuleContexts(CompoundTypeContext.self)
+
+	public class InfixTypeContext: ParserRuleContext {
+			open
+			func compoundType() -> [CompoundTypeContext] {
+				return getRuleContexts(CompoundTypeContext.self)
+			}
+			open
+			func compoundType(_ i: Int) -> CompoundTypeContext? {
+				return getRuleContext(CompoundTypeContext.self, i)
+			}
+			open
+			func Id() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Id.rawValue)
+			}
+			open
+			func Id(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_infixType
 		}
-		open func compoundType(_ i: Int) -> CompoundTypeContext? {
-			return getRuleContext(CompoundTypeContext.self,i)
-		}
-		open func Id() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Id.rawValue) }
-		open func Id(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Id.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_infixType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterInfixType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterInfixType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitInfixType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitInfixType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitInfixType(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitInfixType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitInfixType(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitInfixType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func infixType() throws -> InfixTypeContext {
+	 open func infixType() throws -> InfixTypeContext {
 		var _localctx: InfixTypeContext = InfixTypeContext(_ctx, getState())
 		try enterRule(_localctx, 18, ScalaParser.RULE_infixType)
 		defer {
@@ -1026,43 +1112,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class CompoundTypeContext:ParserRuleContext {
-		open func annotType() -> Array<AnnotTypeContext> {
-			return getRuleContexts(AnnotTypeContext.self)
+
+	public class CompoundTypeContext: ParserRuleContext {
+			open
+			func annotType() -> [AnnotTypeContext] {
+				return getRuleContexts(AnnotTypeContext.self)
+			}
+			open
+			func annotType(_ i: Int) -> AnnotTypeContext? {
+				return getRuleContext(AnnotTypeContext.self, i)
+			}
+			open
+			func refinement() -> RefinementContext? {
+				return getRuleContext(RefinementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_compoundType
 		}
-		open func annotType(_ i: Int) -> AnnotTypeContext? {
-			return getRuleContext(AnnotTypeContext.self,i)
-		}
-		open func refinement() -> RefinementContext? {
-			return getRuleContext(RefinementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_compoundType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterCompoundType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterCompoundType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitCompoundType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitCompoundType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitCompoundType(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitCompoundType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitCompoundType(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitCompoundType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compoundType() throws -> CompoundTypeContext {
+	 open func compoundType() throws -> CompoundTypeContext {
 		var _localctx: CompoundTypeContext = CompoundTypeContext(_ctx, getState())
 		try enterRule(_localctx, 20, ScalaParser.RULE_compoundType)
 		var _la: Int = 0
@@ -1118,7 +1212,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1129,43 +1223,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotTypeContext:ParserRuleContext {
-		open func simpleType() -> SimpleTypeContext? {
-			return getRuleContext(SimpleTypeContext.self,0)
+
+	public class AnnotTypeContext: ParserRuleContext {
+			open
+			func simpleType() -> SimpleTypeContext? {
+				return getRuleContext(SimpleTypeContext.self, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_annotType
 		}
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_annotType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterAnnotType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterAnnotType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitAnnotType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitAnnotType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitAnnotType(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitAnnotType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitAnnotType(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitAnnotType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotType() throws -> AnnotTypeContext {
+	 open func annotType() throws -> AnnotTypeContext {
 		var _localctx: AnnotTypeContext = AnnotTypeContext(_ctx, getState())
 		try enterRule(_localctx, 22, ScalaParser.RULE_annotType)
 		defer {
@@ -1201,47 +1303,58 @@ open class ScalaParser: Parser {
 		return _localctx
 	}
 
-	open class SimpleTypeContext:ParserRuleContext {
-		open func stableId() -> StableIdContext? {
-			return getRuleContext(StableIdContext.self,0)
+	public class SimpleTypeContext: ParserRuleContext {
+			open
+			func stableId() -> StableIdContext? {
+				return getRuleContext(StableIdContext.self, 0)
+			}
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func types() -> TypesContext? {
+				return getRuleContext(TypesContext.self, 0)
+			}
+			open
+			func simpleType() -> SimpleTypeContext? {
+				return getRuleContext(SimpleTypeContext.self, 0)
+			}
+			open
+			func typeArgs() -> TypeArgsContext? {
+				return getRuleContext(TypeArgsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_simpleType
 		}
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func types() -> TypesContext? {
-			return getRuleContext(TypesContext.self,0)
-		}
-		open func simpleType() -> SimpleTypeContext? {
-			return getRuleContext(SimpleTypeContext.self,0)
-		}
-		open func typeArgs() -> TypeArgsContext? {
-			return getRuleContext(TypeArgsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_simpleType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterSimpleType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterSimpleType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitSimpleType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitSimpleType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitSimpleType(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitSimpleType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitSimpleType(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitSimpleType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func simpleType( ) throws -> SimpleTypeContext   {
+	 public final  func simpleType( ) throws -> SimpleTypeContext   {
 		return try simpleType(0)
 	}
 	@discardableResult
@@ -1333,7 +1446,7 @@ open class ScalaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ScalaParser.RULE_simpleType)
 						setState(353)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(354)
 						try typeArgs()
@@ -1344,7 +1457,7 @@ open class ScalaParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, ScalaParser.RULE_simpleType)
 						setState(355)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(356)
 						try match(ScalaParser.Tokens.T__17.rawValue)
@@ -1370,37 +1483,43 @@ open class ScalaParser: Parser {
 
 		return _localctx;
 	}
-	open class TypeArgsContext:ParserRuleContext {
-		open func types() -> TypesContext? {
-			return getRuleContext(TypesContext.self,0)
+
+	public class TypeArgsContext: ParserRuleContext {
+			open
+			func types() -> TypesContext? {
+				return getRuleContext(TypesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_typeArgs
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_typeArgs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTypeArgs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTypeArgs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTypeArgs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTypeArgs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTypeArgs(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTypeArgs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTypeArgs(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTypeArgs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeArgs() throws -> TypeArgsContext {
+	 open func typeArgs() throws -> TypeArgsContext {
 		var _localctx: TypeArgsContext = TypeArgsContext(_ctx, getState())
 		try enterRule(_localctx, 26, ScalaParser.RULE_typeArgs)
 		defer {
@@ -1424,40 +1543,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TypesContext:ParserRuleContext {
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
+
+	public class TypesContext: ParserRuleContext {
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_types
 		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_types }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTypes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTypes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTypes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTypes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTypes(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTypes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTypes(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTypes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func types() throws -> TypesContext {
+	 open func types() throws -> TypesContext {
 		var _localctx: TypesContext = TypesContext(_ctx, getState())
 		try enterRule(_localctx, 28, ScalaParser.RULE_types)
 		var _la: Int = 0
@@ -1496,44 +1622,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class RefinementContext:ParserRuleContext {
-		open func refineStat() -> Array<RefineStatContext> {
-			return getRuleContexts(RefineStatContext.self)
+
+	public class RefinementContext: ParserRuleContext {
+			open
+			func refineStat() -> [RefineStatContext] {
+				return getRuleContexts(RefineStatContext.self)
+			}
+			open
+			func refineStat(_ i: Int) -> RefineStatContext? {
+				return getRuleContext(RefineStatContext.self, i)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_refinement
 		}
-		open func refineStat(_ i: Int) -> RefineStatContext? {
-			return getRuleContext(RefineStatContext.self,i)
-		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_refinement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterRefinement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterRefinement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitRefinement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitRefinement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitRefinement(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitRefinement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitRefinement(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitRefinement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func refinement() throws -> RefinementContext {
+	 open func refinement() throws -> RefinementContext {
 		var _localctx: RefinementContext = RefinementContext(_ctx, getState())
 		try enterRule(_localctx, 30, ScalaParser.RULE_refinement)
 		var _la: Int = 0
@@ -1576,40 +1713,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class RefineStatContext:ParserRuleContext {
-		open func dcl() -> DclContext? {
-			return getRuleContext(DclContext.self,0)
+
+	public class RefineStatContext: ParserRuleContext {
+			open
+			func dcl() -> DclContext? {
+				return getRuleContext(DclContext.self, 0)
+			}
+			open
+			func typeDef() -> TypeDefContext? {
+				return getRuleContext(TypeDefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_refineStat
 		}
-		open func typeDef() -> TypeDefContext? {
-			return getRuleContext(TypeDefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_refineStat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterRefineStat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterRefineStat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitRefineStat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitRefineStat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitRefineStat(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitRefineStat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitRefineStat(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitRefineStat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func refineStat() throws -> RefineStatContext {
+	 open func refineStat() throws -> RefineStatContext {
 		var _localctx: RefineStatContext = RefineStatContext(_ctx, getState())
 		try enterRule(_localctx, 32, ScalaParser.RULE_refineStat)
 		defer {
@@ -1648,37 +1792,43 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TypePatContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class TypePatContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_typePat
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_typePat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTypePat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTypePat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTypePat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTypePat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTypePat(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTypePat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTypePat(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTypePat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typePat() throws -> TypePatContext {
+	 open func typePat() throws -> TypePatContext {
 		var _localctx: TypePatContext = TypePatContext(_ctx, getState())
 		try enterRule(_localctx, 34, ScalaParser.RULE_typePat)
 		defer {
@@ -1698,43 +1848,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class AscriptionContext:ParserRuleContext {
-		open func infixType() -> InfixTypeContext? {
-			return getRuleContext(InfixTypeContext.self,0)
+
+	public class AscriptionContext: ParserRuleContext {
+			open
+			func infixType() -> InfixTypeContext? {
+				return getRuleContext(InfixTypeContext.self, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_ascription
 		}
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_ascription }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterAscription(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterAscription(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitAscription(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitAscription(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitAscription(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitAscription(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitAscription(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitAscription(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ascription() throws -> AscriptionContext {
+	 open func ascription() throws -> AscriptionContext {
 		var _localctx: AscriptionContext = AscriptionContext(_ctx, getState())
 		try enterRule(_localctx, 36, ScalaParser.RULE_ascription)
 		var _la: Int = 0
@@ -1796,44 +1954,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ExprContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class ExprContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func bindings() -> BindingsContext? {
+				return getRuleContext(BindingsContext.self, 0)
+			}
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func expr1() -> Expr1Context? {
+				return getRuleContext(Expr1Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_expr
 		}
-		open func bindings() -> BindingsContext? {
-			return getRuleContext(BindingsContext.self,0)
-		}
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func expr1() -> Expr1Context? {
-			return getRuleContext(Expr1Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitExpr(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr() throws -> ExprContext {
+	 open func expr() throws -> ExprContext {
 		var _localctx: ExprContext = ExprContext(_ctx, getState())
 		try enterRule(_localctx, 38, ScalaParser.RULE_expr)
 		var _la: Int = 0
@@ -1880,7 +2049,7 @@ open class ScalaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(415)
 		 		try match(ScalaParser.Tokens.T__8.rawValue)
@@ -1905,72 +2074,95 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class Expr1Context:ParserRuleContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+
+	public class Expr1Context: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func Semi() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func caseClauses() -> CaseClausesContext? {
+				return getRuleContext(CaseClausesContext.self, 0)
+			}
+			open
+			func enumerators() -> EnumeratorsContext? {
+				return getRuleContext(EnumeratorsContext.self, 0)
+			}
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func blockExpr() -> BlockExprContext? {
+				return getRuleContext(BlockExprContext.self, 0)
+			}
+			open
+			func simpleExpr1() -> SimpleExpr1Context? {
+				return getRuleContext(SimpleExpr1Context.self, 0)
+			}
+			open
+			func classTemplate() -> ClassTemplateContext? {
+				return getRuleContext(ClassTemplateContext.self, 0)
+			}
+			open
+			func templateBody() -> TemplateBodyContext? {
+				return getRuleContext(TemplateBodyContext.self, 0)
+			}
+			open
+			func argumentExprs() -> ArgumentExprsContext? {
+				return getRuleContext(ArgumentExprsContext.self, 0)
+			}
+			open
+			func postfixExpr() -> PostfixExprContext? {
+				return getRuleContext(PostfixExprContext.self, 0)
+			}
+			open
+			func ascription() -> AscriptionContext? {
+				return getRuleContext(AscriptionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_expr1
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func Semi() -> TerminalNode? { return getToken(ScalaParser.Tokens.Semi.rawValue, 0) }
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func caseClauses() -> CaseClausesContext? {
-			return getRuleContext(CaseClausesContext.self,0)
-		}
-		open func enumerators() -> EnumeratorsContext? {
-			return getRuleContext(EnumeratorsContext.self,0)
-		}
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func blockExpr() -> BlockExprContext? {
-			return getRuleContext(BlockExprContext.self,0)
-		}
-		open func simpleExpr1() -> SimpleExpr1Context? {
-			return getRuleContext(SimpleExpr1Context.self,0)
-		}
-		open func classTemplate() -> ClassTemplateContext? {
-			return getRuleContext(ClassTemplateContext.self,0)
-		}
-		open func templateBody() -> TemplateBodyContext? {
-			return getRuleContext(TemplateBodyContext.self,0)
-		}
-		open func argumentExprs() -> ArgumentExprsContext? {
-			return getRuleContext(ArgumentExprsContext.self,0)
-		}
-		open func postfixExpr() -> PostfixExprContext? {
-			return getRuleContext(PostfixExprContext.self,0)
-		}
-		open func ascription() -> AscriptionContext? {
-			return getRuleContext(AscriptionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_expr1 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterExpr1(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterExpr1(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitExpr1(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitExpr1(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitExpr1(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitExpr1(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitExpr1(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitExpr1(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr1() throws -> Expr1Context {
+	 open func expr1() throws -> Expr1Context {
 		var _localctx: Expr1Context = Expr1Context(_ctx, getState())
 		try enterRule(_localctx, 40, ScalaParser.RULE_expr1)
 		var _la: Int = 0
@@ -2143,7 +2335,7 @@ open class ScalaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(479)
 		 		try _errHandler.sync(self)
@@ -2298,38 +2490,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class PostfixExprContext:ParserRuleContext {
-		open func infixExpr() -> InfixExprContext? {
-			return getRuleContext(InfixExprContext.self,0)
+
+	public class PostfixExprContext: ParserRuleContext {
+			open
+			func infixExpr() -> InfixExprContext? {
+				return getRuleContext(InfixExprContext.self, 0)
+			}
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_postfixExpr
 		}
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_postfixExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPostfixExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPostfixExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPostfixExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPostfixExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPostfixExpr(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPostfixExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPostfixExpr(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPostfixExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func postfixExpr() throws -> PostfixExprContext {
+	 open func postfixExpr() throws -> PostfixExprContext {
 		var _localctx: PostfixExprContext = PostfixExprContext(_ctx, getState())
 		try enterRule(_localctx, 42, ScalaParser.RULE_postfixExpr)
 		defer {
@@ -2360,44 +2561,54 @@ open class ScalaParser: Parser {
 		return _localctx
 	}
 
-	open class InfixExprContext:ParserRuleContext {
-		open func prefixExpr() -> PrefixExprContext? {
-			return getRuleContext(PrefixExprContext.self,0)
+	public class InfixExprContext: ParserRuleContext {
+			open
+			func prefixExpr() -> PrefixExprContext? {
+				return getRuleContext(PrefixExprContext.self, 0)
+			}
+			open
+			func infixExpr() -> [InfixExprContext] {
+				return getRuleContexts(InfixExprContext.self)
+			}
+			open
+			func infixExpr(_ i: Int) -> InfixExprContext? {
+				return getRuleContext(InfixExprContext.self, i)
+			}
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_infixExpr
 		}
-		open func infixExpr() -> Array<InfixExprContext> {
-			return getRuleContexts(InfixExprContext.self)
-		}
-		open func infixExpr(_ i: Int) -> InfixExprContext? {
-			return getRuleContext(InfixExprContext.self,i)
-		}
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_infixExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterInfixExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterInfixExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitInfixExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitInfixExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitInfixExpr(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitInfixExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitInfixExpr(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitInfixExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func infixExpr( ) throws -> InfixExprContext   {
+	 public final  func infixExpr( ) throws -> InfixExprContext   {
 		return try infixExpr(0)
 	}
 	@discardableResult
@@ -2431,7 +2642,7 @@ open class ScalaParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, ScalaParser.RULE_infixExpr)
 					setState(531)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(532)
 					try match(ScalaParser.Tokens.Id.rawValue)
@@ -2454,46 +2665,55 @@ open class ScalaParser: Parser {
 
 		return _localctx;
 	}
-	open class PrefixExprContext:ParserRuleContext {
-		open func blockExpr() -> BlockExprContext? {
-			return getRuleContext(BlockExprContext.self,0)
+
+	public class PrefixExprContext: ParserRuleContext {
+			open
+			func blockExpr() -> BlockExprContext? {
+				return getRuleContext(BlockExprContext.self, 0)
+			}
+			open
+			func simpleExpr1() -> SimpleExpr1Context? {
+				return getRuleContext(SimpleExpr1Context.self, 0)
+			}
+			open
+			func classTemplate() -> ClassTemplateContext? {
+				return getRuleContext(ClassTemplateContext.self, 0)
+			}
+			open
+			func templateBody() -> TemplateBodyContext? {
+				return getRuleContext(TemplateBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_prefixExpr
 		}
-		open func simpleExpr1() -> SimpleExpr1Context? {
-			return getRuleContext(SimpleExpr1Context.self,0)
-		}
-		open func classTemplate() -> ClassTemplateContext? {
-			return getRuleContext(ClassTemplateContext.self,0)
-		}
-		open func templateBody() -> TemplateBodyContext? {
-			return getRuleContext(TemplateBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_prefixExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPrefixExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPrefixExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPrefixExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPrefixExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPrefixExpr(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPrefixExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPrefixExpr(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPrefixExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prefixExpr() throws -> PrefixExprContext {
+	 open func prefixExpr() throws -> PrefixExprContext {
 		var _localctx: PrefixExprContext = PrefixExprContext(_ctx, getState())
 		try enterRule(_localctx, 46, ScalaParser.RULE_prefixExpr)
 		var _la: Int = 0
@@ -2582,62 +2802,78 @@ open class ScalaParser: Parser {
 		return _localctx
 	}
 
-	open class SimpleExpr1Context:ParserRuleContext {
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
+	public class SimpleExpr1Context: ParserRuleContext {
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func stableId() -> StableIdContext? {
+				return getRuleContext(StableIdContext.self, 0)
+			}
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+			open
+			func blockExpr() -> BlockExprContext? {
+				return getRuleContext(BlockExprContext.self, 0)
+			}
+			open
+			func classTemplate() -> ClassTemplateContext? {
+				return getRuleContext(ClassTemplateContext.self, 0)
+			}
+			open
+			func templateBody() -> TemplateBodyContext? {
+				return getRuleContext(TemplateBodyContext.self, 0)
+			}
+			open
+			func typeArgs() -> TypeArgsContext? {
+				return getRuleContext(TypeArgsContext.self, 0)
+			}
+			open
+			func simpleExpr1() -> SimpleExpr1Context? {
+				return getRuleContext(SimpleExpr1Context.self, 0)
+			}
+			open
+			func argumentExprs() -> ArgumentExprsContext? {
+				return getRuleContext(ArgumentExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_simpleExpr1
 		}
-		open func stableId() -> StableIdContext? {
-			return getRuleContext(StableIdContext.self,0)
-		}
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
-		}
-		open func blockExpr() -> BlockExprContext? {
-			return getRuleContext(BlockExprContext.self,0)
-		}
-		open func classTemplate() -> ClassTemplateContext? {
-			return getRuleContext(ClassTemplateContext.self,0)
-		}
-		open func templateBody() -> TemplateBodyContext? {
-			return getRuleContext(TemplateBodyContext.self,0)
-		}
-		open func typeArgs() -> TypeArgsContext? {
-			return getRuleContext(TypeArgsContext.self,0)
-		}
-		open func simpleExpr1() -> SimpleExpr1Context? {
-			return getRuleContext(SimpleExpr1Context.self,0)
-		}
-		open func argumentExprs() -> ArgumentExprsContext? {
-			return getRuleContext(ArgumentExprsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_simpleExpr1 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterSimpleExpr1(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterSimpleExpr1(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitSimpleExpr1(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitSimpleExpr1(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitSimpleExpr1(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitSimpleExpr1(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitSimpleExpr1(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitSimpleExpr1(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func simpleExpr1( ) throws -> SimpleExpr1Context   {
+	 public final  func simpleExpr1( ) throws -> SimpleExpr1Context   {
 		return try simpleExpr1(0)
 	}
 	@discardableResult
@@ -2751,7 +2987,7 @@ open class ScalaParser: Parser {
 
 					break
 				default:
-					throw try ANTLRException.recognition(e: NoViableAltException(self))
+					throw ANTLRException.recognition(e: NoViableAltException(self))
 				}
 				setState(576)
 				try match(ScalaParser.Tokens.T__2.rawValue)
@@ -2790,7 +3026,7 @@ open class ScalaParser: Parser {
 
 					break
 				default:
-					throw try ANTLRException.recognition(e: NoViableAltException(self))
+					throw ANTLRException.recognition(e: NoViableAltException(self))
 				}
 				setState(587)
 				try typeArgs()
@@ -2812,7 +3048,7 @@ open class ScalaParser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, ScalaParser.RULE_simpleExpr1)
 					setState(591)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(592)
 					try argumentExprs()
@@ -2833,40 +3069,47 @@ open class ScalaParser: Parser {
 
 		return _localctx;
 	}
-	open class ExprsContext:ParserRuleContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+
+	public class ExprsContext: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_exprs
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_exprs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterExprs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterExprs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitExprs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitExprs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitExprs(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitExprs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitExprs(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitExprs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exprs() throws -> ExprsContext {
+	 open func exprs() throws -> ExprsContext {
 		var _localctx: ExprsContext = ExprsContext(_ctx, getState())
 		try enterRule(_localctx, 50, ScalaParser.RULE_exprs)
 		defer {
@@ -2903,43 +3146,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentExprsContext:ParserRuleContext {
-		open func exprs() -> ExprsContext? {
-			return getRuleContext(ExprsContext.self,0)
+
+	public class ArgumentExprsContext: ParserRuleContext {
+			open
+			func exprs() -> ExprsContext? {
+				return getRuleContext(ExprsContext.self, 0)
+			}
+			open
+			func postfixExpr() -> PostfixExprContext? {
+				return getRuleContext(PostfixExprContext.self, 0)
+			}
+			open
+			func blockExpr() -> BlockExprContext? {
+				return getRuleContext(BlockExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_argumentExprs
 		}
-		open func postfixExpr() -> PostfixExprContext? {
-			return getRuleContext(PostfixExprContext.self,0)
-		}
-		open func blockExpr() -> BlockExprContext? {
-			return getRuleContext(BlockExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_argumentExprs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterArgumentExprs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterArgumentExprs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitArgumentExprs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitArgumentExprs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitArgumentExprs(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitArgumentExprs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitArgumentExprs(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitArgumentExprs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argumentExprs() throws -> ArgumentExprsContext {
+	 open func argumentExprs() throws -> ArgumentExprsContext {
 		var _localctx: ArgumentExprsContext = ArgumentExprsContext(_ctx, getState())
 		try enterRule(_localctx, 52, ScalaParser.RULE_argumentExprs)
 		var _la: Int = 0
@@ -3023,40 +3274,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class BlockExprContext:ParserRuleContext {
-		open func caseClauses() -> CaseClausesContext? {
-			return getRuleContext(CaseClausesContext.self,0)
+
+	public class BlockExprContext: ParserRuleContext {
+			open
+			func caseClauses() -> CaseClausesContext? {
+				return getRuleContext(CaseClausesContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_blockExpr
 		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_blockExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterBlockExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterBlockExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitBlockExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitBlockExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitBlockExpr(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitBlockExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitBlockExpr(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitBlockExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blockExpr() throws -> BlockExprContext {
+	 open func blockExpr() throws -> BlockExprContext {
 		var _localctx: BlockExprContext = BlockExprContext(_ctx, getState())
 		try enterRule(_localctx, 54, ScalaParser.RULE_blockExpr)
 		defer {
@@ -3097,47 +3355,59 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func blockStat() -> Array<BlockStatContext> {
-			return getRuleContexts(BlockStatContext.self)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func blockStat() -> [BlockStatContext] {
+				return getRuleContexts(BlockStatContext.self)
+			}
+			open
+			func blockStat(_ i: Int) -> BlockStatContext? {
+				return getRuleContext(BlockStatContext.self, i)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+			open
+			func resultExpr() -> ResultExprContext? {
+				return getRuleContext(ResultExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_block
 		}
-		open func blockStat(_ i: Int) -> BlockStatContext? {
-			return getRuleContext(BlockStatContext.self,i)
-		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open func resultExpr() -> ResultExprContext? {
-			return getRuleContext(ResultExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitBlock(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 56, ScalaParser.RULE_block)
 		var _la: Int = 0
@@ -3196,58 +3466,71 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class BlockStatContext:ParserRuleContext {
-		open func import_() -> Import_Context? {
-			return getRuleContext(Import_Context.self,0)
+
+	public class BlockStatContext: ParserRuleContext {
+			open
+			func import_() -> Import_Context? {
+				return getRuleContext(Import_Context.self, 0)
+			}
+			open
+			func def() -> DefContext? {
+				return getRuleContext(DefContext.self, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+			open
+			func tmplDef() -> TmplDefContext? {
+				return getRuleContext(TmplDefContext.self, 0)
+			}
+			open
+			func localModifier() -> [LocalModifierContext] {
+				return getRuleContexts(LocalModifierContext.self)
+			}
+			open
+			func localModifier(_ i: Int) -> LocalModifierContext? {
+				return getRuleContext(LocalModifierContext.self, i)
+			}
+			open
+			func expr1() -> Expr1Context? {
+				return getRuleContext(Expr1Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_blockStat
 		}
-		open func def() -> DefContext? {
-			return getRuleContext(DefContext.self,0)
-		}
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open func tmplDef() -> TmplDefContext? {
-			return getRuleContext(TmplDefContext.self,0)
-		}
-		open func localModifier() -> Array<LocalModifierContext> {
-			return getRuleContexts(LocalModifierContext.self)
-		}
-		open func localModifier(_ i: Int) -> LocalModifierContext? {
-			return getRuleContext(LocalModifierContext.self,i)
-		}
-		open func expr1() -> Expr1Context? {
-			return getRuleContext(Expr1Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_blockStat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterBlockStat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterBlockStat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitBlockStat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitBlockStat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitBlockStat(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitBlockStat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitBlockStat(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitBlockStat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blockStat() throws -> BlockStatContext {
+	 open func blockStat() throws -> BlockStatContext {
 		var _localctx: BlockStatContext = BlockStatContext(_ctx, getState())
 		try enterRule(_localctx, 58, ScalaParser.RULE_blockStat)
 		var _la: Int = 0
@@ -3372,47 +3655,59 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ResultExprContext:ParserRuleContext {
-		open func expr1() -> Expr1Context? {
-			return getRuleContext(Expr1Context.self,0)
+
+	public class ResultExprContext: ParserRuleContext {
+			open
+			func expr1() -> Expr1Context? {
+				return getRuleContext(Expr1Context.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func bindings() -> BindingsContext? {
+				return getRuleContext(BindingsContext.self, 0)
+			}
+			open
+			func compoundType() -> CompoundTypeContext? {
+				return getRuleContext(CompoundTypeContext.self, 0)
+			}
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_resultExpr
 		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func bindings() -> BindingsContext? {
-			return getRuleContext(BindingsContext.self,0)
-		}
-		open func compoundType() -> CompoundTypeContext? {
-			return getRuleContext(CompoundTypeContext.self,0)
-		}
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_resultExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterResultExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterResultExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitResultExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitResultExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitResultExpr(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitResultExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitResultExpr(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitResultExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func resultExpr() throws -> ResultExprContext {
+	 open func resultExpr() throws -> ResultExprContext {
 		var _localctx: ResultExprContext = ResultExprContext(_ctx, getState())
 		try enterRule(_localctx, 60, ScalaParser.RULE_resultExpr)
 		var _la: Int = 0
@@ -3471,7 +3766,7 @@ open class ScalaParser: Parser {
 
 		 				break
 		 			default:
-		 				throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 				throw ANTLRException.recognition(e: NoViableAltException(self))
 		 			}
 		 			setState(684)
 		 			try match(ScalaParser.Tokens.T__18.rawValue)
@@ -3480,7 +3775,7 @@ open class ScalaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(688)
 		 		try match(ScalaParser.Tokens.T__8.rawValue)
@@ -3499,44 +3794,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class EnumeratorsContext:ParserRuleContext {
-		open func generator() -> Array<GeneratorContext> {
-			return getRuleContexts(GeneratorContext.self)
+
+	public class EnumeratorsContext: ParserRuleContext {
+			open
+			func generator() -> [GeneratorContext] {
+				return getRuleContexts(GeneratorContext.self)
+			}
+			open
+			func generator(_ i: Int) -> GeneratorContext? {
+				return getRuleContext(GeneratorContext.self, i)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_enumerators
 		}
-		open func generator(_ i: Int) -> GeneratorContext? {
-			return getRuleContext(GeneratorContext.self,i)
-		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_enumerators }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterEnumerators(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterEnumerators(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitEnumerators(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitEnumerators(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitEnumerators(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitEnumerators(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitEnumerators(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitEnumerators(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumerators() throws -> EnumeratorsContext {
+	 open func enumerators() throws -> EnumeratorsContext {
 		var _localctx: EnumeratorsContext = EnumeratorsContext(_ctx, getState())
 		try enterRule(_localctx, 62, ScalaParser.RULE_enumerators)
 		var _la: Int = 0
@@ -3575,56 +3881,71 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class GeneratorContext:ParserRuleContext {
-		open func pattern1() -> Array<Pattern1Context> {
-			return getRuleContexts(Pattern1Context.self)
+
+	public class GeneratorContext: ParserRuleContext {
+			open
+			func pattern1() -> [Pattern1Context] {
+				return getRuleContexts(Pattern1Context.self)
+			}
+			open
+			func pattern1(_ i: Int) -> Pattern1Context? {
+				return getRuleContext(Pattern1Context.self, i)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func guard() -> [GuardContext] {
+				return getRuleContexts(GuardContext.self)
+			}
+			open
+			func guard(_ i: Int) -> GuardContext? {
+				return getRuleContext(GuardContext.self, i)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_generator
 		}
-		open func pattern1(_ i: Int) -> Pattern1Context? {
-			return getRuleContext(Pattern1Context.self,i)
-		}
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func guard() -> Array<GuardContext> {
-			return getRuleContexts(GuardContext.self)
-		}
-		open func guard(_ i: Int) -> GuardContext? {
-			return getRuleContext(GuardContext.self,i)
-		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_generator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterGenerator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterGenerator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitGenerator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitGenerator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitGenerator(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitGenerator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitGenerator(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitGenerator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func generator() throws -> GeneratorContext {
+	 open func generator() throws -> GeneratorContext {
 		var _localctx: GeneratorContext = GeneratorContext(_ctx, getState())
 		try enterRule(_localctx, 64, ScalaParser.RULE_generator)
 		var _la: Int = 0
@@ -3695,40 +4016,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class CaseClausesContext:ParserRuleContext {
-		open func caseClause() -> Array<CaseClauseContext> {
-			return getRuleContexts(CaseClauseContext.self)
+
+	public class CaseClausesContext: ParserRuleContext {
+			open
+			func caseClause() -> [CaseClauseContext] {
+				return getRuleContexts(CaseClauseContext.self)
+			}
+			open
+			func caseClause(_ i: Int) -> CaseClauseContext? {
+				return getRuleContext(CaseClauseContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_caseClauses
 		}
-		open func caseClause(_ i: Int) -> CaseClauseContext? {
-			return getRuleContext(CaseClauseContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_caseClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterCaseClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterCaseClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitCaseClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitCaseClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitCaseClauses(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitCaseClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitCaseClauses(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitCaseClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseClauses() throws -> CaseClausesContext {
+	 open func caseClauses() throws -> CaseClausesContext {
 		var _localctx: CaseClausesContext = CaseClausesContext(_ctx, getState())
 		try enterRule(_localctx, 66, ScalaParser.RULE_caseClauses)
 		var _la: Int = 0
@@ -3763,43 +4091,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class CaseClauseContext:ParserRuleContext {
-		open func pattern() -> PatternContext? {
-			return getRuleContext(PatternContext.self,0)
+
+	public class CaseClauseContext: ParserRuleContext {
+			open
+			func pattern() -> PatternContext? {
+				return getRuleContext(PatternContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func guard() -> GuardContext? {
+				return getRuleContext(GuardContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_caseClause
 		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func guard() -> GuardContext? {
-			return getRuleContext(GuardContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_caseClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterCaseClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterCaseClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitCaseClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitCaseClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitCaseClause(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitCaseClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitCaseClause(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitCaseClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseClause() throws -> CaseClauseContext {
+	 open func caseClause() throws -> CaseClauseContext {
 		var _localctx: CaseClauseContext = CaseClauseContext(_ctx, getState())
 		try enterRule(_localctx, 68, ScalaParser.RULE_caseClause)
 		var _la: Int = 0
@@ -3839,37 +4175,43 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class GuardContext:ParserRuleContext {
-		open func postfixExpr() -> PostfixExprContext? {
-			return getRuleContext(PostfixExprContext.self,0)
+
+	public class GuardContext: ParserRuleContext {
+			open
+			func postfixExpr() -> PostfixExprContext? {
+				return getRuleContext(PostfixExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_guard
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_guard }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterGuard(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterGuard(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitGuard(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitGuard(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitGuard(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitGuard(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitGuard(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitGuard(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func guard() throws -> GuardContext {
+	 open func guard() throws -> GuardContext {
 		var _localctx: GuardContext = GuardContext(_ctx, getState())
 		try enterRule(_localctx, 70, ScalaParser.RULE_guard)
 		defer {
@@ -3891,40 +4233,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class PatternContext:ParserRuleContext {
-		open func pattern1() -> Array<Pattern1Context> {
-			return getRuleContexts(Pattern1Context.self)
+
+	public class PatternContext: ParserRuleContext {
+			open
+			func pattern1() -> [Pattern1Context] {
+				return getRuleContexts(Pattern1Context.self)
+			}
+			open
+			func pattern1(_ i: Int) -> Pattern1Context? {
+				return getRuleContext(Pattern1Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_pattern
 		}
-		open func pattern1(_ i: Int) -> Pattern1Context? {
-			return getRuleContext(Pattern1Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_pattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPattern(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPattern(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pattern() throws -> PatternContext {
+	 open func pattern() throws -> PatternContext {
 		var _localctx: PatternContext = PatternContext(_ctx, getState())
 		try enterRule(_localctx, 72, ScalaParser.RULE_pattern)
 		var _la: Int = 0
@@ -3963,41 +4312,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class Pattern1Context:ParserRuleContext {
-		open func Varid() -> TerminalNode? { return getToken(ScalaParser.Tokens.Varid.rawValue, 0) }
-		open func typePat() -> TypePatContext? {
-			return getRuleContext(TypePatContext.self,0)
+
+	public class Pattern1Context: ParserRuleContext {
+			open
+			func Varid() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Varid.rawValue, 0)
+			}
+			open
+			func typePat() -> TypePatContext? {
+				return getRuleContext(TypePatContext.self, 0)
+			}
+			open
+			func pattern2() -> Pattern2Context? {
+				return getRuleContext(Pattern2Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_pattern1
 		}
-		open func pattern2() -> Pattern2Context? {
-			return getRuleContext(Pattern2Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_pattern1 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPattern1(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPattern1(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPattern1(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPattern1(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPattern1(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPattern1(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPattern1(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPattern1(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pattern1() throws -> Pattern1Context {
+	 open func pattern1() throws -> Pattern1Context {
 		var _localctx: Pattern1Context = Pattern1Context(_ctx, getState())
 		try enterRule(_localctx, 74, ScalaParser.RULE_pattern1)
 		defer {
@@ -4044,38 +4403,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class Pattern2Context:ParserRuleContext {
-		open func Varid() -> TerminalNode? { return getToken(ScalaParser.Tokens.Varid.rawValue, 0) }
-		open func pattern3() -> Pattern3Context? {
-			return getRuleContext(Pattern3Context.self,0)
+
+	public class Pattern2Context: ParserRuleContext {
+			open
+			func Varid() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Varid.rawValue, 0)
+			}
+			open
+			func pattern3() -> Pattern3Context? {
+				return getRuleContext(Pattern3Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_pattern2
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_pattern2 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPattern2(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPattern2(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPattern2(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPattern2(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPattern2(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPattern2(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPattern2(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPattern2(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pattern2() throws -> Pattern2Context {
+	 open func pattern2() throws -> Pattern2Context {
 		var _localctx: Pattern2Context = Pattern2Context(_ctx, getState())
 		try enterRule(_localctx, 76, ScalaParser.RULE_pattern2)
 		var _la: Int = 0
@@ -4124,44 +4492,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class Pattern3Context:ParserRuleContext {
-		open func simplePattern() -> Array<SimplePatternContext> {
-			return getRuleContexts(SimplePatternContext.self)
+
+	public class Pattern3Context: ParserRuleContext {
+			open
+			func simplePattern() -> [SimplePatternContext] {
+				return getRuleContexts(SimplePatternContext.self)
+			}
+			open
+			func simplePattern(_ i: Int) -> SimplePatternContext? {
+				return getRuleContext(SimplePatternContext.self, i)
+			}
+			open
+			func Id() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Id.rawValue)
+			}
+			open
+			func Id(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_pattern3
 		}
-		open func simplePattern(_ i: Int) -> SimplePatternContext? {
-			return getRuleContext(SimplePatternContext.self,i)
-		}
-		open func Id() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Id.rawValue) }
-		open func Id(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Id.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_pattern3 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPattern3(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPattern3(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPattern3(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPattern3(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPattern3(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPattern3(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPattern3(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPattern3(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pattern3() throws -> Pattern3Context {
+	 open func pattern3() throws -> Pattern3Context {
 		var _localctx: Pattern3Context = Pattern3Context(_ctx, getState())
 		try enterRule(_localctx, 78, ScalaParser.RULE_pattern3)
 		var _la: Int = 0
@@ -4213,44 +4592,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class SimplePatternContext:ParserRuleContext {
-		open func Varid() -> TerminalNode? { return getToken(ScalaParser.Tokens.Varid.rawValue, 0) }
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
+
+	public class SimplePatternContext: ParserRuleContext {
+			open
+			func Varid() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Varid.rawValue, 0)
+			}
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func stableId() -> StableIdContext? {
+				return getRuleContext(StableIdContext.self, 0)
+			}
+			open
+			func patterns() -> PatternsContext? {
+				return getRuleContext(PatternsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_simplePattern
 		}
-		open func stableId() -> StableIdContext? {
-			return getRuleContext(StableIdContext.self,0)
-		}
-		open func patterns() -> PatternsContext? {
-			return getRuleContext(PatternsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_simplePattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterSimplePattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterSimplePattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitSimplePattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitSimplePattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitSimplePattern(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitSimplePattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitSimplePattern(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitSimplePattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simplePattern() throws -> SimplePatternContext {
+	 open func simplePattern() throws -> SimplePatternContext {
 		var _localctx: SimplePatternContext = SimplePatternContext(_ctx, getState())
 		try enterRule(_localctx, 80, ScalaParser.RULE_simplePattern)
 		var _la: Int = 0
@@ -4418,40 +4808,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class PatternsContext:ParserRuleContext {
-		open func pattern() -> Array<PatternContext> {
-			return getRuleContexts(PatternContext.self)
+
+	public class PatternsContext: ParserRuleContext {
+			open
+			func pattern() -> [PatternContext] {
+				return getRuleContexts(PatternContext.self)
+			}
+			open
+			func pattern(_ i: Int) -> PatternContext? {
+				return getRuleContext(PatternContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_patterns
 		}
-		open func pattern(_ i: Int) -> PatternContext? {
-			return getRuleContext(PatternContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_patterns }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPatterns(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPatterns(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPatterns(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPatterns(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPatterns(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPatterns(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPatterns(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPatterns(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func patterns() throws -> PatternsContext {
+	 open func patterns() throws -> PatternsContext {
 		var _localctx: PatternsContext = PatternsContext(_ctx, getState())
 		try enterRule(_localctx, 82, ScalaParser.RULE_patterns)
 		var _la: Int = 0
@@ -4516,40 +4913,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeParamClauseContext:ParserRuleContext {
-		open func variantTypeParam() -> Array<VariantTypeParamContext> {
-			return getRuleContexts(VariantTypeParamContext.self)
+
+	public class TypeParamClauseContext: ParserRuleContext {
+			open
+			func variantTypeParam() -> [VariantTypeParamContext] {
+				return getRuleContexts(VariantTypeParamContext.self)
+			}
+			open
+			func variantTypeParam(_ i: Int) -> VariantTypeParamContext? {
+				return getRuleContext(VariantTypeParamContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_typeParamClause
 		}
-		open func variantTypeParam(_ i: Int) -> VariantTypeParamContext? {
-			return getRuleContext(VariantTypeParamContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_typeParamClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTypeParamClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTypeParamClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTypeParamClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTypeParamClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTypeParamClause(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTypeParamClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTypeParamClause(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTypeParamClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeParamClause() throws -> TypeParamClauseContext {
+	 open func typeParamClause() throws -> TypeParamClauseContext {
 		var _localctx: TypeParamClauseContext = TypeParamClauseContext(_ctx, getState())
 		try enterRule(_localctx, 84, ScalaParser.RULE_typeParamClause)
 		var _la: Int = 0
@@ -4592,40 +4996,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class FunTypeParamClauseContext:ParserRuleContext {
-		open func typeParam() -> Array<TypeParamContext> {
-			return getRuleContexts(TypeParamContext.self)
+
+	public class FunTypeParamClauseContext: ParserRuleContext {
+			open
+			func typeParam() -> [TypeParamContext] {
+				return getRuleContexts(TypeParamContext.self)
+			}
+			open
+			func typeParam(_ i: Int) -> TypeParamContext? {
+				return getRuleContext(TypeParamContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_funTypeParamClause
 		}
-		open func typeParam(_ i: Int) -> TypeParamContext? {
-			return getRuleContext(TypeParamContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_funTypeParamClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterFunTypeParamClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterFunTypeParamClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitFunTypeParamClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitFunTypeParamClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitFunTypeParamClause(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitFunTypeParamClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitFunTypeParamClause(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitFunTypeParamClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funTypeParamClause() throws -> FunTypeParamClauseContext {
+	 open func funTypeParamClause() throws -> FunTypeParamClauseContext {
 		var _localctx: FunTypeParamClauseContext = FunTypeParamClauseContext(_ctx, getState())
 		try enterRule(_localctx, 86, ScalaParser.RULE_funTypeParamClause)
 		var _la: Int = 0
@@ -4668,40 +5079,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class VariantTypeParamContext:ParserRuleContext {
-		open func typeParam() -> TypeParamContext? {
-			return getRuleContext(TypeParamContext.self,0)
+
+	public class VariantTypeParamContext: ParserRuleContext {
+			open
+			func typeParam() -> TypeParamContext? {
+				return getRuleContext(TypeParamContext.self, 0)
+			}
+			open
+			func annotation() -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_variantTypeParam
 		}
-		open func annotation() -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_variantTypeParam }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterVariantTypeParam(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterVariantTypeParam(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitVariantTypeParam(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitVariantTypeParam(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitVariantTypeParam(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitVariantTypeParam(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitVariantTypeParam(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitVariantTypeParam(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variantTypeParam() throws -> VariantTypeParamContext {
+	 open func variantTypeParam() throws -> VariantTypeParamContext {
 		var _localctx: VariantTypeParamContext = VariantTypeParamContext(_ctx, getState())
 		try enterRule(_localctx, 88, ScalaParser.RULE_variantTypeParam)
 		var _la: Int = 0
@@ -4759,44 +5177,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeParamContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func typeParamClause() -> TypeParamClauseContext? {
-			return getRuleContext(TypeParamClauseContext.self,0)
+
+	public class TypeParamContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func typeParamClause() -> TypeParamClauseContext? {
+				return getRuleContext(TypeParamClauseContext.self, 0)
+			}
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_typeParam
 		}
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
-		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_typeParam }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTypeParam(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTypeParam(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTypeParam(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTypeParam(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTypeParam(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTypeParam(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTypeParam(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTypeParam(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeParam() throws -> TypeParamContext {
+	 open func typeParam() throws -> TypeParamContext {
 		var _localctx: TypeParamContext = TypeParamContext(_ctx, getState())
 		try enterRule(_localctx, 90, ScalaParser.RULE_typeParam)
 		var _la: Int = 0
@@ -4907,43 +5336,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ParamClausesContext:ParserRuleContext {
-		open func paramClause() -> Array<ParamClauseContext> {
-			return getRuleContexts(ParamClauseContext.self)
+
+	public class ParamClausesContext: ParserRuleContext {
+			open
+			func paramClause() -> [ParamClauseContext] {
+				return getRuleContexts(ParamClauseContext.self)
+			}
+			open
+			func paramClause(_ i: Int) -> ParamClauseContext? {
+				return getRuleContext(ParamClauseContext.self, i)
+			}
+			open
+			func params() -> ParamsContext? {
+				return getRuleContext(ParamsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_paramClauses
 		}
-		open func paramClause(_ i: Int) -> ParamClauseContext? {
-			return getRuleContext(ParamClauseContext.self,i)
-		}
-		open func params() -> ParamsContext? {
-			return getRuleContext(ParamsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_paramClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterParamClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterParamClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitParamClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitParamClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitParamClauses(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitParamClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitParamClauses(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitParamClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func paramClauses() throws -> ParamClausesContext {
+	 open func paramClauses() throws -> ParamClausesContext {
 		var _localctx: ParamClausesContext = ParamClausesContext(_ctx, getState())
 		try enterRule(_localctx, 92, ScalaParser.RULE_paramClauses)
 		var _la: Int = 0
@@ -4996,37 +5433,43 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ParamClauseContext:ParserRuleContext {
-		open func params() -> ParamsContext? {
-			return getRuleContext(ParamsContext.self,0)
+
+	public class ParamClauseContext: ParserRuleContext {
+			open
+			func params() -> ParamsContext? {
+				return getRuleContext(ParamsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_paramClause
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_paramClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterParamClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterParamClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitParamClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitParamClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitParamClause(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitParamClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitParamClause(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitParamClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func paramClause() throws -> ParamClauseContext {
+	 open func paramClause() throws -> ParamClauseContext {
 		var _localctx: ParamClauseContext = ParamClauseContext(_ctx, getState())
 		try enterRule(_localctx, 94, ScalaParser.RULE_paramClause)
 		var _la: Int = 0
@@ -5062,40 +5505,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ParamsContext:ParserRuleContext {
-		open func param() -> Array<ParamContext> {
-			return getRuleContexts(ParamContext.self)
+
+	public class ParamsContext: ParserRuleContext {
+			open
+			func param() -> [ParamContext] {
+				return getRuleContexts(ParamContext.self)
+			}
+			open
+			func param(_ i: Int) -> ParamContext? {
+				return getRuleContext(ParamContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_params
 		}
-		open func param(_ i: Int) -> ParamContext? {
-			return getRuleContext(ParamContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_params }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterParams(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterParams(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitParams(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitParams(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitParams(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitParams(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitParams(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitParams(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func params() throws -> ParamsContext {
+	 open func params() throws -> ParamsContext {
 		var _localctx: ParamsContext = ParamsContext(_ctx, getState())
 		try enterRule(_localctx, 96, ScalaParser.RULE_params)
 		var _la: Int = 0
@@ -5134,47 +5584,59 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ParamContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
+
+	public class ParamContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+			open
+			func paramType() -> ParamTypeContext? {
+				return getRuleContext(ParamTypeContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_param
 		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open func paramType() -> ParamTypeContext? {
-			return getRuleContext(ParamTypeContext.self,0)
-		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_param }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterParam(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterParam(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitParam(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitParam(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitParam(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitParam(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitParam(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitParam(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func param() throws -> ParamContext {
+	 open func param() throws -> ParamContext {
 		var _localctx: ParamContext = ParamContext(_ctx, getState())
 		try enterRule(_localctx, 98, ScalaParser.RULE_param)
 		var _la: Int = 0
@@ -5241,37 +5703,43 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ParamTypeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class ParamTypeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_paramType
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_paramType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterParamType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterParamType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitParamType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitParamType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitParamType(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitParamType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitParamType(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitParamType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func paramType() throws -> ParamTypeContext {
+	 open func paramType() throws -> ParamTypeContext {
 		var _localctx: ParamTypeContext = ParamTypeContext(_ctx, getState())
 		try enterRule(_localctx, 100, ScalaParser.RULE_paramType)
 		defer {
@@ -5314,43 +5782,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ClassParamClausesContext:ParserRuleContext {
-		open func classParamClause() -> Array<ClassParamClauseContext> {
-			return getRuleContexts(ClassParamClauseContext.self)
+
+	public class ClassParamClausesContext: ParserRuleContext {
+			open
+			func classParamClause() -> [ClassParamClauseContext] {
+				return getRuleContexts(ClassParamClauseContext.self)
+			}
+			open
+			func classParamClause(_ i: Int) -> ClassParamClauseContext? {
+				return getRuleContext(ClassParamClauseContext.self, i)
+			}
+			open
+			func classParams() -> ClassParamsContext? {
+				return getRuleContext(ClassParamsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_classParamClauses
 		}
-		open func classParamClause(_ i: Int) -> ClassParamClauseContext? {
-			return getRuleContext(ClassParamClauseContext.self,i)
-		}
-		open func classParams() -> ClassParamsContext? {
-			return getRuleContext(ClassParamsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_classParamClauses }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterClassParamClauses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterClassParamClauses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitClassParamClauses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitClassParamClauses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitClassParamClauses(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitClassParamClauses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitClassParamClauses(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitClassParamClauses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classParamClauses() throws -> ClassParamClausesContext {
+	 open func classParamClauses() throws -> ClassParamClausesContext {
 		var _localctx: ClassParamClausesContext = ClassParamClausesContext(_ctx, getState())
 		try enterRule(_localctx, 102, ScalaParser.RULE_classParamClauses)
 		defer {
@@ -5399,37 +5875,43 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ClassParamClauseContext:ParserRuleContext {
-		open func classParams() -> ClassParamsContext? {
-			return getRuleContext(ClassParamsContext.self,0)
+
+	public class ClassParamClauseContext: ParserRuleContext {
+			open
+			func classParams() -> ClassParamsContext? {
+				return getRuleContext(ClassParamsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_classParamClause
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_classParamClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterClassParamClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterClassParamClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitClassParamClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitClassParamClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitClassParamClause(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitClassParamClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitClassParamClause(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitClassParamClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classParamClause() throws -> ClassParamClauseContext {
+	 open func classParamClause() throws -> ClassParamClauseContext {
 		var _localctx: ClassParamClauseContext = ClassParamClauseContext(_ctx, getState())
 		try enterRule(_localctx, 104, ScalaParser.RULE_classParamClause)
 		var _la: Int = 0
@@ -5468,40 +5950,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ClassParamsContext:ParserRuleContext {
-		open func classParam() -> Array<ClassParamContext> {
-			return getRuleContexts(ClassParamContext.self)
+
+	public class ClassParamsContext: ParserRuleContext {
+			open
+			func classParam() -> [ClassParamContext] {
+				return getRuleContexts(ClassParamContext.self)
+			}
+			open
+			func classParam(_ i: Int) -> ClassParamContext? {
+				return getRuleContext(ClassParamContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_classParams
 		}
-		open func classParam(_ i: Int) -> ClassParamContext? {
-			return getRuleContext(ClassParamContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_classParams }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterClassParams(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterClassParams(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitClassParams(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitClassParams(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitClassParams(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitClassParams(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitClassParams(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitClassParams(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classParams() throws -> ClassParamsContext {
+	 open func classParams() throws -> ClassParamsContext {
 		var _localctx: ClassParamsContext = ClassParamsContext(_ctx, getState())
 		try enterRule(_localctx, 106, ScalaParser.RULE_classParams)
 		var _la: Int = 0
@@ -5540,53 +6029,67 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ClassParamContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func paramType() -> ParamTypeContext? {
-			return getRuleContext(ParamTypeContext.self,0)
+
+	public class ClassParamContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func paramType() -> ParamTypeContext? {
+				return getRuleContext(ParamTypeContext.self, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+			open
+			func modifier() -> [ModifierContext] {
+				return getRuleContexts(ModifierContext.self)
+			}
+			open
+			func modifier(_ i: Int) -> ModifierContext? {
+				return getRuleContext(ModifierContext.self, i)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_classParam
 		}
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open func modifier() -> Array<ModifierContext> {
-			return getRuleContexts(ModifierContext.self)
-		}
-		open func modifier(_ i: Int) -> ModifierContext? {
-			return getRuleContext(ModifierContext.self,i)
-		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_classParam }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterClassParam(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterClassParam(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitClassParam(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitClassParam(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitClassParam(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitClassParam(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitClassParam(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitClassParam(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classParam() throws -> ClassParamContext {
+	 open func classParam() throws -> ClassParamContext {
 		var _localctx: ClassParamContext = ClassParamContext(_ctx, getState())
 		try enterRule(_localctx, 108, ScalaParser.RULE_classParam)
 		var _la: Int = 0
@@ -5685,40 +6188,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class BindingsContext:ParserRuleContext {
-		open func binding() -> Array<BindingContext> {
-			return getRuleContexts(BindingContext.self)
+
+	public class BindingsContext: ParserRuleContext {
+			open
+			func binding() -> [BindingContext] {
+				return getRuleContexts(BindingContext.self)
+			}
+			open
+			func binding(_ i: Int) -> BindingContext? {
+				return getRuleContext(BindingContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_bindings
 		}
-		open func binding(_ i: Int) -> BindingContext? {
-			return getRuleContext(BindingContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_bindings }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterBindings(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterBindings(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitBindings(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitBindings(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitBindings(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitBindings(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitBindings(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitBindings(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bindings() throws -> BindingsContext {
+	 open func bindings() throws -> BindingsContext {
 		var _localctx: BindingsContext = BindingsContext(_ctx, getState())
 		try enterRule(_localctx, 110, ScalaParser.RULE_bindings)
 		var _la: Int = 0
@@ -5761,38 +6271,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class BindingContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class BindingContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_binding
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_binding }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterBinding(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterBinding(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitBinding(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitBinding(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitBinding(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitBinding(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitBinding(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitBinding(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binding() throws -> BindingContext {
+	 open func binding() throws -> BindingContext {
 		var _localctx: BindingContext = BindingContext(_ctx, getState())
 		try enterRule(_localctx, 112, ScalaParser.RULE_binding)
 		var _la: Int = 0
@@ -5839,40 +6358,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ModifierContext:ParserRuleContext {
-		open func localModifier() -> LocalModifierContext? {
-			return getRuleContext(LocalModifierContext.self,0)
+
+	public class ModifierContext: ParserRuleContext {
+			open
+			func localModifier() -> LocalModifierContext? {
+				return getRuleContext(LocalModifierContext.self, 0)
+			}
+			open
+			func accessModifier() -> AccessModifierContext? {
+				return getRuleContext(AccessModifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_modifier
 		}
-		open func accessModifier() -> AccessModifierContext? {
-			return getRuleContext(AccessModifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_modifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterModifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterModifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitModifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitModifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitModifier(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitModifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitModifier(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitModifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func modifier() throws -> ModifierContext {
+	 open func modifier() throws -> ModifierContext {
 		var _localctx: ModifierContext = ModifierContext(_ctx, getState())
 		try enterRule(_localctx, 114, ScalaParser.RULE_modifier)
 		defer {
@@ -5907,7 +6433,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5918,34 +6444,39 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class LocalModifierContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_localModifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterLocalModifier(self)
+
+	public class LocalModifierContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_localModifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterLocalModifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitLocalModifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitLocalModifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitLocalModifier(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitLocalModifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitLocalModifier(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitLocalModifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func localModifier() throws -> LocalModifierContext {
+	 open func localModifier() throws -> LocalModifierContext {
 		var _localctx: LocalModifierContext = LocalModifierContext(_ctx, getState())
 		try enterRule(_localctx, 116, ScalaParser.RULE_localModifier)
 		var _la: Int = 0
@@ -5980,37 +6511,43 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class AccessModifierContext:ParserRuleContext {
-		open func accessQualifier() -> AccessQualifierContext? {
-			return getRuleContext(AccessQualifierContext.self,0)
+
+	public class AccessModifierContext: ParserRuleContext {
+			open
+			func accessQualifier() -> AccessQualifierContext? {
+				return getRuleContext(AccessQualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_accessModifier
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_accessModifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterAccessModifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterAccessModifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitAccessModifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitAccessModifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitAccessModifier(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitAccessModifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitAccessModifier(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitAccessModifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func accessModifier() throws -> AccessModifierContext {
+	 open func accessModifier() throws -> AccessModifierContext {
 		var _localctx: AccessModifierContext = AccessModifierContext(_ctx, getState())
 		try enterRule(_localctx, 118, ScalaParser.RULE_accessModifier)
 		var _la: Int = 0
@@ -6055,35 +6592,43 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class AccessQualifierContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_accessQualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterAccessQualifier(self)
+
+	public class AccessQualifierContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_accessQualifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterAccessQualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitAccessQualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitAccessQualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitAccessQualifier(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitAccessQualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitAccessQualifier(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitAccessQualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func accessQualifier() throws -> AccessQualifierContext {
+	 open func accessQualifier() throws -> AccessQualifierContext {
 		var _localctx: AccessQualifierContext = AccessQualifierContext(_ctx, getState())
 		try enterRule(_localctx, 120, ScalaParser.RULE_accessQualifier)
 		var _la: Int = 0
@@ -6119,43 +6664,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationContext:ParserRuleContext {
-		open func simpleType() -> SimpleTypeContext? {
-			return getRuleContext(SimpleTypeContext.self,0)
+
+	public class AnnotationContext: ParserRuleContext {
+			open
+			func simpleType() -> SimpleTypeContext? {
+				return getRuleContext(SimpleTypeContext.self, 0)
+			}
+			open
+			func argumentExprs() -> [ArgumentExprsContext] {
+				return getRuleContexts(ArgumentExprsContext.self)
+			}
+			open
+			func argumentExprs(_ i: Int) -> ArgumentExprsContext? {
+				return getRuleContext(ArgumentExprsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_annotation
 		}
-		open func argumentExprs() -> Array<ArgumentExprsContext> {
-			return getRuleContexts(ArgumentExprsContext.self)
-		}
-		open func argumentExprs(_ i: Int) -> ArgumentExprsContext? {
-			return getRuleContext(ArgumentExprsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_annotation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterAnnotation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterAnnotation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitAnnotation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitAnnotation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitAnnotation(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitAnnotation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitAnnotation(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitAnnotation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotation() throws -> AnnotationContext {
+	 open func annotation() throws -> AnnotationContext {
 		var _localctx: AnnotationContext = AnnotationContext(_ctx, getState())
 		try enterRule(_localctx, 122, ScalaParser.RULE_annotation)
 		defer {
@@ -6192,40 +6745,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ConstrAnnotationContext:ParserRuleContext {
-		open func simpleType() -> SimpleTypeContext? {
-			return getRuleContext(SimpleTypeContext.self,0)
+
+	public class ConstrAnnotationContext: ParserRuleContext {
+			open
+			func simpleType() -> SimpleTypeContext? {
+				return getRuleContext(SimpleTypeContext.self, 0)
+			}
+			open
+			func argumentExprs() -> ArgumentExprsContext? {
+				return getRuleContext(ArgumentExprsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_constrAnnotation
 		}
-		open func argumentExprs() -> ArgumentExprsContext? {
-			return getRuleContext(ArgumentExprsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_constrAnnotation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterConstrAnnotation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterConstrAnnotation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitConstrAnnotation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitConstrAnnotation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitConstrAnnotation(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitConstrAnnotation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitConstrAnnotation(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitConstrAnnotation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constrAnnotation() throws -> ConstrAnnotationContext {
+	 open func constrAnnotation() throws -> ConstrAnnotationContext {
 		var _localctx: ConstrAnnotationContext = ConstrAnnotationContext(_ctx, getState())
 		try enterRule(_localctx, 124, ScalaParser.RULE_constrAnnotation)
 		defer {
@@ -6249,47 +6809,59 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TemplateBodyContext:ParserRuleContext {
-		open func templateStat() -> Array<TemplateStatContext> {
-			return getRuleContexts(TemplateStatContext.self)
+
+	public class TemplateBodyContext: ParserRuleContext {
+			open
+			func templateStat() -> [TemplateStatContext] {
+				return getRuleContexts(TemplateStatContext.self)
+			}
+			open
+			func templateStat(_ i: Int) -> TemplateStatContext? {
+				return getRuleContext(TemplateStatContext.self, i)
+			}
+			open
+			func selfType() -> SelfTypeContext? {
+				return getRuleContext(SelfTypeContext.self, 0)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_templateBody
 		}
-		open func templateStat(_ i: Int) -> TemplateStatContext? {
-			return getRuleContext(TemplateStatContext.self,i)
-		}
-		open func selfType() -> SelfTypeContext? {
-			return getRuleContext(SelfTypeContext.self,0)
-		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_templateBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTemplateBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTemplateBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTemplateBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTemplateBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTemplateBody(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTemplateBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTemplateBody(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTemplateBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func templateBody() throws -> TemplateBodyContext {
+	 open func templateBody() throws -> TemplateBodyContext {
 		var _localctx: TemplateBodyContext = TemplateBodyContext(_ctx, getState())
 		try enterRule(_localctx, 126, ScalaParser.RULE_templateBody)
 		var _la: Int = 0
@@ -6342,58 +6914,71 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TemplateStatContext:ParserRuleContext {
-		open func import_() -> Import_Context? {
-			return getRuleContext(Import_Context.self,0)
+
+	public class TemplateStatContext: ParserRuleContext {
+			open
+			func import_() -> Import_Context? {
+				return getRuleContext(Import_Context.self, 0)
+			}
+			open
+			func def() -> DefContext? {
+				return getRuleContext(DefContext.self, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+			open
+			func modifier() -> [ModifierContext] {
+				return getRuleContexts(ModifierContext.self)
+			}
+			open
+			func modifier(_ i: Int) -> ModifierContext? {
+				return getRuleContext(ModifierContext.self, i)
+			}
+			open
+			func dcl() -> DclContext? {
+				return getRuleContext(DclContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_templateStat
 		}
-		open func def() -> DefContext? {
-			return getRuleContext(DefContext.self,0)
-		}
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open func modifier() -> Array<ModifierContext> {
-			return getRuleContexts(ModifierContext.self)
-		}
-		open func modifier(_ i: Int) -> ModifierContext? {
-			return getRuleContext(ModifierContext.self,i)
-		}
-		open func dcl() -> DclContext? {
-			return getRuleContext(DclContext.self,0)
-		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_templateStat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTemplateStat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTemplateStat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTemplateStat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTemplateStat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTemplateStat(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTemplateStat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTemplateStat(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTemplateStat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func templateStat() throws -> TemplateStatContext {
+	 open func templateStat() throws -> TemplateStatContext {
 		var _localctx: TemplateStatContext = TemplateStatContext(_ctx, getState())
 		try enterRule(_localctx, 128, ScalaParser.RULE_templateStat)
 		var _la: Int = 0
@@ -6513,38 +7098,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class SelfTypeContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class SelfTypeContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_selfType
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_selfType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterSelfType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterSelfType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitSelfType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitSelfType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitSelfType(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitSelfType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitSelfType(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitSelfType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selfType() throws -> SelfTypeContext {
+	 open func selfType() throws -> SelfTypeContext {
 		var _localctx: SelfTypeContext = SelfTypeContext(_ctx, getState())
 		try enterRule(_localctx, 130, ScalaParser.RULE_selfType)
 		var _la: Int = 0
@@ -6592,7 +7186,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6603,40 +7197,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class Import_Context:ParserRuleContext {
-		open func importExpr() -> Array<ImportExprContext> {
-			return getRuleContexts(ImportExprContext.self)
+
+	public class Import_Context: ParserRuleContext {
+			open
+			func importExpr() -> [ImportExprContext] {
+				return getRuleContexts(ImportExprContext.self)
+			}
+			open
+			func importExpr(_ i: Int) -> ImportExprContext? {
+				return getRuleContext(ImportExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_import_
 		}
-		open func importExpr(_ i: Int) -> ImportExprContext? {
-			return getRuleContext(ImportExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_import_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterImport_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterImport_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitImport_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitImport_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitImport_(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitImport_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitImport_(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitImport_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func import_() throws -> Import_Context {
+	 open func import_() throws -> Import_Context {
 		var _localctx: Import_Context = Import_Context(_ctx, getState())
 		try enterRule(_localctx, 132, ScalaParser.RULE_import_)
 		var _la: Int = 0
@@ -6677,41 +7278,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ImportExprContext:ParserRuleContext {
-		open func stableId() -> StableIdContext? {
-			return getRuleContext(StableIdContext.self,0)
+
+	public class ImportExprContext: ParserRuleContext {
+			open
+			func stableId() -> StableIdContext? {
+				return getRuleContext(StableIdContext.self, 0)
+			}
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func importSelectors() -> ImportSelectorsContext? {
+				return getRuleContext(ImportSelectorsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_importExpr
 		}
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func importSelectors() -> ImportSelectorsContext? {
-			return getRuleContext(ImportSelectorsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_importExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterImportExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterImportExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitImportExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitImportExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitImportExpr(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitImportExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitImportExpr(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitImportExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importExpr() throws -> ImportExprContext {
+	 open func importExpr() throws -> ImportExprContext {
 		var _localctx: ImportExprContext = ImportExprContext(_ctx, getState())
 		try enterRule(_localctx, 134, ScalaParser.RULE_importExpr)
 		defer {
@@ -6744,7 +7355,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -6756,40 +7367,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ImportSelectorsContext:ParserRuleContext {
-		open func importSelector() -> Array<ImportSelectorContext> {
-			return getRuleContexts(ImportSelectorContext.self)
+
+	public class ImportSelectorsContext: ParserRuleContext {
+			open
+			func importSelector() -> [ImportSelectorContext] {
+				return getRuleContexts(ImportSelectorContext.self)
+			}
+			open
+			func importSelector(_ i: Int) -> ImportSelectorContext? {
+				return getRuleContext(ImportSelectorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_importSelectors
 		}
-		open func importSelector(_ i: Int) -> ImportSelectorContext? {
-			return getRuleContext(ImportSelectorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_importSelectors }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterImportSelectors(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterImportSelectors(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitImportSelectors(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitImportSelectors(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitImportSelectors(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitImportSelectors(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitImportSelectors(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitImportSelectors(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importSelectors() throws -> ImportSelectorsContext {
+	 open func importSelectors() throws -> ImportSelectorsContext {
 		var _localctx: ImportSelectorsContext = ImportSelectorsContext(_ctx, getState())
 		try enterRule(_localctx, 136, ScalaParser.RULE_importSelectors)
 		defer {
@@ -6831,7 +7449,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(1104)
 		 	try match(ScalaParser.Tokens.T__13.rawValue)
@@ -6845,38 +7463,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ImportSelectorContext:ParserRuleContext {
-		open func Id() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Id.rawValue) }
-		open func Id(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Id.rawValue, i)
+
+	public class ImportSelectorContext: ParserRuleContext {
+			open
+			func Id() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Id.rawValue)
+			}
+			open
+			func Id(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_importSelector
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_importSelector }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterImportSelector(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterImportSelector(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitImportSelector(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitImportSelector(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitImportSelector(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitImportSelector(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitImportSelector(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitImportSelector(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importSelector() throws -> ImportSelectorContext {
+	 open func importSelector() throws -> ImportSelectorContext {
 		var _localctx: ImportSelectorContext = ImportSelectorContext(_ctx, getState())
 		try enterRule(_localctx, 138, ScalaParser.RULE_importSelector)
 		defer {
@@ -6915,46 +7542,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class DclContext:ParserRuleContext {
-		open func valDcl() -> ValDclContext? {
-			return getRuleContext(ValDclContext.self,0)
+
+	public class DclContext: ParserRuleContext {
+			open
+			func valDcl() -> ValDclContext? {
+				return getRuleContext(ValDclContext.self, 0)
+			}
+			open
+			func varDcl() -> VarDclContext? {
+				return getRuleContext(VarDclContext.self, 0)
+			}
+			open
+			func funDcl() -> FunDclContext? {
+				return getRuleContext(FunDclContext.self, 0)
+			}
+			open
+			func typeDcl() -> TypeDclContext? {
+				return getRuleContext(TypeDclContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_dcl
 		}
-		open func varDcl() -> VarDclContext? {
-			return getRuleContext(VarDclContext.self,0)
-		}
-		open func funDcl() -> FunDclContext? {
-			return getRuleContext(FunDclContext.self,0)
-		}
-		open func typeDcl() -> TypeDclContext? {
-			return getRuleContext(TypeDclContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_dcl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterDcl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterDcl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitDcl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitDcl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitDcl(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitDcl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitDcl(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitDcl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dcl() throws -> DclContext {
+	 open func dcl() throws -> DclContext {
 		var _localctx: DclContext = DclContext(_ctx, getState())
 		try enterRule(_localctx, 140, ScalaParser.RULE_dcl)
 		defer {
@@ -7000,7 +7636,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7011,40 +7647,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ValDclContext:ParserRuleContext {
-		open func ids() -> IdsContext? {
-			return getRuleContext(IdsContext.self,0)
+
+	public class ValDclContext: ParserRuleContext {
+			open
+			func ids() -> IdsContext? {
+				return getRuleContext(IdsContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_valDcl
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_valDcl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterValDcl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterValDcl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitValDcl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitValDcl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitValDcl(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitValDcl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitValDcl(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitValDcl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func valDcl() throws -> ValDclContext {
+	 open func valDcl() throws -> ValDclContext {
 		var _localctx: ValDclContext = ValDclContext(_ctx, getState())
 		try enterRule(_localctx, 142, ScalaParser.RULE_valDcl)
 		defer {
@@ -7068,40 +7711,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class VarDclContext:ParserRuleContext {
-		open func ids() -> IdsContext? {
-			return getRuleContext(IdsContext.self,0)
+
+	public class VarDclContext: ParserRuleContext {
+			open
+			func ids() -> IdsContext? {
+				return getRuleContext(IdsContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_varDcl
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_varDcl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterVarDcl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterVarDcl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitVarDcl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitVarDcl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitVarDcl(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitVarDcl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitVarDcl(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitVarDcl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varDcl() throws -> VarDclContext {
+	 open func varDcl() throws -> VarDclContext {
 		var _localctx: VarDclContext = VarDclContext(_ctx, getState())
 		try enterRule(_localctx, 144, ScalaParser.RULE_varDcl)
 		defer {
@@ -7125,40 +7775,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class FunDclContext:ParserRuleContext {
-		open func funSig() -> FunSigContext? {
-			return getRuleContext(FunSigContext.self,0)
+
+	public class FunDclContext: ParserRuleContext {
+			open
+			func funSig() -> FunSigContext? {
+				return getRuleContext(FunSigContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_funDcl
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_funDcl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterFunDcl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterFunDcl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitFunDcl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitFunDcl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitFunDcl(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitFunDcl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitFunDcl(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitFunDcl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funDcl() throws -> FunDclContext {
+	 open func funDcl() throws -> FunDclContext {
 		var _localctx: FunDclContext = FunDclContext(_ctx, getState())
 		try enterRule(_localctx, 146, ScalaParser.RULE_funDcl)
 		var _la: Int = 0
@@ -7194,41 +7851,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class FunSigContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func paramClauses() -> ParamClausesContext? {
-			return getRuleContext(ParamClausesContext.self,0)
+
+	public class FunSigContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func paramClauses() -> ParamClausesContext? {
+				return getRuleContext(ParamClausesContext.self, 0)
+			}
+			open
+			func funTypeParamClause() -> FunTypeParamClauseContext? {
+				return getRuleContext(FunTypeParamClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_funSig
 		}
-		open func funTypeParamClause() -> FunTypeParamClauseContext? {
-			return getRuleContext(FunTypeParamClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_funSig }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterFunSig(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterFunSig(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitFunSig(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitFunSig(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitFunSig(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitFunSig(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitFunSig(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitFunSig(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funSig() throws -> FunSigContext {
+	 open func funSig() throws -> FunSigContext {
 		var _localctx: FunSigContext = FunSigContext(_ctx, getState())
 		try enterRule(_localctx, 148, ScalaParser.RULE_funSig)
 		var _la: Int = 0
@@ -7264,44 +7931,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeDclContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func typeParamClause() -> TypeParamClauseContext? {
-			return getRuleContext(TypeParamClauseContext.self,0)
+
+	public class TypeDclContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func typeParamClause() -> TypeParamClauseContext? {
+				return getRuleContext(TypeParamClauseContext.self, 0)
+			}
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_typeDcl
 		}
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
-		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_typeDcl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTypeDcl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTypeDcl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTypeDcl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTypeDcl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTypeDcl(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTypeDcl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTypeDcl(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTypeDcl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeDcl() throws -> TypeDclContext {
+	 open func typeDcl() throws -> TypeDclContext {
 		var _localctx: TypeDclContext = TypeDclContext(_ctx, getState())
 		try enterRule(_localctx, 150, ScalaParser.RULE_typeDcl)
 		var _la: Int = 0
@@ -7365,40 +8043,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class PatVarDefContext:ParserRuleContext {
-		open func patDef() -> PatDefContext? {
-			return getRuleContext(PatDefContext.self,0)
+
+	public class PatVarDefContext: ParserRuleContext {
+			open
+			func patDef() -> PatDefContext? {
+				return getRuleContext(PatDefContext.self, 0)
+			}
+			open
+			func varDef() -> VarDefContext? {
+				return getRuleContext(VarDefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_patVarDef
 		}
-		open func varDef() -> VarDefContext? {
-			return getRuleContext(VarDefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_patVarDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPatVarDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPatVarDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPatVarDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPatVarDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPatVarDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPatVarDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPatVarDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPatVarDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func patVarDef() throws -> PatVarDefContext {
+	 open func patVarDef() throws -> PatVarDefContext {
 		var _localctx: PatVarDefContext = PatVarDefContext(_ctx, getState())
 		try enterRule(_localctx, 152, ScalaParser.RULE_patVarDef)
 		defer {
@@ -7426,7 +8111,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7437,46 +8122,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class DefContext:ParserRuleContext {
-		open func patVarDef() -> PatVarDefContext? {
-			return getRuleContext(PatVarDefContext.self,0)
+
+	public class DefContext: ParserRuleContext {
+			open
+			func patVarDef() -> PatVarDefContext? {
+				return getRuleContext(PatVarDefContext.self, 0)
+			}
+			open
+			func funDef() -> FunDefContext? {
+				return getRuleContext(FunDefContext.self, 0)
+			}
+			open
+			func typeDef() -> TypeDefContext? {
+				return getRuleContext(TypeDefContext.self, 0)
+			}
+			open
+			func tmplDef() -> TmplDefContext? {
+				return getRuleContext(TmplDefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_def
 		}
-		open func funDef() -> FunDefContext? {
-			return getRuleContext(FunDefContext.self,0)
-		}
-		open func typeDef() -> TypeDefContext? {
-			return getRuleContext(TypeDefContext.self,0)
-		}
-		open func tmplDef() -> TmplDefContext? {
-			return getRuleContext(TmplDefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_def }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func def() throws -> DefContext {
+	 open func def() throws -> DefContext {
 		var _localctx: DefContext = DefContext(_ctx, getState())
 		try enterRule(_localctx, 154, ScalaParser.RULE_def)
 		defer {
@@ -7520,7 +8214,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7531,49 +8225,59 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class PatDefContext:ParserRuleContext {
-		open func pattern2() -> Array<Pattern2Context> {
-			return getRuleContexts(Pattern2Context.self)
+
+	public class PatDefContext: ParserRuleContext {
+			open
+			func pattern2() -> [Pattern2Context] {
+				return getRuleContexts(Pattern2Context.self)
+			}
+			open
+			func pattern2(_ i: Int) -> Pattern2Context? {
+				return getRuleContext(Pattern2Context.self, i)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_patDef
 		}
-		open func pattern2(_ i: Int) -> Pattern2Context? {
-			return getRuleContext(Pattern2Context.self,i)
-		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
-		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_patDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPatDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPatDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPatDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPatDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPatDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPatDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPatDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPatDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func patDef() throws -> PatDefContext {
+	 open func patDef() throws -> PatDefContext {
 		var _localctx: PatDefContext = PatDefContext(_ctx, getState())
 		try enterRule(_localctx, 156, ScalaParser.RULE_patDef)
 		var _la: Int = 0
@@ -7634,43 +8338,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class VarDefContext:ParserRuleContext {
-		open func patDef() -> PatDefContext? {
-			return getRuleContext(PatDefContext.self,0)
+
+	public class VarDefContext: ParserRuleContext {
+			open
+			func patDef() -> PatDefContext? {
+				return getRuleContext(PatDefContext.self, 0)
+			}
+			open
+			func ids() -> IdsContext? {
+				return getRuleContext(IdsContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_varDef
 		}
-		open func ids() -> IdsContext? {
-			return getRuleContext(IdsContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_varDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterVarDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterVarDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitVarDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitVarDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitVarDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitVarDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitVarDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitVarDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varDef() throws -> VarDefContext {
+	 open func varDef() throws -> VarDefContext {
 		var _localctx: VarDefContext = VarDefContext(_ctx, getState())
 		try enterRule(_localctx, 158, ScalaParser.RULE_varDef)
 		defer {
@@ -7711,58 +8423,71 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class FunDefContext:ParserRuleContext {
-		open func funSig() -> FunSigContext? {
-			return getRuleContext(FunSigContext.self,0)
+
+	public class FunDefContext: ParserRuleContext {
+			open
+			func funSig() -> FunSigContext? {
+				return getRuleContext(FunSigContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func paramClause() -> ParamClauseContext? {
+				return getRuleContext(ParamClauseContext.self, 0)
+			}
+			open
+			func paramClauses() -> ParamClausesContext? {
+				return getRuleContext(ParamClausesContext.self, 0)
+			}
+			open
+			func constrExpr() -> ConstrExprContext? {
+				return getRuleContext(ConstrExprContext.self, 0)
+			}
+			open
+			func constrBlock() -> ConstrBlockContext? {
+				return getRuleContext(ConstrBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_funDef
 		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func paramClause() -> ParamClauseContext? {
-			return getRuleContext(ParamClauseContext.self,0)
-		}
-		open func paramClauses() -> ParamClausesContext? {
-			return getRuleContext(ParamClausesContext.self,0)
-		}
-		open func constrExpr() -> ConstrExprContext? {
-			return getRuleContext(ConstrExprContext.self,0)
-		}
-		open func constrBlock() -> ConstrBlockContext? {
-			return getRuleContext(ConstrBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_funDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterFunDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterFunDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitFunDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitFunDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitFunDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitFunDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitFunDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitFunDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funDef() throws -> FunDefContext {
+	 open func funDef() throws -> FunDefContext {
 		var _localctx: FunDefContext = FunDefContext(_ctx, getState())
 		try enterRule(_localctx, 160, ScalaParser.RULE_funDef)
 		var _la: Int = 0
@@ -7835,7 +8560,7 @@ open class ScalaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -7850,41 +8575,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TypeDefContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class TypeDefContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func typeParamClause() -> TypeParamClauseContext? {
+				return getRuleContext(TypeParamClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_typeDef
 		}
-		open func typeParamClause() -> TypeParamClauseContext? {
-			return getRuleContext(TypeParamClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_typeDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTypeDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTypeDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTypeDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTypeDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTypeDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTypeDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTypeDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTypeDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeDef() throws -> TypeDefContext {
+	 open func typeDef() throws -> TypeDefContext {
 		var _localctx: TypeDefContext = TypeDefContext(_ctx, getState())
 		try enterRule(_localctx, 162, ScalaParser.RULE_typeDef)
 		var _la: Int = 0
@@ -7922,43 +8657,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TmplDefContext:ParserRuleContext {
-		open func classDef() -> ClassDefContext? {
-			return getRuleContext(ClassDefContext.self,0)
+
+	public class TmplDefContext: ParserRuleContext {
+			open
+			func classDef() -> ClassDefContext? {
+				return getRuleContext(ClassDefContext.self, 0)
+			}
+			open
+			func objectDef() -> ObjectDefContext? {
+				return getRuleContext(ObjectDefContext.self, 0)
+			}
+			open
+			func traitDef() -> TraitDefContext? {
+				return getRuleContext(TraitDefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_tmplDef
 		}
-		open func objectDef() -> ObjectDefContext? {
-			return getRuleContext(ObjectDefContext.self,0)
-		}
-		open func traitDef() -> TraitDefContext? {
-			return getRuleContext(TraitDefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_tmplDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTmplDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTmplDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTmplDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTmplDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTmplDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTmplDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTmplDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTmplDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tmplDef() throws -> TmplDefContext {
+	 open func tmplDef() throws -> TmplDefContext {
 		var _localctx: TmplDefContext = TmplDefContext(_ctx, getState())
 		try enterRule(_localctx, 164, ScalaParser.RULE_tmplDef)
 		var _la: Int = 0
@@ -8019,53 +8762,67 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ClassDefContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func classParamClauses() -> ClassParamClausesContext? {
-			return getRuleContext(ClassParamClausesContext.self,0)
+
+	public class ClassDefContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func classParamClauses() -> ClassParamClausesContext? {
+				return getRuleContext(ClassParamClausesContext.self, 0)
+			}
+			open
+			func classTemplateOpt() -> ClassTemplateOptContext? {
+				return getRuleContext(ClassTemplateOptContext.self, 0)
+			}
+			open
+			func typeParamClause() -> TypeParamClauseContext? {
+				return getRuleContext(TypeParamClauseContext.self, 0)
+			}
+			open
+			func constrAnnotation() -> [ConstrAnnotationContext] {
+				return getRuleContexts(ConstrAnnotationContext.self)
+			}
+			open
+			func constrAnnotation(_ i: Int) -> ConstrAnnotationContext? {
+				return getRuleContext(ConstrAnnotationContext.self, i)
+			}
+			open
+			func accessModifier() -> AccessModifierContext? {
+				return getRuleContext(AccessModifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_classDef
 		}
-		open func classTemplateOpt() -> ClassTemplateOptContext? {
-			return getRuleContext(ClassTemplateOptContext.self,0)
-		}
-		open func typeParamClause() -> TypeParamClauseContext? {
-			return getRuleContext(TypeParamClauseContext.self,0)
-		}
-		open func constrAnnotation() -> Array<ConstrAnnotationContext> {
-			return getRuleContexts(ConstrAnnotationContext.self)
-		}
-		open func constrAnnotation(_ i: Int) -> ConstrAnnotationContext? {
-			return getRuleContext(ConstrAnnotationContext.self,i)
-		}
-		open func accessModifier() -> AccessModifierContext? {
-			return getRuleContext(AccessModifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_classDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterClassDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterClassDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitClassDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitClassDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitClassDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitClassDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitClassDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitClassDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classDef() throws -> ClassDefContext {
+	 open func classDef() throws -> ClassDefContext {
 		var _localctx: ClassDefContext = ClassDefContext(_ctx, getState())
 		try enterRule(_localctx, 166, ScalaParser.RULE_classDef)
 		var _la: Int = 0
@@ -8132,41 +8889,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TraitDefContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func traitTemplateOpt() -> TraitTemplateOptContext? {
-			return getRuleContext(TraitTemplateOptContext.self,0)
+
+	public class TraitDefContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func traitTemplateOpt() -> TraitTemplateOptContext? {
+				return getRuleContext(TraitTemplateOptContext.self, 0)
+			}
+			open
+			func typeParamClause() -> TypeParamClauseContext? {
+				return getRuleContext(TypeParamClauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_traitDef
 		}
-		open func typeParamClause() -> TypeParamClauseContext? {
-			return getRuleContext(TypeParamClauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_traitDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTraitDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTraitDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTraitDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTraitDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTraitDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTraitDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTraitDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTraitDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func traitDef() throws -> TraitDefContext {
+	 open func traitDef() throws -> TraitDefContext {
 		var _localctx: TraitDefContext = TraitDefContext(_ctx, getState())
 		try enterRule(_localctx, 168, ScalaParser.RULE_traitDef)
 		var _la: Int = 0
@@ -8202,38 +8969,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ObjectDefContext:ParserRuleContext {
-		open func Id() -> TerminalNode? { return getToken(ScalaParser.Tokens.Id.rawValue, 0) }
-		open func classTemplateOpt() -> ClassTemplateOptContext? {
-			return getRuleContext(ClassTemplateOptContext.self,0)
+
+	public class ObjectDefContext: ParserRuleContext {
+			open
+			func Id() -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Id.rawValue, 0)
+			}
+			open
+			func classTemplateOpt() -> ClassTemplateOptContext? {
+				return getRuleContext(ClassTemplateOptContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_objectDef
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_objectDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterObjectDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterObjectDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitObjectDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitObjectDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitObjectDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitObjectDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitObjectDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitObjectDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func objectDef() throws -> ObjectDefContext {
+	 open func objectDef() throws -> ObjectDefContext {
 		var _localctx: ObjectDefContext = ObjectDefContext(_ctx, getState())
 		try enterRule(_localctx, 170, ScalaParser.RULE_objectDef)
 		defer {
@@ -8255,40 +9031,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ClassTemplateOptContext:ParserRuleContext {
-		open func classTemplate() -> ClassTemplateContext? {
-			return getRuleContext(ClassTemplateContext.self,0)
+
+	public class ClassTemplateOptContext: ParserRuleContext {
+			open
+			func classTemplate() -> ClassTemplateContext? {
+				return getRuleContext(ClassTemplateContext.self, 0)
+			}
+			open
+			func templateBody() -> TemplateBodyContext? {
+				return getRuleContext(TemplateBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_classTemplateOpt
 		}
-		open func templateBody() -> TemplateBodyContext? {
-			return getRuleContext(TemplateBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_classTemplateOpt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterClassTemplateOpt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterClassTemplateOpt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitClassTemplateOpt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitClassTemplateOpt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitClassTemplateOpt(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitClassTemplateOpt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitClassTemplateOpt(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitClassTemplateOpt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classTemplateOpt() throws -> ClassTemplateOptContext {
+	 open func classTemplateOpt() throws -> ClassTemplateOptContext {
 		var _localctx: ClassTemplateOptContext = ClassTemplateOptContext(_ctx, getState())
 		try enterRule(_localctx, 172, ScalaParser.RULE_classTemplateOpt)
 		var _la: Int = 0
@@ -8345,40 +9128,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TraitTemplateOptContext:ParserRuleContext {
-		open func traitTemplate() -> TraitTemplateContext? {
-			return getRuleContext(TraitTemplateContext.self,0)
+
+	public class TraitTemplateOptContext: ParserRuleContext {
+			open
+			func traitTemplate() -> TraitTemplateContext? {
+				return getRuleContext(TraitTemplateContext.self, 0)
+			}
+			open
+			func templateBody() -> TemplateBodyContext? {
+				return getRuleContext(TemplateBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_traitTemplateOpt
 		}
-		open func templateBody() -> TemplateBodyContext? {
-			return getRuleContext(TemplateBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_traitTemplateOpt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTraitTemplateOpt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTraitTemplateOpt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTraitTemplateOpt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTraitTemplateOpt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTraitTemplateOpt(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTraitTemplateOpt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTraitTemplateOpt(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTraitTemplateOpt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func traitTemplateOpt() throws -> TraitTemplateOptContext {
+	 open func traitTemplateOpt() throws -> TraitTemplateOptContext {
 		var _localctx: TraitTemplateOptContext = TraitTemplateOptContext(_ctx, getState())
 		try enterRule(_localctx, 174, ScalaParser.RULE_traitTemplateOpt)
 		var _la: Int = 0
@@ -8435,43 +9225,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ClassTemplateContext:ParserRuleContext {
-		open func classParents() -> ClassParentsContext? {
-			return getRuleContext(ClassParentsContext.self,0)
+
+	public class ClassTemplateContext: ParserRuleContext {
+			open
+			func classParents() -> ClassParentsContext? {
+				return getRuleContext(ClassParentsContext.self, 0)
+			}
+			open
+			func earlyDefs() -> EarlyDefsContext? {
+				return getRuleContext(EarlyDefsContext.self, 0)
+			}
+			open
+			func templateBody() -> TemplateBodyContext? {
+				return getRuleContext(TemplateBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_classTemplate
 		}
-		open func earlyDefs() -> EarlyDefsContext? {
-			return getRuleContext(EarlyDefsContext.self,0)
-		}
-		open func templateBody() -> TemplateBodyContext? {
-			return getRuleContext(TemplateBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_classTemplate }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterClassTemplate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterClassTemplate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitClassTemplate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitClassTemplate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitClassTemplate(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitClassTemplate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitClassTemplate(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitClassTemplate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classTemplate() throws -> ClassTemplateContext {
+	 open func classTemplate() throws -> ClassTemplateContext {
 		var _localctx: ClassTemplateContext = ClassTemplateContext(_ctx, getState())
 		try enterRule(_localctx, 176, ScalaParser.RULE_classTemplate)
 		var _la: Int = 0
@@ -8515,43 +9313,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TraitTemplateContext:ParserRuleContext {
-		open func traitParents() -> TraitParentsContext? {
-			return getRuleContext(TraitParentsContext.self,0)
+
+	public class TraitTemplateContext: ParserRuleContext {
+			open
+			func traitParents() -> TraitParentsContext? {
+				return getRuleContext(TraitParentsContext.self, 0)
+			}
+			open
+			func earlyDefs() -> EarlyDefsContext? {
+				return getRuleContext(EarlyDefsContext.self, 0)
+			}
+			open
+			func templateBody() -> TemplateBodyContext? {
+				return getRuleContext(TemplateBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_traitTemplate
 		}
-		open func earlyDefs() -> EarlyDefsContext? {
-			return getRuleContext(EarlyDefsContext.self,0)
-		}
-		open func templateBody() -> TemplateBodyContext? {
-			return getRuleContext(TemplateBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_traitTemplate }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTraitTemplate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTraitTemplate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTraitTemplate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTraitTemplate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTraitTemplate(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTraitTemplate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTraitTemplate(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTraitTemplate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func traitTemplate() throws -> TraitTemplateContext {
+	 open func traitTemplate() throws -> TraitTemplateContext {
 		var _localctx: TraitTemplateContext = TraitTemplateContext(_ctx, getState())
 		try enterRule(_localctx, 178, ScalaParser.RULE_traitTemplate)
 		var _la: Int = 0
@@ -8595,43 +9401,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ClassParentsContext:ParserRuleContext {
-		open func constr() -> ConstrContext? {
-			return getRuleContext(ConstrContext.self,0)
+
+	public class ClassParentsContext: ParserRuleContext {
+			open
+			func constr() -> ConstrContext? {
+				return getRuleContext(ConstrContext.self, 0)
+			}
+			open
+			func annotType() -> [AnnotTypeContext] {
+				return getRuleContexts(AnnotTypeContext.self)
+			}
+			open
+			func annotType(_ i: Int) -> AnnotTypeContext? {
+				return getRuleContext(AnnotTypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_classParents
 		}
-		open func annotType() -> Array<AnnotTypeContext> {
-			return getRuleContexts(AnnotTypeContext.self)
-		}
-		open func annotType(_ i: Int) -> AnnotTypeContext? {
-			return getRuleContext(AnnotTypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_classParents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterClassParents(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterClassParents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitClassParents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitClassParents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitClassParents(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitClassParents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitClassParents(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitClassParents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classParents() throws -> ClassParentsContext {
+	 open func classParents() throws -> ClassParentsContext {
 		var _localctx: ClassParentsContext = ClassParentsContext(_ctx, getState())
 		try enterRule(_localctx, 180, ScalaParser.RULE_classParents)
 		defer {
@@ -8668,40 +9482,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TraitParentsContext:ParserRuleContext {
-		open func annotType() -> Array<AnnotTypeContext> {
-			return getRuleContexts(AnnotTypeContext.self)
+
+	public class TraitParentsContext: ParserRuleContext {
+			open
+			func annotType() -> [AnnotTypeContext] {
+				return getRuleContexts(AnnotTypeContext.self)
+			}
+			open
+			func annotType(_ i: Int) -> AnnotTypeContext? {
+				return getRuleContext(AnnotTypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_traitParents
 		}
-		open func annotType(_ i: Int) -> AnnotTypeContext? {
-			return getRuleContext(AnnotTypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_traitParents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTraitParents(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTraitParents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTraitParents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTraitParents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTraitParents(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTraitParents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTraitParents(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTraitParents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func traitParents() throws -> TraitParentsContext {
+	 open func traitParents() throws -> TraitParentsContext {
 		var _localctx: TraitParentsContext = TraitParentsContext(_ctx, getState())
 		try enterRule(_localctx, 182, ScalaParser.RULE_traitParents)
 		var _la: Int = 0
@@ -8740,43 +9561,51 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ConstrContext:ParserRuleContext {
-		open func annotType() -> AnnotTypeContext? {
-			return getRuleContext(AnnotTypeContext.self,0)
+
+	public class ConstrContext: ParserRuleContext {
+			open
+			func annotType() -> AnnotTypeContext? {
+				return getRuleContext(AnnotTypeContext.self, 0)
+			}
+			open
+			func argumentExprs() -> [ArgumentExprsContext] {
+				return getRuleContexts(ArgumentExprsContext.self)
+			}
+			open
+			func argumentExprs(_ i: Int) -> ArgumentExprsContext? {
+				return getRuleContext(ArgumentExprsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_constr
 		}
-		open func argumentExprs() -> Array<ArgumentExprsContext> {
-			return getRuleContexts(ArgumentExprsContext.self)
-		}
-		open func argumentExprs(_ i: Int) -> ArgumentExprsContext? {
-			return getRuleContext(ArgumentExprsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_constr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterConstr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterConstr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitConstr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitConstr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitConstr(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitConstr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitConstr(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitConstr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constr() throws -> ConstrContext {
+	 open func constr() throws -> ConstrContext {
 		var _localctx: ConstrContext = ConstrContext(_ctx, getState())
 		try enterRule(_localctx, 184, ScalaParser.RULE_constr)
 		defer {
@@ -8811,44 +9640,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class EarlyDefsContext:ParserRuleContext {
-		open func earlyDef() -> Array<EarlyDefContext> {
-			return getRuleContexts(EarlyDefContext.self)
+
+	public class EarlyDefsContext: ParserRuleContext {
+			open
+			func earlyDef() -> [EarlyDefContext] {
+				return getRuleContexts(EarlyDefContext.self)
+			}
+			open
+			func earlyDef(_ i: Int) -> EarlyDefContext? {
+				return getRuleContext(EarlyDefContext.self, i)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_earlyDefs
 		}
-		open func earlyDef(_ i: Int) -> EarlyDefContext? {
-			return getRuleContext(EarlyDefContext.self,i)
-		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_earlyDefs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterEarlyDefs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterEarlyDefs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitEarlyDefs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitEarlyDefs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitEarlyDefs(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitEarlyDefs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitEarlyDefs(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitEarlyDefs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func earlyDefs() throws -> EarlyDefsContext {
+	 open func earlyDefs() throws -> EarlyDefsContext {
 		var _localctx: EarlyDefsContext = EarlyDefsContext(_ctx, getState())
 		try enterRule(_localctx, 186, ScalaParser.RULE_earlyDefs)
 		var _la: Int = 0
@@ -8907,49 +9747,59 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class EarlyDefContext:ParserRuleContext {
-		open func patVarDef() -> PatVarDefContext? {
-			return getRuleContext(PatVarDefContext.self,0)
+
+	public class EarlyDefContext: ParserRuleContext {
+			open
+			func patVarDef() -> PatVarDefContext? {
+				return getRuleContext(PatVarDefContext.self, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+			open
+			func modifier() -> [ModifierContext] {
+				return getRuleContexts(ModifierContext.self)
+			}
+			open
+			func modifier(_ i: Int) -> ModifierContext? {
+				return getRuleContext(ModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_earlyDef
 		}
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open func modifier() -> Array<ModifierContext> {
-			return getRuleContexts(ModifierContext.self)
-		}
-		open func modifier(_ i: Int) -> ModifierContext? {
-			return getRuleContext(ModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_earlyDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterEarlyDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterEarlyDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitEarlyDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitEarlyDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitEarlyDef(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitEarlyDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitEarlyDef(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitEarlyDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func earlyDef() throws -> EarlyDefContext {
+	 open func earlyDef() throws -> EarlyDefContext {
 		var _localctx: EarlyDefContext = EarlyDefContext(_ctx, getState())
 		try enterRule(_localctx, 188, ScalaParser.RULE_earlyDef)
 		var _la: Int = 0
@@ -9005,40 +9855,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ConstrExprContext:ParserRuleContext {
-		open func selfInvocation() -> SelfInvocationContext? {
-			return getRuleContext(SelfInvocationContext.self,0)
+
+	public class ConstrExprContext: ParserRuleContext {
+			open
+			func selfInvocation() -> SelfInvocationContext? {
+				return getRuleContext(SelfInvocationContext.self, 0)
+			}
+			open
+			func constrBlock() -> ConstrBlockContext? {
+				return getRuleContext(ConstrBlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_constrExpr
 		}
-		open func constrBlock() -> ConstrBlockContext? {
-			return getRuleContext(ConstrBlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_constrExpr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterConstrExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterConstrExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitConstrExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitConstrExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitConstrExpr(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitConstrExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitConstrExpr(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitConstrExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constrExpr() throws -> ConstrExprContext {
+	 open func constrExpr() throws -> ConstrExprContext {
 		var _localctx: ConstrExprContext = ConstrExprContext(_ctx, getState())
 		try enterRule(_localctx, 190, ScalaParser.RULE_constrExpr)
 		defer {
@@ -9062,7 +9919,7 @@ open class ScalaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9073,47 +9930,59 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class ConstrBlockContext:ParserRuleContext {
-		open func selfInvocation() -> SelfInvocationContext? {
-			return getRuleContext(SelfInvocationContext.self,0)
+
+	public class ConstrBlockContext: ParserRuleContext {
+			open
+			func selfInvocation() -> SelfInvocationContext? {
+				return getRuleContext(SelfInvocationContext.self, 0)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+			open
+			func blockStat() -> [BlockStatContext] {
+				return getRuleContexts(BlockStatContext.self)
+			}
+			open
+			func blockStat(_ i: Int) -> BlockStatContext? {
+				return getRuleContext(BlockStatContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_constrBlock
 		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open func blockStat() -> Array<BlockStatContext> {
-			return getRuleContexts(BlockStatContext.self)
-		}
-		open func blockStat(_ i: Int) -> BlockStatContext? {
-			return getRuleContext(BlockStatContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_constrBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterConstrBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterConstrBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitConstrBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitConstrBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitConstrBlock(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitConstrBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitConstrBlock(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitConstrBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constrBlock() throws -> ConstrBlockContext {
+	 open func constrBlock() throws -> ConstrBlockContext {
 		var _localctx: ConstrBlockContext = ConstrBlockContext(_ctx, getState())
 		try enterRule(_localctx, 192, ScalaParser.RULE_constrBlock)
 		var _la: Int = 0
@@ -9156,40 +10025,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class SelfInvocationContext:ParserRuleContext {
-		open func argumentExprs() -> Array<ArgumentExprsContext> {
-			return getRuleContexts(ArgumentExprsContext.self)
+
+	public class SelfInvocationContext: ParserRuleContext {
+			open
+			func argumentExprs() -> [ArgumentExprsContext] {
+				return getRuleContexts(ArgumentExprsContext.self)
+			}
+			open
+			func argumentExprs(_ i: Int) -> ArgumentExprsContext? {
+				return getRuleContext(ArgumentExprsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_selfInvocation
 		}
-		open func argumentExprs(_ i: Int) -> ArgumentExprsContext? {
-			return getRuleContext(ArgumentExprsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_selfInvocation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterSelfInvocation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterSelfInvocation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitSelfInvocation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitSelfInvocation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitSelfInvocation(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitSelfInvocation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitSelfInvocation(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitSelfInvocation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selfInvocation() throws -> SelfInvocationContext {
+	 open func selfInvocation() throws -> SelfInvocationContext {
 		var _localctx: SelfInvocationContext = SelfInvocationContext(_ctx, getState())
 		try enterRule(_localctx, 194, ScalaParser.RULE_selfInvocation)
 		defer {
@@ -9212,7 +10088,7 @@ open class ScalaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(1366); 
 		 		try _errHandler.sync(self)
@@ -9228,44 +10104,55 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TopStatSeqContext:ParserRuleContext {
-		open func topStat() -> Array<TopStatContext> {
-			return getRuleContexts(TopStatContext.self)
+
+	public class TopStatSeqContext: ParserRuleContext {
+			open
+			func topStat() -> [TopStatContext] {
+				return getRuleContexts(TopStatContext.self)
+			}
+			open
+			func topStat(_ i: Int) -> TopStatContext? {
+				return getRuleContext(TopStatContext.self, i)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_topStatSeq
 		}
-		open func topStat(_ i: Int) -> TopStatContext? {
-			return getRuleContext(TopStatContext.self,i)
-		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_topStatSeq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTopStatSeq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTopStatSeq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTopStatSeq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTopStatSeq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTopStatSeq(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTopStatSeq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTopStatSeq(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTopStatSeq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func topStatSeq() throws -> TopStatSeqContext {
+	 open func topStatSeq() throws -> TopStatSeqContext {
 		var _localctx: TopStatSeqContext = TopStatSeqContext(_ctx, getState())
 		try enterRule(_localctx, 196, ScalaParser.RULE_topStatSeq)
 		var _la: Int = 0
@@ -9304,58 +10191,71 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class TopStatContext:ParserRuleContext {
-		open func tmplDef() -> TmplDefContext? {
-			return getRuleContext(TmplDefContext.self,0)
+
+	public class TopStatContext: ParserRuleContext {
+			open
+			func tmplDef() -> TmplDefContext? {
+				return getRuleContext(TmplDefContext.self, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+			open
+			func modifier() -> [ModifierContext] {
+				return getRuleContexts(ModifierContext.self)
+			}
+			open
+			func modifier(_ i: Int) -> ModifierContext? {
+				return getRuleContext(ModifierContext.self, i)
+			}
+			open
+			func import_() -> Import_Context? {
+				return getRuleContext(Import_Context.self, 0)
+			}
+			open
+			func packaging() -> PackagingContext? {
+				return getRuleContext(PackagingContext.self, 0)
+			}
+			open
+			func packageObject() -> PackageObjectContext? {
+				return getRuleContext(PackageObjectContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_topStat
 		}
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open func modifier() -> Array<ModifierContext> {
-			return getRuleContexts(ModifierContext.self)
-		}
-		open func modifier(_ i: Int) -> ModifierContext? {
-			return getRuleContext(ModifierContext.self,i)
-		}
-		open func import_() -> Import_Context? {
-			return getRuleContext(Import_Context.self,0)
-		}
-		open func packaging() -> PackagingContext? {
-			return getRuleContext(PackagingContext.self,0)
-		}
-		open func packageObject() -> PackageObjectContext? {
-			return getRuleContext(PackageObjectContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_topStat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterTopStat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterTopStat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitTopStat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitTopStat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitTopStat(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitTopStat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitTopStat(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitTopStat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func topStat() throws -> TopStatContext {
+	 open func topStat() throws -> TopStatContext {
 		var _localctx: TopStatContext = TopStatContext(_ctx, getState())
 		try enterRule(_localctx, 198, ScalaParser.RULE_topStat)
 		var _la: Int = 0
@@ -9440,40 +10340,47 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class PackagingContext:ParserRuleContext {
-		open func qualId() -> QualIdContext? {
-			return getRuleContext(QualIdContext.self,0)
+
+	public class PackagingContext: ParserRuleContext {
+			open
+			func qualId() -> QualIdContext? {
+				return getRuleContext(QualIdContext.self, 0)
+			}
+			open
+			func topStatSeq() -> TopStatSeqContext? {
+				return getRuleContext(TopStatSeqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_packaging
 		}
-		open func topStatSeq() -> TopStatSeqContext? {
-			return getRuleContext(TopStatSeqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_packaging }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPackaging(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPackaging(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPackaging(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPackaging(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPackaging(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPackaging(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPackaging(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPackaging(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func packaging() throws -> PackagingContext {
+	 open func packaging() throws -> PackagingContext {
 		var _localctx: PackagingContext = PackagingContext(_ctx, getState())
 		try enterRule(_localctx, 200, ScalaParser.RULE_packaging)
 		defer {
@@ -9501,37 +10408,43 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class PackageObjectContext:ParserRuleContext {
-		open func objectDef() -> ObjectDefContext? {
-			return getRuleContext(ObjectDefContext.self,0)
+
+	public class PackageObjectContext: ParserRuleContext {
+			open
+			func objectDef() -> ObjectDefContext? {
+				return getRuleContext(ObjectDefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_packageObject
 		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_packageObject }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterPackageObject(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterPackageObject(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitPackageObject(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitPackageObject(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitPackageObject(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitPackageObject(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitPackageObject(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitPackageObject(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func packageObject() throws -> PackageObjectContext {
+	 open func packageObject() throws -> PackageObjectContext {
 		var _localctx: PackageObjectContext = PackageObjectContext(_ctx, getState())
 		try enterRule(_localctx, 202, ScalaParser.RULE_packageObject)
 		defer {
@@ -9555,47 +10468,59 @@ open class ScalaParser: Parser {
 
 		return _localctx
 	}
-	open class CompilationUnitContext:ParserRuleContext {
-		open func topStatSeq() -> TopStatSeqContext? {
-			return getRuleContext(TopStatSeqContext.self,0)
+
+	public class CompilationUnitContext: ParserRuleContext {
+			open
+			func topStatSeq() -> TopStatSeqContext? {
+				return getRuleContext(TopStatSeqContext.self, 0)
+			}
+			open
+			func qualId() -> [QualIdContext] {
+				return getRuleContexts(QualIdContext.self)
+			}
+			open
+			func qualId(_ i: Int) -> QualIdContext? {
+				return getRuleContext(QualIdContext.self, i)
+			}
+			open
+			func Semi() -> [TerminalNode] {
+				return getTokens(ScalaParser.Tokens.Semi.rawValue)
+			}
+			open
+			func Semi(_ i:Int) -> TerminalNode? {
+				return getToken(ScalaParser.Tokens.Semi.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ScalaParser.RULE_compilationUnit
 		}
-		open func qualId() -> Array<QualIdContext> {
-			return getRuleContexts(QualIdContext.self)
-		}
-		open func qualId(_ i: Int) -> QualIdContext? {
-			return getRuleContext(QualIdContext.self,i)
-		}
-		open func Semi() -> Array<TerminalNode> { return getTokens(ScalaParser.Tokens.Semi.rawValue) }
-		open func Semi(_ i:Int) -> TerminalNode?{
-			return getToken(ScalaParser.Tokens.Semi.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return ScalaParser.RULE_compilationUnit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).enterCompilationUnit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.enterCompilationUnit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ScalaListener {
-			 	(listener as! ScalaListener).exitCompilationUnit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ScalaListener {
+				listener.exitCompilationUnit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ScalaVisitor {
-			     return (visitor as! ScalaVisitor<T>).visitCompilationUnit(self)
-			}else if visitor is ScalaBaseVisitor {
-		    	 return (visitor as! ScalaBaseVisitor<T>).visitCompilationUnit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ScalaVisitor {
+			    return visitor.visitCompilationUnit(self)
+			}
+			else if let visitor = visitor as? ScalaBaseVisitor {
+			    return visitor.visitCompilationUnit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compilationUnit() throws -> CompilationUnitContext {
+	 open func compilationUnit() throws -> CompilationUnitContext {
 		var _localctx: CompilationUnitContext = CompilationUnitContext(_ctx, getState())
 		try enterRule(_localctx, 204, ScalaParser.RULE_compilationUnit)
 		defer {
@@ -9635,8 +10560,8 @@ open class ScalaParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  12:
 			return try simpleType_sempred(_localctx?.castdown(SimpleTypeContext.self), predIndex)
@@ -9667,6 +10592,10 @@ open class ScalaParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = ScalaParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = ScalaParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

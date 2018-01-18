@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class COOLBaseListener: COOLListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -28,13 +28,13 @@ open class COOLBaseListener: COOLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterClass(_ ctx: COOLParser.ClassContext) { }
+	open func enterClasses(_ ctx: COOLParser.ClassesContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitClass(_ ctx: COOLParser.ClassContext) { }
+	open func exitClasses(_ ctx: COOLParser.ClassesContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -80,13 +80,13 @@ open class COOLBaseListener: COOLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterClassProperty(_ ctx: COOLParser.ClassPropertyContext) { }
+	open func enterProperty(_ ctx: COOLParser.PropertyContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitClassProperty(_ ctx: COOLParser.ClassPropertyContext) { }
+	open func exitProperty(_ ctx: COOLParser.PropertyContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -113,19 +113,6 @@ open class COOLBaseListener: COOLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitLetIn(_ ctx: COOLParser.LetInContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterNewType(_ ctx: COOLParser.NewTypeContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitNewType(_ ctx: COOLParser.NewTypeContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -171,13 +158,13 @@ open class COOLBaseListener: COOLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterWhild(_ ctx: COOLParser.WhildContext) { }
+	open func enterWhile(_ ctx: COOLParser.WhileContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitWhild(_ ctx: COOLParser.WhildContext) { }
+	open func exitWhile(_ ctx: COOLParser.WhileContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -191,6 +178,19 @@ open class COOLBaseListener: COOLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitDivision(_ ctx: COOLParser.DivisionContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterNegative(_ ctx: COOLParser.NegativeContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitNegative(_ ctx: COOLParser.NegativeContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -223,13 +223,13 @@ open class COOLBaseListener: COOLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterSuperClassMethod(_ ctx: COOLParser.SuperClassMethodContext) { }
+	open func enterBlock(_ ctx: COOLParser.BlockContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitSuperClassMethod(_ ctx: COOLParser.SuperClassMethodContext) { }
+	open func exitBlock(_ ctx: COOLParser.BlockContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -288,6 +288,19 @@ open class COOLBaseListener: COOLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	open func enterOwnMethodCall(_ ctx: COOLParser.OwnMethodCallContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitOwnMethodCall(_ ctx: COOLParser.OwnMethodCallContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	open func enterAdd(_ ctx: COOLParser.AddContext) { }
 	/**
 	 * {@inheritDoc}
@@ -295,6 +308,19 @@ open class COOLBaseListener: COOLListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	open func exitAdd(_ ctx: COOLParser.AddContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterNew(_ ctx: COOLParser.NewContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitNew(_ ctx: COOLParser.NewContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -366,32 +392,6 @@ open class COOLBaseListener: COOLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterMultipleExpression(_ ctx: COOLParser.MultipleExpressionContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitMultipleExpression(_ ctx: COOLParser.MultipleExpressionContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterFunctionCall(_ ctx: COOLParser.FunctionCallContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitFunctionCall(_ ctx: COOLParser.FunctionCallContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	open func enterTrue(_ ctx: COOLParser.TrueContext) { }
 	/**
 	 * {@inheritDoc}
@@ -418,13 +418,13 @@ open class COOLBaseListener: COOLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterIntegerComplement(_ ctx: COOLParser.IntegerComplementContext) { }
+	open func enterMethodCall(_ ctx: COOLParser.MethodCallContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitIntegerComplement(_ ctx: COOLParser.IntegerComplementContext) { }
+	open func exitMethodCall(_ ctx: COOLParser.MethodCallContext) { }
 
 	/**
 	 * {@inheritDoc}

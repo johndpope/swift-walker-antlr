@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/webidl/WebIDL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/webidl/WebIDL.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class WebIDLParser: Parser {
@@ -11,8 +11,11 @@ open class WebIDLParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -32,46 +35,45 @@ open class WebIDLParser: Parser {
                  IDENTIFIER_WEBIDL = 82, STRING_WEBIDL = 83, WHITESPACE_WEBIDL = 84, 
                  COMMENT_WEBIDL = 85, OTHER_WEBIDL = 86
 	}
-	public static let RULE_webIDL = 0, RULE_definitions = 1, RULE_definition = 2, 
-                   RULE_callbackOrInterface = 3, RULE_callbackRestOrInterface = 4, 
-                   RULE_interface_ = 5, RULE_class_ = 6, RULE_partial = 7, 
-                   RULE_partialDefinition = 8, RULE_partialInterface = 9, 
-                   RULE_interfaceMembers = 10, RULE_interfaceMember = 11, 
-                   RULE_dictionary = 12, RULE_dictionaryMembers = 13, RULE_dictionaryMember = 14, 
-                   RULE_required = 15, RULE_partialDictionary = 16, RULE_default_ = 17, 
-                   RULE_defaultValue = 18, RULE_inheritance = 19, RULE_extension = 20, 
-                   RULE_enum_ = 21, RULE_enumValueList = 22, RULE_enumValueListComma = 23, 
-                   RULE_enumValueListString = 24, RULE_callbackRest = 25, 
-                   RULE_typedef = 26, RULE_implementsStatement = 27, RULE_const_ = 28, 
-                   RULE_constValue = 29, RULE_booleanLiteral = 30, RULE_floatLiteral = 31, 
-                   RULE_serializer = 32, RULE_serializerRest = 33, RULE_serializationPattern = 34, 
-                   RULE_serializationPatternMap = 35, RULE_serializationPatternList = 36, 
-                   RULE_stringifier = 37, RULE_stringifierRest = 38, RULE_staticMember = 39, 
-                   RULE_staticMemberRest = 40, RULE_readonlyMember = 41, 
-                   RULE_readonlyMemberRest = 42, RULE_readWriteAttribute = 43, 
-                   RULE_attributeRest = 44, RULE_attributeName = 45, RULE_attributeNameKeyword = 46, 
-                   RULE_inherit = 47, RULE_readOnly = 48, RULE_operation = 49, 
-                   RULE_specialOperation = 50, RULE_specials = 51, RULE_special = 52, 
-                   RULE_operationRest = 53, RULE_optionalIdentifier = 54, 
-                   RULE_argumentList = 55, RULE_arguments = 56, RULE_argument = 57, 
-                   RULE_optionalOrRequiredArgument = 58, RULE_argumentName = 59, 
-                   RULE_ellipsis = 60, RULE_iterable = 61, RULE_optionalType = 62, 
-                   RULE_readWriteMaplike = 63, RULE_readWriteSetlike = 64, 
-                   RULE_maplikeRest = 65, RULE_setlikeRest = 66, RULE_extendedAttributeList = 67, 
-                   RULE_extendedAttributes = 68, RULE_extendedAttribute = 69, 
-                   RULE_extendedAttributeRest = 70, RULE_extendedAttributeInner = 71, 
-                   RULE_other = 72, RULE_argumentNameKeyword = 73, RULE_otherOrComma = 74, 
-                   RULE_type = 75, RULE_singleType = 76, RULE_unionType = 77, 
-                   RULE_unionMemberType = 78, RULE_unionMemberTypes = 79, 
-                   RULE_nonAnyType = 80, RULE_bufferRelatedType = 81, RULE_constType = 82, 
-                   RULE_primitiveType = 83, RULE_unrestrictedFloatType = 84, 
-                   RULE_floatType = 85, RULE_unsignedIntegerType = 86, RULE_integerType = 87, 
-                   RULE_optionalLong = 88, RULE_promiseType = 89, RULE_null_ = 90, 
-                   RULE_returnType = 91, RULE_identifierList = 92, RULE_identifiers = 93, 
-                   RULE_extendedAttributeNoArgs = 94, RULE_extendedAttributeArgList = 95, 
-                   RULE_extendedAttributeIdent = 96, RULE_extendedAttributeIdentList = 97, 
-                   RULE_extendedAttributeNamedArgList = 98
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_webIDL = 0, RULE_definitions = 1, RULE_definition = 2, 
+            RULE_callbackOrInterface = 3, RULE_callbackRestOrInterface = 4, 
+            RULE_interface_ = 5, RULE_class_ = 6, RULE_partial = 7, RULE_partialDefinition = 8, 
+            RULE_partialInterface = 9, RULE_interfaceMembers = 10, RULE_interfaceMember = 11, 
+            RULE_dictionary = 12, RULE_dictionaryMembers = 13, RULE_dictionaryMember = 14, 
+            RULE_required = 15, RULE_partialDictionary = 16, RULE_default_ = 17, 
+            RULE_defaultValue = 18, RULE_inheritance = 19, RULE_extension = 20, 
+            RULE_enum_ = 21, RULE_enumValueList = 22, RULE_enumValueListComma = 23, 
+            RULE_enumValueListString = 24, RULE_callbackRest = 25, RULE_typedef = 26, 
+            RULE_implementsStatement = 27, RULE_const_ = 28, RULE_constValue = 29, 
+            RULE_booleanLiteral = 30, RULE_floatLiteral = 31, RULE_serializer = 32, 
+            RULE_serializerRest = 33, RULE_serializationPattern = 34, RULE_serializationPatternMap = 35, 
+            RULE_serializationPatternList = 36, RULE_stringifier = 37, RULE_stringifierRest = 38, 
+            RULE_staticMember = 39, RULE_staticMemberRest = 40, RULE_readonlyMember = 41, 
+            RULE_readonlyMemberRest = 42, RULE_readWriteAttribute = 43, 
+            RULE_attributeRest = 44, RULE_attributeName = 45, RULE_attributeNameKeyword = 46, 
+            RULE_inherit = 47, RULE_readOnly = 48, RULE_operation = 49, 
+            RULE_specialOperation = 50, RULE_specials = 51, RULE_special = 52, 
+            RULE_operationRest = 53, RULE_optionalIdentifier = 54, RULE_argumentList = 55, 
+            RULE_arguments = 56, RULE_argument = 57, RULE_optionalOrRequiredArgument = 58, 
+            RULE_argumentName = 59, RULE_ellipsis = 60, RULE_iterable = 61, 
+            RULE_optionalType = 62, RULE_readWriteMaplike = 63, RULE_readWriteSetlike = 64, 
+            RULE_maplikeRest = 65, RULE_setlikeRest = 66, RULE_extendedAttributeList = 67, 
+            RULE_extendedAttributes = 68, RULE_extendedAttribute = 69, RULE_extendedAttributeRest = 70, 
+            RULE_extendedAttributeInner = 71, RULE_other = 72, RULE_argumentNameKeyword = 73, 
+            RULE_otherOrComma = 74, RULE_type = 75, RULE_singleType = 76, 
+            RULE_unionType = 77, RULE_unionMemberType = 78, RULE_unionMemberTypes = 79, 
+            RULE_nonAnyType = 80, RULE_bufferRelatedType = 81, RULE_constType = 82, 
+            RULE_primitiveType = 83, RULE_unrestrictedFloatType = 84, RULE_floatType = 85, 
+            RULE_unsignedIntegerType = 86, RULE_integerType = 87, RULE_optionalLong = 88, 
+            RULE_promiseType = 89, RULE_null_ = 90, RULE_returnType = 91, 
+            RULE_identifierList = 92, RULE_identifiers = 93, RULE_extendedAttributeNoArgs = 94, 
+            RULE_extendedAttributeArgList = 95, RULE_extendedAttributeIdent = 96, 
+            RULE_extendedAttributeIdentList = 97, RULE_extendedAttributeNamedArgList = 98
+
+	public
+	static let ruleNames: [String] = [
 		"webIDL", "definitions", "definition", "callbackOrInterface", "callbackRestOrInterface", 
 		"interface_", "class_", "partial", "partialDefinition", "partialInterface", 
 		"interfaceMembers", "interfaceMember", "dictionary", "dictionaryMembers", 
@@ -121,86 +123,73 @@ open class WebIDLParser: Parser {
 		"IDENTIFIER_WEBIDL", "STRING_WEBIDL", "WHITESPACE_WEBIDL", "COMMENT_WEBIDL", 
 		"OTHER_WEBIDL"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "WebIDL.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return WebIDLParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "WebIDL.g4" }
+	override open
+	func getSerializedATN() -> String { return WebIDLParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return WebIDLParser.ruleNames }
+	override open
+	func getATN() -> ATN { return WebIDLParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return WebIDLParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return WebIDLParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return WebIDLParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,WebIDLParser._ATN,WebIDLParser._decisionToDFA, WebIDLParser._sharedContextCache)
 	}
-	open class WebIDLContext:ParserRuleContext {
-		open func definitions() -> DefinitionsContext? {
-			return getRuleContext(DefinitionsContext.self,0)
+
+	public class WebIDLContext: ParserRuleContext {
+			open
+			func definitions() -> DefinitionsContext? {
+				return getRuleContext(DefinitionsContext.self, 0)
+			}
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.EOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_webIDL
 		}
-		open func EOF() -> TerminalNode? { return getToken(WebIDLParser.Tokens.EOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_webIDL }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterWebIDL(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterWebIDL(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitWebIDL(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitWebIDL(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitWebIDL(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitWebIDL(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitWebIDL(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitWebIDL(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func webIDL() throws -> WebIDLContext {
+	 open func webIDL() throws -> WebIDLContext {
 		var _localctx: WebIDLContext = WebIDLContext(_ctx, getState())
 		try enterRule(_localctx, 0, WebIDLParser.RULE_webIDL)
 		defer {
@@ -222,43 +211,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class DefinitionsContext:ParserRuleContext {
-		open func extendedAttributeList() -> ExtendedAttributeListContext? {
-			return getRuleContext(ExtendedAttributeListContext.self,0)
+
+	public class DefinitionsContext: ParserRuleContext {
+			open
+			func extendedAttributeList() -> ExtendedAttributeListContext? {
+				return getRuleContext(ExtendedAttributeListContext.self, 0)
+			}
+			open
+			func definition() -> DefinitionContext? {
+				return getRuleContext(DefinitionContext.self, 0)
+			}
+			open
+			func definitions() -> DefinitionsContext? {
+				return getRuleContext(DefinitionsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_definitions
 		}
-		open func definition() -> DefinitionContext? {
-			return getRuleContext(DefinitionContext.self,0)
-		}
-		open func definitions() -> DefinitionsContext? {
-			return getRuleContext(DefinitionsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_definitions }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterDefinitions(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterDefinitions(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitDefinitions(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitDefinitions(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitDefinitions(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitDefinitions(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitDefinitions(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitDefinitions(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func definitions() throws -> DefinitionsContext {
+	 open func definitions() throws -> DefinitionsContext {
 		var _localctx: DefinitionsContext = DefinitionsContext(_ctx, getState())
 		try enterRule(_localctx, 2, WebIDLParser.RULE_definitions)
 		defer {
@@ -292,7 +289,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -303,52 +300,63 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class DefinitionContext:ParserRuleContext {
-		open func callbackOrInterface() -> CallbackOrInterfaceContext? {
-			return getRuleContext(CallbackOrInterfaceContext.self,0)
+
+	public class DefinitionContext: ParserRuleContext {
+			open
+			func callbackOrInterface() -> CallbackOrInterfaceContext? {
+				return getRuleContext(CallbackOrInterfaceContext.self, 0)
+			}
+			open
+			func partial() -> PartialContext? {
+				return getRuleContext(PartialContext.self, 0)
+			}
+			open
+			func dictionary() -> DictionaryContext? {
+				return getRuleContext(DictionaryContext.self, 0)
+			}
+			open
+			func enum_() -> Enum_Context? {
+				return getRuleContext(Enum_Context.self, 0)
+			}
+			open
+			func typedef() -> TypedefContext? {
+				return getRuleContext(TypedefContext.self, 0)
+			}
+			open
+			func implementsStatement() -> ImplementsStatementContext? {
+				return getRuleContext(ImplementsStatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_definition
 		}
-		open func partial() -> PartialContext? {
-			return getRuleContext(PartialContext.self,0)
-		}
-		open func dictionary() -> DictionaryContext? {
-			return getRuleContext(DictionaryContext.self,0)
-		}
-		open func enum_() -> Enum_Context? {
-			return getRuleContext(Enum_Context.self,0)
-		}
-		open func typedef() -> TypedefContext? {
-			return getRuleContext(TypedefContext.self,0)
-		}
-		open func implementsStatement() -> ImplementsStatementContext? {
-			return getRuleContext(ImplementsStatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_definition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitDefinition(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitDefinition(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func definition() throws -> DefinitionContext {
+	 open func definition() throws -> DefinitionContext {
 		var _localctx: DefinitionContext = DefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 4, WebIDLParser.RULE_definition)
 		defer {
@@ -402,7 +410,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -413,43 +421,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class CallbackOrInterfaceContext:ParserRuleContext {
-		open func callbackRestOrInterface() -> CallbackRestOrInterfaceContext? {
-			return getRuleContext(CallbackRestOrInterfaceContext.self,0)
+
+	public class CallbackOrInterfaceContext: ParserRuleContext {
+			open
+			func callbackRestOrInterface() -> CallbackRestOrInterfaceContext? {
+				return getRuleContext(CallbackRestOrInterfaceContext.self, 0)
+			}
+			open
+			func interface_() -> Interface_Context? {
+				return getRuleContext(Interface_Context.self, 0)
+			}
+			open
+			func class_() -> Class_Context? {
+				return getRuleContext(Class_Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_callbackOrInterface
 		}
-		open func interface_() -> Interface_Context? {
-			return getRuleContext(Interface_Context.self,0)
-		}
-		open func class_() -> Class_Context? {
-			return getRuleContext(Class_Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_callbackOrInterface }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterCallbackOrInterface(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterCallbackOrInterface(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitCallbackOrInterface(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitCallbackOrInterface(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitCallbackOrInterface(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitCallbackOrInterface(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitCallbackOrInterface(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitCallbackOrInterface(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func callbackOrInterface() throws -> CallbackOrInterfaceContext {
+	 open func callbackOrInterface() throws -> CallbackOrInterfaceContext {
 		var _localctx: CallbackOrInterfaceContext = CallbackOrInterfaceContext(_ctx, getState())
 		try enterRule(_localctx, 6, WebIDLParser.RULE_callbackOrInterface)
 		defer {
@@ -482,7 +498,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -493,40 +509,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class CallbackRestOrInterfaceContext:ParserRuleContext {
-		open func callbackRest() -> CallbackRestContext? {
-			return getRuleContext(CallbackRestContext.self,0)
+
+	public class CallbackRestOrInterfaceContext: ParserRuleContext {
+			open
+			func callbackRest() -> CallbackRestContext? {
+				return getRuleContext(CallbackRestContext.self, 0)
+			}
+			open
+			func interface_() -> Interface_Context? {
+				return getRuleContext(Interface_Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_callbackRestOrInterface
 		}
-		open func interface_() -> Interface_Context? {
-			return getRuleContext(Interface_Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_callbackRestOrInterface }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterCallbackRestOrInterface(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterCallbackRestOrInterface(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitCallbackRestOrInterface(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitCallbackRestOrInterface(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitCallbackRestOrInterface(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitCallbackRestOrInterface(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitCallbackRestOrInterface(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitCallbackRestOrInterface(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func callbackRestOrInterface() throws -> CallbackRestOrInterfaceContext {
+	 open func callbackRestOrInterface() throws -> CallbackRestOrInterfaceContext {
 		var _localctx: CallbackRestOrInterfaceContext = CallbackRestOrInterfaceContext(_ctx, getState())
 		try enterRule(_localctx, 8, WebIDLParser.RULE_callbackRestOrInterface)
 		defer {
@@ -550,7 +573,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -561,41 +584,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class Interface_Context:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func inheritance() -> InheritanceContext? {
-			return getRuleContext(InheritanceContext.self,0)
+
+	public class Interface_Context: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func inheritance() -> InheritanceContext? {
+				return getRuleContext(InheritanceContext.self, 0)
+			}
+			open
+			func interfaceMembers() -> InterfaceMembersContext? {
+				return getRuleContext(InterfaceMembersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_interface_
 		}
-		open func interfaceMembers() -> InterfaceMembersContext? {
-			return getRuleContext(InterfaceMembersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_interface_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterInterface_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterInterface_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitInterface_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitInterface_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitInterface_(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitInterface_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitInterface_(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitInterface_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interface_() throws -> Interface_Context {
+	 open func interface_() throws -> Interface_Context {
 		var _localctx: Interface_Context = Interface_Context(_ctx, getState())
 		try enterRule(_localctx, 10, WebIDLParser.RULE_interface_)
 		defer {
@@ -627,41 +660,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class Class_Context:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func extension() -> ExtensionContext? {
-			return getRuleContext(ExtensionContext.self,0)
+
+	public class Class_Context: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func extension() -> ExtensionContext? {
+				return getRuleContext(ExtensionContext.self, 0)
+			}
+			open
+			func interfaceMembers() -> InterfaceMembersContext? {
+				return getRuleContext(InterfaceMembersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_class_
 		}
-		open func interfaceMembers() -> InterfaceMembersContext? {
-			return getRuleContext(InterfaceMembersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_class_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterClass_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterClass_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitClass_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitClass_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitClass_(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitClass_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitClass_(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitClass_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func class_() throws -> Class_Context {
+	 open func class_() throws -> Class_Context {
 		var _localctx: Class_Context = Class_Context(_ctx, getState())
 		try enterRule(_localctx, 12, WebIDLParser.RULE_class_)
 		defer {
@@ -693,37 +736,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class PartialContext:ParserRuleContext {
-		open func partialDefinition() -> PartialDefinitionContext? {
-			return getRuleContext(PartialDefinitionContext.self,0)
+
+	public class PartialContext: ParserRuleContext {
+			open
+			func partialDefinition() -> PartialDefinitionContext? {
+				return getRuleContext(PartialDefinitionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_partial
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_partial }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterPartial(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterPartial(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitPartial(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitPartial(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitPartial(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitPartial(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitPartial(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitPartial(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func partial() throws -> PartialContext {
+	 open func partial() throws -> PartialContext {
 		var _localctx: PartialContext = PartialContext(_ctx, getState())
 		try enterRule(_localctx, 14, WebIDLParser.RULE_partial)
 		defer {
@@ -745,40 +794,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class PartialDefinitionContext:ParserRuleContext {
-		open func partialInterface() -> PartialInterfaceContext? {
-			return getRuleContext(PartialInterfaceContext.self,0)
+
+	public class PartialDefinitionContext: ParserRuleContext {
+			open
+			func partialInterface() -> PartialInterfaceContext? {
+				return getRuleContext(PartialInterfaceContext.self, 0)
+			}
+			open
+			func partialDictionary() -> PartialDictionaryContext? {
+				return getRuleContext(PartialDictionaryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_partialDefinition
 		}
-		open func partialDictionary() -> PartialDictionaryContext? {
-			return getRuleContext(PartialDictionaryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_partialDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterPartialDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterPartialDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitPartialDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitPartialDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitPartialDefinition(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitPartialDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitPartialDefinition(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitPartialDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func partialDefinition() throws -> PartialDefinitionContext {
+	 open func partialDefinition() throws -> PartialDefinitionContext {
 		var _localctx: PartialDefinitionContext = PartialDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 16, WebIDLParser.RULE_partialDefinition)
 		defer {
@@ -802,7 +858,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -813,38 +869,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class PartialInterfaceContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func interfaceMembers() -> InterfaceMembersContext? {
-			return getRuleContext(InterfaceMembersContext.self,0)
+
+	public class PartialInterfaceContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func interfaceMembers() -> InterfaceMembersContext? {
+				return getRuleContext(InterfaceMembersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_partialInterface
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_partialInterface }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterPartialInterface(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterPartialInterface(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitPartialInterface(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitPartialInterface(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitPartialInterface(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitPartialInterface(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitPartialInterface(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitPartialInterface(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func partialInterface() throws -> PartialInterfaceContext {
+	 open func partialInterface() throws -> PartialInterfaceContext {
 		var _localctx: PartialInterfaceContext = PartialInterfaceContext(_ctx, getState())
 		try enterRule(_localctx, 18, WebIDLParser.RULE_partialInterface)
 		defer {
@@ -874,43 +939,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class InterfaceMembersContext:ParserRuleContext {
-		open func extendedAttributeList() -> ExtendedAttributeListContext? {
-			return getRuleContext(ExtendedAttributeListContext.self,0)
+
+	public class InterfaceMembersContext: ParserRuleContext {
+			open
+			func extendedAttributeList() -> ExtendedAttributeListContext? {
+				return getRuleContext(ExtendedAttributeListContext.self, 0)
+			}
+			open
+			func interfaceMember() -> InterfaceMemberContext? {
+				return getRuleContext(InterfaceMemberContext.self, 0)
+			}
+			open
+			func interfaceMembers() -> InterfaceMembersContext? {
+				return getRuleContext(InterfaceMembersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_interfaceMembers
 		}
-		open func interfaceMember() -> InterfaceMemberContext? {
-			return getRuleContext(InterfaceMemberContext.self,0)
-		}
-		open func interfaceMembers() -> InterfaceMembersContext? {
-			return getRuleContext(InterfaceMembersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_interfaceMembers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterInterfaceMembers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterInterfaceMembers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitInterfaceMembers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitInterfaceMembers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitInterfaceMembers(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitInterfaceMembers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitInterfaceMembers(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitInterfaceMembers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interfaceMembers() throws -> InterfaceMembersContext {
+	 open func interfaceMembers() throws -> InterfaceMembersContext {
 		var _localctx: InterfaceMembersContext = InterfaceMembersContext(_ctx, getState())
 		try enterRule(_localctx, 20, WebIDLParser.RULE_interfaceMembers)
 		defer {
@@ -983,7 +1056,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -994,64 +1067,79 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class InterfaceMemberContext:ParserRuleContext {
-		open func const_() -> Const_Context? {
-			return getRuleContext(Const_Context.self,0)
+
+	public class InterfaceMemberContext: ParserRuleContext {
+			open
+			func const_() -> Const_Context? {
+				return getRuleContext(Const_Context.self, 0)
+			}
+			open
+			func operation() -> OperationContext? {
+				return getRuleContext(OperationContext.self, 0)
+			}
+			open
+			func serializer() -> SerializerContext? {
+				return getRuleContext(SerializerContext.self, 0)
+			}
+			open
+			func stringifier() -> StringifierContext? {
+				return getRuleContext(StringifierContext.self, 0)
+			}
+			open
+			func staticMember() -> StaticMemberContext? {
+				return getRuleContext(StaticMemberContext.self, 0)
+			}
+			open
+			func iterable() -> IterableContext? {
+				return getRuleContext(IterableContext.self, 0)
+			}
+			open
+			func readonlyMember() -> ReadonlyMemberContext? {
+				return getRuleContext(ReadonlyMemberContext.self, 0)
+			}
+			open
+			func readWriteAttribute() -> ReadWriteAttributeContext? {
+				return getRuleContext(ReadWriteAttributeContext.self, 0)
+			}
+			open
+			func readWriteMaplike() -> ReadWriteMaplikeContext? {
+				return getRuleContext(ReadWriteMaplikeContext.self, 0)
+			}
+			open
+			func readWriteSetlike() -> ReadWriteSetlikeContext? {
+				return getRuleContext(ReadWriteSetlikeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_interfaceMember
 		}
-		open func operation() -> OperationContext? {
-			return getRuleContext(OperationContext.self,0)
-		}
-		open func serializer() -> SerializerContext? {
-			return getRuleContext(SerializerContext.self,0)
-		}
-		open func stringifier() -> StringifierContext? {
-			return getRuleContext(StringifierContext.self,0)
-		}
-		open func staticMember() -> StaticMemberContext? {
-			return getRuleContext(StaticMemberContext.self,0)
-		}
-		open func iterable() -> IterableContext? {
-			return getRuleContext(IterableContext.self,0)
-		}
-		open func readonlyMember() -> ReadonlyMemberContext? {
-			return getRuleContext(ReadonlyMemberContext.self,0)
-		}
-		open func readWriteAttribute() -> ReadWriteAttributeContext? {
-			return getRuleContext(ReadWriteAttributeContext.self,0)
-		}
-		open func readWriteMaplike() -> ReadWriteMaplikeContext? {
-			return getRuleContext(ReadWriteMaplikeContext.self,0)
-		}
-		open func readWriteSetlike() -> ReadWriteSetlikeContext? {
-			return getRuleContext(ReadWriteSetlikeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_interfaceMember }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterInterfaceMember(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterInterfaceMember(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitInterfaceMember(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitInterfaceMember(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitInterfaceMember(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitInterfaceMember(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitInterfaceMember(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitInterfaceMember(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interfaceMember() throws -> InterfaceMemberContext {
+	 open func interfaceMember() throws -> InterfaceMemberContext {
 		var _localctx: InterfaceMemberContext = InterfaceMemberContext(_ctx, getState())
 		try enterRule(_localctx, 22, WebIDLParser.RULE_interfaceMember)
 		defer {
@@ -1166,7 +1254,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1177,41 +1265,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class DictionaryContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func inheritance() -> InheritanceContext? {
-			return getRuleContext(InheritanceContext.self,0)
+
+	public class DictionaryContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func inheritance() -> InheritanceContext? {
+				return getRuleContext(InheritanceContext.self, 0)
+			}
+			open
+			func dictionaryMembers() -> DictionaryMembersContext? {
+				return getRuleContext(DictionaryMembersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_dictionary
 		}
-		open func dictionaryMembers() -> DictionaryMembersContext? {
-			return getRuleContext(DictionaryMembersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_dictionary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterDictionary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterDictionary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitDictionary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitDictionary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitDictionary(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitDictionary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitDictionary(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitDictionary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dictionary() throws -> DictionaryContext {
+	 open func dictionary() throws -> DictionaryContext {
 		var _localctx: DictionaryContext = DictionaryContext(_ctx, getState())
 		try enterRule(_localctx, 24, WebIDLParser.RULE_dictionary)
 		defer {
@@ -1243,43 +1341,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class DictionaryMembersContext:ParserRuleContext {
-		open func extendedAttributeList() -> ExtendedAttributeListContext? {
-			return getRuleContext(ExtendedAttributeListContext.self,0)
+
+	public class DictionaryMembersContext: ParserRuleContext {
+			open
+			func extendedAttributeList() -> ExtendedAttributeListContext? {
+				return getRuleContext(ExtendedAttributeListContext.self, 0)
+			}
+			open
+			func dictionaryMember() -> DictionaryMemberContext? {
+				return getRuleContext(DictionaryMemberContext.self, 0)
+			}
+			open
+			func dictionaryMembers() -> DictionaryMembersContext? {
+				return getRuleContext(DictionaryMembersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_dictionaryMembers
 		}
-		open func dictionaryMember() -> DictionaryMemberContext? {
-			return getRuleContext(DictionaryMemberContext.self,0)
-		}
-		open func dictionaryMembers() -> DictionaryMembersContext? {
-			return getRuleContext(DictionaryMembersContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_dictionaryMembers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterDictionaryMembers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterDictionaryMembers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitDictionaryMembers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitDictionaryMembers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitDictionaryMembers(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitDictionaryMembers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitDictionaryMembers(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitDictionaryMembers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dictionaryMembers() throws -> DictionaryMembersContext {
+	 open func dictionaryMembers() throws -> DictionaryMembersContext {
 		var _localctx: DictionaryMembersContext = DictionaryMembersContext(_ctx, getState())
 		try enterRule(_localctx, 26, WebIDLParser.RULE_dictionaryMembers)
 		defer {
@@ -1338,7 +1444,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1349,44 +1455,55 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class DictionaryMemberContext:ParserRuleContext {
-		open func required() -> RequiredContext? {
-			return getRuleContext(RequiredContext.self,0)
+
+	public class DictionaryMemberContext: ParserRuleContext {
+			open
+			func required() -> RequiredContext? {
+				return getRuleContext(RequiredContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func default_() -> Default_Context? {
+				return getRuleContext(Default_Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_dictionaryMember
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func default_() -> Default_Context? {
-			return getRuleContext(Default_Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_dictionaryMember }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterDictionaryMember(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterDictionaryMember(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitDictionaryMember(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitDictionaryMember(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitDictionaryMember(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitDictionaryMember(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitDictionaryMember(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitDictionaryMember(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dictionaryMember() throws -> DictionaryMemberContext {
+	 open func dictionaryMember() throws -> DictionaryMemberContext {
 		var _localctx: DictionaryMemberContext = DictionaryMemberContext(_ctx, getState())
 		try enterRule(_localctx, 28, WebIDLParser.RULE_dictionaryMember)
 		defer {
@@ -1414,34 +1531,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class RequiredContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_required }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterRequired(self)
+
+	public class RequiredContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_required
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterRequired(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitRequired(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitRequired(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitRequired(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitRequired(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitRequired(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitRequired(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func required() throws -> RequiredContext {
+	 open func required() throws -> RequiredContext {
 		var _localctx: RequiredContext = RequiredContext(_ctx, getState())
 		try enterRule(_localctx, 30, WebIDLParser.RULE_required)
 		defer {
@@ -1493,7 +1615,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1504,38 +1626,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class PartialDictionaryContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func dictionaryMembers() -> DictionaryMembersContext? {
-			return getRuleContext(DictionaryMembersContext.self,0)
+
+	public class PartialDictionaryContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func dictionaryMembers() -> DictionaryMembersContext? {
+				return getRuleContext(DictionaryMembersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_partialDictionary
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_partialDictionary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterPartialDictionary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterPartialDictionary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitPartialDictionary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitPartialDictionary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitPartialDictionary(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitPartialDictionary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitPartialDictionary(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitPartialDictionary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func partialDictionary() throws -> PartialDictionaryContext {
+	 open func partialDictionary() throws -> PartialDictionaryContext {
 		var _localctx: PartialDictionaryContext = PartialDictionaryContext(_ctx, getState())
 		try enterRule(_localctx, 32, WebIDLParser.RULE_partialDictionary)
 		defer {
@@ -1565,37 +1696,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class Default_Context:ParserRuleContext {
-		open func defaultValue() -> DefaultValueContext? {
-			return getRuleContext(DefaultValueContext.self,0)
+
+	public class Default_Context: ParserRuleContext {
+			open
+			func defaultValue() -> DefaultValueContext? {
+				return getRuleContext(DefaultValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_default_
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_default_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterDefault_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterDefault_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitDefault_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitDefault_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitDefault_(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitDefault_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitDefault_(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitDefault_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func default_() throws -> Default_Context {
+	 open func default_() throws -> Default_Context {
 		var _localctx: Default_Context = Default_Context(_ctx, getState())
 		try enterRule(_localctx, 34, WebIDLParser.RULE_default_)
 		defer {
@@ -1620,7 +1757,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1631,38 +1768,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class DefaultValueContext:ParserRuleContext {
-		open func constValue() -> ConstValueContext? {
-			return getRuleContext(ConstValueContext.self,0)
+
+	public class DefaultValueContext: ParserRuleContext {
+			open
+			func constValue() -> ConstValueContext? {
+				return getRuleContext(ConstValueContext.self, 0)
+			}
+			open
+			func STRING_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.STRING_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_defaultValue
 		}
-		open func STRING_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.STRING_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_defaultValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterDefaultValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterDefaultValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitDefaultValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitDefaultValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitDefaultValue(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitDefaultValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitDefaultValue(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitDefaultValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func defaultValue() throws -> DefaultValueContext {
+	 open func defaultValue() throws -> DefaultValueContext {
 		var _localctx: DefaultValueContext = DefaultValueContext(_ctx, getState())
 		try enterRule(_localctx, 36, WebIDLParser.RULE_defaultValue)
 		defer {
@@ -1702,7 +1848,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1713,35 +1859,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class InheritanceContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_inheritance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterInheritance(self)
+
+	public class InheritanceContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_inheritance
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterInheritance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitInheritance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitInheritance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitInheritance(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitInheritance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitInheritance(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitInheritance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inheritance() throws -> InheritanceContext {
+	 open func inheritance() throws -> InheritanceContext {
 		var _localctx: InheritanceContext = InheritanceContext(_ctx, getState())
 		try enterRule(_localctx, 38, WebIDLParser.RULE_inheritance)
 		defer {
@@ -1765,7 +1919,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1776,35 +1930,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtensionContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extension }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtension(self)
+
+	public class ExtensionContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extension
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtension(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtension(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtension(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtension(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtension(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtension(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtension(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extension() throws -> ExtensionContext {
+	 open func extension() throws -> ExtensionContext {
 		var _localctx: ExtensionContext = ExtensionContext(_ctx, getState())
 		try enterRule(_localctx, 40, WebIDLParser.RULE_extension)
 		defer {
@@ -1828,7 +1990,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1839,38 +2001,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class Enum_Context:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func enumValueList() -> EnumValueListContext? {
-			return getRuleContext(EnumValueListContext.self,0)
+
+	public class Enum_Context: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func enumValueList() -> EnumValueListContext? {
+				return getRuleContext(EnumValueListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_enum_
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_enum_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterEnum_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterEnum_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitEnum_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitEnum_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitEnum_(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitEnum_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitEnum_(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitEnum_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enum_() throws -> Enum_Context {
+	 open func enum_() throws -> Enum_Context {
 		var _localctx: Enum_Context = Enum_Context(_ctx, getState())
 		try enterRule(_localctx, 42, WebIDLParser.RULE_enum_)
 		defer {
@@ -1900,38 +2071,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class EnumValueListContext:ParserRuleContext {
-		open func STRING_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.STRING_WEBIDL.rawValue, 0) }
-		open func enumValueListComma() -> EnumValueListCommaContext? {
-			return getRuleContext(EnumValueListCommaContext.self,0)
+
+	public class EnumValueListContext: ParserRuleContext {
+			open
+			func STRING_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.STRING_WEBIDL.rawValue, 0)
+			}
+			open
+			func enumValueListComma() -> EnumValueListCommaContext? {
+				return getRuleContext(EnumValueListCommaContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_enumValueList
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_enumValueList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterEnumValueList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterEnumValueList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitEnumValueList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitEnumValueList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitEnumValueList(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitEnumValueList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitEnumValueList(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitEnumValueList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumValueList() throws -> EnumValueListContext {
+	 open func enumValueList() throws -> EnumValueListContext {
 		var _localctx: EnumValueListContext = EnumValueListContext(_ctx, getState())
 		try enterRule(_localctx, 44, WebIDLParser.RULE_enumValueList)
 		defer {
@@ -1953,37 +2133,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class EnumValueListCommaContext:ParserRuleContext {
-		open func enumValueListString() -> EnumValueListStringContext? {
-			return getRuleContext(EnumValueListStringContext.self,0)
+
+	public class EnumValueListCommaContext: ParserRuleContext {
+			open
+			func enumValueListString() -> EnumValueListStringContext? {
+				return getRuleContext(EnumValueListStringContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_enumValueListComma
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_enumValueListComma }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterEnumValueListComma(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterEnumValueListComma(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitEnumValueListComma(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitEnumValueListComma(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitEnumValueListComma(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitEnumValueListComma(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitEnumValueListComma(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitEnumValueListComma(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumValueListComma() throws -> EnumValueListCommaContext {
+	 open func enumValueListComma() throws -> EnumValueListCommaContext {
 		var _localctx: EnumValueListCommaContext = EnumValueListCommaContext(_ctx, getState())
 		try enterRule(_localctx, 46, WebIDLParser.RULE_enumValueListComma)
 		defer {
@@ -2007,7 +2193,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2018,38 +2204,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class EnumValueListStringContext:ParserRuleContext {
-		open func STRING_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.STRING_WEBIDL.rawValue, 0) }
-		open func enumValueListComma() -> EnumValueListCommaContext? {
-			return getRuleContext(EnumValueListCommaContext.self,0)
+
+	public class EnumValueListStringContext: ParserRuleContext {
+			open
+			func STRING_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.STRING_WEBIDL.rawValue, 0)
+			}
+			open
+			func enumValueListComma() -> EnumValueListCommaContext? {
+				return getRuleContext(EnumValueListCommaContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_enumValueListString
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_enumValueListString }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterEnumValueListString(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterEnumValueListString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitEnumValueListString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitEnumValueListString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitEnumValueListString(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitEnumValueListString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitEnumValueListString(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitEnumValueListString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumValueListString() throws -> EnumValueListStringContext {
+	 open func enumValueListString() throws -> EnumValueListStringContext {
 		var _localctx: EnumValueListStringContext = EnumValueListStringContext(_ctx, getState())
 		try enterRule(_localctx, 48, WebIDLParser.RULE_enumValueListString)
 		defer {
@@ -2073,7 +2268,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2084,41 +2279,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class CallbackRestContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func returnType() -> ReturnTypeContext? {
-			return getRuleContext(ReturnTypeContext.self,0)
+
+	public class CallbackRestContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func returnType() -> ReturnTypeContext? {
+				return getRuleContext(ReturnTypeContext.self, 0)
+			}
+			open
+			func argumentList() -> ArgumentListContext? {
+				return getRuleContext(ArgumentListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_callbackRest
 		}
-		open func argumentList() -> ArgumentListContext? {
-			return getRuleContext(ArgumentListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_callbackRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterCallbackRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterCallbackRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitCallbackRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitCallbackRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitCallbackRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitCallbackRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitCallbackRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitCallbackRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func callbackRest() throws -> CallbackRestContext {
+	 open func callbackRest() throws -> CallbackRestContext {
 		var _localctx: CallbackRestContext = CallbackRestContext(_ctx, getState())
 		try enterRule(_localctx, 50, WebIDLParser.RULE_callbackRest)
 		defer {
@@ -2150,38 +2355,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class TypedefContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class TypedefContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_typedef
 		}
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_typedef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterTypedef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterTypedef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitTypedef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitTypedef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitTypedef(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitTypedef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitTypedef(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitTypedef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typedef() throws -> TypedefContext {
+	 open func typedef() throws -> TypedefContext {
 		var _localctx: TypedefContext = TypedefContext(_ctx, getState())
 		try enterRule(_localctx, 52, WebIDLParser.RULE_typedef)
 		defer {
@@ -2207,38 +2421,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ImplementsStatementContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> Array<TerminalNode> { return getTokens(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue) }
-		open func IDENTIFIER_WEBIDL(_ i:Int) -> TerminalNode?{
-			return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, i)
+
+	public class ImplementsStatementContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> [TerminalNode] {
+				return getTokens(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue)
+			}
+			open
+			func IDENTIFIER_WEBIDL(_ i:Int) -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_implementsStatement
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_implementsStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterImplementsStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterImplementsStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitImplementsStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitImplementsStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitImplementsStatement(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitImplementsStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitImplementsStatement(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitImplementsStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func implementsStatement() throws -> ImplementsStatementContext {
+	 open func implementsStatement() throws -> ImplementsStatementContext {
 		var _localctx: ImplementsStatementContext = ImplementsStatementContext(_ctx, getState())
 		try enterRule(_localctx, 54, WebIDLParser.RULE_implementsStatement)
 		defer {
@@ -2264,41 +2487,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class Const_Context:ParserRuleContext {
-		open func constType() -> ConstTypeContext? {
-			return getRuleContext(ConstTypeContext.self,0)
+
+	public class Const_Context: ParserRuleContext {
+			open
+			func constType() -> ConstTypeContext? {
+				return getRuleContext(ConstTypeContext.self, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func constValue() -> ConstValueContext? {
+				return getRuleContext(ConstValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_const_
 		}
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func constValue() -> ConstValueContext? {
-			return getRuleContext(ConstValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_const_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterConst_(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterConst_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitConst_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitConst_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitConst_(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitConst_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitConst_(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitConst_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func const_() throws -> Const_Context {
+	 open func const_() throws -> Const_Context {
 		var _localctx: Const_Context = Const_Context(_ctx, getState())
 		try enterRule(_localctx, 56, WebIDLParser.RULE_const_)
 		defer {
@@ -2328,41 +2561,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ConstValueContext:ParserRuleContext {
-		open func booleanLiteral() -> BooleanLiteralContext? {
-			return getRuleContext(BooleanLiteralContext.self,0)
+
+	public class ConstValueContext: ParserRuleContext {
+			open
+			func booleanLiteral() -> BooleanLiteralContext? {
+				return getRuleContext(BooleanLiteralContext.self, 0)
+			}
+			open
+			func floatLiteral() -> FloatLiteralContext? {
+				return getRuleContext(FloatLiteralContext.self, 0)
+			}
+			open
+			func INTEGER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.INTEGER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_constValue
 		}
-		open func floatLiteral() -> FloatLiteralContext? {
-			return getRuleContext(FloatLiteralContext.self,0)
-		}
-		open func INTEGER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.INTEGER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_constValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterConstValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterConstValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitConstValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitConstValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitConstValue(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitConstValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitConstValue(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitConstValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constValue() throws -> ConstValueContext {
+	 open func constValue() throws -> ConstValueContext {
 		var _localctx: ConstValueContext = ConstValueContext(_ctx, getState())
 		try enterRule(_localctx, 58, WebIDLParser.RULE_constValue)
 		defer {
@@ -2403,7 +2646,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2414,34 +2657,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class BooleanLiteralContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_booleanLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterBooleanLiteral(self)
+
+	public class BooleanLiteralContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_booleanLiteral
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterBooleanLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitBooleanLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitBooleanLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitBooleanLiteral(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitBooleanLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitBooleanLiteral(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitBooleanLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func booleanLiteral() throws -> BooleanLiteralContext {
+	 open func booleanLiteral() throws -> BooleanLiteralContext {
 		var _localctx: BooleanLiteralContext = BooleanLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 60, WebIDLParser.RULE_booleanLiteral)
 		var _la: Int = 0
@@ -2473,35 +2721,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class FloatLiteralContext:ParserRuleContext {
-		open func FLOAT_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.FLOAT_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_floatLiteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterFloatLiteral(self)
+
+	public class FloatLiteralContext: ParserRuleContext {
+			open
+			func FLOAT_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.FLOAT_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_floatLiteral
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterFloatLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitFloatLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitFloatLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitFloatLiteral(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitFloatLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitFloatLiteral(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitFloatLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func floatLiteral() throws -> FloatLiteralContext {
+	 open func floatLiteral() throws -> FloatLiteralContext {
 		var _localctx: FloatLiteralContext = FloatLiteralContext(_ctx, getState())
 		try enterRule(_localctx, 62, WebIDLParser.RULE_floatLiteral)
 		var _la: Int = 0
@@ -2536,37 +2792,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SerializerContext:ParserRuleContext {
-		open func serializerRest() -> SerializerRestContext? {
-			return getRuleContext(SerializerRestContext.self,0)
+
+	public class SerializerContext: ParserRuleContext {
+			open
+			func serializerRest() -> SerializerRestContext? {
+				return getRuleContext(SerializerRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_serializer
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_serializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSerializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSerializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSerializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSerializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSerializer(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSerializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSerializer(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSerializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func serializer() throws -> SerializerContext {
+	 open func serializer() throws -> SerializerContext {
 		var _localctx: SerializerContext = SerializerContext(_ctx, getState())
 		try enterRule(_localctx, 64, WebIDLParser.RULE_serializer)
 		defer {
@@ -2588,40 +2850,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SerializerRestContext:ParserRuleContext {
-		open func operationRest() -> OperationRestContext? {
-			return getRuleContext(OperationRestContext.self,0)
+
+	public class SerializerRestContext: ParserRuleContext {
+			open
+			func operationRest() -> OperationRestContext? {
+				return getRuleContext(OperationRestContext.self, 0)
+			}
+			open
+			func serializationPattern() -> SerializationPatternContext? {
+				return getRuleContext(SerializationPatternContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_serializerRest
 		}
-		open func serializationPattern() -> SerializationPatternContext? {
-			return getRuleContext(SerializationPatternContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_serializerRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSerializerRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSerializerRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSerializerRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSerializerRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSerializerRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSerializerRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSerializerRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSerializerRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func serializerRest() throws -> SerializerRestContext {
+	 open func serializerRest() throws -> SerializerRestContext {
 		var _localctx: SerializerRestContext = SerializerRestContext(_ctx, getState())
 		try enterRule(_localctx, 66, WebIDLParser.RULE_serializerRest)
 		defer {
@@ -2657,7 +2926,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2668,41 +2937,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SerializationPatternContext:ParserRuleContext {
-		open func serializationPatternMap() -> SerializationPatternMapContext? {
-			return getRuleContext(SerializationPatternMapContext.self,0)
+
+	public class SerializationPatternContext: ParserRuleContext {
+			open
+			func serializationPatternMap() -> SerializationPatternMapContext? {
+				return getRuleContext(SerializationPatternMapContext.self, 0)
+			}
+			open
+			func serializationPatternList() -> SerializationPatternListContext? {
+				return getRuleContext(SerializationPatternListContext.self, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_serializationPattern
 		}
-		open func serializationPatternList() -> SerializationPatternListContext? {
-			return getRuleContext(SerializationPatternListContext.self,0)
-		}
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_serializationPattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSerializationPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSerializationPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSerializationPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSerializationPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSerializationPattern(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSerializationPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSerializationPattern(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSerializationPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func serializationPattern() throws -> SerializationPatternContext {
+	 open func serializationPattern() throws -> SerializationPatternContext {
 		var _localctx: SerializationPatternContext = SerializationPatternContext(_ctx, getState())
 		try enterRule(_localctx, 68, WebIDLParser.RULE_serializationPattern)
 		defer {
@@ -2741,7 +3020,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2752,38 +3031,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SerializationPatternMapContext:ParserRuleContext {
-		open func identifiers() -> IdentifiersContext? {
-			return getRuleContext(IdentifiersContext.self,0)
+
+	public class SerializationPatternMapContext: ParserRuleContext {
+			open
+			func identifiers() -> IdentifiersContext? {
+				return getRuleContext(IdentifiersContext.self, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_serializationPatternMap
 		}
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_serializationPatternMap }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSerializationPatternMap(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSerializationPatternMap(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSerializationPatternMap(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSerializationPatternMap(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSerializationPatternMap(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSerializationPatternMap(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSerializationPatternMap(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSerializationPatternMap(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func serializationPatternMap() throws -> SerializationPatternMapContext {
+	 open func serializationPatternMap() throws -> SerializationPatternMapContext {
 		var _localctx: SerializationPatternMapContext = SerializationPatternMapContext(_ctx, getState())
 		try enterRule(_localctx, 70, WebIDLParser.RULE_serializationPatternMap)
 		defer {
@@ -2823,7 +3111,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2834,38 +3122,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SerializationPatternListContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func identifiers() -> IdentifiersContext? {
-			return getRuleContext(IdentifiersContext.self,0)
+
+	public class SerializationPatternListContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func identifiers() -> IdentifiersContext? {
+				return getRuleContext(IdentifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_serializationPatternList
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_serializationPatternList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSerializationPatternList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSerializationPatternList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSerializationPatternList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSerializationPatternList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSerializationPatternList(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSerializationPatternList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSerializationPatternList(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSerializationPatternList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func serializationPatternList() throws -> SerializationPatternListContext {
+	 open func serializationPatternList() throws -> SerializationPatternListContext {
 		var _localctx: SerializationPatternListContext = SerializationPatternListContext(_ctx, getState())
 		try enterRule(_localctx, 72, WebIDLParser.RULE_serializationPatternList)
 		defer {
@@ -2896,7 +3193,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2907,37 +3204,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class StringifierContext:ParserRuleContext {
-		open func stringifierRest() -> StringifierRestContext? {
-			return getRuleContext(StringifierRestContext.self,0)
+
+	public class StringifierContext: ParserRuleContext {
+			open
+			func stringifierRest() -> StringifierRestContext? {
+				return getRuleContext(StringifierRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_stringifier
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_stringifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterStringifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterStringifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitStringifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitStringifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitStringifier(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitStringifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitStringifier(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitStringifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stringifier() throws -> StringifierContext {
+	 open func stringifier() throws -> StringifierContext {
 		var _localctx: StringifierContext = StringifierContext(_ctx, getState())
 		try enterRule(_localctx, 74, WebIDLParser.RULE_stringifier)
 		defer {
@@ -2959,46 +3262,55 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class StringifierRestContext:ParserRuleContext {
-		open func readOnly() -> ReadOnlyContext? {
-			return getRuleContext(ReadOnlyContext.self,0)
+
+	public class StringifierRestContext: ParserRuleContext {
+			open
+			func readOnly() -> ReadOnlyContext? {
+				return getRuleContext(ReadOnlyContext.self, 0)
+			}
+			open
+			func attributeRest() -> AttributeRestContext? {
+				return getRuleContext(AttributeRestContext.self, 0)
+			}
+			open
+			func returnType() -> ReturnTypeContext? {
+				return getRuleContext(ReturnTypeContext.self, 0)
+			}
+			open
+			func operationRest() -> OperationRestContext? {
+				return getRuleContext(OperationRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_stringifierRest
 		}
-		open func attributeRest() -> AttributeRestContext? {
-			return getRuleContext(AttributeRestContext.self,0)
-		}
-		open func returnType() -> ReturnTypeContext? {
-			return getRuleContext(ReturnTypeContext.self,0)
-		}
-		open func operationRest() -> OperationRestContext? {
-			return getRuleContext(OperationRestContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_stringifierRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterStringifierRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterStringifierRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitStringifierRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitStringifierRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitStringifierRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitStringifierRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitStringifierRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitStringifierRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stringifierRest() throws -> StringifierRestContext {
+	 open func stringifierRest() throws -> StringifierRestContext {
 		var _localctx: StringifierRestContext = StringifierRestContext(_ctx, getState())
 		try enterRule(_localctx, 76, WebIDLParser.RULE_stringifierRest)
 		defer {
@@ -3065,7 +3377,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3076,37 +3388,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class StaticMemberContext:ParserRuleContext {
-		open func staticMemberRest() -> StaticMemberRestContext? {
-			return getRuleContext(StaticMemberRestContext.self,0)
+
+	public class StaticMemberContext: ParserRuleContext {
+			open
+			func staticMemberRest() -> StaticMemberRestContext? {
+				return getRuleContext(StaticMemberRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_staticMember
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_staticMember }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterStaticMember(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterStaticMember(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitStaticMember(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitStaticMember(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitStaticMember(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitStaticMember(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitStaticMember(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitStaticMember(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func staticMember() throws -> StaticMemberContext {
+	 open func staticMember() throws -> StaticMemberContext {
 		var _localctx: StaticMemberContext = StaticMemberContext(_ctx, getState())
 		try enterRule(_localctx, 78, WebIDLParser.RULE_staticMember)
 		defer {
@@ -3128,46 +3446,55 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class StaticMemberRestContext:ParserRuleContext {
-		open func readOnly() -> ReadOnlyContext? {
-			return getRuleContext(ReadOnlyContext.self,0)
+
+	public class StaticMemberRestContext: ParserRuleContext {
+			open
+			func readOnly() -> ReadOnlyContext? {
+				return getRuleContext(ReadOnlyContext.self, 0)
+			}
+			open
+			func attributeRest() -> AttributeRestContext? {
+				return getRuleContext(AttributeRestContext.self, 0)
+			}
+			open
+			func returnType() -> ReturnTypeContext? {
+				return getRuleContext(ReturnTypeContext.self, 0)
+			}
+			open
+			func operationRest() -> OperationRestContext? {
+				return getRuleContext(OperationRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_staticMemberRest
 		}
-		open func attributeRest() -> AttributeRestContext? {
-			return getRuleContext(AttributeRestContext.self,0)
-		}
-		open func returnType() -> ReturnTypeContext? {
-			return getRuleContext(ReturnTypeContext.self,0)
-		}
-		open func operationRest() -> OperationRestContext? {
-			return getRuleContext(OperationRestContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_staticMemberRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterStaticMemberRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterStaticMemberRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitStaticMemberRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitStaticMemberRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitStaticMemberRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitStaticMemberRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitStaticMemberRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitStaticMemberRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func staticMemberRest() throws -> StaticMemberRestContext {
+	 open func staticMemberRest() throws -> StaticMemberRestContext {
 		var _localctx: StaticMemberRestContext = StaticMemberRestContext(_ctx, getState())
 		try enterRule(_localctx, 80, WebIDLParser.RULE_staticMemberRest)
 		defer {
@@ -3227,7 +3554,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3238,37 +3565,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ReadonlyMemberContext:ParserRuleContext {
-		open func readonlyMemberRest() -> ReadonlyMemberRestContext? {
-			return getRuleContext(ReadonlyMemberRestContext.self,0)
+
+	public class ReadonlyMemberContext: ParserRuleContext {
+			open
+			func readonlyMemberRest() -> ReadonlyMemberRestContext? {
+				return getRuleContext(ReadonlyMemberRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_readonlyMember
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_readonlyMember }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterReadonlyMember(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterReadonlyMember(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitReadonlyMember(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitReadonlyMember(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitReadonlyMember(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitReadonlyMember(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitReadonlyMember(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitReadonlyMember(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func readonlyMember() throws -> ReadonlyMemberContext {
+	 open func readonlyMember() throws -> ReadonlyMemberContext {
 		var _localctx: ReadonlyMemberContext = ReadonlyMemberContext(_ctx, getState())
 		try enterRule(_localctx, 82, WebIDLParser.RULE_readonlyMember)
 		defer {
@@ -3290,43 +3623,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ReadonlyMemberRestContext:ParserRuleContext {
-		open func attributeRest() -> AttributeRestContext? {
-			return getRuleContext(AttributeRestContext.self,0)
+
+	public class ReadonlyMemberRestContext: ParserRuleContext {
+			open
+			func attributeRest() -> AttributeRestContext? {
+				return getRuleContext(AttributeRestContext.self, 0)
+			}
+			open
+			func readWriteMaplike() -> ReadWriteMaplikeContext? {
+				return getRuleContext(ReadWriteMaplikeContext.self, 0)
+			}
+			open
+			func readWriteSetlike() -> ReadWriteSetlikeContext? {
+				return getRuleContext(ReadWriteSetlikeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_readonlyMemberRest
 		}
-		open func readWriteMaplike() -> ReadWriteMaplikeContext? {
-			return getRuleContext(ReadWriteMaplikeContext.self,0)
-		}
-		open func readWriteSetlike() -> ReadWriteSetlikeContext? {
-			return getRuleContext(ReadWriteSetlikeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_readonlyMemberRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterReadonlyMemberRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterReadonlyMemberRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitReadonlyMemberRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitReadonlyMemberRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitReadonlyMemberRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitReadonlyMemberRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitReadonlyMemberRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitReadonlyMemberRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func readonlyMemberRest() throws -> ReadonlyMemberRestContext {
+	 open func readonlyMemberRest() throws -> ReadonlyMemberRestContext {
 		var _localctx: ReadonlyMemberRestContext = ReadonlyMemberRestContext(_ctx, getState())
 		try enterRule(_localctx, 84, WebIDLParser.RULE_readonlyMemberRest)
 		defer {
@@ -3357,7 +3698,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3368,40 +3709,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ReadWriteAttributeContext:ParserRuleContext {
-		open func readOnly() -> ReadOnlyContext? {
-			return getRuleContext(ReadOnlyContext.self,0)
+
+	public class ReadWriteAttributeContext: ParserRuleContext {
+			open
+			func readOnly() -> ReadOnlyContext? {
+				return getRuleContext(ReadOnlyContext.self, 0)
+			}
+			open
+			func attributeRest() -> AttributeRestContext? {
+				return getRuleContext(AttributeRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_readWriteAttribute
 		}
-		open func attributeRest() -> AttributeRestContext? {
-			return getRuleContext(AttributeRestContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_readWriteAttribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterReadWriteAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterReadWriteAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitReadWriteAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitReadWriteAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitReadWriteAttribute(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitReadWriteAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitReadWriteAttribute(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitReadWriteAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func readWriteAttribute() throws -> ReadWriteAttributeContext {
+	 open func readWriteAttribute() throws -> ReadWriteAttributeContext {
 		var _localctx: ReadWriteAttributeContext = ReadWriteAttributeContext(_ctx, getState())
 		try enterRule(_localctx, 86, WebIDLParser.RULE_readWriteAttribute)
 		defer {
@@ -3429,7 +3777,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3440,40 +3788,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class AttributeRestContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class AttributeRestContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func attributeName() -> AttributeNameContext? {
+				return getRuleContext(AttributeNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_attributeRest
 		}
-		open func attributeName() -> AttributeNameContext? {
-			return getRuleContext(AttributeNameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_attributeRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterAttributeRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterAttributeRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitAttributeRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitAttributeRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitAttributeRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitAttributeRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitAttributeRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitAttributeRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributeRest() throws -> AttributeRestContext {
+	 open func attributeRest() throws -> AttributeRestContext {
 		var _localctx: AttributeRestContext = AttributeRestContext(_ctx, getState())
 		try enterRule(_localctx, 88, WebIDLParser.RULE_attributeRest)
 		defer {
@@ -3499,38 +3854,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class AttributeNameContext:ParserRuleContext {
-		open func attributeNameKeyword() -> AttributeNameKeywordContext? {
-			return getRuleContext(AttributeNameKeywordContext.self,0)
+
+	public class AttributeNameContext: ParserRuleContext {
+			open
+			func attributeNameKeyword() -> AttributeNameKeywordContext? {
+				return getRuleContext(AttributeNameKeywordContext.self, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_attributeName
 		}
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_attributeName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterAttributeName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterAttributeName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitAttributeName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitAttributeName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitAttributeName(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitAttributeName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitAttributeName(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitAttributeName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributeName() throws -> AttributeNameContext {
+	 open func attributeName() throws -> AttributeNameContext {
 		var _localctx: AttributeNameContext = AttributeNameContext(_ctx, getState())
 		try enterRule(_localctx, 90, WebIDLParser.RULE_attributeName)
 		defer {
@@ -3554,7 +3918,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3565,34 +3929,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class AttributeNameKeywordContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_attributeNameKeyword }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterAttributeNameKeyword(self)
+
+	public class AttributeNameKeywordContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_attributeNameKeyword
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterAttributeNameKeyword(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitAttributeNameKeyword(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitAttributeNameKeyword(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitAttributeNameKeyword(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitAttributeNameKeyword(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitAttributeNameKeyword(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitAttributeNameKeyword(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributeNameKeyword() throws -> AttributeNameKeywordContext {
+	 open func attributeNameKeyword() throws -> AttributeNameKeywordContext {
 		var _localctx: AttributeNameKeywordContext = AttributeNameKeywordContext(_ctx, getState())
 		try enterRule(_localctx, 92, WebIDLParser.RULE_attributeNameKeyword)
 		defer {
@@ -3612,34 +3981,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class InheritContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_inherit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterInherit(self)
+
+	public class InheritContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_inherit
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterInherit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitInherit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitInherit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitInherit(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitInherit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitInherit(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitInherit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inherit() throws -> InheritContext {
+	 open func inherit() throws -> InheritContext {
 		var _localctx: InheritContext = InheritContext(_ctx, getState())
 		try enterRule(_localctx, 94, WebIDLParser.RULE_inherit)
 		defer {
@@ -3661,7 +4035,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3672,34 +4046,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ReadOnlyContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_readOnly }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterReadOnly(self)
+
+	public class ReadOnlyContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_readOnly
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterReadOnly(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitReadOnly(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitReadOnly(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitReadOnly(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitReadOnly(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitReadOnly(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitReadOnly(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func readOnly() throws -> ReadOnlyContext {
+	 open func readOnly() throws -> ReadOnlyContext {
 		var _localctx: ReadOnlyContext = ReadOnlyContext(_ctx, getState())
 		try enterRule(_localctx, 96, WebIDLParser.RULE_readOnly)
 		defer {
@@ -3721,7 +4100,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3732,43 +4111,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class OperationContext:ParserRuleContext {
-		open func returnType() -> ReturnTypeContext? {
-			return getRuleContext(ReturnTypeContext.self,0)
+
+	public class OperationContext: ParserRuleContext {
+			open
+			func returnType() -> ReturnTypeContext? {
+				return getRuleContext(ReturnTypeContext.self, 0)
+			}
+			open
+			func operationRest() -> OperationRestContext? {
+				return getRuleContext(OperationRestContext.self, 0)
+			}
+			open
+			func specialOperation() -> SpecialOperationContext? {
+				return getRuleContext(SpecialOperationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_operation
 		}
-		open func operationRest() -> OperationRestContext? {
-			return getRuleContext(OperationRestContext.self,0)
-		}
-		open func specialOperation() -> SpecialOperationContext? {
-			return getRuleContext(SpecialOperationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_operation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterOperation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterOperation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitOperation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitOperation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitOperation(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitOperation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitOperation(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitOperation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operation() throws -> OperationContext {
+	 open func operation() throws -> OperationContext {
 		var _localctx: OperationContext = OperationContext(_ctx, getState())
 		try enterRule(_localctx, 98, WebIDLParser.RULE_operation)
 		defer {
@@ -3828,7 +4215,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3839,46 +4226,55 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SpecialOperationContext:ParserRuleContext {
-		open func special() -> SpecialContext? {
-			return getRuleContext(SpecialContext.self,0)
+
+	public class SpecialOperationContext: ParserRuleContext {
+			open
+			func special() -> SpecialContext? {
+				return getRuleContext(SpecialContext.self, 0)
+			}
+			open
+			func specials() -> SpecialsContext? {
+				return getRuleContext(SpecialsContext.self, 0)
+			}
+			open
+			func returnType() -> ReturnTypeContext? {
+				return getRuleContext(ReturnTypeContext.self, 0)
+			}
+			open
+			func operationRest() -> OperationRestContext? {
+				return getRuleContext(OperationRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_specialOperation
 		}
-		open func specials() -> SpecialsContext? {
-			return getRuleContext(SpecialsContext.self,0)
-		}
-		open func returnType() -> ReturnTypeContext? {
-			return getRuleContext(ReturnTypeContext.self,0)
-		}
-		open func operationRest() -> OperationRestContext? {
-			return getRuleContext(OperationRestContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_specialOperation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSpecialOperation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSpecialOperation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSpecialOperation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSpecialOperation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSpecialOperation(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSpecialOperation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSpecialOperation(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSpecialOperation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specialOperation() throws -> SpecialOperationContext {
+	 open func specialOperation() throws -> SpecialOperationContext {
 		var _localctx: SpecialOperationContext = SpecialOperationContext(_ctx, getState())
 		try enterRule(_localctx, 100, WebIDLParser.RULE_specialOperation)
 		defer {
@@ -3904,40 +4300,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SpecialsContext:ParserRuleContext {
-		open func special() -> SpecialContext? {
-			return getRuleContext(SpecialContext.self,0)
+
+	public class SpecialsContext: ParserRuleContext {
+			open
+			func special() -> SpecialContext? {
+				return getRuleContext(SpecialContext.self, 0)
+			}
+			open
+			func specials() -> SpecialsContext? {
+				return getRuleContext(SpecialsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_specials
 		}
-		open func specials() -> SpecialsContext? {
-			return getRuleContext(SpecialsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_specials }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSpecials(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSpecials(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSpecials(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSpecials(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSpecials(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSpecials(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSpecials(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSpecials(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func specials() throws -> SpecialsContext {
+	 open func specials() throws -> SpecialsContext {
 		var _localctx: SpecialsContext = SpecialsContext(_ctx, getState())
 		try enterRule(_localctx, 102, WebIDLParser.RULE_specials)
 		defer {
@@ -3995,7 +4398,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4006,34 +4409,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SpecialContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_special }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSpecial(self)
+
+	public class SpecialContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_special
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSpecial(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSpecial(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSpecial(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSpecial(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSpecial(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSpecial(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSpecial(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func special() throws -> SpecialContext {
+	 open func special() throws -> SpecialContext {
 		var _localctx: SpecialContext = SpecialContext(_ctx, getState())
 		try enterRule(_localctx, 104, WebIDLParser.RULE_special)
 		var _la: Int = 0
@@ -4068,40 +4476,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class OperationRestContext:ParserRuleContext {
-		open func optionalIdentifier() -> OptionalIdentifierContext? {
-			return getRuleContext(OptionalIdentifierContext.self,0)
+
+	public class OperationRestContext: ParserRuleContext {
+			open
+			func optionalIdentifier() -> OptionalIdentifierContext? {
+				return getRuleContext(OptionalIdentifierContext.self, 0)
+			}
+			open
+			func argumentList() -> ArgumentListContext? {
+				return getRuleContext(ArgumentListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_operationRest
 		}
-		open func argumentList() -> ArgumentListContext? {
-			return getRuleContext(ArgumentListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_operationRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterOperationRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterOperationRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitOperationRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitOperationRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitOperationRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitOperationRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitOperationRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitOperationRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operationRest() throws -> OperationRestContext {
+	 open func operationRest() throws -> OperationRestContext {
 		var _localctx: OperationRestContext = OperationRestContext(_ctx, getState())
 		try enterRule(_localctx, 106, WebIDLParser.RULE_operationRest)
 		defer {
@@ -4129,35 +4544,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class OptionalIdentifierContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_optionalIdentifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterOptionalIdentifier(self)
+
+	public class OptionalIdentifierContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_optionalIdentifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterOptionalIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitOptionalIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitOptionalIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitOptionalIdentifier(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitOptionalIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitOptionalIdentifier(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitOptionalIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optionalIdentifier() throws -> OptionalIdentifierContext {
+	 open func optionalIdentifier() throws -> OptionalIdentifierContext {
 		var _localctx: OptionalIdentifierContext = OptionalIdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 108, WebIDLParser.RULE_optionalIdentifier)
 		defer {
@@ -4179,7 +4602,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4190,40 +4613,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentListContext:ParserRuleContext {
-		open func argument() -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,0)
+
+	public class ArgumentListContext: ParserRuleContext {
+			open
+			func argument() -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, 0)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_argumentList
 		}
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_argumentList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterArgumentList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterArgumentList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitArgumentList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitArgumentList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitArgumentList(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitArgumentList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitArgumentList(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitArgumentList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argumentList() throws -> ArgumentListContext {
+	 open func argumentList() throws -> ArgumentListContext {
 		var _localctx: ArgumentListContext = ArgumentListContext(_ctx, getState())
 		try enterRule(_localctx, 110, WebIDLParser.RULE_argumentList)
 		defer {
@@ -4280,7 +4710,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4291,40 +4721,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentsContext:ParserRuleContext {
-		open func argument() -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,0)
+
+	public class ArgumentsContext: ParserRuleContext {
+			open
+			func argument() -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, 0)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_arguments
 		}
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_arguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterArguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterArguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitArguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitArguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitArguments(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitArguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitArguments(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitArguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arguments() throws -> ArgumentsContext {
+	 open func arguments() throws -> ArgumentsContext {
 		var _localctx: ArgumentsContext = ArgumentsContext(_ctx, getState())
 		try enterRule(_localctx, 112, WebIDLParser.RULE_arguments)
 		defer {
@@ -4350,7 +4787,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4361,40 +4798,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentContext:ParserRuleContext {
-		open func extendedAttributeList() -> ExtendedAttributeListContext? {
-			return getRuleContext(ExtendedAttributeListContext.self,0)
+
+	public class ArgumentContext: ParserRuleContext {
+			open
+			func extendedAttributeList() -> ExtendedAttributeListContext? {
+				return getRuleContext(ExtendedAttributeListContext.self, 0)
+			}
+			open
+			func optionalOrRequiredArgument() -> OptionalOrRequiredArgumentContext? {
+				return getRuleContext(OptionalOrRequiredArgumentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_argument
 		}
-		open func optionalOrRequiredArgument() -> OptionalOrRequiredArgumentContext? {
-			return getRuleContext(OptionalOrRequiredArgumentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterArgument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterArgument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitArgument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitArgument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitArgument(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitArgument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitArgument(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitArgument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument() throws -> ArgumentContext {
+	 open func argument() throws -> ArgumentContext {
 		var _localctx: ArgumentContext = ArgumentContext(_ctx, getState())
 		try enterRule(_localctx, 114, WebIDLParser.RULE_argument)
 		defer {
@@ -4416,46 +4860,55 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class OptionalOrRequiredArgumentContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class OptionalOrRequiredArgumentContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func argumentName() -> ArgumentNameContext? {
+				return getRuleContext(ArgumentNameContext.self, 0)
+			}
+			open
+			func default_() -> Default_Context? {
+				return getRuleContext(Default_Context.self, 0)
+			}
+			open
+			func ellipsis() -> EllipsisContext? {
+				return getRuleContext(EllipsisContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_optionalOrRequiredArgument
 		}
-		open func argumentName() -> ArgumentNameContext? {
-			return getRuleContext(ArgumentNameContext.self,0)
-		}
-		open func default_() -> Default_Context? {
-			return getRuleContext(Default_Context.self,0)
-		}
-		open func ellipsis() -> EllipsisContext? {
-			return getRuleContext(EllipsisContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_optionalOrRequiredArgument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterOptionalOrRequiredArgument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterOptionalOrRequiredArgument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitOptionalOrRequiredArgument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitOptionalOrRequiredArgument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitOptionalOrRequiredArgument(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitOptionalOrRequiredArgument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitOptionalOrRequiredArgument(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitOptionalOrRequiredArgument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optionalOrRequiredArgument() throws -> OptionalOrRequiredArgumentContext {
+	 open func optionalOrRequiredArgument() throws -> OptionalOrRequiredArgumentContext {
 		var _localctx: OptionalOrRequiredArgumentContext = OptionalOrRequiredArgumentContext(_ctx, getState())
 		try enterRule(_localctx, 116, WebIDLParser.RULE_optionalOrRequiredArgument)
 		defer {
@@ -4519,7 +4972,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4530,38 +4983,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentNameContext:ParserRuleContext {
-		open func argumentNameKeyword() -> ArgumentNameKeywordContext? {
-			return getRuleContext(ArgumentNameKeywordContext.self,0)
+
+	public class ArgumentNameContext: ParserRuleContext {
+			open
+			func argumentNameKeyword() -> ArgumentNameKeywordContext? {
+				return getRuleContext(ArgumentNameKeywordContext.self, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_argumentName
 		}
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_argumentName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterArgumentName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterArgumentName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitArgumentName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitArgumentName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitArgumentName(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitArgumentName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitArgumentName(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitArgumentName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argumentName() throws -> ArgumentNameContext {
+	 open func argumentName() throws -> ArgumentNameContext {
 		var _localctx: ArgumentNameContext = ArgumentNameContext(_ctx, getState())
 		try enterRule(_localctx, 118, WebIDLParser.RULE_argumentName)
 		defer {
@@ -4606,7 +5068,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4617,34 +5079,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class EllipsisContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_ellipsis }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterEllipsis(self)
+
+	public class EllipsisContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_ellipsis
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterEllipsis(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitEllipsis(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitEllipsis(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitEllipsis(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitEllipsis(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitEllipsis(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitEllipsis(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ellipsis() throws -> EllipsisContext {
+	 open func ellipsis() throws -> EllipsisContext {
 		var _localctx: EllipsisContext = EllipsisContext(_ctx, getState())
 		try enterRule(_localctx, 120, WebIDLParser.RULE_ellipsis)
 		defer {
@@ -4687,7 +5154,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4698,40 +5165,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class IterableContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class IterableContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func optionalType() -> OptionalTypeContext? {
+				return getRuleContext(OptionalTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_iterable
 		}
-		open func optionalType() -> OptionalTypeContext? {
-			return getRuleContext(OptionalTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_iterable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterIterable(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterIterable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitIterable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitIterable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitIterable(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitIterable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitIterable(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitIterable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iterable() throws -> IterableContext {
+	 open func iterable() throws -> IterableContext {
 		var _localctx: IterableContext = IterableContext(_ctx, getState())
 		try enterRule(_localctx, 122, WebIDLParser.RULE_iterable)
 		defer {
@@ -4761,37 +5235,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class OptionalTypeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class OptionalTypeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_optionalType
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_optionalType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterOptionalType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterOptionalType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitOptionalType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitOptionalType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitOptionalType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitOptionalType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitOptionalType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitOptionalType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optionalType() throws -> OptionalTypeContext {
+	 open func optionalType() throws -> OptionalTypeContext {
 		var _localctx: OptionalTypeContext = OptionalTypeContext(_ctx, getState())
 		try enterRule(_localctx, 124, WebIDLParser.RULE_optionalType)
 		defer {
@@ -4815,7 +5295,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4826,37 +5306,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ReadWriteMaplikeContext:ParserRuleContext {
-		open func maplikeRest() -> MaplikeRestContext? {
-			return getRuleContext(MaplikeRestContext.self,0)
+
+	public class ReadWriteMaplikeContext: ParserRuleContext {
+			open
+			func maplikeRest() -> MaplikeRestContext? {
+				return getRuleContext(MaplikeRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_readWriteMaplike
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_readWriteMaplike }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterReadWriteMaplike(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterReadWriteMaplike(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitReadWriteMaplike(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitReadWriteMaplike(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitReadWriteMaplike(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitReadWriteMaplike(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitReadWriteMaplike(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitReadWriteMaplike(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func readWriteMaplike() throws -> ReadWriteMaplikeContext {
+	 open func readWriteMaplike() throws -> ReadWriteMaplikeContext {
 		var _localctx: ReadWriteMaplikeContext = ReadWriteMaplikeContext(_ctx, getState())
 		try enterRule(_localctx, 126, WebIDLParser.RULE_readWriteMaplike)
 		defer {
@@ -4876,37 +5362,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ReadWriteSetlikeContext:ParserRuleContext {
-		open func setlikeRest() -> SetlikeRestContext? {
-			return getRuleContext(SetlikeRestContext.self,0)
+
+	public class ReadWriteSetlikeContext: ParserRuleContext {
+			open
+			func setlikeRest() -> SetlikeRestContext? {
+				return getRuleContext(SetlikeRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_readWriteSetlike
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_readWriteSetlike }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterReadWriteSetlike(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterReadWriteSetlike(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitReadWriteSetlike(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitReadWriteSetlike(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitReadWriteSetlike(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitReadWriteSetlike(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitReadWriteSetlike(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitReadWriteSetlike(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func readWriteSetlike() throws -> ReadWriteSetlikeContext {
+	 open func readWriteSetlike() throws -> ReadWriteSetlikeContext {
 		var _localctx: ReadWriteSetlikeContext = ReadWriteSetlikeContext(_ctx, getState())
 		try enterRule(_localctx, 128, WebIDLParser.RULE_readWriteSetlike)
 		defer {
@@ -4926,40 +5418,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class MaplikeRestContext:ParserRuleContext {
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
+
+	public class MaplikeRestContext: ParserRuleContext {
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_maplikeRest
 		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_maplikeRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterMaplikeRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterMaplikeRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitMaplikeRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitMaplikeRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitMaplikeRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitMaplikeRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitMaplikeRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitMaplikeRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func maplikeRest() throws -> MaplikeRestContext {
+	 open func maplikeRest() throws -> MaplikeRestContext {
 		var _localctx: MaplikeRestContext = MaplikeRestContext(_ctx, getState())
 		try enterRule(_localctx, 130, WebIDLParser.RULE_maplikeRest)
 		defer {
@@ -4991,37 +5490,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SetlikeRestContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class SetlikeRestContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_setlikeRest
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_setlikeRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSetlikeRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSetlikeRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSetlikeRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSetlikeRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSetlikeRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSetlikeRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSetlikeRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSetlikeRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setlikeRest() throws -> SetlikeRestContext {
+	 open func setlikeRest() throws -> SetlikeRestContext {
 		var _localctx: SetlikeRestContext = SetlikeRestContext(_ctx, getState())
 		try enterRule(_localctx, 132, WebIDLParser.RULE_setlikeRest)
 		defer {
@@ -5049,40 +5554,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributeListContext:ParserRuleContext {
-		open func extendedAttribute() -> ExtendedAttributeContext? {
-			return getRuleContext(ExtendedAttributeContext.self,0)
+
+	public class ExtendedAttributeListContext: ParserRuleContext {
+			open
+			func extendedAttribute() -> ExtendedAttributeContext? {
+				return getRuleContext(ExtendedAttributeContext.self, 0)
+			}
+			open
+			func extendedAttributes() -> ExtendedAttributesContext? {
+				return getRuleContext(ExtendedAttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttributeList
 		}
-		open func extendedAttributes() -> ExtendedAttributesContext? {
-			return getRuleContext(ExtendedAttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttributeList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttributeList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttributeList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttributeList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttributeList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttributeList(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttributeList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttributeList(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttributeList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttributeList() throws -> ExtendedAttributeListContext {
+	 open func extendedAttributeList() throws -> ExtendedAttributeListContext {
 		var _localctx: ExtendedAttributeListContext = ExtendedAttributeListContext(_ctx, getState())
 		try enterRule(_localctx, 134, WebIDLParser.RULE_extendedAttributeList)
 		defer {
@@ -5164,7 +5676,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5175,40 +5687,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributesContext:ParserRuleContext {
-		open func extendedAttribute() -> ExtendedAttributeContext? {
-			return getRuleContext(ExtendedAttributeContext.self,0)
+
+	public class ExtendedAttributesContext: ParserRuleContext {
+			open
+			func extendedAttribute() -> ExtendedAttributeContext? {
+				return getRuleContext(ExtendedAttributeContext.self, 0)
+			}
+			open
+			func extendedAttributes() -> ExtendedAttributesContext? {
+				return getRuleContext(ExtendedAttributesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttributes
 		}
-		open func extendedAttributes() -> ExtendedAttributesContext? {
-			return getRuleContext(ExtendedAttributesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttributes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttributes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttributes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttributes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttributes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttributes(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttributes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttributes(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttributes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttributes() throws -> ExtendedAttributesContext {
+	 open func extendedAttributes() throws -> ExtendedAttributesContext {
 		var _localctx: ExtendedAttributesContext = ExtendedAttributesContext(_ctx, getState())
 		try enterRule(_localctx, 136, WebIDLParser.RULE_extendedAttributes)
 		defer {
@@ -5234,7 +5753,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5245,43 +5764,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributeContext:ParserRuleContext {
-		open func extendedAttributeInner() -> ExtendedAttributeInnerContext? {
-			return getRuleContext(ExtendedAttributeInnerContext.self,0)
+
+	public class ExtendedAttributeContext: ParserRuleContext {
+			open
+			func extendedAttributeInner() -> ExtendedAttributeInnerContext? {
+				return getRuleContext(ExtendedAttributeInnerContext.self, 0)
+			}
+			open
+			func extendedAttributeRest() -> ExtendedAttributeRestContext? {
+				return getRuleContext(ExtendedAttributeRestContext.self, 0)
+			}
+			open
+			func other() -> OtherContext? {
+				return getRuleContext(OtherContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttribute
 		}
-		open func extendedAttributeRest() -> ExtendedAttributeRestContext? {
-			return getRuleContext(ExtendedAttributeRestContext.self,0)
-		}
-		open func other() -> OtherContext? {
-			return getRuleContext(OtherContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttribute(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttribute(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttribute() throws -> ExtendedAttributeContext {
+	 open func extendedAttribute() throws -> ExtendedAttributeContext {
 		var _localctx: ExtendedAttributeContext = ExtendedAttributeContext(_ctx, getState())
 		try enterRule(_localctx, 138, WebIDLParser.RULE_extendedAttribute)
 		defer {
@@ -5409,7 +5936,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5420,37 +5947,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributeRestContext:ParserRuleContext {
-		open func extendedAttribute() -> ExtendedAttributeContext? {
-			return getRuleContext(ExtendedAttributeContext.self,0)
+
+	public class ExtendedAttributeRestContext: ParserRuleContext {
+			open
+			func extendedAttribute() -> ExtendedAttributeContext? {
+				return getRuleContext(ExtendedAttributeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttributeRest
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttributeRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttributeRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttributeRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttributeRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttributeRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttributeRest(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttributeRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttributeRest(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttributeRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttributeRest() throws -> ExtendedAttributeRestContext {
+	 open func extendedAttributeRest() throws -> ExtendedAttributeRestContext {
 		var _localctx: ExtendedAttributeRestContext = ExtendedAttributeRestContext(_ctx, getState())
 		try enterRule(_localctx, 140, WebIDLParser.RULE_extendedAttributeRest)
 		defer {
@@ -5546,7 +6079,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5557,43 +6090,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributeInnerContext:ParserRuleContext {
-		open func extendedAttributeInner() -> Array<ExtendedAttributeInnerContext> {
-			return getRuleContexts(ExtendedAttributeInnerContext.self)
+
+	public class ExtendedAttributeInnerContext: ParserRuleContext {
+			open
+			func extendedAttributeInner() -> [ExtendedAttributeInnerContext] {
+				return getRuleContexts(ExtendedAttributeInnerContext.self)
+			}
+			open
+			func extendedAttributeInner(_ i: Int) -> ExtendedAttributeInnerContext? {
+				return getRuleContext(ExtendedAttributeInnerContext.self, i)
+			}
+			open
+			func otherOrComma() -> OtherOrCommaContext? {
+				return getRuleContext(OtherOrCommaContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttributeInner
 		}
-		open func extendedAttributeInner(_ i: Int) -> ExtendedAttributeInnerContext? {
-			return getRuleContext(ExtendedAttributeInnerContext.self,i)
-		}
-		open func otherOrComma() -> OtherOrCommaContext? {
-			return getRuleContext(OtherOrCommaContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttributeInner }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttributeInner(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttributeInner(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttributeInner(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttributeInner(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttributeInner(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttributeInner(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttributeInner(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttributeInner(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttributeInner() throws -> ExtendedAttributeInnerContext {
+	 open func extendedAttributeInner() throws -> ExtendedAttributeInnerContext {
 		var _localctx: ExtendedAttributeInnerContext = ExtendedAttributeInnerContext(_ctx, getState())
 		try enterRule(_localctx, 142, WebIDLParser.RULE_extendedAttributeInner)
 		defer {
@@ -5728,7 +6269,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5739,45 +6280,67 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class OtherContext:ParserRuleContext {
-		open func INTEGER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.INTEGER_WEBIDL.rawValue, 0) }
-		open func FLOAT_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.FLOAT_WEBIDL.rawValue, 0) }
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func STRING_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.STRING_WEBIDL.rawValue, 0) }
-		open func OTHER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.OTHER_WEBIDL.rawValue, 0) }
-		open func argumentNameKeyword() -> ArgumentNameKeywordContext? {
-			return getRuleContext(ArgumentNameKeywordContext.self,0)
+
+	public class OtherContext: ParserRuleContext {
+			open
+			func INTEGER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.INTEGER_WEBIDL.rawValue, 0)
+			}
+			open
+			func FLOAT_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.FLOAT_WEBIDL.rawValue, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func STRING_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.STRING_WEBIDL.rawValue, 0)
+			}
+			open
+			func OTHER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.OTHER_WEBIDL.rawValue, 0)
+			}
+			open
+			func argumentNameKeyword() -> ArgumentNameKeywordContext? {
+				return getRuleContext(ArgumentNameKeywordContext.self, 0)
+			}
+			open
+			func bufferRelatedType() -> BufferRelatedTypeContext? {
+				return getRuleContext(BufferRelatedTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_other
 		}
-		open func bufferRelatedType() -> BufferRelatedTypeContext? {
-			return getRuleContext(BufferRelatedTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_other }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterOther(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterOther(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitOther(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitOther(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitOther(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitOther(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitOther(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitOther(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func other() throws -> OtherContext {
+	 open func other() throws -> OtherContext {
 		var _localctx: OtherContext = OtherContext(_ctx, getState())
 		try enterRule(_localctx, 144, WebIDLParser.RULE_other)
 		defer {
@@ -6103,7 +6666,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6114,34 +6677,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentNameKeywordContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_argumentNameKeyword }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterArgumentNameKeyword(self)
+
+	public class ArgumentNameKeywordContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_argumentNameKeyword
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterArgumentNameKeyword(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitArgumentNameKeyword(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitArgumentNameKeyword(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitArgumentNameKeyword(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitArgumentNameKeyword(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitArgumentNameKeyword(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitArgumentNameKeyword(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argumentNameKeyword() throws -> ArgumentNameKeywordContext {
+	 open func argumentNameKeyword() throws -> ArgumentNameKeywordContext {
 		var _localctx: ArgumentNameKeywordContext = ArgumentNameKeywordContext(_ctx, getState())
 		try enterRule(_localctx, 146, WebIDLParser.RULE_argumentNameKeyword)
 		var _la: Int = 0
@@ -6177,37 +6745,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class OtherOrCommaContext:ParserRuleContext {
-		open func other() -> OtherContext? {
-			return getRuleContext(OtherContext.self,0)
+
+	public class OtherOrCommaContext: ParserRuleContext {
+			open
+			func other() -> OtherContext? {
+				return getRuleContext(OtherContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_otherOrComma
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_otherOrComma }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterOtherOrComma(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterOtherOrComma(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitOtherOrComma(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitOtherOrComma(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitOtherOrComma(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitOtherOrComma(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitOtherOrComma(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitOtherOrComma(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func otherOrComma() throws -> OtherOrCommaContext {
+	 open func otherOrComma() throws -> OtherOrCommaContext {
 		var _localctx: OtherOrCommaContext = OtherOrCommaContext(_ctx, getState())
 		try enterRule(_localctx, 148, WebIDLParser.RULE_otherOrComma)
 		defer {
@@ -6302,7 +6876,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6313,43 +6887,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func singleType() -> SingleTypeContext? {
-			return getRuleContext(SingleTypeContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func singleType() -> SingleTypeContext? {
+				return getRuleContext(SingleTypeContext.self, 0)
+			}
+			open
+			func unionType() -> UnionTypeContext? {
+				return getRuleContext(UnionTypeContext.self, 0)
+			}
+			open
+			func null_() -> Null_Context? {
+				return getRuleContext(Null_Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_type
 		}
-		open func unionType() -> UnionTypeContext? {
-			return getRuleContext(UnionTypeContext.self,0)
-		}
-		open func null_() -> Null_Context? {
-			return getRuleContext(Null_Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 150, WebIDLParser.RULE_type)
 		defer {
@@ -6405,7 +6987,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6416,37 +6998,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class SingleTypeContext:ParserRuleContext {
-		open func nonAnyType() -> NonAnyTypeContext? {
-			return getRuleContext(NonAnyTypeContext.self,0)
+
+	public class SingleTypeContext: ParserRuleContext {
+			open
+			func nonAnyType() -> NonAnyTypeContext? {
+				return getRuleContext(NonAnyTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_singleType
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_singleType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterSingleType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterSingleType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitSingleType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitSingleType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitSingleType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitSingleType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitSingleType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitSingleType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func singleType() throws -> SingleTypeContext {
+	 open func singleType() throws -> SingleTypeContext {
 		var _localctx: SingleTypeContext = SingleTypeContext(_ctx, getState())
 		try enterRule(_localctx, 152, WebIDLParser.RULE_singleType)
 		defer {
@@ -6499,7 +7087,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6510,43 +7098,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class UnionTypeContext:ParserRuleContext {
-		open func unionMemberType() -> Array<UnionMemberTypeContext> {
-			return getRuleContexts(UnionMemberTypeContext.self)
+
+	public class UnionTypeContext: ParserRuleContext {
+			open
+			func unionMemberType() -> [UnionMemberTypeContext] {
+				return getRuleContexts(UnionMemberTypeContext.self)
+			}
+			open
+			func unionMemberType(_ i: Int) -> UnionMemberTypeContext? {
+				return getRuleContext(UnionMemberTypeContext.self, i)
+			}
+			open
+			func unionMemberTypes() -> UnionMemberTypesContext? {
+				return getRuleContext(UnionMemberTypesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_unionType
 		}
-		open func unionMemberType(_ i: Int) -> UnionMemberTypeContext? {
-			return getRuleContext(UnionMemberTypeContext.self,i)
-		}
-		open func unionMemberTypes() -> UnionMemberTypesContext? {
-			return getRuleContext(UnionMemberTypesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_unionType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterUnionType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterUnionType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitUnionType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitUnionType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitUnionType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitUnionType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitUnionType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitUnionType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unionType() throws -> UnionTypeContext {
+	 open func unionType() throws -> UnionTypeContext {
 		var _localctx: UnionTypeContext = UnionTypeContext(_ctx, getState())
 		try enterRule(_localctx, 154, WebIDLParser.RULE_unionType)
 		defer {
@@ -6576,43 +7172,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class UnionMemberTypeContext:ParserRuleContext {
-		open func nonAnyType() -> NonAnyTypeContext? {
-			return getRuleContext(NonAnyTypeContext.self,0)
+
+	public class UnionMemberTypeContext: ParserRuleContext {
+			open
+			func nonAnyType() -> NonAnyTypeContext? {
+				return getRuleContext(NonAnyTypeContext.self, 0)
+			}
+			open
+			func unionType() -> UnionTypeContext? {
+				return getRuleContext(UnionTypeContext.self, 0)
+			}
+			open
+			func null_() -> Null_Context? {
+				return getRuleContext(Null_Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_unionMemberType
 		}
-		open func unionType() -> UnionTypeContext? {
-			return getRuleContext(UnionTypeContext.self,0)
-		}
-		open func null_() -> Null_Context? {
-			return getRuleContext(Null_Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_unionMemberType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterUnionMemberType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterUnionMemberType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitUnionMemberType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitUnionMemberType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitUnionMemberType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitUnionMemberType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitUnionMemberType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitUnionMemberType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unionMemberType() throws -> UnionMemberTypeContext {
+	 open func unionMemberType() throws -> UnionMemberTypeContext {
 		var _localctx: UnionMemberTypeContext = UnionMemberTypeContext(_ctx, getState())
 		try enterRule(_localctx, 156, WebIDLParser.RULE_unionMemberType)
 		defer {
@@ -6667,7 +7271,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6678,40 +7282,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class UnionMemberTypesContext:ParserRuleContext {
-		open func unionMemberType() -> UnionMemberTypeContext? {
-			return getRuleContext(UnionMemberTypeContext.self,0)
+
+	public class UnionMemberTypesContext: ParserRuleContext {
+			open
+			func unionMemberType() -> UnionMemberTypeContext? {
+				return getRuleContext(UnionMemberTypeContext.self, 0)
+			}
+			open
+			func unionMemberTypes() -> UnionMemberTypesContext? {
+				return getRuleContext(UnionMemberTypesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_unionMemberTypes
 		}
-		open func unionMemberTypes() -> UnionMemberTypesContext? {
-			return getRuleContext(UnionMemberTypesContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_unionMemberTypes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterUnionMemberTypes(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterUnionMemberTypes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitUnionMemberTypes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitUnionMemberTypes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitUnionMemberTypes(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitUnionMemberTypes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitUnionMemberTypes(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitUnionMemberTypes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unionMemberTypes() throws -> UnionMemberTypesContext {
+	 open func unionMemberTypes() throws -> UnionMemberTypesContext {
 		var _localctx: UnionMemberTypesContext = UnionMemberTypesContext(_ctx, getState())
 		try enterRule(_localctx, 158, WebIDLParser.RULE_unionMemberTypes)
 		defer {
@@ -6737,7 +7348,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6748,50 +7359,63 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class NonAnyTypeContext:ParserRuleContext {
-		open func primitiveType() -> PrimitiveTypeContext? {
-			return getRuleContext(PrimitiveTypeContext.self,0)
+
+	public class NonAnyTypeContext: ParserRuleContext {
+			open
+			func primitiveType() -> PrimitiveTypeContext? {
+				return getRuleContext(PrimitiveTypeContext.self, 0)
+			}
+			open
+			func null_() -> Null_Context? {
+				return getRuleContext(Null_Context.self, 0)
+			}
+			open
+			func promiseType() -> PromiseTypeContext? {
+				return getRuleContext(PromiseTypeContext.self, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func bufferRelatedType() -> BufferRelatedTypeContext? {
+				return getRuleContext(BufferRelatedTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_nonAnyType
 		}
-		open func null_() -> Null_Context? {
-			return getRuleContext(Null_Context.self,0)
-		}
-		open func promiseType() -> PromiseTypeContext? {
-			return getRuleContext(PromiseTypeContext.self,0)
-		}
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func bufferRelatedType() -> BufferRelatedTypeContext? {
-			return getRuleContext(BufferRelatedTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_nonAnyType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterNonAnyType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterNonAnyType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitNonAnyType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitNonAnyType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitNonAnyType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitNonAnyType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitNonAnyType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitNonAnyType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nonAnyType() throws -> NonAnyTypeContext {
+	 open func nonAnyType() throws -> NonAnyTypeContext {
 		var _localctx: NonAnyTypeContext = NonAnyTypeContext(_ctx, getState())
 		try enterRule(_localctx, 160, WebIDLParser.RULE_nonAnyType)
 		defer {
@@ -6938,7 +7562,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6949,34 +7573,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class BufferRelatedTypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_bufferRelatedType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterBufferRelatedType(self)
+
+	public class BufferRelatedTypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_bufferRelatedType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterBufferRelatedType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitBufferRelatedType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitBufferRelatedType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitBufferRelatedType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitBufferRelatedType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitBufferRelatedType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitBufferRelatedType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bufferRelatedType() throws -> BufferRelatedTypeContext {
+	 open func bufferRelatedType() throws -> BufferRelatedTypeContext {
 		var _localctx: BufferRelatedTypeContext = BufferRelatedTypeContext(_ctx, getState())
 		try enterRule(_localctx, 162, WebIDLParser.RULE_bufferRelatedType)
 		var _la: Int = 0
@@ -7011,41 +7640,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ConstTypeContext:ParserRuleContext {
-		open func primitiveType() -> PrimitiveTypeContext? {
-			return getRuleContext(PrimitiveTypeContext.self,0)
+
+	public class ConstTypeContext: ParserRuleContext {
+			open
+			func primitiveType() -> PrimitiveTypeContext? {
+				return getRuleContext(PrimitiveTypeContext.self, 0)
+			}
+			open
+			func null_() -> Null_Context? {
+				return getRuleContext(Null_Context.self, 0)
+			}
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_constType
 		}
-		open func null_() -> Null_Context? {
-			return getRuleContext(Null_Context.self,0)
-		}
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_constType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterConstType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterConstType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitConstType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitConstType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitConstType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitConstType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitConstType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitConstType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constType() throws -> ConstTypeContext {
+	 open func constType() throws -> ConstTypeContext {
 		var _localctx: ConstTypeContext = ConstTypeContext(_ctx, getState())
 		try enterRule(_localctx, 164, WebIDLParser.RULE_constType)
 		defer {
@@ -7081,7 +7720,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7092,40 +7731,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class PrimitiveTypeContext:ParserRuleContext {
-		open func unsignedIntegerType() -> UnsignedIntegerTypeContext? {
-			return getRuleContext(UnsignedIntegerTypeContext.self,0)
+
+	public class PrimitiveTypeContext: ParserRuleContext {
+			open
+			func unsignedIntegerType() -> UnsignedIntegerTypeContext? {
+				return getRuleContext(UnsignedIntegerTypeContext.self, 0)
+			}
+			open
+			func unrestrictedFloatType() -> UnrestrictedFloatTypeContext? {
+				return getRuleContext(UnrestrictedFloatTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_primitiveType
 		}
-		open func unrestrictedFloatType() -> UnrestrictedFloatTypeContext? {
-			return getRuleContext(UnrestrictedFloatTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_primitiveType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterPrimitiveType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterPrimitiveType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitPrimitiveType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitPrimitiveType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitPrimitiveType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitPrimitiveType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitPrimitiveType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitPrimitiveType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primitiveType() throws -> PrimitiveTypeContext {
+	 open func primitiveType() throws -> PrimitiveTypeContext {
 		var _localctx: PrimitiveTypeContext = PrimitiveTypeContext(_ctx, getState())
 		try enterRule(_localctx, 166, WebIDLParser.RULE_primitiveType)
 		defer {
@@ -7173,7 +7819,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7184,37 +7830,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class UnrestrictedFloatTypeContext:ParserRuleContext {
-		open func floatType() -> FloatTypeContext? {
-			return getRuleContext(FloatTypeContext.self,0)
+
+	public class UnrestrictedFloatTypeContext: ParserRuleContext {
+			open
+			func floatType() -> FloatTypeContext? {
+				return getRuleContext(FloatTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_unrestrictedFloatType
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_unrestrictedFloatType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterUnrestrictedFloatType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterUnrestrictedFloatType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitUnrestrictedFloatType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitUnrestrictedFloatType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitUnrestrictedFloatType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitUnrestrictedFloatType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitUnrestrictedFloatType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitUnrestrictedFloatType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unrestrictedFloatType() throws -> UnrestrictedFloatTypeContext {
+	 open func unrestrictedFloatType() throws -> UnrestrictedFloatTypeContext {
 		var _localctx: UnrestrictedFloatTypeContext = UnrestrictedFloatTypeContext(_ctx, getState())
 		try enterRule(_localctx, 168, WebIDLParser.RULE_unrestrictedFloatType)
 		defer {
@@ -7240,7 +7892,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7251,34 +7903,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class FloatTypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_floatType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterFloatType(self)
+
+	public class FloatTypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_floatType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterFloatType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitFloatType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitFloatType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitFloatType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitFloatType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitFloatType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitFloatType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func floatType() throws -> FloatTypeContext {
+	 open func floatType() throws -> FloatTypeContext {
 		var _localctx: FloatTypeContext = FloatTypeContext(_ctx, getState())
 		try enterRule(_localctx, 170, WebIDLParser.RULE_floatType)
 		var _la: Int = 0
@@ -7310,37 +7967,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class UnsignedIntegerTypeContext:ParserRuleContext {
-		open func integerType() -> IntegerTypeContext? {
-			return getRuleContext(IntegerTypeContext.self,0)
+
+	public class UnsignedIntegerTypeContext: ParserRuleContext {
+			open
+			func integerType() -> IntegerTypeContext? {
+				return getRuleContext(IntegerTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_unsignedIntegerType
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_unsignedIntegerType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterUnsignedIntegerType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterUnsignedIntegerType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitUnsignedIntegerType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitUnsignedIntegerType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitUnsignedIntegerType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitUnsignedIntegerType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitUnsignedIntegerType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitUnsignedIntegerType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unsignedIntegerType() throws -> UnsignedIntegerTypeContext {
+	 open func unsignedIntegerType() throws -> UnsignedIntegerTypeContext {
 		var _localctx: UnsignedIntegerTypeContext = UnsignedIntegerTypeContext(_ctx, getState())
 		try enterRule(_localctx, 172, WebIDLParser.RULE_unsignedIntegerType)
 		defer {
@@ -7366,7 +8029,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7377,37 +8040,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class IntegerTypeContext:ParserRuleContext {
-		open func optionalLong() -> OptionalLongContext? {
-			return getRuleContext(OptionalLongContext.self,0)
+
+	public class IntegerTypeContext: ParserRuleContext {
+			open
+			func optionalLong() -> OptionalLongContext? {
+				return getRuleContext(OptionalLongContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_integerType
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_integerType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterIntegerType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterIntegerType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitIntegerType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitIntegerType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitIntegerType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitIntegerType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitIntegerType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitIntegerType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integerType() throws -> IntegerTypeContext {
+	 open func integerType() throws -> IntegerTypeContext {
 		var _localctx: IntegerTypeContext = IntegerTypeContext(_ctx, getState())
 		try enterRule(_localctx, 174, WebIDLParser.RULE_integerType)
 		defer {
@@ -7433,7 +8102,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7444,34 +8113,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class OptionalLongContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_optionalLong }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterOptionalLong(self)
+
+	public class OptionalLongContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_optionalLong
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterOptionalLong(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitOptionalLong(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitOptionalLong(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitOptionalLong(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitOptionalLong(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitOptionalLong(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitOptionalLong(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func optionalLong() throws -> OptionalLongContext {
+	 open func optionalLong() throws -> OptionalLongContext {
 		var _localctx: OptionalLongContext = OptionalLongContext(_ctx, getState())
 		try enterRule(_localctx, 176, WebIDLParser.RULE_optionalLong)
 		defer {
@@ -7521,7 +8195,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7532,37 +8206,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class PromiseTypeContext:ParserRuleContext {
-		open func returnType() -> ReturnTypeContext? {
-			return getRuleContext(ReturnTypeContext.self,0)
+
+	public class PromiseTypeContext: ParserRuleContext {
+			open
+			func returnType() -> ReturnTypeContext? {
+				return getRuleContext(ReturnTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_promiseType
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_promiseType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterPromiseType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterPromiseType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitPromiseType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitPromiseType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitPromiseType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitPromiseType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitPromiseType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitPromiseType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func promiseType() throws -> PromiseTypeContext {
+	 open func promiseType() throws -> PromiseTypeContext {
 		var _localctx: PromiseTypeContext = PromiseTypeContext(_ctx, getState())
 		try enterRule(_localctx, 178, WebIDLParser.RULE_promiseType)
 		defer {
@@ -7588,34 +8268,39 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class Null_Context:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_null_ }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterNull_(self)
+
+	public class Null_Context: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_null_
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterNull_(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitNull_(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitNull_(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitNull_(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitNull_(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitNull_(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitNull_(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func null_() throws -> Null_Context {
+	 open func null_() throws -> Null_Context {
 		var _localctx: Null_Context = Null_Context(_ctx, getState())
 		try enterRule(_localctx, 180, WebIDLParser.RULE_null_)
 		defer {
@@ -7664,7 +8349,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7675,37 +8360,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ReturnTypeContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class ReturnTypeContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_returnType
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_returnType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterReturnType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterReturnType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitReturnType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitReturnType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitReturnType(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitReturnType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitReturnType(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitReturnType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func returnType() throws -> ReturnTypeContext {
+	 open func returnType() throws -> ReturnTypeContext {
 		var _localctx: ReturnTypeContext = ReturnTypeContext(_ctx, getState())
 		try enterRule(_localctx, 182, WebIDLParser.RULE_returnType)
 		defer {
@@ -7760,7 +8451,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7771,38 +8462,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class IdentifierListContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func identifiers() -> IdentifiersContext? {
-			return getRuleContext(IdentifiersContext.self,0)
+
+	public class IdentifierListContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func identifiers() -> IdentifiersContext? {
+				return getRuleContext(IdentifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_identifierList
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_identifierList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterIdentifierList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterIdentifierList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitIdentifierList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitIdentifierList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitIdentifierList(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitIdentifierList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitIdentifierList(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitIdentifierList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifierList() throws -> IdentifierListContext {
+	 open func identifierList() throws -> IdentifierListContext {
 		var _localctx: IdentifierListContext = IdentifierListContext(_ctx, getState())
 		try enterRule(_localctx, 184, WebIDLParser.RULE_identifierList)
 		defer {
@@ -7824,38 +8524,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class IdentifiersContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func identifiers() -> IdentifiersContext? {
-			return getRuleContext(IdentifiersContext.self,0)
+
+	public class IdentifiersContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func identifiers() -> IdentifiersContext? {
+				return getRuleContext(IdentifiersContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_identifiers
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_identifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterIdentifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterIdentifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitIdentifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitIdentifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitIdentifiers(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitIdentifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitIdentifiers(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitIdentifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifiers() throws -> IdentifiersContext {
+	 open func identifiers() throws -> IdentifiersContext {
 		var _localctx: IdentifiersContext = IdentifiersContext(_ctx, getState())
 		try enterRule(_localctx, 186, WebIDLParser.RULE_identifiers)
 		defer {
@@ -7882,7 +8591,7 @@ open class WebIDLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7893,35 +8602,43 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributeNoArgsContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttributeNoArgs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttributeNoArgs(self)
+
+	public class ExtendedAttributeNoArgsContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttributeNoArgs
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttributeNoArgs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttributeNoArgs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttributeNoArgs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttributeNoArgs(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttributeNoArgs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttributeNoArgs(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttributeNoArgs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttributeNoArgs() throws -> ExtendedAttributeNoArgsContext {
+	 open func extendedAttributeNoArgs() throws -> ExtendedAttributeNoArgsContext {
 		var _localctx: ExtendedAttributeNoArgsContext = ExtendedAttributeNoArgsContext(_ctx, getState())
 		try enterRule(_localctx, 188, WebIDLParser.RULE_extendedAttributeNoArgs)
 		defer {
@@ -7941,38 +8658,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributeArgListContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func argumentList() -> ArgumentListContext? {
-			return getRuleContext(ArgumentListContext.self,0)
+
+	public class ExtendedAttributeArgListContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func argumentList() -> ArgumentListContext? {
+				return getRuleContext(ArgumentListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttributeArgList
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttributeArgList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttributeArgList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttributeArgList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttributeArgList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttributeArgList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttributeArgList(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttributeArgList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttributeArgList(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttributeArgList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttributeArgList() throws -> ExtendedAttributeArgListContext {
+	 open func extendedAttributeArgList() throws -> ExtendedAttributeArgListContext {
 		var _localctx: ExtendedAttributeArgListContext = ExtendedAttributeArgListContext(_ctx, getState())
 		try enterRule(_localctx, 190, WebIDLParser.RULE_extendedAttributeArgList)
 		defer {
@@ -7998,38 +8724,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributeIdentContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> Array<TerminalNode> { return getTokens(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue) }
-		open func IDENTIFIER_WEBIDL(_ i:Int) -> TerminalNode?{
-			return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, i)
+
+	public class ExtendedAttributeIdentContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> [TerminalNode] {
+				return getTokens(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue)
+			}
+			open
+			func IDENTIFIER_WEBIDL(_ i:Int) -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttributeIdent
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttributeIdent }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttributeIdent(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttributeIdent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttributeIdent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttributeIdent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttributeIdent(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttributeIdent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttributeIdent(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttributeIdent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttributeIdent() throws -> ExtendedAttributeIdentContext {
+	 open func extendedAttributeIdent() throws -> ExtendedAttributeIdentContext {
 		var _localctx: ExtendedAttributeIdentContext = ExtendedAttributeIdentContext(_ctx, getState())
 		try enterRule(_localctx, 192, WebIDLParser.RULE_extendedAttributeIdent)
 		defer {
@@ -8053,38 +8788,47 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributeIdentListContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> TerminalNode? { return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0) }
-		open func identifierList() -> IdentifierListContext? {
-			return getRuleContext(IdentifierListContext.self,0)
+
+	public class ExtendedAttributeIdentListContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, 0)
+			}
+			open
+			func identifierList() -> IdentifierListContext? {
+				return getRuleContext(IdentifierListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttributeIdentList
 		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttributeIdentList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttributeIdentList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttributeIdentList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttributeIdentList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttributeIdentList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttributeIdentList(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttributeIdentList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttributeIdentList(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttributeIdentList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttributeIdentList() throws -> ExtendedAttributeIdentListContext {
+	 open func extendedAttributeIdentList() throws -> ExtendedAttributeIdentListContext {
 		var _localctx: ExtendedAttributeIdentListContext = ExtendedAttributeIdentListContext(_ctx, getState())
 		try enterRule(_localctx, 194, WebIDLParser.RULE_extendedAttributeIdentList)
 		defer {
@@ -8112,41 +8856,51 @@ open class WebIDLParser: Parser {
 
 		return _localctx
 	}
-	open class ExtendedAttributeNamedArgListContext:ParserRuleContext {
-		open func IDENTIFIER_WEBIDL() -> Array<TerminalNode> { return getTokens(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue) }
-		open func IDENTIFIER_WEBIDL(_ i:Int) -> TerminalNode?{
-			return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, i)
+
+	public class ExtendedAttributeNamedArgListContext: ParserRuleContext {
+			open
+			func IDENTIFIER_WEBIDL() -> [TerminalNode] {
+				return getTokens(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue)
+			}
+			open
+			func IDENTIFIER_WEBIDL(_ i:Int) -> TerminalNode? {
+				return getToken(WebIDLParser.Tokens.IDENTIFIER_WEBIDL.rawValue, i)
+			}
+			open
+			func argumentList() -> ArgumentListContext? {
+				return getRuleContext(ArgumentListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WebIDLParser.RULE_extendedAttributeNamedArgList
 		}
-		open func argumentList() -> ArgumentListContext? {
-			return getRuleContext(ArgumentListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WebIDLParser.RULE_extendedAttributeNamedArgList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).enterExtendedAttributeNamedArgList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.enterExtendedAttributeNamedArgList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WebIDLListener {
-			 	(listener as! WebIDLListener).exitExtendedAttributeNamedArgList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WebIDLListener {
+				listener.exitExtendedAttributeNamedArgList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WebIDLVisitor {
-			     return (visitor as! WebIDLVisitor<T>).visitExtendedAttributeNamedArgList(self)
-			}else if visitor is WebIDLBaseVisitor {
-		    	 return (visitor as! WebIDLBaseVisitor<T>).visitExtendedAttributeNamedArgList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WebIDLVisitor {
+			    return visitor.visitExtendedAttributeNamedArgList(self)
+			}
+			else if let visitor = visitor as? WebIDLBaseVisitor {
+			    return visitor.visitExtendedAttributeNamedArgList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extendedAttributeNamedArgList() throws -> ExtendedAttributeNamedArgListContext {
+	 open func extendedAttributeNamedArgList() throws -> ExtendedAttributeNamedArgListContext {
 		var _localctx: ExtendedAttributeNamedArgListContext = ExtendedAttributeNamedArgListContext(_ctx, getState())
 		try enterRule(_localctx, 196, WebIDLParser.RULE_extendedAttributeNamedArgList)
 		defer {
@@ -8177,6 +8931,10 @@ open class WebIDLParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = WebIDLParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = WebIDLParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

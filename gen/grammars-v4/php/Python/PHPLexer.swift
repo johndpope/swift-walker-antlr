@@ -1,89 +1,92 @@
-// Generated from ./grammars-v4/php/Python/PHPLexer.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/php/Python/PhpLexer.g4 by ANTLR 4.7.1
 
 from antlr4.Token import CommonToken
 
 import Antlr4
 
-open class PHPLexer: Lexer {
+open class PhpLexer: Lexer {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
-          let length = PHPLexer._ATN.getNumberOfDecisions()
+          let length = PhpLexer._ATN.getNumberOfDecisions()
           for i in 0..<length {
-          	    decisionToDFA.append(DFA(PHPLexer._ATN.getDecisionState(i)!, i))
+          	    decisionToDFA.append(DFA(PhpLexer._ATN.getDecisionState(i)!, i))
           }
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let SeaWhitespace=1, HtmlText=2, PHPStart=3, HtmlScriptOpen=4, 
-                   HtmlStyleOpen=5, HtmlComment=6, HtmlDtd=7, HtmlOpen=8, 
-                   Shebang=9, Error=10, PHPStartInside=11, HtmlClose=12, 
-                   HtmlSlashClose=13, HtmlSlash=14, HtmlEquals=15, HtmlStartQuoteString=16, 
-                   HtmlStartDoubleQuoteString=17, HtmlHex=18, HtmlDecimal=19, 
-                   HtmlSpace=20, HtmlName=21, ErrorInside=22, PHPStartInsideQuoteString=23, 
-                   HtmlEndQuoteString=24, HtmlQuoteString=25, ErrorHtmlQuote=26, 
-                   PHPStartDoubleQuoteString=27, HtmlEndDoubleQuoteString=28, 
-                   HtmlDoubleQuoteString=29, ErrorHtmlDoubleQuote=30, ScriptText=31, 
-                   ScriptClose=32, PHPStartInsideScript=33, StyleBody=34, 
-                   PHPEnd=35, Whitespace=36, MultiLineComment=37, SingleLineComment=38, 
-                   ShellStyleComment=39, Abstract=40, Array=41, As=42, BinaryCast=43, 
-                   BoolType=44, BooleanConstant=45, Break=46, Callable=47, 
-                   Case=48, Catch=49, Class=50, Clone=51, Const=52, Continue=53, 
-                   Declare=54, Default=55, Do=56, DoubleCast=57, DoubleType=58, 
-                   Echo=59, Else=60, ElseIf=61, Empty=62, EndDeclare=63, 
-                   EndFor=64, EndForeach=65, EndIf=66, EndSwitch=67, EndWhile=68, 
-                   Eval=69, Exit=70, Extends=71, Final=72, Finally=73, FloatCast=74, 
-                   For=75, Foreach=76, Function=77, Global=78, Goto=79, 
-                   If=80, Implements=81, Import=82, Include=83, IncludeOnce=84, 
-                   InstanceOf=85, InsteadOf=86, Int8Cast=87, Int16Cast=88, 
-                   Int64Type=89, IntType=90, Interface=91, IsSet=92, List=93, 
-                   LogicalAnd=94, LogicalOr=95, LogicalXor=96, Namespace=97, 
-                   New=98, Null=99, ObjectType=100, Parent_=101, Partial=102, 
-                   Print=103, Private=104, Protected=105, Public=106, Require=107, 
-                   RequireOnce=108, Resource=109, Return=110, Static=111, 
-                   StringType=112, Switch=113, Throw=114, Trait=115, Try=116, 
-                   Typeof=117, UintCast=118, UnicodeCast=119, Unset=120, 
-                   Use=121, Var=122, While=123, Yield=124, Get=125, Set=126, 
-                   Call=127, CallStatic=128, Constructor=129, Destruct=130, 
-                   Wakeup=131, Sleep=132, Autoload=133, IsSet__=134, Unset__=135, 
-                   ToString__=136, Invoke=137, SetState=138, Clone__=139, 
-                   DebugInfo=140, Namespace__=141, Class__=142, Traic__=143, 
-                   Function__=144, Method__=145, Line__=146, File__=147, 
-                   Dir__=148, Lgeneric=149, Rgeneric=150, DoubleArrow=151, 
-                   Inc=152, Dec=153, IsIdentical=154, IsNoidentical=155, 
-                   IsEqual=156, IsNotEq=157, IsSmallerOrEqual=158, IsGreaterOrEqual=159, 
-                   PlusEqual=160, MinusEqual=161, MulEqual=162, Pow=163, 
-                   PowEqual=164, DivEqual=165, Concaequal=166, ModEqual=167, 
-                   ShiftLeftEqual=168, ShiftRightEqual=169, AndEqual=170, 
-                   OrEqual=171, XorEqual=172, BooleanOr=173, BooleanAnd=174, 
-                   ShiftLeft=175, ShiftRight=176, DoubleColon=177, ObjectOperator=178, 
-                   NamespaceSeparator=179, Ellipsis=180, Less=181, Greater=182, 
-                   Ampersand=183, Pipe=184, Bang=185, Caret=186, Plus=187, 
-                   Minus=188, Asterisk=189, Percent=190, Divide=191, Tilde=192, 
-                   SuppressWarnings=193, Dollar=194, Dot=195, QuestionMark=196, 
-                   OpenRoundBracket=197, CloseRoundBracket=198, OpenSquareBracket=199, 
-                   CloseSquareBracket=200, OpenCurlyBracket=201, CloseCurlyBracket=202, 
-                   Comma=203, Colon=204, SemiColon=205, Eq=206, Quote=207, 
-                   BackQuote=208, VarName=209, Label=210, Octal=211, Decimal=212, 
-                   Real=213, Hex=214, Binary=215, BackQuoteString=216, SingleQuoteString=217, 
-                   DoubleQuote=218, StartNowDoc=219, StartHereDoc=220, ErrorPhp=221, 
-                   CurlyDollar=222, StringPart=223, Comment=224, PHPEndSingleLineComment=225, 
-                   CommentEnd=226, HereDocText=227
-	public static let PhpComments=2, ErrorLexem=3
-	public static let INSIDE=1, HtmlQuoteStringMode=2, HtmlDoubleQuoteStringMode=3, 
-                   SCRIPT=4, STYLE=5, PHP=6, InterpolationString=7, SingleLineCommentMode=8, 
-                   HereDoc=9
-	public static let channelNames: [String] = [
-		"DEFAULT_TOKEN_CHANNEL", "HIDDEN", "PhpComments", "ErrorLexem"
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let SeaWhitespace=1, HtmlText=2, PHPStart=3, HtmlScriptOpen=4, HtmlStyleOpen=5, 
+            HtmlComment=6, HtmlDtd=7, HtmlOpen=8, Shebang=9, Error=10, PHPStartInside=11, 
+            HtmlClose=12, HtmlSlashClose=13, HtmlSlash=14, HtmlEquals=15, 
+            HtmlStartQuoteString=16, HtmlStartDoubleQuoteString=17, HtmlHex=18, 
+            HtmlDecimal=19, HtmlSpace=20, HtmlName=21, ErrorInside=22, PHPStartInsideQuoteString=23, 
+            HtmlEndQuoteString=24, HtmlQuoteString=25, ErrorHtmlQuote=26, 
+            PHPStartDoubleQuoteString=27, HtmlEndDoubleQuoteString=28, HtmlDoubleQuoteString=29, 
+            ErrorHtmlDoubleQuote=30, ScriptText=31, ScriptClose=32, PHPStartInsideScript=33, 
+            StyleBody=34, PHPEnd=35, Whitespace=36, MultiLineComment=37, 
+            SingleLineComment=38, ShellStyleComment=39, Abstract=40, Array=41, 
+            As=42, BinaryCast=43, BoolType=44, BooleanConstant=45, Break=46, 
+            Callable=47, Case=48, Catch=49, Class=50, Clone=51, Const=52, 
+            Continue=53, Declare=54, Default=55, Do=56, DoubleCast=57, DoubleType=58, 
+            Echo=59, Else=60, ElseIf=61, Empty=62, EndDeclare=63, EndFor=64, 
+            EndForeach=65, EndIf=66, EndSwitch=67, EndWhile=68, Eval=69, 
+            Exit=70, Extends=71, Final=72, Finally=73, FloatCast=74, For=75, 
+            Foreach=76, Function=77, Global=78, Goto=79, If=80, Implements=81, 
+            Import=82, Include=83, IncludeOnce=84, InstanceOf=85, InsteadOf=86, 
+            Int8Cast=87, Int16Cast=88, Int64Type=89, IntType=90, Interface=91, 
+            IsSet=92, List=93, LogicalAnd=94, LogicalOr=95, LogicalXor=96, 
+            Namespace=97, New=98, Null=99, ObjectType=100, Parent_=101, 
+            Partial=102, Print=103, Private=104, Protected=105, Public=106, 
+            Require=107, RequireOnce=108, Resource=109, Return=110, Static=111, 
+            StringType=112, Switch=113, Throw=114, Trait=115, Try=116, Typeof=117, 
+            UintCast=118, UnicodeCast=119, Unset=120, Use=121, Var=122, 
+            While=123, Yield=124, Get=125, Set=126, Call=127, CallStatic=128, 
+            Constructor=129, Destruct=130, Wakeup=131, Sleep=132, Autoload=133, 
+            IsSet__=134, Unset__=135, ToString__=136, Invoke=137, SetState=138, 
+            Clone__=139, DebugInfo=140, Namespace__=141, Class__=142, Traic__=143, 
+            Function__=144, Method__=145, Line__=146, File__=147, Dir__=148, 
+            Lgeneric=149, Rgeneric=150, DoubleArrow=151, Inc=152, Dec=153, 
+            IsIdentical=154, IsNoidentical=155, IsEqual=156, IsNotEq=157, 
+            IsSmallerOrEqual=158, IsGreaterOrEqual=159, PlusEqual=160, MinusEqual=161, 
+            MulEqual=162, Pow=163, PowEqual=164, DivEqual=165, Concaequal=166, 
+            ModEqual=167, ShiftLeftEqual=168, ShiftRightEqual=169, AndEqual=170, 
+            OrEqual=171, XorEqual=172, BooleanOr=173, BooleanAnd=174, ShiftLeft=175, 
+            ShiftRight=176, DoubleColon=177, ObjectOperator=178, NamespaceSeparator=179, 
+            Ellipsis=180, Less=181, Greater=182, Ampersand=183, Pipe=184, 
+            Bang=185, Caret=186, Plus=187, Minus=188, Asterisk=189, Percent=190, 
+            Divide=191, Tilde=192, SuppressWarnings=193, Dollar=194, Dot=195, 
+            QuestionMark=196, OpenRoundBracket=197, CloseRoundBracket=198, 
+            OpenSquareBracket=199, CloseSquareBracket=200, OpenCurlyBracket=201, 
+            CloseCurlyBracket=202, Comma=203, Colon=204, SemiColon=205, 
+            Eq=206, Quote=207, BackQuote=208, VarName=209, Label=210, Octal=211, 
+            Decimal=212, Real=213, Hex=214, Binary=215, BackQuoteString=216, 
+            SingleQuoteString=217, DoubleQuote=218, StartNowDoc=219, StartHereDoc=220, 
+            ErrorPhp=221, CurlyDollar=222, StringPart=223, Comment=224, 
+            PHPEndSingleLineComment=225, CommentEnd=226, HereDocText=227
+
+	public
+	static let PhpComments=2, ErrorLexem=3, SkipChannel=4
+	public
+	static let INSIDE=1, HtmlQuoteStringMode=2, HtmlDoubleQuoteStringMode=3, 
+            SCRIPT=4, STYLE=5, PHP=6, InterpolationString=7, SingleLineCommentMode=8, 
+            HereDoc=9
+	public
+	static let channelNames: [String] = [
+		"DEFAULT_TOKEN_CHANNEL", "HIDDEN", "PhpComments", "ErrorLexem", "SkipChannel"
 	]
 
-	public static let modeNames: [String] = [
+	public
+	static let modeNames: [String] = [
 		"DEFAULT_MODE", "INSIDE", "HtmlQuoteStringMode", "HtmlDoubleQuoteStringMode", 
 		"SCRIPT", "STYLE", "PHP", "InterpolationString", "SingleLineCommentMode", 
 		"HereDoc"
 	]
 
-	public static let ruleNames: [String] = [
+	public
+	static let ruleNames: [String] = [
 		"SeaWhitespace", "HtmlText", "PHPStartEcho", "PHPStart", "HtmlScriptOpen", 
 		"HtmlStyleOpen", "HtmlComment", "HtmlDtd", "HtmlOpen", "Shebang", "NumberSign", 
 		"Error", "PHPStartEchoInside", "PHPStartInside", "HtmlClose", "HtmlSlashClose", 
@@ -132,7 +135,7 @@ open class PHPLexer: Lexer {
 	private static let _LITERAL_NAMES: [String?] = [
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "'/>'", 
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
-		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "'//'", "'#'", "'abstract'", 
+		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "'abstract'", 
 		"'array'", "'as'", "'binary'", nil, nil, "'break'", "'callable'", "'case'", 
 		"'catch'", "'class'", "'clone'", "'const'", "'continue'", "'declare'", 
 		"'default'", "'do'", "'real'", "'double'", "'echo'", "'else'", "'elseif'", 
@@ -198,32 +201,8 @@ open class PHPLexer: Lexer {
 		"DoubleQuote", "StartNowDoc", "StartHereDoc", "ErrorPhp", "CurlyDollar", 
 		"StringPart", "Comment", "PHPEndSingleLineComment", "CommentEnd", "HereDocText"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
-
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
-
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
 
 
@@ -237,7 +216,7 @@ open class PHPLexer: Lexer {
 	_insideString = False
 
 	def nextToken(self):
-	    token = super(PHPLexer_Python, self).nextToken()
+	    token = super(PhpLexer_Python, self).nextToken()
 
 	    if token.type == self.PHPEnd or token.type == self.PHPEndSingleLineComment:
 	        if self._mode == self.SingleLineCommentMode:
@@ -256,7 +235,7 @@ open class PHPLexer: Lexer {
 	                self._prevTokenType == self.Colon or \
 	                self._prevTokenType == self.OpenCurlyBracket or \
 	                self._prevTokenType == self.CloseCurlyBracket:
-	                token = super(PHPLexer_Python, self).nextToken()
+	                token = super(PhpLexer_Python, self).nextToken()
 	            else:
 	                token = CommonToken(type=self.SemiColon)
 	                token.text = ';'
@@ -276,7 +255,7 @@ open class PHPLexer: Lexer {
 	                    token = CommonToken(type=self.SemiColon)
 	                    token.text = ';'
 	                else:
-	                    token = super(PHPLexer_Python, self).nextToken()
+	                    token = super(PhpLexer_Python, self).nextToken()
 	    elif self._mode == self.PHP:
 	        if self._channel == self.HIDDEN:
 	            self._prevTokenType = token.type
@@ -288,36 +267,39 @@ open class PHPLexer: Lexer {
 	    return identifier == self._heredocIdentifier
 
 
-    open override func getVocabulary() -> Vocabulary {
-        return PHPLexer.VOCABULARY
-    }
 
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
-		super.init(input)
-		_interp = LexerATNSimulator(self, PHPLexer._ATN, PHPLexer._decisionToDFA, PHPLexer._sharedContextCache)
+	override open
+	func getVocabulary() -> Vocabulary {
+		return PhpLexer.VOCABULARY
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "PHPLexer.g4" }
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
+		super.init(input)
+		_interp = LexerATNSimulator(self, PhpLexer._ATN, PhpLexer._decisionToDFA, PhpLexer._sharedContextCache)
+	}
 
-    override
-	open func getRuleNames() -> [String] { return PHPLexer.ruleNames }
+	override open
+	func getGrammarFileName() -> String { return "PhpLexer.g4" }
 
-	override
-	open func getSerializedATN() -> String { return PHPLexer._serializedATN }
+	override open
+	func getRuleNames() -> [String] { return PhpLexer.ruleNames }
 
-	override
-	open func getChannelNames() -> [String] { return PHPLexer.channelNames }
+	override open
+	func getSerializedATN() -> String { return PhpLexer._serializedATN }
 
-	override
-	open func getModeNames() -> [String] { return PHPLexer.modeNames }
+	override open
+	func getChannelNames() -> [String] { return PhpLexer.channelNames }
 
-	override
-	open func getATN() -> ATN { return PHPLexer._ATN }
+	override open
+	func getModeNames() -> [String] { return PhpLexer.modeNames }
 
-	override
-	open func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
+	override open
+	func getATN() -> ATN { return PhpLexer._ATN }
+
+	override open
+	func action(_ _localctx: RuleContext?,  _ ruleIndex: Int, _ actionIndex: Int) throws {
 		switch (ruleIndex) {
 		case 4:
 			HtmlScriptOpen_action((_localctx as RuleContext?), actionIndex)
@@ -378,7 +360,7 @@ open class PHPLexer: Lexer {
 
 			if self._insideString:
 			    self._insideString = False
-			    self.skip()
+			    self.channel(SkipChannel)
 			    self.popMode()
 
 
@@ -393,8 +375,8 @@ open class PHPLexer: Lexer {
 		 default: break
 		}
 	}
-	override
-	open func sempred(_ _localctx: RuleContext?, _  ruleIndex: Int,_   predIndex: Int) throws -> Bool{
+	override open
+	func sempred(_ _localctx: RuleContext?, _  ruleIndex: Int,_   predIndex: Int) throws -> Bool {
 		switch (ruleIndex) {
 		case 9:
 			return try Shebang_sempred(_localctx?.castdown(RuleContext.self), predIndex)
@@ -457,6 +439,10 @@ open class PHPLexer: Lexer {
 		}
 	}
 
-    public static let _serializedATN: String = PHPLexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = PhpLexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

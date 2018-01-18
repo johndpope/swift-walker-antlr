@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/fol/fol.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/fol/fol.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class folBaseListener: folListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -41,71 +41,6 @@ open class folBaseListener: folListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterDisjunction(_ ctx: folParser.DisjunctionContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitDisjunction(_ ctx: folParser.DisjunctionContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterConjunction(_ ctx: folParser.ConjunctionContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitConjunction(_ ctx: folParser.ConjunctionContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterNegation(_ ctx: folParser.NegationContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitNegation(_ ctx: folParser.NegationContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterPredicate(_ ctx: folParser.PredicateContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitPredicate(_ ctx: folParser.PredicateContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterPredicateTuple(_ ctx: folParser.PredicateTupleContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitPredicateTuple(_ ctx: folParser.PredicateTupleContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	open func enterTerm(_ ctx: folParser.TermContext) { }
 	/**
 	 * {@inheritDoc}
@@ -119,26 +54,78 @@ open class folBaseListener: folListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterFunction(_ ctx: folParser.FunctionContext) { }
+	open func enterBin_connective(_ ctx: folParser.Bin_connectiveContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitFunction(_ ctx: folParser.FunctionContext) { }
+	open func exitBin_connective(_ ctx: folParser.Bin_connectiveContext) { }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterFunctionTuple(_ ctx: folParser.FunctionTupleContext) { }
+	open func enterVariable(_ ctx: folParser.VariableContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitFunctionTuple(_ ctx: folParser.FunctionTupleContext) { }
+	open func exitVariable(_ ctx: folParser.VariableContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterPred_constant(_ ctx: folParser.Pred_constantContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitPred_constant(_ ctx: folParser.Pred_constantContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterInd_constant(_ ctx: folParser.Ind_constantContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitInd_constant(_ ctx: folParser.Ind_constantContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterFunc_constant(_ ctx: folParser.Func_constantContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitFunc_constant(_ ctx: folParser.Func_constantContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterSeparator(_ ctx: folParser.SeparatorContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitSeparator(_ ctx: folParser.SeparatorContext) { }
 
 	/**
 	 * {@inheritDoc}

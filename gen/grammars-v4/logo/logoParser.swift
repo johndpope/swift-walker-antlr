@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/logo/logo.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/logo/logo.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class logoParser: Parser {
@@ -11,8 +11,11 @@ open class logoParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -23,18 +26,21 @@ open class logoParser: Parser {
                  T__37 = 38, T__38 = 39, T__39 = 40, T__40 = 41, STRINGLITERAL = 42, 
                  STRING = 43, NUMBER = 44, COMMENT = 45, EOL = 46, WS = 47
 	}
-	public static let RULE_prog = 0, RULE_line = 1, RULE_cmd = 2, RULE_procedureInvocation = 3, 
-                   RULE_procedureDeclaration = 4, RULE_parameterDeclarations = 5, 
-                   RULE_func = 6, RULE_repeat = 7, RULE_block = 8, RULE_ife = 9, 
-                   RULE_comparison = 10, RULE_comparisonOperator = 11, RULE_make = 12, 
-                   RULE_print = 13, RULE_quotedstring = 14, RULE_name = 15, 
-                   RULE_value = 16, RULE_signExpression = 17, RULE_multiplyingExpression = 18, 
-                   RULE_expression = 19, RULE_deref = 20, RULE_fd = 21, 
-                   RULE_bk = 22, RULE_rt = 23, RULE_lt = 24, RULE_cs = 25, 
-                   RULE_pu = 26, RULE_pd = 27, RULE_ht = 28, RULE_st = 29, 
-                   RULE_home = 30, RULE_stop = 31, RULE_label = 32, RULE_setxy = 33, 
-                   RULE_random = 34, RULE_fore = 35, RULE_number = 36, RULE_comment = 37
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_prog = 0, RULE_line = 1, RULE_cmd = 2, RULE_procedureInvocation = 3, 
+            RULE_procedureDeclaration = 4, RULE_parameterDeclarations = 5, 
+            RULE_func = 6, RULE_repeat = 7, RULE_block = 8, RULE_ife = 9, 
+            RULE_comparison = 10, RULE_comparisonOperator = 11, RULE_make = 12, 
+            RULE_print = 13, RULE_quotedstring = 14, RULE_name = 15, RULE_value = 16, 
+            RULE_signExpression = 17, RULE_multiplyingExpression = 18, RULE_expression = 19, 
+            RULE_deref = 20, RULE_fd = 21, RULE_bk = 22, RULE_rt = 23, RULE_lt = 24, 
+            RULE_cs = 25, RULE_pu = 26, RULE_pd = 27, RULE_ht = 28, RULE_st = 29, 
+            RULE_home = 30, RULE_stop = 31, RULE_label = 32, RULE_setxy = 33, 
+            RULE_random = 34, RULE_fore = 35, RULE_number = 36, RULE_comment = 37
+
+	public
+	static let ruleNames: [String] = [
 		"prog", "line", "cmd", "procedureInvocation", "procedureDeclaration", 
 		"parameterDeclarations", "func", "repeat", "block", "ife", "comparison", 
 		"comparisonOperator", "make", "print", "quotedstring", "name", "value", 
@@ -57,92 +63,81 @@ open class logoParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 
 		"STRINGLITERAL", "STRING", "NUMBER", "COMMENT", "EOL", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "logo.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return logoParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "logo.g4" }
+	override open
+	func getSerializedATN() -> String { return logoParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return logoParser.ruleNames }
+	override open
+	func getATN() -> ATN { return logoParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return logoParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return logoParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return logoParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,logoParser._ATN,logoParser._decisionToDFA, logoParser._sharedContextCache)
 	}
-	open class ProgContext:ParserRuleContext {
-		open func EOL() -> Array<TerminalNode> { return getTokens(logoParser.Tokens.EOL.rawValue) }
-		open func EOL(_ i:Int) -> TerminalNode?{
-			return getToken(logoParser.Tokens.EOL.rawValue, i)
+
+	public class ProgContext: ParserRuleContext {
+			open
+			func EOL() -> [TerminalNode] {
+				return getTokens(logoParser.Tokens.EOL.rawValue)
+			}
+			open
+			func EOL(_ i:Int) -> TerminalNode? {
+				return getToken(logoParser.Tokens.EOL.rawValue, i)
+			}
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_prog
 		}
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
-		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_prog }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterProg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterProg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitProg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitProg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitProg(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitProg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitProg(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitProg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prog() throws -> ProgContext {
+	 open func prog() throws -> ProgContext {
 		var _localctx: ProgContext = ProgContext(_ctx, getState())
 		try enterRule(_localctx, 0, logoParser.RULE_prog)
 		var _la: Int = 0
@@ -180,7 +175,7 @@ open class logoParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(82); 
 		 		try _errHandler.sync(self)
@@ -212,49 +207,59 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func cmd() -> Array<CmdContext> {
-			return getRuleContexts(CmdContext.self)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func cmd() -> [CmdContext] {
+				return getRuleContexts(CmdContext.self)
+			}
+			open
+			func cmd(_ i: Int) -> CmdContext? {
+				return getRuleContext(CmdContext.self, i)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+			open
+			func print() -> PrintContext? {
+				return getRuleContext(PrintContext.self, 0)
+			}
+			open
+			func procedureDeclaration() -> ProcedureDeclarationContext? {
+				return getRuleContext(ProcedureDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_line
 		}
-		open func cmd(_ i: Int) -> CmdContext? {
-			return getRuleContext(CmdContext.self,i)
-		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open func print() -> PrintContext? {
-			return getRuleContext(PrintContext.self,0)
-		}
-		open func procedureDeclaration() -> ProcedureDeclarationContext? {
-			return getRuleContext(ProcedureDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitLine(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 2, logoParser.RULE_line)
 		var _la: Int = 0
@@ -362,7 +367,7 @@ open class logoParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -373,88 +378,111 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class CmdContext:ParserRuleContext {
-		open func repeat() -> RepeatContext? {
-			return getRuleContext(RepeatContext.self,0)
+
+	public class CmdContext: ParserRuleContext {
+			open
+			func repeat() -> RepeatContext? {
+				return getRuleContext(RepeatContext.self, 0)
+			}
+			open
+			func fd() -> FdContext? {
+				return getRuleContext(FdContext.self, 0)
+			}
+			open
+			func bk() -> BkContext? {
+				return getRuleContext(BkContext.self, 0)
+			}
+			open
+			func rt() -> RtContext? {
+				return getRuleContext(RtContext.self, 0)
+			}
+			open
+			func lt() -> LtContext? {
+				return getRuleContext(LtContext.self, 0)
+			}
+			open
+			func cs() -> CsContext? {
+				return getRuleContext(CsContext.self, 0)
+			}
+			open
+			func pu() -> PuContext? {
+				return getRuleContext(PuContext.self, 0)
+			}
+			open
+			func pd() -> PdContext? {
+				return getRuleContext(PdContext.self, 0)
+			}
+			open
+			func ht() -> HtContext? {
+				return getRuleContext(HtContext.self, 0)
+			}
+			open
+			func st() -> StContext? {
+				return getRuleContext(StContext.self, 0)
+			}
+			open
+			func home() -> HomeContext? {
+				return getRuleContext(HomeContext.self, 0)
+			}
+			open
+			func label() -> LabelContext? {
+				return getRuleContext(LabelContext.self, 0)
+			}
+			open
+			func setxy() -> SetxyContext? {
+				return getRuleContext(SetxyContext.self, 0)
+			}
+			open
+			func make() -> MakeContext? {
+				return getRuleContext(MakeContext.self, 0)
+			}
+			open
+			func procedureInvocation() -> ProcedureInvocationContext? {
+				return getRuleContext(ProcedureInvocationContext.self, 0)
+			}
+			open
+			func ife() -> IfeContext? {
+				return getRuleContext(IfeContext.self, 0)
+			}
+			open
+			func stop() -> StopContext? {
+				return getRuleContext(StopContext.self, 0)
+			}
+			open
+			func fore() -> ForeContext? {
+				return getRuleContext(ForeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_cmd
 		}
-		open func fd() -> FdContext? {
-			return getRuleContext(FdContext.self,0)
-		}
-		open func bk() -> BkContext? {
-			return getRuleContext(BkContext.self,0)
-		}
-		open func rt() -> RtContext? {
-			return getRuleContext(RtContext.self,0)
-		}
-		open func lt() -> LtContext? {
-			return getRuleContext(LtContext.self,0)
-		}
-		open func cs() -> CsContext? {
-			return getRuleContext(CsContext.self,0)
-		}
-		open func pu() -> PuContext? {
-			return getRuleContext(PuContext.self,0)
-		}
-		open func pd() -> PdContext? {
-			return getRuleContext(PdContext.self,0)
-		}
-		open func ht() -> HtContext? {
-			return getRuleContext(HtContext.self,0)
-		}
-		open func st() -> StContext? {
-			return getRuleContext(StContext.self,0)
-		}
-		open func home() -> HomeContext? {
-			return getRuleContext(HomeContext.self,0)
-		}
-		open func label() -> LabelContext? {
-			return getRuleContext(LabelContext.self,0)
-		}
-		open func setxy() -> SetxyContext? {
-			return getRuleContext(SetxyContext.self,0)
-		}
-		open func make() -> MakeContext? {
-			return getRuleContext(MakeContext.self,0)
-		}
-		open func procedureInvocation() -> ProcedureInvocationContext? {
-			return getRuleContext(ProcedureInvocationContext.self,0)
-		}
-		open func ife() -> IfeContext? {
-			return getRuleContext(IfeContext.self,0)
-		}
-		open func stop() -> StopContext? {
-			return getRuleContext(StopContext.self,0)
-		}
-		open func fore() -> ForeContext? {
-			return getRuleContext(ForeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_cmd }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterCmd(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterCmd(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitCmd(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitCmd(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitCmd(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitCmd(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitCmd(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitCmd(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cmd() throws -> CmdContext {
+	 open func cmd() throws -> CmdContext {
 		var _localctx: CmdContext = CmdContext(_ctx, getState())
 		try enterRule(_localctx, 4, logoParser.RULE_cmd)
 		defer {
@@ -590,7 +618,7 @@ open class logoParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -601,43 +629,51 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureInvocationContext:ParserRuleContext {
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
+
+	public class ProcedureInvocationContext: ParserRuleContext {
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_procedureInvocation
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_procedureInvocation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterProcedureInvocation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterProcedureInvocation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitProcedureInvocation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitProcedureInvocation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitProcedureInvocation(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitProcedureInvocation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitProcedureInvocation(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitProcedureInvocation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureInvocation() throws -> ProcedureInvocationContext {
+	 open func procedureInvocation() throws -> ProcedureInvocationContext {
 		var _localctx: ProcedureInvocationContext = ProcedureInvocationContext(_ctx, getState())
 		try enterRule(_localctx, 6, logoParser.RULE_procedureInvocation)
 		var _la: Int = 0
@@ -677,53 +713,67 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureDeclarationContext:ParserRuleContext {
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
+
+	public class ProcedureDeclarationContext: ParserRuleContext {
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func parameterDeclarations() -> [ParameterDeclarationsContext] {
+				return getRuleContexts(ParameterDeclarationsContext.self)
+			}
+			open
+			func parameterDeclarations(_ i: Int) -> ParameterDeclarationsContext? {
+				return getRuleContext(ParameterDeclarationsContext.self, i)
+			}
+			open
+			func EOL() -> [TerminalNode] {
+				return getTokens(logoParser.Tokens.EOL.rawValue)
+			}
+			open
+			func EOL(_ i:Int) -> TerminalNode? {
+				return getToken(logoParser.Tokens.EOL.rawValue, i)
+			}
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_procedureDeclaration
 		}
-		open func parameterDeclarations() -> Array<ParameterDeclarationsContext> {
-			return getRuleContexts(ParameterDeclarationsContext.self)
-		}
-		open func parameterDeclarations(_ i: Int) -> ParameterDeclarationsContext? {
-			return getRuleContext(ParameterDeclarationsContext.self,i)
-		}
-		open func EOL() -> Array<TerminalNode> { return getTokens(logoParser.Tokens.EOL.rawValue) }
-		open func EOL(_ i:Int) -> TerminalNode?{
-			return getToken(logoParser.Tokens.EOL.rawValue, i)
-		}
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
-		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_procedureDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterProcedureDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterProcedureDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitProcedureDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitProcedureDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitProcedureDeclaration(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitProcedureDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitProcedureDeclaration(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitProcedureDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureDeclaration() throws -> ProcedureDeclarationContext {
+	 open func procedureDeclaration() throws -> ProcedureDeclarationContext {
 		var _localctx: ProcedureDeclarationContext = ProcedureDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 8, logoParser.RULE_procedureDeclaration)
 		var _la: Int = 0
@@ -809,43 +859,51 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class ParameterDeclarationsContext:ParserRuleContext {
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
+
+	public class ParameterDeclarationsContext: ParserRuleContext {
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func parameterDeclarations() -> [ParameterDeclarationsContext] {
+				return getRuleContexts(ParameterDeclarationsContext.self)
+			}
+			open
+			func parameterDeclarations(_ i: Int) -> ParameterDeclarationsContext? {
+				return getRuleContext(ParameterDeclarationsContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_parameterDeclarations
 		}
-		open func parameterDeclarations() -> Array<ParameterDeclarationsContext> {
-			return getRuleContexts(ParameterDeclarationsContext.self)
-		}
-		open func parameterDeclarations(_ i: Int) -> ParameterDeclarationsContext? {
-			return getRuleContext(ParameterDeclarationsContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_parameterDeclarations }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterParameterDeclarations(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterParameterDeclarations(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitParameterDeclarations(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitParameterDeclarations(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitParameterDeclarations(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitParameterDeclarations(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitParameterDeclarations(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitParameterDeclarations(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameterDeclarations() throws -> ParameterDeclarationsContext {
+	 open func parameterDeclarations() throws -> ParameterDeclarationsContext {
 		var _localctx: ParameterDeclarationsContext = ParameterDeclarationsContext(_ctx, getState())
 		try enterRule(_localctx, 10, logoParser.RULE_parameterDeclarations)
 		defer {
@@ -884,37 +942,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class FuncContext:ParserRuleContext {
-		open func random() -> RandomContext? {
-			return getRuleContext(RandomContext.self,0)
+
+	public class FuncContext: ParserRuleContext {
+			open
+			func random() -> RandomContext? {
+				return getRuleContext(RandomContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_func
 		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_func }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterFunc(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterFunc(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitFunc(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitFunc(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitFunc(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitFunc(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitFunc(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitFunc(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func func() throws -> FuncContext {
+	 open func func() throws -> FuncContext {
 		var _localctx: FuncContext = FuncContext(_ctx, getState())
 		try enterRule(_localctx, 12, logoParser.RULE_func)
 		defer {
@@ -934,40 +998,47 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class RepeatContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class RepeatContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_repeat
 		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_repeat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterRepeat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterRepeat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitRepeat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitRepeat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitRepeat(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitRepeat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitRepeat(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitRepeat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func repeat() throws -> RepeatContext {
+	 open func repeat() throws -> RepeatContext {
 		var _localctx: RepeatContext = RepeatContext(_ctx, getState())
 		try enterRule(_localctx, 14, logoParser.RULE_repeat)
 		defer {
@@ -991,40 +1062,47 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func cmd() -> Array<CmdContext> {
-			return getRuleContexts(CmdContext.self)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func cmd() -> [CmdContext] {
+				return getRuleContexts(CmdContext.self)
+			}
+			open
+			func cmd(_ i: Int) -> CmdContext? {
+				return getRuleContext(CmdContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_block
 		}
-		open func cmd(_ i: Int) -> CmdContext? {
-			return getRuleContext(CmdContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitBlock(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 16, logoParser.RULE_block)
 		var _la: Int = 0
@@ -1066,40 +1144,47 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class IfeContext:ParserRuleContext {
-		open func comparison() -> ComparisonContext? {
-			return getRuleContext(ComparisonContext.self,0)
+
+	public class IfeContext: ParserRuleContext {
+			open
+			func comparison() -> ComparisonContext? {
+				return getRuleContext(ComparisonContext.self, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_ife
 		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_ife }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterIfe(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterIfe(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitIfe(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitIfe(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitIfe(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitIfe(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitIfe(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitIfe(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ife() throws -> IfeContext {
+	 open func ife() throws -> IfeContext {
 		var _localctx: IfeContext = IfeContext(_ctx, getState())
 		try enterRule(_localctx, 18, logoParser.RULE_ife)
 		defer {
@@ -1123,43 +1208,51 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class ComparisonContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ComparisonContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func comparisonOperator() -> ComparisonOperatorContext? {
+				return getRuleContext(ComparisonOperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_comparison
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func comparisonOperator() -> ComparisonOperatorContext? {
-			return getRuleContext(ComparisonOperatorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_comparison }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterComparison(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterComparison(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitComparison(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitComparison(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitComparison(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitComparison(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitComparison(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitComparison(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comparison() throws -> ComparisonContext {
+	 open func comparison() throws -> ComparisonContext {
 		var _localctx: ComparisonContext = ComparisonContext(_ctx, getState())
 		try enterRule(_localctx, 20, logoParser.RULE_comparison)
 		defer {
@@ -1183,34 +1276,39 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class ComparisonOperatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return logoParser.RULE_comparisonOperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterComparisonOperator(self)
+
+	public class ComparisonOperatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_comparisonOperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterComparisonOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitComparisonOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitComparisonOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitComparisonOperator(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitComparisonOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitComparisonOperator(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitComparisonOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comparisonOperator() throws -> ComparisonOperatorContext {
+	 open func comparisonOperator() throws -> ComparisonOperatorContext {
 		var _localctx: ComparisonOperatorContext = ComparisonOperatorContext(_ctx, getState())
 		try enterRule(_localctx, 22, logoParser.RULE_comparisonOperator)
 		var _la: Int = 0
@@ -1245,38 +1343,47 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class MakeContext:ParserRuleContext {
-		open func STRINGLITERAL() -> TerminalNode? { return getToken(logoParser.Tokens.STRINGLITERAL.rawValue, 0) }
-		open func value() -> ValueContext? {
-			return getRuleContext(ValueContext.self,0)
+
+	public class MakeContext: ParserRuleContext {
+			open
+			func STRINGLITERAL() -> TerminalNode? {
+				return getToken(logoParser.Tokens.STRINGLITERAL.rawValue, 0)
+			}
+			open
+			func value() -> ValueContext? {
+				return getRuleContext(ValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_make
 		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_make }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterMake(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterMake(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitMake(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitMake(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitMake(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitMake(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitMake(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitMake(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func make() throws -> MakeContext {
+	 open func make() throws -> MakeContext {
 		var _localctx: MakeContext = MakeContext(_ctx, getState())
 		try enterRule(_localctx, 24, logoParser.RULE_make)
 		defer {
@@ -1300,40 +1407,47 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class PrintContext:ParserRuleContext {
-		open func value() -> ValueContext? {
-			return getRuleContext(ValueContext.self,0)
+
+	public class PrintContext: ParserRuleContext {
+			open
+			func value() -> ValueContext? {
+				return getRuleContext(ValueContext.self, 0)
+			}
+			open
+			func quotedstring() -> QuotedstringContext? {
+				return getRuleContext(QuotedstringContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_print
 		}
-		open func quotedstring() -> QuotedstringContext? {
-			return getRuleContext(QuotedstringContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_print }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterPrint(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterPrint(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitPrint(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitPrint(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitPrint(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitPrint(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitPrint(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitPrint(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func print() throws -> PrintContext {
+	 open func print() throws -> PrintContext {
 		var _localctx: PrintContext = PrintContext(_ctx, getState())
 		try enterRule(_localctx, 26, logoParser.RULE_print)
 		defer {
@@ -1363,7 +1477,7 @@ open class logoParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1375,40 +1489,47 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class QuotedstringContext:ParserRuleContext {
-		open func quotedstring() -> Array<QuotedstringContext> {
-			return getRuleContexts(QuotedstringContext.self)
+
+	public class QuotedstringContext: ParserRuleContext {
+			open
+			func quotedstring() -> [QuotedstringContext] {
+				return getRuleContexts(QuotedstringContext.self)
+			}
+			open
+			func quotedstring(_ i: Int) -> QuotedstringContext? {
+				return getRuleContext(QuotedstringContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_quotedstring
 		}
-		open func quotedstring(_ i: Int) -> QuotedstringContext? {
-			return getRuleContext(QuotedstringContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_quotedstring }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterQuotedstring(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterQuotedstring(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitQuotedstring(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitQuotedstring(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitQuotedstring(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitQuotedstring(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitQuotedstring(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitQuotedstring(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func quotedstring() throws -> QuotedstringContext {
+	 open func quotedstring() throws -> QuotedstringContext {
 		var _localctx: QuotedstringContext = QuotedstringContext(_ctx, getState())
 		try enterRule(_localctx, 28, logoParser.RULE_quotedstring)
 		var _la: Int = 0
@@ -1473,35 +1594,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class NameContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(logoParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return logoParser.RULE_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterName(self)
+
+	public class NameContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(logoParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_name
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitName(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitName(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func name() throws -> NameContext {
+	 open func name() throws -> NameContext {
 		var _localctx: NameContext = NameContext(_ctx, getState())
 		try enterRule(_localctx, 30, logoParser.RULE_name)
 		defer {
@@ -1521,41 +1650,51 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class ValueContext:ParserRuleContext {
-		open func STRINGLITERAL() -> TerminalNode? { return getToken(logoParser.Tokens.STRINGLITERAL.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ValueContext: ParserRuleContext {
+			open
+			func STRINGLITERAL() -> TerminalNode? {
+				return getToken(logoParser.Tokens.STRINGLITERAL.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func deref() -> DerefContext? {
+				return getRuleContext(DerefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_value
 		}
-		open func deref() -> DerefContext? {
-			return getRuleContext(DerefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitValue(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitValue(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value() throws -> ValueContext {
+	 open func value() throws -> ValueContext {
 		var _localctx: ValueContext = ValueContext(_ctx, getState())
 		try enterRule(_localctx, 32, logoParser.RULE_value)
 		defer {
@@ -1594,43 +1733,51 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class SignExpressionContext:ParserRuleContext {
-		open func number() -> NumberContext? {
-			return getRuleContext(NumberContext.self,0)
+
+	public class SignExpressionContext: ParserRuleContext {
+			open
+			func number() -> NumberContext? {
+				return getRuleContext(NumberContext.self, 0)
+			}
+			open
+			func deref() -> DerefContext? {
+				return getRuleContext(DerefContext.self, 0)
+			}
+			open
+			func func() -> FuncContext? {
+				return getRuleContext(FuncContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_signExpression
 		}
-		open func deref() -> DerefContext? {
-			return getRuleContext(DerefContext.self,0)
-		}
-		open func func() -> FuncContext? {
-			return getRuleContext(FuncContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_signExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterSignExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterSignExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitSignExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitSignExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitSignExpression(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitSignExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitSignExpression(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitSignExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func signExpression() throws -> SignExpressionContext {
+	 open func signExpression() throws -> SignExpressionContext {
 		var _localctx: SignExpressionContext = SignExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 34, logoParser.RULE_signExpression)
 		var _la: Int = 0
@@ -1687,7 +1834,7 @@ open class logoParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1699,40 +1846,47 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class MultiplyingExpressionContext:ParserRuleContext {
-		open func signExpression() -> Array<SignExpressionContext> {
-			return getRuleContexts(SignExpressionContext.self)
+
+	public class MultiplyingExpressionContext: ParserRuleContext {
+			open
+			func signExpression() -> [SignExpressionContext] {
+				return getRuleContexts(SignExpressionContext.self)
+			}
+			open
+			func signExpression(_ i: Int) -> SignExpressionContext? {
+				return getRuleContext(SignExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_multiplyingExpression
 		}
-		open func signExpression(_ i: Int) -> SignExpressionContext? {
-			return getRuleContext(SignExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_multiplyingExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterMultiplyingExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterMultiplyingExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitMultiplyingExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitMultiplyingExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitMultiplyingExpression(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitMultiplyingExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitMultiplyingExpression(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitMultiplyingExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiplyingExpression() throws -> MultiplyingExpressionContext {
+	 open func multiplyingExpression() throws -> MultiplyingExpressionContext {
 		var _localctx: MultiplyingExpressionContext = MultiplyingExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 36, logoParser.RULE_multiplyingExpression)
 		var _la: Int = 0
@@ -1781,40 +1935,47 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func multiplyingExpression() -> Array<MultiplyingExpressionContext> {
-			return getRuleContexts(MultiplyingExpressionContext.self)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func multiplyingExpression() -> [MultiplyingExpressionContext] {
+				return getRuleContexts(MultiplyingExpressionContext.self)
+			}
+			open
+			func multiplyingExpression(_ i: Int) -> MultiplyingExpressionContext? {
+				return getRuleContext(MultiplyingExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_expression
 		}
-		open func multiplyingExpression(_ i: Int) -> MultiplyingExpressionContext? {
-			return getRuleContext(MultiplyingExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitExpression(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 38, logoParser.RULE_expression)
 		var _la: Int = 0
@@ -1863,37 +2024,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class DerefContext:ParserRuleContext {
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
+
+	public class DerefContext: ParserRuleContext {
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_deref
 		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_deref }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterDeref(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterDeref(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitDeref(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitDeref(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitDeref(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitDeref(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitDeref(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitDeref(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func deref() throws -> DerefContext {
+	 open func deref() throws -> DerefContext {
 		var _localctx: DerefContext = DerefContext(_ctx, getState())
 		try enterRule(_localctx, 40, logoParser.RULE_deref)
 		defer {
@@ -1915,37 +2082,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class FdContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class FdContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_fd
 		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_fd }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterFd(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterFd(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitFd(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitFd(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitFd(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitFd(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitFd(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitFd(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fd() throws -> FdContext {
+	 open func fd() throws -> FdContext {
 		var _localctx: FdContext = FdContext(_ctx, getState())
 		try enterRule(_localctx, 42, logoParser.RULE_fd)
 		var _la: Int = 0
@@ -1979,37 +2152,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class BkContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class BkContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_bk
 		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_bk }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterBk(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterBk(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitBk(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitBk(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitBk(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitBk(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitBk(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitBk(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bk() throws -> BkContext {
+	 open func bk() throws -> BkContext {
 		var _localctx: BkContext = BkContext(_ctx, getState())
 		try enterRule(_localctx, 44, logoParser.RULE_bk)
 		var _la: Int = 0
@@ -2043,37 +2222,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class RtContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class RtContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_rt
 		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_rt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterRt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterRt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitRt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitRt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitRt(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitRt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitRt(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitRt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rt() throws -> RtContext {
+	 open func rt() throws -> RtContext {
 		var _localctx: RtContext = RtContext(_ctx, getState())
 		try enterRule(_localctx, 46, logoParser.RULE_rt)
 		var _la: Int = 0
@@ -2107,37 +2292,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class LtContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class LtContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_lt
 		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_lt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterLt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterLt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitLt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitLt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitLt(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitLt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitLt(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitLt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lt() throws -> LtContext {
+	 open func lt() throws -> LtContext {
 		var _localctx: LtContext = LtContext(_ctx, getState())
 		try enterRule(_localctx, 48, logoParser.RULE_lt)
 		var _la: Int = 0
@@ -2171,34 +2362,39 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class CsContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return logoParser.RULE_cs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterCs(self)
+
+	public class CsContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_cs
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterCs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitCs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitCs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitCs(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitCs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitCs(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitCs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cs() throws -> CsContext {
+	 open func cs() throws -> CsContext {
 		var _localctx: CsContext = CsContext(_ctx, getState())
 		try enterRule(_localctx, 50, logoParser.RULE_cs)
 		var _la: Int = 0
@@ -2230,34 +2426,39 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class PuContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return logoParser.RULE_pu }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterPu(self)
+
+	public class PuContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_pu
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterPu(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitPu(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitPu(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitPu(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitPu(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitPu(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitPu(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pu() throws -> PuContext {
+	 open func pu() throws -> PuContext {
 		var _localctx: PuContext = PuContext(_ctx, getState())
 		try enterRule(_localctx, 52, logoParser.RULE_pu)
 		var _la: Int = 0
@@ -2289,34 +2490,39 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class PdContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return logoParser.RULE_pd }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterPd(self)
+
+	public class PdContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_pd
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterPd(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitPd(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitPd(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitPd(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitPd(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitPd(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitPd(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pd() throws -> PdContext {
+	 open func pd() throws -> PdContext {
 		var _localctx: PdContext = PdContext(_ctx, getState())
 		try enterRule(_localctx, 54, logoParser.RULE_pd)
 		var _la: Int = 0
@@ -2348,34 +2554,39 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class HtContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return logoParser.RULE_ht }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterHt(self)
+
+	public class HtContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_ht
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterHt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitHt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitHt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitHt(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitHt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitHt(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitHt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ht() throws -> HtContext {
+	 open func ht() throws -> HtContext {
 		var _localctx: HtContext = HtContext(_ctx, getState())
 		try enterRule(_localctx, 56, logoParser.RULE_ht)
 		var _la: Int = 0
@@ -2407,34 +2618,39 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class StContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return logoParser.RULE_st }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterSt(self)
+
+	public class StContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_st
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterSt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitSt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitSt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitSt(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitSt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitSt(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitSt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func st() throws -> StContext {
+	 open func st() throws -> StContext {
 		var _localctx: StContext = StContext(_ctx, getState())
 		try enterRule(_localctx, 58, logoParser.RULE_st)
 		var _la: Int = 0
@@ -2466,34 +2682,39 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class HomeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return logoParser.RULE_home }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterHome(self)
+
+	public class HomeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_home
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterHome(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitHome(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitHome(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitHome(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitHome(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitHome(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitHome(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func home() throws -> HomeContext {
+	 open func home() throws -> HomeContext {
 		var _localctx: HomeContext = HomeContext(_ctx, getState())
 		try enterRule(_localctx, 60, logoParser.RULE_home)
 		defer {
@@ -2513,34 +2734,39 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class StopContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return logoParser.RULE_stop }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterStop(self)
+
+	public class StopContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_stop
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterStop(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitStop(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitStop(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitStop(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitStop(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitStop(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitStop(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stop() throws -> StopContext {
+	 open func stop() throws -> StopContext {
 		var _localctx: StopContext = StopContext(_ctx, getState())
 		try enterRule(_localctx, 62, logoParser.RULE_stop)
 		defer {
@@ -2560,34 +2786,39 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class LabelContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return logoParser.RULE_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterLabel(self)
+
+	public class LabelContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_label
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitLabel(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitLabel(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label() throws -> LabelContext {
+	 open func label() throws -> LabelContext {
 		var _localctx: LabelContext = LabelContext(_ctx, getState())
 		try enterRule(_localctx, 64, logoParser.RULE_label)
 		defer {
@@ -2607,40 +2838,47 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class SetxyContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class SetxyContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_setxy
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_setxy }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterSetxy(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterSetxy(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitSetxy(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitSetxy(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitSetxy(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitSetxy(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitSetxy(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitSetxy(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setxy() throws -> SetxyContext {
+	 open func setxy() throws -> SetxyContext {
 		var _localctx: SetxyContext = SetxyContext(_ctx, getState())
 		try enterRule(_localctx, 66, logoParser.RULE_setxy)
 		defer {
@@ -2664,37 +2902,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class RandomContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class RandomContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_random
 		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_random }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterRandom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterRandom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitRandom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitRandom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitRandom(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitRandom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitRandom(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitRandom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func random() throws -> RandomContext {
+	 open func random() throws -> RandomContext {
 		var _localctx: RandomContext = RandomContext(_ctx, getState())
 		try enterRule(_localctx, 68, logoParser.RULE_random)
 		defer {
@@ -2716,46 +2960,55 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class ForeContext:ParserRuleContext {
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
+
+	public class ForeContext: ParserRuleContext {
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_fore
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return logoParser.RULE_fore }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterFore(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterFore(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitFore(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitFore(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitFore(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitFore(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitFore(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitFore(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fore() throws -> ForeContext {
+	 open func fore() throws -> ForeContext {
 		var _localctx: ForeContext = ForeContext(_ctx, getState())
 		try enterRule(_localctx, 70, logoParser.RULE_fore)
 		defer {
@@ -2789,35 +3042,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class NumberContext:ParserRuleContext {
-		open func NUMBER() -> TerminalNode? { return getToken(logoParser.Tokens.NUMBER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return logoParser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterNumber(self)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(logoParser.Tokens.NUMBER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_number
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitNumber(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 72, logoParser.RULE_number)
 		defer {
@@ -2837,35 +3098,43 @@ open class logoParser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func COMMENT() -> TerminalNode? { return getToken(logoParser.Tokens.COMMENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return logoParser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).enterComment(self)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(logoParser.Tokens.COMMENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return logoParser.RULE_comment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is logoListener {
-			 	(listener as! logoListener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? logoListener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is logoVisitor {
-			     return (visitor as! logoVisitor<T>).visitComment(self)
-			}else if visitor is logoBaseVisitor {
-		    	 return (visitor as! logoBaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? logoVisitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? logoBaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 74, logoParser.RULE_comment)
 		defer {
@@ -2886,6 +3155,10 @@ open class logoParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = logoParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = logoParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

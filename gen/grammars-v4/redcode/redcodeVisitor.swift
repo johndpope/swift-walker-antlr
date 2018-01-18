@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/redcode/redcode.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/redcode/redcode.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class redcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFile(_ ctx: redcodeParser.FileContext) -> T{
+	open func visitFile(_ ctx: redcodeParser.FileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class redcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: redcodeParser.LineContext) -> T{
+	open func visitLine(_ ctx: redcodeParser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class redcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInstruction(_ ctx: redcodeParser.InstructionContext) -> T{
+	open func visitInstruction(_ ctx: redcodeParser.InstructionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class redcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpcode(_ ctx: redcodeParser.OpcodeContext) -> T{
+	open func visitOpcode(_ ctx: redcodeParser.OpcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class redcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModifier(_ ctx: redcodeParser.ModifierContext) -> T{
+	open func visitModifier(_ ctx: redcodeParser.ModifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class redcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMmode(_ ctx: redcodeParser.MmodeContext) -> T{
+	open func visitMmode(_ ctx: redcodeParser.MmodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class redcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: redcodeParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: redcodeParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class redcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: redcodeParser.CommentContext) -> T{
+	open func visitComment(_ ctx: redcodeParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

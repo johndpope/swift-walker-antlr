@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/masm/MASM.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/masm/MASM.g4 by ANTLR 4.7.1
  
  	 package com.Ostermiller.Syntax;
  	 
@@ -14,8 +14,11 @@ open class MASMParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, Identifier = 10, DS = 11, 
                  ES = 12, CS = 13, SS = 14, GS = 15, FS = 16, AH = 17, AL = 18, 
@@ -70,22 +73,25 @@ open class MASMParser: Parser {
                  FloatingPointLiteral = 269, String = 270, Etiqueta = 271, 
                  Separator = 272, WS = 273, LINE_COMMENT = 274
 	}
-	public static let RULE_compilationUnit = 0, RULE_segments = 1, RULE_proc = 2, 
-                   RULE_code = 3, RULE_binary_exp1 = 4, RULE_unuary_exp1 = 5, 
-                   RULE_unuary_exp2 = 6, RULE_binary_exp2 = 7, RULE_notarguments = 8, 
-                   RULE_binary_exp3 = 9, RULE_unuary_exp3 = 10, RULE_binary_exp4 = 11, 
-                   RULE_binary_exp5 = 12, RULE_binary_exp6 = 13, RULE_binary_exp7 = 14, 
-                   RULE_binary_exp8 = 15, RULE_binary_exp9 = 16, RULE_unuary_exp4 = 17, 
-                   RULE_unuary_exp5 = 18, RULE_binary_exp10 = 19, RULE_binary_exp11 = 20, 
-                   RULE_binary_exp12 = 21, RULE_directive_exp1 = 22, RULE_variabledeclaration = 23, 
-                   RULE_memory = 24, RULE_segmentos = 25, RULE_register = 26, 
-                   RULE_o = 27, RULE_op = 28, RULE_ope = 29, RULE_oper = 30, 
-                   RULE_opera = 31, RULE_operat = 32, RULE_operato = 33, 
-                   RULE_operator = 34, RULE_l = 35, RULE_x = 36, RULE_s = 37, 
-                   RULE_sh = 38, RULE_b = 39, RULE_call = 40, RULE_interruption = 41, 
-                   RULE_in = 42, RULE_out = 43, RULE_re = 44, RULE_directives = 45, 
-                   RULE_ty = 46, RULE_question = 47, RULE_time = 48
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_compilationUnit = 0, RULE_segments = 1, RULE_proc = 2, 
+            RULE_code = 3, RULE_binary_exp1 = 4, RULE_unuary_exp1 = 5, RULE_unuary_exp2 = 6, 
+            RULE_binary_exp2 = 7, RULE_notarguments = 8, RULE_binary_exp3 = 9, 
+            RULE_unuary_exp3 = 10, RULE_binary_exp4 = 11, RULE_binary_exp5 = 12, 
+            RULE_binary_exp6 = 13, RULE_binary_exp7 = 14, RULE_binary_exp8 = 15, 
+            RULE_binary_exp9 = 16, RULE_unuary_exp4 = 17, RULE_unuary_exp5 = 18, 
+            RULE_binary_exp10 = 19, RULE_binary_exp11 = 20, RULE_binary_exp12 = 21, 
+            RULE_directive_exp1 = 22, RULE_variabledeclaration = 23, RULE_memory = 24, 
+            RULE_segmentos = 25, RULE_register = 26, RULE_o = 27, RULE_op = 28, 
+            RULE_ope = 29, RULE_oper = 30, RULE_opera = 31, RULE_operat = 32, 
+            RULE_operato = 33, RULE_operator = 34, RULE_l = 35, RULE_x = 36, 
+            RULE_s = 37, RULE_sh = 38, RULE_b = 39, RULE_call = 40, RULE_interruption = 41, 
+            RULE_in = 42, RULE_out = 43, RULE_re = 44, RULE_directives = 45, 
+            RULE_ty = 46, RULE_question = 47, RULE_time = 48
+
+	public
+	static let ruleNames: [String] = [
 		"compilationUnit", "segments", "proc", "code", "binary_exp1", "unuary_exp1", 
 		"unuary_exp2", "binary_exp2", "notarguments", "binary_exp3", "unuary_exp3", 
 		"binary_exp4", "binary_exp5", "binary_exp6", "binary_exp7", "binary_exp8", 
@@ -166,95 +172,85 @@ open class MASMParser: Parser {
 		"Hexnum", "Integer", "Octalnum", "FloatingPointLiteral", "String", "Etiqueta", 
 		"Separator", "WS", "LINE_COMMENT"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "MASM.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return MASMParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "MASM.g4" }
+	override open
+	func getSerializedATN() -> String { return MASMParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return MASMParser.ruleNames }
+	override open
+	func getATN() -> ATN { return MASMParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return MASMParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return MASMParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return MASMParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,MASMParser._ATN,MASMParser._decisionToDFA, MASMParser._sharedContextCache)
 	}
-	open class CompilationUnitContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(MASMParser.Tokens.Identifier.rawValue, 0) }
-		open func segments() -> Array<SegmentsContext> {
-			return getRuleContexts(SegmentsContext.self)
+
+	public class CompilationUnitContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func segments() -> [SegmentsContext] {
+				return getRuleContexts(SegmentsContext.self)
+			}
+			open
+			func segments(_ i: Int) -> SegmentsContext? {
+				return getRuleContext(SegmentsContext.self, i)
+			}
+			open
+			func directive_exp1() -> [Directive_exp1Context] {
+				return getRuleContexts(Directive_exp1Context.self)
+			}
+			open
+			func directive_exp1(_ i: Int) -> Directive_exp1Context? {
+				return getRuleContext(Directive_exp1Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_compilationUnit
 		}
-		open func segments(_ i: Int) -> SegmentsContext? {
-			return getRuleContext(SegmentsContext.self,i)
-		}
-		open func directive_exp1() -> Array<Directive_exp1Context> {
-			return getRuleContexts(Directive_exp1Context.self)
-		}
-		open func directive_exp1(_ i: Int) -> Directive_exp1Context? {
-			return getRuleContext(Directive_exp1Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_compilationUnit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterCompilationUnit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterCompilationUnit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitCompilationUnit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitCompilationUnit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitCompilationUnit(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitCompilationUnit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitCompilationUnit(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitCompilationUnit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compilationUnit() throws -> CompilationUnitContext {
+	 open func compilationUnit() throws -> CompilationUnitContext {
 		var _localctx: CompilationUnitContext = CompilationUnitContext(_ctx, getState())
 		try enterRule(_localctx, 0, MASMParser.RULE_compilationUnit)
 		var _la: Int = 0
@@ -314,7 +310,7 @@ open class MASMParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(104)
@@ -335,50 +331,63 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class SegmentsContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(MASMParser.Tokens.Identifier.rawValue) }
-		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(MASMParser.Tokens.Identifier.rawValue, i)
+
+	public class SegmentsContext: ParserRuleContext {
+			open
+			func Identifier() -> [TerminalNode] {
+				return getTokens(MASMParser.Tokens.Identifier.rawValue)
+			}
+			open
+			func Identifier(_ i:Int) -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Identifier.rawValue, i)
+			}
+			open
+			func code() -> [CodeContext] {
+				return getRuleContexts(CodeContext.self)
+			}
+			open
+			func code(_ i: Int) -> CodeContext? {
+				return getRuleContext(CodeContext.self, i)
+			}
+			open
+			func proc() -> [ProcContext] {
+				return getRuleContexts(ProcContext.self)
+			}
+			open
+			func proc(_ i: Int) -> ProcContext? {
+				return getRuleContext(ProcContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_segments
 		}
-		open func code() -> Array<CodeContext> {
-			return getRuleContexts(CodeContext.self)
-		}
-		open func code(_ i: Int) -> CodeContext? {
-			return getRuleContext(CodeContext.self,i)
-		}
-		open func proc() -> Array<ProcContext> {
-			return getRuleContexts(ProcContext.self)
-		}
-		open func proc(_ i: Int) -> ProcContext? {
-			return getRuleContext(ProcContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_segments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterSegments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterSegments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitSegments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitSegments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitSegments(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitSegments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitSegments(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitSegments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func segments() throws -> SegmentsContext {
+	 open func segments() throws -> SegmentsContext {
 		var _localctx: SegmentsContext = SegmentsContext(_ctx, getState())
 		try enterRule(_localctx, 2, MASMParser.RULE_segments)
 		defer {
@@ -435,44 +444,55 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class ProcContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(MASMParser.Tokens.Identifier.rawValue) }
-		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(MASMParser.Tokens.Identifier.rawValue, i)
+
+	public class ProcContext: ParserRuleContext {
+			open
+			func Identifier() -> [TerminalNode] {
+				return getTokens(MASMParser.Tokens.Identifier.rawValue)
+			}
+			open
+			func Identifier(_ i:Int) -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Identifier.rawValue, i)
+			}
+			open
+			func code() -> [CodeContext] {
+				return getRuleContexts(CodeContext.self)
+			}
+			open
+			func code(_ i: Int) -> CodeContext? {
+				return getRuleContext(CodeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_proc
 		}
-		open func code() -> Array<CodeContext> {
-			return getRuleContexts(CodeContext.self)
-		}
-		open func code(_ i: Int) -> CodeContext? {
-			return getRuleContext(CodeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_proc }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterProc(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterProc(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitProc(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitProc(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitProc(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitProc(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitProc(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitProc(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func proc() throws -> ProcContext {
+	 open func proc() throws -> ProcContext {
 		var _localctx: ProcContext = ProcContext(_ctx, getState())
 		try enterRule(_localctx, 4, MASMParser.RULE_proc)
 		defer {
@@ -515,94 +535,119 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class CodeContext:ParserRuleContext {
-		open func binary_exp1() -> Binary_exp1Context? {
-			return getRuleContext(Binary_exp1Context.self,0)
+
+	public class CodeContext: ParserRuleContext {
+			open
+			func binary_exp1() -> Binary_exp1Context? {
+				return getRuleContext(Binary_exp1Context.self, 0)
+			}
+			open
+			func binary_exp10() -> Binary_exp10Context? {
+				return getRuleContext(Binary_exp10Context.self, 0)
+			}
+			open
+			func binary_exp11() -> Binary_exp11Context? {
+				return getRuleContext(Binary_exp11Context.self, 0)
+			}
+			open
+			func binary_exp12() -> Binary_exp12Context? {
+				return getRuleContext(Binary_exp12Context.self, 0)
+			}
+			open
+			func binary_exp2() -> Binary_exp2Context? {
+				return getRuleContext(Binary_exp2Context.self, 0)
+			}
+			open
+			func binary_exp3() -> Binary_exp3Context? {
+				return getRuleContext(Binary_exp3Context.self, 0)
+			}
+			open
+			func binary_exp4() -> Binary_exp4Context? {
+				return getRuleContext(Binary_exp4Context.self, 0)
+			}
+			open
+			func binary_exp5() -> Binary_exp5Context? {
+				return getRuleContext(Binary_exp5Context.self, 0)
+			}
+			open
+			func binary_exp6() -> Binary_exp6Context? {
+				return getRuleContext(Binary_exp6Context.self, 0)
+			}
+			open
+			func binary_exp7() -> Binary_exp7Context? {
+				return getRuleContext(Binary_exp7Context.self, 0)
+			}
+			open
+			func binary_exp8() -> Binary_exp8Context? {
+				return getRuleContext(Binary_exp8Context.self, 0)
+			}
+			open
+			func binary_exp9() -> Binary_exp9Context? {
+				return getRuleContext(Binary_exp9Context.self, 0)
+			}
+			open
+			func unuary_exp1() -> Unuary_exp1Context? {
+				return getRuleContext(Unuary_exp1Context.self, 0)
+			}
+			open
+			func unuary_exp2() -> Unuary_exp2Context? {
+				return getRuleContext(Unuary_exp2Context.self, 0)
+			}
+			open
+			func unuary_exp3() -> Unuary_exp3Context? {
+				return getRuleContext(Unuary_exp3Context.self, 0)
+			}
+			open
+			func unuary_exp4() -> Unuary_exp4Context? {
+				return getRuleContext(Unuary_exp4Context.self, 0)
+			}
+			open
+			func unuary_exp5() -> Unuary_exp5Context? {
+				return getRuleContext(Unuary_exp5Context.self, 0)
+			}
+			open
+			func notarguments() -> NotargumentsContext? {
+				return getRuleContext(NotargumentsContext.self, 0)
+			}
+			open
+			func variabledeclaration() -> VariabledeclarationContext? {
+				return getRuleContext(VariabledeclarationContext.self, 0)
+			}
+			open
+			func directive_exp1() -> Directive_exp1Context? {
+				return getRuleContext(Directive_exp1Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_code
 		}
-		open func binary_exp10() -> Binary_exp10Context? {
-			return getRuleContext(Binary_exp10Context.self,0)
-		}
-		open func binary_exp11() -> Binary_exp11Context? {
-			return getRuleContext(Binary_exp11Context.self,0)
-		}
-		open func binary_exp12() -> Binary_exp12Context? {
-			return getRuleContext(Binary_exp12Context.self,0)
-		}
-		open func binary_exp2() -> Binary_exp2Context? {
-			return getRuleContext(Binary_exp2Context.self,0)
-		}
-		open func binary_exp3() -> Binary_exp3Context? {
-			return getRuleContext(Binary_exp3Context.self,0)
-		}
-		open func binary_exp4() -> Binary_exp4Context? {
-			return getRuleContext(Binary_exp4Context.self,0)
-		}
-		open func binary_exp5() -> Binary_exp5Context? {
-			return getRuleContext(Binary_exp5Context.self,0)
-		}
-		open func binary_exp6() -> Binary_exp6Context? {
-			return getRuleContext(Binary_exp6Context.self,0)
-		}
-		open func binary_exp7() -> Binary_exp7Context? {
-			return getRuleContext(Binary_exp7Context.self,0)
-		}
-		open func binary_exp8() -> Binary_exp8Context? {
-			return getRuleContext(Binary_exp8Context.self,0)
-		}
-		open func binary_exp9() -> Binary_exp9Context? {
-			return getRuleContext(Binary_exp9Context.self,0)
-		}
-		open func unuary_exp1() -> Unuary_exp1Context? {
-			return getRuleContext(Unuary_exp1Context.self,0)
-		}
-		open func unuary_exp2() -> Unuary_exp2Context? {
-			return getRuleContext(Unuary_exp2Context.self,0)
-		}
-		open func unuary_exp3() -> Unuary_exp3Context? {
-			return getRuleContext(Unuary_exp3Context.self,0)
-		}
-		open func unuary_exp4() -> Unuary_exp4Context? {
-			return getRuleContext(Unuary_exp4Context.self,0)
-		}
-		open func unuary_exp5() -> Unuary_exp5Context? {
-			return getRuleContext(Unuary_exp5Context.self,0)
-		}
-		open func notarguments() -> NotargumentsContext? {
-			return getRuleContext(NotargumentsContext.self,0)
-		}
-		open func variabledeclaration() -> VariabledeclarationContext? {
-			return getRuleContext(VariabledeclarationContext.self,0)
-		}
-		open func directive_exp1() -> Directive_exp1Context? {
-			return getRuleContext(Directive_exp1Context.self,0)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_code }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterCode(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterCode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitCode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitCode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitCode(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitCode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitCode(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitCode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func code() throws -> CodeContext {
+	 open func code() throws -> CodeContext {
 		var _localctx: CodeContext = CodeContext(_ctx, getState())
 		try enterRule(_localctx, 6, MASMParser.RULE_code)
 		defer {
@@ -922,7 +967,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -933,48 +978,63 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp1Context:ParserRuleContext {
-		open func o() -> OContext? {
-			return getRuleContext(OContext.self,0)
+
+	public class Binary_exp1Context: ParserRuleContext {
+			open
+			func o() -> OContext? {
+				return getRuleContext(OContext.self, 0)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp1
 		}
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp1 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp1(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp1(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp1(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp1(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp1(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp1(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp1(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp1(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp1() throws -> Binary_exp1Context {
+	 open func binary_exp1() throws -> Binary_exp1Context {
 		var _localctx: Binary_exp1Context = Binary_exp1Context(_ctx, getState())
 		try enterRule(_localctx, 8, MASMParser.RULE_binary_exp1)
 		defer {
@@ -1036,7 +1096,7 @@ open class MASMParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -1086,7 +1146,7 @@ open class MASMParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -1101,44 +1161,55 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Unuary_exp1Context:ParserRuleContext {
-		open func op() -> OpContext? {
-			return getRuleContext(OpContext.self,0)
+
+	public class Unuary_exp1Context: ParserRuleContext {
+			open
+			func op() -> OpContext? {
+				return getRuleContext(OpContext.self, 0)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+			open
+			func register() -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, 0)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_unuary_exp1
 		}
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open func register() -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,0)
-		}
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_unuary_exp1 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterUnuary_exp1(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterUnuary_exp1(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitUnuary_exp1(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitUnuary_exp1(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitUnuary_exp1(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitUnuary_exp1(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitUnuary_exp1(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitUnuary_exp1(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unuary_exp1() throws -> Unuary_exp1Context {
+	 open func unuary_exp1() throws -> Unuary_exp1Context {
 		var _localctx: Unuary_exp1Context = Unuary_exp1Context(_ctx, getState())
 		try enterRule(_localctx, 10, MASMParser.RULE_unuary_exp1)
 		defer {
@@ -1191,7 +1262,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1203,43 +1274,51 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Unuary_exp2Context:ParserRuleContext {
-		open func ope() -> OpeContext? {
-			return getRuleContext(OpeContext.self,0)
+
+	public class Unuary_exp2Context: ParserRuleContext {
+			open
+			func ope() -> OpeContext? {
+				return getRuleContext(OpeContext.self, 0)
+			}
+			open
+			func register() -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, 0)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_unuary_exp2
 		}
-		open func register() -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,0)
-		}
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_unuary_exp2 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterUnuary_exp2(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterUnuary_exp2(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitUnuary_exp2(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitUnuary_exp2(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitUnuary_exp2(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitUnuary_exp2(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitUnuary_exp2(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitUnuary_exp2(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unuary_exp2() throws -> Unuary_exp2Context {
+	 open func unuary_exp2() throws -> Unuary_exp2Context {
 		var _localctx: Unuary_exp2Context = Unuary_exp2Context(_ctx, getState())
 		try enterRule(_localctx, 12, MASMParser.RULE_unuary_exp2)
 		defer {
@@ -1287,7 +1366,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1299,47 +1378,59 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp2Context:ParserRuleContext {
-		open func oper() -> OperContext? {
-			return getRuleContext(OperContext.self,0)
+
+	public class Binary_exp2Context: ParserRuleContext {
+			open
+			func oper() -> OperContext? {
+				return getRuleContext(OperContext.self, 0)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp2
 		}
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp2 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp2(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp2(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp2(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp2(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp2(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp2(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp2(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp2(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp2() throws -> Binary_exp2Context {
+	 open func binary_exp2() throws -> Binary_exp2Context {
 		var _localctx: Binary_exp2Context = Binary_exp2Context(_ctx, getState())
 		try enterRule(_localctx, 14, MASMParser.RULE_binary_exp2)
 		defer {
@@ -1395,7 +1486,7 @@ open class MASMParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -1422,37 +1513,43 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class NotargumentsContext:ParserRuleContext {
-		open func opera() -> OperaContext? {
-			return getRuleContext(OperaContext.self,0)
+
+	public class NotargumentsContext: ParserRuleContext {
+			open
+			func opera() -> OperaContext? {
+				return getRuleContext(OperaContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_notarguments
 		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_notarguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterNotarguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterNotarguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitNotarguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitNotarguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitNotarguments(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitNotarguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitNotarguments(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitNotarguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func notarguments() throws -> NotargumentsContext {
+	 open func notarguments() throws -> NotargumentsContext {
 		var _localctx: NotargumentsContext = NotargumentsContext(_ctx, getState())
 		try enterRule(_localctx, 16, MASMParser.RULE_notarguments)
 		defer {
@@ -1472,51 +1569,67 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp3Context:ParserRuleContext {
-		open func operat() -> OperatContext? {
-			return getRuleContext(OperatContext.self,0)
+
+	public class Binary_exp3Context: ParserRuleContext {
+			open
+			func operat() -> OperatContext? {
+				return getRuleContext(OperatContext.self, 0)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func memory() -> [MemoryContext] {
+				return getRuleContexts(MemoryContext.self)
+			}
+			open
+			func memory(_ i: Int) -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, i)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp3
 		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func memory() -> Array<MemoryContext> {
-			return getRuleContexts(MemoryContext.self)
-		}
-		open func memory(_ i: Int) -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,i)
-		}
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp3 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp3(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp3(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp3(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp3(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp3(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp3(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp3(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp3(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp3() throws -> Binary_exp3Context {
+	 open func binary_exp3() throws -> Binary_exp3Context {
 		var _localctx: Binary_exp3Context = Binary_exp3Context(_ctx, getState())
 		try enterRule(_localctx, 18, MASMParser.RULE_binary_exp3)
 		defer {
@@ -1564,7 +1677,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(205)
 		 	try match(MASMParser.Tokens.Separator.rawValue)
@@ -1612,7 +1725,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1624,38 +1737,47 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Unuary_exp3Context:ParserRuleContext {
-		open func operato() -> OperatoContext? {
-			return getRuleContext(OperatoContext.self,0)
+
+	public class Unuary_exp3Context: ParserRuleContext {
+			open
+			func operato() -> OperatoContext? {
+				return getRuleContext(OperatoContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_unuary_exp3
 		}
-		open func Identifier() -> TerminalNode? { return getToken(MASMParser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_unuary_exp3 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterUnuary_exp3(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterUnuary_exp3(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitUnuary_exp3(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitUnuary_exp3(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitUnuary_exp3(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitUnuary_exp3(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitUnuary_exp3(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitUnuary_exp3(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unuary_exp3() throws -> Unuary_exp3Context {
+	 open func unuary_exp3() throws -> Unuary_exp3Context {
 		var _localctx: Unuary_exp3Context = Unuary_exp3Context(_ctx, getState())
 		try enterRule(_localctx, 20, MASMParser.RULE_unuary_exp3)
 		defer {
@@ -1677,47 +1799,59 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp4Context:ParserRuleContext {
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
+
+	public class Binary_exp4Context: ParserRuleContext {
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp4
 		}
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp4 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp4(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp4(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp4(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp4(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp4(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp4(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp4(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp4(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp4() throws -> Binary_exp4Context {
+	 open func binary_exp4() throws -> Binary_exp4Context {
 		var _localctx: Binary_exp4Context = Binary_exp4Context(_ctx, getState())
 		try enterRule(_localctx, 22, MASMParser.RULE_binary_exp4)
 		defer {
@@ -1769,7 +1903,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -1781,44 +1915,55 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp5Context:ParserRuleContext {
-		open func l() -> LContext? {
-			return getRuleContext(LContext.self,0)
+
+	public class Binary_exp5Context: ParserRuleContext {
+			open
+			func l() -> LContext? {
+				return getRuleContext(LContext.self, 0)
+			}
+			open
+			func register() -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, 0)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp5
 		}
-		open func register() -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,0)
-		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp5 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp5(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp5(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp5(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp5(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp5(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp5(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp5(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp5(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp5() throws -> Binary_exp5Context {
+	 open func binary_exp5() throws -> Binary_exp5Context {
 		var _localctx: Binary_exp5Context = Binary_exp5Context(_ctx, getState())
 		try enterRule(_localctx, 24, MASMParser.RULE_binary_exp5)
 		defer {
@@ -1844,47 +1989,59 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp6Context:ParserRuleContext {
-		open func x() -> XContext? {
-			return getRuleContext(XContext.self,0)
+
+	public class Binary_exp6Context: ParserRuleContext {
+			open
+			func x() -> XContext? {
+				return getRuleContext(XContext.self, 0)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp6
 		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp6 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp6(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp6(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp6(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp6(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp6(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp6(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp6(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp6(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp6() throws -> Binary_exp6Context {
+	 open func binary_exp6() throws -> Binary_exp6Context {
 		var _localctx: Binary_exp6Context = Binary_exp6Context(_ctx, getState())
 		try enterRule(_localctx, 26, MASMParser.RULE_binary_exp6)
 		defer {
@@ -1932,7 +2089,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(231)
 		 	try match(MASMParser.Tokens.Separator.rawValue)
@@ -1948,48 +2105,63 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp7Context:ParserRuleContext {
-		open func s() -> SContext? {
-			return getRuleContext(SContext.self,0)
+
+	public class Binary_exp7Context: ParserRuleContext {
+			open
+			func s() -> SContext? {
+				return getRuleContext(SContext.self, 0)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp7
 		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp7 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp7(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp7(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp7(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp7(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp7(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp7(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp7(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp7(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp7() throws -> Binary_exp7Context {
+	 open func binary_exp7() throws -> Binary_exp7Context {
 		var _localctx: Binary_exp7Context = Binary_exp7Context(_ctx, getState())
 		try enterRule(_localctx, 28, MASMParser.RULE_binary_exp7)
 		defer {
@@ -2037,7 +2209,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(239)
 		 	try match(MASMParser.Tokens.Separator.rawValue)
@@ -2078,7 +2250,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -2090,51 +2262,67 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp8Context:ParserRuleContext {
-		open func sh() -> ShContext? {
-			return getRuleContext(ShContext.self,0)
+
+	public class Binary_exp8Context: ParserRuleContext {
+			open
+			func sh() -> ShContext? {
+				return getRuleContext(ShContext.self, 0)
+			}
+			open
+			func Separator() -> [TerminalNode] {
+				return getTokens(MASMParser.Tokens.Separator.rawValue)
+			}
+			open
+			func Separator(_ i:Int) -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, i)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp8
 		}
-		open func Separator() -> Array<TerminalNode> { return getTokens(MASMParser.Tokens.Separator.rawValue) }
-		open func Separator(_ i:Int) -> TerminalNode?{
-			return getToken(MASMParser.Tokens.Separator.rawValue, i)
-		}
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp8 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp8(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp8(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp8(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp8(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp8(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp8(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp8(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp8(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp8() throws -> Binary_exp8Context {
+	 open func binary_exp8() throws -> Binary_exp8Context {
 		var _localctx: Binary_exp8Context = Binary_exp8Context(_ctx, getState())
 		try enterRule(_localctx, 30, MASMParser.RULE_binary_exp8)
 		defer {
@@ -2182,7 +2370,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(249)
 		 	try match(MASMParser.Tokens.Separator.rawValue)
@@ -2228,7 +2416,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -2240,50 +2428,63 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp9Context:ParserRuleContext {
-		open func b() -> BContext? {
-			return getRuleContext(BContext.self,0)
+
+	public class Binary_exp9Context: ParserRuleContext {
+			open
+			func b() -> BContext? {
+				return getRuleContext(BContext.self, 0)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func memory() -> [MemoryContext] {
+				return getRuleContexts(MemoryContext.self)
+			}
+			open
+			func memory(_ i: Int) -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp9
 		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func memory() -> Array<MemoryContext> {
-			return getRuleContexts(MemoryContext.self)
-		}
-		open func memory(_ i: Int) -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp9 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp9(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp9(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp9(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp9(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp9(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp9(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp9(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp9(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp9() throws -> Binary_exp9Context {
+	 open func binary_exp9() throws -> Binary_exp9Context {
 		var _localctx: Binary_exp9Context = Binary_exp9Context(_ctx, getState())
 		try enterRule(_localctx, 32, MASMParser.RULE_binary_exp9)
 		defer {
@@ -2331,7 +2532,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(261)
 		 	try match(MASMParser.Tokens.Separator.rawValue)
@@ -2373,7 +2574,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -2385,44 +2586,55 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Unuary_exp4Context:ParserRuleContext {
-		open func call() -> CallContext? {
-			return getRuleContext(CallContext.self,0)
+
+	public class Unuary_exp4Context: ParserRuleContext {
+			open
+			func call() -> CallContext? {
+				return getRuleContext(CallContext.self, 0)
+			}
+			open
+			func register() -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, 0)
+			}
+			open
+			func memory() -> MemoryContext? {
+				return getRuleContext(MemoryContext.self, 0)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_unuary_exp4
 		}
-		open func register() -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,0)
-		}
-		open func memory() -> MemoryContext? {
-			return getRuleContext(MemoryContext.self,0)
-		}
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_unuary_exp4 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterUnuary_exp4(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterUnuary_exp4(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitUnuary_exp4(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitUnuary_exp4(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitUnuary_exp4(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitUnuary_exp4(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitUnuary_exp4(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitUnuary_exp4(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unuary_exp4() throws -> Unuary_exp4Context {
+	 open func unuary_exp4() throws -> Unuary_exp4Context {
 		var _localctx: Unuary_exp4Context = Unuary_exp4Context(_ctx, getState())
 		try enterRule(_localctx, 34, MASMParser.RULE_unuary_exp4)
 		defer {
@@ -2476,7 +2688,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -2488,38 +2700,47 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Unuary_exp5Context:ParserRuleContext {
-		open func interruption() -> InterruptionContext? {
-			return getRuleContext(InterruptionContext.self,0)
+
+	public class Unuary_exp5Context: ParserRuleContext {
+			open
+			func interruption() -> InterruptionContext? {
+				return getRuleContext(InterruptionContext.self, 0)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_unuary_exp5
 		}
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_unuary_exp5 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterUnuary_exp5(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterUnuary_exp5(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitUnuary_exp5(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitUnuary_exp5(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitUnuary_exp5(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitUnuary_exp5(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitUnuary_exp5(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitUnuary_exp5(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unuary_exp5() throws -> Unuary_exp5Context {
+	 open func unuary_exp5() throws -> Unuary_exp5Context {
 		var _localctx: Unuary_exp5Context = Unuary_exp5Context(_ctx, getState())
 		try enterRule(_localctx, 36, MASMParser.RULE_unuary_exp5)
 		defer {
@@ -2541,45 +2762,59 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp10Context:ParserRuleContext {
-		open func in() -> InContext? {
-			return getRuleContext(InContext.self,0)
+
+	public class Binary_exp10Context: ParserRuleContext {
+			open
+			func in() -> InContext? {
+				return getRuleContext(InContext.self, 0)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp10
 		}
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp10 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp10(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp10(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp10(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp10(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp10(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp10(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp10(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp10(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp10() throws -> Binary_exp10Context {
+	 open func binary_exp10() throws -> Binary_exp10Context {
 		var _localctx: Binary_exp10Context = Binary_exp10Context(_ctx, getState())
 		try enterRule(_localctx, 38, MASMParser.RULE_binary_exp10)
 		defer {
@@ -2631,7 +2866,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -2643,45 +2878,59 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp11Context:ParserRuleContext {
-		open func out() -> OutContext? {
-			return getRuleContext(OutContext.self,0)
+
+	public class Binary_exp11Context: ParserRuleContext {
+			open
+			func out() -> OutContext? {
+				return getRuleContext(OutContext.self, 0)
+			}
+			open
+			func Separator() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Separator.rawValue, 0)
+			}
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp11
 		}
-		open func Separator() -> TerminalNode? { return getToken(MASMParser.Tokens.Separator.rawValue, 0) }
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
-		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp11 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp11(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp11(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp11(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp11(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp11(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp11(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp11(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp11(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp11() throws -> Binary_exp11Context {
+	 open func binary_exp11() throws -> Binary_exp11Context {
 		var _localctx: Binary_exp11Context = Binary_exp11Context(_ctx, getState())
 		try enterRule(_localctx, 40, MASMParser.RULE_binary_exp11)
 		defer {
@@ -2729,7 +2978,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(287)
 		 	try match(MASMParser.Tokens.Separator.rawValue)
@@ -2745,40 +2994,47 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Binary_exp12Context:ParserRuleContext {
-		open func re() -> ReContext? {
-			return getRuleContext(ReContext.self,0)
+
+	public class Binary_exp12Context: ParserRuleContext {
+			open
+			func re() -> ReContext? {
+				return getRuleContext(ReContext.self, 0)
+			}
+			open
+			func opera() -> OperaContext? {
+				return getRuleContext(OperaContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_binary_exp12
 		}
-		open func opera() -> OperaContext? {
-			return getRuleContext(OperaContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_binary_exp12 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterBinary_exp12(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterBinary_exp12(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitBinary_exp12(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitBinary_exp12(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitBinary_exp12(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitBinary_exp12(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitBinary_exp12(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitBinary_exp12(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binary_exp12() throws -> Binary_exp12Context {
+	 open func binary_exp12() throws -> Binary_exp12Context {
 		var _localctx: Binary_exp12Context = Binary_exp12Context(_ctx, getState())
 		try enterRule(_localctx, 42, MASMParser.RULE_binary_exp12)
 		defer {
@@ -2800,38 +3056,47 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class Directive_exp1Context:ParserRuleContext {
-		open func directives() -> DirectivesContext? {
-			return getRuleContext(DirectivesContext.self,0)
+
+	public class Directive_exp1Context: ParserRuleContext {
+			open
+			func directives() -> DirectivesContext? {
+				return getRuleContext(DirectivesContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_directive_exp1
 		}
-		open func Identifier() -> TerminalNode? { return getToken(MASMParser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_directive_exp1 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterDirective_exp1(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterDirective_exp1(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitDirective_exp1(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitDirective_exp1(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitDirective_exp1(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitDirective_exp1(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitDirective_exp1(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitDirective_exp1(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func directive_exp1() throws -> Directive_exp1Context {
+	 open func directive_exp1() throws -> Directive_exp1Context {
 		var _localctx: Directive_exp1Context = Directive_exp1Context(_ctx, getState())
 		try enterRule(_localctx, 44, MASMParser.RULE_directive_exp1)
 		defer {
@@ -2866,43 +3131,59 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class VariabledeclarationContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(MASMParser.Tokens.Identifier.rawValue, 0) }
-		open func ty() -> TyContext? {
-			return getRuleContext(TyContext.self,0)
+
+	public class VariabledeclarationContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func ty() -> TyContext? {
+				return getRuleContext(TyContext.self, 0)
+			}
+			open
+			func question() -> QuestionContext? {
+				return getRuleContext(QuestionContext.self, 0)
+			}
+			open
+			func String() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.String.rawValue, 0)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_variabledeclaration
 		}
-		open func question() -> QuestionContext? {
-			return getRuleContext(QuestionContext.self,0)
-		}
-		open func String() -> TerminalNode? { return getToken(MASMParser.Tokens.String.rawValue, 0) }
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_variabledeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterVariabledeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterVariabledeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitVariabledeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitVariabledeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitVariabledeclaration(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitVariabledeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitVariabledeclaration(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitVariabledeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variabledeclaration() throws -> VariabledeclarationContext {
+	 open func variabledeclaration() throws -> VariabledeclarationContext {
 		var _localctx: VariabledeclarationContext = VariabledeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 46, MASMParser.RULE_variabledeclaration)
 		defer {
@@ -2935,7 +3216,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -2947,44 +3228,63 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class MemoryContext:ParserRuleContext {
-		open func register() -> Array<RegisterContext> {
-			return getRuleContexts(RegisterContext.self)
+
+	public class MemoryContext: ParserRuleContext {
+			open
+			func register() -> [RegisterContext] {
+				return getRuleContexts(RegisterContext.self)
+			}
+			open
+			func register(_ i: Int) -> RegisterContext? {
+				return getRuleContext(RegisterContext.self, i)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func Integer() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Integer.rawValue, 0)
+			}
+			open
+			func Hexnum() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Hexnum.rawValue, 0)
+			}
+			open
+			func Octalnum() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.Octalnum.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_memory
 		}
-		open func register(_ i: Int) -> RegisterContext? {
-			return getRuleContext(RegisterContext.self,i)
-		}
-		open func Identifier() -> TerminalNode? { return getToken(MASMParser.Tokens.Identifier.rawValue, 0) }
-		open func Integer() -> TerminalNode? { return getToken(MASMParser.Tokens.Integer.rawValue, 0) }
-		open func Hexnum() -> TerminalNode? { return getToken(MASMParser.Tokens.Hexnum.rawValue, 0) }
-		open func Octalnum() -> TerminalNode? { return getToken(MASMParser.Tokens.Octalnum.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_memory }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterMemory(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterMemory(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitMemory(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitMemory(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitMemory(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitMemory(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitMemory(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitMemory(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func memory() throws -> MemoryContext {
+	 open func memory() throws -> MemoryContext {
 		var _localctx: MemoryContext = MemoryContext(_ctx, getState())
 		try enterRule(_localctx, 48, MASMParser.RULE_memory)
 		var _la: Int = 0
@@ -3033,7 +3333,7 @@ open class MASMParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(322)
 		 	try _errHandler.sync(self)
@@ -3125,7 +3425,7 @@ open class MASMParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 	}
@@ -3142,40 +3442,63 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class SegmentosContext:ParserRuleContext {
-		open func DS() -> TerminalNode? { return getToken(MASMParser.Tokens.DS.rawValue, 0) }
-		open func ES() -> TerminalNode? { return getToken(MASMParser.Tokens.ES.rawValue, 0) }
-		open func CS() -> TerminalNode? { return getToken(MASMParser.Tokens.CS.rawValue, 0) }
-		open func SS() -> TerminalNode? { return getToken(MASMParser.Tokens.SS.rawValue, 0) }
-		open func GS() -> TerminalNode? { return getToken(MASMParser.Tokens.GS.rawValue, 0) }
-		open func FS() -> TerminalNode? { return getToken(MASMParser.Tokens.FS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_segmentos }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterSegmentos(self)
+
+	public class SegmentosContext: ParserRuleContext {
+			open
+			func DS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DS.rawValue, 0)
+			}
+			open
+			func ES() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ES.rawValue, 0)
+			}
+			open
+			func CS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CS.rawValue, 0)
+			}
+			open
+			func SS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SS.rawValue, 0)
+			}
+			open
+			func GS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.GS.rawValue, 0)
+			}
+			open
+			func FS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.FS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_segmentos
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterSegmentos(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitSegmentos(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitSegmentos(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitSegmentos(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitSegmentos(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitSegmentos(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitSegmentos(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func segmentos() throws -> SegmentosContext {
+	 open func segmentos() throws -> SegmentosContext {
 		var _localctx: SegmentosContext = SegmentosContext(_ctx, getState())
 		try enterRule(_localctx, 50, MASMParser.RULE_segmentos)
 		var _la: Int = 0
@@ -3210,58 +3533,135 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class RegisterContext:ParserRuleContext {
-		open func AH() -> TerminalNode? { return getToken(MASMParser.Tokens.AH.rawValue, 0) }
-		open func AL() -> TerminalNode? { return getToken(MASMParser.Tokens.AL.rawValue, 0) }
-		open func AX() -> TerminalNode? { return getToken(MASMParser.Tokens.AX.rawValue, 0) }
-		open func BH() -> TerminalNode? { return getToken(MASMParser.Tokens.BH.rawValue, 0) }
-		open func BL() -> TerminalNode? { return getToken(MASMParser.Tokens.BL.rawValue, 0) }
-		open func BX() -> TerminalNode? { return getToken(MASMParser.Tokens.BX.rawValue, 0) }
-		open func CH() -> TerminalNode? { return getToken(MASMParser.Tokens.CH.rawValue, 0) }
-		open func CL() -> TerminalNode? { return getToken(MASMParser.Tokens.CL.rawValue, 0) }
-		open func CX() -> TerminalNode? { return getToken(MASMParser.Tokens.CX.rawValue, 0) }
-		open func DH() -> TerminalNode? { return getToken(MASMParser.Tokens.DH.rawValue, 0) }
-		open func DL() -> TerminalNode? { return getToken(MASMParser.Tokens.DL.rawValue, 0) }
-		open func DX() -> TerminalNode? { return getToken(MASMParser.Tokens.DX.rawValue, 0) }
-		open func SI() -> TerminalNode? { return getToken(MASMParser.Tokens.SI.rawValue, 0) }
-		open func DI() -> TerminalNode? { return getToken(MASMParser.Tokens.DI.rawValue, 0) }
-		open func SP() -> TerminalNode? { return getToken(MASMParser.Tokens.SP.rawValue, 0) }
-		open func BP() -> TerminalNode? { return getToken(MASMParser.Tokens.BP.rawValue, 0) }
-		open func EAX() -> TerminalNode? { return getToken(MASMParser.Tokens.EAX.rawValue, 0) }
-		open func EBX() -> TerminalNode? { return getToken(MASMParser.Tokens.EBX.rawValue, 0) }
-		open func ECX() -> TerminalNode? { return getToken(MASMParser.Tokens.ECX.rawValue, 0) }
-		open func EDX() -> TerminalNode? { return getToken(MASMParser.Tokens.EDX.rawValue, 0) }
-		open func ESI() -> TerminalNode? { return getToken(MASMParser.Tokens.ESI.rawValue, 0) }
-		open func EDI() -> TerminalNode? { return getToken(MASMParser.Tokens.EDI.rawValue, 0) }
-		open func ESP() -> TerminalNode? { return getToken(MASMParser.Tokens.ESP.rawValue, 0) }
-		open func EBP() -> TerminalNode? { return getToken(MASMParser.Tokens.EBP.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_register }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterRegister(self)
+
+	public class RegisterContext: ParserRuleContext {
+			open
+			func AH() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.AH.rawValue, 0)
+			}
+			open
+			func AL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.AL.rawValue, 0)
+			}
+			open
+			func AX() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.AX.rawValue, 0)
+			}
+			open
+			func BH() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BH.rawValue, 0)
+			}
+			open
+			func BL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BL.rawValue, 0)
+			}
+			open
+			func BX() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BX.rawValue, 0)
+			}
+			open
+			func CH() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CH.rawValue, 0)
+			}
+			open
+			func CL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CL.rawValue, 0)
+			}
+			open
+			func CX() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CX.rawValue, 0)
+			}
+			open
+			func DH() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DH.rawValue, 0)
+			}
+			open
+			func DL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DL.rawValue, 0)
+			}
+			open
+			func DX() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DX.rawValue, 0)
+			}
+			open
+			func SI() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SI.rawValue, 0)
+			}
+			open
+			func DI() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DI.rawValue, 0)
+			}
+			open
+			func SP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SP.rawValue, 0)
+			}
+			open
+			func BP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BP.rawValue, 0)
+			}
+			open
+			func EAX() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.EAX.rawValue, 0)
+			}
+			open
+			func EBX() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.EBX.rawValue, 0)
+			}
+			open
+			func ECX() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ECX.rawValue, 0)
+			}
+			open
+			func EDX() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.EDX.rawValue, 0)
+			}
+			open
+			func ESI() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ESI.rawValue, 0)
+			}
+			open
+			func EDI() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.EDI.rawValue, 0)
+			}
+			open
+			func ESP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ESP.rawValue, 0)
+			}
+			open
+			func EBP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.EBP.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_register
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterRegister(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitRegister(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitRegister(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitRegister(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitRegister(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitRegister(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitRegister(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func register() throws -> RegisterContext {
+	 open func register() throws -> RegisterContext {
 		var _localctx: RegisterContext = RegisterContext(_ctx, getState())
 		try enterRule(_localctx, 52, MASMParser.RULE_register)
 		var _la: Int = 0
@@ -3296,37 +3696,51 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class OContext:ParserRuleContext {
-		open func MOV() -> TerminalNode? { return getToken(MASMParser.Tokens.MOV.rawValue, 0) }
-		open func CMP() -> TerminalNode? { return getToken(MASMParser.Tokens.CMP.rawValue, 0) }
-		open func TEST() -> TerminalNode? { return getToken(MASMParser.Tokens.TEST.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_o }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterO(self)
+
+	public class OContext: ParserRuleContext {
+			open
+			func MOV() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.MOV.rawValue, 0)
+			}
+			open
+			func CMP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CMP.rawValue, 0)
+			}
+			open
+			func TEST() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.TEST.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_o
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterO(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitO(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitO(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitO(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitO(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitO(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitO(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func o() throws -> OContext {
+	 open func o() throws -> OContext {
 		var _localctx: OContext = OContext(_ctx, getState())
 		try enterRule(_localctx, 54, MASMParser.RULE_o)
 		var _la: Int = 0
@@ -3361,35 +3775,43 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class OpContext:ParserRuleContext {
-		open func PUSH() -> TerminalNode? { return getToken(MASMParser.Tokens.PUSH.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_op }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterOp(self)
+
+	public class OpContext: ParserRuleContext {
+			open
+			func PUSH() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.PUSH.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_op
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterOp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitOp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitOp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitOp(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitOp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitOp(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitOp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func op() throws -> OpContext {
+	 open func op() throws -> OpContext {
 		var _localctx: OpContext = OpContext(_ctx, getState())
 		try enterRule(_localctx, 56, MASMParser.RULE_op)
 		defer {
@@ -3409,73 +3831,195 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class OpeContext:ParserRuleContext {
-		open func POP() -> TerminalNode? { return getToken(MASMParser.Tokens.POP.rawValue, 0) }
-		open func IDIV() -> TerminalNode? { return getToken(MASMParser.Tokens.IDIV.rawValue, 0) }
-		open func INC() -> TerminalNode? { return getToken(MASMParser.Tokens.INC.rawValue, 0) }
-		open func DEC() -> TerminalNode? { return getToken(MASMParser.Tokens.DEC.rawValue, 0) }
-		open func NEG() -> TerminalNode? { return getToken(MASMParser.Tokens.NEG.rawValue, 0) }
-		open func MUL() -> TerminalNode? { return getToken(MASMParser.Tokens.MUL.rawValue, 0) }
-		open func DIV() -> TerminalNode? { return getToken(MASMParser.Tokens.DIV.rawValue, 0) }
-		open func IMUL() -> TerminalNode? { return getToken(MASMParser.Tokens.IMUL.rawValue, 0) }
-		open func NOT() -> TerminalNode? { return getToken(MASMParser.Tokens.NOT.rawValue, 0) }
-		open func SETPO() -> TerminalNode? { return getToken(MASMParser.Tokens.SETPO.rawValue, 0) }
-		open func SETAE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETAE.rawValue, 0) }
-		open func SETNLE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNLE.rawValue, 0) }
-		open func SETC() -> TerminalNode? { return getToken(MASMParser.Tokens.SETC.rawValue, 0) }
-		open func SETNO() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNO.rawValue, 0) }
-		open func SETNB() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNB.rawValue, 0) }
-		open func SETP() -> TerminalNode? { return getToken(MASMParser.Tokens.SETP.rawValue, 0) }
-		open func SETNGE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNGE.rawValue, 0) }
-		open func SETL() -> TerminalNode? { return getToken(MASMParser.Tokens.SETL.rawValue, 0) }
-		open func SETGE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETGE.rawValue, 0) }
-		open func SETPE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETPE.rawValue, 0) }
-		open func SETNL() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNL.rawValue, 0) }
-		open func SETNZ() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNZ.rawValue, 0) }
-		open func SETNE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNE.rawValue, 0) }
-		open func SETNC() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNC.rawValue, 0) }
-		open func SETBE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETBE.rawValue, 0) }
-		open func SETNP() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNP.rawValue, 0) }
-		open func SETNS() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNS.rawValue, 0) }
-		open func SETO() -> TerminalNode? { return getToken(MASMParser.Tokens.SETO.rawValue, 0) }
-		open func SETNA() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNA.rawValue, 0) }
-		open func SETNAE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNAE.rawValue, 0) }
-		open func SETZ() -> TerminalNode? { return getToken(MASMParser.Tokens.SETZ.rawValue, 0) }
-		open func SETLE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETLE.rawValue, 0) }
-		open func SETNBE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNBE.rawValue, 0) }
-		open func SETS() -> TerminalNode? { return getToken(MASMParser.Tokens.SETS.rawValue, 0) }
-		open func SETE() -> TerminalNode? { return getToken(MASMParser.Tokens.SETE.rawValue, 0) }
-		open func SETB() -> TerminalNode? { return getToken(MASMParser.Tokens.SETB.rawValue, 0) }
-		open func SETA() -> TerminalNode? { return getToken(MASMParser.Tokens.SETA.rawValue, 0) }
-		open func SETG() -> TerminalNode? { return getToken(MASMParser.Tokens.SETG.rawValue, 0) }
-		open func SETNG() -> TerminalNode? { return getToken(MASMParser.Tokens.SETNG.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_ope }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterOpe(self)
+
+	public class OpeContext: ParserRuleContext {
+			open
+			func POP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.POP.rawValue, 0)
+			}
+			open
+			func IDIV() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.IDIV.rawValue, 0)
+			}
+			open
+			func INC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.INC.rawValue, 0)
+			}
+			open
+			func DEC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DEC.rawValue, 0)
+			}
+			open
+			func NEG() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.NEG.rawValue, 0)
+			}
+			open
+			func MUL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.MUL.rawValue, 0)
+			}
+			open
+			func DIV() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DIV.rawValue, 0)
+			}
+			open
+			func IMUL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.IMUL.rawValue, 0)
+			}
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func SETPO() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETPO.rawValue, 0)
+			}
+			open
+			func SETAE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETAE.rawValue, 0)
+			}
+			open
+			func SETNLE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNLE.rawValue, 0)
+			}
+			open
+			func SETC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETC.rawValue, 0)
+			}
+			open
+			func SETNO() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNO.rawValue, 0)
+			}
+			open
+			func SETNB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNB.rawValue, 0)
+			}
+			open
+			func SETP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETP.rawValue, 0)
+			}
+			open
+			func SETNGE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNGE.rawValue, 0)
+			}
+			open
+			func SETL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETL.rawValue, 0)
+			}
+			open
+			func SETGE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETGE.rawValue, 0)
+			}
+			open
+			func SETPE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETPE.rawValue, 0)
+			}
+			open
+			func SETNL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNL.rawValue, 0)
+			}
+			open
+			func SETNZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNZ.rawValue, 0)
+			}
+			open
+			func SETNE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNE.rawValue, 0)
+			}
+			open
+			func SETNC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNC.rawValue, 0)
+			}
+			open
+			func SETBE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETBE.rawValue, 0)
+			}
+			open
+			func SETNP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNP.rawValue, 0)
+			}
+			open
+			func SETNS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNS.rawValue, 0)
+			}
+			open
+			func SETO() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETO.rawValue, 0)
+			}
+			open
+			func SETNA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNA.rawValue, 0)
+			}
+			open
+			func SETNAE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNAE.rawValue, 0)
+			}
+			open
+			func SETZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETZ.rawValue, 0)
+			}
+			open
+			func SETLE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETLE.rawValue, 0)
+			}
+			open
+			func SETNBE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNBE.rawValue, 0)
+			}
+			open
+			func SETS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETS.rawValue, 0)
+			}
+			open
+			func SETE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETE.rawValue, 0)
+			}
+			open
+			func SETB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETB.rawValue, 0)
+			}
+			open
+			func SETA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETA.rawValue, 0)
+			}
+			open
+			func SETG() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETG.rawValue, 0)
+			}
+			open
+			func SETNG() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SETNG.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_ope
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterOpe(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitOpe(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitOpe(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitOpe(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitOpe(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitOpe(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitOpe(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ope() throws -> OpeContext {
+	 open func ope() throws -> OpeContext {
 		var _localctx: OpeContext = OpeContext(_ctx, getState())
 		try enterRule(_localctx, 58, MASMParser.RULE_ope)
 		var _la: Int = 0
@@ -3510,35 +4054,43 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class OperContext:ParserRuleContext {
-		open func XCHG() -> TerminalNode? { return getToken(MASMParser.Tokens.XCHG.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_oper }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterOper(self)
+
+	public class OperContext: ParserRuleContext {
+			open
+			func XCHG() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.XCHG.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_oper
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterOper(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitOper(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitOper(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitOper(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitOper(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitOper(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitOper(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oper() throws -> OperContext {
+	 open func oper() throws -> OperContext {
 		var _localctx: OperContext = OperContext(_ctx, getState())
 		try enterRule(_localctx, 60, MASMParser.RULE_oper)
 		defer {
@@ -3558,88 +4110,255 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class OperaContext:ParserRuleContext {
-		open func POPAD() -> TerminalNode? { return getToken(MASMParser.Tokens.POPAD.rawValue, 0) }
-		open func AAA() -> TerminalNode? { return getToken(MASMParser.Tokens.AAA.rawValue, 0) }
-		open func POPA() -> TerminalNode? { return getToken(MASMParser.Tokens.POPA.rawValue, 0) }
-		open func POPFD() -> TerminalNode? { return getToken(MASMParser.Tokens.POPFD.rawValue, 0) }
-		open func CWD() -> TerminalNode? { return getToken(MASMParser.Tokens.CWD.rawValue, 0) }
-		open func LAHF() -> TerminalNode? { return getToken(MASMParser.Tokens.LAHF.rawValue, 0) }
-		open func PUSHAD() -> TerminalNode? { return getToken(MASMParser.Tokens.PUSHAD.rawValue, 0) }
-		open func PUSHF() -> TerminalNode? { return getToken(MASMParser.Tokens.PUSHF.rawValue, 0) }
-		open func AAS() -> TerminalNode? { return getToken(MASMParser.Tokens.AAS.rawValue, 0) }
-		open func BSWAP() -> TerminalNode? { return getToken(MASMParser.Tokens.BSWAP.rawValue, 0) }
-		open func PUSHFD() -> TerminalNode? { return getToken(MASMParser.Tokens.PUSHFD.rawValue, 0) }
-		open func CBW() -> TerminalNode? { return getToken(MASMParser.Tokens.CBW.rawValue, 0) }
-		open func CWDE() -> TerminalNode? { return getToken(MASMParser.Tokens.CWDE.rawValue, 0) }
-		open func XLAT() -> TerminalNode? { return getToken(MASMParser.Tokens.XLAT.rawValue, 0) }
-		open func AAM() -> TerminalNode? { return getToken(MASMParser.Tokens.AAM.rawValue, 0) }
-		open func AAD() -> TerminalNode? { return getToken(MASMParser.Tokens.AAD.rawValue, 0) }
-		open func CDQ() -> TerminalNode? { return getToken(MASMParser.Tokens.CDQ.rawValue, 0) }
-		open func DAA() -> TerminalNode? { return getToken(MASMParser.Tokens.DAA.rawValue, 0) }
-		open func SAHF() -> TerminalNode? { return getToken(MASMParser.Tokens.SAHF.rawValue, 0) }
-		open func DAS() -> TerminalNode? { return getToken(MASMParser.Tokens.DAS.rawValue, 0) }
-		open func INTO() -> TerminalNode? { return getToken(MASMParser.Tokens.INTO.rawValue, 0) }
-		open func IRET() -> TerminalNode? { return getToken(MASMParser.Tokens.IRET.rawValue, 0) }
-		open func CLC() -> TerminalNode? { return getToken(MASMParser.Tokens.CLC.rawValue, 0) }
-		open func STC() -> TerminalNode? { return getToken(MASMParser.Tokens.STC.rawValue, 0) }
-		open func CMC() -> TerminalNode? { return getToken(MASMParser.Tokens.CMC.rawValue, 0) }
-		open func CLD() -> TerminalNode? { return getToken(MASMParser.Tokens.CLD.rawValue, 0) }
-		open func STD() -> TerminalNode? { return getToken(MASMParser.Tokens.STD.rawValue, 0) }
-		open func CLI() -> TerminalNode? { return getToken(MASMParser.Tokens.CLI.rawValue, 0) }
-		open func STI() -> TerminalNode? { return getToken(MASMParser.Tokens.STI.rawValue, 0) }
-		open func MOVSB() -> TerminalNode? { return getToken(MASMParser.Tokens.MOVSB.rawValue, 0) }
-		open func MOVSW() -> TerminalNode? { return getToken(MASMParser.Tokens.MOVSW.rawValue, 0) }
-		open func MOVSD() -> TerminalNode? { return getToken(MASMParser.Tokens.MOVSD.rawValue, 0) }
-		open func LODS() -> TerminalNode? { return getToken(MASMParser.Tokens.LODS.rawValue, 0) }
-		open func LODSB() -> TerminalNode? { return getToken(MASMParser.Tokens.LODSB.rawValue, 0) }
-		open func LODSW() -> TerminalNode? { return getToken(MASMParser.Tokens.LODSW.rawValue, 0) }
-		open func LODSD() -> TerminalNode? { return getToken(MASMParser.Tokens.LODSD.rawValue, 0) }
-		open func STOS() -> TerminalNode? { return getToken(MASMParser.Tokens.STOS.rawValue, 0) }
-		open func STOSB() -> TerminalNode? { return getToken(MASMParser.Tokens.STOSB.rawValue, 0) }
-		open func STOSW() -> TerminalNode? { return getToken(MASMParser.Tokens.STOSW.rawValue, 0) }
-		open func SOTSD() -> TerminalNode? { return getToken(MASMParser.Tokens.SOTSD.rawValue, 0) }
-		open func SCAS() -> TerminalNode? { return getToken(MASMParser.Tokens.SCAS.rawValue, 0) }
-		open func SCASB() -> TerminalNode? { return getToken(MASMParser.Tokens.SCASB.rawValue, 0) }
-		open func SCASW() -> TerminalNode? { return getToken(MASMParser.Tokens.SCASW.rawValue, 0) }
-		open func SCASD() -> TerminalNode? { return getToken(MASMParser.Tokens.SCASD.rawValue, 0) }
-		open func CMPS() -> TerminalNode? { return getToken(MASMParser.Tokens.CMPS.rawValue, 0) }
-		open func CMPSB() -> TerminalNode? { return getToken(MASMParser.Tokens.CMPSB.rawValue, 0) }
-		open func CMPSW() -> TerminalNode? { return getToken(MASMParser.Tokens.CMPSW.rawValue, 0) }
-		open func CMPSD() -> TerminalNode? { return getToken(MASMParser.Tokens.CMPSD.rawValue, 0) }
-		open func INSB() -> TerminalNode? { return getToken(MASMParser.Tokens.INSB.rawValue, 0) }
-		open func INSW() -> TerminalNode? { return getToken(MASMParser.Tokens.INSW.rawValue, 0) }
-		open func INSD() -> TerminalNode? { return getToken(MASMParser.Tokens.INSD.rawValue, 0) }
-		open func OUTSB() -> TerminalNode? { return getToken(MASMParser.Tokens.OUTSB.rawValue, 0) }
-		open func OUTSW() -> TerminalNode? { return getToken(MASMParser.Tokens.OUTSW.rawValue, 0) }
-		open func OUTSD() -> TerminalNode? { return getToken(MASMParser.Tokens.OUTSD.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_opera }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterOpera(self)
+
+	public class OperaContext: ParserRuleContext {
+			open
+			func POPAD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.POPAD.rawValue, 0)
+			}
+			open
+			func AAA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.AAA.rawValue, 0)
+			}
+			open
+			func POPA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.POPA.rawValue, 0)
+			}
+			open
+			func POPFD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.POPFD.rawValue, 0)
+			}
+			open
+			func CWD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CWD.rawValue, 0)
+			}
+			open
+			func LAHF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LAHF.rawValue, 0)
+			}
+			open
+			func PUSHAD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.PUSHAD.rawValue, 0)
+			}
+			open
+			func PUSHF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.PUSHF.rawValue, 0)
+			}
+			open
+			func AAS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.AAS.rawValue, 0)
+			}
+			open
+			func BSWAP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BSWAP.rawValue, 0)
+			}
+			open
+			func PUSHFD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.PUSHFD.rawValue, 0)
+			}
+			open
+			func CBW() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CBW.rawValue, 0)
+			}
+			open
+			func CWDE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CWDE.rawValue, 0)
+			}
+			open
+			func XLAT() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.XLAT.rawValue, 0)
+			}
+			open
+			func AAM() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.AAM.rawValue, 0)
+			}
+			open
+			func AAD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.AAD.rawValue, 0)
+			}
+			open
+			func CDQ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CDQ.rawValue, 0)
+			}
+			open
+			func DAA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DAA.rawValue, 0)
+			}
+			open
+			func SAHF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SAHF.rawValue, 0)
+			}
+			open
+			func DAS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DAS.rawValue, 0)
+			}
+			open
+			func INTO() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.INTO.rawValue, 0)
+			}
+			open
+			func IRET() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.IRET.rawValue, 0)
+			}
+			open
+			func CLC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CLC.rawValue, 0)
+			}
+			open
+			func STC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.STC.rawValue, 0)
+			}
+			open
+			func CMC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CMC.rawValue, 0)
+			}
+			open
+			func CLD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CLD.rawValue, 0)
+			}
+			open
+			func STD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.STD.rawValue, 0)
+			}
+			open
+			func CLI() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CLI.rawValue, 0)
+			}
+			open
+			func STI() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.STI.rawValue, 0)
+			}
+			open
+			func MOVSB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.MOVSB.rawValue, 0)
+			}
+			open
+			func MOVSW() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.MOVSW.rawValue, 0)
+			}
+			open
+			func MOVSD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.MOVSD.rawValue, 0)
+			}
+			open
+			func LODS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LODS.rawValue, 0)
+			}
+			open
+			func LODSB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LODSB.rawValue, 0)
+			}
+			open
+			func LODSW() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LODSW.rawValue, 0)
+			}
+			open
+			func LODSD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LODSD.rawValue, 0)
+			}
+			open
+			func STOS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.STOS.rawValue, 0)
+			}
+			open
+			func STOSB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.STOSB.rawValue, 0)
+			}
+			open
+			func STOSW() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.STOSW.rawValue, 0)
+			}
+			open
+			func SOTSD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SOTSD.rawValue, 0)
+			}
+			open
+			func SCAS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SCAS.rawValue, 0)
+			}
+			open
+			func SCASB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SCASB.rawValue, 0)
+			}
+			open
+			func SCASW() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SCASW.rawValue, 0)
+			}
+			open
+			func SCASD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SCASD.rawValue, 0)
+			}
+			open
+			func CMPS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CMPS.rawValue, 0)
+			}
+			open
+			func CMPSB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CMPSB.rawValue, 0)
+			}
+			open
+			func CMPSW() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CMPSW.rawValue, 0)
+			}
+			open
+			func CMPSD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CMPSD.rawValue, 0)
+			}
+			open
+			func INSB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.INSB.rawValue, 0)
+			}
+			open
+			func INSW() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.INSW.rawValue, 0)
+			}
+			open
+			func INSD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.INSD.rawValue, 0)
+			}
+			open
+			func OUTSB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.OUTSB.rawValue, 0)
+			}
+			open
+			func OUTSW() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.OUTSW.rawValue, 0)
+			}
+			open
+			func OUTSD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.OUTSD.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_opera
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterOpera(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitOpera(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitOpera(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitOpera(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitOpera(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitOpera(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitOpera(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func opera() throws -> OperaContext {
+	 open func opera() throws -> OperaContext {
 		var _localctx: OperaContext = OperaContext(_ctx, getState())
 		try enterRule(_localctx, 62, MASMParser.RULE_opera)
 		var _la: Int = 0
@@ -3674,40 +4393,63 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class OperatContext:ParserRuleContext {
-		open func ADC() -> TerminalNode? { return getToken(MASMParser.Tokens.ADC.rawValue, 0) }
-		open func ADD() -> TerminalNode? { return getToken(MASMParser.Tokens.ADD.rawValue, 0) }
-		open func SUB() -> TerminalNode? { return getToken(MASMParser.Tokens.SUB.rawValue, 0) }
-		open func CBB() -> TerminalNode? { return getToken(MASMParser.Tokens.CBB.rawValue, 0) }
-		open func XOR() -> TerminalNode? { return getToken(MASMParser.Tokens.XOR.rawValue, 0) }
-		open func OR() -> TerminalNode? { return getToken(MASMParser.Tokens.OR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_operat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterOperat(self)
+
+	public class OperatContext: ParserRuleContext {
+			open
+			func ADC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ADC.rawValue, 0)
+			}
+			open
+			func ADD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ADD.rawValue, 0)
+			}
+			open
+			func SUB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SUB.rawValue, 0)
+			}
+			open
+			func CBB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CBB.rawValue, 0)
+			}
+			open
+			func XOR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.XOR.rawValue, 0)
+			}
+			open
+			func OR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.OR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_operat
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterOperat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitOperat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitOperat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitOperat(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitOperat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitOperat(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitOperat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operat() throws -> OperatContext {
+	 open func operat() throws -> OperatContext {
 		var _localctx: OperatContext = OperatContext(_ctx, getState())
 		try enterRule(_localctx, 64, MASMParser.RULE_operat)
 		var _la: Int = 0
@@ -3742,71 +4484,187 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class OperatoContext:ParserRuleContext {
-		open func JNBE() -> TerminalNode? { return getToken(MASMParser.Tokens.JNBE.rawValue, 0) }
-		open func JNZ() -> TerminalNode? { return getToken(MASMParser.Tokens.JNZ.rawValue, 0) }
-		open func JPO() -> TerminalNode? { return getToken(MASMParser.Tokens.JPO.rawValue, 0) }
-		open func JZ() -> TerminalNode? { return getToken(MASMParser.Tokens.JZ.rawValue, 0) }
-		open func JS() -> TerminalNode? { return getToken(MASMParser.Tokens.JS.rawValue, 0) }
-		open func LOOPNZ() -> TerminalNode? { return getToken(MASMParser.Tokens.LOOPNZ.rawValue, 0) }
-		open func JGE() -> TerminalNode? { return getToken(MASMParser.Tokens.JGE.rawValue, 0) }
-		open func JB() -> TerminalNode? { return getToken(MASMParser.Tokens.JB.rawValue, 0) }
-		open func JNB() -> TerminalNode? { return getToken(MASMParser.Tokens.JNB.rawValue, 0) }
-		open func JO() -> TerminalNode? { return getToken(MASMParser.Tokens.JO.rawValue, 0) }
-		open func JP() -> TerminalNode? { return getToken(MASMParser.Tokens.JP.rawValue, 0) }
-		open func JNO() -> TerminalNode? { return getToken(MASMParser.Tokens.JNO.rawValue, 0) }
-		open func JNL() -> TerminalNode? { return getToken(MASMParser.Tokens.JNL.rawValue, 0) }
-		open func JNAE() -> TerminalNode? { return getToken(MASMParser.Tokens.JNAE.rawValue, 0) }
-		open func LOOPZ() -> TerminalNode? { return getToken(MASMParser.Tokens.LOOPZ.rawValue, 0) }
-		open func JMP() -> TerminalNode? { return getToken(MASMParser.Tokens.JMP.rawValue, 0) }
-		open func JNP() -> TerminalNode? { return getToken(MASMParser.Tokens.JNP.rawValue, 0) }
-		open func LOOP() -> TerminalNode? { return getToken(MASMParser.Tokens.LOOP.rawValue, 0) }
-		open func JL() -> TerminalNode? { return getToken(MASMParser.Tokens.JL.rawValue, 0) }
-		open func JCXZ() -> TerminalNode? { return getToken(MASMParser.Tokens.JCXZ.rawValue, 0) }
-		open func JAE() -> TerminalNode? { return getToken(MASMParser.Tokens.JAE.rawValue, 0) }
-		open func JNGE() -> TerminalNode? { return getToken(MASMParser.Tokens.JNGE.rawValue, 0) }
-		open func JA() -> TerminalNode? { return getToken(MASMParser.Tokens.JA.rawValue, 0) }
-		open func LOOPNE() -> TerminalNode? { return getToken(MASMParser.Tokens.LOOPNE.rawValue, 0) }
-		open func LOOPE() -> TerminalNode? { return getToken(MASMParser.Tokens.LOOPE.rawValue, 0) }
-		open func JG() -> TerminalNode? { return getToken(MASMParser.Tokens.JG.rawValue, 0) }
-		open func JNLE() -> TerminalNode? { return getToken(MASMParser.Tokens.JNLE.rawValue, 0) }
-		open func JE() -> TerminalNode? { return getToken(MASMParser.Tokens.JE.rawValue, 0) }
-		open func JNC() -> TerminalNode? { return getToken(MASMParser.Tokens.JNC.rawValue, 0) }
-		open func JC() -> TerminalNode? { return getToken(MASMParser.Tokens.JC.rawValue, 0) }
-		open func JNA() -> TerminalNode? { return getToken(MASMParser.Tokens.JNA.rawValue, 0) }
-		open func JBE() -> TerminalNode? { return getToken(MASMParser.Tokens.JBE.rawValue, 0) }
-		open func JLE() -> TerminalNode? { return getToken(MASMParser.Tokens.JLE.rawValue, 0) }
-		open func JPE() -> TerminalNode? { return getToken(MASMParser.Tokens.JPE.rawValue, 0) }
-		open func JNS() -> TerminalNode? { return getToken(MASMParser.Tokens.JNS.rawValue, 0) }
-		open func JECXZ() -> TerminalNode? { return getToken(MASMParser.Tokens.JECXZ.rawValue, 0) }
-		open func JNG() -> TerminalNode? { return getToken(MASMParser.Tokens.JNG.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_operato }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterOperato(self)
+
+	public class OperatoContext: ParserRuleContext {
+			open
+			func JNBE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNBE.rawValue, 0)
+			}
+			open
+			func JNZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNZ.rawValue, 0)
+			}
+			open
+			func JPO() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JPO.rawValue, 0)
+			}
+			open
+			func JZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JZ.rawValue, 0)
+			}
+			open
+			func JS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JS.rawValue, 0)
+			}
+			open
+			func LOOPNZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LOOPNZ.rawValue, 0)
+			}
+			open
+			func JGE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JGE.rawValue, 0)
+			}
+			open
+			func JB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JB.rawValue, 0)
+			}
+			open
+			func JNB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNB.rawValue, 0)
+			}
+			open
+			func JO() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JO.rawValue, 0)
+			}
+			open
+			func JP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JP.rawValue, 0)
+			}
+			open
+			func JNO() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNO.rawValue, 0)
+			}
+			open
+			func JNL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNL.rawValue, 0)
+			}
+			open
+			func JNAE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNAE.rawValue, 0)
+			}
+			open
+			func LOOPZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LOOPZ.rawValue, 0)
+			}
+			open
+			func JMP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JMP.rawValue, 0)
+			}
+			open
+			func JNP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNP.rawValue, 0)
+			}
+			open
+			func LOOP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LOOP.rawValue, 0)
+			}
+			open
+			func JL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JL.rawValue, 0)
+			}
+			open
+			func JCXZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JCXZ.rawValue, 0)
+			}
+			open
+			func JAE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JAE.rawValue, 0)
+			}
+			open
+			func JNGE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNGE.rawValue, 0)
+			}
+			open
+			func JA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JA.rawValue, 0)
+			}
+			open
+			func LOOPNE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LOOPNE.rawValue, 0)
+			}
+			open
+			func LOOPE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LOOPE.rawValue, 0)
+			}
+			open
+			func JG() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JG.rawValue, 0)
+			}
+			open
+			func JNLE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNLE.rawValue, 0)
+			}
+			open
+			func JE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JE.rawValue, 0)
+			}
+			open
+			func JNC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNC.rawValue, 0)
+			}
+			open
+			func JC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JC.rawValue, 0)
+			}
+			open
+			func JNA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNA.rawValue, 0)
+			}
+			open
+			func JBE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JBE.rawValue, 0)
+			}
+			open
+			func JLE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JLE.rawValue, 0)
+			}
+			open
+			func JPE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JPE.rawValue, 0)
+			}
+			open
+			func JNS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNS.rawValue, 0)
+			}
+			open
+			func JECXZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JECXZ.rawValue, 0)
+			}
+			open
+			func JNG() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.JNG.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_operato
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterOperato(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitOperato(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitOperato(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitOperato(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitOperato(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitOperato(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitOperato(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operato() throws -> OperatoContext {
+	 open func operato() throws -> OperatoContext {
 		var _localctx: OperatoContext = OperatoContext(_ctx, getState())
 		try enterRule(_localctx, 66, MASMParser.RULE_operato)
 		var _la: Int = 0
@@ -3841,37 +4699,51 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorContext:ParserRuleContext {
-		open func MOVZX() -> TerminalNode? { return getToken(MASMParser.Tokens.MOVZX.rawValue, 0) }
-		open func BSF() -> TerminalNode? { return getToken(MASMParser.Tokens.BSF.rawValue, 0) }
-		open func BSR() -> TerminalNode? { return getToken(MASMParser.Tokens.BSR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterOperator(self)
+
+	public class OperatorContext: ParserRuleContext {
+			open
+			func MOVZX() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.MOVZX.rawValue, 0)
+			}
+			open
+			func BSF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BSF.rawValue, 0)
+			}
+			open
+			func BSR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BSR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitOperator(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitOperator(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operator() throws -> OperatorContext {
+	 open func operator() throws -> OperatorContext {
 		var _localctx: OperatorContext = OperatorContext(_ctx, getState())
 		try enterRule(_localctx, 68, MASMParser.RULE_operator)
 		var _la: Int = 0
@@ -3906,39 +4778,59 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class LContext:ParserRuleContext {
-		open func LES() -> TerminalNode? { return getToken(MASMParser.Tokens.LES.rawValue, 0) }
-		open func LEA() -> TerminalNode? { return getToken(MASMParser.Tokens.LEA.rawValue, 0) }
-		open func LDS() -> TerminalNode? { return getToken(MASMParser.Tokens.LDS.rawValue, 0) }
-		open func INS() -> TerminalNode? { return getToken(MASMParser.Tokens.INS.rawValue, 0) }
-		open func OUTS() -> TerminalNode? { return getToken(MASMParser.Tokens.OUTS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_l }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterL(self)
+
+	public class LContext: ParserRuleContext {
+			open
+			func LES() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LES.rawValue, 0)
+			}
+			open
+			func LEA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LEA.rawValue, 0)
+			}
+			open
+			func LDS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LDS.rawValue, 0)
+			}
+			open
+			func INS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.INS.rawValue, 0)
+			}
+			open
+			func OUTS() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.OUTS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_l
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterL(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitL(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitL(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitL(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitL(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitL(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitL(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func l() throws -> LContext {
+	 open func l() throws -> LContext {
 		var _localctx: LContext = LContext(_ctx, getState())
 		try enterRule(_localctx, 70, MASMParser.RULE_l)
 		var _la: Int = 0
@@ -3973,36 +4865,47 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class XContext:ParserRuleContext {
-		open func XADD() -> TerminalNode? { return getToken(MASMParser.Tokens.XADD.rawValue, 0) }
-		open func CMPXCHG() -> TerminalNode? { return getToken(MASMParser.Tokens.CMPXCHG.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_x }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterX(self)
+
+	public class XContext: ParserRuleContext {
+			open
+			func XADD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.XADD.rawValue, 0)
+			}
+			open
+			func CMPXCHG() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CMPXCHG.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_x
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterX(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitX(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitX(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitX(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitX(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitX(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitX(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func x() throws -> XContext {
+	 open func x() throws -> XContext {
 		var _localctx: XContext = XContext(_ctx, getState())
 		try enterRule(_localctx, 72, MASMParser.RULE_x)
 		var _la: Int = 0
@@ -4034,42 +4937,71 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class SContext:ParserRuleContext {
-		open func SHL() -> TerminalNode? { return getToken(MASMParser.Tokens.SHL.rawValue, 0) }
-		open func SHR() -> TerminalNode? { return getToken(MASMParser.Tokens.SHR.rawValue, 0) }
-		open func ROR() -> TerminalNode? { return getToken(MASMParser.Tokens.ROR.rawValue, 0) }
-		open func ROL() -> TerminalNode? { return getToken(MASMParser.Tokens.ROL.rawValue, 0) }
-		open func RCL() -> TerminalNode? { return getToken(MASMParser.Tokens.RCL.rawValue, 0) }
-		open func SAL() -> TerminalNode? { return getToken(MASMParser.Tokens.SAL.rawValue, 0) }
-		open func RCR() -> TerminalNode? { return getToken(MASMParser.Tokens.RCR.rawValue, 0) }
-		open func SAR() -> TerminalNode? { return getToken(MASMParser.Tokens.SAR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_s }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterS(self)
+
+	public class SContext: ParserRuleContext {
+			open
+			func SHL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SHL.rawValue, 0)
+			}
+			open
+			func SHR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SHR.rawValue, 0)
+			}
+			open
+			func ROR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ROR.rawValue, 0)
+			}
+			open
+			func ROL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ROL.rawValue, 0)
+			}
+			open
+			func RCL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.RCL.rawValue, 0)
+			}
+			open
+			func SAL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SAL.rawValue, 0)
+			}
+			open
+			func RCR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.RCR.rawValue, 0)
+			}
+			open
+			func SAR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SAR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_s
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterS(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitS(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitS(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitS(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitS(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitS(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitS(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func s() throws -> SContext {
+	 open func s() throws -> SContext {
 		var _localctx: SContext = SContext(_ctx, getState())
 		try enterRule(_localctx, 74, MASMParser.RULE_s)
 		var _la: Int = 0
@@ -4104,36 +5036,47 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class ShContext:ParserRuleContext {
-		open func SHRD() -> TerminalNode? { return getToken(MASMParser.Tokens.SHRD.rawValue, 0) }
-		open func SHLD() -> TerminalNode? { return getToken(MASMParser.Tokens.SHLD.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_sh }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterSh(self)
+
+	public class ShContext: ParserRuleContext {
+			open
+			func SHRD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SHRD.rawValue, 0)
+			}
+			open
+			func SHLD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SHLD.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_sh
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterSh(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitSh(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitSh(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitSh(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitSh(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitSh(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitSh(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sh() throws -> ShContext {
+	 open func sh() throws -> ShContext {
 		var _localctx: ShContext = ShContext(_ctx, getState())
 		try enterRule(_localctx, 76, MASMParser.RULE_sh)
 		var _la: Int = 0
@@ -4165,37 +5108,51 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class BContext:ParserRuleContext {
-		open func BTR() -> TerminalNode? { return getToken(MASMParser.Tokens.BTR.rawValue, 0) }
-		open func BT() -> TerminalNode? { return getToken(MASMParser.Tokens.BT.rawValue, 0) }
-		open func BTC() -> TerminalNode? { return getToken(MASMParser.Tokens.BTC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_b }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterB(self)
+
+	public class BContext: ParserRuleContext {
+			open
+			func BTR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BTR.rawValue, 0)
+			}
+			open
+			func BT() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BT.rawValue, 0)
+			}
+			open
+			func BTC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BTC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_b
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterB(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitB(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitB(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitB(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitB(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitB(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitB(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func b() throws -> BContext {
+	 open func b() throws -> BContext {
 		var _localctx: BContext = BContext(_ctx, getState())
 		try enterRule(_localctx, 78, MASMParser.RULE_b)
 		var _la: Int = 0
@@ -4230,35 +5187,43 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class CallContext:ParserRuleContext {
-		open func CALL() -> TerminalNode? { return getToken(MASMParser.Tokens.CALL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_call }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterCall(self)
+
+	public class CallContext: ParserRuleContext {
+			open
+			func CALL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CALL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_call
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitCall(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitCall(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func call() throws -> CallContext {
+	 open func call() throws -> CallContext {
 		var _localctx: CallContext = CallContext(_ctx, getState())
 		try enterRule(_localctx, 80, MASMParser.RULE_call)
 		defer {
@@ -4278,38 +5243,55 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class InterruptionContext:ParserRuleContext {
-		open func INT() -> TerminalNode? { return getToken(MASMParser.Tokens.INT.rawValue, 0) }
-		open func RETN() -> TerminalNode? { return getToken(MASMParser.Tokens.RETN.rawValue, 0) }
-		open func RET() -> TerminalNode? { return getToken(MASMParser.Tokens.RET.rawValue, 0) }
-		open func RETF() -> TerminalNode? { return getToken(MASMParser.Tokens.RETF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_interruption }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterInterruption(self)
+
+	public class InterruptionContext: ParserRuleContext {
+			open
+			func INT() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.INT.rawValue, 0)
+			}
+			open
+			func RETN() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.RETN.rawValue, 0)
+			}
+			open
+			func RET() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.RET.rawValue, 0)
+			}
+			open
+			func RETF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.RETF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_interruption
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterInterruption(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitInterruption(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitInterruption(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitInterruption(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitInterruption(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitInterruption(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitInterruption(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interruption() throws -> InterruptionContext {
+	 open func interruption() throws -> InterruptionContext {
 		var _localctx: InterruptionContext = InterruptionContext(_ctx, getState())
 		try enterRule(_localctx, 82, MASMParser.RULE_interruption)
 		var _la: Int = 0
@@ -4344,35 +5326,43 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class InContext:ParserRuleContext {
-		open func IN() -> TerminalNode? { return getToken(MASMParser.Tokens.IN.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_in }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterIn(self)
+
+	public class InContext: ParserRuleContext {
+			open
+			func IN() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.IN.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_in
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterIn(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitIn(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitIn(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitIn(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitIn(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitIn(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitIn(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func in() throws -> InContext {
+	 open func in() throws -> InContext {
 		var _localctx: InContext = InContext(_ctx, getState())
 		try enterRule(_localctx, 84, MASMParser.RULE_in)
 		defer {
@@ -4392,35 +5382,43 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class OutContext:ParserRuleContext {
-		open func OUT() -> TerminalNode? { return getToken(MASMParser.Tokens.OUT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_out }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterOut(self)
+
+	public class OutContext: ParserRuleContext {
+			open
+			func OUT() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.OUT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_out
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterOut(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitOut(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitOut(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitOut(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitOut(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitOut(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitOut(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func out() throws -> OutContext {
+	 open func out() throws -> OutContext {
 		var _localctx: OutContext = OutContext(_ctx, getState())
 		try enterRule(_localctx, 86, MASMParser.RULE_out)
 		defer {
@@ -4440,39 +5438,59 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class ReContext:ParserRuleContext {
-		open func REP() -> TerminalNode? { return getToken(MASMParser.Tokens.REP.rawValue, 0) }
-		open func REPE() -> TerminalNode? { return getToken(MASMParser.Tokens.REPE.rawValue, 0) }
-		open func REPZ() -> TerminalNode? { return getToken(MASMParser.Tokens.REPZ.rawValue, 0) }
-		open func REPNE() -> TerminalNode? { return getToken(MASMParser.Tokens.REPNE.rawValue, 0) }
-		open func REPNZ() -> TerminalNode? { return getToken(MASMParser.Tokens.REPNZ.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_re }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterRe(self)
+
+	public class ReContext: ParserRuleContext {
+			open
+			func REP() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.REP.rawValue, 0)
+			}
+			open
+			func REPE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.REPE.rawValue, 0)
+			}
+			open
+			func REPZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.REPZ.rawValue, 0)
+			}
+			open
+			func REPNE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.REPNE.rawValue, 0)
+			}
+			open
+			func REPNZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.REPNZ.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_re
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterRe(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitRe(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitRe(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitRe(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitRe(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitRe(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitRe(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func re() throws -> ReContext {
+	 open func re() throws -> ReContext {
 		var _localctx: ReContext = ReContext(_ctx, getState())
 		try enterRule(_localctx, 88, MASMParser.RULE_re)
 		var _la: Int = 0
@@ -4507,60 +5525,143 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class DirectivesContext:ParserRuleContext {
-		open func ALPHA() -> TerminalNode? { return getToken(MASMParser.Tokens.ALPHA.rawValue, 0) }
-		open func CONST() -> TerminalNode? { return getToken(MASMParser.Tokens.CONST.rawValue, 0) }
-		open func CREF() -> TerminalNode? { return getToken(MASMParser.Tokens.CREF.rawValue, 0) }
-		open func XCREF() -> TerminalNode? { return getToken(MASMParser.Tokens.XCREF.rawValue, 0) }
-		open func DATA() -> TerminalNode? { return getToken(MASMParser.Tokens.DATA.rawValue, 0) }
-		open func DATA2() -> TerminalNode? { return getToken(MASMParser.Tokens.DATA2.rawValue, 0) }
-		open func DOSSEG() -> TerminalNode? { return getToken(MASMParser.Tokens.DOSSEG.rawValue, 0) }
-		open func ERR() -> TerminalNode? { return getToken(MASMParser.Tokens.ERR.rawValue, 0) }
-		open func ERR1() -> TerminalNode? { return getToken(MASMParser.Tokens.ERR1.rawValue, 0) }
-		open func ERR2() -> TerminalNode? { return getToken(MASMParser.Tokens.ERR2.rawValue, 0) }
-		open func ERRE() -> TerminalNode? { return getToken(MASMParser.Tokens.ERRE.rawValue, 0) }
-		open func ERRNZ() -> TerminalNode? { return getToken(MASMParser.Tokens.ERRNZ.rawValue, 0) }
-		open func ERRDEF() -> TerminalNode? { return getToken(MASMParser.Tokens.ERRDEF.rawValue, 0) }
-		open func ERRNDEF() -> TerminalNode? { return getToken(MASMParser.Tokens.ERRNDEF.rawValue, 0) }
-		open func ERRB() -> TerminalNode? { return getToken(MASMParser.Tokens.ERRB.rawValue, 0) }
-		open func ERRNB() -> TerminalNode? { return getToken(MASMParser.Tokens.ERRNB.rawValue, 0) }
-		open func ERRIDN() -> TerminalNode? { return getToken(MASMParser.Tokens.ERRIDN.rawValue, 0) }
-		open func ERRDIF() -> TerminalNode? { return getToken(MASMParser.Tokens.ERRDIF.rawValue, 0) }
-		open func EVEN() -> TerminalNode? { return getToken(MASMParser.Tokens.EVEN.rawValue, 0) }
-		open func LIST() -> TerminalNode? { return getToken(MASMParser.Tokens.LIST.rawValue, 0) }
-		open func WIDTH() -> TerminalNode? { return getToken(MASMParser.Tokens.WIDTH.rawValue, 0) }
-		open func MASK() -> TerminalNode? { return getToken(MASMParser.Tokens.MASK.rawValue, 0) }
-		open func SEQ() -> TerminalNode? { return getToken(MASMParser.Tokens.SEQ.rawValue, 0) }
-		open func XLIST() -> TerminalNode? { return getToken(MASMParser.Tokens.XLIST.rawValue, 0) }
-		open func EXIT() -> TerminalNode? { return getToken(MASMParser.Tokens.EXIT.rawValue, 0) }
-		open func MODEL() -> TerminalNode? { return getToken(MASMParser.Tokens.MODEL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_directives }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterDirectives(self)
+
+	public class DirectivesContext: ParserRuleContext {
+			open
+			func ALPHA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ALPHA.rawValue, 0)
+			}
+			open
+			func CONST() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CONST.rawValue, 0)
+			}
+			open
+			func CREF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.CREF.rawValue, 0)
+			}
+			open
+			func XCREF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.XCREF.rawValue, 0)
+			}
+			open
+			func DATA() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DATA.rawValue, 0)
+			}
+			open
+			func DATA2() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DATA2.rawValue, 0)
+			}
+			open
+			func DOSSEG() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DOSSEG.rawValue, 0)
+			}
+			open
+			func ERR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERR.rawValue, 0)
+			}
+			open
+			func ERR1() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERR1.rawValue, 0)
+			}
+			open
+			func ERR2() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERR2.rawValue, 0)
+			}
+			open
+			func ERRE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERRE.rawValue, 0)
+			}
+			open
+			func ERRNZ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERRNZ.rawValue, 0)
+			}
+			open
+			func ERRDEF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERRDEF.rawValue, 0)
+			}
+			open
+			func ERRNDEF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERRNDEF.rawValue, 0)
+			}
+			open
+			func ERRB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERRB.rawValue, 0)
+			}
+			open
+			func ERRNB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERRNB.rawValue, 0)
+			}
+			open
+			func ERRIDN() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERRIDN.rawValue, 0)
+			}
+			open
+			func ERRDIF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.ERRDIF.rawValue, 0)
+			}
+			open
+			func EVEN() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.EVEN.rawValue, 0)
+			}
+			open
+			func LIST() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.LIST.rawValue, 0)
+			}
+			open
+			func WIDTH() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.WIDTH.rawValue, 0)
+			}
+			open
+			func MASK() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.MASK.rawValue, 0)
+			}
+			open
+			func SEQ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SEQ.rawValue, 0)
+			}
+			open
+			func XLIST() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.XLIST.rawValue, 0)
+			}
+			open
+			func EXIT() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.EXIT.rawValue, 0)
+			}
+			open
+			func MODEL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.MODEL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_directives
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterDirectives(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitDirectives(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitDirectives(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitDirectives(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitDirectives(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitDirectives(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitDirectives(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func directives() throws -> DirectivesContext {
+	 open func directives() throws -> DirectivesContext {
 		var _localctx: DirectivesContext = DirectivesContext(_ctx, getState())
 		try enterRule(_localctx, 90, MASMParser.RULE_directives)
 		var _la: Int = 0
@@ -4595,55 +5696,123 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class TyContext:ParserRuleContext {
-		open func BYTE() -> TerminalNode? { return getToken(MASMParser.Tokens.BYTE.rawValue, 0) }
-		open func SBYTE() -> TerminalNode? { return getToken(MASMParser.Tokens.SBYTE.rawValue, 0) }
-		open func DB() -> TerminalNode? { return getToken(MASMParser.Tokens.DB.rawValue, 0) }
-		open func WORD() -> TerminalNode? { return getToken(MASMParser.Tokens.WORD.rawValue, 0) }
-		open func SWORD() -> TerminalNode? { return getToken(MASMParser.Tokens.SWORD.rawValue, 0) }
-		open func DW() -> TerminalNode? { return getToken(MASMParser.Tokens.DW.rawValue, 0) }
-		open func DWORD() -> TerminalNode? { return getToken(MASMParser.Tokens.DWORD.rawValue, 0) }
-		open func SDWORD() -> TerminalNode? { return getToken(MASMParser.Tokens.SDWORD.rawValue, 0) }
-		open func DD() -> TerminalNode? { return getToken(MASMParser.Tokens.DD.rawValue, 0) }
-		open func FWORD() -> TerminalNode? { return getToken(MASMParser.Tokens.FWORD.rawValue, 0) }
-		open func DF() -> TerminalNode? { return getToken(MASMParser.Tokens.DF.rawValue, 0) }
-		open func QWORD() -> TerminalNode? { return getToken(MASMParser.Tokens.QWORD.rawValue, 0) }
-		open func DQ() -> TerminalNode? { return getToken(MASMParser.Tokens.DQ.rawValue, 0) }
-		open func TBYTE() -> TerminalNode? { return getToken(MASMParser.Tokens.TBYTE.rawValue, 0) }
-		open func DT() -> TerminalNode? { return getToken(MASMParser.Tokens.DT.rawValue, 0) }
-		open func REAL4() -> TerminalNode? { return getToken(MASMParser.Tokens.REAL4.rawValue, 0) }
-		open func REAL8() -> TerminalNode? { return getToken(MASMParser.Tokens.REAL8.rawValue, 0) }
-		open func REAL() -> TerminalNode? { return getToken(MASMParser.Tokens.REAL.rawValue, 0) }
-		open func FAR() -> TerminalNode? { return getToken(MASMParser.Tokens.FAR.rawValue, 0) }
-		open func NEAR() -> TerminalNode? { return getToken(MASMParser.Tokens.NEAR.rawValue, 0) }
-		open func PROC() -> TerminalNode? { return getToken(MASMParser.Tokens.PROC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_ty }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterTy(self)
+
+	public class TyContext: ParserRuleContext {
+			open
+			func BYTE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.BYTE.rawValue, 0)
+			}
+			open
+			func SBYTE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SBYTE.rawValue, 0)
+			}
+			open
+			func DB() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DB.rawValue, 0)
+			}
+			open
+			func WORD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.WORD.rawValue, 0)
+			}
+			open
+			func SWORD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SWORD.rawValue, 0)
+			}
+			open
+			func DW() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DW.rawValue, 0)
+			}
+			open
+			func DWORD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DWORD.rawValue, 0)
+			}
+			open
+			func SDWORD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.SDWORD.rawValue, 0)
+			}
+			open
+			func DD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DD.rawValue, 0)
+			}
+			open
+			func FWORD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.FWORD.rawValue, 0)
+			}
+			open
+			func DF() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DF.rawValue, 0)
+			}
+			open
+			func QWORD() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.QWORD.rawValue, 0)
+			}
+			open
+			func DQ() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DQ.rawValue, 0)
+			}
+			open
+			func TBYTE() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.TBYTE.rawValue, 0)
+			}
+			open
+			func DT() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.DT.rawValue, 0)
+			}
+			open
+			func REAL4() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.REAL4.rawValue, 0)
+			}
+			open
+			func REAL8() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.REAL8.rawValue, 0)
+			}
+			open
+			func REAL() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.REAL.rawValue, 0)
+			}
+			open
+			func FAR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.FAR.rawValue, 0)
+			}
+			open
+			func NEAR() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.NEAR.rawValue, 0)
+			}
+			open
+			func PROC() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.PROC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_ty
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterTy(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitTy(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitTy(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitTy(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitTy(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitTy(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitTy(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ty() throws -> TyContext {
+	 open func ty() throws -> TyContext {
 		var _localctx: TyContext = TyContext(_ctx, getState())
 		try enterRule(_localctx, 92, MASMParser.RULE_ty)
 		var _la: Int = 0
@@ -4678,35 +5847,43 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class QuestionContext:ParserRuleContext {
-		open func QUESTION() -> TerminalNode? { return getToken(MASMParser.Tokens.QUESTION.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_question }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterQuestion(self)
+
+	public class QuestionContext: ParserRuleContext {
+			open
+			func QUESTION() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.QUESTION.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_question
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterQuestion(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitQuestion(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitQuestion(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitQuestion(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitQuestion(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitQuestion(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitQuestion(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func question() throws -> QuestionContext {
+	 open func question() throws -> QuestionContext {
 		var _localctx: QuestionContext = QuestionContext(_ctx, getState())
 		try enterRule(_localctx, 94, MASMParser.RULE_question)
 		defer {
@@ -4726,35 +5903,43 @@ open class MASMParser: Parser {
 
 		return _localctx
 	}
-	open class TimeContext:ParserRuleContext {
-		open func TIMES() -> TerminalNode? { return getToken(MASMParser.Tokens.TIMES.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return MASMParser.RULE_time }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).enterTime(self)
+
+	public class TimeContext: ParserRuleContext {
+			open
+			func TIMES() -> TerminalNode? {
+				return getToken(MASMParser.Tokens.TIMES.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return MASMParser.RULE_time
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.enterTime(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is MASMListener {
-			 	(listener as! MASMListener).exitTime(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? MASMListener {
+				listener.exitTime(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is MASMVisitor {
-			     return (visitor as! MASMVisitor<T>).visitTime(self)
-			}else if visitor is MASMBaseVisitor {
-		    	 return (visitor as! MASMBaseVisitor<T>).visitTime(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? MASMVisitor {
+			    return visitor.visitTime(self)
+			}
+			else if let visitor = visitor as? MASMBaseVisitor {
+			    return visitor.visitTime(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func time() throws -> TimeContext {
+	 open func time() throws -> TimeContext {
 		var _localctx: TimeContext = TimeContext(_ctx, getState())
 		try enterRule(_localctx, 96, MASMParser.RULE_time)
 		defer {
@@ -4775,6 +5960,10 @@ open class MASMParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = MASMParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = MASMParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

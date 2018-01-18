@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/c/C.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/c/C.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryExpression(_ ctx: CParser.PrimaryExpressionContext) -> T{
+	open func visitPrimaryExpression(_ ctx: CParser.PrimaryExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGenericSelection(_ ctx: CParser.GenericSelectionContext) -> T{
+	open func visitGenericSelection(_ ctx: CParser.GenericSelectionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGenericAssocList(_ ctx: CParser.GenericAssocListContext) -> T{
+	open func visitGenericAssocList(_ ctx: CParser.GenericAssocListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGenericAssociation(_ ctx: CParser.GenericAssociationContext) -> T{
+	open func visitGenericAssociation(_ ctx: CParser.GenericAssociationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostfixExpression(_ ctx: CParser.PostfixExpressionContext) -> T{
+	open func visitPostfixExpression(_ ctx: CParser.PostfixExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentExpressionList(_ ctx: CParser.ArgumentExpressionListContext) -> T{
+	open func visitArgumentExpressionList(_ ctx: CParser.ArgumentExpressionListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryExpression(_ ctx: CParser.UnaryExpressionContext) -> T{
+	open func visitUnaryExpression(_ ctx: CParser.UnaryExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryOperator(_ ctx: CParser.UnaryOperatorContext) -> T{
+	open func visitUnaryOperator(_ ctx: CParser.UnaryOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCastExpression(_ ctx: CParser.CastExpressionContext) -> T{
+	open func visitCastExpression(_ ctx: CParser.CastExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplicativeExpression(_ ctx: CParser.MultiplicativeExpressionContext) -> T{
+	open func visitMultiplicativeExpression(_ ctx: CParser.MultiplicativeExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditiveExpression(_ ctx: CParser.AdditiveExpressionContext) -> T{
+	open func visitAdditiveExpression(_ ctx: CParser.AdditiveExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitShiftExpression(_ ctx: CParser.ShiftExpressionContext) -> T{
+	open func visitShiftExpression(_ ctx: CParser.ShiftExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelationalExpression(_ ctx: CParser.RelationalExpressionContext) -> T{
+	open func visitRelationalExpression(_ ctx: CParser.RelationalExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEqualityExpression(_ ctx: CParser.EqualityExpressionContext) -> T{
+	open func visitEqualityExpression(_ ctx: CParser.EqualityExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAndExpression(_ ctx: CParser.AndExpressionContext) -> T{
+	open func visitAndExpression(_ ctx: CParser.AndExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExclusiveOrExpression(_ ctx: CParser.ExclusiveOrExpressionContext) -> T{
+	open func visitExclusiveOrExpression(_ ctx: CParser.ExclusiveOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInclusiveOrExpression(_ ctx: CParser.InclusiveOrExpressionContext) -> T{
+	open func visitInclusiveOrExpression(_ ctx: CParser.InclusiveOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalAndExpression(_ ctx: CParser.LogicalAndExpressionContext) -> T{
+	open func visitLogicalAndExpression(_ ctx: CParser.LogicalAndExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalOrExpression(_ ctx: CParser.LogicalOrExpressionContext) -> T{
+	open func visitLogicalOrExpression(_ ctx: CParser.LogicalOrExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditionalExpression(_ ctx: CParser.ConditionalExpressionContext) -> T{
+	open func visitConditionalExpression(_ ctx: CParser.ConditionalExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentExpression(_ ctx: CParser.AssignmentExpressionContext) -> T{
+	open func visitAssignmentExpression(_ ctx: CParser.AssignmentExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentOperator(_ ctx: CParser.AssignmentOperatorContext) -> T{
+	open func visitAssignmentOperator(_ ctx: CParser.AssignmentOperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: CParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: CParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantExpression(_ ctx: CParser.ConstantExpressionContext) -> T{
+	open func visitConstantExpression(_ ctx: CParser.ConstantExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclaration(_ ctx: CParser.DeclarationContext) -> T{
+	open func visitDeclaration(_ ctx: CParser.DeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarationSpecifiers(_ ctx: CParser.DeclarationSpecifiersContext) -> T{
+	open func visitDeclarationSpecifiers(_ ctx: CParser.DeclarationSpecifiersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarationSpecifiers2(_ ctx: CParser.DeclarationSpecifiers2Context) -> T{
+	open func visitDeclarationSpecifiers2(_ ctx: CParser.DeclarationSpecifiers2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarationSpecifier(_ ctx: CParser.DeclarationSpecifierContext) -> T{
+	open func visitDeclarationSpecifier(_ ctx: CParser.DeclarationSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitDeclaratorList(_ ctx: CParser.InitDeclaratorListContext) -> T{
+	open func visitInitDeclaratorList(_ ctx: CParser.InitDeclaratorListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitDeclarator(_ ctx: CParser.InitDeclaratorContext) -> T{
+	open func visitInitDeclarator(_ ctx: CParser.InitDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStorageClassSpecifier(_ ctx: CParser.StorageClassSpecifierContext) -> T{
+	open func visitStorageClassSpecifier(_ ctx: CParser.StorageClassSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSpecifier(_ ctx: CParser.TypeSpecifierContext) -> T{
+	open func visitTypeSpecifier(_ ctx: CParser.TypeSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructOrUnionSpecifier(_ ctx: CParser.StructOrUnionSpecifierContext) -> T{
+	open func visitStructOrUnionSpecifier(_ ctx: CParser.StructOrUnionSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructOrUnion(_ ctx: CParser.StructOrUnionContext) -> T{
+	open func visitStructOrUnion(_ ctx: CParser.StructOrUnionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructDeclarationList(_ ctx: CParser.StructDeclarationListContext) -> T{
+	open func visitStructDeclarationList(_ ctx: CParser.StructDeclarationListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructDeclaration(_ ctx: CParser.StructDeclarationContext) -> T{
+	open func visitStructDeclaration(_ ctx: CParser.StructDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpecifierQualifierList(_ ctx: CParser.SpecifierQualifierListContext) -> T{
+	open func visitSpecifierQualifierList(_ ctx: CParser.SpecifierQualifierListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructDeclaratorList(_ ctx: CParser.StructDeclaratorListContext) -> T{
+	open func visitStructDeclaratorList(_ ctx: CParser.StructDeclaratorListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructDeclarator(_ ctx: CParser.StructDeclaratorContext) -> T{
+	open func visitStructDeclarator(_ ctx: CParser.StructDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumSpecifier(_ ctx: CParser.EnumSpecifierContext) -> T{
+	open func visitEnumSpecifier(_ ctx: CParser.EnumSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumeratorList(_ ctx: CParser.EnumeratorListContext) -> T{
+	open func visitEnumeratorList(_ ctx: CParser.EnumeratorListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumerator(_ ctx: CParser.EnumeratorContext) -> T{
+	open func visitEnumerator(_ ctx: CParser.EnumeratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumerationConstant(_ ctx: CParser.EnumerationConstantContext) -> T{
+	open func visitEnumerationConstant(_ ctx: CParser.EnumerationConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtomicTypeSpecifier(_ ctx: CParser.AtomicTypeSpecifierContext) -> T{
+	open func visitAtomicTypeSpecifier(_ ctx: CParser.AtomicTypeSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeQualifier(_ ctx: CParser.TypeQualifierContext) -> T{
+	open func visitTypeQualifier(_ ctx: CParser.TypeQualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionSpecifier(_ ctx: CParser.FunctionSpecifierContext) -> T{
+	open func visitFunctionSpecifier(_ ctx: CParser.FunctionSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlignmentSpecifier(_ ctx: CParser.AlignmentSpecifierContext) -> T{
+	open func visitAlignmentSpecifier(_ ctx: CParser.AlignmentSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarator(_ ctx: CParser.DeclaratorContext) -> T{
+	open func visitDeclarator(_ ctx: CParser.DeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDirectDeclarator(_ ctx: CParser.DirectDeclaratorContext) -> T{
+	open func visitDirectDeclarator(_ ctx: CParser.DirectDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGccDeclaratorExtension(_ ctx: CParser.GccDeclaratorExtensionContext) -> T{
+	open func visitGccDeclaratorExtension(_ ctx: CParser.GccDeclaratorExtensionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGccAttributeSpecifier(_ ctx: CParser.GccAttributeSpecifierContext) -> T{
+	open func visitGccAttributeSpecifier(_ ctx: CParser.GccAttributeSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGccAttributeList(_ ctx: CParser.GccAttributeListContext) -> T{
+	open func visitGccAttributeList(_ ctx: CParser.GccAttributeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGccAttribute(_ ctx: CParser.GccAttributeContext) -> T{
+	open func visitGccAttribute(_ ctx: CParser.GccAttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNestedParenthesesBlock(_ ctx: CParser.NestedParenthesesBlockContext) -> T{
+	open func visitNestedParenthesesBlock(_ ctx: CParser.NestedParenthesesBlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPointer(_ ctx: CParser.PointerContext) -> T{
+	open func visitPointer(_ ctx: CParser.PointerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeQualifierList(_ ctx: CParser.TypeQualifierListContext) -> T{
+	open func visitTypeQualifierList(_ ctx: CParser.TypeQualifierListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterTypeList(_ ctx: CParser.ParameterTypeListContext) -> T{
+	open func visitParameterTypeList(_ ctx: CParser.ParameterTypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterList(_ ctx: CParser.ParameterListContext) -> T{
+	open func visitParameterList(_ ctx: CParser.ParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterDeclaration(_ ctx: CParser.ParameterDeclarationContext) -> T{
+	open func visitParameterDeclaration(_ ctx: CParser.ParameterDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifierList(_ ctx: CParser.IdentifierListContext) -> T{
+	open func visitIdentifierList(_ ctx: CParser.IdentifierListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeName(_ ctx: CParser.TypeNameContext) -> T{
+	open func visitTypeName(_ ctx: CParser.TypeNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAbstractDeclarator(_ ctx: CParser.AbstractDeclaratorContext) -> T{
+	open func visitAbstractDeclarator(_ ctx: CParser.AbstractDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDirectAbstractDeclarator(_ ctx: CParser.DirectAbstractDeclaratorContext) -> T{
+	open func visitDirectAbstractDeclarator(_ ctx: CParser.DirectAbstractDeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedefName(_ ctx: CParser.TypedefNameContext) -> T{
+	open func visitTypedefName(_ ctx: CParser.TypedefNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitializer(_ ctx: CParser.InitializerContext) -> T{
+	open func visitInitializer(_ ctx: CParser.InitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitializerList(_ ctx: CParser.InitializerListContext) -> T{
+	open func visitInitializerList(_ ctx: CParser.InitializerListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDesignation(_ ctx: CParser.DesignationContext) -> T{
+	open func visitDesignation(_ ctx: CParser.DesignationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDesignatorList(_ ctx: CParser.DesignatorListContext) -> T{
+	open func visitDesignatorList(_ ctx: CParser.DesignatorListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDesignator(_ ctx: CParser.DesignatorContext) -> T{
+	open func visitDesignator(_ ctx: CParser.DesignatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStaticAssertDeclaration(_ ctx: CParser.StaticAssertDeclarationContext) -> T{
+	open func visitStaticAssertDeclaration(_ ctx: CParser.StaticAssertDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: CParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: CParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabeledStatement(_ ctx: CParser.LabeledStatementContext) -> T{
+	open func visitLabeledStatement(_ ctx: CParser.LabeledStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompoundStatement(_ ctx: CParser.CompoundStatementContext) -> T{
+	open func visitCompoundStatement(_ ctx: CParser.CompoundStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockItemList(_ ctx: CParser.BlockItemListContext) -> T{
+	open func visitBlockItemList(_ ctx: CParser.BlockItemListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockItem(_ ctx: CParser.BlockItemContext) -> T{
+	open func visitBlockItem(_ ctx: CParser.BlockItemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionStatement(_ ctx: CParser.ExpressionStatementContext) -> T{
+	open func visitExpressionStatement(_ ctx: CParser.ExpressionStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelectionStatement(_ ctx: CParser.SelectionStatementContext) -> T{
+	open func visitSelectionStatement(_ ctx: CParser.SelectionStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,37 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIterationStatement(_ ctx: CParser.IterationStatementContext) -> T{
+	open func visitIterationStatement(_ ctx: CParser.IterationStatementContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link CParser#forCondition}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitForCondition(_ ctx: CParser.ForConditionContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link CParser#forDeclaration}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitForDeclaration(_ ctx: CParser.ForDeclarationContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link CParser#forExpression}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitForExpression(_ ctx: CParser.ForExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +825,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJumpStatement(_ ctx: CParser.JumpStatementContext) -> T{
+	open func visitJumpStatement(_ ctx: CParser.JumpStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +835,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompilationUnit(_ ctx: CParser.CompilationUnitContext) -> T{
+	open func visitCompilationUnit(_ ctx: CParser.CompilationUnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +845,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTranslationUnit(_ ctx: CParser.TranslationUnitContext) -> T{
+	open func visitTranslationUnit(_ ctx: CParser.TranslationUnitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +855,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExternalDeclaration(_ ctx: CParser.ExternalDeclarationContext) -> T{
+	open func visitExternalDeclaration(_ ctx: CParser.ExternalDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +865,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionDefinition(_ ctx: CParser.FunctionDefinitionContext) -> T{
+	open func visitFunctionDefinition(_ ctx: CParser.FunctionDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +875,7 @@ open class CVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarationList(_ ctx: CParser.DeclarationListContext) -> T{
+	open func visitDeclarationList(_ ctx: CParser.DeclarationListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

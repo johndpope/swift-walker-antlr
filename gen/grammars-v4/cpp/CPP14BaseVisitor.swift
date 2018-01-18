@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cpp/CPP14.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cpp/CPP14.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -548,7 +548,7 @@ open class CPP14BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitTypename(_ ctx: CPP14Parser.TypenameContext) -> T? { return visitChildren(ctx) }
+	open func visitThetypename(_ ctx: CPP14Parser.ThetypenameContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -898,7 +898,7 @@ open class CPP14BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitTypeid(_ ctx: CPP14Parser.TypeidContext) -> T? { return visitChildren(ctx) }
+	open func visitThetypeid(_ ctx: CPP14Parser.ThetypeidContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1374,7 +1374,7 @@ open class CPP14BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitOperator(_ ctx: CPP14Parser.OperatorContext) -> T? { return visitChildren(ctx) }
+	open func visitTheoperator(_ ctx: CPP14Parser.TheoperatorContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *

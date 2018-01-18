@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/modula2pim4/m2pim4.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/modula2pim4/m2pim4.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**

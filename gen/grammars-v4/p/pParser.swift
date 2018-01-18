@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/p/p.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/p/p.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class pParser: Parser {
@@ -11,12 +11,19 @@ open class pParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, R = 3, L = 4, WS = 5
 	}
-	public static let RULE_prog = 0, RULE_symbol = 1, RULE_iterate = 2, RULE_atom = 3
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_prog = 0, RULE_symbol = 1, RULE_iterate = 2, RULE_atom = 3
+
+	public
+	static let ruleNames: [String] = [
 		"prog", "symbol", "iterate", "atom"
 	]
 
@@ -26,88 +33,73 @@ open class pParser: Parser {
 	private static let _SYMBOLIC_NAMES: [String?] = [
 		nil, nil, nil, "R", "L", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "p.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return pParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "p.g4" }
+	override open
+	func getSerializedATN() -> String { return pParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return pParser.ruleNames }
+	override open
+	func getATN() -> ATN { return pParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return pParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return pParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return pParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,pParser._ATN,pParser._decisionToDFA, pParser._sharedContextCache)
 	}
-	open class ProgContext:ParserRuleContext {
-		open func symbol() -> Array<SymbolContext> {
-			return getRuleContexts(SymbolContext.self)
+
+	public class ProgContext: ParserRuleContext {
+			open
+			func symbol() -> [SymbolContext] {
+				return getRuleContexts(SymbolContext.self)
+			}
+			open
+			func symbol(_ i: Int) -> SymbolContext? {
+				return getRuleContext(SymbolContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pParser.RULE_prog
 		}
-		open func symbol(_ i: Int) -> SymbolContext? {
-			return getRuleContext(SymbolContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return pParser.RULE_prog }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pListener {
-			 	(listener as! pListener).enterProg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pListener {
+				listener.enterProg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pListener {
-			 	(listener as! pListener).exitProg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pListener {
+				listener.exitProg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pVisitor {
-			     return (visitor as! pVisitor<T>).visitProg(self)
-			}else if visitor is pBaseVisitor {
-		    	 return (visitor as! pBaseVisitor<T>).visitProg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pVisitor {
+			    return visitor.visitProg(self)
+			}
+			else if let visitor = visitor as? pBaseVisitor {
+			    return visitor.visitProg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prog() throws -> ProgContext {
+	 open func prog() throws -> ProgContext {
 		var _localctx: ProgContext = ProgContext(_ctx, getState())
 		try enterRule(_localctx, 0, pParser.RULE_prog)
 		var _la: Int = 0
@@ -145,40 +137,47 @@ open class pParser: Parser {
 
 		return _localctx
 	}
-	open class SymbolContext:ParserRuleContext {
-		open func iterate() -> IterateContext? {
-			return getRuleContext(IterateContext.self,0)
+
+	public class SymbolContext: ParserRuleContext {
+			open
+			func iterate() -> IterateContext? {
+				return getRuleContext(IterateContext.self, 0)
+			}
+			open
+			func atom() -> AtomContext? {
+				return getRuleContext(AtomContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pParser.RULE_symbol
 		}
-		open func atom() -> AtomContext? {
-			return getRuleContext(AtomContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return pParser.RULE_symbol }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pListener {
-			 	(listener as! pListener).enterSymbol(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pListener {
+				listener.enterSymbol(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pListener {
-			 	(listener as! pListener).exitSymbol(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pListener {
+				listener.exitSymbol(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pVisitor {
-			     return (visitor as! pVisitor<T>).visitSymbol(self)
-			}else if visitor is pBaseVisitor {
-		    	 return (visitor as! pBaseVisitor<T>).visitSymbol(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pVisitor {
+			    return visitor.visitSymbol(self)
+			}
+			else if let visitor = visitor as? pBaseVisitor {
+			    return visitor.visitSymbol(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func symbol() throws -> SymbolContext {
+	 open func symbol() throws -> SymbolContext {
 		var _localctx: SymbolContext = SymbolContext(_ctx, getState())
 		try enterRule(_localctx, 2, pParser.RULE_symbol)
 		defer {
@@ -202,7 +201,7 @@ open class pParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -213,40 +212,47 @@ open class pParser: Parser {
 
 		return _localctx
 	}
-	open class IterateContext:ParserRuleContext {
-		open func symbol() -> Array<SymbolContext> {
-			return getRuleContexts(SymbolContext.self)
+
+	public class IterateContext: ParserRuleContext {
+			open
+			func symbol() -> [SymbolContext] {
+				return getRuleContexts(SymbolContext.self)
+			}
+			open
+			func symbol(_ i: Int) -> SymbolContext? {
+				return getRuleContext(SymbolContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pParser.RULE_iterate
 		}
-		open func symbol(_ i: Int) -> SymbolContext? {
-			return getRuleContext(SymbolContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return pParser.RULE_iterate }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pListener {
-			 	(listener as! pListener).enterIterate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pListener {
+				listener.enterIterate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pListener {
-			 	(listener as! pListener).exitIterate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pListener {
+				listener.exitIterate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pVisitor {
-			     return (visitor as! pVisitor<T>).visitIterate(self)
-			}else if visitor is pBaseVisitor {
-		    	 return (visitor as! pBaseVisitor<T>).visitIterate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pVisitor {
+			    return visitor.visitIterate(self)
+			}
+			else if let visitor = visitor as? pBaseVisitor {
+			    return visitor.visitIterate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iterate() throws -> IterateContext {
+	 open func iterate() throws -> IterateContext {
 		var _localctx: IterateContext = IterateContext(_ctx, getState())
 		try enterRule(_localctx, 4, pParser.RULE_iterate)
 		var _la: Int = 0
@@ -288,36 +294,47 @@ open class pParser: Parser {
 
 		return _localctx
 	}
-	open class AtomContext:ParserRuleContext {
-		open func R() -> TerminalNode? { return getToken(pParser.Tokens.R.rawValue, 0) }
-		open func L() -> TerminalNode? { return getToken(pParser.Tokens.L.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return pParser.RULE_atom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pListener {
-			 	(listener as! pListener).enterAtom(self)
+
+	public class AtomContext: ParserRuleContext {
+			open
+			func R() -> TerminalNode? {
+				return getToken(pParser.Tokens.R.rawValue, 0)
+			}
+			open
+			func L() -> TerminalNode? {
+				return getToken(pParser.Tokens.L.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pParser.RULE_atom
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pListener {
+				listener.enterAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pListener {
-			 	(listener as! pListener).exitAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pListener {
+				listener.exitAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pVisitor {
-			     return (visitor as! pVisitor<T>).visitAtom(self)
-			}else if visitor is pBaseVisitor {
-		    	 return (visitor as! pBaseVisitor<T>).visitAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pVisitor {
+			    return visitor.visitAtom(self)
+			}
+			else if let visitor = visitor as? pBaseVisitor {
+			    return visitor.visitAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atom() throws -> AtomContext {
+	 open func atom() throws -> AtomContext {
 		var _localctx: AtomContext = AtomContext(_ctx, getState())
 		try enterRule(_localctx, 6, pParser.RULE_atom)
 		var _la: Int = 0
@@ -350,6 +367,10 @@ open class pParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = pParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = pParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

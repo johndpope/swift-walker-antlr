@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cpp/CPP14.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cpp/CPP14.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTranslationunit(_ ctx: CPP14Parser.TranslationunitContext) -> T{
+	open func visitTranslationunit(_ ctx: CPP14Parser.TranslationunitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimaryexpression(_ ctx: CPP14Parser.PrimaryexpressionContext) -> T{
+	open func visitPrimaryexpression(_ ctx: CPP14Parser.PrimaryexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdexpression(_ ctx: CPP14Parser.IdexpressionContext) -> T{
+	open func visitIdexpression(_ ctx: CPP14Parser.IdexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnqualifiedid(_ ctx: CPP14Parser.UnqualifiedidContext) -> T{
+	open func visitUnqualifiedid(_ ctx: CPP14Parser.UnqualifiedidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualifiedid(_ ctx: CPP14Parser.QualifiedidContext) -> T{
+	open func visitQualifiedid(_ ctx: CPP14Parser.QualifiedidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNestednamespecifier(_ ctx: CPP14Parser.NestednamespecifierContext) -> T{
+	open func visitNestednamespecifier(_ ctx: CPP14Parser.NestednamespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambdaexpression(_ ctx: CPP14Parser.LambdaexpressionContext) -> T{
+	open func visitLambdaexpression(_ ctx: CPP14Parser.LambdaexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambdaintroducer(_ ctx: CPP14Parser.LambdaintroducerContext) -> T{
+	open func visitLambdaintroducer(_ ctx: CPP14Parser.LambdaintroducerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambdacapture(_ ctx: CPP14Parser.LambdacaptureContext) -> T{
+	open func visitLambdacapture(_ ctx: CPP14Parser.LambdacaptureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCapturedefault(_ ctx: CPP14Parser.CapturedefaultContext) -> T{
+	open func visitCapturedefault(_ ctx: CPP14Parser.CapturedefaultContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCapturelist(_ ctx: CPP14Parser.CapturelistContext) -> T{
+	open func visitCapturelist(_ ctx: CPP14Parser.CapturelistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCapture(_ ctx: CPP14Parser.CaptureContext) -> T{
+	open func visitCapture(_ ctx: CPP14Parser.CaptureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimplecapture(_ ctx: CPP14Parser.SimplecaptureContext) -> T{
+	open func visitSimplecapture(_ ctx: CPP14Parser.SimplecaptureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitcapture(_ ctx: CPP14Parser.InitcaptureContext) -> T{
+	open func visitInitcapture(_ ctx: CPP14Parser.InitcaptureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambdadeclarator(_ ctx: CPP14Parser.LambdadeclaratorContext) -> T{
+	open func visitLambdadeclarator(_ ctx: CPP14Parser.LambdadeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPostfixexpression(_ ctx: CPP14Parser.PostfixexpressionContext) -> T{
+	open func visitPostfixexpression(_ ctx: CPP14Parser.PostfixexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionlist(_ ctx: CPP14Parser.ExpressionlistContext) -> T{
+	open func visitExpressionlist(_ ctx: CPP14Parser.ExpressionlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPseudodestructorname(_ ctx: CPP14Parser.PseudodestructornameContext) -> T{
+	open func visitPseudodestructorname(_ ctx: CPP14Parser.PseudodestructornameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryexpression(_ ctx: CPP14Parser.UnaryexpressionContext) -> T{
+	open func visitUnaryexpression(_ ctx: CPP14Parser.UnaryexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryoperator(_ ctx: CPP14Parser.UnaryoperatorContext) -> T{
+	open func visitUnaryoperator(_ ctx: CPP14Parser.UnaryoperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNewexpression(_ ctx: CPP14Parser.NewexpressionContext) -> T{
+	open func visitNewexpression(_ ctx: CPP14Parser.NewexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNewplacement(_ ctx: CPP14Parser.NewplacementContext) -> T{
+	open func visitNewplacement(_ ctx: CPP14Parser.NewplacementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNewtypeid(_ ctx: CPP14Parser.NewtypeidContext) -> T{
+	open func visitNewtypeid(_ ctx: CPP14Parser.NewtypeidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNewdeclarator(_ ctx: CPP14Parser.NewdeclaratorContext) -> T{
+	open func visitNewdeclarator(_ ctx: CPP14Parser.NewdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNoptrnewdeclarator(_ ctx: CPP14Parser.NoptrnewdeclaratorContext) -> T{
+	open func visitNoptrnewdeclarator(_ ctx: CPP14Parser.NoptrnewdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNewinitializer(_ ctx: CPP14Parser.NewinitializerContext) -> T{
+	open func visitNewinitializer(_ ctx: CPP14Parser.NewinitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeleteexpression(_ ctx: CPP14Parser.DeleteexpressionContext) -> T{
+	open func visitDeleteexpression(_ ctx: CPP14Parser.DeleteexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNoexceptexpression(_ ctx: CPP14Parser.NoexceptexpressionContext) -> T{
+	open func visitNoexceptexpression(_ ctx: CPP14Parser.NoexceptexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCastexpression(_ ctx: CPP14Parser.CastexpressionContext) -> T{
+	open func visitCastexpression(_ ctx: CPP14Parser.CastexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPmexpression(_ ctx: CPP14Parser.PmexpressionContext) -> T{
+	open func visitPmexpression(_ ctx: CPP14Parser.PmexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMultiplicativeexpression(_ ctx: CPP14Parser.MultiplicativeexpressionContext) -> T{
+	open func visitMultiplicativeexpression(_ ctx: CPP14Parser.MultiplicativeexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdditiveexpression(_ ctx: CPP14Parser.AdditiveexpressionContext) -> T{
+	open func visitAdditiveexpression(_ ctx: CPP14Parser.AdditiveexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitShiftexpression(_ ctx: CPP14Parser.ShiftexpressionContext) -> T{
+	open func visitShiftexpression(_ ctx: CPP14Parser.ShiftexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelationalexpression(_ ctx: CPP14Parser.RelationalexpressionContext) -> T{
+	open func visitRelationalexpression(_ ctx: CPP14Parser.RelationalexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEqualityexpression(_ ctx: CPP14Parser.EqualityexpressionContext) -> T{
+	open func visitEqualityexpression(_ ctx: CPP14Parser.EqualityexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAndexpression(_ ctx: CPP14Parser.AndexpressionContext) -> T{
+	open func visitAndexpression(_ ctx: CPP14Parser.AndexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExclusiveorexpression(_ ctx: CPP14Parser.ExclusiveorexpressionContext) -> T{
+	open func visitExclusiveorexpression(_ ctx: CPP14Parser.ExclusiveorexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInclusiveorexpression(_ ctx: CPP14Parser.InclusiveorexpressionContext) -> T{
+	open func visitInclusiveorexpression(_ ctx: CPP14Parser.InclusiveorexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalandexpression(_ ctx: CPP14Parser.LogicalandexpressionContext) -> T{
+	open func visitLogicalandexpression(_ ctx: CPP14Parser.LogicalandexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLogicalorexpression(_ ctx: CPP14Parser.LogicalorexpressionContext) -> T{
+	open func visitLogicalorexpression(_ ctx: CPP14Parser.LogicalorexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditionalexpression(_ ctx: CPP14Parser.ConditionalexpressionContext) -> T{
+	open func visitConditionalexpression(_ ctx: CPP14Parser.ConditionalexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentexpression(_ ctx: CPP14Parser.AssignmentexpressionContext) -> T{
+	open func visitAssignmentexpression(_ ctx: CPP14Parser.AssignmentexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentoperator(_ ctx: CPP14Parser.AssignmentoperatorContext) -> T{
+	open func visitAssignmentoperator(_ ctx: CPP14Parser.AssignmentoperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: CPP14Parser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: CPP14Parser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantexpression(_ ctx: CPP14Parser.ConstantexpressionContext) -> T{
+	open func visitConstantexpression(_ ctx: CPP14Parser.ConstantexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: CPP14Parser.StatementContext) -> T{
+	open func visitStatement(_ ctx: CPP14Parser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabeledstatement(_ ctx: CPP14Parser.LabeledstatementContext) -> T{
+	open func visitLabeledstatement(_ ctx: CPP14Parser.LabeledstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionstatement(_ ctx: CPP14Parser.ExpressionstatementContext) -> T{
+	open func visitExpressionstatement(_ ctx: CPP14Parser.ExpressionstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompoundstatement(_ ctx: CPP14Parser.CompoundstatementContext) -> T{
+	open func visitCompoundstatement(_ ctx: CPP14Parser.CompoundstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementseq(_ ctx: CPP14Parser.StatementseqContext) -> T{
+	open func visitStatementseq(_ ctx: CPP14Parser.StatementseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelectionstatement(_ ctx: CPP14Parser.SelectionstatementContext) -> T{
+	open func visitSelectionstatement(_ ctx: CPP14Parser.SelectionstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCondition(_ ctx: CPP14Parser.ConditionContext) -> T{
+	open func visitCondition(_ ctx: CPP14Parser.ConditionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIterationstatement(_ ctx: CPP14Parser.IterationstatementContext) -> T{
+	open func visitIterationstatement(_ ctx: CPP14Parser.IterationstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForinitstatement(_ ctx: CPP14Parser.ForinitstatementContext) -> T{
+	open func visitForinitstatement(_ ctx: CPP14Parser.ForinitstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForrangedeclaration(_ ctx: CPP14Parser.ForrangedeclarationContext) -> T{
+	open func visitForrangedeclaration(_ ctx: CPP14Parser.ForrangedeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForrangeinitializer(_ ctx: CPP14Parser.ForrangeinitializerContext) -> T{
+	open func visitForrangeinitializer(_ ctx: CPP14Parser.ForrangeinitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJumpstatement(_ ctx: CPP14Parser.JumpstatementContext) -> T{
+	open func visitJumpstatement(_ ctx: CPP14Parser.JumpstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarationstatement(_ ctx: CPP14Parser.DeclarationstatementContext) -> T{
+	open func visitDeclarationstatement(_ ctx: CPP14Parser.DeclarationstatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarationseq(_ ctx: CPP14Parser.DeclarationseqContext) -> T{
+	open func visitDeclarationseq(_ ctx: CPP14Parser.DeclarationseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclaration(_ ctx: CPP14Parser.DeclarationContext) -> T{
+	open func visitDeclaration(_ ctx: CPP14Parser.DeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockdeclaration(_ ctx: CPP14Parser.BlockdeclarationContext) -> T{
+	open func visitBlockdeclaration(_ ctx: CPP14Parser.BlockdeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAliasdeclaration(_ ctx: CPP14Parser.AliasdeclarationContext) -> T{
+	open func visitAliasdeclaration(_ ctx: CPP14Parser.AliasdeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpledeclaration(_ ctx: CPP14Parser.SimpledeclarationContext) -> T{
+	open func visitSimpledeclaration(_ ctx: CPP14Parser.SimpledeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatic_assertdeclaration(_ ctx: CPP14Parser.Static_assertdeclarationContext) -> T{
+	open func visitStatic_assertdeclaration(_ ctx: CPP14Parser.Static_assertdeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmptydeclaration(_ ctx: CPP14Parser.EmptydeclarationContext) -> T{
+	open func visitEmptydeclaration(_ ctx: CPP14Parser.EmptydeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributedeclaration(_ ctx: CPP14Parser.AttributedeclarationContext) -> T{
+	open func visitAttributedeclaration(_ ctx: CPP14Parser.AttributedeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclspecifier(_ ctx: CPP14Parser.DeclspecifierContext) -> T{
+	open func visitDeclspecifier(_ ctx: CPP14Parser.DeclspecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclspecifierseq(_ ctx: CPP14Parser.DeclspecifierseqContext) -> T{
+	open func visitDeclspecifierseq(_ ctx: CPP14Parser.DeclspecifierseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStorageclassspecifier(_ ctx: CPP14Parser.StorageclassspecifierContext) -> T{
+	open func visitStorageclassspecifier(_ ctx: CPP14Parser.StorageclassspecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionspecifier(_ ctx: CPP14Parser.FunctionspecifierContext) -> T{
+	open func visitFunctionspecifier(_ ctx: CPP14Parser.FunctionspecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypedefname(_ ctx: CPP14Parser.TypedefnameContext) -> T{
+	open func visitTypedefname(_ ctx: CPP14Parser.TypedefnameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypespecifier(_ ctx: CPP14Parser.TypespecifierContext) -> T{
+	open func visitTypespecifier(_ ctx: CPP14Parser.TypespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrailingtypespecifier(_ ctx: CPP14Parser.TrailingtypespecifierContext) -> T{
+	open func visitTrailingtypespecifier(_ ctx: CPP14Parser.TrailingtypespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypespecifierseq(_ ctx: CPP14Parser.TypespecifierseqContext) -> T{
+	open func visitTypespecifierseq(_ ctx: CPP14Parser.TypespecifierseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrailingtypespecifierseq(_ ctx: CPP14Parser.TrailingtypespecifierseqContext) -> T{
+	open func visitTrailingtypespecifierseq(_ ctx: CPP14Parser.TrailingtypespecifierseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,17 +765,17 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpletypespecifier(_ ctx: CPP14Parser.SimpletypespecifierContext) -> T{
+	open func visitSimpletypespecifier(_ ctx: CPP14Parser.SimpletypespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link CPP14Parser#typename}.
+	 * Visit a parse tree produced by {@link CPP14Parser#thetypename}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypename(_ ctx: CPP14Parser.TypenameContext) -> T{
+	open func visitThetypename(_ ctx: CPP14Parser.ThetypenameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDecltypespecifier(_ ctx: CPP14Parser.DecltypespecifierContext) -> T{
+	open func visitDecltypespecifier(_ ctx: CPP14Parser.DecltypespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElaboratedtypespecifier(_ ctx: CPP14Parser.ElaboratedtypespecifierContext) -> T{
+	open func visitElaboratedtypespecifier(_ ctx: CPP14Parser.ElaboratedtypespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumname(_ ctx: CPP14Parser.EnumnameContext) -> T{
+	open func visitEnumname(_ ctx: CPP14Parser.EnumnameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumspecifier(_ ctx: CPP14Parser.EnumspecifierContext) -> T{
+	open func visitEnumspecifier(_ ctx: CPP14Parser.EnumspecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumhead(_ ctx: CPP14Parser.EnumheadContext) -> T{
+	open func visitEnumhead(_ ctx: CPP14Parser.EnumheadContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpaqueenumdeclaration(_ ctx: CPP14Parser.OpaqueenumdeclarationContext) -> T{
+	open func visitOpaqueenumdeclaration(_ ctx: CPP14Parser.OpaqueenumdeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumkey(_ ctx: CPP14Parser.EnumkeyContext) -> T{
+	open func visitEnumkey(_ ctx: CPP14Parser.EnumkeyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumbase(_ ctx: CPP14Parser.EnumbaseContext) -> T{
+	open func visitEnumbase(_ ctx: CPP14Parser.EnumbaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumeratorlist(_ ctx: CPP14Parser.EnumeratorlistContext) -> T{
+	open func visitEnumeratorlist(_ ctx: CPP14Parser.EnumeratorlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumeratordefinition(_ ctx: CPP14Parser.EnumeratordefinitionContext) -> T{
+	open func visitEnumeratordefinition(_ ctx: CPP14Parser.EnumeratordefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumerator(_ ctx: CPP14Parser.EnumeratorContext) -> T{
+	open func visitEnumerator(_ ctx: CPP14Parser.EnumeratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamespacename(_ ctx: CPP14Parser.NamespacenameContext) -> T{
+	open func visitNamespacename(_ ctx: CPP14Parser.NamespacenameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOriginalnamespacename(_ ctx: CPP14Parser.OriginalnamespacenameContext) -> T{
+	open func visitOriginalnamespacename(_ ctx: CPP14Parser.OriginalnamespacenameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamespacedefinition(_ ctx: CPP14Parser.NamespacedefinitionContext) -> T{
+	open func visitNamespacedefinition(_ ctx: CPP14Parser.NamespacedefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamednamespacedefinition(_ ctx: CPP14Parser.NamednamespacedefinitionContext) -> T{
+	open func visitNamednamespacedefinition(_ ctx: CPP14Parser.NamednamespacedefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOriginalnamespacedefinition(_ ctx: CPP14Parser.OriginalnamespacedefinitionContext) -> T{
+	open func visitOriginalnamespacedefinition(_ ctx: CPP14Parser.OriginalnamespacedefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExtensionnamespacedefinition(_ ctx: CPP14Parser.ExtensionnamespacedefinitionContext) -> T{
+	open func visitExtensionnamespacedefinition(_ ctx: CPP14Parser.ExtensionnamespacedefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnnamednamespacedefinition(_ ctx: CPP14Parser.UnnamednamespacedefinitionContext) -> T{
+	open func visitUnnamednamespacedefinition(_ ctx: CPP14Parser.UnnamednamespacedefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamespacebody(_ ctx: CPP14Parser.NamespacebodyContext) -> T{
+	open func visitNamespacebody(_ ctx: CPP14Parser.NamespacebodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamespacealias(_ ctx: CPP14Parser.NamespacealiasContext) -> T{
+	open func visitNamespacealias(_ ctx: CPP14Parser.NamespacealiasContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamespacealiasdefinition(_ ctx: CPP14Parser.NamespacealiasdefinitionContext) -> T{
+	open func visitNamespacealiasdefinition(_ ctx: CPP14Parser.NamespacealiasdefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQualifiednamespacespecifier(_ ctx: CPP14Parser.QualifiednamespacespecifierContext) -> T{
+	open func visitQualifiednamespacespecifier(_ ctx: CPP14Parser.QualifiednamespacespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUsingdeclaration(_ ctx: CPP14Parser.UsingdeclarationContext) -> T{
+	open func visitUsingdeclaration(_ ctx: CPP14Parser.UsingdeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUsingdirective(_ ctx: CPP14Parser.UsingdirectiveContext) -> T{
+	open func visitUsingdirective(_ ctx: CPP14Parser.UsingdirectiveContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1025,7 +1025,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAsmdefinition(_ ctx: CPP14Parser.AsmdefinitionContext) -> T{
+	open func visitAsmdefinition(_ ctx: CPP14Parser.AsmdefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1035,7 +1035,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLinkagespecification(_ ctx: CPP14Parser.LinkagespecificationContext) -> T{
+	open func visitLinkagespecification(_ ctx: CPP14Parser.LinkagespecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1045,7 +1045,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributespecifierseq(_ ctx: CPP14Parser.AttributespecifierseqContext) -> T{
+	open func visitAttributespecifierseq(_ ctx: CPP14Parser.AttributespecifierseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1055,7 +1055,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributespecifier(_ ctx: CPP14Parser.AttributespecifierContext) -> T{
+	open func visitAttributespecifier(_ ctx: CPP14Parser.AttributespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1065,7 +1065,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlignmentspecifier(_ ctx: CPP14Parser.AlignmentspecifierContext) -> T{
+	open func visitAlignmentspecifier(_ ctx: CPP14Parser.AlignmentspecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1075,7 +1075,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributelist(_ ctx: CPP14Parser.AttributelistContext) -> T{
+	open func visitAttributelist(_ ctx: CPP14Parser.AttributelistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1085,7 +1085,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttribute(_ ctx: CPP14Parser.AttributeContext) -> T{
+	open func visitAttribute(_ ctx: CPP14Parser.AttributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1095,7 +1095,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributetoken(_ ctx: CPP14Parser.AttributetokenContext) -> T{
+	open func visitAttributetoken(_ ctx: CPP14Parser.AttributetokenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1105,7 +1105,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributescopedtoken(_ ctx: CPP14Parser.AttributescopedtokenContext) -> T{
+	open func visitAttributescopedtoken(_ ctx: CPP14Parser.AttributescopedtokenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1115,7 +1115,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributenamespace(_ ctx: CPP14Parser.AttributenamespaceContext) -> T{
+	open func visitAttributenamespace(_ ctx: CPP14Parser.AttributenamespaceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1125,7 +1125,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttributeargumentclause(_ ctx: CPP14Parser.AttributeargumentclauseContext) -> T{
+	open func visitAttributeargumentclause(_ ctx: CPP14Parser.AttributeargumentclauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1135,7 +1135,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBalancedtokenseq(_ ctx: CPP14Parser.BalancedtokenseqContext) -> T{
+	open func visitBalancedtokenseq(_ ctx: CPP14Parser.BalancedtokenseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1145,7 +1145,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBalancedtoken(_ ctx: CPP14Parser.BalancedtokenContext) -> T{
+	open func visitBalancedtoken(_ ctx: CPP14Parser.BalancedtokenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1155,7 +1155,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitdeclaratorlist(_ ctx: CPP14Parser.InitdeclaratorlistContext) -> T{
+	open func visitInitdeclaratorlist(_ ctx: CPP14Parser.InitdeclaratorlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1165,7 +1165,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitdeclarator(_ ctx: CPP14Parser.InitdeclaratorContext) -> T{
+	open func visitInitdeclarator(_ ctx: CPP14Parser.InitdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1175,7 +1175,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarator(_ ctx: CPP14Parser.DeclaratorContext) -> T{
+	open func visitDeclarator(_ ctx: CPP14Parser.DeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1185,7 +1185,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPtrdeclarator(_ ctx: CPP14Parser.PtrdeclaratorContext) -> T{
+	open func visitPtrdeclarator(_ ctx: CPP14Parser.PtrdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1195,7 +1195,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNoptrdeclarator(_ ctx: CPP14Parser.NoptrdeclaratorContext) -> T{
+	open func visitNoptrdeclarator(_ ctx: CPP14Parser.NoptrdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1205,7 +1205,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParametersandqualifiers(_ ctx: CPP14Parser.ParametersandqualifiersContext) -> T{
+	open func visitParametersandqualifiers(_ ctx: CPP14Parser.ParametersandqualifiersContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1215,7 +1215,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrailingreturntype(_ ctx: CPP14Parser.TrailingreturntypeContext) -> T{
+	open func visitTrailingreturntype(_ ctx: CPP14Parser.TrailingreturntypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1225,7 +1225,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPtroperator(_ ctx: CPP14Parser.PtroperatorContext) -> T{
+	open func visitPtroperator(_ ctx: CPP14Parser.PtroperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1235,7 +1235,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCvqualifierseq(_ ctx: CPP14Parser.CvqualifierseqContext) -> T{
+	open func visitCvqualifierseq(_ ctx: CPP14Parser.CvqualifierseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1245,7 +1245,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCvqualifier(_ ctx: CPP14Parser.CvqualifierContext) -> T{
+	open func visitCvqualifier(_ ctx: CPP14Parser.CvqualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1255,7 +1255,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRefqualifier(_ ctx: CPP14Parser.RefqualifierContext) -> T{
+	open func visitRefqualifier(_ ctx: CPP14Parser.RefqualifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1265,17 +1265,17 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclaratorid(_ ctx: CPP14Parser.DeclaratoridContext) -> T{
+	open func visitDeclaratorid(_ ctx: CPP14Parser.DeclaratoridContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link CPP14Parser#typeid}.
+	 * Visit a parse tree produced by {@link CPP14Parser#thetypeid}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeid(_ ctx: CPP14Parser.TypeidContext) -> T{
+	open func visitThetypeid(_ ctx: CPP14Parser.ThetypeidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1285,7 +1285,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAbstractdeclarator(_ ctx: CPP14Parser.AbstractdeclaratorContext) -> T{
+	open func visitAbstractdeclarator(_ ctx: CPP14Parser.AbstractdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1295,7 +1295,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPtrabstractdeclarator(_ ctx: CPP14Parser.PtrabstractdeclaratorContext) -> T{
+	open func visitPtrabstractdeclarator(_ ctx: CPP14Parser.PtrabstractdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1305,7 +1305,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNoptrabstractdeclarator(_ ctx: CPP14Parser.NoptrabstractdeclaratorContext) -> T{
+	open func visitNoptrabstractdeclarator(_ ctx: CPP14Parser.NoptrabstractdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1315,7 +1315,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAbstractpackdeclarator(_ ctx: CPP14Parser.AbstractpackdeclaratorContext) -> T{
+	open func visitAbstractpackdeclarator(_ ctx: CPP14Parser.AbstractpackdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1325,7 +1325,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNoptrabstractpackdeclarator(_ ctx: CPP14Parser.NoptrabstractpackdeclaratorContext) -> T{
+	open func visitNoptrabstractpackdeclarator(_ ctx: CPP14Parser.NoptrabstractpackdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1335,7 +1335,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterdeclarationclause(_ ctx: CPP14Parser.ParameterdeclarationclauseContext) -> T{
+	open func visitParameterdeclarationclause(_ ctx: CPP14Parser.ParameterdeclarationclauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1345,7 +1345,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterdeclarationlist(_ ctx: CPP14Parser.ParameterdeclarationlistContext) -> T{
+	open func visitParameterdeclarationlist(_ ctx: CPP14Parser.ParameterdeclarationlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1355,7 +1355,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterdeclaration(_ ctx: CPP14Parser.ParameterdeclarationContext) -> T{
+	open func visitParameterdeclaration(_ ctx: CPP14Parser.ParameterdeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1365,7 +1365,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctiondefinition(_ ctx: CPP14Parser.FunctiondefinitionContext) -> T{
+	open func visitFunctiondefinition(_ ctx: CPP14Parser.FunctiondefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1375,7 +1375,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionbody(_ ctx: CPP14Parser.FunctionbodyContext) -> T{
+	open func visitFunctionbody(_ ctx: CPP14Parser.FunctionbodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1385,7 +1385,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitializer(_ ctx: CPP14Parser.InitializerContext) -> T{
+	open func visitInitializer(_ ctx: CPP14Parser.InitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1395,7 +1395,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBraceorequalinitializer(_ ctx: CPP14Parser.BraceorequalinitializerContext) -> T{
+	open func visitBraceorequalinitializer(_ ctx: CPP14Parser.BraceorequalinitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1405,7 +1405,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitializerclause(_ ctx: CPP14Parser.InitializerclauseContext) -> T{
+	open func visitInitializerclause(_ ctx: CPP14Parser.InitializerclauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1415,7 +1415,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitializerlist(_ ctx: CPP14Parser.InitializerlistContext) -> T{
+	open func visitInitializerlist(_ ctx: CPP14Parser.InitializerlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1425,7 +1425,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBracedinitlist(_ ctx: CPP14Parser.BracedinitlistContext) -> T{
+	open func visitBracedinitlist(_ ctx: CPP14Parser.BracedinitlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1435,7 +1435,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassname(_ ctx: CPP14Parser.ClassnameContext) -> T{
+	open func visitClassname(_ ctx: CPP14Parser.ClassnameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1445,7 +1445,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassspecifier(_ ctx: CPP14Parser.ClassspecifierContext) -> T{
+	open func visitClassspecifier(_ ctx: CPP14Parser.ClassspecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1455,7 +1455,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClasshead(_ ctx: CPP14Parser.ClassheadContext) -> T{
+	open func visitClasshead(_ ctx: CPP14Parser.ClassheadContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1465,7 +1465,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassheadname(_ ctx: CPP14Parser.ClassheadnameContext) -> T{
+	open func visitClassheadname(_ ctx: CPP14Parser.ClassheadnameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1475,7 +1475,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassvirtspecifier(_ ctx: CPP14Parser.ClassvirtspecifierContext) -> T{
+	open func visitClassvirtspecifier(_ ctx: CPP14Parser.ClassvirtspecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1485,7 +1485,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClasskey(_ ctx: CPP14Parser.ClasskeyContext) -> T{
+	open func visitClasskey(_ ctx: CPP14Parser.ClasskeyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1495,7 +1495,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMemberspecification(_ ctx: CPP14Parser.MemberspecificationContext) -> T{
+	open func visitMemberspecification(_ ctx: CPP14Parser.MemberspecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1505,7 +1505,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMemberdeclaration(_ ctx: CPP14Parser.MemberdeclarationContext) -> T{
+	open func visitMemberdeclaration(_ ctx: CPP14Parser.MemberdeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1515,7 +1515,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMemberdeclaratorlist(_ ctx: CPP14Parser.MemberdeclaratorlistContext) -> T{
+	open func visitMemberdeclaratorlist(_ ctx: CPP14Parser.MemberdeclaratorlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1525,7 +1525,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMemberdeclarator(_ ctx: CPP14Parser.MemberdeclaratorContext) -> T{
+	open func visitMemberdeclarator(_ ctx: CPP14Parser.MemberdeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1535,7 +1535,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVirtspecifierseq(_ ctx: CPP14Parser.VirtspecifierseqContext) -> T{
+	open func visitVirtspecifierseq(_ ctx: CPP14Parser.VirtspecifierseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1545,7 +1545,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVirtspecifier(_ ctx: CPP14Parser.VirtspecifierContext) -> T{
+	open func visitVirtspecifier(_ ctx: CPP14Parser.VirtspecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1555,7 +1555,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPurespecifier(_ ctx: CPP14Parser.PurespecifierContext) -> T{
+	open func visitPurespecifier(_ ctx: CPP14Parser.PurespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1565,7 +1565,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBaseclause(_ ctx: CPP14Parser.BaseclauseContext) -> T{
+	open func visitBaseclause(_ ctx: CPP14Parser.BaseclauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1575,7 +1575,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBasespecifierlist(_ ctx: CPP14Parser.BasespecifierlistContext) -> T{
+	open func visitBasespecifierlist(_ ctx: CPP14Parser.BasespecifierlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1585,7 +1585,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBasespecifier(_ ctx: CPP14Parser.BasespecifierContext) -> T{
+	open func visitBasespecifier(_ ctx: CPP14Parser.BasespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1595,7 +1595,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassordecltype(_ ctx: CPP14Parser.ClassordecltypeContext) -> T{
+	open func visitClassordecltype(_ ctx: CPP14Parser.ClassordecltypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1605,7 +1605,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBasetypespecifier(_ ctx: CPP14Parser.BasetypespecifierContext) -> T{
+	open func visitBasetypespecifier(_ ctx: CPP14Parser.BasetypespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1615,7 +1615,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAccessspecifier(_ ctx: CPP14Parser.AccessspecifierContext) -> T{
+	open func visitAccessspecifier(_ ctx: CPP14Parser.AccessspecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1625,7 +1625,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConversionfunctionid(_ ctx: CPP14Parser.ConversionfunctionidContext) -> T{
+	open func visitConversionfunctionid(_ ctx: CPP14Parser.ConversionfunctionidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1635,7 +1635,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConversiontypeid(_ ctx: CPP14Parser.ConversiontypeidContext) -> T{
+	open func visitConversiontypeid(_ ctx: CPP14Parser.ConversiontypeidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1645,7 +1645,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConversiondeclarator(_ ctx: CPP14Parser.ConversiondeclaratorContext) -> T{
+	open func visitConversiondeclarator(_ ctx: CPP14Parser.ConversiondeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1655,7 +1655,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCtorinitializer(_ ctx: CPP14Parser.CtorinitializerContext) -> T{
+	open func visitCtorinitializer(_ ctx: CPP14Parser.CtorinitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1665,7 +1665,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMeminitializerlist(_ ctx: CPP14Parser.MeminitializerlistContext) -> T{
+	open func visitMeminitializerlist(_ ctx: CPP14Parser.MeminitializerlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1675,7 +1675,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMeminitializer(_ ctx: CPP14Parser.MeminitializerContext) -> T{
+	open func visitMeminitializer(_ ctx: CPP14Parser.MeminitializerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1685,7 +1685,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMeminitializerid(_ ctx: CPP14Parser.MeminitializeridContext) -> T{
+	open func visitMeminitializerid(_ ctx: CPP14Parser.MeminitializeridContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1695,7 +1695,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorfunctionid(_ ctx: CPP14Parser.OperatorfunctionidContext) -> T{
+	open func visitOperatorfunctionid(_ ctx: CPP14Parser.OperatorfunctionidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1705,7 +1705,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteraloperatorid(_ ctx: CPP14Parser.LiteraloperatoridContext) -> T{
+	open func visitLiteraloperatorid(_ ctx: CPP14Parser.LiteraloperatoridContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1715,7 +1715,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplatedeclaration(_ ctx: CPP14Parser.TemplatedeclarationContext) -> T{
+	open func visitTemplatedeclaration(_ ctx: CPP14Parser.TemplatedeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1725,7 +1725,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplateparameterlist(_ ctx: CPP14Parser.TemplateparameterlistContext) -> T{
+	open func visitTemplateparameterlist(_ ctx: CPP14Parser.TemplateparameterlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1735,7 +1735,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplateparameter(_ ctx: CPP14Parser.TemplateparameterContext) -> T{
+	open func visitTemplateparameter(_ ctx: CPP14Parser.TemplateparameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1745,7 +1745,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeparameter(_ ctx: CPP14Parser.TypeparameterContext) -> T{
+	open func visitTypeparameter(_ ctx: CPP14Parser.TypeparameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1755,7 +1755,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpletemplateid(_ ctx: CPP14Parser.SimpletemplateidContext) -> T{
+	open func visitSimpletemplateid(_ ctx: CPP14Parser.SimpletemplateidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1765,7 +1765,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplateid(_ ctx: CPP14Parser.TemplateidContext) -> T{
+	open func visitTemplateid(_ ctx: CPP14Parser.TemplateidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1775,7 +1775,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplatename(_ ctx: CPP14Parser.TemplatenameContext) -> T{
+	open func visitTemplatename(_ ctx: CPP14Parser.TemplatenameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1785,7 +1785,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplateargumentlist(_ ctx: CPP14Parser.TemplateargumentlistContext) -> T{
+	open func visitTemplateargumentlist(_ ctx: CPP14Parser.TemplateargumentlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1795,7 +1795,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplateargument(_ ctx: CPP14Parser.TemplateargumentContext) -> T{
+	open func visitTemplateargument(_ ctx: CPP14Parser.TemplateargumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1805,7 +1805,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypenamespecifier(_ ctx: CPP14Parser.TypenamespecifierContext) -> T{
+	open func visitTypenamespecifier(_ ctx: CPP14Parser.TypenamespecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1815,7 +1815,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExplicitinstantiation(_ ctx: CPP14Parser.ExplicitinstantiationContext) -> T{
+	open func visitExplicitinstantiation(_ ctx: CPP14Parser.ExplicitinstantiationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1825,7 +1825,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExplicitspecialization(_ ctx: CPP14Parser.ExplicitspecializationContext) -> T{
+	open func visitExplicitspecialization(_ ctx: CPP14Parser.ExplicitspecializationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1835,7 +1835,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTryblock(_ ctx: CPP14Parser.TryblockContext) -> T{
+	open func visitTryblock(_ ctx: CPP14Parser.TryblockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1845,7 +1845,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctiontryblock(_ ctx: CPP14Parser.FunctiontryblockContext) -> T{
+	open func visitFunctiontryblock(_ ctx: CPP14Parser.FunctiontryblockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1855,7 +1855,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHandlerseq(_ ctx: CPP14Parser.HandlerseqContext) -> T{
+	open func visitHandlerseq(_ ctx: CPP14Parser.HandlerseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1865,7 +1865,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHandler(_ ctx: CPP14Parser.HandlerContext) -> T{
+	open func visitHandler(_ ctx: CPP14Parser.HandlerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1875,7 +1875,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExceptiondeclaration(_ ctx: CPP14Parser.ExceptiondeclarationContext) -> T{
+	open func visitExceptiondeclaration(_ ctx: CPP14Parser.ExceptiondeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1885,7 +1885,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitThrowexpression(_ ctx: CPP14Parser.ThrowexpressionContext) -> T{
+	open func visitThrowexpression(_ ctx: CPP14Parser.ThrowexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1895,7 +1895,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExceptionspecification(_ ctx: CPP14Parser.ExceptionspecificationContext) -> T{
+	open func visitExceptionspecification(_ ctx: CPP14Parser.ExceptionspecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1905,7 +1905,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDynamicexceptionspecification(_ ctx: CPP14Parser.DynamicexceptionspecificationContext) -> T{
+	open func visitDynamicexceptionspecification(_ ctx: CPP14Parser.DynamicexceptionspecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1915,7 +1915,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeidlist(_ ctx: CPP14Parser.TypeidlistContext) -> T{
+	open func visitTypeidlist(_ ctx: CPP14Parser.TypeidlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1925,7 +1925,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNoexceptspecification(_ ctx: CPP14Parser.NoexceptspecificationContext) -> T{
+	open func visitNoexceptspecification(_ ctx: CPP14Parser.NoexceptspecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1935,7 +1935,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRightShift(_ ctx: CPP14Parser.RightShiftContext) -> T{
+	open func visitRightShift(_ ctx: CPP14Parser.RightShiftContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1945,17 +1945,17 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRightShiftAssign(_ ctx: CPP14Parser.RightShiftAssignContext) -> T{
+	open func visitRightShiftAssign(_ ctx: CPP14Parser.RightShiftAssignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link CPP14Parser#operator}.
+	 * Visit a parse tree produced by {@link CPP14Parser#theoperator}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperator(_ ctx: CPP14Parser.OperatorContext) -> T{
+	open func visitTheoperator(_ ctx: CPP14Parser.TheoperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1965,7 +1965,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: CPP14Parser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: CPP14Parser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1975,7 +1975,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBooleanliteral(_ ctx: CPP14Parser.BooleanliteralContext) -> T{
+	open func visitBooleanliteral(_ ctx: CPP14Parser.BooleanliteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1985,7 +1985,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPointerliteral(_ ctx: CPP14Parser.PointerliteralContext) -> T{
+	open func visitPointerliteral(_ ctx: CPP14Parser.PointerliteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1995,7 +1995,7 @@ open class CPP14Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUserdefinedliteral(_ ctx: CPP14Parser.UserdefinedliteralContext) -> T{
+	open func visitUserdefinedliteral(_ ctx: CPP14Parser.UserdefinedliteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

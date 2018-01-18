@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/peoplecode/PeopleCode.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/peoplecode/PeopleCode.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class PeopleCodeParser: Parser {
@@ -11,8 +11,11 @@ open class PeopleCodeParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -31,20 +34,24 @@ open class PeopleCodeParser: Parser {
                  VAR_ID = 76, SYS_VAR_ID = 77, GENERIC_ID = 78, REM = 79, 
                  COMMENT_1 = 80, COMMENT_2 = 81, COMMENT_3 = 82, WS = 83
 	}
-	public static let RULE_program = 0, RULE_stmtList = 1, RULE_stmt = 2, RULE_expr = 3, 
-                   RULE_exprList = 4, RULE_varDeclaration = 5, RULE_varDeclarator = 6, 
-                   RULE_varType = 7, RULE_appClassImport = 8, RULE_appPkgPath = 9, 
-                   RULE_appClassPath = 10, RULE_extFuncImport = 11, RULE_recDefnPath = 12, 
-                   RULE_event = 13, RULE_classDeclaration = 14, RULE_classBlock = 15, 
-                   RULE_classBlockStmt = 16, RULE_method = 17, RULE_constant = 18, 
-                   RULE_property = 19, RULE_instance = 20, RULE_methodImpl = 21, 
-                   RULE_getImpl = 22, RULE_setImpl = 23, RULE_funcImpl = 24, 
-                   RULE_funcSignature = 25, RULE_formalParamList = 26, RULE_param = 27, 
-                   RULE_returnType = 28, RULE_ifStmt = 29, RULE_forStmt = 30, 
-                   RULE_whileStmt = 31, RULE_evaluateStmt = 32, RULE_whenBranch = 33, 
-                   RULE_whenOtherBranch = 34, RULE_tryCatchStmt = 35, RULE_catchSignature = 36, 
-                   RULE_createInvocation = 37, RULE_literal = 38, RULE_id = 39
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_program = 0, RULE_stmtList = 1, RULE_stmt = 2, RULE_expr = 3, 
+            RULE_exprList = 4, RULE_varDeclaration = 5, RULE_varDeclarator = 6, 
+            RULE_varType = 7, RULE_appClassImport = 8, RULE_appPkgPath = 9, 
+            RULE_appClassPath = 10, RULE_extFuncImport = 11, RULE_recDefnPath = 12, 
+            RULE_event = 13, RULE_classDeclaration = 14, RULE_classBlock = 15, 
+            RULE_classBlockStmt = 16, RULE_method = 17, RULE_constant = 18, 
+            RULE_property = 19, RULE_instance = 20, RULE_methodImpl = 21, 
+            RULE_getImpl = 22, RULE_setImpl = 23, RULE_funcImpl = 24, RULE_funcSignature = 25, 
+            RULE_formalParamList = 26, RULE_param = 27, RULE_returnType = 28, 
+            RULE_ifStmt = 29, RULE_forStmt = 30, RULE_whileStmt = 31, RULE_evaluateStmt = 32, 
+            RULE_whenBranch = 33, RULE_whenOtherBranch = 34, RULE_tryCatchStmt = 35, 
+            RULE_catchSignature = 36, RULE_createInvocation = 37, RULE_literal = 38, 
+            RULE_id = 39
+
+	public
+	static let ruleNames: [String] = [
 		"program", "stmtList", "stmt", "expr", "exprList", "varDeclaration", "varDeclarator", 
 		"varType", "appClassImport", "appPkgPath", "appClassPath", "extFuncImport", 
 		"recDefnPath", "event", "classDeclaration", "classBlock", "classBlockStmt", 
@@ -77,85 +84,69 @@ open class PeopleCodeParser: Parser {
 		"VAR_ID", "SYS_VAR_ID", "GENERIC_ID", "REM", "COMMENT_1", "COMMENT_2", 
 		"COMMENT_3", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "PeopleCode.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return PeopleCodeParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "PeopleCode.g4" }
+	override open
+	func getSerializedATN() -> String { return PeopleCodeParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return PeopleCodeParser.ruleNames }
+	override open
+	func getATN() -> ATN { return PeopleCodeParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return PeopleCodeParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return PeopleCodeParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return PeopleCodeParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,PeopleCodeParser._ATN,PeopleCodeParser._decisionToDFA, PeopleCodeParser._sharedContextCache)
 	}
-	open class ProgramContext:ParserRuleContext {
-		open func stmtList() -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,0)
+
+	public class ProgramContext: ParserRuleContext {
+			open
+			func stmtList() -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_program
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_program }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterProgram(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterProgram(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitProgram(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitProgram(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitProgram(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitProgram(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitProgram(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitProgram(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func program() throws -> ProgramContext {
+	 open func program() throws -> ProgramContext {
 		var _localctx: ProgramContext = ProgramContext(_ctx, getState())
 		try enterRule(_localctx, 0, PeopleCodeParser.RULE_program)
 		defer {
@@ -175,40 +166,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class StmtListContext:ParserRuleContext {
-		open func stmt() -> Array<StmtContext> {
-			return getRuleContexts(StmtContext.self)
+
+	public class StmtListContext: ParserRuleContext {
+			open
+			func stmt() -> [StmtContext] {
+				return getRuleContexts(StmtContext.self)
+			}
+			open
+			func stmt(_ i: Int) -> StmtContext? {
+				return getRuleContext(StmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_stmtList
 		}
-		open func stmt(_ i: Int) -> StmtContext? {
-			return getRuleContext(StmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_stmtList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtList(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtList(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stmtList() throws -> StmtListContext {
+	 open func stmtList() throws -> StmtListContext {
 		var _localctx: StmtListContext = StmtListContext(_ctx, getState())
 		try enterRule(_localctx, 2, PeopleCodeParser.RULE_stmtList)
 		var _la: Int = 0
@@ -278,684 +276,772 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class StmtContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_stmt }
+
+	public class StmtContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_stmt
+		}
 	 
-		public  func copyFrom(_ ctx: StmtContext) {
+		open
+		func copyFrom(_ ctx: StmtContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class StmtReturnContext: StmtContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtReturnContext: StmtContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtReturn(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtReturn(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtReturn(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtReturn(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtReturn(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtReturn(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtReturn(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtReturn(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtEvaluateContext: StmtContext {
-		open func evaluateStmt() -> EvaluateStmtContext? {
-			return getRuleContext(EvaluateStmtContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtEvaluateContext: StmtContext {
+			open
+			func evaluateStmt() -> EvaluateStmtContext? {
+				return getRuleContext(EvaluateStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtEvaluate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtEvaluate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtEvaluate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtEvaluate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtEvaluate(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtEvaluate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtEvaluate(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtEvaluate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtAppClassImportContext: StmtContext {
-		open func appClassImport() -> AppClassImportContext? {
-			return getRuleContext(AppClassImportContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtAppClassImportContext: StmtContext {
+			open
+			func appClassImport() -> AppClassImportContext? {
+				return getRuleContext(AppClassImportContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtAppClassImport(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtAppClassImport(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtAppClassImport(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtAppClassImport(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtAppClassImport(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtAppClassImport(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtAppClassImport(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtAppClassImport(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtWarningContext: StmtContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtWarningContext: StmtContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtWarning(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtWarning(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtWarning(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtWarning(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtWarning(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtWarning(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtWarning(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtWarning(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtWhileContext: StmtContext {
-		open func whileStmt() -> WhileStmtContext? {
-			return getRuleContext(WhileStmtContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtWhileContext: StmtContext {
+			open
+			func whileStmt() -> WhileStmtContext? {
+				return getRuleContext(WhileStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtWhile(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtWhile(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtWhile(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtWhile(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtWhile(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtWhile(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtWhile(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtWhile(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtExprContext: StmtContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtExprContext: StmtContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtExpr(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtExpr(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtSetImplContext: StmtContext {
-		open func setImpl() -> SetImplContext? {
-			return getRuleContext(SetImplContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtSetImplContext: StmtContext {
+			open
+			func setImpl() -> SetImplContext? {
+				return getRuleContext(SetImplContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtSetImpl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtSetImpl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtSetImpl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtSetImpl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtSetImpl(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtSetImpl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtSetImpl(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtSetImpl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtMethodImplContext: StmtContext {
-		open func methodImpl() -> MethodImplContext? {
-			return getRuleContext(MethodImplContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtMethodImplContext: StmtContext {
+			open
+			func methodImpl() -> MethodImplContext? {
+				return getRuleContext(MethodImplContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtMethodImpl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtMethodImpl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtMethodImpl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtMethodImpl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtMethodImpl(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtMethodImpl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtMethodImpl(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtMethodImpl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtTryCatchContext: StmtContext {
-		open func tryCatchStmt() -> TryCatchStmtContext? {
-			return getRuleContext(TryCatchStmtContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtTryCatchContext: StmtContext {
+			open
+			func tryCatchStmt() -> TryCatchStmtContext? {
+				return getRuleContext(TryCatchStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtTryCatch(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtTryCatch(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtTryCatch(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtTryCatch(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtTryCatch(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtTryCatch(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtTryCatch(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtTryCatch(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtVarDeclarationContext: StmtContext {
-		open func varDeclaration() -> VarDeclarationContext? {
-			return getRuleContext(VarDeclarationContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtVarDeclarationContext: StmtContext {
+			open
+			func varDeclaration() -> VarDeclarationContext? {
+				return getRuleContext(VarDeclarationContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtVarDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtVarDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtVarDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtVarDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtVarDeclaration(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtVarDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtVarDeclaration(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtVarDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtForContext: StmtContext {
-		open func forStmt() -> ForStmtContext? {
-			return getRuleContext(ForStmtContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtForContext: StmtContext {
+			open
+			func forStmt() -> ForStmtContext? {
+				return getRuleContext(ForStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtFor(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtFor(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtFor(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtFor(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtFor(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtFor(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtFor(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtFor(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtAssignContext: StmtContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtAssignContext: StmtContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtAssign(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtAssign(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtAssign(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtAssign(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtAssign(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtAssign(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtAssign(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtAssign(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtErrorContext: StmtContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtErrorContext: StmtContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtError(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtError(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtError(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtError(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtError(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtError(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtError(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtError(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtExternalFuncImportContext: StmtContext {
-		open func extFuncImport() -> ExtFuncImportContext? {
-			return getRuleContext(ExtFuncImportContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtExternalFuncImportContext: StmtContext {
+			open
+			func extFuncImport() -> ExtFuncImportContext? {
+				return getRuleContext(ExtFuncImportContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtExternalFuncImport(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtExternalFuncImport(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtExternalFuncImport(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtExternalFuncImport(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtExternalFuncImport(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtExternalFuncImport(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtExternalFuncImport(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtExternalFuncImport(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtFuncImplContext: StmtContext {
-		open func funcImpl() -> FuncImplContext? {
-			return getRuleContext(FuncImplContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtFuncImplContext: StmtContext {
+			open
+			func funcImpl() -> FuncImplContext? {
+				return getRuleContext(FuncImplContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtFuncImpl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtFuncImpl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtFuncImpl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtFuncImpl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtFuncImpl(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtFuncImpl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtFuncImpl(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtFuncImpl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtGetImplContext: StmtContext {
-		open func getImpl() -> GetImplContext? {
-			return getRuleContext(GetImplContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtGetImplContext: StmtContext {
+			open
+			func getImpl() -> GetImplContext? {
+				return getRuleContext(GetImplContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtGetImpl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtGetImpl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtGetImpl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtGetImpl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtGetImpl(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtGetImpl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtGetImpl(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtGetImpl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtThrowContext: StmtContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtThrowContext: StmtContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtThrow(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtThrow(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtThrow(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtThrow(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtThrow(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtThrow(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtThrow(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtThrow(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtIfContext: StmtContext {
-		open func ifStmt() -> IfStmtContext? {
-			return getRuleContext(IfStmtContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtIfContext: StmtContext {
+			open
+			func ifStmt() -> IfStmtContext? {
+				return getRuleContext(IfStmtContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtIf(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtIf(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtIf(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtIf(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtIf(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtIf(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtIf(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtIf(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtClassDeclarationContext: StmtContext {
-		open func classDeclaration() -> ClassDeclarationContext? {
-			return getRuleContext(ClassDeclarationContext.self,0)
-		}
-		public init(_ ctx: StmtContext) {
+	public class StmtClassDeclarationContext: StmtContext {
+			open
+			func classDeclaration() -> ClassDeclarationContext? {
+				return getRuleContext(ClassDeclarationContext.self, 0)
+			}
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtClassDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtClassDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtClassDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtClassDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtClassDeclaration(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtClassDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtClassDeclaration(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtClassDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtExitContext: StmtContext {
-		public init(_ ctx: StmtContext) {
+	public class StmtExitContext: StmtContext {
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtExit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtExit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtExit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtExit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtExit(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtExit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtExit(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtExit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StmtBreakContext: StmtContext {
-		public init(_ ctx: StmtContext) {
+	public class StmtBreakContext: StmtContext {
+
+		public
+		init(_ ctx: StmtContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterStmtBreak(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterStmtBreak(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitStmtBreak(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitStmtBreak(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitStmtBreak(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitStmtBreak(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitStmtBreak(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitStmtBreak(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stmt() throws -> StmtContext {
+	 open func stmt() throws -> StmtContext {
 		var _localctx: StmtContext = StmtContext(_ctx, getState())
 		try enterRule(_localctx, 4, PeopleCodeParser.RULE_stmt)
 		var _la: Int = 0
@@ -1155,565 +1241,642 @@ open class PeopleCodeParser: Parser {
 		return _localctx
 	}
 
-	open class ExprContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_expr }
+	public class ExprContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_expr
+		}
 	 
-		public  func copyFrom(_ ctx: ExprContext) {
+		open
+		func copyFrom(_ ctx: ExprContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class ExprComparisonContext: ExprContext {
+	public class ExprComparisonContext: ExprContext {
 		public var le: Token!
 		public var ge: Token!
 		public var l: Token!
 		public var g: Token!
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		public init(_ ctx: ExprContext) {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprComparison(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprComparison(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprComparison(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprComparison(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprComparison(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprComparison(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprComparison(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprComparison(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprConcatContext: ExprContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprConcatContext: ExprContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprConcat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprConcat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprConcat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprConcat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprConcat(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprConcat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprConcat(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprConcat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprCreateContext: ExprContext {
-		open func createInvocation() -> CreateInvocationContext? {
-			return getRuleContext(CreateInvocationContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprCreateContext: ExprContext {
+			open
+			func createInvocation() -> CreateInvocationContext? {
+				return getRuleContext(CreateInvocationContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprCreate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprCreate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprCreate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprCreate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprCreate(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprCreate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprCreate(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprCreate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprBooleanContext: ExprContext {
+	public class ExprBooleanContext: ExprContext {
 		public var op: Token!
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		public init(_ ctx: ExprContext) {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprBoolean(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprBoolean(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprBoolean(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprBoolean(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprBoolean(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprBoolean(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprBoolean(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprBoolean(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprNotContext: ExprContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprNotContext: ExprContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprNot(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprNot(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprNot(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprNot(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprNot(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprNot(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprNot(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprNot(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprAddSubContext: ExprContext {
+	public class ExprAddSubContext: ExprContext {
 		public var a: Token!
 		public var s: Token!
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		public init(_ ctx: ExprContext) {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprAddSub(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprAddSub(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprAddSub(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprAddSub(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprAddSub(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprAddSub(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprAddSub(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprAddSub(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprDotAccessContext: ExprContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func id() -> IdContext? {
-			return getRuleContext(IdContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprDotAccessContext: ExprContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func id() -> IdContext? {
+				return getRuleContext(IdContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprDotAccess(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprDotAccess(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprDotAccess(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprDotAccess(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprDotAccess(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprDotAccess(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprDotAccess(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprDotAccess(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprFnOrIdxCallContext: ExprContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func exprList() -> ExprListContext? {
-			return getRuleContext(ExprListContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprFnOrIdxCallContext: ExprContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func exprList() -> ExprListContext? {
+				return getRuleContext(ExprListContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprFnOrIdxCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprFnOrIdxCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprFnOrIdxCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprFnOrIdxCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprFnOrIdxCall(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprFnOrIdxCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprFnOrIdxCall(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprFnOrIdxCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprParenthesizedContext: ExprContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprParenthesizedContext: ExprContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprParenthesized(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprParenthesized(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprParenthesized(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprParenthesized(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprParenthesized(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprParenthesized(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprParenthesized(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprParenthesized(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprMulDivContext: ExprContext {
+	public class ExprMulDivContext: ExprContext {
 		public var m: Token!
 		public var d: Token!
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		public init(_ ctx: ExprContext) {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprMulDiv(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprMulDiv(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprMulDiv(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprMulDiv(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprMulDiv(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprMulDiv(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprMulDiv(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprMulDiv(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprNegateContext: ExprContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprNegateContext: ExprContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprNegate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprNegate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprNegate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprNegate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprNegate(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprNegate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprNegate(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprNegate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprArrayIndexContext: ExprContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func exprList() -> ExprListContext? {
-			return getRuleContext(ExprListContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprArrayIndexContext: ExprContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func exprList() -> ExprListContext? {
+				return getRuleContext(ExprListContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprArrayIndex(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprArrayIndex(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprArrayIndex(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprArrayIndex(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprArrayIndex(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprArrayIndex(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprArrayIndex(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprArrayIndex(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprLiteralContext: ExprContext {
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprLiteralContext: ExprContext {
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprLiteral(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprLiteral(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprEqualityContext: ExprContext {
+	public class ExprEqualityContext: ExprContext {
 		public var e: Token!
 		public var i: Token!
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
-		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		public init(_ ctx: ExprContext) {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprEquality(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprEquality(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprEquality(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprEquality(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprEquality(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprEquality(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprEquality(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprEquality(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprDynamicReferenceContext: ExprContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprDynamicReferenceContext: ExprContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprDynamicReference(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprDynamicReference(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprDynamicReference(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprDynamicReference(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprDynamicReference(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprDynamicReference(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprDynamicReference(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprDynamicReference(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ExprIdContext: ExprContext {
-		open func id() -> IdContext? {
-			return getRuleContext(IdContext.self,0)
-		}
-		public init(_ ctx: ExprContext) {
+	public class ExprIdContext: ExprContext {
+			open
+			func id() -> IdContext? {
+				return getRuleContext(IdContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExprContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprId(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprId(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprId(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprId(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprId(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprId(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprId(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprId(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expr( ) throws -> ExprContext   {
+	 public final  func expr( ) throws -> ExprContext   {
 		return try expr(0)
 	}
 	@discardableResult
@@ -1811,7 +1974,7 @@ open class PeopleCodeParser: Parser {
 
 				break
 			default:
-				throw try ANTLRException.recognition(e: NoViableAltException(self))
+				throw ANTLRException.recognition(e: NoViableAltException(self))
 			}
 			_ctx!.stop = try _input.LT(-1)
 			setState(195)
@@ -1831,7 +1994,7 @@ open class PeopleCodeParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, PeopleCodeParser.RULE_expr)
 						setState(144)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(147)
 						try _errHandler.sync(self)
@@ -1856,7 +2019,7 @@ open class PeopleCodeParser: Parser {
 
 							break
 						default:
-							throw try ANTLRException.recognition(e: NoViableAltException(self))
+							throw ANTLRException.recognition(e: NoViableAltException(self))
 						}
 						setState(149)
 						try expr(7)
@@ -1867,7 +2030,7 @@ open class PeopleCodeParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, PeopleCodeParser.RULE_expr)
 						setState(150)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(153)
 						try _errHandler.sync(self)
@@ -1892,7 +2055,7 @@ open class PeopleCodeParser: Parser {
 
 							break
 						default:
-							throw try ANTLRException.recognition(e: NoViableAltException(self))
+							throw ANTLRException.recognition(e: NoViableAltException(self))
 						}
 						setState(155)
 						try expr(6)
@@ -1903,7 +2066,7 @@ open class PeopleCodeParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, PeopleCodeParser.RULE_expr)
 						setState(156)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(161)
 						try _errHandler.sync(self)
@@ -1948,7 +2111,7 @@ open class PeopleCodeParser: Parser {
 
 							break
 						default:
-							throw try ANTLRException.recognition(e: NoViableAltException(self))
+							throw ANTLRException.recognition(e: NoViableAltException(self))
 						}
 						setState(163)
 						try expr(5)
@@ -1959,7 +2122,7 @@ open class PeopleCodeParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, PeopleCodeParser.RULE_expr)
 						setState(164)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(167)
 						try _errHandler.sync(self)
@@ -1984,7 +2147,7 @@ open class PeopleCodeParser: Parser {
 
 							break
 						default:
-							throw try ANTLRException.recognition(e: NoViableAltException(self))
+							throw ANTLRException.recognition(e: NoViableAltException(self))
 						}
 						setState(169)
 						try expr(4)
@@ -1995,7 +2158,7 @@ open class PeopleCodeParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, PeopleCodeParser.RULE_expr)
 						setState(170)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(173)
 						try _errHandler.sync(self)
@@ -2020,7 +2183,7 @@ open class PeopleCodeParser: Parser {
 
 							break
 						default:
-							throw try ANTLRException.recognition(e: NoViableAltException(self))
+							throw ANTLRException.recognition(e: NoViableAltException(self))
 						}
 						setState(175)
 						try expr(3)
@@ -2031,7 +2194,7 @@ open class PeopleCodeParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, PeopleCodeParser.RULE_expr)
 						setState(176)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(177)
 						try match(PeopleCodeParser.Tokens.T__26.rawValue)
@@ -2044,7 +2207,7 @@ open class PeopleCodeParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, PeopleCodeParser.RULE_expr)
 						setState(179)
 						if (!(precpred(_ctx, 11))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
 						}
 						setState(180)
 						try match(PeopleCodeParser.Tokens.T__11.rawValue)
@@ -2057,7 +2220,7 @@ open class PeopleCodeParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, PeopleCodeParser.RULE_expr)
 						setState(182)
 						if (!(precpred(_ctx, 10))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
 						}
 						setState(183)
 						try match(PeopleCodeParser.Tokens.T__12.rawValue)
@@ -2072,7 +2235,7 @@ open class PeopleCodeParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, PeopleCodeParser.RULE_expr)
 						setState(187)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(188)
 						try match(PeopleCodeParser.Tokens.T__8.rawValue)
@@ -2118,40 +2281,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx;
 	}
-	open class ExprListContext:ParserRuleContext {
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+
+	public class ExprListContext: ParserRuleContext {
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_exprList
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_exprList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExprList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExprList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExprList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExprList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExprList(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExprList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExprList(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExprList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exprList() throws -> ExprListContext {
+	 open func exprList() throws -> ExprListContext {
 		var _localctx: ExprListContext = ExprListContext(_ctx, getState())
 		try enterRule(_localctx, 8, PeopleCodeParser.RULE_exprList)
 		var _la: Int = 0
@@ -2190,45 +2360,56 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class VarDeclarationContext:ParserRuleContext {
-		public var varScope: Token!
-		open func varType() -> VarTypeContext? {
-			return getRuleContext(VarTypeContext.self,0)
+
+	public class VarDeclarationContext: ParserRuleContext {
+		open var varScope: Token!
+			open
+			func varType() -> VarTypeContext? {
+				return getRuleContext(VarTypeContext.self, 0)
+			}
+			open
+			func varDeclarator() -> [VarDeclaratorContext] {
+				return getRuleContexts(VarDeclaratorContext.self)
+			}
+			open
+			func varDeclarator(_ i: Int) -> VarDeclaratorContext? {
+				return getRuleContext(VarDeclaratorContext.self, i)
+			}
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_varDeclaration
 		}
-		open func varDeclarator() -> Array<VarDeclaratorContext> {
-			return getRuleContexts(VarDeclaratorContext.self)
-		}
-		open func varDeclarator(_ i: Int) -> VarDeclaratorContext? {
-			return getRuleContext(VarDeclaratorContext.self,i)
-		}
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_varDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterVarDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterVarDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitVarDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitVarDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitVarDeclaration(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitVarDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitVarDeclaration(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitVarDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varDeclaration() throws -> VarDeclarationContext {
+	 open func varDeclaration() throws -> VarDeclarationContext {
 		var _localctx: VarDeclarationContext = VarDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 10, PeopleCodeParser.RULE_varDeclaration)
 		var _la: Int = 0
@@ -2275,38 +2456,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class VarDeclaratorContext:ParserRuleContext {
-		open func VAR_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class VarDeclaratorContext: ParserRuleContext {
+			open
+			func VAR_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_varDeclarator
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_varDeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterVarDeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterVarDeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitVarDeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitVarDeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitVarDeclarator(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitVarDeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitVarDeclarator(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitVarDeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varDeclarator() throws -> VarDeclaratorContext {
+	 open func varDeclarator() throws -> VarDeclaratorContext {
 		var _localctx: VarDeclaratorContext = VarDeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 12, PeopleCodeParser.RULE_varDeclarator)
 		var _la: Int = 0
@@ -2342,41 +2532,51 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class VarTypeContext:ParserRuleContext {
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open func varType() -> VarTypeContext? {
-			return getRuleContext(VarTypeContext.self,0)
+
+	public class VarTypeContext: ParserRuleContext {
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+			open
+			func varType() -> VarTypeContext? {
+				return getRuleContext(VarTypeContext.self, 0)
+			}
+			open
+			func appClassPath() -> AppClassPathContext? {
+				return getRuleContext(AppClassPathContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_varType
 		}
-		open func appClassPath() -> AppClassPathContext? {
-			return getRuleContext(AppClassPathContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_varType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterVarType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterVarType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitVarType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitVarType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitVarType(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitVarType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitVarType(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitVarType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func varType() throws -> VarTypeContext {
+	 open func varType() throws -> VarTypeContext {
 		var _localctx: VarTypeContext = VarTypeContext(_ctx, getState())
 		try enterRule(_localctx, 14, PeopleCodeParser.RULE_varType)
 		var _la: Int = 0
@@ -2425,40 +2625,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class AppClassImportContext:ParserRuleContext {
-		open func appPkgPath() -> AppPkgPathContext? {
-			return getRuleContext(AppPkgPathContext.self,0)
+
+	public class AppClassImportContext: ParserRuleContext {
+			open
+			func appPkgPath() -> AppPkgPathContext? {
+				return getRuleContext(AppPkgPathContext.self, 0)
+			}
+			open
+			func appClassPath() -> AppClassPathContext? {
+				return getRuleContext(AppClassPathContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_appClassImport
 		}
-		open func appClassPath() -> AppClassPathContext? {
-			return getRuleContext(AppClassPathContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_appClassImport }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterAppClassImport(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterAppClassImport(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitAppClassImport(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitAppClassImport(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitAppClassImport(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitAppClassImport(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitAppClassImport(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitAppClassImport(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func appClassImport() throws -> AppClassImportContext {
+	 open func appClassImport() throws -> AppClassImportContext {
 		var _localctx: AppClassImportContext = AppClassImportContext(_ctx, getState())
 		try enterRule(_localctx, 16, PeopleCodeParser.RULE_appClassImport)
 		defer {
@@ -2493,38 +2700,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class AppPkgPathContext:ParserRuleContext {
-		open func GENERIC_ID() -> Array<TerminalNode> { return getTokens(PeopleCodeParser.Tokens.GENERIC_ID.rawValue) }
-		open func GENERIC_ID(_ i:Int) -> TerminalNode?{
-			return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, i)
+
+	public class AppPkgPathContext: ParserRuleContext {
+			open
+			func GENERIC_ID() -> [TerminalNode] {
+				return getTokens(PeopleCodeParser.Tokens.GENERIC_ID.rawValue)
+			}
+			open
+			func GENERIC_ID(_ i:Int) -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_appPkgPath
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_appPkgPath }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterAppPkgPath(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterAppPkgPath(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitAppPkgPath(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitAppPkgPath(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitAppPkgPath(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitAppPkgPath(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitAppPkgPath(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitAppPkgPath(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func appPkgPath() throws -> AppPkgPathContext {
+	 open func appPkgPath() throws -> AppPkgPathContext {
 		var _localctx: AppPkgPathContext = AppPkgPathContext(_ctx, getState())
 		try enterRule(_localctx, 18, PeopleCodeParser.RULE_appPkgPath)
 		defer {
@@ -2565,38 +2781,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class AppClassPathContext:ParserRuleContext {
-		open func GENERIC_ID() -> Array<TerminalNode> { return getTokens(PeopleCodeParser.Tokens.GENERIC_ID.rawValue) }
-		open func GENERIC_ID(_ i:Int) -> TerminalNode?{
-			return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, i)
+
+	public class AppClassPathContext: ParserRuleContext {
+			open
+			func GENERIC_ID() -> [TerminalNode] {
+				return getTokens(PeopleCodeParser.Tokens.GENERIC_ID.rawValue)
+			}
+			open
+			func GENERIC_ID(_ i:Int) -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_appClassPath
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_appClassPath }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterAppClassPath(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterAppClassPath(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitAppClassPath(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitAppClassPath(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitAppClassPath(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitAppClassPath(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitAppClassPath(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitAppClassPath(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func appClassPath() throws -> AppClassPathContext {
+	 open func appClassPath() throws -> AppClassPathContext {
 		var _localctx: AppClassPathContext = AppClassPathContext(_ctx, getState())
 		try enterRule(_localctx, 20, PeopleCodeParser.RULE_appClassPath)
 		var _la: Int = 0
@@ -2635,41 +2860,51 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class ExtFuncImportContext:ParserRuleContext {
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open func recDefnPath() -> RecDefnPathContext? {
-			return getRuleContext(RecDefnPathContext.self,0)
+
+	public class ExtFuncImportContext: ParserRuleContext {
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+			open
+			func recDefnPath() -> RecDefnPathContext? {
+				return getRuleContext(RecDefnPathContext.self, 0)
+			}
+			open
+			func event() -> EventContext? {
+				return getRuleContext(EventContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_extFuncImport
 		}
-		open func event() -> EventContext? {
-			return getRuleContext(EventContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_extFuncImport }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterExtFuncImport(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterExtFuncImport(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitExtFuncImport(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitExtFuncImport(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitExtFuncImport(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitExtFuncImport(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitExtFuncImport(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitExtFuncImport(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extFuncImport() throws -> ExtFuncImportContext {
+	 open func extFuncImport() throws -> ExtFuncImportContext {
 		var _localctx: ExtFuncImportContext = ExtFuncImportContext(_ctx, getState())
 		try enterRule(_localctx, 22, PeopleCodeParser.RULE_extFuncImport)
 		defer {
@@ -2699,38 +2934,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class RecDefnPathContext:ParserRuleContext {
-		open func GENERIC_ID() -> Array<TerminalNode> { return getTokens(PeopleCodeParser.Tokens.GENERIC_ID.rawValue) }
-		open func GENERIC_ID(_ i:Int) -> TerminalNode?{
-			return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, i)
+
+	public class RecDefnPathContext: ParserRuleContext {
+			open
+			func GENERIC_ID() -> [TerminalNode] {
+				return getTokens(PeopleCodeParser.Tokens.GENERIC_ID.rawValue)
+			}
+			open
+			func GENERIC_ID(_ i:Int) -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_recDefnPath
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_recDefnPath }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterRecDefnPath(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterRecDefnPath(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitRecDefnPath(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitRecDefnPath(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitRecDefnPath(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitRecDefnPath(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitRecDefnPath(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitRecDefnPath(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func recDefnPath() throws -> RecDefnPathContext {
+	 open func recDefnPath() throws -> RecDefnPathContext {
 		var _localctx: RecDefnPathContext = RecDefnPathContext(_ctx, getState())
 		try enterRule(_localctx, 24, PeopleCodeParser.RULE_recDefnPath)
 		defer {
@@ -2754,34 +2998,39 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class EventContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_event }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterEvent(self)
+
+	public class EventContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_event
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterEvent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitEvent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitEvent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitEvent(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitEvent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitEvent(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitEvent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func event() throws -> EventContext {
+	 open func event() throws -> EventContext {
 		var _localctx: EventContext = EventContext(_ctx, getState())
 		try enterRule(_localctx, 26, PeopleCodeParser.RULE_event)
 		var _la: Int = 0
@@ -2813,41 +3062,51 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class ClassDeclarationContext:ParserRuleContext {
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open func classBlock() -> Array<ClassBlockContext> {
-			return getRuleContexts(ClassBlockContext.self)
+
+	public class ClassDeclarationContext: ParserRuleContext {
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+			open
+			func classBlock() -> [ClassBlockContext] {
+				return getRuleContexts(ClassBlockContext.self)
+			}
+			open
+			func classBlock(_ i: Int) -> ClassBlockContext? {
+				return getRuleContext(ClassBlockContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_classDeclaration
 		}
-		open func classBlock(_ i: Int) -> ClassBlockContext? {
-			return getRuleContext(ClassBlockContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_classDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterClassDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterClassDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitClassDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitClassDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitClassDeclaration(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitClassDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitClassDeclaration(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitClassDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classDeclaration() throws -> ClassDeclarationContext {
+	 open func classDeclaration() throws -> ClassDeclarationContext {
 		var _localctx: ClassDeclarationContext = ClassDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 28, PeopleCodeParser.RULE_classDeclaration)
 		var _la: Int = 0
@@ -2891,41 +3150,48 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class ClassBlockContext:ParserRuleContext {
-		public var aLvl: Token!
-		open func classBlockStmt() -> Array<ClassBlockStmtContext> {
-			return getRuleContexts(ClassBlockStmtContext.self)
+
+	public class ClassBlockContext: ParserRuleContext {
+		open var aLvl: Token!
+			open
+			func classBlockStmt() -> [ClassBlockStmtContext] {
+				return getRuleContexts(ClassBlockStmtContext.self)
+			}
+			open
+			func classBlockStmt(_ i: Int) -> ClassBlockStmtContext? {
+				return getRuleContext(ClassBlockStmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_classBlock
 		}
-		open func classBlockStmt(_ i: Int) -> ClassBlockStmtContext? {
-			return getRuleContext(ClassBlockStmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_classBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterClassBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterClassBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitClassBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitClassBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitClassBlock(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitClassBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitClassBlock(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitClassBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classBlock() throws -> ClassBlockContext {
+	 open func classBlock() throws -> ClassBlockContext {
 		var _localctx: ClassBlockContext = ClassBlockContext(_ctx, getState())
 		try enterRule(_localctx, 30, PeopleCodeParser.RULE_classBlock)
 		var _la: Int = 0
@@ -2980,7 +3246,7 @@ open class PeopleCodeParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(287); 
 		 		try _errHandler.sync(self)
@@ -2996,46 +3262,55 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class ClassBlockStmtContext:ParserRuleContext {
-		open func method() -> MethodContext? {
-			return getRuleContext(MethodContext.self,0)
+
+	public class ClassBlockStmtContext: ParserRuleContext {
+			open
+			func method() -> MethodContext? {
+				return getRuleContext(MethodContext.self, 0)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+			open
+			func property() -> PropertyContext? {
+				return getRuleContext(PropertyContext.self, 0)
+			}
+			open
+			func instance() -> InstanceContext? {
+				return getRuleContext(InstanceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_classBlockStmt
 		}
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
-		}
-		open func property() -> PropertyContext? {
-			return getRuleContext(PropertyContext.self,0)
-		}
-		open func instance() -> InstanceContext? {
-			return getRuleContext(InstanceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_classBlockStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterClassBlockStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterClassBlockStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitClassBlockStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitClassBlockStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitClassBlockStmt(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitClassBlockStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitClassBlockStmt(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitClassBlockStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classBlockStmt() throws -> ClassBlockStmtContext {
+	 open func classBlockStmt() throws -> ClassBlockStmtContext {
 		var _localctx: ClassBlockStmtContext = ClassBlockStmtContext(_ctx, getState())
 		try enterRule(_localctx, 32, PeopleCodeParser.RULE_classBlockStmt)
 		defer {
@@ -3073,7 +3348,7 @@ open class PeopleCodeParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3084,41 +3359,51 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class MethodContext:ParserRuleContext {
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open func formalParamList() -> FormalParamListContext? {
-			return getRuleContext(FormalParamListContext.self,0)
+
+	public class MethodContext: ParserRuleContext {
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+			open
+			func formalParamList() -> FormalParamListContext? {
+				return getRuleContext(FormalParamListContext.self, 0)
+			}
+			open
+			func returnType() -> ReturnTypeContext? {
+				return getRuleContext(ReturnTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_method
 		}
-		open func returnType() -> ReturnTypeContext? {
-			return getRuleContext(ReturnTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_method }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterMethod(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterMethod(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitMethod(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitMethod(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitMethod(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitMethod(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitMethod(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitMethod(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func method() throws -> MethodContext {
+	 open func method() throws -> MethodContext {
 		var _localctx: MethodContext = MethodContext(_ctx, getState())
 		try enterRule(_localctx, 34, PeopleCodeParser.RULE_method)
 		var _la: Int = 0
@@ -3156,38 +3441,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class ConstantContext:ParserRuleContext {
-		open func VAR_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class ConstantContext: ParserRuleContext {
+			open
+			func VAR_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_constant
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_constant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterConstant(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterConstant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitConstant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitConstant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitConstant(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitConstant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitConstant(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitConstant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant() throws -> ConstantContext {
+	 open func constant() throws -> ConstantContext {
 		var _localctx: ConstantContext = ConstantContext(_ctx, getState())
 		try enterRule(_localctx, 36, PeopleCodeParser.RULE_constant)
 		defer {
@@ -3213,41 +3507,50 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyContext:ParserRuleContext {
-		public var g: Token!
-		public var s: Token!
-		public var r: Token!
-		open func varType() -> VarTypeContext? {
-			return getRuleContext(VarTypeContext.self,0)
+
+	public class PropertyContext: ParserRuleContext {
+		open var g: Token!
+		open var s: Token!
+		open var r: Token!
+			open
+			func varType() -> VarTypeContext? {
+				return getRuleContext(VarTypeContext.self, 0)
+			}
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_property
 		}
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_property }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterProperty(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterProperty(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitProperty(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitProperty(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitProperty(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitProperty(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitProperty(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitProperty(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func property() throws -> PropertyContext {
+	 open func property() throws -> PropertyContext {
 		var _localctx: PropertyContext = PropertyContext(_ctx, getState())
 		try enterRule(_localctx, 38, PeopleCodeParser.RULE_property)
 		var _la: Int = 0
@@ -3323,41 +3626,51 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class InstanceContext:ParserRuleContext {
-		open func varType() -> VarTypeContext? {
-			return getRuleContext(VarTypeContext.self,0)
+
+	public class InstanceContext: ParserRuleContext {
+			open
+			func varType() -> VarTypeContext? {
+				return getRuleContext(VarTypeContext.self, 0)
+			}
+			open
+			func VAR_ID() -> [TerminalNode] {
+				return getTokens(PeopleCodeParser.Tokens.VAR_ID.rawValue)
+			}
+			open
+			func VAR_ID(_ i:Int) -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_instance
 		}
-		open func VAR_ID() -> Array<TerminalNode> { return getTokens(PeopleCodeParser.Tokens.VAR_ID.rawValue) }
-		open func VAR_ID(_ i:Int) -> TerminalNode?{
-			return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_instance }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterInstance(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterInstance(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitInstance(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitInstance(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitInstance(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitInstance(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitInstance(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitInstance(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func instance() throws -> InstanceContext {
+	 open func instance() throws -> InstanceContext {
 		var _localctx: InstanceContext = InstanceContext(_ctx, getState())
 		try enterRule(_localctx, 40, PeopleCodeParser.RULE_instance)
 		var _la: Int = 0
@@ -3400,39 +3713,48 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class MethodImplContext:ParserRuleContext {
-		public var endmethod: Token!
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open func stmtList() -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,0)
+
+	public class MethodImplContext: ParserRuleContext {
+		open var endmethod: Token!
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+			open
+			func stmtList() -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_methodImpl
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_methodImpl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterMethodImpl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterMethodImpl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitMethodImpl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitMethodImpl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitMethodImpl(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitMethodImpl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitMethodImpl(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitMethodImpl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func methodImpl() throws -> MethodImplContext {
+	 open func methodImpl() throws -> MethodImplContext {
 		var _localctx: MethodImplContext = MethodImplContext(_ctx, getState())
 		try enterRule(_localctx, 42, PeopleCodeParser.RULE_methodImpl)
 		defer {
@@ -3462,39 +3784,48 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class GetImplContext:ParserRuleContext {
-		public var endget: Token!
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open func stmtList() -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,0)
+
+	public class GetImplContext: ParserRuleContext {
+		open var endget: Token!
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+			open
+			func stmtList() -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_getImpl
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_getImpl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterGetImpl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterGetImpl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitGetImpl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitGetImpl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitGetImpl(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitGetImpl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitGetImpl(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitGetImpl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func getImpl() throws -> GetImplContext {
+	 open func getImpl() throws -> GetImplContext {
 		var _localctx: GetImplContext = GetImplContext(_ctx, getState())
 		try enterRule(_localctx, 44, PeopleCodeParser.RULE_getImpl)
 		defer {
@@ -3524,39 +3855,48 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class SetImplContext:ParserRuleContext {
-		public var endset: Token!
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open func stmtList() -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,0)
+
+	public class SetImplContext: ParserRuleContext {
+		open var endset: Token!
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+			open
+			func stmtList() -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_setImpl
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_setImpl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterSetImpl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterSetImpl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitSetImpl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitSetImpl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitSetImpl(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitSetImpl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitSetImpl(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitSetImpl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setImpl() throws -> SetImplContext {
+	 open func setImpl() throws -> SetImplContext {
 		var _localctx: SetImplContext = SetImplContext(_ctx, getState())
 		try enterRule(_localctx, 46, PeopleCodeParser.RULE_setImpl)
 		defer {
@@ -3586,41 +3926,48 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class FuncImplContext:ParserRuleContext {
-		public var endfunction: Token!
-		open func funcSignature() -> FuncSignatureContext? {
-			return getRuleContext(FuncSignatureContext.self,0)
+
+	public class FuncImplContext: ParserRuleContext {
+		open var endfunction: Token!
+			open
+			func funcSignature() -> FuncSignatureContext? {
+				return getRuleContext(FuncSignatureContext.self, 0)
+			}
+			open
+			func stmtList() -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_funcImpl
 		}
-		open func stmtList() -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_funcImpl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterFuncImpl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterFuncImpl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitFuncImpl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitFuncImpl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitFuncImpl(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitFuncImpl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitFuncImpl(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitFuncImpl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funcImpl() throws -> FuncImplContext {
+	 open func funcImpl() throws -> FuncImplContext {
 		var _localctx: FuncImplContext = FuncImplContext(_ctx, getState())
 		try enterRule(_localctx, 48, PeopleCodeParser.RULE_funcImpl)
 		defer {
@@ -3648,41 +3995,51 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class FuncSignatureContext:ParserRuleContext {
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open func formalParamList() -> FormalParamListContext? {
-			return getRuleContext(FormalParamListContext.self,0)
+
+	public class FuncSignatureContext: ParserRuleContext {
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+			open
+			func formalParamList() -> FormalParamListContext? {
+				return getRuleContext(FormalParamListContext.self, 0)
+			}
+			open
+			func returnType() -> ReturnTypeContext? {
+				return getRuleContext(ReturnTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_funcSignature
 		}
-		open func returnType() -> ReturnTypeContext? {
-			return getRuleContext(ReturnTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_funcSignature }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterFuncSignature(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterFuncSignature(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitFuncSignature(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitFuncSignature(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitFuncSignature(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitFuncSignature(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitFuncSignature(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitFuncSignature(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funcSignature() throws -> FuncSignatureContext {
+	 open func funcSignature() throws -> FuncSignatureContext {
 		var _localctx: FuncSignatureContext = FuncSignatureContext(_ctx, getState())
 		try enterRule(_localctx, 50, PeopleCodeParser.RULE_funcSignature)
 		var _la: Int = 0
@@ -3741,40 +4098,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class FormalParamListContext:ParserRuleContext {
-		open func param() -> Array<ParamContext> {
-			return getRuleContexts(ParamContext.self)
+
+	public class FormalParamListContext: ParserRuleContext {
+			open
+			func param() -> [ParamContext] {
+				return getRuleContexts(ParamContext.self)
+			}
+			open
+			func param(_ i: Int) -> ParamContext? {
+				return getRuleContext(ParamContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_formalParamList
 		}
-		open func param(_ i: Int) -> ParamContext? {
-			return getRuleContext(ParamContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_formalParamList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterFormalParamList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterFormalParamList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitFormalParamList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitFormalParamList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitFormalParamList(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitFormalParamList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitFormalParamList(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitFormalParamList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalParamList() throws -> FormalParamListContext {
+	 open func formalParamList() throws -> FormalParamListContext {
 		var _localctx: FormalParamListContext = FormalParamListContext(_ctx, getState())
 		try enterRule(_localctx, 52, PeopleCodeParser.RULE_formalParamList)
 		var _la: Int = 0
@@ -3828,38 +4192,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class ParamContext:ParserRuleContext {
-		open func VAR_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0) }
-		open func varType() -> VarTypeContext? {
-			return getRuleContext(VarTypeContext.self,0)
+
+	public class ParamContext: ParserRuleContext {
+			open
+			func VAR_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0)
+			}
+			open
+			func varType() -> VarTypeContext? {
+				return getRuleContext(VarTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_param
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_param }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterParam(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterParam(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitParam(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitParam(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitParam(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitParam(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitParam(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitParam(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func param() throws -> ParamContext {
+	 open func param() throws -> ParamContext {
 		var _localctx: ParamContext = ParamContext(_ctx, getState())
 		try enterRule(_localctx, 54, PeopleCodeParser.RULE_param)
 		var _la: Int = 0
@@ -3895,37 +4268,43 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class ReturnTypeContext:ParserRuleContext {
-		open func varType() -> VarTypeContext? {
-			return getRuleContext(VarTypeContext.self,0)
+
+	public class ReturnTypeContext: ParserRuleContext {
+			open
+			func varType() -> VarTypeContext? {
+				return getRuleContext(VarTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_returnType
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_returnType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterReturnType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterReturnType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitReturnType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitReturnType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitReturnType(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitReturnType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitReturnType(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitReturnType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func returnType() throws -> ReturnTypeContext {
+	 open func returnType() throws -> ReturnTypeContext {
 		var _localctx: ReturnTypeContext = ReturnTypeContext(_ctx, getState())
 		try enterRule(_localctx, 56, PeopleCodeParser.RULE_returnType)
 		defer {
@@ -3947,45 +4326,53 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class IfStmtContext:ParserRuleContext {
-		public var elsetok: Token!
-		public var endif: Token!
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class IfStmtContext: ParserRuleContext {
+		open var elsetok: Token!
+		open var endif: Token!
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func stmtList() -> [StmtListContext] {
+				return getRuleContexts(StmtListContext.self)
+			}
+			open
+			func stmtList(_ i: Int) -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_ifStmt
 		}
-		open func stmtList() -> Array<StmtListContext> {
-			return getRuleContexts(StmtListContext.self)
-		}
-		open func stmtList(_ i: Int) -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_ifStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterIfStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterIfStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitIfStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitIfStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitIfStmt(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitIfStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitIfStmt(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitIfStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifStmt() throws -> IfStmtContext {
+	 open func ifStmt() throws -> IfStmtContext {
 		var _localctx: IfStmtContext = IfStmtContext(_ctx, getState())
 		try enterRule(_localctx, 58, PeopleCodeParser.RULE_ifStmt)
 		var _la: Int = 0
@@ -4063,45 +4450,56 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class ForStmtContext:ParserRuleContext {
-		public var endfor: Token!
-		open func VAR_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0) }
-		open func expr() -> Array<ExprContext> {
-			return getRuleContexts(ExprContext.self)
+
+	public class ForStmtContext: ParserRuleContext {
+		open var endfor: Token!
+			open
+			func VAR_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0)
+			}
+			open
+			func expr() -> [ExprContext] {
+				return getRuleContexts(ExprContext.self)
+			}
+			open
+			func expr(_ i: Int) -> ExprContext? {
+				return getRuleContext(ExprContext.self, i)
+			}
+			open
+			func stmtList() -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_forStmt
 		}
-		open func expr(_ i: Int) -> ExprContext? {
-			return getRuleContext(ExprContext.self,i)
-		}
-		open func stmtList() -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_forStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterForStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterForStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitForStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitForStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitForStmt(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitForStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitForStmt(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitForStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forStmt() throws -> ForStmtContext {
+	 open func forStmt() throws -> ForStmtContext {
 		var _localctx: ForStmtContext = ForStmtContext(_ctx, getState())
 		try enterRule(_localctx, 60, PeopleCodeParser.RULE_forStmt)
 		defer {
@@ -4191,40 +4589,47 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class WhileStmtContext:ParserRuleContext {
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class WhileStmtContext: ParserRuleContext {
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func stmtList() -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_whileStmt
 		}
-		open func stmtList() -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_whileStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterWhileStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterWhileStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitWhileStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitWhileStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitWhileStmt(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitWhileStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitWhileStmt(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitWhileStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func whileStmt() throws -> WhileStmtContext {
+	 open func whileStmt() throws -> WhileStmtContext {
 		var _localctx: WhileStmtContext = WhileStmtContext(_ctx, getState())
 		try enterRule(_localctx, 62, PeopleCodeParser.RULE_whileStmt)
 		var _la: Int = 0
@@ -4264,47 +4669,56 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class EvaluateStmtContext:ParserRuleContext {
-		public var endevaluate: Token!
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class EvaluateStmtContext: ParserRuleContext {
+		open var endevaluate: Token!
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func whenBranch() -> [WhenBranchContext] {
+				return getRuleContexts(WhenBranchContext.self)
+			}
+			open
+			func whenBranch(_ i: Int) -> WhenBranchContext? {
+				return getRuleContext(WhenBranchContext.self, i)
+			}
+			open
+			func whenOtherBranch() -> WhenOtherBranchContext? {
+				return getRuleContext(WhenOtherBranchContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_evaluateStmt
 		}
-		open func whenBranch() -> Array<WhenBranchContext> {
-			return getRuleContexts(WhenBranchContext.self)
-		}
-		open func whenBranch(_ i: Int) -> WhenBranchContext? {
-			return getRuleContext(WhenBranchContext.self,i)
-		}
-		open func whenOtherBranch() -> WhenOtherBranchContext? {
-			return getRuleContext(WhenOtherBranchContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_evaluateStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterEvaluateStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterEvaluateStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitEvaluateStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitEvaluateStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitEvaluateStmt(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitEvaluateStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitEvaluateStmt(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitEvaluateStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func evaluateStmt() throws -> EvaluateStmtContext {
+	 open func evaluateStmt() throws -> EvaluateStmtContext {
 		var _localctx: EvaluateStmtContext = EvaluateStmtContext(_ctx, getState())
 		try enterRule(_localctx, 64, PeopleCodeParser.RULE_evaluateStmt)
 		var _la: Int = 0
@@ -4362,41 +4776,48 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class WhenBranchContext:ParserRuleContext {
-		public var op: Token!
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
+
+	public class WhenBranchContext: ParserRuleContext {
+		open var op: Token!
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func stmtList() -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_whenBranch
 		}
-		open func stmtList() -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_whenBranch }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterWhenBranch(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterWhenBranch(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitWhenBranch(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitWhenBranch(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitWhenBranch(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitWhenBranch(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitWhenBranch(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitWhenBranch(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func whenBranch() throws -> WhenBranchContext {
+	 open func whenBranch() throws -> WhenBranchContext {
 		var _localctx: WhenBranchContext = WhenBranchContext(_ctx, getState())
 		try enterRule(_localctx, 66, PeopleCodeParser.RULE_whenBranch)
 		defer {
@@ -4458,37 +4879,43 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class WhenOtherBranchContext:ParserRuleContext {
-		open func stmtList() -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,0)
+
+	public class WhenOtherBranchContext: ParserRuleContext {
+			open
+			func stmtList() -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_whenOtherBranch
 		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_whenOtherBranch }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterWhenOtherBranch(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterWhenOtherBranch(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitWhenOtherBranch(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitWhenOtherBranch(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitWhenOtherBranch(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitWhenOtherBranch(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitWhenOtherBranch(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitWhenOtherBranch(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func whenOtherBranch() throws -> WhenOtherBranchContext {
+	 open func whenOtherBranch() throws -> WhenOtherBranchContext {
 		var _localctx: WhenOtherBranchContext = WhenOtherBranchContext(_ctx, getState())
 		try enterRule(_localctx, 68, PeopleCodeParser.RULE_whenOtherBranch)
 		defer {
@@ -4510,45 +4937,53 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class TryCatchStmtContext:ParserRuleContext {
-		public var trytok: Token!
-		public var endtry: Token!
-		open func stmtList() -> Array<StmtListContext> {
-			return getRuleContexts(StmtListContext.self)
+
+	public class TryCatchStmtContext: ParserRuleContext {
+		open var trytok: Token!
+		open var endtry: Token!
+			open
+			func stmtList() -> [StmtListContext] {
+				return getRuleContexts(StmtListContext.self)
+			}
+			open
+			func stmtList(_ i: Int) -> StmtListContext? {
+				return getRuleContext(StmtListContext.self, i)
+			}
+			open
+			func catchSignature() -> CatchSignatureContext? {
+				return getRuleContext(CatchSignatureContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_tryCatchStmt
 		}
-		open func stmtList(_ i: Int) -> StmtListContext? {
-			return getRuleContext(StmtListContext.self,i)
-		}
-		open func catchSignature() -> CatchSignatureContext? {
-			return getRuleContext(CatchSignatureContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_tryCatchStmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterTryCatchStmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterTryCatchStmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitTryCatchStmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitTryCatchStmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitTryCatchStmt(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitTryCatchStmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitTryCatchStmt(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitTryCatchStmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tryCatchStmt() throws -> TryCatchStmtContext {
+	 open func tryCatchStmt() throws -> TryCatchStmtContext {
 		var _localctx: TryCatchStmtContext = TryCatchStmtContext(_ctx, getState())
 		try enterRule(_localctx, 70, PeopleCodeParser.RULE_tryCatchStmt)
 		defer {
@@ -4584,36 +5019,44 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class CatchSignatureContext:ParserRuleContext {
-		public var exClass: Token!
-		open func VAR_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_catchSignature }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterCatchSignature(self)
+
+	public class CatchSignatureContext: ParserRuleContext {
+		open var exClass: Token!
+			open
+			func VAR_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_catchSignature
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterCatchSignature(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitCatchSignature(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitCatchSignature(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitCatchSignature(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitCatchSignature(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitCatchSignature(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitCatchSignature(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func catchSignature() throws -> CatchSignatureContext {
+	 open func catchSignature() throws -> CatchSignatureContext {
 		var _localctx: CatchSignatureContext = CatchSignatureContext(_ctx, getState())
 		try enterRule(_localctx, 72, PeopleCodeParser.RULE_catchSignature)
 		defer {
@@ -4641,41 +5084,51 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class CreateInvocationContext:ParserRuleContext {
-		open func appClassPath() -> AppClassPathContext? {
-			return getRuleContext(AppClassPathContext.self,0)
+
+	public class CreateInvocationContext: ParserRuleContext {
+			open
+			func appClassPath() -> AppClassPathContext? {
+				return getRuleContext(AppClassPathContext.self, 0)
+			}
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+			open
+			func exprList() -> ExprListContext? {
+				return getRuleContext(ExprListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_createInvocation
 		}
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open func exprList() -> ExprListContext? {
-			return getRuleContext(ExprListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_createInvocation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterCreateInvocation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterCreateInvocation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitCreateInvocation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitCreateInvocation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitCreateInvocation(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitCreateInvocation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitCreateInvocation(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitCreateInvocation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func createInvocation() throws -> CreateInvocationContext {
+	 open func createInvocation() throws -> CreateInvocationContext {
 		var _localctx: CreateInvocationContext = CreateInvocationContext(_ctx, getState())
 		try enterRule(_localctx, 74, PeopleCodeParser.RULE_createInvocation)
 		var _la: Int = 0
@@ -4735,38 +5188,55 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func DecimalLiteral() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.DecimalLiteral.rawValue, 0) }
-		open func IntegerLiteral() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.IntegerLiteral.rawValue, 0) }
-		open func StringLiteral() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.StringLiteral.rawValue, 0) }
-		open func BoolLiteral() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.BoolLiteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterLiteral(self)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func DecimalLiteral() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.DecimalLiteral.rawValue, 0)
+			}
+			open
+			func IntegerLiteral() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.IntegerLiteral.rawValue, 0)
+			}
+			open
+			func StringLiteral() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.StringLiteral.rawValue, 0)
+			}
+			open
+			func BoolLiteral() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.BoolLiteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitLiteral(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 76, PeopleCodeParser.RULE_literal)
 		var _la: Int = 0
@@ -4801,37 +5271,51 @@ open class PeopleCodeParser: Parser {
 
 		return _localctx
 	}
-	open class IdContext:ParserRuleContext {
-		open func SYS_VAR_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.SYS_VAR_ID.rawValue, 0) }
-		open func VAR_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0) }
-		open func GENERIC_ID() -> TerminalNode? { return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return PeopleCodeParser.RULE_id }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).enterId(self)
+
+	public class IdContext: ParserRuleContext {
+			open
+			func SYS_VAR_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.SYS_VAR_ID.rawValue, 0)
+			}
+			open
+			func VAR_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.VAR_ID.rawValue, 0)
+			}
+			open
+			func GENERIC_ID() -> TerminalNode? {
+				return getToken(PeopleCodeParser.Tokens.GENERIC_ID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return PeopleCodeParser.RULE_id
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.enterId(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is PeopleCodeListener {
-			 	(listener as! PeopleCodeListener).exitId(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? PeopleCodeListener {
+				listener.exitId(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is PeopleCodeVisitor {
-			     return (visitor as! PeopleCodeVisitor<T>).visitId(self)
-			}else if visitor is PeopleCodeBaseVisitor {
-		    	 return (visitor as! PeopleCodeBaseVisitor<T>).visitId(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? PeopleCodeVisitor {
+			    return visitor.visitId(self)
+			}
+			else if let visitor = visitor as? PeopleCodeBaseVisitor {
+			    return visitor.visitId(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func id() throws -> IdContext {
+	 open func id() throws -> IdContext {
 		var _localctx: IdContext = IdContext(_ctx, getState())
 		try enterRule(_localctx, 78, PeopleCodeParser.RULE_id)
 		var _la: Int = 0
@@ -4867,8 +5351,8 @@ open class PeopleCodeParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  3:
 			return try expr_sempred(_localctx?.castdown(ExprContext.self), predIndex)
@@ -4890,6 +5374,10 @@ open class PeopleCodeParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = PeopleCodeParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = PeopleCodeParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

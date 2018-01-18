@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/wavefront/WavefrontOBJ.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/wavefront/WavefrontOBJ.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class WavefrontOBJParser: Parser {
@@ -11,8 +11,11 @@ open class WavefrontOBJParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, GEOMETRIC_VERTEX = 6, 
                  TEXTURE_VERTEX = 7, VERTEX_NORMAL = 8, PARAMETER_SPACE_VERTEX = 9, 
                  DEGREE = 10, BASIS_MATRIX = 11, STEP_SIZE = 12, CURVE_SURF_TYPE = 13, 
@@ -26,10 +29,13 @@ open class WavefrontOBJParser: Parser {
                  CURVE_APPROX = 39, SURF_APPROX = 40, INTEGER = 41, DECIMAL = 42, 
                  COMMENT = 43, NAME = 44, WS = 45
 	}
-	public static let RULE_start = 0, RULE_line = 1, RULE_face = 2, RULE_vertex = 3, 
-                   RULE_mtllib = 4, RULE_object = 5, RULE_use_material = 6, 
-                   RULE_group = 7
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_start = 0, RULE_line = 1, RULE_face = 2, RULE_vertex = 3, 
+            RULE_mtllib = 4, RULE_object = 5, RULE_use_material = 6, RULE_group = 7
+
+	public
+	static let ruleNames: [String] = [
 		"start", "line", "face", "vertex", "mtllib", "object", "use_material", 
 		"group"
 	]
@@ -52,88 +58,73 @@ open class WavefrontOBJParser: Parser {
 		"MATERIAL_LIBRARY", "SHADOW_CASTING", "RAY_TRACING", "CURVE_APPROX", "SURF_APPROX", 
 		"INTEGER", "DECIMAL", "COMMENT", "NAME", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "WavefrontOBJ.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return WavefrontOBJParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "WavefrontOBJ.g4" }
+	override open
+	func getSerializedATN() -> String { return WavefrontOBJParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return WavefrontOBJParser.ruleNames }
+	override open
+	func getATN() -> ATN { return WavefrontOBJParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return WavefrontOBJParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return WavefrontOBJParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return WavefrontOBJParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,WavefrontOBJParser._ATN,WavefrontOBJParser._decisionToDFA, WavefrontOBJParser._sharedContextCache)
 	}
-	open class StartContext:ParserRuleContext {
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
+
+	public class StartContext: ParserRuleContext {
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WavefrontOBJParser.RULE_start
 		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return WavefrontOBJParser.RULE_start }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).enterStart(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.enterStart(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).exitStart(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.exitStart(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WavefrontOBJVisitor {
-			     return (visitor as! WavefrontOBJVisitor<T>).visitStart(self)
-			}else if visitor is WavefrontOBJBaseVisitor {
-		    	 return (visitor as! WavefrontOBJBaseVisitor<T>).visitStart(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WavefrontOBJVisitor {
+			    return visitor.visitStart(self)
+			}
+			else if let visitor = visitor as? WavefrontOBJBaseVisitor {
+			    return visitor.visitStart(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func start() throws -> StartContext {
+	 open func start() throws -> StartContext {
 		var _localctx: StartContext = StartContext(_ctx, getState())
 		try enterRule(_localctx, 0, WavefrontOBJParser.RULE_start)
 		var _la: Int = 0
@@ -171,52 +162,63 @@ open class WavefrontOBJParser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func vertex() -> VertexContext? {
-			return getRuleContext(VertexContext.self,0)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func vertex() -> VertexContext? {
+				return getRuleContext(VertexContext.self, 0)
+			}
+			open
+			func face() -> FaceContext? {
+				return getRuleContext(FaceContext.self, 0)
+			}
+			open
+			func mtllib() -> MtllibContext? {
+				return getRuleContext(MtllibContext.self, 0)
+			}
+			open
+			func object() -> ObjectContext? {
+				return getRuleContext(ObjectContext.self, 0)
+			}
+			open
+			func use_material() -> Use_materialContext? {
+				return getRuleContext(Use_materialContext.self, 0)
+			}
+			open
+			func group() -> GroupContext? {
+				return getRuleContext(GroupContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WavefrontOBJParser.RULE_line
 		}
-		open func face() -> FaceContext? {
-			return getRuleContext(FaceContext.self,0)
-		}
-		open func mtllib() -> MtllibContext? {
-			return getRuleContext(MtllibContext.self,0)
-		}
-		open func object() -> ObjectContext? {
-			return getRuleContext(ObjectContext.self,0)
-		}
-		open func use_material() -> Use_materialContext? {
-			return getRuleContext(Use_materialContext.self,0)
-		}
-		open func group() -> GroupContext? {
-			return getRuleContext(GroupContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return WavefrontOBJParser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WavefrontOBJVisitor {
-			     return (visitor as! WavefrontOBJVisitor<T>).visitLine(self)
-			}else if visitor is WavefrontOBJBaseVisitor {
-		    	 return (visitor as! WavefrontOBJBaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WavefrontOBJVisitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? WavefrontOBJBaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 2, WavefrontOBJParser.RULE_line)
 		var _la: Int = 0
@@ -267,7 +269,7 @@ open class WavefrontOBJParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(30)
 		 	try _errHandler.sync(self)
@@ -294,39 +296,51 @@ open class WavefrontOBJParser: Parser {
 
 		return _localctx
 	}
-	open class FaceContext:ParserRuleContext {
-		open func FACE() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.FACE.rawValue, 0) }
-		open func INTEGER() -> Array<TerminalNode> { return getTokens(WavefrontOBJParser.Tokens.INTEGER.rawValue) }
-		open func INTEGER(_ i:Int) -> TerminalNode?{
-			return getToken(WavefrontOBJParser.Tokens.INTEGER.rawValue, i)
+
+	public class FaceContext: ParserRuleContext {
+			open
+			func FACE() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.FACE.rawValue, 0)
+			}
+			open
+			func INTEGER() -> [TerminalNode] {
+				return getTokens(WavefrontOBJParser.Tokens.INTEGER.rawValue)
+			}
+			open
+			func INTEGER(_ i:Int) -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.INTEGER.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WavefrontOBJParser.RULE_face
 		}
-		open override func getRuleIndex() -> Int { return WavefrontOBJParser.RULE_face }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).enterFace(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.enterFace(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).exitFace(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.exitFace(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WavefrontOBJVisitor {
-			     return (visitor as! WavefrontOBJVisitor<T>).visitFace(self)
-			}else if visitor is WavefrontOBJBaseVisitor {
-		    	 return (visitor as! WavefrontOBJBaseVisitor<T>).visitFace(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WavefrontOBJVisitor {
+			    return visitor.visitFace(self)
+			}
+			else if let visitor = visitor as? WavefrontOBJBaseVisitor {
+			    return visitor.visitFace(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func face() throws -> FaceContext {
+	 open func face() throws -> FaceContext {
 		var _localctx: FaceContext = FaceContext(_ctx, getState())
 		try enterRule(_localctx, 4, WavefrontOBJParser.RULE_face)
 		var _la: Int = 0
@@ -363,42 +377,63 @@ open class WavefrontOBJParser: Parser {
 
 		return _localctx
 	}
-	open class VertexContext:ParserRuleContext {
-		open func DECIMAL() -> Array<TerminalNode> { return getTokens(WavefrontOBJParser.Tokens.DECIMAL.rawValue) }
-		open func DECIMAL(_ i:Int) -> TerminalNode?{
-			return getToken(WavefrontOBJParser.Tokens.DECIMAL.rawValue, i)
+
+	public class VertexContext: ParserRuleContext {
+			open
+			func DECIMAL() -> [TerminalNode] {
+				return getTokens(WavefrontOBJParser.Tokens.DECIMAL.rawValue)
+			}
+			open
+			func DECIMAL(_ i:Int) -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.DECIMAL.rawValue, i)
+			}
+			open
+			func GEOMETRIC_VERTEX() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.GEOMETRIC_VERTEX.rawValue, 0)
+			}
+			open
+			func TEXTURE_VERTEX() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.TEXTURE_VERTEX.rawValue, 0)
+			}
+			open
+			func VERTEX_NORMAL() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.VERTEX_NORMAL.rawValue, 0)
+			}
+			open
+			func PARAMETER_SPACE_VERTEX() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.PARAMETER_SPACE_VERTEX.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WavefrontOBJParser.RULE_vertex
 		}
-		open func GEOMETRIC_VERTEX() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.GEOMETRIC_VERTEX.rawValue, 0) }
-		open func TEXTURE_VERTEX() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.TEXTURE_VERTEX.rawValue, 0) }
-		open func VERTEX_NORMAL() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.VERTEX_NORMAL.rawValue, 0) }
-		open func PARAMETER_SPACE_VERTEX() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.PARAMETER_SPACE_VERTEX.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WavefrontOBJParser.RULE_vertex }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).enterVertex(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.enterVertex(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).exitVertex(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.exitVertex(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WavefrontOBJVisitor {
-			     return (visitor as! WavefrontOBJVisitor<T>).visitVertex(self)
-			}else if visitor is WavefrontOBJBaseVisitor {
-		    	 return (visitor as! WavefrontOBJBaseVisitor<T>).visitVertex(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WavefrontOBJVisitor {
+			    return visitor.visitVertex(self)
+			}
+			else if let visitor = visitor as? WavefrontOBJBaseVisitor {
+			    return visitor.visitVertex(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func vertex() throws -> VertexContext {
+	 open func vertex() throws -> VertexContext {
 		var _localctx: VertexContext = VertexContext(_ctx, getState())
 		try enterRule(_localctx, 6, WavefrontOBJParser.RULE_vertex)
 		var _la: Int = 0
@@ -451,7 +486,7 @@ open class WavefrontOBJParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -462,37 +497,48 @@ open class WavefrontOBJParser: Parser {
 
 		return _localctx
 	}
-	open class MtllibContext:ParserRuleContext {
-		public var a: Token!
-		open func MATERIAL_LIBRARY() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.MATERIAL_LIBRARY.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WavefrontOBJParser.RULE_mtllib }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).enterMtllib(self)
+
+	public class MtllibContext: ParserRuleContext {
+		open var a: Token!
+			open
+			func MATERIAL_LIBRARY() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.MATERIAL_LIBRARY.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WavefrontOBJParser.RULE_mtllib
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.enterMtllib(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).exitMtllib(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.exitMtllib(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WavefrontOBJVisitor {
-			     return (visitor as! WavefrontOBJVisitor<T>).visitMtllib(self)
-			}else if visitor is WavefrontOBJBaseVisitor {
-		    	 return (visitor as! WavefrontOBJBaseVisitor<T>).visitMtllib(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WavefrontOBJVisitor {
+			    return visitor.visitMtllib(self)
+			}
+			else if let visitor = visitor as? WavefrontOBJBaseVisitor {
+			    return visitor.visitMtllib(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mtllib() throws -> MtllibContext {
+	 open func mtllib() throws -> MtllibContext {
 		var _localctx: MtllibContext = MtllibContext(_ctx, getState())
 		try enterRule(_localctx, 8, WavefrontOBJParser.RULE_mtllib)
 		defer {
@@ -520,36 +566,47 @@ open class WavefrontOBJParser: Parser {
 
 		return _localctx
 	}
-	open class ObjectContext:ParserRuleContext {
-		open func OBJECT_NAME() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.OBJECT_NAME.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WavefrontOBJParser.RULE_object }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).enterObject(self)
+
+	public class ObjectContext: ParserRuleContext {
+			open
+			func OBJECT_NAME() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.OBJECT_NAME.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WavefrontOBJParser.RULE_object
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.enterObject(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).exitObject(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.exitObject(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WavefrontOBJVisitor {
-			     return (visitor as! WavefrontOBJVisitor<T>).visitObject(self)
-			}else if visitor is WavefrontOBJBaseVisitor {
-		    	 return (visitor as! WavefrontOBJBaseVisitor<T>).visitObject(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WavefrontOBJVisitor {
+			    return visitor.visitObject(self)
+			}
+			else if let visitor = visitor as? WavefrontOBJBaseVisitor {
+			    return visitor.visitObject(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func object() throws -> ObjectContext {
+	 open func object() throws -> ObjectContext {
 		var _localctx: ObjectContext = ObjectContext(_ctx, getState())
 		try enterRule(_localctx, 10, WavefrontOBJParser.RULE_object)
 		defer {
@@ -571,36 +628,47 @@ open class WavefrontOBJParser: Parser {
 
 		return _localctx
 	}
-	open class Use_materialContext:ParserRuleContext {
-		open func MATERIAL_NAME() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.MATERIAL_NAME.rawValue, 0) }
-		open func NAME() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.NAME.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WavefrontOBJParser.RULE_use_material }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).enterUse_material(self)
+
+	public class Use_materialContext: ParserRuleContext {
+			open
+			func MATERIAL_NAME() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.MATERIAL_NAME.rawValue, 0)
+			}
+			open
+			func NAME() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.NAME.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WavefrontOBJParser.RULE_use_material
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.enterUse_material(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).exitUse_material(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.exitUse_material(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WavefrontOBJVisitor {
-			     return (visitor as! WavefrontOBJVisitor<T>).visitUse_material(self)
-			}else if visitor is WavefrontOBJBaseVisitor {
-		    	 return (visitor as! WavefrontOBJBaseVisitor<T>).visitUse_material(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WavefrontOBJVisitor {
+			    return visitor.visitUse_material(self)
+			}
+			else if let visitor = visitor as? WavefrontOBJBaseVisitor {
+			    return visitor.visitUse_material(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func use_material() throws -> Use_materialContext {
+	 open func use_material() throws -> Use_materialContext {
 		var _localctx: Use_materialContext = Use_materialContext(_ctx, getState())
 		try enterRule(_localctx, 12, WavefrontOBJParser.RULE_use_material)
 		defer {
@@ -622,35 +690,43 @@ open class WavefrontOBJParser: Parser {
 
 		return _localctx
 	}
-	open class GroupContext:ParserRuleContext {
-		open func SMOOTHING_GROUP() -> TerminalNode? { return getToken(WavefrontOBJParser.Tokens.SMOOTHING_GROUP.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return WavefrontOBJParser.RULE_group }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).enterGroup(self)
+
+	public class GroupContext: ParserRuleContext {
+			open
+			func SMOOTHING_GROUP() -> TerminalNode? {
+				return getToken(WavefrontOBJParser.Tokens.SMOOTHING_GROUP.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return WavefrontOBJParser.RULE_group
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.enterGroup(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is WavefrontOBJListener {
-			 	(listener as! WavefrontOBJListener).exitGroup(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? WavefrontOBJListener {
+				listener.exitGroup(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is WavefrontOBJVisitor {
-			     return (visitor as! WavefrontOBJVisitor<T>).visitGroup(self)
-			}else if visitor is WavefrontOBJBaseVisitor {
-		    	 return (visitor as! WavefrontOBJBaseVisitor<T>).visitGroup(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? WavefrontOBJVisitor {
+			    return visitor.visitGroup(self)
+			}
+			else if let visitor = visitor as? WavefrontOBJBaseVisitor {
+			    return visitor.visitGroup(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func group() throws -> GroupContext {
+	 open func group() throws -> GroupContext {
 		var _localctx: GroupContext = GroupContext(_ctx, getState())
 		try enterRule(_localctx, 14, WavefrontOBJParser.RULE_group)
 		var _la: Int = 0
@@ -685,6 +761,10 @@ open class WavefrontOBJParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = WavefrontOBJParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = WavefrontOBJParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

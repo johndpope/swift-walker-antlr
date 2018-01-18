@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/smalltalk/Smalltalk.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/smalltalk/Smalltalk.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScript(_ ctx: SmalltalkParser.ScriptContext) -> T{
+	open func visitScript(_ ctx: SmalltalkParser.ScriptContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSequence(_ ctx: SmalltalkParser.SequenceContext) -> T{
+	open func visitSequence(_ ctx: SmalltalkParser.SequenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWs(_ ctx: SmalltalkParser.WsContext) -> T{
+	open func visitWs(_ ctx: SmalltalkParser.WsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemps(_ ctx: SmalltalkParser.TempsContext) -> T{
+	open func visitTemps(_ ctx: SmalltalkParser.TempsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -56,7 +56,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementAnswer(_ ctx: SmalltalkParser.StatementAnswerContext) -> T{
+	open func visitStatementAnswer(_ ctx: SmalltalkParser.StatementAnswerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -67,7 +67,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementExpressionsAnswer(_ ctx: SmalltalkParser.StatementExpressionsAnswerContext) -> T{
+	open func visitStatementExpressionsAnswer(_ ctx: SmalltalkParser.StatementExpressionsAnswerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -78,7 +78,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatementExpressions(_ ctx: SmalltalkParser.StatementExpressionsContext) -> T{
+	open func visitStatementExpressions(_ ctx: SmalltalkParser.StatementExpressionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -88,7 +88,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnswer(_ ctx: SmalltalkParser.AnswerContext) -> T{
+	open func visitAnswer(_ ctx: SmalltalkParser.AnswerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -98,7 +98,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: SmalltalkParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: SmalltalkParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -108,7 +108,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressions(_ ctx: SmalltalkParser.ExpressionsContext) -> T{
+	open func visitExpressions(_ ctx: SmalltalkParser.ExpressionsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -118,7 +118,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpressionList(_ ctx: SmalltalkParser.ExpressionListContext) -> T{
+	open func visitExpressionList(_ ctx: SmalltalkParser.ExpressionListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -128,7 +128,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCascade(_ ctx: SmalltalkParser.CascadeContext) -> T{
+	open func visitCascade(_ ctx: SmalltalkParser.CascadeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -138,7 +138,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMessage(_ ctx: SmalltalkParser.MessageContext) -> T{
+	open func visitMessage(_ ctx: SmalltalkParser.MessageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -148,7 +148,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignment(_ ctx: SmalltalkParser.AssignmentContext) -> T{
+	open func visitAssignment(_ ctx: SmalltalkParser.AssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -158,7 +158,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariable(_ ctx: SmalltalkParser.VariableContext) -> T{
+	open func visitVariable(_ ctx: SmalltalkParser.VariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -168,7 +168,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinarySend(_ ctx: SmalltalkParser.BinarySendContext) -> T{
+	open func visitBinarySend(_ ctx: SmalltalkParser.BinarySendContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -178,7 +178,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnarySend(_ ctx: SmalltalkParser.UnarySendContext) -> T{
+	open func visitUnarySend(_ ctx: SmalltalkParser.UnarySendContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -188,7 +188,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeywordSend(_ ctx: SmalltalkParser.KeywordSendContext) -> T{
+	open func visitKeywordSend(_ ctx: SmalltalkParser.KeywordSendContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -198,7 +198,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeywordMessage(_ ctx: SmalltalkParser.KeywordMessageContext) -> T{
+	open func visitKeywordMessage(_ ctx: SmalltalkParser.KeywordMessageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -208,7 +208,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeywordPair(_ ctx: SmalltalkParser.KeywordPairContext) -> T{
+	open func visitKeywordPair(_ ctx: SmalltalkParser.KeywordPairContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -218,7 +218,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperand(_ ctx: SmalltalkParser.OperandContext) -> T{
+	open func visitOperand(_ ctx: SmalltalkParser.OperandContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -228,7 +228,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubexpression(_ ctx: SmalltalkParser.SubexpressionContext) -> T{
+	open func visitSubexpression(_ ctx: SmalltalkParser.SubexpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -238,7 +238,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: SmalltalkParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: SmalltalkParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -248,7 +248,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRuntimeLiteral(_ ctx: SmalltalkParser.RuntimeLiteralContext) -> T{
+	open func visitRuntimeLiteral(_ ctx: SmalltalkParser.RuntimeLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -258,7 +258,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: SmalltalkParser.BlockContext) -> T{
+	open func visitBlock(_ ctx: SmalltalkParser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -268,7 +268,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlockParamList(_ ctx: SmalltalkParser.BlockParamListContext) -> T{
+	open func visitBlockParamList(_ ctx: SmalltalkParser.BlockParamListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -278,7 +278,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDynamicDictionary(_ ctx: SmalltalkParser.DynamicDictionaryContext) -> T{
+	open func visitDynamicDictionary(_ ctx: SmalltalkParser.DynamicDictionaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -288,7 +288,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDynamicArray(_ ctx: SmalltalkParser.DynamicArrayContext) -> T{
+	open func visitDynamicArray(_ ctx: SmalltalkParser.DynamicArrayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -298,7 +298,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParsetimeLiteral(_ ctx: SmalltalkParser.ParsetimeLiteralContext) -> T{
+	open func visitParsetimeLiteral(_ ctx: SmalltalkParser.ParsetimeLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -308,7 +308,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: SmalltalkParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: SmalltalkParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -318,7 +318,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumberExp(_ ctx: SmalltalkParser.NumberExpContext) -> T{
+	open func visitNumberExp(_ ctx: SmalltalkParser.NumberExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -328,7 +328,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharConstant(_ ctx: SmalltalkParser.CharConstantContext) -> T{
+	open func visitCharConstant(_ ctx: SmalltalkParser.CharConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -338,7 +338,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHex(_ ctx: SmalltalkParser.HexContext) -> T{
+	open func visitHex(_ ctx: SmalltalkParser.HexContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -348,7 +348,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStInteger(_ ctx: SmalltalkParser.StIntegerContext) -> T{
+	open func visitStInteger(_ ctx: SmalltalkParser.StIntegerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -358,7 +358,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStFloat(_ ctx: SmalltalkParser.StFloatContext) -> T{
+	open func visitStFloat(_ ctx: SmalltalkParser.StFloatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -368,7 +368,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPseudoVariable(_ ctx: SmalltalkParser.PseudoVariableContext) -> T{
+	open func visitPseudoVariable(_ ctx: SmalltalkParser.PseudoVariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -378,7 +378,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: SmalltalkParser.StringContext) -> T{
+	open func visitString(_ ctx: SmalltalkParser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -388,7 +388,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbol(_ ctx: SmalltalkParser.SymbolContext) -> T{
+	open func visitSymbol(_ ctx: SmalltalkParser.SymbolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -398,7 +398,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimitive(_ ctx: SmalltalkParser.PrimitiveContext) -> T{
+	open func visitPrimitive(_ ctx: SmalltalkParser.PrimitiveContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -408,7 +408,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBareSymbol(_ ctx: SmalltalkParser.BareSymbolContext) -> T{
+	open func visitBareSymbol(_ ctx: SmalltalkParser.BareSymbolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -418,7 +418,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteralArray(_ ctx: SmalltalkParser.LiteralArrayContext) -> T{
+	open func visitLiteralArray(_ ctx: SmalltalkParser.LiteralArrayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -428,7 +428,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteralArrayRest(_ ctx: SmalltalkParser.LiteralArrayRestContext) -> T{
+	open func visitLiteralArrayRest(_ ctx: SmalltalkParser.LiteralArrayRestContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -438,7 +438,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBareLiteralArray(_ ctx: SmalltalkParser.BareLiteralArrayContext) -> T{
+	open func visitBareLiteralArray(_ ctx: SmalltalkParser.BareLiteralArrayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -448,7 +448,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryTail(_ ctx: SmalltalkParser.UnaryTailContext) -> T{
+	open func visitUnaryTail(_ ctx: SmalltalkParser.UnaryTailContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -458,7 +458,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnaryMessage(_ ctx: SmalltalkParser.UnaryMessageContext) -> T{
+	open func visitUnaryMessage(_ ctx: SmalltalkParser.UnaryMessageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -468,7 +468,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnarySelector(_ ctx: SmalltalkParser.UnarySelectorContext) -> T{
+	open func visitUnarySelector(_ ctx: SmalltalkParser.UnarySelectorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -478,7 +478,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeywords(_ ctx: SmalltalkParser.KeywordsContext) -> T{
+	open func visitKeywords(_ ctx: SmalltalkParser.KeywordsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -488,7 +488,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReference(_ ctx: SmalltalkParser.ReferenceContext) -> T{
+	open func visitReference(_ ctx: SmalltalkParser.ReferenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -498,7 +498,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinaryTail(_ ctx: SmalltalkParser.BinaryTailContext) -> T{
+	open func visitBinaryTail(_ ctx: SmalltalkParser.BinaryTailContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -508,7 +508,7 @@ open class SmalltalkVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinaryMessage(_ ctx: SmalltalkParser.BinaryMessageContext) -> T{
+	open func visitBinaryMessage(_ ctx: SmalltalkParser.BinaryMessageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

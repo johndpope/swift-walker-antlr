@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/python3/Python3.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -52,6 +52,13 @@ open class Python3BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitDecorated(_ ctx: Python3Parser.DecoratedContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitAsync_funcdef(_ ctx: Python3Parser.Async_funcdefContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -122,6 +129,13 @@ open class Python3BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitExpr_stmt(_ ctx: Python3Parser.Expr_stmtContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitAnnassign(_ ctx: Python3Parser.AnnassignContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -276,6 +290,13 @@ open class Python3BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitCompound_stmt(_ ctx: Python3Parser.Compound_stmtContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitAsync_stmt(_ ctx: Python3Parser.Async_stmtContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -464,6 +485,13 @@ open class Python3BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	open func visitAtom_expr(_ ctx: Python3Parser.Atom_exprContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	open func visitAtom(_ ctx: Python3Parser.AtomContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
@@ -569,6 +597,13 @@ open class Python3BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	open func visitEncoding_decl(_ ctx: Python3Parser.Encoding_declContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	open func visitYield_expr(_ ctx: Python3Parser.Yield_exprContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
@@ -577,25 +612,4 @@ open class Python3BaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitYield_arg(_ ctx: Python3Parser.Yield_argContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitStr(_ ctx: Python3Parser.StrContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitNumber(_ ctx: Python3Parser.NumberContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitInteger(_ ctx: Python3Parser.IntegerContext) -> T? { return visitChildren(ctx) }
 }

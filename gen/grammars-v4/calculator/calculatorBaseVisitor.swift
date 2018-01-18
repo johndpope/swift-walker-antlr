@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/calculator/calculator.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/calculator/calculator.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -44,6 +44,13 @@ open class calculatorBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	open func visitSignedAtom(_ ctx: calculatorParser.SignedAtomContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	open func visitAtom(_ ctx: calculatorParser.AtomContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
@@ -52,6 +59,20 @@ open class calculatorBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitScientific(_ ctx: calculatorParser.ScientificContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitConstant(_ ctx: calculatorParser.ConstantContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitVariable(_ ctx: calculatorParser.VariableContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -73,18 +94,4 @@ open class calculatorBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	open func visitRelop(_ ctx: calculatorParser.RelopContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitNumber(_ ctx: calculatorParser.NumberContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitVariable(_ ctx: calculatorParser.VariableContext) -> T? { return visitChildren(ctx) }
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/suokif/SUOKIF.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/suokif/SUOKIF.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class SUOKIFParser: Parser {
@@ -11,17 +11,24 @@ open class SUOKIFParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, NOT = 1, AND = 2, OR = 3, FORALL = 4, EXISTS = 5, WORD = 6, 
                  STRING = 7, VARIABLE = 8, NUMBER = 9, WHITE = 10, COMMENT = 11, 
                  LPAREN = 12, RPAREN = 13, ASSIGN = 14, GT = 15, LT = 16, 
                  QUESTION = 17
 	}
-	public static let RULE_top_level = 0, RULE_term = 1, RULE_argument = 2, 
-                   RULE_funterm = 3, RULE_sentence = 4, RULE_equation = 5, 
-                   RULE_relsent = 6, RULE_logsent = 7, RULE_quantsent = 8
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_top_level = 0, RULE_term = 1, RULE_argument = 2, RULE_funterm = 3, 
+            RULE_sentence = 4, RULE_equation = 5, RULE_relsent = 6, RULE_logsent = 7, 
+            RULE_quantsent = 8
+
+	public
+	static let ruleNames: [String] = [
 		"top_level", "term", "argument", "funterm", "sentence", "equation", "relsent", 
 		"logsent", "quantsent"
 	]
@@ -35,88 +42,73 @@ open class SUOKIFParser: Parser {
 		"NUMBER", "WHITE", "COMMENT", "LPAREN", "RPAREN", "ASSIGN", "GT", "LT", 
 		"QUESTION"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "SUOKIF.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return SUOKIFParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "SUOKIF.g4" }
+	override open
+	func getSerializedATN() -> String { return SUOKIFParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return SUOKIFParser.ruleNames }
+	override open
+	func getATN() -> ATN { return SUOKIFParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return SUOKIFParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return SUOKIFParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return SUOKIFParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,SUOKIFParser._ATN,SUOKIFParser._decisionToDFA, SUOKIFParser._sharedContextCache)
 	}
-	open class Top_levelContext:ParserRuleContext {
-		open func sentence() -> Array<SentenceContext> {
-			return getRuleContexts(SentenceContext.self)
+
+	public class Top_levelContext: ParserRuleContext {
+			open
+			func sentence() -> [SentenceContext] {
+				return getRuleContexts(SentenceContext.self)
+			}
+			open
+			func sentence(_ i: Int) -> SentenceContext? {
+				return getRuleContext(SentenceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SUOKIFParser.RULE_top_level
 		}
-		open func sentence(_ i: Int) -> SentenceContext? {
-			return getRuleContext(SentenceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SUOKIFParser.RULE_top_level }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).enterTop_level(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.enterTop_level(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).exitTop_level(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.exitTop_level(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SUOKIFVisitor {
-			     return (visitor as! SUOKIFVisitor<T>).visitTop_level(self)
-			}else if visitor is SUOKIFBaseVisitor {
-		    	 return (visitor as! SUOKIFBaseVisitor<T>).visitTop_level(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SUOKIFVisitor {
+			    return visitor.visitTop_level(self)
+			}
+			else if let visitor = visitor as? SUOKIFBaseVisitor {
+			    return visitor.visitTop_level(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func top_level() throws -> Top_levelContext {
+	 open func top_level() throws -> Top_levelContext {
 		var _localctx: Top_levelContext = Top_levelContext(_ctx, getState())
 		try enterRule(_localctx, 0, SUOKIFParser.RULE_top_level)
 		var _la: Int = 0
@@ -154,44 +146,63 @@ open class SUOKIFParser: Parser {
 
 		return _localctx
 	}
-	open class TermContext:ParserRuleContext {
-		open func VARIABLE() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.VARIABLE.rawValue, 0) }
-		open func WORD() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.WORD.rawValue, 0) }
-		open func STRING() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.STRING.rawValue, 0) }
-		open func funterm() -> FuntermContext? {
-			return getRuleContext(FuntermContext.self,0)
+
+	public class TermContext: ParserRuleContext {
+			open
+			func VARIABLE() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.VARIABLE.rawValue, 0)
+			}
+			open
+			func WORD() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.WORD.rawValue, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func funterm() -> FuntermContext? {
+				return getRuleContext(FuntermContext.self, 0)
+			}
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.NUMBER.rawValue, 0)
+			}
+			open
+			func sentence() -> SentenceContext? {
+				return getRuleContext(SentenceContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SUOKIFParser.RULE_term
 		}
-		open func NUMBER() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.NUMBER.rawValue, 0) }
-		open func sentence() -> SentenceContext? {
-			return getRuleContext(SentenceContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SUOKIFParser.RULE_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).enterTerm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.enterTerm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).exitTerm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.exitTerm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SUOKIFVisitor {
-			     return (visitor as! SUOKIFVisitor<T>).visitTerm(self)
-			}else if visitor is SUOKIFBaseVisitor {
-		    	 return (visitor as! SUOKIFBaseVisitor<T>).visitTerm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SUOKIFVisitor {
+			    return visitor.visitTerm(self)
+			}
+			else if let visitor = visitor as? SUOKIFBaseVisitor {
+			    return visitor.visitTerm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func term() throws -> TermContext {
+	 open func term() throws -> TermContext {
 		var _localctx: TermContext = TermContext(_ctx, getState())
 		try enterRule(_localctx, 2, SUOKIFParser.RULE_term)
 		defer {
@@ -248,40 +259,47 @@ open class SUOKIFParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentContext:ParserRuleContext {
-		open func sentence() -> SentenceContext? {
-			return getRuleContext(SentenceContext.self,0)
+
+	public class ArgumentContext: ParserRuleContext {
+			open
+			func sentence() -> SentenceContext? {
+				return getRuleContext(SentenceContext.self, 0)
+			}
+			open
+			func term() -> TermContext? {
+				return getRuleContext(TermContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SUOKIFParser.RULE_argument
 		}
-		open func term() -> TermContext? {
-			return getRuleContext(TermContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return SUOKIFParser.RULE_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).enterArgument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.enterArgument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).exitArgument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.exitArgument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SUOKIFVisitor {
-			     return (visitor as! SUOKIFVisitor<T>).visitArgument(self)
-			}else if visitor is SUOKIFBaseVisitor {
-		    	 return (visitor as! SUOKIFBaseVisitor<T>).visitArgument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SUOKIFVisitor {
+			    return visitor.visitArgument(self)
+			}
+			else if let visitor = visitor as? SUOKIFBaseVisitor {
+			    return visitor.visitArgument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument() throws -> ArgumentContext {
+	 open func argument() throws -> ArgumentContext {
 		var _localctx: ArgumentContext = ArgumentContext(_ctx, getState())
 		try enterRule(_localctx, 4, SUOKIFParser.RULE_argument)
 		defer {
@@ -314,41 +332,51 @@ open class SUOKIFParser: Parser {
 
 		return _localctx
 	}
-	open class FuntermContext:ParserRuleContext {
-		open func WORD() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.WORD.rawValue, 0) }
-		open func argument() -> Array<ArgumentContext> {
-			return getRuleContexts(ArgumentContext.self)
+
+	public class FuntermContext: ParserRuleContext {
+			open
+			func WORD() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.WORD.rawValue, 0)
+			}
+			open
+			func argument() -> [ArgumentContext] {
+				return getRuleContexts(ArgumentContext.self)
+			}
+			open
+			func argument(_ i: Int) -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SUOKIFParser.RULE_funterm
 		}
-		open func argument(_ i: Int) -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SUOKIFParser.RULE_funterm }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).enterFunterm(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.enterFunterm(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).exitFunterm(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.exitFunterm(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SUOKIFVisitor {
-			     return (visitor as! SUOKIFVisitor<T>).visitFunterm(self)
-			}else if visitor is SUOKIFBaseVisitor {
-		    	 return (visitor as! SUOKIFBaseVisitor<T>).visitFunterm(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SUOKIFVisitor {
+			    return visitor.visitFunterm(self)
+			}
+			else if let visitor = visitor as? SUOKIFBaseVisitor {
+			    return visitor.visitFunterm(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func funterm() throws -> FuntermContext {
+	 open func funterm() throws -> FuntermContext {
 		var _localctx: FuntermContext = FuntermContext(_ctx, getState())
 		try enterRule(_localctx, 6, SUOKIFParser.RULE_funterm)
 		var _la: Int = 0
@@ -392,48 +420,63 @@ open class SUOKIFParser: Parser {
 
 		return _localctx
 	}
-	open class SentenceContext:ParserRuleContext {
-		open func WORD() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.WORD.rawValue, 0) }
-		open func equation() -> EquationContext? {
-			return getRuleContext(EquationContext.self,0)
+
+	public class SentenceContext: ParserRuleContext {
+			open
+			func WORD() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.WORD.rawValue, 0)
+			}
+			open
+			func equation() -> EquationContext? {
+				return getRuleContext(EquationContext.self, 0)
+			}
+			open
+			func relsent() -> RelsentContext? {
+				return getRuleContext(RelsentContext.self, 0)
+			}
+			open
+			func logsent() -> LogsentContext? {
+				return getRuleContext(LogsentContext.self, 0)
+			}
+			open
+			func quantsent() -> QuantsentContext? {
+				return getRuleContext(QuantsentContext.self, 0)
+			}
+			open
+			func VARIABLE() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.VARIABLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SUOKIFParser.RULE_sentence
 		}
-		open func relsent() -> RelsentContext? {
-			return getRuleContext(RelsentContext.self,0)
-		}
-		open func logsent() -> LogsentContext? {
-			return getRuleContext(LogsentContext.self,0)
-		}
-		open func quantsent() -> QuantsentContext? {
-			return getRuleContext(QuantsentContext.self,0)
-		}
-		open func VARIABLE() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.VARIABLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SUOKIFParser.RULE_sentence }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).enterSentence(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.enterSentence(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).exitSentence(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.exitSentence(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SUOKIFVisitor {
-			     return (visitor as! SUOKIFVisitor<T>).visitSentence(self)
-			}else if visitor is SUOKIFBaseVisitor {
-		    	 return (visitor as! SUOKIFBaseVisitor<T>).visitSentence(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SUOKIFVisitor {
+			    return visitor.visitSentence(self)
+			}
+			else if let visitor = visitor as? SUOKIFBaseVisitor {
+			    return visitor.visitSentence(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sentence() throws -> SentenceContext {
+	 open func sentence() throws -> SentenceContext {
 		var _localctx: SentenceContext = SentenceContext(_ctx, getState())
 		try enterRule(_localctx, 8, SUOKIFParser.RULE_sentence)
 		defer {
@@ -490,40 +533,47 @@ open class SUOKIFParser: Parser {
 
 		return _localctx
 	}
-	open class EquationContext:ParserRuleContext {
-		open func term() -> Array<TermContext> {
-			return getRuleContexts(TermContext.self)
+
+	public class EquationContext: ParserRuleContext {
+			open
+			func term() -> [TermContext] {
+				return getRuleContexts(TermContext.self)
+			}
+			open
+			func term(_ i: Int) -> TermContext? {
+				return getRuleContext(TermContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SUOKIFParser.RULE_equation
 		}
-		open func term(_ i: Int) -> TermContext? {
-			return getRuleContext(TermContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SUOKIFParser.RULE_equation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).enterEquation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.enterEquation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).exitEquation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.exitEquation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SUOKIFVisitor {
-			     return (visitor as! SUOKIFVisitor<T>).visitEquation(self)
-			}else if visitor is SUOKIFBaseVisitor {
-		    	 return (visitor as! SUOKIFBaseVisitor<T>).visitEquation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SUOKIFVisitor {
+			    return visitor.visitEquation(self)
+			}
+			else if let visitor = visitor as? SUOKIFBaseVisitor {
+			    return visitor.visitEquation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func equation() throws -> EquationContext {
+	 open func equation() throws -> EquationContext {
 		var _localctx: EquationContext = EquationContext(_ctx, getState())
 		try enterRule(_localctx, 10, SUOKIFParser.RULE_equation)
 		defer {
@@ -551,42 +601,55 @@ open class SUOKIFParser: Parser {
 
 		return _localctx
 	}
-	open class RelsentContext:ParserRuleContext {
-		open func WORD() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.WORD.rawValue, 0) }
-		open func VARIABLE() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.VARIABLE.rawValue, 0) }
-		open func argument() -> Array<ArgumentContext> {
-			return getRuleContexts(ArgumentContext.self)
+
+	public class RelsentContext: ParserRuleContext {
+			open
+			func WORD() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.WORD.rawValue, 0)
+			}
+			open
+			func VARIABLE() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.VARIABLE.rawValue, 0)
+			}
+			open
+			func argument() -> [ArgumentContext] {
+				return getRuleContexts(ArgumentContext.self)
+			}
+			open
+			func argument(_ i: Int) -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SUOKIFParser.RULE_relsent
 		}
-		open func argument(_ i: Int) -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return SUOKIFParser.RULE_relsent }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).enterRelsent(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.enterRelsent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).exitRelsent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.exitRelsent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SUOKIFVisitor {
-			     return (visitor as! SUOKIFVisitor<T>).visitRelsent(self)
-			}else if visitor is SUOKIFBaseVisitor {
-		    	 return (visitor as! SUOKIFBaseVisitor<T>).visitRelsent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SUOKIFVisitor {
+			    return visitor.visitRelsent(self)
+			}
+			else if let visitor = visitor as? SUOKIFBaseVisitor {
+			    return visitor.visitRelsent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func relsent() throws -> RelsentContext {
+	 open func relsent() throws -> RelsentContext {
 		var _localctx: RelsentContext = RelsentContext(_ctx, getState())
 		try enterRule(_localctx, 12, SUOKIFParser.RULE_relsent)
 		var _la: Int = 0
@@ -641,43 +704,59 @@ open class SUOKIFParser: Parser {
 
 		return _localctx
 	}
-	open class LogsentContext:ParserRuleContext {
-		open func NOT() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.NOT.rawValue, 0) }
-		open func sentence() -> Array<SentenceContext> {
-			return getRuleContexts(SentenceContext.self)
+
+	public class LogsentContext: ParserRuleContext {
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func sentence() -> [SentenceContext] {
+				return getRuleContexts(SentenceContext.self)
+			}
+			open
+			func sentence(_ i: Int) -> SentenceContext? {
+				return getRuleContext(SentenceContext.self, i)
+			}
+			open
+			func AND() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.AND.rawValue, 0)
+			}
+			open
+			func OR() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.OR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SUOKIFParser.RULE_logsent
 		}
-		open func sentence(_ i: Int) -> SentenceContext? {
-			return getRuleContext(SentenceContext.self,i)
-		}
-		open func AND() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.AND.rawValue, 0) }
-		open func OR() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.OR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SUOKIFParser.RULE_logsent }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).enterLogsent(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.enterLogsent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).exitLogsent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.exitLogsent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SUOKIFVisitor {
-			     return (visitor as! SUOKIFVisitor<T>).visitLogsent(self)
-			}else if visitor is SUOKIFBaseVisitor {
-		    	 return (visitor as! SUOKIFBaseVisitor<T>).visitLogsent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SUOKIFVisitor {
+			    return visitor.visitLogsent(self)
+			}
+			else if let visitor = visitor as? SUOKIFBaseVisitor {
+			    return visitor.visitLogsent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func logsent() throws -> LogsentContext {
+	 open func logsent() throws -> LogsentContext {
 		var _localctx: LogsentContext = LogsentContext(_ctx, getState())
 		try enterRule(_localctx, 14, SUOKIFParser.RULE_logsent)
 		var _la: Int = 0
@@ -803,43 +882,59 @@ open class SUOKIFParser: Parser {
 
 		return _localctx
 	}
-	open class QuantsentContext:ParserRuleContext {
-		open func FORALL() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.FORALL.rawValue, 0) }
-		open func sentence() -> SentenceContext? {
-			return getRuleContext(SentenceContext.self,0)
+
+	public class QuantsentContext: ParserRuleContext {
+			open
+			func FORALL() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.FORALL.rawValue, 0)
+			}
+			open
+			func sentence() -> SentenceContext? {
+				return getRuleContext(SentenceContext.self, 0)
+			}
+			open
+			func VARIABLE() -> [TerminalNode] {
+				return getTokens(SUOKIFParser.Tokens.VARIABLE.rawValue)
+			}
+			open
+			func VARIABLE(_ i:Int) -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.VARIABLE.rawValue, i)
+			}
+			open
+			func EXISTS() -> TerminalNode? {
+				return getToken(SUOKIFParser.Tokens.EXISTS.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return SUOKIFParser.RULE_quantsent
 		}
-		open func VARIABLE() -> Array<TerminalNode> { return getTokens(SUOKIFParser.Tokens.VARIABLE.rawValue) }
-		open func VARIABLE(_ i:Int) -> TerminalNode?{
-			return getToken(SUOKIFParser.Tokens.VARIABLE.rawValue, i)
-		}
-		open func EXISTS() -> TerminalNode? { return getToken(SUOKIFParser.Tokens.EXISTS.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return SUOKIFParser.RULE_quantsent }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).enterQuantsent(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.enterQuantsent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is SUOKIFListener {
-			 	(listener as! SUOKIFListener).exitQuantsent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? SUOKIFListener {
+				listener.exitQuantsent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is SUOKIFVisitor {
-			     return (visitor as! SUOKIFVisitor<T>).visitQuantsent(self)
-			}else if visitor is SUOKIFBaseVisitor {
-		    	 return (visitor as! SUOKIFBaseVisitor<T>).visitQuantsent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? SUOKIFVisitor {
+			    return visitor.visitQuantsent(self)
+			}
+			else if let visitor = visitor as? SUOKIFBaseVisitor {
+			    return visitor.visitQuantsent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func quantsent() throws -> QuantsentContext {
+	 open func quantsent() throws -> QuantsentContext {
 		var _localctx: QuantsentContext = QuantsentContext(_ctx, getState())
 		try enterRule(_localctx, 16, SUOKIFParser.RULE_quantsent)
 		var _la: Int = 0
@@ -926,6 +1021,10 @@ open class SUOKIFParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = SUOKIFParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = SUOKIFParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

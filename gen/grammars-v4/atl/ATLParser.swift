@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/atl/ATL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/atl/ATL.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class ATLParser: Parser {
@@ -11,8 +11,11 @@ open class ATLParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -31,41 +34,44 @@ open class ATLParser: Parser {
                  T__77 = 78, T__78 = 79, T__79 = 80, STRING = 81, INTEGER = 82, 
                  FLOAT = 83, IDENTIFIER = 84, WS = 85, COMMENT = 86, LINE_COMMENT = 87
 	}
-	public static let RULE_unit = 0, RULE_module = 1, RULE_targetModelPattern = 2, 
-                   RULE_sourceModelPattern = 3, RULE_transformationMode = 4, 
-                   RULE_library = 5, RULE_query = 6, RULE_libraryRef = 7, 
-                   RULE_moduleElement = 8, RULE_helper = 9, RULE_oclFeatureDefinition = 10, 
-                   RULE_oclContextDefinition = 11, RULE_oclFeature = 12, 
-                   RULE_operation = 13, RULE_parameter = 14, RULE_attribute = 15, 
-                   RULE_arule = 16, RULE_matchedRule = 17, RULE_lazyMatchedRule = 18, 
-                   RULE_ruleVariableDeclaration = 19, RULE_calledRule = 20, 
-                   RULE_inPattern = 21, RULE_inPatternElement = 22, RULE_simpleInPatternElement = 23, 
-                   RULE_outPattern = 24, RULE_outPatternElement = 25, RULE_simpleOutPatternElement = 26, 
-                   RULE_forEachOutPatternElement = 27, RULE_binding = 28, 
-                   RULE_actionBlock = 29, RULE_statement = 30, RULE_bindingStat = 31, 
-                   RULE_expressionStat = 32, RULE_ifStat = 33, RULE_forStat = 34, 
-                   RULE_oclModel = 35, RULE_oclModelElement = 36, RULE_oclExpression = 37, 
-                   RULE_iteratorExp = 38, RULE_iterateExp = 39, RULE_collectionOperationCallExp = 40, 
-                   RULE_operationCallExp = 41, RULE_navigationOrAttributeCallExp = 42, 
-                   RULE_iterator = 43, RULE_oclUndefinedExp = 44, RULE_primitiveExp = 45, 
-                   RULE_numericExp = 46, RULE_booleanExp = 47, RULE_integerExp = 48, 
-                   RULE_realExp = 49, RULE_stringExp = 50, RULE_ifExp = 51, 
-                   RULE_variableExp = 52, RULE_superExp = 53, RULE_letExp = 54, 
-                   RULE_variableDeclaration = 55, RULE_enumLiteralExp = 56, 
-                   RULE_collectionExp = 57, RULE_bagExp = 58, RULE_setExp = 59, 
-                   RULE_orderedSetExp = 60, RULE_sequenceExp = 61, RULE_mapExp = 62, 
-                   RULE_mapElement = 63, RULE_tupleExp = 64, RULE_tuplePart = 65, 
-                   RULE_oclType = 66, RULE_oclAnyType = 67, RULE_tupleType = 68, 
-                   RULE_tupleTypeAttribute = 69, RULE_mapType = 70, RULE_primitive = 71, 
-                   RULE_numericType = 72, RULE_integerType = 73, RULE_realType = 74, 
-                   RULE_booleanType = 75, RULE_stringType = 76, RULE_collectionType = 77, 
-                   RULE_bagType = 78, RULE_setType = 79, RULE_orderedSetType = 80, 
-                   RULE_sequenceType = 81, RULE_priority_0 = 82, RULE_priority_1 = 83, 
-                   RULE_priority_2 = 84, RULE_priority_3 = 85, RULE_priority_4 = 86, 
-                   RULE_priority_5 = 87, RULE_matchedRule_abstractContents = 88, 
-                   RULE_oclType_abstractContents = 89, RULE_oclAnyType_abstractContents = 90, 
-                   RULE_collectionType_abstractContents = 91, RULE_primary_oclExpression = 92
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_unit = 0, RULE_module = 1, RULE_targetModelPattern = 2, 
+            RULE_sourceModelPattern = 3, RULE_transformationMode = 4, RULE_library = 5, 
+            RULE_query = 6, RULE_libraryRef = 7, RULE_moduleElement = 8, 
+            RULE_helper = 9, RULE_oclFeatureDefinition = 10, RULE_oclContextDefinition = 11, 
+            RULE_oclFeature = 12, RULE_operation = 13, RULE_parameter = 14, 
+            RULE_attribute = 15, RULE_arule = 16, RULE_matchedRule = 17, 
+            RULE_lazyMatchedRule = 18, RULE_ruleVariableDeclaration = 19, 
+            RULE_calledRule = 20, RULE_inPattern = 21, RULE_inPatternElement = 22, 
+            RULE_simpleInPatternElement = 23, RULE_outPattern = 24, RULE_outPatternElement = 25, 
+            RULE_simpleOutPatternElement = 26, RULE_forEachOutPatternElement = 27, 
+            RULE_binding = 28, RULE_actionBlock = 29, RULE_statement = 30, 
+            RULE_bindingStat = 31, RULE_expressionStat = 32, RULE_ifStat = 33, 
+            RULE_forStat = 34, RULE_oclModel = 35, RULE_oclModelElement = 36, 
+            RULE_oclExpression = 37, RULE_iteratorExp = 38, RULE_iterateExp = 39, 
+            RULE_collectionOperationCallExp = 40, RULE_operationCallExp = 41, 
+            RULE_navigationOrAttributeCallExp = 42, RULE_iterator = 43, 
+            RULE_oclUndefinedExp = 44, RULE_primitiveExp = 45, RULE_numericExp = 46, 
+            RULE_booleanExp = 47, RULE_integerExp = 48, RULE_realExp = 49, 
+            RULE_stringExp = 50, RULE_ifExp = 51, RULE_variableExp = 52, 
+            RULE_superExp = 53, RULE_letExp = 54, RULE_variableDeclaration = 55, 
+            RULE_enumLiteralExp = 56, RULE_collectionExp = 57, RULE_bagExp = 58, 
+            RULE_setExp = 59, RULE_orderedSetExp = 60, RULE_sequenceExp = 61, 
+            RULE_mapExp = 62, RULE_mapElement = 63, RULE_tupleExp = 64, 
+            RULE_tuplePart = 65, RULE_oclType = 66, RULE_oclAnyType = 67, 
+            RULE_tupleType = 68, RULE_tupleTypeAttribute = 69, RULE_mapType = 70, 
+            RULE_primitive = 71, RULE_numericType = 72, RULE_integerType = 73, 
+            RULE_realType = 74, RULE_booleanType = 75, RULE_stringType = 76, 
+            RULE_collectionType = 77, RULE_bagType = 78, RULE_setType = 79, 
+            RULE_orderedSetType = 80, RULE_sequenceType = 81, RULE_priority_0 = 82, 
+            RULE_priority_1 = 83, RULE_priority_2 = 84, RULE_priority_3 = 85, 
+            RULE_priority_4 = 86, RULE_priority_5 = 87, RULE_matchedRule_abstractContents = 88, 
+            RULE_oclType_abstractContents = 89, RULE_oclAnyType_abstractContents = 90, 
+            RULE_collectionType_abstractContents = 91, RULE_primary_oclExpression = 92
+
+	public
+	static let ruleNames: [String] = [
 		"unit", "module", "targetModelPattern", "sourceModelPattern", "transformationMode", 
 		"library", "query", "libraryRef", "moduleElement", "helper", "oclFeatureDefinition", 
 		"oclContextDefinition", "oclFeature", "operation", "parameter", "attribute", 
@@ -110,91 +116,77 @@ open class ATLParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "STRING", "INTEGER", 
 		"FLOAT", "IDENTIFIER", "WS", "COMMENT", "LINE_COMMENT"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "ATL.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return ATLParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "ATL.g4" }
+	override open
+	func getSerializedATN() -> String { return ATLParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return ATLParser.ruleNames }
+	override open
+	func getATN() -> ATN { return ATLParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return ATLParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return ATLParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return ATLParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,ATLParser._ATN,ATLParser._decisionToDFA, ATLParser._sharedContextCache)
 	}
-	open class UnitContext:ParserRuleContext {
-		open func module() -> ModuleContext? {
-			return getRuleContext(ModuleContext.self,0)
+
+	public class UnitContext: ParserRuleContext {
+			open
+			func module() -> ModuleContext? {
+				return getRuleContext(ModuleContext.self, 0)
+			}
+			open
+			func library() -> LibraryContext? {
+				return getRuleContext(LibraryContext.self, 0)
+			}
+			open
+			func query() -> QueryContext? {
+				return getRuleContext(QueryContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_unit
 		}
-		open func library() -> LibraryContext? {
-			return getRuleContext(LibraryContext.self,0)
-		}
-		open func query() -> QueryContext? {
-			return getRuleContext(QueryContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_unit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterUnit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterUnit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitUnit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitUnit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitUnit(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitUnit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitUnit(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitUnit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unit() throws -> UnitContext {
+	 open func unit() throws -> UnitContext {
 		var _localctx: UnitContext = UnitContext(_ctx, getState())
 		try enterRule(_localctx, 0, ATLParser.RULE_unit)
 		defer {
@@ -225,7 +217,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -236,57 +228,75 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleContext:ParserRuleContext {
-		open func targetModelPattern() -> TargetModelPatternContext? {
-			return getRuleContext(TargetModelPatternContext.self,0)
+
+	public class ModuleContext: ParserRuleContext {
+			open
+			func targetModelPattern() -> TargetModelPatternContext? {
+				return getRuleContext(TargetModelPatternContext.self, 0)
+			}
+			open
+			func transformationMode() -> TransformationModeContext? {
+				return getRuleContext(TransformationModeContext.self, 0)
+			}
+			open
+			func sourceModelPattern() -> SourceModelPatternContext? {
+				return getRuleContext(SourceModelPatternContext.self, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func libraryRef() -> [LibraryRefContext] {
+				return getRuleContexts(LibraryRefContext.self)
+			}
+			open
+			func libraryRef(_ i: Int) -> LibraryRefContext? {
+				return getRuleContext(LibraryRefContext.self, i)
+			}
+			open
+			func moduleElement() -> [ModuleElementContext] {
+				return getRuleContexts(ModuleElementContext.self)
+			}
+			open
+			func moduleElement(_ i: Int) -> ModuleElementContext? {
+				return getRuleContext(ModuleElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_module
 		}
-		open func transformationMode() -> TransformationModeContext? {
-			return getRuleContext(TransformationModeContext.self,0)
-		}
-		open func sourceModelPattern() -> SourceModelPatternContext? {
-			return getRuleContext(SourceModelPatternContext.self,0)
-		}
-		open func STRING() -> TerminalNode? { return getToken(ATLParser.Tokens.STRING.rawValue, 0) }
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func libraryRef() -> Array<LibraryRefContext> {
-			return getRuleContexts(LibraryRefContext.self)
-		}
-		open func libraryRef(_ i: Int) -> LibraryRefContext? {
-			return getRuleContext(LibraryRefContext.self,i)
-		}
-		open func moduleElement() -> Array<ModuleElementContext> {
-			return getRuleContexts(ModuleElementContext.self)
-		}
-		open func moduleElement(_ i: Int) -> ModuleElementContext? {
-			return getRuleContext(ModuleElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_module }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterModule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterModule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitModule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitModule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitModule(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitModule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitModule(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitModule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func module() throws -> ModuleContext {
+	 open func module() throws -> ModuleContext {
 		var _localctx: ModuleContext = ModuleContext(_ctx, getState())
 		try enterRule(_localctx, 2, ATLParser.RULE_module)
 		var _la: Int = 0
@@ -368,40 +378,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class TargetModelPatternContext:ParserRuleContext {
-		open func oclModel() -> Array<OclModelContext> {
-			return getRuleContexts(OclModelContext.self)
+
+	public class TargetModelPatternContext: ParserRuleContext {
+			open
+			func oclModel() -> [OclModelContext] {
+				return getRuleContexts(OclModelContext.self)
+			}
+			open
+			func oclModel(_ i: Int) -> OclModelContext? {
+				return getRuleContext(OclModelContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_targetModelPattern
 		}
-		open func oclModel(_ i: Int) -> OclModelContext? {
-			return getRuleContext(OclModelContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_targetModelPattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterTargetModelPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterTargetModelPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitTargetModelPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitTargetModelPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitTargetModelPattern(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitTargetModelPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitTargetModelPattern(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitTargetModelPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func targetModelPattern() throws -> TargetModelPatternContext {
+	 open func targetModelPattern() throws -> TargetModelPatternContext {
 		var _localctx: TargetModelPatternContext = TargetModelPatternContext(_ctx, getState())
 		try enterRule(_localctx, 4, ATLParser.RULE_targetModelPattern)
 		var _la: Int = 0
@@ -440,40 +457,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class SourceModelPatternContext:ParserRuleContext {
-		open func oclModel() -> Array<OclModelContext> {
-			return getRuleContexts(OclModelContext.self)
+
+	public class SourceModelPatternContext: ParserRuleContext {
+			open
+			func oclModel() -> [OclModelContext] {
+				return getRuleContexts(OclModelContext.self)
+			}
+			open
+			func oclModel(_ i: Int) -> OclModelContext? {
+				return getRuleContext(OclModelContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_sourceModelPattern
 		}
-		open func oclModel(_ i: Int) -> OclModelContext? {
-			return getRuleContext(OclModelContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_sourceModelPattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterSourceModelPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterSourceModelPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitSourceModelPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitSourceModelPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitSourceModelPattern(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitSourceModelPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitSourceModelPattern(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitSourceModelPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sourceModelPattern() throws -> SourceModelPatternContext {
+	 open func sourceModelPattern() throws -> SourceModelPatternContext {
 		var _localctx: SourceModelPatternContext = SourceModelPatternContext(_ctx, getState())
 		try enterRule(_localctx, 6, ATLParser.RULE_sourceModelPattern)
 		var _la: Int = 0
@@ -512,34 +536,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class TransformationModeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_transformationMode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterTransformationMode(self)
+
+	public class TransformationModeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_transformationMode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterTransformationMode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitTransformationMode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitTransformationMode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitTransformationMode(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitTransformationMode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitTransformationMode(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitTransformationMode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func transformationMode() throws -> TransformationModeContext {
+	 open func transformationMode() throws -> TransformationModeContext {
 		var _localctx: TransformationModeContext = TransformationModeContext(_ctx, getState())
 		try enterRule(_localctx, 8, ATLParser.RULE_transformationMode)
 		var _la: Int = 0
@@ -571,48 +600,63 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class LibraryContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(ATLParser.Tokens.STRING.rawValue, 0) }
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func libraryRef() -> Array<LibraryRefContext> {
-			return getRuleContexts(LibraryRefContext.self)
+
+	public class LibraryContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func libraryRef() -> [LibraryRefContext] {
+				return getRuleContexts(LibraryRefContext.self)
+			}
+			open
+			func libraryRef(_ i: Int) -> LibraryRefContext? {
+				return getRuleContext(LibraryRefContext.self, i)
+			}
+			open
+			func helper() -> [HelperContext] {
+				return getRuleContexts(HelperContext.self)
+			}
+			open
+			func helper(_ i: Int) -> HelperContext? {
+				return getRuleContext(HelperContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_library
 		}
-		open func libraryRef(_ i: Int) -> LibraryRefContext? {
-			return getRuleContext(LibraryRefContext.self,i)
-		}
-		open func helper() -> Array<HelperContext> {
-			return getRuleContexts(HelperContext.self)
-		}
-		open func helper(_ i: Int) -> HelperContext? {
-			return getRuleContext(HelperContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_library }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterLibrary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterLibrary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitLibrary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitLibrary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitLibrary(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitLibrary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitLibrary(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitLibrary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func library() throws -> LibraryContext {
+	 open func library() throws -> LibraryContext {
 		var _localctx: LibraryContext = LibraryContext(_ctx, getState())
 		try enterRule(_localctx, 10, ATLParser.RULE_library)
 		var _la: Int = 0
@@ -680,51 +724,67 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class QueryContext:ParserRuleContext {
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
+
+	public class QueryContext: ParserRuleContext {
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func libraryRef() -> [LibraryRefContext] {
+				return getRuleContexts(LibraryRefContext.self)
+			}
+			open
+			func libraryRef(_ i: Int) -> LibraryRefContext? {
+				return getRuleContext(LibraryRefContext.self, i)
+			}
+			open
+			func helper() -> [HelperContext] {
+				return getRuleContexts(HelperContext.self)
+			}
+			open
+			func helper(_ i: Int) -> HelperContext? {
+				return getRuleContext(HelperContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_query
 		}
-		open func STRING() -> TerminalNode? { return getToken(ATLParser.Tokens.STRING.rawValue, 0) }
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func libraryRef() -> Array<LibraryRefContext> {
-			return getRuleContexts(LibraryRefContext.self)
-		}
-		open func libraryRef(_ i: Int) -> LibraryRefContext? {
-			return getRuleContext(LibraryRefContext.self,i)
-		}
-		open func helper() -> Array<HelperContext> {
-			return getRuleContexts(HelperContext.self)
-		}
-		open func helper(_ i: Int) -> HelperContext? {
-			return getRuleContext(HelperContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_query }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterQuery(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterQuery(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitQuery(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitQuery(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitQuery(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitQuery(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitQuery(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitQuery(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func query() throws -> QueryContext {
+	 open func query() throws -> QueryContext {
 		var _localctx: QueryContext = QueryContext(_ctx, getState())
 		try enterRule(_localctx, 12, ATLParser.RULE_query)
 		var _la: Int = 0
@@ -796,35 +856,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class LibraryRefContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(ATLParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_libraryRef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterLibraryRef(self)
+
+	public class LibraryRefContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_libraryRef
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterLibraryRef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitLibraryRef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitLibraryRef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitLibraryRef(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitLibraryRef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitLibraryRef(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitLibraryRef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func libraryRef() throws -> LibraryRefContext {
+	 open func libraryRef() throws -> LibraryRefContext {
 		var _localctx: LibraryRefContext = LibraryRefContext(_ctx, getState())
 		try enterRule(_localctx, 14, ATLParser.RULE_libraryRef)
 		defer {
@@ -848,40 +916,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class ModuleElementContext:ParserRuleContext {
-		open func helper() -> HelperContext? {
-			return getRuleContext(HelperContext.self,0)
+
+	public class ModuleElementContext: ParserRuleContext {
+			open
+			func helper() -> HelperContext? {
+				return getRuleContext(HelperContext.self, 0)
+			}
+			open
+			func arule() -> AruleContext? {
+				return getRuleContext(AruleContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_moduleElement
 		}
-		open func arule() -> AruleContext? {
-			return getRuleContext(AruleContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_moduleElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterModuleElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterModuleElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitModuleElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitModuleElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitModuleElement(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitModuleElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitModuleElement(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitModuleElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func moduleElement() throws -> ModuleElementContext {
+	 open func moduleElement() throws -> ModuleElementContext {
 		var _localctx: ModuleElementContext = ModuleElementContext(_ctx, getState())
 		try enterRule(_localctx, 16, ATLParser.RULE_moduleElement)
 		defer {
@@ -911,7 +986,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -922,37 +997,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class HelperContext:ParserRuleContext {
-		open func oclFeatureDefinition() -> OclFeatureDefinitionContext? {
-			return getRuleContext(OclFeatureDefinitionContext.self,0)
+
+	public class HelperContext: ParserRuleContext {
+			open
+			func oclFeatureDefinition() -> OclFeatureDefinitionContext? {
+				return getRuleContext(OclFeatureDefinitionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_helper
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_helper }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterHelper(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterHelper(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitHelper(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitHelper(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitHelper(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitHelper(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitHelper(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitHelper(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func helper() throws -> HelperContext {
+	 open func helper() throws -> HelperContext {
 		var _localctx: HelperContext = HelperContext(_ctx, getState())
 		try enterRule(_localctx, 18, ATLParser.RULE_helper)
 		defer {
@@ -976,40 +1057,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclFeatureDefinitionContext:ParserRuleContext {
-		open func oclFeature() -> OclFeatureContext? {
-			return getRuleContext(OclFeatureContext.self,0)
+
+	public class OclFeatureDefinitionContext: ParserRuleContext {
+			open
+			func oclFeature() -> OclFeatureContext? {
+				return getRuleContext(OclFeatureContext.self, 0)
+			}
+			open
+			func oclContextDefinition() -> OclContextDefinitionContext? {
+				return getRuleContext(OclContextDefinitionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclFeatureDefinition
 		}
-		open func oclContextDefinition() -> OclContextDefinitionContext? {
-			return getRuleContext(OclContextDefinitionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclFeatureDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclFeatureDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclFeatureDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclFeatureDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclFeatureDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclFeatureDefinition(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclFeatureDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclFeatureDefinition(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclFeatureDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclFeatureDefinition() throws -> OclFeatureDefinitionContext {
+	 open func oclFeatureDefinition() throws -> OclFeatureDefinitionContext {
 		var _localctx: OclFeatureDefinitionContext = OclFeatureDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 20, ATLParser.RULE_oclFeatureDefinition)
 		var _la: Int = 0
@@ -1047,37 +1135,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclContextDefinitionContext:ParserRuleContext {
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class OclContextDefinitionContext: ParserRuleContext {
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclContextDefinition
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclContextDefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclContextDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclContextDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclContextDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclContextDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclContextDefinition(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclContextDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclContextDefinition(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclContextDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclContextDefinition() throws -> OclContextDefinitionContext {
+	 open func oclContextDefinition() throws -> OclContextDefinitionContext {
 		var _localctx: OclContextDefinitionContext = OclContextDefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 22, ATLParser.RULE_oclContextDefinition)
 		defer {
@@ -1099,40 +1193,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclFeatureContext:ParserRuleContext {
-		open func operation() -> OperationContext? {
-			return getRuleContext(OperationContext.self,0)
+
+	public class OclFeatureContext: ParserRuleContext {
+			open
+			func operation() -> OperationContext? {
+				return getRuleContext(OperationContext.self, 0)
+			}
+			open
+			func attribute() -> AttributeContext? {
+				return getRuleContext(AttributeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclFeature
 		}
-		open func attribute() -> AttributeContext? {
-			return getRuleContext(AttributeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclFeature }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclFeature(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclFeature(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclFeature(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclFeature(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclFeature(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclFeature(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclFeature(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclFeature(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclFeature() throws -> OclFeatureContext {
+	 open func oclFeature() throws -> OclFeatureContext {
 		var _localctx: OclFeatureContext = OclFeatureContext(_ctx, getState())
 		try enterRule(_localctx, 24, ATLParser.RULE_oclFeature)
 		defer {
@@ -1165,47 +1266,59 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OperationContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class OperationContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+			open
+			func parameter() -> [ParameterContext] {
+				return getRuleContexts(ParameterContext.self)
+			}
+			open
+			func parameter(_ i: Int) -> ParameterContext? {
+				return getRuleContext(ParameterContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_operation
 		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open func parameter() -> Array<ParameterContext> {
-			return getRuleContexts(ParameterContext.self)
-		}
-		open func parameter(_ i: Int) -> ParameterContext? {
-			return getRuleContext(ParameterContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_operation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOperation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOperation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOperation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOperation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOperation(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOperation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOperation(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOperation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operation() throws -> OperationContext {
+	 open func operation() throws -> OperationContext {
 		var _localctx: OperationContext = OperationContext(_ctx, getState())
 		try enterRule(_localctx, 26, ATLParser.RULE_operation)
 		var _la: Int = 0
@@ -1269,38 +1382,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class ParameterContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class ParameterContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_parameter
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_parameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterParameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterParameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitParameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitParameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitParameter(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitParameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitParameter(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitParameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameter() throws -> ParameterContext {
+	 open func parameter() throws -> ParameterContext {
 		var _localctx: ParameterContext = ParameterContext(_ctx, getState())
 		try enterRule(_localctx, 28, ATLParser.RULE_parameter)
 		defer {
@@ -1324,41 +1446,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class AttributeContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class AttributeContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_attribute
 		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_attribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitAttribute(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitAttribute(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attribute() throws -> AttributeContext {
+	 open func attribute() throws -> AttributeContext {
 		var _localctx: AttributeContext = AttributeContext(_ctx, getState())
 		try enterRule(_localctx, 30, ATLParser.RULE_attribute)
 		defer {
@@ -1386,40 +1518,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class AruleContext:ParserRuleContext {
-		open func calledRule() -> CalledRuleContext? {
-			return getRuleContext(CalledRuleContext.self,0)
+
+	public class AruleContext: ParserRuleContext {
+			open
+			func calledRule() -> CalledRuleContext? {
+				return getRuleContext(CalledRuleContext.self, 0)
+			}
+			open
+			func matchedRule() -> MatchedRuleContext? {
+				return getRuleContext(MatchedRuleContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_arule
 		}
-		open func matchedRule() -> MatchedRuleContext? {
-			return getRuleContext(MatchedRuleContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_arule }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterArule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterArule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitArule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitArule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitArule(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitArule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitArule(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitArule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arule() throws -> AruleContext {
+	 open func arule() throws -> AruleContext {
 		var _localctx: AruleContext = AruleContext(_ctx, getState())
 		try enterRule(_localctx, 32, ATLParser.RULE_arule)
 		defer {
@@ -1452,40 +1591,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class MatchedRuleContext:ParserRuleContext {
-		open func lazyMatchedRule() -> LazyMatchedRuleContext? {
-			return getRuleContext(LazyMatchedRuleContext.self,0)
+
+	public class MatchedRuleContext: ParserRuleContext {
+			open
+			func lazyMatchedRule() -> LazyMatchedRuleContext? {
+				return getRuleContext(LazyMatchedRuleContext.self, 0)
+			}
+			open
+			func matchedRule_abstractContents() -> MatchedRule_abstractContentsContext? {
+				return getRuleContext(MatchedRule_abstractContentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_matchedRule
 		}
-		open func matchedRule_abstractContents() -> MatchedRule_abstractContentsContext? {
-			return getRuleContext(MatchedRule_abstractContentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_matchedRule }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterMatchedRule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterMatchedRule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitMatchedRule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitMatchedRule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitMatchedRule(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitMatchedRule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitMatchedRule(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitMatchedRule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func matchedRule() throws -> MatchedRuleContext {
+	 open func matchedRule() throws -> MatchedRuleContext {
 		var _localctx: MatchedRuleContext = MatchedRuleContext(_ctx, getState())
 		try enterRule(_localctx, 34, ATLParser.RULE_matchedRule)
 		defer {
@@ -1512,7 +1658,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1523,53 +1669,67 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class LazyMatchedRuleContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class LazyMatchedRuleContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func inPattern() -> InPatternContext? {
+				return getRuleContext(InPatternContext.self, 0)
+			}
+			open
+			func outPattern() -> OutPatternContext? {
+				return getRuleContext(OutPatternContext.self, 0)
+			}
+			open
+			func actionBlock() -> ActionBlockContext? {
+				return getRuleContext(ActionBlockContext.self, 0)
+			}
+			open
+			func ruleVariableDeclaration() -> [RuleVariableDeclarationContext] {
+				return getRuleContexts(RuleVariableDeclarationContext.self)
+			}
+			open
+			func ruleVariableDeclaration(_ i: Int) -> RuleVariableDeclarationContext? {
+				return getRuleContext(RuleVariableDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_lazyMatchedRule
 		}
-		open func inPattern() -> InPatternContext? {
-			return getRuleContext(InPatternContext.self,0)
-		}
-		open func outPattern() -> OutPatternContext? {
-			return getRuleContext(OutPatternContext.self,0)
-		}
-		open func actionBlock() -> ActionBlockContext? {
-			return getRuleContext(ActionBlockContext.self,0)
-		}
-		open func ruleVariableDeclaration() -> Array<RuleVariableDeclarationContext> {
-			return getRuleContexts(RuleVariableDeclarationContext.self)
-		}
-		open func ruleVariableDeclaration(_ i: Int) -> RuleVariableDeclarationContext? {
-			return getRuleContext(RuleVariableDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_lazyMatchedRule }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterLazyMatchedRule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterLazyMatchedRule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitLazyMatchedRule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitLazyMatchedRule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitLazyMatchedRule(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitLazyMatchedRule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitLazyMatchedRule(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitLazyMatchedRule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lazyMatchedRule() throws -> LazyMatchedRuleContext {
+	 open func lazyMatchedRule() throws -> LazyMatchedRuleContext {
 		var _localctx: LazyMatchedRuleContext = LazyMatchedRuleContext(_ctx, getState())
 		try enterRule(_localctx, 36, ATLParser.RULE_lazyMatchedRule)
 		var _la: Int = 0
@@ -1713,41 +1873,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class RuleVariableDeclarationContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class RuleVariableDeclarationContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_ruleVariableDeclaration
 		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_ruleVariableDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterRuleVariableDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterRuleVariableDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitRuleVariableDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitRuleVariableDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitRuleVariableDeclaration(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitRuleVariableDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitRuleVariableDeclaration(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitRuleVariableDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ruleVariableDeclaration() throws -> RuleVariableDeclarationContext {
+	 open func ruleVariableDeclaration() throws -> RuleVariableDeclarationContext {
 		var _localctx: RuleVariableDeclarationContext = RuleVariableDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 38, ATLParser.RULE_ruleVariableDeclaration)
 		defer {
@@ -1777,53 +1947,67 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class CalledRuleContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func parameter() -> Array<ParameterContext> {
-			return getRuleContexts(ParameterContext.self)
+
+	public class CalledRuleContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func parameter() -> [ParameterContext] {
+				return getRuleContexts(ParameterContext.self)
+			}
+			open
+			func parameter(_ i: Int) -> ParameterContext? {
+				return getRuleContext(ParameterContext.self, i)
+			}
+			open
+			func outPattern() -> OutPatternContext? {
+				return getRuleContext(OutPatternContext.self, 0)
+			}
+			open
+			func actionBlock() -> ActionBlockContext? {
+				return getRuleContext(ActionBlockContext.self, 0)
+			}
+			open
+			func ruleVariableDeclaration() -> [RuleVariableDeclarationContext] {
+				return getRuleContexts(RuleVariableDeclarationContext.self)
+			}
+			open
+			func ruleVariableDeclaration(_ i: Int) -> RuleVariableDeclarationContext? {
+				return getRuleContext(RuleVariableDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_calledRule
 		}
-		open func parameter(_ i: Int) -> ParameterContext? {
-			return getRuleContext(ParameterContext.self,i)
-		}
-		open func outPattern() -> OutPatternContext? {
-			return getRuleContext(OutPatternContext.self,0)
-		}
-		open func actionBlock() -> ActionBlockContext? {
-			return getRuleContext(ActionBlockContext.self,0)
-		}
-		open func ruleVariableDeclaration() -> Array<RuleVariableDeclarationContext> {
-			return getRuleContexts(RuleVariableDeclarationContext.self)
-		}
-		open func ruleVariableDeclaration(_ i: Int) -> RuleVariableDeclarationContext? {
-			return getRuleContext(RuleVariableDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_calledRule }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterCalledRule(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterCalledRule(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitCalledRule(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitCalledRule(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitCalledRule(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitCalledRule(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitCalledRule(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitCalledRule(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func calledRule() throws -> CalledRuleContext {
+	 open func calledRule() throws -> CalledRuleContext {
 		var _localctx: CalledRuleContext = CalledRuleContext(_ctx, getState())
 		try enterRule(_localctx, 40, ATLParser.RULE_calledRule)
 		var _la: Int = 0
@@ -1970,43 +2154,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class InPatternContext:ParserRuleContext {
-		open func inPatternElement() -> Array<InPatternElementContext> {
-			return getRuleContexts(InPatternElementContext.self)
+
+	public class InPatternContext: ParserRuleContext {
+			open
+			func inPatternElement() -> [InPatternElementContext] {
+				return getRuleContexts(InPatternElementContext.self)
+			}
+			open
+			func inPatternElement(_ i: Int) -> InPatternElementContext? {
+				return getRuleContext(InPatternElementContext.self, i)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_inPattern
 		}
-		open func inPatternElement(_ i: Int) -> InPatternElementContext? {
-			return getRuleContext(InPatternElementContext.self,i)
-		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_inPattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterInPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterInPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitInPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitInPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitInPattern(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitInPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitInPattern(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitInPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inPattern() throws -> InPatternContext {
+	 open func inPattern() throws -> InPatternContext {
 		var _localctx: InPatternContext = InPatternContext(_ctx, getState())
 		try enterRule(_localctx, 42, ATLParser.RULE_inPattern)
 		var _la: Int = 0
@@ -2064,37 +2256,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class InPatternElementContext:ParserRuleContext {
-		open func simpleInPatternElement() -> SimpleInPatternElementContext? {
-			return getRuleContext(SimpleInPatternElementContext.self,0)
+
+	public class InPatternElementContext: ParserRuleContext {
+			open
+			func simpleInPatternElement() -> SimpleInPatternElementContext? {
+				return getRuleContext(SimpleInPatternElementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_inPatternElement
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_inPatternElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterInPatternElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterInPatternElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitInPatternElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitInPatternElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitInPatternElement(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitInPatternElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitInPatternElement(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitInPatternElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func inPatternElement() throws -> InPatternElementContext {
+	 open func inPatternElement() throws -> InPatternElementContext {
 		var _localctx: InPatternElementContext = InPatternElementContext(_ctx, getState())
 		try enterRule(_localctx, 44, ATLParser.RULE_inPatternElement)
 		defer {
@@ -2114,41 +2312,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class SimpleInPatternElementContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class SimpleInPatternElementContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_simpleInPatternElement
 		}
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_simpleInPatternElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterSimpleInPatternElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterSimpleInPatternElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitSimpleInPatternElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitSimpleInPatternElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitSimpleInPatternElement(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitSimpleInPatternElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitSimpleInPatternElement(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitSimpleInPatternElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleInPatternElement() throws -> SimpleInPatternElementContext {
+	 open func simpleInPatternElement() throws -> SimpleInPatternElementContext {
 		var _localctx: SimpleInPatternElementContext = SimpleInPatternElementContext(_ctx, getState())
 		try enterRule(_localctx, 46, ATLParser.RULE_simpleInPatternElement)
 		var _la: Int = 0
@@ -2205,40 +2413,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OutPatternContext:ParserRuleContext {
-		open func outPatternElement() -> Array<OutPatternElementContext> {
-			return getRuleContexts(OutPatternElementContext.self)
+
+	public class OutPatternContext: ParserRuleContext {
+			open
+			func outPatternElement() -> [OutPatternElementContext] {
+				return getRuleContexts(OutPatternElementContext.self)
+			}
+			open
+			func outPatternElement(_ i: Int) -> OutPatternElementContext? {
+				return getRuleContext(OutPatternElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_outPattern
 		}
-		open func outPatternElement(_ i: Int) -> OutPatternElementContext? {
-			return getRuleContext(OutPatternElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_outPattern }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOutPattern(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOutPattern(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOutPattern(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOutPattern(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOutPattern(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOutPattern(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOutPattern(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOutPattern(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func outPattern() throws -> OutPatternContext {
+	 open func outPattern() throws -> OutPatternContext {
 		var _localctx: OutPatternContext = OutPatternContext(_ctx, getState())
 		try enterRule(_localctx, 48, ATLParser.RULE_outPattern)
 		var _la: Int = 0
@@ -2279,40 +2494,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OutPatternElementContext:ParserRuleContext {
-		open func simpleOutPatternElement() -> SimpleOutPatternElementContext? {
-			return getRuleContext(SimpleOutPatternElementContext.self,0)
+
+	public class OutPatternElementContext: ParserRuleContext {
+			open
+			func simpleOutPatternElement() -> SimpleOutPatternElementContext? {
+				return getRuleContext(SimpleOutPatternElementContext.self, 0)
+			}
+			open
+			func forEachOutPatternElement() -> ForEachOutPatternElementContext? {
+				return getRuleContext(ForEachOutPatternElementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_outPatternElement
 		}
-		open func forEachOutPatternElement() -> ForEachOutPatternElementContext? {
-			return getRuleContext(ForEachOutPatternElementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_outPatternElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOutPatternElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOutPatternElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOutPatternElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOutPatternElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOutPatternElement(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOutPatternElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOutPatternElement(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOutPatternElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func outPatternElement() throws -> OutPatternElementContext {
+	 open func outPatternElement() throws -> OutPatternElementContext {
 		var _localctx: OutPatternElementContext = OutPatternElementContext(_ctx, getState())
 		try enterRule(_localctx, 50, ATLParser.RULE_outPatternElement)
 		defer {
@@ -2345,47 +2567,59 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class SimpleOutPatternElementContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class SimpleOutPatternElementContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+			open
+			func binding() -> [BindingContext] {
+				return getRuleContexts(BindingContext.self)
+			}
+			open
+			func binding(_ i: Int) -> BindingContext? {
+				return getRuleContext(BindingContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_simpleOutPatternElement
 		}
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
-		}
-		open func binding() -> Array<BindingContext> {
-			return getRuleContexts(BindingContext.self)
-		}
-		open func binding(_ i: Int) -> BindingContext? {
-			return getRuleContext(BindingContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_simpleOutPatternElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterSimpleOutPatternElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterSimpleOutPatternElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitSimpleOutPatternElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitSimpleOutPatternElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitSimpleOutPatternElement(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitSimpleOutPatternElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitSimpleOutPatternElement(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitSimpleOutPatternElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpleOutPatternElement() throws -> SimpleOutPatternElementContext {
+	 open func simpleOutPatternElement() throws -> SimpleOutPatternElementContext {
 		var _localctx: SimpleOutPatternElementContext = SimpleOutPatternElementContext(_ctx, getState())
 		try enterRule(_localctx, 52, ATLParser.RULE_simpleOutPatternElement)
 		var _la: Int = 0
@@ -2486,53 +2720,67 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class ForEachOutPatternElementContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class ForEachOutPatternElementContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+			open
+			func iterator() -> IteratorContext? {
+				return getRuleContext(IteratorContext.self, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+			open
+			func binding() -> [BindingContext] {
+				return getRuleContexts(BindingContext.self)
+			}
+			open
+			func binding(_ i: Int) -> BindingContext? {
+				return getRuleContext(BindingContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_forEachOutPatternElement
 		}
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
-		}
-		open func iterator() -> IteratorContext? {
-			return getRuleContext(IteratorContext.self,0)
-		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open func binding() -> Array<BindingContext> {
-			return getRuleContexts(BindingContext.self)
-		}
-		open func binding(_ i: Int) -> BindingContext? {
-			return getRuleContext(BindingContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_forEachOutPatternElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterForEachOutPatternElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterForEachOutPatternElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitForEachOutPatternElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitForEachOutPatternElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitForEachOutPatternElement(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitForEachOutPatternElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitForEachOutPatternElement(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitForEachOutPatternElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forEachOutPatternElement() throws -> ForEachOutPatternElementContext {
+	 open func forEachOutPatternElement() throws -> ForEachOutPatternElementContext {
 		var _localctx: ForEachOutPatternElementContext = ForEachOutPatternElementContext(_ctx, getState())
 		try enterRule(_localctx, 54, ATLParser.RULE_forEachOutPatternElement)
 		var _la: Int = 0
@@ -2632,38 +2880,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class BindingContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
+
+	public class BindingContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_binding
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_binding }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterBinding(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterBinding(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitBinding(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitBinding(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitBinding(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitBinding(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitBinding(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitBinding(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func binding() throws -> BindingContext {
+	 open func binding() throws -> BindingContext {
 		var _localctx: BindingContext = BindingContext(_ctx, getState())
 		try enterRule(_localctx, 56, ATLParser.RULE_binding)
 		defer {
@@ -2687,40 +2944,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class ActionBlockContext:ParserRuleContext {
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
+
+	public class ActionBlockContext: ParserRuleContext {
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_actionBlock
 		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_actionBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterActionBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterActionBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitActionBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitActionBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitActionBlock(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitActionBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitActionBlock(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitActionBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func actionBlock() throws -> ActionBlockContext {
+	 open func actionBlock() throws -> ActionBlockContext {
 		var _localctx: ActionBlockContext = ActionBlockContext(_ctx, getState())
 		try enterRule(_localctx, 58, ATLParser.RULE_actionBlock)
 		var _la: Int = 0
@@ -2768,46 +3032,55 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func ifStat() -> IfStatContext? {
-			return getRuleContext(IfStatContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func ifStat() -> IfStatContext? {
+				return getRuleContext(IfStatContext.self, 0)
+			}
+			open
+			func expressionStat() -> ExpressionStatContext? {
+				return getRuleContext(ExpressionStatContext.self, 0)
+			}
+			open
+			func bindingStat() -> BindingStatContext? {
+				return getRuleContext(BindingStatContext.self, 0)
+			}
+			open
+			func forStat() -> ForStatContext? {
+				return getRuleContext(ForStatContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_statement
 		}
-		open func expressionStat() -> ExpressionStatContext? {
-			return getRuleContext(ExpressionStatContext.self,0)
-		}
-		open func bindingStat() -> BindingStatContext? {
-			return getRuleContext(BindingStatContext.self,0)
-		}
-		open func forStat() -> ForStatContext? {
-			return getRuleContext(ForStatContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitStatement(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 60, ATLParser.RULE_statement)
 		defer {
@@ -2852,40 +3125,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class BindingStatContext:ParserRuleContext {
-		open func oclExpression() -> Array<OclExpressionContext> {
-			return getRuleContexts(OclExpressionContext.self)
+
+	public class BindingStatContext: ParserRuleContext {
+			open
+			func oclExpression() -> [OclExpressionContext] {
+				return getRuleContexts(OclExpressionContext.self)
+			}
+			open
+			func oclExpression(_ i: Int) -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_bindingStat
 		}
-		open func oclExpression(_ i: Int) -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_bindingStat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterBindingStat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterBindingStat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitBindingStat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitBindingStat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitBindingStat(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitBindingStat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitBindingStat(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitBindingStat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bindingStat() throws -> BindingStatContext {
+	 open func bindingStat() throws -> BindingStatContext {
 		var _localctx: BindingStatContext = BindingStatContext(_ctx, getState())
 		try enterRule(_localctx, 62, ATLParser.RULE_bindingStat)
 		defer {
@@ -2911,37 +3191,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionStatContext:ParserRuleContext {
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
+
+	public class ExpressionStatContext: ParserRuleContext {
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_expressionStat
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_expressionStat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterExpressionStat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterExpressionStat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitExpressionStat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitExpressionStat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitExpressionStat(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitExpressionStat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitExpressionStat(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitExpressionStat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionStat() throws -> ExpressionStatContext {
+	 open func expressionStat() throws -> ExpressionStatContext {
 		var _localctx: ExpressionStatContext = ExpressionStatContext(_ctx, getState())
 		try enterRule(_localctx, 64, ATLParser.RULE_expressionStat)
 		defer {
@@ -2963,43 +3249,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class IfStatContext:ParserRuleContext {
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
+
+	public class IfStatContext: ParserRuleContext {
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_ifStat
 		}
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
-		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_ifStat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterIfStat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterIfStat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitIfStat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitIfStat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitIfStat(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitIfStat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitIfStat(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitIfStat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifStat() throws -> IfStatContext {
+	 open func ifStat() throws -> IfStatContext {
 		var _localctx: IfStatContext = IfStatContext(_ctx, getState())
 		try enterRule(_localctx, 66, ATLParser.RULE_ifStat)
 		var _la: Int = 0
@@ -3084,7 +3378,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(559)
 		 	try _errHandler.sync(self)
@@ -3160,7 +3454,7 @@ open class ATLParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -3176,46 +3470,55 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class ForStatContext:ParserRuleContext {
-		open func iterator() -> IteratorContext? {
-			return getRuleContext(IteratorContext.self,0)
+
+	public class ForStatContext: ParserRuleContext {
+			open
+			func iterator() -> IteratorContext? {
+				return getRuleContext(IteratorContext.self, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_forStat
 		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
-		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_forStat }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterForStat(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterForStat(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitForStat(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitForStat(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitForStat(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitForStat(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitForStat(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitForStat(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forStat() throws -> ForStatContext {
+	 open func forStat() throws -> ForStatContext {
 		var _localctx: ForStatContext = ForStatContext(_ctx, getState())
 		try enterRule(_localctx, 68, ATLParser.RULE_forStat)
 		var _la: Int = 0
@@ -3273,38 +3576,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclModelContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class OclModelContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclModel
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclModel }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclModel(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclModel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclModel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclModel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclModel(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclModel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclModel(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclModel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclModel() throws -> OclModelContext {
+	 open func oclModel() throws -> OclModelContext {
 		var _localctx: OclModelContext = OclModelContext(_ctx, getState())
 		try enterRule(_localctx, 70, ATLParser.RULE_oclModel)
 		defer {
@@ -3328,39 +3640,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclModelElementContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class OclModelElementContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclModelElement
 		}
-		open func STRING() -> TerminalNode? { return getToken(ATLParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclModelElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclModelElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclModelElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclModelElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclModelElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclModelElement(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclModelElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclModelElement(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclModelElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclModelElement() throws -> OclModelElementContext {
+	 open func oclModelElement() throws -> OclModelElementContext {
 		var _localctx: OclModelElementContext = OclModelElementContext(_ctx, getState())
 		try enterRule(_localctx, 72, ATLParser.RULE_oclModelElement)
 		var _la: Int = 0
@@ -3396,40 +3720,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclExpressionContext:ParserRuleContext {
-		open func priority_5() -> Priority_5Context? {
-			return getRuleContext(Priority_5Context.self,0)
+
+	public class OclExpressionContext: ParserRuleContext {
+			open
+			func priority_5() -> Priority_5Context? {
+				return getRuleContext(Priority_5Context.self, 0)
+			}
+			open
+			func letExp() -> LetExpContext? {
+				return getRuleContext(LetExpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclExpression
 		}
-		open func letExp() -> LetExpContext? {
-			return getRuleContext(LetExpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclExpression(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclExpression(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclExpression() throws -> OclExpressionContext {
+	 open func oclExpression() throws -> OclExpressionContext {
 		var _localctx: OclExpressionContext = OclExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 74, ATLParser.RULE_oclExpression)
 		defer {
@@ -3479,7 +3810,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3490,44 +3821,55 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class IteratorExpContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func iterator() -> Array<IteratorContext> {
-			return getRuleContexts(IteratorContext.self)
+
+	public class IteratorExpContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func iterator() -> [IteratorContext] {
+				return getRuleContexts(IteratorContext.self)
+			}
+			open
+			func iterator(_ i: Int) -> IteratorContext? {
+				return getRuleContext(IteratorContext.self, i)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_iteratorExp
 		}
-		open func iterator(_ i: Int) -> IteratorContext? {
-			return getRuleContext(IteratorContext.self,i)
-		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_iteratorExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterIteratorExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterIteratorExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitIteratorExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitIteratorExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitIteratorExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitIteratorExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitIteratorExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitIteratorExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iteratorExp() throws -> IteratorExpContext {
+	 open func iteratorExp() throws -> IteratorExpContext {
 		var _localctx: IteratorExpContext = IteratorExpContext(_ctx, getState())
 		try enterRule(_localctx, 76, ATLParser.RULE_iteratorExp)
 		var _la: Int = 0
@@ -3576,46 +3918,55 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class IterateExpContext:ParserRuleContext {
-		open func iterator() -> Array<IteratorContext> {
-			return getRuleContexts(IteratorContext.self)
+
+	public class IterateExpContext: ParserRuleContext {
+			open
+			func iterator() -> [IteratorContext] {
+				return getRuleContexts(IteratorContext.self)
+			}
+			open
+			func iterator(_ i: Int) -> IteratorContext? {
+				return getRuleContext(IteratorContext.self, i)
+			}
+			open
+			func variableDeclaration() -> VariableDeclarationContext? {
+				return getRuleContext(VariableDeclarationContext.self, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_iterateExp
 		}
-		open func iterator(_ i: Int) -> IteratorContext? {
-			return getRuleContext(IteratorContext.self,i)
-		}
-		open func variableDeclaration() -> VariableDeclarationContext? {
-			return getRuleContext(VariableDeclarationContext.self,0)
-		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_iterateExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterIterateExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterIterateExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitIterateExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitIterateExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitIterateExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitIterateExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitIterateExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitIterateExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iterateExp() throws -> IterateExpContext {
+	 open func iterateExp() throws -> IterateExpContext {
 		var _localctx: IterateExpContext = IterateExpContext(_ctx, getState())
 		try enterRule(_localctx, 78, ATLParser.RULE_iterateExp)
 		var _la: Int = 0
@@ -3668,41 +4019,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class CollectionOperationCallExpContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclExpression() -> Array<OclExpressionContext> {
-			return getRuleContexts(OclExpressionContext.self)
+
+	public class CollectionOperationCallExpContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclExpression() -> [OclExpressionContext] {
+				return getRuleContexts(OclExpressionContext.self)
+			}
+			open
+			func oclExpression(_ i: Int) -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_collectionOperationCallExp
 		}
-		open func oclExpression(_ i: Int) -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_collectionOperationCallExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterCollectionOperationCallExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterCollectionOperationCallExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitCollectionOperationCallExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitCollectionOperationCallExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitCollectionOperationCallExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitCollectionOperationCallExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitCollectionOperationCallExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitCollectionOperationCallExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collectionOperationCallExp() throws -> CollectionOperationCallExpContext {
+	 open func collectionOperationCallExp() throws -> CollectionOperationCallExpContext {
 		var _localctx: CollectionOperationCallExpContext = CollectionOperationCallExpContext(_ctx, getState())
 		try enterRule(_localctx, 80, ATLParser.RULE_collectionOperationCallExp)
 		var _la: Int = 0
@@ -3765,41 +4126,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OperationCallExpContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclExpression() -> Array<OclExpressionContext> {
-			return getRuleContexts(OclExpressionContext.self)
+
+	public class OperationCallExpContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclExpression() -> [OclExpressionContext] {
+				return getRuleContexts(OclExpressionContext.self)
+			}
+			open
+			func oclExpression(_ i: Int) -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_operationCallExp
 		}
-		open func oclExpression(_ i: Int) -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_operationCallExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOperationCallExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOperationCallExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOperationCallExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOperationCallExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOperationCallExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOperationCallExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOperationCallExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOperationCallExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operationCallExp() throws -> OperationCallExpContext {
+	 open func operationCallExp() throws -> OperationCallExpContext {
 		var _localctx: OperationCallExpContext = OperationCallExpContext(_ctx, getState())
 		try enterRule(_localctx, 82, ATLParser.RULE_operationCallExp)
 		var _la: Int = 0
@@ -3862,35 +4233,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class NavigationOrAttributeCallExpContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_navigationOrAttributeCallExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterNavigationOrAttributeCallExp(self)
+
+	public class NavigationOrAttributeCallExpContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_navigationOrAttributeCallExp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterNavigationOrAttributeCallExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitNavigationOrAttributeCallExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitNavigationOrAttributeCallExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitNavigationOrAttributeCallExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitNavigationOrAttributeCallExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitNavigationOrAttributeCallExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitNavigationOrAttributeCallExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func navigationOrAttributeCallExp() throws -> NavigationOrAttributeCallExpContext {
+	 open func navigationOrAttributeCallExp() throws -> NavigationOrAttributeCallExpContext {
 		var _localctx: NavigationOrAttributeCallExpContext = NavigationOrAttributeCallExpContext(_ctx, getState())
 		try enterRule(_localctx, 84, ATLParser.RULE_navigationOrAttributeCallExp)
 		defer {
@@ -3910,35 +4289,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class IteratorContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_iterator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterIterator(self)
+
+	public class IteratorContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_iterator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterIterator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitIterator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitIterator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitIterator(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitIterator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitIterator(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitIterator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iterator() throws -> IteratorContext {
+	 open func iterator() throws -> IteratorContext {
 		var _localctx: IteratorContext = IteratorContext(_ctx, getState())
 		try enterRule(_localctx, 86, ATLParser.RULE_iterator)
 		defer {
@@ -3958,34 +4345,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclUndefinedExpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclUndefinedExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclUndefinedExp(self)
+
+	public class OclUndefinedExpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclUndefinedExp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclUndefinedExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclUndefinedExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclUndefinedExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclUndefinedExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclUndefinedExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclUndefinedExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclUndefinedExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclUndefinedExp() throws -> OclUndefinedExpContext {
+	 open func oclUndefinedExp() throws -> OclUndefinedExpContext {
 		var _localctx: OclUndefinedExpContext = OclUndefinedExpContext(_ctx, getState())
 		try enterRule(_localctx, 88, ATLParser.RULE_oclUndefinedExp)
 		defer {
@@ -4005,43 +4397,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class PrimitiveExpContext:ParserRuleContext {
-		open func numericExp() -> NumericExpContext? {
-			return getRuleContext(NumericExpContext.self,0)
+
+	public class PrimitiveExpContext: ParserRuleContext {
+			open
+			func numericExp() -> NumericExpContext? {
+				return getRuleContext(NumericExpContext.self, 0)
+			}
+			open
+			func booleanExp() -> BooleanExpContext? {
+				return getRuleContext(BooleanExpContext.self, 0)
+			}
+			open
+			func stringExp() -> StringExpContext? {
+				return getRuleContext(StringExpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_primitiveExp
 		}
-		open func booleanExp() -> BooleanExpContext? {
-			return getRuleContext(BooleanExpContext.self,0)
-		}
-		open func stringExp() -> StringExpContext? {
-			return getRuleContext(StringExpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_primitiveExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterPrimitiveExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterPrimitiveExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitPrimitiveExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitPrimitiveExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitPrimitiveExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitPrimitiveExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitPrimitiveExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitPrimitiveExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primitiveExp() throws -> PrimitiveExpContext {
+	 open func primitiveExp() throws -> PrimitiveExpContext {
 		var _localctx: PrimitiveExpContext = PrimitiveExpContext(_ctx, getState())
 		try enterRule(_localctx, 90, ATLParser.RULE_primitiveExp)
 		defer {
@@ -4073,7 +4473,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4084,40 +4484,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class NumericExpContext:ParserRuleContext {
-		open func integerExp() -> IntegerExpContext? {
-			return getRuleContext(IntegerExpContext.self,0)
+
+	public class NumericExpContext: ParserRuleContext {
+			open
+			func integerExp() -> IntegerExpContext? {
+				return getRuleContext(IntegerExpContext.self, 0)
+			}
+			open
+			func realExp() -> RealExpContext? {
+				return getRuleContext(RealExpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_numericExp
 		}
-		open func realExp() -> RealExpContext? {
-			return getRuleContext(RealExpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_numericExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterNumericExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterNumericExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitNumericExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitNumericExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitNumericExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitNumericExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitNumericExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitNumericExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numericExp() throws -> NumericExpContext {
+	 open func numericExp() throws -> NumericExpContext {
 		var _localctx: NumericExpContext = NumericExpContext(_ctx, getState())
 		try enterRule(_localctx, 92, ATLParser.RULE_numericExp)
 		defer {
@@ -4141,7 +4548,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4152,34 +4559,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class BooleanExpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_booleanExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterBooleanExp(self)
+
+	public class BooleanExpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_booleanExp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterBooleanExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitBooleanExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitBooleanExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitBooleanExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitBooleanExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitBooleanExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitBooleanExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func booleanExp() throws -> BooleanExpContext {
+	 open func booleanExp() throws -> BooleanExpContext {
 		var _localctx: BooleanExpContext = BooleanExpContext(_ctx, getState())
 		try enterRule(_localctx, 94, ATLParser.RULE_booleanExp)
 		var _la: Int = 0
@@ -4211,35 +4623,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class IntegerExpContext:ParserRuleContext {
-		open func INTEGER() -> TerminalNode? { return getToken(ATLParser.Tokens.INTEGER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_integerExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterIntegerExp(self)
+
+	public class IntegerExpContext: ParserRuleContext {
+			open
+			func INTEGER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.INTEGER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_integerExp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterIntegerExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitIntegerExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitIntegerExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitIntegerExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitIntegerExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitIntegerExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitIntegerExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integerExp() throws -> IntegerExpContext {
+	 open func integerExp() throws -> IntegerExpContext {
 		var _localctx: IntegerExpContext = IntegerExpContext(_ctx, getState())
 		try enterRule(_localctx, 96, ATLParser.RULE_integerExp)
 		defer {
@@ -4259,35 +4679,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class RealExpContext:ParserRuleContext {
-		open func FLOAT() -> TerminalNode? { return getToken(ATLParser.Tokens.FLOAT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_realExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterRealExp(self)
+
+	public class RealExpContext: ParserRuleContext {
+			open
+			func FLOAT() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.FLOAT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_realExp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterRealExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitRealExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitRealExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitRealExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitRealExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitRealExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitRealExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func realExp() throws -> RealExpContext {
+	 open func realExp() throws -> RealExpContext {
 		var _localctx: RealExpContext = RealExpContext(_ctx, getState())
 		try enterRule(_localctx, 98, ATLParser.RULE_realExp)
 		defer {
@@ -4307,35 +4735,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class StringExpContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(ATLParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_stringExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterStringExp(self)
+
+	public class StringExpContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_stringExp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterStringExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitStringExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitStringExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitStringExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitStringExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitStringExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitStringExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stringExp() throws -> StringExpContext {
+	 open func stringExp() throws -> StringExpContext {
 		var _localctx: StringExpContext = StringExpContext(_ctx, getState())
 		try enterRule(_localctx, 100, ATLParser.RULE_stringExp)
 		defer {
@@ -4355,40 +4791,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class IfExpContext:ParserRuleContext {
-		open func oclExpression() -> Array<OclExpressionContext> {
-			return getRuleContexts(OclExpressionContext.self)
+
+	public class IfExpContext: ParserRuleContext {
+			open
+			func oclExpression() -> [OclExpressionContext] {
+				return getRuleContexts(OclExpressionContext.self)
+			}
+			open
+			func oclExpression(_ i: Int) -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_ifExp
 		}
-		open func oclExpression(_ i: Int) -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_ifExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterIfExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterIfExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitIfExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitIfExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitIfExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitIfExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitIfExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitIfExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ifExp() throws -> IfExpContext {
+	 open func ifExp() throws -> IfExpContext {
 		var _localctx: IfExpContext = IfExpContext(_ctx, getState())
 		try enterRule(_localctx, 102, ATLParser.RULE_ifExp)
 		defer {
@@ -4420,35 +4863,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class VariableExpContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_variableExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterVariableExp(self)
+
+	public class VariableExpContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_variableExp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterVariableExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitVariableExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitVariableExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitVariableExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitVariableExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitVariableExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitVariableExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableExp() throws -> VariableExpContext {
+	 open func variableExp() throws -> VariableExpContext {
 		var _localctx: VariableExpContext = VariableExpContext(_ctx, getState())
 		try enterRule(_localctx, 104, ATLParser.RULE_variableExp)
 		defer {
@@ -4468,34 +4919,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class SuperExpContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_superExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterSuperExp(self)
+
+	public class SuperExpContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_superExp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterSuperExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitSuperExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitSuperExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitSuperExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitSuperExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitSuperExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitSuperExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func superExp() throws -> SuperExpContext {
+	 open func superExp() throws -> SuperExpContext {
 		var _localctx: SuperExpContext = SuperExpContext(_ctx, getState())
 		try enterRule(_localctx, 106, ATLParser.RULE_superExp)
 		defer {
@@ -4515,40 +4971,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class LetExpContext:ParserRuleContext {
-		open func variableDeclaration() -> VariableDeclarationContext? {
-			return getRuleContext(VariableDeclarationContext.self,0)
+
+	public class LetExpContext: ParserRuleContext {
+			open
+			func variableDeclaration() -> VariableDeclarationContext? {
+				return getRuleContext(VariableDeclarationContext.self, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_letExp
 		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_letExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterLetExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterLetExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitLetExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitLetExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitLetExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitLetExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitLetExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitLetExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func letExp() throws -> LetExpContext {
+	 open func letExp() throws -> LetExpContext {
 		var _localctx: LetExpContext = LetExpContext(_ctx, getState())
 		try enterRule(_localctx, 108, ATLParser.RULE_letExp)
 		defer {
@@ -4574,41 +5037,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclarationContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class VariableDeclarationContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_variableDeclaration
 		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_variableDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterVariableDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterVariableDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitVariableDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitVariableDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitVariableDeclaration(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitVariableDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitVariableDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclaration() throws -> VariableDeclarationContext {
+	 open func variableDeclaration() throws -> VariableDeclarationContext {
 		var _localctx: VariableDeclarationContext = VariableDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 110, ATLParser.RULE_variableDeclaration)
 		defer {
@@ -4636,35 +5109,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class EnumLiteralExpContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_enumLiteralExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterEnumLiteralExp(self)
+
+	public class EnumLiteralExpContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_enumLiteralExp
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterEnumLiteralExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitEnumLiteralExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitEnumLiteralExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitEnumLiteralExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitEnumLiteralExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitEnumLiteralExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitEnumLiteralExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumLiteralExp() throws -> EnumLiteralExpContext {
+	 open func enumLiteralExp() throws -> EnumLiteralExpContext {
 		var _localctx: EnumLiteralExpContext = EnumLiteralExpContext(_ctx, getState())
 		try enterRule(_localctx, 112, ATLParser.RULE_enumLiteralExp)
 		defer {
@@ -4686,46 +5167,55 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class CollectionExpContext:ParserRuleContext {
-		open func bagExp() -> BagExpContext? {
-			return getRuleContext(BagExpContext.self,0)
+
+	public class CollectionExpContext: ParserRuleContext {
+			open
+			func bagExp() -> BagExpContext? {
+				return getRuleContext(BagExpContext.self, 0)
+			}
+			open
+			func setExp() -> SetExpContext? {
+				return getRuleContext(SetExpContext.self, 0)
+			}
+			open
+			func orderedSetExp() -> OrderedSetExpContext? {
+				return getRuleContext(OrderedSetExpContext.self, 0)
+			}
+			open
+			func sequenceExp() -> SequenceExpContext? {
+				return getRuleContext(SequenceExpContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_collectionExp
 		}
-		open func setExp() -> SetExpContext? {
-			return getRuleContext(SetExpContext.self,0)
-		}
-		open func orderedSetExp() -> OrderedSetExpContext? {
-			return getRuleContext(OrderedSetExpContext.self,0)
-		}
-		open func sequenceExp() -> SequenceExpContext? {
-			return getRuleContext(SequenceExpContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_collectionExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterCollectionExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterCollectionExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitCollectionExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitCollectionExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitCollectionExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitCollectionExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitCollectionExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitCollectionExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collectionExp() throws -> CollectionExpContext {
+	 open func collectionExp() throws -> CollectionExpContext {
 		var _localctx: CollectionExpContext = CollectionExpContext(_ctx, getState())
 		try enterRule(_localctx, 114, ATLParser.RULE_collectionExp)
 		defer {
@@ -4763,7 +5253,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4774,40 +5264,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class BagExpContext:ParserRuleContext {
-		open func oclExpression() -> Array<OclExpressionContext> {
-			return getRuleContexts(OclExpressionContext.self)
+
+	public class BagExpContext: ParserRuleContext {
+			open
+			func oclExpression() -> [OclExpressionContext] {
+				return getRuleContexts(OclExpressionContext.self)
+			}
+			open
+			func oclExpression(_ i: Int) -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_bagExp
 		}
-		open func oclExpression(_ i: Int) -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_bagExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterBagExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterBagExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitBagExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitBagExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitBagExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitBagExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitBagExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitBagExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bagExp() throws -> BagExpContext {
+	 open func bagExp() throws -> BagExpContext {
 		var _localctx: BagExpContext = BagExpContext(_ctx, getState())
 		try enterRule(_localctx, 116, ATLParser.RULE_bagExp)
 		var _la: Int = 0
@@ -4870,40 +5367,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class SetExpContext:ParserRuleContext {
-		open func oclExpression() -> Array<OclExpressionContext> {
-			return getRuleContexts(OclExpressionContext.self)
+
+	public class SetExpContext: ParserRuleContext {
+			open
+			func oclExpression() -> [OclExpressionContext] {
+				return getRuleContexts(OclExpressionContext.self)
+			}
+			open
+			func oclExpression(_ i: Int) -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_setExp
 		}
-		open func oclExpression(_ i: Int) -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_setExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterSetExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterSetExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitSetExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitSetExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitSetExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitSetExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitSetExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitSetExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setExp() throws -> SetExpContext {
+	 open func setExp() throws -> SetExpContext {
 		var _localctx: SetExpContext = SetExpContext(_ctx, getState())
 		try enterRule(_localctx, 118, ATLParser.RULE_setExp)
 		var _la: Int = 0
@@ -4966,40 +5470,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OrderedSetExpContext:ParserRuleContext {
-		open func oclExpression() -> Array<OclExpressionContext> {
-			return getRuleContexts(OclExpressionContext.self)
+
+	public class OrderedSetExpContext: ParserRuleContext {
+			open
+			func oclExpression() -> [OclExpressionContext] {
+				return getRuleContexts(OclExpressionContext.self)
+			}
+			open
+			func oclExpression(_ i: Int) -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_orderedSetExp
 		}
-		open func oclExpression(_ i: Int) -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_orderedSetExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOrderedSetExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOrderedSetExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOrderedSetExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOrderedSetExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOrderedSetExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOrderedSetExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOrderedSetExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOrderedSetExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func orderedSetExp() throws -> OrderedSetExpContext {
+	 open func orderedSetExp() throws -> OrderedSetExpContext {
 		var _localctx: OrderedSetExpContext = OrderedSetExpContext(_ctx, getState())
 		try enterRule(_localctx, 120, ATLParser.RULE_orderedSetExp)
 		var _la: Int = 0
@@ -5062,40 +5573,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class SequenceExpContext:ParserRuleContext {
-		open func oclExpression() -> Array<OclExpressionContext> {
-			return getRuleContexts(OclExpressionContext.self)
+
+	public class SequenceExpContext: ParserRuleContext {
+			open
+			func oclExpression() -> [OclExpressionContext] {
+				return getRuleContexts(OclExpressionContext.self)
+			}
+			open
+			func oclExpression(_ i: Int) -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_sequenceExp
 		}
-		open func oclExpression(_ i: Int) -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_sequenceExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterSequenceExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterSequenceExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitSequenceExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitSequenceExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitSequenceExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitSequenceExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitSequenceExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitSequenceExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sequenceExp() throws -> SequenceExpContext {
+	 open func sequenceExp() throws -> SequenceExpContext {
 		var _localctx: SequenceExpContext = SequenceExpContext(_ctx, getState())
 		try enterRule(_localctx, 122, ATLParser.RULE_sequenceExp)
 		var _la: Int = 0
@@ -5158,40 +5676,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class MapExpContext:ParserRuleContext {
-		open func mapElement() -> Array<MapElementContext> {
-			return getRuleContexts(MapElementContext.self)
+
+	public class MapExpContext: ParserRuleContext {
+			open
+			func mapElement() -> [MapElementContext] {
+				return getRuleContexts(MapElementContext.self)
+			}
+			open
+			func mapElement(_ i: Int) -> MapElementContext? {
+				return getRuleContext(MapElementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_mapExp
 		}
-		open func mapElement(_ i: Int) -> MapElementContext? {
-			return getRuleContext(MapElementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_mapExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterMapExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterMapExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitMapExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitMapExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitMapExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitMapExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitMapExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitMapExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mapExp() throws -> MapExpContext {
+	 open func mapExp() throws -> MapExpContext {
 		var _localctx: MapExpContext = MapExpContext(_ctx, getState())
 		try enterRule(_localctx, 124, ATLParser.RULE_mapExp)
 		var _la: Int = 0
@@ -5247,40 +5772,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class MapElementContext:ParserRuleContext {
-		open func oclExpression() -> Array<OclExpressionContext> {
-			return getRuleContexts(OclExpressionContext.self)
+
+	public class MapElementContext: ParserRuleContext {
+			open
+			func oclExpression() -> [OclExpressionContext] {
+				return getRuleContexts(OclExpressionContext.self)
+			}
+			open
+			func oclExpression(_ i: Int) -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_mapElement
 		}
-		open func oclExpression(_ i: Int) -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_mapElement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterMapElement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterMapElement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitMapElement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitMapElement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitMapElement(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitMapElement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitMapElement(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitMapElement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mapElement() throws -> MapElementContext {
+	 open func mapElement() throws -> MapElementContext {
 		var _localctx: MapElementContext = MapElementContext(_ctx, getState())
 		try enterRule(_localctx, 126, ATLParser.RULE_mapElement)
 		defer {
@@ -5308,40 +5840,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class TupleExpContext:ParserRuleContext {
-		open func tuplePart() -> Array<TuplePartContext> {
-			return getRuleContexts(TuplePartContext.self)
+
+	public class TupleExpContext: ParserRuleContext {
+			open
+			func tuplePart() -> [TuplePartContext] {
+				return getRuleContexts(TuplePartContext.self)
+			}
+			open
+			func tuplePart(_ i: Int) -> TuplePartContext? {
+				return getRuleContext(TuplePartContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_tupleExp
 		}
-		open func tuplePart(_ i: Int) -> TuplePartContext? {
-			return getRuleContext(TuplePartContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_tupleExp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterTupleExp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterTupleExp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitTupleExp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitTupleExp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitTupleExp(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitTupleExp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitTupleExp(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitTupleExp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tupleExp() throws -> TupleExpContext {
+	 open func tupleExp() throws -> TupleExpContext {
 		var _localctx: TupleExpContext = TupleExpContext(_ctx, getState())
 		try enterRule(_localctx, 128, ATLParser.RULE_tupleExp)
 		var _la: Int = 0
@@ -5397,41 +5936,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class TuplePartContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
+
+	public class TuplePartContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_tuplePart
 		}
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_tuplePart }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterTuplePart(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterTuplePart(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitTuplePart(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitTuplePart(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitTuplePart(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitTuplePart(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitTuplePart(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitTuplePart(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tuplePart() throws -> TuplePartContext {
+	 open func tuplePart() throws -> TuplePartContext {
 		var _localctx: TuplePartContext = TuplePartContext(_ctx, getState())
 		try enterRule(_localctx, 130, ATLParser.RULE_tuplePart)
 		var _la: Int = 0
@@ -5471,55 +6020,67 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclTypeContext:ParserRuleContext {
-		open func oclModelElement() -> OclModelElementContext? {
-			return getRuleContext(OclModelElementContext.self,0)
+
+	public class OclTypeContext: ParserRuleContext {
+			open
+			func oclModelElement() -> OclModelElementContext? {
+				return getRuleContext(OclModelElementContext.self, 0)
+			}
+			open
+			func oclAnyType() -> OclAnyTypeContext? {
+				return getRuleContext(OclAnyTypeContext.self, 0)
+			}
+			open
+			func tupleType() -> TupleTypeContext? {
+				return getRuleContext(TupleTypeContext.self, 0)
+			}
+			open
+			func mapType() -> MapTypeContext? {
+				return getRuleContext(MapTypeContext.self, 0)
+			}
+			open
+			func primitive() -> PrimitiveContext? {
+				return getRuleContext(PrimitiveContext.self, 0)
+			}
+			open
+			func collectionType() -> CollectionTypeContext? {
+				return getRuleContext(CollectionTypeContext.self, 0)
+			}
+			open
+			func oclType_abstractContents() -> OclType_abstractContentsContext? {
+				return getRuleContext(OclType_abstractContentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclType
 		}
-		open func oclAnyType() -> OclAnyTypeContext? {
-			return getRuleContext(OclAnyTypeContext.self,0)
-		}
-		open func tupleType() -> TupleTypeContext? {
-			return getRuleContext(TupleTypeContext.self,0)
-		}
-		open func mapType() -> MapTypeContext? {
-			return getRuleContext(MapTypeContext.self,0)
-		}
-		open func primitive() -> PrimitiveContext? {
-			return getRuleContext(PrimitiveContext.self,0)
-		}
-		open func collectionType() -> CollectionTypeContext? {
-			return getRuleContext(CollectionTypeContext.self,0)
-		}
-		open func oclType_abstractContents() -> OclType_abstractContentsContext? {
-			return getRuleContext(OclType_abstractContentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclType() throws -> OclTypeContext {
+	 open func oclType() throws -> OclTypeContext {
 		var _localctx: OclTypeContext = OclTypeContext(_ctx, getState())
 		try enterRule(_localctx, 132, ATLParser.RULE_oclType)
 		defer {
@@ -5583,7 +6144,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5594,37 +6155,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclAnyTypeContext:ParserRuleContext {
-		open func oclAnyType_abstractContents() -> OclAnyType_abstractContentsContext? {
-			return getRuleContext(OclAnyType_abstractContentsContext.self,0)
+
+	public class OclAnyTypeContext: ParserRuleContext {
+			open
+			func oclAnyType_abstractContents() -> OclAnyType_abstractContentsContext? {
+				return getRuleContext(OclAnyType_abstractContentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclAnyType
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclAnyType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclAnyType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclAnyType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclAnyType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclAnyType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclAnyType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclAnyType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclAnyType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclAnyType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclAnyType() throws -> OclAnyTypeContext {
+	 open func oclAnyType() throws -> OclAnyTypeContext {
 		var _localctx: OclAnyTypeContext = OclAnyTypeContext(_ctx, getState())
 		try enterRule(_localctx, 134, ATLParser.RULE_oclAnyType)
 		defer {
@@ -5644,40 +6211,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class TupleTypeContext:ParserRuleContext {
-		open func tupleTypeAttribute() -> Array<TupleTypeAttributeContext> {
-			return getRuleContexts(TupleTypeAttributeContext.self)
+
+	public class TupleTypeContext: ParserRuleContext {
+			open
+			func tupleTypeAttribute() -> [TupleTypeAttributeContext] {
+				return getRuleContexts(TupleTypeAttributeContext.self)
+			}
+			open
+			func tupleTypeAttribute(_ i: Int) -> TupleTypeAttributeContext? {
+				return getRuleContext(TupleTypeAttributeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_tupleType
 		}
-		open func tupleTypeAttribute(_ i: Int) -> TupleTypeAttributeContext? {
-			return getRuleContext(TupleTypeAttributeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_tupleType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterTupleType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterTupleType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitTupleType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitTupleType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitTupleType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitTupleType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitTupleType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitTupleType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tupleType() throws -> TupleTypeContext {
+	 open func tupleType() throws -> TupleTypeContext {
 		var _localctx: TupleTypeContext = TupleTypeContext(_ctx, getState())
 		try enterRule(_localctx, 136, ATLParser.RULE_tupleType)
 		var _la: Int = 0
@@ -5733,38 +6307,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class TupleTypeAttributeContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class TupleTypeAttributeContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_tupleTypeAttribute
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_tupleTypeAttribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterTupleTypeAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterTupleTypeAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitTupleTypeAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitTupleTypeAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitTupleTypeAttribute(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitTupleTypeAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitTupleTypeAttribute(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitTupleTypeAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tupleTypeAttribute() throws -> TupleTypeAttributeContext {
+	 open func tupleTypeAttribute() throws -> TupleTypeAttributeContext {
 		var _localctx: TupleTypeAttributeContext = TupleTypeAttributeContext(_ctx, getState())
 		try enterRule(_localctx, 138, ATLParser.RULE_tupleTypeAttribute)
 		defer {
@@ -5788,40 +6371,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class MapTypeContext:ParserRuleContext {
-		open func oclType() -> Array<OclTypeContext> {
-			return getRuleContexts(OclTypeContext.self)
+
+	public class MapTypeContext: ParserRuleContext {
+			open
+			func oclType() -> [OclTypeContext] {
+				return getRuleContexts(OclTypeContext.self)
+			}
+			open
+			func oclType(_ i: Int) -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_mapType
 		}
-		open func oclType(_ i: Int) -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_mapType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterMapType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterMapType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitMapType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitMapType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitMapType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitMapType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitMapType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitMapType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mapType() throws -> MapTypeContext {
+	 open func mapType() throws -> MapTypeContext {
 		var _localctx: MapTypeContext = MapTypeContext(_ctx, getState())
 		try enterRule(_localctx, 140, ATLParser.RULE_mapType)
 		defer {
@@ -5851,43 +6441,51 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class PrimitiveContext:ParserRuleContext {
-		open func numericType() -> NumericTypeContext? {
-			return getRuleContext(NumericTypeContext.self,0)
+
+	public class PrimitiveContext: ParserRuleContext {
+			open
+			func numericType() -> NumericTypeContext? {
+				return getRuleContext(NumericTypeContext.self, 0)
+			}
+			open
+			func booleanType() -> BooleanTypeContext? {
+				return getRuleContext(BooleanTypeContext.self, 0)
+			}
+			open
+			func stringType() -> StringTypeContext? {
+				return getRuleContext(StringTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_primitive
 		}
-		open func booleanType() -> BooleanTypeContext? {
-			return getRuleContext(BooleanTypeContext.self,0)
-		}
-		open func stringType() -> StringTypeContext? {
-			return getRuleContext(StringTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_primitive }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterPrimitive(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterPrimitive(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitPrimitive(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitPrimitive(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitPrimitive(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitPrimitive(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitPrimitive(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitPrimitive(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primitive() throws -> PrimitiveContext {
+	 open func primitive() throws -> PrimitiveContext {
 		var _localctx: PrimitiveContext = PrimitiveContext(_ctx, getState())
 		try enterRule(_localctx, 142, ATLParser.RULE_primitive)
 		defer {
@@ -5919,7 +6517,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5930,40 +6528,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class NumericTypeContext:ParserRuleContext {
-		open func integerType() -> IntegerTypeContext? {
-			return getRuleContext(IntegerTypeContext.self,0)
+
+	public class NumericTypeContext: ParserRuleContext {
+			open
+			func integerType() -> IntegerTypeContext? {
+				return getRuleContext(IntegerTypeContext.self, 0)
+			}
+			open
+			func realType() -> RealTypeContext? {
+				return getRuleContext(RealTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_numericType
 		}
-		open func realType() -> RealTypeContext? {
-			return getRuleContext(RealTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_numericType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterNumericType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterNumericType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitNumericType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitNumericType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitNumericType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitNumericType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitNumericType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitNumericType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numericType() throws -> NumericTypeContext {
+	 open func numericType() throws -> NumericTypeContext {
 		var _localctx: NumericTypeContext = NumericTypeContext(_ctx, getState())
 		try enterRule(_localctx, 144, ATLParser.RULE_numericType)
 		defer {
@@ -5987,7 +6592,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5998,34 +6603,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class IntegerTypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_integerType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterIntegerType(self)
+
+	public class IntegerTypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_integerType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterIntegerType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitIntegerType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitIntegerType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitIntegerType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitIntegerType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitIntegerType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitIntegerType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integerType() throws -> IntegerTypeContext {
+	 open func integerType() throws -> IntegerTypeContext {
 		var _localctx: IntegerTypeContext = IntegerTypeContext(_ctx, getState())
 		try enterRule(_localctx, 146, ATLParser.RULE_integerType)
 		defer {
@@ -6045,34 +6655,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class RealTypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_realType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterRealType(self)
+
+	public class RealTypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_realType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterRealType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitRealType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitRealType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitRealType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitRealType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitRealType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitRealType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func realType() throws -> RealTypeContext {
+	 open func realType() throws -> RealTypeContext {
 		var _localctx: RealTypeContext = RealTypeContext(_ctx, getState())
 		try enterRule(_localctx, 148, ATLParser.RULE_realType)
 		defer {
@@ -6092,34 +6707,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class BooleanTypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_booleanType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterBooleanType(self)
+
+	public class BooleanTypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_booleanType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterBooleanType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitBooleanType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitBooleanType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitBooleanType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitBooleanType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitBooleanType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitBooleanType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func booleanType() throws -> BooleanTypeContext {
+	 open func booleanType() throws -> BooleanTypeContext {
 		var _localctx: BooleanTypeContext = BooleanTypeContext(_ctx, getState())
 		try enterRule(_localctx, 150, ATLParser.RULE_booleanType)
 		defer {
@@ -6139,34 +6759,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class StringTypeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_stringType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterStringType(self)
+
+	public class StringTypeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_stringType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterStringType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitStringType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitStringType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitStringType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitStringType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitStringType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitStringType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stringType() throws -> StringTypeContext {
+	 open func stringType() throws -> StringTypeContext {
 		var _localctx: StringTypeContext = StringTypeContext(_ctx, getState())
 		try enterRule(_localctx, 152, ATLParser.RULE_stringType)
 		defer {
@@ -6186,49 +6811,59 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class CollectionTypeContext:ParserRuleContext {
-		open func bagType() -> BagTypeContext? {
-			return getRuleContext(BagTypeContext.self,0)
+
+	public class CollectionTypeContext: ParserRuleContext {
+			open
+			func bagType() -> BagTypeContext? {
+				return getRuleContext(BagTypeContext.self, 0)
+			}
+			open
+			func setType() -> SetTypeContext? {
+				return getRuleContext(SetTypeContext.self, 0)
+			}
+			open
+			func orderedSetType() -> OrderedSetTypeContext? {
+				return getRuleContext(OrderedSetTypeContext.self, 0)
+			}
+			open
+			func sequenceType() -> SequenceTypeContext? {
+				return getRuleContext(SequenceTypeContext.self, 0)
+			}
+			open
+			func collectionType_abstractContents() -> CollectionType_abstractContentsContext? {
+				return getRuleContext(CollectionType_abstractContentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_collectionType
 		}
-		open func setType() -> SetTypeContext? {
-			return getRuleContext(SetTypeContext.self,0)
-		}
-		open func orderedSetType() -> OrderedSetTypeContext? {
-			return getRuleContext(OrderedSetTypeContext.self,0)
-		}
-		open func sequenceType() -> SequenceTypeContext? {
-			return getRuleContext(SequenceTypeContext.self,0)
-		}
-		open func collectionType_abstractContents() -> CollectionType_abstractContentsContext? {
-			return getRuleContext(CollectionType_abstractContentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_collectionType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterCollectionType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterCollectionType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitCollectionType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitCollectionType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitCollectionType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitCollectionType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitCollectionType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitCollectionType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collectionType() throws -> CollectionTypeContext {
+	 open func collectionType() throws -> CollectionTypeContext {
 		var _localctx: CollectionTypeContext = CollectionTypeContext(_ctx, getState())
 		try enterRule(_localctx, 154, ATLParser.RULE_collectionType)
 		defer {
@@ -6273,7 +6908,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6284,37 +6919,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class BagTypeContext:ParserRuleContext {
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class BagTypeContext: ParserRuleContext {
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_bagType
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_bagType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterBagType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterBagType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitBagType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitBagType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitBagType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitBagType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitBagType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitBagType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bagType() throws -> BagTypeContext {
+	 open func bagType() throws -> BagTypeContext {
 		var _localctx: BagTypeContext = BagTypeContext(_ctx, getState())
 		try enterRule(_localctx, 156, ATLParser.RULE_bagType)
 		defer {
@@ -6340,37 +6981,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class SetTypeContext:ParserRuleContext {
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class SetTypeContext: ParserRuleContext {
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_setType
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_setType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterSetType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterSetType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitSetType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitSetType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitSetType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitSetType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitSetType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitSetType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setType() throws -> SetTypeContext {
+	 open func setType() throws -> SetTypeContext {
 		var _localctx: SetTypeContext = SetTypeContext(_ctx, getState())
 		try enterRule(_localctx, 158, ATLParser.RULE_setType)
 		defer {
@@ -6396,37 +7043,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OrderedSetTypeContext:ParserRuleContext {
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class OrderedSetTypeContext: ParserRuleContext {
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_orderedSetType
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_orderedSetType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOrderedSetType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOrderedSetType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOrderedSetType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOrderedSetType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOrderedSetType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOrderedSetType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOrderedSetType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOrderedSetType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func orderedSetType() throws -> OrderedSetTypeContext {
+	 open func orderedSetType() throws -> OrderedSetTypeContext {
 		var _localctx: OrderedSetTypeContext = OrderedSetTypeContext(_ctx, getState())
 		try enterRule(_localctx, 160, ATLParser.RULE_orderedSetType)
 		defer {
@@ -6452,37 +7105,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class SequenceTypeContext:ParserRuleContext {
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class SequenceTypeContext: ParserRuleContext {
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_sequenceType
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_sequenceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterSequenceType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterSequenceType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitSequenceType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitSequenceType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitSequenceType(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitSequenceType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitSequenceType(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitSequenceType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sequenceType() throws -> SequenceTypeContext {
+	 open func sequenceType() throws -> SequenceTypeContext {
 		var _localctx: SequenceTypeContext = SequenceTypeContext(_ctx, getState())
 		try enterRule(_localctx, 162, ATLParser.RULE_sequenceType)
 		defer {
@@ -6508,67 +7167,83 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class Priority_0Context:ParserRuleContext {
-		open func primary_oclExpression() -> Primary_oclExpressionContext? {
-			return getRuleContext(Primary_oclExpressionContext.self,0)
+
+	public class Priority_0Context: ParserRuleContext {
+			open
+			func primary_oclExpression() -> Primary_oclExpressionContext? {
+				return getRuleContext(Primary_oclExpressionContext.self, 0)
+			}
+			open
+			func operationCallExp() -> [OperationCallExpContext] {
+				return getRuleContexts(OperationCallExpContext.self)
+			}
+			open
+			func operationCallExp(_ i: Int) -> OperationCallExpContext? {
+				return getRuleContext(OperationCallExpContext.self, i)
+			}
+			open
+			func navigationOrAttributeCallExp() -> [NavigationOrAttributeCallExpContext] {
+				return getRuleContexts(NavigationOrAttributeCallExpContext.self)
+			}
+			open
+			func navigationOrAttributeCallExp(_ i: Int) -> NavigationOrAttributeCallExpContext? {
+				return getRuleContext(NavigationOrAttributeCallExpContext.self, i)
+			}
+			open
+			func iteratorExp() -> [IteratorExpContext] {
+				return getRuleContexts(IteratorExpContext.self)
+			}
+			open
+			func iteratorExp(_ i: Int) -> IteratorExpContext? {
+				return getRuleContext(IteratorExpContext.self, i)
+			}
+			open
+			func iterateExp() -> [IterateExpContext] {
+				return getRuleContexts(IterateExpContext.self)
+			}
+			open
+			func iterateExp(_ i: Int) -> IterateExpContext? {
+				return getRuleContext(IterateExpContext.self, i)
+			}
+			open
+			func collectionOperationCallExp() -> [CollectionOperationCallExpContext] {
+				return getRuleContexts(CollectionOperationCallExpContext.self)
+			}
+			open
+			func collectionOperationCallExp(_ i: Int) -> CollectionOperationCallExpContext? {
+				return getRuleContext(CollectionOperationCallExpContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_priority_0
 		}
-		open func operationCallExp() -> Array<OperationCallExpContext> {
-			return getRuleContexts(OperationCallExpContext.self)
-		}
-		open func operationCallExp(_ i: Int) -> OperationCallExpContext? {
-			return getRuleContext(OperationCallExpContext.self,i)
-		}
-		open func navigationOrAttributeCallExp() -> Array<NavigationOrAttributeCallExpContext> {
-			return getRuleContexts(NavigationOrAttributeCallExpContext.self)
-		}
-		open func navigationOrAttributeCallExp(_ i: Int) -> NavigationOrAttributeCallExpContext? {
-			return getRuleContext(NavigationOrAttributeCallExpContext.self,i)
-		}
-		open func iteratorExp() -> Array<IteratorExpContext> {
-			return getRuleContexts(IteratorExpContext.self)
-		}
-		open func iteratorExp(_ i: Int) -> IteratorExpContext? {
-			return getRuleContext(IteratorExpContext.self,i)
-		}
-		open func iterateExp() -> Array<IterateExpContext> {
-			return getRuleContexts(IterateExpContext.self)
-		}
-		open func iterateExp(_ i: Int) -> IterateExpContext? {
-			return getRuleContext(IterateExpContext.self,i)
-		}
-		open func collectionOperationCallExp() -> Array<CollectionOperationCallExpContext> {
-			return getRuleContexts(CollectionOperationCallExpContext.self)
-		}
-		open func collectionOperationCallExp(_ i: Int) -> CollectionOperationCallExpContext? {
-			return getRuleContext(CollectionOperationCallExpContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_priority_0 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterPriority_0(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterPriority_0(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitPriority_0(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitPriority_0(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitPriority_0(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitPriority_0(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitPriority_0(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitPriority_0(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func priority_0() throws -> Priority_0Context {
+	 open func priority_0() throws -> Priority_0Context {
 		var _localctx: Priority_0Context = Priority_0Context(_ctx, getState())
 		try enterRule(_localctx, 164, ATLParser.RULE_priority_0)
 		var _la: Int = 0
@@ -6637,7 +7312,7 @@ open class ATLParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(895)
@@ -6654,37 +7329,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class Priority_1Context:ParserRuleContext {
-		open func priority_0() -> Priority_0Context? {
-			return getRuleContext(Priority_0Context.self,0)
+
+	public class Priority_1Context: ParserRuleContext {
+			open
+			func priority_0() -> Priority_0Context? {
+				return getRuleContext(Priority_0Context.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_priority_1
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_priority_1 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterPriority_1(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterPriority_1(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitPriority_1(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitPriority_1(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitPriority_1(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitPriority_1(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitPriority_1(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitPriority_1(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func priority_1() throws -> Priority_1Context {
+	 open func priority_1() throws -> Priority_1Context {
 		var _localctx: Priority_1Context = Priority_1Context(_ctx, getState())
 		try enterRule(_localctx, 166, ATLParser.RULE_priority_1)
 		defer {
@@ -6742,7 +7423,7 @@ open class ATLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6753,40 +7434,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class Priority_2Context:ParserRuleContext {
-		open func priority_1() -> Array<Priority_1Context> {
-			return getRuleContexts(Priority_1Context.self)
+
+	public class Priority_2Context: ParserRuleContext {
+			open
+			func priority_1() -> [Priority_1Context] {
+				return getRuleContexts(Priority_1Context.self)
+			}
+			open
+			func priority_1(_ i: Int) -> Priority_1Context? {
+				return getRuleContext(Priority_1Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_priority_2
 		}
-		open func priority_1(_ i: Int) -> Priority_1Context? {
-			return getRuleContext(Priority_1Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_priority_2 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterPriority_2(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterPriority_2(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitPriority_2(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitPriority_2(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitPriority_2(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitPriority_2(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitPriority_2(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitPriority_2(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func priority_2() throws -> Priority_2Context {
+	 open func priority_2() throws -> Priority_2Context {
 		var _localctx: Priority_2Context = Priority_2Context(_ctx, getState())
 		try enterRule(_localctx, 168, ATLParser.RULE_priority_2)
 		var _la: Int = 0
@@ -6843,7 +7531,7 @@ open class ATLParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(916)
@@ -6860,40 +7548,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class Priority_3Context:ParserRuleContext {
-		open func priority_2() -> Array<Priority_2Context> {
-			return getRuleContexts(Priority_2Context.self)
+
+	public class Priority_3Context: ParserRuleContext {
+			open
+			func priority_2() -> [Priority_2Context] {
+				return getRuleContexts(Priority_2Context.self)
+			}
+			open
+			func priority_2(_ i: Int) -> Priority_2Context? {
+				return getRuleContext(Priority_2Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_priority_3
 		}
-		open func priority_2(_ i: Int) -> Priority_2Context? {
-			return getRuleContext(Priority_2Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_priority_3 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterPriority_3(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterPriority_3(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitPriority_3(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitPriority_3(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitPriority_3(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitPriority_3(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitPriority_3(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitPriority_3(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func priority_3() throws -> Priority_3Context {
+	 open func priority_3() throws -> Priority_3Context {
 		var _localctx: Priority_3Context = Priority_3Context(_ctx, getState())
 		try enterRule(_localctx, 170, ATLParser.RULE_priority_3)
 		var _la: Int = 0
@@ -6931,7 +7626,7 @@ open class ATLParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(926)
@@ -6948,40 +7643,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class Priority_4Context:ParserRuleContext {
-		open func priority_3() -> Array<Priority_3Context> {
-			return getRuleContexts(Priority_3Context.self)
+
+	public class Priority_4Context: ParserRuleContext {
+			open
+			func priority_3() -> [Priority_3Context] {
+				return getRuleContexts(Priority_3Context.self)
+			}
+			open
+			func priority_3(_ i: Int) -> Priority_3Context? {
+				return getRuleContext(Priority_3Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_priority_4
 		}
-		open func priority_3(_ i: Int) -> Priority_3Context? {
-			return getRuleContext(Priority_3Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_priority_4 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterPriority_4(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterPriority_4(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitPriority_4(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitPriority_4(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitPriority_4(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitPriority_4(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitPriority_4(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitPriority_4(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func priority_4() throws -> Priority_4Context {
+	 open func priority_4() throws -> Priority_4Context {
 		var _localctx: Priority_4Context = Priority_4Context(_ctx, getState())
 		try enterRule(_localctx, 172, ATLParser.RULE_priority_4)
 		var _la: Int = 0
@@ -7054,7 +7756,7 @@ open class ATLParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(944)
@@ -7071,40 +7773,47 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class Priority_5Context:ParserRuleContext {
-		open func priority_4() -> Array<Priority_4Context> {
-			return getRuleContexts(Priority_4Context.self)
+
+	public class Priority_5Context: ParserRuleContext {
+			open
+			func priority_4() -> [Priority_4Context] {
+				return getRuleContexts(Priority_4Context.self)
+			}
+			open
+			func priority_4(_ i: Int) -> Priority_4Context? {
+				return getRuleContext(Priority_4Context.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_priority_5
 		}
-		open func priority_4(_ i: Int) -> Priority_4Context? {
-			return getRuleContext(Priority_4Context.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_priority_5 }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterPriority_5(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterPriority_5(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitPriority_5(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitPriority_5(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitPriority_5(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitPriority_5(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitPriority_5(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitPriority_5(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func priority_5() throws -> Priority_5Context {
+	 open func priority_5() throws -> Priority_5Context {
 		var _localctx: Priority_5Context = Priority_5Context(_ctx, getState())
 		try enterRule(_localctx, 174, ATLParser.RULE_priority_5)
 		var _la: Int = 0
@@ -7161,7 +7870,7 @@ open class ATLParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(958)
@@ -7178,53 +7887,67 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class MatchedRule_abstractContentsContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class MatchedRule_abstractContentsContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(ATLParser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(ATLParser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func inPattern() -> InPatternContext? {
+				return getRuleContext(InPatternContext.self, 0)
+			}
+			open
+			func outPattern() -> OutPatternContext? {
+				return getRuleContext(OutPatternContext.self, 0)
+			}
+			open
+			func actionBlock() -> ActionBlockContext? {
+				return getRuleContext(ActionBlockContext.self, 0)
+			}
+			open
+			func ruleVariableDeclaration() -> [RuleVariableDeclarationContext] {
+				return getRuleContexts(RuleVariableDeclarationContext.self)
+			}
+			open
+			func ruleVariableDeclaration(_ i: Int) -> RuleVariableDeclarationContext? {
+				return getRuleContext(RuleVariableDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_matchedRule_abstractContents
 		}
-		open func inPattern() -> InPatternContext? {
-			return getRuleContext(InPatternContext.self,0)
-		}
-		open func outPattern() -> OutPatternContext? {
-			return getRuleContext(OutPatternContext.self,0)
-		}
-		open func actionBlock() -> ActionBlockContext? {
-			return getRuleContext(ActionBlockContext.self,0)
-		}
-		open func ruleVariableDeclaration() -> Array<RuleVariableDeclarationContext> {
-			return getRuleContexts(RuleVariableDeclarationContext.self)
-		}
-		open func ruleVariableDeclaration(_ i: Int) -> RuleVariableDeclarationContext? {
-			return getRuleContext(RuleVariableDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_matchedRule_abstractContents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterMatchedRule_abstractContents(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterMatchedRule_abstractContents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitMatchedRule_abstractContents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitMatchedRule_abstractContents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitMatchedRule_abstractContents(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitMatchedRule_abstractContents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitMatchedRule_abstractContents(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitMatchedRule_abstractContents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func matchedRule_abstractContents() throws -> MatchedRule_abstractContentsContext {
+	 open func matchedRule_abstractContents() throws -> MatchedRule_abstractContentsContext {
 		var _localctx: MatchedRule_abstractContentsContext = MatchedRule_abstractContentsContext(_ctx, getState())
 		try enterRule(_localctx, 176, ATLParser.RULE_matchedRule_abstractContents)
 		var _la: Int = 0
@@ -7366,34 +8089,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclType_abstractContentsContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclType_abstractContents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclType_abstractContents(self)
+
+	public class OclType_abstractContentsContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclType_abstractContents
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclType_abstractContents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclType_abstractContents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclType_abstractContents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclType_abstractContents(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclType_abstractContents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclType_abstractContents(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclType_abstractContents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclType_abstractContents() throws -> OclType_abstractContentsContext {
+	 open func oclType_abstractContents() throws -> OclType_abstractContentsContext {
 		var _localctx: OclType_abstractContentsContext = OclType_abstractContentsContext(_ctx, getState())
 		try enterRule(_localctx, 178, ATLParser.RULE_oclType_abstractContents)
 		defer {
@@ -7413,34 +8141,39 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class OclAnyType_abstractContentsContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_oclAnyType_abstractContents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterOclAnyType_abstractContents(self)
+
+	public class OclAnyType_abstractContentsContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_oclAnyType_abstractContents
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterOclAnyType_abstractContents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitOclAnyType_abstractContents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitOclAnyType_abstractContents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitOclAnyType_abstractContents(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitOclAnyType_abstractContents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitOclAnyType_abstractContents(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitOclAnyType_abstractContents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oclAnyType_abstractContents() throws -> OclAnyType_abstractContentsContext {
+	 open func oclAnyType_abstractContents() throws -> OclAnyType_abstractContentsContext {
 		var _localctx: OclAnyType_abstractContentsContext = OclAnyType_abstractContentsContext(_ctx, getState())
 		try enterRule(_localctx, 180, ATLParser.RULE_oclAnyType_abstractContents)
 		defer {
@@ -7460,37 +8193,43 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class CollectionType_abstractContentsContext:ParserRuleContext {
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
+
+	public class CollectionType_abstractContentsContext: ParserRuleContext {
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_collectionType_abstractContents
 		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_collectionType_abstractContents }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterCollectionType_abstractContents(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterCollectionType_abstractContents(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitCollectionType_abstractContents(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitCollectionType_abstractContents(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitCollectionType_abstractContents(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitCollectionType_abstractContents(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitCollectionType_abstractContents(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitCollectionType_abstractContents(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func collectionType_abstractContents() throws -> CollectionType_abstractContentsContext {
+	 open func collectionType_abstractContents() throws -> CollectionType_abstractContentsContext {
 		var _localctx: CollectionType_abstractContentsContext = CollectionType_abstractContentsContext(_ctx, getState())
 		try enterRule(_localctx, 182, ATLParser.RULE_collectionType_abstractContents)
 		defer {
@@ -7516,67 +8255,83 @@ open class ATLParser: Parser {
 
 		return _localctx
 	}
-	open class Primary_oclExpressionContext:ParserRuleContext {
-		open func variableExp() -> VariableExpContext? {
-			return getRuleContext(VariableExpContext.self,0)
+
+	public class Primary_oclExpressionContext: ParserRuleContext {
+			open
+			func variableExp() -> VariableExpContext? {
+				return getRuleContext(VariableExpContext.self, 0)
+			}
+			open
+			func oclUndefinedExp() -> OclUndefinedExpContext? {
+				return getRuleContext(OclUndefinedExpContext.self, 0)
+			}
+			open
+			func primitiveExp() -> PrimitiveExpContext? {
+				return getRuleContext(PrimitiveExpContext.self, 0)
+			}
+			open
+			func ifExp() -> IfExpContext? {
+				return getRuleContext(IfExpContext.self, 0)
+			}
+			open
+			func superExp() -> SuperExpContext? {
+				return getRuleContext(SuperExpContext.self, 0)
+			}
+			open
+			func enumLiteralExp() -> EnumLiteralExpContext? {
+				return getRuleContext(EnumLiteralExpContext.self, 0)
+			}
+			open
+			func collectionExp() -> CollectionExpContext? {
+				return getRuleContext(CollectionExpContext.self, 0)
+			}
+			open
+			func mapExp() -> MapExpContext? {
+				return getRuleContext(MapExpContext.self, 0)
+			}
+			open
+			func tupleExp() -> TupleExpContext? {
+				return getRuleContext(TupleExpContext.self, 0)
+			}
+			open
+			func oclType() -> OclTypeContext? {
+				return getRuleContext(OclTypeContext.self, 0)
+			}
+			open
+			func oclExpression() -> OclExpressionContext? {
+				return getRuleContext(OclExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return ATLParser.RULE_primary_oclExpression
 		}
-		open func oclUndefinedExp() -> OclUndefinedExpContext? {
-			return getRuleContext(OclUndefinedExpContext.self,0)
-		}
-		open func primitiveExp() -> PrimitiveExpContext? {
-			return getRuleContext(PrimitiveExpContext.self,0)
-		}
-		open func ifExp() -> IfExpContext? {
-			return getRuleContext(IfExpContext.self,0)
-		}
-		open func superExp() -> SuperExpContext? {
-			return getRuleContext(SuperExpContext.self,0)
-		}
-		open func enumLiteralExp() -> EnumLiteralExpContext? {
-			return getRuleContext(EnumLiteralExpContext.self,0)
-		}
-		open func collectionExp() -> CollectionExpContext? {
-			return getRuleContext(CollectionExpContext.self,0)
-		}
-		open func mapExp() -> MapExpContext? {
-			return getRuleContext(MapExpContext.self,0)
-		}
-		open func tupleExp() -> TupleExpContext? {
-			return getRuleContext(TupleExpContext.self,0)
-		}
-		open func oclType() -> OclTypeContext? {
-			return getRuleContext(OclTypeContext.self,0)
-		}
-		open func oclExpression() -> OclExpressionContext? {
-			return getRuleContext(OclExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return ATLParser.RULE_primary_oclExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).enterPrimary_oclExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.enterPrimary_oclExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is ATLListener {
-			 	(listener as! ATLListener).exitPrimary_oclExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? ATLListener {
+				listener.exitPrimary_oclExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is ATLVisitor {
-			     return (visitor as! ATLVisitor<T>).visitPrimary_oclExpression(self)
-			}else if visitor is ATLBaseVisitor {
-		    	 return (visitor as! ATLBaseVisitor<T>).visitPrimary_oclExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? ATLVisitor {
+			    return visitor.visitPrimary_oclExpression(self)
+			}
+			else if let visitor = visitor as? ATLBaseVisitor {
+			    return visitor.visitPrimary_oclExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primary_oclExpression() throws -> Primary_oclExpressionContext {
+	 open func primary_oclExpression() throws -> Primary_oclExpressionContext {
 		var _localctx: Primary_oclExpressionContext = Primary_oclExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 184, ATLParser.RULE_primary_oclExpression)
 		defer {
@@ -7668,6 +8423,10 @@ open class ATLParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = ATLParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = ATLParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

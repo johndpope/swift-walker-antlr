@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/lolcode/lolcode.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/lolcode/lolcode.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: lolcodeParser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: lolcodeParser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCode_block(_ ctx: lolcodeParser.Code_blockContext) -> T{
+	open func visitCode_block(_ ctx: lolcodeParser.Code_blockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: lolcodeParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: lolcodeParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLoop(_ ctx: lolcodeParser.LoopContext) -> T{
+	open func visitLoop(_ ctx: lolcodeParser.LoopContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclaration(_ ctx: lolcodeParser.DeclarationContext) -> T{
+	open func visitDeclaration(_ ctx: lolcodeParser.DeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: lolcodeParser.CommentContext) -> T{
+	open func visitComment(_ ctx: lolcodeParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrint_block(_ ctx: lolcodeParser.Print_blockContext) -> T{
+	open func visitPrint_block(_ ctx: lolcodeParser.Print_blockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIf_block(_ ctx: lolcodeParser.If_blockContext) -> T{
+	open func visitIf_block(_ ctx: lolcodeParser.If_blockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElse_if_block(_ ctx: lolcodeParser.Else_if_blockContext) -> T{
+	open func visitElse_if_block(_ ctx: lolcodeParser.Else_if_blockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInput_block(_ ctx: lolcodeParser.Input_blockContext) -> T{
+	open func visitInput_block(_ ctx: lolcodeParser.Input_blockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunc_decl(_ ctx: lolcodeParser.Func_declContext) -> T{
+	open func visitFunc_decl(_ ctx: lolcodeParser.Func_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignment(_ ctx: lolcodeParser.AssignmentContext) -> T{
+	open func visitAssignment(_ ctx: lolcodeParser.AssignmentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: lolcodeParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: lolcodeParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEquals(_ ctx: lolcodeParser.EqualsContext) -> T{
+	open func visitEquals(_ ctx: lolcodeParser.EqualsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNot_equals(_ ctx: lolcodeParser.Not_equalsContext) -> T{
+	open func visitNot_equals(_ ctx: lolcodeParser.Not_equalsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoth(_ ctx: lolcodeParser.BothContext) -> T{
+	open func visitBoth(_ ctx: lolcodeParser.BothContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEither(_ ctx: lolcodeParser.EitherContext) -> T{
+	open func visitEither(_ ctx: lolcodeParser.EitherContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGreater(_ ctx: lolcodeParser.GreaterContext) -> T{
+	open func visitGreater(_ ctx: lolcodeParser.GreaterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLess(_ ctx: lolcodeParser.LessContext) -> T{
+	open func visitLess(_ ctx: lolcodeParser.LessContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdd(_ ctx: lolcodeParser.AddContext) -> T{
+	open func visitAdd(_ ctx: lolcodeParser.AddContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSub(_ ctx: lolcodeParser.SubContext) -> T{
+	open func visitSub(_ ctx: lolcodeParser.SubContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMul(_ ctx: lolcodeParser.MulContext) -> T{
+	open func visitMul(_ ctx: lolcodeParser.MulContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDiv(_ ctx: lolcodeParser.DivContext) -> T{
+	open func visitDiv(_ ctx: lolcodeParser.DivContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMod(_ ctx: lolcodeParser.ModContext) -> T{
+	open func visitMod(_ ctx: lolcodeParser.ModContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCast(_ ctx: lolcodeParser.CastContext) -> T{
+	open func visitCast(_ ctx: lolcodeParser.CastContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAll(_ ctx: lolcodeParser.AllContext) -> T{
+	open func visitAll(_ ctx: lolcodeParser.AllContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAny(_ ctx: lolcodeParser.AnyContext) -> T{
+	open func visitAny(_ ctx: lolcodeParser.AnyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNot(_ ctx: lolcodeParser.NotContext) -> T{
+	open func visitNot(_ ctx: lolcodeParser.NotContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class lolcodeVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunc(_ ctx: lolcodeParser.FuncContext) -> T{
+	open func visitFunc(_ ctx: lolcodeParser.FuncContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

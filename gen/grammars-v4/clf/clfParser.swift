@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/clf/clf.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/clf/clf.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class clfParser: Parser {
@@ -11,16 +11,22 @@ open class clfParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, DATE = 4, TIME = 5, TZ = 6, 
                  LITERAL = 7, IP = 8, STRING = 9, EOL = 10, WS = 11
 	}
-	public static let RULE_log = 0, RULE_line = 1, RULE_host = 2, RULE_logname = 3, 
-                   RULE_username = 4, RULE_datetimetz = 5, RULE_referer = 6, 
-                   RULE_request = 7, RULE_useragent = 8, RULE_statuscode = 9, 
-                   RULE_bytes = 10
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_log = 0, RULE_line = 1, RULE_host = 2, RULE_logname = 3, 
+            RULE_username = 4, RULE_datetimetz = 5, RULE_referer = 6, RULE_request = 7, 
+            RULE_useragent = 8, RULE_statuscode = 9, RULE_bytes = 10
+
+	public
+	static let ruleNames: [String] = [
 		"log", "line", "host", "logname", "username", "datetimetz", "referer", 
 		"request", "useragent", "statuscode", "bytes"
 	]
@@ -32,92 +38,81 @@ open class clfParser: Parser {
 		nil, nil, nil, nil, "DATE", "TIME", "TZ", "LITERAL", "IP", "STRING", "EOL", 
 		"WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "clf.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return clfParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "clf.g4" }
+	override open
+	func getSerializedATN() -> String { return clfParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return clfParser.ruleNames }
+	override open
+	func getATN() -> ATN { return clfParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return clfParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return clfParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return clfParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,clfParser._ATN,clfParser._decisionToDFA, clfParser._sharedContextCache)
 	}
-	open class LogContext:ParserRuleContext {
-		open func EOL() -> Array<TerminalNode> { return getTokens(clfParser.Tokens.EOL.rawValue) }
-		open func EOL(_ i:Int) -> TerminalNode?{
-			return getToken(clfParser.Tokens.EOL.rawValue, i)
+
+	public class LogContext: ParserRuleContext {
+			open
+			func EOL() -> [TerminalNode] {
+				return getTokens(clfParser.Tokens.EOL.rawValue)
+			}
+			open
+			func EOL(_ i:Int) -> TerminalNode? {
+				return getToken(clfParser.Tokens.EOL.rawValue, i)
+			}
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_log
 		}
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
-		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return clfParser.RULE_log }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterLog(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterLog(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitLog(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitLog(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitLog(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitLog(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitLog(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitLog(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func log() throws -> LogContext {
+	 open func log() throws -> LogContext {
 		var _localctx: LogContext = LogContext(_ctx, getState())
 		try enterRule(_localctx, 0, clfParser.RULE_log)
 		var _la: Int = 0
@@ -152,7 +147,7 @@ open class clfParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(28); 
 		 		try _errHandler.sync(self)
@@ -181,61 +176,75 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func host() -> HostContext? {
-			return getRuleContext(HostContext.self,0)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func host() -> HostContext? {
+				return getRuleContext(HostContext.self, 0)
+			}
+			open
+			func logname() -> LognameContext? {
+				return getRuleContext(LognameContext.self, 0)
+			}
+			open
+			func username() -> UsernameContext? {
+				return getRuleContext(UsernameContext.self, 0)
+			}
+			open
+			func datetimetz() -> DatetimetzContext? {
+				return getRuleContext(DatetimetzContext.self, 0)
+			}
+			open
+			func request() -> RequestContext? {
+				return getRuleContext(RequestContext.self, 0)
+			}
+			open
+			func statuscode() -> StatuscodeContext? {
+				return getRuleContext(StatuscodeContext.self, 0)
+			}
+			open
+			func bytes() -> BytesContext? {
+				return getRuleContext(BytesContext.self, 0)
+			}
+			open
+			func referer() -> RefererContext? {
+				return getRuleContext(RefererContext.self, 0)
+			}
+			open
+			func useragent() -> UseragentContext? {
+				return getRuleContext(UseragentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_line
 		}
-		open func logname() -> LognameContext? {
-			return getRuleContext(LognameContext.self,0)
-		}
-		open func username() -> UsernameContext? {
-			return getRuleContext(UsernameContext.self,0)
-		}
-		open func datetimetz() -> DatetimetzContext? {
-			return getRuleContext(DatetimetzContext.self,0)
-		}
-		open func request() -> RequestContext? {
-			return getRuleContext(RequestContext.self,0)
-		}
-		open func statuscode() -> StatuscodeContext? {
-			return getRuleContext(StatuscodeContext.self,0)
-		}
-		open func bytes() -> BytesContext? {
-			return getRuleContext(BytesContext.self,0)
-		}
-		open func referer() -> RefererContext? {
-			return getRuleContext(RefererContext.self,0)
-		}
-		open func useragent() -> UseragentContext? {
-			return getRuleContext(UseragentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return clfParser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitLine(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 2, clfParser.RULE_line)
 		var _la: Int = 0
@@ -283,36 +292,47 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class HostContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(clfParser.Tokens.STRING.rawValue, 0) }
-		open func IP() -> TerminalNode? { return getToken(clfParser.Tokens.IP.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return clfParser.RULE_host }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterHost(self)
+
+	public class HostContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(clfParser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func IP() -> TerminalNode? {
+				return getToken(clfParser.Tokens.IP.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_host
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterHost(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitHost(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitHost(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitHost(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitHost(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitHost(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitHost(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func host() throws -> HostContext {
+	 open func host() throws -> HostContext {
 		var _localctx: HostContext = HostContext(_ctx, getState())
 		try enterRule(_localctx, 4, clfParser.RULE_host)
 		var _la: Int = 0
@@ -344,35 +364,43 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class LognameContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(clfParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return clfParser.RULE_logname }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterLogname(self)
+
+	public class LognameContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(clfParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_logname
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterLogname(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitLogname(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitLogname(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitLogname(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitLogname(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitLogname(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitLogname(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func logname() throws -> LognameContext {
+	 open func logname() throws -> LognameContext {
 		var _localctx: LognameContext = LognameContext(_ctx, getState())
 		try enterRule(_localctx, 6, clfParser.RULE_logname)
 		defer {
@@ -392,35 +420,43 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class UsernameContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(clfParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return clfParser.RULE_username }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterUsername(self)
+
+	public class UsernameContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(clfParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_username
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterUsername(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitUsername(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitUsername(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitUsername(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitUsername(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitUsername(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitUsername(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func username() throws -> UsernameContext {
+	 open func username() throws -> UsernameContext {
 		var _localctx: UsernameContext = UsernameContext(_ctx, getState())
 		try enterRule(_localctx, 8, clfParser.RULE_username)
 		defer {
@@ -440,37 +476,51 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class DatetimetzContext:ParserRuleContext {
-		open func DATE() -> TerminalNode? { return getToken(clfParser.Tokens.DATE.rawValue, 0) }
-		open func TIME() -> TerminalNode? { return getToken(clfParser.Tokens.TIME.rawValue, 0) }
-		open func TZ() -> TerminalNode? { return getToken(clfParser.Tokens.TZ.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return clfParser.RULE_datetimetz }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterDatetimetz(self)
+
+	public class DatetimetzContext: ParserRuleContext {
+			open
+			func DATE() -> TerminalNode? {
+				return getToken(clfParser.Tokens.DATE.rawValue, 0)
+			}
+			open
+			func TIME() -> TerminalNode? {
+				return getToken(clfParser.Tokens.TIME.rawValue, 0)
+			}
+			open
+			func TZ() -> TerminalNode? {
+				return getToken(clfParser.Tokens.TZ.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_datetimetz
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterDatetimetz(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitDatetimetz(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitDatetimetz(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitDatetimetz(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitDatetimetz(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitDatetimetz(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitDatetimetz(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func datetimetz() throws -> DatetimetzContext {
+	 open func datetimetz() throws -> DatetimetzContext {
 		var _localctx: DatetimetzContext = DatetimetzContext(_ctx, getState())
 		try enterRule(_localctx, 10, clfParser.RULE_datetimetz)
 		defer {
@@ -500,35 +550,43 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class RefererContext:ParserRuleContext {
-		open func LITERAL() -> TerminalNode? { return getToken(clfParser.Tokens.LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return clfParser.RULE_referer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterReferer(self)
+
+	public class RefererContext: ParserRuleContext {
+			open
+			func LITERAL() -> TerminalNode? {
+				return getToken(clfParser.Tokens.LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_referer
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterReferer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitReferer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitReferer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitReferer(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitReferer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitReferer(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitReferer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func referer() throws -> RefererContext {
+	 open func referer() throws -> RefererContext {
 		var _localctx: RefererContext = RefererContext(_ctx, getState())
 		try enterRule(_localctx, 12, clfParser.RULE_referer)
 		defer {
@@ -548,35 +606,43 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class RequestContext:ParserRuleContext {
-		open func LITERAL() -> TerminalNode? { return getToken(clfParser.Tokens.LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return clfParser.RULE_request }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterRequest(self)
+
+	public class RequestContext: ParserRuleContext {
+			open
+			func LITERAL() -> TerminalNode? {
+				return getToken(clfParser.Tokens.LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_request
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterRequest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitRequest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitRequest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitRequest(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitRequest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitRequest(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitRequest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func request() throws -> RequestContext {
+	 open func request() throws -> RequestContext {
 		var _localctx: RequestContext = RequestContext(_ctx, getState())
 		try enterRule(_localctx, 14, clfParser.RULE_request)
 		defer {
@@ -596,35 +662,43 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class UseragentContext:ParserRuleContext {
-		open func LITERAL() -> TerminalNode? { return getToken(clfParser.Tokens.LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return clfParser.RULE_useragent }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterUseragent(self)
+
+	public class UseragentContext: ParserRuleContext {
+			open
+			func LITERAL() -> TerminalNode? {
+				return getToken(clfParser.Tokens.LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_useragent
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterUseragent(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitUseragent(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitUseragent(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitUseragent(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitUseragent(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitUseragent(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitUseragent(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func useragent() throws -> UseragentContext {
+	 open func useragent() throws -> UseragentContext {
 		var _localctx: UseragentContext = UseragentContext(_ctx, getState())
 		try enterRule(_localctx, 16, clfParser.RULE_useragent)
 		defer {
@@ -644,35 +718,43 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class StatuscodeContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(clfParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return clfParser.RULE_statuscode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterStatuscode(self)
+
+	public class StatuscodeContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(clfParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_statuscode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterStatuscode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitStatuscode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitStatuscode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitStatuscode(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitStatuscode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitStatuscode(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitStatuscode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statuscode() throws -> StatuscodeContext {
+	 open func statuscode() throws -> StatuscodeContext {
 		var _localctx: StatuscodeContext = StatuscodeContext(_ctx, getState())
 		try enterRule(_localctx, 18, clfParser.RULE_statuscode)
 		defer {
@@ -692,35 +774,43 @@ open class clfParser: Parser {
 
 		return _localctx
 	}
-	open class BytesContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(clfParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return clfParser.RULE_bytes }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).enterBytes(self)
+
+	public class BytesContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(clfParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return clfParser.RULE_bytes
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.enterBytes(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is clfListener {
-			 	(listener as! clfListener).exitBytes(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? clfListener {
+				listener.exitBytes(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is clfVisitor {
-			     return (visitor as! clfVisitor<T>).visitBytes(self)
-			}else if visitor is clfBaseVisitor {
-		    	 return (visitor as! clfBaseVisitor<T>).visitBytes(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? clfVisitor {
+			    return visitor.visitBytes(self)
+			}
+			else if let visitor = visitor as? clfBaseVisitor {
+			    return visitor.visitBytes(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bytes() throws -> BytesContext {
+	 open func bytes() throws -> BytesContext {
 		var _localctx: BytesContext = BytesContext(_ctx, getState())
 		try enterRule(_localctx, 20, clfParser.RULE_bytes)
 		defer {
@@ -741,6 +831,10 @@ open class clfParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = clfParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = clfParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

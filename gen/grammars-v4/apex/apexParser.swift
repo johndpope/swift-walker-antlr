@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/apex/apex.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/apex/apex.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class apexParser: Parser {
@@ -11,8 +11,11 @@ open class apexParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, SoqlLiteral = 1, OVERRIDE = 2, VIRTUAL = 3, SET = 4, GET = 5, 
                  DATABASE = 6, ABSTRACT = 7, BOOLEAN = 8, BREAK = 9, BYTE = 10, 
                  CATCH = 11, CHAR = 12, CLASS = 13, CONST = 14, CONTINUE = 15, 
@@ -42,54 +45,52 @@ open class apexParser: Parser {
                  APEXDOC_COMMENT_START = 119, COMMENT = 120, COMMENT_START = 121, 
                  LINE_COMMENT = 122, QUOTE = 123
 	}
-	public static let RULE_compilationUnit = 0, RULE_packageDeclaration = 1, 
-                   RULE_importDeclaration = 2, RULE_typeDeclaration = 3, 
-                   RULE_modifier = 4, RULE_classOrInterfaceModifier = 5, 
-                   RULE_variableModifier = 6, RULE_classDeclaration = 7, 
-                   RULE_typeParameters = 8, RULE_typeParameter = 9, RULE_typeBound = 10, 
-                   RULE_enumDeclaration = 11, RULE_enumConstants = 12, RULE_enumConstant = 13, 
-                   RULE_enumBodyDeclarations = 14, RULE_interfaceDeclaration = 15, 
-                   RULE_typeList = 16, RULE_classBody = 17, RULE_interfaceBody = 18, 
-                   RULE_classBodyDeclaration = 19, RULE_memberDeclaration = 20, 
-                   RULE_methodDeclaration = 21, RULE_genericMethodDeclaration = 22, 
-                   RULE_constructorDeclaration = 23, RULE_genericConstructorDeclaration = 24, 
-                   RULE_fieldDeclaration = 25, RULE_propertyDeclaration = 26, 
-                   RULE_propertyBodyDeclaration = 27, RULE_interfaceBodyDeclaration = 28, 
-                   RULE_interfaceMemberDeclaration = 29, RULE_constDeclaration = 30, 
-                   RULE_constantDeclarator = 31, RULE_interfaceMethodDeclaration = 32, 
-                   RULE_genericInterfaceMethodDeclaration = 33, RULE_variableDeclarators = 34, 
-                   RULE_variableDeclarator = 35, RULE_variableDeclaratorId = 36, 
-                   RULE_variableInitializer = 37, RULE_arrayInitializer = 38, 
-                   RULE_enumConstantName = 39, RULE_type = 40, RULE_classOrInterfaceType = 41, 
-                   RULE_primitiveType = 42, RULE_typeArguments = 43, RULE_typeArgument = 44, 
-                   RULE_qualifiedNameList = 45, RULE_formalParameters = 46, 
-                   RULE_formalParameterList = 47, RULE_formalParameter = 48, 
-                   RULE_lastFormalParameter = 49, RULE_methodBody = 50, 
-                   RULE_constructorBody = 51, RULE_qualifiedName = 52, RULE_literal = 53, 
-                   RULE_annotation = 54, RULE_annotationName = 55, RULE_elementValuePairs = 56, 
-                   RULE_elementValuePair = 57, RULE_elementValue = 58, RULE_elementValueArrayInitializer = 59, 
-                   RULE_annotationTypeDeclaration = 60, RULE_annotationTypeBody = 61, 
-                   RULE_annotationTypeElementDeclaration = 62, RULE_annotationTypeElementRest = 63, 
-                   RULE_annotationMethodOrConstantRest = 64, RULE_annotationMethodRest = 65, 
-                   RULE_annotationConstantRest = 66, RULE_defaultValue = 67, 
-                   RULE_block = 68, RULE_blockStatement = 69, RULE_localVariableDeclarationStatement = 70, 
-                   RULE_localVariableDeclaration = 71, RULE_statement = 72, 
-                   RULE_propertyBlock = 73, RULE_getter = 74, RULE_setter = 75, 
-                   RULE_catchClause = 76, RULE_catchType = 77, RULE_finallyBlock = 78, 
-                   RULE_resourceSpecification = 79, RULE_resources = 80, 
-                   RULE_resource = 81, RULE_forControl = 82, RULE_forInit = 83, 
-                   RULE_enhancedForControl = 84, RULE_forUpdate = 85, RULE_parExpression = 86, 
-                   RULE_expressionList = 87, RULE_statementExpression = 88, 
-                   RULE_constantExpression = 89, RULE_apexDbExpressionLong = 90, 
-                   RULE_apexDbExpressionShort = 91, RULE_apexDbExpression = 92, 
-                   RULE_expression = 93, RULE_primary = 94, RULE_creator = 95, 
-                   RULE_createdName = 96, RULE_innerCreator = 97, RULE_arrayCreatorRest = 98, 
-                   RULE_mapCreatorRest = 99, RULE_setCreatorRest = 100, 
-                   RULE_classCreatorRest = 101, RULE_explicitGenericInvocation = 102, 
-                   RULE_nonWildcardTypeArguments = 103, RULE_typeArgumentsOrDiamond = 104, 
-                   RULE_nonWildcardTypeArgumentsOrDiamond = 105, RULE_superSuffix = 106, 
-                   RULE_explicitGenericInvocationSuffix = 107, RULE_arguments = 108
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_compilationUnit = 0, RULE_packageDeclaration = 1, RULE_importDeclaration = 2, 
+            RULE_typeDeclaration = 3, RULE_modifier = 4, RULE_classOrInterfaceModifier = 5, 
+            RULE_variableModifier = 6, RULE_classDeclaration = 7, RULE_typeParameters = 8, 
+            RULE_typeParameter = 9, RULE_typeBound = 10, RULE_enumDeclaration = 11, 
+            RULE_enumConstants = 12, RULE_enumConstant = 13, RULE_enumBodyDeclarations = 14, 
+            RULE_interfaceDeclaration = 15, RULE_typeList = 16, RULE_classBody = 17, 
+            RULE_interfaceBody = 18, RULE_classBodyDeclaration = 19, RULE_memberDeclaration = 20, 
+            RULE_methodDeclaration = 21, RULE_genericMethodDeclaration = 22, 
+            RULE_constructorDeclaration = 23, RULE_genericConstructorDeclaration = 24, 
+            RULE_fieldDeclaration = 25, RULE_propertyDeclaration = 26, RULE_propertyBodyDeclaration = 27, 
+            RULE_interfaceBodyDeclaration = 28, RULE_interfaceMemberDeclaration = 29, 
+            RULE_constDeclaration = 30, RULE_constantDeclarator = 31, RULE_interfaceMethodDeclaration = 32, 
+            RULE_genericInterfaceMethodDeclaration = 33, RULE_variableDeclarators = 34, 
+            RULE_variableDeclarator = 35, RULE_variableDeclaratorId = 36, 
+            RULE_variableInitializer = 37, RULE_arrayInitializer = 38, RULE_enumConstantName = 39, 
+            RULE_type = 40, RULE_classOrInterfaceType = 41, RULE_primitiveType = 42, 
+            RULE_typeArguments = 43, RULE_typeArgument = 44, RULE_qualifiedNameList = 45, 
+            RULE_formalParameters = 46, RULE_formalParameterList = 47, RULE_formalParameter = 48, 
+            RULE_lastFormalParameter = 49, RULE_methodBody = 50, RULE_constructorBody = 51, 
+            RULE_qualifiedName = 52, RULE_literal = 53, RULE_annotation = 54, 
+            RULE_annotationName = 55, RULE_elementValuePairs = 56, RULE_elementValuePair = 57, 
+            RULE_elementValue = 58, RULE_elementValueArrayInitializer = 59, 
+            RULE_annotationTypeDeclaration = 60, RULE_annotationTypeBody = 61, 
+            RULE_annotationTypeElementDeclaration = 62, RULE_annotationTypeElementRest = 63, 
+            RULE_annotationMethodOrConstantRest = 64, RULE_annotationMethodRest = 65, 
+            RULE_annotationConstantRest = 66, RULE_defaultValue = 67, RULE_block = 68, 
+            RULE_blockStatement = 69, RULE_localVariableDeclarationStatement = 70, 
+            RULE_localVariableDeclaration = 71, RULE_statement = 72, RULE_propertyBlock = 73, 
+            RULE_getter = 74, RULE_setter = 75, RULE_catchClause = 76, RULE_catchType = 77, 
+            RULE_finallyBlock = 78, RULE_resourceSpecification = 79, RULE_resources = 80, 
+            RULE_resource = 81, RULE_forControl = 82, RULE_forInit = 83, 
+            RULE_enhancedForControl = 84, RULE_forUpdate = 85, RULE_parExpression = 86, 
+            RULE_expressionList = 87, RULE_statementExpression = 88, RULE_constantExpression = 89, 
+            RULE_apexDbExpressionLong = 90, RULE_apexDbExpressionShort = 91, 
+            RULE_apexDbExpression = 92, RULE_expression = 93, RULE_primary = 94, 
+            RULE_creator = 95, RULE_createdName = 96, RULE_innerCreator = 97, 
+            RULE_arrayCreatorRest = 98, RULE_mapCreatorRest = 99, RULE_setCreatorRest = 100, 
+            RULE_classCreatorRest = 101, RULE_explicitGenericInvocation = 102, 
+            RULE_nonWildcardTypeArguments = 103, RULE_typeArgumentsOrDiamond = 104, 
+            RULE_nonWildcardTypeArgumentsOrDiamond = 105, RULE_superSuffix = 106, 
+            RULE_explicitGenericInvocationSuffix = 107, RULE_arguments = 108
+
+	public
+	static let ruleNames: [String] = [
 		"compilationUnit", "packageDeclaration", "importDeclaration", "typeDeclaration", 
 		"modifier", "classOrInterfaceModifier", "variableModifier", "classDeclaration", 
 		"typeParameters", "typeParameter", "typeBound", "enumDeclaration", "enumConstants", 
@@ -153,98 +154,89 @@ open class apexParser: Parser {
 		"Identifier", "AT", "ELLIPSIS", "WS", "APEXDOC_COMMENT", "APEXDOC_COMMENT_START", 
 		"COMMENT", "COMMENT_START", "LINE_COMMENT", "QUOTE"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "apex.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return apexParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "apex.g4" }
+	override open
+	func getSerializedATN() -> String { return apexParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return apexParser.ruleNames }
+	override open
+	func getATN() -> ATN { return apexParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return apexParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return apexParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return apexParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,apexParser._ATN,apexParser._decisionToDFA, apexParser._sharedContextCache)
 	}
-	open class CompilationUnitContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(apexParser.Tokens.EOF.rawValue, 0) }
-		open func packageDeclaration() -> PackageDeclarationContext? {
-			return getRuleContext(PackageDeclarationContext.self,0)
+
+	public class CompilationUnitContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(apexParser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func packageDeclaration() -> PackageDeclarationContext? {
+				return getRuleContext(PackageDeclarationContext.self, 0)
+			}
+			open
+			func importDeclaration() -> [ImportDeclarationContext] {
+				return getRuleContexts(ImportDeclarationContext.self)
+			}
+			open
+			func importDeclaration(_ i: Int) -> ImportDeclarationContext? {
+				return getRuleContext(ImportDeclarationContext.self, i)
+			}
+			open
+			func typeDeclaration() -> [TypeDeclarationContext] {
+				return getRuleContexts(TypeDeclarationContext.self)
+			}
+			open
+			func typeDeclaration(_ i: Int) -> TypeDeclarationContext? {
+				return getRuleContext(TypeDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_compilationUnit
 		}
-		open func importDeclaration() -> Array<ImportDeclarationContext> {
-			return getRuleContexts(ImportDeclarationContext.self)
-		}
-		open func importDeclaration(_ i: Int) -> ImportDeclarationContext? {
-			return getRuleContext(ImportDeclarationContext.self,i)
-		}
-		open func typeDeclaration() -> Array<TypeDeclarationContext> {
-			return getRuleContexts(TypeDeclarationContext.self)
-		}
-		open func typeDeclaration(_ i: Int) -> TypeDeclarationContext? {
-			return getRuleContext(TypeDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_compilationUnit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterCompilationUnit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterCompilationUnit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitCompilationUnit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitCompilationUnit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitCompilationUnit(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitCompilationUnit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitCompilationUnit(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitCompilationUnit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compilationUnit() throws -> CompilationUnitContext {
+	 open func compilationUnit() throws -> CompilationUnitContext {
 		var _localctx: CompilationUnitContext = CompilationUnitContext(_ctx, getState())
 		try enterRule(_localctx, 0, apexParser.RULE_compilationUnit)
 		var _la: Int = 0
@@ -311,44 +303,55 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class PackageDeclarationContext:ParserRuleContext {
-		open func PACKAGE() -> TerminalNode? { return getToken(apexParser.Tokens.PACKAGE.rawValue, 0) }
-		open func qualifiedName() -> QualifiedNameContext? {
-			return getRuleContext(QualifiedNameContext.self,0)
+
+	public class PackageDeclarationContext: ParserRuleContext {
+			open
+			func PACKAGE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.PACKAGE.rawValue, 0)
+			}
+			open
+			func qualifiedName() -> QualifiedNameContext? {
+				return getRuleContext(QualifiedNameContext.self, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_packageDeclaration
 		}
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
-		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_packageDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterPackageDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterPackageDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitPackageDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitPackageDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitPackageDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitPackageDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitPackageDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitPackageDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func packageDeclaration() throws -> PackageDeclarationContext {
+	 open func packageDeclaration() throws -> PackageDeclarationContext {
 		var _localctx: PackageDeclarationContext = PackageDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 2, apexParser.RULE_packageDeclaration)
 		var _la: Int = 0
@@ -389,39 +392,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ImportDeclarationContext:ParserRuleContext {
-		open func IMPORT() -> TerminalNode? { return getToken(apexParser.Tokens.IMPORT.rawValue, 0) }
-		open func qualifiedName() -> QualifiedNameContext? {
-			return getRuleContext(QualifiedNameContext.self,0)
+
+	public class ImportDeclarationContext: ParserRuleContext {
+			open
+			func IMPORT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.IMPORT.rawValue, 0)
+			}
+			open
+			func qualifiedName() -> QualifiedNameContext? {
+				return getRuleContext(QualifiedNameContext.self, 0)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(apexParser.Tokens.STATIC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_importDeclaration
 		}
-		open func STATIC() -> TerminalNode? { return getToken(apexParser.Tokens.STATIC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_importDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterImportDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterImportDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitImportDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitImportDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitImportDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitImportDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitImportDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitImportDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func importDeclaration() throws -> ImportDeclarationContext {
+	 open func importDeclaration() throws -> ImportDeclarationContext {
 		var _localctx: ImportDeclarationContext = ImportDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 4, apexParser.RULE_importDeclaration)
 		var _la: Int = 0
@@ -474,52 +489,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class TypeDeclarationContext:ParserRuleContext {
-		open func classDeclaration() -> ClassDeclarationContext? {
-			return getRuleContext(ClassDeclarationContext.self,0)
+
+	public class TypeDeclarationContext: ParserRuleContext {
+			open
+			func classDeclaration() -> ClassDeclarationContext? {
+				return getRuleContext(ClassDeclarationContext.self, 0)
+			}
+			open
+			func classOrInterfaceModifier() -> [ClassOrInterfaceModifierContext] {
+				return getRuleContexts(ClassOrInterfaceModifierContext.self)
+			}
+			open
+			func classOrInterfaceModifier(_ i: Int) -> ClassOrInterfaceModifierContext? {
+				return getRuleContext(ClassOrInterfaceModifierContext.self, i)
+			}
+			open
+			func enumDeclaration() -> EnumDeclarationContext? {
+				return getRuleContext(EnumDeclarationContext.self, 0)
+			}
+			open
+			func interfaceDeclaration() -> InterfaceDeclarationContext? {
+				return getRuleContext(InterfaceDeclarationContext.self, 0)
+			}
+			open
+			func annotationTypeDeclaration() -> AnnotationTypeDeclarationContext? {
+				return getRuleContext(AnnotationTypeDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_typeDeclaration
 		}
-		open func classOrInterfaceModifier() -> Array<ClassOrInterfaceModifierContext> {
-			return getRuleContexts(ClassOrInterfaceModifierContext.self)
-		}
-		open func classOrInterfaceModifier(_ i: Int) -> ClassOrInterfaceModifierContext? {
-			return getRuleContext(ClassOrInterfaceModifierContext.self,i)
-		}
-		open func enumDeclaration() -> EnumDeclarationContext? {
-			return getRuleContext(EnumDeclarationContext.self,0)
-		}
-		open func interfaceDeclaration() -> InterfaceDeclarationContext? {
-			return getRuleContext(InterfaceDeclarationContext.self,0)
-		}
-		open func annotationTypeDeclaration() -> AnnotationTypeDeclarationContext? {
-			return getRuleContext(AnnotationTypeDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_typeDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterTypeDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterTypeDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitTypeDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitTypeDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitTypeDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitTypeDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitTypeDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitTypeDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeDeclaration() throws -> TypeDeclarationContext {
+	 open func typeDeclaration() throws -> TypeDeclarationContext {
 		var _localctx: TypeDeclarationContext = TypeDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 6, apexParser.RULE_typeDeclaration)
 		var _la: Int = 0
@@ -646,40 +672,55 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ModifierContext:ParserRuleContext {
-		open func classOrInterfaceModifier() -> ClassOrInterfaceModifierContext? {
-			return getRuleContext(ClassOrInterfaceModifierContext.self,0)
+
+	public class ModifierContext: ParserRuleContext {
+			open
+			func classOrInterfaceModifier() -> ClassOrInterfaceModifierContext? {
+				return getRuleContext(ClassOrInterfaceModifierContext.self, 0)
+			}
+			open
+			func NATIVE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.NATIVE.rawValue, 0)
+			}
+			open
+			func SYNCHRONIZED() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SYNCHRONIZED.rawValue, 0)
+			}
+			open
+			func TRANSIENT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.TRANSIENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_modifier
 		}
-		open func NATIVE() -> TerminalNode? { return getToken(apexParser.Tokens.NATIVE.rawValue, 0) }
-		open func SYNCHRONIZED() -> TerminalNode? { return getToken(apexParser.Tokens.SYNCHRONIZED.rawValue, 0) }
-		open func TRANSIENT() -> TerminalNode? { return getToken(apexParser.Tokens.TRANSIENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_modifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterModifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterModifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitModifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitModifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitModifier(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitModifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitModifier(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitModifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func modifier() throws -> ModifierContext {
+	 open func modifier() throws -> ModifierContext {
 		var _localctx: ModifierContext = ModifierContext(_ctx, getState())
 		try enterRule(_localctx, 8, apexParser.RULE_modifier)
 		var _la: Int = 0
@@ -732,7 +773,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -743,50 +784,95 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ClassOrInterfaceModifierContext:ParserRuleContext {
-		open func annotation() -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,0)
+
+	public class ClassOrInterfaceModifierContext: ParserRuleContext {
+			open
+			func annotation() -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, 0)
+			}
+			open
+			func PUBLIC() -> TerminalNode? {
+				return getToken(apexParser.Tokens.PUBLIC.rawValue, 0)
+			}
+			open
+			func PROTECTED() -> TerminalNode? {
+				return getToken(apexParser.Tokens.PROTECTED.rawValue, 0)
+			}
+			open
+			func PRIVATE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.PRIVATE.rawValue, 0)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(apexParser.Tokens.STATIC.rawValue, 0)
+			}
+			open
+			func ABSTRACT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.ABSTRACT.rawValue, 0)
+			}
+			open
+			func FINAL() -> TerminalNode? {
+				return getToken(apexParser.Tokens.FINAL.rawValue, 0)
+			}
+			open
+			func GLOBAL() -> TerminalNode? {
+				return getToken(apexParser.Tokens.GLOBAL.rawValue, 0)
+			}
+			open
+			func WEBSERVICE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.WEBSERVICE.rawValue, 0)
+			}
+			open
+			func OVERRIDE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.OVERRIDE.rawValue, 0)
+			}
+			open
+			func VIRTUAL() -> TerminalNode? {
+				return getToken(apexParser.Tokens.VIRTUAL.rawValue, 0)
+			}
+			open
+			func TESTMETHOD() -> TerminalNode? {
+				return getToken(apexParser.Tokens.TESTMETHOD.rawValue, 0)
+			}
+			open
+			func APEX_WITH_SHARING() -> TerminalNode? {
+				return getToken(apexParser.Tokens.APEX_WITH_SHARING.rawValue, 0)
+			}
+			open
+			func APEX_WITHOUT_SHARING() -> TerminalNode? {
+				return getToken(apexParser.Tokens.APEX_WITHOUT_SHARING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_classOrInterfaceModifier
 		}
-		open func PUBLIC() -> TerminalNode? { return getToken(apexParser.Tokens.PUBLIC.rawValue, 0) }
-		open func PROTECTED() -> TerminalNode? { return getToken(apexParser.Tokens.PROTECTED.rawValue, 0) }
-		open func PRIVATE() -> TerminalNode? { return getToken(apexParser.Tokens.PRIVATE.rawValue, 0) }
-		open func STATIC() -> TerminalNode? { return getToken(apexParser.Tokens.STATIC.rawValue, 0) }
-		open func ABSTRACT() -> TerminalNode? { return getToken(apexParser.Tokens.ABSTRACT.rawValue, 0) }
-		open func FINAL() -> TerminalNode? { return getToken(apexParser.Tokens.FINAL.rawValue, 0) }
-		open func GLOBAL() -> TerminalNode? { return getToken(apexParser.Tokens.GLOBAL.rawValue, 0) }
-		open func WEBSERVICE() -> TerminalNode? { return getToken(apexParser.Tokens.WEBSERVICE.rawValue, 0) }
-		open func OVERRIDE() -> TerminalNode? { return getToken(apexParser.Tokens.OVERRIDE.rawValue, 0) }
-		open func VIRTUAL() -> TerminalNode? { return getToken(apexParser.Tokens.VIRTUAL.rawValue, 0) }
-		open func TESTMETHOD() -> TerminalNode? { return getToken(apexParser.Tokens.TESTMETHOD.rawValue, 0) }
-		open func APEX_WITH_SHARING() -> TerminalNode? { return getToken(apexParser.Tokens.APEX_WITH_SHARING.rawValue, 0) }
-		open func APEX_WITHOUT_SHARING() -> TerminalNode? { return getToken(apexParser.Tokens.APEX_WITHOUT_SHARING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_classOrInterfaceModifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterClassOrInterfaceModifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterClassOrInterfaceModifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitClassOrInterfaceModifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitClassOrInterfaceModifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitClassOrInterfaceModifier(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitClassOrInterfaceModifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitClassOrInterfaceModifier(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitClassOrInterfaceModifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classOrInterfaceModifier() throws -> ClassOrInterfaceModifierContext {
+	 open func classOrInterfaceModifier() throws -> ClassOrInterfaceModifierContext {
 		var _localctx: ClassOrInterfaceModifierContext = ClassOrInterfaceModifierContext(_ctx, getState())
 		try enterRule(_localctx, 10, apexParser.RULE_classOrInterfaceModifier)
 		var _la: Int = 0
@@ -836,7 +922,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -847,38 +933,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class VariableModifierContext:ParserRuleContext {
-		open func FINAL() -> TerminalNode? { return getToken(apexParser.Tokens.FINAL.rawValue, 0) }
-		open func annotation() -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,0)
+
+	public class VariableModifierContext: ParserRuleContext {
+			open
+			func FINAL() -> TerminalNode? {
+				return getToken(apexParser.Tokens.FINAL.rawValue, 0)
+			}
+			open
+			func annotation() -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_variableModifier
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_variableModifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterVariableModifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterVariableModifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitVariableModifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitVariableModifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitVariableModifier(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitVariableModifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitVariableModifier(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitVariableModifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableModifier() throws -> VariableModifierContext {
+	 open func variableModifier() throws -> VariableModifierContext {
 		var _localctx: VariableModifierContext = VariableModifierContext(_ctx, getState())
 		try enterRule(_localctx, 12, apexParser.RULE_variableModifier)
 		defer {
@@ -902,7 +997,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -913,50 +1008,71 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ClassDeclarationContext:ParserRuleContext {
-		open func CLASS() -> TerminalNode? { return getToken(apexParser.Tokens.CLASS.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func classBody() -> ClassBodyContext? {
-			return getRuleContext(ClassBodyContext.self,0)
+
+	public class ClassDeclarationContext: ParserRuleContext {
+			open
+			func CLASS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.CLASS.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func classBody() -> ClassBodyContext? {
+				return getRuleContext(ClassBodyContext.self, 0)
+			}
+			open
+			func typeParameters() -> TypeParametersContext? {
+				return getRuleContext(TypeParametersContext.self, 0)
+			}
+			open
+			func EXTENDS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.EXTENDS.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func IMPLEMENTS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.IMPLEMENTS.rawValue, 0)
+			}
+			open
+			func typeList() -> TypeListContext? {
+				return getRuleContext(TypeListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_classDeclaration
 		}
-		open func typeParameters() -> TypeParametersContext? {
-			return getRuleContext(TypeParametersContext.self,0)
-		}
-		open func EXTENDS() -> TerminalNode? { return getToken(apexParser.Tokens.EXTENDS.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func IMPLEMENTS() -> TerminalNode? { return getToken(apexParser.Tokens.IMPLEMENTS.rawValue, 0) }
-		open func typeList() -> TypeListContext? {
-			return getRuleContext(TypeListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_classDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterClassDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterClassDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitClassDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitClassDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitClassDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitClassDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitClassDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitClassDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classDeclaration() throws -> ClassDeclarationContext {
+	 open func classDeclaration() throws -> ClassDeclarationContext {
 		var _localctx: ClassDeclarationContext = ClassDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 14, apexParser.RULE_classDeclaration)
 		var _la: Int = 0
@@ -1024,40 +1140,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class TypeParametersContext:ParserRuleContext {
-		open func typeParameter() -> Array<TypeParameterContext> {
-			return getRuleContexts(TypeParameterContext.self)
+
+	public class TypeParametersContext: ParserRuleContext {
+			open
+			func typeParameter() -> [TypeParameterContext] {
+				return getRuleContexts(TypeParameterContext.self)
+			}
+			open
+			func typeParameter(_ i: Int) -> TypeParameterContext? {
+				return getRuleContext(TypeParameterContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_typeParameters
 		}
-		open func typeParameter(_ i: Int) -> TypeParameterContext? {
-			return getRuleContext(TypeParameterContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_typeParameters }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterTypeParameters(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterTypeParameters(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitTypeParameters(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitTypeParameters(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitTypeParameters(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitTypeParameters(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitTypeParameters(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitTypeParameters(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeParameters() throws -> TypeParametersContext {
+	 open func typeParameters() throws -> TypeParametersContext {
 		var _localctx: TypeParametersContext = TypeParametersContext(_ctx, getState())
 		try enterRule(_localctx, 16, apexParser.RULE_typeParameters)
 		var _la: Int = 0
@@ -1100,39 +1223,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class TypeParameterContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func EXTENDS() -> TerminalNode? { return getToken(apexParser.Tokens.EXTENDS.rawValue, 0) }
-		open func typeBound() -> TypeBoundContext? {
-			return getRuleContext(TypeBoundContext.self,0)
+
+	public class TypeParameterContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func EXTENDS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.EXTENDS.rawValue, 0)
+			}
+			open
+			func typeBound() -> TypeBoundContext? {
+				return getRuleContext(TypeBoundContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_typeParameter
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_typeParameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterTypeParameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterTypeParameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitTypeParameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitTypeParameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitTypeParameter(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitTypeParameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitTypeParameter(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitTypeParameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeParameter() throws -> TypeParameterContext {
+	 open func typeParameter() throws -> TypeParameterContext {
 		var _localctx: TypeParameterContext = TypeParameterContext(_ctx, getState())
 		try enterRule(_localctx, 18, apexParser.RULE_typeParameter)
 		var _la: Int = 0
@@ -1168,40 +1303,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class TypeBoundContext:ParserRuleContext {
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
+
+	public class TypeBoundContext: ParserRuleContext {
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_typeBound
 		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_typeBound }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterTypeBound(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterTypeBound(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitTypeBound(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitTypeBound(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitTypeBound(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitTypeBound(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitTypeBound(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitTypeBound(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeBound() throws -> TypeBoundContext {
+	 open func typeBound() throws -> TypeBoundContext {
 		var _localctx: TypeBoundContext = TypeBoundContext(_ctx, getState())
 		try enterRule(_localctx, 20, apexParser.RULE_typeBound)
 		var _la: Int = 0
@@ -1240,46 +1382,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class EnumDeclarationContext:ParserRuleContext {
-		open func ENUM() -> TerminalNode? { return getToken(apexParser.Tokens.ENUM.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func IMPLEMENTS() -> TerminalNode? { return getToken(apexParser.Tokens.IMPLEMENTS.rawValue, 0) }
-		open func typeList() -> TypeListContext? {
-			return getRuleContext(TypeListContext.self,0)
+
+	public class EnumDeclarationContext: ParserRuleContext {
+			open
+			func ENUM() -> TerminalNode? {
+				return getToken(apexParser.Tokens.ENUM.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func IMPLEMENTS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.IMPLEMENTS.rawValue, 0)
+			}
+			open
+			func typeList() -> TypeListContext? {
+				return getRuleContext(TypeListContext.self, 0)
+			}
+			open
+			func enumConstants() -> EnumConstantsContext? {
+				return getRuleContext(EnumConstantsContext.self, 0)
+			}
+			open
+			func enumBodyDeclarations() -> EnumBodyDeclarationsContext? {
+				return getRuleContext(EnumBodyDeclarationsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_enumDeclaration
 		}
-		open func enumConstants() -> EnumConstantsContext? {
-			return getRuleContext(EnumConstantsContext.self,0)
-		}
-		open func enumBodyDeclarations() -> EnumBodyDeclarationsContext? {
-			return getRuleContext(EnumBodyDeclarationsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_enumDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterEnumDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterEnumDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitEnumDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitEnumDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitEnumDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitEnumDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitEnumDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitEnumDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumDeclaration() throws -> EnumDeclarationContext {
+	 open func enumDeclaration() throws -> EnumDeclarationContext {
 		var _localctx: EnumDeclarationContext = EnumDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 22, apexParser.RULE_enumDeclaration)
 		var _la: Int = 0
@@ -1360,40 +1519,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class EnumConstantsContext:ParserRuleContext {
-		open func enumConstant() -> Array<EnumConstantContext> {
-			return getRuleContexts(EnumConstantContext.self)
+
+	public class EnumConstantsContext: ParserRuleContext {
+			open
+			func enumConstant() -> [EnumConstantContext] {
+				return getRuleContexts(EnumConstantContext.self)
+			}
+			open
+			func enumConstant(_ i: Int) -> EnumConstantContext? {
+				return getRuleContext(EnumConstantContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_enumConstants
 		}
-		open func enumConstant(_ i: Int) -> EnumConstantContext? {
-			return getRuleContext(EnumConstantContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_enumConstants }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterEnumConstants(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterEnumConstants(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitEnumConstants(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitEnumConstants(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitEnumConstants(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitEnumConstants(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitEnumConstants(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitEnumConstants(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumConstants() throws -> EnumConstantsContext {
+	 open func enumConstants() throws -> EnumConstantsContext {
 		var _localctx: EnumConstantsContext = EnumConstantsContext(_ctx, getState())
 		try enterRule(_localctx, 24, apexParser.RULE_enumConstants)
 		defer {
@@ -1430,47 +1596,59 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class EnumConstantContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func annotation() -> Array<AnnotationContext> {
-			return getRuleContexts(AnnotationContext.self)
+
+	public class EnumConstantContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func annotation() -> [AnnotationContext] {
+				return getRuleContexts(AnnotationContext.self)
+			}
+			open
+			func annotation(_ i: Int) -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, i)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+			open
+			func classBody() -> ClassBodyContext? {
+				return getRuleContext(ClassBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_enumConstant
 		}
-		open func annotation(_ i: Int) -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,i)
-		}
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		open func classBody() -> ClassBodyContext? {
-			return getRuleContext(ClassBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_enumConstant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterEnumConstant(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterEnumConstant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitEnumConstant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitEnumConstant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitEnumConstant(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitEnumConstant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitEnumConstant(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitEnumConstant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumConstant() throws -> EnumConstantContext {
+	 open func enumConstant() throws -> EnumConstantContext {
 		var _localctx: EnumConstantContext = EnumConstantContext(_ctx, getState())
 		try enterRule(_localctx, 26, apexParser.RULE_enumConstant)
 		var _la: Int = 0
@@ -1533,40 +1711,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class EnumBodyDeclarationsContext:ParserRuleContext {
-		open func classBodyDeclaration() -> Array<ClassBodyDeclarationContext> {
-			return getRuleContexts(ClassBodyDeclarationContext.self)
+
+	public class EnumBodyDeclarationsContext: ParserRuleContext {
+			open
+			func classBodyDeclaration() -> [ClassBodyDeclarationContext] {
+				return getRuleContexts(ClassBodyDeclarationContext.self)
+			}
+			open
+			func classBodyDeclaration(_ i: Int) -> ClassBodyDeclarationContext? {
+				return getRuleContext(ClassBodyDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_enumBodyDeclarations
 		}
-		open func classBodyDeclaration(_ i: Int) -> ClassBodyDeclarationContext? {
-			return getRuleContext(ClassBodyDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_enumBodyDeclarations }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterEnumBodyDeclarations(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterEnumBodyDeclarations(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitEnumBodyDeclarations(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitEnumBodyDeclarations(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitEnumBodyDeclarations(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitEnumBodyDeclarations(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitEnumBodyDeclarations(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitEnumBodyDeclarations(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumBodyDeclarations() throws -> EnumBodyDeclarationsContext {
+	 open func enumBodyDeclarations() throws -> EnumBodyDeclarationsContext {
 		var _localctx: EnumBodyDeclarationsContext = EnumBodyDeclarationsContext(_ctx, getState())
 		try enterRule(_localctx, 28, apexParser.RULE_enumBodyDeclarations)
 		var _la: Int = 0
@@ -1610,46 +1795,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class InterfaceDeclarationContext:ParserRuleContext {
-		open func INTERFACE() -> TerminalNode? { return getToken(apexParser.Tokens.INTERFACE.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func interfaceBody() -> InterfaceBodyContext? {
-			return getRuleContext(InterfaceBodyContext.self,0)
+
+	public class InterfaceDeclarationContext: ParserRuleContext {
+			open
+			func INTERFACE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.INTERFACE.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func interfaceBody() -> InterfaceBodyContext? {
+				return getRuleContext(InterfaceBodyContext.self, 0)
+			}
+			open
+			func typeParameters() -> TypeParametersContext? {
+				return getRuleContext(TypeParametersContext.self, 0)
+			}
+			open
+			func EXTENDS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.EXTENDS.rawValue, 0)
+			}
+			open
+			func typeList() -> TypeListContext? {
+				return getRuleContext(TypeListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_interfaceDeclaration
 		}
-		open func typeParameters() -> TypeParametersContext? {
-			return getRuleContext(TypeParametersContext.self,0)
-		}
-		open func EXTENDS() -> TerminalNode? { return getToken(apexParser.Tokens.EXTENDS.rawValue, 0) }
-		open func typeList() -> TypeListContext? {
-			return getRuleContext(TypeListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_interfaceDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterInterfaceDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterInterfaceDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitInterfaceDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitInterfaceDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitInterfaceDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitInterfaceDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitInterfaceDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitInterfaceDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interfaceDeclaration() throws -> InterfaceDeclarationContext {
+	 open func interfaceDeclaration() throws -> InterfaceDeclarationContext {
 		var _localctx: InterfaceDeclarationContext = InterfaceDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 30, apexParser.RULE_interfaceDeclaration)
 		var _la: Int = 0
@@ -1702,40 +1904,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class TypeListContext:ParserRuleContext {
-		open func type() -> Array<TypeContext> {
-			return getRuleContexts(TypeContext.self)
+
+	public class TypeListContext: ParserRuleContext {
+			open
+			func type() -> [TypeContext] {
+				return getRuleContexts(TypeContext.self)
+			}
+			open
+			func type(_ i: Int) -> TypeContext? {
+				return getRuleContext(TypeContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_typeList
 		}
-		open func type(_ i: Int) -> TypeContext? {
-			return getRuleContext(TypeContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_typeList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterTypeList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterTypeList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitTypeList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitTypeList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitTypeList(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitTypeList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitTypeList(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitTypeList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeList() throws -> TypeListContext {
+	 open func typeList() throws -> TypeListContext {
 		var _localctx: TypeListContext = TypeListContext(_ctx, getState())
 		try enterRule(_localctx, 32, apexParser.RULE_typeList)
 		var _la: Int = 0
@@ -1774,40 +1983,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ClassBodyContext:ParserRuleContext {
-		open func classBodyDeclaration() -> Array<ClassBodyDeclarationContext> {
-			return getRuleContexts(ClassBodyDeclarationContext.self)
+
+	public class ClassBodyContext: ParserRuleContext {
+			open
+			func classBodyDeclaration() -> [ClassBodyDeclarationContext] {
+				return getRuleContexts(ClassBodyDeclarationContext.self)
+			}
+			open
+			func classBodyDeclaration(_ i: Int) -> ClassBodyDeclarationContext? {
+				return getRuleContext(ClassBodyDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_classBody
 		}
-		open func classBodyDeclaration(_ i: Int) -> ClassBodyDeclarationContext? {
-			return getRuleContext(ClassBodyDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_classBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterClassBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterClassBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitClassBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitClassBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitClassBody(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitClassBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitClassBody(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitClassBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classBody() throws -> ClassBodyContext {
+	 open func classBody() throws -> ClassBodyContext {
 		var _localctx: ClassBodyContext = ClassBodyContext(_ctx, getState())
 		try enterRule(_localctx, 34, apexParser.RULE_classBody)
 		var _la: Int = 0
@@ -1853,40 +2069,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class InterfaceBodyContext:ParserRuleContext {
-		open func interfaceBodyDeclaration() -> Array<InterfaceBodyDeclarationContext> {
-			return getRuleContexts(InterfaceBodyDeclarationContext.self)
+
+	public class InterfaceBodyContext: ParserRuleContext {
+			open
+			func interfaceBodyDeclaration() -> [InterfaceBodyDeclarationContext] {
+				return getRuleContexts(InterfaceBodyDeclarationContext.self)
+			}
+			open
+			func interfaceBodyDeclaration(_ i: Int) -> InterfaceBodyDeclarationContext? {
+				return getRuleContext(InterfaceBodyDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_interfaceBody
 		}
-		open func interfaceBodyDeclaration(_ i: Int) -> InterfaceBodyDeclarationContext? {
-			return getRuleContext(InterfaceBodyDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_interfaceBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterInterfaceBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterInterfaceBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitInterfaceBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitInterfaceBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitInterfaceBody(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitInterfaceBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitInterfaceBody(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitInterfaceBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interfaceBody() throws -> InterfaceBodyContext {
+	 open func interfaceBody() throws -> InterfaceBodyContext {
 		var _localctx: InterfaceBodyContext = InterfaceBodyContext(_ctx, getState())
 		try enterRule(_localctx, 36, apexParser.RULE_interfaceBody)
 		var _la: Int = 0
@@ -1932,47 +2155,59 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ClassBodyDeclarationContext:ParserRuleContext {
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class ClassBodyDeclarationContext: ParserRuleContext {
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func STATIC() -> TerminalNode? {
+				return getToken(apexParser.Tokens.STATIC.rawValue, 0)
+			}
+			open
+			func memberDeclaration() -> MemberDeclarationContext? {
+				return getRuleContext(MemberDeclarationContext.self, 0)
+			}
+			open
+			func modifier() -> [ModifierContext] {
+				return getRuleContexts(ModifierContext.self)
+			}
+			open
+			func modifier(_ i: Int) -> ModifierContext? {
+				return getRuleContext(ModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_classBodyDeclaration
 		}
-		open func STATIC() -> TerminalNode? { return getToken(apexParser.Tokens.STATIC.rawValue, 0) }
-		open func memberDeclaration() -> MemberDeclarationContext? {
-			return getRuleContext(MemberDeclarationContext.self,0)
-		}
-		open func modifier() -> Array<ModifierContext> {
-			return getRuleContexts(ModifierContext.self)
-		}
-		open func modifier(_ i: Int) -> ModifierContext? {
-			return getRuleContext(ModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_classBodyDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterClassBodyDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterClassBodyDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitClassBodyDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitClassBodyDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitClassBodyDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitClassBodyDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitClassBodyDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitClassBodyDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classBodyDeclaration() throws -> ClassBodyDeclarationContext {
+	 open func classBodyDeclaration() throws -> ClassBodyDeclarationContext {
 		var _localctx: ClassBodyDeclarationContext = ClassBodyDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 38, apexParser.RULE_classBodyDeclaration)
 		var _la: Int = 0
@@ -2040,64 +2275,79 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class MemberDeclarationContext:ParserRuleContext {
-		open func methodDeclaration() -> MethodDeclarationContext? {
-			return getRuleContext(MethodDeclarationContext.self,0)
+
+	public class MemberDeclarationContext: ParserRuleContext {
+			open
+			func methodDeclaration() -> MethodDeclarationContext? {
+				return getRuleContext(MethodDeclarationContext.self, 0)
+			}
+			open
+			func genericMethodDeclaration() -> GenericMethodDeclarationContext? {
+				return getRuleContext(GenericMethodDeclarationContext.self, 0)
+			}
+			open
+			func fieldDeclaration() -> FieldDeclarationContext? {
+				return getRuleContext(FieldDeclarationContext.self, 0)
+			}
+			open
+			func constructorDeclaration() -> ConstructorDeclarationContext? {
+				return getRuleContext(ConstructorDeclarationContext.self, 0)
+			}
+			open
+			func genericConstructorDeclaration() -> GenericConstructorDeclarationContext? {
+				return getRuleContext(GenericConstructorDeclarationContext.self, 0)
+			}
+			open
+			func interfaceDeclaration() -> InterfaceDeclarationContext? {
+				return getRuleContext(InterfaceDeclarationContext.self, 0)
+			}
+			open
+			func annotationTypeDeclaration() -> AnnotationTypeDeclarationContext? {
+				return getRuleContext(AnnotationTypeDeclarationContext.self, 0)
+			}
+			open
+			func classDeclaration() -> ClassDeclarationContext? {
+				return getRuleContext(ClassDeclarationContext.self, 0)
+			}
+			open
+			func enumDeclaration() -> EnumDeclarationContext? {
+				return getRuleContext(EnumDeclarationContext.self, 0)
+			}
+			open
+			func propertyDeclaration() -> PropertyDeclarationContext? {
+				return getRuleContext(PropertyDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_memberDeclaration
 		}
-		open func genericMethodDeclaration() -> GenericMethodDeclarationContext? {
-			return getRuleContext(GenericMethodDeclarationContext.self,0)
-		}
-		open func fieldDeclaration() -> FieldDeclarationContext? {
-			return getRuleContext(FieldDeclarationContext.self,0)
-		}
-		open func constructorDeclaration() -> ConstructorDeclarationContext? {
-			return getRuleContext(ConstructorDeclarationContext.self,0)
-		}
-		open func genericConstructorDeclaration() -> GenericConstructorDeclarationContext? {
-			return getRuleContext(GenericConstructorDeclarationContext.self,0)
-		}
-		open func interfaceDeclaration() -> InterfaceDeclarationContext? {
-			return getRuleContext(InterfaceDeclarationContext.self,0)
-		}
-		open func annotationTypeDeclaration() -> AnnotationTypeDeclarationContext? {
-			return getRuleContext(AnnotationTypeDeclarationContext.self,0)
-		}
-		open func classDeclaration() -> ClassDeclarationContext? {
-			return getRuleContext(ClassDeclarationContext.self,0)
-		}
-		open func enumDeclaration() -> EnumDeclarationContext? {
-			return getRuleContext(EnumDeclarationContext.self,0)
-		}
-		open func propertyDeclaration() -> PropertyDeclarationContext? {
-			return getRuleContext(PropertyDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_memberDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterMemberDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterMemberDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitMemberDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitMemberDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitMemberDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitMemberDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitMemberDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitMemberDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func memberDeclaration() throws -> MemberDeclarationContext {
+	 open func memberDeclaration() throws -> MemberDeclarationContext {
 		var _localctx: MemberDeclarationContext = MemberDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 40, apexParser.RULE_memberDeclaration)
 		defer {
@@ -2178,50 +2428,71 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class MethodDeclarationContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func formalParameters() -> FormalParametersContext? {
-			return getRuleContext(FormalParametersContext.self,0)
+
+	public class MethodDeclarationContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func formalParameters() -> FormalParametersContext? {
+				return getRuleContext(FormalParametersContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func VOID() -> TerminalNode? {
+				return getToken(apexParser.Tokens.VOID.rawValue, 0)
+			}
+			open
+			func methodBody() -> MethodBodyContext? {
+				return getRuleContext(MethodBodyContext.self, 0)
+			}
+			open
+			func OVERRIDE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.OVERRIDE.rawValue, 0)
+			}
+			open
+			func THROWS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.THROWS.rawValue, 0)
+			}
+			open
+			func qualifiedNameList() -> QualifiedNameListContext? {
+				return getRuleContext(QualifiedNameListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_methodDeclaration
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func VOID() -> TerminalNode? { return getToken(apexParser.Tokens.VOID.rawValue, 0) }
-		open func methodBody() -> MethodBodyContext? {
-			return getRuleContext(MethodBodyContext.self,0)
-		}
-		open func OVERRIDE() -> TerminalNode? { return getToken(apexParser.Tokens.OVERRIDE.rawValue, 0) }
-		open func THROWS() -> TerminalNode? { return getToken(apexParser.Tokens.THROWS.rawValue, 0) }
-		open func qualifiedNameList() -> QualifiedNameListContext? {
-			return getRuleContext(QualifiedNameListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_methodDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterMethodDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterMethodDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitMethodDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitMethodDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitMethodDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitMethodDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitMethodDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitMethodDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func methodDeclaration() throws -> MethodDeclarationContext {
+	 open func methodDeclaration() throws -> MethodDeclarationContext {
 		var _localctx: MethodDeclarationContext = MethodDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 42, apexParser.RULE_methodDeclaration)
 		var _la: Int = 0
@@ -2267,7 +2538,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(454)
 		 	try match(apexParser.Tokens.Identifier.rawValue)
@@ -2321,7 +2592,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -2333,40 +2604,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class GenericMethodDeclarationContext:ParserRuleContext {
-		open func typeParameters() -> TypeParametersContext? {
-			return getRuleContext(TypeParametersContext.self,0)
+
+	public class GenericMethodDeclarationContext: ParserRuleContext {
+			open
+			func typeParameters() -> TypeParametersContext? {
+				return getRuleContext(TypeParametersContext.self, 0)
+			}
+			open
+			func methodDeclaration() -> MethodDeclarationContext? {
+				return getRuleContext(MethodDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_genericMethodDeclaration
 		}
-		open func methodDeclaration() -> MethodDeclarationContext? {
-			return getRuleContext(MethodDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_genericMethodDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterGenericMethodDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterGenericMethodDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitGenericMethodDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitGenericMethodDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitGenericMethodDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitGenericMethodDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitGenericMethodDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitGenericMethodDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func genericMethodDeclaration() throws -> GenericMethodDeclarationContext {
+	 open func genericMethodDeclaration() throws -> GenericMethodDeclarationContext {
 		var _localctx: GenericMethodDeclarationContext = GenericMethodDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 44, apexParser.RULE_genericMethodDeclaration)
 		defer {
@@ -2388,45 +2666,59 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ConstructorDeclarationContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func formalParameters() -> FormalParametersContext? {
-			return getRuleContext(FormalParametersContext.self,0)
+
+	public class ConstructorDeclarationContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func formalParameters() -> FormalParametersContext? {
+				return getRuleContext(FormalParametersContext.self, 0)
+			}
+			open
+			func constructorBody() -> ConstructorBodyContext? {
+				return getRuleContext(ConstructorBodyContext.self, 0)
+			}
+			open
+			func THROWS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.THROWS.rawValue, 0)
+			}
+			open
+			func qualifiedNameList() -> QualifiedNameListContext? {
+				return getRuleContext(QualifiedNameListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_constructorDeclaration
 		}
-		open func constructorBody() -> ConstructorBodyContext? {
-			return getRuleContext(ConstructorBodyContext.self,0)
-		}
-		open func THROWS() -> TerminalNode? { return getToken(apexParser.Tokens.THROWS.rawValue, 0) }
-		open func qualifiedNameList() -> QualifiedNameListContext? {
-			return getRuleContext(QualifiedNameListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_constructorDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterConstructorDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterConstructorDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitConstructorDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitConstructorDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitConstructorDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitConstructorDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitConstructorDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitConstructorDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructorDeclaration() throws -> ConstructorDeclarationContext {
+	 open func constructorDeclaration() throws -> ConstructorDeclarationContext {
 		var _localctx: ConstructorDeclarationContext = ConstructorDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 46, apexParser.RULE_constructorDeclaration)
 		var _la: Int = 0
@@ -2466,40 +2758,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class GenericConstructorDeclarationContext:ParserRuleContext {
-		open func typeParameters() -> TypeParametersContext? {
-			return getRuleContext(TypeParametersContext.self,0)
+
+	public class GenericConstructorDeclarationContext: ParserRuleContext {
+			open
+			func typeParameters() -> TypeParametersContext? {
+				return getRuleContext(TypeParametersContext.self, 0)
+			}
+			open
+			func constructorDeclaration() -> ConstructorDeclarationContext? {
+				return getRuleContext(ConstructorDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_genericConstructorDeclaration
 		}
-		open func constructorDeclaration() -> ConstructorDeclarationContext? {
-			return getRuleContext(ConstructorDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_genericConstructorDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterGenericConstructorDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterGenericConstructorDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitGenericConstructorDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitGenericConstructorDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitGenericConstructorDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitGenericConstructorDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitGenericConstructorDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitGenericConstructorDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func genericConstructorDeclaration() throws -> GenericConstructorDeclarationContext {
+	 open func genericConstructorDeclaration() throws -> GenericConstructorDeclarationContext {
 		var _localctx: GenericConstructorDeclarationContext = GenericConstructorDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 48, apexParser.RULE_genericConstructorDeclaration)
 		defer {
@@ -2521,40 +2820,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class FieldDeclarationContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class FieldDeclarationContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func variableDeclarators() -> VariableDeclaratorsContext? {
+				return getRuleContext(VariableDeclaratorsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_fieldDeclaration
 		}
-		open func variableDeclarators() -> VariableDeclaratorsContext? {
-			return getRuleContext(VariableDeclaratorsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_fieldDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterFieldDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterFieldDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitFieldDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitFieldDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitFieldDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitFieldDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitFieldDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitFieldDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fieldDeclaration() throws -> FieldDeclarationContext {
+	 open func fieldDeclaration() throws -> FieldDeclarationContext {
 		var _localctx: FieldDeclarationContext = FieldDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 50, apexParser.RULE_fieldDeclaration)
 		defer {
@@ -2578,43 +2884,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyDeclarationContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class PropertyDeclarationContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func variableDeclarators() -> VariableDeclaratorsContext? {
+				return getRuleContext(VariableDeclaratorsContext.self, 0)
+			}
+			open
+			func propertyBodyDeclaration() -> PropertyBodyDeclarationContext? {
+				return getRuleContext(PropertyBodyDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_propertyDeclaration
 		}
-		open func variableDeclarators() -> VariableDeclaratorsContext? {
-			return getRuleContext(VariableDeclaratorsContext.self,0)
-		}
-		open func propertyBodyDeclaration() -> PropertyBodyDeclarationContext? {
-			return getRuleContext(PropertyBodyDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_propertyDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterPropertyDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterPropertyDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitPropertyDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitPropertyDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitPropertyDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitPropertyDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitPropertyDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitPropertyDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyDeclaration() throws -> PropertyDeclarationContext {
+	 open func propertyDeclaration() throws -> PropertyDeclarationContext {
 		var _localctx: PropertyDeclarationContext = PropertyDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 52, apexParser.RULE_propertyDeclaration)
 		defer {
@@ -2638,40 +2952,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyBodyDeclarationContext:ParserRuleContext {
-		open func propertyBlock() -> Array<PropertyBlockContext> {
-			return getRuleContexts(PropertyBlockContext.self)
+
+	public class PropertyBodyDeclarationContext: ParserRuleContext {
+			open
+			func propertyBlock() -> [PropertyBlockContext] {
+				return getRuleContexts(PropertyBlockContext.self)
+			}
+			open
+			func propertyBlock(_ i: Int) -> PropertyBlockContext? {
+				return getRuleContext(PropertyBlockContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_propertyBodyDeclaration
 		}
-		open func propertyBlock(_ i: Int) -> PropertyBlockContext? {
-			return getRuleContext(PropertyBlockContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_propertyBodyDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterPropertyBodyDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterPropertyBodyDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitPropertyBodyDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitPropertyBodyDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitPropertyBodyDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitPropertyBodyDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitPropertyBodyDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitPropertyBodyDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyBodyDeclaration() throws -> PropertyBodyDeclarationContext {
+	 open func propertyBodyDeclaration() throws -> PropertyBodyDeclarationContext {
 		var _localctx: PropertyBodyDeclarationContext = PropertyBodyDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 54, apexParser.RULE_propertyBodyDeclaration)
 		var _la: Int = 0
@@ -2713,43 +3034,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class InterfaceBodyDeclarationContext:ParserRuleContext {
-		open func interfaceMemberDeclaration() -> InterfaceMemberDeclarationContext? {
-			return getRuleContext(InterfaceMemberDeclarationContext.self,0)
+
+	public class InterfaceBodyDeclarationContext: ParserRuleContext {
+			open
+			func interfaceMemberDeclaration() -> InterfaceMemberDeclarationContext? {
+				return getRuleContext(InterfaceMemberDeclarationContext.self, 0)
+			}
+			open
+			func modifier() -> [ModifierContext] {
+				return getRuleContexts(ModifierContext.self)
+			}
+			open
+			func modifier(_ i: Int) -> ModifierContext? {
+				return getRuleContext(ModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_interfaceBodyDeclaration
 		}
-		open func modifier() -> Array<ModifierContext> {
-			return getRuleContexts(ModifierContext.self)
-		}
-		open func modifier(_ i: Int) -> ModifierContext? {
-			return getRuleContext(ModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_interfaceBodyDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterInterfaceBodyDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterInterfaceBodyDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitInterfaceBodyDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitInterfaceBodyDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitInterfaceBodyDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitInterfaceBodyDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitInterfaceBodyDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitInterfaceBodyDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interfaceBodyDeclaration() throws -> InterfaceBodyDeclarationContext {
+	 open func interfaceBodyDeclaration() throws -> InterfaceBodyDeclarationContext {
 		var _localctx: InterfaceBodyDeclarationContext = InterfaceBodyDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 56, apexParser.RULE_interfaceBodyDeclaration)
 		defer {
@@ -2819,7 +3148,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2830,55 +3159,67 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class InterfaceMemberDeclarationContext:ParserRuleContext {
-		open func constDeclaration() -> ConstDeclarationContext? {
-			return getRuleContext(ConstDeclarationContext.self,0)
+
+	public class InterfaceMemberDeclarationContext: ParserRuleContext {
+			open
+			func constDeclaration() -> ConstDeclarationContext? {
+				return getRuleContext(ConstDeclarationContext.self, 0)
+			}
+			open
+			func interfaceMethodDeclaration() -> InterfaceMethodDeclarationContext? {
+				return getRuleContext(InterfaceMethodDeclarationContext.self, 0)
+			}
+			open
+			func genericInterfaceMethodDeclaration() -> GenericInterfaceMethodDeclarationContext? {
+				return getRuleContext(GenericInterfaceMethodDeclarationContext.self, 0)
+			}
+			open
+			func interfaceDeclaration() -> InterfaceDeclarationContext? {
+				return getRuleContext(InterfaceDeclarationContext.self, 0)
+			}
+			open
+			func annotationTypeDeclaration() -> AnnotationTypeDeclarationContext? {
+				return getRuleContext(AnnotationTypeDeclarationContext.self, 0)
+			}
+			open
+			func classDeclaration() -> ClassDeclarationContext? {
+				return getRuleContext(ClassDeclarationContext.self, 0)
+			}
+			open
+			func enumDeclaration() -> EnumDeclarationContext? {
+				return getRuleContext(EnumDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_interfaceMemberDeclaration
 		}
-		open func interfaceMethodDeclaration() -> InterfaceMethodDeclarationContext? {
-			return getRuleContext(InterfaceMethodDeclarationContext.self,0)
-		}
-		open func genericInterfaceMethodDeclaration() -> GenericInterfaceMethodDeclarationContext? {
-			return getRuleContext(GenericInterfaceMethodDeclarationContext.self,0)
-		}
-		open func interfaceDeclaration() -> InterfaceDeclarationContext? {
-			return getRuleContext(InterfaceDeclarationContext.self,0)
-		}
-		open func annotationTypeDeclaration() -> AnnotationTypeDeclarationContext? {
-			return getRuleContext(AnnotationTypeDeclarationContext.self,0)
-		}
-		open func classDeclaration() -> ClassDeclarationContext? {
-			return getRuleContext(ClassDeclarationContext.self,0)
-		}
-		open func enumDeclaration() -> EnumDeclarationContext? {
-			return getRuleContext(EnumDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_interfaceMemberDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterInterfaceMemberDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterInterfaceMemberDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitInterfaceMemberDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitInterfaceMemberDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitInterfaceMemberDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitInterfaceMemberDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitInterfaceMemberDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitInterfaceMemberDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interfaceMemberDeclaration() throws -> InterfaceMemberDeclarationContext {
+	 open func interfaceMemberDeclaration() throws -> InterfaceMemberDeclarationContext {
 		var _localctx: InterfaceMemberDeclarationContext = InterfaceMemberDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 58, apexParser.RULE_interfaceMemberDeclaration)
 		defer {
@@ -2941,43 +3282,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ConstDeclarationContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class ConstDeclarationContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func constantDeclarator() -> [ConstantDeclaratorContext] {
+				return getRuleContexts(ConstantDeclaratorContext.self)
+			}
+			open
+			func constantDeclarator(_ i: Int) -> ConstantDeclaratorContext? {
+				return getRuleContext(ConstantDeclaratorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_constDeclaration
 		}
-		open func constantDeclarator() -> Array<ConstantDeclaratorContext> {
-			return getRuleContexts(ConstantDeclaratorContext.self)
-		}
-		open func constantDeclarator(_ i: Int) -> ConstantDeclaratorContext? {
-			return getRuleContext(ConstantDeclaratorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_constDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterConstDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterConstDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitConstDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitConstDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitConstDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitConstDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitConstDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitConstDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constDeclaration() throws -> ConstDeclarationContext {
+	 open func constDeclaration() throws -> ConstDeclarationContext {
 		var _localctx: ConstDeclarationContext = ConstDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 60, apexParser.RULE_constDeclaration)
 		var _la: Int = 0
@@ -3020,38 +3369,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ConstantDeclaratorContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func variableInitializer() -> VariableInitializerContext? {
-			return getRuleContext(VariableInitializerContext.self,0)
+
+	public class ConstantDeclaratorContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func variableInitializer() -> VariableInitializerContext? {
+				return getRuleContext(VariableInitializerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_constantDeclarator
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_constantDeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterConstantDeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterConstantDeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitConstantDeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitConstantDeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitConstantDeclarator(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitConstantDeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitConstantDeclarator(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitConstantDeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constantDeclarator() throws -> ConstantDeclaratorContext {
+	 open func constantDeclarator() throws -> ConstantDeclaratorContext {
 		var _localctx: ConstantDeclaratorContext = ConstantDeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 62, apexParser.RULE_constantDeclarator)
 		var _la: Int = 0
@@ -3094,46 +3452,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class InterfaceMethodDeclarationContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func formalParameters() -> FormalParametersContext? {
-			return getRuleContext(FormalParametersContext.self,0)
+
+	public class InterfaceMethodDeclarationContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func formalParameters() -> FormalParametersContext? {
+				return getRuleContext(FormalParametersContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func VOID() -> TerminalNode? {
+				return getToken(apexParser.Tokens.VOID.rawValue, 0)
+			}
+			open
+			func THROWS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.THROWS.rawValue, 0)
+			}
+			open
+			func qualifiedNameList() -> QualifiedNameListContext? {
+				return getRuleContext(QualifiedNameListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_interfaceMethodDeclaration
 		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func VOID() -> TerminalNode? { return getToken(apexParser.Tokens.VOID.rawValue, 0) }
-		open func THROWS() -> TerminalNode? { return getToken(apexParser.Tokens.THROWS.rawValue, 0) }
-		open func qualifiedNameList() -> QualifiedNameListContext? {
-			return getRuleContext(QualifiedNameListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_interfaceMethodDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterInterfaceMethodDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterInterfaceMethodDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitInterfaceMethodDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitInterfaceMethodDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitInterfaceMethodDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitInterfaceMethodDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitInterfaceMethodDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitInterfaceMethodDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func interfaceMethodDeclaration() throws -> InterfaceMethodDeclarationContext {
+	 open func interfaceMethodDeclaration() throws -> InterfaceMethodDeclarationContext {
 		var _localctx: InterfaceMethodDeclarationContext = InterfaceMethodDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 64, apexParser.RULE_interfaceMethodDeclaration)
 		var _la: Int = 0
@@ -3166,7 +3541,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(545)
 		 	try match(apexParser.Tokens.Identifier.rawValue)
@@ -3217,40 +3592,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class GenericInterfaceMethodDeclarationContext:ParserRuleContext {
-		open func typeParameters() -> TypeParametersContext? {
-			return getRuleContext(TypeParametersContext.self,0)
+
+	public class GenericInterfaceMethodDeclarationContext: ParserRuleContext {
+			open
+			func typeParameters() -> TypeParametersContext? {
+				return getRuleContext(TypeParametersContext.self, 0)
+			}
+			open
+			func interfaceMethodDeclaration() -> InterfaceMethodDeclarationContext? {
+				return getRuleContext(InterfaceMethodDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_genericInterfaceMethodDeclaration
 		}
-		open func interfaceMethodDeclaration() -> InterfaceMethodDeclarationContext? {
-			return getRuleContext(InterfaceMethodDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_genericInterfaceMethodDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterGenericInterfaceMethodDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterGenericInterfaceMethodDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitGenericInterfaceMethodDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitGenericInterfaceMethodDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitGenericInterfaceMethodDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitGenericInterfaceMethodDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitGenericInterfaceMethodDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitGenericInterfaceMethodDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func genericInterfaceMethodDeclaration() throws -> GenericInterfaceMethodDeclarationContext {
+	 open func genericInterfaceMethodDeclaration() throws -> GenericInterfaceMethodDeclarationContext {
 		var _localctx: GenericInterfaceMethodDeclarationContext = GenericInterfaceMethodDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 66, apexParser.RULE_genericInterfaceMethodDeclaration)
 		defer {
@@ -3272,40 +3654,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclaratorsContext:ParserRuleContext {
-		open func variableDeclarator() -> Array<VariableDeclaratorContext> {
-			return getRuleContexts(VariableDeclaratorContext.self)
+
+	public class VariableDeclaratorsContext: ParserRuleContext {
+			open
+			func variableDeclarator() -> [VariableDeclaratorContext] {
+				return getRuleContexts(VariableDeclaratorContext.self)
+			}
+			open
+			func variableDeclarator(_ i: Int) -> VariableDeclaratorContext? {
+				return getRuleContext(VariableDeclaratorContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_variableDeclarators
 		}
-		open func variableDeclarator(_ i: Int) -> VariableDeclaratorContext? {
-			return getRuleContext(VariableDeclaratorContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_variableDeclarators }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterVariableDeclarators(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterVariableDeclarators(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitVariableDeclarators(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitVariableDeclarators(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitVariableDeclarators(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitVariableDeclarators(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitVariableDeclarators(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitVariableDeclarators(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclarators() throws -> VariableDeclaratorsContext {
+	 open func variableDeclarators() throws -> VariableDeclaratorsContext {
 		var _localctx: VariableDeclaratorsContext = VariableDeclaratorsContext(_ctx, getState())
 		try enterRule(_localctx, 68, apexParser.RULE_variableDeclarators)
 		var _la: Int = 0
@@ -3344,40 +3733,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclaratorContext:ParserRuleContext {
-		open func variableDeclaratorId() -> VariableDeclaratorIdContext? {
-			return getRuleContext(VariableDeclaratorIdContext.self,0)
+
+	public class VariableDeclaratorContext: ParserRuleContext {
+			open
+			func variableDeclaratorId() -> VariableDeclaratorIdContext? {
+				return getRuleContext(VariableDeclaratorIdContext.self, 0)
+			}
+			open
+			func variableInitializer() -> VariableInitializerContext? {
+				return getRuleContext(VariableInitializerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_variableDeclarator
 		}
-		open func variableInitializer() -> VariableInitializerContext? {
-			return getRuleContext(VariableInitializerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_variableDeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterVariableDeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterVariableDeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitVariableDeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitVariableDeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitVariableDeclarator(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitVariableDeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitVariableDeclarator(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitVariableDeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclarator() throws -> VariableDeclaratorContext {
+	 open func variableDeclarator() throws -> VariableDeclaratorContext {
 		var _localctx: VariableDeclaratorContext = VariableDeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 70, apexParser.RULE_variableDeclarator)
 		var _la: Int = 0
@@ -3413,35 +3809,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class VariableDeclaratorIdContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_variableDeclaratorId }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterVariableDeclaratorId(self)
+
+	public class VariableDeclaratorIdContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_variableDeclaratorId
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterVariableDeclaratorId(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitVariableDeclaratorId(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitVariableDeclaratorId(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitVariableDeclaratorId(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitVariableDeclaratorId(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitVariableDeclaratorId(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitVariableDeclaratorId(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableDeclaratorId() throws -> VariableDeclaratorIdContext {
+	 open func variableDeclaratorId() throws -> VariableDeclaratorIdContext {
 		var _localctx: VariableDeclaratorIdContext = VariableDeclaratorIdContext(_ctx, getState())
 		try enterRule(_localctx, 72, apexParser.RULE_variableDeclaratorId)
 		var _la: Int = 0
@@ -3480,40 +3884,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class VariableInitializerContext:ParserRuleContext {
-		open func arrayInitializer() -> ArrayInitializerContext? {
-			return getRuleContext(ArrayInitializerContext.self,0)
+
+	public class VariableInitializerContext: ParserRuleContext {
+			open
+			func arrayInitializer() -> ArrayInitializerContext? {
+				return getRuleContext(ArrayInitializerContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_variableInitializer
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_variableInitializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterVariableInitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterVariableInitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitVariableInitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitVariableInitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitVariableInitializer(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitVariableInitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitVariableInitializer(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitVariableInitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variableInitializer() throws -> VariableInitializerContext {
+	 open func variableInitializer() throws -> VariableInitializerContext {
 		var _localctx: VariableInitializerContext = VariableInitializerContext(_ctx, getState())
 		try enterRule(_localctx, 74, apexParser.RULE_variableInitializer)
 		defer {
@@ -3564,7 +3975,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3575,40 +3986,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayInitializerContext:ParserRuleContext {
-		open func variableInitializer() -> Array<VariableInitializerContext> {
-			return getRuleContexts(VariableInitializerContext.self)
+
+	public class ArrayInitializerContext: ParserRuleContext {
+			open
+			func variableInitializer() -> [VariableInitializerContext] {
+				return getRuleContexts(VariableInitializerContext.self)
+			}
+			open
+			func variableInitializer(_ i: Int) -> VariableInitializerContext? {
+				return getRuleContext(VariableInitializerContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_arrayInitializer
 		}
-		open func variableInitializer(_ i: Int) -> VariableInitializerContext? {
-			return getRuleContext(VariableInitializerContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_arrayInitializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterArrayInitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterArrayInitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitArrayInitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitArrayInitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitArrayInitializer(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitArrayInitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitArrayInitializer(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitArrayInitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayInitializer() throws -> ArrayInitializerContext {
+	 open func arrayInitializer() throws -> ArrayInitializerContext {
 		var _localctx: ArrayInitializerContext = ArrayInitializerContext(_ctx, getState())
 		try enterRule(_localctx, 76, apexParser.RULE_arrayInitializer)
 		var _la: Int = 0
@@ -3681,35 +4099,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class EnumConstantNameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_enumConstantName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterEnumConstantName(self)
+
+	public class EnumConstantNameContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_enumConstantName
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterEnumConstantName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitEnumConstantName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitEnumConstantName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitEnumConstantName(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitEnumConstantName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitEnumConstantName(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitEnumConstantName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumConstantName() throws -> EnumConstantNameContext {
+	 open func enumConstantName() throws -> EnumConstantNameContext {
 		var _localctx: EnumConstantNameContext = EnumConstantNameContext(_ctx, getState())
 		try enterRule(_localctx, 78, apexParser.RULE_enumConstantName)
 		defer {
@@ -3729,40 +4155,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class TypeContext:ParserRuleContext {
-		open func classOrInterfaceType() -> ClassOrInterfaceTypeContext? {
-			return getRuleContext(ClassOrInterfaceTypeContext.self,0)
+
+	public class TypeContext: ParserRuleContext {
+			open
+			func classOrInterfaceType() -> ClassOrInterfaceTypeContext? {
+				return getRuleContext(ClassOrInterfaceTypeContext.self, 0)
+			}
+			open
+			func primitiveType() -> PrimitiveTypeContext? {
+				return getRuleContext(PrimitiveTypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_type
 		}
-		open func primitiveType() -> PrimitiveTypeContext? {
-			return getRuleContext(PrimitiveTypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_type }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitType(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitType(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func type() throws -> TypeContext {
+	 open func type() throws -> TypeContext {
 		var _localctx: TypeContext = TypeContext(_ctx, getState())
 		try enterRule(_localctx, 80, apexParser.RULE_type)
 		defer {
@@ -3826,7 +4259,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3837,45 +4270,59 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ClassOrInterfaceTypeContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(apexParser.Tokens.Identifier.rawValue) }
-		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(apexParser.Tokens.Identifier.rawValue, i)
+
+	public class ClassOrInterfaceTypeContext: ParserRuleContext {
+			open
+			func Identifier() -> [TerminalNode] {
+				return getTokens(apexParser.Tokens.Identifier.rawValue)
+			}
+			open
+			func Identifier(_ i:Int) -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, i)
+			}
+			open
+			func typeArguments() -> [TypeArgumentsContext] {
+				return getRuleContexts(TypeArgumentsContext.self)
+			}
+			open
+			func typeArguments(_ i: Int) -> TypeArgumentsContext? {
+				return getRuleContext(TypeArgumentsContext.self, i)
+			}
+			open
+			func SET() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SET.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_classOrInterfaceType
 		}
-		open func typeArguments() -> Array<TypeArgumentsContext> {
-			return getRuleContexts(TypeArgumentsContext.self)
-		}
-		open func typeArguments(_ i: Int) -> TypeArgumentsContext? {
-			return getRuleContext(TypeArgumentsContext.self,i)
-		}
-		open func SET() -> TerminalNode? { return getToken(apexParser.Tokens.SET.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_classOrInterfaceType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterClassOrInterfaceType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterClassOrInterfaceType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitClassOrInterfaceType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitClassOrInterfaceType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitClassOrInterfaceType(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitClassOrInterfaceType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitClassOrInterfaceType(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitClassOrInterfaceType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classOrInterfaceType() throws -> ClassOrInterfaceTypeContext {
+	 open func classOrInterfaceType() throws -> ClassOrInterfaceTypeContext {
 		var _localctx: ClassOrInterfaceTypeContext = ClassOrInterfaceTypeContext(_ctx, getState())
 		try enterRule(_localctx, 82, apexParser.RULE_classOrInterfaceType)
 		defer {
@@ -3938,7 +4385,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3949,42 +4396,71 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class PrimitiveTypeContext:ParserRuleContext {
-		open func BOOLEAN() -> TerminalNode? { return getToken(apexParser.Tokens.BOOLEAN.rawValue, 0) }
-		open func CHAR() -> TerminalNode? { return getToken(apexParser.Tokens.CHAR.rawValue, 0) }
-		open func BYTE() -> TerminalNode? { return getToken(apexParser.Tokens.BYTE.rawValue, 0) }
-		open func SHORT() -> TerminalNode? { return getToken(apexParser.Tokens.SHORT.rawValue, 0) }
-		open func INT() -> TerminalNode? { return getToken(apexParser.Tokens.INT.rawValue, 0) }
-		open func LONG() -> TerminalNode? { return getToken(apexParser.Tokens.LONG.rawValue, 0) }
-		open func FLOAT() -> TerminalNode? { return getToken(apexParser.Tokens.FLOAT.rawValue, 0) }
-		open func DOUBLE() -> TerminalNode? { return getToken(apexParser.Tokens.DOUBLE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_primitiveType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterPrimitiveType(self)
+
+	public class PrimitiveTypeContext: ParserRuleContext {
+			open
+			func BOOLEAN() -> TerminalNode? {
+				return getToken(apexParser.Tokens.BOOLEAN.rawValue, 0)
+			}
+			open
+			func CHAR() -> TerminalNode? {
+				return getToken(apexParser.Tokens.CHAR.rawValue, 0)
+			}
+			open
+			func BYTE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.BYTE.rawValue, 0)
+			}
+			open
+			func SHORT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SHORT.rawValue, 0)
+			}
+			open
+			func INT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.INT.rawValue, 0)
+			}
+			open
+			func LONG() -> TerminalNode? {
+				return getToken(apexParser.Tokens.LONG.rawValue, 0)
+			}
+			open
+			func FLOAT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.FLOAT.rawValue, 0)
+			}
+			open
+			func DOUBLE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DOUBLE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_primitiveType
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterPrimitiveType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitPrimitiveType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitPrimitiveType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitPrimitiveType(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitPrimitiveType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitPrimitiveType(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitPrimitiveType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primitiveType() throws -> PrimitiveTypeContext {
+	 open func primitiveType() throws -> PrimitiveTypeContext {
 		var _localctx: PrimitiveTypeContext = PrimitiveTypeContext(_ctx, getState())
 		try enterRule(_localctx, 84, apexParser.RULE_primitiveType)
 		var _la: Int = 0
@@ -4019,40 +4495,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class TypeArgumentsContext:ParserRuleContext {
-		open func typeArgument() -> Array<TypeArgumentContext> {
-			return getRuleContexts(TypeArgumentContext.self)
+
+	public class TypeArgumentsContext: ParserRuleContext {
+			open
+			func typeArgument() -> [TypeArgumentContext] {
+				return getRuleContexts(TypeArgumentContext.self)
+			}
+			open
+			func typeArgument(_ i: Int) -> TypeArgumentContext? {
+				return getRuleContext(TypeArgumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_typeArguments
 		}
-		open func typeArgument(_ i: Int) -> TypeArgumentContext? {
-			return getRuleContext(TypeArgumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_typeArguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterTypeArguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterTypeArguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitTypeArguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitTypeArguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitTypeArguments(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitTypeArguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitTypeArguments(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitTypeArguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeArguments() throws -> TypeArgumentsContext {
+	 open func typeArguments() throws -> TypeArgumentsContext {
 		var _localctx: TypeArgumentsContext = TypeArgumentsContext(_ctx, getState())
 		try enterRule(_localctx, 86, apexParser.RULE_typeArguments)
 		var _la: Int = 0
@@ -4095,39 +4578,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class TypeArgumentContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class TypeArgumentContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func EXTENDS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.EXTENDS.rawValue, 0)
+			}
+			open
+			func SUPER() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SUPER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_typeArgument
 		}
-		open func EXTENDS() -> TerminalNode? { return getToken(apexParser.Tokens.EXTENDS.rawValue, 0) }
-		open func SUPER() -> TerminalNode? { return getToken(apexParser.Tokens.SUPER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_typeArgument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterTypeArgument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterTypeArgument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitTypeArgument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitTypeArgument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitTypeArgument(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitTypeArgument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitTypeArgument(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitTypeArgument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeArgument() throws -> TypeArgumentContext {
+	 open func typeArgument() throws -> TypeArgumentContext {
 		var _localctx: TypeArgumentContext = TypeArgumentContext(_ctx, getState())
 		try enterRule(_localctx, 88, apexParser.RULE_typeArgument)
 		var _la: Int = 0
@@ -4187,7 +4682,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4198,40 +4693,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class QualifiedNameListContext:ParserRuleContext {
-		open func qualifiedName() -> Array<QualifiedNameContext> {
-			return getRuleContexts(QualifiedNameContext.self)
+
+	public class QualifiedNameListContext: ParserRuleContext {
+			open
+			func qualifiedName() -> [QualifiedNameContext] {
+				return getRuleContexts(QualifiedNameContext.self)
+			}
+			open
+			func qualifiedName(_ i: Int) -> QualifiedNameContext? {
+				return getRuleContext(QualifiedNameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_qualifiedNameList
 		}
-		open func qualifiedName(_ i: Int) -> QualifiedNameContext? {
-			return getRuleContext(QualifiedNameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_qualifiedNameList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterQualifiedNameList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterQualifiedNameList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitQualifiedNameList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitQualifiedNameList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitQualifiedNameList(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitQualifiedNameList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitQualifiedNameList(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitQualifiedNameList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qualifiedNameList() throws -> QualifiedNameListContext {
+	 open func qualifiedNameList() throws -> QualifiedNameListContext {
 		var _localctx: QualifiedNameListContext = QualifiedNameListContext(_ctx, getState())
 		try enterRule(_localctx, 90, apexParser.RULE_qualifiedNameList)
 		var _la: Int = 0
@@ -4270,37 +4772,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class FormalParametersContext:ParserRuleContext {
-		open func formalParameterList() -> FormalParameterListContext? {
-			return getRuleContext(FormalParameterListContext.self,0)
+
+	public class FormalParametersContext: ParserRuleContext {
+			open
+			func formalParameterList() -> FormalParameterListContext? {
+				return getRuleContext(FormalParameterListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_formalParameters
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_formalParameters }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterFormalParameters(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterFormalParameters(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitFormalParameters(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitFormalParameters(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitFormalParameters(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitFormalParameters(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitFormalParameters(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitFormalParameters(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalParameters() throws -> FormalParametersContext {
+	 open func formalParameters() throws -> FormalParametersContext {
 		var _localctx: FormalParametersContext = FormalParametersContext(_ctx, getState())
 		try enterRule(_localctx, 92, apexParser.RULE_formalParameters)
 		var _la: Int = 0
@@ -4340,43 +4848,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class FormalParameterListContext:ParserRuleContext {
-		open func formalParameter() -> Array<FormalParameterContext> {
-			return getRuleContexts(FormalParameterContext.self)
+
+	public class FormalParameterListContext: ParserRuleContext {
+			open
+			func formalParameter() -> [FormalParameterContext] {
+				return getRuleContexts(FormalParameterContext.self)
+			}
+			open
+			func formalParameter(_ i: Int) -> FormalParameterContext? {
+				return getRuleContext(FormalParameterContext.self, i)
+			}
+			open
+			func lastFormalParameter() -> LastFormalParameterContext? {
+				return getRuleContext(LastFormalParameterContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_formalParameterList
 		}
-		open func formalParameter(_ i: Int) -> FormalParameterContext? {
-			return getRuleContext(FormalParameterContext.self,i)
-		}
-		open func lastFormalParameter() -> LastFormalParameterContext? {
-			return getRuleContext(LastFormalParameterContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_formalParameterList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterFormalParameterList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterFormalParameterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitFormalParameterList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitFormalParameterList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitFormalParameterList(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitFormalParameterList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitFormalParameterList(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitFormalParameterList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalParameterList() throws -> FormalParameterListContext {
+	 open func formalParameterList() throws -> FormalParameterListContext {
 		var _localctx: FormalParameterListContext = FormalParameterListContext(_ctx, getState())
 		try enterRule(_localctx, 94, apexParser.RULE_formalParameterList)
 		var _la: Int = 0
@@ -4442,46 +4958,55 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class FormalParameterContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class FormalParameterContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func variableDeclaratorId() -> VariableDeclaratorIdContext? {
+				return getRuleContext(VariableDeclaratorIdContext.self, 0)
+			}
+			open
+			func variableModifier() -> [VariableModifierContext] {
+				return getRuleContexts(VariableModifierContext.self)
+			}
+			open
+			func variableModifier(_ i: Int) -> VariableModifierContext? {
+				return getRuleContext(VariableModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_formalParameter
 		}
-		open func variableDeclaratorId() -> VariableDeclaratorIdContext? {
-			return getRuleContext(VariableDeclaratorIdContext.self,0)
-		}
-		open func variableModifier() -> Array<VariableModifierContext> {
-			return getRuleContexts(VariableModifierContext.self)
-		}
-		open func variableModifier(_ i: Int) -> VariableModifierContext? {
-			return getRuleContext(VariableModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_formalParameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterFormalParameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterFormalParameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitFormalParameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitFormalParameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitFormalParameter(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitFormalParameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitFormalParameter(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitFormalParameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formalParameter() throws -> FormalParameterContext {
+	 open func formalParameter() throws -> FormalParameterContext {
 		var _localctx: FormalParameterContext = FormalParameterContext(_ctx, getState())
 		try enterRule(_localctx, 96, apexParser.RULE_formalParameter)
 		var _la: Int = 0
@@ -4521,46 +5046,55 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class LastFormalParameterContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class LastFormalParameterContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func variableDeclaratorId() -> VariableDeclaratorIdContext? {
+				return getRuleContext(VariableDeclaratorIdContext.self, 0)
+			}
+			open
+			func variableModifier() -> [VariableModifierContext] {
+				return getRuleContexts(VariableModifierContext.self)
+			}
+			open
+			func variableModifier(_ i: Int) -> VariableModifierContext? {
+				return getRuleContext(VariableModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_lastFormalParameter
 		}
-		open func variableDeclaratorId() -> VariableDeclaratorIdContext? {
-			return getRuleContext(VariableDeclaratorIdContext.self,0)
-		}
-		open func variableModifier() -> Array<VariableModifierContext> {
-			return getRuleContexts(VariableModifierContext.self)
-		}
-		open func variableModifier(_ i: Int) -> VariableModifierContext? {
-			return getRuleContext(VariableModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_lastFormalParameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterLastFormalParameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterLastFormalParameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitLastFormalParameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitLastFormalParameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitLastFormalParameter(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitLastFormalParameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitLastFormalParameter(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitLastFormalParameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lastFormalParameter() throws -> LastFormalParameterContext {
+	 open func lastFormalParameter() throws -> LastFormalParameterContext {
 		var _localctx: LastFormalParameterContext = LastFormalParameterContext(_ctx, getState())
 		try enterRule(_localctx, 98, apexParser.RULE_lastFormalParameter)
 		var _la: Int = 0
@@ -4602,37 +5136,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class MethodBodyContext:ParserRuleContext {
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class MethodBodyContext: ParserRuleContext {
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_methodBody
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_methodBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterMethodBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterMethodBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitMethodBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitMethodBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitMethodBody(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitMethodBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitMethodBody(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitMethodBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func methodBody() throws -> MethodBodyContext {
+	 open func methodBody() throws -> MethodBodyContext {
 		var _localctx: MethodBodyContext = MethodBodyContext(_ctx, getState())
 		try enterRule(_localctx, 100, apexParser.RULE_methodBody)
 		defer {
@@ -4652,37 +5192,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ConstructorBodyContext:ParserRuleContext {
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class ConstructorBodyContext: ParserRuleContext {
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_constructorBody
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_constructorBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterConstructorBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterConstructorBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitConstructorBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitConstructorBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitConstructorBody(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitConstructorBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitConstructorBody(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitConstructorBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constructorBody() throws -> ConstructorBodyContext {
+	 open func constructorBody() throws -> ConstructorBodyContext {
 		var _localctx: ConstructorBodyContext = ConstructorBodyContext(_ctx, getState())
 		try enterRule(_localctx, 102, apexParser.RULE_constructorBody)
 		defer {
@@ -4702,38 +5248,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class QualifiedNameContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(apexParser.Tokens.Identifier.rawValue) }
-		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(apexParser.Tokens.Identifier.rawValue, i)
+
+	public class QualifiedNameContext: ParserRuleContext {
+			open
+			func Identifier() -> [TerminalNode] {
+				return getTokens(apexParser.Tokens.Identifier.rawValue)
+			}
+			open
+			func Identifier(_ i:Int) -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_qualifiedName
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_qualifiedName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterQualifiedName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterQualifiedName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitQualifiedName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitQualifiedName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitQualifiedName(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitQualifiedName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitQualifiedName(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitQualifiedName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qualifiedName() throws -> QualifiedNameContext {
+	 open func qualifiedName() throws -> QualifiedNameContext {
 		var _localctx: QualifiedNameContext = QualifiedNameContext(_ctx, getState())
 		try enterRule(_localctx, 104, apexParser.RULE_qualifiedName)
 		defer {
@@ -4770,40 +5325,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func IntegerLiteral() -> TerminalNode? { return getToken(apexParser.Tokens.IntegerLiteral.rawValue, 0) }
-		open func FloatingPointLiteral() -> TerminalNode? { return getToken(apexParser.Tokens.FloatingPointLiteral.rawValue, 0) }
-		open func CharacterLiteral() -> TerminalNode? { return getToken(apexParser.Tokens.CharacterLiteral.rawValue, 0) }
-		open func StringLiteral() -> TerminalNode? { return getToken(apexParser.Tokens.StringLiteral.rawValue, 0) }
-		open func BooleanLiteral() -> TerminalNode? { return getToken(apexParser.Tokens.BooleanLiteral.rawValue, 0) }
-		open func NullLiteral() -> TerminalNode? { return getToken(apexParser.Tokens.NullLiteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterLiteral(self)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func IntegerLiteral() -> TerminalNode? {
+				return getToken(apexParser.Tokens.IntegerLiteral.rawValue, 0)
+			}
+			open
+			func FloatingPointLiteral() -> TerminalNode? {
+				return getToken(apexParser.Tokens.FloatingPointLiteral.rawValue, 0)
+			}
+			open
+			func CharacterLiteral() -> TerminalNode? {
+				return getToken(apexParser.Tokens.CharacterLiteral.rawValue, 0)
+			}
+			open
+			func StringLiteral() -> TerminalNode? {
+				return getToken(apexParser.Tokens.StringLiteral.rawValue, 0)
+			}
+			open
+			func BooleanLiteral() -> TerminalNode? {
+				return getToken(apexParser.Tokens.BooleanLiteral.rawValue, 0)
+			}
+			open
+			func NullLiteral() -> TerminalNode? {
+				return getToken(apexParser.Tokens.NullLiteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitLiteral(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 106, apexParser.RULE_literal)
 		var _la: Int = 0
@@ -4838,43 +5416,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationContext:ParserRuleContext {
-		open func annotationName() -> AnnotationNameContext? {
-			return getRuleContext(AnnotationNameContext.self,0)
+
+	public class AnnotationContext: ParserRuleContext {
+			open
+			func annotationName() -> AnnotationNameContext? {
+				return getRuleContext(AnnotationNameContext.self, 0)
+			}
+			open
+			func elementValuePairs() -> ElementValuePairsContext? {
+				return getRuleContext(ElementValuePairsContext.self, 0)
+			}
+			open
+			func elementValue() -> ElementValueContext? {
+				return getRuleContext(ElementValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_annotation
 		}
-		open func elementValuePairs() -> ElementValuePairsContext? {
-			return getRuleContext(ElementValuePairsContext.self,0)
-		}
-		open func elementValue() -> ElementValueContext? {
-			return getRuleContext(ElementValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_annotation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterAnnotation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterAnnotation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitAnnotation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitAnnotation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitAnnotation(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitAnnotation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitAnnotation(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitAnnotation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotation() throws -> AnnotationContext {
+	 open func annotation() throws -> AnnotationContext {
 		var _localctx: AnnotationContext = AnnotationContext(_ctx, getState())
 		try enterRule(_localctx, 108, apexParser.RULE_annotation)
 		var _la: Int = 0
@@ -4927,37 +5513,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationNameContext:ParserRuleContext {
-		open func qualifiedName() -> QualifiedNameContext? {
-			return getRuleContext(QualifiedNameContext.self,0)
+
+	public class AnnotationNameContext: ParserRuleContext {
+			open
+			func qualifiedName() -> QualifiedNameContext? {
+				return getRuleContext(QualifiedNameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_annotationName
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_annotationName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterAnnotationName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterAnnotationName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitAnnotationName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitAnnotationName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitAnnotationName(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitAnnotationName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitAnnotationName(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitAnnotationName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotationName() throws -> AnnotationNameContext {
+	 open func annotationName() throws -> AnnotationNameContext {
 		var _localctx: AnnotationNameContext = AnnotationNameContext(_ctx, getState())
 		try enterRule(_localctx, 110, apexParser.RULE_annotationName)
 		defer {
@@ -4977,40 +5569,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ElementValuePairsContext:ParserRuleContext {
-		open func elementValuePair() -> Array<ElementValuePairContext> {
-			return getRuleContexts(ElementValuePairContext.self)
+
+	public class ElementValuePairsContext: ParserRuleContext {
+			open
+			func elementValuePair() -> [ElementValuePairContext] {
+				return getRuleContexts(ElementValuePairContext.self)
+			}
+			open
+			func elementValuePair(_ i: Int) -> ElementValuePairContext? {
+				return getRuleContext(ElementValuePairContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_elementValuePairs
 		}
-		open func elementValuePair(_ i: Int) -> ElementValuePairContext? {
-			return getRuleContext(ElementValuePairContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_elementValuePairs }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterElementValuePairs(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterElementValuePairs(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitElementValuePairs(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitElementValuePairs(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitElementValuePairs(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitElementValuePairs(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitElementValuePairs(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitElementValuePairs(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elementValuePairs() throws -> ElementValuePairsContext {
+	 open func elementValuePairs() throws -> ElementValuePairsContext {
 		var _localctx: ElementValuePairsContext = ElementValuePairsContext(_ctx, getState())
 		try enterRule(_localctx, 112, apexParser.RULE_elementValuePairs)
 		var _la: Int = 0
@@ -5049,38 +5648,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ElementValuePairContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func elementValue() -> ElementValueContext? {
-			return getRuleContext(ElementValueContext.self,0)
+
+	public class ElementValuePairContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func elementValue() -> ElementValueContext? {
+				return getRuleContext(ElementValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_elementValuePair
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_elementValuePair }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterElementValuePair(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterElementValuePair(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitElementValuePair(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitElementValuePair(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitElementValuePair(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitElementValuePair(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitElementValuePair(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitElementValuePair(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elementValuePair() throws -> ElementValuePairContext {
+	 open func elementValuePair() throws -> ElementValuePairContext {
 		var _localctx: ElementValuePairContext = ElementValuePairContext(_ctx, getState())
 		try enterRule(_localctx, 114, apexParser.RULE_elementValuePair)
 		defer {
@@ -5104,43 +5712,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ElementValueContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ElementValueContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func annotation() -> AnnotationContext? {
+				return getRuleContext(AnnotationContext.self, 0)
+			}
+			open
+			func elementValueArrayInitializer() -> ElementValueArrayInitializerContext? {
+				return getRuleContext(ElementValueArrayInitializerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_elementValue
 		}
-		open func annotation() -> AnnotationContext? {
-			return getRuleContext(AnnotationContext.self,0)
-		}
-		open func elementValueArrayInitializer() -> ElementValueArrayInitializerContext? {
-			return getRuleContext(ElementValueArrayInitializerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_elementValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterElementValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterElementValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitElementValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitElementValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitElementValue(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitElementValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitElementValue(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitElementValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elementValue() throws -> ElementValueContext {
+	 open func elementValue() throws -> ElementValueContext {
 		var _localctx: ElementValueContext = ElementValueContext(_ctx, getState())
 		try enterRule(_localctx, 116, apexParser.RULE_elementValue)
 		defer {
@@ -5199,7 +5815,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5210,40 +5826,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ElementValueArrayInitializerContext:ParserRuleContext {
-		open func elementValue() -> Array<ElementValueContext> {
-			return getRuleContexts(ElementValueContext.self)
+
+	public class ElementValueArrayInitializerContext: ParserRuleContext {
+			open
+			func elementValue() -> [ElementValueContext] {
+				return getRuleContexts(ElementValueContext.self)
+			}
+			open
+			func elementValue(_ i: Int) -> ElementValueContext? {
+				return getRuleContext(ElementValueContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_elementValueArrayInitializer
 		}
-		open func elementValue(_ i: Int) -> ElementValueContext? {
-			return getRuleContext(ElementValueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_elementValueArrayInitializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterElementValueArrayInitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterElementValueArrayInitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitElementValueArrayInitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitElementValueArrayInitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitElementValueArrayInitializer(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitElementValueArrayInitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitElementValueArrayInitializer(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitElementValueArrayInitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elementValueArrayInitializer() throws -> ElementValueArrayInitializerContext {
+	 open func elementValueArrayInitializer() throws -> ElementValueArrayInitializerContext {
 		var _localctx: ElementValueArrayInitializerContext = ElementValueArrayInitializerContext(_ctx, getState())
 		try enterRule(_localctx, 118, apexParser.RULE_elementValueArrayInitializer)
 		var _la: Int = 0
@@ -5316,39 +5939,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationTypeDeclarationContext:ParserRuleContext {
-		open func INTERFACE() -> TerminalNode? { return getToken(apexParser.Tokens.INTERFACE.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func annotationTypeBody() -> AnnotationTypeBodyContext? {
-			return getRuleContext(AnnotationTypeBodyContext.self,0)
+
+	public class AnnotationTypeDeclarationContext: ParserRuleContext {
+			open
+			func INTERFACE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.INTERFACE.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func annotationTypeBody() -> AnnotationTypeBodyContext? {
+				return getRuleContext(AnnotationTypeBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_annotationTypeDeclaration
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_annotationTypeDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterAnnotationTypeDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterAnnotationTypeDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitAnnotationTypeDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitAnnotationTypeDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitAnnotationTypeDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitAnnotationTypeDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitAnnotationTypeDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitAnnotationTypeDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotationTypeDeclaration() throws -> AnnotationTypeDeclarationContext {
+	 open func annotationTypeDeclaration() throws -> AnnotationTypeDeclarationContext {
 		var _localctx: AnnotationTypeDeclarationContext = AnnotationTypeDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 120, apexParser.RULE_annotationTypeDeclaration)
 		defer {
@@ -5374,40 +6009,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationTypeBodyContext:ParserRuleContext {
-		open func annotationTypeElementDeclaration() -> Array<AnnotationTypeElementDeclarationContext> {
-			return getRuleContexts(AnnotationTypeElementDeclarationContext.self)
+
+	public class AnnotationTypeBodyContext: ParserRuleContext {
+			open
+			func annotationTypeElementDeclaration() -> [AnnotationTypeElementDeclarationContext] {
+				return getRuleContexts(AnnotationTypeElementDeclarationContext.self)
+			}
+			open
+			func annotationTypeElementDeclaration(_ i: Int) -> AnnotationTypeElementDeclarationContext? {
+				return getRuleContext(AnnotationTypeElementDeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_annotationTypeBody
 		}
-		open func annotationTypeElementDeclaration(_ i: Int) -> AnnotationTypeElementDeclarationContext? {
-			return getRuleContext(AnnotationTypeElementDeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_annotationTypeBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterAnnotationTypeBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterAnnotationTypeBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitAnnotationTypeBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitAnnotationTypeBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitAnnotationTypeBody(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitAnnotationTypeBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitAnnotationTypeBody(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitAnnotationTypeBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotationTypeBody() throws -> AnnotationTypeBodyContext {
+	 open func annotationTypeBody() throws -> AnnotationTypeBodyContext {
 		var _localctx: AnnotationTypeBodyContext = AnnotationTypeBodyContext(_ctx, getState())
 		try enterRule(_localctx, 122, apexParser.RULE_annotationTypeBody)
 		var _la: Int = 0
@@ -5453,43 +6095,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationTypeElementDeclarationContext:ParserRuleContext {
-		open func annotationTypeElementRest() -> AnnotationTypeElementRestContext? {
-			return getRuleContext(AnnotationTypeElementRestContext.self,0)
+
+	public class AnnotationTypeElementDeclarationContext: ParserRuleContext {
+			open
+			func annotationTypeElementRest() -> AnnotationTypeElementRestContext? {
+				return getRuleContext(AnnotationTypeElementRestContext.self, 0)
+			}
+			open
+			func modifier() -> [ModifierContext] {
+				return getRuleContexts(ModifierContext.self)
+			}
+			open
+			func modifier(_ i: Int) -> ModifierContext? {
+				return getRuleContext(ModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_annotationTypeElementDeclaration
 		}
-		open func modifier() -> Array<ModifierContext> {
-			return getRuleContexts(ModifierContext.self)
-		}
-		open func modifier(_ i: Int) -> ModifierContext? {
-			return getRuleContext(ModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_annotationTypeElementDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterAnnotationTypeElementDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterAnnotationTypeElementDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitAnnotationTypeElementDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitAnnotationTypeElementDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitAnnotationTypeElementDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitAnnotationTypeElementDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitAnnotationTypeElementDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitAnnotationTypeElementDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotationTypeElementDeclaration() throws -> AnnotationTypeElementDeclarationContext {
+	 open func annotationTypeElementDeclaration() throws -> AnnotationTypeElementDeclarationContext {
 		var _localctx: AnnotationTypeElementDeclarationContext = AnnotationTypeElementDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 124, apexParser.RULE_annotationTypeElementDeclaration)
 		defer {
@@ -5557,7 +6207,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5568,52 +6218,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationTypeElementRestContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class AnnotationTypeElementRestContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func annotationMethodOrConstantRest() -> AnnotationMethodOrConstantRestContext? {
+				return getRuleContext(AnnotationMethodOrConstantRestContext.self, 0)
+			}
+			open
+			func classDeclaration() -> ClassDeclarationContext? {
+				return getRuleContext(ClassDeclarationContext.self, 0)
+			}
+			open
+			func interfaceDeclaration() -> InterfaceDeclarationContext? {
+				return getRuleContext(InterfaceDeclarationContext.self, 0)
+			}
+			open
+			func enumDeclaration() -> EnumDeclarationContext? {
+				return getRuleContext(EnumDeclarationContext.self, 0)
+			}
+			open
+			func annotationTypeDeclaration() -> AnnotationTypeDeclarationContext? {
+				return getRuleContext(AnnotationTypeDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_annotationTypeElementRest
 		}
-		open func annotationMethodOrConstantRest() -> AnnotationMethodOrConstantRestContext? {
-			return getRuleContext(AnnotationMethodOrConstantRestContext.self,0)
-		}
-		open func classDeclaration() -> ClassDeclarationContext? {
-			return getRuleContext(ClassDeclarationContext.self,0)
-		}
-		open func interfaceDeclaration() -> InterfaceDeclarationContext? {
-			return getRuleContext(InterfaceDeclarationContext.self,0)
-		}
-		open func enumDeclaration() -> EnumDeclarationContext? {
-			return getRuleContext(EnumDeclarationContext.self,0)
-		}
-		open func annotationTypeDeclaration() -> AnnotationTypeDeclarationContext? {
-			return getRuleContext(AnnotationTypeDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_annotationTypeElementRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterAnnotationTypeElementRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterAnnotationTypeElementRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitAnnotationTypeElementRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitAnnotationTypeElementRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitAnnotationTypeElementRest(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitAnnotationTypeElementRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitAnnotationTypeElementRest(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitAnnotationTypeElementRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotationTypeElementRest() throws -> AnnotationTypeElementRestContext {
+	 open func annotationTypeElementRest() throws -> AnnotationTypeElementRestContext {
 		var _localctx: AnnotationTypeElementRestContext = AnnotationTypeElementRestContext(_ctx, getState())
 		try enterRule(_localctx, 126, apexParser.RULE_annotationTypeElementRest)
 		defer {
@@ -5711,7 +6372,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -5722,40 +6383,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationMethodOrConstantRestContext:ParserRuleContext {
-		open func annotationMethodRest() -> AnnotationMethodRestContext? {
-			return getRuleContext(AnnotationMethodRestContext.self,0)
+
+	public class AnnotationMethodOrConstantRestContext: ParserRuleContext {
+			open
+			func annotationMethodRest() -> AnnotationMethodRestContext? {
+				return getRuleContext(AnnotationMethodRestContext.self, 0)
+			}
+			open
+			func annotationConstantRest() -> AnnotationConstantRestContext? {
+				return getRuleContext(AnnotationConstantRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_annotationMethodOrConstantRest
 		}
-		open func annotationConstantRest() -> AnnotationConstantRestContext? {
-			return getRuleContext(AnnotationConstantRestContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_annotationMethodOrConstantRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterAnnotationMethodOrConstantRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterAnnotationMethodOrConstantRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitAnnotationMethodOrConstantRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitAnnotationMethodOrConstantRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitAnnotationMethodOrConstantRest(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitAnnotationMethodOrConstantRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitAnnotationMethodOrConstantRest(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitAnnotationMethodOrConstantRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotationMethodOrConstantRest() throws -> AnnotationMethodOrConstantRestContext {
+	 open func annotationMethodOrConstantRest() throws -> AnnotationMethodOrConstantRestContext {
 		var _localctx: AnnotationMethodOrConstantRestContext = AnnotationMethodOrConstantRestContext(_ctx, getState())
 		try enterRule(_localctx, 128, apexParser.RULE_annotationMethodOrConstantRest)
 		defer {
@@ -5788,38 +6456,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationMethodRestContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func defaultValue() -> DefaultValueContext? {
-			return getRuleContext(DefaultValueContext.self,0)
+
+	public class AnnotationMethodRestContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func defaultValue() -> DefaultValueContext? {
+				return getRuleContext(DefaultValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_annotationMethodRest
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_annotationMethodRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterAnnotationMethodRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterAnnotationMethodRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitAnnotationMethodRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitAnnotationMethodRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitAnnotationMethodRest(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitAnnotationMethodRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitAnnotationMethodRest(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitAnnotationMethodRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotationMethodRest() throws -> AnnotationMethodRestContext {
+	 open func annotationMethodRest() throws -> AnnotationMethodRestContext {
 		var _localctx: AnnotationMethodRestContext = AnnotationMethodRestContext(_ctx, getState())
 		try enterRule(_localctx, 130, apexParser.RULE_annotationMethodRest)
 		var _la: Int = 0
@@ -5857,37 +6534,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class AnnotationConstantRestContext:ParserRuleContext {
-		open func variableDeclarators() -> VariableDeclaratorsContext? {
-			return getRuleContext(VariableDeclaratorsContext.self,0)
+
+	public class AnnotationConstantRestContext: ParserRuleContext {
+			open
+			func variableDeclarators() -> VariableDeclaratorsContext? {
+				return getRuleContext(VariableDeclaratorsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_annotationConstantRest
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_annotationConstantRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterAnnotationConstantRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterAnnotationConstantRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitAnnotationConstantRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitAnnotationConstantRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitAnnotationConstantRest(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitAnnotationConstantRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitAnnotationConstantRest(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitAnnotationConstantRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func annotationConstantRest() throws -> AnnotationConstantRestContext {
+	 open func annotationConstantRest() throws -> AnnotationConstantRestContext {
 		var _localctx: AnnotationConstantRestContext = AnnotationConstantRestContext(_ctx, getState())
 		try enterRule(_localctx, 132, apexParser.RULE_annotationConstantRest)
 		defer {
@@ -5907,38 +6590,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class DefaultValueContext:ParserRuleContext {
-		open func DEFAULT() -> TerminalNode? { return getToken(apexParser.Tokens.DEFAULT.rawValue, 0) }
-		open func elementValue() -> ElementValueContext? {
-			return getRuleContext(ElementValueContext.self,0)
+
+	public class DefaultValueContext: ParserRuleContext {
+			open
+			func DEFAULT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DEFAULT.rawValue, 0)
+			}
+			open
+			func elementValue() -> ElementValueContext? {
+				return getRuleContext(ElementValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_defaultValue
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_defaultValue }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterDefaultValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterDefaultValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitDefaultValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitDefaultValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitDefaultValue(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitDefaultValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitDefaultValue(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitDefaultValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func defaultValue() throws -> DefaultValueContext {
+	 open func defaultValue() throws -> DefaultValueContext {
 		var _localctx: DefaultValueContext = DefaultValueContext(_ctx, getState())
 		try enterRule(_localctx, 134, apexParser.RULE_defaultValue)
 		defer {
@@ -5960,40 +6652,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class BlockContext:ParserRuleContext {
-		open func blockStatement() -> Array<BlockStatementContext> {
-			return getRuleContexts(BlockStatementContext.self)
+
+	public class BlockContext: ParserRuleContext {
+			open
+			func blockStatement() -> [BlockStatementContext] {
+				return getRuleContexts(BlockStatementContext.self)
+			}
+			open
+			func blockStatement(_ i: Int) -> BlockStatementContext? {
+				return getRuleContext(BlockStatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_block
 		}
-		open func blockStatement(_ i: Int) -> BlockStatementContext? {
-			return getRuleContext(BlockStatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitBlock(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func block() throws -> BlockContext {
+	 open func block() throws -> BlockContext {
 		var _localctx: BlockContext = BlockContext(_ctx, getState())
 		try enterRule(_localctx, 136, apexParser.RULE_block)
 		var _la: Int = 0
@@ -6039,43 +6738,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class BlockStatementContext:ParserRuleContext {
-		open func localVariableDeclarationStatement() -> LocalVariableDeclarationStatementContext? {
-			return getRuleContext(LocalVariableDeclarationStatementContext.self,0)
+
+	public class BlockStatementContext: ParserRuleContext {
+			open
+			func localVariableDeclarationStatement() -> LocalVariableDeclarationStatementContext? {
+				return getRuleContext(LocalVariableDeclarationStatementContext.self, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func typeDeclaration() -> TypeDeclarationContext? {
+				return getRuleContext(TypeDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_blockStatement
 		}
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		open func typeDeclaration() -> TypeDeclarationContext? {
-			return getRuleContext(TypeDeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_blockStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterBlockStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterBlockStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitBlockStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitBlockStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitBlockStatement(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitBlockStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitBlockStatement(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitBlockStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blockStatement() throws -> BlockStatementContext {
+	 open func blockStatement() throws -> BlockStatementContext {
 		var _localctx: BlockStatementContext = BlockStatementContext(_ctx, getState())
 		try enterRule(_localctx, 138, apexParser.RULE_blockStatement)
 		defer {
@@ -6114,37 +6821,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class LocalVariableDeclarationStatementContext:ParserRuleContext {
-		open func localVariableDeclaration() -> LocalVariableDeclarationContext? {
-			return getRuleContext(LocalVariableDeclarationContext.self,0)
+
+	public class LocalVariableDeclarationStatementContext: ParserRuleContext {
+			open
+			func localVariableDeclaration() -> LocalVariableDeclarationContext? {
+				return getRuleContext(LocalVariableDeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_localVariableDeclarationStatement
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_localVariableDeclarationStatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterLocalVariableDeclarationStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterLocalVariableDeclarationStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitLocalVariableDeclarationStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitLocalVariableDeclarationStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitLocalVariableDeclarationStatement(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitLocalVariableDeclarationStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitLocalVariableDeclarationStatement(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitLocalVariableDeclarationStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func localVariableDeclarationStatement() throws -> LocalVariableDeclarationStatementContext {
+	 open func localVariableDeclarationStatement() throws -> LocalVariableDeclarationStatementContext {
 		var _localctx: LocalVariableDeclarationStatementContext = LocalVariableDeclarationStatementContext(_ctx, getState())
 		try enterRule(_localctx, 140, apexParser.RULE_localVariableDeclarationStatement)
 		defer {
@@ -6166,46 +6879,55 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class LocalVariableDeclarationContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class LocalVariableDeclarationContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func variableDeclarators() -> VariableDeclaratorsContext? {
+				return getRuleContext(VariableDeclaratorsContext.self, 0)
+			}
+			open
+			func variableModifier() -> [VariableModifierContext] {
+				return getRuleContexts(VariableModifierContext.self)
+			}
+			open
+			func variableModifier(_ i: Int) -> VariableModifierContext? {
+				return getRuleContext(VariableModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_localVariableDeclaration
 		}
-		open func variableDeclarators() -> VariableDeclaratorsContext? {
-			return getRuleContext(VariableDeclaratorsContext.self,0)
-		}
-		open func variableModifier() -> Array<VariableModifierContext> {
-			return getRuleContexts(VariableModifierContext.self)
-		}
-		open func variableModifier(_ i: Int) -> VariableModifierContext? {
-			return getRuleContext(VariableModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_localVariableDeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterLocalVariableDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterLocalVariableDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitLocalVariableDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitLocalVariableDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitLocalVariableDeclaration(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitLocalVariableDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitLocalVariableDeclaration(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitLocalVariableDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func localVariableDeclaration() throws -> LocalVariableDeclarationContext {
+	 open func localVariableDeclaration() throws -> LocalVariableDeclarationContext {
 		var _localctx: LocalVariableDeclarationContext = LocalVariableDeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 142, apexParser.RULE_localVariableDeclaration)
 		var _la: Int = 0
@@ -6245,81 +6967,131 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func IF() -> TerminalNode? {
+				return getToken(apexParser.Tokens.IF.rawValue, 0)
+			}
+			open
+			func parExpression() -> ParExpressionContext? {
+				return getRuleContext(ParExpressionContext.self, 0)
+			}
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.ELSE.rawValue, 0)
+			}
+			open
+			func FOR() -> TerminalNode? {
+				return getToken(apexParser.Tokens.FOR.rawValue, 0)
+			}
+			open
+			func forControl() -> ForControlContext? {
+				return getRuleContext(ForControlContext.self, 0)
+			}
+			open
+			func WHILE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.WHILE.rawValue, 0)
+			}
+			open
+			func DO() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DO.rawValue, 0)
+			}
+			open
+			func TRY() -> TerminalNode? {
+				return getToken(apexParser.Tokens.TRY.rawValue, 0)
+			}
+			open
+			func finallyBlock() -> FinallyBlockContext? {
+				return getRuleContext(FinallyBlockContext.self, 0)
+			}
+			open
+			func catchClause() -> [CatchClauseContext] {
+				return getRuleContexts(CatchClauseContext.self)
+			}
+			open
+			func catchClause(_ i: Int) -> CatchClauseContext? {
+				return getRuleContext(CatchClauseContext.self, i)
+			}
+			open
+			func resourceSpecification() -> ResourceSpecificationContext? {
+				return getRuleContext(ResourceSpecificationContext.self, 0)
+			}
+			open
+			func RETURN() -> TerminalNode? {
+				return getToken(apexParser.Tokens.RETURN.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func THROW() -> TerminalNode? {
+				return getToken(apexParser.Tokens.THROW.rawValue, 0)
+			}
+			open
+			func BREAK() -> TerminalNode? {
+				return getToken(apexParser.Tokens.BREAK.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func CONTINUE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.CONTINUE.rawValue, 0)
+			}
+			open
+			func statementExpression() -> StatementExpressionContext? {
+				return getRuleContext(StatementExpressionContext.self, 0)
+			}
+			open
+			func apexDbExpression() -> ApexDbExpressionContext? {
+				return getRuleContext(ApexDbExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_statement
 		}
-		open func IF() -> TerminalNode? { return getToken(apexParser.Tokens.IF.rawValue, 0) }
-		open func parExpression() -> ParExpressionContext? {
-			return getRuleContext(ParExpressionContext.self,0)
-		}
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
-		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open func ELSE() -> TerminalNode? { return getToken(apexParser.Tokens.ELSE.rawValue, 0) }
-		open func FOR() -> TerminalNode? { return getToken(apexParser.Tokens.FOR.rawValue, 0) }
-		open func forControl() -> ForControlContext? {
-			return getRuleContext(ForControlContext.self,0)
-		}
-		open func WHILE() -> TerminalNode? { return getToken(apexParser.Tokens.WHILE.rawValue, 0) }
-		open func DO() -> TerminalNode? { return getToken(apexParser.Tokens.DO.rawValue, 0) }
-		open func TRY() -> TerminalNode? { return getToken(apexParser.Tokens.TRY.rawValue, 0) }
-		open func finallyBlock() -> FinallyBlockContext? {
-			return getRuleContext(FinallyBlockContext.self,0)
-		}
-		open func catchClause() -> Array<CatchClauseContext> {
-			return getRuleContexts(CatchClauseContext.self)
-		}
-		open func catchClause(_ i: Int) -> CatchClauseContext? {
-			return getRuleContext(CatchClauseContext.self,i)
-		}
-		open func resourceSpecification() -> ResourceSpecificationContext? {
-			return getRuleContext(ResourceSpecificationContext.self,0)
-		}
-		open func RETURN() -> TerminalNode? { return getToken(apexParser.Tokens.RETURN.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func THROW() -> TerminalNode? { return getToken(apexParser.Tokens.THROW.rawValue, 0) }
-		open func BREAK() -> TerminalNode? { return getToken(apexParser.Tokens.BREAK.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func CONTINUE() -> TerminalNode? { return getToken(apexParser.Tokens.CONTINUE.rawValue, 0) }
-		open func statementExpression() -> StatementExpressionContext? {
-			return getRuleContext(StatementExpressionContext.self,0)
-		}
-		open func apexDbExpression() -> ApexDbExpressionContext? {
-			return getRuleContext(ApexDbExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitStatement(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 144, apexParser.RULE_statement)
 		var _la: Int = 0
@@ -6444,7 +7216,7 @@ open class apexParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -6610,46 +7382,55 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class PropertyBlockContext:ParserRuleContext {
-		open func getter() -> GetterContext? {
-			return getRuleContext(GetterContext.self,0)
+
+	public class PropertyBlockContext: ParserRuleContext {
+			open
+			func getter() -> GetterContext? {
+				return getRuleContext(GetterContext.self, 0)
+			}
+			open
+			func setter() -> SetterContext? {
+				return getRuleContext(SetterContext.self, 0)
+			}
+			open
+			func modifier() -> [ModifierContext] {
+				return getRuleContexts(ModifierContext.self)
+			}
+			open
+			func modifier(_ i: Int) -> ModifierContext? {
+				return getRuleContext(ModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_propertyBlock
 		}
-		open func setter() -> SetterContext? {
-			return getRuleContext(SetterContext.self,0)
-		}
-		open func modifier() -> Array<ModifierContext> {
-			return getRuleContexts(ModifierContext.self)
-		}
-		open func modifier(_ i: Int) -> ModifierContext? {
-			return getRuleContext(ModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_propertyBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterPropertyBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterPropertyBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitPropertyBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitPropertyBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitPropertyBlock(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitPropertyBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitPropertyBlock(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitPropertyBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func propertyBlock() throws -> PropertyBlockContext {
+	 open func propertyBlock() throws -> PropertyBlockContext {
 		var _localctx: PropertyBlockContext = PropertyBlockContext(_ctx, getState())
 		try enterRule(_localctx, 146, apexParser.RULE_propertyBlock)
 		var _la: Int = 0
@@ -6693,7 +7474,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -6705,38 +7486,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class GetterContext:ParserRuleContext {
-		open func GET() -> TerminalNode? { return getToken(apexParser.Tokens.GET.rawValue, 0) }
-		open func methodBody() -> MethodBodyContext? {
-			return getRuleContext(MethodBodyContext.self,0)
+
+	public class GetterContext: ParserRuleContext {
+			open
+			func GET() -> TerminalNode? {
+				return getToken(apexParser.Tokens.GET.rawValue, 0)
+			}
+			open
+			func methodBody() -> MethodBodyContext? {
+				return getRuleContext(MethodBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_getter
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_getter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterGetter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterGetter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitGetter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitGetter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitGetter(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitGetter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitGetter(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitGetter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func getter() throws -> GetterContext {
+	 open func getter() throws -> GetterContext {
 		var _localctx: GetterContext = GetterContext(_ctx, getState())
 		try enterRule(_localctx, 148, apexParser.RULE_getter)
 		defer {
@@ -6761,7 +7551,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -6773,38 +7563,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class SetterContext:ParserRuleContext {
-		open func SET() -> TerminalNode? { return getToken(apexParser.Tokens.SET.rawValue, 0) }
-		open func methodBody() -> MethodBodyContext? {
-			return getRuleContext(MethodBodyContext.self,0)
+
+	public class SetterContext: ParserRuleContext {
+			open
+			func SET() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SET.rawValue, 0)
+			}
+			open
+			func methodBody() -> MethodBodyContext? {
+				return getRuleContext(MethodBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_setter
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_setter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterSetter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterSetter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitSetter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitSetter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitSetter(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitSetter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitSetter(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitSetter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setter() throws -> SetterContext {
+	 open func setter() throws -> SetterContext {
 		var _localctx: SetterContext = SetterContext(_ctx, getState())
 		try enterRule(_localctx, 150, apexParser.RULE_setter)
 		defer {
@@ -6829,7 +7628,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -6841,48 +7640,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class CatchClauseContext:ParserRuleContext {
-		open func CATCH() -> TerminalNode? { return getToken(apexParser.Tokens.CATCH.rawValue, 0) }
-		open func catchType() -> CatchTypeContext? {
-			return getRuleContext(CatchTypeContext.self,0)
+
+	public class CatchClauseContext: ParserRuleContext {
+			open
+			func CATCH() -> TerminalNode? {
+				return getToken(apexParser.Tokens.CATCH.rawValue, 0)
+			}
+			open
+			func catchType() -> CatchTypeContext? {
+				return getRuleContext(CatchTypeContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+			open
+			func variableModifier() -> [VariableModifierContext] {
+				return getRuleContexts(VariableModifierContext.self)
+			}
+			open
+			func variableModifier(_ i: Int) -> VariableModifierContext? {
+				return getRuleContext(VariableModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_catchClause
 		}
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
-		}
-		open func variableModifier() -> Array<VariableModifierContext> {
-			return getRuleContexts(VariableModifierContext.self)
-		}
-		open func variableModifier(_ i: Int) -> VariableModifierContext? {
-			return getRuleContext(VariableModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_catchClause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterCatchClause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterCatchClause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitCatchClause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitCatchClause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitCatchClause(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitCatchClause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitCatchClause(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitCatchClause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func catchClause() throws -> CatchClauseContext {
+	 open func catchClause() throws -> CatchClauseContext {
 		var _localctx: CatchClauseContext = CatchClauseContext(_ctx, getState())
 		try enterRule(_localctx, 152, apexParser.RULE_catchClause)
 		var _la: Int = 0
@@ -6930,40 +7744,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class CatchTypeContext:ParserRuleContext {
-		open func qualifiedName() -> Array<QualifiedNameContext> {
-			return getRuleContexts(QualifiedNameContext.self)
+
+	public class CatchTypeContext: ParserRuleContext {
+			open
+			func qualifiedName() -> [QualifiedNameContext] {
+				return getRuleContexts(QualifiedNameContext.self)
+			}
+			open
+			func qualifiedName(_ i: Int) -> QualifiedNameContext? {
+				return getRuleContext(QualifiedNameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_catchType
 		}
-		open func qualifiedName(_ i: Int) -> QualifiedNameContext? {
-			return getRuleContext(QualifiedNameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_catchType }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterCatchType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterCatchType(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitCatchType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitCatchType(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitCatchType(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitCatchType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitCatchType(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitCatchType(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func catchType() throws -> CatchTypeContext {
+	 open func catchType() throws -> CatchTypeContext {
 		var _localctx: CatchTypeContext = CatchTypeContext(_ctx, getState())
 		try enterRule(_localctx, 154, apexParser.RULE_catchType)
 		var _la: Int = 0
@@ -7002,38 +7823,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class FinallyBlockContext:ParserRuleContext {
-		open func FINALLY() -> TerminalNode? { return getToken(apexParser.Tokens.FINALLY.rawValue, 0) }
-		open func block() -> BlockContext? {
-			return getRuleContext(BlockContext.self,0)
+
+	public class FinallyBlockContext: ParserRuleContext {
+			open
+			func FINALLY() -> TerminalNode? {
+				return getToken(apexParser.Tokens.FINALLY.rawValue, 0)
+			}
+			open
+			func block() -> BlockContext? {
+				return getRuleContext(BlockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_finallyBlock
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_finallyBlock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterFinallyBlock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterFinallyBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitFinallyBlock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitFinallyBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitFinallyBlock(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitFinallyBlock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitFinallyBlock(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitFinallyBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func finallyBlock() throws -> FinallyBlockContext {
+	 open func finallyBlock() throws -> FinallyBlockContext {
 		var _localctx: FinallyBlockContext = FinallyBlockContext(_ctx, getState())
 		try enterRule(_localctx, 156, apexParser.RULE_finallyBlock)
 		defer {
@@ -7055,37 +7885,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ResourceSpecificationContext:ParserRuleContext {
-		open func resources() -> ResourcesContext? {
-			return getRuleContext(ResourcesContext.self,0)
+
+	public class ResourceSpecificationContext: ParserRuleContext {
+			open
+			func resources() -> ResourcesContext? {
+				return getRuleContext(ResourcesContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_resourceSpecification
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_resourceSpecification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterResourceSpecification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterResourceSpecification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitResourceSpecification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitResourceSpecification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitResourceSpecification(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitResourceSpecification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitResourceSpecification(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitResourceSpecification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func resourceSpecification() throws -> ResourceSpecificationContext {
+	 open func resourceSpecification() throws -> ResourceSpecificationContext {
 		var _localctx: ResourceSpecificationContext = ResourceSpecificationContext(_ctx, getState())
 		try enterRule(_localctx, 158, apexParser.RULE_resourceSpecification)
 		var _la: Int = 0
@@ -7123,40 +7959,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ResourcesContext:ParserRuleContext {
-		open func resource() -> Array<ResourceContext> {
-			return getRuleContexts(ResourceContext.self)
+
+	public class ResourcesContext: ParserRuleContext {
+			open
+			func resource() -> [ResourceContext] {
+				return getRuleContexts(ResourceContext.self)
+			}
+			open
+			func resource(_ i: Int) -> ResourceContext? {
+				return getRuleContext(ResourceContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_resources
 		}
-		open func resource(_ i: Int) -> ResourceContext? {
-			return getRuleContext(ResourceContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_resources }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterResources(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterResources(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitResources(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitResources(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitResources(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitResources(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitResources(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitResources(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func resources() throws -> ResourcesContext {
+	 open func resources() throws -> ResourcesContext {
 		var _localctx: ResourcesContext = ResourcesContext(_ctx, getState())
 		try enterRule(_localctx, 160, apexParser.RULE_resources)
 		defer {
@@ -7193,49 +8036,59 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ResourceContext:ParserRuleContext {
-		open func classOrInterfaceType() -> ClassOrInterfaceTypeContext? {
-			return getRuleContext(ClassOrInterfaceTypeContext.self,0)
+
+	public class ResourceContext: ParserRuleContext {
+			open
+			func classOrInterfaceType() -> ClassOrInterfaceTypeContext? {
+				return getRuleContext(ClassOrInterfaceTypeContext.self, 0)
+			}
+			open
+			func variableDeclaratorId() -> VariableDeclaratorIdContext? {
+				return getRuleContext(VariableDeclaratorIdContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func variableModifier() -> [VariableModifierContext] {
+				return getRuleContexts(VariableModifierContext.self)
+			}
+			open
+			func variableModifier(_ i: Int) -> VariableModifierContext? {
+				return getRuleContext(VariableModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_resource
 		}
-		open func variableDeclaratorId() -> VariableDeclaratorIdContext? {
-			return getRuleContext(VariableDeclaratorIdContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func variableModifier() -> Array<VariableModifierContext> {
-			return getRuleContexts(VariableModifierContext.self)
-		}
-		open func variableModifier(_ i: Int) -> VariableModifierContext? {
-			return getRuleContext(VariableModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_resource }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterResource(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterResource(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitResource(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitResource(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitResource(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitResource(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitResource(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitResource(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func resource() throws -> ResourceContext {
+	 open func resource() throws -> ResourceContext {
 		var _localctx: ResourceContext = ResourceContext(_ctx, getState())
 		try enterRule(_localctx, 162, apexParser.RULE_resource)
 		var _la: Int = 0
@@ -7279,46 +8132,55 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ForControlContext:ParserRuleContext {
-		open func enhancedForControl() -> EnhancedForControlContext? {
-			return getRuleContext(EnhancedForControlContext.self,0)
+
+	public class ForControlContext: ParserRuleContext {
+			open
+			func enhancedForControl() -> EnhancedForControlContext? {
+				return getRuleContext(EnhancedForControlContext.self, 0)
+			}
+			open
+			func forInit() -> ForInitContext? {
+				return getRuleContext(ForInitContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func forUpdate() -> ForUpdateContext? {
+				return getRuleContext(ForUpdateContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_forControl
 		}
-		open func forInit() -> ForInitContext? {
-			return getRuleContext(ForInitContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func forUpdate() -> ForUpdateContext? {
-			return getRuleContext(ForUpdateContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_forControl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterForControl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterForControl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitForControl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitForControl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitForControl(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitForControl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitForControl(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitForControl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forControl() throws -> ForControlContext {
+	 open func forControl() throws -> ForControlContext {
 		var _localctx: ForControlContext = ForControlContext(_ctx, getState())
 		try enterRule(_localctx, 164, apexParser.RULE_forControl)
 		var _la: Int = 0
@@ -7414,40 +8276,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ForInitContext:ParserRuleContext {
-		open func localVariableDeclaration() -> LocalVariableDeclarationContext? {
-			return getRuleContext(LocalVariableDeclarationContext.self,0)
+
+	public class ForInitContext: ParserRuleContext {
+			open
+			func localVariableDeclaration() -> LocalVariableDeclarationContext? {
+				return getRuleContext(LocalVariableDeclarationContext.self, 0)
+			}
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_forInit
 		}
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_forInit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterForInit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterForInit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitForInit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitForInit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitForInit(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitForInit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitForInit(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitForInit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forInit() throws -> ForInitContext {
+	 open func forInit() throws -> ForInitContext {
 		var _localctx: ForInitContext = ForInitContext(_ctx, getState())
 		try enterRule(_localctx, 166, apexParser.RULE_forInit)
 		defer {
@@ -7480,49 +8349,59 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class EnhancedForControlContext:ParserRuleContext {
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
+
+	public class EnhancedForControlContext: ParserRuleContext {
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func variableDeclaratorId() -> VariableDeclaratorIdContext? {
+				return getRuleContext(VariableDeclaratorIdContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func variableModifier() -> [VariableModifierContext] {
+				return getRuleContexts(VariableModifierContext.self)
+			}
+			open
+			func variableModifier(_ i: Int) -> VariableModifierContext? {
+				return getRuleContext(VariableModifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_enhancedForControl
 		}
-		open func variableDeclaratorId() -> VariableDeclaratorIdContext? {
-			return getRuleContext(VariableDeclaratorIdContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func variableModifier() -> Array<VariableModifierContext> {
-			return getRuleContexts(VariableModifierContext.self)
-		}
-		open func variableModifier(_ i: Int) -> VariableModifierContext? {
-			return getRuleContext(VariableModifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_enhancedForControl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterEnhancedForControl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterEnhancedForControl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitEnhancedForControl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitEnhancedForControl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitEnhancedForControl(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitEnhancedForControl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitEnhancedForControl(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitEnhancedForControl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enhancedForControl() throws -> EnhancedForControlContext {
+	 open func enhancedForControl() throws -> EnhancedForControlContext {
 		var _localctx: EnhancedForControlContext = EnhancedForControlContext(_ctx, getState())
 		try enterRule(_localctx, 168, apexParser.RULE_enhancedForControl)
 		var _la: Int = 0
@@ -7566,37 +8445,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ForUpdateContext:ParserRuleContext {
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
+
+	public class ForUpdateContext: ParserRuleContext {
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_forUpdate
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_forUpdate }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterForUpdate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterForUpdate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitForUpdate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitForUpdate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitForUpdate(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitForUpdate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitForUpdate(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitForUpdate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forUpdate() throws -> ForUpdateContext {
+	 open func forUpdate() throws -> ForUpdateContext {
 		var _localctx: ForUpdateContext = ForUpdateContext(_ctx, getState())
 		try enterRule(_localctx, 170, apexParser.RULE_forUpdate)
 		defer {
@@ -7616,37 +8501,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ParExpressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ParExpressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_parExpression
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_parExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterParExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterParExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitParExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitParExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitParExpression(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitParExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitParExpression(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitParExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parExpression() throws -> ParExpressionContext {
+	 open func parExpression() throws -> ParExpressionContext {
 		var _localctx: ParExpressionContext = ParExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 172, apexParser.RULE_parExpression)
 		defer {
@@ -7670,40 +8561,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionListContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ExpressionListContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_expressionList
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_expressionList }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterExpressionList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterExpressionList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitExpressionList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitExpressionList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitExpressionList(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitExpressionList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitExpressionList(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitExpressionList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionList() throws -> ExpressionListContext {
+	 open func expressionList() throws -> ExpressionListContext {
 		var _localctx: ExpressionListContext = ExpressionListContext(_ctx, getState())
 		try enterRule(_localctx, 174, apexParser.RULE_expressionList)
 		var _la: Int = 0
@@ -7742,37 +8640,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class StatementExpressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class StatementExpressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_statementExpression
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_statementExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterStatementExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterStatementExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitStatementExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitStatementExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitStatementExpression(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitStatementExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitStatementExpression(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitStatementExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statementExpression() throws -> StatementExpressionContext {
+	 open func statementExpression() throws -> StatementExpressionContext {
 		var _localctx: StatementExpressionContext = StatementExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 176, apexParser.RULE_statementExpression)
 		defer {
@@ -7792,37 +8696,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ConstantExpressionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ConstantExpressionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_constantExpression
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_constantExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterConstantExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterConstantExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitConstantExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitConstantExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitConstantExpression(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitConstantExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitConstantExpression(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitConstantExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constantExpression() throws -> ConstantExpressionContext {
+	 open func constantExpression() throws -> ConstantExpressionContext {
 		var _localctx: ConstantExpressionContext = ConstantExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 178, apexParser.RULE_constantExpression)
 		defer {
@@ -7842,43 +8752,67 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ApexDbExpressionLongContext:ParserRuleContext {
-		open func DATABASE() -> TerminalNode? { return getToken(apexParser.Tokens.DATABASE.rawValue, 0) }
-		open func parExpression() -> ParExpressionContext? {
-			return getRuleContext(ParExpressionContext.self,0)
+
+	public class ApexDbExpressionLongContext: ParserRuleContext {
+			open
+			func DATABASE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DATABASE.rawValue, 0)
+			}
+			open
+			func parExpression() -> ParExpressionContext? {
+				return getRuleContext(ParExpressionContext.self, 0)
+			}
+			open
+			func DB_INSERT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_INSERT.rawValue, 0)
+			}
+			open
+			func DB_UPSERT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_UPSERT.rawValue, 0)
+			}
+			open
+			func DB_UPDATE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_UPDATE.rawValue, 0)
+			}
+			open
+			func DB_DELETE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_DELETE.rawValue, 0)
+			}
+			open
+			func DB_UNDELETE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_UNDELETE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_apexDbExpressionLong
 		}
-		open func DB_INSERT() -> TerminalNode? { return getToken(apexParser.Tokens.DB_INSERT.rawValue, 0) }
-		open func DB_UPSERT() -> TerminalNode? { return getToken(apexParser.Tokens.DB_UPSERT.rawValue, 0) }
-		open func DB_UPDATE() -> TerminalNode? { return getToken(apexParser.Tokens.DB_UPDATE.rawValue, 0) }
-		open func DB_DELETE() -> TerminalNode? { return getToken(apexParser.Tokens.DB_DELETE.rawValue, 0) }
-		open func DB_UNDELETE() -> TerminalNode? { return getToken(apexParser.Tokens.DB_UNDELETE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_apexDbExpressionLong }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterApexDbExpressionLong(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterApexDbExpressionLong(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitApexDbExpressionLong(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitApexDbExpressionLong(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitApexDbExpressionLong(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitApexDbExpressionLong(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitApexDbExpressionLong(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitApexDbExpressionLong(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func apexDbExpressionLong() throws -> ApexDbExpressionLongContext {
+	 open func apexDbExpressionLong() throws -> ApexDbExpressionLongContext {
 		var _localctx: ApexDbExpressionLongContext = ApexDbExpressionLongContext(_ctx, getState())
 		try enterRule(_localctx, 180, apexParser.RULE_apexDbExpressionLong)
 		var _la: Int = 0
@@ -7919,42 +8853,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ApexDbExpressionShortContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ApexDbExpressionShortContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func DB_INSERT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_INSERT.rawValue, 0)
+			}
+			open
+			func DB_UPSERT() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_UPSERT.rawValue, 0)
+			}
+			open
+			func DB_UPDATE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_UPDATE.rawValue, 0)
+			}
+			open
+			func DB_DELETE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_DELETE.rawValue, 0)
+			}
+			open
+			func DB_UNDELETE() -> TerminalNode? {
+				return getToken(apexParser.Tokens.DB_UNDELETE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_apexDbExpressionShort
 		}
-		open func DB_INSERT() -> TerminalNode? { return getToken(apexParser.Tokens.DB_INSERT.rawValue, 0) }
-		open func DB_UPSERT() -> TerminalNode? { return getToken(apexParser.Tokens.DB_UPSERT.rawValue, 0) }
-		open func DB_UPDATE() -> TerminalNode? { return getToken(apexParser.Tokens.DB_UPDATE.rawValue, 0) }
-		open func DB_DELETE() -> TerminalNode? { return getToken(apexParser.Tokens.DB_DELETE.rawValue, 0) }
-		open func DB_UNDELETE() -> TerminalNode? { return getToken(apexParser.Tokens.DB_UNDELETE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_apexDbExpressionShort }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterApexDbExpressionShort(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterApexDbExpressionShort(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitApexDbExpressionShort(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitApexDbExpressionShort(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitApexDbExpressionShort(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitApexDbExpressionShort(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitApexDbExpressionShort(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitApexDbExpressionShort(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func apexDbExpressionShort() throws -> ApexDbExpressionShortContext {
+	 open func apexDbExpressionShort() throws -> ApexDbExpressionShortContext {
 		var _localctx: ApexDbExpressionShortContext = ApexDbExpressionShortContext(_ctx, getState())
 		try enterRule(_localctx, 182, apexParser.RULE_apexDbExpressionShort)
 		var _la: Int = 0
@@ -7991,40 +8946,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ApexDbExpressionContext:ParserRuleContext {
-		open func apexDbExpressionLong() -> ApexDbExpressionLongContext? {
-			return getRuleContext(ApexDbExpressionLongContext.self,0)
+
+	public class ApexDbExpressionContext: ParserRuleContext {
+			open
+			func apexDbExpressionLong() -> ApexDbExpressionLongContext? {
+				return getRuleContext(ApexDbExpressionLongContext.self, 0)
+			}
+			open
+			func apexDbExpressionShort() -> ApexDbExpressionShortContext? {
+				return getRuleContext(ApexDbExpressionShortContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_apexDbExpression
 		}
-		open func apexDbExpressionShort() -> ApexDbExpressionShortContext? {
-			return getRuleContext(ApexDbExpressionShortContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_apexDbExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterApexDbExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterApexDbExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitApexDbExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitApexDbExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitApexDbExpression(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitApexDbExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitApexDbExpression(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitApexDbExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func apexDbExpression() throws -> ApexDbExpressionContext {
+	 open func apexDbExpression() throws -> ApexDbExpressionContext {
 		var _localctx: ApexDbExpressionContext = ApexDbExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 184, apexParser.RULE_apexDbExpression)
 		defer {
@@ -8051,7 +9013,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -8063,71 +9025,106 @@ open class apexParser: Parser {
 		return _localctx
 	}
 
-	open class ExpressionContext:ParserRuleContext {
-		open func primary() -> PrimaryContext? {
-			return getRuleContext(PrimaryContext.self,0)
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func primary() -> PrimaryContext? {
+				return getRuleContext(PrimaryContext.self, 0)
+			}
+			open
+			func NEW() -> TerminalNode? {
+				return getToken(apexParser.Tokens.NEW.rawValue, 0)
+			}
+			open
+			func creator() -> CreatorContext? {
+				return getRuleContext(CreatorContext.self, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func GET() -> TerminalNode? {
+				return getToken(apexParser.Tokens.GET.rawValue, 0)
+			}
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+			open
+			func SET() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SET.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func THIS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.THIS.rawValue, 0)
+			}
+			open
+			func innerCreator() -> InnerCreatorContext? {
+				return getRuleContext(InnerCreatorContext.self, 0)
+			}
+			open
+			func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
+				return getRuleContext(NonWildcardTypeArgumentsContext.self, 0)
+			}
+			open
+			func SUPER() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SUPER.rawValue, 0)
+			}
+			open
+			func superSuffix() -> SuperSuffixContext? {
+				return getRuleContext(SuperSuffixContext.self, 0)
+			}
+			open
+			func explicitGenericInvocation() -> ExplicitGenericInvocationContext? {
+				return getRuleContext(ExplicitGenericInvocationContext.self, 0)
+			}
+			open
+			func INSTANCEOF() -> TerminalNode? {
+				return getToken(apexParser.Tokens.INSTANCEOF.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_expression
 		}
-		open func NEW() -> TerminalNode? { return getToken(apexParser.Tokens.NEW.rawValue, 0) }
-		open func creator() -> CreatorContext? {
-			return getRuleContext(CreatorContext.self,0)
-		}
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func GET() -> TerminalNode? { return getToken(apexParser.Tokens.GET.rawValue, 0) }
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
-		}
-		open func SET() -> TerminalNode? { return getToken(apexParser.Tokens.SET.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func THIS() -> TerminalNode? { return getToken(apexParser.Tokens.THIS.rawValue, 0) }
-		open func innerCreator() -> InnerCreatorContext? {
-			return getRuleContext(InnerCreatorContext.self,0)
-		}
-		open func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
-			return getRuleContext(NonWildcardTypeArgumentsContext.self,0)
-		}
-		open func SUPER() -> TerminalNode? { return getToken(apexParser.Tokens.SUPER.rawValue, 0) }
-		open func superSuffix() -> SuperSuffixContext? {
-			return getRuleContext(SuperSuffixContext.self,0)
-		}
-		open func explicitGenericInvocation() -> ExplicitGenericInvocationContext? {
-			return getRuleContext(ExplicitGenericInvocationContext.self,0)
-		}
-		open func INSTANCEOF() -> TerminalNode? { return getToken(apexParser.Tokens.INSTANCEOF.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitExpression(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expression( ) throws -> ExpressionContext   {
+	 public final  func expression( ) throws -> ExpressionContext   {
 		return try expression(0)
 	}
 	@discardableResult
@@ -8230,7 +9227,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1081)
 						if (!(precpred(_ctx, 13))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
 						}
 						setState(1082)
 						_la = try _input.LA(1)
@@ -8257,7 +9254,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1084)
 						if (!(precpred(_ctx, 12))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
 						}
 						setState(1085)
 						_la = try _input.LA(1)
@@ -8281,7 +9278,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1087)
 						if (!(precpred(_ctx, 11))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
 						}
 						setState(1095)
 						try _errHandler.sync(self)
@@ -8320,7 +9317,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1098)
 						if (!(precpred(_ctx, 10))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
 						}
 						setState(1099)
 						_la = try _input.LA(1)
@@ -8347,7 +9344,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1101)
 						if (!(precpred(_ctx, 8))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
 						}
 						setState(1102)
 						_la = try _input.LA(1)
@@ -8371,7 +9368,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1104)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(1105)
 						try match(apexParser.Tokens.BITAND.rawValue)
@@ -8384,7 +9381,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1107)
 						if (!(precpred(_ctx, 6))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 6)"))
 						}
 						setState(1108)
 						try match(apexParser.Tokens.CARET.rawValue)
@@ -8397,7 +9394,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1110)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(1111)
 						try match(apexParser.Tokens.BITOR.rawValue)
@@ -8410,7 +9407,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1113)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(1114)
 						try match(apexParser.Tokens.AND.rawValue)
@@ -8423,7 +9420,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1116)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(1117)
 						try match(apexParser.Tokens.OR.rawValue)
@@ -8436,7 +9433,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1119)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(1120)
 						try match(apexParser.Tokens.QUESTION.rawValue)
@@ -8453,7 +9450,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1125)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(1126)
 						_la = try _input.LA(1)
@@ -8480,7 +9477,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1128)
 						if (!(precpred(_ctx, 27))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 27)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 27)"))
 						}
 						setState(1129)
 						try match(apexParser.Tokens.DOT.rawValue)
@@ -8517,7 +9514,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1136)
 						if (!(precpred(_ctx, 26))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 26)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 26)"))
 						}
 						setState(1137)
 						try match(apexParser.Tokens.DOT.rawValue)
@@ -8554,7 +9551,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1144)
 						if (!(precpred(_ctx, 25))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 25)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 25)"))
 						}
 						setState(1145)
 						try match(apexParser.Tokens.DOT.rawValue)
@@ -8567,7 +9564,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1147)
 						if (!(precpred(_ctx, 24))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 24)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 24)"))
 						}
 						setState(1148)
 						try match(apexParser.Tokens.DOT.rawValue)
@@ -8580,7 +9577,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1150)
 						if (!(precpred(_ctx, 23))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 23)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 23)"))
 						}
 						setState(1151)
 						try match(apexParser.Tokens.DOT.rawValue)
@@ -8608,7 +9605,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1157)
 						if (!(precpred(_ctx, 22))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 22)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 22)"))
 						}
 						setState(1158)
 						try match(apexParser.Tokens.DOT.rawValue)
@@ -8623,7 +9620,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1161)
 						if (!(precpred(_ctx, 21))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 21)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 21)"))
 						}
 						setState(1162)
 						try match(apexParser.Tokens.DOT.rawValue)
@@ -8636,7 +9633,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1164)
 						if (!(precpred(_ctx, 20))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 20)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 20)"))
 						}
 						setState(1165)
 						try match(apexParser.Tokens.LBRACK.rawValue)
@@ -8651,7 +9648,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1169)
 						if (!(precpred(_ctx, 19))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
 						}
 						setState(1170)
 						try match(apexParser.Tokens.LPAREN.rawValue)
@@ -8684,7 +9681,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1175)
 						if (!(precpred(_ctx, 16))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 16)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 16)"))
 						}
 						setState(1176)
 						_la = try _input.LA(1)
@@ -8706,7 +9703,7 @@ open class apexParser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, apexParser.RULE_expression)
 						setState(1177)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(1178)
 						try match(apexParser.Tokens.INSTANCEOF.rawValue)
@@ -8732,58 +9729,87 @@ open class apexParser: Parser {
 
 		return _localctx;
 	}
-	open class PrimaryContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class PrimaryContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func THIS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.THIS.rawValue, 0)
+			}
+			open
+			func SUPER() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SUPER.rawValue, 0)
+			}
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func type() -> TypeContext? {
+				return getRuleContext(TypeContext.self, 0)
+			}
+			open
+			func CLASS() -> TerminalNode? {
+				return getToken(apexParser.Tokens.CLASS.rawValue, 0)
+			}
+			open
+			func VOID() -> TerminalNode? {
+				return getToken(apexParser.Tokens.VOID.rawValue, 0)
+			}
+			open
+			func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
+				return getRuleContext(NonWildcardTypeArgumentsContext.self, 0)
+			}
+			open
+			func explicitGenericInvocationSuffix() -> ExplicitGenericInvocationSuffixContext? {
+				return getRuleContext(ExplicitGenericInvocationSuffixContext.self, 0)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+			open
+			func SoqlLiteral() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SoqlLiteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_primary
 		}
-		open func THIS() -> TerminalNode? { return getToken(apexParser.Tokens.THIS.rawValue, 0) }
-		open func SUPER() -> TerminalNode? { return getToken(apexParser.Tokens.SUPER.rawValue, 0) }
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func type() -> TypeContext? {
-			return getRuleContext(TypeContext.self,0)
-		}
-		open func CLASS() -> TerminalNode? { return getToken(apexParser.Tokens.CLASS.rawValue, 0) }
-		open func VOID() -> TerminalNode? { return getToken(apexParser.Tokens.VOID.rawValue, 0) }
-		open func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
-			return getRuleContext(NonWildcardTypeArgumentsContext.self,0)
-		}
-		open func explicitGenericInvocationSuffix() -> ExplicitGenericInvocationSuffixContext? {
-			return getRuleContext(ExplicitGenericInvocationSuffixContext.self,0)
-		}
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		open func SoqlLiteral() -> TerminalNode? { return getToken(apexParser.Tokens.SoqlLiteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_primary }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterPrimary(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterPrimary(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitPrimary(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitPrimary(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitPrimary(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitPrimary(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitPrimary(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitPrimary(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primary() throws -> PrimaryContext {
+	 open func primary() throws -> PrimaryContext {
 		var _localctx: PrimaryContext = PrimaryContext(_ctx, getState())
 		try enterRule(_localctx, 188, apexParser.RULE_primary)
 		defer {
@@ -8869,7 +9895,7 @@ open class apexParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		break
@@ -8890,52 +9916,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class CreatorContext:ParserRuleContext {
-		open func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
-			return getRuleContext(NonWildcardTypeArgumentsContext.self,0)
+
+	public class CreatorContext: ParserRuleContext {
+			open
+			func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
+				return getRuleContext(NonWildcardTypeArgumentsContext.self, 0)
+			}
+			open
+			func createdName() -> CreatedNameContext? {
+				return getRuleContext(CreatedNameContext.self, 0)
+			}
+			open
+			func classCreatorRest() -> ClassCreatorRestContext? {
+				return getRuleContext(ClassCreatorRestContext.self, 0)
+			}
+			open
+			func arrayCreatorRest() -> ArrayCreatorRestContext? {
+				return getRuleContext(ArrayCreatorRestContext.self, 0)
+			}
+			open
+			func mapCreatorRest() -> MapCreatorRestContext? {
+				return getRuleContext(MapCreatorRestContext.self, 0)
+			}
+			open
+			func setCreatorRest() -> SetCreatorRestContext? {
+				return getRuleContext(SetCreatorRestContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_creator
 		}
-		open func createdName() -> CreatedNameContext? {
-			return getRuleContext(CreatedNameContext.self,0)
-		}
-		open func classCreatorRest() -> ClassCreatorRestContext? {
-			return getRuleContext(ClassCreatorRestContext.self,0)
-		}
-		open func arrayCreatorRest() -> ArrayCreatorRestContext? {
-			return getRuleContext(ArrayCreatorRestContext.self,0)
-		}
-		open func mapCreatorRest() -> MapCreatorRestContext? {
-			return getRuleContext(MapCreatorRestContext.self,0)
-		}
-		open func setCreatorRest() -> SetCreatorRestContext? {
-			return getRuleContext(SetCreatorRestContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_creator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterCreator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterCreator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitCreator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitCreator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitCreator(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitCreator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitCreator(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitCreator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func creator() throws -> CreatorContext {
+	 open func creator() throws -> CreatorContext {
 		var _localctx: CreatorContext = CreatorContext(_ctx, getState())
 		try enterRule(_localctx, 190, apexParser.RULE_creator)
 		defer {
@@ -8996,7 +10033,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9007,48 +10044,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class CreatedNameContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(apexParser.Tokens.Identifier.rawValue) }
-		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(apexParser.Tokens.Identifier.rawValue, i)
+
+	public class CreatedNameContext: ParserRuleContext {
+			open
+			func Identifier() -> [TerminalNode] {
+				return getTokens(apexParser.Tokens.Identifier.rawValue)
+			}
+			open
+			func Identifier(_ i:Int) -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, i)
+			}
+			open
+			func typeArgumentsOrDiamond() -> [TypeArgumentsOrDiamondContext] {
+				return getRuleContexts(TypeArgumentsOrDiamondContext.self)
+			}
+			open
+			func typeArgumentsOrDiamond(_ i: Int) -> TypeArgumentsOrDiamondContext? {
+				return getRuleContext(TypeArgumentsOrDiamondContext.self, i)
+			}
+			open
+			func primitiveType() -> PrimitiveTypeContext? {
+				return getRuleContext(PrimitiveTypeContext.self, 0)
+			}
+			open
+			func SET() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SET.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_createdName
 		}
-		open func typeArgumentsOrDiamond() -> Array<TypeArgumentsOrDiamondContext> {
-			return getRuleContexts(TypeArgumentsOrDiamondContext.self)
-		}
-		open func typeArgumentsOrDiamond(_ i: Int) -> TypeArgumentsOrDiamondContext? {
-			return getRuleContext(TypeArgumentsOrDiamondContext.self,i)
-		}
-		open func primitiveType() -> PrimitiveTypeContext? {
-			return getRuleContext(PrimitiveTypeContext.self,0)
-		}
-		open func SET() -> TerminalNode? { return getToken(apexParser.Tokens.SET.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_createdName }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterCreatedName(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterCreatedName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitCreatedName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitCreatedName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitCreatedName(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitCreatedName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitCreatedName(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitCreatedName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func createdName() throws -> CreatedNameContext {
+	 open func createdName() throws -> CreatedNameContext {
 		var _localctx: CreatedNameContext = CreatedNameContext(_ctx, getState())
 		try enterRule(_localctx, 192, apexParser.RULE_createdName)
 		var _la: Int = 0
@@ -9132,7 +10184,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -9143,41 +10195,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class InnerCreatorContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func classCreatorRest() -> ClassCreatorRestContext? {
-			return getRuleContext(ClassCreatorRestContext.self,0)
+
+	public class InnerCreatorContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func classCreatorRest() -> ClassCreatorRestContext? {
+				return getRuleContext(ClassCreatorRestContext.self, 0)
+			}
+			open
+			func nonWildcardTypeArgumentsOrDiamond() -> NonWildcardTypeArgumentsOrDiamondContext? {
+				return getRuleContext(NonWildcardTypeArgumentsOrDiamondContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_innerCreator
 		}
-		open func nonWildcardTypeArgumentsOrDiamond() -> NonWildcardTypeArgumentsOrDiamondContext? {
-			return getRuleContext(NonWildcardTypeArgumentsOrDiamondContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_innerCreator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterInnerCreator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterInnerCreator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitInnerCreator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitInnerCreator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitInnerCreator(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitInnerCreator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitInnerCreator(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitInnerCreator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func innerCreator() throws -> InnerCreatorContext {
+	 open func innerCreator() throws -> InnerCreatorContext {
 		var _localctx: InnerCreatorContext = InnerCreatorContext(_ctx, getState())
 		try enterRule(_localctx, 194, apexParser.RULE_innerCreator)
 		var _la: Int = 0
@@ -9213,43 +10275,51 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ArrayCreatorRestContext:ParserRuleContext {
-		open func arrayInitializer() -> ArrayInitializerContext? {
-			return getRuleContext(ArrayInitializerContext.self,0)
+
+	public class ArrayCreatorRestContext: ParserRuleContext {
+			open
+			func arrayInitializer() -> ArrayInitializerContext? {
+				return getRuleContext(ArrayInitializerContext.self, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_arrayCreatorRest
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_arrayCreatorRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterArrayCreatorRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterArrayCreatorRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitArrayCreatorRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitArrayCreatorRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitArrayCreatorRest(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitArrayCreatorRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitArrayCreatorRest(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitArrayCreatorRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arrayCreatorRest() throws -> ArrayCreatorRestContext {
+	 open func arrayCreatorRest() throws -> ArrayCreatorRestContext {
 		var _localctx: ArrayCreatorRestContext = ArrayCreatorRestContext(_ctx, getState())
 		try enterRule(_localctx, 196, apexParser.RULE_arrayCreatorRest)
 		var _la: Int = 0
@@ -9359,7 +10429,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 
 		}
@@ -9371,50 +10441,63 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class MapCreatorRestContext:ParserRuleContext {
-		open func Identifier() -> Array<TerminalNode> { return getTokens(apexParser.Tokens.Identifier.rawValue) }
-		open func Identifier(_ i:Int) -> TerminalNode?{
-			return getToken(apexParser.Tokens.Identifier.rawValue, i)
+
+	public class MapCreatorRestContext: ParserRuleContext {
+			open
+			func Identifier() -> [TerminalNode] {
+				return getTokens(apexParser.Tokens.Identifier.rawValue)
+			}
+			open
+			func Identifier(_ i:Int) -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func literal() -> [LiteralContext] {
+				return getRuleContexts(LiteralContext.self)
+			}
+			open
+			func literal(_ i: Int) -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_mapCreatorRest
 		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func literal() -> Array<LiteralContext> {
-			return getRuleContexts(LiteralContext.self)
-		}
-		open func literal(_ i: Int) -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_mapCreatorRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterMapCreatorRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterMapCreatorRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitMapCreatorRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitMapCreatorRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitMapCreatorRest(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitMapCreatorRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitMapCreatorRest(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitMapCreatorRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mapCreatorRest() throws -> MapCreatorRestContext {
+	 open func mapCreatorRest() throws -> MapCreatorRestContext {
 		var _localctx: MapCreatorRestContext = MapCreatorRestContext(_ctx, getState())
 		try enterRule(_localctx, 198, apexParser.RULE_mapCreatorRest)
 		var _la: Int = 0
@@ -9517,46 +10600,55 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class SetCreatorRestContext:ParserRuleContext {
-		open func literal() -> Array<LiteralContext> {
-			return getRuleContexts(LiteralContext.self)
+
+	public class SetCreatorRestContext: ParserRuleContext {
+			open
+			func literal() -> [LiteralContext] {
+				return getRuleContexts(LiteralContext.self)
+			}
+			open
+			func literal(_ i: Int) -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, i)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_setCreatorRest
 		}
-		open func literal(_ i: Int) -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,i)
-		}
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_setCreatorRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterSetCreatorRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterSetCreatorRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitSetCreatorRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitSetCreatorRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitSetCreatorRest(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitSetCreatorRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitSetCreatorRest(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitSetCreatorRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func setCreatorRest() throws -> SetCreatorRestContext {
+	 open func setCreatorRest() throws -> SetCreatorRestContext {
 		var _localctx: SetCreatorRestContext = SetCreatorRestContext(_ctx, getState())
 		try enterRule(_localctx, 200, apexParser.RULE_setCreatorRest)
 		var _la: Int = 0
@@ -9625,40 +10717,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ClassCreatorRestContext:ParserRuleContext {
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
+
+	public class ClassCreatorRestContext: ParserRuleContext {
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+			open
+			func classBody() -> ClassBodyContext? {
+				return getRuleContext(ClassBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_classCreatorRest
 		}
-		open func classBody() -> ClassBodyContext? {
-			return getRuleContext(ClassBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_classCreatorRest }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterClassCreatorRest(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterClassCreatorRest(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitClassCreatorRest(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitClassCreatorRest(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitClassCreatorRest(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitClassCreatorRest(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitClassCreatorRest(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitClassCreatorRest(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classCreatorRest() throws -> ClassCreatorRestContext {
+	 open func classCreatorRest() throws -> ClassCreatorRestContext {
 		var _localctx: ClassCreatorRestContext = ClassCreatorRestContext(_ctx, getState())
 		try enterRule(_localctx, 202, apexParser.RULE_classCreatorRest)
 		defer {
@@ -9688,40 +10787,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ExplicitGenericInvocationContext:ParserRuleContext {
-		open func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
-			return getRuleContext(NonWildcardTypeArgumentsContext.self,0)
+
+	public class ExplicitGenericInvocationContext: ParserRuleContext {
+			open
+			func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
+				return getRuleContext(NonWildcardTypeArgumentsContext.self, 0)
+			}
+			open
+			func explicitGenericInvocationSuffix() -> ExplicitGenericInvocationSuffixContext? {
+				return getRuleContext(ExplicitGenericInvocationSuffixContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_explicitGenericInvocation
 		}
-		open func explicitGenericInvocationSuffix() -> ExplicitGenericInvocationSuffixContext? {
-			return getRuleContext(ExplicitGenericInvocationSuffixContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_explicitGenericInvocation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterExplicitGenericInvocation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterExplicitGenericInvocation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitExplicitGenericInvocation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitExplicitGenericInvocation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitExplicitGenericInvocation(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitExplicitGenericInvocation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitExplicitGenericInvocation(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitExplicitGenericInvocation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func explicitGenericInvocation() throws -> ExplicitGenericInvocationContext {
+	 open func explicitGenericInvocation() throws -> ExplicitGenericInvocationContext {
 		var _localctx: ExplicitGenericInvocationContext = ExplicitGenericInvocationContext(_ctx, getState())
 		try enterRule(_localctx, 204, apexParser.RULE_explicitGenericInvocation)
 		defer {
@@ -9743,37 +10849,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class NonWildcardTypeArgumentsContext:ParserRuleContext {
-		open func typeList() -> TypeListContext? {
-			return getRuleContext(TypeListContext.self,0)
+
+	public class NonWildcardTypeArgumentsContext: ParserRuleContext {
+			open
+			func typeList() -> TypeListContext? {
+				return getRuleContext(TypeListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_nonWildcardTypeArguments
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_nonWildcardTypeArguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterNonWildcardTypeArguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterNonWildcardTypeArguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitNonWildcardTypeArguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitNonWildcardTypeArguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitNonWildcardTypeArguments(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitNonWildcardTypeArguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitNonWildcardTypeArguments(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitNonWildcardTypeArguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nonWildcardTypeArguments() throws -> NonWildcardTypeArgumentsContext {
+	 open func nonWildcardTypeArguments() throws -> NonWildcardTypeArgumentsContext {
 		var _localctx: NonWildcardTypeArgumentsContext = NonWildcardTypeArgumentsContext(_ctx, getState())
 		try enterRule(_localctx, 206, apexParser.RULE_nonWildcardTypeArguments)
 		defer {
@@ -9797,37 +10909,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class TypeArgumentsOrDiamondContext:ParserRuleContext {
-		open func typeArguments() -> TypeArgumentsContext? {
-			return getRuleContext(TypeArgumentsContext.self,0)
+
+	public class TypeArgumentsOrDiamondContext: ParserRuleContext {
+			open
+			func typeArguments() -> TypeArgumentsContext? {
+				return getRuleContext(TypeArgumentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_typeArgumentsOrDiamond
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_typeArgumentsOrDiamond }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterTypeArgumentsOrDiamond(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterTypeArgumentsOrDiamond(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitTypeArgumentsOrDiamond(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitTypeArgumentsOrDiamond(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitTypeArgumentsOrDiamond(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitTypeArgumentsOrDiamond(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitTypeArgumentsOrDiamond(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitTypeArgumentsOrDiamond(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeArgumentsOrDiamond() throws -> TypeArgumentsOrDiamondContext {
+	 open func typeArgumentsOrDiamond() throws -> TypeArgumentsOrDiamondContext {
 		var _localctx: TypeArgumentsOrDiamondContext = TypeArgumentsOrDiamondContext(_ctx, getState())
 		try enterRule(_localctx, 208, apexParser.RULE_typeArgumentsOrDiamond)
 		defer {
@@ -9862,37 +10980,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class NonWildcardTypeArgumentsOrDiamondContext:ParserRuleContext {
-		open func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
-			return getRuleContext(NonWildcardTypeArgumentsContext.self,0)
+
+	public class NonWildcardTypeArgumentsOrDiamondContext: ParserRuleContext {
+			open
+			func nonWildcardTypeArguments() -> NonWildcardTypeArgumentsContext? {
+				return getRuleContext(NonWildcardTypeArgumentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_nonWildcardTypeArgumentsOrDiamond
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_nonWildcardTypeArgumentsOrDiamond }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterNonWildcardTypeArgumentsOrDiamond(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterNonWildcardTypeArgumentsOrDiamond(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitNonWildcardTypeArgumentsOrDiamond(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitNonWildcardTypeArgumentsOrDiamond(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitNonWildcardTypeArgumentsOrDiamond(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitNonWildcardTypeArgumentsOrDiamond(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitNonWildcardTypeArgumentsOrDiamond(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitNonWildcardTypeArgumentsOrDiamond(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func nonWildcardTypeArgumentsOrDiamond() throws -> NonWildcardTypeArgumentsOrDiamondContext {
+	 open func nonWildcardTypeArgumentsOrDiamond() throws -> NonWildcardTypeArgumentsOrDiamondContext {
 		var _localctx: NonWildcardTypeArgumentsOrDiamondContext = NonWildcardTypeArgumentsOrDiamondContext(_ctx, getState())
 		try enterRule(_localctx, 210, apexParser.RULE_nonWildcardTypeArgumentsOrDiamond)
 		defer {
@@ -9927,38 +11051,47 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class SuperSuffixContext:ParserRuleContext {
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
+
+	public class SuperSuffixContext: ParserRuleContext {
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_superSuffix
 		}
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return apexParser.RULE_superSuffix }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterSuperSuffix(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterSuperSuffix(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitSuperSuffix(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitSuperSuffix(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitSuperSuffix(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitSuperSuffix(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitSuperSuffix(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitSuperSuffix(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func superSuffix() throws -> SuperSuffixContext {
+	 open func superSuffix() throws -> SuperSuffixContext {
 		var _localctx: SuperSuffixContext = SuperSuffixContext(_ctx, getState())
 		try enterRule(_localctx, 212, apexParser.RULE_superSuffix)
 		defer {
@@ -9994,7 +11127,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10005,42 +11138,55 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ExplicitGenericInvocationSuffixContext:ParserRuleContext {
-		open func SUPER() -> TerminalNode? { return getToken(apexParser.Tokens.SUPER.rawValue, 0) }
-		open func superSuffix() -> SuperSuffixContext? {
-			return getRuleContext(SuperSuffixContext.self,0)
+
+	public class ExplicitGenericInvocationSuffixContext: ParserRuleContext {
+			open
+			func SUPER() -> TerminalNode? {
+				return getToken(apexParser.Tokens.SUPER.rawValue, 0)
+			}
+			open
+			func superSuffix() -> SuperSuffixContext? {
+				return getRuleContext(SuperSuffixContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(apexParser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func arguments() -> ArgumentsContext? {
+				return getRuleContext(ArgumentsContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_explicitGenericInvocationSuffix
 		}
-		open func Identifier() -> TerminalNode? { return getToken(apexParser.Tokens.Identifier.rawValue, 0) }
-		open func arguments() -> ArgumentsContext? {
-			return getRuleContext(ArgumentsContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_explicitGenericInvocationSuffix }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterExplicitGenericInvocationSuffix(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterExplicitGenericInvocationSuffix(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitExplicitGenericInvocationSuffix(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitExplicitGenericInvocationSuffix(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitExplicitGenericInvocationSuffix(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitExplicitGenericInvocationSuffix(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitExplicitGenericInvocationSuffix(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitExplicitGenericInvocationSuffix(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func explicitGenericInvocationSuffix() throws -> ExplicitGenericInvocationSuffixContext {
+	 open func explicitGenericInvocationSuffix() throws -> ExplicitGenericInvocationSuffixContext {
 		var _localctx: ExplicitGenericInvocationSuffixContext = ExplicitGenericInvocationSuffixContext(_ctx, getState())
 		try enterRule(_localctx, 214, apexParser.RULE_explicitGenericInvocationSuffix)
 		defer {
@@ -10068,7 +11214,7 @@ open class apexParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10079,37 +11225,43 @@ open class apexParser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentsContext:ParserRuleContext {
-		open func expressionList() -> ExpressionListContext? {
-			return getRuleContext(ExpressionListContext.self,0)
+
+	public class ArgumentsContext: ParserRuleContext {
+			open
+			func expressionList() -> ExpressionListContext? {
+				return getRuleContext(ExpressionListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return apexParser.RULE_arguments
 		}
-		open override func getRuleIndex() -> Int { return apexParser.RULE_arguments }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).enterArguments(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.enterArguments(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is apexListener {
-			 	(listener as! apexListener).exitArguments(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? apexListener {
+				listener.exitArguments(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is apexVisitor {
-			     return (visitor as! apexVisitor<T>).visitArguments(self)
-			}else if visitor is apexBaseVisitor {
-		    	 return (visitor as! apexBaseVisitor<T>).visitArguments(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? apexVisitor {
+			    return visitor.visitArguments(self)
+			}
+			else if let visitor = visitor as? apexBaseVisitor {
+			    return visitor.visitArguments(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func arguments() throws -> ArgumentsContext {
+	 open func arguments() throws -> ArgumentsContext {
 		var _localctx: ArgumentsContext = ArgumentsContext(_ctx, getState())
 		try enterRule(_localctx, 216, apexParser.RULE_arguments)
 		var _la: Int = 0
@@ -10153,8 +11305,8 @@ open class apexParser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  93:
 			return try expression_sempred(_localctx?.castdown(ExpressionContext.self), predIndex)
@@ -10190,6 +11342,10 @@ open class apexParser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = apexParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = apexParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

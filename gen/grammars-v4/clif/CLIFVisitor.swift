@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/clif/CLIF.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/clif/CLIF.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTermseq(_ ctx: CLIFParser.TermseqContext) -> T{
+	open func visitTermseq(_ ctx: CLIFParser.TermseqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterpretedname(_ ctx: CLIFParser.InterpretednameContext) -> T{
+	open func visitInterpretedname(_ ctx: CLIFParser.InterpretednameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterpretablename(_ ctx: CLIFParser.InterpretablenameContext) -> T{
+	open func visitInterpretablename(_ ctx: CLIFParser.InterpretablenameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitName(_ ctx: CLIFParser.NameContext) -> T{
+	open func visitName(_ ctx: CLIFParser.NameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: CLIFParser.TermContext) -> T{
+	open func visitTerm(_ ctx: CLIFParser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperator(_ ctx: CLIFParser.OperatorContext) -> T{
+	open func visitOperator(_ ctx: CLIFParser.OperatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEquation(_ ctx: CLIFParser.EquationContext) -> T{
+	open func visitEquation(_ ctx: CLIFParser.EquationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSentence(_ ctx: CLIFParser.SentenceContext) -> T{
+	open func visitSentence(_ ctx: CLIFParser.SentenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtomsent(_ ctx: CLIFParser.AtomsentContext) -> T{
+	open func visitAtomsent(_ ctx: CLIFParser.AtomsentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: CLIFParser.AtomContext) -> T{
+	open func visitAtom(_ ctx: CLIFParser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPredicate(_ ctx: CLIFParser.PredicateContext) -> T{
+	open func visitPredicate(_ ctx: CLIFParser.PredicateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoolsent(_ ctx: CLIFParser.BoolsentContext) -> T{
+	open func visitBoolsent(_ ctx: CLIFParser.BoolsentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuantsent(_ ctx: CLIFParser.QuantsentContext) -> T{
+	open func visitQuantsent(_ ctx: CLIFParser.QuantsentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoundlist(_ ctx: CLIFParser.BoundlistContext) -> T{
+	open func visitBoundlist(_ ctx: CLIFParser.BoundlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommentsent(_ ctx: CLIFParser.CommentsentContext) -> T{
+	open func visitCommentsent(_ ctx: CLIFParser.CommentsentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModule(_ ctx: CLIFParser.ModuleContext) -> T{
+	open func visitModule(_ ctx: CLIFParser.ModuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPhrase(_ ctx: CLIFParser.PhraseContext) -> T{
+	open func visitPhrase(_ ctx: CLIFParser.PhraseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitText(_ ctx: CLIFParser.TextContext) -> T{
+	open func visitText(_ ctx: CLIFParser.TextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCltext(_ ctx: CLIFParser.CltextContext) -> T{
+	open func visitCltext(_ ctx: CLIFParser.CltextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class CLIFVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamedtext(_ ctx: CLIFParser.NamedtextContext) -> T{
+	open func visitNamedtext(_ ctx: CLIFParser.NamedtextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

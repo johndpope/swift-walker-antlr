@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/asm6502/asm6502.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/asm6502/asm6502.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProg(_ ctx: asm6502Parser.ProgContext) -> T{
+	open func visitProg(_ ctx: asm6502Parser.ProgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLine(_ ctx: asm6502Parser.LineContext) -> T{
+	open func visitLine(_ ctx: asm6502Parser.LineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInstruction(_ ctx: asm6502Parser.InstructionContext) -> T{
+	open func visitInstruction(_ ctx: asm6502Parser.InstructionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssemblerinstruction(_ ctx: asm6502Parser.AssemblerinstructionContext) -> T{
+	open func visitAssemblerinstruction(_ ctx: asm6502Parser.AssemblerinstructionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssembleropcode(_ ctx: asm6502Parser.AssembleropcodeContext) -> T{
+	open func visitAssembleropcode(_ ctx: asm6502Parser.AssembleropcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLbl(_ ctx: asm6502Parser.LblContext) -> T{
+	open func visitLbl(_ ctx: asm6502Parser.LblContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgumentlist(_ ctx: asm6502Parser.ArgumentlistContext) -> T{
+	open func visitArgumentlist(_ ctx: asm6502Parser.ArgumentlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabel(_ ctx: asm6502Parser.LabelContext) -> T{
+	open func visitLabel(_ ctx: asm6502Parser.LabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgument(_ ctx: asm6502Parser.ArgumentContext) -> T{
+	open func visitArgument(_ ctx: asm6502Parser.ArgumentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrefix(_ ctx: asm6502Parser.PrefixContext) -> T{
+	open func visitPrefix(_ ctx: asm6502Parser.PrefixContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: asm6502Parser.StringContext) -> T{
+	open func visitString(_ ctx: asm6502Parser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitName(_ ctx: asm6502Parser.NameContext) -> T{
+	open func visitName(_ ctx: asm6502Parser.NameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: asm6502Parser.NumberContext) -> T{
+	open func visitNumber(_ ctx: asm6502Parser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: asm6502Parser.CommentContext) -> T{
+	open func visitComment(_ ctx: asm6502Parser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class asm6502Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOpcode(_ ctx: asm6502Parser.OpcodeContext) -> T{
+	open func visitOpcode(_ ctx: asm6502Parser.OpcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

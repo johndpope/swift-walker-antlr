@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/tiny/tiny.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/tiny/tiny.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: tinyParser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: tinyParser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmt_list(_ ctx: tinyParser.Stmt_listContext) -> T{
+	open func visitStmt_list(_ ctx: tinyParser.Stmt_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStmt(_ ctx: tinyParser.StmtContext) -> T{
+	open func visitStmt(_ ctx: tinyParser.StmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssign_stmt(_ ctx: tinyParser.Assign_stmtContext) -> T{
+	open func visitAssign_stmt(_ ctx: tinyParser.Assign_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRead_stmt(_ ctx: tinyParser.Read_stmtContext) -> T{
+	open func visitRead_stmt(_ ctx: tinyParser.Read_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWrite_stmt(_ ctx: tinyParser.Write_stmtContext) -> T{
+	open func visitWrite_stmt(_ ctx: tinyParser.Write_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitId_list(_ ctx: tinyParser.Id_listContext) -> T{
+	open func visitId_list(_ ctx: tinyParser.Id_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr_list(_ ctx: tinyParser.Expr_listContext) -> T{
+	open func visitExpr_list(_ ctx: tinyParser.Expr_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpr(_ ctx: tinyParser.ExprContext) -> T{
+	open func visitExpr(_ ctx: tinyParser.ExprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFactor(_ ctx: tinyParser.FactorContext) -> T{
+	open func visitFactor(_ ctx: tinyParser.FactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInteger(_ ctx: tinyParser.IntegerContext) -> T{
+	open func visitInteger(_ ctx: tinyParser.IntegerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOp(_ ctx: tinyParser.OpContext) -> T{
+	open func visitOp(_ ctx: tinyParser.OpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class tinyVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdent(_ ctx: tinyParser.IdentContext) -> T{
+	open func visitIdent(_ ctx: tinyParser.IdentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

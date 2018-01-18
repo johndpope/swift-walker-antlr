@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/idl/IDL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/idl/IDL.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSpecification(_ ctx: IDLParser.SpecificationContext) -> T{
+	open func visitSpecification(_ ctx: IDLParser.SpecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinition(_ ctx: IDLParser.DefinitionContext) -> T{
+	open func visitDefinition(_ ctx: IDLParser.DefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitModule(_ ctx: IDLParser.ModuleContext) -> T{
+	open func visitModule(_ ctx: IDLParser.ModuleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterface_or_forward_decl(_ ctx: IDLParser.Interface_or_forward_declContext) -> T{
+	open func visitInterface_or_forward_decl(_ ctx: IDLParser.Interface_or_forward_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterface_decl(_ ctx: IDLParser.Interface_declContext) -> T{
+	open func visitInterface_decl(_ ctx: IDLParser.Interface_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForward_decl(_ ctx: IDLParser.Forward_declContext) -> T{
+	open func visitForward_decl(_ ctx: IDLParser.Forward_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterface_header(_ ctx: IDLParser.Interface_headerContext) -> T{
+	open func visitInterface_header(_ ctx: IDLParser.Interface_headerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterface_body(_ ctx: IDLParser.Interface_bodyContext) -> T{
+	open func visitInterface_body(_ ctx: IDLParser.Interface_bodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExport(_ ctx: IDLParser.ExportContext) -> T{
+	open func visitExport(_ ctx: IDLParser.ExportContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterface_inheritance_spec(_ ctx: IDLParser.Interface_inheritance_specContext) -> T{
+	open func visitInterface_inheritance_spec(_ ctx: IDLParser.Interface_inheritance_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterface_name(_ ctx: IDLParser.Interface_nameContext) -> T{
+	open func visitInterface_name(_ ctx: IDLParser.Interface_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScoped_name(_ ctx: IDLParser.Scoped_nameContext) -> T{
+	open func visitScoped_name(_ ctx: IDLParser.Scoped_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: IDLParser.ValueContext) -> T{
+	open func visitValue(_ ctx: IDLParser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_forward_decl(_ ctx: IDLParser.Value_forward_declContext) -> T{
+	open func visitValue_forward_decl(_ ctx: IDLParser.Value_forward_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_box_decl(_ ctx: IDLParser.Value_box_declContext) -> T{
+	open func visitValue_box_decl(_ ctx: IDLParser.Value_box_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_abs_decl(_ ctx: IDLParser.Value_abs_declContext) -> T{
+	open func visitValue_abs_decl(_ ctx: IDLParser.Value_abs_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_decl(_ ctx: IDLParser.Value_declContext) -> T{
+	open func visitValue_decl(_ ctx: IDLParser.Value_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_header(_ ctx: IDLParser.Value_headerContext) -> T{
+	open func visitValue_header(_ ctx: IDLParser.Value_headerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_inheritance_spec(_ ctx: IDLParser.Value_inheritance_specContext) -> T{
+	open func visitValue_inheritance_spec(_ ctx: IDLParser.Value_inheritance_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_name(_ ctx: IDLParser.Value_nameContext) -> T{
+	open func visitValue_name(_ ctx: IDLParser.Value_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_element(_ ctx: IDLParser.Value_elementContext) -> T{
+	open func visitValue_element(_ ctx: IDLParser.Value_elementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitState_member(_ ctx: IDLParser.State_memberContext) -> T{
+	open func visitState_member(_ ctx: IDLParser.State_memberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInit_decl(_ ctx: IDLParser.Init_declContext) -> T{
+	open func visitInit_decl(_ ctx: IDLParser.Init_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInit_param_decls(_ ctx: IDLParser.Init_param_declsContext) -> T{
+	open func visitInit_param_decls(_ ctx: IDLParser.Init_param_declsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInit_param_decl(_ ctx: IDLParser.Init_param_declContext) -> T{
+	open func visitInit_param_decl(_ ctx: IDLParser.Init_param_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInit_param_attribute(_ ctx: IDLParser.Init_param_attributeContext) -> T{
+	open func visitInit_param_attribute(_ ctx: IDLParser.Init_param_attributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConst_decl(_ ctx: IDLParser.Const_declContext) -> T{
+	open func visitConst_decl(_ ctx: IDLParser.Const_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConst_type(_ ctx: IDLParser.Const_typeContext) -> T{
+	open func visitConst_type(_ ctx: IDLParser.Const_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConst_exp(_ ctx: IDLParser.Const_expContext) -> T{
+	open func visitConst_exp(_ ctx: IDLParser.Const_expContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOr_expr(_ ctx: IDLParser.Or_exprContext) -> T{
+	open func visitOr_expr(_ ctx: IDLParser.Or_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitXor_expr(_ ctx: IDLParser.Xor_exprContext) -> T{
+	open func visitXor_expr(_ ctx: IDLParser.Xor_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAnd_expr(_ ctx: IDLParser.And_exprContext) -> T{
+	open func visitAnd_expr(_ ctx: IDLParser.And_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitShift_expr(_ ctx: IDLParser.Shift_exprContext) -> T{
+	open func visitShift_expr(_ ctx: IDLParser.Shift_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAdd_expr(_ ctx: IDLParser.Add_exprContext) -> T{
+	open func visitAdd_expr(_ ctx: IDLParser.Add_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMult_expr(_ ctx: IDLParser.Mult_exprContext) -> T{
+	open func visitMult_expr(_ ctx: IDLParser.Mult_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnary_expr(_ ctx: IDLParser.Unary_exprContext) -> T{
+	open func visitUnary_expr(_ ctx: IDLParser.Unary_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnary_operator(_ ctx: IDLParser.Unary_operatorContext) -> T{
+	open func visitUnary_operator(_ ctx: IDLParser.Unary_operatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimary_expr(_ ctx: IDLParser.Primary_exprContext) -> T{
+	open func visitPrimary_expr(_ ctx: IDLParser.Primary_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: IDLParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: IDLParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPositive_int_const(_ ctx: IDLParser.Positive_int_constContext) -> T{
+	open func visitPositive_int_const(_ ctx: IDLParser.Positive_int_constContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType_decl(_ ctx: IDLParser.Type_declContext) -> T{
+	open func visitType_decl(_ ctx: IDLParser.Type_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType_declarator(_ ctx: IDLParser.Type_declaratorContext) -> T{
+	open func visitType_declarator(_ ctx: IDLParser.Type_declaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType_spec(_ ctx: IDLParser.Type_specContext) -> T{
+	open func visitType_spec(_ ctx: IDLParser.Type_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_type_spec(_ ctx: IDLParser.Simple_type_specContext) -> T{
+	open func visitSimple_type_spec(_ ctx: IDLParser.Simple_type_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBase_type_spec(_ ctx: IDLParser.Base_type_specContext) -> T{
+	open func visitBase_type_spec(_ ctx: IDLParser.Base_type_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTemplate_type_spec(_ ctx: IDLParser.Template_type_specContext) -> T{
+	open func visitTemplate_type_spec(_ ctx: IDLParser.Template_type_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstr_type_spec(_ ctx: IDLParser.Constr_type_specContext) -> T{
+	open func visitConstr_type_spec(_ ctx: IDLParser.Constr_type_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarators(_ ctx: IDLParser.DeclaratorsContext) -> T{
+	open func visitDeclarators(_ ctx: IDLParser.DeclaratorsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclarator(_ ctx: IDLParser.DeclaratorContext) -> T{
+	open func visitDeclarator(_ ctx: IDLParser.DeclaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_declarator(_ ctx: IDLParser.Simple_declaratorContext) -> T{
+	open func visitSimple_declarator(_ ctx: IDLParser.Simple_declaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComplex_declarator(_ ctx: IDLParser.Complex_declaratorContext) -> T{
+	open func visitComplex_declarator(_ ctx: IDLParser.Complex_declaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFloating_pt_type(_ ctx: IDLParser.Floating_pt_typeContext) -> T{
+	open func visitFloating_pt_type(_ ctx: IDLParser.Floating_pt_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInteger_type(_ ctx: IDLParser.Integer_typeContext) -> T{
+	open func visitInteger_type(_ ctx: IDLParser.Integer_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSigned_int(_ ctx: IDLParser.Signed_intContext) -> T{
+	open func visitSigned_int(_ ctx: IDLParser.Signed_intContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSigned_short_int(_ ctx: IDLParser.Signed_short_intContext) -> T{
+	open func visitSigned_short_int(_ ctx: IDLParser.Signed_short_intContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSigned_long_int(_ ctx: IDLParser.Signed_long_intContext) -> T{
+	open func visitSigned_long_int(_ ctx: IDLParser.Signed_long_intContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSigned_longlong_int(_ ctx: IDLParser.Signed_longlong_intContext) -> T{
+	open func visitSigned_longlong_int(_ ctx: IDLParser.Signed_longlong_intContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsigned_int(_ ctx: IDLParser.Unsigned_intContext) -> T{
+	open func visitUnsigned_int(_ ctx: IDLParser.Unsigned_intContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsigned_short_int(_ ctx: IDLParser.Unsigned_short_intContext) -> T{
+	open func visitUnsigned_short_int(_ ctx: IDLParser.Unsigned_short_intContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsigned_long_int(_ ctx: IDLParser.Unsigned_long_intContext) -> T{
+	open func visitUnsigned_long_int(_ ctx: IDLParser.Unsigned_long_intContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsigned_longlong_int(_ ctx: IDLParser.Unsigned_longlong_intContext) -> T{
+	open func visitUnsigned_longlong_int(_ ctx: IDLParser.Unsigned_longlong_intContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitChar_type(_ ctx: IDLParser.Char_typeContext) -> T{
+	open func visitChar_type(_ ctx: IDLParser.Char_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWide_char_type(_ ctx: IDLParser.Wide_char_typeContext) -> T{
+	open func visitWide_char_type(_ ctx: IDLParser.Wide_char_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoolean_type(_ ctx: IDLParser.Boolean_typeContext) -> T{
+	open func visitBoolean_type(_ ctx: IDLParser.Boolean_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOctet_type(_ ctx: IDLParser.Octet_typeContext) -> T{
+	open func visitOctet_type(_ ctx: IDLParser.Octet_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAny_type(_ ctx: IDLParser.Any_typeContext) -> T{
+	open func visitAny_type(_ ctx: IDLParser.Any_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObject_type(_ ctx: IDLParser.Object_typeContext) -> T{
+	open func visitObject_type(_ ctx: IDLParser.Object_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStruct_type(_ ctx: IDLParser.Struct_typeContext) -> T{
+	open func visitStruct_type(_ ctx: IDLParser.Struct_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMember_list(_ ctx: IDLParser.Member_listContext) -> T{
+	open func visitMember_list(_ ctx: IDLParser.Member_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMember(_ ctx: IDLParser.MemberContext) -> T{
+	open func visitMember(_ ctx: IDLParser.MemberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnion_type(_ ctx: IDLParser.Union_typeContext) -> T{
+	open func visitUnion_type(_ ctx: IDLParser.Union_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSwitch_type_spec(_ ctx: IDLParser.Switch_type_specContext) -> T{
+	open func visitSwitch_type_spec(_ ctx: IDLParser.Switch_type_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSwitch_body(_ ctx: IDLParser.Switch_bodyContext) -> T{
+	open func visitSwitch_body(_ ctx: IDLParser.Switch_bodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCase_stmt(_ ctx: IDLParser.Case_stmtContext) -> T{
+	open func visitCase_stmt(_ ctx: IDLParser.Case_stmtContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCase_label(_ ctx: IDLParser.Case_labelContext) -> T{
+	open func visitCase_label(_ ctx: IDLParser.Case_labelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement_spec(_ ctx: IDLParser.Element_specContext) -> T{
+	open func visitElement_spec(_ ctx: IDLParser.Element_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnum_type(_ ctx: IDLParser.Enum_typeContext) -> T{
+	open func visitEnum_type(_ ctx: IDLParser.Enum_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumerator(_ ctx: IDLParser.EnumeratorContext) -> T{
+	open func visitEnumerator(_ ctx: IDLParser.EnumeratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSequence_type(_ ctx: IDLParser.Sequence_typeContext) -> T{
+	open func visitSequence_type(_ ctx: IDLParser.Sequence_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString_type(_ ctx: IDLParser.String_typeContext) -> T{
+	open func visitString_type(_ ctx: IDLParser.String_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWide_string_type(_ ctx: IDLParser.Wide_string_typeContext) -> T{
+	open func visitWide_string_type(_ ctx: IDLParser.Wide_string_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArray_declarator(_ ctx: IDLParser.Array_declaratorContext) -> T{
+	open func visitArray_declarator(_ ctx: IDLParser.Array_declaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFixed_array_size(_ ctx: IDLParser.Fixed_array_sizeContext) -> T{
+	open func visitFixed_array_size(_ ctx: IDLParser.Fixed_array_sizeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttr_decl(_ ctx: IDLParser.Attr_declContext) -> T{
+	open func visitAttr_decl(_ ctx: IDLParser.Attr_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExcept_decl(_ ctx: IDLParser.Except_declContext) -> T{
+	open func visitExcept_decl(_ ctx: IDLParser.Except_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOp_decl(_ ctx: IDLParser.Op_declContext) -> T{
+	open func visitOp_decl(_ ctx: IDLParser.Op_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOp_attribute(_ ctx: IDLParser.Op_attributeContext) -> T{
+	open func visitOp_attribute(_ ctx: IDLParser.Op_attributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOp_type_spec(_ ctx: IDLParser.Op_type_specContext) -> T{
+	open func visitOp_type_spec(_ ctx: IDLParser.Op_type_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameter_decls(_ ctx: IDLParser.Parameter_declsContext) -> T{
+	open func visitParameter_decls(_ ctx: IDLParser.Parameter_declsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParam_decl(_ ctx: IDLParser.Param_declContext) -> T{
+	open func visitParam_decl(_ ctx: IDLParser.Param_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParam_attribute(_ ctx: IDLParser.Param_attributeContext) -> T{
+	open func visitParam_attribute(_ ctx: IDLParser.Param_attributeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRaises_expr(_ ctx: IDLParser.Raises_exprContext) -> T{
+	open func visitRaises_expr(_ ctx: IDLParser.Raises_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContext_expr(_ ctx: IDLParser.Context_exprContext) -> T{
+	open func visitContext_expr(_ ctx: IDLParser.Context_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParam_type_spec(_ ctx: IDLParser.Param_type_specContext) -> T{
+	open func visitParam_type_spec(_ ctx: IDLParser.Param_type_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFixed_pt_type(_ ctx: IDLParser.Fixed_pt_typeContext) -> T{
+	open func visitFixed_pt_type(_ ctx: IDLParser.Fixed_pt_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFixed_pt_const_type(_ ctx: IDLParser.Fixed_pt_const_typeContext) -> T{
+	open func visitFixed_pt_const_type(_ ctx: IDLParser.Fixed_pt_const_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_base_type(_ ctx: IDLParser.Value_base_typeContext) -> T{
+	open func visitValue_base_type(_ ctx: IDLParser.Value_base_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstr_forward_decl(_ ctx: IDLParser.Constr_forward_declContext) -> T{
+	open func visitConstr_forward_decl(_ ctx: IDLParser.Constr_forward_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImport_decl(_ ctx: IDLParser.Import_declContext) -> T{
+	open func visitImport_decl(_ ctx: IDLParser.Import_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitImported_scope(_ ctx: IDLParser.Imported_scopeContext) -> T{
+	open func visitImported_scope(_ ctx: IDLParser.Imported_scopeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType_id_decl(_ ctx: IDLParser.Type_id_declContext) -> T{
+	open func visitType_id_decl(_ ctx: IDLParser.Type_id_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1025,7 +1025,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType_prefix_decl(_ ctx: IDLParser.Type_prefix_declContext) -> T{
+	open func visitType_prefix_decl(_ ctx: IDLParser.Type_prefix_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1035,7 +1035,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadonly_attr_spec(_ ctx: IDLParser.Readonly_attr_specContext) -> T{
+	open func visitReadonly_attr_spec(_ ctx: IDLParser.Readonly_attr_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1045,7 +1045,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReadonly_attr_declarator(_ ctx: IDLParser.Readonly_attr_declaratorContext) -> T{
+	open func visitReadonly_attr_declarator(_ ctx: IDLParser.Readonly_attr_declaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1055,7 +1055,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttr_spec(_ ctx: IDLParser.Attr_specContext) -> T{
+	open func visitAttr_spec(_ ctx: IDLParser.Attr_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1065,7 +1065,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttr_declarator(_ ctx: IDLParser.Attr_declaratorContext) -> T{
+	open func visitAttr_declarator(_ ctx: IDLParser.Attr_declaratorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1075,7 +1075,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttr_raises_expr(_ ctx: IDLParser.Attr_raises_exprContext) -> T{
+	open func visitAttr_raises_expr(_ ctx: IDLParser.Attr_raises_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1085,7 +1085,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGet_excep_expr(_ ctx: IDLParser.Get_excep_exprContext) -> T{
+	open func visitGet_excep_expr(_ ctx: IDLParser.Get_excep_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1095,7 +1095,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSet_excep_expr(_ ctx: IDLParser.Set_excep_exprContext) -> T{
+	open func visitSet_excep_expr(_ ctx: IDLParser.Set_excep_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1105,7 +1105,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitException_list(_ ctx: IDLParser.Exception_listContext) -> T{
+	open func visitException_list(_ ctx: IDLParser.Exception_listContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1115,7 +1115,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponent(_ ctx: IDLParser.ComponentContext) -> T{
+	open func visitComponent(_ ctx: IDLParser.ComponentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1125,7 +1125,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponent_forward_decl(_ ctx: IDLParser.Component_forward_declContext) -> T{
+	open func visitComponent_forward_decl(_ ctx: IDLParser.Component_forward_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1135,7 +1135,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponent_decl(_ ctx: IDLParser.Component_declContext) -> T{
+	open func visitComponent_decl(_ ctx: IDLParser.Component_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1145,7 +1145,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponent_header(_ ctx: IDLParser.Component_headerContext) -> T{
+	open func visitComponent_header(_ ctx: IDLParser.Component_headerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1155,7 +1155,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSupported_interface_spec(_ ctx: IDLParser.Supported_interface_specContext) -> T{
+	open func visitSupported_interface_spec(_ ctx: IDLParser.Supported_interface_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1165,7 +1165,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponent_inheritance_spec(_ ctx: IDLParser.Component_inheritance_specContext) -> T{
+	open func visitComponent_inheritance_spec(_ ctx: IDLParser.Component_inheritance_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1175,7 +1175,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponent_body(_ ctx: IDLParser.Component_bodyContext) -> T{
+	open func visitComponent_body(_ ctx: IDLParser.Component_bodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1185,7 +1185,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponent_export(_ ctx: IDLParser.Component_exportContext) -> T{
+	open func visitComponent_export(_ ctx: IDLParser.Component_exportContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1195,7 +1195,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProvides_decl(_ ctx: IDLParser.Provides_declContext) -> T{
+	open func visitProvides_decl(_ ctx: IDLParser.Provides_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1205,7 +1205,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterface_type(_ ctx: IDLParser.Interface_typeContext) -> T{
+	open func visitInterface_type(_ ctx: IDLParser.Interface_typeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1215,7 +1215,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUses_decl(_ ctx: IDLParser.Uses_declContext) -> T{
+	open func visitUses_decl(_ ctx: IDLParser.Uses_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1225,7 +1225,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmits_decl(_ ctx: IDLParser.Emits_declContext) -> T{
+	open func visitEmits_decl(_ ctx: IDLParser.Emits_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1235,7 +1235,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPublishes_decl(_ ctx: IDLParser.Publishes_declContext) -> T{
+	open func visitPublishes_decl(_ ctx: IDLParser.Publishes_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1245,7 +1245,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConsumes_decl(_ ctx: IDLParser.Consumes_declContext) -> T{
+	open func visitConsumes_decl(_ ctx: IDLParser.Consumes_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1255,7 +1255,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHome_decl(_ ctx: IDLParser.Home_declContext) -> T{
+	open func visitHome_decl(_ ctx: IDLParser.Home_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1265,7 +1265,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHome_header(_ ctx: IDLParser.Home_headerContext) -> T{
+	open func visitHome_header(_ ctx: IDLParser.Home_headerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1275,7 +1275,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHome_inheritance_spec(_ ctx: IDLParser.Home_inheritance_specContext) -> T{
+	open func visitHome_inheritance_spec(_ ctx: IDLParser.Home_inheritance_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1285,7 +1285,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrimary_key_spec(_ ctx: IDLParser.Primary_key_specContext) -> T{
+	open func visitPrimary_key_spec(_ ctx: IDLParser.Primary_key_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1295,7 +1295,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHome_body(_ ctx: IDLParser.Home_bodyContext) -> T{
+	open func visitHome_body(_ ctx: IDLParser.Home_bodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1305,7 +1305,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHome_export(_ ctx: IDLParser.Home_exportContext) -> T{
+	open func visitHome_export(_ ctx: IDLParser.Home_exportContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1315,7 +1315,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFactory_decl(_ ctx: IDLParser.Factory_declContext) -> T{
+	open func visitFactory_decl(_ ctx: IDLParser.Factory_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1325,7 +1325,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFinder_decl(_ ctx: IDLParser.Finder_declContext) -> T{
+	open func visitFinder_decl(_ ctx: IDLParser.Finder_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1335,7 +1335,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEvent(_ ctx: IDLParser.EventContext) -> T{
+	open func visitEvent(_ ctx: IDLParser.EventContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1345,7 +1345,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEvent_forward_decl(_ ctx: IDLParser.Event_forward_declContext) -> T{
+	open func visitEvent_forward_decl(_ ctx: IDLParser.Event_forward_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1355,7 +1355,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEvent_abs_decl(_ ctx: IDLParser.Event_abs_declContext) -> T{
+	open func visitEvent_abs_decl(_ ctx: IDLParser.Event_abs_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1365,7 +1365,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEvent_decl(_ ctx: IDLParser.Event_declContext) -> T{
+	open func visitEvent_decl(_ ctx: IDLParser.Event_declContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1375,7 +1375,7 @@ open class IDLVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEvent_header(_ ctx: IDLParser.Event_headerContext) -> T{
+	open func visitEvent_header(_ ctx: IDLParser.Event_headerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

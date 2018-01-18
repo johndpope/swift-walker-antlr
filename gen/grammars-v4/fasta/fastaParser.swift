@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/fasta/fasta.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/fasta/fasta.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class fastaParser: Parser {
@@ -11,14 +11,21 @@ open class fastaParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, COMMENTLINE = 1, DESCRIPTIONLINE = 2, TEXT = 3, EOL = 4, 
                  SEQUENCELINE = 5
 	}
-	public static let RULE_sequence = 0, RULE_section = 1, RULE_sequencelines = 2, 
-                   RULE_descriptionline = 3, RULE_commentline = 4
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_sequence = 0, RULE_section = 1, RULE_sequencelines = 2, 
+            RULE_descriptionline = 3, RULE_commentline = 4
+
+	public
+	static let ruleNames: [String] = [
 		"sequence", "section", "sequencelines", "descriptionline", "commentline"
 	]
 
@@ -27,88 +34,73 @@ open class fastaParser: Parser {
 	private static let _SYMBOLIC_NAMES: [String?] = [
 		nil, "COMMENTLINE", "DESCRIPTIONLINE", "TEXT", "EOL", "SEQUENCELINE"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "fasta.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return fastaParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "fasta.g4" }
+	override open
+	func getSerializedATN() -> String { return fastaParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return fastaParser.ruleNames }
+	override open
+	func getATN() -> ATN { return fastaParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return fastaParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return fastaParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return fastaParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,fastaParser._ATN,fastaParser._decisionToDFA, fastaParser._sharedContextCache)
 	}
-	open class SequenceContext:ParserRuleContext {
-		open func section() -> Array<SectionContext> {
-			return getRuleContexts(SectionContext.self)
+
+	public class SequenceContext: ParserRuleContext {
+			open
+			func section() -> [SectionContext] {
+				return getRuleContexts(SectionContext.self)
+			}
+			open
+			func section(_ i: Int) -> SectionContext? {
+				return getRuleContext(SectionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return fastaParser.RULE_sequence
 		}
-		open func section(_ i: Int) -> SectionContext? {
-			return getRuleContext(SectionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return fastaParser.RULE_sequence }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).enterSequence(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.enterSequence(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).exitSequence(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.exitSequence(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is fastaVisitor {
-			     return (visitor as! fastaVisitor<T>).visitSequence(self)
-			}else if visitor is fastaBaseVisitor {
-		    	 return (visitor as! fastaBaseVisitor<T>).visitSequence(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? fastaVisitor {
+			    return visitor.visitSequence(self)
+			}
+			else if let visitor = visitor as? fastaBaseVisitor {
+			    return visitor.visitSequence(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sequence() throws -> SequenceContext {
+	 open func sequence() throws -> SequenceContext {
 		var _localctx: SequenceContext = SequenceContext(_ctx, getState())
 		try enterRule(_localctx, 0, fastaParser.RULE_sequence)
 		var _la: Int = 0
@@ -146,43 +138,51 @@ open class fastaParser: Parser {
 
 		return _localctx
 	}
-	open class SectionContext:ParserRuleContext {
-		open func descriptionline() -> DescriptionlineContext? {
-			return getRuleContext(DescriptionlineContext.self,0)
+
+	public class SectionContext: ParserRuleContext {
+			open
+			func descriptionline() -> DescriptionlineContext? {
+				return getRuleContext(DescriptionlineContext.self, 0)
+			}
+			open
+			func sequencelines() -> SequencelinesContext? {
+				return getRuleContext(SequencelinesContext.self, 0)
+			}
+			open
+			func commentline() -> CommentlineContext? {
+				return getRuleContext(CommentlineContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return fastaParser.RULE_section
 		}
-		open func sequencelines() -> SequencelinesContext? {
-			return getRuleContext(SequencelinesContext.self,0)
-		}
-		open func commentline() -> CommentlineContext? {
-			return getRuleContext(CommentlineContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return fastaParser.RULE_section }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).enterSection(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.enterSection(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).exitSection(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.exitSection(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is fastaVisitor {
-			     return (visitor as! fastaVisitor<T>).visitSection(self)
-			}else if visitor is fastaBaseVisitor {
-		    	 return (visitor as! fastaBaseVisitor<T>).visitSection(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? fastaVisitor {
+			    return visitor.visitSection(self)
+			}
+			else if let visitor = visitor as? fastaBaseVisitor {
+			    return visitor.visitSection(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func section() throws -> SectionContext {
+	 open func section() throws -> SectionContext {
 		var _localctx: SectionContext = SectionContext(_ctx, getState())
 		try enterRule(_localctx, 2, fastaParser.RULE_section)
 		defer {
@@ -213,7 +213,7 @@ open class fastaParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -224,38 +224,47 @@ open class fastaParser: Parser {
 
 		return _localctx
 	}
-	open class SequencelinesContext:ParserRuleContext {
-		open func SEQUENCELINE() -> Array<TerminalNode> { return getTokens(fastaParser.Tokens.SEQUENCELINE.rawValue) }
-		open func SEQUENCELINE(_ i:Int) -> TerminalNode?{
-			return getToken(fastaParser.Tokens.SEQUENCELINE.rawValue, i)
+
+	public class SequencelinesContext: ParserRuleContext {
+			open
+			func SEQUENCELINE() -> [TerminalNode] {
+				return getTokens(fastaParser.Tokens.SEQUENCELINE.rawValue)
+			}
+			open
+			func SEQUENCELINE(_ i:Int) -> TerminalNode? {
+				return getToken(fastaParser.Tokens.SEQUENCELINE.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return fastaParser.RULE_sequencelines
 		}
-		open override func getRuleIndex() -> Int { return fastaParser.RULE_sequencelines }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).enterSequencelines(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.enterSequencelines(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).exitSequencelines(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.exitSequencelines(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is fastaVisitor {
-			     return (visitor as! fastaVisitor<T>).visitSequencelines(self)
-			}else if visitor is fastaBaseVisitor {
-		    	 return (visitor as! fastaBaseVisitor<T>).visitSequencelines(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? fastaVisitor {
+			    return visitor.visitSequencelines(self)
+			}
+			else if let visitor = visitor as? fastaBaseVisitor {
+			    return visitor.visitSequencelines(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sequencelines() throws -> SequencelinesContext {
+	 open func sequencelines() throws -> SequencelinesContext {
 		var _localctx: SequencelinesContext = SequencelinesContext(_ctx, getState())
 		try enterRule(_localctx, 4, fastaParser.RULE_sequencelines)
 		defer {
@@ -276,7 +285,7 @@ open class fastaParser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(23); 
 		 		try _errHandler.sync(self)
@@ -292,35 +301,43 @@ open class fastaParser: Parser {
 
 		return _localctx
 	}
-	open class DescriptionlineContext:ParserRuleContext {
-		open func DESCRIPTIONLINE() -> TerminalNode? { return getToken(fastaParser.Tokens.DESCRIPTIONLINE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return fastaParser.RULE_descriptionline }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).enterDescriptionline(self)
+
+	public class DescriptionlineContext: ParserRuleContext {
+			open
+			func DESCRIPTIONLINE() -> TerminalNode? {
+				return getToken(fastaParser.Tokens.DESCRIPTIONLINE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return fastaParser.RULE_descriptionline
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.enterDescriptionline(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).exitDescriptionline(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.exitDescriptionline(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is fastaVisitor {
-			     return (visitor as! fastaVisitor<T>).visitDescriptionline(self)
-			}else if visitor is fastaBaseVisitor {
-		    	 return (visitor as! fastaBaseVisitor<T>).visitDescriptionline(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? fastaVisitor {
+			    return visitor.visitDescriptionline(self)
+			}
+			else if let visitor = visitor as? fastaBaseVisitor {
+			    return visitor.visitDescriptionline(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func descriptionline() throws -> DescriptionlineContext {
+	 open func descriptionline() throws -> DescriptionlineContext {
 		var _localctx: DescriptionlineContext = DescriptionlineContext(_ctx, getState())
 		try enterRule(_localctx, 6, fastaParser.RULE_descriptionline)
 		defer {
@@ -340,35 +357,43 @@ open class fastaParser: Parser {
 
 		return _localctx
 	}
-	open class CommentlineContext:ParserRuleContext {
-		open func COMMENTLINE() -> TerminalNode? { return getToken(fastaParser.Tokens.COMMENTLINE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return fastaParser.RULE_commentline }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).enterCommentline(self)
+
+	public class CommentlineContext: ParserRuleContext {
+			open
+			func COMMENTLINE() -> TerminalNode? {
+				return getToken(fastaParser.Tokens.COMMENTLINE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return fastaParser.RULE_commentline
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.enterCommentline(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is fastaListener {
-			 	(listener as! fastaListener).exitCommentline(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? fastaListener {
+				listener.exitCommentline(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is fastaVisitor {
-			     return (visitor as! fastaVisitor<T>).visitCommentline(self)
-			}else if visitor is fastaBaseVisitor {
-		    	 return (visitor as! fastaBaseVisitor<T>).visitCommentline(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? fastaVisitor {
+			    return visitor.visitCommentline(self)
+			}
+			else if let visitor = visitor as? fastaBaseVisitor {
+			    return visitor.visitCommentline(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func commentline() throws -> CommentlineContext {
+	 open func commentline() throws -> CommentlineContext {
 		var _localctx: CommentlineContext = CommentlineContext(_ctx, getState())
 		try enterRule(_localctx, 8, fastaParser.RULE_commentline)
 		defer {
@@ -389,6 +414,10 @@ open class fastaParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = fastaParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = fastaParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

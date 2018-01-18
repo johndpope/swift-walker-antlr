@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/pascal/pascal.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/pascal/pascal.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgram(_ ctx: pascalParser.ProgramContext) -> T{
+	open func visitProgram(_ ctx: pascalParser.ProgramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgramHeading(_ ctx: pascalParser.ProgramHeadingContext) -> T{
+	open func visitProgramHeading(_ ctx: pascalParser.ProgramHeadingContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifier(_ ctx: pascalParser.IdentifierContext) -> T{
+	open func visitIdentifier(_ ctx: pascalParser.IdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: pascalParser.BlockContext) -> T{
+	open func visitBlock(_ ctx: pascalParser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUsesUnitsPart(_ ctx: pascalParser.UsesUnitsPartContext) -> T{
+	open func visitUsesUnitsPart(_ ctx: pascalParser.UsesUnitsPartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabelDeclarationPart(_ ctx: pascalParser.LabelDeclarationPartContext) -> T{
+	open func visitLabelDeclarationPart(_ ctx: pascalParser.LabelDeclarationPartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabel(_ ctx: pascalParser.LabelContext) -> T{
+	open func visitLabel(_ ctx: pascalParser.LabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantDefinitionPart(_ ctx: pascalParser.ConstantDefinitionPartContext) -> T{
+	open func visitConstantDefinitionPart(_ ctx: pascalParser.ConstantDefinitionPartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantDefinition(_ ctx: pascalParser.ConstantDefinitionContext) -> T{
+	open func visitConstantDefinition(_ ctx: pascalParser.ConstantDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantChr(_ ctx: pascalParser.ConstantChrContext) -> T{
+	open func visitConstantChr(_ ctx: pascalParser.ConstantChrContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstant(_ ctx: pascalParser.ConstantContext) -> T{
+	open func visitConstant(_ ctx: pascalParser.ConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedNumber(_ ctx: pascalParser.UnsignedNumberContext) -> T{
+	open func visitUnsignedNumber(_ ctx: pascalParser.UnsignedNumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedInteger(_ ctx: pascalParser.UnsignedIntegerContext) -> T{
+	open func visitUnsignedInteger(_ ctx: pascalParser.UnsignedIntegerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedReal(_ ctx: pascalParser.UnsignedRealContext) -> T{
+	open func visitUnsignedReal(_ ctx: pascalParser.UnsignedRealContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSign(_ ctx: pascalParser.SignContext) -> T{
+	open func visitSign(_ ctx: pascalParser.SignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: pascalParser.StringContext) -> T{
+	open func visitString(_ ctx: pascalParser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDefinitionPart(_ ctx: pascalParser.TypeDefinitionPartContext) -> T{
+	open func visitTypeDefinitionPart(_ ctx: pascalParser.TypeDefinitionPartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDefinition(_ ctx: pascalParser.TypeDefinitionContext) -> T{
+	open func visitTypeDefinition(_ ctx: pascalParser.TypeDefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionType(_ ctx: pascalParser.FunctionTypeContext) -> T{
+	open func visitFunctionType(_ ctx: pascalParser.FunctionTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureType(_ ctx: pascalParser.ProcedureTypeContext) -> T{
+	open func visitProcedureType(_ ctx: pascalParser.ProcedureTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType(_ ctx: pascalParser.TypeContext) -> T{
+	open func visitType(_ ctx: pascalParser.TypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleType(_ ctx: pascalParser.SimpleTypeContext) -> T{
+	open func visitSimpleType(_ ctx: pascalParser.SimpleTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitScalarType(_ ctx: pascalParser.ScalarTypeContext) -> T{
+	open func visitScalarType(_ ctx: pascalParser.ScalarTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubrangeType(_ ctx: pascalParser.SubrangeTypeContext) -> T{
+	open func visitSubrangeType(_ ctx: pascalParser.SubrangeTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeIdentifier(_ ctx: pascalParser.TypeIdentifierContext) -> T{
+	open func visitTypeIdentifier(_ ctx: pascalParser.TypeIdentifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructuredType(_ ctx: pascalParser.StructuredTypeContext) -> T{
+	open func visitStructuredType(_ ctx: pascalParser.StructuredTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnpackedStructuredType(_ ctx: pascalParser.UnpackedStructuredTypeContext) -> T{
+	open func visitUnpackedStructuredType(_ ctx: pascalParser.UnpackedStructuredTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStringtype(_ ctx: pascalParser.StringtypeContext) -> T{
+	open func visitStringtype(_ ctx: pascalParser.StringtypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArrayType(_ ctx: pascalParser.ArrayTypeContext) -> T{
+	open func visitArrayType(_ ctx: pascalParser.ArrayTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeList(_ ctx: pascalParser.TypeListContext) -> T{
+	open func visitTypeList(_ ctx: pascalParser.TypeListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIndexType(_ ctx: pascalParser.IndexTypeContext) -> T{
+	open func visitIndexType(_ ctx: pascalParser.IndexTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponentType(_ ctx: pascalParser.ComponentTypeContext) -> T{
+	open func visitComponentType(_ ctx: pascalParser.ComponentTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordType(_ ctx: pascalParser.RecordTypeContext) -> T{
+	open func visitRecordType(_ ctx: pascalParser.RecordTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldList(_ ctx: pascalParser.FieldListContext) -> T{
+	open func visitFieldList(_ ctx: pascalParser.FieldListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFixedPart(_ ctx: pascalParser.FixedPartContext) -> T{
+	open func visitFixedPart(_ ctx: pascalParser.FixedPartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordSection(_ ctx: pascalParser.RecordSectionContext) -> T{
+	open func visitRecordSection(_ ctx: pascalParser.RecordSectionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariantPart(_ ctx: pascalParser.VariantPartContext) -> T{
+	open func visitVariantPart(_ ctx: pascalParser.VariantPartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTag(_ ctx: pascalParser.TagContext) -> T{
+	open func visitTag(_ ctx: pascalParser.TagContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariant(_ ctx: pascalParser.VariantContext) -> T{
+	open func visitVariant(_ ctx: pascalParser.VariantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSetType(_ ctx: pascalParser.SetTypeContext) -> T{
+	open func visitSetType(_ ctx: pascalParser.SetTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBaseType(_ ctx: pascalParser.BaseTypeContext) -> T{
+	open func visitBaseType(_ ctx: pascalParser.BaseTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFileType(_ ctx: pascalParser.FileTypeContext) -> T{
+	open func visitFileType(_ ctx: pascalParser.FileTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPointerType(_ ctx: pascalParser.PointerTypeContext) -> T{
+	open func visitPointerType(_ ctx: pascalParser.PointerTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclarationPart(_ ctx: pascalParser.VariableDeclarationPartContext) -> T{
+	open func visitVariableDeclarationPart(_ ctx: pascalParser.VariableDeclarationPartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariableDeclaration(_ ctx: pascalParser.VariableDeclarationContext) -> T{
+	open func visitVariableDeclaration(_ ctx: pascalParser.VariableDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureAndFunctionDeclarationPart(_ ctx: pascalParser.ProcedureAndFunctionDeclarationPartContext) -> T{
+	open func visitProcedureAndFunctionDeclarationPart(_ ctx: pascalParser.ProcedureAndFunctionDeclarationPartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureOrFunctionDeclaration(_ ctx: pascalParser.ProcedureOrFunctionDeclarationContext) -> T{
+	open func visitProcedureOrFunctionDeclaration(_ ctx: pascalParser.ProcedureOrFunctionDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureDeclaration(_ ctx: pascalParser.ProcedureDeclarationContext) -> T{
+	open func visitProcedureDeclaration(_ ctx: pascalParser.ProcedureDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameterList(_ ctx: pascalParser.FormalParameterListContext) -> T{
+	open func visitFormalParameterList(_ ctx: pascalParser.FormalParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormalParameterSection(_ ctx: pascalParser.FormalParameterSectionContext) -> T{
+	open func visitFormalParameterSection(_ ctx: pascalParser.FormalParameterSectionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterGroup(_ ctx: pascalParser.ParameterGroupContext) -> T{
+	open func visitParameterGroup(_ ctx: pascalParser.ParameterGroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentifierList(_ ctx: pascalParser.IdentifierListContext) -> T{
+	open func visitIdentifierList(_ ctx: pascalParser.IdentifierListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstList(_ ctx: pascalParser.ConstListContext) -> T{
+	open func visitConstList(_ ctx: pascalParser.ConstListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionDeclaration(_ ctx: pascalParser.FunctionDeclarationContext) -> T{
+	open func visitFunctionDeclaration(_ ctx: pascalParser.FunctionDeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResultType(_ ctx: pascalParser.ResultTypeContext) -> T{
+	open func visitResultType(_ ctx: pascalParser.ResultTypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: pascalParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: pascalParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnlabelledStatement(_ ctx: pascalParser.UnlabelledStatementContext) -> T{
+	open func visitUnlabelledStatement(_ ctx: pascalParser.UnlabelledStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleStatement(_ ctx: pascalParser.SimpleStatementContext) -> T{
+	open func visitSimpleStatement(_ ctx: pascalParser.SimpleStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssignmentStatement(_ ctx: pascalParser.AssignmentStatementContext) -> T{
+	open func visitAssignmentStatement(_ ctx: pascalParser.AssignmentStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariable(_ ctx: pascalParser.VariableContext) -> T{
+	open func visitVariable(_ ctx: pascalParser.VariableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExpression(_ ctx: pascalParser.ExpressionContext) -> T{
+	open func visitExpression(_ ctx: pascalParser.ExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimpleExpression(_ ctx: pascalParser.SimpleExpressionContext) -> T{
+	open func visitSimpleExpression(_ ctx: pascalParser.SimpleExpressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: pascalParser.TermContext) -> T{
+	open func visitTerm(_ ctx: pascalParser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSignedFactor(_ ctx: pascalParser.SignedFactorContext) -> T{
+	open func visitSignedFactor(_ ctx: pascalParser.SignedFactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFactor(_ ctx: pascalParser.FactorContext) -> T{
+	open func visitFactor(_ ctx: pascalParser.FactorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnsignedConstant(_ ctx: pascalParser.UnsignedConstantContext) -> T{
+	open func visitUnsignedConstant(_ ctx: pascalParser.UnsignedConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionDesignator(_ ctx: pascalParser.FunctionDesignatorContext) -> T{
+	open func visitFunctionDesignator(_ ctx: pascalParser.FunctionDesignatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParameterList(_ ctx: pascalParser.ParameterListContext) -> T{
+	open func visitParameterList(_ ctx: pascalParser.ParameterListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSet(_ ctx: pascalParser.SetContext) -> T{
+	open func visitSet(_ ctx: pascalParser.SetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementList(_ ctx: pascalParser.ElementListContext) -> T{
+	open func visitElementList(_ ctx: pascalParser.ElementListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement(_ ctx: pascalParser.ElementContext) -> T{
+	open func visitElement(_ ctx: pascalParser.ElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureStatement(_ ctx: pascalParser.ProcedureStatementContext) -> T{
+	open func visitProcedureStatement(_ ctx: pascalParser.ProcedureStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActualParameter(_ ctx: pascalParser.ActualParameterContext) -> T{
+	open func visitActualParameter(_ ctx: pascalParser.ActualParameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGotoStatement(_ ctx: pascalParser.GotoStatementContext) -> T{
+	open func visitGotoStatement(_ ctx: pascalParser.GotoStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmptyStatement(_ ctx: pascalParser.EmptyStatementContext) -> T{
+	open func visitEmptyStatement(_ ctx: pascalParser.EmptyStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmpty(_ ctx: pascalParser.EmptyContext) -> T{
+	open func visitEmpty(_ ctx: pascalParser.EmptyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructuredStatement(_ ctx: pascalParser.StructuredStatementContext) -> T{
+	open func visitStructuredStatement(_ ctx: pascalParser.StructuredStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompoundStatement(_ ctx: pascalParser.CompoundStatementContext) -> T{
+	open func visitCompoundStatement(_ ctx: pascalParser.CompoundStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatements(_ ctx: pascalParser.StatementsContext) -> T{
+	open func visitStatements(_ ctx: pascalParser.StatementsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditionalStatement(_ ctx: pascalParser.ConditionalStatementContext) -> T{
+	open func visitConditionalStatement(_ ctx: pascalParser.ConditionalStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIfStatement(_ ctx: pascalParser.IfStatementContext) -> T{
+	open func visitIfStatement(_ ctx: pascalParser.IfStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseStatement(_ ctx: pascalParser.CaseStatementContext) -> T{
+	open func visitCaseStatement(_ ctx: pascalParser.CaseStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseListElement(_ ctx: pascalParser.CaseListElementContext) -> T{
+	open func visitCaseListElement(_ ctx: pascalParser.CaseListElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRepetetiveStatement(_ ctx: pascalParser.RepetetiveStatementContext) -> T{
+	open func visitRepetetiveStatement(_ ctx: pascalParser.RepetetiveStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhileStatement(_ ctx: pascalParser.WhileStatementContext) -> T{
+	open func visitWhileStatement(_ ctx: pascalParser.WhileStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRepeatStatement(_ ctx: pascalParser.RepeatStatementContext) -> T{
+	open func visitRepeatStatement(_ ctx: pascalParser.RepeatStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForStatement(_ ctx: pascalParser.ForStatementContext) -> T{
+	open func visitForStatement(_ ctx: pascalParser.ForStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForList(_ ctx: pascalParser.ForListContext) -> T{
+	open func visitForList(_ ctx: pascalParser.ForListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInitialValue(_ ctx: pascalParser.InitialValueContext) -> T{
+	open func visitInitialValue(_ ctx: pascalParser.InitialValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFinalValue(_ ctx: pascalParser.FinalValueContext) -> T{
+	open func visitFinalValue(_ ctx: pascalParser.FinalValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWithStatement(_ ctx: pascalParser.WithStatementContext) -> T{
+	open func visitWithStatement(_ ctx: pascalParser.WithStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class pascalVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecordVariableList(_ ctx: pascalParser.RecordVariableListContext) -> T{
+	open func visitRecordVariableList(_ ctx: pascalParser.RecordVariableListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

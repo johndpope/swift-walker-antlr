@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/oncrpc/oncrpcv2.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/oncrpc/oncrpcv2.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class oncrpcv2Parser: Parser {
@@ -11,8 +11,11 @@ open class oncrpcv2Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -22,14 +25,18 @@ open class oncrpcv2Parser: Parser {
                  T__32 = 33, COMMENT = 34, OCTAL = 35, DECIMAL = 36, HEXADECIMAL = 37, 
                  IDENTIFIER = 38, WS = 39
 	}
-	public static let RULE_programDef = 0, RULE_versionDef = 1, RULE_procedureDef = 2, 
-                   RULE_procReturn = 3, RULE_procFirstArg = 4, RULE_oncrpcv2Specification = 5, 
-                   RULE_declaration = 6, RULE_value = 7, RULE_constant = 8, 
-                   RULE_typeSpecifier = 9, RULE_enumTypeSpec = 10, RULE_enumBody = 11, 
-                   RULE_structTypeSpec = 12, RULE_structBody = 13, RULE_unionTypeSpec = 14, 
-                   RULE_unionBody = 15, RULE_caseSpec = 16, RULE_constantDef = 17, 
-                   RULE_typeDef = 18, RULE_definition = 19, RULE_xdrSpecification = 20
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_programDef = 0, RULE_versionDef = 1, RULE_procedureDef = 2, 
+            RULE_procReturn = 3, RULE_procFirstArg = 4, RULE_oncrpcv2Specification = 5, 
+            RULE_declaration = 6, RULE_value = 7, RULE_constant = 8, RULE_typeSpecifier = 9, 
+            RULE_enumTypeSpec = 10, RULE_enumBody = 11, RULE_structTypeSpec = 12, 
+            RULE_structBody = 13, RULE_unionTypeSpec = 14, RULE_unionBody = 15, 
+            RULE_caseSpec = 16, RULE_constantDef = 17, RULE_typeDef = 18, 
+            RULE_definition = 19, RULE_xdrSpecification = 20
+
+	public
+	static let ruleNames: [String] = [
 		"programDef", "versionDef", "procedureDef", "procReturn", "procFirstArg", 
 		"oncrpcv2Specification", "declaration", "value", "constant", "typeSpecifier", 
 		"enumTypeSpec", "enumBody", "structTypeSpec", "structBody", "unionTypeSpec", 
@@ -49,92 +56,81 @@ open class oncrpcv2Parser: Parser {
 		nil, nil, nil, nil, nil, nil, "COMMENT", "OCTAL", "DECIMAL", "HEXADECIMAL", 
 		"IDENTIFIER", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "oncrpcv2.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return oncrpcv2Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "oncrpcv2.g4" }
+	override open
+	func getSerializedATN() -> String { return oncrpcv2Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return oncrpcv2Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return oncrpcv2Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return oncrpcv2Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return oncrpcv2Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return oncrpcv2Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,oncrpcv2Parser._ATN,oncrpcv2Parser._decisionToDFA, oncrpcv2Parser._sharedContextCache)
 	}
-	open class ProgramDefContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func versionDef() -> Array<VersionDefContext> {
-			return getRuleContexts(VersionDefContext.self)
+
+	public class ProgramDefContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func versionDef() -> [VersionDefContext] {
+				return getRuleContexts(VersionDefContext.self)
+			}
+			open
+			func versionDef(_ i: Int) -> VersionDefContext? {
+				return getRuleContext(VersionDefContext.self, i)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_programDef
 		}
-		open func versionDef(_ i: Int) -> VersionDefContext? {
-			return getRuleContext(VersionDefContext.self,i)
-		}
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_programDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterProgramDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterProgramDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitProgramDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitProgramDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitProgramDef(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitProgramDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitProgramDef(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitProgramDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func programDef() throws -> ProgramDefContext {
+	 open func programDef() throws -> ProgramDefContext {
 		var _localctx: ProgramDefContext = ProgramDefContext(_ctx, getState())
 		try enterRule(_localctx, 0, oncrpcv2Parser.RULE_programDef)
 		var _la: Int = 0
@@ -185,44 +181,55 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class VersionDefContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func procedureDef() -> Array<ProcedureDefContext> {
-			return getRuleContexts(ProcedureDefContext.self)
+
+	public class VersionDefContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func procedureDef() -> [ProcedureDefContext] {
+				return getRuleContexts(ProcedureDefContext.self)
+			}
+			open
+			func procedureDef(_ i: Int) -> ProcedureDefContext? {
+				return getRuleContext(ProcedureDefContext.self, i)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_versionDef
 		}
-		open func procedureDef(_ i: Int) -> ProcedureDefContext? {
-			return getRuleContext(ProcedureDefContext.self,i)
-		}
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_versionDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterVersionDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterVersionDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitVersionDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitVersionDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitVersionDef(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitVersionDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitVersionDef(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitVersionDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func versionDef() throws -> VersionDefContext {
+	 open func versionDef() throws -> VersionDefContext {
 		var _localctx: VersionDefContext = VersionDefContext(_ctx, getState())
 		try enterRule(_localctx, 2, oncrpcv2Parser.RULE_versionDef)
 		var _la: Int = 0
@@ -276,50 +283,63 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class ProcedureDefContext:ParserRuleContext {
-		open func procReturn() -> ProcReturnContext? {
-			return getRuleContext(ProcReturnContext.self,0)
+
+	public class ProcedureDefContext: ParserRuleContext {
+			open
+			func procReturn() -> ProcReturnContext? {
+				return getRuleContext(ProcReturnContext.self, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func procFirstArg() -> ProcFirstArgContext? {
+				return getRuleContext(ProcFirstArgContext.self, 0)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+			open
+			func typeSpecifier() -> [TypeSpecifierContext] {
+				return getRuleContexts(TypeSpecifierContext.self)
+			}
+			open
+			func typeSpecifier(_ i: Int) -> TypeSpecifierContext? {
+				return getRuleContext(TypeSpecifierContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_procedureDef
 		}
-		open func IDENTIFIER() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func procFirstArg() -> ProcFirstArgContext? {
-			return getRuleContext(ProcFirstArgContext.self,0)
-		}
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
-		}
-		open func typeSpecifier() -> Array<TypeSpecifierContext> {
-			return getRuleContexts(TypeSpecifierContext.self)
-		}
-		open func typeSpecifier(_ i: Int) -> TypeSpecifierContext? {
-			return getRuleContext(TypeSpecifierContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_procedureDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterProcedureDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterProcedureDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitProcedureDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitProcedureDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitProcedureDef(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitProcedureDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitProcedureDef(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitProcedureDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procedureDef() throws -> ProcedureDefContext {
+	 open func procedureDef() throws -> ProcedureDefContext {
 		var _localctx: ProcedureDefContext = ProcedureDefContext(_ctx, getState())
 		try enterRule(_localctx, 4, oncrpcv2Parser.RULE_procedureDef)
 		var _la: Int = 0
@@ -372,37 +392,43 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class ProcReturnContext:ParserRuleContext {
-		open func typeSpecifier() -> TypeSpecifierContext? {
-			return getRuleContext(TypeSpecifierContext.self,0)
+
+	public class ProcReturnContext: ParserRuleContext {
+			open
+			func typeSpecifier() -> TypeSpecifierContext? {
+				return getRuleContext(TypeSpecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_procReturn
 		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_procReturn }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterProcReturn(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterProcReturn(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitProcReturn(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitProcReturn(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitProcReturn(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitProcReturn(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitProcReturn(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitProcReturn(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procReturn() throws -> ProcReturnContext {
+	 open func procReturn() throws -> ProcReturnContext {
 		var _localctx: ProcReturnContext = ProcReturnContext(_ctx, getState())
 		try enterRule(_localctx, 6, oncrpcv2Parser.RULE_procReturn)
 		defer {
@@ -435,7 +461,7 @@ open class oncrpcv2Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -446,37 +472,43 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class ProcFirstArgContext:ParserRuleContext {
-		open func typeSpecifier() -> TypeSpecifierContext? {
-			return getRuleContext(TypeSpecifierContext.self,0)
+
+	public class ProcFirstArgContext: ParserRuleContext {
+			open
+			func typeSpecifier() -> TypeSpecifierContext? {
+				return getRuleContext(TypeSpecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_procFirstArg
 		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_procFirstArg }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterProcFirstArg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterProcFirstArg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitProcFirstArg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitProcFirstArg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitProcFirstArg(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitProcFirstArg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitProcFirstArg(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitProcFirstArg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func procFirstArg() throws -> ProcFirstArgContext {
+	 open func procFirstArg() throws -> ProcFirstArgContext {
 		var _localctx: ProcFirstArgContext = ProcFirstArgContext(_ctx, getState())
 		try enterRule(_localctx, 8, oncrpcv2Parser.RULE_procFirstArg)
 		defer {
@@ -509,7 +541,7 @@ open class oncrpcv2Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -520,46 +552,55 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class Oncrpcv2SpecificationContext:ParserRuleContext {
-		open func xdrSpecification() -> Array<XdrSpecificationContext> {
-			return getRuleContexts(XdrSpecificationContext.self)
+
+	public class Oncrpcv2SpecificationContext: ParserRuleContext {
+			open
+			func xdrSpecification() -> [XdrSpecificationContext] {
+				return getRuleContexts(XdrSpecificationContext.self)
+			}
+			open
+			func xdrSpecification(_ i: Int) -> XdrSpecificationContext? {
+				return getRuleContext(XdrSpecificationContext.self, i)
+			}
+			open
+			func programDef() -> [ProgramDefContext] {
+				return getRuleContexts(ProgramDefContext.self)
+			}
+			open
+			func programDef(_ i: Int) -> ProgramDefContext? {
+				return getRuleContext(ProgramDefContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_oncrpcv2Specification
 		}
-		open func xdrSpecification(_ i: Int) -> XdrSpecificationContext? {
-			return getRuleContext(XdrSpecificationContext.self,i)
-		}
-		open func programDef() -> Array<ProgramDefContext> {
-			return getRuleContexts(ProgramDefContext.self)
-		}
-		open func programDef(_ i: Int) -> ProgramDefContext? {
-			return getRuleContext(ProgramDefContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_oncrpcv2Specification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterOncrpcv2Specification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterOncrpcv2Specification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitOncrpcv2Specification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitOncrpcv2Specification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitOncrpcv2Specification(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitOncrpcv2Specification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitOncrpcv2Specification(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitOncrpcv2Specification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func oncrpcv2Specification() throws -> Oncrpcv2SpecificationContext {
+	 open func oncrpcv2Specification() throws -> Oncrpcv2SpecificationContext {
 		var _localctx: Oncrpcv2SpecificationContext = Oncrpcv2SpecificationContext(_ctx, getState())
 		try enterRule(_localctx, 10, oncrpcv2Parser.RULE_oncrpcv2Specification)
 		var _la: Int = 0
@@ -598,7 +639,7 @@ open class oncrpcv2Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 
 		 		setState(102)
@@ -615,41 +656,51 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationContext:ParserRuleContext {
-		open func typeSpecifier() -> TypeSpecifierContext? {
-			return getRuleContext(TypeSpecifierContext.self,0)
+
+	public class DeclarationContext: ParserRuleContext {
+			open
+			func typeSpecifier() -> TypeSpecifierContext? {
+				return getRuleContext(TypeSpecifierContext.self, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func value() -> ValueContext? {
+				return getRuleContext(ValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_declaration
 		}
-		open func IDENTIFIER() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func value() -> ValueContext? {
-			return getRuleContext(ValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitDeclaration(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitDeclaration(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration() throws -> DeclarationContext {
+	 open func declaration() throws -> DeclarationContext {
 		var _localctx: DeclarationContext = DeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 12, oncrpcv2Parser.RULE_declaration)
 		var _la: Int = 0
@@ -807,38 +858,47 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class ValueContext:ParserRuleContext {
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
+
+	public class ValueContext: ParserRuleContext {
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_value
 		}
-		open func IDENTIFIER() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitValue(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitValue(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value() throws -> ValueContext {
+	 open func value() throws -> ValueContext {
 		var _localctx: ValueContext = ValueContext(_ctx, getState())
 		try enterRule(_localctx, 14, oncrpcv2Parser.RULE_value)
 		defer {
@@ -864,7 +924,7 @@ open class oncrpcv2Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -875,37 +935,51 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class ConstantContext:ParserRuleContext {
-		open func DECIMAL() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.DECIMAL.rawValue, 0) }
-		open func HEXADECIMAL() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.HEXADECIMAL.rawValue, 0) }
-		open func OCTAL() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.OCTAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_constant }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterConstant(self)
+
+	public class ConstantContext: ParserRuleContext {
+			open
+			func DECIMAL() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.DECIMAL.rawValue, 0)
+			}
+			open
+			func HEXADECIMAL() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.HEXADECIMAL.rawValue, 0)
+			}
+			open
+			func OCTAL() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.OCTAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_constant
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterConstant(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitConstant(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitConstant(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitConstant(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitConstant(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitConstant(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitConstant(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constant() throws -> ConstantContext {
+	 open func constant() throws -> ConstantContext {
 		var _localctx: ConstantContext = ConstantContext(_ctx, getState())
 		try enterRule(_localctx, 16, oncrpcv2Parser.RULE_constant)
 		var _la: Int = 0
@@ -940,44 +1014,55 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class TypeSpecifierContext:ParserRuleContext {
-		open func enumTypeSpec() -> EnumTypeSpecContext? {
-			return getRuleContext(EnumTypeSpecContext.self,0)
+
+	public class TypeSpecifierContext: ParserRuleContext {
+			open
+			func enumTypeSpec() -> EnumTypeSpecContext? {
+				return getRuleContext(EnumTypeSpecContext.self, 0)
+			}
+			open
+			func structTypeSpec() -> StructTypeSpecContext? {
+				return getRuleContext(StructTypeSpecContext.self, 0)
+			}
+			open
+			func unionTypeSpec() -> UnionTypeSpecContext? {
+				return getRuleContext(UnionTypeSpecContext.self, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_typeSpecifier
 		}
-		open func structTypeSpec() -> StructTypeSpecContext? {
-			return getRuleContext(StructTypeSpecContext.self,0)
-		}
-		open func unionTypeSpec() -> UnionTypeSpecContext? {
-			return getRuleContext(UnionTypeSpecContext.self,0)
-		}
-		open func IDENTIFIER() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_typeSpecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterTypeSpecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterTypeSpecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitTypeSpecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitTypeSpecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitTypeSpecifier(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitTypeSpecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitTypeSpecifier(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitTypeSpecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeSpecifier() throws -> TypeSpecifierContext {
+	 open func typeSpecifier() throws -> TypeSpecifierContext {
 		var _localctx: TypeSpecifierContext = TypeSpecifierContext(_ctx, getState())
 		try enterRule(_localctx, 18, oncrpcv2Parser.RULE_typeSpecifier)
 		var _la: Int = 0
@@ -1085,37 +1170,43 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumTypeSpecContext:ParserRuleContext {
-		open func enumBody() -> EnumBodyContext? {
-			return getRuleContext(EnumBodyContext.self,0)
+
+	public class EnumTypeSpecContext: ParserRuleContext {
+			open
+			func enumBody() -> EnumBodyContext? {
+				return getRuleContext(EnumBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_enumTypeSpec
 		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_enumTypeSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterEnumTypeSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterEnumTypeSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitEnumTypeSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitEnumTypeSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitEnumTypeSpec(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitEnumTypeSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitEnumTypeSpec(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitEnumTypeSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumTypeSpec() throws -> EnumTypeSpecContext {
+	 open func enumTypeSpec() throws -> EnumTypeSpecContext {
 		var _localctx: EnumTypeSpecContext = EnumTypeSpecContext(_ctx, getState())
 		try enterRule(_localctx, 20, oncrpcv2Parser.RULE_enumTypeSpec)
 		defer {
@@ -1137,44 +1228,55 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumBodyContext:ParserRuleContext {
-		open func IDENTIFIER() -> Array<TerminalNode> { return getTokens(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue) }
-		open func IDENTIFIER(_ i:Int) -> TerminalNode?{
-			return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, i)
+
+	public class EnumBodyContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> [TerminalNode] {
+				return getTokens(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue)
+			}
+			open
+			func IDENTIFIER(_ i:Int) -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, i)
+			}
+			open
+			func value() -> [ValueContext] {
+				return getRuleContexts(ValueContext.self)
+			}
+			open
+			func value(_ i: Int) -> ValueContext? {
+				return getRuleContext(ValueContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_enumBody
 		}
-		open func value() -> Array<ValueContext> {
-			return getRuleContexts(ValueContext.self)
-		}
-		open func value(_ i: Int) -> ValueContext? {
-			return getRuleContext(ValueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_enumBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterEnumBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterEnumBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitEnumBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitEnumBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitEnumBody(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitEnumBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitEnumBody(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitEnumBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumBody() throws -> EnumBodyContext {
+	 open func enumBody() throws -> EnumBodyContext {
 		var _localctx: EnumBodyContext = EnumBodyContext(_ctx, getState())
 		try enterRule(_localctx, 22, oncrpcv2Parser.RULE_enumBody)
 		var _la: Int = 0
@@ -1227,37 +1329,43 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class StructTypeSpecContext:ParserRuleContext {
-		open func structBody() -> StructBodyContext? {
-			return getRuleContext(StructBodyContext.self,0)
+
+	public class StructTypeSpecContext: ParserRuleContext {
+			open
+			func structBody() -> StructBodyContext? {
+				return getRuleContext(StructBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_structTypeSpec
 		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_structTypeSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterStructTypeSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterStructTypeSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitStructTypeSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitStructTypeSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitStructTypeSpec(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitStructTypeSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitStructTypeSpec(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitStructTypeSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func structTypeSpec() throws -> StructTypeSpecContext {
+	 open func structTypeSpec() throws -> StructTypeSpecContext {
 		var _localctx: StructTypeSpecContext = StructTypeSpecContext(_ctx, getState())
 		try enterRule(_localctx, 24, oncrpcv2Parser.RULE_structTypeSpec)
 		defer {
@@ -1279,40 +1387,47 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class StructBodyContext:ParserRuleContext {
-		open func declaration() -> Array<DeclarationContext> {
-			return getRuleContexts(DeclarationContext.self)
+
+	public class StructBodyContext: ParserRuleContext {
+			open
+			func declaration() -> [DeclarationContext] {
+				return getRuleContexts(DeclarationContext.self)
+			}
+			open
+			func declaration(_ i: Int) -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_structBody
 		}
-		open func declaration(_ i: Int) -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_structBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterStructBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterStructBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitStructBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitStructBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitStructBody(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitStructBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitStructBody(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitStructBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func structBody() throws -> StructBodyContext {
+	 open func structBody() throws -> StructBodyContext {
 		var _localctx: StructBodyContext = StructBodyContext(_ctx, getState())
 		try enterRule(_localctx, 26, oncrpcv2Parser.RULE_structBody)
 		var _la: Int = 0
@@ -1362,37 +1477,43 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class UnionTypeSpecContext:ParserRuleContext {
-		open func unionBody() -> UnionBodyContext? {
-			return getRuleContext(UnionBodyContext.self,0)
+
+	public class UnionTypeSpecContext: ParserRuleContext {
+			open
+			func unionBody() -> UnionBodyContext? {
+				return getRuleContext(UnionBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_unionTypeSpec
 		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_unionTypeSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterUnionTypeSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterUnionTypeSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitUnionTypeSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitUnionTypeSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitUnionTypeSpec(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitUnionTypeSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitUnionTypeSpec(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitUnionTypeSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unionTypeSpec() throws -> UnionTypeSpecContext {
+	 open func unionTypeSpec() throws -> UnionTypeSpecContext {
 		var _localctx: UnionTypeSpecContext = UnionTypeSpecContext(_ctx, getState())
 		try enterRule(_localctx, 28, oncrpcv2Parser.RULE_unionTypeSpec)
 		defer {
@@ -1414,46 +1535,55 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class UnionBodyContext:ParserRuleContext {
-		open func declaration() -> Array<DeclarationContext> {
-			return getRuleContexts(DeclarationContext.self)
+
+	public class UnionBodyContext: ParserRuleContext {
+			open
+			func declaration() -> [DeclarationContext] {
+				return getRuleContexts(DeclarationContext.self)
+			}
+			open
+			func declaration(_ i: Int) -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, i)
+			}
+			open
+			func caseSpec() -> [CaseSpecContext] {
+				return getRuleContexts(CaseSpecContext.self)
+			}
+			open
+			func caseSpec(_ i: Int) -> CaseSpecContext? {
+				return getRuleContext(CaseSpecContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_unionBody
 		}
-		open func declaration(_ i: Int) -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,i)
-		}
-		open func caseSpec() -> Array<CaseSpecContext> {
-			return getRuleContexts(CaseSpecContext.self)
-		}
-		open func caseSpec(_ i: Int) -> CaseSpecContext? {
-			return getRuleContext(CaseSpecContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_unionBody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterUnionBody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterUnionBody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitUnionBody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitUnionBody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitUnionBody(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitUnionBody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitUnionBody(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitUnionBody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unionBody() throws -> UnionBodyContext {
+	 open func unionBody() throws -> UnionBodyContext {
 		var _localctx: UnionBodyContext = UnionBodyContext(_ctx, getState())
 		try enterRule(_localctx, 30, oncrpcv2Parser.RULE_unionBody)
 		var _la: Int = 0
@@ -1521,43 +1651,51 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class CaseSpecContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class CaseSpecContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func value() -> [ValueContext] {
+				return getRuleContexts(ValueContext.self)
+			}
+			open
+			func value(_ i: Int) -> ValueContext? {
+				return getRuleContext(ValueContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_caseSpec
 		}
-		open func value() -> Array<ValueContext> {
-			return getRuleContexts(ValueContext.self)
-		}
-		open func value(_ i: Int) -> ValueContext? {
-			return getRuleContext(ValueContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_caseSpec }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterCaseSpec(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterCaseSpec(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitCaseSpec(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitCaseSpec(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitCaseSpec(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitCaseSpec(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitCaseSpec(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitCaseSpec(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func caseSpec() throws -> CaseSpecContext {
+	 open func caseSpec() throws -> CaseSpecContext {
 		var _localctx: CaseSpecContext = CaseSpecContext(_ctx, getState())
 		try enterRule(_localctx, 32, oncrpcv2Parser.RULE_caseSpec)
 		var _la: Int = 0
@@ -1607,38 +1745,47 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class ConstantDefContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func constant() -> ConstantContext? {
-			return getRuleContext(ConstantContext.self,0)
+
+	public class ConstantDefContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func constant() -> ConstantContext? {
+				return getRuleContext(ConstantContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_constantDef
 		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_constantDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterConstantDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterConstantDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitConstantDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitConstantDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitConstantDef(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitConstantDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitConstantDef(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitConstantDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constantDef() throws -> ConstantDefContext {
+	 open func constantDef() throws -> ConstantDefContext {
 		var _localctx: ConstantDefContext = ConstantDefContext(_ctx, getState())
 		try enterRule(_localctx, 34, oncrpcv2Parser.RULE_constantDef)
 		defer {
@@ -1666,47 +1813,59 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class TypeDefContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class TypeDefContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+			open
+			func enumBody() -> EnumBodyContext? {
+				return getRuleContext(EnumBodyContext.self, 0)
+			}
+			open
+			func structBody() -> StructBodyContext? {
+				return getRuleContext(StructBodyContext.self, 0)
+			}
+			open
+			func unionBody() -> UnionBodyContext? {
+				return getRuleContext(UnionBodyContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_typeDef
 		}
-		open func IDENTIFIER() -> TerminalNode? { return getToken(oncrpcv2Parser.Tokens.IDENTIFIER.rawValue, 0) }
-		open func enumBody() -> EnumBodyContext? {
-			return getRuleContext(EnumBodyContext.self,0)
-		}
-		open func structBody() -> StructBodyContext? {
-			return getRuleContext(StructBodyContext.self,0)
-		}
-		open func unionBody() -> UnionBodyContext? {
-			return getRuleContext(UnionBodyContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_typeDef }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterTypeDef(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterTypeDef(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitTypeDef(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitTypeDef(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitTypeDef(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitTypeDef(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitTypeDef(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitTypeDef(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeDef() throws -> TypeDefContext {
+	 open func typeDef() throws -> TypeDefContext {
 		var _localctx: TypeDefContext = TypeDefContext(_ctx, getState())
 		try enterRule(_localctx, 36, oncrpcv2Parser.RULE_typeDef)
 		defer {
@@ -1766,7 +1925,7 @@ open class oncrpcv2Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1777,40 +1936,47 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class DefinitionContext:ParserRuleContext {
-		open func typeDef() -> TypeDefContext? {
-			return getRuleContext(TypeDefContext.self,0)
+
+	public class DefinitionContext: ParserRuleContext {
+			open
+			func typeDef() -> TypeDefContext? {
+				return getRuleContext(TypeDefContext.self, 0)
+			}
+			open
+			func constantDef() -> ConstantDefContext? {
+				return getRuleContext(ConstantDefContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_definition
 		}
-		open func constantDef() -> ConstantDefContext? {
-			return getRuleContext(ConstantDefContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_definition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterDefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterDefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitDefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitDefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitDefinition(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitDefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitDefinition(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitDefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func definition() throws -> DefinitionContext {
+	 open func definition() throws -> DefinitionContext {
 		var _localctx: DefinitionContext = DefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 38, oncrpcv2Parser.RULE_definition)
 		defer {
@@ -1837,7 +2003,7 @@ open class oncrpcv2Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1848,40 +2014,47 @@ open class oncrpcv2Parser: Parser {
 
 		return _localctx
 	}
-	open class XdrSpecificationContext:ParserRuleContext {
-		open func definition() -> Array<DefinitionContext> {
-			return getRuleContexts(DefinitionContext.self)
+
+	public class XdrSpecificationContext: ParserRuleContext {
+			open
+			func definition() -> [DefinitionContext] {
+				return getRuleContexts(DefinitionContext.self)
+			}
+			open
+			func definition(_ i: Int) -> DefinitionContext? {
+				return getRuleContext(DefinitionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return oncrpcv2Parser.RULE_xdrSpecification
 		}
-		open func definition(_ i: Int) -> DefinitionContext? {
-			return getRuleContext(DefinitionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return oncrpcv2Parser.RULE_xdrSpecification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).enterXdrSpecification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.enterXdrSpecification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is oncrpcv2Listener {
-			 	(listener as! oncrpcv2Listener).exitXdrSpecification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? oncrpcv2Listener {
+				listener.exitXdrSpecification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is oncrpcv2Visitor {
-			     return (visitor as! oncrpcv2Visitor<T>).visitXdrSpecification(self)
-			}else if visitor is oncrpcv2BaseVisitor {
-		    	 return (visitor as! oncrpcv2BaseVisitor<T>).visitXdrSpecification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? oncrpcv2Visitor {
+			    return visitor.visitXdrSpecification(self)
+			}
+			else if let visitor = visitor as? oncrpcv2BaseVisitor {
+			    return visitor.visitXdrSpecification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func xdrSpecification() throws -> XdrSpecificationContext {
+	 open func xdrSpecification() throws -> XdrSpecificationContext {
 		var _localctx: XdrSpecificationContext = XdrSpecificationContext(_ctx, getState())
 		try enterRule(_localctx, 40, oncrpcv2Parser.RULE_xdrSpecification)
 		defer {
@@ -1902,7 +2075,7 @@ open class oncrpcv2Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(281); 
 		 		try _errHandler.sync(self)
@@ -1919,6 +2092,10 @@ open class oncrpcv2Parser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = oncrpcv2ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = oncrpcv2ParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

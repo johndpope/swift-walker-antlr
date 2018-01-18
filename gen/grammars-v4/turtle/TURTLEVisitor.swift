@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/turtle/TURTLE.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/turtle/TURTLE.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTurtleDoc(_ ctx: TURTLEParser.TurtleDocContext) -> T{
+	open func visitTurtleDoc(_ ctx: TURTLEParser.TurtleDocContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatement(_ ctx: TURTLEParser.StatementContext) -> T{
+	open func visitStatement(_ ctx: TURTLEParser.StatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDirective(_ ctx: TURTLEParser.DirectiveContext) -> T{
+	open func visitDirective(_ ctx: TURTLEParser.DirectiveContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrefixID(_ ctx: TURTLEParser.PrefixIDContext) -> T{
+	open func visitPrefixID(_ ctx: TURTLEParser.PrefixIDContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBase(_ ctx: TURTLEParser.BaseContext) -> T{
+	open func visitBase(_ ctx: TURTLEParser.BaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSparqlBase(_ ctx: TURTLEParser.SparqlBaseContext) -> T{
+	open func visitSparqlBase(_ ctx: TURTLEParser.SparqlBaseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSparqlPrefix(_ ctx: TURTLEParser.SparqlPrefixContext) -> T{
+	open func visitSparqlPrefix(_ ctx: TURTLEParser.SparqlPrefixContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTriples(_ ctx: TURTLEParser.TriplesContext) -> T{
+	open func visitTriples(_ ctx: TURTLEParser.TriplesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPredicateObjectList(_ ctx: TURTLEParser.PredicateObjectListContext) -> T{
+	open func visitPredicateObjectList(_ ctx: TURTLEParser.PredicateObjectListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObjectList(_ ctx: TURTLEParser.ObjectListContext) -> T{
+	open func visitObjectList(_ ctx: TURTLEParser.ObjectListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVerb(_ ctx: TURTLEParser.VerbContext) -> T{
+	open func visitVerb(_ ctx: TURTLEParser.VerbContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubject(_ ctx: TURTLEParser.SubjectContext) -> T{
+	open func visitSubject(_ ctx: TURTLEParser.SubjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPredicate(_ ctx: TURTLEParser.PredicateContext) -> T{
+	open func visitPredicate(_ ctx: TURTLEParser.PredicateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitObject(_ ctx: TURTLEParser.ObjectContext) -> T{
+	open func visitObject(_ ctx: TURTLEParser.ObjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: TURTLEParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: TURTLEParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlankNodePropertyList(_ ctx: TURTLEParser.BlankNodePropertyListContext) -> T{
+	open func visitBlankNodePropertyList(_ ctx: TURTLEParser.BlankNodePropertyListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollection(_ ctx: TURTLEParser.CollectionContext) -> T{
+	open func visitCollection(_ ctx: TURTLEParser.CollectionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRdfLiteral(_ ctx: TURTLEParser.RdfLiteralContext) -> T{
+	open func visitRdfLiteral(_ ctx: TURTLEParser.RdfLiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class TURTLEVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIri(_ ctx: TURTLEParser.IriContext) -> T{
+	open func visitIri(_ ctx: TURTLEParser.IriContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/asn/ASN.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/asn/ASN.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -597,7 +597,7 @@ open class ASNBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitType(_ ctx: ASNParser.TypeContext) -> T? { return visitChildren(ctx) }
+	open func visitAsnType(_ ctx: ASNParser.AsnTypeContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *

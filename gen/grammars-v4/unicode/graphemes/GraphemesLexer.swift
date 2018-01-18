@@ -1,7 +1,8 @@
-// Generated from ./grammars-v4/unicode/graphemes/Graphemes.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/unicode/graphemes/Graphemes.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class GraphemesLexer: Lexer {
+
 	internal static var _decisionToDFA: [DFA] = {
           var decisionToDFA = [DFA]()
           let length = GraphemesLexer._ATN.getNumberOfDecisions()
@@ -11,19 +12,24 @@ open class GraphemesLexer: Lexer {
            return decisionToDFA
      }()
 
-	internal static let _sharedContextCache:PredictionContextCache = PredictionContextCache()
-	public static let Extend=1, ZWJ=2, SpacingMark=3, EmojiCoreSequence=4, 
-                   EmojiZWJSequence=5, Prepend=6, NonControl=7, CRLF=8, 
-                   HangulSyllable=9
-	public static let channelNames: [String] = [
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	static let Extend=1, ZWJ=2, SpacingMark=3, EmojiCoreSequence=4, EmojiZWJSequence=5, 
+            Prepend=6, NonControl=7, CRLF=8, HangulSyllable=9
+
+	public
+	static let channelNames: [String] = [
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	]
 
-	public static let modeNames: [String] = [
+	public
+	static let modeNames: [String] = [
 		"DEFAULT_MODE"
 	]
 
-	public static let ruleNames: [String] = [
+	public
+	static let ruleNames: [String] = [
 		"Extend", "ZWJ", "SpacingMark", "VS15", "VS16", "NonspacingMark", "TextPresentationCharacter", 
 		"EmojiPresentationCharacter", "TextPresentationSequence", "EmojiPresentationSequence", 
 		"EmojiCharacter", "EmojiModifierSequence", "EmojiFlagSequence", "ExtendedPictographic", 
@@ -39,61 +45,44 @@ open class GraphemesLexer: Lexer {
 		nil, "Extend", "ZWJ", "SpacingMark", "EmojiCoreSequence", "EmojiZWJSequence", 
 		"Prepend", "NonControl", "CRLF", "HangulSyllable"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
+	override open
+	func getVocabulary() -> Vocabulary {
+		return GraphemesLexer.VOCABULARY
 	}
 
-    open override func getVocabulary() -> Vocabulary {
-        return GraphemesLexer.VOCABULARY
-    }
-
-	public override init(_ input: CharStream) {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	public
+	required init(_ input: CharStream) {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		super.init(input)
 		_interp = LexerATNSimulator(self, GraphemesLexer._ATN, GraphemesLexer._decisionToDFA, GraphemesLexer._sharedContextCache)
 	}
 
-	override
-	open func getGrammarFileName() -> String { return "Graphemes.g4" }
+	override open
+	func getGrammarFileName() -> String { return "Graphemes.g4" }
 
-    override
-	open func getRuleNames() -> [String] { return GraphemesLexer.ruleNames }
+	override open
+	func getRuleNames() -> [String] { return GraphemesLexer.ruleNames }
 
-	override
-	open func getSerializedATN() -> String { return GraphemesLexer._serializedATN }
+	override open
+	func getSerializedATN() -> String { return GraphemesLexer._serializedATN }
 
-	override
-	open func getChannelNames() -> [String] { return GraphemesLexer.channelNames }
+	override open
+	func getChannelNames() -> [String] { return GraphemesLexer.channelNames }
 
-	override
-	open func getModeNames() -> [String] { return GraphemesLexer.modeNames }
+	override open
+	func getModeNames() -> [String] { return GraphemesLexer.modeNames }
 
-	override
-	open func getATN() -> ATN { return GraphemesLexer._ATN }
+	override open
+	func getATN() -> ATN { return GraphemesLexer._ATN }
 
-    public static let _serializedATN: String = GraphemesLexerATN().jsonString
-	public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN: String = GraphemesLexerATN().jsonString
+
+	public
+	static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/swift3/Swift3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/swift3/Swift3.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,7 +9,7 @@ import Antlr4
  * of the available methods.
  */
 open class Swift3BaseListener: Swift3Listener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *

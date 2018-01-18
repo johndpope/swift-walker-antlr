@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/antlr3/ANTLRv3.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/antlr3/ANTLRv3.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGrammarDef(_ ctx: ANTLRv3Parser.GrammarDefContext) -> T{
+	open func visitGrammarDef(_ ctx: ANTLRv3Parser.GrammarDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTokensSpec(_ ctx: ANTLRv3Parser.TokensSpecContext) -> T{
+	open func visitTokensSpec(_ ctx: ANTLRv3Parser.TokensSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTokenSpec(_ ctx: ANTLRv3Parser.TokenSpecContext) -> T{
+	open func visitTokenSpec(_ ctx: ANTLRv3Parser.TokenSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttrScope(_ ctx: ANTLRv3Parser.AttrScopeContext) -> T{
+	open func visitAttrScope(_ ctx: ANTLRv3Parser.AttrScopeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAction(_ ctx: ANTLRv3Parser.ActionContext) -> T{
+	open func visitAction(_ ctx: ANTLRv3Parser.ActionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActionScopeName(_ ctx: ANTLRv3Parser.ActionScopeNameContext) -> T{
+	open func visitActionScopeName(_ ctx: ANTLRv3Parser.ActionScopeNameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionsSpec(_ ctx: ANTLRv3Parser.OptionsSpecContext) -> T{
+	open func visitOptionsSpec(_ ctx: ANTLRv3Parser.OptionsSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOption(_ ctx: ANTLRv3Parser.OptionContext) -> T{
+	open func visitOption(_ ctx: ANTLRv3Parser.OptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOptionValue(_ ctx: ANTLRv3Parser.OptionValueContext) -> T{
+	open func visitOptionValue(_ ctx: ANTLRv3Parser.OptionValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRule_(_ ctx: ANTLRv3Parser.Rule_Context) -> T{
+	open func visitRule_(_ ctx: ANTLRv3Parser.Rule_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRuleAction(_ ctx: ANTLRv3Parser.RuleActionContext) -> T{
+	open func visitRuleAction(_ ctx: ANTLRv3Parser.RuleActionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitThrowsSpec(_ ctx: ANTLRv3Parser.ThrowsSpecContext) -> T{
+	open func visitThrowsSpec(_ ctx: ANTLRv3Parser.ThrowsSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRuleScopeSpec(_ ctx: ANTLRv3Parser.RuleScopeSpecContext) -> T{
+	open func visitRuleScopeSpec(_ ctx: ANTLRv3Parser.RuleScopeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: ANTLRv3Parser.BlockContext) -> T{
+	open func visitBlock(_ ctx: ANTLRv3Parser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAltList(_ ctx: ANTLRv3Parser.AltListContext) -> T{
+	open func visitAltList(_ ctx: ANTLRv3Parser.AltListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlternative(_ ctx: ANTLRv3Parser.AlternativeContext) -> T{
+	open func visitAlternative(_ ctx: ANTLRv3Parser.AlternativeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExceptionGroup(_ ctx: ANTLRv3Parser.ExceptionGroupContext) -> T{
+	open func visitExceptionGroup(_ ctx: ANTLRv3Parser.ExceptionGroupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExceptionHandler(_ ctx: ANTLRv3Parser.ExceptionHandlerContext) -> T{
+	open func visitExceptionHandler(_ ctx: ANTLRv3Parser.ExceptionHandlerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFinallyClause(_ ctx: ANTLRv3Parser.FinallyClauseContext) -> T{
+	open func visitFinallyClause(_ ctx: ANTLRv3Parser.FinallyClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElement(_ ctx: ANTLRv3Parser.ElementContext) -> T{
+	open func visitElement(_ ctx: ANTLRv3Parser.ElementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitElementNoOptionSpec(_ ctx: ANTLRv3Parser.ElementNoOptionSpecContext) -> T{
+	open func visitElementNoOptionSpec(_ ctx: ANTLRv3Parser.ElementNoOptionSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAtom(_ ctx: ANTLRv3Parser.AtomContext) -> T{
+	open func visitAtom(_ ctx: ANTLRv3Parser.AtomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNotSet(_ ctx: ANTLRv3Parser.NotSetContext) -> T{
+	open func visitNotSet(_ ctx: ANTLRv3Parser.NotSetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTreeSpec(_ ctx: ANTLRv3Parser.TreeSpecContext) -> T{
+	open func visitTreeSpec(_ ctx: ANTLRv3Parser.TreeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEbnf(_ ctx: ANTLRv3Parser.EbnfContext) -> T{
+	open func visitEbnf(_ ctx: ANTLRv3Parser.EbnfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRange(_ ctx: ANTLRv3Parser.RangeContext) -> T{
+	open func visitRange(_ ctx: ANTLRv3Parser.RangeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerminal_(_ ctx: ANTLRv3Parser.Terminal_Context) -> T{
+	open func visitTerminal_(_ ctx: ANTLRv3Parser.Terminal_Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNotTerminal(_ ctx: ANTLRv3Parser.NotTerminalContext) -> T{
+	open func visitNotTerminal(_ ctx: ANTLRv3Parser.NotTerminalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEbnfSuffix(_ ctx: ANTLRv3Parser.EbnfSuffixContext) -> T{
+	open func visitEbnfSuffix(_ ctx: ANTLRv3Parser.EbnfSuffixContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite(_ ctx: ANTLRv3Parser.RewriteContext) -> T{
+	open func visitRewrite(_ ctx: ANTLRv3Parser.RewriteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_alternative(_ ctx: ANTLRv3Parser.Rewrite_alternativeContext) -> T{
+	open func visitRewrite_alternative(_ ctx: ANTLRv3Parser.Rewrite_alternativeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_tree_block(_ ctx: ANTLRv3Parser.Rewrite_tree_blockContext) -> T{
+	open func visitRewrite_tree_block(_ ctx: ANTLRv3Parser.Rewrite_tree_blockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_tree_alternative(_ ctx: ANTLRv3Parser.Rewrite_tree_alternativeContext) -> T{
+	open func visitRewrite_tree_alternative(_ ctx: ANTLRv3Parser.Rewrite_tree_alternativeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_tree_element(_ ctx: ANTLRv3Parser.Rewrite_tree_elementContext) -> T{
+	open func visitRewrite_tree_element(_ ctx: ANTLRv3Parser.Rewrite_tree_elementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_tree_atom(_ ctx: ANTLRv3Parser.Rewrite_tree_atomContext) -> T{
+	open func visitRewrite_tree_atom(_ ctx: ANTLRv3Parser.Rewrite_tree_atomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_tree_ebnf(_ ctx: ANTLRv3Parser.Rewrite_tree_ebnfContext) -> T{
+	open func visitRewrite_tree_ebnf(_ ctx: ANTLRv3Parser.Rewrite_tree_ebnfContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_tree(_ ctx: ANTLRv3Parser.Rewrite_treeContext) -> T{
+	open func visitRewrite_tree(_ ctx: ANTLRv3Parser.Rewrite_treeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_template(_ ctx: ANTLRv3Parser.Rewrite_templateContext) -> T{
+	open func visitRewrite_template(_ ctx: ANTLRv3Parser.Rewrite_templateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_template_ref(_ ctx: ANTLRv3Parser.Rewrite_template_refContext) -> T{
+	open func visitRewrite_template_ref(_ ctx: ANTLRv3Parser.Rewrite_template_refContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_indirect_template_head(_ ctx: ANTLRv3Parser.Rewrite_indirect_template_headContext) -> T{
+	open func visitRewrite_indirect_template_head(_ ctx: ANTLRv3Parser.Rewrite_indirect_template_headContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_template_args(_ ctx: ANTLRv3Parser.Rewrite_template_argsContext) -> T{
+	open func visitRewrite_template_args(_ ctx: ANTLRv3Parser.Rewrite_template_argsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRewrite_template_arg(_ ctx: ANTLRv3Parser.Rewrite_template_argContext) -> T{
+	open func visitRewrite_template_arg(_ ctx: ANTLRv3Parser.Rewrite_template_argContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class ANTLRv3Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitId(_ ctx: ANTLRv3Parser.IdContext) -> T{
+	open func visitId(_ ctx: ANTLRv3Parser.IdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

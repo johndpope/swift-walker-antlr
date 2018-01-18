@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cobol85/Cobol85Preprocessor.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cobol85/Cobol85Preprocessor.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,37 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStartRule(_ ctx: Cobol85PreprocessorParser.StartRuleContext) -> T{
+	open func visitStartRule(_ ctx: Cobol85PreprocessorParser.StartRuleContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#compilerOptions}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCompilerOptions(_ ctx: Cobol85PreprocessorParser.CompilerOptionsContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#compilerXOpts}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCompilerXOpts(_ ctx: Cobol85PreprocessorParser.CompilerXOptsContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#compilerOption}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCompilerOption(_ ctx: Cobol85PreprocessorParser.CompilerOptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +55,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExecCicsStatement(_ ctx: Cobol85PreprocessorParser.ExecCicsStatementContext) -> T{
+	open func visitExecCicsStatement(_ ctx: Cobol85PreprocessorParser.ExecCicsStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +65,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExecSqlStatement(_ ctx: Cobol85PreprocessorParser.ExecSqlStatementContext) -> T{
+	open func visitExecSqlStatement(_ ctx: Cobol85PreprocessorParser.ExecSqlStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +75,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExecSqlImsStatement(_ ctx: Cobol85PreprocessorParser.ExecSqlImsStatementContext) -> T{
+	open func visitExecSqlImsStatement(_ ctx: Cobol85PreprocessorParser.ExecSqlImsStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +85,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCopyStatement(_ ctx: Cobol85PreprocessorParser.CopyStatementContext) -> T{
+	open func visitCopyStatement(_ ctx: Cobol85PreprocessorParser.CopyStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +95,17 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCopySource(_ ctx: Cobol85PreprocessorParser.CopySourceContext) -> T{
+	open func visitCopySource(_ ctx: Cobol85PreprocessorParser.CopySourceContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#copyLibrary}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCopyLibrary(_ ctx: Cobol85PreprocessorParser.CopyLibraryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +115,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReplacingPhrase(_ ctx: Cobol85PreprocessorParser.ReplacingPhraseContext) -> T{
+	open func visitReplacingPhrase(_ ctx: Cobol85PreprocessorParser.ReplacingPhraseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +125,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReplaceArea(_ ctx: Cobol85PreprocessorParser.ReplaceAreaContext) -> T{
+	open func visitReplaceArea(_ ctx: Cobol85PreprocessorParser.ReplaceAreaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +135,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReplaceByStatement(_ ctx: Cobol85PreprocessorParser.ReplaceByStatementContext) -> T{
+	open func visitReplaceByStatement(_ ctx: Cobol85PreprocessorParser.ReplaceByStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +145,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReplaceOffStatement(_ ctx: Cobol85PreprocessorParser.ReplaceOffStatementContext) -> T{
+	open func visitReplaceOffStatement(_ ctx: Cobol85PreprocessorParser.ReplaceOffStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +155,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReplaceClause(_ ctx: Cobol85PreprocessorParser.ReplaceClauseContext) -> T{
+	open func visitReplaceClause(_ ctx: Cobol85PreprocessorParser.ReplaceClauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +165,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDirectoryPhrase(_ ctx: Cobol85PreprocessorParser.DirectoryPhraseContext) -> T{
+	open func visitDirectoryPhrase(_ ctx: Cobol85PreprocessorParser.DirectoryPhraseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +175,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFamilyPhrase(_ ctx: Cobol85PreprocessorParser.FamilyPhraseContext) -> T{
+	open func visitFamilyPhrase(_ ctx: Cobol85PreprocessorParser.FamilyPhraseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +185,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReplaceable(_ ctx: Cobol85PreprocessorParser.ReplaceableContext) -> T{
+	open func visitReplaceable(_ ctx: Cobol85PreprocessorParser.ReplaceableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,37 +195,37 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReplacement(_ ctx: Cobol85PreprocessorParser.ReplacementContext) -> T{
+	open func visitReplacement(_ ctx: Cobol85PreprocessorParser.ReplacementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#controlSpacingStatement}.
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#ejectStatement}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitControlSpacingStatement(_ ctx: Cobol85PreprocessorParser.ControlSpacingStatementContext) -> T{
+	open func visitEjectStatement(_ ctx: Cobol85PreprocessorParser.EjectStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#cobolWord}.
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#skipStatement}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCobolWord(_ ctx: Cobol85PreprocessorParser.CobolWordContext) -> T{
+	open func visitSkipStatement(_ ctx: Cobol85PreprocessorParser.SkipStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#literal}.
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#titleStatement}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: Cobol85PreprocessorParser.LiteralContext) -> T{
+	open func visitTitleStatement(_ ctx: Cobol85PreprocessorParser.TitleStatementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +235,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPseudoText(_ ctx: Cobol85PreprocessorParser.PseudoTextContext) -> T{
+	open func visitPseudoText(_ ctx: Cobol85PreprocessorParser.PseudoTextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +245,17 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharData(_ ctx: Cobol85PreprocessorParser.CharDataContext) -> T{
+	open func visitCharData(_ ctx: Cobol85PreprocessorParser.CharDataContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#charDataSql}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCharDataSql(_ ctx: Cobol85PreprocessorParser.CharDataSqlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +265,37 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharDataLine(_ ctx: Cobol85PreprocessorParser.CharDataLineContext) -> T{
+	open func visitCharDataLine(_ ctx: Cobol85PreprocessorParser.CharDataLineContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#cobolWord}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitCobolWord(_ ctx: Cobol85PreprocessorParser.CobolWordContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#literal}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitLiteral(_ ctx: Cobol85PreprocessorParser.LiteralContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link Cobol85PreprocessorParser#filename}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitFilename(_ ctx: Cobol85PreprocessorParser.FilenameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +305,7 @@ open class Cobol85PreprocessorVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharDataKeyword(_ ctx: Cobol85PreprocessorParser.CharDataKeywordContext) -> T{
+	open func visitCharDataKeyword(_ ctx: Cobol85PreprocessorParser.CharDataKeywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

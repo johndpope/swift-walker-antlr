@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/lua/Lua.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/lua/Lua.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitChunk(_ ctx: LuaParser.ChunkContext) -> T{
+	open func visitChunk(_ ctx: LuaParser.ChunkContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBlock(_ ctx: LuaParser.BlockContext) -> T{
+	open func visitBlock(_ ctx: LuaParser.BlockContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStat(_ ctx: LuaParser.StatContext) -> T{
+	open func visitStat(_ ctx: LuaParser.StatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRetstat(_ ctx: LuaParser.RetstatContext) -> T{
+	open func visitRetstat(_ ctx: LuaParser.RetstatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLabel(_ ctx: LuaParser.LabelContext) -> T{
+	open func visitLabel(_ ctx: LuaParser.LabelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFuncname(_ ctx: LuaParser.FuncnameContext) -> T{
+	open func visitFuncname(_ ctx: LuaParser.FuncnameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarlist(_ ctx: LuaParser.VarlistContext) -> T{
+	open func visitVarlist(_ ctx: LuaParser.VarlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamelist(_ ctx: LuaParser.NamelistContext) -> T{
+	open func visitNamelist(_ ctx: LuaParser.NamelistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExplist(_ ctx: LuaParser.ExplistContext) -> T{
+	open func visitExplist(_ ctx: LuaParser.ExplistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExp(_ ctx: LuaParser.ExpContext) -> T{
+	open func visitExp(_ ctx: LuaParser.ExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPrefixexp(_ ctx: LuaParser.PrefixexpContext) -> T{
+	open func visitPrefixexp(_ ctx: LuaParser.PrefixexpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctioncall(_ ctx: LuaParser.FunctioncallContext) -> T{
+	open func visitFunctioncall(_ ctx: LuaParser.FunctioncallContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarOrExp(_ ctx: LuaParser.VarOrExpContext) -> T{
+	open func visitVarOrExp(_ ctx: LuaParser.VarOrExpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVar(_ ctx: LuaParser.VarContext) -> T{
+	open func visitVar(_ ctx: LuaParser.VarContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVarSuffix(_ ctx: LuaParser.VarSuffixContext) -> T{
+	open func visitVarSuffix(_ ctx: LuaParser.VarSuffixContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNameAndArgs(_ ctx: LuaParser.NameAndArgsContext) -> T{
+	open func visitNameAndArgs(_ ctx: LuaParser.NameAndArgsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArgs(_ ctx: LuaParser.ArgsContext) -> T{
+	open func visitArgs(_ ctx: LuaParser.ArgsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctiondef(_ ctx: LuaParser.FunctiondefContext) -> T{
+	open func visitFunctiondef(_ ctx: LuaParser.FunctiondefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFuncbody(_ ctx: LuaParser.FuncbodyContext) -> T{
+	open func visitFuncbody(_ ctx: LuaParser.FuncbodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParlist(_ ctx: LuaParser.ParlistContext) -> T{
+	open func visitParlist(_ ctx: LuaParser.ParlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTableconstructor(_ ctx: LuaParser.TableconstructorContext) -> T{
+	open func visitTableconstructor(_ ctx: LuaParser.TableconstructorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldlist(_ ctx: LuaParser.FieldlistContext) -> T{
+	open func visitFieldlist(_ ctx: LuaParser.FieldlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitField(_ ctx: LuaParser.FieldContext) -> T{
+	open func visitField(_ ctx: LuaParser.FieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFieldsep(_ ctx: LuaParser.FieldsepContext) -> T{
+	open func visitFieldsep(_ ctx: LuaParser.FieldsepContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorOr(_ ctx: LuaParser.OperatorOrContext) -> T{
+	open func visitOperatorOr(_ ctx: LuaParser.OperatorOrContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorAnd(_ ctx: LuaParser.OperatorAndContext) -> T{
+	open func visitOperatorAnd(_ ctx: LuaParser.OperatorAndContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorComparison(_ ctx: LuaParser.OperatorComparisonContext) -> T{
+	open func visitOperatorComparison(_ ctx: LuaParser.OperatorComparisonContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorStrcat(_ ctx: LuaParser.OperatorStrcatContext) -> T{
+	open func visitOperatorStrcat(_ ctx: LuaParser.OperatorStrcatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorAddSub(_ ctx: LuaParser.OperatorAddSubContext) -> T{
+	open func visitOperatorAddSub(_ ctx: LuaParser.OperatorAddSubContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorMulDivMod(_ ctx: LuaParser.OperatorMulDivModContext) -> T{
+	open func visitOperatorMulDivMod(_ ctx: LuaParser.OperatorMulDivModContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorBitwise(_ ctx: LuaParser.OperatorBitwiseContext) -> T{
+	open func visitOperatorBitwise(_ ctx: LuaParser.OperatorBitwiseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorUnary(_ ctx: LuaParser.OperatorUnaryContext) -> T{
+	open func visitOperatorUnary(_ ctx: LuaParser.OperatorUnaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOperatorPower(_ ctx: LuaParser.OperatorPowerContext) -> T{
+	open func visitOperatorPower(_ ctx: LuaParser.OperatorPowerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: LuaParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: LuaParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class LuaVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: LuaParser.StringContext) -> T{
+	open func visitString(_ ctx: LuaParser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

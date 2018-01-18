@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/csv/CSV.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/csv/CSV.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class CSVVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCsvFile(_ ctx: CSVParser.CsvFileContext) -> T{
+	open func visitCsvFile(_ ctx: CSVParser.CsvFileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class CSVVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHdr(_ ctx: CSVParser.HdrContext) -> T{
+	open func visitHdr(_ ctx: CSVParser.HdrContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class CSVVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRow(_ ctx: CSVParser.RowContext) -> T{
+	open func visitRow(_ ctx: CSVParser.RowContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class CSVVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitField(_ ctx: CSVParser.FieldContext) -> T{
+	open func visitField(_ ctx: CSVParser.FieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

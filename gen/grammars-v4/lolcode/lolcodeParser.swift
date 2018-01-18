@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/lolcode/lolcode.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/lolcode/lolcode.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class lolcodeParser: Parser {
@@ -11,8 +11,11 @@ open class lolcodeParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -23,16 +26,19 @@ open class lolcodeParser: Parser {
                  T__37 = 38, T__38 = 39, T__39 = 40, LABEL = 41, ATOM = 42, 
                  STRING = 43, WS = 44
 	}
-	public static let RULE_program = 0, RULE_code_block = 1, RULE_statement = 2, 
-                   RULE_loop = 3, RULE_declaration = 4, RULE_comment = 5, 
-                   RULE_print_block = 6, RULE_if_block = 7, RULE_else_if_block = 8, 
-                   RULE_input_block = 9, RULE_func_decl = 10, RULE_assignment = 11, 
-                   RULE_expression = 12, RULE_equals = 13, RULE_not_equals = 14, 
-                   RULE_both = 15, RULE_either = 16, RULE_greater = 17, 
-                   RULE_less = 18, RULE_add = 19, RULE_sub = 20, RULE_mul = 21, 
-                   RULE_div = 22, RULE_mod = 23, RULE_cast = 24, RULE_all = 25, 
-                   RULE_any = 26, RULE_not = 27, RULE_func = 28
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_program = 0, RULE_code_block = 1, RULE_statement = 2, RULE_loop = 3, 
+            RULE_declaration = 4, RULE_comment = 5, RULE_print_block = 6, 
+            RULE_if_block = 7, RULE_else_if_block = 8, RULE_input_block = 9, 
+            RULE_func_decl = 10, RULE_assignment = 11, RULE_expression = 12, 
+            RULE_equals = 13, RULE_not_equals = 14, RULE_both = 15, RULE_either = 16, 
+            RULE_greater = 17, RULE_less = 18, RULE_add = 19, RULE_sub = 20, 
+            RULE_mul = 21, RULE_div = 22, RULE_mod = 23, RULE_cast = 24, 
+            RULE_all = 25, RULE_any = 26, RULE_not = 27, RULE_func = 28
+
+	public
+	static let ruleNames: [String] = [
 		"program", "code_block", "statement", "loop", "declaration", "comment", 
 		"print_block", "if_block", "else_if_block", "input_block", "func_decl", 
 		"assignment", "expression", "equals", "not_equals", "both", "either", 
@@ -55,85 +61,69 @@ open class lolcodeParser: Parser {
 		nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "LABEL", 
 		"ATOM", "STRING", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "lolcode.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return lolcodeParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "lolcode.g4" }
+	override open
+	func getSerializedATN() -> String { return lolcodeParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return lolcodeParser.ruleNames }
+	override open
+	func getATN() -> ATN { return lolcodeParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return lolcodeParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return lolcodeParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return lolcodeParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,lolcodeParser._ATN,lolcodeParser._decisionToDFA, lolcodeParser._sharedContextCache)
 	}
-	open class ProgramContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class ProgramContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_program
 		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_program }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterProgram(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterProgram(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitProgram(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitProgram(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitProgram(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitProgram(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitProgram(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitProgram(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func program() throws -> ProgramContext {
+	 open func program() throws -> ProgramContext {
 		var _localctx: ProgramContext = ProgramContext(_ctx, getState())
 		try enterRule(_localctx, 0, lolcodeParser.RULE_program)
 		var _la: Int = 0
@@ -169,40 +159,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class Code_blockContext:ParserRuleContext {
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
+
+	public class Code_blockContext: ParserRuleContext {
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_code_block
 		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_code_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterCode_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterCode_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitCode_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitCode_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitCode_block(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitCode_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitCode_block(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitCode_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func code_block() throws -> Code_blockContext {
+	 open func code_block() throws -> Code_blockContext {
 		var _localctx: Code_blockContext = Code_blockContext(_ctx, getState())
 		try enterRule(_localctx, 2, lolcodeParser.RULE_code_block)
 		var _la: Int = 0
@@ -240,61 +237,75 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func loop() -> LoopContext? {
-			return getRuleContext(LoopContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func loop() -> LoopContext? {
+				return getRuleContext(LoopContext.self, 0)
+			}
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+			open
+			func print_block() -> Print_blockContext? {
+				return getRuleContext(Print_blockContext.self, 0)
+			}
+			open
+			func if_block() -> If_blockContext? {
+				return getRuleContext(If_blockContext.self, 0)
+			}
+			open
+			func input_block() -> Input_blockContext? {
+				return getRuleContext(Input_blockContext.self, 0)
+			}
+			open
+			func func_decl() -> Func_declContext? {
+				return getRuleContext(Func_declContext.self, 0)
+			}
+			open
+			func assignment() -> AssignmentContext? {
+				return getRuleContext(AssignmentContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_statement
 		}
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
-		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open func print_block() -> Print_blockContext? {
-			return getRuleContext(Print_blockContext.self,0)
-		}
-		open func if_block() -> If_blockContext? {
-			return getRuleContext(If_blockContext.self,0)
-		}
-		open func input_block() -> Input_blockContext? {
-			return getRuleContext(Input_blockContext.self,0)
-		}
-		open func func_decl() -> Func_declContext? {
-			return getRuleContext(Func_declContext.self,0)
-		}
-		open func assignment() -> AssignmentContext? {
-			return getRuleContext(AssignmentContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitStatement(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 4, lolcodeParser.RULE_statement)
 		defer {
@@ -369,44 +380,55 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class LoopContext:ParserRuleContext {
-		open func LABEL() -> Array<TerminalNode> { return getTokens(lolcodeParser.Tokens.LABEL.rawValue) }
-		open func LABEL(_ i:Int) -> TerminalNode?{
-			return getToken(lolcodeParser.Tokens.LABEL.rawValue, i)
+
+	public class LoopContext: ParserRuleContext {
+			open
+			func LABEL() -> [TerminalNode] {
+				return getTokens(lolcodeParser.Tokens.LABEL.rawValue)
+			}
+			open
+			func LABEL(_ i:Int) -> TerminalNode? {
+				return getToken(lolcodeParser.Tokens.LABEL.rawValue, i)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_loop
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_loop }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterLoop(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterLoop(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitLoop(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitLoop(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitLoop(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitLoop(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitLoop(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitLoop(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func loop() throws -> LoopContext {
+	 open func loop() throws -> LoopContext {
 		var _localctx: LoopContext = LoopContext(_ctx, getState())
 		try enterRule(_localctx, 6, lolcodeParser.RULE_loop)
 		defer {
@@ -438,35 +460,43 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationContext:ParserRuleContext {
-		open func LABEL() -> TerminalNode? { return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterDeclaration(self)
+
+	public class DeclarationContext: ParserRuleContext {
+			open
+			func LABEL() -> TerminalNode? {
+				return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_declaration
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitDeclaration(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitDeclaration(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration() throws -> DeclarationContext {
+	 open func declaration() throws -> DeclarationContext {
 		var _localctx: DeclarationContext = DeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 8, lolcodeParser.RULE_declaration)
 		defer {
@@ -505,35 +535,43 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(lolcodeParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterComment(self)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(lolcodeParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_comment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitComment(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 10, lolcodeParser.RULE_comment)
 		defer {
@@ -563,7 +601,7 @@ open class lolcodeParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -574,40 +612,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class Print_blockContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Print_blockContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_print_block
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_print_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterPrint_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterPrint_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitPrint_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitPrint_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitPrint_block(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitPrint_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitPrint_block(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitPrint_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func print_block() throws -> Print_blockContext {
+	 open func print_block() throws -> Print_blockContext {
 		var _localctx: Print_blockContext = Print_blockContext(_ctx, getState())
 		try enterRule(_localctx, 12, lolcodeParser.RULE_print_block)
 		var _la: Int = 0
@@ -656,40 +701,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class If_blockContext:ParserRuleContext {
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
+
+	public class If_blockContext: ParserRuleContext {
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func else_if_block() -> Else_if_blockContext? {
+				return getRuleContext(Else_if_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_if_block
 		}
-		open func else_if_block() -> Else_if_blockContext? {
-			return getRuleContext(Else_if_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_if_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterIf_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterIf_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitIf_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitIf_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitIf_block(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitIf_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitIf_block(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitIf_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func if_block() throws -> If_blockContext {
+	 open func if_block() throws -> If_blockContext {
 		var _localctx: If_blockContext = If_blockContext(_ctx, getState())
 		try enterRule(_localctx, 14, lolcodeParser.RULE_if_block)
 		defer {
@@ -736,43 +788,51 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class Else_if_blockContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class Else_if_blockContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+			open
+			func else_if_block() -> Else_if_blockContext? {
+				return getRuleContext(Else_if_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_else_if_block
 		}
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
-		}
-		open func else_if_block() -> Else_if_blockContext? {
-			return getRuleContext(Else_if_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_else_if_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterElse_if_block(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterElse_if_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitElse_if_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitElse_if_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitElse_if_block(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitElse_if_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitElse_if_block(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitElse_if_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func else_if_block() throws -> Else_if_blockContext {
+	 open func else_if_block() throws -> Else_if_blockContext {
 		var _localctx: Else_if_blockContext = Else_if_blockContext(_ctx, getState())
 		try enterRule(_localctx, 16, lolcodeParser.RULE_else_if_block)
 		defer {
@@ -823,35 +883,43 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class Input_blockContext:ParserRuleContext {
-		open func LABEL() -> TerminalNode? { return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_input_block }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterInput_block(self)
+
+	public class Input_blockContext: ParserRuleContext {
+			open
+			func LABEL() -> TerminalNode? {
+				return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_input_block
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterInput_block(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitInput_block(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitInput_block(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitInput_block(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitInput_block(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitInput_block(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitInput_block(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func input_block() throws -> Input_blockContext {
+	 open func input_block() throws -> Input_blockContext {
 		var _localctx: Input_blockContext = Input_blockContext(_ctx, getState())
 		try enterRule(_localctx, 18, lolcodeParser.RULE_input_block)
 		defer {
@@ -873,41 +941,51 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class Func_declContext:ParserRuleContext {
-		open func LABEL() -> Array<TerminalNode> { return getTokens(lolcodeParser.Tokens.LABEL.rawValue) }
-		open func LABEL(_ i:Int) -> TerminalNode?{
-			return getToken(lolcodeParser.Tokens.LABEL.rawValue, i)
+
+	public class Func_declContext: ParserRuleContext {
+			open
+			func LABEL() -> [TerminalNode] {
+				return getTokens(lolcodeParser.Tokens.LABEL.rawValue)
+			}
+			open
+			func LABEL(_ i:Int) -> TerminalNode? {
+				return getToken(lolcodeParser.Tokens.LABEL.rawValue, i)
+			}
+			open
+			func code_block() -> Code_blockContext? {
+				return getRuleContext(Code_blockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_func_decl
 		}
-		open func code_block() -> Code_blockContext? {
-			return getRuleContext(Code_blockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_func_decl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterFunc_decl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterFunc_decl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitFunc_decl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitFunc_decl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitFunc_decl(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitFunc_decl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitFunc_decl(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitFunc_decl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func func_decl() throws -> Func_declContext {
+	 open func func_decl() throws -> Func_declContext {
 		var _localctx: Func_declContext = Func_declContext(_ctx, getState())
 		try enterRule(_localctx, 20, lolcodeParser.RULE_func_decl)
 		var _la: Int = 0
@@ -968,38 +1046,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentContext:ParserRuleContext {
-		open func LABEL() -> TerminalNode? { return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class AssignmentContext: ParserRuleContext {
+			open
+			func LABEL() -> TerminalNode? {
+				return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_assignment
 		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterAssignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterAssignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitAssignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitAssignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitAssignment(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitAssignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitAssignment(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitAssignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignment() throws -> AssignmentContext {
+	 open func assignment() throws -> AssignmentContext {
 		var _localctx: AssignmentContext = AssignmentContext(_ctx, getState())
 		try enterRule(_localctx, 22, lolcodeParser.RULE_assignment)
 		defer {
@@ -1023,84 +1110,111 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func equals() -> EqualsContext? {
-			return getRuleContext(EqualsContext.self,0)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func equals() -> EqualsContext? {
+				return getRuleContext(EqualsContext.self, 0)
+			}
+			open
+			func both() -> BothContext? {
+				return getRuleContext(BothContext.self, 0)
+			}
+			open
+			func not_equals() -> Not_equalsContext? {
+				return getRuleContext(Not_equalsContext.self, 0)
+			}
+			open
+			func greater() -> GreaterContext? {
+				return getRuleContext(GreaterContext.self, 0)
+			}
+			open
+			func less() -> LessContext? {
+				return getRuleContext(LessContext.self, 0)
+			}
+			open
+			func add() -> AddContext? {
+				return getRuleContext(AddContext.self, 0)
+			}
+			open
+			func sub() -> SubContext? {
+				return getRuleContext(SubContext.self, 0)
+			}
+			open
+			func mul() -> MulContext? {
+				return getRuleContext(MulContext.self, 0)
+			}
+			open
+			func div() -> DivContext? {
+				return getRuleContext(DivContext.self, 0)
+			}
+			open
+			func mod() -> ModContext? {
+				return getRuleContext(ModContext.self, 0)
+			}
+			open
+			func cast() -> CastContext? {
+				return getRuleContext(CastContext.self, 0)
+			}
+			open
+			func either() -> EitherContext? {
+				return getRuleContext(EitherContext.self, 0)
+			}
+			open
+			func all() -> AllContext? {
+				return getRuleContext(AllContext.self, 0)
+			}
+			open
+			func any() -> AnyContext? {
+				return getRuleContext(AnyContext.self, 0)
+			}
+			open
+			func not() -> NotContext? {
+				return getRuleContext(NotContext.self, 0)
+			}
+			open
+			func func() -> FuncContext? {
+				return getRuleContext(FuncContext.self, 0)
+			}
+			open
+			func LABEL() -> TerminalNode? {
+				return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0)
+			}
+			open
+			func ATOM() -> TerminalNode? {
+				return getToken(lolcodeParser.Tokens.ATOM.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_expression
 		}
-		open func both() -> BothContext? {
-			return getRuleContext(BothContext.self,0)
-		}
-		open func not_equals() -> Not_equalsContext? {
-			return getRuleContext(Not_equalsContext.self,0)
-		}
-		open func greater() -> GreaterContext? {
-			return getRuleContext(GreaterContext.self,0)
-		}
-		open func less() -> LessContext? {
-			return getRuleContext(LessContext.self,0)
-		}
-		open func add() -> AddContext? {
-			return getRuleContext(AddContext.self,0)
-		}
-		open func sub() -> SubContext? {
-			return getRuleContext(SubContext.self,0)
-		}
-		open func mul() -> MulContext? {
-			return getRuleContext(MulContext.self,0)
-		}
-		open func div() -> DivContext? {
-			return getRuleContext(DivContext.self,0)
-		}
-		open func mod() -> ModContext? {
-			return getRuleContext(ModContext.self,0)
-		}
-		open func cast() -> CastContext? {
-			return getRuleContext(CastContext.self,0)
-		}
-		open func either() -> EitherContext? {
-			return getRuleContext(EitherContext.self,0)
-		}
-		open func all() -> AllContext? {
-			return getRuleContext(AllContext.self,0)
-		}
-		open func any() -> AnyContext? {
-			return getRuleContext(AnyContext.self,0)
-		}
-		open func not() -> NotContext? {
-			return getRuleContext(NotContext.self,0)
-		}
-		open func func() -> FuncContext? {
-			return getRuleContext(FuncContext.self,0)
-		}
-		open func LABEL() -> TerminalNode? { return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0) }
-		open func ATOM() -> TerminalNode? { return getToken(lolcodeParser.Tokens.ATOM.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitExpression(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 24, lolcodeParser.RULE_expression)
 		defer {
@@ -1229,40 +1343,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class EqualsContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class EqualsContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_equals
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_equals }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterEquals(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterEquals(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitEquals(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitEquals(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitEquals(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitEquals(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitEquals(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitEquals(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func equals() throws -> EqualsContext {
+	 open func equals() throws -> EqualsContext {
 		var _localctx: EqualsContext = EqualsContext(_ctx, getState())
 		try enterRule(_localctx, 26, lolcodeParser.RULE_equals)
 		defer {
@@ -1288,40 +1409,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class Not_equalsContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class Not_equalsContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_not_equals
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_not_equals }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterNot_equals(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterNot_equals(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitNot_equals(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitNot_equals(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitNot_equals(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitNot_equals(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitNot_equals(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitNot_equals(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func not_equals() throws -> Not_equalsContext {
+	 open func not_equals() throws -> Not_equalsContext {
 		var _localctx: Not_equalsContext = Not_equalsContext(_ctx, getState())
 		try enterRule(_localctx, 28, lolcodeParser.RULE_not_equals)
 		defer {
@@ -1347,40 +1475,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class BothContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class BothContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_both
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_both }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterBoth(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterBoth(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitBoth(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitBoth(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitBoth(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitBoth(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitBoth(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitBoth(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func both() throws -> BothContext {
+	 open func both() throws -> BothContext {
 		var _localctx: BothContext = BothContext(_ctx, getState())
 		try enterRule(_localctx, 30, lolcodeParser.RULE_both)
 		defer {
@@ -1406,40 +1541,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class EitherContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class EitherContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_either
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_either }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterEither(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterEither(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitEither(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitEither(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitEither(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitEither(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitEither(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitEither(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func either() throws -> EitherContext {
+	 open func either() throws -> EitherContext {
 		var _localctx: EitherContext = EitherContext(_ctx, getState())
 		try enterRule(_localctx, 32, lolcodeParser.RULE_either)
 		defer {
@@ -1465,40 +1607,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class GreaterContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class GreaterContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_greater
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_greater }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterGreater(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterGreater(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitGreater(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitGreater(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitGreater(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitGreater(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitGreater(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitGreater(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func greater() throws -> GreaterContext {
+	 open func greater() throws -> GreaterContext {
 		var _localctx: GreaterContext = GreaterContext(_ctx, getState())
 		try enterRule(_localctx, 34, lolcodeParser.RULE_greater)
 		defer {
@@ -1524,40 +1673,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class LessContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class LessContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_less
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_less }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterLess(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterLess(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitLess(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitLess(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitLess(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitLess(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitLess(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitLess(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func less() throws -> LessContext {
+	 open func less() throws -> LessContext {
 		var _localctx: LessContext = LessContext(_ctx, getState())
 		try enterRule(_localctx, 36, lolcodeParser.RULE_less)
 		defer {
@@ -1583,40 +1739,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class AddContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class AddContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_add
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_add }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterAdd(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterAdd(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitAdd(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitAdd(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitAdd(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitAdd(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitAdd(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitAdd(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func add() throws -> AddContext {
+	 open func add() throws -> AddContext {
 		var _localctx: AddContext = AddContext(_ctx, getState())
 		try enterRule(_localctx, 38, lolcodeParser.RULE_add)
 		defer {
@@ -1642,40 +1805,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class SubContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class SubContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_sub
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_sub }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterSub(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterSub(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitSub(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitSub(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitSub(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitSub(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitSub(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitSub(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sub() throws -> SubContext {
+	 open func sub() throws -> SubContext {
 		var _localctx: SubContext = SubContext(_ctx, getState())
 		try enterRule(_localctx, 40, lolcodeParser.RULE_sub)
 		defer {
@@ -1701,40 +1871,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class MulContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class MulContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_mul
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_mul }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterMul(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterMul(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitMul(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitMul(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitMul(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitMul(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitMul(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitMul(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mul() throws -> MulContext {
+	 open func mul() throws -> MulContext {
 		var _localctx: MulContext = MulContext(_ctx, getState())
 		try enterRule(_localctx, 42, lolcodeParser.RULE_mul)
 		defer {
@@ -1760,40 +1937,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class DivContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class DivContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_div
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_div }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterDiv(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterDiv(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitDiv(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitDiv(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitDiv(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitDiv(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitDiv(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitDiv(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func div() throws -> DivContext {
+	 open func div() throws -> DivContext {
 		var _localctx: DivContext = DivContext(_ctx, getState())
 		try enterRule(_localctx, 44, lolcodeParser.RULE_div)
 		defer {
@@ -1819,40 +2003,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class ModContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class ModContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_mod
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_mod }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterMod(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterMod(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitMod(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitMod(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitMod(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitMod(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitMod(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitMod(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mod() throws -> ModContext {
+	 open func mod() throws -> ModContext {
 		var _localctx: ModContext = ModContext(_ctx, getState())
 		try enterRule(_localctx, 46, lolcodeParser.RULE_mod)
 		defer {
@@ -1878,37 +2069,43 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class CastContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class CastContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_cast
 		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_cast }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterCast(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterCast(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitCast(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitCast(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitCast(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitCast(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitCast(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitCast(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cast() throws -> CastContext {
+	 open func cast() throws -> CastContext {
 		var _localctx: CastContext = CastContext(_ctx, getState())
 		try enterRule(_localctx, 48, lolcodeParser.RULE_cast)
 		defer {
@@ -1932,40 +2129,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class AllContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class AllContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_all
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_all }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterAll(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterAll(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitAll(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitAll(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitAll(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitAll(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitAll(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitAll(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func all() throws -> AllContext {
+	 open func all() throws -> AllContext {
 		var _localctx: AllContext = AllContext(_ctx, getState())
 		try enterRule(_localctx, 50, lolcodeParser.RULE_all)
 		var _la: Int = 0
@@ -2008,40 +2212,47 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class AnyContext:ParserRuleContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class AnyContext: ParserRuleContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_any
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_any }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterAny(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterAny(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitAny(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitAny(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitAny(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitAny(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitAny(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitAny(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func any() throws -> AnyContext {
+	 open func any() throws -> AnyContext {
 		var _localctx: AnyContext = AnyContext(_ctx, getState())
 		try enterRule(_localctx, 52, lolcodeParser.RULE_any)
 		var _la: Int = 0
@@ -2084,37 +2295,43 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class NotContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class NotContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_not
 		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_not }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterNot(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterNot(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitNot(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitNot(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitNot(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitNot(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitNot(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitNot(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func not() throws -> NotContext {
+	 open func not() throws -> NotContext {
 		var _localctx: NotContext = NotContext(_ctx, getState())
 		try enterRule(_localctx, 54, lolcodeParser.RULE_not)
 		defer {
@@ -2136,41 +2353,51 @@ open class lolcodeParser: Parser {
 
 		return _localctx
 	}
-	open class FuncContext:ParserRuleContext {
-		open func LABEL() -> TerminalNode? { return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
+
+	public class FuncContext: ParserRuleContext {
+			open
+			func LABEL() -> TerminalNode? {
+				return getToken(lolcodeParser.Tokens.LABEL.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return lolcodeParser.RULE_func
 		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return lolcodeParser.RULE_func }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).enterFunc(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.enterFunc(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is lolcodeListener {
-			 	(listener as! lolcodeListener).exitFunc(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? lolcodeListener {
+				listener.exitFunc(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is lolcodeVisitor {
-			     return (visitor as! lolcodeVisitor<T>).visitFunc(self)
-			}else if visitor is lolcodeBaseVisitor {
-		    	 return (visitor as! lolcodeBaseVisitor<T>).visitFunc(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? lolcodeVisitor {
+			    return visitor.visitFunc(self)
+			}
+			else if let visitor = visitor as? lolcodeBaseVisitor {
+			    return visitor.visitFunc(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func func() throws -> FuncContext {
+	 open func func() throws -> FuncContext {
 		var _localctx: FuncContext = FuncContext(_ctx, getState())
 		try enterRule(_localctx, 56, lolcodeParser.RULE_func)
 		var _la: Int = 0
@@ -2213,6 +2440,10 @@ open class lolcodeParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = lolcodeParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = lolcodeParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

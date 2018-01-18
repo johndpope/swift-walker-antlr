@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/cool/COOL.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class COOLParser: Parser {
@@ -11,8 +11,11 @@ open class COOLParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, WHITESPACE = 10, OPEN_COMMENT = 11, 
                  CLOSE_COMMENT = 12, COMMENT = 13, ONE_LINE_COMMENT = 14, 
@@ -22,11 +25,15 @@ open class COOLParser: Parser {
                  OF = 31, NOT = 32, TRUE = 33, STRING = 34, INT = 35, TYPEID = 36, 
                  OBJECTID = 37, ASSIGNMENT = 38, CASE_ARROW = 39, ADD = 40, 
                  MINUS = 41, MULTIPLY = 42, DIVISION = 43, LESS_THAN = 44, 
-                 LESS_EQUAL = 45, EQUAL = 46, INTEGER_COMPLEMENT = 47
+                 LESS_EQUAL = 45, EQUAL = 46, INTEGER_NEGATIVE = 47
 	}
-	public static let RULE_program = 0, RULE_programBlocks = 1, RULE_classDefine = 2, 
-                   RULE_feature = 3, RULE_formal = 4, RULE_expression = 5
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_program = 0, RULE_programBlocks = 1, RULE_classDefine = 2, 
+            RULE_feature = 3, RULE_formal = 4, RULE_expression = 5
+
+	public
+	static let ruleNames: [String] = [
 		"program", "programBlocks", "classDefine", "feature", "formal", "expression"
 	]
 
@@ -42,87 +49,71 @@ open class COOLParser: Parser {
 		"FI", "IF", "IN", "INHERITS", "ISVOID", "LET", "LOOP", "POOL", "THEN", 
 		"WHILE", "CASE", "ESAC", "NEW", "OF", "NOT", "TRUE", "STRING", "INT", 
 		"TYPEID", "OBJECTID", "ASSIGNMENT", "CASE_ARROW", "ADD", "MINUS", "MULTIPLY", 
-		"DIVISION", "LESS_THAN", "LESS_EQUAL", "EQUAL", "INTEGER_COMPLEMENT"
+		"DIVISION", "LESS_THAN", "LESS_EQUAL", "EQUAL", "INTEGER_NEGATIVE"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "COOL.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return COOLParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "COOL.g4" }
+	override open
+	func getSerializedATN() -> String { return COOLParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return COOLParser.ruleNames }
+	override open
+	func getATN() -> ATN { return COOLParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return COOLParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return COOLParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return COOLParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,COOLParser._ATN,COOLParser._decisionToDFA, COOLParser._sharedContextCache)
 	}
-	open class ProgramContext:ParserRuleContext {
-		open func programBlocks() -> ProgramBlocksContext? {
-			return getRuleContext(ProgramBlocksContext.self,0)
+
+	public class ProgramContext: ParserRuleContext {
+			open
+			func programBlocks() -> ProgramBlocksContext? {
+				return getRuleContext(ProgramBlocksContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return COOLParser.RULE_program
 		}
-		open override func getRuleIndex() -> Int { return COOLParser.RULE_program }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterProgram(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterProgram(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitProgram(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitProgram(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitProgram(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitProgram(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitProgram(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitProgram(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func program() throws -> ProgramContext {
+	 open func program() throws -> ProgramContext {
 		var _localctx: ProgramContext = ProgramContext(_ctx, getState())
 		try enterRule(_localctx, 0, COOLParser.RULE_program)
 		defer {
@@ -142,80 +133,96 @@ open class COOLParser: Parser {
 
 		return _localctx
 	}
-	open class ProgramBlocksContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return COOLParser.RULE_programBlocks }
+
+	public class ProgramBlocksContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return COOLParser.RULE_programBlocks
+		}
 	 
-		public  func copyFrom(_ ctx: ProgramBlocksContext) {
+		open
+		func copyFrom(_ ctx: ProgramBlocksContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class ClassContext: ProgramBlocksContext {
-		open func classDefine() -> ClassDefineContext? {
-			return getRuleContext(ClassDefineContext.self,0)
-		}
-		open func programBlocks() -> ProgramBlocksContext? {
-			return getRuleContext(ProgramBlocksContext.self,0)
-		}
-		public init(_ ctx: ProgramBlocksContext) {
+	public class ClassesContext: ProgramBlocksContext {
+			open
+			func classDefine() -> ClassDefineContext? {
+				return getRuleContext(ClassDefineContext.self, 0)
+			}
+			open
+			func programBlocks() -> ProgramBlocksContext? {
+				return getRuleContext(ProgramBlocksContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ProgramBlocksContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterClass(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterClasses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitClass(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitClasses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitClass(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitClass(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitClasses(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitClasses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class EofContext: ProgramBlocksContext {
-		open func EOF() -> TerminalNode? { return getToken(COOLParser.Tokens.EOF.rawValue, 0) }
-		public init(_ ctx: ProgramBlocksContext) {
+	public class EofContext: ProgramBlocksContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.EOF.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ProgramBlocksContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterEof(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterEof(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitEof(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitEof(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitEof(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitEof(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitEof(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitEof(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func programBlocks() throws -> ProgramBlocksContext {
+	 open func programBlocks() throws -> ProgramBlocksContext {
 		var _localctx: ProgramBlocksContext = ProgramBlocksContext(_ctx, getState())
 		try enterRule(_localctx, 2, COOLParser.RULE_programBlocks)
 		defer {
@@ -226,7 +233,7 @@ open class COOLParser: Parser {
 		 	try _errHandler.sync(self)
 		 	switch (COOLParser.Tokens(rawValue: try _input.LA(1))!) {
 		 	case .CLASS:
-		 		_localctx =  ClassContext(_localctx);
+		 		_localctx =  ClassesContext(_localctx);
 		 		try enterOuterAlt(_localctx, 1)
 		 		setState(14)
 		 		try classDefine()
@@ -245,7 +252,7 @@ open class COOLParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -256,46 +263,63 @@ open class COOLParser: Parser {
 
 		return _localctx
 	}
-	open class ClassDefineContext:ParserRuleContext {
-		open func CLASS() -> TerminalNode? { return getToken(COOLParser.Tokens.CLASS.rawValue, 0) }
-		open func TYPEID() -> Array<TerminalNode> { return getTokens(COOLParser.Tokens.TYPEID.rawValue) }
-		open func TYPEID(_ i:Int) -> TerminalNode?{
-			return getToken(COOLParser.Tokens.TYPEID.rawValue, i)
+
+	public class ClassDefineContext: ParserRuleContext {
+			open
+			func CLASS() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.CLASS.rawValue, 0)
+			}
+			open
+			func TYPEID() -> [TerminalNode] {
+				return getTokens(COOLParser.Tokens.TYPEID.rawValue)
+			}
+			open
+			func TYPEID(_ i:Int) -> TerminalNode? {
+				return getToken(COOLParser.Tokens.TYPEID.rawValue, i)
+			}
+			open
+			func INHERITS() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.INHERITS.rawValue, 0)
+			}
+			open
+			func feature() -> [FeatureContext] {
+				return getRuleContexts(FeatureContext.self)
+			}
+			open
+			func feature(_ i: Int) -> FeatureContext? {
+				return getRuleContext(FeatureContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return COOLParser.RULE_classDefine
 		}
-		open func INHERITS() -> TerminalNode? { return getToken(COOLParser.Tokens.INHERITS.rawValue, 0) }
-		open func feature() -> Array<FeatureContext> {
-			return getRuleContexts(FeatureContext.self)
-		}
-		open func feature(_ i: Int) -> FeatureContext? {
-			return getRuleContext(FeatureContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return COOLParser.RULE_classDefine }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterClassDefine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterClassDefine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitClassDefine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitClassDefine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitClassDefine(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitClassDefine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitClassDefine(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitClassDefine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classDefine() throws -> ClassDefineContext {
+	 open func classDefine() throws -> ClassDefineContext {
 		var _localctx: ClassDefineContext = ClassDefineContext(_ctx, getState())
 		try enterRule(_localctx, 4, COOLParser.RULE_classDefine)
 		var _la: Int = 0
@@ -355,90 +379,120 @@ open class COOLParser: Parser {
 
 		return _localctx
 	}
-	open class FeatureContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return COOLParser.RULE_feature }
+
+	public class FeatureContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return COOLParser.RULE_feature
+		}
 	 
-		public  func copyFrom(_ ctx: FeatureContext) {
+		open
+		func copyFrom(_ ctx: FeatureContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class MethodContext: FeatureContext {
-		open func OBJECTID() -> TerminalNode? { return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0) }
-		open func TYPEID() -> TerminalNode? { return getToken(COOLParser.Tokens.TYPEID.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func formal() -> Array<FormalContext> {
-			return getRuleContexts(FormalContext.self)
-		}
-		open func formal(_ i: Int) -> FormalContext? {
-			return getRuleContext(FormalContext.self,i)
-		}
-		public init(_ ctx: FeatureContext) {
+	public class MethodContext: FeatureContext {
+			open
+			func OBJECTID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0)
+			}
+			open
+			func TYPEID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.TYPEID.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func formal() -> [FormalContext] {
+				return getRuleContexts(FormalContext.self)
+			}
+			open
+			func formal(_ i: Int) -> FormalContext? {
+				return getRuleContext(FormalContext.self, i)
+			}
+
+		public
+		init(_ ctx: FeatureContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterMethod(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterMethod(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitMethod(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitMethod(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitMethod(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitMethod(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitMethod(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitMethod(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ClassPropertyContext: FeatureContext {
-		open func OBJECTID() -> TerminalNode? { return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0) }
-		open func TYPEID() -> TerminalNode? { return getToken(COOLParser.Tokens.TYPEID.rawValue, 0) }
-		open func ASSIGNMENT() -> TerminalNode? { return getToken(COOLParser.Tokens.ASSIGNMENT.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		public init(_ ctx: FeatureContext) {
+	public class PropertyContext: FeatureContext {
+			open
+			func OBJECTID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0)
+			}
+			open
+			func TYPEID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.TYPEID.rawValue, 0)
+			}
+			open
+			func ASSIGNMENT() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.ASSIGNMENT.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: FeatureContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterClassProperty(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterProperty(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitClassProperty(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitProperty(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitClassProperty(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitClassProperty(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitProperty(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitProperty(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func feature() throws -> FeatureContext {
+	 open func feature() throws -> FeatureContext {
 		var _localctx: FeatureContext = FeatureContext(_ctx, getState())
 		try enterRule(_localctx, 6, COOLParser.RULE_feature)
 		var _la: Int = 0
@@ -505,7 +559,7 @@ open class COOLParser: Parser {
 
 		 		break
 		 	case 2:
-		 		_localctx =  ClassPropertyContext(_localctx);
+		 		_localctx =  PropertyContext(_localctx);
 		 		try enterOuterAlt(_localctx, 2)
 		 		setState(60)
 		 		try match(COOLParser.Tokens.OBJECTID.rawValue)
@@ -541,36 +595,47 @@ open class COOLParser: Parser {
 
 		return _localctx
 	}
-	open class FormalContext:ParserRuleContext {
-		open func OBJECTID() -> TerminalNode? { return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0) }
-		open func TYPEID() -> TerminalNode? { return getToken(COOLParser.Tokens.TYPEID.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return COOLParser.RULE_formal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterFormal(self)
+
+	public class FormalContext: ParserRuleContext {
+			open
+			func OBJECTID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0)
+			}
+			open
+			func TYPEID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.TYPEID.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return COOLParser.RULE_formal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterFormal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitFormal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitFormal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitFormal(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitFormal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitFormal(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitFormal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func formal() throws -> FormalContext {
+	 open func formal() throws -> FormalContext {
 		var _localctx: FormalContext = FormalContext(_ctx, getState())
 		try enterRule(_localctx, 8, COOLParser.RULE_formal)
 		defer {
@@ -595,897 +660,1135 @@ open class COOLParser: Parser {
 		return _localctx
 	}
 
-	open class ExpressionContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return COOLParser.RULE_expression }
+	public class ExpressionContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return COOLParser.RULE_expression
+		}
 	 
-		public  func copyFrom(_ ctx: ExpressionContext) {
+		open
+		func copyFrom(_ ctx: ExpressionContext) {
 			super.copyFrom(ctx)
 		}
 	}
-	public  final class LetInContext: ExpressionContext {
-		open func LET() -> TerminalNode? { return getToken(COOLParser.Tokens.LET.rawValue, 0) }
-		open func OBJECTID() -> Array<TerminalNode> { return getTokens(COOLParser.Tokens.OBJECTID.rawValue) }
-		open func OBJECTID(_ i:Int) -> TerminalNode?{
-			return getToken(COOLParser.Tokens.OBJECTID.rawValue, i)
-		}
-		open func TYPEID() -> Array<TerminalNode> { return getTokens(COOLParser.Tokens.TYPEID.rawValue) }
-		open func TYPEID(_ i:Int) -> TerminalNode?{
-			return getToken(COOLParser.Tokens.TYPEID.rawValue, i)
-		}
-		open func IN() -> TerminalNode? { return getToken(COOLParser.Tokens.IN.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func ASSIGNMENT() -> Array<TerminalNode> { return getTokens(COOLParser.Tokens.ASSIGNMENT.rawValue) }
-		open func ASSIGNMENT(_ i:Int) -> TerminalNode?{
-			return getToken(COOLParser.Tokens.ASSIGNMENT.rawValue, i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class LetInContext: ExpressionContext {
+			open
+			func LET() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.LET.rawValue, 0)
+			}
+			open
+			func OBJECTID() -> [TerminalNode] {
+				return getTokens(COOLParser.Tokens.OBJECTID.rawValue)
+			}
+			open
+			func OBJECTID(_ i:Int) -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OBJECTID.rawValue, i)
+			}
+			open
+			func TYPEID() -> [TerminalNode] {
+				return getTokens(COOLParser.Tokens.TYPEID.rawValue)
+			}
+			open
+			func TYPEID(_ i:Int) -> TerminalNode? {
+				return getToken(COOLParser.Tokens.TYPEID.rawValue, i)
+			}
+			open
+			func IN() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.IN.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func ASSIGNMENT() -> [TerminalNode] {
+				return getTokens(COOLParser.Tokens.ASSIGNMENT.rawValue)
+			}
+			open
+			func ASSIGNMENT(_ i:Int) -> TerminalNode? {
+				return getToken(COOLParser.Tokens.ASSIGNMENT.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterLetIn(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterLetIn(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitLetIn(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitLetIn(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitLetIn(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitLetIn(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitLetIn(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitLetIn(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class NewTypeContext: ExpressionContext {
-		open func NEW() -> TerminalNode? { return getToken(COOLParser.Tokens.NEW.rawValue, 0) }
-		open func TYPEID() -> TerminalNode? { return getToken(COOLParser.Tokens.TYPEID.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class MinusContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func MINUS() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.MINUS.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterNewType(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterMinus(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitNewType(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitMinus(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitNewType(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitNewType(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitMinus(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitMinus(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class MinusContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func MINUS() -> TerminalNode? { return getToken(COOLParser.Tokens.MINUS.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class StringContext: ExpressionContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.STRING.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterMinus(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitMinus(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitMinus(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitMinus(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitString(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class StringContext: ExpressionContext {
-		open func STRING() -> TerminalNode? { return getToken(COOLParser.Tokens.STRING.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class IsvoidContext: ExpressionContext {
+			open
+			func ISVOID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.ISVOID.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterString(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterIsvoid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitIsvoid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitString(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitIsvoid(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitIsvoid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class IsvoidContext: ExpressionContext {
-		open func ISVOID() -> TerminalNode? { return getToken(COOLParser.Tokens.ISVOID.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class WhileContext: ExpressionContext {
+			open
+			func WHILE() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.WHILE.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func LOOP() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.LOOP.rawValue, 0)
+			}
+			open
+			func POOL() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.POOL.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterIsvoid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterWhile(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitIsvoid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitWhile(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitIsvoid(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitIsvoid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitWhile(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitWhile(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class WhildContext: ExpressionContext {
-		open func WHILE() -> TerminalNode? { return getToken(COOLParser.Tokens.WHILE.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func LOOP() -> TerminalNode? { return getToken(COOLParser.Tokens.LOOP.rawValue, 0) }
-		open func POOL() -> TerminalNode? { return getToken(COOLParser.Tokens.POOL.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class DivisionContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func DIVISION() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.DIVISION.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterWhild(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterDivision(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitWhild(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitDivision(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitWhild(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitWhild(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitDivision(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitDivision(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class DivisionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func DIVISION() -> TerminalNode? { return getToken(COOLParser.Tokens.DIVISION.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class NegativeContext: ExpressionContext {
+			open
+			func INTEGER_NEGATIVE() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.INTEGER_NEGATIVE.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterDivision(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterNegative(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitDivision(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitNegative(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitDivision(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitDivision(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitNegative(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitNegative(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class BoolNotContext: ExpressionContext {
-		open func NOT() -> TerminalNode? { return getToken(COOLParser.Tokens.NOT.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class BoolNotContext: ExpressionContext {
+			open
+			func NOT() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.NOT.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterBoolNot(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterBoolNot(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitBoolNot(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitBoolNot(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitBoolNot(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitBoolNot(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitBoolNot(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitBoolNot(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class LessThanContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func LESS_THAN() -> TerminalNode? { return getToken(COOLParser.Tokens.LESS_THAN.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class LessThanContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func LESS_THAN() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.LESS_THAN.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterLessThan(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterLessThan(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitLessThan(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitLessThan(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitLessThan(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitLessThan(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitLessThan(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitLessThan(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class SuperClassMethodContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func OBJECTID() -> TerminalNode? { return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0) }
-		open func TYPEID() -> TerminalNode? { return getToken(COOLParser.Tokens.TYPEID.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class BlockContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterSuperClassMethod(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterBlock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitSuperClassMethod(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitBlock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitSuperClassMethod(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitSuperClassMethod(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitBlock(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitBlock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class IdContext: ExpressionContext {
-		open func OBJECTID() -> TerminalNode? { return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class IdContext: ExpressionContext {
+			open
+			func OBJECTID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterId(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterId(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitId(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitId(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitId(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitId(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitId(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitId(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class MultiplyContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func MULTIPLY() -> TerminalNode? { return getToken(COOLParser.Tokens.MULTIPLY.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class MultiplyContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func MULTIPLY() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.MULTIPLY.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterMultiply(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterMultiply(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitMultiply(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitMultiply(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitMultiply(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitMultiply(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitMultiply(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitMultiply(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class IfContext: ExpressionContext {
-		open func IF() -> TerminalNode? { return getToken(COOLParser.Tokens.IF.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func THEN() -> TerminalNode? { return getToken(COOLParser.Tokens.THEN.rawValue, 0) }
-		open func ELSE() -> TerminalNode? { return getToken(COOLParser.Tokens.ELSE.rawValue, 0) }
-		open func FI() -> TerminalNode? { return getToken(COOLParser.Tokens.FI.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class IfContext: ExpressionContext {
+			open
+			func IF() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.IF.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func THEN() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.THEN.rawValue, 0)
+			}
+			open
+			func ELSE() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.ELSE.rawValue, 0)
+			}
+			open
+			func FI() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.FI.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterIf(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterIf(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitIf(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitIf(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitIf(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitIf(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitIf(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitIf(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class CaseContext: ExpressionContext {
-		open func CASE() -> TerminalNode? { return getToken(COOLParser.Tokens.CASE.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func OF() -> TerminalNode? { return getToken(COOLParser.Tokens.OF.rawValue, 0) }
-		open func ESAC() -> TerminalNode? { return getToken(COOLParser.Tokens.ESAC.rawValue, 0) }
-		open func OBJECTID() -> Array<TerminalNode> { return getTokens(COOLParser.Tokens.OBJECTID.rawValue) }
-		open func OBJECTID(_ i:Int) -> TerminalNode?{
-			return getToken(COOLParser.Tokens.OBJECTID.rawValue, i)
-		}
-		open func TYPEID() -> Array<TerminalNode> { return getTokens(COOLParser.Tokens.TYPEID.rawValue) }
-		open func TYPEID(_ i:Int) -> TerminalNode?{
-			return getToken(COOLParser.Tokens.TYPEID.rawValue, i)
-		}
-		open func CASE_ARROW() -> Array<TerminalNode> { return getTokens(COOLParser.Tokens.CASE_ARROW.rawValue) }
-		open func CASE_ARROW(_ i:Int) -> TerminalNode?{
-			return getToken(COOLParser.Tokens.CASE_ARROW.rawValue, i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class CaseContext: ExpressionContext {
+			open
+			func CASE() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.CASE.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func OF() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OF.rawValue, 0)
+			}
+			open
+			func ESAC() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.ESAC.rawValue, 0)
+			}
+			open
+			func OBJECTID() -> [TerminalNode] {
+				return getTokens(COOLParser.Tokens.OBJECTID.rawValue)
+			}
+			open
+			func OBJECTID(_ i:Int) -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OBJECTID.rawValue, i)
+			}
+			open
+			func TYPEID() -> [TerminalNode] {
+				return getTokens(COOLParser.Tokens.TYPEID.rawValue)
+			}
+			open
+			func TYPEID(_ i:Int) -> TerminalNode? {
+				return getToken(COOLParser.Tokens.TYPEID.rawValue, i)
+			}
+			open
+			func CASE_ARROW() -> [TerminalNode] {
+				return getTokens(COOLParser.Tokens.CASE_ARROW.rawValue)
+			}
+			open
+			func CASE_ARROW(_ i:Int) -> TerminalNode? {
+				return getToken(COOLParser.Tokens.CASE_ARROW.rawValue, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterCase(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterCase(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitCase(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitCase(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitCase(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitCase(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitCase(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitCase(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AddContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func ADD() -> TerminalNode? { return getToken(COOLParser.Tokens.ADD.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class OwnMethodCallContext: ExpressionContext {
+			open
+			func OBJECTID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0)
+			}
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterAdd(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterOwnMethodCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitAdd(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitOwnMethodCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitAdd(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitAdd(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitOwnMethodCall(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitOwnMethodCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class ParenthesesContext: ExpressionContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class AddContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func ADD() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.ADD.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterParentheses(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterAdd(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitParentheses(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitAdd(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitParentheses(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitParentheses(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitAdd(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitAdd(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class AssignmentContext: ExpressionContext {
-		open func OBJECTID() -> TerminalNode? { return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0) }
-		open func ASSIGNMENT() -> TerminalNode? { return getToken(COOLParser.Tokens.ASSIGNMENT.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class NewContext: ExpressionContext {
+			open
+			func NEW() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.NEW.rawValue, 0)
+			}
+			open
+			func TYPEID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.TYPEID.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterAssignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterNew(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitAssignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitNew(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitAssignment(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitAssignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitNew(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitNew(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class FalseContext: ExpressionContext {
-		open func FALSE() -> TerminalNode? { return getToken(COOLParser.Tokens.FALSE.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class ParenthesesContext: ExpressionContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterFalse(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterParentheses(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitFalse(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitParentheses(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitFalse(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitFalse(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitParentheses(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitParentheses(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class IntContext: ExpressionContext {
-		open func INT() -> TerminalNode? { return getToken(COOLParser.Tokens.INT.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class AssignmentContext: ExpressionContext {
+			open
+			func OBJECTID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0)
+			}
+			open
+			func ASSIGNMENT() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.ASSIGNMENT.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterInt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterAssignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitInt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitAssignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitInt(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitInt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitAssignment(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitAssignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class EqualContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func EQUAL() -> TerminalNode? { return getToken(COOLParser.Tokens.EQUAL.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class FalseContext: ExpressionContext {
+			open
+			func FALSE() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.FALSE.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterEqual(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterFalse(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitEqual(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitFalse(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitEqual(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitEqual(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitFalse(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitFalse(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class MultipleExpressionContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class IntContext: ExpressionContext {
+			open
+			func INT() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.INT.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterMultipleExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterInt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitMultipleExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitInt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitMultipleExpression(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitMultipleExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitInt(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitInt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class FunctionCallContext: ExpressionContext {
-		open func OBJECTID() -> TerminalNode? { return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0) }
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class EqualContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func EQUAL() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.EQUAL.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterFunctionCall(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterEqual(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitFunctionCall(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitEqual(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitFunctionCall(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitFunctionCall(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitEqual(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitEqual(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class TrueContext: ExpressionContext {
-		open func TRUE() -> TerminalNode? { return getToken(COOLParser.Tokens.TRUE.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class TrueContext: ExpressionContext {
+			open
+			func TRUE() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.TRUE.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterTrue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterTrue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitTrue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitTrue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitTrue(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitTrue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitTrue(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitTrue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class LessEqualContext: ExpressionContext {
-		open func expression() -> Array<ExpressionContext> {
-			return getRuleContexts(ExpressionContext.self)
-		}
-		open func expression(_ i: Int) -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,i)
-		}
-		open func LESS_EQUAL() -> TerminalNode? { return getToken(COOLParser.Tokens.LESS_EQUAL.rawValue, 0) }
-		public init(_ ctx: ExpressionContext) {
+	public class LessEqualContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func LESS_EQUAL() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.LESS_EQUAL.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterLessEqual(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterLessEqual(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitLessEqual(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitLessEqual(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitLessEqual(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitLessEqual(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitLessEqual(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitLessEqual(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
-	public  final class IntegerComplementContext: ExpressionContext {
-		open func INTEGER_COMPLEMENT() -> TerminalNode? { return getToken(COOLParser.Tokens.INTEGER_COMPLEMENT.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		public init(_ ctx: ExpressionContext) {
+	public class MethodCallContext: ExpressionContext {
+			open
+			func expression() -> [ExpressionContext] {
+				return getRuleContexts(ExpressionContext.self)
+			}
+			open
+			func expression(_ i: Int) -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, i)
+			}
+			open
+			func OBJECTID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.OBJECTID.rawValue, 0)
+			}
+			open
+			func TYPEID() -> TerminalNode? {
+				return getToken(COOLParser.Tokens.TYPEID.rawValue, 0)
+			}
+
+		public
+		init(_ ctx: ExpressionContext) {
 			super.init()
 			copyFrom(ctx)
 		}
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).enterIntegerComplement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.enterMethodCall(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is COOLListener {
-			 	(listener as! COOLListener).exitIntegerComplement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? COOLListener {
+				listener.exitMethodCall(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is COOLVisitor {
-			     return (visitor as! COOLVisitor<T>).visitIntegerComplement(self)
-			}else if visitor is COOLBaseVisitor {
-		    	 return (visitor as! COOLBaseVisitor<T>).visitIntegerComplement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? COOLVisitor {
+			    return visitor.visitMethodCall(self)
+			}
+			else if let visitor = visitor as? COOLBaseVisitor {
+			    return visitor.visitMethodCall(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expression( ) throws -> ExpressionContext   {
+	 public final  func expression( ) throws -> ExpressionContext   {
 		return try expression(0)
 	}
 	@discardableResult
@@ -1507,40 +1810,28 @@ open class COOLParser: Parser {
 			try _errHandler.sync(self)
 			switch(try getInterpreter().adaptivePredict(_input,14, _ctx)) {
 			case 1:
-				_localctx = AssignmentContext(_localctx)
+				_localctx = OwnMethodCallContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
 
 				setState(74)
 				try match(COOLParser.Tokens.OBJECTID.rawValue)
 				setState(75)
-				try match(COOLParser.Tokens.ASSIGNMENT.rawValue)
-				setState(76)
-				try expression(25)
-
-				break
-			case 2:
-				_localctx = FunctionCallContext(_localctx)
-				_ctx = _localctx
-				_prevctx = _localctx
-				setState(77)
-				try match(COOLParser.Tokens.OBJECTID.rawValue)
-				setState(78)
 				try match(COOLParser.Tokens.T__3.rawValue)
-				setState(89)
+				setState(86)
 				try _errHandler.sync(self)
 				_la = try _input.LA(1)
 				while (//closure
 				 { () -> Bool in
 				      let testSet: Bool = {  () -> Bool in
-				   let testArray: [Int] = [_la, COOLParser.Tokens.T__1.rawValue,COOLParser.Tokens.T__3.rawValue,COOLParser.Tokens.FALSE.rawValue,COOLParser.Tokens.IF.rawValue,COOLParser.Tokens.ISVOID.rawValue,COOLParser.Tokens.LET.rawValue,COOLParser.Tokens.WHILE.rawValue,COOLParser.Tokens.CASE.rawValue,COOLParser.Tokens.NEW.rawValue,COOLParser.Tokens.NOT.rawValue,COOLParser.Tokens.TRUE.rawValue,COOLParser.Tokens.STRING.rawValue,COOLParser.Tokens.INT.rawValue,COOLParser.Tokens.OBJECTID.rawValue,COOLParser.Tokens.INTEGER_COMPLEMENT.rawValue]
+				   let testArray: [Int] = [_la, COOLParser.Tokens.T__1.rawValue,COOLParser.Tokens.T__3.rawValue,COOLParser.Tokens.FALSE.rawValue,COOLParser.Tokens.IF.rawValue,COOLParser.Tokens.ISVOID.rawValue,COOLParser.Tokens.LET.rawValue,COOLParser.Tokens.WHILE.rawValue,COOLParser.Tokens.CASE.rawValue,COOLParser.Tokens.NEW.rawValue,COOLParser.Tokens.NOT.rawValue,COOLParser.Tokens.TRUE.rawValue,COOLParser.Tokens.STRING.rawValue,COOLParser.Tokens.INT.rawValue,COOLParser.Tokens.OBJECTID.rawValue,COOLParser.Tokens.INTEGER_NEGATIVE.rawValue]
 				    return  Utils.testBitLeftShiftArray(testArray, 0)
 				}()
 				      return testSet
 				 }()) {
-					setState(79)
+					setState(76)
 					try expression(0)
-					setState(84)
+					setState(81)
 					try _errHandler.sync(self)
 					_la = try _input.LA(1)
 					while (//closure
@@ -1548,106 +1839,106 @@ open class COOLParser: Parser {
 					      let testSet: Bool = _la == COOLParser.Tokens.T__4.rawValue
 					      return testSet
 					 }()) {
-						setState(80)
+						setState(77)
 						try match(COOLParser.Tokens.T__4.rawValue)
-						setState(81)
+						setState(78)
 						try expression(0)
 
 
-						setState(86)
+						setState(83)
 						try _errHandler.sync(self)
 						_la = try _input.LA(1)
 					}
 
 
-					setState(91)
+					setState(88)
 					try _errHandler.sync(self)
 					_la = try _input.LA(1)
 				}
-				setState(92)
+				setState(89)
 				try match(COOLParser.Tokens.T__5.rawValue)
 
 				break
-			case 3:
+			case 2:
 				_localctx = IfContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(93)
+				setState(90)
 				try match(COOLParser.Tokens.IF.rawValue)
-				setState(94)
+				setState(91)
 				try expression(0)
-				setState(95)
+				setState(92)
 				try match(COOLParser.Tokens.THEN.rawValue)
-				setState(96)
+				setState(93)
 				try expression(0)
-				setState(97)
+				setState(94)
 				try match(COOLParser.Tokens.ELSE.rawValue)
-				setState(98)
+				setState(95)
 				try expression(0)
-				setState(99)
+				setState(96)
 				try match(COOLParser.Tokens.FI.rawValue)
 
 				break
-			case 4:
-				_localctx = WhildContext(_localctx)
+			case 3:
+				_localctx = WhileContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(101)
+				setState(98)
 				try match(COOLParser.Tokens.WHILE.rawValue)
-				setState(102)
+				setState(99)
 				try expression(0)
-				setState(103)
+				setState(100)
 				try match(COOLParser.Tokens.LOOP.rawValue)
-				setState(104)
+				setState(101)
 				try expression(0)
-				setState(105)
+				setState(102)
 				try match(COOLParser.Tokens.POOL.rawValue)
 
 				break
-			case 5:
-				_localctx = MultipleExpressionContext(_localctx)
+			case 4:
+				_localctx = BlockContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(107)
+				setState(104)
 				try match(COOLParser.Tokens.T__1.rawValue)
-				setState(111) 
+				setState(108) 
 				try _errHandler.sync(self)
 				_la = try _input.LA(1)
 				repeat {
-					setState(108)
+					setState(105)
 					try expression(0)
-					setState(109)
+					setState(106)
 					try match(COOLParser.Tokens.T__0.rawValue)
 
 
-					setState(113); 
+					setState(110); 
 					try _errHandler.sync(self)
 					_la = try _input.LA(1)
 				} while (//closure
 				 { () -> Bool in
 				      let testSet: Bool = {  () -> Bool in
-				   let testArray: [Int] = [_la, COOLParser.Tokens.T__1.rawValue,COOLParser.Tokens.T__3.rawValue,COOLParser.Tokens.FALSE.rawValue,COOLParser.Tokens.IF.rawValue,COOLParser.Tokens.ISVOID.rawValue,COOLParser.Tokens.LET.rawValue,COOLParser.Tokens.WHILE.rawValue,COOLParser.Tokens.CASE.rawValue,COOLParser.Tokens.NEW.rawValue,COOLParser.Tokens.NOT.rawValue,COOLParser.Tokens.TRUE.rawValue,COOLParser.Tokens.STRING.rawValue,COOLParser.Tokens.INT.rawValue,COOLParser.Tokens.OBJECTID.rawValue,COOLParser.Tokens.INTEGER_COMPLEMENT.rawValue]
+				   let testArray: [Int] = [_la, COOLParser.Tokens.T__1.rawValue,COOLParser.Tokens.T__3.rawValue,COOLParser.Tokens.FALSE.rawValue,COOLParser.Tokens.IF.rawValue,COOLParser.Tokens.ISVOID.rawValue,COOLParser.Tokens.LET.rawValue,COOLParser.Tokens.WHILE.rawValue,COOLParser.Tokens.CASE.rawValue,COOLParser.Tokens.NEW.rawValue,COOLParser.Tokens.NOT.rawValue,COOLParser.Tokens.TRUE.rawValue,COOLParser.Tokens.STRING.rawValue,COOLParser.Tokens.INT.rawValue,COOLParser.Tokens.OBJECTID.rawValue,COOLParser.Tokens.INTEGER_NEGATIVE.rawValue]
 				    return  Utils.testBitLeftShiftArray(testArray, 0)
 				}()
 				      return testSet
 				 }())
-				setState(115)
+				setState(112)
 				try match(COOLParser.Tokens.T__2.rawValue)
 
 				break
-			case 6:
+			case 5:
 				_localctx = LetInContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(117)
+				setState(114)
 				try match(COOLParser.Tokens.LET.rawValue)
-				setState(118)
+				setState(115)
 				try match(COOLParser.Tokens.OBJECTID.rawValue)
-				setState(119)
+				setState(116)
 				try match(COOLParser.Tokens.T__6.rawValue)
-				setState(120)
+				setState(117)
 				try match(COOLParser.Tokens.TYPEID.rawValue)
-				setState(123)
+				setState(120)
 				try _errHandler.sync(self)
 				_la = try _input.LA(1)
 				if (//closure
@@ -1655,14 +1946,14 @@ open class COOLParser: Parser {
 				      let testSet: Bool = _la == COOLParser.Tokens.ASSIGNMENT.rawValue
 				      return testSet
 				 }()) {
-					setState(121)
+					setState(118)
 					try match(COOLParser.Tokens.ASSIGNMENT.rawValue)
-					setState(122)
+					setState(119)
 					try expression(0)
 
 				}
 
-				setState(135)
+				setState(132)
 				try _errHandler.sync(self)
 				_la = try _input.LA(1)
 				while (//closure
@@ -1670,15 +1961,15 @@ open class COOLParser: Parser {
 				      let testSet: Bool = _la == COOLParser.Tokens.T__4.rawValue
 				      return testSet
 				 }()) {
-					setState(125)
+					setState(122)
 					try match(COOLParser.Tokens.T__4.rawValue)
-					setState(126)
+					setState(123)
 					try match(COOLParser.Tokens.OBJECTID.rawValue)
-					setState(127)
+					setState(124)
 					try match(COOLParser.Tokens.T__6.rawValue)
-					setState(128)
+					setState(125)
 					try match(COOLParser.Tokens.TYPEID.rawValue)
-					setState(131)
+					setState(128)
 					try _errHandler.sync(self)
 					_la = try _input.LA(1)
 					if (//closure
@@ -1686,54 +1977,54 @@ open class COOLParser: Parser {
 					      let testSet: Bool = _la == COOLParser.Tokens.ASSIGNMENT.rawValue
 					      return testSet
 					 }()) {
-						setState(129)
+						setState(126)
 						try match(COOLParser.Tokens.ASSIGNMENT.rawValue)
-						setState(130)
+						setState(127)
 						try expression(0)
 
 					}
 
 
 
-					setState(137)
+					setState(134)
 					try _errHandler.sync(self)
 					_la = try _input.LA(1)
 				}
-				setState(138)
+				setState(135)
 				try match(COOLParser.Tokens.IN.rawValue)
-				setState(139)
-				try expression(19)
+				setState(136)
+				try expression(20)
 
 				break
-			case 7:
+			case 6:
 				_localctx = CaseContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(140)
+				setState(137)
 				try match(COOLParser.Tokens.CASE.rawValue)
-				setState(141)
+				setState(138)
 				try expression(0)
-				setState(142)
+				setState(139)
 				try match(COOLParser.Tokens.OF.rawValue)
-				setState(150) 
+				setState(147) 
 				try _errHandler.sync(self)
 				_la = try _input.LA(1)
 				repeat {
-					setState(143)
+					setState(140)
 					try match(COOLParser.Tokens.OBJECTID.rawValue)
-					setState(144)
+					setState(141)
 					try match(COOLParser.Tokens.T__6.rawValue)
-					setState(145)
+					setState(142)
 					try match(COOLParser.Tokens.TYPEID.rawValue)
-					setState(146)
+					setState(143)
 					try match(COOLParser.Tokens.CASE_ARROW.rawValue)
-					setState(147)
+					setState(144)
 					try expression(0)
-					setState(148)
+					setState(145)
 					try match(COOLParser.Tokens.T__0.rawValue)
 
 
-					setState(152); 
+					setState(149); 
 					try _errHandler.sync(self)
 					_la = try _input.LA(1)
 				} while (//closure
@@ -1741,100 +2032,112 @@ open class COOLParser: Parser {
 				      let testSet: Bool = _la == COOLParser.Tokens.OBJECTID.rawValue
 				      return testSet
 				 }())
-				setState(154)
+				setState(151)
 				try match(COOLParser.Tokens.ESAC.rawValue)
 
 				break
-			case 8:
-				_localctx = NewTypeContext(_localctx)
+			case 7:
+				_localctx = NewContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(156)
+				setState(153)
 				try match(COOLParser.Tokens.NEW.rawValue)
-				setState(157)
+				setState(154)
 				try match(COOLParser.Tokens.TYPEID.rawValue)
+
+				break
+			case 8:
+				_localctx = NegativeContext(_localctx)
+				_ctx = _localctx
+				_prevctx = _localctx
+				setState(155)
+				try match(COOLParser.Tokens.INTEGER_NEGATIVE.rawValue)
+				setState(156)
+				try expression(17)
 
 				break
 			case 9:
 				_localctx = IsvoidContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(158)
+				setState(157)
 				try match(COOLParser.Tokens.ISVOID.rawValue)
-				setState(159)
+				setState(158)
 				try expression(16)
 
 				break
 			case 10:
-				_localctx = IntegerComplementContext(_localctx)
-				_ctx = _localctx
-				_prevctx = _localctx
-				setState(160)
-				try match(COOLParser.Tokens.INTEGER_COMPLEMENT.rawValue)
-				setState(161)
-				try expression(11)
-
-				break
-			case 11:
 				_localctx = BoolNotContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(162)
+				setState(159)
 				try match(COOLParser.Tokens.NOT.rawValue)
-				setState(163)
-				try expression(7)
+				setState(160)
+				try expression(8)
 
 				break
-			case 12:
+			case 11:
 				_localctx = ParenthesesContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(164)
+				setState(161)
 				try match(COOLParser.Tokens.T__3.rawValue)
-				setState(165)
+				setState(162)
 				try expression(0)
-				setState(166)
+				setState(163)
 				try match(COOLParser.Tokens.T__5.rawValue)
 
 				break
-			case 13:
+			case 12:
 				_localctx = IdContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(168)
+				setState(165)
 				try match(COOLParser.Tokens.OBJECTID.rawValue)
 
 				break
-			case 14:
+			case 13:
 				_localctx = IntContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(169)
+				setState(166)
 				try match(COOLParser.Tokens.INT.rawValue)
 
 				break
-			case 15:
+			case 14:
 				_localctx = StringContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(170)
+				setState(167)
 				try match(COOLParser.Tokens.STRING.rawValue)
 
 				break
-			case 16:
+			case 15:
 				_localctx = TrueContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(171)
+				setState(168)
 				try match(COOLParser.Tokens.TRUE.rawValue)
 
 				break
-			case 17:
+			case 16:
 				_localctx = FalseContext(_localctx)
 				_ctx = _localctx
 				_prevctx = _localctx
-				setState(172)
+				setState(169)
 				try match(COOLParser.Tokens.FALSE.rawValue)
+
+				break
+			case 17:
+				_localctx = AssignmentContext(_localctx)
+				_ctx = _localctx
+				_prevctx = _localctx
+				setState(170)
+				try match(COOLParser.Tokens.OBJECTID.rawValue)
+				setState(171)
+				try match(COOLParser.Tokens.ASSIGNMENT.rawValue)
+				setState(172)
+				try expression(1)
 
 				break
 			default: break
@@ -1853,53 +2156,53 @@ open class COOLParser: Parser {
 					try _errHandler.sync(self)
 					switch(try getInterpreter().adaptivePredict(_input,18, _ctx)) {
 					case 1:
-						_localctx = AddContext(  ExpressionContext(_parentctx, _parentState))
+						_localctx = MultiplyContext(  ExpressionContext(_parentctx, _parentState))
 						try pushNewRecursionContext(_localctx, _startState, COOLParser.RULE_expression)
 						setState(175)
 						if (!(precpred(_ctx, 15))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 15)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 15)"))
 						}
 						setState(176)
-						try match(COOLParser.Tokens.ADD.rawValue)
+						try match(COOLParser.Tokens.MULTIPLY.rawValue)
 						setState(177)
 						try expression(16)
 
 						break
 					case 2:
-						_localctx = MinusContext(  ExpressionContext(_parentctx, _parentState))
+						_localctx = DivisionContext(  ExpressionContext(_parentctx, _parentState))
 						try pushNewRecursionContext(_localctx, _startState, COOLParser.RULE_expression)
 						setState(178)
 						if (!(precpred(_ctx, 14))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 14)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 14)"))
 						}
 						setState(179)
-						try match(COOLParser.Tokens.MINUS.rawValue)
+						try match(COOLParser.Tokens.DIVISION.rawValue)
 						setState(180)
 						try expression(15)
 
 						break
 					case 3:
-						_localctx = MultiplyContext(  ExpressionContext(_parentctx, _parentState))
+						_localctx = AddContext(  ExpressionContext(_parentctx, _parentState))
 						try pushNewRecursionContext(_localctx, _startState, COOLParser.RULE_expression)
 						setState(181)
 						if (!(precpred(_ctx, 13))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 13)"))
 						}
 						setState(182)
-						try match(COOLParser.Tokens.MULTIPLY.rawValue)
+						try match(COOLParser.Tokens.ADD.rawValue)
 						setState(183)
 						try expression(14)
 
 						break
 					case 4:
-						_localctx = DivisionContext(  ExpressionContext(_parentctx, _parentState))
+						_localctx = MinusContext(  ExpressionContext(_parentctx, _parentState))
 						try pushNewRecursionContext(_localctx, _startState, COOLParser.RULE_expression)
 						setState(184)
 						if (!(precpred(_ctx, 12))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
 						}
 						setState(185)
-						try match(COOLParser.Tokens.DIVISION.rawValue)
+						try match(COOLParser.Tokens.MINUS.rawValue)
 						setState(186)
 						try expression(13)
 
@@ -1908,47 +2211,47 @@ open class COOLParser: Parser {
 						_localctx = LessThanContext(  ExpressionContext(_parentctx, _parentState))
 						try pushNewRecursionContext(_localctx, _startState, COOLParser.RULE_expression)
 						setState(187)
-						if (!(precpred(_ctx, 10))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
+						if (!(precpred(_ctx, 11))) {
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
 						}
 						setState(188)
 						try match(COOLParser.Tokens.LESS_THAN.rawValue)
 						setState(189)
-						try expression(11)
+						try expression(12)
 
 						break
 					case 6:
 						_localctx = LessEqualContext(  ExpressionContext(_parentctx, _parentState))
 						try pushNewRecursionContext(_localctx, _startState, COOLParser.RULE_expression)
 						setState(190)
-						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						if (!(precpred(_ctx, 10))) {
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
 						}
 						setState(191)
 						try match(COOLParser.Tokens.LESS_EQUAL.rawValue)
 						setState(192)
-						try expression(10)
+						try expression(11)
 
 						break
 					case 7:
 						_localctx = EqualContext(  ExpressionContext(_parentctx, _parentState))
 						try pushNewRecursionContext(_localctx, _startState, COOLParser.RULE_expression)
 						setState(193)
-						if (!(precpred(_ctx, 8))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
+						if (!(precpred(_ctx, 9))) {
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(194)
 						try match(COOLParser.Tokens.EQUAL.rawValue)
 						setState(195)
-						try expression(9)
+						try expression(10)
 
 						break
 					case 8:
-						_localctx = SuperClassMethodContext(  ExpressionContext(_parentctx, _parentState))
+						_localctx = MethodCallContext(  ExpressionContext(_parentctx, _parentState))
 						try pushNewRecursionContext(_localctx, _startState, COOLParser.RULE_expression)
 						setState(196)
-						if (!(precpred(_ctx, 24))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 24)"))
+						if (!(precpred(_ctx, 25))) {
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 25)"))
 						}
 						setState(199)
 						try _errHandler.sync(self)
@@ -1977,7 +2280,7 @@ open class COOLParser: Parser {
 						while (//closure
 						 { () -> Bool in
 						      let testSet: Bool = {  () -> Bool in
-						   let testArray: [Int] = [_la, COOLParser.Tokens.T__1.rawValue,COOLParser.Tokens.T__3.rawValue,COOLParser.Tokens.FALSE.rawValue,COOLParser.Tokens.IF.rawValue,COOLParser.Tokens.ISVOID.rawValue,COOLParser.Tokens.LET.rawValue,COOLParser.Tokens.WHILE.rawValue,COOLParser.Tokens.CASE.rawValue,COOLParser.Tokens.NEW.rawValue,COOLParser.Tokens.NOT.rawValue,COOLParser.Tokens.TRUE.rawValue,COOLParser.Tokens.STRING.rawValue,COOLParser.Tokens.INT.rawValue,COOLParser.Tokens.OBJECTID.rawValue,COOLParser.Tokens.INTEGER_COMPLEMENT.rawValue]
+						   let testArray: [Int] = [_la, COOLParser.Tokens.T__1.rawValue,COOLParser.Tokens.T__3.rawValue,COOLParser.Tokens.FALSE.rawValue,COOLParser.Tokens.IF.rawValue,COOLParser.Tokens.ISVOID.rawValue,COOLParser.Tokens.LET.rawValue,COOLParser.Tokens.WHILE.rawValue,COOLParser.Tokens.CASE.rawValue,COOLParser.Tokens.NEW.rawValue,COOLParser.Tokens.NOT.rawValue,COOLParser.Tokens.TRUE.rawValue,COOLParser.Tokens.STRING.rawValue,COOLParser.Tokens.INT.rawValue,COOLParser.Tokens.OBJECTID.rawValue,COOLParser.Tokens.INTEGER_NEGATIVE.rawValue]
 						    return  Utils.testBitLeftShiftArray(testArray, 0)
 						}()
 						      return testSet
@@ -2031,8 +2334,8 @@ open class COOLParser: Parser {
 		return _localctx;
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  5:
 			return try expression_sempred(_localctx?.castdown(ExpressionContext.self), predIndex)
@@ -2045,14 +2348,18 @@ open class COOLParser: Parser {
 		    case 1:return precpred(_ctx, 14)
 		    case 2:return precpred(_ctx, 13)
 		    case 3:return precpred(_ctx, 12)
-		    case 4:return precpred(_ctx, 10)
-		    case 5:return precpred(_ctx, 9)
-		    case 6:return precpred(_ctx, 8)
-		    case 7:return precpred(_ctx, 24)
+		    case 4:return precpred(_ctx, 11)
+		    case 5:return precpred(_ctx, 10)
+		    case 6:return precpred(_ctx, 9)
+		    case 7:return precpred(_ctx, 25)
 		    default: return true
 		}
 	}
 
-   public static let _serializedATN : String = COOLParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = COOLParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

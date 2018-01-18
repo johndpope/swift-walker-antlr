@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/c/C.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/c/C.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -942,6 +942,42 @@ public protocol CListener: ParseTreeListener {
 	   - ctx: the parse tree
 	 */
 	func exitIterationStatement(_ ctx: CParser.IterationStatementContext)
+	/**
+	 * Enter a parse tree produced by {@link CParser#forCondition}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterForCondition(_ ctx: CParser.ForConditionContext)
+	/**
+	 * Exit a parse tree produced by {@link CParser#forCondition}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitForCondition(_ ctx: CParser.ForConditionContext)
+	/**
+	 * Enter a parse tree produced by {@link CParser#forDeclaration}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterForDeclaration(_ ctx: CParser.ForDeclarationContext)
+	/**
+	 * Exit a parse tree produced by {@link CParser#forDeclaration}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitForDeclaration(_ ctx: CParser.ForDeclarationContext)
+	/**
+	 * Enter a parse tree produced by {@link CParser#forExpression}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func enterForExpression(_ ctx: CParser.ForExpressionContext)
+	/**
+	 * Exit a parse tree produced by {@link CParser#forExpression}.
+	 - Parameters:
+	   - ctx: the parse tree
+	 */
+	func exitForExpression(_ ctx: CParser.ForExpressionContext)
 	/**
 	 * Enter a parse tree produced by {@link CParser#jumpStatement}.
 	 - Parameters:

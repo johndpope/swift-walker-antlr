@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/clojure/Clojure.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/clojure/Clojure.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFile(_ ctx: ClojureParser.FileContext) -> T{
+	open func visitFile(_ ctx: ClojureParser.FileContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForm(_ ctx: ClojureParser.FormContext) -> T{
+	open func visitForm(_ ctx: ClojureParser.FormContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitForms(_ ctx: ClojureParser.FormsContext) -> T{
+	open func visitForms(_ ctx: ClojureParser.FormsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitList(_ ctx: ClojureParser.ListContext) -> T{
+	open func visitList(_ ctx: ClojureParser.ListContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVector(_ ctx: ClojureParser.VectorContext) -> T{
+	open func visitVector(_ ctx: ClojureParser.VectorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMap(_ ctx: ClojureParser.MapContext) -> T{
+	open func visitMap(_ ctx: ClojureParser.MapContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSet(_ ctx: ClojureParser.SetContext) -> T{
+	open func visitSet(_ ctx: ClojureParser.SetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReader_macro(_ ctx: ClojureParser.Reader_macroContext) -> T{
+	open func visitReader_macro(_ ctx: ClojureParser.Reader_macroContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuote(_ ctx: ClojureParser.QuoteContext) -> T{
+	open func visitQuote(_ ctx: ClojureParser.QuoteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBacktick(_ ctx: ClojureParser.BacktickContext) -> T{
+	open func visitBacktick(_ ctx: ClojureParser.BacktickContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnquote(_ ctx: ClojureParser.UnquoteContext) -> T{
+	open func visitUnquote(_ ctx: ClojureParser.UnquoteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnquote_splicing(_ ctx: ClojureParser.Unquote_splicingContext) -> T{
+	open func visitUnquote_splicing(_ ctx: ClojureParser.Unquote_splicingContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTag(_ ctx: ClojureParser.TagContext) -> T{
+	open func visitTag(_ ctx: ClojureParser.TagContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeref(_ ctx: ClojureParser.DerefContext) -> T{
+	open func visitDeref(_ ctx: ClojureParser.DerefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGensym(_ ctx: ClojureParser.GensymContext) -> T{
+	open func visitGensym(_ ctx: ClojureParser.GensymContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLambda(_ ctx: ClojureParser.LambdaContext) -> T{
+	open func visitLambda(_ ctx: ClojureParser.LambdaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMeta_data(_ ctx: ClojureParser.Meta_dataContext) -> T{
+	open func visitMeta_data(_ ctx: ClojureParser.Meta_dataContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVar_quote(_ ctx: ClojureParser.Var_quoteContext) -> T{
+	open func visitVar_quote(_ ctx: ClojureParser.Var_quoteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHost_expr(_ ctx: ClojureParser.Host_exprContext) -> T{
+	open func visitHost_expr(_ ctx: ClojureParser.Host_exprContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDiscard(_ ctx: ClojureParser.DiscardContext) -> T{
+	open func visitDiscard(_ ctx: ClojureParser.DiscardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDispatch(_ ctx: ClojureParser.DispatchContext) -> T{
+	open func visitDispatch(_ ctx: ClojureParser.DispatchContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRegex(_ ctx: ClojureParser.RegexContext) -> T{
+	open func visitRegex(_ ctx: ClojureParser.RegexContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: ClojureParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: ClojureParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString(_ ctx: ClojureParser.StringContext) -> T{
+	open func visitString(_ ctx: ClojureParser.StringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHex(_ ctx: ClojureParser.HexContext) -> T{
+	open func visitHex(_ ctx: ClojureParser.HexContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBin(_ ctx: ClojureParser.BinContext) -> T{
+	open func visitBin(_ ctx: ClojureParser.BinContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBign(_ ctx: ClojureParser.BignContext) -> T{
+	open func visitBign(_ ctx: ClojureParser.BignContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: ClojureParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: ClojureParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCharacter(_ ctx: ClojureParser.CharacterContext) -> T{
+	open func visitCharacter(_ ctx: ClojureParser.CharacterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNamed_char(_ ctx: ClojureParser.Named_charContext) -> T{
+	open func visitNamed_char(_ ctx: ClojureParser.Named_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAny_char(_ ctx: ClojureParser.Any_charContext) -> T{
+	open func visitAny_char(_ ctx: ClojureParser.Any_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitU_hex_quad(_ ctx: ClojureParser.U_hex_quadContext) -> T{
+	open func visitU_hex_quad(_ ctx: ClojureParser.U_hex_quadContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNil(_ ctx: ClojureParser.NilContext) -> T{
+	open func visitNil(_ ctx: ClojureParser.NilContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitKeyword(_ ctx: ClojureParser.KeywordContext) -> T{
+	open func visitKeyword(_ ctx: ClojureParser.KeywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_keyword(_ ctx: ClojureParser.Simple_keywordContext) -> T{
+	open func visitSimple_keyword(_ ctx: ClojureParser.Simple_keywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMacro_keyword(_ ctx: ClojureParser.Macro_keywordContext) -> T{
+	open func visitMacro_keyword(_ ctx: ClojureParser.Macro_keywordContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSymbol(_ ctx: ClojureParser.SymbolContext) -> T{
+	open func visitSymbol(_ ctx: ClojureParser.SymbolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_sym(_ ctx: ClojureParser.Simple_symContext) -> T{
+	open func visitSimple_sym(_ ctx: ClojureParser.Simple_symContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNs_symbol(_ ctx: ClojureParser.Ns_symbolContext) -> T{
+	open func visitNs_symbol(_ ctx: ClojureParser.Ns_symbolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class ClojureVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParam_name(_ ctx: ClojureParser.Param_nameContext) -> T{
+	open func visitParam_name(_ ctx: ClojureParser.Param_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

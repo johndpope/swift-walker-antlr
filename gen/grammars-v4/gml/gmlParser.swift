@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/gml/gml.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/gml/gml.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class gmlParser: Parser {
@@ -11,15 +11,22 @@ open class gmlParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, STRINGLITERAL = 3, REAL = 4, SIGN = 5, 
                  DIGIT = 6, MANTISSA = 7, VALUE = 8, WS = 9
 	}
-	public static let RULE_graph = 0, RULE_list = 1, RULE_kv = 2, RULE_value = 3, 
-                   RULE_key = 4, RULE_integer = 5, RULE_realnum = 6, RULE_str = 7, 
-                   RULE_stringliteral = 8
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_graph = 0, RULE_list = 1, RULE_kv = 2, RULE_value = 3, 
+            RULE_key = 4, RULE_integer = 5, RULE_realnum = 6, RULE_str = 7, 
+            RULE_stringliteral = 8
+
+	public
+	static let ruleNames: [String] = [
 		"graph", "list", "kv", "value", "key", "integer", "realnum", "str", "stringliteral"
 	]
 
@@ -30,88 +37,73 @@ open class gmlParser: Parser {
 		nil, nil, nil, "STRINGLITERAL", "REAL", "SIGN", "DIGIT", "MANTISSA", "VALUE", 
 		"WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "gml.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return gmlParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "gml.g4" }
+	override open
+	func getSerializedATN() -> String { return gmlParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return gmlParser.ruleNames }
+	override open
+	func getATN() -> ATN { return gmlParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return gmlParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return gmlParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return gmlParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,gmlParser._ATN,gmlParser._decisionToDFA, gmlParser._sharedContextCache)
 	}
-	open class GraphContext:ParserRuleContext {
-		open func kv() -> Array<KvContext> {
-			return getRuleContexts(KvContext.self)
+
+	public class GraphContext: ParserRuleContext {
+			open
+			func kv() -> [KvContext] {
+				return getRuleContexts(KvContext.self)
+			}
+			open
+			func kv(_ i: Int) -> KvContext? {
+				return getRuleContext(KvContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gmlParser.RULE_graph
 		}
-		open func kv(_ i: Int) -> KvContext? {
-			return getRuleContext(KvContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return gmlParser.RULE_graph }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).enterGraph(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.enterGraph(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).exitGraph(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.exitGraph(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gmlVisitor {
-			     return (visitor as! gmlVisitor<T>).visitGraph(self)
-			}else if visitor is gmlBaseVisitor {
-		    	 return (visitor as! gmlBaseVisitor<T>).visitGraph(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gmlVisitor {
+			    return visitor.visitGraph(self)
+			}
+			else if let visitor = visitor as? gmlBaseVisitor {
+			    return visitor.visitGraph(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func graph() throws -> GraphContext {
+	 open func graph() throws -> GraphContext {
 		var _localctx: GraphContext = GraphContext(_ctx, getState())
 		try enterRule(_localctx, 0, gmlParser.RULE_graph)
 		var _la: Int = 0
@@ -146,40 +138,47 @@ open class gmlParser: Parser {
 
 		return _localctx
 	}
-	open class ListContext:ParserRuleContext {
-		open func kv() -> Array<KvContext> {
-			return getRuleContexts(KvContext.self)
+
+	public class ListContext: ParserRuleContext {
+			open
+			func kv() -> [KvContext] {
+				return getRuleContexts(KvContext.self)
+			}
+			open
+			func kv(_ i: Int) -> KvContext? {
+				return getRuleContext(KvContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gmlParser.RULE_list
 		}
-		open func kv(_ i: Int) -> KvContext? {
-			return getRuleContext(KvContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return gmlParser.RULE_list }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).enterList(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.enterList(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).exitList(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.exitList(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gmlVisitor {
-			     return (visitor as! gmlVisitor<T>).visitList(self)
-			}else if visitor is gmlBaseVisitor {
-		    	 return (visitor as! gmlBaseVisitor<T>).visitList(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gmlVisitor {
+			    return visitor.visitList(self)
+			}
+			else if let visitor = visitor as? gmlBaseVisitor {
+			    return visitor.visitList(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func list() throws -> ListContext {
+	 open func list() throws -> ListContext {
 		var _localctx: ListContext = ListContext(_ctx, getState())
 		try enterRule(_localctx, 2, gmlParser.RULE_list)
 		var _la: Int = 0
@@ -218,40 +217,47 @@ open class gmlParser: Parser {
 
 		return _localctx
 	}
-	open class KvContext:ParserRuleContext {
-		open func key() -> KeyContext? {
-			return getRuleContext(KeyContext.self,0)
+
+	public class KvContext: ParserRuleContext {
+			open
+			func key() -> KeyContext? {
+				return getRuleContext(KeyContext.self, 0)
+			}
+			open
+			func value() -> ValueContext? {
+				return getRuleContext(ValueContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gmlParser.RULE_kv
 		}
-		open func value() -> ValueContext? {
-			return getRuleContext(ValueContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return gmlParser.RULE_kv }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).enterKv(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.enterKv(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).exitKv(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.exitKv(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gmlVisitor {
-			     return (visitor as! gmlVisitor<T>).visitKv(self)
-			}else if visitor is gmlBaseVisitor {
-		    	 return (visitor as! gmlBaseVisitor<T>).visitKv(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gmlVisitor {
+			    return visitor.visitKv(self)
+			}
+			else if let visitor = visitor as? gmlBaseVisitor {
+			    return visitor.visitKv(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func kv() throws -> KvContext {
+	 open func kv() throws -> KvContext {
 		var _localctx: KvContext = KvContext(_ctx, getState())
 		try enterRule(_localctx, 4, gmlParser.RULE_kv)
 		defer {
@@ -273,49 +279,59 @@ open class gmlParser: Parser {
 
 		return _localctx
 	}
-	open class ValueContext:ParserRuleContext {
-		open func integer() -> IntegerContext? {
-			return getRuleContext(IntegerContext.self,0)
+
+	public class ValueContext: ParserRuleContext {
+			open
+			func integer() -> IntegerContext? {
+				return getRuleContext(IntegerContext.self, 0)
+			}
+			open
+			func realnum() -> RealnumContext? {
+				return getRuleContext(RealnumContext.self, 0)
+			}
+			open
+			func stringliteral() -> StringliteralContext? {
+				return getRuleContext(StringliteralContext.self, 0)
+			}
+			open
+			func str() -> StrContext? {
+				return getRuleContext(StrContext.self, 0)
+			}
+			open
+			func list() -> ListContext? {
+				return getRuleContext(ListContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gmlParser.RULE_value
 		}
-		open func realnum() -> RealnumContext? {
-			return getRuleContext(RealnumContext.self,0)
-		}
-		open func stringliteral() -> StringliteralContext? {
-			return getRuleContext(StringliteralContext.self,0)
-		}
-		open func str() -> StrContext? {
-			return getRuleContext(StrContext.self,0)
-		}
-		open func list() -> ListContext? {
-			return getRuleContext(ListContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return gmlParser.RULE_value }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).enterValue(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.enterValue(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).exitValue(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.exitValue(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gmlVisitor {
-			     return (visitor as! gmlVisitor<T>).visitValue(self)
-			}else if visitor is gmlBaseVisitor {
-		    	 return (visitor as! gmlBaseVisitor<T>).visitValue(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gmlVisitor {
+			    return visitor.visitValue(self)
+			}
+			else if let visitor = visitor as? gmlBaseVisitor {
+			    return visitor.visitValue(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func value() throws -> ValueContext {
+	 open func value() throws -> ValueContext {
 		var _localctx: ValueContext = ValueContext(_ctx, getState())
 		try enterRule(_localctx, 6, gmlParser.RULE_value)
 		defer {
@@ -361,7 +377,7 @@ open class gmlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -372,35 +388,43 @@ open class gmlParser: Parser {
 
 		return _localctx
 	}
-	open class KeyContext:ParserRuleContext {
-		open func VALUE() -> TerminalNode? { return getToken(gmlParser.Tokens.VALUE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gmlParser.RULE_key }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).enterKey(self)
+
+	public class KeyContext: ParserRuleContext {
+			open
+			func VALUE() -> TerminalNode? {
+				return getToken(gmlParser.Tokens.VALUE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gmlParser.RULE_key
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.enterKey(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).exitKey(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.exitKey(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gmlVisitor {
-			     return (visitor as! gmlVisitor<T>).visitKey(self)
-			}else if visitor is gmlBaseVisitor {
-		    	 return (visitor as! gmlBaseVisitor<T>).visitKey(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gmlVisitor {
+			    return visitor.visitKey(self)
+			}
+			else if let visitor = visitor as? gmlBaseVisitor {
+			    return visitor.visitKey(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func key() throws -> KeyContext {
+	 open func key() throws -> KeyContext {
 		var _localctx: KeyContext = KeyContext(_ctx, getState())
 		try enterRule(_localctx, 8, gmlParser.RULE_key)
 		defer {
@@ -420,39 +444,51 @@ open class gmlParser: Parser {
 
 		return _localctx
 	}
-	open class IntegerContext:ParserRuleContext {
-		open func SIGN() -> TerminalNode? { return getToken(gmlParser.Tokens.SIGN.rawValue, 0) }
-		open func DIGIT() -> Array<TerminalNode> { return getTokens(gmlParser.Tokens.DIGIT.rawValue) }
-		open func DIGIT(_ i:Int) -> TerminalNode?{
-			return getToken(gmlParser.Tokens.DIGIT.rawValue, i)
+
+	public class IntegerContext: ParserRuleContext {
+			open
+			func SIGN() -> TerminalNode? {
+				return getToken(gmlParser.Tokens.SIGN.rawValue, 0)
+			}
+			open
+			func DIGIT() -> [TerminalNode] {
+				return getTokens(gmlParser.Tokens.DIGIT.rawValue)
+			}
+			open
+			func DIGIT(_ i:Int) -> TerminalNode? {
+				return getToken(gmlParser.Tokens.DIGIT.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gmlParser.RULE_integer
 		}
-		open override func getRuleIndex() -> Int { return gmlParser.RULE_integer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).enterInteger(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.enterInteger(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).exitInteger(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.exitInteger(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gmlVisitor {
-			     return (visitor as! gmlVisitor<T>).visitInteger(self)
-			}else if visitor is gmlBaseVisitor {
-		    	 return (visitor as! gmlBaseVisitor<T>).visitInteger(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gmlVisitor {
+			    return visitor.visitInteger(self)
+			}
+			else if let visitor = visitor as? gmlBaseVisitor {
+			    return visitor.visitInteger(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func integer() throws -> IntegerContext {
+	 open func integer() throws -> IntegerContext {
 		var _localctx: IntegerContext = IntegerContext(_ctx, getState())
 		try enterRule(_localctx, 10, gmlParser.RULE_integer)
 		var _la: Int = 0
@@ -500,35 +536,43 @@ open class gmlParser: Parser {
 
 		return _localctx
 	}
-	open class RealnumContext:ParserRuleContext {
-		open func REAL() -> TerminalNode? { return getToken(gmlParser.Tokens.REAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gmlParser.RULE_realnum }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).enterRealnum(self)
+
+	public class RealnumContext: ParserRuleContext {
+			open
+			func REAL() -> TerminalNode? {
+				return getToken(gmlParser.Tokens.REAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gmlParser.RULE_realnum
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.enterRealnum(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).exitRealnum(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.exitRealnum(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gmlVisitor {
-			     return (visitor as! gmlVisitor<T>).visitRealnum(self)
-			}else if visitor is gmlBaseVisitor {
-		    	 return (visitor as! gmlBaseVisitor<T>).visitRealnum(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gmlVisitor {
+			    return visitor.visitRealnum(self)
+			}
+			else if let visitor = visitor as? gmlBaseVisitor {
+			    return visitor.visitRealnum(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func realnum() throws -> RealnumContext {
+	 open func realnum() throws -> RealnumContext {
 		var _localctx: RealnumContext = RealnumContext(_ctx, getState())
 		try enterRule(_localctx, 12, gmlParser.RULE_realnum)
 		defer {
@@ -548,35 +592,43 @@ open class gmlParser: Parser {
 
 		return _localctx
 	}
-	open class StrContext:ParserRuleContext {
-		open func VALUE() -> TerminalNode? { return getToken(gmlParser.Tokens.VALUE.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gmlParser.RULE_str }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).enterStr(self)
+
+	public class StrContext: ParserRuleContext {
+			open
+			func VALUE() -> TerminalNode? {
+				return getToken(gmlParser.Tokens.VALUE.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gmlParser.RULE_str
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.enterStr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).exitStr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.exitStr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gmlVisitor {
-			     return (visitor as! gmlVisitor<T>).visitStr(self)
-			}else if visitor is gmlBaseVisitor {
-		    	 return (visitor as! gmlBaseVisitor<T>).visitStr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gmlVisitor {
+			    return visitor.visitStr(self)
+			}
+			else if let visitor = visitor as? gmlBaseVisitor {
+			    return visitor.visitStr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func str() throws -> StrContext {
+	 open func str() throws -> StrContext {
 		var _localctx: StrContext = StrContext(_ctx, getState())
 		try enterRule(_localctx, 14, gmlParser.RULE_str)
 		defer {
@@ -596,35 +648,43 @@ open class gmlParser: Parser {
 
 		return _localctx
 	}
-	open class StringliteralContext:ParserRuleContext {
-		open func STRINGLITERAL() -> TerminalNode? { return getToken(gmlParser.Tokens.STRINGLITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return gmlParser.RULE_stringliteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).enterStringliteral(self)
+
+	public class StringliteralContext: ParserRuleContext {
+			open
+			func STRINGLITERAL() -> TerminalNode? {
+				return getToken(gmlParser.Tokens.STRINGLITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return gmlParser.RULE_stringliteral
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.enterStringliteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is gmlListener {
-			 	(listener as! gmlListener).exitStringliteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? gmlListener {
+				listener.exitStringliteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is gmlVisitor {
-			     return (visitor as! gmlVisitor<T>).visitStringliteral(self)
-			}else if visitor is gmlBaseVisitor {
-		    	 return (visitor as! gmlBaseVisitor<T>).visitStringliteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? gmlVisitor {
+			    return visitor.visitStringliteral(self)
+			}
+			else if let visitor = visitor as? gmlBaseVisitor {
+			    return visitor.visitStringliteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func stringliteral() throws -> StringliteralContext {
+	 open func stringliteral() throws -> StringliteralContext {
 		var _localctx: StringliteralContext = StringliteralContext(_ctx, getState())
 		try enterRule(_localctx, 16, gmlParser.RULE_stringliteral)
 		defer {
@@ -645,6 +705,10 @@ open class gmlParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = gmlParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = gmlParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/icalendar/ICalendar.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/icalendar/ICalendar.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParse(_ ctx: ICalendarParser.ParseContext) -> T{
+	open func visitParse(_ ctx: ICalendarParser.ParseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIcalstream(_ ctx: ICalendarParser.IcalstreamContext) -> T{
+	open func visitIcalstream(_ ctx: ICalendarParser.IcalstreamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIcalobject(_ ctx: ICalendarParser.IcalobjectContext) -> T{
+	open func visitIcalobject(_ ctx: ICalendarParser.IcalobjectContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCalprop(_ ctx: ICalendarParser.CalpropContext) -> T{
+	open func visitCalprop(_ ctx: ICalendarParser.CalpropContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCalscale(_ ctx: ICalendarParser.CalscaleContext) -> T{
+	open func visitCalscale(_ ctx: ICalendarParser.CalscaleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMethod(_ ctx: ICalendarParser.MethodContext) -> T{
+	open func visitMethod(_ ctx: ICalendarParser.MethodContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProdid(_ ctx: ICalendarParser.ProdidContext) -> T{
+	open func visitProdid(_ ctx: ICalendarParser.ProdidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVersion(_ ctx: ICalendarParser.VersionContext) -> T{
+	open func visitVersion(_ ctx: ICalendarParser.VersionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVervalue(_ ctx: ICalendarParser.VervalueContext) -> T{
+	open func visitVervalue(_ ctx: ICalendarParser.VervalueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComponent(_ ctx: ICalendarParser.ComponentContext) -> T{
+	open func visitComponent(_ ctx: ICalendarParser.ComponentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIana_comp(_ ctx: ICalendarParser.Iana_compContext) -> T{
+	open func visitIana_comp(_ ctx: ICalendarParser.Iana_compContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitX_comp(_ ctx: ICalendarParser.X_compContext) -> T{
+	open func visitX_comp(_ ctx: ICalendarParser.X_compContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContentline(_ ctx: ICalendarParser.ContentlineContext) -> T{
+	open func visitContentline(_ ctx: ICalendarParser.ContentlineContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitName(_ ctx: ICalendarParser.NameContext) -> T{
+	open func visitName(_ ctx: ICalendarParser.NameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: ICalendarParser.ValueContext) -> T{
+	open func visitValue(_ ctx: ICalendarParser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEventc(_ ctx: ICalendarParser.EventcContext) -> T{
+	open func visitEventc(_ ctx: ICalendarParser.EventcContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTodoc(_ ctx: ICalendarParser.TodocContext) -> T{
+	open func visitTodoc(_ ctx: ICalendarParser.TodocContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJournalc(_ ctx: ICalendarParser.JournalcContext) -> T{
+	open func visitJournalc(_ ctx: ICalendarParser.JournalcContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFreebusyc(_ ctx: ICalendarParser.FreebusycContext) -> T{
+	open func visitFreebusyc(_ ctx: ICalendarParser.FreebusycContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTimezonec(_ ctx: ICalendarParser.TimezonecContext) -> T{
+	open func visitTimezonec(_ ctx: ICalendarParser.TimezonecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlarmc(_ ctx: ICalendarParser.AlarmcContext) -> T{
+	open func visitAlarmc(_ ctx: ICalendarParser.AlarmcContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEventprop(_ ctx: ICalendarParser.EventpropContext) -> T{
+	open func visitEventprop(_ ctx: ICalendarParser.EventpropContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTodoprop(_ ctx: ICalendarParser.TodopropContext) -> T{
+	open func visitTodoprop(_ ctx: ICalendarParser.TodopropContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJourprop(_ ctx: ICalendarParser.JourpropContext) -> T{
+	open func visitJourprop(_ ctx: ICalendarParser.JourpropContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFbprop(_ ctx: ICalendarParser.FbpropContext) -> T{
+	open func visitFbprop(_ ctx: ICalendarParser.FbpropContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTimezoneprop(_ ctx: ICalendarParser.TimezonepropContext) -> T{
+	open func visitTimezoneprop(_ ctx: ICalendarParser.TimezonepropContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTzprop(_ ctx: ICalendarParser.TzpropContext) -> T{
+	open func visitTzprop(_ ctx: ICalendarParser.TzpropContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlarmprop(_ ctx: ICalendarParser.AlarmpropContext) -> T{
+	open func visitAlarmprop(_ ctx: ICalendarParser.AlarmpropContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStandardc(_ ctx: ICalendarParser.StandardcContext) -> T{
+	open func visitStandardc(_ ctx: ICalendarParser.StandardcContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDaylightc(_ ctx: ICalendarParser.DaylightcContext) -> T{
+	open func visitDaylightc(_ ctx: ICalendarParser.DaylightcContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttach(_ ctx: ICalendarParser.AttachContext) -> T{
+	open func visitAttach(_ ctx: ICalendarParser.AttachContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttachparam(_ ctx: ICalendarParser.AttachparamContext) -> T{
+	open func visitAttachparam(_ ctx: ICalendarParser.AttachparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCategories(_ ctx: ICalendarParser.CategoriesContext) -> T{
+	open func visitCategories(_ ctx: ICalendarParser.CategoriesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCatparam(_ ctx: ICalendarParser.CatparamContext) -> T{
+	open func visitCatparam(_ ctx: ICalendarParser.CatparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClazz(_ ctx: ICalendarParser.ClazzContext) -> T{
+	open func visitClazz(_ ctx: ICalendarParser.ClazzContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitClassvalue(_ ctx: ICalendarParser.ClassvalueContext) -> T{
+	open func visitClassvalue(_ ctx: ICalendarParser.ClassvalueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComment(_ ctx: ICalendarParser.CommentContext) -> T{
+	open func visitComment(_ ctx: ICalendarParser.CommentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCommparam(_ ctx: ICalendarParser.CommparamContext) -> T{
+	open func visitCommparam(_ ctx: ICalendarParser.CommparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDescription(_ ctx: ICalendarParser.DescriptionContext) -> T{
+	open func visitDescription(_ ctx: ICalendarParser.DescriptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDescparam(_ ctx: ICalendarParser.DescparamContext) -> T{
+	open func visitDescparam(_ ctx: ICalendarParser.DescparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGeo(_ ctx: ICalendarParser.GeoContext) -> T{
+	open func visitGeo(_ ctx: ICalendarParser.GeoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGeovalue(_ ctx: ICalendarParser.GeovalueContext) -> T{
+	open func visitGeovalue(_ ctx: ICalendarParser.GeovalueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocation(_ ctx: ICalendarParser.LocationContext) -> T{
+	open func visitLocation(_ ctx: ICalendarParser.LocationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLocparam(_ ctx: ICalendarParser.LocparamContext) -> T{
+	open func visitLocparam(_ ctx: ICalendarParser.LocparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPercent(_ ctx: ICalendarParser.PercentContext) -> T{
+	open func visitPercent(_ ctx: ICalendarParser.PercentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPriority(_ ctx: ICalendarParser.PriorityContext) -> T{
+	open func visitPriority(_ ctx: ICalendarParser.PriorityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPriovalue(_ ctx: ICalendarParser.PriovalueContext) -> T{
+	open func visitPriovalue(_ ctx: ICalendarParser.PriovalueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResources(_ ctx: ICalendarParser.ResourcesContext) -> T{
+	open func visitResources(_ ctx: ICalendarParser.ResourcesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitResrcparam(_ ctx: ICalendarParser.ResrcparamContext) -> T{
+	open func visitResrcparam(_ ctx: ICalendarParser.ResrcparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatus(_ ctx: ICalendarParser.StatusContext) -> T{
+	open func visitStatus(_ ctx: ICalendarParser.StatusContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatvalue(_ ctx: ICalendarParser.StatvalueContext) -> T{
+	open func visitStatvalue(_ ctx: ICalendarParser.StatvalueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatvalue_event(_ ctx: ICalendarParser.Statvalue_eventContext) -> T{
+	open func visitStatvalue_event(_ ctx: ICalendarParser.Statvalue_eventContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatvalue_todo(_ ctx: ICalendarParser.Statvalue_todoContext) -> T{
+	open func visitStatvalue_todo(_ ctx: ICalendarParser.Statvalue_todoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatvalue_jour(_ ctx: ICalendarParser.Statvalue_jourContext) -> T{
+	open func visitStatvalue_jour(_ ctx: ICalendarParser.Statvalue_jourContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSummary(_ ctx: ICalendarParser.SummaryContext) -> T{
+	open func visitSummary(_ ctx: ICalendarParser.SummaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSummparam(_ ctx: ICalendarParser.SummparamContext) -> T{
+	open func visitSummparam(_ ctx: ICalendarParser.SummparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCompleted(_ ctx: ICalendarParser.CompletedContext) -> T{
+	open func visitCompleted(_ ctx: ICalendarParser.CompletedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDtend(_ ctx: ICalendarParser.DtendContext) -> T{
+	open func visitDtend(_ ctx: ICalendarParser.DtendContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDtendparam(_ ctx: ICalendarParser.DtendparamContext) -> T{
+	open func visitDtendparam(_ ctx: ICalendarParser.DtendparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDue(_ ctx: ICalendarParser.DueContext) -> T{
+	open func visitDue(_ ctx: ICalendarParser.DueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDueparam(_ ctx: ICalendarParser.DueparamContext) -> T{
+	open func visitDueparam(_ ctx: ICalendarParser.DueparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDtstart(_ ctx: ICalendarParser.DtstartContext) -> T{
+	open func visitDtstart(_ ctx: ICalendarParser.DtstartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDtstparam(_ ctx: ICalendarParser.DtstparamContext) -> T{
+	open func visitDtstparam(_ ctx: ICalendarParser.DtstparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDuration(_ ctx: ICalendarParser.DurationContext) -> T{
+	open func visitDuration(_ ctx: ICalendarParser.DurationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFreebusy(_ ctx: ICalendarParser.FreebusyContext) -> T{
+	open func visitFreebusy(_ ctx: ICalendarParser.FreebusyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFbparam(_ ctx: ICalendarParser.FbparamContext) -> T{
+	open func visitFbparam(_ ctx: ICalendarParser.FbparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFbvalue(_ ctx: ICalendarParser.FbvalueContext) -> T{
+	open func visitFbvalue(_ ctx: ICalendarParser.FbvalueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTransp(_ ctx: ICalendarParser.TranspContext) -> T{
+	open func visitTransp(_ ctx: ICalendarParser.TranspContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTransvalue(_ ctx: ICalendarParser.TransvalueContext) -> T{
+	open func visitTransvalue(_ ctx: ICalendarParser.TransvalueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTzid(_ ctx: ICalendarParser.TzidContext) -> T{
+	open func visitTzid(_ ctx: ICalendarParser.TzidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTzname(_ ctx: ICalendarParser.TznameContext) -> T{
+	open func visitTzname(_ ctx: ICalendarParser.TznameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTznparam(_ ctx: ICalendarParser.TznparamContext) -> T{
+	open func visitTznparam(_ ctx: ICalendarParser.TznparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTzoffsetfrom(_ ctx: ICalendarParser.TzoffsetfromContext) -> T{
+	open func visitTzoffsetfrom(_ ctx: ICalendarParser.TzoffsetfromContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTzoffsetto(_ ctx: ICalendarParser.TzoffsettoContext) -> T{
+	open func visitTzoffsetto(_ ctx: ICalendarParser.TzoffsettoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTzurl(_ ctx: ICalendarParser.TzurlContext) -> T{
+	open func visitTzurl(_ ctx: ICalendarParser.TzurlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttendee(_ ctx: ICalendarParser.AttendeeContext) -> T{
+	open func visitAttendee(_ ctx: ICalendarParser.AttendeeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAttparam(_ ctx: ICalendarParser.AttparamContext) -> T{
+	open func visitAttparam(_ ctx: ICalendarParser.AttparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContact(_ ctx: ICalendarParser.ContactContext) -> T{
+	open func visitContact(_ ctx: ICalendarParser.ContactContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitContparam(_ ctx: ICalendarParser.ContparamContext) -> T{
+	open func visitContparam(_ ctx: ICalendarParser.ContparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrganizer(_ ctx: ICalendarParser.OrganizerContext) -> T{
+	open func visitOrganizer(_ ctx: ICalendarParser.OrganizerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrgparam(_ ctx: ICalendarParser.OrgparamContext) -> T{
+	open func visitOrgparam(_ ctx: ICalendarParser.OrgparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecurid(_ ctx: ICalendarParser.RecuridContext) -> T{
+	open func visitRecurid(_ ctx: ICalendarParser.RecuridContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRidparam(_ ctx: ICalendarParser.RidparamContext) -> T{
+	open func visitRidparam(_ ctx: ICalendarParser.RidparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelated(_ ctx: ICalendarParser.RelatedContext) -> T{
+	open func visitRelated(_ ctx: ICalendarParser.RelatedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRelparam(_ ctx: ICalendarParser.RelparamContext) -> T{
+	open func visitRelparam(_ ctx: ICalendarParser.RelparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUrl(_ ctx: ICalendarParser.UrlContext) -> T{
+	open func visitUrl(_ ctx: ICalendarParser.UrlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUid(_ ctx: ICalendarParser.UidContext) -> T{
+	open func visitUid(_ ctx: ICalendarParser.UidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -885,7 +885,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExdate(_ ctx: ICalendarParser.ExdateContext) -> T{
+	open func visitExdate(_ ctx: ICalendarParser.ExdateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -895,7 +895,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExdtparam(_ ctx: ICalendarParser.ExdtparamContext) -> T{
+	open func visitExdtparam(_ ctx: ICalendarParser.ExdtparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -905,7 +905,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRdate(_ ctx: ICalendarParser.RdateContext) -> T{
+	open func visitRdate(_ ctx: ICalendarParser.RdateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -915,7 +915,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRdtparam(_ ctx: ICalendarParser.RdtparamContext) -> T{
+	open func visitRdtparam(_ ctx: ICalendarParser.RdtparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -925,7 +925,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRdtval(_ ctx: ICalendarParser.RdtvalContext) -> T{
+	open func visitRdtval(_ ctx: ICalendarParser.RdtvalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -935,7 +935,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDate_time_date(_ ctx: ICalendarParser.Date_time_dateContext) -> T{
+	open func visitDate_time_date(_ ctx: ICalendarParser.Date_time_dateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -945,7 +945,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRrule(_ ctx: ICalendarParser.RruleContext) -> T{
+	open func visitRrule(_ ctx: ICalendarParser.RruleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -955,7 +955,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAction(_ ctx: ICalendarParser.ActionContext) -> T{
+	open func visitAction(_ ctx: ICalendarParser.ActionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -965,7 +965,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitActionvalue(_ ctx: ICalendarParser.ActionvalueContext) -> T{
+	open func visitActionvalue(_ ctx: ICalendarParser.ActionvalueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -975,7 +975,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRepeat(_ ctx: ICalendarParser.RepeatContext) -> T{
+	open func visitRepeat(_ ctx: ICalendarParser.RepeatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -985,7 +985,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrigger(_ ctx: ICalendarParser.TriggerContext) -> T{
+	open func visitTrigger(_ ctx: ICalendarParser.TriggerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -995,7 +995,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrigrel(_ ctx: ICalendarParser.TrigrelContext) -> T{
+	open func visitTrigrel(_ ctx: ICalendarParser.TrigrelContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1005,7 +1005,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrigabs(_ ctx: ICalendarParser.TrigabsContext) -> T{
+	open func visitTrigabs(_ ctx: ICalendarParser.TrigabsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1015,7 +1015,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCreated(_ ctx: ICalendarParser.CreatedContext) -> T{
+	open func visitCreated(_ ctx: ICalendarParser.CreatedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1025,7 +1025,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDtstamp(_ ctx: ICalendarParser.DtstampContext) -> T{
+	open func visitDtstamp(_ ctx: ICalendarParser.DtstampContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1035,7 +1035,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLast_mod(_ ctx: ICalendarParser.Last_modContext) -> T{
+	open func visitLast_mod(_ ctx: ICalendarParser.Last_modContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1045,7 +1045,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSeq(_ ctx: ICalendarParser.SeqContext) -> T{
+	open func visitSeq(_ ctx: ICalendarParser.SeqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1055,7 +1055,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIana_prop(_ ctx: ICalendarParser.Iana_propContext) -> T{
+	open func visitIana_prop(_ ctx: ICalendarParser.Iana_propContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1065,7 +1065,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitX_prop(_ ctx: ICalendarParser.X_propContext) -> T{
+	open func visitX_prop(_ ctx: ICalendarParser.X_propContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1075,7 +1075,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRstatus(_ ctx: ICalendarParser.RstatusContext) -> T{
+	open func visitRstatus(_ ctx: ICalendarParser.RstatusContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1085,7 +1085,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRstatparam(_ ctx: ICalendarParser.RstatparamContext) -> T{
+	open func visitRstatparam(_ ctx: ICalendarParser.RstatparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1095,7 +1095,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStatcode(_ ctx: ICalendarParser.StatcodeContext) -> T{
+	open func visitStatcode(_ ctx: ICalendarParser.StatcodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1105,7 +1105,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParam_name(_ ctx: ICalendarParser.Param_nameContext) -> T{
+	open func visitParam_name(_ ctx: ICalendarParser.Param_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1115,7 +1115,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParam_value(_ ctx: ICalendarParser.Param_valueContext) -> T{
+	open func visitParam_value(_ ctx: ICalendarParser.Param_valueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1125,7 +1125,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitParamtext(_ ctx: ICalendarParser.ParamtextContext) -> T{
+	open func visitParamtext(_ ctx: ICalendarParser.ParamtextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1135,7 +1135,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQuoted_string(_ ctx: ICalendarParser.Quoted_stringContext) -> T{
+	open func visitQuoted_string(_ ctx: ICalendarParser.Quoted_stringContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1145,7 +1145,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIana_token(_ ctx: ICalendarParser.Iana_tokenContext) -> T{
+	open func visitIana_token(_ ctx: ICalendarParser.Iana_tokenContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1155,7 +1155,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIcalparameter(_ ctx: ICalendarParser.IcalparameterContext) -> T{
+	open func visitIcalparameter(_ ctx: ICalendarParser.IcalparameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1165,7 +1165,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAltrepparam(_ ctx: ICalendarParser.AltrepparamContext) -> T{
+	open func visitAltrepparam(_ ctx: ICalendarParser.AltrepparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1175,7 +1175,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCnparam(_ ctx: ICalendarParser.CnparamContext) -> T{
+	open func visitCnparam(_ ctx: ICalendarParser.CnparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1185,7 +1185,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCutypeparam(_ ctx: ICalendarParser.CutypeparamContext) -> T{
+	open func visitCutypeparam(_ ctx: ICalendarParser.CutypeparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1195,7 +1195,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelfromparam(_ ctx: ICalendarParser.DelfromparamContext) -> T{
+	open func visitDelfromparam(_ ctx: ICalendarParser.DelfromparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1205,7 +1205,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeltoparam(_ ctx: ICalendarParser.DeltoparamContext) -> T{
+	open func visitDeltoparam(_ ctx: ICalendarParser.DeltoparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1215,7 +1215,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDirparam(_ ctx: ICalendarParser.DirparamContext) -> T{
+	open func visitDirparam(_ ctx: ICalendarParser.DirparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1225,7 +1225,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEncodingparam(_ ctx: ICalendarParser.EncodingparamContext) -> T{
+	open func visitEncodingparam(_ ctx: ICalendarParser.EncodingparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1235,7 +1235,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFmttypeparam(_ ctx: ICalendarParser.FmttypeparamContext) -> T{
+	open func visitFmttypeparam(_ ctx: ICalendarParser.FmttypeparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1245,7 +1245,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFbtypeparam(_ ctx: ICalendarParser.FbtypeparamContext) -> T{
+	open func visitFbtypeparam(_ ctx: ICalendarParser.FbtypeparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1255,7 +1255,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLanguageparam(_ ctx: ICalendarParser.LanguageparamContext) -> T{
+	open func visitLanguageparam(_ ctx: ICalendarParser.LanguageparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1265,7 +1265,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMemberparam(_ ctx: ICalendarParser.MemberparamContext) -> T{
+	open func visitMemberparam(_ ctx: ICalendarParser.MemberparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1275,7 +1275,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPartstatparam(_ ctx: ICalendarParser.PartstatparamContext) -> T{
+	open func visitPartstatparam(_ ctx: ICalendarParser.PartstatparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1285,7 +1285,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRangeparam(_ ctx: ICalendarParser.RangeparamContext) -> T{
+	open func visitRangeparam(_ ctx: ICalendarParser.RangeparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1295,7 +1295,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrigrelparam(_ ctx: ICalendarParser.TrigrelparamContext) -> T{
+	open func visitTrigrelparam(_ ctx: ICalendarParser.TrigrelparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1305,7 +1305,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReltypeparam(_ ctx: ICalendarParser.ReltypeparamContext) -> T{
+	open func visitReltypeparam(_ ctx: ICalendarParser.ReltypeparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1315,7 +1315,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRoleparam(_ ctx: ICalendarParser.RoleparamContext) -> T{
+	open func visitRoleparam(_ ctx: ICalendarParser.RoleparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1325,7 +1325,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRsvpparam(_ ctx: ICalendarParser.RsvpparamContext) -> T{
+	open func visitRsvpparam(_ ctx: ICalendarParser.RsvpparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1335,7 +1335,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSentbyparam(_ ctx: ICalendarParser.SentbyparamContext) -> T{
+	open func visitSentbyparam(_ ctx: ICalendarParser.SentbyparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1345,7 +1345,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTzidparam(_ ctx: ICalendarParser.TzidparamContext) -> T{
+	open func visitTzidparam(_ ctx: ICalendarParser.TzidparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1355,7 +1355,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValuetypeparam(_ ctx: ICalendarParser.ValuetypeparamContext) -> T{
+	open func visitValuetypeparam(_ ctx: ICalendarParser.ValuetypeparamContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1365,7 +1365,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValuetype(_ ctx: ICalendarParser.ValuetypeContext) -> T{
+	open func visitValuetype(_ ctx: ICalendarParser.ValuetypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1375,7 +1375,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBinary(_ ctx: ICalendarParser.BinaryContext) -> T{
+	open func visitBinary(_ ctx: ICalendarParser.BinaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1385,7 +1385,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitB_chars(_ ctx: ICalendarParser.B_charsContext) -> T{
+	open func visitB_chars(_ ctx: ICalendarParser.B_charsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1395,7 +1395,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitB_end(_ ctx: ICalendarParser.B_endContext) -> T{
+	open func visitB_end(_ ctx: ICalendarParser.B_endContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1405,7 +1405,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBool(_ ctx: ICalendarParser.BoolContext) -> T{
+	open func visitBool(_ ctx: ICalendarParser.BoolContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1415,7 +1415,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCal_address(_ ctx: ICalendarParser.Cal_addressContext) -> T{
+	open func visitCal_address(_ ctx: ICalendarParser.Cal_addressContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1425,7 +1425,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDate(_ ctx: ICalendarParser.DateContext) -> T{
+	open func visitDate(_ ctx: ICalendarParser.DateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1435,7 +1435,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDate_time(_ ctx: ICalendarParser.Date_timeContext) -> T{
+	open func visitDate_time(_ ctx: ICalendarParser.Date_timeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1445,7 +1445,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDur_value(_ ctx: ICalendarParser.Dur_valueContext) -> T{
+	open func visitDur_value(_ ctx: ICalendarParser.Dur_valueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1455,7 +1455,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFloat_num(_ ctx: ICalendarParser.Float_numContext) -> T{
+	open func visitFloat_num(_ ctx: ICalendarParser.Float_numContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1465,7 +1465,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDigits(_ ctx: ICalendarParser.DigitsContext) -> T{
+	open func visitDigits(_ ctx: ICalendarParser.DigitsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1475,7 +1475,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInteger(_ ctx: ICalendarParser.IntegerContext) -> T{
+	open func visitInteger(_ ctx: ICalendarParser.IntegerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1485,7 +1485,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPeriod(_ ctx: ICalendarParser.PeriodContext) -> T{
+	open func visitPeriod(_ ctx: ICalendarParser.PeriodContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1495,7 +1495,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecur(_ ctx: ICalendarParser.RecurContext) -> T{
+	open func visitRecur(_ ctx: ICalendarParser.RecurContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1505,7 +1505,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitText(_ ctx: ICalendarParser.TextContext) -> T{
+	open func visitText(_ ctx: ICalendarParser.TextContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1515,7 +1515,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTime(_ ctx: ICalendarParser.TimeContext) -> T{
+	open func visitTime(_ ctx: ICalendarParser.TimeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1525,7 +1525,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUri(_ ctx: ICalendarParser.UriContext) -> T{
+	open func visitUri(_ ctx: ICalendarParser.UriContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1535,7 +1535,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUtc_offset(_ ctx: ICalendarParser.Utc_offsetContext) -> T{
+	open func visitUtc_offset(_ ctx: ICalendarParser.Utc_offsetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1545,7 +1545,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOther_param(_ ctx: ICalendarParser.Other_paramContext) -> T{
+	open func visitOther_param(_ ctx: ICalendarParser.Other_paramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1555,7 +1555,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIana_param(_ ctx: ICalendarParser.Iana_paramContext) -> T{
+	open func visitIana_param(_ ctx: ICalendarParser.Iana_paramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1565,7 +1565,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitX_param(_ ctx: ICalendarParser.X_paramContext) -> T{
+	open func visitX_param(_ ctx: ICalendarParser.X_paramContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1575,7 +1575,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitType_name(_ ctx: ICalendarParser.Type_nameContext) -> T{
+	open func visitType_name(_ ctx: ICalendarParser.Type_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1585,7 +1585,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubtype_name(_ ctx: ICalendarParser.Subtype_nameContext) -> T{
+	open func visitSubtype_name(_ ctx: ICalendarParser.Subtype_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1595,7 +1595,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReg_name(_ ctx: ICalendarParser.Reg_nameContext) -> T{
+	open func visitReg_name(_ ctx: ICalendarParser.Reg_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1605,7 +1605,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLanguage(_ ctx: ICalendarParser.LanguageContext) -> T{
+	open func visitLanguage(_ ctx: ICalendarParser.LanguageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1615,7 +1615,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPartstat_event(_ ctx: ICalendarParser.Partstat_eventContext) -> T{
+	open func visitPartstat_event(_ ctx: ICalendarParser.Partstat_eventContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1625,7 +1625,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPartstat_todo(_ ctx: ICalendarParser.Partstat_todoContext) -> T{
+	open func visitPartstat_todo(_ ctx: ICalendarParser.Partstat_todoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1635,7 +1635,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPartstat_jour(_ ctx: ICalendarParser.Partstat_jourContext) -> T{
+	open func visitPartstat_jour(_ ctx: ICalendarParser.Partstat_jourContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1645,7 +1645,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitB_char(_ ctx: ICalendarParser.B_charContext) -> T{
+	open func visitB_char(_ ctx: ICalendarParser.B_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1655,7 +1655,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDate_value(_ ctx: ICalendarParser.Date_valueContext) -> T{
+	open func visitDate_value(_ ctx: ICalendarParser.Date_valueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1665,7 +1665,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDate_fullyear(_ ctx: ICalendarParser.Date_fullyearContext) -> T{
+	open func visitDate_fullyear(_ ctx: ICalendarParser.Date_fullyearContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1675,7 +1675,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDate_month(_ ctx: ICalendarParser.Date_monthContext) -> T{
+	open func visitDate_month(_ ctx: ICalendarParser.Date_monthContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1685,7 +1685,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDate_mday(_ ctx: ICalendarParser.Date_mdayContext) -> T{
+	open func visitDate_mday(_ ctx: ICalendarParser.Date_mdayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1695,7 +1695,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTime_hour(_ ctx: ICalendarParser.Time_hourContext) -> T{
+	open func visitTime_hour(_ ctx: ICalendarParser.Time_hourContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1705,7 +1705,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTime_minute(_ ctx: ICalendarParser.Time_minuteContext) -> T{
+	open func visitTime_minute(_ ctx: ICalendarParser.Time_minuteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1715,7 +1715,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTime_second(_ ctx: ICalendarParser.Time_secondContext) -> T{
+	open func visitTime_second(_ ctx: ICalendarParser.Time_secondContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1725,7 +1725,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDur_date(_ ctx: ICalendarParser.Dur_dateContext) -> T{
+	open func visitDur_date(_ ctx: ICalendarParser.Dur_dateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1735,7 +1735,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDur_day(_ ctx: ICalendarParser.Dur_dayContext) -> T{
+	open func visitDur_day(_ ctx: ICalendarParser.Dur_dayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1745,7 +1745,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDur_time(_ ctx: ICalendarParser.Dur_timeContext) -> T{
+	open func visitDur_time(_ ctx: ICalendarParser.Dur_timeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1755,7 +1755,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDur_week(_ ctx: ICalendarParser.Dur_weekContext) -> T{
+	open func visitDur_week(_ ctx: ICalendarParser.Dur_weekContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1765,7 +1765,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDur_hour(_ ctx: ICalendarParser.Dur_hourContext) -> T{
+	open func visitDur_hour(_ ctx: ICalendarParser.Dur_hourContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1775,7 +1775,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDur_minute(_ ctx: ICalendarParser.Dur_minuteContext) -> T{
+	open func visitDur_minute(_ ctx: ICalendarParser.Dur_minuteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1785,7 +1785,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDur_second(_ ctx: ICalendarParser.Dur_secondContext) -> T{
+	open func visitDur_second(_ ctx: ICalendarParser.Dur_secondContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1795,7 +1795,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPeriod_explicit(_ ctx: ICalendarParser.Period_explicitContext) -> T{
+	open func visitPeriod_explicit(_ ctx: ICalendarParser.Period_explicitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1805,7 +1805,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPeriod_start(_ ctx: ICalendarParser.Period_startContext) -> T{
+	open func visitPeriod_start(_ ctx: ICalendarParser.Period_startContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1815,7 +1815,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRecur_rule_part(_ ctx: ICalendarParser.Recur_rule_partContext) -> T{
+	open func visitRecur_rule_part(_ ctx: ICalendarParser.Recur_rule_partContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1825,7 +1825,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFreq(_ ctx: ICalendarParser.FreqContext) -> T{
+	open func visitFreq(_ ctx: ICalendarParser.FreqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1835,7 +1835,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnddate(_ ctx: ICalendarParser.EnddateContext) -> T{
+	open func visitEnddate(_ ctx: ICalendarParser.EnddateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1845,7 +1845,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCount(_ ctx: ICalendarParser.CountContext) -> T{
+	open func visitCount(_ ctx: ICalendarParser.CountContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1855,7 +1855,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInterval(_ ctx: ICalendarParser.IntervalContext) -> T{
+	open func visitInterval(_ ctx: ICalendarParser.IntervalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1865,7 +1865,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitByseclist(_ ctx: ICalendarParser.ByseclistContext) -> T{
+	open func visitByseclist(_ ctx: ICalendarParser.ByseclistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1875,7 +1875,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitByminlist(_ ctx: ICalendarParser.ByminlistContext) -> T{
+	open func visitByminlist(_ ctx: ICalendarParser.ByminlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1885,7 +1885,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitByhrlist(_ ctx: ICalendarParser.ByhrlistContext) -> T{
+	open func visitByhrlist(_ ctx: ICalendarParser.ByhrlistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1895,7 +1895,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBywdaylist(_ ctx: ICalendarParser.BywdaylistContext) -> T{
+	open func visitBywdaylist(_ ctx: ICalendarParser.BywdaylistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1905,7 +1905,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWeekdaynum(_ ctx: ICalendarParser.WeekdaynumContext) -> T{
+	open func visitWeekdaynum(_ ctx: ICalendarParser.WeekdaynumContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1915,7 +1915,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWeekday(_ ctx: ICalendarParser.WeekdayContext) -> T{
+	open func visitWeekday(_ ctx: ICalendarParser.WeekdayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1925,7 +1925,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBymodaylist(_ ctx: ICalendarParser.BymodaylistContext) -> T{
+	open func visitBymodaylist(_ ctx: ICalendarParser.BymodaylistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1935,7 +1935,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitMonthdaynum(_ ctx: ICalendarParser.MonthdaynumContext) -> T{
+	open func visitMonthdaynum(_ ctx: ICalendarParser.MonthdaynumContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1945,7 +1945,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitByyrdaylist(_ ctx: ICalendarParser.ByyrdaylistContext) -> T{
+	open func visitByyrdaylist(_ ctx: ICalendarParser.ByyrdaylistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1955,7 +1955,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitYeardaynum(_ ctx: ICalendarParser.YeardaynumContext) -> T{
+	open func visitYeardaynum(_ ctx: ICalendarParser.YeardaynumContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1965,7 +1965,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrdyrday(_ ctx: ICalendarParser.OrdyrdayContext) -> T{
+	open func visitOrdyrday(_ ctx: ICalendarParser.OrdyrdayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1975,7 +1975,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBywknolist(_ ctx: ICalendarParser.BywknolistContext) -> T{
+	open func visitBywknolist(_ ctx: ICalendarParser.BywknolistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1985,7 +1985,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWeeknum(_ ctx: ICalendarParser.WeeknumContext) -> T{
+	open func visitWeeknum(_ ctx: ICalendarParser.WeeknumContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -1995,7 +1995,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBymolist(_ ctx: ICalendarParser.BymolistContext) -> T{
+	open func visitBymolist(_ ctx: ICalendarParser.BymolistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2005,7 +2005,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBysplist(_ ctx: ICalendarParser.BysplistContext) -> T{
+	open func visitBysplist(_ ctx: ICalendarParser.BysplistContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2015,7 +2015,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDigits_2(_ ctx: ICalendarParser.Digits_2Context) -> T{
+	open func visitDigits_2(_ ctx: ICalendarParser.Digits_2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2025,7 +2025,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDigits_1_2(_ ctx: ICalendarParser.Digits_1_2Context) -> T{
+	open func visitDigits_1_2(_ ctx: ICalendarParser.Digits_1_2Context) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2035,7 +2035,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSafe_char(_ ctx: ICalendarParser.Safe_charContext) -> T{
+	open func visitSafe_char(_ ctx: ICalendarParser.Safe_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2045,7 +2045,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue_char(_ ctx: ICalendarParser.Value_charContext) -> T{
+	open func visitValue_char(_ ctx: ICalendarParser.Value_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2055,7 +2055,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQsafe_char(_ ctx: ICalendarParser.Qsafe_charContext) -> T{
+	open func visitQsafe_char(_ ctx: ICalendarParser.Qsafe_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2065,7 +2065,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTsafe_char(_ ctx: ICalendarParser.Tsafe_charContext) -> T{
+	open func visitTsafe_char(_ ctx: ICalendarParser.Tsafe_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2075,7 +2075,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTime_numzone(_ ctx: ICalendarParser.Time_numzoneContext) -> T{
+	open func visitTime_numzone(_ ctx: ICalendarParser.Time_numzoneContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2085,7 +2085,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitReg_name_char(_ ctx: ICalendarParser.Reg_name_charContext) -> T{
+	open func visitReg_name_char(_ ctx: ICalendarParser.Reg_name_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2095,7 +2095,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLanguage_char(_ ctx: ICalendarParser.Language_charContext) -> T{
+	open func visitLanguage_char(_ ctx: ICalendarParser.Language_charContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2105,7 +2105,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitX_name(_ ctx: ICalendarParser.X_nameContext) -> T{
+	open func visitX_name(_ ctx: ICalendarParser.X_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2115,7 +2115,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlpha_num(_ ctx: ICalendarParser.Alpha_numContext) -> T{
+	open func visitAlpha_num(_ ctx: ICalendarParser.Alpha_numContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2125,7 +2125,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDigit(_ ctx: ICalendarParser.DigitContext) -> T{
+	open func visitDigit(_ ctx: ICalendarParser.DigitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2135,7 +2135,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAlpha(_ ctx: ICalendarParser.AlphaContext) -> T{
+	open func visitAlpha(_ ctx: ICalendarParser.AlphaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2145,7 +2145,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_accepted(_ ctx: ICalendarParser.K_acceptedContext) -> T{
+	open func visitK_accepted(_ ctx: ICalendarParser.K_acceptedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2155,7 +2155,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_action(_ ctx: ICalendarParser.K_actionContext) -> T{
+	open func visitK_action(_ ctx: ICalendarParser.K_actionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2165,7 +2165,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_address(_ ctx: ICalendarParser.K_addressContext) -> T{
+	open func visitK_address(_ ctx: ICalendarParser.K_addressContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2175,7 +2175,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_altrep(_ ctx: ICalendarParser.K_altrepContext) -> T{
+	open func visitK_altrep(_ ctx: ICalendarParser.K_altrepContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2185,7 +2185,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_attach(_ ctx: ICalendarParser.K_attachContext) -> T{
+	open func visitK_attach(_ ctx: ICalendarParser.K_attachContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2195,7 +2195,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_attendee(_ ctx: ICalendarParser.K_attendeeContext) -> T{
+	open func visitK_attendee(_ ctx: ICalendarParser.K_attendeeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2205,7 +2205,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_audio(_ ctx: ICalendarParser.K_audioContext) -> T{
+	open func visitK_audio(_ ctx: ICalendarParser.K_audioContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2215,7 +2215,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_base(_ ctx: ICalendarParser.K_baseContext) -> T{
+	open func visitK_base(_ ctx: ICalendarParser.K_baseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2225,7 +2225,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_begin(_ ctx: ICalendarParser.K_beginContext) -> T{
+	open func visitK_begin(_ ctx: ICalendarParser.K_beginContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2235,7 +2235,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_binary(_ ctx: ICalendarParser.K_binaryContext) -> T{
+	open func visitK_binary(_ ctx: ICalendarParser.K_binaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2245,7 +2245,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_bit(_ ctx: ICalendarParser.K_bitContext) -> T{
+	open func visitK_bit(_ ctx: ICalendarParser.K_bitContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2255,7 +2255,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_boolean(_ ctx: ICalendarParser.K_booleanContext) -> T{
+	open func visitK_boolean(_ ctx: ICalendarParser.K_booleanContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2265,7 +2265,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_busy(_ ctx: ICalendarParser.K_busyContext) -> T{
+	open func visitK_busy(_ ctx: ICalendarParser.K_busyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2275,7 +2275,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_busy_unavailable(_ ctx: ICalendarParser.K_busy_unavailableContext) -> T{
+	open func visitK_busy_unavailable(_ ctx: ICalendarParser.K_busy_unavailableContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2285,7 +2285,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_busy_tentative(_ ctx: ICalendarParser.K_busy_tentativeContext) -> T{
+	open func visitK_busy_tentative(_ ctx: ICalendarParser.K_busy_tentativeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2295,7 +2295,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_byday(_ ctx: ICalendarParser.K_bydayContext) -> T{
+	open func visitK_byday(_ ctx: ICalendarParser.K_bydayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2305,7 +2305,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_byhour(_ ctx: ICalendarParser.K_byhourContext) -> T{
+	open func visitK_byhour(_ ctx: ICalendarParser.K_byhourContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2315,7 +2315,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_byminute(_ ctx: ICalendarParser.K_byminuteContext) -> T{
+	open func visitK_byminute(_ ctx: ICalendarParser.K_byminuteContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2325,7 +2325,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_bymonth(_ ctx: ICalendarParser.K_bymonthContext) -> T{
+	open func visitK_bymonth(_ ctx: ICalendarParser.K_bymonthContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2335,7 +2335,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_bymonthday(_ ctx: ICalendarParser.K_bymonthdayContext) -> T{
+	open func visitK_bymonthday(_ ctx: ICalendarParser.K_bymonthdayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2345,7 +2345,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_bysecond(_ ctx: ICalendarParser.K_bysecondContext) -> T{
+	open func visitK_bysecond(_ ctx: ICalendarParser.K_bysecondContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2355,7 +2355,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_bysetpos(_ ctx: ICalendarParser.K_bysetposContext) -> T{
+	open func visitK_bysetpos(_ ctx: ICalendarParser.K_bysetposContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2365,7 +2365,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_byweekno(_ ctx: ICalendarParser.K_byweeknoContext) -> T{
+	open func visitK_byweekno(_ ctx: ICalendarParser.K_byweeknoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2375,7 +2375,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_byyearday(_ ctx: ICalendarParser.K_byyeardayContext) -> T{
+	open func visitK_byyearday(_ ctx: ICalendarParser.K_byyeardayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2385,7 +2385,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_cal_address(_ ctx: ICalendarParser.K_cal_addressContext) -> T{
+	open func visitK_cal_address(_ ctx: ICalendarParser.K_cal_addressContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2395,7 +2395,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_calscale(_ ctx: ICalendarParser.K_calscaleContext) -> T{
+	open func visitK_calscale(_ ctx: ICalendarParser.K_calscaleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2405,7 +2405,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_cancelled(_ ctx: ICalendarParser.K_cancelledContext) -> T{
+	open func visitK_cancelled(_ ctx: ICalendarParser.K_cancelledContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2415,7 +2415,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_categories(_ ctx: ICalendarParser.K_categoriesContext) -> T{
+	open func visitK_categories(_ ctx: ICalendarParser.K_categoriesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2425,7 +2425,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_chair(_ ctx: ICalendarParser.K_chairContext) -> T{
+	open func visitK_chair(_ ctx: ICalendarParser.K_chairContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2435,7 +2435,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_child(_ ctx: ICalendarParser.K_childContext) -> T{
+	open func visitK_child(_ ctx: ICalendarParser.K_childContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2445,7 +2445,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_class(_ ctx: ICalendarParser.K_classContext) -> T{
+	open func visitK_class(_ ctx: ICalendarParser.K_classContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2455,7 +2455,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_cn(_ ctx: ICalendarParser.K_cnContext) -> T{
+	open func visitK_cn(_ ctx: ICalendarParser.K_cnContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2465,7 +2465,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_comment(_ ctx: ICalendarParser.K_commentContext) -> T{
+	open func visitK_comment(_ ctx: ICalendarParser.K_commentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2475,7 +2475,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_completed(_ ctx: ICalendarParser.K_completedContext) -> T{
+	open func visitK_completed(_ ctx: ICalendarParser.K_completedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2485,7 +2485,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_confidential(_ ctx: ICalendarParser.K_confidentialContext) -> T{
+	open func visitK_confidential(_ ctx: ICalendarParser.K_confidentialContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2495,7 +2495,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_confirmed(_ ctx: ICalendarParser.K_confirmedContext) -> T{
+	open func visitK_confirmed(_ ctx: ICalendarParser.K_confirmedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2505,7 +2505,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_contact(_ ctx: ICalendarParser.K_contactContext) -> T{
+	open func visitK_contact(_ ctx: ICalendarParser.K_contactContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2515,7 +2515,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_count(_ ctx: ICalendarParser.K_countContext) -> T{
+	open func visitK_count(_ ctx: ICalendarParser.K_countContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2525,7 +2525,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_created(_ ctx: ICalendarParser.K_createdContext) -> T{
+	open func visitK_created(_ ctx: ICalendarParser.K_createdContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2535,7 +2535,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_cutype(_ ctx: ICalendarParser.K_cutypeContext) -> T{
+	open func visitK_cutype(_ ctx: ICalendarParser.K_cutypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2545,7 +2545,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_daily(_ ctx: ICalendarParser.K_dailyContext) -> T{
+	open func visitK_daily(_ ctx: ICalendarParser.K_dailyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2555,7 +2555,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_date(_ ctx: ICalendarParser.K_dateContext) -> T{
+	open func visitK_date(_ ctx: ICalendarParser.K_dateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2565,7 +2565,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_date_time(_ ctx: ICalendarParser.K_date_timeContext) -> T{
+	open func visitK_date_time(_ ctx: ICalendarParser.K_date_timeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2575,7 +2575,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_daylight(_ ctx: ICalendarParser.K_daylightContext) -> T{
+	open func visitK_daylight(_ ctx: ICalendarParser.K_daylightContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2585,7 +2585,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_declined(_ ctx: ICalendarParser.K_declinedContext) -> T{
+	open func visitK_declined(_ ctx: ICalendarParser.K_declinedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2595,7 +2595,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_delegated(_ ctx: ICalendarParser.K_delegatedContext) -> T{
+	open func visitK_delegated(_ ctx: ICalendarParser.K_delegatedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2605,7 +2605,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_delegated_from(_ ctx: ICalendarParser.K_delegated_fromContext) -> T{
+	open func visitK_delegated_from(_ ctx: ICalendarParser.K_delegated_fromContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2615,7 +2615,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_delegated_to(_ ctx: ICalendarParser.K_delegated_toContext) -> T{
+	open func visitK_delegated_to(_ ctx: ICalendarParser.K_delegated_toContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2625,7 +2625,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_description(_ ctx: ICalendarParser.K_descriptionContext) -> T{
+	open func visitK_description(_ ctx: ICalendarParser.K_descriptionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2635,7 +2635,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_dir(_ ctx: ICalendarParser.K_dirContext) -> T{
+	open func visitK_dir(_ ctx: ICalendarParser.K_dirContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2645,7 +2645,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_display(_ ctx: ICalendarParser.K_displayContext) -> T{
+	open func visitK_display(_ ctx: ICalendarParser.K_displayContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2655,7 +2655,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_draft(_ ctx: ICalendarParser.K_draftContext) -> T{
+	open func visitK_draft(_ ctx: ICalendarParser.K_draftContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2665,7 +2665,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_dtend(_ ctx: ICalendarParser.K_dtendContext) -> T{
+	open func visitK_dtend(_ ctx: ICalendarParser.K_dtendContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2675,7 +2675,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_dtstamp(_ ctx: ICalendarParser.K_dtstampContext) -> T{
+	open func visitK_dtstamp(_ ctx: ICalendarParser.K_dtstampContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2685,7 +2685,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_dtstart(_ ctx: ICalendarParser.K_dtstartContext) -> T{
+	open func visitK_dtstart(_ ctx: ICalendarParser.K_dtstartContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2695,7 +2695,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_due(_ ctx: ICalendarParser.K_dueContext) -> T{
+	open func visitK_due(_ ctx: ICalendarParser.K_dueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2705,7 +2705,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_duration(_ ctx: ICalendarParser.K_durationContext) -> T{
+	open func visitK_duration(_ ctx: ICalendarParser.K_durationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2715,7 +2715,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_email(_ ctx: ICalendarParser.K_emailContext) -> T{
+	open func visitK_email(_ ctx: ICalendarParser.K_emailContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2725,7 +2725,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_encoding(_ ctx: ICalendarParser.K_encodingContext) -> T{
+	open func visitK_encoding(_ ctx: ICalendarParser.K_encodingContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2735,7 +2735,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_end(_ ctx: ICalendarParser.K_endContext) -> T{
+	open func visitK_end(_ ctx: ICalendarParser.K_endContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2745,7 +2745,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_exdate(_ ctx: ICalendarParser.K_exdateContext) -> T{
+	open func visitK_exdate(_ ctx: ICalendarParser.K_exdateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2755,7 +2755,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_false(_ ctx: ICalendarParser.K_falseContext) -> T{
+	open func visitK_false(_ ctx: ICalendarParser.K_falseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2765,7 +2765,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_fbtype(_ ctx: ICalendarParser.K_fbtypeContext) -> T{
+	open func visitK_fbtype(_ ctx: ICalendarParser.K_fbtypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2775,7 +2775,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_final(_ ctx: ICalendarParser.K_finalContext) -> T{
+	open func visitK_final(_ ctx: ICalendarParser.K_finalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2785,7 +2785,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_float(_ ctx: ICalendarParser.K_floatContext) -> T{
+	open func visitK_float(_ ctx: ICalendarParser.K_floatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2795,7 +2795,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_fmttype(_ ctx: ICalendarParser.K_fmttypeContext) -> T{
+	open func visitK_fmttype(_ ctx: ICalendarParser.K_fmttypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2805,7 +2805,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_fr(_ ctx: ICalendarParser.K_frContext) -> T{
+	open func visitK_fr(_ ctx: ICalendarParser.K_frContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2815,7 +2815,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_free(_ ctx: ICalendarParser.K_freeContext) -> T{
+	open func visitK_free(_ ctx: ICalendarParser.K_freeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2825,7 +2825,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_freebusy(_ ctx: ICalendarParser.K_freebusyContext) -> T{
+	open func visitK_freebusy(_ ctx: ICalendarParser.K_freebusyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2835,7 +2835,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_freq(_ ctx: ICalendarParser.K_freqContext) -> T{
+	open func visitK_freq(_ ctx: ICalendarParser.K_freqContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2845,7 +2845,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_geo(_ ctx: ICalendarParser.K_geoContext) -> T{
+	open func visitK_geo(_ ctx: ICalendarParser.K_geoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2855,7 +2855,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_gregorian(_ ctx: ICalendarParser.K_gregorianContext) -> T{
+	open func visitK_gregorian(_ ctx: ICalendarParser.K_gregorianContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2865,7 +2865,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_group(_ ctx: ICalendarParser.K_groupContext) -> T{
+	open func visitK_group(_ ctx: ICalendarParser.K_groupContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2875,7 +2875,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_hourly(_ ctx: ICalendarParser.K_hourlyContext) -> T{
+	open func visitK_hourly(_ ctx: ICalendarParser.K_hourlyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2885,7 +2885,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_in_progress(_ ctx: ICalendarParser.K_in_progressContext) -> T{
+	open func visitK_in_progress(_ ctx: ICalendarParser.K_in_progressContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2895,7 +2895,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_individual(_ ctx: ICalendarParser.K_individualContext) -> T{
+	open func visitK_individual(_ ctx: ICalendarParser.K_individualContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2905,7 +2905,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_integer(_ ctx: ICalendarParser.K_integerContext) -> T{
+	open func visitK_integer(_ ctx: ICalendarParser.K_integerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2915,7 +2915,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_interval(_ ctx: ICalendarParser.K_intervalContext) -> T{
+	open func visitK_interval(_ ctx: ICalendarParser.K_intervalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2925,7 +2925,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_language(_ ctx: ICalendarParser.K_languageContext) -> T{
+	open func visitK_language(_ ctx: ICalendarParser.K_languageContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2935,7 +2935,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_last_modified(_ ctx: ICalendarParser.K_last_modifiedContext) -> T{
+	open func visitK_last_modified(_ ctx: ICalendarParser.K_last_modifiedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2945,7 +2945,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_location(_ ctx: ICalendarParser.K_locationContext) -> T{
+	open func visitK_location(_ ctx: ICalendarParser.K_locationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2955,7 +2955,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_member(_ ctx: ICalendarParser.K_memberContext) -> T{
+	open func visitK_member(_ ctx: ICalendarParser.K_memberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2965,7 +2965,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_method(_ ctx: ICalendarParser.K_methodContext) -> T{
+	open func visitK_method(_ ctx: ICalendarParser.K_methodContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2975,7 +2975,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_minutely(_ ctx: ICalendarParser.K_minutelyContext) -> T{
+	open func visitK_minutely(_ ctx: ICalendarParser.K_minutelyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2985,7 +2985,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_mo(_ ctx: ICalendarParser.K_moContext) -> T{
+	open func visitK_mo(_ ctx: ICalendarParser.K_moContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -2995,7 +2995,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_monthly(_ ctx: ICalendarParser.K_monthlyContext) -> T{
+	open func visitK_monthly(_ ctx: ICalendarParser.K_monthlyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3005,7 +3005,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_needs_action(_ ctx: ICalendarParser.K_needs_actionContext) -> T{
+	open func visitK_needs_action(_ ctx: ICalendarParser.K_needs_actionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3015,7 +3015,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_non_participant(_ ctx: ICalendarParser.K_non_participantContext) -> T{
+	open func visitK_non_participant(_ ctx: ICalendarParser.K_non_participantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3025,7 +3025,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_opaque(_ ctx: ICalendarParser.K_opaqueContext) -> T{
+	open func visitK_opaque(_ ctx: ICalendarParser.K_opaqueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3035,7 +3035,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_opt_participant(_ ctx: ICalendarParser.K_opt_participantContext) -> T{
+	open func visitK_opt_participant(_ ctx: ICalendarParser.K_opt_participantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3045,7 +3045,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_organizer(_ ctx: ICalendarParser.K_organizerContext) -> T{
+	open func visitK_organizer(_ ctx: ICalendarParser.K_organizerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3055,7 +3055,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_parent(_ ctx: ICalendarParser.K_parentContext) -> T{
+	open func visitK_parent(_ ctx: ICalendarParser.K_parentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3065,7 +3065,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_participant(_ ctx: ICalendarParser.K_participantContext) -> T{
+	open func visitK_participant(_ ctx: ICalendarParser.K_participantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3075,7 +3075,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_partstat(_ ctx: ICalendarParser.K_partstatContext) -> T{
+	open func visitK_partstat(_ ctx: ICalendarParser.K_partstatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3085,7 +3085,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_percent_complete(_ ctx: ICalendarParser.K_percent_completeContext) -> T{
+	open func visitK_percent_complete(_ ctx: ICalendarParser.K_percent_completeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3095,7 +3095,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_period(_ ctx: ICalendarParser.K_periodContext) -> T{
+	open func visitK_period(_ ctx: ICalendarParser.K_periodContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3105,7 +3105,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_priority(_ ctx: ICalendarParser.K_priorityContext) -> T{
+	open func visitK_priority(_ ctx: ICalendarParser.K_priorityContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3115,7 +3115,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_private(_ ctx: ICalendarParser.K_privateContext) -> T{
+	open func visitK_private(_ ctx: ICalendarParser.K_privateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3125,7 +3125,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_process(_ ctx: ICalendarParser.K_processContext) -> T{
+	open func visitK_process(_ ctx: ICalendarParser.K_processContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3135,7 +3135,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_prodid(_ ctx: ICalendarParser.K_prodidContext) -> T{
+	open func visitK_prodid(_ ctx: ICalendarParser.K_prodidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3145,7 +3145,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_public(_ ctx: ICalendarParser.K_publicContext) -> T{
+	open func visitK_public(_ ctx: ICalendarParser.K_publicContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3155,7 +3155,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_range(_ ctx: ICalendarParser.K_rangeContext) -> T{
+	open func visitK_range(_ ctx: ICalendarParser.K_rangeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3165,7 +3165,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_rdate(_ ctx: ICalendarParser.K_rdateContext) -> T{
+	open func visitK_rdate(_ ctx: ICalendarParser.K_rdateContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3175,7 +3175,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_recur(_ ctx: ICalendarParser.K_recurContext) -> T{
+	open func visitK_recur(_ ctx: ICalendarParser.K_recurContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3185,7 +3185,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_recurrence_id(_ ctx: ICalendarParser.K_recurrence_idContext) -> T{
+	open func visitK_recurrence_id(_ ctx: ICalendarParser.K_recurrence_idContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3195,7 +3195,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_relat(_ ctx: ICalendarParser.K_relatContext) -> T{
+	open func visitK_relat(_ ctx: ICalendarParser.K_relatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3205,7 +3205,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_related(_ ctx: ICalendarParser.K_relatedContext) -> T{
+	open func visitK_related(_ ctx: ICalendarParser.K_relatedContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3215,7 +3215,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_related_to(_ ctx: ICalendarParser.K_related_toContext) -> T{
+	open func visitK_related_to(_ ctx: ICalendarParser.K_related_toContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3225,7 +3225,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_reltype(_ ctx: ICalendarParser.K_reltypeContext) -> T{
+	open func visitK_reltype(_ ctx: ICalendarParser.K_reltypeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3235,7 +3235,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_repeat(_ ctx: ICalendarParser.K_repeatContext) -> T{
+	open func visitK_repeat(_ ctx: ICalendarParser.K_repeatContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3245,7 +3245,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_req_participant(_ ctx: ICalendarParser.K_req_participantContext) -> T{
+	open func visitK_req_participant(_ ctx: ICalendarParser.K_req_participantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3255,7 +3255,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_request_status(_ ctx: ICalendarParser.K_request_statusContext) -> T{
+	open func visitK_request_status(_ ctx: ICalendarParser.K_request_statusContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3265,7 +3265,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_resource(_ ctx: ICalendarParser.K_resourceContext) -> T{
+	open func visitK_resource(_ ctx: ICalendarParser.K_resourceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3275,7 +3275,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_resources(_ ctx: ICalendarParser.K_resourcesContext) -> T{
+	open func visitK_resources(_ ctx: ICalendarParser.K_resourcesContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3285,7 +3285,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_role(_ ctx: ICalendarParser.K_roleContext) -> T{
+	open func visitK_role(_ ctx: ICalendarParser.K_roleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3295,7 +3295,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_room(_ ctx: ICalendarParser.K_roomContext) -> T{
+	open func visitK_room(_ ctx: ICalendarParser.K_roomContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3305,7 +3305,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_rrule(_ ctx: ICalendarParser.K_rruleContext) -> T{
+	open func visitK_rrule(_ ctx: ICalendarParser.K_rruleContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3315,7 +3315,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_rsvp(_ ctx: ICalendarParser.K_rsvpContext) -> T{
+	open func visitK_rsvp(_ ctx: ICalendarParser.K_rsvpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3325,7 +3325,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_sa(_ ctx: ICalendarParser.K_saContext) -> T{
+	open func visitK_sa(_ ctx: ICalendarParser.K_saContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3335,7 +3335,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_secondly(_ ctx: ICalendarParser.K_secondlyContext) -> T{
+	open func visitK_secondly(_ ctx: ICalendarParser.K_secondlyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3345,7 +3345,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_sent_by(_ ctx: ICalendarParser.K_sent_byContext) -> T{
+	open func visitK_sent_by(_ ctx: ICalendarParser.K_sent_byContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3355,7 +3355,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_sequence(_ ctx: ICalendarParser.K_sequenceContext) -> T{
+	open func visitK_sequence(_ ctx: ICalendarParser.K_sequenceContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3365,7 +3365,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_sibling(_ ctx: ICalendarParser.K_siblingContext) -> T{
+	open func visitK_sibling(_ ctx: ICalendarParser.K_siblingContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3375,7 +3375,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_standard(_ ctx: ICalendarParser.K_standardContext) -> T{
+	open func visitK_standard(_ ctx: ICalendarParser.K_standardContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3385,7 +3385,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_start(_ ctx: ICalendarParser.K_startContext) -> T{
+	open func visitK_start(_ ctx: ICalendarParser.K_startContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3395,7 +3395,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_status(_ ctx: ICalendarParser.K_statusContext) -> T{
+	open func visitK_status(_ ctx: ICalendarParser.K_statusContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3405,7 +3405,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_su(_ ctx: ICalendarParser.K_suContext) -> T{
+	open func visitK_su(_ ctx: ICalendarParser.K_suContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3415,7 +3415,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_summary(_ ctx: ICalendarParser.K_summaryContext) -> T{
+	open func visitK_summary(_ ctx: ICalendarParser.K_summaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3425,7 +3425,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_tentative(_ ctx: ICalendarParser.K_tentativeContext) -> T{
+	open func visitK_tentative(_ ctx: ICalendarParser.K_tentativeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3435,7 +3435,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_text(_ ctx: ICalendarParser.K_textContext) -> T{
+	open func visitK_text(_ ctx: ICalendarParser.K_textContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3445,7 +3445,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_th(_ ctx: ICalendarParser.K_thContext) -> T{
+	open func visitK_th(_ ctx: ICalendarParser.K_thContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3455,7 +3455,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_thisandfuture(_ ctx: ICalendarParser.K_thisandfutureContext) -> T{
+	open func visitK_thisandfuture(_ ctx: ICalendarParser.K_thisandfutureContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3465,7 +3465,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_time(_ ctx: ICalendarParser.K_timeContext) -> T{
+	open func visitK_time(_ ctx: ICalendarParser.K_timeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3475,7 +3475,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_transp(_ ctx: ICalendarParser.K_transpContext) -> T{
+	open func visitK_transp(_ ctx: ICalendarParser.K_transpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3485,7 +3485,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_transparent(_ ctx: ICalendarParser.K_transparentContext) -> T{
+	open func visitK_transparent(_ ctx: ICalendarParser.K_transparentContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3495,7 +3495,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_trigger(_ ctx: ICalendarParser.K_triggerContext) -> T{
+	open func visitK_trigger(_ ctx: ICalendarParser.K_triggerContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3505,7 +3505,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_true(_ ctx: ICalendarParser.K_trueContext) -> T{
+	open func visitK_true(_ ctx: ICalendarParser.K_trueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3515,7 +3515,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_tu(_ ctx: ICalendarParser.K_tuContext) -> T{
+	open func visitK_tu(_ ctx: ICalendarParser.K_tuContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3525,7 +3525,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_tzid(_ ctx: ICalendarParser.K_tzidContext) -> T{
+	open func visitK_tzid(_ ctx: ICalendarParser.K_tzidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3535,7 +3535,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_tzname(_ ctx: ICalendarParser.K_tznameContext) -> T{
+	open func visitK_tzname(_ ctx: ICalendarParser.K_tznameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3545,7 +3545,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_tzoffsetfrom(_ ctx: ICalendarParser.K_tzoffsetfromContext) -> T{
+	open func visitK_tzoffsetfrom(_ ctx: ICalendarParser.K_tzoffsetfromContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3555,7 +3555,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_tzoffsetto(_ ctx: ICalendarParser.K_tzoffsettoContext) -> T{
+	open func visitK_tzoffsetto(_ ctx: ICalendarParser.K_tzoffsettoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3565,7 +3565,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_tzurl(_ ctx: ICalendarParser.K_tzurlContext) -> T{
+	open func visitK_tzurl(_ ctx: ICalendarParser.K_tzurlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3575,7 +3575,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_uid(_ ctx: ICalendarParser.K_uidContext) -> T{
+	open func visitK_uid(_ ctx: ICalendarParser.K_uidContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3585,7 +3585,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_unknown(_ ctx: ICalendarParser.K_unknownContext) -> T{
+	open func visitK_unknown(_ ctx: ICalendarParser.K_unknownContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3595,7 +3595,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_until(_ ctx: ICalendarParser.K_untilContext) -> T{
+	open func visitK_until(_ ctx: ICalendarParser.K_untilContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3605,7 +3605,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_uri(_ ctx: ICalendarParser.K_uriContext) -> T{
+	open func visitK_uri(_ ctx: ICalendarParser.K_uriContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3615,7 +3615,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_url(_ ctx: ICalendarParser.K_urlContext) -> T{
+	open func visitK_url(_ ctx: ICalendarParser.K_urlContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3625,7 +3625,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_utc_offset(_ ctx: ICalendarParser.K_utc_offsetContext) -> T{
+	open func visitK_utc_offset(_ ctx: ICalendarParser.K_utc_offsetContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3635,7 +3635,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_valarm(_ ctx: ICalendarParser.K_valarmContext) -> T{
+	open func visitK_valarm(_ ctx: ICalendarParser.K_valarmContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3645,7 +3645,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_value(_ ctx: ICalendarParser.K_valueContext) -> T{
+	open func visitK_value(_ ctx: ICalendarParser.K_valueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3655,7 +3655,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_vcalendar(_ ctx: ICalendarParser.K_vcalendarContext) -> T{
+	open func visitK_vcalendar(_ ctx: ICalendarParser.K_vcalendarContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3665,7 +3665,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_version(_ ctx: ICalendarParser.K_versionContext) -> T{
+	open func visitK_version(_ ctx: ICalendarParser.K_versionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3675,7 +3675,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_vevent(_ ctx: ICalendarParser.K_veventContext) -> T{
+	open func visitK_vevent(_ ctx: ICalendarParser.K_veventContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3685,7 +3685,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_vfreebusy(_ ctx: ICalendarParser.K_vfreebusyContext) -> T{
+	open func visitK_vfreebusy(_ ctx: ICalendarParser.K_vfreebusyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3695,7 +3695,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_vjournal(_ ctx: ICalendarParser.K_vjournalContext) -> T{
+	open func visitK_vjournal(_ ctx: ICalendarParser.K_vjournalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3705,7 +3705,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_vtimezone(_ ctx: ICalendarParser.K_vtimezoneContext) -> T{
+	open func visitK_vtimezone(_ ctx: ICalendarParser.K_vtimezoneContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3715,7 +3715,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_vtodo(_ ctx: ICalendarParser.K_vtodoContext) -> T{
+	open func visitK_vtodo(_ ctx: ICalendarParser.K_vtodoContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3725,7 +3725,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_we(_ ctx: ICalendarParser.K_weContext) -> T{
+	open func visitK_we(_ ctx: ICalendarParser.K_weContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3735,7 +3735,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_weekly(_ ctx: ICalendarParser.K_weeklyContext) -> T{
+	open func visitK_weekly(_ ctx: ICalendarParser.K_weeklyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3745,7 +3745,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_wkst(_ ctx: ICalendarParser.K_wkstContext) -> T{
+	open func visitK_wkst(_ ctx: ICalendarParser.K_wkstContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -3755,7 +3755,7 @@ open class ICalendarVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitK_yearly(_ ctx: ICalendarParser.K_yearlyContext) -> T{
+	open func visitK_yearly(_ ctx: ICalendarParser.K_yearlyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

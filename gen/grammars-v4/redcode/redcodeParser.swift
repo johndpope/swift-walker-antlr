@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/redcode/redcode.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/redcode/redcode.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class redcodeParser: Parser {
@@ -11,8 +11,11 @@ open class redcodeParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, A = 10, B = 11, AB = 12, 
                  BA = 13, F = 14, X = 15, I = 16, DAT = 17, MOV = 18, ADD = 19, 
@@ -20,9 +23,13 @@ open class redcodeParser: Parser {
                  JMN = 26, DJN = 27, CMP = 28, SLT = 29, DJZ = 30, SPL = 31, 
                  ORG = 32, NUMBER = 33, COMMENT = 34, EOL = 35, WS = 36
 	}
-	public static let RULE_file = 0, RULE_line = 1, RULE_instruction = 2, RULE_opcode = 3, 
-                   RULE_modifier = 4, RULE_mmode = 5, RULE_number = 6, RULE_comment = 7
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_file = 0, RULE_line = 1, RULE_instruction = 2, RULE_opcode = 3, 
+            RULE_modifier = 4, RULE_mmode = 5, RULE_number = 6, RULE_comment = 7
+
+	public
+	static let ruleNames: [String] = [
 		"file", "line", "instruction", "opcode", "modifier", "mmode", "number", 
 		"comment"
 	]
@@ -39,88 +46,73 @@ open class redcodeParser: Parser {
 		"JMZ", "JMN", "DJN", "CMP", "SLT", "DJZ", "SPL", "ORG", "NUMBER", "COMMENT", 
 		"EOL", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "redcode.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return redcodeParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "redcode.g4" }
+	override open
+	func getSerializedATN() -> String { return redcodeParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return redcodeParser.ruleNames }
+	override open
+	func getATN() -> ATN { return redcodeParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return redcodeParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return redcodeParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return redcodeParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,redcodeParser._ATN,redcodeParser._decisionToDFA, redcodeParser._sharedContextCache)
 	}
-	open class FileContext:ParserRuleContext {
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
+
+	public class FileContext: ParserRuleContext {
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return redcodeParser.RULE_file
 		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return redcodeParser.RULE_file }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).enterFile(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.enterFile(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).exitFile(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.exitFile(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is redcodeVisitor {
-			     return (visitor as! redcodeVisitor<T>).visitFile(self)
-			}else if visitor is redcodeBaseVisitor {
-		    	 return (visitor as! redcodeBaseVisitor<T>).visitFile(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? redcodeVisitor {
+			    return visitor.visitFile(self)
+			}
+			else if let visitor = visitor as? redcodeBaseVisitor {
+			    return visitor.visitFile(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func file() throws -> FileContext {
+	 open func file() throws -> FileContext {
 		var _localctx: FileContext = FileContext(_ctx, getState())
 		try enterRule(_localctx, 0, redcodeParser.RULE_file)
 		var _la: Int = 0
@@ -158,41 +150,51 @@ open class redcodeParser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func EOL() -> TerminalNode? { return getToken(redcodeParser.Tokens.EOL.rawValue, 0) }
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func EOL() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.EOL.rawValue, 0)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+			open
+			func instruction() -> InstructionContext? {
+				return getRuleContext(InstructionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return redcodeParser.RULE_line
 		}
-		open func instruction() -> InstructionContext? {
-			return getRuleContext(InstructionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return redcodeParser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is redcodeVisitor {
-			     return (visitor as! redcodeVisitor<T>).visitLine(self)
-			}else if visitor is redcodeBaseVisitor {
-		    	 return (visitor as! redcodeBaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? redcodeVisitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? redcodeBaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 2, redcodeParser.RULE_line)
 		defer {
@@ -229,7 +231,7 @@ open class redcodeParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(25)
 		 	try match(redcodeParser.Tokens.EOL.rawValue)
@@ -243,55 +245,67 @@ open class redcodeParser: Parser {
 
 		return _localctx
 	}
-	open class InstructionContext:ParserRuleContext {
-		open func opcode() -> OpcodeContext? {
-			return getRuleContext(OpcodeContext.self,0)
+
+	public class InstructionContext: ParserRuleContext {
+			open
+			func opcode() -> OpcodeContext? {
+				return getRuleContext(OpcodeContext.self, 0)
+			}
+			open
+			func number() -> [NumberContext] {
+				return getRuleContexts(NumberContext.self)
+			}
+			open
+			func number(_ i: Int) -> NumberContext? {
+				return getRuleContext(NumberContext.self, i)
+			}
+			open
+			func modifier() -> ModifierContext? {
+				return getRuleContext(ModifierContext.self, 0)
+			}
+			open
+			func mmode() -> [MmodeContext] {
+				return getRuleContexts(MmodeContext.self)
+			}
+			open
+			func mmode(_ i: Int) -> MmodeContext? {
+				return getRuleContext(MmodeContext.self, i)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return redcodeParser.RULE_instruction
 		}
-		open func number() -> Array<NumberContext> {
-			return getRuleContexts(NumberContext.self)
-		}
-		open func number(_ i: Int) -> NumberContext? {
-			return getRuleContext(NumberContext.self,i)
-		}
-		open func modifier() -> ModifierContext? {
-			return getRuleContext(ModifierContext.self,0)
-		}
-		open func mmode() -> Array<MmodeContext> {
-			return getRuleContexts(MmodeContext.self)
-		}
-		open func mmode(_ i: Int) -> MmodeContext? {
-			return getRuleContext(MmodeContext.self,i)
-		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return redcodeParser.RULE_instruction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).enterInstruction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.enterInstruction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).exitInstruction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.exitInstruction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is redcodeVisitor {
-			     return (visitor as! redcodeVisitor<T>).visitInstruction(self)
-			}else if visitor is redcodeBaseVisitor {
-		    	 return (visitor as! redcodeBaseVisitor<T>).visitInstruction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? redcodeVisitor {
+			    return visitor.visitInstruction(self)
+			}
+			else if let visitor = visitor as? redcodeBaseVisitor {
+			    return visitor.visitInstruction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func instruction() throws -> InstructionContext {
+	 open func instruction() throws -> InstructionContext {
 		var _localctx: InstructionContext = InstructionContext(_ctx, getState())
 		try enterRule(_localctx, 4, redcodeParser.RULE_instruction)
 		var _la: Int = 0
@@ -389,50 +403,103 @@ open class redcodeParser: Parser {
 
 		return _localctx
 	}
-	open class OpcodeContext:ParserRuleContext {
-		open func DAT() -> TerminalNode? { return getToken(redcodeParser.Tokens.DAT.rawValue, 0) }
-		open func MOV() -> TerminalNode? { return getToken(redcodeParser.Tokens.MOV.rawValue, 0) }
-		open func ADD() -> TerminalNode? { return getToken(redcodeParser.Tokens.ADD.rawValue, 0) }
-		open func SUB() -> TerminalNode? { return getToken(redcodeParser.Tokens.SUB.rawValue, 0) }
-		open func MUL() -> TerminalNode? { return getToken(redcodeParser.Tokens.MUL.rawValue, 0) }
-		open func DIV() -> TerminalNode? { return getToken(redcodeParser.Tokens.DIV.rawValue, 0) }
-		open func MOD() -> TerminalNode? { return getToken(redcodeParser.Tokens.MOD.rawValue, 0) }
-		open func JMP() -> TerminalNode? { return getToken(redcodeParser.Tokens.JMP.rawValue, 0) }
-		open func JMZ() -> TerminalNode? { return getToken(redcodeParser.Tokens.JMZ.rawValue, 0) }
-		open func JMN() -> TerminalNode? { return getToken(redcodeParser.Tokens.JMN.rawValue, 0) }
-		open func DJN() -> TerminalNode? { return getToken(redcodeParser.Tokens.DJN.rawValue, 0) }
-		open func CMP() -> TerminalNode? { return getToken(redcodeParser.Tokens.CMP.rawValue, 0) }
-		open func SLT() -> TerminalNode? { return getToken(redcodeParser.Tokens.SLT.rawValue, 0) }
-		open func SPL() -> TerminalNode? { return getToken(redcodeParser.Tokens.SPL.rawValue, 0) }
-		open func ORG() -> TerminalNode? { return getToken(redcodeParser.Tokens.ORG.rawValue, 0) }
-		open func DJZ() -> TerminalNode? { return getToken(redcodeParser.Tokens.DJZ.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return redcodeParser.RULE_opcode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).enterOpcode(self)
+
+	public class OpcodeContext: ParserRuleContext {
+			open
+			func DAT() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.DAT.rawValue, 0)
+			}
+			open
+			func MOV() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.MOV.rawValue, 0)
+			}
+			open
+			func ADD() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.ADD.rawValue, 0)
+			}
+			open
+			func SUB() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.SUB.rawValue, 0)
+			}
+			open
+			func MUL() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.MUL.rawValue, 0)
+			}
+			open
+			func DIV() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.DIV.rawValue, 0)
+			}
+			open
+			func MOD() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.MOD.rawValue, 0)
+			}
+			open
+			func JMP() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.JMP.rawValue, 0)
+			}
+			open
+			func JMZ() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.JMZ.rawValue, 0)
+			}
+			open
+			func JMN() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.JMN.rawValue, 0)
+			}
+			open
+			func DJN() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.DJN.rawValue, 0)
+			}
+			open
+			func CMP() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.CMP.rawValue, 0)
+			}
+			open
+			func SLT() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.SLT.rawValue, 0)
+			}
+			open
+			func SPL() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.SPL.rawValue, 0)
+			}
+			open
+			func ORG() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.ORG.rawValue, 0)
+			}
+			open
+			func DJZ() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.DJZ.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return redcodeParser.RULE_opcode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.enterOpcode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).exitOpcode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.exitOpcode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is redcodeVisitor {
-			     return (visitor as! redcodeVisitor<T>).visitOpcode(self)
-			}else if visitor is redcodeBaseVisitor {
-		    	 return (visitor as! redcodeBaseVisitor<T>).visitOpcode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? redcodeVisitor {
+			    return visitor.visitOpcode(self)
+			}
+			else if let visitor = visitor as? redcodeBaseVisitor {
+			    return visitor.visitOpcode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func opcode() throws -> OpcodeContext {
+	 open func opcode() throws -> OpcodeContext {
 		var _localctx: OpcodeContext = OpcodeContext(_ctx, getState())
 		try enterRule(_localctx, 6, redcodeParser.RULE_opcode)
 		var _la: Int = 0
@@ -467,41 +534,67 @@ open class redcodeParser: Parser {
 
 		return _localctx
 	}
-	open class ModifierContext:ParserRuleContext {
-		open func A() -> TerminalNode? { return getToken(redcodeParser.Tokens.A.rawValue, 0) }
-		open func B() -> TerminalNode? { return getToken(redcodeParser.Tokens.B.rawValue, 0) }
-		open func AB() -> TerminalNode? { return getToken(redcodeParser.Tokens.AB.rawValue, 0) }
-		open func BA() -> TerminalNode? { return getToken(redcodeParser.Tokens.BA.rawValue, 0) }
-		open func F() -> TerminalNode? { return getToken(redcodeParser.Tokens.F.rawValue, 0) }
-		open func X() -> TerminalNode? { return getToken(redcodeParser.Tokens.X.rawValue, 0) }
-		open func I() -> TerminalNode? { return getToken(redcodeParser.Tokens.I.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return redcodeParser.RULE_modifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).enterModifier(self)
+
+	public class ModifierContext: ParserRuleContext {
+			open
+			func A() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.A.rawValue, 0)
+			}
+			open
+			func B() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.B.rawValue, 0)
+			}
+			open
+			func AB() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.AB.rawValue, 0)
+			}
+			open
+			func BA() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.BA.rawValue, 0)
+			}
+			open
+			func F() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.F.rawValue, 0)
+			}
+			open
+			func X() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.X.rawValue, 0)
+			}
+			open
+			func I() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.I.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return redcodeParser.RULE_modifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.enterModifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).exitModifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.exitModifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is redcodeVisitor {
-			     return (visitor as! redcodeVisitor<T>).visitModifier(self)
-			}else if visitor is redcodeBaseVisitor {
-		    	 return (visitor as! redcodeBaseVisitor<T>).visitModifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? redcodeVisitor {
+			    return visitor.visitModifier(self)
+			}
+			else if let visitor = visitor as? redcodeBaseVisitor {
+			    return visitor.visitModifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func modifier() throws -> ModifierContext {
+	 open func modifier() throws -> ModifierContext {
 		var _localctx: ModifierContext = ModifierContext(_ctx, getState())
 		try enterRule(_localctx, 8, redcodeParser.RULE_modifier)
 		var _la: Int = 0
@@ -536,34 +629,39 @@ open class redcodeParser: Parser {
 
 		return _localctx
 	}
-	open class MmodeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return redcodeParser.RULE_mmode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).enterMmode(self)
+
+	public class MmodeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return redcodeParser.RULE_mmode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.enterMmode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).exitMmode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.exitMmode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is redcodeVisitor {
-			     return (visitor as! redcodeVisitor<T>).visitMmode(self)
-			}else if visitor is redcodeBaseVisitor {
-		    	 return (visitor as! redcodeBaseVisitor<T>).visitMmode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? redcodeVisitor {
+			    return visitor.visitMmode(self)
+			}
+			else if let visitor = visitor as? redcodeBaseVisitor {
+			    return visitor.visitMmode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func mmode() throws -> MmodeContext {
+	 open func mmode() throws -> MmodeContext {
 		var _localctx: MmodeContext = MmodeContext(_ctx, getState())
 		try enterRule(_localctx, 10, redcodeParser.RULE_mmode)
 		var _la: Int = 0
@@ -598,35 +696,43 @@ open class redcodeParser: Parser {
 
 		return _localctx
 	}
-	open class NumberContext:ParserRuleContext {
-		open func NUMBER() -> TerminalNode? { return getToken(redcodeParser.Tokens.NUMBER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return redcodeParser.RULE_number }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).enterNumber(self)
+
+	public class NumberContext: ParserRuleContext {
+			open
+			func NUMBER() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.NUMBER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return redcodeParser.RULE_number
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.enterNumber(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).exitNumber(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.exitNumber(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is redcodeVisitor {
-			     return (visitor as! redcodeVisitor<T>).visitNumber(self)
-			}else if visitor is redcodeBaseVisitor {
-		    	 return (visitor as! redcodeBaseVisitor<T>).visitNumber(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? redcodeVisitor {
+			    return visitor.visitNumber(self)
+			}
+			else if let visitor = visitor as? redcodeBaseVisitor {
+			    return visitor.visitNumber(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func number() throws -> NumberContext {
+	 open func number() throws -> NumberContext {
 		var _localctx: NumberContext = NumberContext(_ctx, getState())
 		try enterRule(_localctx, 12, redcodeParser.RULE_number)
 		var _la: Int = 0
@@ -671,35 +777,43 @@ open class redcodeParser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func COMMENT() -> TerminalNode? { return getToken(redcodeParser.Tokens.COMMENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return redcodeParser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).enterComment(self)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(redcodeParser.Tokens.COMMENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return redcodeParser.RULE_comment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is redcodeListener {
-			 	(listener as! redcodeListener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? redcodeListener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is redcodeVisitor {
-			     return (visitor as! redcodeVisitor<T>).visitComment(self)
-			}else if visitor is redcodeBaseVisitor {
-		    	 return (visitor as! redcodeBaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? redcodeVisitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? redcodeBaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 14, redcodeParser.RULE_comment)
 		defer {
@@ -720,6 +834,10 @@ open class redcodeParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = redcodeParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = redcodeParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

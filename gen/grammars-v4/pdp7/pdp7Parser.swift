@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/pdp7/pdp7.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/pdp7/pdp7.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class pdp7Parser: Parser {
@@ -11,8 +11,11 @@ open class pdp7Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, 
                  T__6 = 7, T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, 
                  T__12 = 13, T__13 = 14, T__14 = 15, T__15 = 16, T__16 = 17, 
@@ -36,13 +39,16 @@ open class pdp7Parser: Parser {
                  NUMERIC_LITERAL = 103, DECIMAL = 104, OCTAL = 105, DECIMAL_MINUS = 106, 
                  STRING = 107, CHAR = 108, COMMENT = 109, EOL = 110, WS = 111
 	}
-	public static let RULE_prog = 0, RULE_line = 1, RULE_declarations = 2, 
-                   RULE_declaration = 3, RULE_declarationRight = 4, RULE_instruction = 5, 
-                   RULE_argument = 6, RULE_assignment = 7, RULE_symbol = 8, 
-                   RULE_expression = 9, RULE_multiplyingExpression = 10, 
-                   RULE_atom = 11, RULE_string = 12, RULE_eol = 13, RULE_comment = 14, 
-                   RULE_label = 15, RULE_variable = 16, RULE_opcode = 17
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_prog = 0, RULE_line = 1, RULE_declarations = 2, RULE_declaration = 3, 
+            RULE_declarationRight = 4, RULE_instruction = 5, RULE_argument = 6, 
+            RULE_assignment = 7, RULE_symbol = 8, RULE_expression = 9, RULE_multiplyingExpression = 10, 
+            RULE_atom = 11, RULE_string = 12, RULE_eol = 13, RULE_comment = 14, 
+            RULE_label = 15, RULE_variable = 16, RULE_opcode = 17
+
+	public
+	static let ruleNames: [String] = [
 		"prog", "line", "declarations", "declaration", "declarationRight", "instruction", 
 		"argument", "assignment", "symbol", "expression", "multiplyingExpression", 
 		"atom", "string", "eol", "comment", "label", "variable", "opcode"
@@ -75,95 +81,85 @@ open class pdp7Parser: Parser {
 		"DECIMAL", "OCTAL", "DECIMAL_MINUS", "STRING", "CHAR", "COMMENT", "EOL", 
 		"WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "pdp7.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return pdp7Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "pdp7.g4" }
+	override open
+	func getSerializedATN() -> String { return pdp7Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return pdp7Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return pdp7Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return pdp7Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return pdp7Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return pdp7Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,pdp7Parser._ATN,pdp7Parser._decisionToDFA, pdp7Parser._sharedContextCache)
 	}
-	open class ProgContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(pdp7Parser.Tokens.EOF.rawValue, 0) }
-		open func eol() -> Array<EolContext> {
-			return getRuleContexts(EolContext.self)
+
+	public class ProgContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func eol() -> [EolContext] {
+				return getRuleContexts(EolContext.self)
+			}
+			open
+			func eol(_ i: Int) -> EolContext? {
+				return getRuleContext(EolContext.self, i)
+			}
+			open
+			func line() -> [LineContext] {
+				return getRuleContexts(LineContext.self)
+			}
+			open
+			func line(_ i: Int) -> LineContext? {
+				return getRuleContext(LineContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_prog
 		}
-		open func eol(_ i: Int) -> EolContext? {
-			return getRuleContext(EolContext.self,i)
-		}
-		open func line() -> Array<LineContext> {
-			return getRuleContexts(LineContext.self)
-		}
-		open func line(_ i: Int) -> LineContext? {
-			return getRuleContext(LineContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_prog }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterProg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterProg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitProg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitProg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitProg(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitProg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitProg(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitProg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prog() throws -> ProgContext {
+	 open func prog() throws -> ProgContext {
 		var _localctx: ProgContext = ProgContext(_ctx, getState())
 		try enterRule(_localctx, 0, pdp7Parser.RULE_prog)
 		var _la: Int = 0
@@ -205,7 +201,7 @@ open class pdp7Parser: Parser {
 
 		 			break
 		 		default:
-		 			throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 			throw ANTLRException.recognition(e: NoViableAltException(self))
 		 		}
 		 		setState(42); 
 		 		try _errHandler.sync(self)
@@ -243,40 +239,47 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class LineContext:ParserRuleContext {
-		open func declarations() -> DeclarationsContext? {
-			return getRuleContext(DeclarationsContext.self,0)
+
+	public class LineContext: ParserRuleContext {
+			open
+			func declarations() -> DeclarationsContext? {
+				return getRuleContext(DeclarationsContext.self, 0)
+			}
+			open
+			func comment() -> CommentContext? {
+				return getRuleContext(CommentContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_line
 		}
-		open func comment() -> CommentContext? {
-			return getRuleContext(CommentContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_line }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterLine(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterLine(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitLine(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitLine(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitLine(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitLine(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitLine(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitLine(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func line() throws -> LineContext {
+	 open func line() throws -> LineContext {
 		var _localctx: LineContext = LineContext(_ctx, getState())
 		try enterRule(_localctx, 2, pdp7Parser.RULE_line)
 		var _la: Int = 0
@@ -415,7 +418,7 @@ open class pdp7Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -426,40 +429,47 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationsContext:ParserRuleContext {
-		open func declaration() -> Array<DeclarationContext> {
-			return getRuleContexts(DeclarationContext.self)
+
+	public class DeclarationsContext: ParserRuleContext {
+			open
+			func declaration() -> [DeclarationContext] {
+				return getRuleContexts(DeclarationContext.self)
+			}
+			open
+			func declaration(_ i: Int) -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_declarations
 		}
-		open func declaration(_ i: Int) -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_declarations }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterDeclarations(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterDeclarations(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitDeclarations(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitDeclarations(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitDeclarations(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitDeclarations(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitDeclarations(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitDeclarations(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declarations() throws -> DeclarationsContext {
+	 open func declarations() throws -> DeclarationsContext {
 		var _localctx: DeclarationsContext = DeclarationsContext(_ctx, getState())
 		try enterRule(_localctx, 4, pdp7Parser.RULE_declarations)
 		var _la: Int = 0
@@ -516,46 +526,55 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationContext:ParserRuleContext {
-		open func label() -> Array<LabelContext> {
-			return getRuleContexts(LabelContext.self)
+
+	public class DeclarationContext: ParserRuleContext {
+			open
+			func label() -> [LabelContext] {
+				return getRuleContexts(LabelContext.self)
+			}
+			open
+			func label(_ i: Int) -> LabelContext? {
+				return getRuleContext(LabelContext.self, i)
+			}
+			open
+			func declarationRight() -> [DeclarationRightContext] {
+				return getRuleContexts(DeclarationRightContext.self)
+			}
+			open
+			func declarationRight(_ i: Int) -> DeclarationRightContext? {
+				return getRuleContext(DeclarationRightContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_declaration
 		}
-		open func label(_ i: Int) -> LabelContext? {
-			return getRuleContext(LabelContext.self,i)
-		}
-		open func declarationRight() -> Array<DeclarationRightContext> {
-			return getRuleContexts(DeclarationRightContext.self)
-		}
-		open func declarationRight(_ i: Int) -> DeclarationRightContext? {
-			return getRuleContext(DeclarationRightContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitDeclaration(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitDeclaration(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration() throws -> DeclarationContext {
+	 open func declaration() throws -> DeclarationContext {
 		var _localctx: DeclarationContext = DeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 6, pdp7Parser.RULE_declaration)
 		var _la: Int = 0
@@ -737,7 +756,7 @@ open class pdp7Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -748,43 +767,51 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationRightContext:ParserRuleContext {
-		open func instruction() -> InstructionContext? {
-			return getRuleContext(InstructionContext.self,0)
+
+	public class DeclarationRightContext: ParserRuleContext {
+			open
+			func instruction() -> InstructionContext? {
+				return getRuleContext(InstructionContext.self, 0)
+			}
+			open
+			func assignment() -> AssignmentContext? {
+				return getRuleContext(AssignmentContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_declarationRight
 		}
-		open func assignment() -> AssignmentContext? {
-			return getRuleContext(AssignmentContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_declarationRight }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterDeclarationRight(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterDeclarationRight(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitDeclarationRight(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitDeclarationRight(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitDeclarationRight(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitDeclarationRight(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitDeclarationRight(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitDeclarationRight(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declarationRight() throws -> DeclarationRightContext {
+	 open func declarationRight() throws -> DeclarationRightContext {
 		var _localctx: DeclarationRightContext = DeclarationRightContext(_ctx, getState())
 		try enterRule(_localctx, 8, pdp7Parser.RULE_declarationRight)
 		defer {
@@ -823,43 +850,51 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class InstructionContext:ParserRuleContext {
-		open func opcode() -> OpcodeContext? {
-			return getRuleContext(OpcodeContext.self,0)
+
+	public class InstructionContext: ParserRuleContext {
+			open
+			func opcode() -> OpcodeContext? {
+				return getRuleContext(OpcodeContext.self, 0)
+			}
+			open
+			func argument() -> [ArgumentContext] {
+				return getRuleContexts(ArgumentContext.self)
+			}
+			open
+			func argument(_ i: Int) -> ArgumentContext? {
+				return getRuleContext(ArgumentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_instruction
 		}
-		open func argument() -> Array<ArgumentContext> {
-			return getRuleContexts(ArgumentContext.self)
-		}
-		open func argument(_ i: Int) -> ArgumentContext? {
-			return getRuleContext(ArgumentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_instruction }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterInstruction(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterInstruction(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitInstruction(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitInstruction(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitInstruction(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitInstruction(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitInstruction(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitInstruction(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func instruction() throws -> InstructionContext {
+	 open func instruction() throws -> InstructionContext {
 		var _localctx: InstructionContext = InstructionContext(_ctx, getState())
 		try enterRule(_localctx, 10, pdp7Parser.RULE_instruction)
 		defer {
@@ -894,37 +929,43 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class ArgumentContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ArgumentContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_argument
 		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_argument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterArgument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterArgument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitArgument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitArgument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitArgument(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitArgument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitArgument(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitArgument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func argument() throws -> ArgumentContext {
+	 open func argument() throws -> ArgumentContext {
 		var _localctx: ArgumentContext = ArgumentContext(_ctx, getState())
 		try enterRule(_localctx, 12, pdp7Parser.RULE_argument)
 		defer {
@@ -944,40 +985,47 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentContext:ParserRuleContext {
-		open func symbol() -> SymbolContext? {
-			return getRuleContext(SymbolContext.self,0)
+
+	public class AssignmentContext: ParserRuleContext {
+			open
+			func symbol() -> SymbolContext? {
+				return getRuleContext(SymbolContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_assignment
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterAssignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterAssignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitAssignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitAssignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitAssignment(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitAssignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitAssignment(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitAssignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignment() throws -> AssignmentContext {
+	 open func assignment() throws -> AssignmentContext {
 		var _localctx: AssignmentContext = AssignmentContext(_ctx, getState())
 		try enterRule(_localctx, 14, pdp7Parser.RULE_assignment)
 		defer {
@@ -1001,42 +1049,55 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class SymbolContext:ParserRuleContext {
-		open func opcode() -> OpcodeContext? {
-			return getRuleContext(OpcodeContext.self,0)
+
+	public class SymbolContext: ParserRuleContext {
+			open
+			func opcode() -> OpcodeContext? {
+				return getRuleContext(OpcodeContext.self, 0)
+			}
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func LOC() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.LOC.rawValue, 0)
+			}
+			open
+			func RELOC() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.RELOC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_symbol
 		}
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
-		}
-		open func LOC() -> TerminalNode? { return getToken(pdp7Parser.Tokens.LOC.rawValue, 0) }
-		open func RELOC() -> TerminalNode? { return getToken(pdp7Parser.Tokens.RELOC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_symbol }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterSymbol(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterSymbol(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitSymbol(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitSymbol(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitSymbol(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitSymbol(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitSymbol(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitSymbol(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func symbol() throws -> SymbolContext {
+	 open func symbol() throws -> SymbolContext {
 		var _localctx: SymbolContext = SymbolContext(_ctx, getState())
 		try enterRule(_localctx, 16, pdp7Parser.RULE_symbol)
 		defer {
@@ -1164,7 +1225,7 @@ open class pdp7Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1175,48 +1236,63 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionContext:ParserRuleContext {
-		open func multiplyingExpression() -> Array<MultiplyingExpressionContext> {
-			return getRuleContexts(MultiplyingExpressionContext.self)
+
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func multiplyingExpression() -> [MultiplyingExpressionContext] {
+				return getRuleContexts(MultiplyingExpressionContext.self)
+			}
+			open
+			func multiplyingExpression(_ i: Int) -> MultiplyingExpressionContext? {
+				return getRuleContext(MultiplyingExpressionContext.self, i)
+			}
+			open
+			func PLUS() -> [TerminalNode] {
+				return getTokens(pdp7Parser.Tokens.PLUS.rawValue)
+			}
+			open
+			func PLUS(_ i:Int) -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.PLUS.rawValue, i)
+			}
+			open
+			func MINUS() -> [TerminalNode] {
+				return getTokens(pdp7Parser.Tokens.MINUS.rawValue)
+			}
+			open
+			func MINUS(_ i:Int) -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.MINUS.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_expression
 		}
-		open func multiplyingExpression(_ i: Int) -> MultiplyingExpressionContext? {
-			return getRuleContext(MultiplyingExpressionContext.self,i)
-		}
-		open func PLUS() -> Array<TerminalNode> { return getTokens(pdp7Parser.Tokens.PLUS.rawValue) }
-		open func PLUS(_ i:Int) -> TerminalNode?{
-			return getToken(pdp7Parser.Tokens.PLUS.rawValue, i)
-		}
-		open func MINUS() -> Array<TerminalNode> { return getTokens(pdp7Parser.Tokens.MINUS.rawValue) }
-		open func MINUS(_ i:Int) -> TerminalNode?{
-			return getToken(pdp7Parser.Tokens.MINUS.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitExpression(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expression() throws -> ExpressionContext {
+	 open func expression() throws -> ExpressionContext {
 		var _localctx: ExpressionContext = ExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 18, pdp7Parser.RULE_expression)
 		var _la: Int = 0
@@ -1265,48 +1341,63 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class MultiplyingExpressionContext:ParserRuleContext {
-		open func atom() -> Array<AtomContext> {
-			return getRuleContexts(AtomContext.self)
+
+	public class MultiplyingExpressionContext: ParserRuleContext {
+			open
+			func atom() -> [AtomContext] {
+				return getRuleContexts(AtomContext.self)
+			}
+			open
+			func atom(_ i: Int) -> AtomContext? {
+				return getRuleContext(AtomContext.self, i)
+			}
+			open
+			func TIMES() -> [TerminalNode] {
+				return getTokens(pdp7Parser.Tokens.TIMES.rawValue)
+			}
+			open
+			func TIMES(_ i:Int) -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.TIMES.rawValue, i)
+			}
+			open
+			func DIV() -> [TerminalNode] {
+				return getTokens(pdp7Parser.Tokens.DIV.rawValue)
+			}
+			open
+			func DIV(_ i:Int) -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.DIV.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_multiplyingExpression
 		}
-		open func atom(_ i: Int) -> AtomContext? {
-			return getRuleContext(AtomContext.self,i)
-		}
-		open func TIMES() -> Array<TerminalNode> { return getTokens(pdp7Parser.Tokens.TIMES.rawValue) }
-		open func TIMES(_ i:Int) -> TerminalNode?{
-			return getToken(pdp7Parser.Tokens.TIMES.rawValue, i)
-		}
-		open func DIV() -> Array<TerminalNode> { return getTokens(pdp7Parser.Tokens.DIV.rawValue) }
-		open func DIV(_ i:Int) -> TerminalNode?{
-			return getToken(pdp7Parser.Tokens.DIV.rawValue, i)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_multiplyingExpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterMultiplyingExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterMultiplyingExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitMultiplyingExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitMultiplyingExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitMultiplyingExpression(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitMultiplyingExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitMultiplyingExpression(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitMultiplyingExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func multiplyingExpression() throws -> MultiplyingExpressionContext {
+	 open func multiplyingExpression() throws -> MultiplyingExpressionContext {
 		var _localctx: MultiplyingExpressionContext = MultiplyingExpressionContext(_ctx, getState())
 		try enterRule(_localctx, 20, pdp7Parser.RULE_multiplyingExpression)
 		var _la: Int = 0
@@ -1356,50 +1447,79 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class AtomContext:ParserRuleContext {
-		open func variable() -> VariableContext? {
-			return getRuleContext(VariableContext.self,0)
+
+	public class AtomContext: ParserRuleContext {
+			open
+			func variable() -> VariableContext? {
+				return getRuleContext(VariableContext.self, 0)
+			}
+			open
+			func LOC() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.LOC.rawValue, 0)
+			}
+			open
+			func CHAR() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.CHAR.rawValue, 0)
+			}
+			open
+			func RELOC() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.RELOC.rawValue, 0)
+			}
+			open
+			func string() -> StringContext? {
+				return getRuleContext(StringContext.self, 0)
+			}
+			open
+			func DECIMAL() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.DECIMAL.rawValue, 0)
+			}
+			open
+			func DECIMAL_MINUS() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.DECIMAL_MINUS.rawValue, 0)
+			}
+			open
+			func OCTAL() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.OCTAL.rawValue, 0)
+			}
+			open
+			func NUMERIC_LITERAL() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.NUMERIC_LITERAL.rawValue, 0)
+			}
+			open
+			func atom() -> AtomContext? {
+				return getRuleContext(AtomContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_atom
 		}
-		open func LOC() -> TerminalNode? { return getToken(pdp7Parser.Tokens.LOC.rawValue, 0) }
-		open func CHAR() -> TerminalNode? { return getToken(pdp7Parser.Tokens.CHAR.rawValue, 0) }
-		open func RELOC() -> TerminalNode? { return getToken(pdp7Parser.Tokens.RELOC.rawValue, 0) }
-		open func string() -> StringContext? {
-			return getRuleContext(StringContext.self,0)
-		}
-		open func DECIMAL() -> TerminalNode? { return getToken(pdp7Parser.Tokens.DECIMAL.rawValue, 0) }
-		open func DECIMAL_MINUS() -> TerminalNode? { return getToken(pdp7Parser.Tokens.DECIMAL_MINUS.rawValue, 0) }
-		open func OCTAL() -> TerminalNode? { return getToken(pdp7Parser.Tokens.OCTAL.rawValue, 0) }
-		open func NUMERIC_LITERAL() -> TerminalNode? { return getToken(pdp7Parser.Tokens.NUMERIC_LITERAL.rawValue, 0) }
-		open func atom() -> AtomContext? {
-			return getRuleContext(AtomContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_atom }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterAtom(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterAtom(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitAtom(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitAtom(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitAtom(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitAtom(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitAtom(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitAtom(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func atom() throws -> AtomContext {
+	 open func atom() throws -> AtomContext {
 		var _localctx: AtomContext = AtomContext(_ctx, getState())
 		try enterRule(_localctx, 22, pdp7Parser.RULE_atom)
 		defer {
@@ -1481,7 +1601,7 @@ open class pdp7Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1492,39 +1612,51 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class StringContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(pdp7Parser.Tokens.STRING.rawValue, 0) }
-		open func NUMERIC_LITERAL() -> Array<TerminalNode> { return getTokens(pdp7Parser.Tokens.NUMERIC_LITERAL.rawValue) }
-		open func NUMERIC_LITERAL(_ i:Int) -> TerminalNode?{
-			return getToken(pdp7Parser.Tokens.NUMERIC_LITERAL.rawValue, i)
+
+	public class StringContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.STRING.rawValue, 0)
+			}
+			open
+			func NUMERIC_LITERAL() -> [TerminalNode] {
+				return getTokens(pdp7Parser.Tokens.NUMERIC_LITERAL.rawValue)
+			}
+			open
+			func NUMERIC_LITERAL(_ i:Int) -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.NUMERIC_LITERAL.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_string
 		}
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_string }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterString(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterString(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitString(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitString(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitString(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitString(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitString(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitString(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string() throws -> StringContext {
+	 open func string() throws -> StringContext {
 		var _localctx: StringContext = StringContext(_ctx, getState())
 		try enterRule(_localctx, 24, pdp7Parser.RULE_string)
 		var _la: Int = 0
@@ -1573,35 +1705,43 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class EolContext:ParserRuleContext {
-		open func EOL() -> TerminalNode? { return getToken(pdp7Parser.Tokens.EOL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_eol }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterEol(self)
+
+	public class EolContext: ParserRuleContext {
+			open
+			func EOL() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.EOL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_eol
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterEol(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitEol(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitEol(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitEol(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitEol(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitEol(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitEol(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eol() throws -> EolContext {
+	 open func eol() throws -> EolContext {
 		var _localctx: EolContext = EolContext(_ctx, getState())
 		try enterRule(_localctx, 26, pdp7Parser.RULE_eol)
 		defer {
@@ -1621,35 +1761,43 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func COMMENT() -> TerminalNode? { return getToken(pdp7Parser.Tokens.COMMENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterComment(self)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.COMMENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_comment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitComment(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 28, pdp7Parser.RULE_comment)
 		defer {
@@ -1669,35 +1817,43 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class LabelContext:ParserRuleContext {
-		open func LABEL() -> TerminalNode? { return getToken(pdp7Parser.Tokens.LABEL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_label }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterLabel(self)
+
+	public class LabelContext: ParserRuleContext {
+			open
+			func LABEL() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.LABEL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_label
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterLabel(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitLabel(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitLabel(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitLabel(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitLabel(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitLabel(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitLabel(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func label() throws -> LabelContext {
+	 open func label() throws -> LabelContext {
 		var _localctx: LabelContext = LabelContext(_ctx, getState())
 		try enterRule(_localctx, 30, pdp7Parser.RULE_label)
 		defer {
@@ -1717,35 +1873,43 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class VariableContext:ParserRuleContext {
-		open func IDENTIFIER() -> TerminalNode? { return getToken(pdp7Parser.Tokens.IDENTIFIER.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_variable }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterVariable(self)
+
+	public class VariableContext: ParserRuleContext {
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(pdp7Parser.Tokens.IDENTIFIER.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_variable
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterVariable(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitVariable(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitVariable(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitVariable(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitVariable(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitVariable(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitVariable(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func variable() throws -> VariableContext {
+	 open func variable() throws -> VariableContext {
 		var _localctx: VariableContext = VariableContext(_ctx, getState())
 		try enterRule(_localctx, 32, pdp7Parser.RULE_variable)
 		defer {
@@ -1765,34 +1929,39 @@ open class pdp7Parser: Parser {
 
 		return _localctx
 	}
-	open class OpcodeContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return pdp7Parser.RULE_opcode }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).enterOpcode(self)
+
+	public class OpcodeContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return pdp7Parser.RULE_opcode
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.enterOpcode(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is pdp7Listener {
-			 	(listener as! pdp7Listener).exitOpcode(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? pdp7Listener {
+				listener.exitOpcode(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is pdp7Visitor {
-			     return (visitor as! pdp7Visitor<T>).visitOpcode(self)
-			}else if visitor is pdp7BaseVisitor {
-		    	 return (visitor as! pdp7BaseVisitor<T>).visitOpcode(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? pdp7Visitor {
+			    return visitor.visitOpcode(self)
+			}
+			else if let visitor = visitor as? pdp7BaseVisitor {
+			    return visitor.visitOpcode(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func opcode() throws -> OpcodeContext {
+	 open func opcode() throws -> OpcodeContext {
 		var _localctx: OpcodeContext = OpcodeContext(_ctx, getState())
 		try enterRule(_localctx, 34, pdp7Parser.RULE_opcode)
 		var _la: Int = 0
@@ -1832,6 +2001,10 @@ open class pdp7Parser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = pdp7ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = pdp7ParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

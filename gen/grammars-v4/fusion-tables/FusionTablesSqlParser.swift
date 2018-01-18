@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/fusion-tables/FusionTablesSql.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/fusion-tables/FusionTablesSql.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class FusionTablesSqlParser: Parser {
@@ -11,8 +11,11 @@ open class FusionTablesSqlParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, K_ALTER = 5, K_AND = 6, 
                  K_OR = 7, K_AS = 8, K_ASC = 9, K_AVERAGE = 10, K_BY = 11, 
                  K_BETWEEN = 12, K_CASE = 13, K_CIRCLE = 14, K_COLUMN = 15, 
@@ -32,23 +35,26 @@ open class FusionTablesSqlParser: Parser {
                  STRING = 74, QUOTED_STRING = 75, SINGLELINE_COMMENT = 76, 
                  MULTILINE_COMMENT = 77, WHITESPACE = 78
 	}
-	public static let RULE_fusionTablesSql = 0, RULE_sql_stmt = 1, RULE_table_name_in_ddl = 2, 
-                   RULE_table_name_in_dml = 3, RULE_create_table_as_select_stmt = 4, 
-                   RULE_describe_stmt = 5, RULE_show_tables_stmt = 6, RULE_alter_table_stmt = 7, 
-                   RULE_create_view_stmt = 8, RULE_drop_table_stmt = 9, 
-                   RULE_insert_stmt = 10, RULE_update_stmt = 11, RULE_column_assignment = 12, 
-                   RULE_delete_stmt = 13, RULE_eq_comparison = 14, RULE_table_name_with_alias = 15, 
-                   RULE_select_stmt = 16, RULE_ordering_term = 17, RULE_join_clause = 18, 
-                   RULE_result_column = 19, RULE_qualified_column_name = 20, 
-                   RULE_aggregate_exp = 21, RULE_expr = 22, RULE_column_name_beginning_expr = 23, 
-                   RULE_column_name_in_dml = 24, RULE_and_or_or = 25, RULE_geometry = 26, 
-                   RULE_circle = 27, RULE_rectangle = 28, RULE_coordinate = 29, 
-                   RULE_keyword = 30, RULE_operator = 31, RULE_literal = 32, 
-                   RULE_error_message = 33, RULE_identifier = 34, RULE_column_alias = 35, 
-                   RULE_table_name = 36, RULE_column_name = 37, RULE_new_table_name = 38, 
-                   RULE_view_name = 39, RULE_table_alias = 40, RULE_numeric_literal = 41, 
-                   RULE_string_literal = 42
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_fusionTablesSql = 0, RULE_sql_stmt = 1, RULE_table_name_in_ddl = 2, 
+            RULE_table_name_in_dml = 3, RULE_create_table_as_select_stmt = 4, 
+            RULE_describe_stmt = 5, RULE_show_tables_stmt = 6, RULE_alter_table_stmt = 7, 
+            RULE_create_view_stmt = 8, RULE_drop_table_stmt = 9, RULE_insert_stmt = 10, 
+            RULE_update_stmt = 11, RULE_column_assignment = 12, RULE_delete_stmt = 13, 
+            RULE_eq_comparison = 14, RULE_table_name_with_alias = 15, RULE_select_stmt = 16, 
+            RULE_ordering_term = 17, RULE_join_clause = 18, RULE_result_column = 19, 
+            RULE_qualified_column_name = 20, RULE_aggregate_exp = 21, RULE_expr = 22, 
+            RULE_column_name_beginning_expr = 23, RULE_column_name_in_dml = 24, 
+            RULE_and_or_or = 25, RULE_geometry = 26, RULE_circle = 27, RULE_rectangle = 28, 
+            RULE_coordinate = 29, RULE_keyword = 30, RULE_operator = 31, 
+            RULE_literal = 32, RULE_error_message = 33, RULE_identifier = 34, 
+            RULE_column_alias = 35, RULE_table_name = 36, RULE_column_name = 37, 
+            RULE_new_table_name = 38, RULE_view_name = 39, RULE_table_alias = 40, 
+            RULE_numeric_literal = 41, RULE_string_literal = 42
+
+	public
+	static let ruleNames: [String] = [
 		"fusionTablesSql", "sql_stmt", "table_name_in_ddl", "table_name_in_dml", 
 		"create_table_as_select_stmt", "describe_stmt", "show_tables_stmt", "alter_table_stmt", 
 		"create_view_stmt", "drop_table_stmt", "insert_stmt", "update_stmt", "column_assignment", 
@@ -83,88 +89,73 @@ open class FusionTablesSqlParser: Parser {
 		"STRING_LITERAL", "STRING", "QUOTED_STRING", "SINGLELINE_COMMENT", "MULTILINE_COMMENT", 
 		"WHITESPACE"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "FusionTablesSql.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return FusionTablesSqlParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "FusionTablesSql.g4" }
+	override open
+	func getSerializedATN() -> String { return FusionTablesSqlParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return FusionTablesSqlParser.ruleNames }
+	override open
+	func getATN() -> ATN { return FusionTablesSqlParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return FusionTablesSqlParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return FusionTablesSqlParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return FusionTablesSqlParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,FusionTablesSqlParser._ATN,FusionTablesSqlParser._decisionToDFA, FusionTablesSqlParser._sharedContextCache)
 	}
-	open class FusionTablesSqlContext:ParserRuleContext {
-		open func sql_stmt() -> Array<Sql_stmtContext> {
-			return getRuleContexts(Sql_stmtContext.self)
+
+	public class FusionTablesSqlContext: ParserRuleContext {
+			open
+			func sql_stmt() -> [Sql_stmtContext] {
+				return getRuleContexts(Sql_stmtContext.self)
+			}
+			open
+			func sql_stmt(_ i: Int) -> Sql_stmtContext? {
+				return getRuleContext(Sql_stmtContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_fusionTablesSql
 		}
-		open func sql_stmt(_ i: Int) -> Sql_stmtContext? {
-			return getRuleContext(Sql_stmtContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_fusionTablesSql }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterFusionTablesSql(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterFusionTablesSql(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitFusionTablesSql(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitFusionTablesSql(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitFusionTablesSql(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitFusionTablesSql(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitFusionTablesSql(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitFusionTablesSql(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func fusionTablesSql() throws -> FusionTablesSqlContext {
+	 open func fusionTablesSql() throws -> FusionTablesSqlContext {
 		var _localctx: FusionTablesSqlContext = FusionTablesSqlContext(_ctx, getState())
 		try enterRule(_localctx, 0, FusionTablesSqlParser.RULE_fusionTablesSql)
 		var _la: Int = 0
@@ -202,64 +193,79 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Sql_stmtContext:ParserRuleContext {
-		open func alter_table_stmt() -> Alter_table_stmtContext? {
-			return getRuleContext(Alter_table_stmtContext.self,0)
+
+	public class Sql_stmtContext: ParserRuleContext {
+			open
+			func alter_table_stmt() -> Alter_table_stmtContext? {
+				return getRuleContext(Alter_table_stmtContext.self, 0)
+			}
+			open
+			func select_stmt() -> Select_stmtContext? {
+				return getRuleContext(Select_stmtContext.self, 0)
+			}
+			open
+			func create_view_stmt() -> Create_view_stmtContext? {
+				return getRuleContext(Create_view_stmtContext.self, 0)
+			}
+			open
+			func create_table_as_select_stmt() -> Create_table_as_select_stmtContext? {
+				return getRuleContext(Create_table_as_select_stmtContext.self, 0)
+			}
+			open
+			func delete_stmt() -> Delete_stmtContext? {
+				return getRuleContext(Delete_stmtContext.self, 0)
+			}
+			open
+			func drop_table_stmt() -> Drop_table_stmtContext? {
+				return getRuleContext(Drop_table_stmtContext.self, 0)
+			}
+			open
+			func insert_stmt() -> Insert_stmtContext? {
+				return getRuleContext(Insert_stmtContext.self, 0)
+			}
+			open
+			func update_stmt() -> Update_stmtContext? {
+				return getRuleContext(Update_stmtContext.self, 0)
+			}
+			open
+			func describe_stmt() -> Describe_stmtContext? {
+				return getRuleContext(Describe_stmtContext.self, 0)
+			}
+			open
+			func show_tables_stmt() -> Show_tables_stmtContext? {
+				return getRuleContext(Show_tables_stmtContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_sql_stmt
 		}
-		open func select_stmt() -> Select_stmtContext? {
-			return getRuleContext(Select_stmtContext.self,0)
-		}
-		open func create_view_stmt() -> Create_view_stmtContext? {
-			return getRuleContext(Create_view_stmtContext.self,0)
-		}
-		open func create_table_as_select_stmt() -> Create_table_as_select_stmtContext? {
-			return getRuleContext(Create_table_as_select_stmtContext.self,0)
-		}
-		open func delete_stmt() -> Delete_stmtContext? {
-			return getRuleContext(Delete_stmtContext.self,0)
-		}
-		open func drop_table_stmt() -> Drop_table_stmtContext? {
-			return getRuleContext(Drop_table_stmtContext.self,0)
-		}
-		open func insert_stmt() -> Insert_stmtContext? {
-			return getRuleContext(Insert_stmtContext.self,0)
-		}
-		open func update_stmt() -> Update_stmtContext? {
-			return getRuleContext(Update_stmtContext.self,0)
-		}
-		open func describe_stmt() -> Describe_stmtContext? {
-			return getRuleContext(Describe_stmtContext.self,0)
-		}
-		open func show_tables_stmt() -> Show_tables_stmtContext? {
-			return getRuleContext(Show_tables_stmtContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_sql_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterSql_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterSql_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitSql_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitSql_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitSql_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitSql_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitSql_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitSql_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func sql_stmt() throws -> Sql_stmtContext {
+	 open func sql_stmt() throws -> Sql_stmtContext {
 		var _localctx: Sql_stmtContext = Sql_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 2, FusionTablesSqlParser.RULE_sql_stmt)
 		defer {
@@ -334,37 +340,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Table_name_in_ddlContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Table_name_in_ddlContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_table_name_in_ddl
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_table_name_in_ddl }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterTable_name_in_ddl(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterTable_name_in_ddl(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitTable_name_in_ddl(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitTable_name_in_ddl(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitTable_name_in_ddl(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitTable_name_in_ddl(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitTable_name_in_ddl(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitTable_name_in_ddl(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_name_in_ddl() throws -> Table_name_in_ddlContext {
+	 open func table_name_in_ddl() throws -> Table_name_in_ddlContext {
 		var _localctx: Table_name_in_ddlContext = Table_name_in_ddlContext(_ctx, getState())
 		try enterRule(_localctx, 4, FusionTablesSqlParser.RULE_table_name_in_ddl)
 		defer {
@@ -384,37 +396,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Table_name_in_dmlContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Table_name_in_dmlContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_table_name_in_dml
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_table_name_in_dml }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterTable_name_in_dml(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterTable_name_in_dml(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitTable_name_in_dml(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitTable_name_in_dml(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitTable_name_in_dml(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitTable_name_in_dml(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitTable_name_in_dml(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitTable_name_in_dml(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_name_in_dml() throws -> Table_name_in_dmlContext {
+	 open func table_name_in_dml() throws -> Table_name_in_dmlContext {
 		var _localctx: Table_name_in_dmlContext = Table_name_in_dmlContext(_ctx, getState())
 		try enterRule(_localctx, 6, FusionTablesSqlParser.RULE_table_name_in_dml)
 		defer {
@@ -434,45 +452,67 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Create_table_as_select_stmtContext:ParserRuleContext {
-		open func K_CREATE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CREATE.rawValue, 0) }
-		open func K_TABLE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_TABLE.rawValue, 0) }
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Create_table_as_select_stmtContext: ParserRuleContext {
+			open
+			func K_CREATE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CREATE.rawValue, 0)
+			}
+			open
+			func K_TABLE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_TABLE.rawValue, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func K_SELECT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_SELECT.rawValue, 0)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func table_name_in_ddl() -> Table_name_in_ddlContext? {
+				return getRuleContext(Table_name_in_ddlContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_create_table_as_select_stmt
 		}
-		open func K_AS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_AS.rawValue, 0) }
-		open func K_SELECT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_SELECT.rawValue, 0) }
-		open func K_FROM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0) }
-		open func table_name_in_ddl() -> Table_name_in_ddlContext? {
-			return getRuleContext(Table_name_in_ddlContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_create_table_as_select_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterCreate_table_as_select_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterCreate_table_as_select_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitCreate_table_as_select_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitCreate_table_as_select_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitCreate_table_as_select_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitCreate_table_as_select_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitCreate_table_as_select_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitCreate_table_as_select_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func create_table_as_select_stmt() throws -> Create_table_as_select_stmtContext {
+	 open func create_table_as_select_stmt() throws -> Create_table_as_select_stmtContext {
 		var _localctx: Create_table_as_select_stmtContext = Create_table_as_select_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 8, FusionTablesSqlParser.RULE_create_table_as_select_stmt)
 		defer {
@@ -506,38 +546,47 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Describe_stmtContext:ParserRuleContext {
-		open func K_DESCRIBE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_DESCRIBE.rawValue, 0) }
-		open func table_name_in_ddl() -> Table_name_in_ddlContext? {
-			return getRuleContext(Table_name_in_ddlContext.self,0)
+
+	public class Describe_stmtContext: ParserRuleContext {
+			open
+			func K_DESCRIBE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_DESCRIBE.rawValue, 0)
+			}
+			open
+			func table_name_in_ddl() -> Table_name_in_ddlContext? {
+				return getRuleContext(Table_name_in_ddlContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_describe_stmt
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_describe_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterDescribe_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterDescribe_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitDescribe_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitDescribe_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitDescribe_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitDescribe_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitDescribe_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitDescribe_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func describe_stmt() throws -> Describe_stmtContext {
+	 open func describe_stmt() throws -> Describe_stmtContext {
 		var _localctx: Describe_stmtContext = Describe_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 10, FusionTablesSqlParser.RULE_describe_stmt)
 		defer {
@@ -559,36 +608,47 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Show_tables_stmtContext:ParserRuleContext {
-		open func K_SHOW() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_SHOW.rawValue, 0) }
-		open func K_TABLES() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_TABLES.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_show_tables_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterShow_tables_stmt(self)
+
+	public class Show_tables_stmtContext: ParserRuleContext {
+			open
+			func K_SHOW() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_SHOW.rawValue, 0)
+			}
+			open
+			func K_TABLES() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_TABLES.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_show_tables_stmt
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterShow_tables_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitShow_tables_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitShow_tables_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitShow_tables_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitShow_tables_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitShow_tables_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitShow_tables_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func show_tables_stmt() throws -> Show_tables_stmtContext {
+	 open func show_tables_stmt() throws -> Show_tables_stmtContext {
 		var _localctx: Show_tables_stmtContext = Show_tables_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 12, FusionTablesSqlParser.RULE_show_tables_stmt)
 		defer {
@@ -610,44 +670,63 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Alter_table_stmtContext:ParserRuleContext {
-		open func K_ALTER() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ALTER.rawValue, 0) }
-		open func K_TABLE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_TABLE.rawValue, 0) }
-		open func table_name_in_ddl() -> Table_name_in_ddlContext? {
-			return getRuleContext(Table_name_in_ddlContext.self,0)
+
+	public class Alter_table_stmtContext: ParserRuleContext {
+			open
+			func K_ALTER() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ALTER.rawValue, 0)
+			}
+			open
+			func K_TABLE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_TABLE.rawValue, 0)
+			}
+			open
+			func table_name_in_ddl() -> Table_name_in_ddlContext? {
+				return getRuleContext(Table_name_in_ddlContext.self, 0)
+			}
+			open
+			func K_RENAME() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_RENAME.rawValue, 0)
+			}
+			open
+			func K_TO() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_TO.rawValue, 0)
+			}
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_alter_table_stmt
 		}
-		open func K_RENAME() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_RENAME.rawValue, 0) }
-		open func K_TO() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_TO.rawValue, 0) }
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_alter_table_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterAlter_table_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterAlter_table_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitAlter_table_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitAlter_table_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitAlter_table_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitAlter_table_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitAlter_table_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitAlter_table_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func alter_table_stmt() throws -> Alter_table_stmtContext {
+	 open func alter_table_stmt() throws -> Alter_table_stmtContext {
 		var _localctx: Alter_table_stmtContext = Alter_table_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 14, FusionTablesSqlParser.RULE_alter_table_stmt)
 		defer {
@@ -679,61 +758,91 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Create_view_stmtContext:ParserRuleContext {
-		open func K_CREATE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CREATE.rawValue, 0) }
-		open func K_VIEW() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_VIEW.rawValue, 0) }
-		open func view_name() -> View_nameContext? {
-			return getRuleContext(View_nameContext.self,0)
+
+	public class Create_view_stmtContext: ParserRuleContext {
+			open
+			func K_CREATE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CREATE.rawValue, 0)
+			}
+			open
+			func K_VIEW() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_VIEW.rawValue, 0)
+			}
+			open
+			func view_name() -> View_nameContext? {
+				return getRuleContext(View_nameContext.self, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func K_SELECT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_SELECT.rawValue, 0)
+			}
+			open
+			func result_column() -> [Result_columnContext] {
+				return getRuleContexts(Result_columnContext.self)
+			}
+			open
+			func result_column(_ i: Int) -> Result_columnContext? {
+				return getRuleContext(Result_columnContext.self, i)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func table_name_with_alias() -> Table_name_with_aliasContext? {
+				return getRuleContext(Table_name_with_aliasContext.self, 0)
+			}
+			open
+			func join_clause() -> [Join_clauseContext] {
+				return getRuleContexts(Join_clauseContext.self)
+			}
+			open
+			func join_clause(_ i: Int) -> Join_clauseContext? {
+				return getRuleContext(Join_clauseContext.self, i)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_create_view_stmt
 		}
-		open func K_AS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_AS.rawValue, 0) }
-		open func K_SELECT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_SELECT.rawValue, 0) }
-		open func result_column() -> Array<Result_columnContext> {
-			return getRuleContexts(Result_columnContext.self)
-		}
-		open func result_column(_ i: Int) -> Result_columnContext? {
-			return getRuleContext(Result_columnContext.self,i)
-		}
-		open func K_FROM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0) }
-		open func table_name_with_alias() -> Table_name_with_aliasContext? {
-			return getRuleContext(Table_name_with_aliasContext.self,0)
-		}
-		open func join_clause() -> Array<Join_clauseContext> {
-			return getRuleContexts(Join_clauseContext.self)
-		}
-		open func join_clause(_ i: Int) -> Join_clauseContext? {
-			return getRuleContext(Join_clauseContext.self,i)
-		}
-		open func K_WHERE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_create_view_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterCreate_view_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterCreate_view_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitCreate_view_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitCreate_view_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitCreate_view_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitCreate_view_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitCreate_view_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitCreate_view_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func create_view_stmt() throws -> Create_view_stmtContext {
+	 open func create_view_stmt() throws -> Create_view_stmtContext {
 		var _localctx: Create_view_stmtContext = Create_view_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 16, FusionTablesSqlParser.RULE_create_view_stmt)
 		var _la: Int = 0
@@ -824,39 +933,51 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Drop_table_stmtContext:ParserRuleContext {
-		open func K_DROP() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_DROP.rawValue, 0) }
-		open func K_TABLE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_TABLE.rawValue, 0) }
-		open func table_name_in_ddl() -> Table_name_in_ddlContext? {
-			return getRuleContext(Table_name_in_ddlContext.self,0)
+
+	public class Drop_table_stmtContext: ParserRuleContext {
+			open
+			func K_DROP() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_DROP.rawValue, 0)
+			}
+			open
+			func K_TABLE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_TABLE.rawValue, 0)
+			}
+			open
+			func table_name_in_ddl() -> Table_name_in_ddlContext? {
+				return getRuleContext(Table_name_in_ddlContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_drop_table_stmt
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_drop_table_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterDrop_table_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterDrop_table_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitDrop_table_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitDrop_table_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitDrop_table_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitDrop_table_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitDrop_table_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitDrop_table_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func drop_table_stmt() throws -> Drop_table_stmtContext {
+	 open func drop_table_stmt() throws -> Drop_table_stmtContext {
 		var _localctx: Drop_table_stmtContext = Drop_table_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 18, FusionTablesSqlParser.RULE_drop_table_stmt)
 		defer {
@@ -880,52 +1001,71 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Insert_stmtContext:ParserRuleContext {
-		open func K_INSERT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_INSERT.rawValue, 0) }
-		open func K_INTO() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_INTO.rawValue, 0) }
-		open func table_name_in_dml() -> Table_name_in_dmlContext? {
-			return getRuleContext(Table_name_in_dmlContext.self,0)
+
+	public class Insert_stmtContext: ParserRuleContext {
+			open
+			func K_INSERT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_INSERT.rawValue, 0)
+			}
+			open
+			func K_INTO() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_INTO.rawValue, 0)
+			}
+			open
+			func table_name_in_dml() -> Table_name_in_dmlContext? {
+				return getRuleContext(Table_name_in_dmlContext.self, 0)
+			}
+			open
+			func column_name_in_dml() -> [Column_name_in_dmlContext] {
+				return getRuleContexts(Column_name_in_dmlContext.self)
+			}
+			open
+			func column_name_in_dml(_ i: Int) -> Column_name_in_dmlContext? {
+				return getRuleContext(Column_name_in_dmlContext.self, i)
+			}
+			open
+			func K_VALUES() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_VALUES.rawValue, 0)
+			}
+			open
+			func literal() -> [LiteralContext] {
+				return getRuleContexts(LiteralContext.self)
+			}
+			open
+			func literal(_ i: Int) -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_insert_stmt
 		}
-		open func column_name_in_dml() -> Array<Column_name_in_dmlContext> {
-			return getRuleContexts(Column_name_in_dmlContext.self)
-		}
-		open func column_name_in_dml(_ i: Int) -> Column_name_in_dmlContext? {
-			return getRuleContext(Column_name_in_dmlContext.self,i)
-		}
-		open func K_VALUES() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_VALUES.rawValue, 0) }
-		open func literal() -> Array<LiteralContext> {
-			return getRuleContexts(LiteralContext.self)
-		}
-		open func literal(_ i: Int) -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_insert_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterInsert_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterInsert_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitInsert_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitInsert_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitInsert_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitInsert_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitInsert_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitInsert_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func insert_stmt() throws -> Insert_stmtContext {
+	 open func insert_stmt() throws -> Insert_stmtContext {
 		var _localctx: Insert_stmtContext = Insert_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 20, FusionTablesSqlParser.RULE_insert_stmt)
 		var _la: Int = 0
@@ -1003,49 +1143,67 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Update_stmtContext:ParserRuleContext {
-		open func K_UPDATE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_UPDATE.rawValue, 0) }
-		open func table_name_in_dml() -> Table_name_in_dmlContext? {
-			return getRuleContext(Table_name_in_dmlContext.self,0)
+
+	public class Update_stmtContext: ParserRuleContext {
+			open
+			func K_UPDATE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_UPDATE.rawValue, 0)
+			}
+			open
+			func table_name_in_dml() -> Table_name_in_dmlContext? {
+				return getRuleContext(Table_name_in_dmlContext.self, 0)
+			}
+			open
+			func K_SET() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_SET.rawValue, 0)
+			}
+			open
+			func column_assignment() -> [Column_assignmentContext] {
+				return getRuleContexts(Column_assignmentContext.self)
+			}
+			open
+			func column_assignment(_ i: Int) -> Column_assignmentContext? {
+				return getRuleContext(Column_assignmentContext.self, i)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func eq_comparison() -> Eq_comparisonContext? {
+				return getRuleContext(Eq_comparisonContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_update_stmt
 		}
-		open func K_SET() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_SET.rawValue, 0) }
-		open func column_assignment() -> Array<Column_assignmentContext> {
-			return getRuleContexts(Column_assignmentContext.self)
-		}
-		open func column_assignment(_ i: Int) -> Column_assignmentContext? {
-			return getRuleContext(Column_assignmentContext.self,i)
-		}
-		open func K_WHERE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0) }
-		open func eq_comparison() -> Eq_comparisonContext? {
-			return getRuleContext(Eq_comparisonContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_update_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterUpdate_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterUpdate_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitUpdate_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitUpdate_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitUpdate_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitUpdate_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitUpdate_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitUpdate_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func update_stmt() throws -> Update_stmtContext {
+	 open func update_stmt() throws -> Update_stmtContext {
 		var _localctx: Update_stmtContext = Update_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 22, FusionTablesSqlParser.RULE_update_stmt)
 		var _la: Int = 0
@@ -1094,40 +1252,47 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Column_assignmentContext:ParserRuleContext {
-		open func column_name_in_dml() -> Column_name_in_dmlContext? {
-			return getRuleContext(Column_name_in_dmlContext.self,0)
+
+	public class Column_assignmentContext: ParserRuleContext {
+			open
+			func column_name_in_dml() -> Column_name_in_dmlContext? {
+				return getRuleContext(Column_name_in_dmlContext.self, 0)
+			}
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_column_assignment
 		}
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_column_assignment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterColumn_assignment(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterColumn_assignment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitColumn_assignment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitColumn_assignment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitColumn_assignment(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitColumn_assignment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitColumn_assignment(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitColumn_assignment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func column_assignment() throws -> Column_assignmentContext {
+	 open func column_assignment() throws -> Column_assignmentContext {
 		var _localctx: Column_assignmentContext = Column_assignmentContext(_ctx, getState())
 		try enterRule(_localctx, 24, FusionTablesSqlParser.RULE_column_assignment)
 		defer {
@@ -1151,46 +1316,63 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Delete_stmtContext:ParserRuleContext {
-		open func K_DELETE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_DELETE.rawValue, 0) }
-		open func K_FROM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0) }
-		open func table_name_in_dml() -> Table_name_in_dmlContext? {
-			return getRuleContext(Table_name_in_dmlContext.self,0)
+
+	public class Delete_stmtContext: ParserRuleContext {
+			open
+			func K_DELETE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_DELETE.rawValue, 0)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func table_name_in_dml() -> Table_name_in_dmlContext? {
+				return getRuleContext(Table_name_in_dmlContext.self, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func column_name_in_dml() -> Column_name_in_dmlContext? {
+				return getRuleContext(Column_name_in_dmlContext.self, 0)
+			}
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_delete_stmt
 		}
-		open func K_WHERE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0) }
-		open func column_name_in_dml() -> Column_name_in_dmlContext? {
-			return getRuleContext(Column_name_in_dmlContext.self,0)
-		}
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_delete_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterDelete_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterDelete_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitDelete_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitDelete_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitDelete_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitDelete_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitDelete_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitDelete_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func delete_stmt() throws -> Delete_stmtContext {
+	 open func delete_stmt() throws -> Delete_stmtContext {
 		var _localctx: Delete_stmtContext = Delete_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 26, FusionTablesSqlParser.RULE_delete_stmt)
 		var _la: Int = 0
@@ -1234,41 +1416,51 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Eq_comparisonContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Eq_comparisonContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.EQ.rawValue, 0)
+			}
+			open
+			func string_literal() -> String_literalContext? {
+				return getRuleContext(String_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_eq_comparison
 		}
-		open func EQ() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.EQ.rawValue, 0) }
-		open func string_literal() -> String_literalContext? {
-			return getRuleContext(String_literalContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_eq_comparison }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterEq_comparison(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterEq_comparison(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitEq_comparison(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitEq_comparison(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitEq_comparison(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitEq_comparison(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitEq_comparison(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitEq_comparison(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func eq_comparison() throws -> Eq_comparisonContext {
+	 open func eq_comparison() throws -> Eq_comparisonContext {
 		var _localctx: Eq_comparisonContext = Eq_comparisonContext(_ctx, getState())
 		try enterRule(_localctx, 28, FusionTablesSqlParser.RULE_eq_comparison)
 		defer {
@@ -1292,41 +1484,51 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Table_name_with_aliasContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Table_name_with_aliasContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func table_alias() -> Table_aliasContext? {
+				return getRuleContext(Table_aliasContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_table_name_with_alias
 		}
-		open func K_AS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_AS.rawValue, 0) }
-		open func table_alias() -> Table_aliasContext? {
-			return getRuleContext(Table_aliasContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_table_name_with_alias }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterTable_name_with_alias(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterTable_name_with_alias(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitTable_name_with_alias(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitTable_name_with_alias(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitTable_name_with_alias(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitTable_name_with_alias(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitTable_name_with_alias(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitTable_name_with_alias(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_name_with_alias() throws -> Table_name_with_aliasContext {
+	 open func table_name_with_alias() throws -> Table_name_with_aliasContext {
 		var _localctx: Table_name_with_aliasContext = Table_name_with_aliasContext(_ctx, getState())
 		try enterRule(_localctx, 30, FusionTablesSqlParser.RULE_table_name_with_alias)
 		var _la: Int = 0
@@ -1362,81 +1564,123 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Select_stmtContext:ParserRuleContext {
-		open func K_SELECT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_SELECT.rawValue, 0) }
-		open func result_column() -> Array<Result_columnContext> {
-			return getRuleContexts(Result_columnContext.self)
+
+	public class Select_stmtContext: ParserRuleContext {
+			open
+			func K_SELECT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_SELECT.rawValue, 0)
+			}
+			open
+			func result_column() -> [Result_columnContext] {
+				return getRuleContexts(Result_columnContext.self)
+			}
+			open
+			func result_column(_ i: Int) -> Result_columnContext? {
+				return getRuleContext(Result_columnContext.self, i)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func table_name_with_alias() -> Table_name_with_aliasContext? {
+				return getRuleContext(Table_name_with_aliasContext.self, 0)
+			}
+			open
+			func join_clause() -> [Join_clauseContext] {
+				return getRuleContexts(Join_clauseContext.self)
+			}
+			open
+			func join_clause(_ i: Int) -> Join_clauseContext? {
+				return getRuleContext(Join_clauseContext.self, i)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func K_GROUP() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_GROUP.rawValue, 0)
+			}
+			open
+			func K_BY() -> [TerminalNode] {
+				return getTokens(FusionTablesSqlParser.Tokens.K_BY.rawValue)
+			}
+			open
+			func K_BY(_ i:Int) -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_BY.rawValue, i)
+			}
+			open
+			func qualified_column_name() -> [Qualified_column_nameContext] {
+				return getRuleContexts(Qualified_column_nameContext.self)
+			}
+			open
+			func qualified_column_name(_ i: Int) -> Qualified_column_nameContext? {
+				return getRuleContext(Qualified_column_nameContext.self, i)
+			}
+			open
+			func K_ORDER() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ORDER.rawValue, 0)
+			}
+			open
+			func ordering_term() -> [Ordering_termContext] {
+				return getRuleContexts(Ordering_termContext.self)
+			}
+			open
+			func ordering_term(_ i: Int) -> Ordering_termContext? {
+				return getRuleContext(Ordering_termContext.self, i)
+			}
+			open
+			func K_OFFSET() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_OFFSET.rawValue, 0)
+			}
+			open
+			func numeric_literal() -> [Numeric_literalContext] {
+				return getRuleContexts(Numeric_literalContext.self)
+			}
+			open
+			func numeric_literal(_ i: Int) -> Numeric_literalContext? {
+				return getRuleContext(Numeric_literalContext.self, i)
+			}
+			open
+			func K_LIMIT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_LIMIT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_select_stmt
 		}
-		open func result_column(_ i: Int) -> Result_columnContext? {
-			return getRuleContext(Result_columnContext.self,i)
-		}
-		open func K_FROM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0) }
-		open func table_name_with_alias() -> Table_name_with_aliasContext? {
-			return getRuleContext(Table_name_with_aliasContext.self,0)
-		}
-		open func join_clause() -> Array<Join_clauseContext> {
-			return getRuleContexts(Join_clauseContext.self)
-		}
-		open func join_clause(_ i: Int) -> Join_clauseContext? {
-			return getRuleContext(Join_clauseContext.self,i)
-		}
-		open func K_WHERE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0) }
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func K_GROUP() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_GROUP.rawValue, 0) }
-		open func K_BY() -> Array<TerminalNode> { return getTokens(FusionTablesSqlParser.Tokens.K_BY.rawValue) }
-		open func K_BY(_ i:Int) -> TerminalNode?{
-			return getToken(FusionTablesSqlParser.Tokens.K_BY.rawValue, i)
-		}
-		open func qualified_column_name() -> Array<Qualified_column_nameContext> {
-			return getRuleContexts(Qualified_column_nameContext.self)
-		}
-		open func qualified_column_name(_ i: Int) -> Qualified_column_nameContext? {
-			return getRuleContext(Qualified_column_nameContext.self,i)
-		}
-		open func K_ORDER() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ORDER.rawValue, 0) }
-		open func ordering_term() -> Array<Ordering_termContext> {
-			return getRuleContexts(Ordering_termContext.self)
-		}
-		open func ordering_term(_ i: Int) -> Ordering_termContext? {
-			return getRuleContext(Ordering_termContext.self,i)
-		}
-		open func K_OFFSET() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_OFFSET.rawValue, 0) }
-		open func numeric_literal() -> Array<Numeric_literalContext> {
-			return getRuleContexts(Numeric_literalContext.self)
-		}
-		open func numeric_literal(_ i: Int) -> Numeric_literalContext? {
-			return getRuleContext(Numeric_literalContext.self,i)
-		}
-		open func K_LIMIT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_LIMIT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_select_stmt }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterSelect_stmt(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterSelect_stmt(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitSelect_stmt(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitSelect_stmt(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitSelect_stmt(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitSelect_stmt(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitSelect_stmt(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitSelect_stmt(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func select_stmt() throws -> Select_stmtContext {
+	 open func select_stmt() throws -> Select_stmtContext {
 		var _localctx: Select_stmtContext = Select_stmtContext(_ctx, getState())
 		try enterRule(_localctx, 32, FusionTablesSqlParser.RULE_select_stmt)
 		var _la: Int = 0
@@ -1613,43 +1857,59 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Ordering_termContext:ParserRuleContext {
-		open func qualified_column_name() -> Qualified_column_nameContext? {
-			return getRuleContext(Qualified_column_nameContext.self,0)
+
+	public class Ordering_termContext: ParserRuleContext {
+			open
+			func qualified_column_name() -> Qualified_column_nameContext? {
+				return getRuleContext(Qualified_column_nameContext.self, 0)
+			}
+			open
+			func K_ST_DISTANCE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ST_DISTANCE.rawValue, 0)
+			}
+			open
+			func coordinate() -> CoordinateContext? {
+				return getRuleContext(CoordinateContext.self, 0)
+			}
+			open
+			func K_ASC() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ASC.rawValue, 0)
+			}
+			open
+			func K_DESC() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_DESC.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_ordering_term
 		}
-		open func K_ST_DISTANCE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ST_DISTANCE.rawValue, 0) }
-		open func coordinate() -> CoordinateContext? {
-			return getRuleContext(CoordinateContext.self,0)
-		}
-		open func K_ASC() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ASC.rawValue, 0) }
-		open func K_DESC() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_DESC.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_ordering_term }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterOrdering_term(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterOrdering_term(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitOrdering_term(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitOrdering_term(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitOrdering_term(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitOrdering_term(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitOrdering_term(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitOrdering_term(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ordering_term() throws -> Ordering_termContext {
+	 open func ordering_term() throws -> Ordering_termContext {
 		var _localctx: Ordering_termContext = Ordering_termContext(_ctx, getState())
 		try enterRule(_localctx, 34, FusionTablesSqlParser.RULE_ordering_term)
 		var _la: Int = 0
@@ -1683,7 +1943,7 @@ open class FusionTablesSqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		 	setState(291)
 		 	try _errHandler.sync(self)
@@ -1719,47 +1979,67 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Join_clauseContext:ParserRuleContext {
-		open func K_LEFT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_LEFT.rawValue, 0) }
-		open func K_OUTER() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_OUTER.rawValue, 0) }
-		open func K_JOIN() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_JOIN.rawValue, 0) }
-		open func table_name_with_alias() -> Table_name_with_aliasContext? {
-			return getRuleContext(Table_name_with_aliasContext.self,0)
+
+	public class Join_clauseContext: ParserRuleContext {
+			open
+			func K_LEFT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_LEFT.rawValue, 0)
+			}
+			open
+			func K_OUTER() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_OUTER.rawValue, 0)
+			}
+			open
+			func K_JOIN() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_JOIN.rawValue, 0)
+			}
+			open
+			func table_name_with_alias() -> Table_name_with_aliasContext? {
+				return getRuleContext(Table_name_with_aliasContext.self, 0)
+			}
+			open
+			func K_ON() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ON.rawValue, 0)
+			}
+			open
+			func qualified_column_name() -> [Qualified_column_nameContext] {
+				return getRuleContexts(Qualified_column_nameContext.self)
+			}
+			open
+			func qualified_column_name(_ i: Int) -> Qualified_column_nameContext? {
+				return getRuleContext(Qualified_column_nameContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_join_clause
 		}
-		open func K_ON() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ON.rawValue, 0) }
-		open func qualified_column_name() -> Array<Qualified_column_nameContext> {
-			return getRuleContexts(Qualified_column_nameContext.self)
-		}
-		open func qualified_column_name(_ i: Int) -> Qualified_column_nameContext? {
-			return getRuleContext(Qualified_column_nameContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_join_clause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterJoin_clause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterJoin_clause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitJoin_clause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitJoin_clause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitJoin_clause(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitJoin_clause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitJoin_clause(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitJoin_clause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func join_clause() throws -> Join_clauseContext {
+	 open func join_clause() throws -> Join_clauseContext {
 		var _localctx: Join_clauseContext = Join_clauseContext(_ctx, getState())
 		try enterRule(_localctx, 36, FusionTablesSqlParser.RULE_join_clause)
 		defer {
@@ -1794,43 +2074,51 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Result_columnContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class Result_columnContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+			open
+			func qualified_column_name() -> Qualified_column_nameContext? {
+				return getRuleContext(Qualified_column_nameContext.self, 0)
+			}
+			open
+			func aggregate_exp() -> Aggregate_expContext? {
+				return getRuleContext(Aggregate_expContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_result_column
 		}
-		open func qualified_column_name() -> Qualified_column_nameContext? {
-			return getRuleContext(Qualified_column_nameContext.self,0)
-		}
-		open func aggregate_exp() -> Aggregate_expContext? {
-			return getRuleContext(Aggregate_expContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_result_column }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterResult_column(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterResult_column(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitResult_column(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitResult_column(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitResult_column(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitResult_column(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitResult_column(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitResult_column(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func result_column() throws -> Result_columnContext {
+	 open func result_column() throws -> Result_columnContext {
 		var _localctx: Result_columnContext = Result_columnContext(_ctx, getState())
 		try enterRule(_localctx, 38, FusionTablesSqlParser.RULE_result_column)
 		defer {
@@ -1879,40 +2167,47 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Qualified_column_nameContext:ParserRuleContext {
-		open func column_name() -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,0)
+
+	public class Qualified_column_nameContext: ParserRuleContext {
+			open
+			func column_name() -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, 0)
+			}
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_qualified_column_name
 		}
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_qualified_column_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterQualified_column_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterQualified_column_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitQualified_column_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitQualified_column_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitQualified_column_name(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitQualified_column_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitQualified_column_name(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitQualified_column_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qualified_column_name() throws -> Qualified_column_nameContext {
+	 open func qualified_column_name() throws -> Qualified_column_nameContext {
 		var _localctx: Qualified_column_nameContext = Qualified_column_nameContext(_ctx, getState())
 		try enterRule(_localctx, 40, FusionTablesSqlParser.RULE_qualified_column_name)
 		defer {
@@ -1944,44 +2239,71 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Aggregate_expContext:ParserRuleContext {
-		open func LPAR() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.LPAR.rawValue, 0) }
-		open func qualified_column_name() -> Qualified_column_nameContext? {
-			return getRuleContext(Qualified_column_nameContext.self,0)
+
+	public class Aggregate_expContext: ParserRuleContext {
+			open
+			func LPAR() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.LPAR.rawValue, 0)
+			}
+			open
+			func qualified_column_name() -> Qualified_column_nameContext? {
+				return getRuleContext(Qualified_column_nameContext.self, 0)
+			}
+			open
+			func RPAR() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.RPAR.rawValue, 0)
+			}
+			open
+			func K_SUM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_SUM.rawValue, 0)
+			}
+			open
+			func K_COUNT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_COUNT.rawValue, 0)
+			}
+			open
+			func K_AVERAGE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_AVERAGE.rawValue, 0)
+			}
+			open
+			func K_MAXIMUM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_MAXIMUM.rawValue, 0)
+			}
+			open
+			func K_MINIMUM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_MINIMUM.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_aggregate_exp
 		}
-		open func RPAR() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.RPAR.rawValue, 0) }
-		open func K_SUM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_SUM.rawValue, 0) }
-		open func K_COUNT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_COUNT.rawValue, 0) }
-		open func K_AVERAGE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_AVERAGE.rawValue, 0) }
-		open func K_MAXIMUM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_MAXIMUM.rawValue, 0) }
-		open func K_MINIMUM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_MINIMUM.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_aggregate_exp }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterAggregate_exp(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterAggregate_exp(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitAggregate_exp(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitAggregate_exp(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitAggregate_exp(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitAggregate_exp(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitAggregate_exp(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitAggregate_exp(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func aggregate_exp() throws -> Aggregate_expContext {
+	 open func aggregate_exp() throws -> Aggregate_expContext {
 		var _localctx: Aggregate_expContext = Aggregate_expContext(_ctx, getState())
 		try enterRule(_localctx, 42, FusionTablesSqlParser.RULE_aggregate_exp)
 		var _la: Int = 0
@@ -2022,83 +2344,155 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class ExprContext:ParserRuleContext {
-		open func column_name_beginning_expr() -> Column_name_beginning_exprContext? {
-			return getRuleContext(Column_name_beginning_exprContext.self,0)
+
+	public class ExprContext: ParserRuleContext {
+			open
+			func column_name_beginning_expr() -> Column_name_beginning_exprContext? {
+				return getRuleContext(Column_name_beginning_exprContext.self, 0)
+			}
+			open
+			func literal() -> [LiteralContext] {
+				return getRuleContexts(LiteralContext.self)
+			}
+			open
+			func literal(_ i: Int) -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, i)
+			}
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+			open
+			func and_or_or() -> And_or_orContext? {
+				return getRuleContext(And_or_orContext.self, 0)
+			}
+			open
+			func expr() -> ExprContext? {
+				return getRuleContext(ExprContext.self, 0)
+			}
+			open
+			func string_literal() -> [String_literalContext] {
+				return getRuleContexts(String_literalContext.self)
+			}
+			open
+			func string_literal(_ i: Int) -> String_literalContext? {
+				return getRuleContext(String_literalContext.self, i)
+			}
+			open
+			func K_LIKE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_LIKE.rawValue, 0)
+			}
+			open
+			func K_MATCHES() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_MATCHES.rawValue, 0)
+			}
+			open
+			func K_STARTS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_STARTS.rawValue, 0)
+			}
+			open
+			func K_WITH() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_WITH.rawValue, 0)
+			}
+			open
+			func K_ENDS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ENDS.rawValue, 0)
+			}
+			open
+			func K_CONTAINS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CONTAINS.rawValue, 0)
+			}
+			open
+			func K_IGNORING() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_IGNORING.rawValue, 0)
+			}
+			open
+			func K_CASE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CASE.rawValue, 0)
+			}
+			open
+			func K_DOES() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_DOES.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_CONTAIN() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CONTAIN.rawValue, 0)
+			}
+			open
+			func K_EQUAL() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_EQUAL.rawValue, 0)
+			}
+			open
+			func K_TO() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_TO.rawValue, 0)
+			}
+			open
+			func K_IN() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_IN.rawValue, 0)
+			}
+			open
+			func K_BETWEEN() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_BETWEEN.rawValue, 0)
+			}
+			open
+			func K_AND() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_AND.rawValue, 0)
+			}
+			open
+			func K_ST_INTERSECTS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ST_INTERSECTS.rawValue, 0)
+			}
+			open
+			func LPAR() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.LPAR.rawValue, 0)
+			}
+			open
+			func qualified_column_name() -> Qualified_column_nameContext? {
+				return getRuleContext(Qualified_column_nameContext.self, 0)
+			}
+			open
+			func geometry() -> GeometryContext? {
+				return getRuleContext(GeometryContext.self, 0)
+			}
+			open
+			func RPAR() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.RPAR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_expr
 		}
-		open func literal() -> Array<LiteralContext> {
-			return getRuleContexts(LiteralContext.self)
-		}
-		open func literal(_ i: Int) -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,i)
-		}
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
-		}
-		open func and_or_or() -> And_or_orContext? {
-			return getRuleContext(And_or_orContext.self,0)
-		}
-		open func expr() -> ExprContext? {
-			return getRuleContext(ExprContext.self,0)
-		}
-		open func string_literal() -> Array<String_literalContext> {
-			return getRuleContexts(String_literalContext.self)
-		}
-		open func string_literal(_ i: Int) -> String_literalContext? {
-			return getRuleContext(String_literalContext.self,i)
-		}
-		open func K_LIKE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_LIKE.rawValue, 0) }
-		open func K_MATCHES() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_MATCHES.rawValue, 0) }
-		open func K_STARTS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_STARTS.rawValue, 0) }
-		open func K_WITH() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_WITH.rawValue, 0) }
-		open func K_ENDS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ENDS.rawValue, 0) }
-		open func K_CONTAINS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CONTAINS.rawValue, 0) }
-		open func K_IGNORING() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_IGNORING.rawValue, 0) }
-		open func K_CASE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CASE.rawValue, 0) }
-		open func K_DOES() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_DOES.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_CONTAIN() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CONTAIN.rawValue, 0) }
-		open func K_EQUAL() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_EQUAL.rawValue, 0) }
-		open func K_TO() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_TO.rawValue, 0) }
-		open func K_IN() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_IN.rawValue, 0) }
-		open func K_BETWEEN() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_BETWEEN.rawValue, 0) }
-		open func K_AND() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_AND.rawValue, 0) }
-		open func K_ST_INTERSECTS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ST_INTERSECTS.rawValue, 0) }
-		open func LPAR() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.LPAR.rawValue, 0) }
-		open func qualified_column_name() -> Qualified_column_nameContext? {
-			return getRuleContext(Qualified_column_nameContext.self,0)
-		}
-		open func geometry() -> GeometryContext? {
-			return getRuleContext(GeometryContext.self,0)
-		}
-		open func RPAR() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.RPAR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterExpr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterExpr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitExpr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitExpr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitExpr(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitExpr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitExpr(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitExpr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expr() throws -> ExprContext {
+	 open func expr() throws -> ExprContext {
 		var _localctx: ExprContext = ExprContext(_ctx, getState())
 		try enterRule(_localctx, 44, FusionTablesSqlParser.RULE_expr)
 		var _la: Int = 0
@@ -2338,37 +2732,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Column_name_beginning_exprContext:ParserRuleContext {
-		open func qualified_column_name() -> Qualified_column_nameContext? {
-			return getRuleContext(Qualified_column_nameContext.self,0)
+
+	public class Column_name_beginning_exprContext: ParserRuleContext {
+			open
+			func qualified_column_name() -> Qualified_column_nameContext? {
+				return getRuleContext(Qualified_column_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_column_name_beginning_expr
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_column_name_beginning_expr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterColumn_name_beginning_expr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterColumn_name_beginning_expr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitColumn_name_beginning_expr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitColumn_name_beginning_expr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitColumn_name_beginning_expr(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitColumn_name_beginning_expr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitColumn_name_beginning_expr(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitColumn_name_beginning_expr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func column_name_beginning_expr() throws -> Column_name_beginning_exprContext {
+	 open func column_name_beginning_expr() throws -> Column_name_beginning_exprContext {
 		var _localctx: Column_name_beginning_exprContext = Column_name_beginning_exprContext(_ctx, getState())
 		try enterRule(_localctx, 46, FusionTablesSqlParser.RULE_column_name_beginning_expr)
 		defer {
@@ -2388,37 +2788,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Column_name_in_dmlContext:ParserRuleContext {
-		open func column_name() -> Column_nameContext? {
-			return getRuleContext(Column_nameContext.self,0)
+
+	public class Column_name_in_dmlContext: ParserRuleContext {
+			open
+			func column_name() -> Column_nameContext? {
+				return getRuleContext(Column_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_column_name_in_dml
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_column_name_in_dml }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterColumn_name_in_dml(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterColumn_name_in_dml(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitColumn_name_in_dml(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitColumn_name_in_dml(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitColumn_name_in_dml(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitColumn_name_in_dml(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitColumn_name_in_dml(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitColumn_name_in_dml(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func column_name_in_dml() throws -> Column_name_in_dmlContext {
+	 open func column_name_in_dml() throws -> Column_name_in_dmlContext {
 		var _localctx: Column_name_in_dmlContext = Column_name_in_dmlContext(_ctx, getState())
 		try enterRule(_localctx, 48, FusionTablesSqlParser.RULE_column_name_in_dml)
 		defer {
@@ -2438,36 +2844,47 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class And_or_orContext:ParserRuleContext {
-		open func K_AND() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_AND.rawValue, 0) }
-		open func K_OR() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_OR.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_and_or_or }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterAnd_or_or(self)
+
+	public class And_or_orContext: ParserRuleContext {
+			open
+			func K_AND() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_AND.rawValue, 0)
+			}
+			open
+			func K_OR() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_OR.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_and_or_or
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterAnd_or_or(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitAnd_or_or(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitAnd_or_or(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitAnd_or_or(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitAnd_or_or(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitAnd_or_or(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitAnd_or_or(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func and_or_or() throws -> And_or_orContext {
+	 open func and_or_or() throws -> And_or_orContext {
 		var _localctx: And_or_orContext = And_or_orContext(_ctx, getState())
 		try enterRule(_localctx, 50, FusionTablesSqlParser.RULE_and_or_or)
 		var _la: Int = 0
@@ -2499,40 +2916,47 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class GeometryContext:ParserRuleContext {
-		open func circle() -> CircleContext? {
-			return getRuleContext(CircleContext.self,0)
+
+	public class GeometryContext: ParserRuleContext {
+			open
+			func circle() -> CircleContext? {
+				return getRuleContext(CircleContext.self, 0)
+			}
+			open
+			func rectangle() -> RectangleContext? {
+				return getRuleContext(RectangleContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_geometry
 		}
-		open func rectangle() -> RectangleContext? {
-			return getRuleContext(RectangleContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_geometry }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterGeometry(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterGeometry(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitGeometry(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitGeometry(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitGeometry(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitGeometry(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitGeometry(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitGeometry(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func geometry() throws -> GeometryContext {
+	 open func geometry() throws -> GeometryContext {
 		var _localctx: GeometryContext = GeometryContext(_ctx, getState())
 		try enterRule(_localctx, 52, FusionTablesSqlParser.RULE_geometry)
 		defer {
@@ -2556,7 +2980,7 @@ open class FusionTablesSqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2567,41 +2991,51 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class CircleContext:ParserRuleContext {
-		open func K_CIRCLE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CIRCLE.rawValue, 0) }
-		open func coordinate() -> CoordinateContext? {
-			return getRuleContext(CoordinateContext.self,0)
+
+	public class CircleContext: ParserRuleContext {
+			open
+			func K_CIRCLE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CIRCLE.rawValue, 0)
+			}
+			open
+			func coordinate() -> CoordinateContext? {
+				return getRuleContext(CoordinateContext.self, 0)
+			}
+			open
+			func numeric_literal() -> Numeric_literalContext? {
+				return getRuleContext(Numeric_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_circle
 		}
-		open func numeric_literal() -> Numeric_literalContext? {
-			return getRuleContext(Numeric_literalContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_circle }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterCircle(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterCircle(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitCircle(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitCircle(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitCircle(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitCircle(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitCircle(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitCircle(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func circle() throws -> CircleContext {
+	 open func circle() throws -> CircleContext {
 		var _localctx: CircleContext = CircleContext(_ctx, getState())
 		try enterRule(_localctx, 54, FusionTablesSqlParser.RULE_circle)
 		defer {
@@ -2631,41 +3065,51 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class RectangleContext:ParserRuleContext {
-		open func K_RECTANGLE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_RECTANGLE.rawValue, 0) }
-		open func coordinate() -> Array<CoordinateContext> {
-			return getRuleContexts(CoordinateContext.self)
+
+	public class RectangleContext: ParserRuleContext {
+			open
+			func K_RECTANGLE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_RECTANGLE.rawValue, 0)
+			}
+			open
+			func coordinate() -> [CoordinateContext] {
+				return getRuleContexts(CoordinateContext.self)
+			}
+			open
+			func coordinate(_ i: Int) -> CoordinateContext? {
+				return getRuleContext(CoordinateContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_rectangle
 		}
-		open func coordinate(_ i: Int) -> CoordinateContext? {
-			return getRuleContext(CoordinateContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_rectangle }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterRectangle(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterRectangle(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitRectangle(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitRectangle(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitRectangle(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitRectangle(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitRectangle(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitRectangle(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rectangle() throws -> RectangleContext {
+	 open func rectangle() throws -> RectangleContext {
 		var _localctx: RectangleContext = RectangleContext(_ctx, getState())
 		try enterRule(_localctx, 56, FusionTablesSqlParser.RULE_rectangle)
 		defer {
@@ -2695,41 +3139,51 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class CoordinateContext:ParserRuleContext {
-		open func K_LATLNG() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_LATLNG.rawValue, 0) }
-		open func numeric_literal() -> Array<Numeric_literalContext> {
-			return getRuleContexts(Numeric_literalContext.self)
+
+	public class CoordinateContext: ParserRuleContext {
+			open
+			func K_LATLNG() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_LATLNG.rawValue, 0)
+			}
+			open
+			func numeric_literal() -> [Numeric_literalContext] {
+				return getRuleContexts(Numeric_literalContext.self)
+			}
+			open
+			func numeric_literal(_ i: Int) -> Numeric_literalContext? {
+				return getRuleContext(Numeric_literalContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_coordinate
 		}
-		open func numeric_literal(_ i: Int) -> Numeric_literalContext? {
-			return getRuleContext(Numeric_literalContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_coordinate }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterCoordinate(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterCoordinate(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitCoordinate(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitCoordinate(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitCoordinate(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitCoordinate(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitCoordinate(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitCoordinate(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func coordinate() throws -> CoordinateContext {
+	 open func coordinate() throws -> CoordinateContext {
 		var _localctx: CoordinateContext = CoordinateContext(_ctx, getState())
 		try enterRule(_localctx, 58, FusionTablesSqlParser.RULE_coordinate)
 		defer {
@@ -2759,91 +3213,267 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class KeywordContext:ParserRuleContext {
-		open func K_ALTER() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ALTER.rawValue, 0) }
-		open func K_AND() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_AND.rawValue, 0) }
-		open func K_OR() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_OR.rawValue, 0) }
-		open func K_AS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_AS.rawValue, 0) }
-		open func K_ASC() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ASC.rawValue, 0) }
-		open func K_AVERAGE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_AVERAGE.rawValue, 0) }
-		open func K_BY() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_BY.rawValue, 0) }
-		open func K_BETWEEN() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_BETWEEN.rawValue, 0) }
-		open func K_CASE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CASE.rawValue, 0) }
-		open func K_CIRCLE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CIRCLE.rawValue, 0) }
-		open func K_COLUMN() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_COLUMN.rawValue, 0) }
-		open func K_CONTAIN() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CONTAIN.rawValue, 0) }
-		open func K_CONTAINS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CONTAINS.rawValue, 0) }
-		open func K_COUNT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_COUNT.rawValue, 0) }
-		open func K_CREATE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_CREATE.rawValue, 0) }
-		open func K_DELETE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_DELETE.rawValue, 0) }
-		open func K_DESC() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_DESC.rawValue, 0) }
-		open func K_DOES() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_DOES.rawValue, 0) }
-		open func K_DROP() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_DROP.rawValue, 0) }
-		open func K_ENDS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ENDS.rawValue, 0) }
-		open func K_EQUAL() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_EQUAL.rawValue, 0) }
-		open func K_FROM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0) }
-		open func K_GROUP() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_GROUP.rawValue, 0) }
-		open func K_HAVING() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_HAVING.rawValue, 0) }
-		open func K_IGNORING() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_IGNORING.rawValue, 0) }
-		open func K_IN() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_IN.rawValue, 0) }
-		open func K_INSERT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_INSERT.rawValue, 0) }
-		open func K_INTO() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_INTO.rawValue, 0) }
-		open func K_JOIN() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_JOIN.rawValue, 0) }
-		open func K_LATLNG() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_LATLNG.rawValue, 0) }
-		open func K_LEFT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_LEFT.rawValue, 0) }
-		open func K_LIKE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_LIKE.rawValue, 0) }
-		open func K_LIMIT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_LIMIT.rawValue, 0) }
-		open func K_MATCHES() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_MATCHES.rawValue, 0) }
-		open func K_MAXIMUM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_MAXIMUM.rawValue, 0) }
-		open func K_MINIMUM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_MINIMUM.rawValue, 0) }
-		open func K_NOT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_NOT.rawValue, 0) }
-		open func K_OF() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_OF.rawValue, 0) }
-		open func K_OFFSET() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_OFFSET.rawValue, 0) }
-		open func K_ON() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ON.rawValue, 0) }
-		open func K_ORDER() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ORDER.rawValue, 0) }
-		open func K_OUTER() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_OUTER.rawValue, 0) }
-		open func K_RECTANGLE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_RECTANGLE.rawValue, 0) }
-		open func K_RENAME() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_RENAME.rawValue, 0) }
-		open func K_SELECT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_SELECT.rawValue, 0) }
-		open func K_SET() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_SET.rawValue, 0) }
-		open func K_STARTS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_STARTS.rawValue, 0) }
-		open func K_ST_DISTANCE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ST_DISTANCE.rawValue, 0) }
-		open func K_ST_INTERSECTS() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_ST_INTERSECTS.rawValue, 0) }
-		open func K_SUM() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_SUM.rawValue, 0) }
-		open func K_TABLE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_TABLE.rawValue, 0) }
-		open func K_TO() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_TO.rawValue, 0) }
-		open func K_UPDATE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_UPDATE.rawValue, 0) }
-		open func K_VALUES() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_VALUES.rawValue, 0) }
-		open func K_VIEW() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_VIEW.rawValue, 0) }
-		open func K_WHERE() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0) }
-		open func K_WITH() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.K_WITH.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_keyword }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterKeyword(self)
+
+	public class KeywordContext: ParserRuleContext {
+			open
+			func K_ALTER() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ALTER.rawValue, 0)
+			}
+			open
+			func K_AND() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_AND.rawValue, 0)
+			}
+			open
+			func K_OR() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_OR.rawValue, 0)
+			}
+			open
+			func K_AS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_AS.rawValue, 0)
+			}
+			open
+			func K_ASC() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ASC.rawValue, 0)
+			}
+			open
+			func K_AVERAGE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_AVERAGE.rawValue, 0)
+			}
+			open
+			func K_BY() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_BY.rawValue, 0)
+			}
+			open
+			func K_BETWEEN() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_BETWEEN.rawValue, 0)
+			}
+			open
+			func K_CASE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CASE.rawValue, 0)
+			}
+			open
+			func K_CIRCLE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CIRCLE.rawValue, 0)
+			}
+			open
+			func K_COLUMN() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_COLUMN.rawValue, 0)
+			}
+			open
+			func K_CONTAIN() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CONTAIN.rawValue, 0)
+			}
+			open
+			func K_CONTAINS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CONTAINS.rawValue, 0)
+			}
+			open
+			func K_COUNT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_COUNT.rawValue, 0)
+			}
+			open
+			func K_CREATE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_CREATE.rawValue, 0)
+			}
+			open
+			func K_DELETE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_DELETE.rawValue, 0)
+			}
+			open
+			func K_DESC() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_DESC.rawValue, 0)
+			}
+			open
+			func K_DOES() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_DOES.rawValue, 0)
+			}
+			open
+			func K_DROP() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_DROP.rawValue, 0)
+			}
+			open
+			func K_ENDS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ENDS.rawValue, 0)
+			}
+			open
+			func K_EQUAL() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_EQUAL.rawValue, 0)
+			}
+			open
+			func K_FROM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_FROM.rawValue, 0)
+			}
+			open
+			func K_GROUP() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_GROUP.rawValue, 0)
+			}
+			open
+			func K_HAVING() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_HAVING.rawValue, 0)
+			}
+			open
+			func K_IGNORING() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_IGNORING.rawValue, 0)
+			}
+			open
+			func K_IN() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_IN.rawValue, 0)
+			}
+			open
+			func K_INSERT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_INSERT.rawValue, 0)
+			}
+			open
+			func K_INTO() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_INTO.rawValue, 0)
+			}
+			open
+			func K_JOIN() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_JOIN.rawValue, 0)
+			}
+			open
+			func K_LATLNG() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_LATLNG.rawValue, 0)
+			}
+			open
+			func K_LEFT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_LEFT.rawValue, 0)
+			}
+			open
+			func K_LIKE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_LIKE.rawValue, 0)
+			}
+			open
+			func K_LIMIT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_LIMIT.rawValue, 0)
+			}
+			open
+			func K_MATCHES() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_MATCHES.rawValue, 0)
+			}
+			open
+			func K_MAXIMUM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_MAXIMUM.rawValue, 0)
+			}
+			open
+			func K_MINIMUM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_MINIMUM.rawValue, 0)
+			}
+			open
+			func K_NOT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_NOT.rawValue, 0)
+			}
+			open
+			func K_OF() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_OF.rawValue, 0)
+			}
+			open
+			func K_OFFSET() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_OFFSET.rawValue, 0)
+			}
+			open
+			func K_ON() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ON.rawValue, 0)
+			}
+			open
+			func K_ORDER() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ORDER.rawValue, 0)
+			}
+			open
+			func K_OUTER() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_OUTER.rawValue, 0)
+			}
+			open
+			func K_RECTANGLE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_RECTANGLE.rawValue, 0)
+			}
+			open
+			func K_RENAME() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_RENAME.rawValue, 0)
+			}
+			open
+			func K_SELECT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_SELECT.rawValue, 0)
+			}
+			open
+			func K_SET() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_SET.rawValue, 0)
+			}
+			open
+			func K_STARTS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_STARTS.rawValue, 0)
+			}
+			open
+			func K_ST_DISTANCE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ST_DISTANCE.rawValue, 0)
+			}
+			open
+			func K_ST_INTERSECTS() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_ST_INTERSECTS.rawValue, 0)
+			}
+			open
+			func K_SUM() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_SUM.rawValue, 0)
+			}
+			open
+			func K_TABLE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_TABLE.rawValue, 0)
+			}
+			open
+			func K_TO() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_TO.rawValue, 0)
+			}
+			open
+			func K_UPDATE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_UPDATE.rawValue, 0)
+			}
+			open
+			func K_VALUES() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_VALUES.rawValue, 0)
+			}
+			open
+			func K_VIEW() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_VIEW.rawValue, 0)
+			}
+			open
+			func K_WHERE() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_WHERE.rawValue, 0)
+			}
+			open
+			func K_WITH() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.K_WITH.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_keyword
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterKeyword(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitKeyword(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitKeyword(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitKeyword(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitKeyword(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitKeyword(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitKeyword(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func keyword() throws -> KeywordContext {
+	 open func keyword() throws -> KeywordContext {
 		var _localctx: KeywordContext = KeywordContext(_ctx, getState())
 		try enterRule(_localctx, 60, FusionTablesSqlParser.RULE_keyword)
 		defer {
@@ -3257,7 +3887,7 @@ open class FusionTablesSqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3268,39 +3898,59 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class OperatorContext:ParserRuleContext {
-		open func LT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.LT.rawValue, 0) }
-		open func LT_EQ() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.LT_EQ.rawValue, 0) }
-		open func GT() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.GT.rawValue, 0) }
-		open func GT_EQ() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.GT_EQ.rawValue, 0) }
-		open func EQ() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.EQ.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterOperator(self)
+
+	public class OperatorContext: ParserRuleContext {
+			open
+			func LT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.LT.rawValue, 0)
+			}
+			open
+			func LT_EQ() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.LT_EQ.rawValue, 0)
+			}
+			open
+			func GT() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.GT.rawValue, 0)
+			}
+			open
+			func GT_EQ() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.GT_EQ.rawValue, 0)
+			}
+			open
+			func EQ() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.EQ.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_operator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitOperator(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitOperator(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operator() throws -> OperatorContext {
+	 open func operator() throws -> OperatorContext {
 		var _localctx: OperatorContext = OperatorContext(_ctx, getState())
 		try enterRule(_localctx, 62, FusionTablesSqlParser.RULE_operator)
 		var _la: Int = 0
@@ -3335,40 +3985,47 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func numeric_literal() -> Numeric_literalContext? {
-			return getRuleContext(Numeric_literalContext.self,0)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func numeric_literal() -> Numeric_literalContext? {
+				return getRuleContext(Numeric_literalContext.self, 0)
+			}
+			open
+			func string_literal() -> String_literalContext? {
+				return getRuleContext(String_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_literal
 		}
-		open func string_literal() -> String_literalContext? {
-			return getRuleContext(String_literalContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitLiteral(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 64, FusionTablesSqlParser.RULE_literal)
 		defer {
@@ -3392,7 +4049,7 @@ open class FusionTablesSqlParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3403,37 +4060,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Error_messageContext:ParserRuleContext {
-		open func string_literal() -> String_literalContext? {
-			return getRuleContext(String_literalContext.self,0)
+
+	public class Error_messageContext: ParserRuleContext {
+			open
+			func string_literal() -> String_literalContext? {
+				return getRuleContext(String_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_error_message
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_error_message }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterError_message(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterError_message(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitError_message(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitError_message(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitError_message(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitError_message(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitError_message(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitError_message(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func error_message() throws -> Error_messageContext {
+	 open func error_message() throws -> Error_messageContext {
 		var _localctx: Error_messageContext = Error_messageContext(_ctx, getState())
 		try enterRule(_localctx, 66, FusionTablesSqlParser.RULE_error_message)
 		defer {
@@ -3453,37 +4116,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class IdentifierContext:ParserRuleContext {
-		open func string_literal() -> String_literalContext? {
-			return getRuleContext(String_literalContext.self,0)
+
+	public class IdentifierContext: ParserRuleContext {
+			open
+			func string_literal() -> String_literalContext? {
+				return getRuleContext(String_literalContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_identifier
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_identifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterIdentifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterIdentifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitIdentifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitIdentifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitIdentifier(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitIdentifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitIdentifier(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitIdentifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func identifier() throws -> IdentifierContext {
+	 open func identifier() throws -> IdentifierContext {
 		var _localctx: IdentifierContext = IdentifierContext(_ctx, getState())
 		try enterRule(_localctx, 68, FusionTablesSqlParser.RULE_identifier)
 		defer {
@@ -3503,37 +4172,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Column_aliasContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Column_aliasContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_column_alias
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_column_alias }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterColumn_alias(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterColumn_alias(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitColumn_alias(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitColumn_alias(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitColumn_alias(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitColumn_alias(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitColumn_alias(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitColumn_alias(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func column_alias() throws -> Column_aliasContext {
+	 open func column_alias() throws -> Column_aliasContext {
 		var _localctx: Column_aliasContext = Column_aliasContext(_ctx, getState())
 		try enterRule(_localctx, 70, FusionTablesSqlParser.RULE_column_alias)
 		defer {
@@ -3553,37 +4228,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Table_nameContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Table_nameContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_table_name
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_table_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterTable_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterTable_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitTable_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitTable_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitTable_name(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitTable_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitTable_name(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitTable_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_name() throws -> Table_nameContext {
+	 open func table_name() throws -> Table_nameContext {
 		var _localctx: Table_nameContext = Table_nameContext(_ctx, getState())
 		try enterRule(_localctx, 72, FusionTablesSqlParser.RULE_table_name)
 		defer {
@@ -3603,37 +4284,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Column_nameContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Column_nameContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_column_name
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_column_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterColumn_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterColumn_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitColumn_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitColumn_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitColumn_name(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitColumn_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitColumn_name(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitColumn_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func column_name() throws -> Column_nameContext {
+	 open func column_name() throws -> Column_nameContext {
 		var _localctx: Column_nameContext = Column_nameContext(_ctx, getState())
 		try enterRule(_localctx, 74, FusionTablesSqlParser.RULE_column_name)
 		defer {
@@ -3653,37 +4340,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class New_table_nameContext:ParserRuleContext {
-		open func table_name() -> Table_nameContext? {
-			return getRuleContext(Table_nameContext.self,0)
+
+	public class New_table_nameContext: ParserRuleContext {
+			open
+			func table_name() -> Table_nameContext? {
+				return getRuleContext(Table_nameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_new_table_name
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_new_table_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterNew_table_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterNew_table_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitNew_table_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitNew_table_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitNew_table_name(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitNew_table_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitNew_table_name(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitNew_table_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func new_table_name() throws -> New_table_nameContext {
+	 open func new_table_name() throws -> New_table_nameContext {
 		var _localctx: New_table_nameContext = New_table_nameContext(_ctx, getState())
 		try enterRule(_localctx, 76, FusionTablesSqlParser.RULE_new_table_name)
 		defer {
@@ -3703,37 +4396,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class View_nameContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class View_nameContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_view_name
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_view_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterView_name(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterView_name(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitView_name(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitView_name(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitView_name(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitView_name(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitView_name(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitView_name(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func view_name() throws -> View_nameContext {
+	 open func view_name() throws -> View_nameContext {
 		var _localctx: View_nameContext = View_nameContext(_ctx, getState())
 		try enterRule(_localctx, 78, FusionTablesSqlParser.RULE_view_name)
 		defer {
@@ -3753,37 +4452,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Table_aliasContext:ParserRuleContext {
-		open func identifier() -> IdentifierContext? {
-			return getRuleContext(IdentifierContext.self,0)
+
+	public class Table_aliasContext: ParserRuleContext {
+			open
+			func identifier() -> IdentifierContext? {
+				return getRuleContext(IdentifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_table_alias
 		}
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_table_alias }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterTable_alias(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterTable_alias(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitTable_alias(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitTable_alias(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitTable_alias(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitTable_alias(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitTable_alias(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitTable_alias(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func table_alias() throws -> Table_aliasContext {
+	 open func table_alias() throws -> Table_aliasContext {
 		var _localctx: Table_aliasContext = Table_aliasContext(_ctx, getState())
 		try enterRule(_localctx, 80, FusionTablesSqlParser.RULE_table_alias)
 		defer {
@@ -3803,35 +4508,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class Numeric_literalContext:ParserRuleContext {
-		open func NUMERIC_LITERAL() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.NUMERIC_LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_numeric_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterNumeric_literal(self)
+
+	public class Numeric_literalContext: ParserRuleContext {
+			open
+			func NUMERIC_LITERAL() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.NUMERIC_LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_numeric_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterNumeric_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitNumeric_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitNumeric_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitNumeric_literal(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitNumeric_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitNumeric_literal(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitNumeric_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func numeric_literal() throws -> Numeric_literalContext {
+	 open func numeric_literal() throws -> Numeric_literalContext {
 		var _localctx: Numeric_literalContext = Numeric_literalContext(_ctx, getState())
 		try enterRule(_localctx, 82, FusionTablesSqlParser.RULE_numeric_literal)
 		defer {
@@ -3851,35 +4564,43 @@ open class FusionTablesSqlParser: Parser {
 
 		return _localctx
 	}
-	open class String_literalContext:ParserRuleContext {
-		open func STRING_LITERAL() -> TerminalNode? { return getToken(FusionTablesSqlParser.Tokens.STRING_LITERAL.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return FusionTablesSqlParser.RULE_string_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).enterString_literal(self)
+
+	public class String_literalContext: ParserRuleContext {
+			open
+			func STRING_LITERAL() -> TerminalNode? {
+				return getToken(FusionTablesSqlParser.Tokens.STRING_LITERAL.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return FusionTablesSqlParser.RULE_string_literal
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.enterString_literal(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is FusionTablesSqlListener {
-			 	(listener as! FusionTablesSqlListener).exitString_literal(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? FusionTablesSqlListener {
+				listener.exitString_literal(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is FusionTablesSqlVisitor {
-			     return (visitor as! FusionTablesSqlVisitor<T>).visitString_literal(self)
-			}else if visitor is FusionTablesSqlBaseVisitor {
-		    	 return (visitor as! FusionTablesSqlBaseVisitor<T>).visitString_literal(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? FusionTablesSqlVisitor {
+			    return visitor.visitString_literal(self)
+			}
+			else if let visitor = visitor as? FusionTablesSqlBaseVisitor {
+			    return visitor.visitString_literal(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func string_literal() throws -> String_literalContext {
+	 open func string_literal() throws -> String_literalContext {
 		var _localctx: String_literalContext = String_literalContext(_ctx, getState())
 		try enterRule(_localctx, 84, FusionTablesSqlParser.RULE_string_literal)
 		defer {
@@ -3900,6 +4621,10 @@ open class FusionTablesSqlParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = FusionTablesSqlParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = FusionTablesSqlParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

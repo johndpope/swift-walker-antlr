@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/url/url.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/url/url.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -16,7 +16,7 @@ open class urlBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitFragmentaddress(_ ctx: urlParser.FragmentaddressContext) -> T? { return visitChildren(ctx) }
+	open func visitUrl(_ ctx: urlParser.UrlContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -30,14 +30,7 @@ open class urlBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitUrl(_ ctx: urlParser.UrlContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitAuthority(_ ctx: urlParser.AuthorityContext) -> T? { return visitChildren(ctx) }
+	open func visitScheme(_ ctx: urlParser.SchemeContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -79,20 +72,6 @@ open class urlBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitSearch(_ ctx: urlParser.SearchContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	open func visitSearchparameter(_ ctx: urlParser.SearchparameterContext) -> T? { return visitChildren(ctx) }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
 	open func visitUser(_ ctx: urlParser.UserContext) -> T? { return visitChildren(ctx) }
 	/**
 	 * {@inheritDoc}
@@ -114,5 +93,33 @@ open class urlBaseVisitor<T>: AbstractParseTreeVisitor<T> {
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	open func visitFragmentid(_ ctx: urlParser.FragmentidContext) -> T? { return visitChildren(ctx) }
+	open func visitFrag(_ ctx: urlParser.FragContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitQuery(_ ctx: urlParser.QueryContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitSearch(_ ctx: urlParser.SearchContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitSearchparameter(_ ctx: urlParser.SearchparameterContext) -> T? { return visitChildren(ctx) }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	open func visitString(_ ctx: urlParser.StringContext) -> T? { return visitChildren(ctx) }
 }

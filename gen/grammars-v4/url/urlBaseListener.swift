@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/url/url.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/url/url.g4 by ANTLR 4.7.1
 
 import Antlr4
 
@@ -9,19 +9,19 @@ import Antlr4
  * of the available methods.
  */
 open class urlBaseListener: urlListener {
-    public init() { }
+     public init() { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterFragmentaddress(_ ctx: urlParser.FragmentaddressContext) { }
+	open func enterUrl(_ ctx: urlParser.UrlContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitFragmentaddress(_ ctx: urlParser.FragmentaddressContext) { }
+	open func exitUrl(_ ctx: urlParser.UrlContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -41,26 +41,13 @@ open class urlBaseListener: urlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterUrl(_ ctx: urlParser.UrlContext) { }
+	open func enterScheme(_ ctx: urlParser.SchemeContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitUrl(_ ctx: urlParser.UrlContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterAuthority(_ ctx: urlParser.AuthorityContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitAuthority(_ ctx: urlParser.AuthorityContext) { }
+	open func exitScheme(_ ctx: urlParser.SchemeContext) { }
 
 	/**
 	 * {@inheritDoc}
@@ -132,32 +119,6 @@ open class urlBaseListener: urlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterSearch(_ ctx: urlParser.SearchContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitSearch(_ ctx: urlParser.SearchContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func enterSearchparameter(_ ctx: urlParser.SearchparameterContext) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	open func exitSearchparameter(_ ctx: urlParser.SearchparameterContext) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	open func enterUser(_ ctx: urlParser.UserContext) { }
 	/**
 	 * {@inheritDoc}
@@ -197,13 +158,65 @@ open class urlBaseListener: urlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func enterFragmentid(_ ctx: urlParser.FragmentidContext) { }
+	open func enterFrag(_ ctx: urlParser.FragContext) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	open func exitFragmentid(_ ctx: urlParser.FragmentidContext) { }
+	open func exitFrag(_ ctx: urlParser.FragContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterQuery(_ ctx: urlParser.QueryContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitQuery(_ ctx: urlParser.QueryContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterSearch(_ ctx: urlParser.SearchContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitSearch(_ ctx: urlParser.SearchContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterSearchparameter(_ ctx: urlParser.SearchparameterContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitSearchparameter(_ ctx: urlParser.SearchparameterContext) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func enterString(_ ctx: urlParser.StringContext) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	open func exitString(_ ctx: urlParser.StringContext) { }
 
 	/**
 	 * {@inheritDoc}

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/oncrpc/oncrpcv2.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/oncrpc/oncrpcv2.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProgramDef(_ ctx: oncrpcv2Parser.ProgramDefContext) -> T{
+	open func visitProgramDef(_ ctx: oncrpcv2Parser.ProgramDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVersionDef(_ ctx: oncrpcv2Parser.VersionDefContext) -> T{
+	open func visitVersionDef(_ ctx: oncrpcv2Parser.VersionDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcedureDef(_ ctx: oncrpcv2Parser.ProcedureDefContext) -> T{
+	open func visitProcedureDef(_ ctx: oncrpcv2Parser.ProcedureDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcReturn(_ ctx: oncrpcv2Parser.ProcReturnContext) -> T{
+	open func visitProcReturn(_ ctx: oncrpcv2Parser.ProcReturnContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitProcFirstArg(_ ctx: oncrpcv2Parser.ProcFirstArgContext) -> T{
+	open func visitProcFirstArg(_ ctx: oncrpcv2Parser.ProcFirstArgContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOncrpcv2Specification(_ ctx: oncrpcv2Parser.Oncrpcv2SpecificationContext) -> T{
+	open func visitOncrpcv2Specification(_ ctx: oncrpcv2Parser.Oncrpcv2SpecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDeclaration(_ ctx: oncrpcv2Parser.DeclarationContext) -> T{
+	open func visitDeclaration(_ ctx: oncrpcv2Parser.DeclarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitValue(_ ctx: oncrpcv2Parser.ValueContext) -> T{
+	open func visitValue(_ ctx: oncrpcv2Parser.ValueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstant(_ ctx: oncrpcv2Parser.ConstantContext) -> T{
+	open func visitConstant(_ ctx: oncrpcv2Parser.ConstantContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeSpecifier(_ ctx: oncrpcv2Parser.TypeSpecifierContext) -> T{
+	open func visitTypeSpecifier(_ ctx: oncrpcv2Parser.TypeSpecifierContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumTypeSpec(_ ctx: oncrpcv2Parser.EnumTypeSpecContext) -> T{
+	open func visitEnumTypeSpec(_ ctx: oncrpcv2Parser.EnumTypeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnumBody(_ ctx: oncrpcv2Parser.EnumBodyContext) -> T{
+	open func visitEnumBody(_ ctx: oncrpcv2Parser.EnumBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructTypeSpec(_ ctx: oncrpcv2Parser.StructTypeSpecContext) -> T{
+	open func visitStructTypeSpec(_ ctx: oncrpcv2Parser.StructTypeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitStructBody(_ ctx: oncrpcv2Parser.StructBodyContext) -> T{
+	open func visitStructBody(_ ctx: oncrpcv2Parser.StructBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionTypeSpec(_ ctx: oncrpcv2Parser.UnionTypeSpecContext) -> T{
+	open func visitUnionTypeSpec(_ ctx: oncrpcv2Parser.UnionTypeSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUnionBody(_ ctx: oncrpcv2Parser.UnionBodyContext) -> T{
+	open func visitUnionBody(_ ctx: oncrpcv2Parser.UnionBodyContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCaseSpec(_ ctx: oncrpcv2Parser.CaseSpecContext) -> T{
+	open func visitCaseSpec(_ ctx: oncrpcv2Parser.CaseSpecContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstantDef(_ ctx: oncrpcv2Parser.ConstantDefContext) -> T{
+	open func visitConstantDef(_ ctx: oncrpcv2Parser.ConstantDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTypeDef(_ ctx: oncrpcv2Parser.TypeDefContext) -> T{
+	open func visitTypeDef(_ ctx: oncrpcv2Parser.TypeDefContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDefinition(_ ctx: oncrpcv2Parser.DefinitionContext) -> T{
+	open func visitDefinition(_ ctx: oncrpcv2Parser.DefinitionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class oncrpcv2Visitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitXdrSpecification(_ ctx: oncrpcv2Parser.XdrSpecificationContext) -> T{
+	open func visitXdrSpecification(_ ctx: oncrpcv2Parser.XdrSpecificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/csv/CSV.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/csv/CSV.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class CSVParser: Parser {
@@ -11,12 +11,19 @@ open class CSVParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, T__2 = 3, TEXT = 4, STRING = 5
 	}
-	public static let RULE_csvFile = 0, RULE_hdr = 1, RULE_row = 2, RULE_field = 3
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_csvFile = 0, RULE_hdr = 1, RULE_row = 2, RULE_field = 3
+
+	public
+	static let ruleNames: [String] = [
 		"csvFile", "hdr", "row", "field"
 	]
 
@@ -26,91 +33,77 @@ open class CSVParser: Parser {
 	private static let _SYMBOLIC_NAMES: [String?] = [
 		nil, nil, nil, nil, "TEXT", "STRING"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "CSV.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return CSVParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "CSV.g4" }
+	override open
+	func getSerializedATN() -> String { return CSVParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return CSVParser.ruleNames }
+	override open
+	func getATN() -> ATN { return CSVParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return CSVParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return CSVParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return CSVParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,CSVParser._ATN,CSVParser._decisionToDFA, CSVParser._sharedContextCache)
 	}
-	open class CsvFileContext:ParserRuleContext {
-		open func hdr() -> HdrContext? {
-			return getRuleContext(HdrContext.self,0)
+
+	public class CsvFileContext: ParserRuleContext {
+			open
+			func hdr() -> HdrContext? {
+				return getRuleContext(HdrContext.self, 0)
+			}
+			open
+			func row() -> [RowContext] {
+				return getRuleContexts(RowContext.self)
+			}
+			open
+			func row(_ i: Int) -> RowContext? {
+				return getRuleContext(RowContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CSVParser.RULE_csvFile
 		}
-		open func row() -> Array<RowContext> {
-			return getRuleContexts(RowContext.self)
-		}
-		open func row(_ i: Int) -> RowContext? {
-			return getRuleContext(RowContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return CSVParser.RULE_csvFile }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CSVListener {
-			 	(listener as! CSVListener).enterCsvFile(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CSVListener {
+				listener.enterCsvFile(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CSVListener {
-			 	(listener as! CSVListener).exitCsvFile(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CSVListener {
+				listener.exitCsvFile(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CSVVisitor {
-			     return (visitor as! CSVVisitor<T>).visitCsvFile(self)
-			}else if visitor is CSVBaseVisitor {
-		    	 return (visitor as! CSVBaseVisitor<T>).visitCsvFile(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CSVVisitor {
+			    return visitor.visitCsvFile(self)
+			}
+			else if let visitor = visitor as? CSVBaseVisitor {
+			    return visitor.visitCsvFile(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func csvFile() throws -> CsvFileContext {
+	 open func csvFile() throws -> CsvFileContext {
 		var _localctx: CsvFileContext = CsvFileContext(_ctx, getState())
 		try enterRule(_localctx, 0, CSVParser.RULE_csvFile)
 		var _la: Int = 0
@@ -150,37 +143,43 @@ open class CSVParser: Parser {
 
 		return _localctx
 	}
-	open class HdrContext:ParserRuleContext {
-		open func row() -> RowContext? {
-			return getRuleContext(RowContext.self,0)
+
+	public class HdrContext: ParserRuleContext {
+			open
+			func row() -> RowContext? {
+				return getRuleContext(RowContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CSVParser.RULE_hdr
 		}
-		open override func getRuleIndex() -> Int { return CSVParser.RULE_hdr }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CSVListener {
-			 	(listener as! CSVListener).enterHdr(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CSVListener {
+				listener.enterHdr(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CSVListener {
-			 	(listener as! CSVListener).exitHdr(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CSVListener {
+				listener.exitHdr(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CSVVisitor {
-			     return (visitor as! CSVVisitor<T>).visitHdr(self)
-			}else if visitor is CSVBaseVisitor {
-		    	 return (visitor as! CSVBaseVisitor<T>).visitHdr(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CSVVisitor {
+			    return visitor.visitHdr(self)
+			}
+			else if let visitor = visitor as? CSVBaseVisitor {
+			    return visitor.visitHdr(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func hdr() throws -> HdrContext {
+	 open func hdr() throws -> HdrContext {
 		var _localctx: HdrContext = HdrContext(_ctx, getState())
 		try enterRule(_localctx, 2, CSVParser.RULE_hdr)
 		defer {
@@ -200,40 +199,47 @@ open class CSVParser: Parser {
 
 		return _localctx
 	}
-	open class RowContext:ParserRuleContext {
-		open func field() -> Array<FieldContext> {
-			return getRuleContexts(FieldContext.self)
+
+	public class RowContext: ParserRuleContext {
+			open
+			func field() -> [FieldContext] {
+				return getRuleContexts(FieldContext.self)
+			}
+			open
+			func field(_ i: Int) -> FieldContext? {
+				return getRuleContext(FieldContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CSVParser.RULE_row
 		}
-		open func field(_ i: Int) -> FieldContext? {
-			return getRuleContext(FieldContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return CSVParser.RULE_row }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CSVListener {
-			 	(listener as! CSVListener).enterRow(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CSVListener {
+				listener.enterRow(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CSVListener {
-			 	(listener as! CSVListener).exitRow(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CSVListener {
+				listener.exitRow(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CSVVisitor {
-			     return (visitor as! CSVVisitor<T>).visitRow(self)
-			}else if visitor is CSVBaseVisitor {
-		    	 return (visitor as! CSVBaseVisitor<T>).visitRow(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CSVVisitor {
+			    return visitor.visitRow(self)
+			}
+			else if let visitor = visitor as? CSVBaseVisitor {
+			    return visitor.visitRow(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func row() throws -> RowContext {
+	 open func row() throws -> RowContext {
 		var _localctx: RowContext = RowContext(_ctx, getState())
 		try enterRule(_localctx, 4, CSVParser.RULE_row)
 		var _la: Int = 0
@@ -287,36 +293,47 @@ open class CSVParser: Parser {
 
 		return _localctx
 	}
-	open class FieldContext:ParserRuleContext {
-		open func TEXT() -> TerminalNode? { return getToken(CSVParser.Tokens.TEXT.rawValue, 0) }
-		open func STRING() -> TerminalNode? { return getToken(CSVParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CSVParser.RULE_field }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CSVListener {
-			 	(listener as! CSVListener).enterField(self)
+
+	public class FieldContext: ParserRuleContext {
+			open
+			func TEXT() -> TerminalNode? {
+				return getToken(CSVParser.Tokens.TEXT.rawValue, 0)
+			}
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(CSVParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CSVParser.RULE_field
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CSVListener {
+				listener.enterField(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CSVListener {
-			 	(listener as! CSVListener).exitField(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CSVListener {
+				listener.exitField(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CSVVisitor {
-			     return (visitor as! CSVVisitor<T>).visitField(self)
-			}else if visitor is CSVBaseVisitor {
-		    	 return (visitor as! CSVBaseVisitor<T>).visitField(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CSVVisitor {
+			    return visitor.visitField(self)
+			}
+			else if let visitor = visitor as? CSVBaseVisitor {
+			    return visitor.visitField(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func field() throws -> FieldContext {
+	 open func field() throws -> FieldContext {
 		var _localctx: FieldContext = FieldContext(_ctx, getState())
 		try enterRule(_localctx, 6, CSVParser.RULE_field)
 		defer {
@@ -346,7 +363,7 @@ open class CSVParser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -358,6 +375,10 @@ open class CSVParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = CSVParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = CSVParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

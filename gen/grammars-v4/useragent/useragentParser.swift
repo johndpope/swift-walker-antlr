@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/useragent/useragent.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/useragent/useragent.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class useragentParser: Parser {
@@ -11,13 +11,20 @@ open class useragentParser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, T__0 = 1, T__1 = 2, COMMENT = 3, STRING = 4, WS = 5
 	}
-	public static let RULE_prog = 0, RULE_product = 1, RULE_name = 2, RULE_version = 3, 
-                   RULE_comment = 4
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_prog = 0, RULE_product = 1, RULE_name = 2, RULE_version = 3, 
+            RULE_comment = 4
+
+	public
+	static let ruleNames: [String] = [
 		"prog", "product", "name", "version", "comment"
 	]
 
@@ -27,94 +34,81 @@ open class useragentParser: Parser {
 	private static let _SYMBOLIC_NAMES: [String?] = [
 		nil, nil, nil, "COMMENT", "STRING", "WS"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "useragent.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return useragentParser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "useragent.g4" }
+	override open
+	func getSerializedATN() -> String { return useragentParser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return useragentParser.ruleNames }
+	override open
+	func getATN() -> ATN { return useragentParser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return useragentParser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return useragentParser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return useragentParser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,useragentParser._ATN,useragentParser._decisionToDFA, useragentParser._sharedContextCache)
 	}
-	open class ProgContext:ParserRuleContext {
-		open func product() -> Array<ProductContext> {
-			return getRuleContexts(ProductContext.self)
+
+	public class ProgContext: ParserRuleContext {
+			open
+			func product() -> [ProductContext] {
+				return getRuleContexts(ProductContext.self)
+			}
+			open
+			func product(_ i: Int) -> ProductContext? {
+				return getRuleContext(ProductContext.self, i)
+			}
+			open
+			func comment() -> [CommentContext] {
+				return getRuleContexts(CommentContext.self)
+			}
+			open
+			func comment(_ i: Int) -> CommentContext? {
+				return getRuleContext(CommentContext.self, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return useragentParser.RULE_prog
 		}
-		open func product(_ i: Int) -> ProductContext? {
-			return getRuleContext(ProductContext.self,i)
-		}
-		open func comment() -> Array<CommentContext> {
-			return getRuleContexts(CommentContext.self)
-		}
-		open func comment(_ i: Int) -> CommentContext? {
-			return getRuleContext(CommentContext.self,i)
-		}
-		open override func getRuleIndex() -> Int { return useragentParser.RULE_prog }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).enterProg(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.enterProg(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).exitProg(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.exitProg(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is useragentVisitor {
-			     return (visitor as! useragentVisitor<T>).visitProg(self)
-			}else if visitor is useragentBaseVisitor {
-		    	 return (visitor as! useragentBaseVisitor<T>).visitProg(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? useragentVisitor {
+			    return visitor.visitProg(self)
+			}
+			else if let visitor = visitor as? useragentBaseVisitor {
+			    return visitor.visitProg(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func prog() throws -> ProgContext {
+	 open func prog() throws -> ProgContext {
 		var _localctx: ProgContext = ProgContext(_ctx, getState())
 		try enterRule(_localctx, 0, useragentParser.RULE_prog)
 		var _la: Int = 0
@@ -162,40 +156,47 @@ open class useragentParser: Parser {
 
 		return _localctx
 	}
-	open class ProductContext:ParserRuleContext {
-		open func name() -> NameContext? {
-			return getRuleContext(NameContext.self,0)
+
+	public class ProductContext: ParserRuleContext {
+			open
+			func name() -> NameContext? {
+				return getRuleContext(NameContext.self, 0)
+			}
+			open
+			func version() -> VersionContext? {
+				return getRuleContext(VersionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return useragentParser.RULE_product
 		}
-		open func version() -> VersionContext? {
-			return getRuleContext(VersionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return useragentParser.RULE_product }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).enterProduct(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.enterProduct(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).exitProduct(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.exitProduct(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is useragentVisitor {
-			     return (visitor as! useragentVisitor<T>).visitProduct(self)
-			}else if visitor is useragentBaseVisitor {
-		    	 return (visitor as! useragentBaseVisitor<T>).visitProduct(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? useragentVisitor {
+			    return visitor.visitProduct(self)
+			}
+			else if let visitor = visitor as? useragentBaseVisitor {
+			    return visitor.visitProduct(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func product() throws -> ProductContext {
+	 open func product() throws -> ProductContext {
 		var _localctx: ProductContext = ProductContext(_ctx, getState())
 		try enterRule(_localctx, 2, useragentParser.RULE_product)
 		defer {
@@ -219,35 +220,43 @@ open class useragentParser: Parser {
 
 		return _localctx
 	}
-	open class NameContext:ParserRuleContext {
-		open func STRING() -> TerminalNode? { return getToken(useragentParser.Tokens.STRING.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return useragentParser.RULE_name }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).enterName(self)
+
+	public class NameContext: ParserRuleContext {
+			open
+			func STRING() -> TerminalNode? {
+				return getToken(useragentParser.Tokens.STRING.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return useragentParser.RULE_name
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.enterName(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).exitName(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.exitName(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is useragentVisitor {
-			     return (visitor as! useragentVisitor<T>).visitName(self)
-			}else if visitor is useragentBaseVisitor {
-		    	 return (visitor as! useragentBaseVisitor<T>).visitName(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? useragentVisitor {
+			    return visitor.visitName(self)
+			}
+			else if let visitor = visitor as? useragentBaseVisitor {
+			    return visitor.visitName(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func name() throws -> NameContext {
+	 open func name() throws -> NameContext {
 		var _localctx: NameContext = NameContext(_ctx, getState())
 		try enterRule(_localctx, 4, useragentParser.RULE_name)
 		defer {
@@ -267,38 +276,47 @@ open class useragentParser: Parser {
 
 		return _localctx
 	}
-	open class VersionContext:ParserRuleContext {
-		open func STRING() -> Array<TerminalNode> { return getTokens(useragentParser.Tokens.STRING.rawValue) }
-		open func STRING(_ i:Int) -> TerminalNode?{
-			return getToken(useragentParser.Tokens.STRING.rawValue, i)
+
+	public class VersionContext: ParserRuleContext {
+			open
+			func STRING() -> [TerminalNode] {
+				return getTokens(useragentParser.Tokens.STRING.rawValue)
+			}
+			open
+			func STRING(_ i:Int) -> TerminalNode? {
+				return getToken(useragentParser.Tokens.STRING.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return useragentParser.RULE_version
 		}
-		open override func getRuleIndex() -> Int { return useragentParser.RULE_version }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).enterVersion(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.enterVersion(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).exitVersion(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.exitVersion(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is useragentVisitor {
-			     return (visitor as! useragentVisitor<T>).visitVersion(self)
-			}else if visitor is useragentBaseVisitor {
-		    	 return (visitor as! useragentBaseVisitor<T>).visitVersion(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? useragentVisitor {
+			    return visitor.visitVersion(self)
+			}
+			else if let visitor = visitor as? useragentBaseVisitor {
+			    return visitor.visitVersion(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func version() throws -> VersionContext {
+	 open func version() throws -> VersionContext {
 		var _localctx: VersionContext = VersionContext(_ctx, getState())
 		try enterRule(_localctx, 6, useragentParser.RULE_version)
 		var _la: Int = 0
@@ -337,35 +355,43 @@ open class useragentParser: Parser {
 
 		return _localctx
 	}
-	open class CommentContext:ParserRuleContext {
-		open func COMMENT() -> TerminalNode? { return getToken(useragentParser.Tokens.COMMENT.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return useragentParser.RULE_comment }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).enterComment(self)
+
+	public class CommentContext: ParserRuleContext {
+			open
+			func COMMENT() -> TerminalNode? {
+				return getToken(useragentParser.Tokens.COMMENT.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return useragentParser.RULE_comment
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.enterComment(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is useragentListener {
-			 	(listener as! useragentListener).exitComment(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? useragentListener {
+				listener.exitComment(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is useragentVisitor {
-			     return (visitor as! useragentVisitor<T>).visitComment(self)
-			}else if visitor is useragentBaseVisitor {
-		    	 return (visitor as! useragentBaseVisitor<T>).visitComment(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? useragentVisitor {
+			    return visitor.visitComment(self)
+			}
+			else if let visitor = visitor as? useragentBaseVisitor {
+			    return visitor.visitComment(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func comment() throws -> CommentContext {
+	 open func comment() throws -> CommentContext {
 		var _localctx: CommentContext = CommentContext(_ctx, getState())
 		try enterRule(_localctx, 8, useragentParser.RULE_comment)
 		defer {
@@ -386,6 +412,10 @@ open class useragentParser: Parser {
 		return _localctx
 	}
 
-   public static let _serializedATN : String = useragentParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = useragentParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

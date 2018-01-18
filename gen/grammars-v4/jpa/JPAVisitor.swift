@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/jpa/JPA.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/jpa/JPA.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitQl_statement(_ ctx: JPAParser.Ql_statementContext) -> T{
+	open func visitQl_statement(_ ctx: JPAParser.Ql_statementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelect_statement(_ ctx: JPAParser.Select_statementContext) -> T{
+	open func visitSelect_statement(_ ctx: JPAParser.Select_statementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUpdate_statement(_ ctx: JPAParser.Update_statementContext) -> T{
+	open func visitUpdate_statement(_ ctx: JPAParser.Update_statementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelete_statement(_ ctx: JPAParser.Delete_statementContext) -> T{
+	open func visitDelete_statement(_ ctx: JPAParser.Delete_statementContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFrom_clause(_ ctx: JPAParser.From_clauseContext) -> T{
+	open func visitFrom_clause(_ ctx: JPAParser.From_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIdentification_variable_declaration(_ ctx: JPAParser.Identification_variable_declarationContext) -> T{
+	open func visitIdentification_variable_declaration(_ ctx: JPAParser.Identification_variable_declarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitRange_variable_declaration(_ ctx: JPAParser.Range_variable_declarationContext) -> T{
+	open func visitRange_variable_declaration(_ ctx: JPAParser.Range_variable_declarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,7 +85,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJoin(_ ctx: JPAParser.JoinContext) -> T{
+	open func visitJoin(_ ctx: JPAParser.JoinContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -95,7 +95,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFetch_join(_ ctx: JPAParser.Fetch_joinContext) -> T{
+	open func visitFetch_join(_ ctx: JPAParser.Fetch_joinContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -105,7 +105,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJoin_spec(_ ctx: JPAParser.Join_specContext) -> T{
+	open func visitJoin_spec(_ ctx: JPAParser.Join_specContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -115,7 +115,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJoin_association_path_expression(_ ctx: JPAParser.Join_association_path_expressionContext) -> T{
+	open func visitJoin_association_path_expression(_ ctx: JPAParser.Join_association_path_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -125,7 +125,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJoin_collection_valued_path_expression(_ ctx: JPAParser.Join_collection_valued_path_expressionContext) -> T{
+	open func visitJoin_collection_valued_path_expression(_ ctx: JPAParser.Join_collection_valued_path_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -135,7 +135,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJoin_single_valued_association_path_expression(_ ctx: JPAParser.Join_single_valued_association_path_expressionContext) -> T{
+	open func visitJoin_single_valued_association_path_expression(_ ctx: JPAParser.Join_single_valued_association_path_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -145,7 +145,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollection_member_declaration(_ ctx: JPAParser.Collection_member_declarationContext) -> T{
+	open func visitCollection_member_declaration(_ ctx: JPAParser.Collection_member_declarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -155,7 +155,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingle_valued_path_expression(_ ctx: JPAParser.Single_valued_path_expressionContext) -> T{
+	open func visitSingle_valued_path_expression(_ ctx: JPAParser.Single_valued_path_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -165,7 +165,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitState_field_path_expression(_ ctx: JPAParser.State_field_path_expressionContext) -> T{
+	open func visitState_field_path_expression(_ ctx: JPAParser.State_field_path_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -175,7 +175,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingle_valued_association_path_expression(_ ctx: JPAParser.Single_valued_association_path_expressionContext) -> T{
+	open func visitSingle_valued_association_path_expression(_ ctx: JPAParser.Single_valued_association_path_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -185,7 +185,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollection_valued_path_expression(_ ctx: JPAParser.Collection_valued_path_expressionContext) -> T{
+	open func visitCollection_valued_path_expression(_ ctx: JPAParser.Collection_valued_path_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -195,7 +195,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitState_field(_ ctx: JPAParser.State_fieldContext) -> T{
+	open func visitState_field(_ ctx: JPAParser.State_fieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -205,7 +205,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUpdate_clause(_ ctx: JPAParser.Update_clauseContext) -> T{
+	open func visitUpdate_clause(_ ctx: JPAParser.Update_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -215,7 +215,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitUpdate_item(_ ctx: JPAParser.Update_itemContext) -> T{
+	open func visitUpdate_item(_ ctx: JPAParser.Update_itemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -225,7 +225,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNew_value(_ ctx: JPAParser.New_valueContext) -> T{
+	open func visitNew_value(_ ctx: JPAParser.New_valueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -235,7 +235,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDelete_clause(_ ctx: JPAParser.Delete_clauseContext) -> T{
+	open func visitDelete_clause(_ ctx: JPAParser.Delete_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -245,7 +245,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelect_clause(_ ctx: JPAParser.Select_clauseContext) -> T{
+	open func visitSelect_clause(_ ctx: JPAParser.Select_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -255,7 +255,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSelect_expression(_ ctx: JPAParser.Select_expressionContext) -> T{
+	open func visitSelect_expression(_ ctx: JPAParser.Select_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -265,7 +265,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructor_expression(_ ctx: JPAParser.Constructor_expressionContext) -> T{
+	open func visitConstructor_expression(_ ctx: JPAParser.Constructor_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -275,7 +275,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructor_item(_ ctx: JPAParser.Constructor_itemContext) -> T{
+	open func visitConstructor_item(_ ctx: JPAParser.Constructor_itemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -285,7 +285,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAggregate_expression(_ ctx: JPAParser.Aggregate_expressionContext) -> T{
+	open func visitAggregate_expression(_ ctx: JPAParser.Aggregate_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -295,7 +295,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitWhere_clause(_ ctx: JPAParser.Where_clauseContext) -> T{
+	open func visitWhere_clause(_ ctx: JPAParser.Where_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -305,7 +305,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGroupby_clause(_ ctx: JPAParser.Groupby_clauseContext) -> T{
+	open func visitGroupby_clause(_ ctx: JPAParser.Groupby_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -315,7 +315,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitGroupby_item(_ ctx: JPAParser.Groupby_itemContext) -> T{
+	open func visitGroupby_item(_ ctx: JPAParser.Groupby_itemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -325,7 +325,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitHaving_clause(_ ctx: JPAParser.Having_clauseContext) -> T{
+	open func visitHaving_clause(_ ctx: JPAParser.Having_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -335,7 +335,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrderby_clause(_ ctx: JPAParser.Orderby_clauseContext) -> T{
+	open func visitOrderby_clause(_ ctx: JPAParser.Orderby_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -345,7 +345,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitOrderby_item(_ ctx: JPAParser.Orderby_itemContext) -> T{
+	open func visitOrderby_item(_ ctx: JPAParser.Orderby_itemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -355,7 +355,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubquery(_ ctx: JPAParser.SubqueryContext) -> T{
+	open func visitSubquery(_ ctx: JPAParser.SubqueryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -365,7 +365,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubquery_from_clause(_ ctx: JPAParser.Subquery_from_clauseContext) -> T{
+	open func visitSubquery_from_clause(_ ctx: JPAParser.Subquery_from_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -375,7 +375,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubselect_identification_variable_declaration(_ ctx: JPAParser.Subselect_identification_variable_declarationContext) -> T{
+	open func visitSubselect_identification_variable_declaration(_ ctx: JPAParser.Subselect_identification_variable_declarationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -385,7 +385,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAssociation_path_expression(_ ctx: JPAParser.Association_path_expressionContext) -> T{
+	open func visitAssociation_path_expression(_ ctx: JPAParser.Association_path_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -395,7 +395,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_select_clause(_ ctx: JPAParser.Simple_select_clauseContext) -> T{
+	open func visitSimple_select_clause(_ ctx: JPAParser.Simple_select_clauseContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -405,7 +405,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_select_expression(_ ctx: JPAParser.Simple_select_expressionContext) -> T{
+	open func visitSimple_select_expression(_ ctx: JPAParser.Simple_select_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -415,7 +415,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditional_expression(_ ctx: JPAParser.Conditional_expressionContext) -> T{
+	open func visitConditional_expression(_ ctx: JPAParser.Conditional_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -425,7 +425,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditional_term(_ ctx: JPAParser.Conditional_termContext) -> T{
+	open func visitConditional_term(_ ctx: JPAParser.Conditional_termContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -435,7 +435,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditional_factor(_ ctx: JPAParser.Conditional_factorContext) -> T{
+	open func visitConditional_factor(_ ctx: JPAParser.Conditional_factorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -445,7 +445,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConditional_primary(_ ctx: JPAParser.Conditional_primaryContext) -> T{
+	open func visitConditional_primary(_ ctx: JPAParser.Conditional_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -455,7 +455,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_cond_expression(_ ctx: JPAParser.Simple_cond_expressionContext) -> T{
+	open func visitSimple_cond_expression(_ ctx: JPAParser.Simple_cond_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -465,7 +465,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBetween_expression(_ ctx: JPAParser.Between_expressionContext) -> T{
+	open func visitBetween_expression(_ ctx: JPAParser.Between_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -475,7 +475,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIn_expression(_ ctx: JPAParser.In_expressionContext) -> T{
+	open func visitIn_expression(_ ctx: JPAParser.In_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -485,7 +485,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitIn_item(_ ctx: JPAParser.In_itemContext) -> T{
+	open func visitIn_item(_ ctx: JPAParser.In_itemContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -495,7 +495,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLike_expression(_ ctx: JPAParser.Like_expressionContext) -> T{
+	open func visitLike_expression(_ ctx: JPAParser.Like_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -505,7 +505,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNull_comparison_expression(_ ctx: JPAParser.Null_comparison_expressionContext) -> T{
+	open func visitNull_comparison_expression(_ ctx: JPAParser.Null_comparison_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -515,7 +515,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmpty_collection_comparison_expression(_ ctx: JPAParser.Empty_collection_comparison_expressionContext) -> T{
+	open func visitEmpty_collection_comparison_expression(_ ctx: JPAParser.Empty_collection_comparison_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -525,7 +525,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollection_member_expression(_ ctx: JPAParser.Collection_member_expressionContext) -> T{
+	open func visitCollection_member_expression(_ ctx: JPAParser.Collection_member_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -535,7 +535,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExists_expression(_ ctx: JPAParser.Exists_expressionContext) -> T{
+	open func visitExists_expression(_ ctx: JPAParser.Exists_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -545,7 +545,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAll_or_any_expression(_ ctx: JPAParser.All_or_any_expressionContext) -> T{
+	open func visitAll_or_any_expression(_ ctx: JPAParser.All_or_any_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -555,7 +555,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComparison_expression(_ ctx: JPAParser.Comparison_expressionContext) -> T{
+	open func visitComparison_expression(_ ctx: JPAParser.Comparison_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -565,7 +565,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitComparison_operator(_ ctx: JPAParser.Comparison_operatorContext) -> T{
+	open func visitComparison_operator(_ ctx: JPAParser.Comparison_operatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -575,7 +575,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArithmetic_expression(_ ctx: JPAParser.Arithmetic_expressionContext) -> T{
+	open func visitArithmetic_expression(_ ctx: JPAParser.Arithmetic_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -585,7 +585,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_arithmetic_expression(_ ctx: JPAParser.Simple_arithmetic_expressionContext) -> T{
+	open func visitSimple_arithmetic_expression(_ ctx: JPAParser.Simple_arithmetic_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -595,7 +595,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArithmetic_term(_ ctx: JPAParser.Arithmetic_termContext) -> T{
+	open func visitArithmetic_term(_ ctx: JPAParser.Arithmetic_termContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -605,7 +605,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArithmetic_factor(_ ctx: JPAParser.Arithmetic_factorContext) -> T{
+	open func visitArithmetic_factor(_ ctx: JPAParser.Arithmetic_factorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -615,7 +615,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitArithmetic_primary(_ ctx: JPAParser.Arithmetic_primaryContext) -> T{
+	open func visitArithmetic_primary(_ ctx: JPAParser.Arithmetic_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -625,7 +625,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString_expression(_ ctx: JPAParser.String_expressionContext) -> T{
+	open func visitString_expression(_ ctx: JPAParser.String_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -635,7 +635,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitString_primary(_ ctx: JPAParser.String_primaryContext) -> T{
+	open func visitString_primary(_ ctx: JPAParser.String_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -645,7 +645,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDatetime_expression(_ ctx: JPAParser.Datetime_expressionContext) -> T{
+	open func visitDatetime_expression(_ ctx: JPAParser.Datetime_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -655,7 +655,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitDatetime_primary(_ ctx: JPAParser.Datetime_primaryContext) -> T{
+	open func visitDatetime_primary(_ ctx: JPAParser.Datetime_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -665,7 +665,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoolean_expression(_ ctx: JPAParser.Boolean_expressionContext) -> T{
+	open func visitBoolean_expression(_ ctx: JPAParser.Boolean_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -675,7 +675,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoolean_primary(_ ctx: JPAParser.Boolean_primaryContext) -> T{
+	open func visitBoolean_primary(_ ctx: JPAParser.Boolean_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -685,7 +685,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnum_expression(_ ctx: JPAParser.Enum_expressionContext) -> T{
+	open func visitEnum_expression(_ ctx: JPAParser.Enum_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -695,7 +695,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnum_primary(_ ctx: JPAParser.Enum_primaryContext) -> T{
+	open func visitEnum_primary(_ ctx: JPAParser.Enum_primaryContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -705,7 +705,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEntity_expression(_ ctx: JPAParser.Entity_expressionContext) -> T{
+	open func visitEntity_expression(_ ctx: JPAParser.Entity_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -715,7 +715,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_entity_expression(_ ctx: JPAParser.Simple_entity_expressionContext) -> T{
+	open func visitSimple_entity_expression(_ ctx: JPAParser.Simple_entity_expressionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -725,7 +725,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctions_returning_numerics(_ ctx: JPAParser.Functions_returning_numericsContext) -> T{
+	open func visitFunctions_returning_numerics(_ ctx: JPAParser.Functions_returning_numericsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -735,7 +735,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctions_returning_datetime(_ ctx: JPAParser.Functions_returning_datetimeContext) -> T{
+	open func visitFunctions_returning_datetime(_ ctx: JPAParser.Functions_returning_datetimeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -745,7 +745,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctions_returning_strings(_ ctx: JPAParser.Functions_returning_stringsContext) -> T{
+	open func visitFunctions_returning_strings(_ ctx: JPAParser.Functions_returning_stringsContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -755,7 +755,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTrim_specification(_ ctx: JPAParser.Trim_specificationContext) -> T{
+	open func visitTrim_specification(_ ctx: JPAParser.Trim_specificationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -765,7 +765,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumeric_literal(_ ctx: JPAParser.Numeric_literalContext) -> T{
+	open func visitNumeric_literal(_ ctx: JPAParser.Numeric_literalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -775,7 +775,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitPattern_value(_ ctx: JPAParser.Pattern_valueContext) -> T{
+	open func visitPattern_value(_ ctx: JPAParser.Pattern_valueContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -785,7 +785,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitInput_parameter(_ ctx: JPAParser.Input_parameterContext) -> T{
+	open func visitInput_parameter(_ ctx: JPAParser.Input_parameterContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -795,7 +795,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitLiteral(_ ctx: JPAParser.LiteralContext) -> T{
+	open func visitLiteral(_ ctx: JPAParser.LiteralContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -805,7 +805,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitConstructor_name(_ ctx: JPAParser.Constructor_nameContext) -> T{
+	open func visitConstructor_name(_ ctx: JPAParser.Constructor_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -815,7 +815,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEnum_literal(_ ctx: JPAParser.Enum_literalContext) -> T{
+	open func visitEnum_literal(_ ctx: JPAParser.Enum_literalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -825,7 +825,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitBoolean_literal(_ ctx: JPAParser.Boolean_literalContext) -> T{
+	open func visitBoolean_literal(_ ctx: JPAParser.Boolean_literalContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -835,7 +835,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSimple_state_field(_ ctx: JPAParser.Simple_state_fieldContext) -> T{
+	open func visitSimple_state_field(_ ctx: JPAParser.Simple_state_fieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -845,7 +845,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitEmbedded_class_state_field(_ ctx: JPAParser.Embedded_class_state_fieldContext) -> T{
+	open func visitEmbedded_class_state_field(_ ctx: JPAParser.Embedded_class_state_fieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -855,7 +855,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSingle_valued_association_field(_ ctx: JPAParser.Single_valued_association_fieldContext) -> T{
+	open func visitSingle_valued_association_field(_ ctx: JPAParser.Single_valued_association_fieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -865,7 +865,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCollection_valued_association_field(_ ctx: JPAParser.Collection_valued_association_fieldContext) -> T{
+	open func visitCollection_valued_association_field(_ ctx: JPAParser.Collection_valued_association_fieldContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -875,7 +875,7 @@ open class JPAVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAbstract_schema_name(_ ctx: JPAParser.Abstract_schema_nameContext) -> T{
+	open func visitAbstract_schema_name(_ ctx: JPAParser.Abstract_schema_nameContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

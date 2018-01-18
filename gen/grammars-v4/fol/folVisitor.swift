@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/fol/fol.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/fol/fol.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class folVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitCondition(_ ctx: folParser.ConditionContext) -> T{
+	open func visitCondition(_ ctx: folParser.ConditionContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,57 +25,7 @@ open class folVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFormula(_ ctx: folParser.FormulaContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link folParser#disjunction}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitDisjunction(_ ctx: folParser.DisjunctionContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link folParser#conjunction}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitConjunction(_ ctx: folParser.ConjunctionContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link folParser#negation}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitNegation(_ ctx: folParser.NegationContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link folParser#predicate}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitPredicate(_ ctx: folParser.PredicateContext) -> T{
-	 	fatalError(#function + " must be overridden")
-	}
-
-	/**
-	 * Visit a parse tree produced by {@link folParser#predicateTuple}.
-	- Parameters:
-	  - ctx: the parse tree
-	- returns: the visitor result
-	 */
-	open func visitPredicateTuple(_ ctx: folParser.PredicateTupleContext) -> T{
+	open func visitFormula(_ ctx: folParser.FormulaContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -85,27 +35,67 @@ open class folVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitTerm(_ ctx: folParser.TermContext) -> T{
+	open func visitTerm(_ ctx: folParser.TermContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link folParser#function}.
+	 * Visit a parse tree produced by {@link folParser#bin_connective}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunction(_ ctx: folParser.FunctionContext) -> T{
+	open func visitBin_connective(_ ctx: folParser.Bin_connectiveContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
 	/**
-	 * Visit a parse tree produced by {@link folParser#functionTuple}.
+	 * Visit a parse tree produced by {@link folParser#variable}.
 	- Parameters:
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitFunctionTuple(_ ctx: folParser.FunctionTupleContext) -> T{
+	open func visitVariable(_ ctx: folParser.VariableContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link folParser#pred_constant}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitPred_constant(_ ctx: folParser.Pred_constantContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link folParser#ind_constant}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitInd_constant(_ ctx: folParser.Ind_constantContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link folParser#func_constant}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitFunc_constant(_ ctx: folParser.Func_constantContext) -> T {
+	 	fatalError(#function + " must be overridden")
+	}
+
+	/**
+	 * Visit a parse tree produced by {@link folParser#separator}.
+	- Parameters:
+	  - ctx: the parse tree
+	- returns: the visitor result
+	 */
+	open func visitSeparator(_ ctx: folParser.SeparatorContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 

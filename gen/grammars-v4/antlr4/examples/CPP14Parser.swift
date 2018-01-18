@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/antlr4/examples/CPP14.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/antlr4/examples/CPP14.g4 by ANTLR 4.7.1
 import Antlr4
 
 open class CPP14Parser: Parser {
@@ -11,8 +11,11 @@ open class CPP14Parser: Parser {
            }
            return decisionToDFA
      }()
-	internal static let _sharedContextCache: PredictionContextCache = PredictionContextCache()
-	public enum Tokens: Int {
+
+	internal static let _sharedContextCache = PredictionContextCache()
+
+	public
+	enum Tokens: Int {
 		case EOF = -1, Directive = 1, Alignas = 2, Alignof = 3, Asm = 4, Auto = 5, 
                  Bool = 6, Break = 7, Case = 8, Catch = 9, Char = 10, Char16 = 11, 
                  Char32 = 12, Class = 13, Const = 14, Constexpr = 15, Const_cast = 16, 
@@ -47,94 +50,87 @@ open class CPP14Parser: Parser {
                  Userdefinedstringliteral = 136, Userdefinedcharacterliteral = 137, 
                  Whitespace = 138, Newline = 139, BlockComment = 140, LineComment = 141
 	}
-	public static let RULE_translationunit = 0, RULE_primaryexpression = 1, 
-                   RULE_idexpression = 2, RULE_unqualifiedid = 3, RULE_qualifiedid = 4, 
-                   RULE_nestednamespecifier = 5, RULE_lambdaexpression = 6, 
-                   RULE_lambdaintroducer = 7, RULE_lambdacapture = 8, RULE_capturedefault = 9, 
-                   RULE_capturelist = 10, RULE_capture = 11, RULE_simplecapture = 12, 
-                   RULE_initcapture = 13, RULE_lambdadeclarator = 14, RULE_postfixexpression = 15, 
-                   RULE_expressionlist = 16, RULE_pseudodestructorname = 17, 
-                   RULE_unaryexpression = 18, RULE_unaryoperator = 19, RULE_newexpression = 20, 
-                   RULE_newplacement = 21, RULE_newtypeid = 22, RULE_newdeclarator = 23, 
-                   RULE_noptrnewdeclarator = 24, RULE_newinitializer = 25, 
-                   RULE_deleteexpression = 26, RULE_noexceptexpression = 27, 
-                   RULE_castexpression = 28, RULE_pmexpression = 29, RULE_multiplicativeexpression = 30, 
-                   RULE_additiveexpression = 31, RULE_shiftexpression = 32, 
-                   RULE_relationalexpression = 33, RULE_equalityexpression = 34, 
-                   RULE_andexpression = 35, RULE_exclusiveorexpression = 36, 
-                   RULE_inclusiveorexpression = 37, RULE_logicalandexpression = 38, 
-                   RULE_logicalorexpression = 39, RULE_conditionalexpression = 40, 
-                   RULE_assignmentexpression = 41, RULE_assignmentoperator = 42, 
-                   RULE_expression = 43, RULE_constantexpression = 44, RULE_statement = 45, 
-                   RULE_labeledstatement = 46, RULE_expressionstatement = 47, 
-                   RULE_compoundstatement = 48, RULE_statementseq = 49, 
-                   RULE_selectionstatement = 50, RULE_condition = 51, RULE_iterationstatement = 52, 
-                   RULE_forinitstatement = 53, RULE_forrangedeclaration = 54, 
-                   RULE_forrangeinitializer = 55, RULE_jumpstatement = 56, 
-                   RULE_declarationstatement = 57, RULE_declarationseq = 58, 
-                   RULE_declaration = 59, RULE_blockdeclaration = 60, RULE_aliasdeclaration = 61, 
-                   RULE_simpledeclaration = 62, RULE_static_assertdeclaration = 63, 
-                   RULE_emptydeclaration = 64, RULE_attributedeclaration = 65, 
-                   RULE_declspecifier = 66, RULE_declspecifierseq = 67, 
-                   RULE_storageclassspecifier = 68, RULE_functionspecifier = 69, 
-                   RULE_typedefname = 70, RULE_typespecifier = 71, RULE_trailingtypespecifier = 72, 
-                   RULE_typespecifierseq = 73, RULE_trailingtypespecifierseq = 74, 
-                   RULE_simpletypespecifier = 75, RULE_typename = 76, RULE_decltypespecifier = 77, 
-                   RULE_elaboratedtypespecifier = 78, RULE_enumname = 79, 
-                   RULE_enumspecifier = 80, RULE_enumhead = 81, RULE_opaqueenumdeclaration = 82, 
-                   RULE_enumkey = 83, RULE_enumbase = 84, RULE_enumeratorlist = 85, 
-                   RULE_enumeratordefinition = 86, RULE_enumerator = 87, 
-                   RULE_namespacename = 88, RULE_originalnamespacename = 89, 
-                   RULE_namespacedefinition = 90, RULE_namednamespacedefinition = 91, 
-                   RULE_originalnamespacedefinition = 92, RULE_extensionnamespacedefinition = 93, 
-                   RULE_unnamednamespacedefinition = 94, RULE_namespacebody = 95, 
-                   RULE_namespacealias = 96, RULE_namespacealiasdefinition = 97, 
-                   RULE_qualifiednamespacespecifier = 98, RULE_usingdeclaration = 99, 
-                   RULE_usingdirective = 100, RULE_asmdefinition = 101, 
-                   RULE_linkagespecification = 102, RULE_attributespecifierseq = 103, 
-                   RULE_attributespecifier = 104, RULE_alignmentspecifier = 105, 
-                   RULE_attributelist = 106, RULE_attribute = 107, RULE_attributetoken = 108, 
-                   RULE_attributescopedtoken = 109, RULE_attributenamespace = 110, 
-                   RULE_attributeargumentclause = 111, RULE_balancedtokenseq = 112, 
-                   RULE_balancedtoken = 113, RULE_initdeclaratorlist = 114, 
-                   RULE_initdeclarator = 115, RULE_declarator = 116, RULE_ptrdeclarator = 117, 
-                   RULE_noptrdeclarator = 118, RULE_parametersandqualifiers = 119, 
-                   RULE_trailingreturntype = 120, RULE_ptroperator = 121, 
-                   RULE_cvqualifierseq = 122, RULE_cvqualifier = 123, RULE_refqualifier = 124, 
-                   RULE_declaratorid = 125, RULE_typeid = 126, RULE_abstractdeclarator = 127, 
-                   RULE_ptrabstractdeclarator = 128, RULE_noptrabstractdeclarator = 129, 
-                   RULE_abstractpackdeclarator = 130, RULE_noptrabstractpackdeclarator = 131, 
-                   RULE_parameterdeclarationclause = 132, RULE_parameterdeclarationlist = 133, 
-                   RULE_parameterdeclaration = 134, RULE_functiondefinition = 135, 
-                   RULE_functionbody = 136, RULE_initializer = 137, RULE_braceorequalinitializer = 138, 
-                   RULE_initializerclause = 139, RULE_initializerlist = 140, 
-                   RULE_bracedinitlist = 141, RULE_classname = 142, RULE_classspecifier = 143, 
-                   RULE_classhead = 144, RULE_classheadname = 145, RULE_classvirtspecifier = 146, 
-                   RULE_classkey = 147, RULE_memberspecification = 148, 
-                   RULE_memberdeclaration = 149, RULE_memberdeclaratorlist = 150, 
-                   RULE_memberdeclarator = 151, RULE_virtspecifierseq = 152, 
-                   RULE_virtspecifier = 153, RULE_purespecifier = 154, RULE_baseclause = 155, 
-                   RULE_basespecifierlist = 156, RULE_basespecifier = 157, 
-                   RULE_classordecltype = 158, RULE_basetypespecifier = 159, 
-                   RULE_accessspecifier = 160, RULE_conversionfunctionid = 161, 
-                   RULE_conversiontypeid = 162, RULE_conversiondeclarator = 163, 
-                   RULE_ctorinitializer = 164, RULE_meminitializerlist = 165, 
-                   RULE_meminitializer = 166, RULE_meminitializerid = 167, 
-                   RULE_operatorfunctionid = 168, RULE_literaloperatorid = 169, 
-                   RULE_templatedeclaration = 170, RULE_templateparameterlist = 171, 
-                   RULE_templateparameter = 172, RULE_typeparameter = 173, 
-                   RULE_simpletemplateid = 174, RULE_templateid = 175, RULE_templatename = 176, 
-                   RULE_templateargumentlist = 177, RULE_templateargument = 178, 
-                   RULE_typenamespecifier = 179, RULE_explicitinstantiation = 180, 
-                   RULE_explicitspecialization = 181, RULE_tryblock = 182, 
-                   RULE_functiontryblock = 183, RULE_handlerseq = 184, RULE_handler = 185, 
-                   RULE_exceptiondeclaration = 186, RULE_throwexpression = 187, 
-                   RULE_exceptionspecification = 188, RULE_dynamicexceptionspecification = 189, 
-                   RULE_typeidlist = 190, RULE_noexceptspecification = 191, 
-                   RULE_rightShift = 192, RULE_rightShiftAssign = 193, RULE_operator = 194, 
-                   RULE_literal = 195, RULE_booleanliteral = 196, RULE_pointerliteral = 197, 
-                   RULE_userdefinedliteral = 198
-	public static let ruleNames: [String] = [
+
+	public
+	static let RULE_translationunit = 0, RULE_primaryexpression = 1, RULE_idexpression = 2, 
+            RULE_unqualifiedid = 3, RULE_qualifiedid = 4, RULE_nestednamespecifier = 5, 
+            RULE_lambdaexpression = 6, RULE_lambdaintroducer = 7, RULE_lambdacapture = 8, 
+            RULE_capturedefault = 9, RULE_capturelist = 10, RULE_capture = 11, 
+            RULE_simplecapture = 12, RULE_initcapture = 13, RULE_lambdadeclarator = 14, 
+            RULE_postfixexpression = 15, RULE_expressionlist = 16, RULE_pseudodestructorname = 17, 
+            RULE_unaryexpression = 18, RULE_unaryoperator = 19, RULE_newexpression = 20, 
+            RULE_newplacement = 21, RULE_newtypeid = 22, RULE_newdeclarator = 23, 
+            RULE_noptrnewdeclarator = 24, RULE_newinitializer = 25, RULE_deleteexpression = 26, 
+            RULE_noexceptexpression = 27, RULE_castexpression = 28, RULE_pmexpression = 29, 
+            RULE_multiplicativeexpression = 30, RULE_additiveexpression = 31, 
+            RULE_shiftexpression = 32, RULE_relationalexpression = 33, RULE_equalityexpression = 34, 
+            RULE_andexpression = 35, RULE_exclusiveorexpression = 36, RULE_inclusiveorexpression = 37, 
+            RULE_logicalandexpression = 38, RULE_logicalorexpression = 39, 
+            RULE_conditionalexpression = 40, RULE_assignmentexpression = 41, 
+            RULE_assignmentoperator = 42, RULE_expression = 43, RULE_constantexpression = 44, 
+            RULE_statement = 45, RULE_labeledstatement = 46, RULE_expressionstatement = 47, 
+            RULE_compoundstatement = 48, RULE_statementseq = 49, RULE_selectionstatement = 50, 
+            RULE_condition = 51, RULE_iterationstatement = 52, RULE_forinitstatement = 53, 
+            RULE_forrangedeclaration = 54, RULE_forrangeinitializer = 55, 
+            RULE_jumpstatement = 56, RULE_declarationstatement = 57, RULE_declarationseq = 58, 
+            RULE_declaration = 59, RULE_blockdeclaration = 60, RULE_aliasdeclaration = 61, 
+            RULE_simpledeclaration = 62, RULE_static_assertdeclaration = 63, 
+            RULE_emptydeclaration = 64, RULE_attributedeclaration = 65, 
+            RULE_declspecifier = 66, RULE_declspecifierseq = 67, RULE_storageclassspecifier = 68, 
+            RULE_functionspecifier = 69, RULE_typedefname = 70, RULE_typespecifier = 71, 
+            RULE_trailingtypespecifier = 72, RULE_typespecifierseq = 73, 
+            RULE_trailingtypespecifierseq = 74, RULE_simpletypespecifier = 75, 
+            RULE_typename = 76, RULE_decltypespecifier = 77, RULE_elaboratedtypespecifier = 78, 
+            RULE_enumname = 79, RULE_enumspecifier = 80, RULE_enumhead = 81, 
+            RULE_opaqueenumdeclaration = 82, RULE_enumkey = 83, RULE_enumbase = 84, 
+            RULE_enumeratorlist = 85, RULE_enumeratordefinition = 86, RULE_enumerator = 87, 
+            RULE_namespacename = 88, RULE_originalnamespacename = 89, RULE_namespacedefinition = 90, 
+            RULE_namednamespacedefinition = 91, RULE_originalnamespacedefinition = 92, 
+            RULE_extensionnamespacedefinition = 93, RULE_unnamednamespacedefinition = 94, 
+            RULE_namespacebody = 95, RULE_namespacealias = 96, RULE_namespacealiasdefinition = 97, 
+            RULE_qualifiednamespacespecifier = 98, RULE_usingdeclaration = 99, 
+            RULE_usingdirective = 100, RULE_asmdefinition = 101, RULE_linkagespecification = 102, 
+            RULE_attributespecifierseq = 103, RULE_attributespecifier = 104, 
+            RULE_alignmentspecifier = 105, RULE_attributelist = 106, RULE_attribute = 107, 
+            RULE_attributetoken = 108, RULE_attributescopedtoken = 109, 
+            RULE_attributenamespace = 110, RULE_attributeargumentclause = 111, 
+            RULE_balancedtokenseq = 112, RULE_balancedtoken = 113, RULE_initdeclaratorlist = 114, 
+            RULE_initdeclarator = 115, RULE_declarator = 116, RULE_ptrdeclarator = 117, 
+            RULE_noptrdeclarator = 118, RULE_parametersandqualifiers = 119, 
+            RULE_trailingreturntype = 120, RULE_ptroperator = 121, RULE_cvqualifierseq = 122, 
+            RULE_cvqualifier = 123, RULE_refqualifier = 124, RULE_declaratorid = 125, 
+            RULE_typeid = 126, RULE_abstractdeclarator = 127, RULE_ptrabstractdeclarator = 128, 
+            RULE_noptrabstractdeclarator = 129, RULE_abstractpackdeclarator = 130, 
+            RULE_noptrabstractpackdeclarator = 131, RULE_parameterdeclarationclause = 132, 
+            RULE_parameterdeclarationlist = 133, RULE_parameterdeclaration = 134, 
+            RULE_functiondefinition = 135, RULE_functionbody = 136, RULE_initializer = 137, 
+            RULE_braceorequalinitializer = 138, RULE_initializerclause = 139, 
+            RULE_initializerlist = 140, RULE_bracedinitlist = 141, RULE_classname = 142, 
+            RULE_classspecifier = 143, RULE_classhead = 144, RULE_classheadname = 145, 
+            RULE_classvirtspecifier = 146, RULE_classkey = 147, RULE_memberspecification = 148, 
+            RULE_memberdeclaration = 149, RULE_memberdeclaratorlist = 150, 
+            RULE_memberdeclarator = 151, RULE_virtspecifierseq = 152, RULE_virtspecifier = 153, 
+            RULE_purespecifier = 154, RULE_baseclause = 155, RULE_basespecifierlist = 156, 
+            RULE_basespecifier = 157, RULE_classordecltype = 158, RULE_basetypespecifier = 159, 
+            RULE_accessspecifier = 160, RULE_conversionfunctionid = 161, 
+            RULE_conversiontypeid = 162, RULE_conversiondeclarator = 163, 
+            RULE_ctorinitializer = 164, RULE_meminitializerlist = 165, RULE_meminitializer = 166, 
+            RULE_meminitializerid = 167, RULE_operatorfunctionid = 168, 
+            RULE_literaloperatorid = 169, RULE_templatedeclaration = 170, 
+            RULE_templateparameterlist = 171, RULE_templateparameter = 172, 
+            RULE_typeparameter = 173, RULE_simpletemplateid = 174, RULE_templateid = 175, 
+            RULE_templatename = 176, RULE_templateargumentlist = 177, RULE_templateargument = 178, 
+            RULE_typenamespecifier = 179, RULE_explicitinstantiation = 180, 
+            RULE_explicitspecialization = 181, RULE_tryblock = 182, RULE_functiontryblock = 183, 
+            RULE_handlerseq = 184, RULE_handler = 185, RULE_exceptiondeclaration = 186, 
+            RULE_throwexpression = 187, RULE_exceptionspecification = 188, 
+            RULE_dynamicexceptionspecification = 189, RULE_typeidlist = 190, 
+            RULE_noexceptspecification = 191, RULE_rightShift = 192, RULE_rightShiftAssign = 193, 
+            RULE_operator = 194, RULE_literal = 195, RULE_booleanliteral = 196, 
+            RULE_pointerliteral = 197, RULE_userdefinedliteral = 198
+
+	public
+	static let ruleNames: [String] = [
 		"translationunit", "primaryexpression", "idexpression", "unqualifiedid", 
 		"qualifiedid", "nestednamespecifier", "lambdaexpression", "lambdaintroducer", 
 		"lambdacapture", "capturedefault", "capturelist", "capture", "simplecapture", 
@@ -232,86 +228,73 @@ open class CPP14Parser: Parser {
 		"Userdefinedcharacterliteral", "Whitespace", "Newline", "BlockComment", 
 		"LineComment"
 	]
-	public static let VOCABULARY: Vocabulary = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
+	public
+	static let VOCABULARY = Vocabulary(_LITERAL_NAMES, _SYMBOLIC_NAMES)
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	//@Deprecated
-	public let tokenNames: [String?]? = {
-	    let length = _SYMBOLIC_NAMES.count
-	    var tokenNames = [String?](repeating: nil, count: length)
-		for i in 0..<length {
-			var name = VOCABULARY.getLiteralName(i)
-			if name == nil {
-				name = VOCABULARY.getSymbolicName(i)
-			}
-			if name == nil {
-				name = "<INVALID>"
-			}
-			tokenNames[i] = name
-		}
-		return tokenNames
-	}()
+	override open
+	func getGrammarFileName() -> String { return "CPP14.g4" }
 
-	override
-	open func getTokenNames() -> [String?]? {
-		return tokenNames
-	}
+	override open
+	func getRuleNames() -> [String] { return CPP14Parser.ruleNames }
 
-	override
-	open func getGrammarFileName() -> String { return "CPP14.g4" }
+	override open
+	func getSerializedATN() -> String { return CPP14Parser._serializedATN }
 
-	override
-	open func getRuleNames() -> [String] { return CPP14Parser.ruleNames }
+	override open
+	func getATN() -> ATN { return CPP14Parser._ATN }
 
-	override
-	open func getSerializedATN() -> String { return CPP14Parser._serializedATN }
-
-	override
-	open func getATN() -> ATN { return CPP14Parser._ATN }
-
-	open override func getVocabulary() -> Vocabulary {
+	override open
+	func getVocabulary() -> Vocabulary {
 	    return CPP14Parser.VOCABULARY
 	}
 
-	public override init(_ input:TokenStream)throws {
-	    RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION)
+	override public
+	init(_ input:TokenStream) throws {
+	    RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION)
 		try super.init(input)
 		_interp = ParserATNSimulator(self,CPP14Parser._ATN,CPP14Parser._decisionToDFA, CPP14Parser._sharedContextCache)
 	}
-	open class TranslationunitContext:ParserRuleContext {
-		open func EOF() -> TerminalNode? { return getToken(CPP14Parser.Tokens.EOF.rawValue, 0) }
-		open func declarationseq() -> DeclarationseqContext? {
-			return getRuleContext(DeclarationseqContext.self,0)
+
+	public class TranslationunitContext: ParserRuleContext {
+			open
+			func EOF() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.EOF.rawValue, 0)
+			}
+			open
+			func declarationseq() -> DeclarationseqContext? {
+				return getRuleContext(DeclarationseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_translationunit
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_translationunit }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTranslationunit(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTranslationunit(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTranslationunit(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTranslationunit(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTranslationunit(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTranslationunit(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTranslationunit(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTranslationunit(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func translationunit() throws -> TranslationunitContext {
+	 open func translationunit() throws -> TranslationunitContext {
 		var _localctx: TranslationunitContext = TranslationunitContext(_ctx, getState())
 		try enterRule(_localctx, 0, CPP14Parser.RULE_translationunit)
 		var _la: Int = 0
@@ -352,47 +335,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class PrimaryexpressionContext:ParserRuleContext {
-		open func literal() -> LiteralContext? {
-			return getRuleContext(LiteralContext.self,0)
+
+	public class PrimaryexpressionContext: ParserRuleContext {
+			open
+			func literal() -> LiteralContext? {
+				return getRuleContext(LiteralContext.self, 0)
+			}
+			open
+			func This() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.This.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func idexpression() -> IdexpressionContext? {
+				return getRuleContext(IdexpressionContext.self, 0)
+			}
+			open
+			func lambdaexpression() -> LambdaexpressionContext? {
+				return getRuleContext(LambdaexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_primaryexpression
 		}
-		open func This() -> TerminalNode? { return getToken(CPP14Parser.Tokens.This.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func idexpression() -> IdexpressionContext? {
-			return getRuleContext(IdexpressionContext.self,0)
-		}
-		open func lambdaexpression() -> LambdaexpressionContext? {
-			return getRuleContext(LambdaexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_primaryexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterPrimaryexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterPrimaryexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitPrimaryexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitPrimaryexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitPrimaryexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitPrimaryexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitPrimaryexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitPrimaryexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func primaryexpression() throws -> PrimaryexpressionContext {
+	 open func primaryexpression() throws -> PrimaryexpressionContext {
 		var _localctx: PrimaryexpressionContext = PrimaryexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 2, CPP14Parser.RULE_primaryexpression)
 		defer {
@@ -454,7 +449,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -465,40 +460,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class IdexpressionContext:ParserRuleContext {
-		open func unqualifiedid() -> UnqualifiedidContext? {
-			return getRuleContext(UnqualifiedidContext.self,0)
+
+	public class IdexpressionContext: ParserRuleContext {
+			open
+			func unqualifiedid() -> UnqualifiedidContext? {
+				return getRuleContext(UnqualifiedidContext.self, 0)
+			}
+			open
+			func qualifiedid() -> QualifiedidContext? {
+				return getRuleContext(QualifiedidContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_idexpression
 		}
-		open func qualifiedid() -> QualifiedidContext? {
-			return getRuleContext(QualifiedidContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_idexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterIdexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterIdexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitIdexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitIdexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitIdexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitIdexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitIdexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitIdexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func idexpression() throws -> IdexpressionContext {
+	 open func idexpression() throws -> IdexpressionContext {
 		var _localctx: IdexpressionContext = IdexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 4, CPP14Parser.RULE_idexpression)
 		defer {
@@ -531,53 +533,67 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class UnqualifiedidContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func operatorfunctionid() -> OperatorfunctionidContext? {
-			return getRuleContext(OperatorfunctionidContext.self,0)
+
+	public class UnqualifiedidContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func operatorfunctionid() -> OperatorfunctionidContext? {
+				return getRuleContext(OperatorfunctionidContext.self, 0)
+			}
+			open
+			func conversionfunctionid() -> ConversionfunctionidContext? {
+				return getRuleContext(ConversionfunctionidContext.self, 0)
+			}
+			open
+			func literaloperatorid() -> LiteraloperatoridContext? {
+				return getRuleContext(LiteraloperatoridContext.self, 0)
+			}
+			open
+			func classname() -> ClassnameContext? {
+				return getRuleContext(ClassnameContext.self, 0)
+			}
+			open
+			func decltypespecifier() -> DecltypespecifierContext? {
+				return getRuleContext(DecltypespecifierContext.self, 0)
+			}
+			open
+			func templateid() -> TemplateidContext? {
+				return getRuleContext(TemplateidContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_unqualifiedid
 		}
-		open func conversionfunctionid() -> ConversionfunctionidContext? {
-			return getRuleContext(ConversionfunctionidContext.self,0)
-		}
-		open func literaloperatorid() -> LiteraloperatoridContext? {
-			return getRuleContext(LiteraloperatoridContext.self,0)
-		}
-		open func classname() -> ClassnameContext? {
-			return getRuleContext(ClassnameContext.self,0)
-		}
-		open func decltypespecifier() -> DecltypespecifierContext? {
-			return getRuleContext(DecltypespecifierContext.self,0)
-		}
-		open func templateid() -> TemplateidContext? {
-			return getRuleContext(TemplateidContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_unqualifiedid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterUnqualifiedid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterUnqualifiedid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitUnqualifiedid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitUnqualifiedid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitUnqualifiedid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitUnqualifiedid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitUnqualifiedid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitUnqualifiedid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unqualifiedid() throws -> UnqualifiedidContext {
+	 open func unqualifiedid() throws -> UnqualifiedidContext {
 		var _localctx: UnqualifiedidContext = UnqualifiedidContext(_ctx, getState())
 		try enterRule(_localctx, 6, CPP14Parser.RULE_unqualifiedid)
 		defer {
@@ -644,41 +660,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class QualifiedidContext:ParserRuleContext {
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
+
+	public class QualifiedidContext: ParserRuleContext {
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+			open
+			func unqualifiedid() -> UnqualifiedidContext? {
+				return getRuleContext(UnqualifiedidContext.self, 0)
+			}
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_qualifiedid
 		}
-		open func unqualifiedid() -> UnqualifiedidContext? {
-			return getRuleContext(UnqualifiedidContext.self,0)
-		}
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_qualifiedid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterQualifiedid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterQualifiedid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitQualifiedid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitQualifiedid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitQualifiedid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitQualifiedid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitQualifiedid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitQualifiedid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qualifiedid() throws -> QualifiedidContext {
+	 open func qualifiedid() throws -> QualifiedidContext {
 		var _localctx: QualifiedidContext = QualifiedidContext(_ctx, getState())
 		try enterRule(_localctx, 8, CPP14Parser.RULE_qualifiedid)
 		var _la: Int = 0
@@ -715,51 +741,66 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class NestednamespecifierContext:ParserRuleContext {
-		open func typename() -> TypenameContext? {
-			return getRuleContext(TypenameContext.self,0)
+	public class NestednamespecifierContext: ParserRuleContext {
+			open
+			func typename() -> TypenameContext? {
+				return getRuleContext(TypenameContext.self, 0)
+			}
+			open
+			func namespacename() -> NamespacenameContext? {
+				return getRuleContext(NamespacenameContext.self, 0)
+			}
+			open
+			func decltypespecifier() -> DecltypespecifierContext? {
+				return getRuleContext(DecltypespecifierContext.self, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func simpletemplateid() -> SimpletemplateidContext? {
+				return getRuleContext(SimpletemplateidContext.self, 0)
+			}
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_nestednamespecifier
 		}
-		open func namespacename() -> NamespacenameContext? {
-			return getRuleContext(NamespacenameContext.self,0)
-		}
-		open func decltypespecifier() -> DecltypespecifierContext? {
-			return getRuleContext(DecltypespecifierContext.self,0)
-		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func simpletemplateid() -> SimpletemplateidContext? {
-			return getRuleContext(SimpletemplateidContext.self,0)
-		}
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_nestednamespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNestednamespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNestednamespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNestednamespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNestednamespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNestednamespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNestednamespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNestednamespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNestednamespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func nestednamespecifier( ) throws -> NestednamespecifierContext   {
+	 public final  func nestednamespecifier( ) throws -> NestednamespecifierContext   {
 		return try nestednamespecifier(0)
 	}
 	@discardableResult
@@ -826,7 +867,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_nestednamespecifier)
 						setState(447)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(448)
 						try match(CPP14Parser.Tokens.Identifier.rawValue)
@@ -839,7 +880,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_nestednamespecifier)
 						setState(450)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(452)
 						try _errHandler.sync(self)
@@ -878,43 +919,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class LambdaexpressionContext:ParserRuleContext {
-		open func lambdaintroducer() -> LambdaintroducerContext? {
-			return getRuleContext(LambdaintroducerContext.self,0)
+
+	public class LambdaexpressionContext: ParserRuleContext {
+			open
+			func lambdaintroducer() -> LambdaintroducerContext? {
+				return getRuleContext(LambdaintroducerContext.self, 0)
+			}
+			open
+			func compoundstatement() -> CompoundstatementContext? {
+				return getRuleContext(CompoundstatementContext.self, 0)
+			}
+			open
+			func lambdadeclarator() -> LambdadeclaratorContext? {
+				return getRuleContext(LambdadeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_lambdaexpression
 		}
-		open func compoundstatement() -> CompoundstatementContext? {
-			return getRuleContext(CompoundstatementContext.self,0)
-		}
-		open func lambdadeclarator() -> LambdadeclaratorContext? {
-			return getRuleContext(LambdadeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_lambdaexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLambdaexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLambdaexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLambdaexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLambdaexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLambdaexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLambdaexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLambdaexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLambdaexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lambdaexpression() throws -> LambdaexpressionContext {
+	 open func lambdaexpression() throws -> LambdaexpressionContext {
 		var _localctx: LambdaexpressionContext = LambdaexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 12, CPP14Parser.RULE_lambdaexpression)
 		var _la: Int = 0
@@ -950,37 +999,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class LambdaintroducerContext:ParserRuleContext {
-		open func lambdacapture() -> LambdacaptureContext? {
-			return getRuleContext(LambdacaptureContext.self,0)
+
+	public class LambdaintroducerContext: ParserRuleContext {
+			open
+			func lambdacapture() -> LambdacaptureContext? {
+				return getRuleContext(LambdacaptureContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_lambdaintroducer
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_lambdaintroducer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLambdaintroducer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLambdaintroducer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLambdaintroducer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLambdaintroducer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLambdaintroducer(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLambdaintroducer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLambdaintroducer(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLambdaintroducer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lambdaintroducer() throws -> LambdaintroducerContext {
+	 open func lambdaintroducer() throws -> LambdaintroducerContext {
 		var _localctx: LambdaintroducerContext = LambdaintroducerContext(_ctx, getState())
 		try enterRule(_localctx, 14, CPP14Parser.RULE_lambdaintroducer)
 		var _la: Int = 0
@@ -1019,40 +1074,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class LambdacaptureContext:ParserRuleContext {
-		open func capturedefault() -> CapturedefaultContext? {
-			return getRuleContext(CapturedefaultContext.self,0)
+
+	public class LambdacaptureContext: ParserRuleContext {
+			open
+			func capturedefault() -> CapturedefaultContext? {
+				return getRuleContext(CapturedefaultContext.self, 0)
+			}
+			open
+			func capturelist() -> CapturelistContext? {
+				return getRuleContext(CapturelistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_lambdacapture
 		}
-		open func capturelist() -> CapturelistContext? {
-			return getRuleContext(CapturelistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_lambdacapture }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLambdacapture(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLambdacapture(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLambdacapture(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLambdacapture(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLambdacapture(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLambdacapture(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLambdacapture(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLambdacapture(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lambdacapture() throws -> LambdacaptureContext {
+	 open func lambdacapture() throws -> LambdacaptureContext {
 		var _localctx: LambdacaptureContext = LambdacaptureContext(_ctx, getState())
 		try enterRule(_localctx, 16, CPP14Parser.RULE_lambdacapture)
 		defer {
@@ -1095,34 +1157,39 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class CapturedefaultContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_capturedefault }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterCapturedefault(self)
+
+	public class CapturedefaultContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_capturedefault
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterCapturedefault(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitCapturedefault(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitCapturedefault(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitCapturedefault(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitCapturedefault(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitCapturedefault(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitCapturedefault(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func capturedefault() throws -> CapturedefaultContext {
+	 open func capturedefault() throws -> CapturedefaultContext {
 		var _localctx: CapturedefaultContext = CapturedefaultContext(_ctx, getState())
 		try enterRule(_localctx, 18, CPP14Parser.RULE_capturedefault)
 		var _la: Int = 0
@@ -1155,40 +1222,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class CapturelistContext:ParserRuleContext {
-		open func capture() -> CaptureContext? {
-			return getRuleContext(CaptureContext.self,0)
+	public class CapturelistContext: ParserRuleContext {
+			open
+			func capture() -> CaptureContext? {
+				return getRuleContext(CaptureContext.self, 0)
+			}
+			open
+			func capturelist() -> CapturelistContext? {
+				return getRuleContext(CapturelistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_capturelist
 		}
-		open func capturelist() -> CapturelistContext? {
-			return getRuleContext(CapturelistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_capturelist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterCapturelist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterCapturelist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitCapturelist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitCapturelist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitCapturelist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitCapturelist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitCapturelist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitCapturelist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func capturelist( ) throws -> CapturelistContext   {
+	 public final  func capturelist( ) throws -> CapturelistContext   {
 		return try capturelist(0)
 	}
 	@discardableResult
@@ -1232,7 +1305,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_capturelist)
 					setState(489)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(490)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -1265,40 +1338,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class CaptureContext:ParserRuleContext {
-		open func simplecapture() -> SimplecaptureContext? {
-			return getRuleContext(SimplecaptureContext.self,0)
+
+	public class CaptureContext: ParserRuleContext {
+			open
+			func simplecapture() -> SimplecaptureContext? {
+				return getRuleContext(SimplecaptureContext.self, 0)
+			}
+			open
+			func initcapture() -> InitcaptureContext? {
+				return getRuleContext(InitcaptureContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_capture
 		}
-		open func initcapture() -> InitcaptureContext? {
-			return getRuleContext(InitcaptureContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_capture }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterCapture(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterCapture(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitCapture(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitCapture(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitCapture(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitCapture(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitCapture(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitCapture(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func capture() throws -> CaptureContext {
+	 open func capture() throws -> CaptureContext {
 		var _localctx: CaptureContext = CaptureContext(_ctx, getState())
 		try enterRule(_localctx, 22, CPP14Parser.RULE_capture)
 		defer {
@@ -1331,36 +1411,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class SimplecaptureContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func This() -> TerminalNode? { return getToken(CPP14Parser.Tokens.This.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_simplecapture }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterSimplecapture(self)
+
+	public class SimplecaptureContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func This() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.This.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_simplecapture
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterSimplecapture(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitSimplecapture(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitSimplecapture(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitSimplecapture(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitSimplecapture(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitSimplecapture(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitSimplecapture(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simplecapture() throws -> SimplecaptureContext {
+	 open func simplecapture() throws -> SimplecaptureContext {
 		var _localctx: SimplecaptureContext = SimplecaptureContext(_ctx, getState())
 		try enterRule(_localctx, 24, CPP14Parser.RULE_simplecapture)
 		defer {
@@ -1393,7 +1484,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1404,38 +1495,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class InitcaptureContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func initializer() -> InitializerContext? {
-			return getRuleContext(InitializerContext.self,0)
+
+	public class InitcaptureContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func initializer() -> InitializerContext? {
+				return getRuleContext(InitializerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_initcapture
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_initcapture }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterInitcapture(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterInitcapture(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitInitcapture(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitInitcapture(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitInitcapture(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitInitcapture(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitInitcapture(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitInitcapture(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initcapture() throws -> InitcaptureContext {
+	 open func initcapture() throws -> InitcaptureContext {
 		var _localctx: InitcaptureContext = InitcaptureContext(_ctx, getState())
 		try enterRule(_localctx, 26, CPP14Parser.RULE_initcapture)
 		defer {
@@ -1465,7 +1565,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -1476,47 +1576,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class LambdadeclaratorContext:ParserRuleContext {
-		open func parameterdeclarationclause() -> ParameterdeclarationclauseContext? {
-			return getRuleContext(ParameterdeclarationclauseContext.self,0)
+
+	public class LambdadeclaratorContext: ParserRuleContext {
+			open
+			func parameterdeclarationclause() -> ParameterdeclarationclauseContext? {
+				return getRuleContext(ParameterdeclarationclauseContext.self, 0)
+			}
+			open
+			func Mutable() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Mutable.rawValue, 0)
+			}
+			open
+			func exceptionspecification() -> ExceptionspecificationContext? {
+				return getRuleContext(ExceptionspecificationContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func trailingreturntype() -> TrailingreturntypeContext? {
+				return getRuleContext(TrailingreturntypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_lambdadeclarator
 		}
-		open func Mutable() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Mutable.rawValue, 0) }
-		open func exceptionspecification() -> ExceptionspecificationContext? {
-			return getRuleContext(ExceptionspecificationContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func trailingreturntype() -> TrailingreturntypeContext? {
-			return getRuleContext(TrailingreturntypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_lambdadeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLambdadeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLambdadeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLambdadeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLambdadeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLambdadeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLambdadeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLambdadeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLambdadeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func lambdadeclarator() throws -> LambdadeclaratorContext {
+	 open func lambdadeclarator() throws -> LambdadeclaratorContext {
 		var _localctx: LambdadeclaratorContext = LambdadeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 28, CPP14Parser.RULE_lambdadeclarator)
 		var _la: Int = 0
@@ -1595,70 +1707,102 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class PostfixexpressionContext:ParserRuleContext {
-		open func primaryexpression() -> PrimaryexpressionContext? {
-			return getRuleContext(PrimaryexpressionContext.self,0)
+	public class PostfixexpressionContext: ParserRuleContext {
+			open
+			func primaryexpression() -> PrimaryexpressionContext? {
+				return getRuleContext(PrimaryexpressionContext.self, 0)
+			}
+			open
+			func simpletypespecifier() -> SimpletypespecifierContext? {
+				return getRuleContext(SimpletypespecifierContext.self, 0)
+			}
+			open
+			func expressionlist() -> ExpressionlistContext? {
+				return getRuleContext(ExpressionlistContext.self, 0)
+			}
+			open
+			func typenamespecifier() -> TypenamespecifierContext? {
+				return getRuleContext(TypenamespecifierContext.self, 0)
+			}
+			open
+			func bracedinitlist() -> BracedinitlistContext? {
+				return getRuleContext(BracedinitlistContext.self, 0)
+			}
+			open
+			func Dynamic_cast() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Dynamic_cast.rawValue, 0)
+			}
+			open
+			func typeid() -> TypeidContext? {
+				return getRuleContext(TypeidContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func Static_cast() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Static_cast.rawValue, 0)
+			}
+			open
+			func Reinterpret_cast() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Reinterpret_cast.rawValue, 0)
+			}
+			open
+			func Const_cast() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Const_cast.rawValue, 0)
+			}
+			open
+			func Typeid() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Typeid.rawValue, 0)
+			}
+			open
+			func postfixexpression() -> PostfixexpressionContext? {
+				return getRuleContext(PostfixexpressionContext.self, 0)
+			}
+			open
+			func idexpression() -> IdexpressionContext? {
+				return getRuleContext(IdexpressionContext.self, 0)
+			}
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+			open
+			func pseudodestructorname() -> PseudodestructornameContext? {
+				return getRuleContext(PseudodestructornameContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_postfixexpression
 		}
-		open func simpletypespecifier() -> SimpletypespecifierContext? {
-			return getRuleContext(SimpletypespecifierContext.self,0)
-		}
-		open func expressionlist() -> ExpressionlistContext? {
-			return getRuleContext(ExpressionlistContext.self,0)
-		}
-		open func typenamespecifier() -> TypenamespecifierContext? {
-			return getRuleContext(TypenamespecifierContext.self,0)
-		}
-		open func bracedinitlist() -> BracedinitlistContext? {
-			return getRuleContext(BracedinitlistContext.self,0)
-		}
-		open func Dynamic_cast() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Dynamic_cast.rawValue, 0) }
-		open func typeid() -> TypeidContext? {
-			return getRuleContext(TypeidContext.self,0)
-		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func Static_cast() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Static_cast.rawValue, 0) }
-		open func Reinterpret_cast() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Reinterpret_cast.rawValue, 0) }
-		open func Const_cast() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Const_cast.rawValue, 0) }
-		open func Typeid() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Typeid.rawValue, 0) }
-		open func postfixexpression() -> PostfixexpressionContext? {
-			return getRuleContext(PostfixexpressionContext.self,0)
-		}
-		open func idexpression() -> IdexpressionContext? {
-			return getRuleContext(IdexpressionContext.self,0)
-		}
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open func pseudodestructorname() -> PseudodestructornameContext? {
-			return getRuleContext(PseudodestructornameContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_postfixexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterPostfixexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterPostfixexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitPostfixexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitPostfixexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitPostfixexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitPostfixexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitPostfixexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitPostfixexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func postfixexpression( ) throws -> PostfixexpressionContext   {
+	 public final  func postfixexpression( ) throws -> PostfixexpressionContext   {
 		return try postfixexpression(0)
 	}
 	@discardableResult
@@ -1874,7 +2018,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_postfixexpression)
 						setState(598)
 						if (!(precpred(_ctx, 19))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 19)"))
 						}
 						setState(599)
 						try match(CPP14Parser.Tokens.LeftBracket.rawValue)
@@ -1889,7 +2033,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_postfixexpression)
 						setState(603)
 						if (!(precpred(_ctx, 18))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 18)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 18)"))
 						}
 						setState(604)
 						try match(CPP14Parser.Tokens.LeftBracket.rawValue)
@@ -1904,7 +2048,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_postfixexpression)
 						setState(608)
 						if (!(precpred(_ctx, 17))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 17)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 17)"))
 						}
 						setState(609)
 						try match(CPP14Parser.Tokens.LeftParen.rawValue)
@@ -1941,7 +2085,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_postfixexpression)
 						setState(614)
 						if (!(precpred(_ctx, 12))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 12)"))
 						}
 						setState(615)
 						try match(CPP14Parser.Tokens.Dot.rawValue)
@@ -1967,7 +2111,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_postfixexpression)
 						setState(620)
 						if (!(precpred(_ctx, 11))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 11)"))
 						}
 						setState(621)
 						try match(CPP14Parser.Tokens.Arrow.rawValue)
@@ -1993,7 +2137,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_postfixexpression)
 						setState(626)
 						if (!(precpred(_ctx, 10))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 10)"))
 						}
 						setState(627)
 						try match(CPP14Parser.Tokens.Dot.rawValue)
@@ -2006,7 +2150,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_postfixexpression)
 						setState(629)
 						if (!(precpred(_ctx, 9))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 9)"))
 						}
 						setState(630)
 						try match(CPP14Parser.Tokens.Arrow.rawValue)
@@ -2019,7 +2163,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_postfixexpression)
 						setState(632)
 						if (!(precpred(_ctx, 8))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 8)"))
 						}
 						setState(633)
 						try match(CPP14Parser.Tokens.PlusPlus.rawValue)
@@ -2030,7 +2174,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_postfixexpression)
 						setState(634)
 						if (!(precpred(_ctx, 7))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 7)"))
 						}
 						setState(635)
 						try match(CPP14Parser.Tokens.MinusMinus.rawValue)
@@ -2054,37 +2198,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class ExpressionlistContext:ParserRuleContext {
-		open func initializerlist() -> InitializerlistContext? {
-			return getRuleContext(InitializerlistContext.self,0)
+
+	public class ExpressionlistContext: ParserRuleContext {
+			open
+			func initializerlist() -> InitializerlistContext? {
+				return getRuleContext(InitializerlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_expressionlist
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_expressionlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterExpressionlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterExpressionlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitExpressionlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitExpressionlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitExpressionlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitExpressionlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitExpressionlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitExpressionlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionlist() throws -> ExpressionlistContext {
+	 open func expressionlist() throws -> ExpressionlistContext {
 		var _localctx: ExpressionlistContext = ExpressionlistContext(_ctx, getState())
 		try enterRule(_localctx, 32, CPP14Parser.RULE_expressionlist)
 		defer {
@@ -2104,50 +2254,63 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class PseudodestructornameContext:ParserRuleContext {
-		open func typename() -> Array<TypenameContext> {
-			return getRuleContexts(TypenameContext.self)
+
+	public class PseudodestructornameContext: ParserRuleContext {
+			open
+			func typename() -> [TypenameContext] {
+				return getRuleContexts(TypenameContext.self)
+			}
+			open
+			func typename(_ i: Int) -> TypenameContext? {
+				return getRuleContext(TypenameContext.self, i)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+			open
+			func simpletemplateid() -> SimpletemplateidContext? {
+				return getRuleContext(SimpletemplateidContext.self, 0)
+			}
+			open
+			func decltypespecifier() -> DecltypespecifierContext? {
+				return getRuleContext(DecltypespecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_pseudodestructorname
 		}
-		open func typename(_ i: Int) -> TypenameContext? {
-			return getRuleContext(TypenameContext.self,i)
-		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open func simpletemplateid() -> SimpletemplateidContext? {
-			return getRuleContext(SimpletemplateidContext.self,0)
-		}
-		open func decltypespecifier() -> DecltypespecifierContext? {
-			return getRuleContext(DecltypespecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_pseudodestructorname }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterPseudodestructorname(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterPseudodestructorname(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitPseudodestructorname(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitPseudodestructorname(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitPseudodestructorname(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitPseudodestructorname(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitPseudodestructorname(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitPseudodestructorname(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pseudodestructorname() throws -> PseudodestructornameContext {
+	 open func pseudodestructorname() throws -> PseudodestructornameContext {
 		var _localctx: PseudodestructornameContext = PseudodestructornameContext(_ctx, getState())
 		try enterRule(_localctx, 34, CPP14Parser.RULE_pseudodestructorname)
 		var _la: Int = 0
@@ -2237,61 +2400,83 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class UnaryexpressionContext:ParserRuleContext {
-		open func postfixexpression() -> PostfixexpressionContext? {
-			return getRuleContext(PostfixexpressionContext.self,0)
+
+	public class UnaryexpressionContext: ParserRuleContext {
+			open
+			func postfixexpression() -> PostfixexpressionContext? {
+				return getRuleContext(PostfixexpressionContext.self, 0)
+			}
+			open
+			func castexpression() -> CastexpressionContext? {
+				return getRuleContext(CastexpressionContext.self, 0)
+			}
+			open
+			func unaryoperator() -> UnaryoperatorContext? {
+				return getRuleContext(UnaryoperatorContext.self, 0)
+			}
+			open
+			func Sizeof() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Sizeof.rawValue, 0)
+			}
+			open
+			func unaryexpression() -> UnaryexpressionContext? {
+				return getRuleContext(UnaryexpressionContext.self, 0)
+			}
+			open
+			func typeid() -> TypeidContext? {
+				return getRuleContext(TypeidContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func Alignof() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Alignof.rawValue, 0)
+			}
+			open
+			func noexceptexpression() -> NoexceptexpressionContext? {
+				return getRuleContext(NoexceptexpressionContext.self, 0)
+			}
+			open
+			func newexpression() -> NewexpressionContext? {
+				return getRuleContext(NewexpressionContext.self, 0)
+			}
+			open
+			func deleteexpression() -> DeleteexpressionContext? {
+				return getRuleContext(DeleteexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_unaryexpression
 		}
-		open func castexpression() -> CastexpressionContext? {
-			return getRuleContext(CastexpressionContext.self,0)
-		}
-		open func unaryoperator() -> UnaryoperatorContext? {
-			return getRuleContext(UnaryoperatorContext.self,0)
-		}
-		open func Sizeof() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Sizeof.rawValue, 0) }
-		open func unaryexpression() -> UnaryexpressionContext? {
-			return getRuleContext(UnaryexpressionContext.self,0)
-		}
-		open func typeid() -> TypeidContext? {
-			return getRuleContext(TypeidContext.self,0)
-		}
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func Alignof() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Alignof.rawValue, 0) }
-		open func noexceptexpression() -> NoexceptexpressionContext? {
-			return getRuleContext(NoexceptexpressionContext.self,0)
-		}
-		open func newexpression() -> NewexpressionContext? {
-			return getRuleContext(NewexpressionContext.self,0)
-		}
-		open func deleteexpression() -> DeleteexpressionContext? {
-			return getRuleContext(DeleteexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_unaryexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterUnaryexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterUnaryexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitUnaryexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitUnaryexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitUnaryexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitUnaryexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitUnaryexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitUnaryexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unaryexpression() throws -> UnaryexpressionContext {
+	 open func unaryexpression() throws -> UnaryexpressionContext {
 		var _localctx: UnaryexpressionContext = UnaryexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 36, CPP14Parser.RULE_unaryexpression)
 		defer {
@@ -2406,34 +2591,39 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class UnaryoperatorContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_unaryoperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterUnaryoperator(self)
+
+	public class UnaryoperatorContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_unaryoperator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterUnaryoperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitUnaryoperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitUnaryoperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitUnaryoperator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitUnaryoperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitUnaryoperator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitUnaryoperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unaryoperator() throws -> UnaryoperatorContext {
+	 open func unaryoperator() throws -> UnaryoperatorContext {
 		var _localctx: UnaryoperatorContext = UnaryoperatorContext(_ctx, getState())
 		try enterRule(_localctx, 38, CPP14Parser.RULE_unaryoperator)
 		var _la: Int = 0
@@ -2468,47 +2658,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NewexpressionContext:ParserRuleContext {
-		open func New() -> TerminalNode? { return getToken(CPP14Parser.Tokens.New.rawValue, 0) }
-		open func newtypeid() -> NewtypeidContext? {
-			return getRuleContext(NewtypeidContext.self,0)
+
+	public class NewexpressionContext: ParserRuleContext {
+			open
+			func New() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.New.rawValue, 0)
+			}
+			open
+			func newtypeid() -> NewtypeidContext? {
+				return getRuleContext(NewtypeidContext.self, 0)
+			}
+			open
+			func newplacement() -> NewplacementContext? {
+				return getRuleContext(NewplacementContext.self, 0)
+			}
+			open
+			func newinitializer() -> NewinitializerContext? {
+				return getRuleContext(NewinitializerContext.self, 0)
+			}
+			open
+			func typeid() -> TypeidContext? {
+				return getRuleContext(TypeidContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_newexpression
 		}
-		open func newplacement() -> NewplacementContext? {
-			return getRuleContext(NewplacementContext.self,0)
-		}
-		open func newinitializer() -> NewinitializerContext? {
-			return getRuleContext(NewinitializerContext.self,0)
-		}
-		open func typeid() -> TypeidContext? {
-			return getRuleContext(TypeidContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_newexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNewexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNewexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNewexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNewexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNewexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNewexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNewexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNewexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func newexpression() throws -> NewexpressionContext {
+	 open func newexpression() throws -> NewexpressionContext {
 		var _localctx: NewexpressionContext = NewexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 40, CPP14Parser.RULE_newexpression)
 		var _la: Int = 0
@@ -2619,37 +2821,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NewplacementContext:ParserRuleContext {
-		open func expressionlist() -> ExpressionlistContext? {
-			return getRuleContext(ExpressionlistContext.self,0)
+
+	public class NewplacementContext: ParserRuleContext {
+			open
+			func expressionlist() -> ExpressionlistContext? {
+				return getRuleContext(ExpressionlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_newplacement
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_newplacement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNewplacement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNewplacement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNewplacement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNewplacement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNewplacement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNewplacement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNewplacement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNewplacement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func newplacement() throws -> NewplacementContext {
+	 open func newplacement() throws -> NewplacementContext {
 		var _localctx: NewplacementContext = NewplacementContext(_ctx, getState())
 		try enterRule(_localctx, 42, CPP14Parser.RULE_newplacement)
 		defer {
@@ -2673,40 +2881,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NewtypeidContext:ParserRuleContext {
-		open func typespecifierseq() -> TypespecifierseqContext? {
-			return getRuleContext(TypespecifierseqContext.self,0)
+
+	public class NewtypeidContext: ParserRuleContext {
+			open
+			func typespecifierseq() -> TypespecifierseqContext? {
+				return getRuleContext(TypespecifierseqContext.self, 0)
+			}
+			open
+			func newdeclarator() -> NewdeclaratorContext? {
+				return getRuleContext(NewdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_newtypeid
 		}
-		open func newdeclarator() -> NewdeclaratorContext? {
-			return getRuleContext(NewdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_newtypeid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNewtypeid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNewtypeid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNewtypeid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNewtypeid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNewtypeid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNewtypeid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNewtypeid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNewtypeid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func newtypeid() throws -> NewtypeidContext {
+	 open func newtypeid() throws -> NewtypeidContext {
 		var _localctx: NewtypeidContext = NewtypeidContext(_ctx, getState())
 		try enterRule(_localctx, 44, CPP14Parser.RULE_newtypeid)
 		defer {
@@ -2736,43 +2951,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NewdeclaratorContext:ParserRuleContext {
-		open func ptroperator() -> PtroperatorContext? {
-			return getRuleContext(PtroperatorContext.self,0)
+
+	public class NewdeclaratorContext: ParserRuleContext {
+			open
+			func ptroperator() -> PtroperatorContext? {
+				return getRuleContext(PtroperatorContext.self, 0)
+			}
+			open
+			func newdeclarator() -> NewdeclaratorContext? {
+				return getRuleContext(NewdeclaratorContext.self, 0)
+			}
+			open
+			func noptrnewdeclarator() -> NoptrnewdeclaratorContext? {
+				return getRuleContext(NoptrnewdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_newdeclarator
 		}
-		open func newdeclarator() -> NewdeclaratorContext? {
-			return getRuleContext(NewdeclaratorContext.self,0)
-		}
-		open func noptrnewdeclarator() -> NoptrnewdeclaratorContext? {
-			return getRuleContext(NoptrnewdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_newdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNewdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNewdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNewdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNewdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNewdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNewdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNewdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNewdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func newdeclarator() throws -> NewdeclaratorContext {
+	 open func newdeclarator() throws -> NewdeclaratorContext {
 		var _localctx: NewdeclaratorContext = NewdeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 46, CPP14Parser.RULE_newdeclarator)
 		defer {
@@ -2811,7 +3034,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -2823,46 +3046,54 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class NoptrnewdeclaratorContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+	public class NoptrnewdeclaratorContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func noptrnewdeclarator() -> NoptrnewdeclaratorContext? {
+				return getRuleContext(NoptrnewdeclaratorContext.self, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_noptrnewdeclarator
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func noptrnewdeclarator() -> NoptrnewdeclaratorContext? {
-			return getRuleContext(NoptrnewdeclaratorContext.self,0)
-		}
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_noptrnewdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNoptrnewdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNoptrnewdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNoptrnewdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNoptrnewdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNoptrnewdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNoptrnewdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNoptrnewdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNoptrnewdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func noptrnewdeclarator( ) throws -> NoptrnewdeclaratorContext   {
+	 public final  func noptrnewdeclarator( ) throws -> NoptrnewdeclaratorContext   {
 		return try noptrnewdeclarator(0)
 	}
 	@discardableResult
@@ -2910,7 +3141,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_noptrnewdeclarator)
 					setState(747)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(748)
 					try match(CPP14Parser.Tokens.LeftBracket.rawValue)
@@ -2945,40 +3176,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class NewinitializerContext:ParserRuleContext {
-		open func expressionlist() -> ExpressionlistContext? {
-			return getRuleContext(ExpressionlistContext.self,0)
+
+	public class NewinitializerContext: ParserRuleContext {
+			open
+			func expressionlist() -> ExpressionlistContext? {
+				return getRuleContext(ExpressionlistContext.self, 0)
+			}
+			open
+			func bracedinitlist() -> BracedinitlistContext? {
+				return getRuleContext(BracedinitlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_newinitializer
 		}
-		open func bracedinitlist() -> BracedinitlistContext? {
-			return getRuleContext(BracedinitlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_newinitializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNewinitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNewinitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNewinitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNewinitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNewinitializer(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNewinitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNewinitializer(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNewinitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func newinitializer() throws -> NewinitializerContext {
+	 open func newinitializer() throws -> NewinitializerContext {
 		var _localctx: NewinitializerContext = NewinitializerContext(_ctx, getState())
 		try enterRule(_localctx, 50, CPP14Parser.RULE_newinitializer)
 		var _la: Int = 0
@@ -3029,7 +3267,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -3040,38 +3278,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class DeleteexpressionContext:ParserRuleContext {
-		open func Delete() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Delete.rawValue, 0) }
-		open func castexpression() -> CastexpressionContext? {
-			return getRuleContext(CastexpressionContext.self,0)
+
+	public class DeleteexpressionContext: ParserRuleContext {
+			open
+			func Delete() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Delete.rawValue, 0)
+			}
+			open
+			func castexpression() -> CastexpressionContext? {
+				return getRuleContext(CastexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_deleteexpression
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_deleteexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDeleteexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDeleteexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDeleteexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDeleteexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDeleteexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDeleteexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDeleteexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDeleteexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func deleteexpression() throws -> DeleteexpressionContext {
+	 open func deleteexpression() throws -> DeleteexpressionContext {
 		var _localctx: DeleteexpressionContext = DeleteexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 52, CPP14Parser.RULE_deleteexpression)
 		var _la: Int = 0
@@ -3139,38 +3386,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NoexceptexpressionContext:ParserRuleContext {
-		open func Noexcept() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Noexcept.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class NoexceptexpressionContext: ParserRuleContext {
+			open
+			func Noexcept() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Noexcept.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_noexceptexpression
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_noexceptexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNoexceptexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNoexceptexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNoexceptexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNoexceptexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNoexceptexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNoexceptexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNoexceptexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNoexceptexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func noexceptexpression() throws -> NoexceptexpressionContext {
+	 open func noexceptexpression() throws -> NoexceptexpressionContext {
 		var _localctx: NoexceptexpressionContext = NoexceptexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 54, CPP14Parser.RULE_noexceptexpression)
 		defer {
@@ -3196,43 +3452,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class CastexpressionContext:ParserRuleContext {
-		open func unaryexpression() -> UnaryexpressionContext? {
-			return getRuleContext(UnaryexpressionContext.self,0)
+
+	public class CastexpressionContext: ParserRuleContext {
+			open
+			func unaryexpression() -> UnaryexpressionContext? {
+				return getRuleContext(UnaryexpressionContext.self, 0)
+			}
+			open
+			func typeid() -> TypeidContext? {
+				return getRuleContext(TypeidContext.self, 0)
+			}
+			open
+			func castexpression() -> CastexpressionContext? {
+				return getRuleContext(CastexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_castexpression
 		}
-		open func typeid() -> TypeidContext? {
-			return getRuleContext(TypeidContext.self,0)
-		}
-		open func castexpression() -> CastexpressionContext? {
-			return getRuleContext(CastexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_castexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterCastexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterCastexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitCastexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitCastexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitCastexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitCastexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitCastexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitCastexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func castexpression() throws -> CastexpressionContext {
+	 open func castexpression() throws -> CastexpressionContext {
 		var _localctx: CastexpressionContext = CastexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 56, CPP14Parser.RULE_castexpression)
 		defer {
@@ -3272,40 +3536,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class PmexpressionContext:ParserRuleContext {
-		open func castexpression() -> CastexpressionContext? {
-			return getRuleContext(CastexpressionContext.self,0)
+	public class PmexpressionContext: ParserRuleContext {
+			open
+			func castexpression() -> CastexpressionContext? {
+				return getRuleContext(CastexpressionContext.self, 0)
+			}
+			open
+			func pmexpression() -> PmexpressionContext? {
+				return getRuleContext(PmexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_pmexpression
 		}
-		open func pmexpression() -> PmexpressionContext? {
-			return getRuleContext(PmexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_pmexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterPmexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterPmexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitPmexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitPmexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitPmexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitPmexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitPmexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitPmexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func pmexpression( ) throws -> PmexpressionContext   {
+	 public final  func pmexpression( ) throws -> PmexpressionContext   {
 		return try pmexpression(0)
 	}
 	@discardableResult
@@ -3343,7 +3613,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_pmexpression)
 						setState(797)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(798)
 						try match(CPP14Parser.Tokens.DotStar.rawValue)
@@ -3356,7 +3626,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_pmexpression)
 						setState(800)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(801)
 						try match(CPP14Parser.Tokens.ArrowStar.rawValue)
@@ -3383,40 +3653,46 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class MultiplicativeexpressionContext:ParserRuleContext {
-		open func pmexpression() -> PmexpressionContext? {
-			return getRuleContext(PmexpressionContext.self,0)
+	public class MultiplicativeexpressionContext: ParserRuleContext {
+			open
+			func pmexpression() -> PmexpressionContext? {
+				return getRuleContext(PmexpressionContext.self, 0)
+			}
+			open
+			func multiplicativeexpression() -> MultiplicativeexpressionContext? {
+				return getRuleContext(MultiplicativeexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_multiplicativeexpression
 		}
-		open func multiplicativeexpression() -> MultiplicativeexpressionContext? {
-			return getRuleContext(MultiplicativeexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_multiplicativeexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterMultiplicativeexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterMultiplicativeexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitMultiplicativeexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitMultiplicativeexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitMultiplicativeexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitMultiplicativeexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitMultiplicativeexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitMultiplicativeexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func multiplicativeexpression( ) throws -> MultiplicativeexpressionContext   {
+	 public final  func multiplicativeexpression( ) throws -> MultiplicativeexpressionContext   {
 		return try multiplicativeexpression(0)
 	}
 	@discardableResult
@@ -3454,7 +3730,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_multiplicativeexpression)
 						setState(811)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(812)
 						try match(CPP14Parser.Tokens.Star.rawValue)
@@ -3467,7 +3743,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_multiplicativeexpression)
 						setState(814)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(815)
 						try match(CPP14Parser.Tokens.Div.rawValue)
@@ -3480,7 +3756,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_multiplicativeexpression)
 						setState(817)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(818)
 						try match(CPP14Parser.Tokens.Mod.rawValue)
@@ -3507,40 +3783,46 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class AdditiveexpressionContext:ParserRuleContext {
-		open func multiplicativeexpression() -> MultiplicativeexpressionContext? {
-			return getRuleContext(MultiplicativeexpressionContext.self,0)
+	public class AdditiveexpressionContext: ParserRuleContext {
+			open
+			func multiplicativeexpression() -> MultiplicativeexpressionContext? {
+				return getRuleContext(MultiplicativeexpressionContext.self, 0)
+			}
+			open
+			func additiveexpression() -> AdditiveexpressionContext? {
+				return getRuleContext(AdditiveexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_additiveexpression
 		}
-		open func additiveexpression() -> AdditiveexpressionContext? {
-			return getRuleContext(AdditiveexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_additiveexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAdditiveexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAdditiveexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAdditiveexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAdditiveexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAdditiveexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAdditiveexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAdditiveexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAdditiveexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func additiveexpression( ) throws -> AdditiveexpressionContext   {
+	 public final  func additiveexpression( ) throws -> AdditiveexpressionContext   {
 		return try additiveexpression(0)
 	}
 	@discardableResult
@@ -3578,7 +3860,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_additiveexpression)
 						setState(828)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(829)
 						try match(CPP14Parser.Tokens.Plus.rawValue)
@@ -3591,7 +3873,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_additiveexpression)
 						setState(831)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(832)
 						try match(CPP14Parser.Tokens.Minus.rawValue)
@@ -3618,43 +3900,50 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class ShiftexpressionContext:ParserRuleContext {
-		open func additiveexpression() -> AdditiveexpressionContext? {
-			return getRuleContext(AdditiveexpressionContext.self,0)
+	public class ShiftexpressionContext: ParserRuleContext {
+			open
+			func additiveexpression() -> AdditiveexpressionContext? {
+				return getRuleContext(AdditiveexpressionContext.self, 0)
+			}
+			open
+			func shiftexpression() -> ShiftexpressionContext? {
+				return getRuleContext(ShiftexpressionContext.self, 0)
+			}
+			open
+			func rightShift() -> RightShiftContext? {
+				return getRuleContext(RightShiftContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_shiftexpression
 		}
-		open func shiftexpression() -> ShiftexpressionContext? {
-			return getRuleContext(ShiftexpressionContext.self,0)
-		}
-		open func rightShift() -> RightShiftContext? {
-			return getRuleContext(RightShiftContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_shiftexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterShiftexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterShiftexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitShiftexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitShiftexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitShiftexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitShiftexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitShiftexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitShiftexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func shiftexpression( ) throws -> ShiftexpressionContext   {
+	 public final  func shiftexpression( ) throws -> ShiftexpressionContext   {
 		return try shiftexpression(0)
 	}
 	@discardableResult
@@ -3692,7 +3981,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_shiftexpression)
 						setState(842)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(843)
 						try match(CPP14Parser.Tokens.LeftShift.rawValue)
@@ -3705,7 +3994,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_shiftexpression)
 						setState(845)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(846)
 						try rightShift()
@@ -3732,40 +4021,46 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class RelationalexpressionContext:ParserRuleContext {
-		open func shiftexpression() -> ShiftexpressionContext? {
-			return getRuleContext(ShiftexpressionContext.self,0)
+	public class RelationalexpressionContext: ParserRuleContext {
+			open
+			func shiftexpression() -> ShiftexpressionContext? {
+				return getRuleContext(ShiftexpressionContext.self, 0)
+			}
+			open
+			func relationalexpression() -> RelationalexpressionContext? {
+				return getRuleContext(RelationalexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_relationalexpression
 		}
-		open func relationalexpression() -> RelationalexpressionContext? {
-			return getRuleContext(RelationalexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_relationalexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterRelationalexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterRelationalexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitRelationalexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitRelationalexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitRelationalexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitRelationalexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitRelationalexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitRelationalexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func relationalexpression( ) throws -> RelationalexpressionContext   {
+	 public final  func relationalexpression( ) throws -> RelationalexpressionContext   {
 		return try relationalexpression(0)
 	}
 	@discardableResult
@@ -3803,7 +4098,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_relationalexpression)
 						setState(857)
 						if (!(precpred(_ctx, 4))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 4)"))
 						}
 						setState(858)
 						try match(CPP14Parser.Tokens.Less.rawValue)
@@ -3816,7 +4111,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_relationalexpression)
 						setState(860)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(861)
 						try match(CPP14Parser.Tokens.Greater.rawValue)
@@ -3829,7 +4124,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_relationalexpression)
 						setState(863)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(864)
 						try match(CPP14Parser.Tokens.LessEqual.rawValue)
@@ -3842,7 +4137,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_relationalexpression)
 						setState(866)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(867)
 						try match(CPP14Parser.Tokens.GreaterEqual.rawValue)
@@ -3869,40 +4164,46 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class EqualityexpressionContext:ParserRuleContext {
-		open func relationalexpression() -> RelationalexpressionContext? {
-			return getRuleContext(RelationalexpressionContext.self,0)
+	public class EqualityexpressionContext: ParserRuleContext {
+			open
+			func relationalexpression() -> RelationalexpressionContext? {
+				return getRuleContext(RelationalexpressionContext.self, 0)
+			}
+			open
+			func equalityexpression() -> EqualityexpressionContext? {
+				return getRuleContext(EqualityexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_equalityexpression
 		}
-		open func equalityexpression() -> EqualityexpressionContext? {
-			return getRuleContext(EqualityexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_equalityexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEqualityexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEqualityexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEqualityexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEqualityexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEqualityexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEqualityexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEqualityexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEqualityexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func equalityexpression( ) throws -> EqualityexpressionContext   {
+	 public final  func equalityexpression( ) throws -> EqualityexpressionContext   {
 		return try equalityexpression(0)
 	}
 	@discardableResult
@@ -3940,7 +4241,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_equalityexpression)
 						setState(877)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(878)
 						try match(CPP14Parser.Tokens.Equal.rawValue)
@@ -3953,7 +4254,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_equalityexpression)
 						setState(880)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(881)
 						try match(CPP14Parser.Tokens.NotEqual.rawValue)
@@ -3980,40 +4281,46 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class AndexpressionContext:ParserRuleContext {
-		open func equalityexpression() -> EqualityexpressionContext? {
-			return getRuleContext(EqualityexpressionContext.self,0)
+	public class AndexpressionContext: ParserRuleContext {
+			open
+			func equalityexpression() -> EqualityexpressionContext? {
+				return getRuleContext(EqualityexpressionContext.self, 0)
+			}
+			open
+			func andexpression() -> AndexpressionContext? {
+				return getRuleContext(AndexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_andexpression
 		}
-		open func andexpression() -> AndexpressionContext? {
-			return getRuleContext(AndexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_andexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAndexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAndexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAndexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAndexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAndexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAndexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAndexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAndexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func andexpression( ) throws -> AndexpressionContext   {
+	 public final  func andexpression( ) throws -> AndexpressionContext   {
 		return try andexpression(0)
 	}
 	@discardableResult
@@ -4047,7 +4354,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_andexpression)
 					setState(891)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(892)
 					try match(CPP14Parser.Tokens.And.rawValue)
@@ -4071,40 +4378,46 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class ExclusiveorexpressionContext:ParserRuleContext {
-		open func andexpression() -> AndexpressionContext? {
-			return getRuleContext(AndexpressionContext.self,0)
+	public class ExclusiveorexpressionContext: ParserRuleContext {
+			open
+			func andexpression() -> AndexpressionContext? {
+				return getRuleContext(AndexpressionContext.self, 0)
+			}
+			open
+			func exclusiveorexpression() -> ExclusiveorexpressionContext? {
+				return getRuleContext(ExclusiveorexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_exclusiveorexpression
 		}
-		open func exclusiveorexpression() -> ExclusiveorexpressionContext? {
-			return getRuleContext(ExclusiveorexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_exclusiveorexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterExclusiveorexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterExclusiveorexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitExclusiveorexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitExclusiveorexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitExclusiveorexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitExclusiveorexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitExclusiveorexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitExclusiveorexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func exclusiveorexpression( ) throws -> ExclusiveorexpressionContext   {
+	 public final  func exclusiveorexpression( ) throws -> ExclusiveorexpressionContext   {
 		return try exclusiveorexpression(0)
 	}
 	@discardableResult
@@ -4138,7 +4451,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_exclusiveorexpression)
 					setState(902)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(903)
 					try match(CPP14Parser.Tokens.Caret.rawValue)
@@ -4162,40 +4475,46 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class InclusiveorexpressionContext:ParserRuleContext {
-		open func exclusiveorexpression() -> ExclusiveorexpressionContext? {
-			return getRuleContext(ExclusiveorexpressionContext.self,0)
+	public class InclusiveorexpressionContext: ParserRuleContext {
+			open
+			func exclusiveorexpression() -> ExclusiveorexpressionContext? {
+				return getRuleContext(ExclusiveorexpressionContext.self, 0)
+			}
+			open
+			func inclusiveorexpression() -> InclusiveorexpressionContext? {
+				return getRuleContext(InclusiveorexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_inclusiveorexpression
 		}
-		open func inclusiveorexpression() -> InclusiveorexpressionContext? {
-			return getRuleContext(InclusiveorexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_inclusiveorexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterInclusiveorexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterInclusiveorexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitInclusiveorexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitInclusiveorexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitInclusiveorexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitInclusiveorexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitInclusiveorexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitInclusiveorexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func inclusiveorexpression( ) throws -> InclusiveorexpressionContext   {
+	 public final  func inclusiveorexpression( ) throws -> InclusiveorexpressionContext   {
 		return try inclusiveorexpression(0)
 	}
 	@discardableResult
@@ -4229,7 +4548,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_inclusiveorexpression)
 					setState(913)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(914)
 					try match(CPP14Parser.Tokens.Or.rawValue)
@@ -4253,40 +4572,46 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class LogicalandexpressionContext:ParserRuleContext {
-		open func inclusiveorexpression() -> InclusiveorexpressionContext? {
-			return getRuleContext(InclusiveorexpressionContext.self,0)
+	public class LogicalandexpressionContext: ParserRuleContext {
+			open
+			func inclusiveorexpression() -> InclusiveorexpressionContext? {
+				return getRuleContext(InclusiveorexpressionContext.self, 0)
+			}
+			open
+			func logicalandexpression() -> LogicalandexpressionContext? {
+				return getRuleContext(LogicalandexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_logicalandexpression
 		}
-		open func logicalandexpression() -> LogicalandexpressionContext? {
-			return getRuleContext(LogicalandexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_logicalandexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLogicalandexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLogicalandexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLogicalandexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLogicalandexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLogicalandexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLogicalandexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLogicalandexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLogicalandexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func logicalandexpression( ) throws -> LogicalandexpressionContext   {
+	 public final  func logicalandexpression( ) throws -> LogicalandexpressionContext   {
 		return try logicalandexpression(0)
 	}
 	@discardableResult
@@ -4320,7 +4645,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_logicalandexpression)
 					setState(924)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(925)
 					try match(CPP14Parser.Tokens.AndAnd.rawValue)
@@ -4344,40 +4669,46 @@ open class CPP14Parser: Parser {
 		return _localctx;
 	}
 
-	open class LogicalorexpressionContext:ParserRuleContext {
-		open func logicalandexpression() -> LogicalandexpressionContext? {
-			return getRuleContext(LogicalandexpressionContext.self,0)
+	public class LogicalorexpressionContext: ParserRuleContext {
+			open
+			func logicalandexpression() -> LogicalandexpressionContext? {
+				return getRuleContext(LogicalandexpressionContext.self, 0)
+			}
+			open
+			func logicalorexpression() -> LogicalorexpressionContext? {
+				return getRuleContext(LogicalorexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_logicalorexpression
 		}
-		open func logicalorexpression() -> LogicalorexpressionContext? {
-			return getRuleContext(LogicalorexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_logicalorexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLogicalorexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLogicalorexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLogicalorexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLogicalorexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLogicalorexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLogicalorexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLogicalorexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLogicalorexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func logicalorexpression( ) throws -> LogicalorexpressionContext   {
+	 public final  func logicalorexpression( ) throws -> LogicalorexpressionContext   {
 		return try logicalorexpression(0)
 	}
 	@discardableResult
@@ -4411,7 +4742,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_logicalorexpression)
 					setState(935)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(936)
 					try match(CPP14Parser.Tokens.OrOr.rawValue)
@@ -4434,43 +4765,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class ConditionalexpressionContext:ParserRuleContext {
-		open func logicalorexpression() -> LogicalorexpressionContext? {
-			return getRuleContext(LogicalorexpressionContext.self,0)
+
+	public class ConditionalexpressionContext: ParserRuleContext {
+			open
+			func logicalorexpression() -> LogicalorexpressionContext? {
+				return getRuleContext(LogicalorexpressionContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func assignmentexpression() -> AssignmentexpressionContext? {
+				return getRuleContext(AssignmentexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_conditionalexpression
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func assignmentexpression() -> AssignmentexpressionContext? {
-			return getRuleContext(AssignmentexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_conditionalexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterConditionalexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterConditionalexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitConditionalexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitConditionalexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitConditionalexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitConditionalexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitConditionalexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitConditionalexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conditionalexpression() throws -> ConditionalexpressionContext {
+	 open func conditionalexpression() throws -> ConditionalexpressionContext {
 		var _localctx: ConditionalexpressionContext = ConditionalexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 80, CPP14Parser.RULE_conditionalexpression)
 		defer {
@@ -4511,49 +4850,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentexpressionContext:ParserRuleContext {
-		open func conditionalexpression() -> ConditionalexpressionContext? {
-			return getRuleContext(ConditionalexpressionContext.self,0)
+
+	public class AssignmentexpressionContext: ParserRuleContext {
+			open
+			func conditionalexpression() -> ConditionalexpressionContext? {
+				return getRuleContext(ConditionalexpressionContext.self, 0)
+			}
+			open
+			func logicalorexpression() -> LogicalorexpressionContext? {
+				return getRuleContext(LogicalorexpressionContext.self, 0)
+			}
+			open
+			func assignmentoperator() -> AssignmentoperatorContext? {
+				return getRuleContext(AssignmentoperatorContext.self, 0)
+			}
+			open
+			func initializerclause() -> InitializerclauseContext? {
+				return getRuleContext(InitializerclauseContext.self, 0)
+			}
+			open
+			func throwexpression() -> ThrowexpressionContext? {
+				return getRuleContext(ThrowexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_assignmentexpression
 		}
-		open func logicalorexpression() -> LogicalorexpressionContext? {
-			return getRuleContext(LogicalorexpressionContext.self,0)
-		}
-		open func assignmentoperator() -> AssignmentoperatorContext? {
-			return getRuleContext(AssignmentoperatorContext.self,0)
-		}
-		open func initializerclause() -> InitializerclauseContext? {
-			return getRuleContext(InitializerclauseContext.self,0)
-		}
-		open func throwexpression() -> ThrowexpressionContext? {
-			return getRuleContext(ThrowexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_assignmentexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAssignmentexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAssignmentexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAssignmentexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAssignmentexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAssignmentexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAssignmentexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAssignmentexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAssignmentexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignmentexpression() throws -> AssignmentexpressionContext {
+	 open func assignmentexpression() throws -> AssignmentexpressionContext {
 		var _localctx: AssignmentexpressionContext = AssignmentexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 82, CPP14Parser.RULE_assignmentexpression)
 		defer {
@@ -4596,37 +4945,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AssignmentoperatorContext:ParserRuleContext {
-		open func rightShiftAssign() -> RightShiftAssignContext? {
-			return getRuleContext(RightShiftAssignContext.self,0)
+
+	public class AssignmentoperatorContext: ParserRuleContext {
+			open
+			func rightShiftAssign() -> RightShiftAssignContext? {
+				return getRuleContext(RightShiftAssignContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_assignmentoperator
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_assignmentoperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAssignmentoperator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAssignmentoperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAssignmentoperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAssignmentoperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAssignmentoperator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAssignmentoperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAssignmentoperator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAssignmentoperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func assignmentoperator() throws -> AssignmentoperatorContext {
+	 open func assignmentoperator() throws -> AssignmentoperatorContext {
 		var _localctx: AssignmentoperatorContext = AssignmentoperatorContext(_ctx, getState())
 		try enterRule(_localctx, 84, CPP14Parser.RULE_assignmentoperator)
 		defer {
@@ -4713,7 +5068,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -4725,40 +5080,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class ExpressionContext:ParserRuleContext {
-		open func assignmentexpression() -> AssignmentexpressionContext? {
-			return getRuleContext(AssignmentexpressionContext.self,0)
+	public class ExpressionContext: ParserRuleContext {
+			open
+			func assignmentexpression() -> AssignmentexpressionContext? {
+				return getRuleContext(AssignmentexpressionContext.self, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_expression
 		}
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_expression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterExpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterExpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitExpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitExpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitExpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitExpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitExpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitExpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func expression( ) throws -> ExpressionContext   {
+	 public final  func expression( ) throws -> ExpressionContext   {
 		return try expression(0)
 	}
 	@discardableResult
@@ -4792,7 +5153,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_expression)
 					setState(976)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(977)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -4815,37 +5176,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class ConstantexpressionContext:ParserRuleContext {
-		open func conditionalexpression() -> ConditionalexpressionContext? {
-			return getRuleContext(ConditionalexpressionContext.self,0)
+
+	public class ConstantexpressionContext: ParserRuleContext {
+			open
+			func conditionalexpression() -> ConditionalexpressionContext? {
+				return getRuleContext(ConditionalexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_constantexpression
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_constantexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterConstantexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterConstantexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitConstantexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitConstantexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitConstantexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitConstantexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitConstantexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitConstantexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func constantexpression() throws -> ConstantexpressionContext {
+	 open func constantexpression() throws -> ConstantexpressionContext {
 		var _localctx: ConstantexpressionContext = ConstantexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 88, CPP14Parser.RULE_constantexpression)
 		defer {
@@ -4865,61 +5232,75 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class StatementContext:ParserRuleContext {
-		open func labeledstatement() -> LabeledstatementContext? {
-			return getRuleContext(LabeledstatementContext.self,0)
+
+	public class StatementContext: ParserRuleContext {
+			open
+			func labeledstatement() -> LabeledstatementContext? {
+				return getRuleContext(LabeledstatementContext.self, 0)
+			}
+			open
+			func expressionstatement() -> ExpressionstatementContext? {
+				return getRuleContext(ExpressionstatementContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func compoundstatement() -> CompoundstatementContext? {
+				return getRuleContext(CompoundstatementContext.self, 0)
+			}
+			open
+			func selectionstatement() -> SelectionstatementContext? {
+				return getRuleContext(SelectionstatementContext.self, 0)
+			}
+			open
+			func iterationstatement() -> IterationstatementContext? {
+				return getRuleContext(IterationstatementContext.self, 0)
+			}
+			open
+			func jumpstatement() -> JumpstatementContext? {
+				return getRuleContext(JumpstatementContext.self, 0)
+			}
+			open
+			func declarationstatement() -> DeclarationstatementContext? {
+				return getRuleContext(DeclarationstatementContext.self, 0)
+			}
+			open
+			func tryblock() -> TryblockContext? {
+				return getRuleContext(TryblockContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_statement
 		}
-		open func expressionstatement() -> ExpressionstatementContext? {
-			return getRuleContext(ExpressionstatementContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func compoundstatement() -> CompoundstatementContext? {
-			return getRuleContext(CompoundstatementContext.self,0)
-		}
-		open func selectionstatement() -> SelectionstatementContext? {
-			return getRuleContext(SelectionstatementContext.self,0)
-		}
-		open func iterationstatement() -> IterationstatementContext? {
-			return getRuleContext(IterationstatementContext.self,0)
-		}
-		open func jumpstatement() -> JumpstatementContext? {
-			return getRuleContext(JumpstatementContext.self,0)
-		}
-		open func declarationstatement() -> DeclarationstatementContext? {
-			return getRuleContext(DeclarationstatementContext.self,0)
-		}
-		open func tryblock() -> TryblockContext? {
-			return getRuleContext(TryblockContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_statement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterStatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterStatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitStatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitStatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitStatement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitStatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitStatement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitStatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func statement() throws -> StatementContext {
+	 open func statement() throws -> StatementContext {
 		var _localctx: StatementContext = StatementContext(_ctx, getState())
 		try enterRule(_localctx, 90, CPP14Parser.RULE_statement)
 		var _la: Int = 0
@@ -5069,46 +5450,63 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class LabeledstatementContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
+
+	public class LabeledstatementContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func Case() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Case.rawValue, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+			open
+			func Default() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Default.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_labeledstatement
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func Case() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Case.rawValue, 0) }
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
-		}
-		open func Default() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Default.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_labeledstatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLabeledstatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLabeledstatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLabeledstatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLabeledstatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLabeledstatement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLabeledstatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLabeledstatement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLabeledstatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func labeledstatement() throws -> LabeledstatementContext {
+	 open func labeledstatement() throws -> LabeledstatementContext {
 		var _localctx: LabeledstatementContext = LabeledstatementContext(_ctx, getState())
 		try enterRule(_localctx, 92, CPP14Parser.RULE_labeledstatement)
 		var _la: Int = 0
@@ -5204,37 +5602,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ExpressionstatementContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ExpressionstatementContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_expressionstatement
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_expressionstatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterExpressionstatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterExpressionstatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitExpressionstatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitExpressionstatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitExpressionstatement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitExpressionstatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitExpressionstatement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitExpressionstatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func expressionstatement() throws -> ExpressionstatementContext {
+	 open func expressionstatement() throws -> ExpressionstatementContext {
 		var _localctx: ExpressionstatementContext = ExpressionstatementContext(_ctx, getState())
 		try enterRule(_localctx, 94, CPP14Parser.RULE_expressionstatement)
 		var _la: Int = 0
@@ -5279,37 +5683,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class CompoundstatementContext:ParserRuleContext {
-		open func statementseq() -> StatementseqContext? {
-			return getRuleContext(StatementseqContext.self,0)
+
+	public class CompoundstatementContext: ParserRuleContext {
+			open
+			func statementseq() -> StatementseqContext? {
+				return getRuleContext(StatementseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_compoundstatement
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_compoundstatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterCompoundstatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterCompoundstatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitCompoundstatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitCompoundstatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitCompoundstatement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitCompoundstatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitCompoundstatement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitCompoundstatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func compoundstatement() throws -> CompoundstatementContext {
+	 open func compoundstatement() throws -> CompoundstatementContext {
 		var _localctx: CompoundstatementContext = CompoundstatementContext(_ctx, getState())
 		try enterRule(_localctx, 96, CPP14Parser.RULE_compoundstatement)
 		var _la: Int = 0
@@ -5357,40 +5767,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class StatementseqContext:ParserRuleContext {
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
+	public class StatementseqContext: ParserRuleContext {
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func statementseq() -> StatementseqContext? {
+				return getRuleContext(StatementseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_statementseq
 		}
-		open func statementseq() -> StatementseqContext? {
-			return getRuleContext(StatementseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_statementseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterStatementseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterStatementseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitStatementseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitStatementseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitStatementseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitStatementseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitStatementseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitStatementseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func statementseq( ) throws -> StatementseqContext   {
+	 public final  func statementseq( ) throws -> StatementseqContext   {
 		return try statementseq(0)
 	}
 	@discardableResult
@@ -5424,7 +5840,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_statementseq)
 					setState(1050)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(1051)
 					try statement()
@@ -5445,46 +5861,63 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class SelectionstatementContext:ParserRuleContext {
-		open func If() -> TerminalNode? { return getToken(CPP14Parser.Tokens.If.rawValue, 0) }
-		open func condition() -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,0)
+
+	public class SelectionstatementContext: ParserRuleContext {
+			open
+			func If() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.If.rawValue, 0)
+			}
+			open
+			func condition() -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, 0)
+			}
+			open
+			func statement() -> [StatementContext] {
+				return getRuleContexts(StatementContext.self)
+			}
+			open
+			func statement(_ i: Int) -> StatementContext? {
+				return getRuleContext(StatementContext.self, i)
+			}
+			open
+			func Else() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Else.rawValue, 0)
+			}
+			open
+			func Switch() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Switch.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_selectionstatement
 		}
-		open func statement() -> Array<StatementContext> {
-			return getRuleContexts(StatementContext.self)
-		}
-		open func statement(_ i: Int) -> StatementContext? {
-			return getRuleContext(StatementContext.self,i)
-		}
-		open func Else() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Else.rawValue, 0) }
-		open func Switch() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Switch.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_selectionstatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterSelectionstatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterSelectionstatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitSelectionstatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitSelectionstatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitSelectionstatement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitSelectionstatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitSelectionstatement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitSelectionstatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func selectionstatement() throws -> SelectionstatementContext {
+	 open func selectionstatement() throws -> SelectionstatementContext {
 		var _localctx: SelectionstatementContext = SelectionstatementContext(_ctx, getState())
 		try enterRule(_localctx, 100, CPP14Parser.RULE_selectionstatement)
 		defer {
@@ -5551,52 +5984,63 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ConditionContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ConditionContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func declspecifierseq() -> DeclspecifierseqContext? {
+				return getRuleContext(DeclspecifierseqContext.self, 0)
+			}
+			open
+			func declarator() -> DeclaratorContext? {
+				return getRuleContext(DeclaratorContext.self, 0)
+			}
+			open
+			func initializerclause() -> InitializerclauseContext? {
+				return getRuleContext(InitializerclauseContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func bracedinitlist() -> BracedinitlistContext? {
+				return getRuleContext(BracedinitlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_condition
 		}
-		open func declspecifierseq() -> DeclspecifierseqContext? {
-			return getRuleContext(DeclspecifierseqContext.self,0)
-		}
-		open func declarator() -> DeclaratorContext? {
-			return getRuleContext(DeclaratorContext.self,0)
-		}
-		open func initializerclause() -> InitializerclauseContext? {
-			return getRuleContext(InitializerclauseContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func bracedinitlist() -> BracedinitlistContext? {
-			return getRuleContext(BracedinitlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_condition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterCondition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterCondition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitCondition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitCondition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitCondition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitCondition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitCondition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitCondition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func condition() throws -> ConditionContext {
+	 open func condition() throws -> ConditionContext {
 		var _localctx: ConditionContext = ConditionContext(_ctx, getState())
 		try enterRule(_localctx, 102, CPP14Parser.RULE_condition)
 		var _la: Int = 0
@@ -5674,55 +6118,75 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class IterationstatementContext:ParserRuleContext {
-		open func While() -> TerminalNode? { return getToken(CPP14Parser.Tokens.While.rawValue, 0) }
-		open func condition() -> ConditionContext? {
-			return getRuleContext(ConditionContext.self,0)
+
+	public class IterationstatementContext: ParserRuleContext {
+			open
+			func While() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.While.rawValue, 0)
+			}
+			open
+			func condition() -> ConditionContext? {
+				return getRuleContext(ConditionContext.self, 0)
+			}
+			open
+			func statement() -> StatementContext? {
+				return getRuleContext(StatementContext.self, 0)
+			}
+			open
+			func Do() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Do.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func For() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.For.rawValue, 0)
+			}
+			open
+			func forinitstatement() -> ForinitstatementContext? {
+				return getRuleContext(ForinitstatementContext.self, 0)
+			}
+			open
+			func forrangedeclaration() -> ForrangedeclarationContext? {
+				return getRuleContext(ForrangedeclarationContext.self, 0)
+			}
+			open
+			func forrangeinitializer() -> ForrangeinitializerContext? {
+				return getRuleContext(ForrangeinitializerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_iterationstatement
 		}
-		open func statement() -> StatementContext? {
-			return getRuleContext(StatementContext.self,0)
-		}
-		open func Do() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Do.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
-		}
-		open func For() -> TerminalNode? { return getToken(CPP14Parser.Tokens.For.rawValue, 0) }
-		open func forinitstatement() -> ForinitstatementContext? {
-			return getRuleContext(ForinitstatementContext.self,0)
-		}
-		open func forrangedeclaration() -> ForrangedeclarationContext? {
-			return getRuleContext(ForrangedeclarationContext.self,0)
-		}
-		open func forrangeinitializer() -> ForrangeinitializerContext? {
-			return getRuleContext(ForrangeinitializerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_iterationstatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterIterationstatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterIterationstatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitIterationstatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitIterationstatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitIterationstatement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitIterationstatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitIterationstatement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitIterationstatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func iterationstatement() throws -> IterationstatementContext {
+	 open func iterationstatement() throws -> IterationstatementContext {
 		var _localctx: IterationstatementContext = IterationstatementContext(_ctx, getState())
 		try enterRule(_localctx, 104, CPP14Parser.RULE_iterationstatement)
 		var _la: Int = 0
@@ -5858,40 +6322,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ForinitstatementContext:ParserRuleContext {
-		open func expressionstatement() -> ExpressionstatementContext? {
-			return getRuleContext(ExpressionstatementContext.self,0)
+
+	public class ForinitstatementContext: ParserRuleContext {
+			open
+			func expressionstatement() -> ExpressionstatementContext? {
+				return getRuleContext(ExpressionstatementContext.self, 0)
+			}
+			open
+			func simpledeclaration() -> SimpledeclarationContext? {
+				return getRuleContext(SimpledeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_forinitstatement
 		}
-		open func simpledeclaration() -> SimpledeclarationContext? {
-			return getRuleContext(SimpledeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_forinitstatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterForinitstatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterForinitstatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitForinitstatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitForinitstatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitForinitstatement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitForinitstatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitForinitstatement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitForinitstatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forinitstatement() throws -> ForinitstatementContext {
+	 open func forinitstatement() throws -> ForinitstatementContext {
 		var _localctx: ForinitstatementContext = ForinitstatementContext(_ctx, getState())
 		try enterRule(_localctx, 106, CPP14Parser.RULE_forinitstatement)
 		defer {
@@ -5924,43 +6395,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ForrangedeclarationContext:ParserRuleContext {
-		open func declspecifierseq() -> DeclspecifierseqContext? {
-			return getRuleContext(DeclspecifierseqContext.self,0)
+
+	public class ForrangedeclarationContext: ParserRuleContext {
+			open
+			func declspecifierseq() -> DeclspecifierseqContext? {
+				return getRuleContext(DeclspecifierseqContext.self, 0)
+			}
+			open
+			func declarator() -> DeclaratorContext? {
+				return getRuleContext(DeclaratorContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_forrangedeclaration
 		}
-		open func declarator() -> DeclaratorContext? {
-			return getRuleContext(DeclaratorContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_forrangedeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterForrangedeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterForrangedeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitForrangedeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitForrangedeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitForrangedeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitForrangedeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitForrangedeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitForrangedeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forrangedeclaration() throws -> ForrangedeclarationContext {
+	 open func forrangedeclaration() throws -> ForrangedeclarationContext {
 		var _localctx: ForrangedeclarationContext = ForrangedeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 108, CPP14Parser.RULE_forrangedeclaration)
 		var _la: Int = 0
@@ -5997,40 +6476,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ForrangeinitializerContext:ParserRuleContext {
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class ForrangeinitializerContext: ParserRuleContext {
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func bracedinitlist() -> BracedinitlistContext? {
+				return getRuleContext(BracedinitlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_forrangeinitializer
 		}
-		open func bracedinitlist() -> BracedinitlistContext? {
-			return getRuleContext(BracedinitlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_forrangeinitializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterForrangeinitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterForrangeinitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitForrangeinitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitForrangeinitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitForrangeinitializer(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitForrangeinitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitForrangeinitializer(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitForrangeinitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func forrangeinitializer() throws -> ForrangeinitializerContext {
+	 open func forrangeinitializer() throws -> ForrangeinitializerContext {
 		var _localctx: ForrangeinitializerContext = ForrangeinitializerContext(_ctx, getState())
 		try enterRule(_localctx, 110, CPP14Parser.RULE_forrangeinitializer)
 		defer {
@@ -6106,7 +6592,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6117,45 +6603,67 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class JumpstatementContext:ParserRuleContext {
-		open func Break() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Break.rawValue, 0) }
-		open func Continue() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Continue.rawValue, 0) }
-		open func Return() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Return.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class JumpstatementContext: ParserRuleContext {
+			open
+			func Break() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Break.rawValue, 0)
+			}
+			open
+			func Continue() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Continue.rawValue, 0)
+			}
+			open
+			func Return() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Return.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func bracedinitlist() -> BracedinitlistContext? {
+				return getRuleContext(BracedinitlistContext.self, 0)
+			}
+			open
+			func Goto() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Goto.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_jumpstatement
 		}
-		open func bracedinitlist() -> BracedinitlistContext? {
-			return getRuleContext(BracedinitlistContext.self,0)
-		}
-		open func Goto() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Goto.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_jumpstatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterJumpstatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterJumpstatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitJumpstatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitJumpstatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitJumpstatement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitJumpstatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitJumpstatement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitJumpstatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func jumpstatement() throws -> JumpstatementContext {
+	 open func jumpstatement() throws -> JumpstatementContext {
 		var _localctx: JumpstatementContext = JumpstatementContext(_ctx, getState())
 		try enterRule(_localctx, 112, CPP14Parser.RULE_jumpstatement)
 		var _la: Int = 0
@@ -6245,37 +6753,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclarationstatementContext:ParserRuleContext {
-		open func blockdeclaration() -> BlockdeclarationContext? {
-			return getRuleContext(BlockdeclarationContext.self,0)
+
+	public class DeclarationstatementContext: ParserRuleContext {
+			open
+			func blockdeclaration() -> BlockdeclarationContext? {
+				return getRuleContext(BlockdeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_declarationstatement
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_declarationstatement }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDeclarationstatement(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDeclarationstatement(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDeclarationstatement(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDeclarationstatement(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDeclarationstatement(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDeclarationstatement(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDeclarationstatement(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDeclarationstatement(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declarationstatement() throws -> DeclarationstatementContext {
+	 open func declarationstatement() throws -> DeclarationstatementContext {
 		var _localctx: DeclarationstatementContext = DeclarationstatementContext(_ctx, getState())
 		try enterRule(_localctx, 114, CPP14Parser.RULE_declarationstatement)
 		defer {
@@ -6296,40 +6810,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class DeclarationseqContext:ParserRuleContext {
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+	public class DeclarationseqContext: ParserRuleContext {
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func declarationseq() -> DeclarationseqContext? {
+				return getRuleContext(DeclarationseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_declarationseq
 		}
-		open func declarationseq() -> DeclarationseqContext? {
-			return getRuleContext(DeclarationseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_declarationseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDeclarationseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDeclarationseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDeclarationseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDeclarationseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDeclarationseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDeclarationseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDeclarationseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDeclarationseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func declarationseq( ) throws -> DeclarationseqContext   {
+	 public final  func declarationseq( ) throws -> DeclarationseqContext   {
 		return try declarationseq(0)
 	}
 	@discardableResult
@@ -6363,7 +6883,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_declarationseq)
 					setState(1171)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(1172)
 					try declaration()
@@ -6384,61 +6904,75 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class DeclarationContext:ParserRuleContext {
-		open func blockdeclaration() -> BlockdeclarationContext? {
-			return getRuleContext(BlockdeclarationContext.self,0)
+
+	public class DeclarationContext: ParserRuleContext {
+			open
+			func blockdeclaration() -> BlockdeclarationContext? {
+				return getRuleContext(BlockdeclarationContext.self, 0)
+			}
+			open
+			func functiondefinition() -> FunctiondefinitionContext? {
+				return getRuleContext(FunctiondefinitionContext.self, 0)
+			}
+			open
+			func templatedeclaration() -> TemplatedeclarationContext? {
+				return getRuleContext(TemplatedeclarationContext.self, 0)
+			}
+			open
+			func explicitinstantiation() -> ExplicitinstantiationContext? {
+				return getRuleContext(ExplicitinstantiationContext.self, 0)
+			}
+			open
+			func explicitspecialization() -> ExplicitspecializationContext? {
+				return getRuleContext(ExplicitspecializationContext.self, 0)
+			}
+			open
+			func linkagespecification() -> LinkagespecificationContext? {
+				return getRuleContext(LinkagespecificationContext.self, 0)
+			}
+			open
+			func namespacedefinition() -> NamespacedefinitionContext? {
+				return getRuleContext(NamespacedefinitionContext.self, 0)
+			}
+			open
+			func emptydeclaration() -> EmptydeclarationContext? {
+				return getRuleContext(EmptydeclarationContext.self, 0)
+			}
+			open
+			func attributedeclaration() -> AttributedeclarationContext? {
+				return getRuleContext(AttributedeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_declaration
 		}
-		open func functiondefinition() -> FunctiondefinitionContext? {
-			return getRuleContext(FunctiondefinitionContext.self,0)
-		}
-		open func templatedeclaration() -> TemplatedeclarationContext? {
-			return getRuleContext(TemplatedeclarationContext.self,0)
-		}
-		open func explicitinstantiation() -> ExplicitinstantiationContext? {
-			return getRuleContext(ExplicitinstantiationContext.self,0)
-		}
-		open func explicitspecialization() -> ExplicitspecializationContext? {
-			return getRuleContext(ExplicitspecializationContext.self,0)
-		}
-		open func linkagespecification() -> LinkagespecificationContext? {
-			return getRuleContext(LinkagespecificationContext.self,0)
-		}
-		open func namespacedefinition() -> NamespacedefinitionContext? {
-			return getRuleContext(NamespacedefinitionContext.self,0)
-		}
-		open func emptydeclaration() -> EmptydeclarationContext? {
-			return getRuleContext(EmptydeclarationContext.self,0)
-		}
-		open func attributedeclaration() -> AttributedeclarationContext? {
-			return getRuleContext(AttributedeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_declaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaration() throws -> DeclarationContext {
+	 open func declaration() throws -> DeclarationContext {
 		var _localctx: DeclarationContext = DeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 118, CPP14Parser.RULE_declaration)
 		defer {
@@ -6513,58 +7047,71 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class BlockdeclarationContext:ParserRuleContext {
-		open func simpledeclaration() -> SimpledeclarationContext? {
-			return getRuleContext(SimpledeclarationContext.self,0)
+
+	public class BlockdeclarationContext: ParserRuleContext {
+			open
+			func simpledeclaration() -> SimpledeclarationContext? {
+				return getRuleContext(SimpledeclarationContext.self, 0)
+			}
+			open
+			func asmdefinition() -> AsmdefinitionContext? {
+				return getRuleContext(AsmdefinitionContext.self, 0)
+			}
+			open
+			func namespacealiasdefinition() -> NamespacealiasdefinitionContext? {
+				return getRuleContext(NamespacealiasdefinitionContext.self, 0)
+			}
+			open
+			func usingdeclaration() -> UsingdeclarationContext? {
+				return getRuleContext(UsingdeclarationContext.self, 0)
+			}
+			open
+			func usingdirective() -> UsingdirectiveContext? {
+				return getRuleContext(UsingdirectiveContext.self, 0)
+			}
+			open
+			func static_assertdeclaration() -> Static_assertdeclarationContext? {
+				return getRuleContext(Static_assertdeclarationContext.self, 0)
+			}
+			open
+			func aliasdeclaration() -> AliasdeclarationContext? {
+				return getRuleContext(AliasdeclarationContext.self, 0)
+			}
+			open
+			func opaqueenumdeclaration() -> OpaqueenumdeclarationContext? {
+				return getRuleContext(OpaqueenumdeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_blockdeclaration
 		}
-		open func asmdefinition() -> AsmdefinitionContext? {
-			return getRuleContext(AsmdefinitionContext.self,0)
-		}
-		open func namespacealiasdefinition() -> NamespacealiasdefinitionContext? {
-			return getRuleContext(NamespacealiasdefinitionContext.self,0)
-		}
-		open func usingdeclaration() -> UsingdeclarationContext? {
-			return getRuleContext(UsingdeclarationContext.self,0)
-		}
-		open func usingdirective() -> UsingdirectiveContext? {
-			return getRuleContext(UsingdirectiveContext.self,0)
-		}
-		open func static_assertdeclaration() -> Static_assertdeclarationContext? {
-			return getRuleContext(Static_assertdeclarationContext.self,0)
-		}
-		open func aliasdeclaration() -> AliasdeclarationContext? {
-			return getRuleContext(AliasdeclarationContext.self,0)
-		}
-		open func opaqueenumdeclaration() -> OpaqueenumdeclarationContext? {
-			return getRuleContext(OpaqueenumdeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_blockdeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBlockdeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBlockdeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBlockdeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBlockdeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBlockdeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBlockdeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBlockdeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBlockdeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func blockdeclaration() throws -> BlockdeclarationContext {
+	 open func blockdeclaration() throws -> BlockdeclarationContext {
 		var _localctx: BlockdeclarationContext = BlockdeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 120, CPP14Parser.RULE_blockdeclaration)
 		defer {
@@ -6633,42 +7180,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AliasdeclarationContext:ParserRuleContext {
-		open func Using() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Using.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func typeid() -> TypeidContext? {
-			return getRuleContext(TypeidContext.self,0)
+
+	public class AliasdeclarationContext: ParserRuleContext {
+			open
+			func Using() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Using.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func typeid() -> TypeidContext? {
+				return getRuleContext(TypeidContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_aliasdeclaration
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_aliasdeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAliasdeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAliasdeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAliasdeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAliasdeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAliasdeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAliasdeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAliasdeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAliasdeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func aliasdeclaration() throws -> AliasdeclarationContext {
+	 open func aliasdeclaration() throws -> AliasdeclarationContext {
 		var _localctx: AliasdeclarationContext = AliasdeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 122, CPP14Parser.RULE_aliasdeclaration)
 		var _la: Int = 0
@@ -6711,43 +7271,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class SimpledeclarationContext:ParserRuleContext {
-		open func declspecifierseq() -> DeclspecifierseqContext? {
-			return getRuleContext(DeclspecifierseqContext.self,0)
+
+	public class SimpledeclarationContext: ParserRuleContext {
+			open
+			func declspecifierseq() -> DeclspecifierseqContext? {
+				return getRuleContext(DeclspecifierseqContext.self, 0)
+			}
+			open
+			func initdeclaratorlist() -> InitdeclaratorlistContext? {
+				return getRuleContext(InitdeclaratorlistContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_simpledeclaration
 		}
-		open func initdeclaratorlist() -> InitdeclaratorlistContext? {
-			return getRuleContext(InitdeclaratorlistContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_simpledeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterSimpledeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterSimpledeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitSimpledeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitSimpledeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitSimpledeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitSimpledeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitSimpledeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitSimpledeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpledeclaration() throws -> SimpledeclarationContext {
+	 open func simpledeclaration() throws -> SimpledeclarationContext {
 		var _localctx: SimpledeclarationContext = SimpledeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 124, CPP14Parser.RULE_simpledeclaration)
 		var _la: Int = 0
@@ -6855,7 +7423,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -6866,39 +7434,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class Static_assertdeclarationContext:ParserRuleContext {
-		open func Static_assert() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Static_assert.rawValue, 0) }
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
+
+	public class Static_assertdeclarationContext: ParserRuleContext {
+			open
+			func Static_assert() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Static_assert.rawValue, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+			open
+			func Stringliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_static_assertdeclaration
 		}
-		open func Stringliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_static_assertdeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterStatic_assertdeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterStatic_assertdeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitStatic_assertdeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitStatic_assertdeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitStatic_assertdeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitStatic_assertdeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitStatic_assertdeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitStatic_assertdeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func static_assertdeclaration() throws -> Static_assertdeclarationContext {
+	 open func static_assertdeclaration() throws -> Static_assertdeclarationContext {
 		var _localctx: Static_assertdeclarationContext = Static_assertdeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 126, CPP14Parser.RULE_static_assertdeclaration)
 		defer {
@@ -6930,34 +7510,39 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class EmptydeclarationContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_emptydeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEmptydeclaration(self)
+
+	public class EmptydeclarationContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_emptydeclaration
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEmptydeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEmptydeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEmptydeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEmptydeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEmptydeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEmptydeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEmptydeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func emptydeclaration() throws -> EmptydeclarationContext {
+	 open func emptydeclaration() throws -> EmptydeclarationContext {
 		var _localctx: EmptydeclarationContext = EmptydeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 128, CPP14Parser.RULE_emptydeclaration)
 		defer {
@@ -6977,37 +7562,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AttributedeclarationContext:ParserRuleContext {
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
+
+	public class AttributedeclarationContext: ParserRuleContext {
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_attributedeclaration
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_attributedeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAttributedeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAttributedeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAttributedeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAttributedeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAttributedeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAttributedeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAttributedeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAttributedeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributedeclaration() throws -> AttributedeclarationContext {
+	 open func attributedeclaration() throws -> AttributedeclarationContext {
 		var _localctx: AttributedeclarationContext = AttributedeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 130, CPP14Parser.RULE_attributedeclaration)
 		defer {
@@ -7029,46 +7620,63 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclspecifierContext:ParserRuleContext {
-		open func storageclassspecifier() -> StorageclassspecifierContext? {
-			return getRuleContext(StorageclassspecifierContext.self,0)
+
+	public class DeclspecifierContext: ParserRuleContext {
+			open
+			func storageclassspecifier() -> StorageclassspecifierContext? {
+				return getRuleContext(StorageclassspecifierContext.self, 0)
+			}
+			open
+			func typespecifier() -> TypespecifierContext? {
+				return getRuleContext(TypespecifierContext.self, 0)
+			}
+			open
+			func functionspecifier() -> FunctionspecifierContext? {
+				return getRuleContext(FunctionspecifierContext.self, 0)
+			}
+			open
+			func Friend() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Friend.rawValue, 0)
+			}
+			open
+			func Typedef() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Typedef.rawValue, 0)
+			}
+			open
+			func Constexpr() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Constexpr.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_declspecifier
 		}
-		open func typespecifier() -> TypespecifierContext? {
-			return getRuleContext(TypespecifierContext.self,0)
-		}
-		open func functionspecifier() -> FunctionspecifierContext? {
-			return getRuleContext(FunctionspecifierContext.self,0)
-		}
-		open func Friend() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Friend.rawValue, 0) }
-		open func Typedef() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Typedef.rawValue, 0) }
-		open func Constexpr() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Constexpr.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_declspecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDeclspecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDeclspecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDeclspecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDeclspecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDeclspecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDeclspecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDeclspecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDeclspecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declspecifier() throws -> DeclspecifierContext {
+	 open func declspecifier() throws -> DeclspecifierContext {
 		var _localctx: DeclspecifierContext = DeclspecifierContext(_ctx, getState())
 		try enterRule(_localctx, 132, CPP14Parser.RULE_declspecifier)
 		defer {
@@ -7147,7 +7755,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7158,43 +7766,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclspecifierseqContext:ParserRuleContext {
-		open func declspecifier() -> DeclspecifierContext? {
-			return getRuleContext(DeclspecifierContext.self,0)
+
+	public class DeclspecifierseqContext: ParserRuleContext {
+			open
+			func declspecifier() -> DeclspecifierContext? {
+				return getRuleContext(DeclspecifierContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func declspecifierseq() -> DeclspecifierseqContext? {
+				return getRuleContext(DeclspecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_declspecifierseq
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func declspecifierseq() -> DeclspecifierseqContext? {
-			return getRuleContext(DeclspecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_declspecifierseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDeclspecifierseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDeclspecifierseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDeclspecifierseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDeclspecifierseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDeclspecifierseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDeclspecifierseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDeclspecifierseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDeclspecifierseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declspecifierseq() throws -> DeclspecifierseqContext {
+	 open func declspecifierseq() throws -> DeclspecifierseqContext {
 		var _localctx: DeclspecifierseqContext = DeclspecifierseqContext(_ctx, getState())
 		try enterRule(_localctx, 134, CPP14Parser.RULE_declspecifierseq)
 		defer {
@@ -7239,39 +7855,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class StorageclassspecifierContext:ParserRuleContext {
-		open func Register() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Register.rawValue, 0) }
-		open func Static() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Static.rawValue, 0) }
-		open func Thread_local() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Thread_local.rawValue, 0) }
-		open func Extern() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Extern.rawValue, 0) }
-		open func Mutable() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Mutable.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_storageclassspecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterStorageclassspecifier(self)
+
+	public class StorageclassspecifierContext: ParserRuleContext {
+			open
+			func Register() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Register.rawValue, 0)
+			}
+			open
+			func Static() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Static.rawValue, 0)
+			}
+			open
+			func Thread_local() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Thread_local.rawValue, 0)
+			}
+			open
+			func Extern() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Extern.rawValue, 0)
+			}
+			open
+			func Mutable() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Mutable.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_storageclassspecifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterStorageclassspecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitStorageclassspecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitStorageclassspecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitStorageclassspecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitStorageclassspecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitStorageclassspecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitStorageclassspecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func storageclassspecifier() throws -> StorageclassspecifierContext {
+	 open func storageclassspecifier() throws -> StorageclassspecifierContext {
 		var _localctx: StorageclassspecifierContext = StorageclassspecifierContext(_ctx, getState())
 		try enterRule(_localctx, 136, CPP14Parser.RULE_storageclassspecifier)
 		var _la: Int = 0
@@ -7306,37 +7942,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class FunctionspecifierContext:ParserRuleContext {
-		open func Inline() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Inline.rawValue, 0) }
-		open func Virtual() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Virtual.rawValue, 0) }
-		open func Explicit() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Explicit.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_functionspecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterFunctionspecifier(self)
+
+	public class FunctionspecifierContext: ParserRuleContext {
+			open
+			func Inline() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Inline.rawValue, 0)
+			}
+			open
+			func Virtual() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Virtual.rawValue, 0)
+			}
+			open
+			func Explicit() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Explicit.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_functionspecifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterFunctionspecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitFunctionspecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitFunctionspecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitFunctionspecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitFunctionspecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitFunctionspecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitFunctionspecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionspecifier() throws -> FunctionspecifierContext {
+	 open func functionspecifier() throws -> FunctionspecifierContext {
 		var _localctx: FunctionspecifierContext = FunctionspecifierContext(_ctx, getState())
 		try enterRule(_localctx, 138, CPP14Parser.RULE_functionspecifier)
 		var _la: Int = 0
@@ -7371,35 +8021,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TypedefnameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_typedefname }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTypedefname(self)
+
+	public class TypedefnameContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_typedefname
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTypedefname(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTypedefname(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTypedefname(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTypedefname(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTypedefname(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTypedefname(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTypedefname(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typedefname() throws -> TypedefnameContext {
+	 open func typedefname() throws -> TypedefnameContext {
 		var _localctx: TypedefnameContext = TypedefnameContext(_ctx, getState())
 		try enterRule(_localctx, 140, CPP14Parser.RULE_typedefname)
 		defer {
@@ -7419,43 +8077,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TypespecifierContext:ParserRuleContext {
-		open func trailingtypespecifier() -> TrailingtypespecifierContext? {
-			return getRuleContext(TrailingtypespecifierContext.self,0)
+
+	public class TypespecifierContext: ParserRuleContext {
+			open
+			func trailingtypespecifier() -> TrailingtypespecifierContext? {
+				return getRuleContext(TrailingtypespecifierContext.self, 0)
+			}
+			open
+			func classspecifier() -> ClassspecifierContext? {
+				return getRuleContext(ClassspecifierContext.self, 0)
+			}
+			open
+			func enumspecifier() -> EnumspecifierContext? {
+				return getRuleContext(EnumspecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_typespecifier
 		}
-		open func classspecifier() -> ClassspecifierContext? {
-			return getRuleContext(ClassspecifierContext.self,0)
-		}
-		open func enumspecifier() -> EnumspecifierContext? {
-			return getRuleContext(EnumspecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_typespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTypespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTypespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTypespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTypespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTypespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTypespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTypespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTypespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typespecifier() throws -> TypespecifierContext {
+	 open func typespecifier() throws -> TypespecifierContext {
 		var _localctx: TypespecifierContext = TypespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 142, CPP14Parser.RULE_typespecifier)
 		defer {
@@ -7494,46 +8160,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TrailingtypespecifierContext:ParserRuleContext {
-		open func simpletypespecifier() -> SimpletypespecifierContext? {
-			return getRuleContext(SimpletypespecifierContext.self,0)
+
+	public class TrailingtypespecifierContext: ParserRuleContext {
+			open
+			func simpletypespecifier() -> SimpletypespecifierContext? {
+				return getRuleContext(SimpletypespecifierContext.self, 0)
+			}
+			open
+			func elaboratedtypespecifier() -> ElaboratedtypespecifierContext? {
+				return getRuleContext(ElaboratedtypespecifierContext.self, 0)
+			}
+			open
+			func typenamespecifier() -> TypenamespecifierContext? {
+				return getRuleContext(TypenamespecifierContext.self, 0)
+			}
+			open
+			func cvqualifier() -> CvqualifierContext? {
+				return getRuleContext(CvqualifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_trailingtypespecifier
 		}
-		open func elaboratedtypespecifier() -> ElaboratedtypespecifierContext? {
-			return getRuleContext(ElaboratedtypespecifierContext.self,0)
-		}
-		open func typenamespecifier() -> TypenamespecifierContext? {
-			return getRuleContext(TypenamespecifierContext.self,0)
-		}
-		open func cvqualifier() -> CvqualifierContext? {
-			return getRuleContext(CvqualifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_trailingtypespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTrailingtypespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTrailingtypespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTrailingtypespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTrailingtypespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTrailingtypespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTrailingtypespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTrailingtypespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTrailingtypespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func trailingtypespecifier() throws -> TrailingtypespecifierContext {
+	 open func trailingtypespecifier() throws -> TrailingtypespecifierContext {
 		var _localctx: TrailingtypespecifierContext = TrailingtypespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 144, CPP14Parser.RULE_trailingtypespecifier)
 		defer {
@@ -7589,7 +8264,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -7600,43 +8275,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TypespecifierseqContext:ParserRuleContext {
-		open func typespecifier() -> TypespecifierContext? {
-			return getRuleContext(TypespecifierContext.self,0)
+
+	public class TypespecifierseqContext: ParserRuleContext {
+			open
+			func typespecifier() -> TypespecifierContext? {
+				return getRuleContext(TypespecifierContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func typespecifierseq() -> TypespecifierseqContext? {
+				return getRuleContext(TypespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_typespecifierseq
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func typespecifierseq() -> TypespecifierseqContext? {
-			return getRuleContext(TypespecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_typespecifierseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTypespecifierseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTypespecifierseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTypespecifierseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTypespecifierseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTypespecifierseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTypespecifierseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTypespecifierseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTypespecifierseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typespecifierseq() throws -> TypespecifierseqContext {
+	 open func typespecifierseq() throws -> TypespecifierseqContext {
 		var _localctx: TypespecifierseqContext = TypespecifierseqContext(_ctx, getState())
 		try enterRule(_localctx, 146, CPP14Parser.RULE_typespecifierseq)
 		defer {
@@ -7681,43 +8364,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TrailingtypespecifierseqContext:ParserRuleContext {
-		open func trailingtypespecifier() -> TrailingtypespecifierContext? {
-			return getRuleContext(TrailingtypespecifierContext.self,0)
+
+	public class TrailingtypespecifierseqContext: ParserRuleContext {
+			open
+			func trailingtypespecifier() -> TrailingtypespecifierContext? {
+				return getRuleContext(TrailingtypespecifierContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func trailingtypespecifierseq() -> TrailingtypespecifierseqContext? {
+				return getRuleContext(TrailingtypespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_trailingtypespecifierseq
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func trailingtypespecifierseq() -> TrailingtypespecifierseqContext? {
-			return getRuleContext(TrailingtypespecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_trailingtypespecifierseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTrailingtypespecifierseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTrailingtypespecifierseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTrailingtypespecifierseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTrailingtypespecifierseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTrailingtypespecifierseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTrailingtypespecifierseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTrailingtypespecifierseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTrailingtypespecifierseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func trailingtypespecifierseq() throws -> TrailingtypespecifierseqContext {
+	 open func trailingtypespecifierseq() throws -> TrailingtypespecifierseqContext {
 		var _localctx: TrailingtypespecifierseqContext = TrailingtypespecifierseqContext(_ctx, getState())
 		try enterRule(_localctx, 148, CPP14Parser.RULE_trailingtypespecifierseq)
 		defer {
@@ -7762,61 +8453,115 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class SimpletypespecifierContext:ParserRuleContext {
-		open func typename() -> TypenameContext? {
-			return getRuleContext(TypenameContext.self,0)
+
+	public class SimpletypespecifierContext: ParserRuleContext {
+			open
+			func typename() -> TypenameContext? {
+				return getRuleContext(TypenameContext.self, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+			open
+			func simpletemplateid() -> SimpletemplateidContext? {
+				return getRuleContext(SimpletemplateidContext.self, 0)
+			}
+			open
+			func Char() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Char.rawValue, 0)
+			}
+			open
+			func Char16() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Char16.rawValue, 0)
+			}
+			open
+			func Char32() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Char32.rawValue, 0)
+			}
+			open
+			func Wchar() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Wchar.rawValue, 0)
+			}
+			open
+			func Bool() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Bool.rawValue, 0)
+			}
+			open
+			func Short() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Short.rawValue, 0)
+			}
+			open
+			func Int() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Int.rawValue, 0)
+			}
+			open
+			func Long() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Long.rawValue, 0)
+			}
+			open
+			func Signed() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Signed.rawValue, 0)
+			}
+			open
+			func Unsigned() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Unsigned.rawValue, 0)
+			}
+			open
+			func Float() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Float.rawValue, 0)
+			}
+			open
+			func Double() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Double.rawValue, 0)
+			}
+			open
+			func Void() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Void.rawValue, 0)
+			}
+			open
+			func Auto() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Auto.rawValue, 0)
+			}
+			open
+			func decltypespecifier() -> DecltypespecifierContext? {
+				return getRuleContext(DecltypespecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_simpletypespecifier
 		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open func simpletemplateid() -> SimpletemplateidContext? {
-			return getRuleContext(SimpletemplateidContext.self,0)
-		}
-		open func Char() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Char.rawValue, 0) }
-		open func Char16() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Char16.rawValue, 0) }
-		open func Char32() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Char32.rawValue, 0) }
-		open func Wchar() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Wchar.rawValue, 0) }
-		open func Bool() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Bool.rawValue, 0) }
-		open func Short() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Short.rawValue, 0) }
-		open func Int() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Int.rawValue, 0) }
-		open func Long() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Long.rawValue, 0) }
-		open func Signed() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Signed.rawValue, 0) }
-		open func Unsigned() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Unsigned.rawValue, 0) }
-		open func Float() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Float.rawValue, 0) }
-		open func Double() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Double.rawValue, 0) }
-		open func Void() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Void.rawValue, 0) }
-		open func Auto() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Auto.rawValue, 0) }
-		open func decltypespecifier() -> DecltypespecifierContext? {
-			return getRuleContext(DecltypespecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_simpletypespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterSimpletypespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterSimpletypespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitSimpletypespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitSimpletypespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitSimpletypespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitSimpletypespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitSimpletypespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitSimpletypespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpletypespecifier() throws -> SimpletypespecifierContext {
+	 open func simpletypespecifier() throws -> SimpletypespecifierContext {
 		var _localctx: SimpletypespecifierContext = SimpletypespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 150, CPP14Parser.RULE_simpletypespecifier)
 		defer {
@@ -7953,46 +8698,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TypenameContext:ParserRuleContext {
-		open func classname() -> ClassnameContext? {
-			return getRuleContext(ClassnameContext.self,0)
+
+	public class TypenameContext: ParserRuleContext {
+			open
+			func classname() -> ClassnameContext? {
+				return getRuleContext(ClassnameContext.self, 0)
+			}
+			open
+			func enumname() -> EnumnameContext? {
+				return getRuleContext(EnumnameContext.self, 0)
+			}
+			open
+			func typedefname() -> TypedefnameContext? {
+				return getRuleContext(TypedefnameContext.self, 0)
+			}
+			open
+			func simpletemplateid() -> SimpletemplateidContext? {
+				return getRuleContext(SimpletemplateidContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_typename
 		}
-		open func enumname() -> EnumnameContext? {
-			return getRuleContext(EnumnameContext.self,0)
-		}
-		open func typedefname() -> TypedefnameContext? {
-			return getRuleContext(TypedefnameContext.self,0)
-		}
-		open func simpletemplateid() -> SimpletemplateidContext? {
-			return getRuleContext(SimpletemplateidContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_typename }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTypename(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTypename(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTypename(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTypename(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTypename(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTypename(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTypename(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTypename(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typename() throws -> TypenameContext {
+	 open func typename() throws -> TypenameContext {
 		var _localctx: TypenameContext = TypenameContext(_ctx, getState())
 		try enterRule(_localctx, 152, CPP14Parser.RULE_typename)
 		defer {
@@ -8037,39 +8791,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class DecltypespecifierContext:ParserRuleContext {
-		open func Decltype() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Decltype.rawValue, 0) }
-		open func expression() -> ExpressionContext? {
-			return getRuleContext(ExpressionContext.self,0)
+
+	public class DecltypespecifierContext: ParserRuleContext {
+			open
+			func Decltype() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Decltype.rawValue, 0)
+			}
+			open
+			func expression() -> ExpressionContext? {
+				return getRuleContext(ExpressionContext.self, 0)
+			}
+			open
+			func Auto() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Auto.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_decltypespecifier
 		}
-		open func Auto() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Auto.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_decltypespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDecltypespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDecltypespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDecltypespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDecltypespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDecltypespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDecltypespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDecltypespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDecltypespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func decltypespecifier() throws -> DecltypespecifierContext {
+	 open func decltypespecifier() throws -> DecltypespecifierContext {
 		var _localctx: DecltypespecifierContext = DecltypespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 154, CPP14Parser.RULE_decltypespecifier)
 		defer {
@@ -8114,49 +8880,67 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ElaboratedtypespecifierContext:ParserRuleContext {
-		open func classkey() -> ClasskeyContext? {
-			return getRuleContext(ClasskeyContext.self,0)
+
+	public class ElaboratedtypespecifierContext: ParserRuleContext {
+			open
+			func classkey() -> ClasskeyContext? {
+				return getRuleContext(ClasskeyContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+			open
+			func simpletemplateid() -> SimpletemplateidContext? {
+				return getRuleContext(SimpletemplateidContext.self, 0)
+			}
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+			open
+			func Enum() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Enum.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_elaboratedtypespecifier
 		}
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open func simpletemplateid() -> SimpletemplateidContext? {
-			return getRuleContext(SimpletemplateidContext.self,0)
-		}
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open func Enum() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Enum.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_elaboratedtypespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterElaboratedtypespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterElaboratedtypespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitElaboratedtypespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitElaboratedtypespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitElaboratedtypespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitElaboratedtypespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitElaboratedtypespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitElaboratedtypespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func elaboratedtypespecifier() throws -> ElaboratedtypespecifierContext {
+	 open func elaboratedtypespecifier() throws -> ElaboratedtypespecifierContext {
 		var _localctx: ElaboratedtypespecifierContext = ElaboratedtypespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 156, CPP14Parser.RULE_elaboratedtypespecifier)
 		var _la: Int = 0
@@ -8259,35 +9043,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumnameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_enumname }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEnumname(self)
+
+	public class EnumnameContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_enumname
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEnumname(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEnumname(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEnumname(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEnumname(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEnumname(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEnumname(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEnumname(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumname() throws -> EnumnameContext {
+	 open func enumname() throws -> EnumnameContext {
 		var _localctx: EnumnameContext = EnumnameContext(_ctx, getState())
 		try enterRule(_localctx, 158, CPP14Parser.RULE_enumname)
 		defer {
@@ -8307,40 +9099,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumspecifierContext:ParserRuleContext {
-		open func enumhead() -> EnumheadContext? {
-			return getRuleContext(EnumheadContext.self,0)
+
+	public class EnumspecifierContext: ParserRuleContext {
+			open
+			func enumhead() -> EnumheadContext? {
+				return getRuleContext(EnumheadContext.self, 0)
+			}
+			open
+			func enumeratorlist() -> EnumeratorlistContext? {
+				return getRuleContext(EnumeratorlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_enumspecifier
 		}
-		open func enumeratorlist() -> EnumeratorlistContext? {
-			return getRuleContext(EnumeratorlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_enumspecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEnumspecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEnumspecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEnumspecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEnumspecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEnumspecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEnumspecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEnumspecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEnumspecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumspecifier() throws -> EnumspecifierContext {
+	 open func enumspecifier() throws -> EnumspecifierContext {
 		var _localctx: EnumspecifierContext = EnumspecifierContext(_ctx, getState())
 		try enterRule(_localctx, 160, CPP14Parser.RULE_enumspecifier)
 		var _la: Int = 0
@@ -8399,47 +9198,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumheadContext:ParserRuleContext {
-		open func enumkey() -> EnumkeyContext? {
-			return getRuleContext(EnumkeyContext.self,0)
+
+	public class EnumheadContext: ParserRuleContext {
+			open
+			func enumkey() -> EnumkeyContext? {
+				return getRuleContext(EnumkeyContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func enumbase() -> EnumbaseContext? {
+				return getRuleContext(EnumbaseContext.self, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_enumhead
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func enumbase() -> EnumbaseContext? {
-			return getRuleContext(EnumbaseContext.self,0)
-		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_enumhead }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEnumhead(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEnumhead(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEnumhead(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEnumhead(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEnumhead(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEnumhead(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEnumhead(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEnumhead(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumhead() throws -> EnumheadContext {
+	 open func enumhead() throws -> EnumheadContext {
 		var _localctx: EnumheadContext = EnumheadContext(_ctx, getState())
 		try enterRule(_localctx, 162, CPP14Parser.RULE_enumhead)
 		var _la: Int = 0
@@ -8544,44 +9355,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class OpaqueenumdeclarationContext:ParserRuleContext {
-		open func enumkey() -> EnumkeyContext? {
-			return getRuleContext(EnumkeyContext.self,0)
+
+	public class OpaqueenumdeclarationContext: ParserRuleContext {
+			open
+			func enumkey() -> EnumkeyContext? {
+				return getRuleContext(EnumkeyContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func enumbase() -> EnumbaseContext? {
+				return getRuleContext(EnumbaseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_opaqueenumdeclaration
 		}
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func enumbase() -> EnumbaseContext? {
-			return getRuleContext(EnumbaseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_opaqueenumdeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterOpaqueenumdeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterOpaqueenumdeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitOpaqueenumdeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitOpaqueenumdeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitOpaqueenumdeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitOpaqueenumdeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitOpaqueenumdeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitOpaqueenumdeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func opaqueenumdeclaration() throws -> OpaqueenumdeclarationContext {
+	 open func opaqueenumdeclaration() throws -> OpaqueenumdeclarationContext {
 		var _localctx: OpaqueenumdeclarationContext = OpaqueenumdeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 164, CPP14Parser.RULE_opaqueenumdeclaration)
 		var _la: Int = 0
@@ -8633,37 +9455,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumkeyContext:ParserRuleContext {
-		open func Enum() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Enum.rawValue, 0) }
-		open func Class() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Class.rawValue, 0) }
-		open func Struct() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Struct.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_enumkey }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEnumkey(self)
+
+	public class EnumkeyContext: ParserRuleContext {
+			open
+			func Enum() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Enum.rawValue, 0)
+			}
+			open
+			func Class() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Class.rawValue, 0)
+			}
+			open
+			func Struct() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Struct.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_enumkey
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEnumkey(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEnumkey(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEnumkey(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEnumkey(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEnumkey(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEnumkey(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEnumkey(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumkey() throws -> EnumkeyContext {
+	 open func enumkey() throws -> EnumkeyContext {
 		var _localctx: EnumkeyContext = EnumkeyContext(_ctx, getState())
 		try enterRule(_localctx, 166, CPP14Parser.RULE_enumkey)
 		defer {
@@ -8706,37 +9542,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumbaseContext:ParserRuleContext {
-		open func typespecifierseq() -> TypespecifierseqContext? {
-			return getRuleContext(TypespecifierseqContext.self,0)
+
+	public class EnumbaseContext: ParserRuleContext {
+			open
+			func typespecifierseq() -> TypespecifierseqContext? {
+				return getRuleContext(TypespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_enumbase
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_enumbase }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEnumbase(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEnumbase(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEnumbase(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEnumbase(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEnumbase(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEnumbase(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEnumbase(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEnumbase(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumbase() throws -> EnumbaseContext {
+	 open func enumbase() throws -> EnumbaseContext {
 		var _localctx: EnumbaseContext = EnumbaseContext(_ctx, getState())
 		try enterRule(_localctx, 168, CPP14Parser.RULE_enumbase)
 		defer {
@@ -8759,40 +9601,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class EnumeratorlistContext:ParserRuleContext {
-		open func enumeratordefinition() -> EnumeratordefinitionContext? {
-			return getRuleContext(EnumeratordefinitionContext.self,0)
+	public class EnumeratorlistContext: ParserRuleContext {
+			open
+			func enumeratordefinition() -> EnumeratordefinitionContext? {
+				return getRuleContext(EnumeratordefinitionContext.self, 0)
+			}
+			open
+			func enumeratorlist() -> EnumeratorlistContext? {
+				return getRuleContext(EnumeratorlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_enumeratorlist
 		}
-		open func enumeratorlist() -> EnumeratorlistContext? {
-			return getRuleContext(EnumeratorlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_enumeratorlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEnumeratorlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEnumeratorlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEnumeratorlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEnumeratorlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEnumeratorlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEnumeratorlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEnumeratorlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEnumeratorlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func enumeratorlist( ) throws -> EnumeratorlistContext   {
+	 public final  func enumeratorlist( ) throws -> EnumeratorlistContext   {
 		return try enumeratorlist(0)
 	}
 	@discardableResult
@@ -8826,7 +9674,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_enumeratorlist)
 					setState(1418)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(1419)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -8849,40 +9697,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class EnumeratordefinitionContext:ParserRuleContext {
-		open func enumerator() -> EnumeratorContext? {
-			return getRuleContext(EnumeratorContext.self,0)
+
+	public class EnumeratordefinitionContext: ParserRuleContext {
+			open
+			func enumerator() -> EnumeratorContext? {
+				return getRuleContext(EnumeratorContext.self, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_enumeratordefinition
 		}
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_enumeratordefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEnumeratordefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEnumeratordefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEnumeratordefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEnumeratordefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEnumeratordefinition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEnumeratordefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEnumeratordefinition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEnumeratordefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumeratordefinition() throws -> EnumeratordefinitionContext {
+	 open func enumeratordefinition() throws -> EnumeratordefinitionContext {
 		var _localctx: EnumeratordefinitionContext = EnumeratordefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 172, CPP14Parser.RULE_enumeratordefinition)
 		defer {
@@ -8919,35 +9774,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class EnumeratorContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_enumerator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterEnumerator(self)
+
+	public class EnumeratorContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_enumerator
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterEnumerator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitEnumerator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitEnumerator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitEnumerator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitEnumerator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitEnumerator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitEnumerator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func enumerator() throws -> EnumeratorContext {
+	 open func enumerator() throws -> EnumeratorContext {
 		var _localctx: EnumeratorContext = EnumeratorContext(_ctx, getState())
 		try enterRule(_localctx, 174, CPP14Parser.RULE_enumerator)
 		defer {
@@ -8967,40 +9830,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NamespacenameContext:ParserRuleContext {
-		open func originalnamespacename() -> OriginalnamespacenameContext? {
-			return getRuleContext(OriginalnamespacenameContext.self,0)
+
+	public class NamespacenameContext: ParserRuleContext {
+			open
+			func originalnamespacename() -> OriginalnamespacenameContext? {
+				return getRuleContext(OriginalnamespacenameContext.self, 0)
+			}
+			open
+			func namespacealias() -> NamespacealiasContext? {
+				return getRuleContext(NamespacealiasContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_namespacename
 		}
-		open func namespacealias() -> NamespacealiasContext? {
-			return getRuleContext(NamespacealiasContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_namespacename }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNamespacename(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNamespacename(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNamespacename(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNamespacename(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNamespacename(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNamespacename(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNamespacename(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNamespacename(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func namespacename() throws -> NamespacenameContext {
+	 open func namespacename() throws -> NamespacenameContext {
 		var _localctx: NamespacenameContext = NamespacenameContext(_ctx, getState())
 		try enterRule(_localctx, 176, CPP14Parser.RULE_namespacename)
 		defer {
@@ -9033,35 +9903,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class OriginalnamespacenameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_originalnamespacename }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterOriginalnamespacename(self)
+
+	public class OriginalnamespacenameContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_originalnamespacename
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterOriginalnamespacename(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitOriginalnamespacename(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitOriginalnamespacename(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitOriginalnamespacename(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitOriginalnamespacename(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitOriginalnamespacename(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitOriginalnamespacename(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func originalnamespacename() throws -> OriginalnamespacenameContext {
+	 open func originalnamespacename() throws -> OriginalnamespacenameContext {
 		var _localctx: OriginalnamespacenameContext = OriginalnamespacenameContext(_ctx, getState())
 		try enterRule(_localctx, 178, CPP14Parser.RULE_originalnamespacename)
 		defer {
@@ -9081,40 +9959,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NamespacedefinitionContext:ParserRuleContext {
-		open func namednamespacedefinition() -> NamednamespacedefinitionContext? {
-			return getRuleContext(NamednamespacedefinitionContext.self,0)
+
+	public class NamespacedefinitionContext: ParserRuleContext {
+			open
+			func namednamespacedefinition() -> NamednamespacedefinitionContext? {
+				return getRuleContext(NamednamespacedefinitionContext.self, 0)
+			}
+			open
+			func unnamednamespacedefinition() -> UnnamednamespacedefinitionContext? {
+				return getRuleContext(UnnamednamespacedefinitionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_namespacedefinition
 		}
-		open func unnamednamespacedefinition() -> UnnamednamespacedefinitionContext? {
-			return getRuleContext(UnnamednamespacedefinitionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_namespacedefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNamespacedefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNamespacedefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNamespacedefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNamespacedefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNamespacedefinition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNamespacedefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNamespacedefinition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNamespacedefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func namespacedefinition() throws -> NamespacedefinitionContext {
+	 open func namespacedefinition() throws -> NamespacedefinitionContext {
 		var _localctx: NamespacedefinitionContext = NamespacedefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 180, CPP14Parser.RULE_namespacedefinition)
 		defer {
@@ -9147,40 +10032,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NamednamespacedefinitionContext:ParserRuleContext {
-		open func originalnamespacedefinition() -> OriginalnamespacedefinitionContext? {
-			return getRuleContext(OriginalnamespacedefinitionContext.self,0)
+
+	public class NamednamespacedefinitionContext: ParserRuleContext {
+			open
+			func originalnamespacedefinition() -> OriginalnamespacedefinitionContext? {
+				return getRuleContext(OriginalnamespacedefinitionContext.self, 0)
+			}
+			open
+			func extensionnamespacedefinition() -> ExtensionnamespacedefinitionContext? {
+				return getRuleContext(ExtensionnamespacedefinitionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_namednamespacedefinition
 		}
-		open func extensionnamespacedefinition() -> ExtensionnamespacedefinitionContext? {
-			return getRuleContext(ExtensionnamespacedefinitionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_namednamespacedefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNamednamespacedefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNamednamespacedefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNamednamespacedefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNamednamespacedefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNamednamespacedefinition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNamednamespacedefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNamednamespacedefinition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNamednamespacedefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func namednamespacedefinition() throws -> NamednamespacedefinitionContext {
+	 open func namednamespacedefinition() throws -> NamednamespacedefinitionContext {
 		var _localctx: NamednamespacedefinitionContext = NamednamespacedefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 182, CPP14Parser.RULE_namednamespacedefinition)
 		defer {
@@ -9213,40 +10105,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class OriginalnamespacedefinitionContext:ParserRuleContext {
-		open func Namespace() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func namespacebody() -> NamespacebodyContext? {
-			return getRuleContext(NamespacebodyContext.self,0)
+
+	public class OriginalnamespacedefinitionContext: ParserRuleContext {
+			open
+			func Namespace() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func namespacebody() -> NamespacebodyContext? {
+				return getRuleContext(NamespacebodyContext.self, 0)
+			}
+			open
+			func Inline() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Inline.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_originalnamespacedefinition
 		}
-		open func Inline() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Inline.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_originalnamespacedefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterOriginalnamespacedefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterOriginalnamespacedefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitOriginalnamespacedefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitOriginalnamespacedefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitOriginalnamespacedefinition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitOriginalnamespacedefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitOriginalnamespacedefinition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitOriginalnamespacedefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func originalnamespacedefinition() throws -> OriginalnamespacedefinitionContext {
+	 open func originalnamespacedefinition() throws -> OriginalnamespacedefinitionContext {
 		var _localctx: OriginalnamespacedefinitionContext = OriginalnamespacedefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 184, CPP14Parser.RULE_originalnamespacedefinition)
 		var _la: Int = 0
@@ -9288,42 +10195,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ExtensionnamespacedefinitionContext:ParserRuleContext {
-		open func Namespace() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0) }
-		open func originalnamespacename() -> OriginalnamespacenameContext? {
-			return getRuleContext(OriginalnamespacenameContext.self,0)
+
+	public class ExtensionnamespacedefinitionContext: ParserRuleContext {
+			open
+			func Namespace() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0)
+			}
+			open
+			func originalnamespacename() -> OriginalnamespacenameContext? {
+				return getRuleContext(OriginalnamespacenameContext.self, 0)
+			}
+			open
+			func namespacebody() -> NamespacebodyContext? {
+				return getRuleContext(NamespacebodyContext.self, 0)
+			}
+			open
+			func Inline() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Inline.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_extensionnamespacedefinition
 		}
-		open func namespacebody() -> NamespacebodyContext? {
-			return getRuleContext(NamespacebodyContext.self,0)
-		}
-		open func Inline() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Inline.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_extensionnamespacedefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterExtensionnamespacedefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterExtensionnamespacedefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitExtensionnamespacedefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitExtensionnamespacedefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitExtensionnamespacedefinition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitExtensionnamespacedefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitExtensionnamespacedefinition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitExtensionnamespacedefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func extensionnamespacedefinition() throws -> ExtensionnamespacedefinitionContext {
+	 open func extensionnamespacedefinition() throws -> ExtensionnamespacedefinitionContext {
 		var _localctx: ExtensionnamespacedefinitionContext = ExtensionnamespacedefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 186, CPP14Parser.RULE_extensionnamespacedefinition)
 		var _la: Int = 0
@@ -9365,39 +10285,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class UnnamednamespacedefinitionContext:ParserRuleContext {
-		open func Namespace() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0) }
-		open func namespacebody() -> NamespacebodyContext? {
-			return getRuleContext(NamespacebodyContext.self,0)
+
+	public class UnnamednamespacedefinitionContext: ParserRuleContext {
+			open
+			func Namespace() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0)
+			}
+			open
+			func namespacebody() -> NamespacebodyContext? {
+				return getRuleContext(NamespacebodyContext.self, 0)
+			}
+			open
+			func Inline() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Inline.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_unnamednamespacedefinition
 		}
-		open func Inline() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Inline.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_unnamednamespacedefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterUnnamednamespacedefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterUnnamednamespacedefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitUnnamednamespacedefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitUnnamednamespacedefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitUnnamednamespacedefinition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitUnnamednamespacedefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitUnnamednamespacedefinition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitUnnamednamespacedefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func unnamednamespacedefinition() throws -> UnnamednamespacedefinitionContext {
+	 open func unnamednamespacedefinition() throws -> UnnamednamespacedefinitionContext {
 		var _localctx: UnnamednamespacedefinitionContext = UnnamednamespacedefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 188, CPP14Parser.RULE_unnamednamespacedefinition)
 		var _la: Int = 0
@@ -9437,37 +10369,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NamespacebodyContext:ParserRuleContext {
-		open func declarationseq() -> DeclarationseqContext? {
-			return getRuleContext(DeclarationseqContext.self,0)
+
+	public class NamespacebodyContext: ParserRuleContext {
+			open
+			func declarationseq() -> DeclarationseqContext? {
+				return getRuleContext(DeclarationseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_namespacebody
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_namespacebody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNamespacebody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNamespacebody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNamespacebody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNamespacebody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNamespacebody(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNamespacebody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNamespacebody(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNamespacebody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func namespacebody() throws -> NamespacebodyContext {
+	 open func namespacebody() throws -> NamespacebodyContext {
 		var _localctx: NamespacebodyContext = NamespacebodyContext(_ctx, getState())
 		try enterRule(_localctx, 190, CPP14Parser.RULE_namespacebody)
 		var _la: Int = 0
@@ -9506,35 +10444,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NamespacealiasContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_namespacealias }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNamespacealias(self)
+
+	public class NamespacealiasContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_namespacealias
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNamespacealias(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNamespacealias(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNamespacealias(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNamespacealias(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNamespacealias(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNamespacealias(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNamespacealias(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func namespacealias() throws -> NamespacealiasContext {
+	 open func namespacealias() throws -> NamespacealiasContext {
 		var _localctx: NamespacealiasContext = NamespacealiasContext(_ctx, getState())
 		try enterRule(_localctx, 192, CPP14Parser.RULE_namespacealias)
 		defer {
@@ -9554,39 +10500,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class NamespacealiasdefinitionContext:ParserRuleContext {
-		open func Namespace() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func qualifiednamespacespecifier() -> QualifiednamespacespecifierContext? {
-			return getRuleContext(QualifiednamespacespecifierContext.self,0)
+
+	public class NamespacealiasdefinitionContext: ParserRuleContext {
+			open
+			func Namespace() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func qualifiednamespacespecifier() -> QualifiednamespacespecifierContext? {
+				return getRuleContext(QualifiednamespacespecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_namespacealiasdefinition
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_namespacealiasdefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNamespacealiasdefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNamespacealiasdefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNamespacealiasdefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNamespacealiasdefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNamespacealiasdefinition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNamespacealiasdefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNamespacealiasdefinition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNamespacealiasdefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func namespacealiasdefinition() throws -> NamespacealiasdefinitionContext {
+	 open func namespacealiasdefinition() throws -> NamespacealiasdefinitionContext {
 		var _localctx: NamespacealiasdefinitionContext = NamespacealiasdefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 194, CPP14Parser.RULE_namespacealiasdefinition)
 		defer {
@@ -9614,40 +10572,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class QualifiednamespacespecifierContext:ParserRuleContext {
-		open func namespacename() -> NamespacenameContext? {
-			return getRuleContext(NamespacenameContext.self,0)
+
+	public class QualifiednamespacespecifierContext: ParserRuleContext {
+			open
+			func namespacename() -> NamespacenameContext? {
+				return getRuleContext(NamespacenameContext.self, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_qualifiednamespacespecifier
 		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_qualifiednamespacespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterQualifiednamespacespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterQualifiednamespacespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitQualifiednamespacespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitQualifiednamespacespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitQualifiednamespacespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitQualifiednamespacespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitQualifiednamespacespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitQualifiednamespacespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func qualifiednamespacespecifier() throws -> QualifiednamespacespecifierContext {
+	 open func qualifiednamespacespecifier() throws -> QualifiednamespacespecifierContext {
 		var _localctx: QualifiednamespacespecifierContext = QualifiednamespacespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 196, CPP14Parser.RULE_qualifiednamespacespecifier)
 		defer {
@@ -9677,42 +10642,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class UsingdeclarationContext:ParserRuleContext {
-		open func Using() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Using.rawValue, 0) }
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
+
+	public class UsingdeclarationContext: ParserRuleContext {
+			open
+			func Using() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Using.rawValue, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+			open
+			func unqualifiedid() -> UnqualifiedidContext? {
+				return getRuleContext(UnqualifiedidContext.self, 0)
+			}
+			open
+			func Typename() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Typename.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_usingdeclaration
 		}
-		open func unqualifiedid() -> UnqualifiedidContext? {
-			return getRuleContext(UnqualifiedidContext.self,0)
-		}
-		open func Typename() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Typename.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_usingdeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterUsingdeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterUsingdeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitUsingdeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitUsingdeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitUsingdeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitUsingdeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitUsingdeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitUsingdeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func usingdeclaration() throws -> UsingdeclarationContext {
+	 open func usingdeclaration() throws -> UsingdeclarationContext {
 		var _localctx: UsingdeclarationContext = UsingdeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 198, CPP14Parser.RULE_usingdeclaration)
 		var _la: Int = 0
@@ -9771,45 +10749,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class UsingdirectiveContext:ParserRuleContext {
-		open func Using() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Using.rawValue, 0) }
-		open func Namespace() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0) }
-		open func namespacename() -> NamespacenameContext? {
-			return getRuleContext(NamespacenameContext.self,0)
+
+	public class UsingdirectiveContext: ParserRuleContext {
+			open
+			func Using() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Using.rawValue, 0)
+			}
+			open
+			func Namespace() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Namespace.rawValue, 0)
+			}
+			open
+			func namespacename() -> NamespacenameContext? {
+				return getRuleContext(NamespacenameContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_usingdirective
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_usingdirective }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterUsingdirective(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterUsingdirective(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitUsingdirective(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitUsingdirective(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitUsingdirective(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitUsingdirective(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitUsingdirective(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitUsingdirective(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func usingdirective() throws -> UsingdirectiveContext {
+	 open func usingdirective() throws -> UsingdirectiveContext {
 		var _localctx: UsingdirectiveContext = UsingdirectiveContext(_ctx, getState())
 		try enterRule(_localctx, 200, CPP14Parser.RULE_usingdirective)
 		var _la: Int = 0
@@ -9860,36 +10852,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AsmdefinitionContext:ParserRuleContext {
-		open func Asm() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Asm.rawValue, 0) }
-		open func Stringliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_asmdefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAsmdefinition(self)
+
+	public class AsmdefinitionContext: ParserRuleContext {
+			open
+			func Asm() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Asm.rawValue, 0)
+			}
+			open
+			func Stringliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_asmdefinition
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAsmdefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAsmdefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAsmdefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAsmdefinition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAsmdefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAsmdefinition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAsmdefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func asmdefinition() throws -> AsmdefinitionContext {
+	 open func asmdefinition() throws -> AsmdefinitionContext {
 		var _localctx: AsmdefinitionContext = AsmdefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 202, CPP14Parser.RULE_asmdefinition)
 		defer {
@@ -9917,42 +10920,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class LinkagespecificationContext:ParserRuleContext {
-		open func Extern() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Extern.rawValue, 0) }
-		open func Stringliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0) }
-		open func declarationseq() -> DeclarationseqContext? {
-			return getRuleContext(DeclarationseqContext.self,0)
+
+	public class LinkagespecificationContext: ParserRuleContext {
+			open
+			func Extern() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Extern.rawValue, 0)
+			}
+			open
+			func Stringliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0)
+			}
+			open
+			func declarationseq() -> DeclarationseqContext? {
+				return getRuleContext(DeclarationseqContext.self, 0)
+			}
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_linkagespecification
 		}
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_linkagespecification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLinkagespecification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLinkagespecification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLinkagespecification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLinkagespecification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLinkagespecification(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLinkagespecification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLinkagespecification(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLinkagespecification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func linkagespecification() throws -> LinkagespecificationContext {
+	 open func linkagespecification() throws -> LinkagespecificationContext {
 		var _localctx: LinkagespecificationContext = LinkagespecificationContext(_ctx, getState())
 		try enterRule(_localctx, 204, CPP14Parser.RULE_linkagespecification)
 		var _la: Int = 0
@@ -10017,40 +11033,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class AttributespecifierseqContext:ParserRuleContext {
-		open func attributespecifier() -> AttributespecifierContext? {
-			return getRuleContext(AttributespecifierContext.self,0)
+	public class AttributespecifierseqContext: ParserRuleContext {
+			open
+			func attributespecifier() -> AttributespecifierContext? {
+				return getRuleContext(AttributespecifierContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_attributespecifierseq
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_attributespecifierseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAttributespecifierseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAttributespecifierseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAttributespecifierseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAttributespecifierseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAttributespecifierseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAttributespecifierseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAttributespecifierseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAttributespecifierseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func attributespecifierseq( ) throws -> AttributespecifierseqContext   {
+	 public final  func attributespecifierseq( ) throws -> AttributespecifierseqContext   {
 		return try attributespecifierseq(0)
 	}
 	@discardableResult
@@ -10084,7 +11106,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_attributespecifierseq)
 					setState(1538)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(1539)
 					try attributespecifier()
@@ -10105,40 +11127,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class AttributespecifierContext:ParserRuleContext {
-		open func attributelist() -> AttributelistContext? {
-			return getRuleContext(AttributelistContext.self,0)
+
+	public class AttributespecifierContext: ParserRuleContext {
+			open
+			func attributelist() -> AttributelistContext? {
+				return getRuleContext(AttributelistContext.self, 0)
+			}
+			open
+			func alignmentspecifier() -> AlignmentspecifierContext? {
+				return getRuleContext(AlignmentspecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_attributespecifier
 		}
-		open func alignmentspecifier() -> AlignmentspecifierContext? {
-			return getRuleContext(AlignmentspecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_attributespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAttributespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAttributespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAttributespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAttributespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAttributespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAttributespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAttributespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAttributespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributespecifier() throws -> AttributespecifierContext {
+	 open func attributespecifier() throws -> AttributespecifierContext {
 		var _localctx: AttributespecifierContext = AttributespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 208, CPP14Parser.RULE_attributespecifier)
 		defer {
@@ -10170,7 +11199,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10181,41 +11210,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AlignmentspecifierContext:ParserRuleContext {
-		open func Alignas() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Alignas.rawValue, 0) }
-		open func typeid() -> TypeidContext? {
-			return getRuleContext(TypeidContext.self,0)
+
+	public class AlignmentspecifierContext: ParserRuleContext {
+			open
+			func Alignas() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Alignas.rawValue, 0)
+			}
+			open
+			func typeid() -> TypeidContext? {
+				return getRuleContext(TypeidContext.self, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_alignmentspecifier
 		}
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_alignmentspecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAlignmentspecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAlignmentspecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAlignmentspecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAlignmentspecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAlignmentspecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAlignmentspecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAlignmentspecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAlignmentspecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func alignmentspecifier() throws -> AlignmentspecifierContext {
+	 open func alignmentspecifier() throws -> AlignmentspecifierContext {
 		var _localctx: AlignmentspecifierContext = AlignmentspecifierContext(_ctx, getState())
 		try enterRule(_localctx, 210, CPP14Parser.RULE_alignmentspecifier)
 		var _la: Int = 0
@@ -10288,40 +11327,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class AttributelistContext:ParserRuleContext {
-		open func attribute() -> AttributeContext? {
-			return getRuleContext(AttributeContext.self,0)
+	public class AttributelistContext: ParserRuleContext {
+			open
+			func attribute() -> AttributeContext? {
+				return getRuleContext(AttributeContext.self, 0)
+			}
+			open
+			func attributelist() -> AttributelistContext? {
+				return getRuleContext(AttributelistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_attributelist
 		}
-		open func attributelist() -> AttributelistContext? {
-			return getRuleContext(AttributelistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_attributelist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAttributelist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAttributelist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAttributelist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAttributelist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAttributelist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAttributelist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAttributelist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAttributelist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func attributelist( ) throws -> AttributelistContext   {
+	 public final  func attributelist( ) throws -> AttributelistContext   {
 		return try attributelist(0)
 	}
 	@discardableResult
@@ -10381,7 +11426,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_attributelist)
 						setState(1581)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(1582)
 						try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -10402,7 +11447,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_attributelist)
 						setState(1586)
 						if (!(precpred(_ctx, 1))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 						}
 						setState(1587)
 						try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -10430,40 +11475,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class AttributeContext:ParserRuleContext {
-		open func attributetoken() -> AttributetokenContext? {
-			return getRuleContext(AttributetokenContext.self,0)
+
+	public class AttributeContext: ParserRuleContext {
+			open
+			func attributetoken() -> AttributetokenContext? {
+				return getRuleContext(AttributetokenContext.self, 0)
+			}
+			open
+			func attributeargumentclause() -> AttributeargumentclauseContext? {
+				return getRuleContext(AttributeargumentclauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_attribute
 		}
-		open func attributeargumentclause() -> AttributeargumentclauseContext? {
-			return getRuleContext(AttributeargumentclauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_attribute }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAttribute(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAttribute(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAttribute(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAttribute(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAttribute(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAttribute(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAttribute(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAttribute(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attribute() throws -> AttributeContext {
+	 open func attribute() throws -> AttributeContext {
 		var _localctx: AttributeContext = AttributeContext(_ctx, getState())
 		try enterRule(_localctx, 214, CPP14Parser.RULE_attribute)
 		defer {
@@ -10493,38 +11545,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AttributetokenContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func attributescopedtoken() -> AttributescopedtokenContext? {
-			return getRuleContext(AttributescopedtokenContext.self,0)
+
+	public class AttributetokenContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func attributescopedtoken() -> AttributescopedtokenContext? {
+				return getRuleContext(AttributescopedtokenContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_attributetoken
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_attributetoken }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAttributetoken(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAttributetoken(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAttributetoken(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAttributetoken(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAttributetoken(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAttributetoken(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAttributetoken(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAttributetoken(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributetoken() throws -> AttributetokenContext {
+	 open func attributetoken() throws -> AttributetokenContext {
 		var _localctx: AttributetokenContext = AttributetokenContext(_ctx, getState())
 		try enterRule(_localctx, 216, CPP14Parser.RULE_attributetoken)
 		defer {
@@ -10557,38 +11618,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AttributescopedtokenContext:ParserRuleContext {
-		open func attributenamespace() -> AttributenamespaceContext? {
-			return getRuleContext(AttributenamespaceContext.self,0)
+
+	public class AttributescopedtokenContext: ParserRuleContext {
+			open
+			func attributenamespace() -> AttributenamespaceContext? {
+				return getRuleContext(AttributenamespaceContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_attributescopedtoken
 		}
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_attributescopedtoken }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAttributescopedtoken(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAttributescopedtoken(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAttributescopedtoken(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAttributescopedtoken(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAttributescopedtoken(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAttributescopedtoken(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAttributescopedtoken(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAttributescopedtoken(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributescopedtoken() throws -> AttributescopedtokenContext {
+	 open func attributescopedtoken() throws -> AttributescopedtokenContext {
 		var _localctx: AttributescopedtokenContext = AttributescopedtokenContext(_ctx, getState())
 		try enterRule(_localctx, 218, CPP14Parser.RULE_attributescopedtoken)
 		defer {
@@ -10612,35 +11682,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AttributenamespaceContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_attributenamespace }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAttributenamespace(self)
+
+	public class AttributenamespaceContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_attributenamespace
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAttributenamespace(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAttributenamespace(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAttributenamespace(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAttributenamespace(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAttributenamespace(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAttributenamespace(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAttributenamespace(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributenamespace() throws -> AttributenamespaceContext {
+	 open func attributenamespace() throws -> AttributenamespaceContext {
 		var _localctx: AttributenamespaceContext = AttributenamespaceContext(_ctx, getState())
 		try enterRule(_localctx, 220, CPP14Parser.RULE_attributenamespace)
 		defer {
@@ -10660,37 +11738,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AttributeargumentclauseContext:ParserRuleContext {
-		open func balancedtokenseq() -> BalancedtokenseqContext? {
-			return getRuleContext(BalancedtokenseqContext.self,0)
+
+	public class AttributeargumentclauseContext: ParserRuleContext {
+			open
+			func balancedtokenseq() -> BalancedtokenseqContext? {
+				return getRuleContext(BalancedtokenseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_attributeargumentclause
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_attributeargumentclause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAttributeargumentclause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAttributeargumentclause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAttributeargumentclause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAttributeargumentclause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAttributeargumentclause(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAttributeargumentclause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAttributeargumentclause(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAttributeargumentclause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func attributeargumentclause() throws -> AttributeargumentclauseContext {
+	 open func attributeargumentclause() throws -> AttributeargumentclauseContext {
 		var _localctx: AttributeargumentclauseContext = AttributeargumentclauseContext(_ctx, getState())
 		try enterRule(_localctx, 222, CPP14Parser.RULE_attributeargumentclause)
 		defer {
@@ -10715,40 +11799,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class BalancedtokenseqContext:ParserRuleContext {
-		open func balancedtoken() -> BalancedtokenContext? {
-			return getRuleContext(BalancedtokenContext.self,0)
+	public class BalancedtokenseqContext: ParserRuleContext {
+			open
+			func balancedtoken() -> BalancedtokenContext? {
+				return getRuleContext(BalancedtokenContext.self, 0)
+			}
+			open
+			func balancedtokenseq() -> BalancedtokenseqContext? {
+				return getRuleContext(BalancedtokenseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_balancedtokenseq
 		}
-		open func balancedtokenseq() -> BalancedtokenseqContext? {
-			return getRuleContext(BalancedtokenseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_balancedtokenseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBalancedtokenseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBalancedtokenseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBalancedtokenseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBalancedtokenseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBalancedtokenseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBalancedtokenseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBalancedtokenseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBalancedtokenseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func balancedtokenseq( ) throws -> BalancedtokenseqContext   {
+	 public final  func balancedtokenseq( ) throws -> BalancedtokenseqContext   {
 		return try balancedtokenseq(0)
 	}
 	@discardableResult
@@ -10790,7 +11880,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_balancedtokenseq)
 					setState(1618)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(1619)
 					try balancedtoken()
@@ -10811,37 +11901,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class BalancedtokenContext:ParserRuleContext {
-		open func balancedtokenseq() -> BalancedtokenseqContext? {
-			return getRuleContext(BalancedtokenseqContext.self,0)
+
+	public class BalancedtokenContext: ParserRuleContext {
+			open
+			func balancedtokenseq() -> BalancedtokenseqContext? {
+				return getRuleContext(BalancedtokenseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_balancedtoken
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_balancedtoken }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBalancedtoken(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBalancedtoken(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBalancedtoken(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBalancedtoken(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBalancedtoken(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBalancedtoken(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBalancedtoken(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBalancedtoken(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func balancedtoken() throws -> BalancedtokenContext {
+	 open func balancedtoken() throws -> BalancedtokenContext {
 		var _localctx: BalancedtokenContext = BalancedtokenContext(_ctx, getState())
 		try enterRule(_localctx, 226, CPP14Parser.RULE_balancedtoken)
 		defer {
@@ -10884,7 +11980,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -10896,40 +11992,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class InitdeclaratorlistContext:ParserRuleContext {
-		open func initdeclarator() -> InitdeclaratorContext? {
-			return getRuleContext(InitdeclaratorContext.self,0)
+	public class InitdeclaratorlistContext: ParserRuleContext {
+			open
+			func initdeclarator() -> InitdeclaratorContext? {
+				return getRuleContext(InitdeclaratorContext.self, 0)
+			}
+			open
+			func initdeclaratorlist() -> InitdeclaratorlistContext? {
+				return getRuleContext(InitdeclaratorlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_initdeclaratorlist
 		}
-		open func initdeclaratorlist() -> InitdeclaratorlistContext? {
-			return getRuleContext(InitdeclaratorlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_initdeclaratorlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterInitdeclaratorlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterInitdeclaratorlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitInitdeclaratorlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitInitdeclaratorlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitInitdeclaratorlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitInitdeclaratorlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitInitdeclaratorlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitInitdeclaratorlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func initdeclaratorlist( ) throws -> InitdeclaratorlistContext   {
+	 public final  func initdeclaratorlist( ) throws -> InitdeclaratorlistContext   {
 		return try initdeclaratorlist(0)
 	}
 	@discardableResult
@@ -10963,7 +12065,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_initdeclaratorlist)
 					setState(1642)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(1643)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -10986,40 +12088,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class InitdeclaratorContext:ParserRuleContext {
-		open func declarator() -> DeclaratorContext? {
-			return getRuleContext(DeclaratorContext.self,0)
+
+	public class InitdeclaratorContext: ParserRuleContext {
+			open
+			func declarator() -> DeclaratorContext? {
+				return getRuleContext(DeclaratorContext.self, 0)
+			}
+			open
+			func initializer() -> InitializerContext? {
+				return getRuleContext(InitializerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_initdeclarator
 		}
-		open func initializer() -> InitializerContext? {
-			return getRuleContext(InitializerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_initdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterInitdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterInitdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitInitdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitInitdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitInitdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitInitdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitInitdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitInitdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initdeclarator() throws -> InitdeclaratorContext {
+	 open func initdeclarator() throws -> InitdeclaratorContext {
 		var _localctx: InitdeclaratorContext = InitdeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 230, CPP14Parser.RULE_initdeclarator)
 		defer {
@@ -11049,46 +12158,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclaratorContext:ParserRuleContext {
-		open func ptrdeclarator() -> PtrdeclaratorContext? {
-			return getRuleContext(PtrdeclaratorContext.self,0)
+
+	public class DeclaratorContext: ParserRuleContext {
+			open
+			func ptrdeclarator() -> PtrdeclaratorContext? {
+				return getRuleContext(PtrdeclaratorContext.self, 0)
+			}
+			open
+			func noptrdeclarator() -> NoptrdeclaratorContext? {
+				return getRuleContext(NoptrdeclaratorContext.self, 0)
+			}
+			open
+			func parametersandqualifiers() -> ParametersandqualifiersContext? {
+				return getRuleContext(ParametersandqualifiersContext.self, 0)
+			}
+			open
+			func trailingreturntype() -> TrailingreturntypeContext? {
+				return getRuleContext(TrailingreturntypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_declarator
 		}
-		open func noptrdeclarator() -> NoptrdeclaratorContext? {
-			return getRuleContext(NoptrdeclaratorContext.self,0)
-		}
-		open func parametersandqualifiers() -> ParametersandqualifiersContext? {
-			return getRuleContext(ParametersandqualifiersContext.self,0)
-		}
-		open func trailingreturntype() -> TrailingreturntypeContext? {
-			return getRuleContext(TrailingreturntypeContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_declarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declarator() throws -> DeclaratorContext {
+	 open func declarator() throws -> DeclaratorContext {
 		var _localctx: DeclaratorContext = DeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 232, CPP14Parser.RULE_declarator)
 		defer {
@@ -11125,43 +12243,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class PtrdeclaratorContext:ParserRuleContext {
-		open func noptrdeclarator() -> NoptrdeclaratorContext? {
-			return getRuleContext(NoptrdeclaratorContext.self,0)
+
+	public class PtrdeclaratorContext: ParserRuleContext {
+			open
+			func noptrdeclarator() -> NoptrdeclaratorContext? {
+				return getRuleContext(NoptrdeclaratorContext.self, 0)
+			}
+			open
+			func ptroperator() -> PtroperatorContext? {
+				return getRuleContext(PtroperatorContext.self, 0)
+			}
+			open
+			func ptrdeclarator() -> PtrdeclaratorContext? {
+				return getRuleContext(PtrdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_ptrdeclarator
 		}
-		open func ptroperator() -> PtroperatorContext? {
-			return getRuleContext(PtroperatorContext.self,0)
-		}
-		open func ptrdeclarator() -> PtrdeclaratorContext? {
-			return getRuleContext(PtrdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_ptrdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterPtrdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterPtrdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitPtrdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitPtrdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitPtrdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitPtrdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitPtrdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitPtrdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ptrdeclarator() throws -> PtrdeclaratorContext {
+	 open func ptrdeclarator() throws -> PtrdeclaratorContext {
 		var _localctx: PtrdeclaratorContext = PtrdeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 234, CPP14Parser.RULE_ptrdeclarator)
 		defer {
@@ -11197,52 +12323,62 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class NoptrdeclaratorContext:ParserRuleContext {
-		open func declaratorid() -> DeclaratoridContext? {
-			return getRuleContext(DeclaratoridContext.self,0)
+	public class NoptrdeclaratorContext: ParserRuleContext {
+			open
+			func declaratorid() -> DeclaratoridContext? {
+				return getRuleContext(DeclaratoridContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func ptrdeclarator() -> PtrdeclaratorContext? {
+				return getRuleContext(PtrdeclaratorContext.self, 0)
+			}
+			open
+			func noptrdeclarator() -> NoptrdeclaratorContext? {
+				return getRuleContext(NoptrdeclaratorContext.self, 0)
+			}
+			open
+			func parametersandqualifiers() -> ParametersandqualifiersContext? {
+				return getRuleContext(ParametersandqualifiersContext.self, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_noptrdeclarator
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func ptrdeclarator() -> PtrdeclaratorContext? {
-			return getRuleContext(PtrdeclaratorContext.self,0)
-		}
-		open func noptrdeclarator() -> NoptrdeclaratorContext? {
-			return getRuleContext(NoptrdeclaratorContext.self,0)
-		}
-		open func parametersandqualifiers() -> ParametersandqualifiersContext? {
-			return getRuleContext(ParametersandqualifiersContext.self,0)
-		}
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_noptrdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNoptrdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNoptrdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNoptrdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNoptrdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNoptrdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNoptrdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNoptrdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNoptrdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func noptrdeclarator( ) throws -> NoptrdeclaratorContext   {
+	 public final  func noptrdeclarator( ) throws -> NoptrdeclaratorContext   {
 		return try noptrdeclarator(0)
 	}
 	@discardableResult
@@ -11294,7 +12430,7 @@ open class CPP14Parser: Parser {
 
 				break
 			default:
-				throw try ANTLRException.recognition(e: NoViableAltException(self))
+				throw ANTLRException.recognition(e: NoViableAltException(self))
 			}
 			_ctx!.stop = try _input.LT(-1)
 			setState(1691)
@@ -11314,7 +12450,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_noptrdeclarator)
 						setState(1678)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(1679)
 						try parametersandqualifiers()
@@ -11325,7 +12461,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_noptrdeclarator)
 						setState(1680)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(1681)
 						try match(CPP14Parser.Tokens.LeftBracket.rawValue)
@@ -11385,49 +12521,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class ParametersandqualifiersContext:ParserRuleContext {
-		open func parameterdeclarationclause() -> ParameterdeclarationclauseContext? {
-			return getRuleContext(ParameterdeclarationclauseContext.self,0)
+
+	public class ParametersandqualifiersContext: ParserRuleContext {
+			open
+			func parameterdeclarationclause() -> ParameterdeclarationclauseContext? {
+				return getRuleContext(ParameterdeclarationclauseContext.self, 0)
+			}
+			open
+			func cvqualifierseq() -> CvqualifierseqContext? {
+				return getRuleContext(CvqualifierseqContext.self, 0)
+			}
+			open
+			func refqualifier() -> RefqualifierContext? {
+				return getRuleContext(RefqualifierContext.self, 0)
+			}
+			open
+			func exceptionspecification() -> ExceptionspecificationContext? {
+				return getRuleContext(ExceptionspecificationContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_parametersandqualifiers
 		}
-		open func cvqualifierseq() -> CvqualifierseqContext? {
-			return getRuleContext(CvqualifierseqContext.self,0)
-		}
-		open func refqualifier() -> RefqualifierContext? {
-			return getRuleContext(RefqualifierContext.self,0)
-		}
-		open func exceptionspecification() -> ExceptionspecificationContext? {
-			return getRuleContext(ExceptionspecificationContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_parametersandqualifiers }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterParametersandqualifiers(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterParametersandqualifiers(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitParametersandqualifiers(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitParametersandqualifiers(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitParametersandqualifiers(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitParametersandqualifiers(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitParametersandqualifiers(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitParametersandqualifiers(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parametersandqualifiers() throws -> ParametersandqualifiersContext {
+	 open func parametersandqualifiers() throws -> ParametersandqualifiersContext {
 		var _localctx: ParametersandqualifiersContext = ParametersandqualifiersContext(_ctx, getState())
 		try enterRule(_localctx, 238, CPP14Parser.RULE_parametersandqualifiers)
 		defer {
@@ -11491,40 +12637,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TrailingreturntypeContext:ParserRuleContext {
-		open func trailingtypespecifierseq() -> TrailingtypespecifierseqContext? {
-			return getRuleContext(TrailingtypespecifierseqContext.self,0)
+
+	public class TrailingreturntypeContext: ParserRuleContext {
+			open
+			func trailingtypespecifierseq() -> TrailingtypespecifierseqContext? {
+				return getRuleContext(TrailingtypespecifierseqContext.self, 0)
+			}
+			open
+			func abstractdeclarator() -> AbstractdeclaratorContext? {
+				return getRuleContext(AbstractdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_trailingreturntype
 		}
-		open func abstractdeclarator() -> AbstractdeclaratorContext? {
-			return getRuleContext(AbstractdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_trailingreturntype }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTrailingreturntype(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTrailingreturntype(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTrailingreturntype(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTrailingreturntype(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTrailingreturntype(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTrailingreturntype(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTrailingreturntype(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTrailingreturntype(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func trailingreturntype() throws -> TrailingreturntypeContext {
+	 open func trailingreturntype() throws -> TrailingreturntypeContext {
 		var _localctx: TrailingreturntypeContext = TrailingreturntypeContext(_ctx, getState())
 		try enterRule(_localctx, 240, CPP14Parser.RULE_trailingreturntype)
 		defer {
@@ -11556,43 +12709,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class PtroperatorContext:ParserRuleContext {
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
+
+	public class PtroperatorContext: ParserRuleContext {
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func cvqualifierseq() -> CvqualifierseqContext? {
+				return getRuleContext(CvqualifierseqContext.self, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_ptroperator
 		}
-		open func cvqualifierseq() -> CvqualifierseqContext? {
-			return getRuleContext(CvqualifierseqContext.self,0)
-		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_ptroperator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterPtroperator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterPtroperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitPtroperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitPtroperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitPtroperator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitPtroperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitPtroperator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitPtroperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ptroperator() throws -> PtroperatorContext {
+	 open func ptroperator() throws -> PtroperatorContext {
 		var _localctx: PtroperatorContext = PtroperatorContext(_ctx, getState())
 		try enterRule(_localctx, 242, CPP14Parser.RULE_ptroperator)
 		defer {
@@ -11693,7 +12854,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -11704,40 +12865,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class CvqualifierseqContext:ParserRuleContext {
-		open func cvqualifier() -> CvqualifierContext? {
-			return getRuleContext(CvqualifierContext.self,0)
+
+	public class CvqualifierseqContext: ParserRuleContext {
+			open
+			func cvqualifier() -> CvqualifierContext? {
+				return getRuleContext(CvqualifierContext.self, 0)
+			}
+			open
+			func cvqualifierseq() -> CvqualifierseqContext? {
+				return getRuleContext(CvqualifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_cvqualifierseq
 		}
-		open func cvqualifierseq() -> CvqualifierseqContext? {
-			return getRuleContext(CvqualifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_cvqualifierseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterCvqualifierseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterCvqualifierseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitCvqualifierseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitCvqualifierseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitCvqualifierseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitCvqualifierseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitCvqualifierseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitCvqualifierseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cvqualifierseq() throws -> CvqualifierseqContext {
+	 open func cvqualifierseq() throws -> CvqualifierseqContext {
 		var _localctx: CvqualifierseqContext = CvqualifierseqContext(_ctx, getState())
 		try enterRule(_localctx, 244, CPP14Parser.RULE_cvqualifierseq)
 		defer {
@@ -11767,36 +12935,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class CvqualifierContext:ParserRuleContext {
-		open func Const() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Const.rawValue, 0) }
-		open func Volatile() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Volatile.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_cvqualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterCvqualifier(self)
+
+	public class CvqualifierContext: ParserRuleContext {
+			open
+			func Const() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Const.rawValue, 0)
+			}
+			open
+			func Volatile() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Volatile.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_cvqualifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterCvqualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitCvqualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitCvqualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitCvqualifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitCvqualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitCvqualifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitCvqualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func cvqualifier() throws -> CvqualifierContext {
+	 open func cvqualifier() throws -> CvqualifierContext {
 		var _localctx: CvqualifierContext = CvqualifierContext(_ctx, getState())
 		try enterRule(_localctx, 246, CPP14Parser.RULE_cvqualifier)
 		var _la: Int = 0
@@ -11828,34 +13007,39 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class RefqualifierContext:ParserRuleContext {
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_refqualifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterRefqualifier(self)
+
+	public class RefqualifierContext: ParserRuleContext {
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_refqualifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterRefqualifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitRefqualifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitRefqualifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitRefqualifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitRefqualifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitRefqualifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitRefqualifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func refqualifier() throws -> RefqualifierContext {
+	 open func refqualifier() throws -> RefqualifierContext {
 		var _localctx: RefqualifierContext = RefqualifierContext(_ctx, getState())
 		try enterRule(_localctx, 248, CPP14Parser.RULE_refqualifier)
 		var _la: Int = 0
@@ -11887,37 +13071,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class DeclaratoridContext:ParserRuleContext {
-		open func idexpression() -> IdexpressionContext? {
-			return getRuleContext(IdexpressionContext.self,0)
+
+	public class DeclaratoridContext: ParserRuleContext {
+			open
+			func idexpression() -> IdexpressionContext? {
+				return getRuleContext(IdexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_declaratorid
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_declaratorid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDeclaratorid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDeclaratorid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDeclaratorid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDeclaratorid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDeclaratorid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDeclaratorid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDeclaratorid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDeclaratorid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func declaratorid() throws -> DeclaratoridContext {
+	 open func declaratorid() throws -> DeclaratoridContext {
 		var _localctx: DeclaratoridContext = DeclaratoridContext(_ctx, getState())
 		try enterRule(_localctx, 250, CPP14Parser.RULE_declaratorid)
 		var _la: Int = 0
@@ -11951,40 +13141,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TypeidContext:ParserRuleContext {
-		open func typespecifierseq() -> TypespecifierseqContext? {
-			return getRuleContext(TypespecifierseqContext.self,0)
+
+	public class TypeidContext: ParserRuleContext {
+			open
+			func typespecifierseq() -> TypespecifierseqContext? {
+				return getRuleContext(TypespecifierseqContext.self, 0)
+			}
+			open
+			func abstractdeclarator() -> AbstractdeclaratorContext? {
+				return getRuleContext(AbstractdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_typeid
 		}
-		open func abstractdeclarator() -> AbstractdeclaratorContext? {
-			return getRuleContext(AbstractdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_typeid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTypeid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTypeid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTypeid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTypeid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTypeid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTypeid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTypeid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTypeid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeid() throws -> TypeidContext {
+	 open func typeid() throws -> TypeidContext {
 		var _localctx: TypeidContext = TypeidContext(_ctx, getState())
 		try enterRule(_localctx, 252, CPP14Parser.RULE_typeid)
 		defer {
@@ -12014,49 +13211,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AbstractdeclaratorContext:ParserRuleContext {
-		open func ptrabstractdeclarator() -> PtrabstractdeclaratorContext? {
-			return getRuleContext(PtrabstractdeclaratorContext.self,0)
+
+	public class AbstractdeclaratorContext: ParserRuleContext {
+			open
+			func ptrabstractdeclarator() -> PtrabstractdeclaratorContext? {
+				return getRuleContext(PtrabstractdeclaratorContext.self, 0)
+			}
+			open
+			func parametersandqualifiers() -> ParametersandqualifiersContext? {
+				return getRuleContext(ParametersandqualifiersContext.self, 0)
+			}
+			open
+			func trailingreturntype() -> TrailingreturntypeContext? {
+				return getRuleContext(TrailingreturntypeContext.self, 0)
+			}
+			open
+			func noptrabstractdeclarator() -> NoptrabstractdeclaratorContext? {
+				return getRuleContext(NoptrabstractdeclaratorContext.self, 0)
+			}
+			open
+			func abstractpackdeclarator() -> AbstractpackdeclaratorContext? {
+				return getRuleContext(AbstractpackdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_abstractdeclarator
 		}
-		open func parametersandqualifiers() -> ParametersandqualifiersContext? {
-			return getRuleContext(ParametersandqualifiersContext.self,0)
-		}
-		open func trailingreturntype() -> TrailingreturntypeContext? {
-			return getRuleContext(TrailingreturntypeContext.self,0)
-		}
-		open func noptrabstractdeclarator() -> NoptrabstractdeclaratorContext? {
-			return getRuleContext(NoptrabstractdeclaratorContext.self,0)
-		}
-		open func abstractpackdeclarator() -> AbstractpackdeclaratorContext? {
-			return getRuleContext(AbstractpackdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_abstractdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAbstractdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAbstractdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAbstractdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAbstractdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAbstractdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAbstractdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAbstractdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAbstractdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func abstractdeclarator() throws -> AbstractdeclaratorContext {
+	 open func abstractdeclarator() throws -> AbstractdeclaratorContext {
 		var _localctx: AbstractdeclaratorContext = AbstractdeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 254, CPP14Parser.RULE_abstractdeclarator)
 		defer {
@@ -12107,43 +13314,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class PtrabstractdeclaratorContext:ParserRuleContext {
-		open func noptrabstractdeclarator() -> NoptrabstractdeclaratorContext? {
-			return getRuleContext(NoptrabstractdeclaratorContext.self,0)
+
+	public class PtrabstractdeclaratorContext: ParserRuleContext {
+			open
+			func noptrabstractdeclarator() -> NoptrabstractdeclaratorContext? {
+				return getRuleContext(NoptrabstractdeclaratorContext.self, 0)
+			}
+			open
+			func ptroperator() -> PtroperatorContext? {
+				return getRuleContext(PtroperatorContext.self, 0)
+			}
+			open
+			func ptrabstractdeclarator() -> PtrabstractdeclaratorContext? {
+				return getRuleContext(PtrabstractdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_ptrabstractdeclarator
 		}
-		open func ptroperator() -> PtroperatorContext? {
-			return getRuleContext(PtroperatorContext.self,0)
-		}
-		open func ptrabstractdeclarator() -> PtrabstractdeclaratorContext? {
-			return getRuleContext(PtrabstractdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_ptrabstractdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterPtrabstractdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterPtrabstractdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitPtrabstractdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitPtrabstractdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitPtrabstractdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitPtrabstractdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitPtrabstractdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitPtrabstractdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ptrabstractdeclarator() throws -> PtrabstractdeclaratorContext {
+	 open func ptrabstractdeclarator() throws -> PtrabstractdeclaratorContext {
 		var _localctx: PtrabstractdeclaratorContext = PtrabstractdeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 256, CPP14Parser.RULE_ptrabstractdeclarator)
 		defer {
@@ -12182,7 +13397,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12194,49 +13409,58 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class NoptrabstractdeclaratorContext:ParserRuleContext {
-		open func parametersandqualifiers() -> ParametersandqualifiersContext? {
-			return getRuleContext(ParametersandqualifiersContext.self,0)
+	public class NoptrabstractdeclaratorContext: ParserRuleContext {
+			open
+			func parametersandqualifiers() -> ParametersandqualifiersContext? {
+				return getRuleContext(ParametersandqualifiersContext.self, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func ptrabstractdeclarator() -> PtrabstractdeclaratorContext? {
+				return getRuleContext(PtrabstractdeclaratorContext.self, 0)
+			}
+			open
+			func noptrabstractdeclarator() -> NoptrabstractdeclaratorContext? {
+				return getRuleContext(NoptrabstractdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_noptrabstractdeclarator
 		}
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func ptrabstractdeclarator() -> PtrabstractdeclaratorContext? {
-			return getRuleContext(PtrabstractdeclaratorContext.self,0)
-		}
-		open func noptrabstractdeclarator() -> NoptrabstractdeclaratorContext? {
-			return getRuleContext(NoptrabstractdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_noptrabstractdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNoptrabstractdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNoptrabstractdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNoptrabstractdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNoptrabstractdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNoptrabstractdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNoptrabstractdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNoptrabstractdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNoptrabstractdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func noptrabstractdeclarator( ) throws -> NoptrabstractdeclaratorContext   {
+	 public final  func noptrabstractdeclarator( ) throws -> NoptrabstractdeclaratorContext   {
 		return try noptrabstractdeclarator(0)
 	}
 	@discardableResult
@@ -12332,7 +13556,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_noptrabstractdeclarator)
 						setState(1789)
 						if (!(precpred(_ctx, 5))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 5)"))
 						}
 						setState(1790)
 						try parametersandqualifiers()
@@ -12343,7 +13567,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_noptrabstractdeclarator)
 						setState(1791)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(1792)
 						try match(CPP14Parser.Tokens.LeftBracket.rawValue)
@@ -12403,43 +13627,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class AbstractpackdeclaratorContext:ParserRuleContext {
-		open func noptrabstractpackdeclarator() -> NoptrabstractpackdeclaratorContext? {
-			return getRuleContext(NoptrabstractpackdeclaratorContext.self,0)
+
+	public class AbstractpackdeclaratorContext: ParserRuleContext {
+			open
+			func noptrabstractpackdeclarator() -> NoptrabstractpackdeclaratorContext? {
+				return getRuleContext(NoptrabstractpackdeclaratorContext.self, 0)
+			}
+			open
+			func ptroperator() -> PtroperatorContext? {
+				return getRuleContext(PtroperatorContext.self, 0)
+			}
+			open
+			func abstractpackdeclarator() -> AbstractpackdeclaratorContext? {
+				return getRuleContext(AbstractpackdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_abstractpackdeclarator
 		}
-		open func ptroperator() -> PtroperatorContext? {
-			return getRuleContext(PtroperatorContext.self,0)
-		}
-		open func abstractpackdeclarator() -> AbstractpackdeclaratorContext? {
-			return getRuleContext(AbstractpackdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_abstractpackdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAbstractpackdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAbstractpackdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAbstractpackdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAbstractpackdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAbstractpackdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAbstractpackdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAbstractpackdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAbstractpackdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func abstractpackdeclarator() throws -> AbstractpackdeclaratorContext {
+	 open func abstractpackdeclarator() throws -> AbstractpackdeclaratorContext {
 		var _localctx: AbstractpackdeclaratorContext = AbstractpackdeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 260, CPP14Parser.RULE_abstractpackdeclarator)
 		defer {
@@ -12469,7 +13701,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -12481,46 +13713,54 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class NoptrabstractpackdeclaratorContext:ParserRuleContext {
-		open func noptrabstractpackdeclarator() -> NoptrabstractpackdeclaratorContext? {
-			return getRuleContext(NoptrabstractpackdeclaratorContext.self,0)
+	public class NoptrabstractpackdeclaratorContext: ParserRuleContext {
+			open
+			func noptrabstractpackdeclarator() -> NoptrabstractpackdeclaratorContext? {
+				return getRuleContext(NoptrabstractpackdeclaratorContext.self, 0)
+			}
+			open
+			func parametersandqualifiers() -> ParametersandqualifiersContext? {
+				return getRuleContext(ParametersandqualifiersContext.self, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_noptrabstractpackdeclarator
 		}
-		open func parametersandqualifiers() -> ParametersandqualifiersContext? {
-			return getRuleContext(ParametersandqualifiersContext.self,0)
-		}
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_noptrabstractpackdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNoptrabstractpackdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNoptrabstractpackdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNoptrabstractpackdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNoptrabstractpackdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNoptrabstractpackdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNoptrabstractpackdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNoptrabstractpackdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNoptrabstractpackdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func noptrabstractpackdeclarator( ) throws -> NoptrabstractpackdeclaratorContext   {
+	 public final  func noptrabstractpackdeclarator( ) throws -> NoptrabstractpackdeclaratorContext   {
 		return try noptrabstractpackdeclarator(0)
 	}
 	@discardableResult
@@ -12559,7 +13799,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_noptrabstractpackdeclarator)
 						setState(1814)
 						if (!(precpred(_ctx, 3))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 3)"))
 						}
 						setState(1815)
 						try parametersandqualifiers()
@@ -12570,7 +13810,7 @@ open class CPP14Parser: Parser {
 						try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_noptrabstractpackdeclarator)
 						setState(1816)
 						if (!(precpred(_ctx, 2))) {
-						    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
+						    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 2)"))
 						}
 						setState(1817)
 						try match(CPP14Parser.Tokens.LeftBracket.rawValue)
@@ -12630,37 +13870,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class ParameterdeclarationclauseContext:ParserRuleContext {
-		open func parameterdeclarationlist() -> ParameterdeclarationlistContext? {
-			return getRuleContext(ParameterdeclarationlistContext.self,0)
+
+	public class ParameterdeclarationclauseContext: ParserRuleContext {
+			open
+			func parameterdeclarationlist() -> ParameterdeclarationlistContext? {
+				return getRuleContext(ParameterdeclarationlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_parameterdeclarationclause
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_parameterdeclarationclause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterParameterdeclarationclause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterParameterdeclarationclause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitParameterdeclarationclause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitParameterdeclarationclause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitParameterdeclarationclause(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitParameterdeclarationclause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitParameterdeclarationclause(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitParameterdeclarationclause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameterdeclarationclause() throws -> ParameterdeclarationclauseContext {
+	 open func parameterdeclarationclause() throws -> ParameterdeclarationclauseContext {
 		var _localctx: ParameterdeclarationclauseContext = ParameterdeclarationclauseContext(_ctx, getState())
 		try enterRule(_localctx, 264, CPP14Parser.RULE_parameterdeclarationclause)
 		var _la: Int = 0
@@ -12730,40 +13976,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class ParameterdeclarationlistContext:ParserRuleContext {
-		open func parameterdeclaration() -> ParameterdeclarationContext? {
-			return getRuleContext(ParameterdeclarationContext.self,0)
+	public class ParameterdeclarationlistContext: ParserRuleContext {
+			open
+			func parameterdeclaration() -> ParameterdeclarationContext? {
+				return getRuleContext(ParameterdeclarationContext.self, 0)
+			}
+			open
+			func parameterdeclarationlist() -> ParameterdeclarationlistContext? {
+				return getRuleContext(ParameterdeclarationlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_parameterdeclarationlist
 		}
-		open func parameterdeclarationlist() -> ParameterdeclarationlistContext? {
-			return getRuleContext(ParameterdeclarationlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_parameterdeclarationlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterParameterdeclarationlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterParameterdeclarationlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitParameterdeclarationlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitParameterdeclarationlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitParameterdeclarationlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitParameterdeclarationlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitParameterdeclarationlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitParameterdeclarationlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func parameterdeclarationlist( ) throws -> ParameterdeclarationlistContext   {
+	 public final  func parameterdeclarationlist( ) throws -> ParameterdeclarationlistContext   {
 		return try parameterdeclarationlist(0)
 	}
 	@discardableResult
@@ -12797,7 +14049,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_parameterdeclarationlist)
 					setState(1845)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(1846)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -12820,49 +14072,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class ParameterdeclarationContext:ParserRuleContext {
-		open func declspecifierseq() -> DeclspecifierseqContext? {
-			return getRuleContext(DeclspecifierseqContext.self,0)
+
+	public class ParameterdeclarationContext: ParserRuleContext {
+			open
+			func declspecifierseq() -> DeclspecifierseqContext? {
+				return getRuleContext(DeclspecifierseqContext.self, 0)
+			}
+			open
+			func declarator() -> DeclaratorContext? {
+				return getRuleContext(DeclaratorContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func initializerclause() -> InitializerclauseContext? {
+				return getRuleContext(InitializerclauseContext.self, 0)
+			}
+			open
+			func abstractdeclarator() -> AbstractdeclaratorContext? {
+				return getRuleContext(AbstractdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_parameterdeclaration
 		}
-		open func declarator() -> DeclaratorContext? {
-			return getRuleContext(DeclaratorContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func initializerclause() -> InitializerclauseContext? {
-			return getRuleContext(InitializerclauseContext.self,0)
-		}
-		open func abstractdeclarator() -> AbstractdeclaratorContext? {
-			return getRuleContext(AbstractdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_parameterdeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterParameterdeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterParameterdeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitParameterdeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitParameterdeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitParameterdeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitParameterdeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitParameterdeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitParameterdeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func parameterdeclaration() throws -> ParameterdeclarationContext {
+	 open func parameterdeclaration() throws -> ParameterdeclarationContext {
 		var _localctx: ParameterdeclarationContext = ParameterdeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 268, CPP14Parser.RULE_parameterdeclaration)
 		var _la: Int = 0
@@ -13003,49 +14265,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class FunctiondefinitionContext:ParserRuleContext {
-		open func declarator() -> DeclaratorContext? {
-			return getRuleContext(DeclaratorContext.self,0)
+
+	public class FunctiondefinitionContext: ParserRuleContext {
+			open
+			func declarator() -> DeclaratorContext? {
+				return getRuleContext(DeclaratorContext.self, 0)
+			}
+			open
+			func functionbody() -> FunctionbodyContext? {
+				return getRuleContext(FunctionbodyContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func declspecifierseq() -> DeclspecifierseqContext? {
+				return getRuleContext(DeclspecifierseqContext.self, 0)
+			}
+			open
+			func virtspecifierseq() -> VirtspecifierseqContext? {
+				return getRuleContext(VirtspecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_functiondefinition
 		}
-		open func functionbody() -> FunctionbodyContext? {
-			return getRuleContext(FunctionbodyContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func declspecifierseq() -> DeclspecifierseqContext? {
-			return getRuleContext(DeclspecifierseqContext.self,0)
-		}
-		open func virtspecifierseq() -> VirtspecifierseqContext? {
-			return getRuleContext(VirtspecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_functiondefinition }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterFunctiondefinition(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterFunctiondefinition(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitFunctiondefinition(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitFunctiondefinition(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitFunctiondefinition(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitFunctiondefinition(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitFunctiondefinition(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitFunctiondefinition(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functiondefinition() throws -> FunctiondefinitionContext {
+	 open func functiondefinition() throws -> FunctiondefinitionContext {
 		var _localctx: FunctiondefinitionContext = FunctiondefinitionContext(_ctx, getState())
 		try enterRule(_localctx, 270, CPP14Parser.RULE_functiondefinition)
 		var _la: Int = 0
@@ -13105,45 +14377,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class FunctionbodyContext:ParserRuleContext {
-		open func compoundstatement() -> CompoundstatementContext? {
-			return getRuleContext(CompoundstatementContext.self,0)
+
+	public class FunctionbodyContext: ParserRuleContext {
+			open
+			func compoundstatement() -> CompoundstatementContext? {
+				return getRuleContext(CompoundstatementContext.self, 0)
+			}
+			open
+			func ctorinitializer() -> CtorinitializerContext? {
+				return getRuleContext(CtorinitializerContext.self, 0)
+			}
+			open
+			func functiontryblock() -> FunctiontryblockContext? {
+				return getRuleContext(FunctiontryblockContext.self, 0)
+			}
+			open
+			func Default() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Default.rawValue, 0)
+			}
+			open
+			func Delete() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Delete.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_functionbody
 		}
-		open func ctorinitializer() -> CtorinitializerContext? {
-			return getRuleContext(CtorinitializerContext.self,0)
-		}
-		open func functiontryblock() -> FunctiontryblockContext? {
-			return getRuleContext(FunctiontryblockContext.self,0)
-		}
-		open func Default() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Default.rawValue, 0) }
-		open func Delete() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Delete.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_functionbody }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterFunctionbody(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterFunctionbody(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitFunctionbody(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitFunctionbody(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitFunctionbody(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitFunctionbody(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitFunctionbody(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitFunctionbody(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functionbody() throws -> FunctionbodyContext {
+	 open func functionbody() throws -> FunctionbodyContext {
 		var _localctx: FunctionbodyContext = FunctionbodyContext(_ctx, getState())
 		try enterRule(_localctx, 272, CPP14Parser.RULE_functionbody)
 		var _la: Int = 0
@@ -13210,40 +14496,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class InitializerContext:ParserRuleContext {
-		open func braceorequalinitializer() -> BraceorequalinitializerContext? {
-			return getRuleContext(BraceorequalinitializerContext.self,0)
+
+	public class InitializerContext: ParserRuleContext {
+			open
+			func braceorequalinitializer() -> BraceorequalinitializerContext? {
+				return getRuleContext(BraceorequalinitializerContext.self, 0)
+			}
+			open
+			func expressionlist() -> ExpressionlistContext? {
+				return getRuleContext(ExpressionlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_initializer
 		}
-		open func expressionlist() -> ExpressionlistContext? {
-			return getRuleContext(ExpressionlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_initializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterInitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterInitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitInitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitInitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitInitializer(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitInitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitInitializer(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitInitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initializer() throws -> InitializerContext {
+	 open func initializer() throws -> InitializerContext {
 		var _localctx: InitializerContext = InitializerContext(_ctx, getState())
 		try enterRule(_localctx, 274, CPP14Parser.RULE_initializer)
 		defer {
@@ -13272,7 +14565,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13283,40 +14576,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class BraceorequalinitializerContext:ParserRuleContext {
-		open func initializerclause() -> InitializerclauseContext? {
-			return getRuleContext(InitializerclauseContext.self,0)
+
+	public class BraceorequalinitializerContext: ParserRuleContext {
+			open
+			func initializerclause() -> InitializerclauseContext? {
+				return getRuleContext(InitializerclauseContext.self, 0)
+			}
+			open
+			func bracedinitlist() -> BracedinitlistContext? {
+				return getRuleContext(BracedinitlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_braceorequalinitializer
 		}
-		open func bracedinitlist() -> BracedinitlistContext? {
-			return getRuleContext(BracedinitlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_braceorequalinitializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBraceorequalinitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBraceorequalinitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBraceorequalinitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBraceorequalinitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBraceorequalinitializer(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBraceorequalinitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBraceorequalinitializer(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBraceorequalinitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func braceorequalinitializer() throws -> BraceorequalinitializerContext {
+	 open func braceorequalinitializer() throws -> BraceorequalinitializerContext {
 		var _localctx: BraceorequalinitializerContext = BraceorequalinitializerContext(_ctx, getState())
 		try enterRule(_localctx, 276, CPP14Parser.RULE_braceorequalinitializer)
 		defer {
@@ -13342,7 +14642,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13353,40 +14653,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class InitializerclauseContext:ParserRuleContext {
-		open func assignmentexpression() -> AssignmentexpressionContext? {
-			return getRuleContext(AssignmentexpressionContext.self,0)
+
+	public class InitializerclauseContext: ParserRuleContext {
+			open
+			func assignmentexpression() -> AssignmentexpressionContext? {
+				return getRuleContext(AssignmentexpressionContext.self, 0)
+			}
+			open
+			func bracedinitlist() -> BracedinitlistContext? {
+				return getRuleContext(BracedinitlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_initializerclause
 		}
-		open func bracedinitlist() -> BracedinitlistContext? {
-			return getRuleContext(BracedinitlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_initializerclause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterInitializerclause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterInitializerclause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitInitializerclause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitInitializerclause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitInitializerclause(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitInitializerclause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitInitializerclause(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitInitializerclause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func initializerclause() throws -> InitializerclauseContext {
+	 open func initializerclause() throws -> InitializerclauseContext {
 		var _localctx: InitializerclauseContext = InitializerclauseContext(_ctx, getState())
 		try enterRule(_localctx, 278, CPP14Parser.RULE_initializerclause)
 		defer {
@@ -13462,7 +14769,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -13474,40 +14781,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class InitializerlistContext:ParserRuleContext {
-		open func initializerclause() -> InitializerclauseContext? {
-			return getRuleContext(InitializerclauseContext.self,0)
+	public class InitializerlistContext: ParserRuleContext {
+			open
+			func initializerclause() -> InitializerclauseContext? {
+				return getRuleContext(InitializerclauseContext.self, 0)
+			}
+			open
+			func initializerlist() -> InitializerlistContext? {
+				return getRuleContext(InitializerlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_initializerlist
 		}
-		open func initializerlist() -> InitializerlistContext? {
-			return getRuleContext(InitializerlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_initializerlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterInitializerlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterInitializerlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitInitializerlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitInitializerlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitInitializerlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitInitializerlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitInitializerlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitInitializerlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func initializerlist( ) throws -> InitializerlistContext   {
+	 public final  func initializerlist( ) throws -> InitializerlistContext   {
 		return try initializerlist(0)
 	}
 	@discardableResult
@@ -13551,7 +14864,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_initializerlist)
 					setState(1932)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(1933)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -13584,37 +14897,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class BracedinitlistContext:ParserRuleContext {
-		open func initializerlist() -> InitializerlistContext? {
-			return getRuleContext(InitializerlistContext.self,0)
+
+	public class BracedinitlistContext: ParserRuleContext {
+			open
+			func initializerlist() -> InitializerlistContext? {
+				return getRuleContext(InitializerlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_bracedinitlist
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_bracedinitlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBracedinitlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBracedinitlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBracedinitlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBracedinitlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBracedinitlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBracedinitlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBracedinitlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBracedinitlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func bracedinitlist() throws -> BracedinitlistContext {
+	 open func bracedinitlist() throws -> BracedinitlistContext {
 		var _localctx: BracedinitlistContext = BracedinitlistContext(_ctx, getState())
 		try enterRule(_localctx, 282, CPP14Parser.RULE_bracedinitlist)
 		var _la: Int = 0
@@ -13667,38 +14986,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ClassnameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func simpletemplateid() -> SimpletemplateidContext? {
-			return getRuleContext(SimpletemplateidContext.self,0)
+
+	public class ClassnameContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func simpletemplateid() -> SimpletemplateidContext? {
+				return getRuleContext(SimpletemplateidContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_classname
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_classname }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterClassname(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterClassname(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitClassname(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitClassname(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitClassname(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitClassname(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitClassname(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitClassname(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classname() throws -> ClassnameContext {
+	 open func classname() throws -> ClassnameContext {
 		var _localctx: ClassnameContext = ClassnameContext(_ctx, getState())
 		try enterRule(_localctx, 284, CPP14Parser.RULE_classname)
 		defer {
@@ -13731,40 +15059,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ClassspecifierContext:ParserRuleContext {
-		open func classhead() -> ClassheadContext? {
-			return getRuleContext(ClassheadContext.self,0)
+
+	public class ClassspecifierContext: ParserRuleContext {
+			open
+			func classhead() -> ClassheadContext? {
+				return getRuleContext(ClassheadContext.self, 0)
+			}
+			open
+			func memberspecification() -> MemberspecificationContext? {
+				return getRuleContext(MemberspecificationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_classspecifier
 		}
-		open func memberspecification() -> MemberspecificationContext? {
-			return getRuleContext(MemberspecificationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_classspecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterClassspecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterClassspecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitClassspecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitClassspecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitClassspecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitClassspecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitClassspecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitClassspecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classspecifier() throws -> ClassspecifierContext {
+	 open func classspecifier() throws -> ClassspecifierContext {
 		var _localctx: ClassspecifierContext = ClassspecifierContext(_ctx, getState())
 		try enterRule(_localctx, 286, CPP14Parser.RULE_classspecifier)
 		var _la: Int = 0
@@ -13809,49 +15144,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ClassheadContext:ParserRuleContext {
-		open func classkey() -> ClasskeyContext? {
-			return getRuleContext(ClasskeyContext.self,0)
+
+	public class ClassheadContext: ParserRuleContext {
+			open
+			func classkey() -> ClasskeyContext? {
+				return getRuleContext(ClasskeyContext.self, 0)
+			}
+			open
+			func classheadname() -> ClassheadnameContext? {
+				return getRuleContext(ClassheadnameContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func classvirtspecifier() -> ClassvirtspecifierContext? {
+				return getRuleContext(ClassvirtspecifierContext.self, 0)
+			}
+			open
+			func baseclause() -> BaseclauseContext? {
+				return getRuleContext(BaseclauseContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_classhead
 		}
-		open func classheadname() -> ClassheadnameContext? {
-			return getRuleContext(ClassheadnameContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func classvirtspecifier() -> ClassvirtspecifierContext? {
-			return getRuleContext(ClassvirtspecifierContext.self,0)
-		}
-		open func baseclause() -> BaseclauseContext? {
-			return getRuleContext(BaseclauseContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_classhead }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterClasshead(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterClasshead(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitClasshead(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitClasshead(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitClasshead(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitClasshead(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitClasshead(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitClasshead(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classhead() throws -> ClassheadContext {
+	 open func classhead() throws -> ClassheadContext {
 		var _localctx: ClassheadContext = ClassheadContext(_ctx, getState())
 		try enterRule(_localctx, 288, CPP14Parser.RULE_classhead)
 		var _la: Int = 0
@@ -13954,40 +15299,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ClassheadnameContext:ParserRuleContext {
-		open func classname() -> ClassnameContext? {
-			return getRuleContext(ClassnameContext.self,0)
+
+	public class ClassheadnameContext: ParserRuleContext {
+			open
+			func classname() -> ClassnameContext? {
+				return getRuleContext(ClassnameContext.self, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_classheadname
 		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_classheadname }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterClassheadname(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterClassheadname(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitClassheadname(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitClassheadname(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitClassheadname(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitClassheadname(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitClassheadname(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitClassheadname(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classheadname() throws -> ClassheadnameContext {
+	 open func classheadname() throws -> ClassheadnameContext {
 		var _localctx: ClassheadnameContext = ClassheadnameContext(_ctx, getState())
 		try enterRule(_localctx, 290, CPP14Parser.RULE_classheadname)
 		defer {
@@ -14017,35 +15369,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ClassvirtspecifierContext:ParserRuleContext {
-		open func Final() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Final.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_classvirtspecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterClassvirtspecifier(self)
+
+	public class ClassvirtspecifierContext: ParserRuleContext {
+			open
+			func Final() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Final.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_classvirtspecifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterClassvirtspecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitClassvirtspecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitClassvirtspecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitClassvirtspecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitClassvirtspecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitClassvirtspecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitClassvirtspecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classvirtspecifier() throws -> ClassvirtspecifierContext {
+	 open func classvirtspecifier() throws -> ClassvirtspecifierContext {
 		var _localctx: ClassvirtspecifierContext = ClassvirtspecifierContext(_ctx, getState())
 		try enterRule(_localctx, 292, CPP14Parser.RULE_classvirtspecifier)
 		defer {
@@ -14065,37 +15425,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ClasskeyContext:ParserRuleContext {
-		open func Class() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Class.rawValue, 0) }
-		open func Struct() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Struct.rawValue, 0) }
-		open func Union() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Union.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_classkey }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterClasskey(self)
+
+	public class ClasskeyContext: ParserRuleContext {
+			open
+			func Class() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Class.rawValue, 0)
+			}
+			open
+			func Struct() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Struct.rawValue, 0)
+			}
+			open
+			func Union() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Union.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_classkey
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterClasskey(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitClasskey(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitClasskey(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitClasskey(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitClasskey(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitClasskey(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitClasskey(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classkey() throws -> ClasskeyContext {
+	 open func classkey() throws -> ClasskeyContext {
 		var _localctx: ClasskeyContext = ClasskeyContext(_ctx, getState())
 		try enterRule(_localctx, 294, CPP14Parser.RULE_classkey)
 		var _la: Int = 0
@@ -14130,43 +15504,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class MemberspecificationContext:ParserRuleContext {
-		open func memberdeclaration() -> MemberdeclarationContext? {
-			return getRuleContext(MemberdeclarationContext.self,0)
+
+	public class MemberspecificationContext: ParserRuleContext {
+			open
+			func memberdeclaration() -> MemberdeclarationContext? {
+				return getRuleContext(MemberdeclarationContext.self, 0)
+			}
+			open
+			func memberspecification() -> MemberspecificationContext? {
+				return getRuleContext(MemberspecificationContext.self, 0)
+			}
+			open
+			func accessspecifier() -> AccessspecifierContext? {
+				return getRuleContext(AccessspecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_memberspecification
 		}
-		open func memberspecification() -> MemberspecificationContext? {
-			return getRuleContext(MemberspecificationContext.self,0)
-		}
-		open func accessspecifier() -> AccessspecifierContext? {
-			return getRuleContext(AccessspecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_memberspecification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterMemberspecification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterMemberspecification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitMemberspecification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitMemberspecification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitMemberspecification(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitMemberspecification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitMemberspecification(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitMemberspecification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func memberspecification() throws -> MemberspecificationContext {
+	 open func memberspecification() throws -> MemberspecificationContext {
 		var _localctx: MemberspecificationContext = MemberspecificationContext(_ctx, getState())
 		try enterRule(_localctx, 296, CPP14Parser.RULE_memberspecification)
 		var _la: Int = 0
@@ -14282,7 +15664,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -14293,61 +15675,75 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class MemberdeclarationContext:ParserRuleContext {
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
+
+	public class MemberdeclarationContext: ParserRuleContext {
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func declspecifierseq() -> DeclspecifierseqContext? {
+				return getRuleContext(DeclspecifierseqContext.self, 0)
+			}
+			open
+			func memberdeclaratorlist() -> MemberdeclaratorlistContext? {
+				return getRuleContext(MemberdeclaratorlistContext.self, 0)
+			}
+			open
+			func functiondefinition() -> FunctiondefinitionContext? {
+				return getRuleContext(FunctiondefinitionContext.self, 0)
+			}
+			open
+			func usingdeclaration() -> UsingdeclarationContext? {
+				return getRuleContext(UsingdeclarationContext.self, 0)
+			}
+			open
+			func static_assertdeclaration() -> Static_assertdeclarationContext? {
+				return getRuleContext(Static_assertdeclarationContext.self, 0)
+			}
+			open
+			func templatedeclaration() -> TemplatedeclarationContext? {
+				return getRuleContext(TemplatedeclarationContext.self, 0)
+			}
+			open
+			func aliasdeclaration() -> AliasdeclarationContext? {
+				return getRuleContext(AliasdeclarationContext.self, 0)
+			}
+			open
+			func emptydeclaration() -> EmptydeclarationContext? {
+				return getRuleContext(EmptydeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_memberdeclaration
 		}
-		open func declspecifierseq() -> DeclspecifierseqContext? {
-			return getRuleContext(DeclspecifierseqContext.self,0)
-		}
-		open func memberdeclaratorlist() -> MemberdeclaratorlistContext? {
-			return getRuleContext(MemberdeclaratorlistContext.self,0)
-		}
-		open func functiondefinition() -> FunctiondefinitionContext? {
-			return getRuleContext(FunctiondefinitionContext.self,0)
-		}
-		open func usingdeclaration() -> UsingdeclarationContext? {
-			return getRuleContext(UsingdeclarationContext.self,0)
-		}
-		open func static_assertdeclaration() -> Static_assertdeclarationContext? {
-			return getRuleContext(Static_assertdeclarationContext.self,0)
-		}
-		open func templatedeclaration() -> TemplatedeclarationContext? {
-			return getRuleContext(TemplatedeclarationContext.self,0)
-		}
-		open func aliasdeclaration() -> AliasdeclarationContext? {
-			return getRuleContext(AliasdeclarationContext.self,0)
-		}
-		open func emptydeclaration() -> EmptydeclarationContext? {
-			return getRuleContext(EmptydeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_memberdeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterMemberdeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterMemberdeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitMemberdeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitMemberdeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitMemberdeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitMemberdeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitMemberdeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitMemberdeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func memberdeclaration() throws -> MemberdeclarationContext {
+	 open func memberdeclaration() throws -> MemberdeclarationContext {
 		var _localctx: MemberdeclarationContext = MemberdeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 298, CPP14Parser.RULE_memberdeclaration)
 		var _la: Int = 0
@@ -14452,40 +15848,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class MemberdeclaratorlistContext:ParserRuleContext {
-		open func memberdeclarator() -> MemberdeclaratorContext? {
-			return getRuleContext(MemberdeclaratorContext.self,0)
+	public class MemberdeclaratorlistContext: ParserRuleContext {
+			open
+			func memberdeclarator() -> MemberdeclaratorContext? {
+				return getRuleContext(MemberdeclaratorContext.self, 0)
+			}
+			open
+			func memberdeclaratorlist() -> MemberdeclaratorlistContext? {
+				return getRuleContext(MemberdeclaratorlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_memberdeclaratorlist
 		}
-		open func memberdeclaratorlist() -> MemberdeclaratorlistContext? {
-			return getRuleContext(MemberdeclaratorlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_memberdeclaratorlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterMemberdeclaratorlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterMemberdeclaratorlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitMemberdeclaratorlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitMemberdeclaratorlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitMemberdeclaratorlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitMemberdeclaratorlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitMemberdeclaratorlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitMemberdeclaratorlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func memberdeclaratorlist( ) throws -> MemberdeclaratorlistContext   {
+	 public final  func memberdeclaratorlist( ) throws -> MemberdeclaratorlistContext   {
 		return try memberdeclaratorlist(0)
 	}
 	@discardableResult
@@ -14519,7 +15921,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_memberdeclaratorlist)
 					setState(2026)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(2027)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -14542,53 +15944,67 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class MemberdeclaratorContext:ParserRuleContext {
-		open func declarator() -> DeclaratorContext? {
-			return getRuleContext(DeclaratorContext.self,0)
+
+	public class MemberdeclaratorContext: ParserRuleContext {
+			open
+			func declarator() -> DeclaratorContext? {
+				return getRuleContext(DeclaratorContext.self, 0)
+			}
+			open
+			func virtspecifierseq() -> VirtspecifierseqContext? {
+				return getRuleContext(VirtspecifierseqContext.self, 0)
+			}
+			open
+			func purespecifier() -> PurespecifierContext? {
+				return getRuleContext(PurespecifierContext.self, 0)
+			}
+			open
+			func braceorequalinitializer() -> BraceorequalinitializerContext? {
+				return getRuleContext(BraceorequalinitializerContext.self, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_memberdeclarator
 		}
-		open func virtspecifierseq() -> VirtspecifierseqContext? {
-			return getRuleContext(VirtspecifierseqContext.self,0)
-		}
-		open func purespecifier() -> PurespecifierContext? {
-			return getRuleContext(PurespecifierContext.self,0)
-		}
-		open func braceorequalinitializer() -> BraceorequalinitializerContext? {
-			return getRuleContext(BraceorequalinitializerContext.self,0)
-		}
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
-		}
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_memberdeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterMemberdeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterMemberdeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitMemberdeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitMemberdeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitMemberdeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitMemberdeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitMemberdeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitMemberdeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func memberdeclarator() throws -> MemberdeclaratorContext {
+	 open func memberdeclarator() throws -> MemberdeclaratorContext {
 		var _localctx: MemberdeclaratorContext = MemberdeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 302, CPP14Parser.RULE_memberdeclarator)
 		var _la: Int = 0
@@ -14688,40 +16104,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class VirtspecifierseqContext:ParserRuleContext {
-		open func virtspecifier() -> VirtspecifierContext? {
-			return getRuleContext(VirtspecifierContext.self,0)
+	public class VirtspecifierseqContext: ParserRuleContext {
+			open
+			func virtspecifier() -> VirtspecifierContext? {
+				return getRuleContext(VirtspecifierContext.self, 0)
+			}
+			open
+			func virtspecifierseq() -> VirtspecifierseqContext? {
+				return getRuleContext(VirtspecifierseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_virtspecifierseq
 		}
-		open func virtspecifierseq() -> VirtspecifierseqContext? {
-			return getRuleContext(VirtspecifierseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_virtspecifierseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterVirtspecifierseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterVirtspecifierseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitVirtspecifierseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitVirtspecifierseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitVirtspecifierseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitVirtspecifierseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitVirtspecifierseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitVirtspecifierseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func virtspecifierseq( ) throws -> VirtspecifierseqContext   {
+	 public final  func virtspecifierseq( ) throws -> VirtspecifierseqContext   {
 		return try virtspecifierseq(0)
 	}
 	@discardableResult
@@ -14755,7 +16177,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_virtspecifierseq)
 					setState(2058)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(2059)
 					try virtspecifier()
@@ -14776,36 +16198,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class VirtspecifierContext:ParserRuleContext {
-		open func Override() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Override.rawValue, 0) }
-		open func Final() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Final.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_virtspecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterVirtspecifier(self)
+
+	public class VirtspecifierContext: ParserRuleContext {
+			open
+			func Override() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Override.rawValue, 0)
+			}
+			open
+			func Final() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Final.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_virtspecifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterVirtspecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitVirtspecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitVirtspecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitVirtspecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitVirtspecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitVirtspecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitVirtspecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func virtspecifier() throws -> VirtspecifierContext {
+	 open func virtspecifier() throws -> VirtspecifierContext {
 		var _localctx: VirtspecifierContext = VirtspecifierContext(_ctx, getState())
 		try enterRule(_localctx, 306, CPP14Parser.RULE_virtspecifier)
 		var _la: Int = 0
@@ -14837,37 +16270,48 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class PurespecifierContext:ParserRuleContext {
-		public var val: Token!
-		open func Assign() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Assign.rawValue, 0) }
-		open func Octalliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Octalliteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_purespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterPurespecifier(self)
+
+	public class PurespecifierContext: ParserRuleContext {
+		open var val: Token!
+			open
+			func Assign() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Assign.rawValue, 0)
+			}
+			open
+			func Octalliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Octalliteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_purespecifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterPurespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitPurespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitPurespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitPurespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitPurespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitPurespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitPurespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func purespecifier() throws -> PurespecifierContext {
+	 open func purespecifier() throws -> PurespecifierContext {
 		var _localctx: PurespecifierContext = PurespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 308, CPP14Parser.RULE_purespecifier)
 		defer {
@@ -14894,37 +16338,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class BaseclauseContext:ParserRuleContext {
-		open func basespecifierlist() -> BasespecifierlistContext? {
-			return getRuleContext(BasespecifierlistContext.self,0)
+
+	public class BaseclauseContext: ParserRuleContext {
+			open
+			func basespecifierlist() -> BasespecifierlistContext? {
+				return getRuleContext(BasespecifierlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_baseclause
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_baseclause }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBaseclause(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBaseclause(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBaseclause(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBaseclause(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBaseclause(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBaseclause(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBaseclause(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBaseclause(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func baseclause() throws -> BaseclauseContext {
+	 open func baseclause() throws -> BaseclauseContext {
 		var _localctx: BaseclauseContext = BaseclauseContext(_ctx, getState())
 		try enterRule(_localctx, 310, CPP14Parser.RULE_baseclause)
 		defer {
@@ -14947,40 +16397,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class BasespecifierlistContext:ParserRuleContext {
-		open func basespecifier() -> BasespecifierContext? {
-			return getRuleContext(BasespecifierContext.self,0)
+	public class BasespecifierlistContext: ParserRuleContext {
+			open
+			func basespecifier() -> BasespecifierContext? {
+				return getRuleContext(BasespecifierContext.self, 0)
+			}
+			open
+			func basespecifierlist() -> BasespecifierlistContext? {
+				return getRuleContext(BasespecifierlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_basespecifierlist
 		}
-		open func basespecifierlist() -> BasespecifierlistContext? {
-			return getRuleContext(BasespecifierlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_basespecifierlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBasespecifierlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBasespecifierlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBasespecifierlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBasespecifierlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBasespecifierlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBasespecifierlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBasespecifierlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBasespecifierlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func basespecifierlist( ) throws -> BasespecifierlistContext   {
+	 public final  func basespecifierlist( ) throws -> BasespecifierlistContext   {
 		return try basespecifierlist(0)
 	}
 	@discardableResult
@@ -15024,7 +16480,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_basespecifierlist)
 					setState(2079)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(2080)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -15057,44 +16513,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class BasespecifierContext:ParserRuleContext {
-		open func basetypespecifier() -> BasetypespecifierContext? {
-			return getRuleContext(BasetypespecifierContext.self,0)
+
+	public class BasespecifierContext: ParserRuleContext {
+			open
+			func basetypespecifier() -> BasetypespecifierContext? {
+				return getRuleContext(BasetypespecifierContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func Virtual() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Virtual.rawValue, 0)
+			}
+			open
+			func accessspecifier() -> AccessspecifierContext? {
+				return getRuleContext(AccessspecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_basespecifier
 		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func Virtual() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Virtual.rawValue, 0) }
-		open func accessspecifier() -> AccessspecifierContext? {
-			return getRuleContext(AccessspecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_basespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBasespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBasespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBasespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBasespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBasespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBasespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBasespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBasespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func basespecifier() throws -> BasespecifierContext {
+	 open func basespecifier() throws -> BasespecifierContext {
 		var _localctx: BasespecifierContext = BasespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 314, CPP14Parser.RULE_basespecifier)
 		var _la: Int = 0
@@ -15209,43 +16676,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ClassordecltypeContext:ParserRuleContext {
-		open func classname() -> ClassnameContext? {
-			return getRuleContext(ClassnameContext.self,0)
+
+	public class ClassordecltypeContext: ParserRuleContext {
+			open
+			func classname() -> ClassnameContext? {
+				return getRuleContext(ClassnameContext.self, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+			open
+			func decltypespecifier() -> DecltypespecifierContext? {
+				return getRuleContext(DecltypespecifierContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_classordecltype
 		}
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
-		}
-		open func decltypespecifier() -> DecltypespecifierContext? {
-			return getRuleContext(DecltypespecifierContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_classordecltype }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterClassordecltype(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterClassordecltype(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitClassordecltype(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitClassordecltype(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitClassordecltype(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitClassordecltype(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitClassordecltype(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitClassordecltype(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func classordecltype() throws -> ClassordecltypeContext {
+	 open func classordecltype() throws -> ClassordecltypeContext {
 		var _localctx: ClassordecltypeContext = ClassordecltypeContext(_ctx, getState())
 		try enterRule(_localctx, 316, CPP14Parser.RULE_classordecltype)
 		defer {
@@ -15288,37 +16763,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class BasetypespecifierContext:ParserRuleContext {
-		open func classordecltype() -> ClassordecltypeContext? {
-			return getRuleContext(ClassordecltypeContext.self,0)
+
+	public class BasetypespecifierContext: ParserRuleContext {
+			open
+			func classordecltype() -> ClassordecltypeContext? {
+				return getRuleContext(ClassordecltypeContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_basetypespecifier
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_basetypespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBasetypespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBasetypespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBasetypespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBasetypespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBasetypespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBasetypespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBasetypespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBasetypespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func basetypespecifier() throws -> BasetypespecifierContext {
+	 open func basetypespecifier() throws -> BasetypespecifierContext {
 		var _localctx: BasetypespecifierContext = BasetypespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 318, CPP14Parser.RULE_basetypespecifier)
 		defer {
@@ -15338,37 +16819,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class AccessspecifierContext:ParserRuleContext {
-		open func Private() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Private.rawValue, 0) }
-		open func Protected() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Protected.rawValue, 0) }
-		open func Public() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Public.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_accessspecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterAccessspecifier(self)
+
+	public class AccessspecifierContext: ParserRuleContext {
+			open
+			func Private() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Private.rawValue, 0)
+			}
+			open
+			func Protected() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Protected.rawValue, 0)
+			}
+			open
+			func Public() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Public.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_accessspecifier
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterAccessspecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitAccessspecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitAccessspecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitAccessspecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitAccessspecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitAccessspecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitAccessspecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func accessspecifier() throws -> AccessspecifierContext {
+	 open func accessspecifier() throws -> AccessspecifierContext {
 		var _localctx: AccessspecifierContext = AccessspecifierContext(_ctx, getState())
 		try enterRule(_localctx, 320, CPP14Parser.RULE_accessspecifier)
 		var _la: Int = 0
@@ -15403,38 +16898,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ConversionfunctionidContext:ParserRuleContext {
-		open func Operator() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Operator.rawValue, 0) }
-		open func conversiontypeid() -> ConversiontypeidContext? {
-			return getRuleContext(ConversiontypeidContext.self,0)
+
+	public class ConversionfunctionidContext: ParserRuleContext {
+			open
+			func Operator() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Operator.rawValue, 0)
+			}
+			open
+			func conversiontypeid() -> ConversiontypeidContext? {
+				return getRuleContext(ConversiontypeidContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_conversionfunctionid
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_conversionfunctionid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterConversionfunctionid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterConversionfunctionid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitConversionfunctionid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitConversionfunctionid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitConversionfunctionid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitConversionfunctionid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitConversionfunctionid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitConversionfunctionid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conversionfunctionid() throws -> ConversionfunctionidContext {
+	 open func conversionfunctionid() throws -> ConversionfunctionidContext {
 		var _localctx: ConversionfunctionidContext = ConversionfunctionidContext(_ctx, getState())
 		try enterRule(_localctx, 322, CPP14Parser.RULE_conversionfunctionid)
 		defer {
@@ -15456,40 +16960,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ConversiontypeidContext:ParserRuleContext {
-		open func typespecifierseq() -> TypespecifierseqContext? {
-			return getRuleContext(TypespecifierseqContext.self,0)
+
+	public class ConversiontypeidContext: ParserRuleContext {
+			open
+			func typespecifierseq() -> TypespecifierseqContext? {
+				return getRuleContext(TypespecifierseqContext.self, 0)
+			}
+			open
+			func conversiondeclarator() -> ConversiondeclaratorContext? {
+				return getRuleContext(ConversiondeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_conversiontypeid
 		}
-		open func conversiondeclarator() -> ConversiondeclaratorContext? {
-			return getRuleContext(ConversiondeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_conversiontypeid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterConversiontypeid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterConversiontypeid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitConversiontypeid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitConversiontypeid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitConversiontypeid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitConversiontypeid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitConversiontypeid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitConversiontypeid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conversiontypeid() throws -> ConversiontypeidContext {
+	 open func conversiontypeid() throws -> ConversiontypeidContext {
 		var _localctx: ConversiontypeidContext = ConversiontypeidContext(_ctx, getState())
 		try enterRule(_localctx, 324, CPP14Parser.RULE_conversiontypeid)
 		defer {
@@ -15519,40 +17030,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ConversiondeclaratorContext:ParserRuleContext {
-		open func ptroperator() -> PtroperatorContext? {
-			return getRuleContext(PtroperatorContext.self,0)
+
+	public class ConversiondeclaratorContext: ParserRuleContext {
+			open
+			func ptroperator() -> PtroperatorContext? {
+				return getRuleContext(PtroperatorContext.self, 0)
+			}
+			open
+			func conversiondeclarator() -> ConversiondeclaratorContext? {
+				return getRuleContext(ConversiondeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_conversiondeclarator
 		}
-		open func conversiondeclarator() -> ConversiondeclaratorContext? {
-			return getRuleContext(ConversiondeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_conversiondeclarator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterConversiondeclarator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterConversiondeclarator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitConversiondeclarator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitConversiondeclarator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitConversiondeclarator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitConversiondeclarator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitConversiondeclarator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitConversiondeclarator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func conversiondeclarator() throws -> ConversiondeclaratorContext {
+	 open func conversiondeclarator() throws -> ConversiondeclaratorContext {
 		var _localctx: ConversiondeclaratorContext = ConversiondeclaratorContext(_ctx, getState())
 		try enterRule(_localctx, 326, CPP14Parser.RULE_conversiondeclarator)
 		defer {
@@ -15582,37 +17100,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class CtorinitializerContext:ParserRuleContext {
-		open func meminitializerlist() -> MeminitializerlistContext? {
-			return getRuleContext(MeminitializerlistContext.self,0)
+
+	public class CtorinitializerContext: ParserRuleContext {
+			open
+			func meminitializerlist() -> MeminitializerlistContext? {
+				return getRuleContext(MeminitializerlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_ctorinitializer
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_ctorinitializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterCtorinitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterCtorinitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitCtorinitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitCtorinitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitCtorinitializer(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitCtorinitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitCtorinitializer(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitCtorinitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func ctorinitializer() throws -> CtorinitializerContext {
+	 open func ctorinitializer() throws -> CtorinitializerContext {
 		var _localctx: CtorinitializerContext = CtorinitializerContext(_ctx, getState())
 		try enterRule(_localctx, 328, CPP14Parser.RULE_ctorinitializer)
 		defer {
@@ -15634,40 +17158,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class MeminitializerlistContext:ParserRuleContext {
-		open func meminitializer() -> MeminitializerContext? {
-			return getRuleContext(MeminitializerContext.self,0)
+
+	public class MeminitializerlistContext: ParserRuleContext {
+			open
+			func meminitializer() -> MeminitializerContext? {
+				return getRuleContext(MeminitializerContext.self, 0)
+			}
+			open
+			func meminitializerlist() -> MeminitializerlistContext? {
+				return getRuleContext(MeminitializerlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_meminitializerlist
 		}
-		open func meminitializerlist() -> MeminitializerlistContext? {
-			return getRuleContext(MeminitializerlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_meminitializerlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterMeminitializerlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterMeminitializerlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitMeminitializerlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitMeminitializerlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitMeminitializerlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitMeminitializerlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitMeminitializerlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitMeminitializerlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func meminitializerlist() throws -> MeminitializerlistContext {
+	 open func meminitializerlist() throws -> MeminitializerlistContext {
 		var _localctx: MeminitializerlistContext = MeminitializerlistContext(_ctx, getState())
 		try enterRule(_localctx, 330, CPP14Parser.RULE_meminitializerlist)
 		var _la: Int = 0
@@ -15731,43 +17262,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class MeminitializerContext:ParserRuleContext {
-		open func meminitializerid() -> MeminitializeridContext? {
-			return getRuleContext(MeminitializeridContext.self,0)
+
+	public class MeminitializerContext: ParserRuleContext {
+			open
+			func meminitializerid() -> MeminitializeridContext? {
+				return getRuleContext(MeminitializeridContext.self, 0)
+			}
+			open
+			func expressionlist() -> ExpressionlistContext? {
+				return getRuleContext(ExpressionlistContext.self, 0)
+			}
+			open
+			func bracedinitlist() -> BracedinitlistContext? {
+				return getRuleContext(BracedinitlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_meminitializer
 		}
-		open func expressionlist() -> ExpressionlistContext? {
-			return getRuleContext(ExpressionlistContext.self,0)
-		}
-		open func bracedinitlist() -> BracedinitlistContext? {
-			return getRuleContext(BracedinitlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_meminitializer }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterMeminitializer(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterMeminitializer(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitMeminitializer(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitMeminitializer(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitMeminitializer(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitMeminitializer(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitMeminitializer(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitMeminitializer(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func meminitializer() throws -> MeminitializerContext {
+	 open func meminitializer() throws -> MeminitializerContext {
 		var _localctx: MeminitializerContext = MeminitializerContext(_ctx, getState())
 		try enterRule(_localctx, 332, CPP14Parser.RULE_meminitializer)
 		var _la: Int = 0
@@ -15831,38 +17370,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class MeminitializeridContext:ParserRuleContext {
-		open func classordecltype() -> ClassordecltypeContext? {
-			return getRuleContext(ClassordecltypeContext.self,0)
+
+	public class MeminitializeridContext: ParserRuleContext {
+			open
+			func classordecltype() -> ClassordecltypeContext? {
+				return getRuleContext(ClassordecltypeContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_meminitializerid
 		}
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_meminitializerid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterMeminitializerid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterMeminitializerid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitMeminitializerid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitMeminitializerid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitMeminitializerid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitMeminitializerid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitMeminitializerid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitMeminitializerid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func meminitializerid() throws -> MeminitializeridContext {
+	 open func meminitializerid() throws -> MeminitializeridContext {
 		var _localctx: MeminitializeridContext = MeminitializeridContext(_ctx, getState())
 		try enterRule(_localctx, 334, CPP14Parser.RULE_meminitializerid)
 		defer {
@@ -15895,38 +17443,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class OperatorfunctionidContext:ParserRuleContext {
-		open func Operator() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Operator.rawValue, 0) }
-		open func operator() -> OperatorContext? {
-			return getRuleContext(OperatorContext.self,0)
+
+	public class OperatorfunctionidContext: ParserRuleContext {
+			open
+			func Operator() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Operator.rawValue, 0)
+			}
+			open
+			func operator() -> OperatorContext? {
+				return getRuleContext(OperatorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_operatorfunctionid
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_operatorfunctionid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterOperatorfunctionid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterOperatorfunctionid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitOperatorfunctionid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitOperatorfunctionid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitOperatorfunctionid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitOperatorfunctionid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitOperatorfunctionid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitOperatorfunctionid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operatorfunctionid() throws -> OperatorfunctionidContext {
+	 open func operatorfunctionid() throws -> OperatorfunctionidContext {
 		var _localctx: OperatorfunctionidContext = OperatorfunctionidContext(_ctx, getState())
 		try enterRule(_localctx, 336, CPP14Parser.RULE_operatorfunctionid)
 		defer {
@@ -15948,38 +17505,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class LiteraloperatoridContext:ParserRuleContext {
-		open func Operator() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Operator.rawValue, 0) }
-		open func Stringliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func Userdefinedstringliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Userdefinedstringliteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_literaloperatorid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLiteraloperatorid(self)
+
+	public class LiteraloperatoridContext: ParserRuleContext {
+			open
+			func Operator() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Operator.rawValue, 0)
+			}
+			open
+			func Stringliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func Userdefinedstringliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Userdefinedstringliteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_literaloperatorid
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLiteraloperatorid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLiteraloperatorid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLiteraloperatorid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLiteraloperatorid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLiteraloperatorid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLiteraloperatorid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLiteraloperatorid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literaloperatorid() throws -> LiteraloperatoridContext {
+	 open func literaloperatorid() throws -> LiteraloperatoridContext {
 		var _localctx: LiteraloperatoridContext = LiteraloperatoridContext(_ctx, getState())
 		try enterRule(_localctx, 338, CPP14Parser.RULE_literaloperatorid)
 		defer {
@@ -16018,41 +17592,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TemplatedeclarationContext:ParserRuleContext {
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open func templateparameterlist() -> TemplateparameterlistContext? {
-			return getRuleContext(TemplateparameterlistContext.self,0)
+
+	public class TemplatedeclarationContext: ParserRuleContext {
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+			open
+			func templateparameterlist() -> TemplateparameterlistContext? {
+				return getRuleContext(TemplateparameterlistContext.self, 0)
+			}
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_templatedeclaration
 		}
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_templatedeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTemplatedeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTemplatedeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTemplatedeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTemplatedeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTemplatedeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTemplatedeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTemplatedeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTemplatedeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func templatedeclaration() throws -> TemplatedeclarationContext {
+	 open func templatedeclaration() throws -> TemplatedeclarationContext {
 		var _localctx: TemplatedeclarationContext = TemplatedeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 340, CPP14Parser.RULE_templatedeclaration)
 		defer {
@@ -16081,40 +17665,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class TemplateparameterlistContext:ParserRuleContext {
-		open func templateparameter() -> TemplateparameterContext? {
-			return getRuleContext(TemplateparameterContext.self,0)
+	public class TemplateparameterlistContext: ParserRuleContext {
+			open
+			func templateparameter() -> TemplateparameterContext? {
+				return getRuleContext(TemplateparameterContext.self, 0)
+			}
+			open
+			func templateparameterlist() -> TemplateparameterlistContext? {
+				return getRuleContext(TemplateparameterlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_templateparameterlist
 		}
-		open func templateparameterlist() -> TemplateparameterlistContext? {
-			return getRuleContext(TemplateparameterlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_templateparameterlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTemplateparameterlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTemplateparameterlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTemplateparameterlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTemplateparameterlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTemplateparameterlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTemplateparameterlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTemplateparameterlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTemplateparameterlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func templateparameterlist( ) throws -> TemplateparameterlistContext   {
+	 public final  func templateparameterlist( ) throws -> TemplateparameterlistContext   {
 		return try templateparameterlist(0)
 	}
 	@discardableResult
@@ -16148,7 +17738,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_templateparameterlist)
 					setState(2186)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(2187)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -16171,40 +17761,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class TemplateparameterContext:ParserRuleContext {
-		open func typeparameter() -> TypeparameterContext? {
-			return getRuleContext(TypeparameterContext.self,0)
+
+	public class TemplateparameterContext: ParserRuleContext {
+			open
+			func typeparameter() -> TypeparameterContext? {
+				return getRuleContext(TypeparameterContext.self, 0)
+			}
+			open
+			func parameterdeclaration() -> ParameterdeclarationContext? {
+				return getRuleContext(ParameterdeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_templateparameter
 		}
-		open func parameterdeclaration() -> ParameterdeclarationContext? {
-			return getRuleContext(ParameterdeclarationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_templateparameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTemplateparameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTemplateparameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTemplateparameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTemplateparameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTemplateparameter(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTemplateparameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTemplateparameter(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTemplateparameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func templateparameter() throws -> TemplateparameterContext {
+	 open func templateparameter() throws -> TemplateparameterContext {
 		var _localctx: TemplateparameterContext = TemplateparameterContext(_ctx, getState())
 		try enterRule(_localctx, 344, CPP14Parser.RULE_templateparameter)
 		defer {
@@ -16237,47 +17834,67 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TypeparameterContext:ParserRuleContext {
-		open func Class() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Class.rawValue, 0) }
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func typeid() -> TypeidContext? {
-			return getRuleContext(TypeidContext.self,0)
+
+	public class TypeparameterContext: ParserRuleContext {
+			open
+			func Class() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Class.rawValue, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func typeid() -> TypeidContext? {
+				return getRuleContext(TypeidContext.self, 0)
+			}
+			open
+			func Typename() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Typename.rawValue, 0)
+			}
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+			open
+			func templateparameterlist() -> TemplateparameterlistContext? {
+				return getRuleContext(TemplateparameterlistContext.self, 0)
+			}
+			open
+			func idexpression() -> IdexpressionContext? {
+				return getRuleContext(IdexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_typeparameter
 		}
-		open func Typename() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Typename.rawValue, 0) }
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open func templateparameterlist() -> TemplateparameterlistContext? {
-			return getRuleContext(TemplateparameterlistContext.self,0)
-		}
-		open func idexpression() -> IdexpressionContext? {
-			return getRuleContext(IdexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_typeparameter }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTypeparameter(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTypeparameter(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTypeparameter(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTypeparameter(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTypeparameter(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTypeparameter(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTypeparameter(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTypeparameter(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typeparameter() throws -> TypeparameterContext {
+	 open func typeparameter() throws -> TypeparameterContext {
 		var _localctx: TypeparameterContext = TypeparameterContext(_ctx, getState())
 		try enterRule(_localctx, 346, CPP14Parser.RULE_typeparameter)
 		var _la: Int = 0
@@ -16462,40 +18079,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class SimpletemplateidContext:ParserRuleContext {
-		open func templatename() -> TemplatenameContext? {
-			return getRuleContext(TemplatenameContext.self,0)
+
+	public class SimpletemplateidContext: ParserRuleContext {
+			open
+			func templatename() -> TemplatenameContext? {
+				return getRuleContext(TemplatenameContext.self, 0)
+			}
+			open
+			func templateargumentlist() -> TemplateargumentlistContext? {
+				return getRuleContext(TemplateargumentlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_simpletemplateid
 		}
-		open func templateargumentlist() -> TemplateargumentlistContext? {
-			return getRuleContext(TemplateargumentlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_simpletemplateid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterSimpletemplateid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterSimpletemplateid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitSimpletemplateid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitSimpletemplateid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitSimpletemplateid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitSimpletemplateid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitSimpletemplateid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitSimpletemplateid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func simpletemplateid() throws -> SimpletemplateidContext {
+	 open func simpletemplateid() throws -> SimpletemplateidContext {
 		var _localctx: SimpletemplateidContext = SimpletemplateidContext(_ctx, getState())
 		try enterRule(_localctx, 348, CPP14Parser.RULE_simpletemplateid)
 		var _la: Int = 0
@@ -16544,46 +18168,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TemplateidContext:ParserRuleContext {
-		open func simpletemplateid() -> SimpletemplateidContext? {
-			return getRuleContext(SimpletemplateidContext.self,0)
+
+	public class TemplateidContext: ParserRuleContext {
+			open
+			func simpletemplateid() -> SimpletemplateidContext? {
+				return getRuleContext(SimpletemplateidContext.self, 0)
+			}
+			open
+			func operatorfunctionid() -> OperatorfunctionidContext? {
+				return getRuleContext(OperatorfunctionidContext.self, 0)
+			}
+			open
+			func templateargumentlist() -> TemplateargumentlistContext? {
+				return getRuleContext(TemplateargumentlistContext.self, 0)
+			}
+			open
+			func literaloperatorid() -> LiteraloperatoridContext? {
+				return getRuleContext(LiteraloperatoridContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_templateid
 		}
-		open func operatorfunctionid() -> OperatorfunctionidContext? {
-			return getRuleContext(OperatorfunctionidContext.self,0)
-		}
-		open func templateargumentlist() -> TemplateargumentlistContext? {
-			return getRuleContext(TemplateargumentlistContext.self,0)
-		}
-		open func literaloperatorid() -> LiteraloperatoridContext? {
-			return getRuleContext(LiteraloperatoridContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_templateid }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTemplateid(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTemplateid(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTemplateid(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTemplateid(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTemplateid(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTemplateid(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTemplateid(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTemplateid(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func templateid() throws -> TemplateidContext {
+	 open func templateid() throws -> TemplateidContext {
 		var _localctx: TemplateidContext = TemplateidContext(_ctx, getState())
 		try enterRule(_localctx, 350, CPP14Parser.RULE_templateid)
 		var _la: Int = 0
@@ -16679,35 +18312,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TemplatenameContext:ParserRuleContext {
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_templatename }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTemplatename(self)
+
+	public class TemplatenameContext: ParserRuleContext {
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_templatename
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTemplatename(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTemplatename(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTemplatename(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTemplatename(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTemplatename(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTemplatename(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTemplatename(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func templatename() throws -> TemplatenameContext {
+	 open func templatename() throws -> TemplatenameContext {
 		var _localctx: TemplatenameContext = TemplatenameContext(_ctx, getState())
 		try enterRule(_localctx, 352, CPP14Parser.RULE_templatename)
 		defer {
@@ -16728,40 +18369,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class TemplateargumentlistContext:ParserRuleContext {
-		open func templateargument() -> TemplateargumentContext? {
-			return getRuleContext(TemplateargumentContext.self,0)
+	public class TemplateargumentlistContext: ParserRuleContext {
+			open
+			func templateargument() -> TemplateargumentContext? {
+				return getRuleContext(TemplateargumentContext.self, 0)
+			}
+			open
+			func templateargumentlist() -> TemplateargumentlistContext? {
+				return getRuleContext(TemplateargumentlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_templateargumentlist
 		}
-		open func templateargumentlist() -> TemplateargumentlistContext? {
-			return getRuleContext(TemplateargumentlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_templateargumentlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTemplateargumentlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTemplateargumentlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTemplateargumentlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTemplateargumentlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTemplateargumentlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTemplateargumentlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTemplateargumentlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTemplateargumentlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func templateargumentlist( ) throws -> TemplateargumentlistContext   {
+	 public final  func templateargumentlist( ) throws -> TemplateargumentlistContext   {
 		return try templateargumentlist(0)
 	}
 	@discardableResult
@@ -16805,7 +18452,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_templateargumentlist)
 					setState(2279)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(2280)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -16838,43 +18485,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class TemplateargumentContext:ParserRuleContext {
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
+
+	public class TemplateargumentContext: ParserRuleContext {
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+			open
+			func typeid() -> TypeidContext? {
+				return getRuleContext(TypeidContext.self, 0)
+			}
+			open
+			func idexpression() -> IdexpressionContext? {
+				return getRuleContext(IdexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_templateargument
 		}
-		open func typeid() -> TypeidContext? {
-			return getRuleContext(TypeidContext.self,0)
-		}
-		open func idexpression() -> IdexpressionContext? {
-			return getRuleContext(IdexpressionContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_templateargument }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTemplateargument(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTemplateargument(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTemplateargument(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTemplateargument(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTemplateargument(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTemplateargument(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTemplateargument(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTemplateargument(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func templateargument() throws -> TemplateargumentContext {
+	 open func templateargument() throws -> TemplateargumentContext {
 		var _localctx: TemplateargumentContext = TemplateargumentContext(_ctx, getState())
 		try enterRule(_localctx, 356, CPP14Parser.RULE_templateargument)
 		defer {
@@ -16913,43 +18568,59 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TypenamespecifierContext:ParserRuleContext {
-		open func Typename() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Typename.rawValue, 0) }
-		open func nestednamespecifier() -> NestednamespecifierContext? {
-			return getRuleContext(NestednamespecifierContext.self,0)
+
+	public class TypenamespecifierContext: ParserRuleContext {
+			open
+			func Typename() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Typename.rawValue, 0)
+			}
+			open
+			func nestednamespecifier() -> NestednamespecifierContext? {
+				return getRuleContext(NestednamespecifierContext.self, 0)
+			}
+			open
+			func Identifier() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0)
+			}
+			open
+			func simpletemplateid() -> SimpletemplateidContext? {
+				return getRuleContext(SimpletemplateidContext.self, 0)
+			}
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_typenamespecifier
 		}
-		open func Identifier() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Identifier.rawValue, 0) }
-		open func simpletemplateid() -> SimpletemplateidContext? {
-			return getRuleContext(SimpletemplateidContext.self,0)
-		}
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_typenamespecifier }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTypenamespecifier(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTypenamespecifier(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTypenamespecifier(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTypenamespecifier(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTypenamespecifier(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTypenamespecifier(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTypenamespecifier(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTypenamespecifier(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func typenamespecifier() throws -> TypenamespecifierContext {
+	 open func typenamespecifier() throws -> TypenamespecifierContext {
 		var _localctx: TypenamespecifierContext = TypenamespecifierContext(_ctx, getState())
 		try enterRule(_localctx, 358, CPP14Parser.RULE_typenamespecifier)
 		var _la: Int = 0
@@ -17004,39 +18675,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ExplicitinstantiationContext:ParserRuleContext {
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class ExplicitinstantiationContext: ParserRuleContext {
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+			open
+			func Extern() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Extern.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_explicitinstantiation
 		}
-		open func Extern() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Extern.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_explicitinstantiation }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterExplicitinstantiation(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterExplicitinstantiation(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitExplicitinstantiation(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitExplicitinstantiation(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitExplicitinstantiation(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitExplicitinstantiation(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitExplicitinstantiation(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitExplicitinstantiation(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func explicitinstantiation() throws -> ExplicitinstantiationContext {
+	 open func explicitinstantiation() throws -> ExplicitinstantiationContext {
 		var _localctx: ExplicitinstantiationContext = ExplicitinstantiationContext(_ctx, getState())
 		try enterRule(_localctx, 360, CPP14Parser.RULE_explicitinstantiation)
 		var _la: Int = 0
@@ -17072,38 +18755,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ExplicitspecializationContext:ParserRuleContext {
-		open func Template() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Template.rawValue, 0) }
-		open func declaration() -> DeclarationContext? {
-			return getRuleContext(DeclarationContext.self,0)
+
+	public class ExplicitspecializationContext: ParserRuleContext {
+			open
+			func Template() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Template.rawValue, 0)
+			}
+			open
+			func declaration() -> DeclarationContext? {
+				return getRuleContext(DeclarationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_explicitspecialization
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_explicitspecialization }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterExplicitspecialization(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterExplicitspecialization(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitExplicitspecialization(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitExplicitspecialization(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitExplicitspecialization(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitExplicitspecialization(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitExplicitspecialization(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitExplicitspecialization(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func explicitspecialization() throws -> ExplicitspecializationContext {
+	 open func explicitspecialization() throws -> ExplicitspecializationContext {
 		var _localctx: ExplicitspecializationContext = ExplicitspecializationContext(_ctx, getState())
 		try enterRule(_localctx, 362, CPP14Parser.RULE_explicitspecialization)
 		defer {
@@ -17129,41 +18821,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class TryblockContext:ParserRuleContext {
-		open func Try() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Try.rawValue, 0) }
-		open func compoundstatement() -> CompoundstatementContext? {
-			return getRuleContext(CompoundstatementContext.self,0)
+
+	public class TryblockContext: ParserRuleContext {
+			open
+			func Try() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Try.rawValue, 0)
+			}
+			open
+			func compoundstatement() -> CompoundstatementContext? {
+				return getRuleContext(CompoundstatementContext.self, 0)
+			}
+			open
+			func handlerseq() -> HandlerseqContext? {
+				return getRuleContext(HandlerseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_tryblock
 		}
-		open func handlerseq() -> HandlerseqContext? {
-			return getRuleContext(HandlerseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_tryblock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTryblock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTryblock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTryblock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTryblock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTryblock(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTryblock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTryblock(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTryblock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func tryblock() throws -> TryblockContext {
+	 open func tryblock() throws -> TryblockContext {
 		var _localctx: TryblockContext = TryblockContext(_ctx, getState())
 		try enterRule(_localctx, 364, CPP14Parser.RULE_tryblock)
 		defer {
@@ -17187,44 +18889,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class FunctiontryblockContext:ParserRuleContext {
-		open func Try() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Try.rawValue, 0) }
-		open func compoundstatement() -> CompoundstatementContext? {
-			return getRuleContext(CompoundstatementContext.self,0)
+
+	public class FunctiontryblockContext: ParserRuleContext {
+			open
+			func Try() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Try.rawValue, 0)
+			}
+			open
+			func compoundstatement() -> CompoundstatementContext? {
+				return getRuleContext(CompoundstatementContext.self, 0)
+			}
+			open
+			func handlerseq() -> HandlerseqContext? {
+				return getRuleContext(HandlerseqContext.self, 0)
+			}
+			open
+			func ctorinitializer() -> CtorinitializerContext? {
+				return getRuleContext(CtorinitializerContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_functiontryblock
 		}
-		open func handlerseq() -> HandlerseqContext? {
-			return getRuleContext(HandlerseqContext.self,0)
-		}
-		open func ctorinitializer() -> CtorinitializerContext? {
-			return getRuleContext(CtorinitializerContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_functiontryblock }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterFunctiontryblock(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterFunctiontryblock(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitFunctiontryblock(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitFunctiontryblock(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitFunctiontryblock(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitFunctiontryblock(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitFunctiontryblock(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitFunctiontryblock(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func functiontryblock() throws -> FunctiontryblockContext {
+	 open func functiontryblock() throws -> FunctiontryblockContext {
 		var _localctx: FunctiontryblockContext = FunctiontryblockContext(_ctx, getState())
 		try enterRule(_localctx, 366, CPP14Parser.RULE_functiontryblock)
 		var _la: Int = 0
@@ -17262,40 +18975,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class HandlerseqContext:ParserRuleContext {
-		open func handler() -> HandlerContext? {
-			return getRuleContext(HandlerContext.self,0)
+
+	public class HandlerseqContext: ParserRuleContext {
+			open
+			func handler() -> HandlerContext? {
+				return getRuleContext(HandlerContext.self, 0)
+			}
+			open
+			func handlerseq() -> HandlerseqContext? {
+				return getRuleContext(HandlerseqContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_handlerseq
 		}
-		open func handlerseq() -> HandlerseqContext? {
-			return getRuleContext(HandlerseqContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_handlerseq }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterHandlerseq(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterHandlerseq(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitHandlerseq(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitHandlerseq(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitHandlerseq(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitHandlerseq(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitHandlerseq(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitHandlerseq(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func handlerseq() throws -> HandlerseqContext {
+	 open func handlerseq() throws -> HandlerseqContext {
 		var _localctx: HandlerseqContext = HandlerseqContext(_ctx, getState())
 		try enterRule(_localctx, 368, CPP14Parser.RULE_handlerseq)
 		defer {
@@ -17325,41 +19045,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class HandlerContext:ParserRuleContext {
-		open func Catch() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Catch.rawValue, 0) }
-		open func exceptiondeclaration() -> ExceptiondeclarationContext? {
-			return getRuleContext(ExceptiondeclarationContext.self,0)
+
+	public class HandlerContext: ParserRuleContext {
+			open
+			func Catch() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Catch.rawValue, 0)
+			}
+			open
+			func exceptiondeclaration() -> ExceptiondeclarationContext? {
+				return getRuleContext(ExceptiondeclarationContext.self, 0)
+			}
+			open
+			func compoundstatement() -> CompoundstatementContext? {
+				return getRuleContext(CompoundstatementContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_handler
 		}
-		open func compoundstatement() -> CompoundstatementContext? {
-			return getRuleContext(CompoundstatementContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_handler }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterHandler(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterHandler(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitHandler(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitHandler(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitHandler(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitHandler(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitHandler(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitHandler(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func handler() throws -> HandlerContext {
+	 open func handler() throws -> HandlerContext {
 		var _localctx: HandlerContext = HandlerContext(_ctx, getState())
 		try enterRule(_localctx, 370, CPP14Parser.RULE_handler)
 		defer {
@@ -17387,46 +19117,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ExceptiondeclarationContext:ParserRuleContext {
-		open func typespecifierseq() -> TypespecifierseqContext? {
-			return getRuleContext(TypespecifierseqContext.self,0)
+
+	public class ExceptiondeclarationContext: ParserRuleContext {
+			open
+			func typespecifierseq() -> TypespecifierseqContext? {
+				return getRuleContext(TypespecifierseqContext.self, 0)
+			}
+			open
+			func declarator() -> DeclaratorContext? {
+				return getRuleContext(DeclaratorContext.self, 0)
+			}
+			open
+			func attributespecifierseq() -> AttributespecifierseqContext? {
+				return getRuleContext(AttributespecifierseqContext.self, 0)
+			}
+			open
+			func abstractdeclarator() -> AbstractdeclaratorContext? {
+				return getRuleContext(AbstractdeclaratorContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_exceptiondeclaration
 		}
-		open func declarator() -> DeclaratorContext? {
-			return getRuleContext(DeclaratorContext.self,0)
-		}
-		open func attributespecifierseq() -> AttributespecifierseqContext? {
-			return getRuleContext(AttributespecifierseqContext.self,0)
-		}
-		open func abstractdeclarator() -> AbstractdeclaratorContext? {
-			return getRuleContext(AbstractdeclaratorContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_exceptiondeclaration }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterExceptiondeclaration(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterExceptiondeclaration(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitExceptiondeclaration(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitExceptiondeclaration(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitExceptiondeclaration(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitExceptiondeclaration(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitExceptiondeclaration(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitExceptiondeclaration(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exceptiondeclaration() throws -> ExceptiondeclarationContext {
+	 open func exceptiondeclaration() throws -> ExceptiondeclarationContext {
 		var _localctx: ExceptiondeclarationContext = ExceptiondeclarationContext(_ctx, getState())
 		try enterRule(_localctx, 372, CPP14Parser.RULE_exceptiondeclaration)
 		var _la: Int = 0
@@ -17513,38 +19252,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ThrowexpressionContext:ParserRuleContext {
-		open func Throw() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Throw.rawValue, 0) }
-		open func assignmentexpression() -> AssignmentexpressionContext? {
-			return getRuleContext(AssignmentexpressionContext.self,0)
+
+	public class ThrowexpressionContext: ParserRuleContext {
+			open
+			func Throw() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Throw.rawValue, 0)
+			}
+			open
+			func assignmentexpression() -> AssignmentexpressionContext? {
+				return getRuleContext(AssignmentexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_throwexpression
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_throwexpression }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterThrowexpression(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterThrowexpression(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitThrowexpression(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitThrowexpression(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitThrowexpression(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitThrowexpression(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitThrowexpression(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitThrowexpression(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func throwexpression() throws -> ThrowexpressionContext {
+	 open func throwexpression() throws -> ThrowexpressionContext {
 		var _localctx: ThrowexpressionContext = ThrowexpressionContext(_ctx, getState())
 		try enterRule(_localctx, 374, CPP14Parser.RULE_throwexpression)
 		defer {
@@ -17574,40 +19322,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class ExceptionspecificationContext:ParserRuleContext {
-		open func dynamicexceptionspecification() -> DynamicexceptionspecificationContext? {
-			return getRuleContext(DynamicexceptionspecificationContext.self,0)
+
+	public class ExceptionspecificationContext: ParserRuleContext {
+			open
+			func dynamicexceptionspecification() -> DynamicexceptionspecificationContext? {
+				return getRuleContext(DynamicexceptionspecificationContext.self, 0)
+			}
+			open
+			func noexceptspecification() -> NoexceptspecificationContext? {
+				return getRuleContext(NoexceptspecificationContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_exceptionspecification
 		}
-		open func noexceptspecification() -> NoexceptspecificationContext? {
-			return getRuleContext(NoexceptspecificationContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_exceptionspecification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterExceptionspecification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterExceptionspecification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitExceptionspecification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitExceptionspecification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitExceptionspecification(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitExceptionspecification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitExceptionspecification(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitExceptionspecification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func exceptionspecification() throws -> ExceptionspecificationContext {
+	 open func exceptionspecification() throws -> ExceptionspecificationContext {
 		var _localctx: ExceptionspecificationContext = ExceptionspecificationContext(_ctx, getState())
 		try enterRule(_localctx, 376, CPP14Parser.RULE_exceptionspecification)
 		defer {
@@ -17631,7 +19386,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -17642,38 +19397,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class DynamicexceptionspecificationContext:ParserRuleContext {
-		open func Throw() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Throw.rawValue, 0) }
-		open func typeidlist() -> TypeidlistContext? {
-			return getRuleContext(TypeidlistContext.self,0)
+
+	public class DynamicexceptionspecificationContext: ParserRuleContext {
+			open
+			func Throw() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Throw.rawValue, 0)
+			}
+			open
+			func typeidlist() -> TypeidlistContext? {
+				return getRuleContext(TypeidlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_dynamicexceptionspecification
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_dynamicexceptionspecification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterDynamicexceptionspecification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterDynamicexceptionspecification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitDynamicexceptionspecification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitDynamicexceptionspecification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitDynamicexceptionspecification(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitDynamicexceptionspecification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitDynamicexceptionspecification(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitDynamicexceptionspecification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func dynamicexceptionspecification() throws -> DynamicexceptionspecificationContext {
+	 open func dynamicexceptionspecification() throws -> DynamicexceptionspecificationContext {
 		var _localctx: DynamicexceptionspecificationContext = DynamicexceptionspecificationContext(_ctx, getState())
 		try enterRule(_localctx, 378, CPP14Parser.RULE_dynamicexceptionspecification)
 		var _la: Int = 0
@@ -17719,40 +19483,46 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-	open class TypeidlistContext:ParserRuleContext {
-		open func typeid() -> TypeidContext? {
-			return getRuleContext(TypeidContext.self,0)
+	public class TypeidlistContext: ParserRuleContext {
+			open
+			func typeid() -> TypeidContext? {
+				return getRuleContext(TypeidContext.self, 0)
+			}
+			open
+			func typeidlist() -> TypeidlistContext? {
+				return getRuleContext(TypeidlistContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_typeidlist
 		}
-		open func typeidlist() -> TypeidlistContext? {
-			return getRuleContext(TypeidlistContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_typeidlist }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterTypeidlist(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterTypeidlist(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitTypeidlist(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitTypeidlist(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitTypeidlist(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitTypeidlist(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitTypeidlist(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitTypeidlist(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 
-	public final  func typeidlist( ) throws -> TypeidlistContext   {
+	 public final  func typeidlist( ) throws -> TypeidlistContext   {
 		return try typeidlist(0)
 	}
 	@discardableResult
@@ -17796,7 +19566,7 @@ open class CPP14Parser: Parser {
 					try pushNewRecursionContext(_localctx, _startState, CPP14Parser.RULE_typeidlist)
 					setState(2376)
 					if (!(precpred(_ctx, 1))) {
-					    throw try ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
+					    throw ANTLRException.recognition(e:FailedPredicateException(self, "precpred(_ctx, 1)"))
 					}
 					setState(2377)
 					try match(CPP14Parser.Tokens.Comma.rawValue)
@@ -17829,38 +19599,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx;
 	}
-	open class NoexceptspecificationContext:ParserRuleContext {
-		open func Noexcept() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Noexcept.rawValue, 0) }
-		open func constantexpression() -> ConstantexpressionContext? {
-			return getRuleContext(ConstantexpressionContext.self,0)
+
+	public class NoexceptspecificationContext: ParserRuleContext {
+			open
+			func Noexcept() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Noexcept.rawValue, 0)
+			}
+			open
+			func constantexpression() -> ConstantexpressionContext? {
+				return getRuleContext(ConstantexpressionContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_noexceptspecification
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_noexceptspecification }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterNoexceptspecification(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterNoexceptspecification(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitNoexceptspecification(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitNoexceptspecification(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitNoexceptspecification(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitNoexceptspecification(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitNoexceptspecification(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitNoexceptspecification(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func noexceptspecification() throws -> NoexceptspecificationContext {
+	 open func noexceptspecification() throws -> NoexceptspecificationContext {
 		var _localctx: NoexceptspecificationContext = NoexceptspecificationContext(_ctx, getState())
 		try enterRule(_localctx, 382, CPP14Parser.RULE_noexceptspecification)
 		defer {
@@ -17899,38 +19678,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class RightShiftContext:ParserRuleContext {
-		open func Greater() -> Array<TerminalNode> { return getTokens(CPP14Parser.Tokens.Greater.rawValue) }
-		open func Greater(_ i:Int) -> TerminalNode?{
-			return getToken(CPP14Parser.Tokens.Greater.rawValue, i)
+
+	public class RightShiftContext: ParserRuleContext {
+			open
+			func Greater() -> [TerminalNode] {
+				return getTokens(CPP14Parser.Tokens.Greater.rawValue)
+			}
+			open
+			func Greater(_ i:Int) -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Greater.rawValue, i)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_rightShift
 		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_rightShift }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterRightShift(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterRightShift(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitRightShift(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitRightShift(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitRightShift(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitRightShift(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitRightShift(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitRightShift(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rightShift() throws -> RightShiftContext {
+	 open func rightShift() throws -> RightShiftContext {
 		var _localctx: RightShiftContext = RightShiftContext(_ctx, getState())
 		try enterRule(_localctx, 384, CPP14Parser.RULE_rightShift)
 		defer {
@@ -17952,39 +19740,51 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class RightShiftAssignContext:ParserRuleContext {
-		open func Greater() -> Array<TerminalNode> { return getTokens(CPP14Parser.Tokens.Greater.rawValue) }
-		open func Greater(_ i:Int) -> TerminalNode?{
-			return getToken(CPP14Parser.Tokens.Greater.rawValue, i)
+
+	public class RightShiftAssignContext: ParserRuleContext {
+			open
+			func Greater() -> [TerminalNode] {
+				return getTokens(CPP14Parser.Tokens.Greater.rawValue)
+			}
+			open
+			func Greater(_ i:Int) -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Greater.rawValue, i)
+			}
+			open
+			func Assign() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Assign.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_rightShiftAssign
 		}
-		open func Assign() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Assign.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_rightShiftAssign }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterRightShiftAssign(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterRightShiftAssign(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitRightShiftAssign(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitRightShiftAssign(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitRightShiftAssign(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitRightShiftAssign(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitRightShiftAssign(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitRightShiftAssign(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func rightShiftAssign() throws -> RightShiftAssignContext {
+	 open func rightShiftAssign() throws -> RightShiftAssignContext {
 		var _localctx: RightShiftAssignContext = RightShiftAssignContext(_ctx, getState())
 		try enterRule(_localctx, 386, CPP14Parser.RULE_rightShiftAssign)
 		defer {
@@ -18008,42 +19808,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class OperatorContext:ParserRuleContext {
-		open func New() -> TerminalNode? { return getToken(CPP14Parser.Tokens.New.rawValue, 0) }
-		open func Delete() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Delete.rawValue, 0) }
-		open func rightShift() -> RightShiftContext? {
-			return getRuleContext(RightShiftContext.self,0)
+
+	public class OperatorContext: ParserRuleContext {
+			open
+			func New() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.New.rawValue, 0)
+			}
+			open
+			func Delete() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Delete.rawValue, 0)
+			}
+			open
+			func rightShift() -> RightShiftContext? {
+				return getRuleContext(RightShiftContext.self, 0)
+			}
+			open
+			func rightShiftAssign() -> RightShiftAssignContext? {
+				return getRuleContext(RightShiftAssignContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_operator
 		}
-		open func rightShiftAssign() -> RightShiftAssignContext? {
-			return getRuleContext(RightShiftAssignContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_operator }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterOperator(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterOperator(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitOperator(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitOperator(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitOperator(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitOperator(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitOperator(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitOperator(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func operator() throws -> OperatorContext {
+	 open func operator() throws -> OperatorContext {
 		var _localctx: OperatorContext = OperatorContext(_ctx, getState())
 		try enterRule(_localctx, 388, CPP14Parser.RULE_operator)
 		defer {
@@ -18328,47 +20141,67 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class LiteralContext:ParserRuleContext {
-		open func Integerliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Integerliteral.rawValue, 0) }
-		open func Characterliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Characterliteral.rawValue, 0) }
-		open func Floatingliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Floatingliteral.rawValue, 0) }
-		open func Stringliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0) }
-		open func booleanliteral() -> BooleanliteralContext? {
-			return getRuleContext(BooleanliteralContext.self,0)
+
+	public class LiteralContext: ParserRuleContext {
+			open
+			func Integerliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Integerliteral.rawValue, 0)
+			}
+			open
+			func Characterliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Characterliteral.rawValue, 0)
+			}
+			open
+			func Floatingliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Floatingliteral.rawValue, 0)
+			}
+			open
+			func Stringliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Stringliteral.rawValue, 0)
+			}
+			open
+			func booleanliteral() -> BooleanliteralContext? {
+				return getRuleContext(BooleanliteralContext.self, 0)
+			}
+			open
+			func pointerliteral() -> PointerliteralContext? {
+				return getRuleContext(PointerliteralContext.self, 0)
+			}
+			open
+			func userdefinedliteral() -> UserdefinedliteralContext? {
+				return getRuleContext(UserdefinedliteralContext.self, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_literal
 		}
-		open func pointerliteral() -> PointerliteralContext? {
-			return getRuleContext(PointerliteralContext.self,0)
-		}
-		open func userdefinedliteral() -> UserdefinedliteralContext? {
-			return getRuleContext(UserdefinedliteralContext.self,0)
-		}
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_literal }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterLiteral(self)
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterLiteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitLiteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitLiteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitLiteral(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitLiteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitLiteral(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitLiteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func literal() throws -> LiteralContext {
+	 open func literal() throws -> LiteralContext {
 		var _localctx: LiteralContext = LiteralContext(_ctx, getState())
 		try enterRule(_localctx, 390, CPP14Parser.RULE_literal)
 		defer {
@@ -18429,7 +20262,7 @@ open class CPP14Parser: Parser {
 
 		 		break
 		 	default:
-		 		throw try ANTLRException.recognition(e: NoViableAltException(self))
+		 		throw ANTLRException.recognition(e: NoViableAltException(self))
 		 	}
 		}
 		catch ANTLRException.recognition(let re) {
@@ -18440,36 +20273,47 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class BooleanliteralContext:ParserRuleContext {
-		open func False() -> TerminalNode? { return getToken(CPP14Parser.Tokens.False.rawValue, 0) }
-		open func True() -> TerminalNode? { return getToken(CPP14Parser.Tokens.True.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_booleanliteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterBooleanliteral(self)
+
+	public class BooleanliteralContext: ParserRuleContext {
+			open
+			func False() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.False.rawValue, 0)
+			}
+			open
+			func True() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.True.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_booleanliteral
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterBooleanliteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitBooleanliteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitBooleanliteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitBooleanliteral(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitBooleanliteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitBooleanliteral(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitBooleanliteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func booleanliteral() throws -> BooleanliteralContext {
+	 open func booleanliteral() throws -> BooleanliteralContext {
 		var _localctx: BooleanliteralContext = BooleanliteralContext(_ctx, getState())
 		try enterRule(_localctx, 392, CPP14Parser.RULE_booleanliteral)
 		var _la: Int = 0
@@ -18501,35 +20345,43 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class PointerliteralContext:ParserRuleContext {
-		open func Nullptr() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Nullptr.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_pointerliteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterPointerliteral(self)
+
+	public class PointerliteralContext: ParserRuleContext {
+			open
+			func Nullptr() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Nullptr.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_pointerliteral
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterPointerliteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitPointerliteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitPointerliteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitPointerliteral(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitPointerliteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitPointerliteral(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitPointerliteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func pointerliteral() throws -> PointerliteralContext {
+	 open func pointerliteral() throws -> PointerliteralContext {
 		var _localctx: PointerliteralContext = PointerliteralContext(_ctx, getState())
 		try enterRule(_localctx, 394, CPP14Parser.RULE_pointerliteral)
 		defer {
@@ -18549,38 +20401,55 @@ open class CPP14Parser: Parser {
 
 		return _localctx
 	}
-	open class UserdefinedliteralContext:ParserRuleContext {
-		open func Userdefinedintegerliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Userdefinedintegerliteral.rawValue, 0) }
-		open func Userdefinedfloatingliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Userdefinedfloatingliteral.rawValue, 0) }
-		open func Userdefinedstringliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Userdefinedstringliteral.rawValue, 0) }
-		open func Userdefinedcharacterliteral() -> TerminalNode? { return getToken(CPP14Parser.Tokens.Userdefinedcharacterliteral.rawValue, 0) }
-		open override func getRuleIndex() -> Int { return CPP14Parser.RULE_userdefinedliteral }
-		override
-		open func enterRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).enterUserdefinedliteral(self)
+
+	public class UserdefinedliteralContext: ParserRuleContext {
+			open
+			func Userdefinedintegerliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Userdefinedintegerliteral.rawValue, 0)
+			}
+			open
+			func Userdefinedfloatingliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Userdefinedfloatingliteral.rawValue, 0)
+			}
+			open
+			func Userdefinedstringliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Userdefinedstringliteral.rawValue, 0)
+			}
+			open
+			func Userdefinedcharacterliteral() -> TerminalNode? {
+				return getToken(CPP14Parser.Tokens.Userdefinedcharacterliteral.rawValue, 0)
+			}
+		override open
+		func getRuleIndex() -> Int {
+			return CPP14Parser.RULE_userdefinedliteral
+		}
+		override open
+		func enterRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.enterUserdefinedliteral(self)
 			}
 		}
-		override
-		open func exitRule(_ listener: ParseTreeListener) {
-			if listener is CPP14Listener {
-			 	(listener as! CPP14Listener).exitUserdefinedliteral(self)
+		override open
+		func exitRule(_ listener: ParseTreeListener) {
+			if let listener = listener as? CPP14Listener {
+				listener.exitUserdefinedliteral(self)
 			}
 		}
-		override
-		open func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
-			if visitor is CPP14Visitor {
-			     return (visitor as! CPP14Visitor<T>).visitUserdefinedliteral(self)
-			}else if visitor is CPP14BaseVisitor {
-		    	 return (visitor as! CPP14BaseVisitor<T>).visitUserdefinedliteral(self)
-		    }
+		override open
+		func accept<T>(_ visitor: ParseTreeVisitor<T>) -> T? {
+			if let visitor = visitor as? CPP14Visitor {
+			    return visitor.visitUserdefinedliteral(self)
+			}
+			else if let visitor = visitor as? CPP14BaseVisitor {
+			    return visitor.visitUserdefinedliteral(self)
+			}
 			else {
 			     return visitor.visitChildren(self)
 			}
 		}
 	}
 	@discardableResult
-	open func userdefinedliteral() throws -> UserdefinedliteralContext {
+	 open func userdefinedliteral() throws -> UserdefinedliteralContext {
 		var _localctx: UserdefinedliteralContext = UserdefinedliteralContext(_ctx, getState())
 		try enterRule(_localctx, 396, CPP14Parser.RULE_userdefinedliteral)
 		var _la: Int = 0
@@ -18616,8 +20485,8 @@ open class CPP14Parser: Parser {
 		return _localctx
 	}
 
-    override
-	open func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
+	override open
+	func sempred(_ _localctx: RuleContext?, _ ruleIndex: Int,  _ predIndex: Int)throws -> Bool {
 		switch (ruleIndex) {
 		case  5:
 			return try nestednamespecifier_sempred(_localctx?.castdown(NestednamespecifierContext.self), predIndex)
@@ -18917,6 +20786,10 @@ open class CPP14Parser: Parser {
 		}
 	}
 
-   public static let _serializedATN : String = CPP14ParserATN().jsonString
-   public static let _ATN: ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
+
+	public
+	static let _serializedATN = CPP14ParserATN().jsonString
+
+	public
+	static let _ATN = ATNDeserializer().deserializeFromJson(_serializedATN)
 }

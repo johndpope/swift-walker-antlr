@@ -30,8 +30,8 @@ else
   cloneGrammaFilesRemoveAllFilesExceptG4
 fi
 
-if [! -f "antlr-4.7-complete.jar" ] ; then
-    sudo curl -O http://www.antlr.org/download/antlr-4.7-complete.jar
+if [! -f "antlr-4.7.1-complete.jar" ] ; then
+    sudo curl -O http://www.antlr.org/download/antlr-4.7.1-complete.jar
 fi
 
 
@@ -44,11 +44,25 @@ echo " so fork / clone https://github.com/HeMet/ANTLR4Swift -> drop in the updat
 echo " commit / tag / open a PR. "
 
 
+echo "CHECK - http://www.antlr.org/download/ for latest antlr jar file"
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+
 
 for file_path in $(find ./grammars-v4 -type f -name "*.g4" ); do
   #DIR=$(dirname $file_path)
   file=$(basename $file_path)
-  java -cp antlr-4.7-complete.jar org.antlr.v4.Tool -Dlanguage=Swift -visitor -o gen $file_path
+  java -cp antlr-4.7.1-complete.jar org.antlr.v4.Tool -Dlanguage=Swift -visitor -o gen $file_path
 done
 
 

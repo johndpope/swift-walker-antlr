@@ -1,4 +1,4 @@
-// Generated from ./grammars-v4/telephone/telephone.g4 by ANTLR 4.7
+// Generated from ./grammars-v4/telephone/telephone.g4 by ANTLR 4.7.1
 import Antlr4
 
 /**
@@ -15,7 +15,7 @@ open class telephoneVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNumber(_ ctx: telephoneParser.NumberContext) -> T{
+	open func visitNumber(_ ctx: telephoneParser.NumberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -25,7 +25,7 @@ open class telephoneVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitVariation(_ ctx: telephoneParser.VariationContext) -> T{
+	open func visitVariation(_ ctx: telephoneParser.VariationContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -35,7 +35,7 @@ open class telephoneVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitNanp(_ ctx: telephoneParser.NanpContext) -> T{
+	open func visitNanp(_ ctx: telephoneParser.NanpContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -45,7 +45,7 @@ open class telephoneVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitAreacode(_ ctx: telephoneParser.AreacodeContext) -> T{
+	open func visitAreacode(_ ctx: telephoneParser.AreacodeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -55,7 +55,7 @@ open class telephoneVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitExchange(_ ctx: telephoneParser.ExchangeContext) -> T{
+	open func visitExchange(_ ctx: telephoneParser.ExchangeContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -65,7 +65,7 @@ open class telephoneVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitSubscriber(_ ctx: telephoneParser.SubscriberContext) -> T{
+	open func visitSubscriber(_ ctx: telephoneParser.SubscriberContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
@@ -75,7 +75,7 @@ open class telephoneVisitor<T>: ParseTreeVisitor<T> {
 	  - ctx: the parse tree
 	- returns: the visitor result
 	 */
-	open func visitJapan(_ ctx: telephoneParser.JapanContext) -> T{
+	open func visitJapan(_ ctx: telephoneParser.JapanContext) -> T {
 	 	fatalError(#function + " must be overridden")
 	}
 
